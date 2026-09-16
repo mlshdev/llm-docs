@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/setting-up-endpoints.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/serverless/setting-up-endpoints.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/setting-up-endpoints.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/serverless/setting-up-endpoints.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/setting-up-endpoints
 
 # Setting Up Endpoints
@@ -26,9 +26,9 @@ For a faster, one-click setup, see the [Quickstart](https://docs.vast.ai/guides/
    | **Minimum Load**       | 1              | Minimum active capacity (keeps at least one worker active)           |
    | **Target Utilization** | 0.9            | Ratio of active capacity to anticipated load (lower = more headroom) |
 
-   ![Create Endpoint dialog](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/create_endpoint_light.webp)
+   ![Create Endpoint dialog](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/create_endpoint_light.webp)
 
-   ![Create Endpoint dialog](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/create_endpoint_dark.webp)
+   ![Create Endpoint dialog](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/create_endpoint_dark.webp)
 2. Optionally, click **"Advanced"** to expand additional scaling parameters. These all have sensible defaults, so you can leave them as-is and continue:
 
    | Parameter              | Default | Description                                                         |
@@ -39,9 +39,9 @@ For a faster, one-click setup, see the [Quickstart](https://docs.vast.ai/guides/
    | **Target Queue Time**  | 10s     | Queue time threshold that triggers aggressive scale-up              |
    | **Inactivity Timeout** | Not set | Seconds of inactivity before the engine is allowed to scale to zero |
 
-   ![Create Endpoint advanced parameters](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/create_endpoint_advanced_light.webp)
+   ![Create Endpoint advanced parameters](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/create_endpoint_advanced_light.webp)
 
-   ![Create Endpoint advanced parameters](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/create_endpoint_advanced_dark.webp)
+   ![Create Endpoint advanced parameters](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/create_endpoint_advanced_dark.webp)
 
    For details on what each parameter controls, see [Endpoint Parameters](https://docs.vast.ai/guides/serverless/serverless-parameters).
 
@@ -54,18 +54,18 @@ For a faster, one-click setup, see the [Quickstart](https://docs.vast.ai/guides/
    - **Framework**: vLLM for high-performance inference
    - **API**: OpenAI-compatible endpoints
 
-   ![Create Workergroup - Template selection](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/create_workergroup_template_light.webp)
+   ![Create Workergroup - Template selection](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/create_workergroup_template_light.webp)
 
-   ![Create Workergroup - Template selection](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/create_workergroup_template_dark.webp)
+   ![Create Workergroup - Template selection](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/create_workergroup_template_dark.webp)
 
    The template will automatically filter available GPU instances to those with enough VRAM for the model.
 4. After selecting a template, choose the GPU instances for your workergroup.
 
    Use the filters to narrow by GPU type, quantity, region, and sort order. Each instance card shows specs including TFLOPS, VRAM, efficiency, disk speed, and pricing.
 
-   ![Create Workergroup - GPU selection](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/create_workergroup_light.webp)
+   ![Create Workergroup - GPU selection](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/create_workergroup_light.webp)
 
-   ![Create Workergroup - GPU selection](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/create_workergroup_dark.webp)
+   ![Create Workergroup - GPU selection](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/create_workergroup_dark.webp)
 
    Click **"Create"** once you've selected your template and reviewed the available instances.
 5. Your serverless infrastructure is now being provisioned. **This process takes time** as workers need to:
@@ -75,9 +75,9 @@ For a faster, one-click setup, see the [Quickstart](https://docs.vast.ai/guides/
    3. Load the model into GPU memory
    4. Complete health checks
 
-   ![Workers loading in the dashboard](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/workers_loading_light.webp)
+   ![Workers loading in the dashboard](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/workers_loading_light.webp)
 
-   ![Workers loading in the dashboard](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/workers_loading_dark.webp)
+   ![Workers loading in the dashboard](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/workers_loading_dark.webp)
 
    > **Warning**
    >
@@ -96,9 +96,9 @@ For a faster, one-click setup, see the [Quickstart](https://docs.vast.ai/guides/
    - Click on the "eye" icon to view the logs for a worker
    - Logs show model download progress, loading status, and any startup errors
 
-   ![Workers progressing through initialization](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/workers_progress_light.webp)
+   ![Workers progressing through initialization](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/workers_progress_light.webp)
 
-   ![Workers progressing through initialization](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/workers_progress_dark.webp)
+   ![Workers progressing through initialization](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/workers_progress_dark.webp)
 
    > **Note**
    >
@@ -110,15 +110,15 @@ To modify parameters on a live endpoint, click the **pencil icon** on the endpoi
 
 The **Edit Endpoint** dialog shows the same parameters as creation. Changes take effect immediately and the serverless engine will work to match the new targets.
 
-![Edit Endpoint dialog](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/edit_endpoint_light.webp)
+![Edit Endpoint dialog](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/edit_endpoint_light.webp)
 
-![Edit Endpoint dialog](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/edit_endpoint_dark.webp)
+![Edit Endpoint dialog](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/edit_endpoint_dark.webp)
 
 Click **"Advanced"** to access additional scaling controls:
 
-![Edit Endpoint advanced parameters](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/edit_endpoint_advanced_light.webp)
+![Edit Endpoint advanced parameters](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/edit_endpoint_advanced_light.webp)
 
-![Edit Endpoint advanced parameters](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/serverless/edit_endpoint_advanced_dark.webp)
+![Edit Endpoint advanced parameters](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/serverless/edit_endpoint_advanced_dark.webp)
 
 ## Next Steps
 

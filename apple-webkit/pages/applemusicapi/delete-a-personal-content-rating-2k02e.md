@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applemusicapi/delete-a-personal-content-rating-2k02e](https://developer.apple.com/documentation/applemusicapi/delete-a-personal-content-rating-2k02e)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applemusicapi/delete-a-personal-content-rating-2k02e
 
 # Delete a Personal Library Song Rating
 

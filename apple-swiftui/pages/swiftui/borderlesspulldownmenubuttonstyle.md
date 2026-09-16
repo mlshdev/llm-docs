@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/borderlesspulldownmenubuttonstyle](https://developer.apple.com/documentation/swiftui/borderlesspulldownmenubuttonstyle)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/borderlesspulldownmenubuttonstyle
 
 # BorderlessPullDownMenuButtonStyle
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** macOS 10.15+ (deprecated in 27.0)
+**Availability:** macOS 10.15+ (deprecated in 27.2)
 
 A menu button style which manifests as a borderless pull-down button.
 

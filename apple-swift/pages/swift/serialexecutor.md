@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/serialexecutor](https://developer.apple.com/documentation/swift/serialexecutor)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/serialexecutor
 
 # SerialExecutor
 
@@ -51,6 +52,7 @@ It is also possible to use a form of shared executor, either created as a global
 actor MyActor {
   // Serial executor reused by *all* instances of MyActor!
   static let sharedMyActorsExecutor = MyExecutor() // implements SerialExecutor
+
 
   nonisolated var unownedExecutor: UnownedSerialExecutor {
     Self.sharedMyActorsExecutor.asUnownedSerialExecutor()

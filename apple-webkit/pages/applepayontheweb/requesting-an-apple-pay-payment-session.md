@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepayontheweb/requesting-an-apple-pay-payment-session](https://developer.apple.com/documentation/applepayontheweb/requesting-an-apple-pay-payment-session)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applepayontheweb/requesting-an-apple-pay-payment-session
 
 # Requesting an Apple Pay payment session
 

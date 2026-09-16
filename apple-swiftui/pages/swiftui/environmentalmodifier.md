@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/environmentalmodifier](https://developer.apple.com/documentation/swiftui/environmentalmodifier)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/environmentalmodifier
 
 # EnvironmentalModifier
 
@@ -37,10 +38,10 @@ protocol EnvironmentalModifier : ViewModifier where Self.Body == Never
 - [ViewModifier](viewmodifier.md): A modifier that you apply to a view or another view modifier, producing a different version of the original value.
 - [EmptyModifier](emptymodifier.md): An empty, or identity, modifier, used during development to switch modifiers at compile time.
 - [ModifiedContent](modifiedcontent.md): A value with a modifier applied to it.
-- [ManipulableModifier](manipulablemodifier.md)
-- [ManipulableResponderModifier](manipulablerespondermodifier.md)
-- [ManipulableTransformBindingModifier](manipulabletransformbindingmodifier.md)
-- [ManipulationGeometryModifier](manipulationgeometrymodifier.md)
-- [ManipulationGestureModifier](manipulationgesturemodifier.md)
-- [ManipulationUsingGestureStateModifier](manipulationusinggesturestatemodifier.md)
+- [ManipulableModifier](manipulablemodifier.md): A view modifier that lets hand gestures move, rotate, and scale a view.
+- [ManipulableResponderModifier](manipulablerespondermodifier.md): A view modifier that makes a view respond to manipulation hand gestures.
+- [ManipulableTransformBindingModifier](manipulabletransformbindingmodifier.md): A view modifier that applies a 3D affine transform to a view and lets hand gestures change it.
+- [ManipulationGeometryModifier](manipulationgeometrymodifier.md): A view modifier that tracks the geometry a manipulation gesture acts on.
+- [ManipulationGestureModifier](manipulationgesturemodifier.md): A view modifier that recognizes manipulation hand gestures and reports their state through a binding.
+- [ManipulationUsingGestureStateModifier](manipulationusinggesturestatemodifier.md): A view modifier that applies the manipulation state from a gesture on another view.
 - [Manipulable](manipulable.md): A namespace for various manipulable related types.

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/templates/examples/grobid.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/templates/examples/grobid.mdx)
+> Pinned source for Vast.ai main: [guides/templates/examples/grobid.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/templates/examples/grobid.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/templates/examples/grobid
 
 # Creating Templates for GROBID
@@ -13,13 +13,13 @@ This guide demonstrates creating a template using an existing Docker image. See 
 
 There are multiple GROBID images in dockerhub, but for this guide we will be using the official GROBID image.
 
-![Grobid Overview](https://vast.ai/uploads/grobid_overview.png)
+![Grobid Overview](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/grobid-overview.webp)
 
 ### Step 2 - Selecting the Version Tag
 
 If you don't already have a version you intend to use, we recommend selecting the latest stable version.&#x20;
 
-![Stable Tag](https://vast.ai/uploads/stable_tag.png)
+![Stable Tag](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/grobid-stable-tag.webp)
 
 At the time of writing, the current stable version is 0.8.0, so that is the version we'll be using here.
 
@@ -29,7 +29,7 @@ At the time of writing, the current stable version is 0.8.0, so that is the vers
 
 In the Docker Repository And Environment section, you will enter your image path and tag.
 
-![Imageandtag](https://vast.ai/uploads/templates/ImageAndTag.png)
+![Imageandtag](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/grobid-imageandtag.webp)
 
 ### Step 2 - Map Ports and Specify Your Image and Tag Combination
 
@@ -37,25 +37,25 @@ The overview page for this image at dockerhub has a link to their guide to [usin
 
 As we follow their guide to containerizing GROBID, we'll need to make sure the container's port 8070 is set to the host machine's port 8070. We will do that in the Vast.ai template. We use -p 8070:8070 as one of the docker run options.
 
-![Run Cmd](https://vast.ai/uploads/run_cmd.png)
+![Run Cmd](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/grobid-run-cmd.webp)
 
 **Note:** Vast only allows -e and -p docker run options to set environment variables and expose ports.
 
-![Grobidport](https://vast.ai/uploads/templates/GrobidPort.png)
+![Grobidport](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/grobid-grobidport.webp)
 
 ### Step 3 - Select the Launch Mode
 
 Here we will select the SSH launch mode.
 
-![Sshdirect](https://vast.ai/uploads/templates/SSHDirect.png)
+![Sshdirect](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/grobid-sshdirect.webp)
 
 ### Step 4 - Look for CMD or ENTRYPOINT command
 
-![Found Tag](https://vast.ai/uploads/found_tag.png)
+![Found Tag](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/grobid-found-tag.webp)
 
 To find this for the template we are creating, we searched the [image's page in Dockerhub](https://hub.docker.com/r/grobid/grobid) and found the **CMD&#x20;**&#x63;ommand in the **Tags** tab under the link "0.8.0" highlighted in blue.
 
-![Found Cmd](https://vast.ai/uploads/found_cmd.png)
+![Found Cmd](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/grobid-found-cmd.webp)
 
 ### Step 5 - Fill Out On-start Script section using the CMD command we just found
 
@@ -63,13 +63,13 @@ Next, we add the contents of the **CMD&#x20;**&#x63;ommand to the end of the bas
 
 Also, appended environment variables to /etc/environment file in our on-start section.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-creating-templates-for-grobid.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-creating-templates-for-grobid.webp)
 
 This makes environment variables available to all users and processes and ensures they are persistent even if our instance/docker container is rebooted. We suggest doing the same for your templates.
 
 ### Step 6 - Name and Save The Template
 
-![Grobidexample](https://vast.ai/uploads/templates/GrobidExample.png)
+![Grobidexample](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/grobid-grobidexample.webp)
 
 When you are finished setting up your template, If you haven't already done so, specify the template name and description.
 
@@ -79,19 +79,19 @@ Finally, click **Create & Use** to save the template and navigate to the GPU off
 
 Once you have selected an instance offer, You'll click on the **INSTANCES&#x20;**&#x6C;ink in the left menu and see your rented GPU instance that has your template applied.&#x20;
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-creating-templates-for-grobid-2.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-creating-templates-for-grobid-2.webp)
 
 When the instance is done loading and the **>\_CONNECT** state on the blue button appears, you should be able to see the ip range button at the top of the instance card.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-creating-templates-for-grobid-3.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-creating-templates-for-grobid-3.webp)
 
 If you click the IP range button you will see a new modal has the IP and port information for your instance. You'll see the port 8070 that we set listed in Open Ports.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-creating-templates-for-grobi-4.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-creating-templates-for-grobi-4.webp)
 
 You can copy the machine IP and port and load the address (in this example: 195.0.159.206:55734) in a new browser tab or window. This address will load the GROBID web app.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-creating-templates-for-grobid-5.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-creating-templates-for-grobid-5.webp)
 
 ## Additional Resources
 

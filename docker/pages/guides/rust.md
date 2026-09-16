@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/rust.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/guides/rust.md)
+> Pinned source for Docker main: [content/guides/rust.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/guides/rust.md)
 
 The Rust language-specific guide teaches you how to create a containerized Rust application using Docker. In this guide, you'll learn how to:
 
@@ -561,7 +561,7 @@ For the sample application, you'll use a variation of the backend from the react
 
    ARG RUST_VERSION=1.70.0
    ARG APP_NAME=react-rust-postgres
-   FROM rust:${RUST_VERSION}-slim-bullseye AS build
+   FROM rust:${RUST_VERSION}-slim-bookworm AS build
    ARG APP_NAME
    WORKDIR /app
 
@@ -590,12 +590,12 @@ For the sample application, you'll use a variation of the backend from the react
    # image from the build stage where the necessary files are copied from the build
    # stage.
    #
-   # The example below uses the debian bullseye image as the foundation for    running the app.
-   # By specifying the "bullseye-slim" tag, it will also use whatever happens to    be the
+   # The example below uses the Debian Bookworm image as the foundation for    running the app.
+   # By specifying the "bookworm-slim" tag, it will also use whatever happens to    be the
    # most recent version of that tag when you build your Dockerfile. If
    # reproducibility is important, consider using a digest
-   # (e.g.,    debian@sha256:ac707220fbd7b67fc19b112cee8170b41a9e97f703f588b2cdbbcdcecdd8af57).
-   FROM debian:bullseye-slim AS final
+   # (e.g.,    debian@sha256:88200866dfff7ea7f5cbcb6ec7c8a701889efe6fe859fe64d6990e4b07ea4171).
+   FROM debian:bookworm-slim AS final
 
    # Create a non-privileged user that the app will run under.
    # See https://docs.docker.com/develop/develop-images/dockerfile_best-practices/   #user

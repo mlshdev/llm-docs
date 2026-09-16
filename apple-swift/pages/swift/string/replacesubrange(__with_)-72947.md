@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/string/replacesubrange(_:with:)-72947](https://developer.apple.com/documentation/swift/string/replacesubrange(_:with:)-72947)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/string/replacesubrange(_:with:)-72947
 
 # replaceSubrange(\_:with:)
 

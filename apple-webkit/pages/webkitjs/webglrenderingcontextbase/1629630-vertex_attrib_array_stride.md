@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webglrenderingcontextbase/1629630-vertex_attrib_array_stride](https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1629630-vertex_attrib_array_stride)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1629630-vertex_attrib_array_stride
 
 # VERTEX_ATTRIB_ARRAY_STRIDE
 

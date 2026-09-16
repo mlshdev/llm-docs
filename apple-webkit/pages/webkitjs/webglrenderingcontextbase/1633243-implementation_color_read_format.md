@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webglrenderingcontextbase/1633243-implementation_color_read_format](https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1633243-implementation_color_read_format)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1633243-implementation_color_read_format
 
 # IMPLEMENTATION_COLOR_READ_FORMAT
 

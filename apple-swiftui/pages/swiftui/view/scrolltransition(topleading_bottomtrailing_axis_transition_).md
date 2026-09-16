@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/scrolltransition(topleading:bottomtrailing:axis:transition:)](https://developer.apple.com/documentation/swiftui/view/scrolltransition(topleading:bottomtrailing:axis:transition:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/scrolltransition(topleading:bottomtrailing:axis:transition:)
 
 # scrollTransition(topLeading:bottomTrailing:axis:transition:)
 
@@ -17,10 +18,10 @@ nonisolated func scrollTransition(topLeading: ScrollTransitionConfiguration, bot
 
 ## Parameters
 
-- `topLeading`: The configuration that drives the transition when the view is about to appear at the top edge of a vertical scroll view, or the leading edge of a horizont scroll view.
-- `bottomTrailing`: The configuration that drives the transition when the view is about to appear at the bottom edge of a vertical scroll view, or the trailing edge of a horizont scroll view.
+- `topLeading`: The configuration that drives the transition when the view is about to appear at the top edge of a vertical scroll view, or the leading edge of a horizontal scroll view.
+- `bottomTrailing`: The configuration that drives the transition when the view is about to appear at the bottom edge of a vertical scroll view, or the trailing edge of a horizontal scroll view.
 - `axis`: The axis of the containing scroll view over which the transition will be applied. The default value of `nil` uses the axis of the innermost containing scroll view, or `.vertical` if the innermost scroll view is scrollable along both axes.
-- `transition`: The transition to apply.
+- `transition`: A closure that applies visual effects as a function of the provided phase.
 
 ## See Also
 

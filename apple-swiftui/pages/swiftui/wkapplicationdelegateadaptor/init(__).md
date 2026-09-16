@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/wkapplicationdelegateadaptor/init(_:)](https://developer.apple.com/documentation/swiftui/wkapplicationdelegateadaptor/init(_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/wkapplicationdelegateadaptor/init(_:)
 
 # init(\_:)
 
@@ -13,6 +14,10 @@ Creates an `WKApplicationDelegateAdaptor` using a WatchKit Application Delegate.
 ```swift
 @MainActor @preconcurrency init(_ delegateType: DelegateType.Type = DelegateType.self)
 ```
+
+## Parameters
+
+- `delegateType`: The type of `WKApplicationDelegate` to use.
 
 <a id="discussion"></a>
 

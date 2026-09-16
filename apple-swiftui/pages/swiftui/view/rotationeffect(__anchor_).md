@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/rotationeffect(_:anchor:)](https://developer.apple.com/documentation/swiftui/view/rotationeffect(_:anchor:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/rotationeffect(_:anchor:)
 
 # rotationEffect(\_:anchor:)
 
@@ -57,5 +58,5 @@ Text("Rotation by passing an angle in degrees")
 - [transformEffect(\_:)](transformeffect%28__%29.md): Applies an affine transformation to this view’s rendered output.
 - [transform3DEffect(\_:)](transform3deffect%28__%29.md): Applies a 3D transformation to this view’s rendered output.
 - [projectionEffect(\_:)](projectioneffect%28__%29.md): Applies a projection transformation to this view’s rendered output.
-- [ProjectionTransform](../projectiontransform.md)
+- [ProjectionTransform](../projectiontransform.md): A 3x3 matrix that transforms points in a plane.
 - [ContentMode](../contentmode.md): Constants that define how a view’s content fills the available space.

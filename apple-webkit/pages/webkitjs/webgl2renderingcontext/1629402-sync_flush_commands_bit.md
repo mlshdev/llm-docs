@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webgl2renderingcontext/1629402-sync_flush_commands_bit](https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1629402-sync_flush_commands_bit)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1629402-sync_flush_commands_bit
 
 # SYNC_FLUSH_COMMANDS_BIT
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/shape/scale(x:y:anchor:)](https://developer.apple.com/documentation/swiftui/shape/scale(x:y:anchor:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/shape/scale(x:y:anchor:)
 
 # scale(x:y:anchor:)
 
@@ -18,6 +19,7 @@ nonisolated func scale(x: CGFloat = 1, y: CGFloat = 1, anchor: UnitPoint = .cent
 
 - `x`: The multiplication factor used to resize this shape along its x-axis.
 - `y`: The multiplication factor used to resize this shape along its y-axis.
+- `anchor`: The point to rotate the shape around.
 
 <a id="return-value"></a>
 

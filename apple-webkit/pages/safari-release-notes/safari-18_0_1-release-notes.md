@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/safari-release-notes/safari-18_0_1-release-notes](https://developer.apple.com/documentation/safari-release-notes/safari-18_0_1-release-notes)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/safari-release-notes/safari-18_0_1-release-notes
 
 # Safari 18.0.1 Release Notes
 

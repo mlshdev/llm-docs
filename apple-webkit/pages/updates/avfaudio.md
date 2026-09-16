@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/updates/avfaudio](https://developer.apple.com/documentation/updates/avfaudio)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/updates/avfaudio
 
 # AVFAudio updates
 
@@ -43,4 +44,4 @@ Browse notable changes in [AVFAudio](https://developer.apple.com/documentation/a
 - [Audio Toolbox updates](audiotoolbox.md): Learn about important changes to Audio Toolbox.
 - [AuthenticationServices updates](authenticationservices.md): Learn about important changes to AuthenticationServices.
 - [AVFoundation updates](avfoundation.md): Learn about important changes to AVFoundation.
-- [Background Tasks updates](backgroundtasks.md): Learn about important changes in Background Tasks.
+- [AVKit updates](avkit.md): Learn about important changes to AVKit.

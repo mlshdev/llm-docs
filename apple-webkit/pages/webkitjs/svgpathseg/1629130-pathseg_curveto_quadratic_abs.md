@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgpathseg/1629130-pathseg_curveto_quadratic_abs](https://developer.apple.com/documentation/webkitjs/svgpathseg/1629130-pathseg_curveto_quadratic_abs)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgpathseg/1629130-pathseg_curveto_quadratic_abs
 
 # PATHSEG_CURVETO_QUADRATIC_ABS
 

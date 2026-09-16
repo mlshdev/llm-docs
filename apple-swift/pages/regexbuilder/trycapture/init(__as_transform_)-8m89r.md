@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/regexbuilder/trycapture/init(_:as:transform:)-8m89r](https://developer.apple.com/documentation/regexbuilder/trycapture/init(_:as:transform:)-8m89r)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/regexbuilder/trycapture/init(_:as:transform:)-8m89r
 
 # init(\_:as:transform:)
 

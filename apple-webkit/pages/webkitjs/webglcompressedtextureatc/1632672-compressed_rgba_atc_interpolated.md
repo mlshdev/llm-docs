@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webglcompressedtextureatc/1632672-compressed_rgba_atc_interpolated](https://developer.apple.com/documentation/webkitjs/webglcompressedtextureatc/1632672-compressed_rgba_atc_interpolated)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webglcompressedtextureatc/1632672-compressed_rgba_atc_interpolated
 
 # COMPRESSED_RGBA_ATC_INTERPOLATED_ALPHA_WEBGL
 

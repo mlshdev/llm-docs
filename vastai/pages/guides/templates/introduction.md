@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/templates/introduction.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/templates/introduction.mdx)
+> Pinned source for Vast.ai main: [guides/templates/introduction.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/templates/introduction.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/templates/introduction
 
 # Templates
@@ -39,7 +39,7 @@ These are large Docker images that contain CUDA development libraries, node + np
 
 When you click the Open button on an instance running one of our recommended templates, you'll see the Instance Portal:
 
-![Instance portal landing page](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-templates-18.webp)
+![Instance portal landing page](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-18.webp)
 
 The **Instance Portal** provides easy access links to services running in your instance. It places an authentication layer in front of these services to prevent access by anyone who does not have the correct authentication token. You can also create tunnels to your services without exposing ports.
 

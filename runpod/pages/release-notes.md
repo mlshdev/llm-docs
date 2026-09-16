@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/release-notes.mdx)
+> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/release-notes.mdx)
 > Canonical documentation: https://docs.runpod.io/release-notes
 
 # Product updates
@@ -12,6 +12,10 @@ New features, fixes, and improvements for the Runpod platform. Review setup, con
 **September 14, 2026**
 
 \*\*\*\* [Nano Banana Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-edit) The Nano Banana Edit public endpoint will be retired on **September 28, 2026**, because Google is discontinuing the underlying model. Migrate to [Nano Banana 2 Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-2-edit) before that date.
+
+**September 10, 2026**
+
+\*\*\*\* [Sales tax and tax ID support](https://docs.runpod.io/accounts-billing/sales-tax) Runpod now collects sales tax on credit purchases in applicable jurisdictions. You can add a business tax ID at checkout or in your account settings to update how tax applies to your purchases. See [Adding your tax ID](https://docs.runpod.io/accounts-billing/add-tax-id) to get started.
 
 **August 19, 2026**
 

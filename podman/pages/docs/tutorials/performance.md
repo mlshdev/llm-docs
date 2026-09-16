@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.1: [docs/tutorials/performance.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/performance.md)
+> Pinned source for Podman v6.1.2: [docs/tutorials/performance.md](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/tutorials/performance.md)
 
 # Podman performance guide
 
@@ -161,7 +161,7 @@ You can avoid using *pasta* in the following ways:
     Using a service on demand, can free up compute resources.
   - Start the service explicitly (`systemctl --user enable foobar.service`). If the service is already
     running when the first client connects, there will be no delay due to container startup.
-    The [socket activation tutorial](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/socket_activation.md)
+    The [socket activation tutorial](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/tutorials/socket_activation.md)
     provides more information about socket activation support in Podman.
 
 - Set up the network manually as root. Create a bridge and virtual ethernet pair (VETH). Note: compared to other methods,

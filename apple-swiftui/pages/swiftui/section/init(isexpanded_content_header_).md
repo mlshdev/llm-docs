@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/section/init(isexpanded:content:header:)](https://developer.apple.com/documentation/swiftui/section/init(isexpanded:content:header:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/section/init(isexpanded:content:header:)
 
 # init(isExpanded:content:header:)
 
@@ -18,6 +19,7 @@ Creates a section with the provided section content.
 
 - `isExpanded`: A binding to a Boolean value that determines the section’s expansion state (expanded or collapsed).
 - `content`: The section’s content.
+- `header`: A view to use as the section’s header.
 
 ## See Also
 

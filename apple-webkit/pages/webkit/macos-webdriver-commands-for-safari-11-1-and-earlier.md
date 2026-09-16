@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/macos-webdriver-commands-for-safari-11-1-and-earlier](https://developer.apple.com/documentation/webkit/macos-webdriver-commands-for-safari-11-1-and-earlier)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/macos-webdriver-commands-for-safari-11-1-and-earlier
 
 # macOS WebDriver Commands for Safari 11.1 and earlier
 

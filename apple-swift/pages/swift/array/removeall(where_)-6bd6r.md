@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/array/removeall(where:)-6bd6r](https://developer.apple.com/documentation/swift/array/removeall(where:)-6bd6r)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/array/removeall(where:)-6bd6r
 
 # removeAll(where:)
 

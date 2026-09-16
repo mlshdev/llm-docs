@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/color/init(uicolor:)](https://developer.apple.com/documentation/swiftui/color/init(uicolor:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/color/init(uicolor:)
 
 # init(uiColor:)
 
@@ -13,6 +14,10 @@ Creates a color from a UIKit color.
 ```swift
 init(uiColor: UIColor)
 ```
+
+## Parameters
+
+- `uiColor`: A [UIColor](https://developer.apple.com/documentation/uikit/uicolor) instance from which to create a color.
 
 <a id="discussion"></a>
 

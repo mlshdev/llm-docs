@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-gamecentergroups-_id_-relationships-gamecenterleaderboardsetsv2](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-gamecentergroups-_id_-relationships-gamecenterleaderboardsetsv2)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-gamecentergroups-_id_-relationships-gamecenterleaderboardsetsv2
 
 # Get All Leaderboard Set IDs for a Game Center Group
 

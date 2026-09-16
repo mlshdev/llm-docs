@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/input-events](https://developer.apple.com/documentation/swiftui/input-events)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/input-events
 
 # Input events
 
@@ -26,7 +27,7 @@ For design guidance, see [Inputs](https://developer.apple.com/design/human-inter
 - [onKeyPress(\_:phases:action:)](view/onkeypress%28__phases_action_%29.md): Performs an action if the user presses a key on a hardware keyboard while the view has focus.
 - [onKeyPress(characters:phases:action:)](view/onkeypress%28characters_phases_action_%29.md): Performs an action if the user presses one or more keys on a hardware keyboard while the view has focus.
 - [onKeyPress(keys:phases:action:)](view/onkeypress%28keys_phases_action_%29.md): Performs an action if the user presses one or more keys on a hardware keyboard while the view has focus.
-- [KeyPress](keypress.md)
+- [KeyPress](keypress.md): A hardware keyboard event that a focused view receives.
 
 ### Creating keyboard shortcuts
 
@@ -107,6 +108,12 @@ For design guidance, see [Inputs](https://developer.apple.com/design/human-inter
 - [contentShape(\_:eoFill:)](view/contentshape%28__eofill_%29.md): Defines the content shape for hit testing.
 - [contentShape(\_:\_:eoFill:)](view/contentshape%28____eofill_%29.md): Sets the content shape for this view.
 - [ContentShapeKinds](contentshapekinds.md): A kind for the content shape of a view.
+
+### Responding to hinge angle changes
+
+- [onHingeChange(isEnabled:\_:)](view/onhingechange%28isenabled___%29.md): Beta. Adds an action to perform when the hinge context of the view hierarchy changes.
+- [DeviceHingeContext](devicehingecontext.md): Beta. A type describing the context of hinges on the device.
+- [DeviceHinge](devicehinge.md): Beta. A type encapsulating the state of a single hinge.
 
 ### Interacting with the Digital Crown
 

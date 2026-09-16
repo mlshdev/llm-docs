@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/nshostingview/init(coder:)](https://developer.apple.com/documentation/swiftui/nshostingview/init(coder:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/nshostingview/init(coder:)
 
 # init(coder:)
 
@@ -13,6 +14,10 @@ Creates a hosting view object from the contents of the specified archive.
 ```swift
 @MainActor @preconcurrency required dynamic init?(coder aDecoder: NSCoder)
 ```
+
+## Parameters
+
+- `aDecoder`: The decoder to use during initialization.
 
 <a id="discussion"></a>
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/tabviewcustomization/resetsectionorder(for:)](https://developer.apple.com/documentation/swiftui/tabviewcustomization/resetsectionorder(for:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/tabviewcustomization/resetsectionorder(for:)
 
 # resetSectionOrder(for:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 18.0+ (deprecated in 27.0) · iPadOS 18.0+ (deprecated in 27.0) · Mac Catalyst 18.0+ (deprecated in 27.0) · macOS 15.0+ (deprecated in 27.0) · visionOS 2.0+ (deprecated in 27.0)
+**Availability:** iOS 18.0+ (deprecated in 27.2) · iPadOS 18.0+ (deprecated in 27.2) · Mac Catalyst 18.0+ (deprecated in 27.2) · macOS 15.0+ (deprecated in 27.2) · visionOS 2.0+ (deprecated in 27.2)
 
 Resets ordering back to the default for the section with `sectionID`, preserving any customized tab visibilities.
 

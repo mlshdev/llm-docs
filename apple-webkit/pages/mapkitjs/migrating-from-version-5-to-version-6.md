@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/mapkitjs/migrating-from-version-5-to-version-6](https://developer.apple.com/documentation/mapkitjs/migrating-from-version-5-to-version-6)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mapkitjs/migrating-from-version-5-to-version-6
 
 # Migrating from Version 5 to Version 6
 

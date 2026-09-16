@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webkitmediakeyerror/2871262-media_keyerr_domain](https://developer.apple.com/documentation/webkitjs/webkitmediakeyerror/2871262-media_keyerr_domain)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeyerror/2871262-media_keyerr_domain
 
 # MEDIA_KEYERR_DOMAIN
 

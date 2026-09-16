@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svglength/1631187-svg_lengthtype_pt](https://developer.apple.com/documentation/webkitjs/svglength/1631187-svg_lengthtype_pt)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svglength/1631187-svg_lengthtype_pt
 
 # SVG_LENGTHTYPE_PT
 

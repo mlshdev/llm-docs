@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/drawing-and-graphics](https://developer.apple.com/documentation/swiftui/drawing-and-graphics)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/drawing-and-graphics
 
 # Drawing and graphics
 
@@ -82,7 +83,7 @@ For design guidance, see [Materials](https://developer.apple.com/design/human-in
 - [transformEffect(\_:)](view/transformeffect%28__%29.md): Applies an affine transformation to this view’s rendered output.
 - [transform3DEffect(\_:)](view/transform3deffect%28__%29.md): Applies a 3D transformation to this view’s rendered output.
 - [projectionEffect(\_:)](view/projectioneffect%28__%29.md): Applies a projection transformation to this view’s rendered output.
-- [ProjectionTransform](projectiontransform.md)
+- [ProjectionTransform](projectiontransform.md): A 3x3 matrix that transforms points in a plane.
 - [ContentMode](contentmode.md): Constants that define how a view’s content fills the available space.
 
 ### Masking and clipping
@@ -111,7 +112,7 @@ For design guidance, see [Materials](https://developer.apple.com/design/human-in
 - [drawingGroup(opaque:colorMode:)](view/drawinggroup%28opaque_colormode_%29.md): Composites this view’s contents into an offscreen image before final display.
 - [BlendMode](blendmode.md): Modes for compositing a view with overlapping content.
 - [ColorRenderingMode](colorrenderingmode.md): The set of possible working color spaces for color-compositing operations.
-- [CompositorContent](compositorcontent.md)
+- [CompositorContent](compositorcontent.md): A type that describes content a scene renders directly with Metal, rather than composing from SwiftUI views.
 - [CompositorContentBuilder](compositorcontentbuilder.md): A result builder for composing a collection of [CompositorContent](compositorcontent.md) elements.
 - [AnyCompositorContent](anycompositorcontent.md): Type erased compositor content.
 
@@ -120,6 +121,8 @@ For design guidance, see [Materials](https://developer.apple.com/design/human-in
 - [GeometryReader](geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [coordinateSpace(\_:)](view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpace](coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.
@@ -147,7 +150,7 @@ For design guidance, see [Materials](https://developer.apple.com/design/human-in
 - [UnitPoint](unitpoint.md): A normalized 2D point in a view’s coordinate space.
 - [UnitPoint3D](unitpoint3d.md): A normalized 3D point in a view’s coordinate space.
 - [Anchor](anchor.md): An opaque value derived from an anchor source and a particular view.
-- [DepthAlignmentID](depthalignmentid.md)
+- [DepthAlignmentID](depthalignmentid.md): A type that defines a custom depth alignment guide.
 - [Alignment3D](alignment3d.md): An alignment in all three axes.
 - [GeometryProxyCoordinateSpace3D](geometryproxycoordinatespace3d.md): A representation of a `GeometryProxy3D` which can be used for `CoordinateSpace3D` based conversions.
 

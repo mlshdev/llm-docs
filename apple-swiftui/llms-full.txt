@@ -1,10 +1,11 @@
-# Apple SwiftUI snapshot-5ae2cd850b20: full documentation
+# Apple SwiftUI snapshot-8b55d19a707e: full documentation
 
 Source: https://developer.apple.com/documentation/swiftui
-Catalog snapshot: 5ae2cd850b20ad5728652e071419f71b5604c76d38870605d23e5c435d0a59c5
-Content digest: 703f64dbbf46fa77015dc2b9add2f8d46ac554ae7c160089a93bf18774664edb
-Captured at: 2026-09-12T21:04:59.662Z
+Catalog snapshot: 8b55d19a707ef89040e675038f5d9370df5025b13779e4c7d74995445f93294d
+Content digest: af6870304bfe66f126acaccc9d5b2922f7e585e382e3bcd46dff2e79583a42cb
+Captured at: 2026-09-16T18:21:42.082Z
+
 This corpus is published as 2 retrieval-sized volumes. Read the volumes in order for the complete corpus.
 
-- [Volume 1](llms-full.001.txt): 5104 documents, 8388365 bytes, SHA-256 `ab2abfbeb0af42de6dc23ebace0df2942410c27cbe1b0f4db6085a2eb981fc06`.
-- [Volume 2](llms-full.002.txt): 2000 documents, 4399410 bytes, SHA-256 `52f36a24daaaa9ee89c2b6b5721dc602a5c56fea120b04ea2183d98b02acca7c`.
+- [Volume 1](llms-full.001.txt): 4732 documents, 8382679 bytes, SHA-256 `d9985e427479ff6938d64b4e67a7ed19f427957717014b47f8fcd2da60ca666c`.
+- [Volume 2](llms-full.002.txt): 2446 documents, 5731445 bytes, SHA-256 `37a49ca1a85937347b254cb82afd2570189a0659b309b24d17e9767074c51a4c`.

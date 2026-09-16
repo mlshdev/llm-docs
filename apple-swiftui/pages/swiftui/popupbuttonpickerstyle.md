@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/popupbuttonpickerstyle](https://developer.apple.com/documentation/swiftui/popupbuttonpickerstyle)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/popupbuttonpickerstyle
 
 # PopUpButtonPickerStyle
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** macOS 10.15+ (deprecated in 27.0)
+**Availability:** macOS 10.15+ (deprecated in 27.2)
 
 A picker style that presents the options as a menu when the user presses a button.
 

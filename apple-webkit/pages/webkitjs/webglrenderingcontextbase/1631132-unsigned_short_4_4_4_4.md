@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webglrenderingcontextbase/1631132-unsigned_short_4_4_4_4](https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1631132-unsigned_short_4_4_4_4)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1631132-unsigned_short_4_4_4_4
 
 # UNSIGNED_SHORT_4_4_4_4
 

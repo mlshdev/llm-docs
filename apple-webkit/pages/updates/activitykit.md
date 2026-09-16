@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/updates/activitykit](https://developer.apple.com/documentation/updates/activitykit)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/updates/activitykit
 
 # ActivityKit updates
 
@@ -45,4 +46,4 @@ Browse notable changes in [ActivityKit](https://developer.apple.com/documentatio
 - [AuthenticationServices updates](authenticationservices.md): Learn about important changes to AuthenticationServices.
 - [AVFAudio updates](avfaudio.md): Learn about important changes to AVFAudio.
 - [AVFoundation updates](avfoundation.md): Learn about important changes to AVFoundation.
-- [Background Tasks updates](backgroundtasks.md): Learn about important changes in Background Tasks.
+- [AVKit updates](avkit.md): Learn about important changes to AVKit.

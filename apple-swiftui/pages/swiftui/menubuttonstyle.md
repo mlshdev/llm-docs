@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/menubuttonstyle](https://developer.apple.com/documentation/swiftui/menubuttonstyle)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/menubuttonstyle
 
 # MenuButtonStyle
 
 **Framework:** SwiftUI  
 **Kind:** Protocol  
-**Availability:** macOS 10.15+ (deprecated in 27.0)
+**Availability:** macOS 10.15+ (deprecated in 27.2)
 
 A custom specification for the appearance and interaction of a menu button.
 

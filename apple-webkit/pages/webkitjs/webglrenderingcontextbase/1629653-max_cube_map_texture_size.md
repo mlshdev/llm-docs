@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webglrenderingcontextbase/1629653-max_cube_map_texture_size](https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1629653-max_cube_map_texture_size)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1629653-max_cube_map_texture_size
 
 # MAX_CUBE_MAP_TEXTURE_SIZE
 

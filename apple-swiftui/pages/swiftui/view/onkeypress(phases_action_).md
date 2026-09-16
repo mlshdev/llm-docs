@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/onkeypress(phases:action:)](https://developer.apple.com/documentation/swiftui/view/onkeypress(phases:action:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/onkeypress(phases:action:)
 
 # onKeyPress(phases:action:)
 
@@ -26,6 +27,21 @@ nonisolated func onKeyPress(phases: KeyPress.Phases = [.down, .repeat], action: 
 
 A modified view that binds hardware keyboard input when focused.
 
+<a id="discussion"></a>
+
+## Discussion
+
+The following example shows a hint while someone holds the Option key, and hides it again when they let go. It returns `.ignored` so that other views still receive the event:
+
+```swift
+CanvasView()
+    .focusable()
+    .onKeyPress(phases: [.down, .up]) { keyPress in
+        isShowingHint = keyPress.modifiers.contains(.option)
+        return .ignored
+    }
+```
+
 ## See Also
 
 ### Responding to keyboard input
@@ -34,4 +50,4 @@ A modified view that binds hardware keyboard input when focused.
 - [onKeyPress(\_:phases:action:)](onkeypress%28__phases_action_%29.md): Performs an action if the user presses a key on a hardware keyboard while the view has focus.
 - [onKeyPress(characters:phases:action:)](onkeypress%28characters_phases_action_%29.md): Performs an action if the user presses one or more keys on a hardware keyboard while the view has focus.
 - [onKeyPress(keys:phases:action:)](onkeypress%28keys_phases_action_%29.md): Performs an action if the user presses one or more keys on a hardware keyboard while the view has focus.
-- [KeyPress](../keypress.md)
+- [KeyPress](../keypress.md): A hardware keyboard event that a focused view receives.

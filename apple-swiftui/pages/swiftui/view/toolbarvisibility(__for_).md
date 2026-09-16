@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/toolbarvisibility(_:for:)](https://developer.apple.com/documentation/swiftui/view/toolbarvisibility(_:for:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/toolbarvisibility(_:for:)
 
 # toolbarVisibility(\_:for:)
 
@@ -69,4 +70,4 @@ Depending on the specified bars, the requested visibility may not be able to be 
 - [toolbar(\_:for:)](toolbar%28__for_%29.md): Deprecated. Specifies the visibility of a bar managed by SwiftUI.
 - [toolbarBackgroundVisibility(\_:for:)](toolbarbackgroundvisibility%28__for_%29.md): Specifies the preferred visibility of backgrounds on a bar managed by SwiftUI.
 - [ToolbarPlacement](../toolbarplacement.md): The placement of a toolbar.
-- [ContentToolbarPlacement](../contenttoolbarplacement.md)
+- [ContentToolbarPlacement](../contenttoolbarplacement.md): A region of the interface that hosts its own toolbar content.

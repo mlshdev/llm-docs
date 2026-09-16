@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/food-truck-building-a-swiftui-multiplatform-app](https://developer.apple.com/documentation/swiftui/food-truck-building-a-swiftui-multiplatform-app)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/food-truck-building-a-swiftui-multiplatform-app
 
 # Food Truck: Building a SwiftUI multiplatform app (Swift)
 

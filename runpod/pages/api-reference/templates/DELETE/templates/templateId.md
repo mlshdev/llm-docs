@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference/templates/DELETE/templates/templateId.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/api-reference/templates/DELETE/templates/templateId.mdx)
+> Pinned source for Runpod main: [api-reference/templates/DELETE/templates/templateId.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference/templates/DELETE/templates/templateId.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference/templates/DELETE/templates/templateId
 
 # Delete a template

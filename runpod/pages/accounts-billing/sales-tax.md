@@ -1,0 +1,49 @@
+> Pinned source for Runpod main: [accounts-billing/sales-tax.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/accounts-billing/sales-tax.mdx)
+> Canonical documentation: https://docs.runpod.io/accounts-billing/sales-tax
+
+# Sales tax on Runpod purchases
+
+Understand how sales tax applies to Runpod purchases, what determines your rate, and how it appears on your receipts.
+
+Digital sales tax applies to purchases of Runpod credits in certain jurisdictions, with varying rates by both country and state or province. B2B transactions may be exempt from digital sales taxes applicable to consumers only. Runpod remits the tax directly to the relevant tax authority.
+
+***
+
+## What determines whether you're taxed
+
+Two things determine your rate: your billing address, and your payment method. If either is registered in a jurisdiction where Runpod collects tax, checkout adds the applicable rate to your purchase.
+
+***
+
+## Tax-registered businesses
+
+If your business is registered for tax in your jurisdiction, adding a valid tax ID may exempt you from tax.
+
+See [Adding your tax ID](https://docs.runpod.io/accounts-billing/add-tax-id) for instructions.
+
+***
+
+## How tax affects your credits
+
+Where tax applies, Runpod always charges it **on top of** your credit purchase. It does not reduce the credits you receive.
+
+- For example, in a jurisdiction with an 18% tax rate, a $100 credit purchase results in a charge of **$118**. You still receive **$100 in credits**.
+- The tax amount appears as a separate line item on your receipt.
+
+Tax does not affect your credit balance. $100 purchased always equals $100 in credits, regardless of the tax rate that applies to your account.
+
+***
+
+## Auto-reload
+
+If you have auto-reload enabled, tax applies to each reload in the same way it applies to manual purchases. Tax adds to the reload amount:
+
+- For example, in a jurisdiction with an 18% tax rate, a $100 auto-reload results in a charge of **$118**. You still receive **$100 in credits**.
+
+The reload threshold and amount you configure refer to credits, not the total charge. Factor in the applicable tax rate when estimating your billing.
+
+***
+
+## Receipts
+
+Tax appears as a separate line item on your receipt email and on the [billing page](https://www.console.runpod.io/user/billing) in the Runpod console.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webglrenderingcontextbase/1628842-depth_clear_value](https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1628842-depth_clear_value)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1628842-depth_clear_value
 
 # DEPTH_CLEAR_VALUE
 

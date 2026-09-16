@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/ciproduct/relationships-data.dictionary/primaryrepositories-data.dictionary/data-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/ciproduct/relationships-data.dictionary/primaryrepositories-data.dictionary/data-data.dictionary)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/ciproduct/relationships-data.dictionary/primaryrepositories-data.dictionary/data-data.dictionary
 
 # CiProduct.Relationships.PrimaryRepositories.Data
 

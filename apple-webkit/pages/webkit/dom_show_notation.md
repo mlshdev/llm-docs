@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/dom_show_notation](https://developer.apple.com/documentation/webkit/dom_show_notation)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/dom_show_notation
 
 # DOM_SHOW_NOTATION (Swift)
 

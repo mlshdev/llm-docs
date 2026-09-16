@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/configuring-webhook-notifications](https://developer.apple.com/documentation/appstoreconnectapi/configuring-webhook-notifications)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/configuring-webhook-notifications
 
 # Configuring and parsing App Store Connect API webhook notifications
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginekit/bescrollview](https://developer.apple.com/documentation/browserenginekit/bescrollview)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/browserenginekit/bescrollview
 
 # BEScrollView (Swift)
 
@@ -50,6 +51,8 @@ In any of these scenarios, set the scroll view’s [delegate](bescrollview/deleg
 - [Hashable](https://developer.apple.com/documentation/swift/hashable)
 - [NSCoding](https://developer.apple.com/documentation/foundation/nscoding)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIAccessibilityIdentification](https://developer.apple.com/documentation/uikit/uiaccessibilityidentification)
 - [UIActivityItemsConfigurationProviding](https://developer.apple.com/documentation/uikit/uiactivityitemsconfigurationproviding)
 - [UIAppearance](https://developer.apple.com/documentation/uikit/uiappearance)

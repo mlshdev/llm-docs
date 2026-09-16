@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/pastebutton/init(supportedcontenttypes:validator:payloadaction:)](https://developer.apple.com/documentation/swiftui/pastebutton/init(supportedcontenttypes:validator:payloadaction:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/pastebutton/init(supportedcontenttypes:validator:payloadaction:)
 
 # init(supportedContentTypes:validator:payloadAction:)
 
 **Framework:** SwiftUI  
 **Kind:** Initializer  
-**Availability:** macOS 11.0+ (deprecated in 27.0)
+**Availability:** macOS 11.0+ (deprecated in 27.2)
 
 Creates a Paste button that accepts specific types of data from the pasteboard, performing a custom validation of the data before sending it to your app.
 

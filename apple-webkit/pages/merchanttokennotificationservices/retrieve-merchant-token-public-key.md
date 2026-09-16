@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/merchanttokennotificationservices/retrieve-merchant-token-public-key](https://developer.apple.com/documentation/merchanttokennotificationservices/retrieve-merchant-token-public-key)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/merchanttokennotificationservices/retrieve-merchant-token-public-key
 
 # Retrieve Merchant Token Public Key
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/unsafemutablepointer/moveassign(from:count:)](https://developer.apple.com/documentation/swift/unsafemutablepointer/moveassign(from:count:))
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/unsafemutablepointer/moveassign(from:count:)
 
 # moveAssign(from:count:)
 

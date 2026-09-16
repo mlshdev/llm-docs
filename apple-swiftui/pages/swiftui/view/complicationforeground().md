@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/complicationforeground()](https://developer.apple.com/documentation/swiftui/view/complicationforeground())
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/complicationforeground()
 
 # complicationForeground()
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Promotes this view to the foreground in a complication.
 

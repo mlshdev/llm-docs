@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/troubleshooting/troubleshooting-502-errors.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/pods/troubleshooting/troubleshooting-502-errors.mdx)
+> Pinned source for Runpod main: [pods/troubleshooting/troubleshooting-502-errors.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/pods/troubleshooting/troubleshooting-502-errors.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/troubleshooting/troubleshooting-502-errors
 
 # 502 errors
@@ -17,7 +17,7 @@ The first step to troubleshooting a 502 error is to check whether your Pod has a
 
 If a GPU is attached, you will see it under the Pods screen (e.g. 1 x A6000). If a GPU is not attached, this number will be 0. Runpod does allow you to spin up a Pod with 0 GPUs so that you can connect to it via a Terminal or CloudSync to access data. However, the options to connect to Runpod via the web interface will be nonfunctional, even if they are lit up.
 
-![](https://raw.githubusercontent.com/runpod/docs/ceb79977df03b21e40ceaec3fdea8c9869897b7e/images/1950025a-fb4c0dd-image-a00848a71ff50d8ce10e5e7f35cc33ff.png)
+![](https://raw.githubusercontent.com/runpod/docs/1ac8c64f9623ca776ec994c36b22d4329facbb1d/images/1950025a-fb4c0dd-image-a00848a71ff50d8ce10e5e7f35cc33ff.png)
 
 ### Check your Pod's logs
 
@@ -25,7 +25,7 @@ After confirming that your Pod has a GPU attached, the next step is to check you
 
 1. **Access your Pod's logs**: You can view the logs from the Pod's settings in the user interface.
 
-2. ![](https://raw.githubusercontent.com/runpod/docs/ceb79977df03b21e40ceaec3fdea8c9869897b7e/images/ef293f09-3500eba-image-dc2d7107a41028eb6ed2c97919c4e61c.png)
+2. ![](https://raw.githubusercontent.com/runpod/docs/1ac8c64f9623ca776ec994c36b22d4329facbb1d/images/ef293f09-3500eba-image-dc2d7107a41028eb6ed2c97919c4e61c.png)
 
    **Look for errors**: Browse through the logs to find any error messages that may provide clues about why you're experiencing a 502 error.
 

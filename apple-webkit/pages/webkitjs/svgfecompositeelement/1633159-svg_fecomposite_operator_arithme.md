@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgfecompositeelement/1633159-svg_fecomposite_operator_arithme](https://developer.apple.com/documentation/webkitjs/svgfecompositeelement/1633159-svg_fecomposite_operator_arithme)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgfecompositeelement/1633159-svg_fecomposite_operator_arithme
 
 # SVG_FECOMPOSITE_OPERATOR_ARITHMETIC
 

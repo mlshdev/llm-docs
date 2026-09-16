@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/uint8/random(in:using:)-3zjsj](https://developer.apple.com/documentation/swift/uint8/random(in:using:)-3zjsj)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/uint8/random(in:using:)-3zjsj
 
 # random(in:using:)
 

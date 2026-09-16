@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/domwindow/1778102-webkitnotifications](https://developer.apple.com/documentation/webkitjs/domwindow/1778102-webkitnotifications)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/domwindow/1778102-webkitnotifications
 
 # webkitNotifications
 

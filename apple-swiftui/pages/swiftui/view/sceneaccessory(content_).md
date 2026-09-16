@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/sceneaccessory(content:)](https://developer.apple.com/documentation/swiftui/view/sceneaccessory(content:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/sceneaccessory(content:)
 
 # sceneAccessory(content:)
 
@@ -84,5 +85,6 @@ struct RootView: View {
 
 ### Presenting content on an external display
 
+- [CameraCaptureAccessory](../cameracaptureaccessory.md): Beta. A scene accessory that presents content during camera capture.
 - [SceneAccessoryContent](../sceneaccessorycontent.md): Conforming types represent items which define content for scene accessories.
 - [ExternalNonInteractiveAccessory](../externalnoninteractiveaccessory.md): A scene accessory that presents non-interactive content on an external display.

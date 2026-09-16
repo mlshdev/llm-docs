@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view-presentation](https://developer.apple.com/documentation/swiftui/view-presentation)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view-presentation
 
 # Presentation modifiers
 
@@ -40,14 +41,14 @@ For more information about how to use these modifiers, see [Modal presentations]
 - [confirmationDialog(\_:isPresented:titleVisibility:actions:)](view/confirmationdialog%28__ispresented_titlevisibility_actions_%29.md): Presents a confirmation dialog when a given condition is true, using a localized string resource for the title.
 - [confirmationDialog(\_:isPresented:titleVisibility:presenting:actions:)](view/confirmationdialog%28__ispresented_titlevisibility_presenting_actions_%29.md): Presents a confirmation dialog using data to produce the dialog’s content and a localized string resource for the title.
 - [confirmationDialog(\_:item:titleVisibility:actions:)](view/confirmationdialog%28__item_titlevisibility_actions_%29.md): Presents a confirmation dialog using data to produce the dialog’s content and a text view for the title.
-- [dismissalConfirmationDialog(\_:shouldPresent:actions:)](view/dismissalconfirmationdialog%28__shouldpresent_actions_%29.md): Presents a confirmation dialog when a dismiss action has been triggered.
+- [dismissalConfirmationDialog(\_:shouldPresent:actions:)](view/dismissalconfirmationdialog%28__shouldpresent_actions_%29.md): Presents a confirmation dialog upon an attempt to dismiss the window for this view.
 
 ### Confirmation dialogs with a message
 
 - [confirmationDialog(\_:isPresented:titleVisibility:actions:message:)](view/confirmationdialog%28__ispresented_titlevisibility_actions_message_%29.md): Presents a confirmation dialog with a message when a given condition is true, using a localized string resource for the title.
 - [confirmationDialog(\_:isPresented:titleVisibility:presenting:actions:message:)](view/confirmationdialog%28__ispresented_titlevisibility_presenting_actions_message_%29.md): Presents a confirmation dialog with a message using data to produce the dialog’s content and a localized string resource for the title.
 - [confirmationDialog(\_:item:titleVisibility:actions:message:)](view/confirmationdialog%28__item_titlevisibility_actions_message_%29.md): Presents a confirmation dialog with a message using data to produce the dialog’s content and a text view for the message.
-- [dismissalConfirmationDialog(\_:shouldPresent:actions:message:)](view/dismissalconfirmationdialog%28__shouldpresent_actions_message_%29.md): Presents a confirmation dialog when a dismiss action has been triggered.
+- [dismissalConfirmationDialog(\_:shouldPresent:actions:message:)](view/dismissalconfirmationdialog%28__shouldpresent_actions_message_%29.md): Presents a confirmation dialog upon an attempt to dismiss the window for this view.
 
 ### Dialog configuration
 
@@ -194,6 +195,10 @@ For more information about how to use these modifiers, see [Modal presentations]
 - [photosSharedAlbumCreationSheet(isPresented:defaultTitle:defaultSharingPolicy:photoLibrary:onCompletion:)](view/photossharedalbumcreationsheet%28ispresented_defaulttitle_defaultsharingpolicy_photolibrary_oncompletion_%29.md): Presents a view for allowing the user to create a new shared album.
 - [photosSharedAlbumCustomizationSheet(isPresented:albumIdentifier:photoLibrary:onCompletion:)](view/photossharedalbumcustomizationsheet%28ispresented_albumidentifier_photolibrary_oncompletion_%29.md): Presents a view for allowing the user to customize a specified shared album.
 - [photosSharedAlbumPostingSheet(isPresented:items:defaultAlbumIdentifier:photoLibrary:completion:)](view/photossharedalbumpostingsheet%28ispresented_items_defaultalbumidentifier_photolibrary_completion_%29.md): Presents an “Add to Shared Album” sheet that allows the user to post the given items to a shared album.
+- [photosReferenceImageViewer(asset:onProcessingCompletion:)](view/photosreferenceimageviewer%28asset_onprocessingcompletion_%29.md): Presents an image viewer for an asset in a photo library that contains Apple Reference Image data when `isPresented` is set to true.
+- [photosReferenceImageViewer(fileURL:onProcessingCompletion:)](view/photosreferenceimageviewer%28fileurl_onprocessingcompletion_%29.md): Presents an image viewer for a given image file containing Apple Reference Image data when `fileURL` is set.
+- [photosReferenceImageViewer(pickerItem:onProcessingCompletion:)](view/photosreferenceimageviewer%28pickeritem_onprocessingcompletion_%29.md): Presents an image viewer for an image containing Apple Reference Image data selected from the Photos picker when `isPresented` is set to true.
+- [photosReferenceImageViewer(pickerResult:onProcessingCompletion:)](view/photosreferenceimageviewer%28pickerresult_onprocessingcompletion_%29.md): Presents an image viewer for the resulting image containing Apple Reference Image data from `PHPickerViewController` when `isPresented` is set to true.
 
 ### Translation
 

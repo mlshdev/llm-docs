@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/navigationlink/init(destinationname:tag:selection:label:)](https://developer.apple.com/documentation/swiftui/navigationlink/init(destinationname:tag:selection:label:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/navigationlink/init(destinationname:tag:selection:label:)
 
 # init(destinationName:tag:selection:label:)
 
 **Framework:** SwiftUI  
 **Kind:** Initializer  
-**Availability:** watchOS 6.0+ (deprecated in 27.0)
+**Availability:** watchOS 6.0+ (deprecated in 27.2)
 
 Creates a navigation link that presents a view from a WatchKit storyboard when a bound selection variable matches a value you provide.
 

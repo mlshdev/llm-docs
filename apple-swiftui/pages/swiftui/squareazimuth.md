@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/squareazimuth](https://developer.apple.com/documentation/swiftui/squareazimuth)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/squareazimuth
 
 # SquareAzimuth
 
@@ -18,7 +19,7 @@ A type describing what direction something is being viewed from along the horizo
 
 ### Structures
 
-- [SquareAzimuth.Set](squareazimuth/set.md)
+- [SquareAzimuth.Set](squareazimuth/set.md): A set of horizontal directions that specify how someone can look at a volume.
 
 ### Enumeration Cases
 

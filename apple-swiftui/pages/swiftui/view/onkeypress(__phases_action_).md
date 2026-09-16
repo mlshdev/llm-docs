@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/onkeypress(_:phases:action:)](https://developer.apple.com/documentation/swiftui/view/onkeypress(_:phases:action:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/onkeypress(_:phases:action:)
 
 # onKeyPress(\_:phases:action:)
 
@@ -41,4 +42,4 @@ SwiftUI performs the action for the specified event phases.
 - [onKeyPress(phases:action:)](onkeypress%28phases_action_%29.md): Performs an action if the user presses any key on a hardware keyboard while the view has focus.
 - [onKeyPress(characters:phases:action:)](onkeypress%28characters_phases_action_%29.md): Performs an action if the user presses one or more keys on a hardware keyboard while the view has focus.
 - [onKeyPress(keys:phases:action:)](onkeypress%28keys_phases_action_%29.md): Performs an action if the user presses one or more keys on a hardware keyboard while the view has focus.
-- [KeyPress](../keypress.md)
+- [KeyPress](../keypress.md): A hardware keyboard event that a focused view receives.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/coordinatespace](https://developer.apple.com/documentation/swiftui/coordinatespace)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/coordinatespace
 
 # CoordinateSpace
 
@@ -47,6 +48,8 @@ You don’t typically use `CoordinateSpace` directly. Instead, use the static pr
 - [GeometryReader](geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [coordinateSpace(\_:)](view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpaceProtocol](coordinatespaceprotocol.md): A frame of reference within the layout system.

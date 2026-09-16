@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/enhancing-your-app-content-with-tab-navigation](https://developer.apple.com/documentation/swiftui/enhancing-your-app-content-with-tab-navigation)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/enhancing-your-app-content-with-tab-navigation
 
 # Enhancing your app’s content with tab navigation
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/fixedwidthinteger/&__=(_:_:)-5s3cx](https://developer.apple.com/documentation/swift/fixedwidthinteger/&__=(_:_:)-5s3cx)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/fixedwidthinteger/&__=(_:_:)-5s3cx
 
 # &\<\<=(\_:\_:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/animation/timingcurve(_:duration:)](https://developer.apple.com/documentation/swiftui/animation/timingcurve(_:duration:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/animation/timingcurve(_:duration:)
 
 # timingCurve(\_:duration:)
 
@@ -16,6 +17,7 @@ static func timingCurve(_ curve: UnitCurve, duration: TimeInterval) -> Animation
 
 ## Parameters
 
+- `curve`: A curve that describes the speed of the animation over its duration.
 - `duration`: The duration of the animation, in seconds.
 
 ## See Also

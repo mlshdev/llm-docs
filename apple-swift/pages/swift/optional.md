@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/optional](https://developer.apple.com/documentation/swift/optional)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/optional
 
 # Optional
 
@@ -179,7 +180,7 @@ Unconditionally unwrapping a `nil` instance with `!` triggers a runtime error.
 
 ### Type Aliases
 
-- [Optional.PartiallyGenerated](optional/partiallygenerated.md): Conforms when `Wrapped` conforms to `Generable`.
+- [Optional.PartiallyGenerated](optional/partiallygenerated.md): Conforms when `Wrapped` conforms to `Generable`. A representation of partially generated content for the wrapped type.
 - [Optional.Specification](optional/specification.md): Conforms when `Wrapped` conforms to `_IntentValue`.
 - [Optional.TableRowBody](optional/tablerowbody.md): Conforms when `Wrapped` conforms to `TableColumnContent`.
 - [Optional.TicksCollection](optional/tickscollection.md): Conforms when `Wrapped` conforms to `SliderTickContent`.

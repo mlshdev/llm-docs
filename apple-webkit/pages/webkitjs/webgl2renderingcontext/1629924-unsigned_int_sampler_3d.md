@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webgl2renderingcontext/1629924-unsigned_int_sampler_3d](https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1629924-unsigned_int_sampler_3d)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1629924-unsigned_int_sampler_3d
 
 # UNSIGNED_INT_SAMPLER_3D
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/uihostingcontroller/init(coder:rootview:)](https://developer.apple.com/documentation/swiftui/uihostingcontroller/init(coder:rootview:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/uihostingcontroller/init(coder:rootview:)
 
 # init(coder:rootView:)
 
@@ -16,6 +17,7 @@ Creates a hosting controller object from an archive and the specified SwiftUI vi
 
 ## Parameters
 
+- `aDecoder`: The decoder to use during initialization.
 - `rootView`: The root view of the SwiftUI view hierarchy that you want to manage using this view controller.
 
 <a id="return-value"></a>

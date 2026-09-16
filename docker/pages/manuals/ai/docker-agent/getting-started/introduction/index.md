@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/getting-started/introduction/index.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/_vendor/github.com/docker/docker-agent/docs/getting-started/introduction/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/getting-started/introduction/index.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/_vendor/github.com/docker/docker-agent/docs/getting-started/introduction/index.md)
 
 *Docker Agent is a multi-agent runtime that lets you build, run, and share AI agents with a YAML or HCL config — no glue code required.*
 

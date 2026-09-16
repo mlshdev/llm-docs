@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/referencefiledocument](https://developer.apple.com/documentation/swiftui/referencefiledocument)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/referencefiledocument
 
 # ReferenceFileDocument
 
 **Framework:** SwiftUI  
 **Kind:** Protocol  
-**Availability:** iOS 14.0+ (deprecated in 27.0) · iPadOS 14.0+ (deprecated in 27.0) · Mac Catalyst 14.0+ (deprecated in 27.0) · macOS 11.0+ (deprecated in 27.0) · visionOS 1.0+
+**Availability:** iOS 14.0+ (deprecated in 27.2) · iPadOS 14.0+ (deprecated in 27.2) · Mac Catalyst 14.0+ (deprecated in 27.2) · macOS 11.0+ (deprecated in 27.2) · visionOS 1.0+
 
 A type that you use to serialize reference type documents to and from file.
 
@@ -25,6 +26,8 @@ To store a document as a reference type — like a class — create a type that 
 - Provides a list of the content types that the document can read from and write to by defining [readableContentTypes](referencefiledocument/readablecontenttypes.md). If the list of content types that the document can write to is different from those that it reads from, you can optionally also define [writableContentTypes](referencefiledocument/writablecontenttypes.md).
 - Loads documents from file in the [init(configuration:)](referencefiledocument/init%28configuration_%29.md) initializer.
 - Stores documents to file by providing a snapshot of the document’s content in the [snapshot(contentType:)](referencefiledocument/snapshot%28contenttype_%29.md) method, and then serializing that content in the [fileWrapper(snapshot:configuration:)](referencefiledocument/filewrapper%28snapshot_configuration_%29.md) method.
+
+Because `ReferenceFileDocument` is a reference type, SwiftUI can’t detect changes to your document’s properties on its own. Register an undo action with the environment’s `UndoManager` whenever you mutate the document, for example by calling `UndoManager/registerUndo(withTarget:handler:)`.
 
 Ensure that types that conform to this protocol are `Sendable`. In particular, SwiftUI calls the protocol’s methods from different isolation domains. Don’t perform serialization and deserialization on `MainActor`.
 
@@ -56,7 +59,7 @@ final class PDFDocument: ReferenceFileDocument {
 
 > **Important**
 
-> If you store your document as a value type — like a structure — use [FileDocument](filedocument.md) instead.
+> If you store your document as a value type — like a structure — use [FileDocument](filedocument.md) instead. Because a value type’s changes are always visible to SwiftUI, undo management and the registration of undo actions are automatic.
 
 ## Topics
 

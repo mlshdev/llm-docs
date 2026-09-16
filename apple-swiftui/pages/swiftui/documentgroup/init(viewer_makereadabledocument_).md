@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/documentgroup/init(viewer:makereadabledocument:)](https://developer.apple.com/documentation/swiftui/documentgroup/init(viewer:makereadabledocument:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/documentgroup/init(viewer:makereadabledocument:)
 
 # init(viewer:makeReadableDocument:)
 
@@ -17,6 +18,7 @@ nonisolated init(@ContentBuilder viewer: @escaping (Document) -> Content, makeRe
 ## Parameters
 
 - `viewer`: The viewing UI for the provided document.
+- `makeReadableDocument`: A closure that creates the document instance. Throw `CancellationError` to indicate that document opening was cancelled.
 
 ## See Also
 

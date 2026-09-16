@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/toolbars](https://developer.apple.com/documentation/swiftui/toolbars)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbars
 
 # Toolbars
 
@@ -54,7 +55,7 @@ For design guidance, see [Toolbars](https://developer.apple.com/design/human-int
 - [toolbarVisibility(\_:for:)](view/toolbarvisibility%28__for_%29.md): Specifies the visibility of a bar managed by SwiftUI.
 - [toolbarBackgroundVisibility(\_:for:)](view/toolbarbackgroundvisibility%28__for_%29.md): Specifies the preferred visibility of backgrounds on a bar managed by SwiftUI.
 - [ToolbarPlacement](toolbarplacement.md): The placement of a toolbar.
-- [ContentToolbarPlacement](contenttoolbarplacement.md)
+- [ContentToolbarPlacement](contenttoolbarplacement.md): A region of the interface that hosts its own toolbar content.
 
 ### Specifying the role of toolbar content
 
@@ -100,6 +101,13 @@ For design guidance, see [Toolbars](https://developer.apple.com/design/human-int
 - [ToolbarMinimizationRestoration](toolbarminimizationrestoration.md): The restoration behavior during toolbar minimization.
 - [toolbarMinimizationSafeAreaAdjustment(\_:for:)](view/toolbarminimizationsafeareaadjustment%28__for_%29.md): Sets the safe area adjustment for the specified bars during minimization.
 - [ToolbarMinimizationSafeAreaAdjustment](toolbarminimizationsafeareaadjustment.md): The safe area adjustment during toolbar minimization.
+
+### Configuring vertical toolbar behavior
+
+- [toolbarVerticalBehavior(\_:)](view/toolbarverticalbehavior%28__%29.md): Beta. Sets the behavior for the vertical bar.
+- [ToolbarVerticalBehavior](toolbarverticalbehavior.md): Beta. A behavior that determines whether the vertical bar is used.
+- [toolbarVerticalCompressionBehavior(\_:)](view/toolbarverticalcompressionbehavior%28__%29.md): Beta. Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
+- [ToolbarVerticalCompressionBehavior](toolbarverticalcompressionbehavior.md): Beta. A behavior that determines how bars compress when the system places different types of bars together and space is constrained.
 
 ## See Also
 

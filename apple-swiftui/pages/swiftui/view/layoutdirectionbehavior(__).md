@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/layoutdirectionbehavior(_:)](https://developer.apple.com/documentation/swiftui/view/layoutdirectionbehavior(_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/layoutdirectionbehavior(_:)
 
 # layoutDirectionBehavior(\_:)
 
@@ -40,4 +41,4 @@ To override the layout direction for a specific view, use the [environment(\_:\_
 - [LayoutDirectionBehavior](../layoutdirectionbehavior.md): A description of what should happen when the layout direction changes.
 - [layoutDirection](../environmentvalues/layoutdirection.md): The layout direction associated with the current environment.
 - [LayoutDirection](../layoutdirection.md): A direction in which SwiftUI can lay out content.
-- [LayoutRotationUnaryLayout](../layoutrotationunarylayout.md)
+- [LayoutRotationUnaryLayout](../layoutrotationunarylayout.md): A layout that rotates the space containing a view.

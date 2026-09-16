@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/windowplacement/init(x:y:width:height:)](https://developer.apple.com/documentation/swiftui/windowplacement/init(x:y:width:height:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/windowplacement/init(x:y:width:height:)
 
 # init(x:y:width:height:)
 

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/team/members](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/api-reference/openapi.yaml%23get%20/api/v0/team/members)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/team/members](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/api-reference/openapi.yaml%23get%20/api/v0/team/members)
 > Canonical documentation: https://docs.vast.ai/api-reference/team/show-team-members
 
 # show team members

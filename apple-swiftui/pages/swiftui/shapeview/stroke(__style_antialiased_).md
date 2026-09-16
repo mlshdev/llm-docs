@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/shapeview/stroke(_:style:antialiased:)](https://developer.apple.com/documentation/swiftui/shapeview/stroke(_:style:antialiased:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/shapeview/stroke(_:style:antialiased:)
 
 # stroke(\_:style:antialiased:)
 
@@ -18,6 +19,7 @@ Traces the outline of this shape with a color or gradient.
 
 - `content`: The color or gradient with which to stroke this shape.
 - `style`: The stroke characteristics — such as the line’s width and whether the stroke is dashed — that determine how to render this shape.
+- `antialiased`: A Boolean value that specifies whether to allow antialiasing. Pass `true` to allow antialising, otherwise `false`.
 
 <a id="return-value"></a>
 

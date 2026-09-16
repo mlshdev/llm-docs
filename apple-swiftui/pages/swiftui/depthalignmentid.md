@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/depthalignmentid](https://developer.apple.com/documentation/swiftui/depthalignmentid)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/depthalignmentid
 
 # DepthAlignmentID
 
@@ -6,10 +7,45 @@
 **Kind:** Protocol  
 **Availability:** visionOS 1.0+
 
+A type that defines a custom depth alignment guide.
+
 ## Declaration
 
 ```swift
 protocol DepthAlignmentID
+```
+
+<a id="overview"></a>
+
+## Overview
+
+SwiftUI provides guides for the front, center, and back of a view. Conform to this protocol when you need to align views on some other plane along the depth axis, the way [AlignmentID](alignmentid.md) lets you add guides across width and height.
+
+Implement [defaultValue(in:)](depthalignmentid/defaultvalue%28in_%29.md) to say where the guide falls in a view that does not set it, then wrap the type in a [DepthAlignment](depthalignment.md) so containers can align to it:
+
+```swift
+private enum FrontThird: DepthAlignmentID {
+    static func defaultValue(in context: ViewDimensions3D) -> CGFloat {
+        context.size.depth / 3
+    }
+}
+
+extension DepthAlignment {
+    static let frontThird = DepthAlignment(FrontThird.self)
+}
+```
+
+A layout then aligns its subviews on the new guide, and any subview can override the default with [alignmentGuide(\_:computeValue:)](view/alignmentguide%28__computevalue_%29.md):
+
+```swift
+let shelf = HStackLayout().depthAlignment(.frontThird)
+shelf {
+    Model3D(named: "lamp")
+    Model3D(named: "table")
+        .alignmentGuide(.frontThird) { context in
+            context.size.depth / 2
+        }
+}
 ```
 
 ## Topics

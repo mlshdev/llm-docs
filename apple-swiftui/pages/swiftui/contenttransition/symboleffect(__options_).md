@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/contenttransition/symboleffect(_:options:)](https://developer.apple.com/documentation/swiftui/contenttransition/symboleffect(_:options:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/contenttransition/symboleffect(_:options:)
 
 # symbolEffect(\_:options:)
 
@@ -13,6 +14,11 @@ Creates a content transition that applies the symbol Replace animation to symbol
 ```swift
 static func symbolEffect<T>(_ effect: T, options: SymbolEffectOptions = .default) -> ContentTransition where T : ContentTransitionSymbolEffect, T : SymbolEffect
 ```
+
+## Parameters
+
+- `effect`: The symbol effect value.
+- `options`: A set of options that configure how effects apply to symbol-based images.
 
 <a id="return-value"></a>
 

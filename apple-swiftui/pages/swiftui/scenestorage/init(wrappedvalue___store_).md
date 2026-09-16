@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/scenestorage/init(wrappedvalue:_:store:)](https://developer.apple.com/documentation/swiftui/scenestorage/init(wrappedvalue:_:store:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/scenestorage/init(wrappedvalue:_:store:)
 
 # init(wrappedValue:\_:store:)
 
@@ -18,6 +19,7 @@ init(wrappedValue: Value = TabViewCustomization(), _ key: String, store: UserDef
 
 - `wrappedValue`: The default value if the customization is not available for the given key.
 - `key`: A key used to save and restore the value.
+- `store`: The user defaults store to read and write to. A value of `nil` will use the user default store from the environment.
 
 <a id="discussion"></a>
 

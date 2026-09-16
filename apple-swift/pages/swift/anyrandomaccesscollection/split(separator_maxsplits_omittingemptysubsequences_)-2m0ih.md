@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/anyrandomaccesscollection/split(separator:maxsplits:omittingemptysubsequences:)-2m0ih](https://developer.apple.com/documentation/swift/anyrandomaccesscollection/split(separator:maxsplits:omittingemptysubsequences:)-2m0ih)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/anyrandomaccesscollection/split(separator:maxsplits:omittingemptysubsequences:)-2m0ih
 
 # split(separator:maxSplits:omittingEmptySubsequences:)
 

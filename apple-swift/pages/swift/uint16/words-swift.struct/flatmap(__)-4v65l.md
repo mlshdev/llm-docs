@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/uint16/words-swift.struct/flatmap(_:)-4v65l](https://developer.apple.com/documentation/swift/uint16/words-swift.struct/flatmap(_:)-4v65l)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/uint16/words-swift.struct/flatmap(_:)-4v65l
 
 # flatMap(\_:)
 

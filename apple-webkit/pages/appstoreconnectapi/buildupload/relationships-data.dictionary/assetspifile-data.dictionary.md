@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/buildupload/relationships-data.dictionary/assetspifile-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/buildupload/relationships-data.dictionary/assetspifile-data.dictionary)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/buildupload/relationships-data.dictionary/assetspifile-data.dictionary
 
 # BuildUpload.Relationships.AssetSpiFile
 

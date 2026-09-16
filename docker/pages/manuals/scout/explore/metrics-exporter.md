@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/explore/metrics-exporter.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/scout/explore/metrics-exporter.md)
+> Pinned source for Docker main: [content/manuals/scout/explore/metrics-exporter.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/scout/explore/metrics-exporter.md)
 
 # Docker Scout metrics exporter
 
@@ -152,16 +152,10 @@ The Prometheus server runs in a Docker container and is accessible on port 9090.
 After a few seconds, you should see the metrics endpoint as a target in the
 Prometheus UI at <http://localhost:9090/targets>.
 
-![Docker Scout metrics exporter Prometheus target](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/scout/images/scout-metrics-prom-target.png "Docker Scout metrics exporter Prometheus target")
-
 ### Viewing the metrics in Grafana
 
 To view the Grafana dashboards, go to <http://localhost:3000/dashboards>,
 and sign in using the credentials defined in the Docker Compose file (username: `admin`, password: `grafana`).
-
-![Vulnerability dashboard in Grafana](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/scout/images/scout-metrics-grafana-vulns.png "Vulnerability dashboard in Grafana")
-
-![Policy dashboard in Grafana](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/scout/images/scout-metrics-grafana-policy.png "Policy dashboard in Grafana")
 
 The dashboards are pre-configured to visualize the vulnerability and policy metrics scraped by Prometheus.
 
@@ -311,13 +305,13 @@ to see the metrics collected from this example. This configuration will collect
 all exposed metrics starting with `scout_` under the namespace
 `scout_metrics_exporter`.
 
-![datadog\_metrics\_summary](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/scout/images/datadog_metrics_summary.png)
+![datadog\_metrics\_summary](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/scout/images/datadog_metrics_summary.png)
 
 The following screenshots show examples of a Datadog dashboard containing
 graphs about vulnerability and policy compliance for a specific stream.
 
-![datadog\_dashboard\_1](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/scout/images/datadog_dashboard_1.png)
-![datadog\_dashboard\_2](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/scout/images/datadog_dashboard_2.png)
+![datadog\_dashboard\_1](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/scout/images/datadog_dashboard_1.png)
+![datadog\_dashboard\_2](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/scout/images/datadog_dashboard_2.png)
 
 > The reason why the lines in the graphs look flat is due to the own nature of
 > vulnerabilities (they don't change too often) and the short time interval

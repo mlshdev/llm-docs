@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/preferredsurroundingseffect(_:)](https://developer.apple.com/documentation/swiftui/view/preferredsurroundingseffect(_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/preferredsurroundingseffect(_:)
 
 # preferredSurroundingsEffect(\_:)
 
@@ -52,4 +53,4 @@ Use a value of `nil` to indicate that you have no preference. You typically do t
 
 - [SurroundingsEffect](../surroundingseffect.md): Effects that the system can apply to passthrough video.
 - [breakthroughEffect(\_:)](breakthrougheffect%28__%29.md): Ensures that the view is always visible to the user, even when other content is occluding it, like 3D models.
-- [BreakthroughEffect](../breakthrougheffect.md)
+- [BreakthroughEffect](../breakthrougheffect.md): The way a presentation shows through content in front of it.

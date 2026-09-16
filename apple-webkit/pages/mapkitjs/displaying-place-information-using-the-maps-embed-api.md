@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/mapkitjs/displaying-place-information-using-the-maps-embed-api](https://developer.apple.com/documentation/mapkitjs/displaying-place-information-using-the-maps-embed-api)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mapkitjs/displaying-place-information-using-the-maps-embed-api
 
 # Displaying place information using the Maps Embed API
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/modal-presentations](https://developer.apple.com/documentation/swiftui/modal-presentations)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/modal-presentations
 
 # Modal presentations
 
@@ -83,13 +84,13 @@ For design guidance, see [Modality](https://developer.apple.com/design/human-int
 
 - [confirmationDialog(\_:isPresented:titleVisibility:actions:)](view/confirmationdialog%28__ispresented_titlevisibility_actions_%29.md): Presents a confirmation dialog when a given condition is true, using a localized string resource for the title.
 - [confirmationDialog(\_:isPresented:titleVisibility:presenting:actions:)](view/confirmationdialog%28__ispresented_titlevisibility_presenting_actions_%29.md): Presents a confirmation dialog using data to produce the dialog’s content and a localized string resource for the title.
-- [dismissalConfirmationDialog(\_:shouldPresent:actions:)](view/dismissalconfirmationdialog%28__shouldpresent_actions_%29.md): Presents a confirmation dialog when a dismiss action has been triggered.
+- [dismissalConfirmationDialog(\_:shouldPresent:actions:)](view/dismissalconfirmationdialog%28__shouldpresent_actions_%29.md): Presents a confirmation dialog upon an attempt to dismiss the window for this view.
 
 ### Showing a confirmation dialog with a message
 
 - [confirmationDialog(\_:isPresented:titleVisibility:actions:message:)](view/confirmationdialog%28__ispresented_titlevisibility_actions_message_%29.md): Presents a confirmation dialog with a message when a given condition is true, using a localized string resource for the title.
 - [confirmationDialog(\_:isPresented:titleVisibility:presenting:actions:message:)](view/confirmationdialog%28__ispresented_titlevisibility_presenting_actions_message_%29.md): Presents a confirmation dialog with a message using data to produce the dialog’s content and a localized string resource for the title.
-- [dismissalConfirmationDialog(\_:shouldPresent:actions:message:)](view/dismissalconfirmationdialog%28__shouldpresent_actions_message_%29.md): Presents a confirmation dialog when a dismiss action has been triggered.
+- [dismissalConfirmationDialog(\_:shouldPresent:actions:message:)](view/dismissalconfirmationdialog%28__shouldpresent_actions_message_%29.md): Presents a confirmation dialog upon an attempt to dismiss the window for this view.
 
 ### Configuring a dialog
 

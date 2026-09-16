@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/borderedtablestyle/init(alternatesrowbackgrounds:)](https://developer.apple.com/documentation/swiftui/borderedtablestyle/init(alternatesrowbackgrounds:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/borderedtablestyle/init(alternatesrowbackgrounds:)
 
 # init(alternatesRowBackgrounds:)
 
 **Framework:** SwiftUI  
 **Kind:** Initializer  
-**Availability:** macOS 12.0+ (deprecated in 27.0)
+**Availability:** macOS 12.0+ (deprecated in 27.2)
 
 Creates an inset table style with optional alternating row backgrounds.
 

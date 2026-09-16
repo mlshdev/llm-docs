@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view-input-and-events](https://developer.apple.com/documentation/swiftui/view-input-and-events)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view-input-and-events
 
 # Input and event modifiers
 
@@ -222,7 +223,11 @@ For more information, see [Drag and drop](drag-and-drop.md).
 - [onPlayPauseCommand(perform:)](view/onplaypausecommand%28perform_%29.md): Adds an action to perform in response to the system’s Play/Pause command.
 - [onCommand(\_:perform:)](view/oncommand%28__perform_%29.md): Adds an action to perform in response to the given selector.
 
-### Digital crown
+### Hinge
+
+- [onHingeChange(isEnabled:\_:)](view/onhingechange%28isenabled___%29.md): Beta. Adds an action to perform when the hinge context of the view hierarchy changes.
+
+### Digital Crown
 
 - [digitalCrownAccessory(\_:)](view/digitalcrownaccessory%28__%29.md): Specifies the visibility of Digital Crown accessory Views on Apple Watch.
 - [digitalCrownAccessory(content:)](view/digitalcrownaccessory%28content_%29.md): Places an accessory View next to the Digital Crown on Apple Watch.
@@ -308,7 +313,7 @@ For more information, see [Immersive spaces](immersive-spaces.md).
 - [appEntityIdentifier(\_:)](view/appentityidentifier%28__%29.md): Associates a SwiftUI view with an app entity to make its content discoverable by Apple Intelligence and Siri.
 - [appEntityIdentifier(forSelectionType:identifier:)](view/appentityidentifier%28forselectiontype_identifier_%29.md): Associates the items in a SwiftUI list view with app entities to make them discoverable by Apple Intelligence and Siri.
 - [appEntityUIElements(\_:)](view/appentityuielements%28__%29.md): Provides the system with additional context to make a custom view’s content discoverable by Apple Intelligence and Siri.
-- [onAppIntentExecution(\_:perform:)](view/onappintentexecution%28__perform_%29.md): Registers a handler to invoke in response to the specified app intent that your app receives.
+- [onAppIntentExecution(\_:perform:)](view/onappintentexecution%28__perform_%29.md): Registers a handler to run when the app receives an app intent that targets the associated scene.
 - [shortcutsLinkStyle(\_:)](view/shortcutslinkstyle%28__%29.md): Sets the given style for ShortcutsLinks within the view hierarchy
 - [siriTipViewStyle(\_:)](view/siritipviewstyle%28__%29.md): Sets the given style for SiriTipView within the view hierarchy
 

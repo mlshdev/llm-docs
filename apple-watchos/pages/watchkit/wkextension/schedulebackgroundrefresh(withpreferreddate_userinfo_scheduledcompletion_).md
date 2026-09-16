@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple watchOS snapshot-2bb3946a9b15; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple watchOS snapshot-4bff84466040; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/watchkit/wkextension/schedulebackgroundrefresh(withpreferreddate:userinfo:scheduledcompletion:)
 
 # scheduleBackgroundRefresh(withPreferredDate:userInfo:scheduledCompletion:) (Swift)
 
 **Framework:** WatchKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 3.0+
+**Availability:** watchOS 3.0+ (deprecated in 9.2)
 
 Schedules a background task to refresh the app’s data.
 
@@ -50,7 +50,7 @@ Use this task to update your application’s state. You can only schedule one ba
 
 **Framework:** WatchKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 3.0+
+**Availability:** watchOS 3.0+ (deprecated in 9.2)
 
 Schedules a background task to refresh the app’s data.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/asyncdropfirstsequence/compactmap(_:)-874pn](https://developer.apple.com/documentation/swift/asyncdropfirstsequence/compactmap(_:)-874pn)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/asyncdropfirstsequence/compactmap(_:)-874pn
 
 # compactMap(\_:)
 

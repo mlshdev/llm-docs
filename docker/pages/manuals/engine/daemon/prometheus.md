@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/daemon/prometheus.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/engine/daemon/prometheus.md)
+> Pinned source for Docker main: [content/manuals/engine/daemon/prometheus.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/engine/daemon/prometheus.md)
 
 [Prometheus](https://prometheus.io/) is an open-source systems monitoring and
 alerting toolkit. You can configure Docker as a Prometheus target.
@@ -109,7 +109,7 @@ container. Docker Desktop does this by default. The host IP is exposed as the
 
 Verify that the Docker target is listed at `http://localhost:9090/targets/`.
 
-![Prometheus targets page](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/engine/daemon/images/prometheus-targets.webp)
+![Prometheus targets page](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/engine/daemon/images/prometheus-targets.webp)
 
 > \[!NOTE]
 >
@@ -123,7 +123,7 @@ from the combo box to the right of the **Execute** button, and click
 **Execute**. The screenshot below shows the graph for
 `engine_daemon_network_actions_seconds_count`.
 
-![Idle Prometheus report](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/engine/daemon/images/prometheus-graph_idle.webp)
+![Idle Prometheus report](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/engine/daemon/images/prometheus-graph_idle.webp)
 
 The graph shows a pretty idle Docker instance, unless you're already running
 active workloads on your system.
@@ -139,7 +139,7 @@ Wait a few seconds (the default scrape interval is 15 seconds) and reload your
 graph. You should see an uptick in the graph, showing the increased network
 traffic caused by the container you just ran.
 
-![Prometheus report showing traffic](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/engine/daemon/images/prometheus-graph_load.webp)
+![Prometheus report showing traffic](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/engine/daemon/images/prometheus-graph_load.webp)
 
 ## Next steps
 

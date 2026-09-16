@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/environmentvalues/immersivespacedisplacement](https://developer.apple.com/documentation/swiftui/environmentvalues/immersivespacedisplacement)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/environmentvalues/immersivespacedisplacement
 
 # immersiveSpaceDisplacement
 
@@ -61,4 +62,4 @@ struct ImmersiveGameView: View {
 - [immersionStyle(selection:in:)](../scene/immersionstyle%28selection_in_%29.md): Sets the style for an immersive space.
 - [ImmersionStyle](../immersionstyle.md): The styles that an immersive space can have.
 - [ImmersiveEnvironmentBehavior](../immersiveenvironmentbehavior.md): The behavior of the system-provided immersive environments when a scene is opened by your app.
-- [ProgressiveImmersionAspectRatio](../progressiveimmersionaspectratio.md)
+- [ProgressiveImmersionAspectRatio](../progressiveimmersionaspectratio.md): The shape of the portal that a progressive immersion style opens.

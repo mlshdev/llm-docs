@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webglcompressedtexturepvrtc/1631951-compressed_rgb_pvrtc_4bppv1_img](https://developer.apple.com/documentation/webkitjs/webglcompressedtexturepvrtc/1631951-compressed_rgb_pvrtc_4bppv1_img)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webglcompressedtexturepvrtc/1631951-compressed_rgb_pvrtc_4bppv1_img
 
 # COMPRESSED_RGB_PVRTC_4BPPV1_IMG
 

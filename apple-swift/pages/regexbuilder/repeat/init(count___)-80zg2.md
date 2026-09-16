@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/regexbuilder/repeat/init(count:_:)-80zg2](https://developer.apple.com/documentation/regexbuilder/repeat/init(count:_:)-80zg2)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/regexbuilder/repeat/init(count:_:)-80zg2
 
 # init(count:\_:)
 

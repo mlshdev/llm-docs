@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/newdocumentbutton/init(_:contenttype:preparedocumenturl:)](https://developer.apple.com/documentation/swiftui/newdocumentbutton/init(_:contenttype:preparedocumenturl:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/newdocumentbutton/init(_:contenttype:preparedocumenturl:)
 
 # init(\_:contentType:prepareDocumentURL:)
 
@@ -16,6 +17,7 @@ Creates and opens new documents.
 
 ## Parameters
 
+- `title`: A title resource for the button title.
 - `contentType`: A content type of the document to create.
 - `prepareDocumentURL`: A closure that is called when a user presses the button. At this point, you can present a document template picker or another UI that allows users to choose a theme, configuration, or a template to create a document from. Return a prepared document, or throw an error if document creation failed. Return `nil` to request creation of an empty document.
 

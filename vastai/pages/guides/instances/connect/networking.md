@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/connect/networking.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/instances/connect/networking.mdx)
+> Pinned source for Vast.ai main: [guides/instances/connect/networking.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/instances/connect/networking.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/connect/networking
 
 # Networking & Ports

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/1476191-dom-keyboard-input-enumeration-l](https://developer.apple.com/documentation/webkit/1476191-dom-keyboard-input-enumeration-l)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/1476191-dom-keyboard-input-enumeration-l
 
 # DOM Keyboard Input Enumeration (Legacy)
 

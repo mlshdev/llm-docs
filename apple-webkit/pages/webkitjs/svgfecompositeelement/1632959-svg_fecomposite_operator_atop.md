@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgfecompositeelement/1632959-svg_fecomposite_operator_atop](https://developer.apple.com/documentation/webkitjs/svgfecompositeelement/1632959-svg_fecomposite_operator_atop)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgfecompositeelement/1632959-svg_fecomposite_operator_atop
 
 # SVG_FECOMPOSITE_OPERATOR_ATOP
 

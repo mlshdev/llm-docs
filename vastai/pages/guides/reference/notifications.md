@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/reference/notifications.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/reference/notifications.mdx)
+> Pinned source for Vast.ai main: [guides/reference/notifications.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/reference/notifications.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/reference/notifications
 
 # Notifications
@@ -17,7 +17,7 @@ The notification system is shared across the web console and the API. The consol
 
 Open [Account Settings](https://cloud.vast.ai/account/) and go to **Notification Settings**.
 
-![Notification Settings page with Account, Billing, and Instance notification groups](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-notifications-settings.png)
+![Notification Settings page with Account, Billing, and Instance notification groups](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-notifications-settings.png)
 
 The page groups events by the part of Vast.ai they affect:
 

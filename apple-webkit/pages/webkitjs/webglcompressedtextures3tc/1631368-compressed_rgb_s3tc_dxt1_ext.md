@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webglcompressedtextures3tc/1631368-compressed_rgb_s3tc_dxt1_ext](https://developer.apple.com/documentation/webkitjs/webglcompressedtextures3tc/1631368-compressed_rgb_s3tc_dxt1_ext)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webglcompressedtextures3tc/1631368-compressed_rgb_s3tc_dxt1_ext
 
 # COMPRESSED_RGB_S3TC_DXT1_EXT
 

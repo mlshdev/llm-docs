@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/string/encoding/utf32littleendian](https://developer.apple.com/documentation/swift/string/encoding/utf32littleendian)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/string/encoding/utf32littleendian
 
 # utf32LittleEndian
 

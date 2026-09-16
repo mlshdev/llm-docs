@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [hub/overview.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/hub/overview.mdx)
+> Pinned source for Runpod main: [hub/overview.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/hub/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/hub/overview
 
 # Overview
@@ -7,7 +7,7 @@ Discover, deploy, and share preconfigured AI repos using the Runpod Hub. Review 
 
 The [Runpod Hub](https://console.runpod.io/hub) is a centralized repository for discovering, sharing, and deploying preconfigured AI repos optimized for Serverless and Pod infrastructure.
 
-![](https://raw.githubusercontent.com/runpod/docs/ceb79977df03b21e40ceaec3fdea8c9869897b7e/images/hub-homepage.png)
+![](https://raw.githubusercontent.com/runpod/docs/1ac8c64f9623ca776ec994c36b22d4329facbb1d/images/hub-homepage.png)
 
 ## Why use the Hub?
 

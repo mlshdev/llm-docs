@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/unsafebufferpointer/graphbuildertensor(_:)](https://developer.apple.com/documentation/swift/unsafebufferpointer/graphbuildertensor(_:))
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/unsafebufferpointer/graphbuildertensor(_:)
 
 # graphBuilderTensor(\_:)
 
@@ -26,6 +27,7 @@ The following code shows how to use this function to register a tensor from an u
 
        ([1, 2, 3, 4] as [Float]).withUnsafeBufferPointer { x in
            ([5, 6, 7, 8] as [Float]).withUnsafeBufferPointer { y in
+
 
                let x = x.graphBuilderTensor(builder)
 

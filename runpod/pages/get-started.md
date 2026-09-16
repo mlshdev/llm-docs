@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/get-started.mdx)
+> Pinned source for Runpod main: [get-started.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/get-started.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started
 
 # Deploy your first Pod
@@ -57,14 +57,19 @@ To open the deploy page, click **+ New** in the top-right corner of the console 
 
    **Container disk**
 
-   This is the container's primary storage, and it's wiped whenever the Pod is stopped.
+   The container's root filesystem. Anything stored here is erased when the Pod stops.
 
    **Persistent storage**
 
-   Persistent storage keeps your data across stops and restarts, and you can mount it at any location. It's mounted at `/workspace` by default, but you can change this with a template override, or the template itself can set a different default. It comes in two types, and you can attach one or the other but not both:
+   Persistent storage keeps your data across stops and restarts, and you can mount it at any location.
+
+   It comes in three types. You can attach a volume disk on its own, or attach a network volume and a global volume together or individually:
 
    - **Volume disk**: a disk attached directly to your Pod that keeps its data across stops and restarts but is deleted when the Pod is terminated.
-   - **Network volume**: permanent storage that exists independently of any Pod, so you can attach the same volume to different Pods over time.
+   - **Network volume**: permanent storage that exists independently of any Pod, so you can attach the same volume to different Pods over time. A network volume is tied to a single data center.
+   - **Global volume**: permanent, region-independent storage that any Pod can mount, regardless of data center. Capacity grows with the data you store. See [Global volumes](https://docs.runpod.io/storage/globalvolume).
+
+   Each type mounts at `/workspace` by default. You can change the path at any time. If you attach a network volume and a global volume and leave both paths at their defaults, the global volume moves to `/workspace-global` and the network volume mounts at `/workspace`. Two volumes cannot share a mount path.
 
    If you did select a network volume in the **Compute** step, the persistent storage selection in this step is locked to that network volume.
 

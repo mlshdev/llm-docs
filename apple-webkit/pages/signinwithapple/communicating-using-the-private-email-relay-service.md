@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/signinwithapple/communicating-using-the-private-email-relay-service](https://developer.apple.com/documentation/signinwithapple/communicating-using-the-private-email-relay-service)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/signinwithapple/communicating-using-the-private-email-relay-service
 
 # Communicating using the private email relay service
 

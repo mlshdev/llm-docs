@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/extsrgb/1632244-srgb8_alpha8_ext](https://developer.apple.com/documentation/webkitjs/extsrgb/1632244-srgb8_alpha8_ext)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/extsrgb/1632244-srgb8_alpha8_ext
 
 # SRGB8_ALPHA8_EXT
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginekit/betextsuggestion/init(inputtext:)](https://developer.apple.com/documentation/browserenginekit/betextsuggestion/init(inputtext:))
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/browserenginekit/betextsuggestion/init(inputtext:)
 
 # init(inputText:) (Swift)
 

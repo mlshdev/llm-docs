@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/customizabletoolbarcontent/visibilitypriority(_:)](https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent/visibilitypriority(_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent/visibilitypriority(_:)
 
 # visibilityPriority(\_:)
 
@@ -43,3 +44,10 @@ struct RootView: View {
     }
 }
 ```
+
+## See Also
+
+### Setting visibility
+
+- [hidden(\_:)](hidden%28__%29.md): Hides a toolbar item within its toolbar.
+- [sharedBackgroundVisibility(\_:)](sharedbackgroundvisibility%28__%29.md): Controls the visibility of the glass background effect on items in the toolbar. In certain contexts, such as the navigation bar on iOS and the window toolbar on macOS, toolbar items will be given a glass background effect that is shared with other items in the same logical grouping.

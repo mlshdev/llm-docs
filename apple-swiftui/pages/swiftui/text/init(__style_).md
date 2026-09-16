@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/text/init(_:style:)](https://developer.apple.com/documentation/swiftui/text/init(_:style:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/text/init(_:style:)
 
 # init(\_:style:)
 
@@ -18,6 +19,14 @@ init(_ date: Date, style: Text.DateStyle)
 
 - `date`: The target date to display.
 - `style`: The style used when displaying a date.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Note**
+
+> In a widget, a `Text` that uses the [relative](datestyle/relative.md), [offset](datestyle/offset.md), or [timer](datestyle/timer.md) style becomes horizontally flexible and expands to fill the available width. Widgets can’t perform layout again after the system archives them, so the text can’t measure itself against its eventual content, which changes as the date updates, without risking clipping. If you want to constrain the width, apply a [frame(width:height:alignment:)](../view/frame%28width_height_alignment_%29.md) modifier, and use [multilineTextAlignment(\_:)](../view/multilinetextalignment%28__%29.md) to align the text within that frame.
 
 ## See Also
 

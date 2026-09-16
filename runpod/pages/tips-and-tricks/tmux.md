@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tips-and-tricks/tmux.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/tips-and-tricks/tmux.mdx)
+> Pinned source for Runpod main: [tips-and-tricks/tmux.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/tips-and-tricks/tmux.mdx)
 > Canonical documentation: https://docs.runpod.io/tips-and-tricks/tmux
 
 # Using TMUX for persistent sessions

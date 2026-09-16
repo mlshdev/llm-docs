@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [sdk/python/serverless/client-worker.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/sdk/python/serverless/client-worker.mdx)
+> Pinned source for Vast.ai main: [sdk/python/serverless/client-worker.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/sdk/python/serverless/client-worker.mdx)
 > Canonical documentation: https://docs.vast.ai/sdk/python/serverless/client-worker
 
 # Worker

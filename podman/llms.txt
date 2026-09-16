@@ -1,8 +1,8 @@
-# Podman v6.1.1
+# Podman v6.1.2
 
-> Documentation generated from the latest stable release of [podman-container-tools/podman](https://github.com/podman-container-tools/podman) and pinned to immutable source commit `8303f2e25b675ea7f82099d615c60969aec15870`.
+> Documentation generated from the latest stable release of [podman-container-tools/podman](https://github.com/podman-container-tools/podman) and pinned to immutable source commit `04f3aa430e6df81bea059978bc5bafbc846ba3e7`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Podman v6.1.1.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Podman v6.1.2.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Podman man-page templates are expanded by a non-executing implementation of the tagged repository's documented preprocessing rules.
 - Generated aliases, duplicate rootless/troubleshooting pages, translations, assets, and vendored code are omitted.
@@ -10,7 +10,7 @@
 ## Overview and operations
 
 - [Podman: A tool for managing OCI containers and pods](pages/README.md): ![LFX Health Score](https://insights.linuxfoundation.org/project/podman-container-tools/repository/containers-podman) ![LFX Contributors](https://insights.linuxfoundation.org/project/podman-container-tools/repository/co… (16763 bytes)
-- [Release Notes](pages/RELEASE_NOTES.md): Several paths related to rootless Podman had their default values changed in this release. If paths were not hardcoded in libpod.conf, your system may lose track of running containers and believe they are newly-created. (619027 bytes)
+- [Release Notes](pages/RELEASE_NOTES.md): Several paths related to rootless Podman had their default values changed in this release. If paths were not hardcoded in libpod.conf, your system may lose track of running containers and believe they are newly-created. (619867 bytes)
 - [Building the Podman client on macOS](pages/build_osx.md): The following describes the process for building the Podman client on macOS. (2349 bytes)
 - [Building the Podman client and client installer on Windows](pages/build_windows.md): The following describes the process for building and testing the Podman Windows client (podman.exe) and the Podman Windows installer (podman-setup.exe) on Windows. (20671 bytes)
 - [libpod Installation Instructions](pages/install.md): The installation instructions for Podman and libpod now reside here on the podman.io site. (504 bytes)

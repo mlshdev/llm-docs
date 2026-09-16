@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/uihostingconfiguration/background(content:)](https://developer.apple.com/documentation/swiftui/uihostingconfiguration/background(content:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/uihostingconfiguration/background(content:)
 
 # background(content:)
 
@@ -13,6 +14,10 @@ Sets the background contents for the hosting configuration’s enclosing cell.
 ```swift
 func background<B>(@ContentBuilder content: () -> B) -> UIHostingConfiguration<Content, B> where B : View
 ```
+
+## Parameters
+
+- `content`: The contents of the SwiftUI hierarchy to be shown inside the background of the cell.
 
 <a id="discussion"></a>
 

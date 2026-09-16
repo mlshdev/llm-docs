@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-appencryptiondeclarationdocuments-_id_](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appencryptiondeclarationdocuments-_id_)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appencryptiondeclarationdocuments-_id_
 
 # Read a specific app encryption declaration document
 
@@ -75,6 +76,7 @@ https://api.appstoreconnect.apple.com/v1/appEncryptionDeclarationDocuments/e55c4
     "self": "https://api.appstoreconnect.apple.com/v1/appEncryptionDeclarationDocuments/e55c4bbe-a1b9-427c-99cf-fd8db5050fc9"
   }
 }
+
 
 ```
 

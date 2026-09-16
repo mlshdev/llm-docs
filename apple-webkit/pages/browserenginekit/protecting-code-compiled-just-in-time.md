@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginekit/protecting-code-compiled-just-in-time](https://developer.apple.com/documentation/browserenginekit/protecting-code-compiled-just-in-time)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/browserenginekit/protecting-code-compiled-just-in-time
 
 # Protecting code compiled just in time (Swift)
 

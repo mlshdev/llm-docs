@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/cloudkitjs/cloudkit.notification/notification_type_record_zone](https://developer.apple.com/documentation/cloudkitjs/cloudkit.notification/notification_type_record_zone)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/cloudkitjs/cloudkit.notification/notification_type_record_zone
 
 # NOTIFICATION_TYPE_RECORD_ZONE
 

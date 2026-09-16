@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/wk_swift_async_throws_on_false](https://developer.apple.com/documentation/webkit/wk_swift_async_throws_on_false)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/wk_swift_async_throws_on_false
 
 # WK_SWIFT_ASYNC_THROWS_ON_FALSE
 

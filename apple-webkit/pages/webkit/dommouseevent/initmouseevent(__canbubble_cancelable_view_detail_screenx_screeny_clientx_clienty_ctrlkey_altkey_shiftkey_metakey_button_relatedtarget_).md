@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/dommouseevent/initmouseevent(_:canbubble:cancelable:view:detail:screenx:screeny:clientx:clienty:ctrlkey:altkey:shiftkey:metakey:button:relatedtarget:)](https://developer.apple.com/documentation/webkit/dommouseevent/initmouseevent(_:canbubble:cancelable:view:detail:screenx:screeny:clientx:clienty:ctrlkey:altkey:shiftkey:metakey:button:relatedtarget:))
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/dommouseevent/initmouseevent(_:canbubble:cancelable:view:detail:screenx:screeny:clientx:clienty:ctrlkey:altkey:shiftkey:metakey:button:relatedtarget:)
 
 # initMouseEvent(\_:canBubble:cancelable:view:detail:screenX:screenY:clientX:clientY:ctrlKey:altKey:shiftKey:metaKey:button:relatedTarget:) (Swift)
 

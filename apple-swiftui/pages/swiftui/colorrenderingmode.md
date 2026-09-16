@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/colorrenderingmode](https://developer.apple.com/documentation/swiftui/colorrenderingmode)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/colorrenderingmode
 
 # ColorRenderingMode
 
@@ -45,6 +46,6 @@ Each color space guarantees the preservation of a particular range of color valu
 - [compositingGroup()](view/compositinggroup%28%29.md): Wraps this view in a compositing group.
 - [drawingGroup(opaque:colorMode:)](view/drawinggroup%28opaque_colormode_%29.md): Composites this view’s contents into an offscreen image before final display.
 - [BlendMode](blendmode.md): Modes for compositing a view with overlapping content.
-- [CompositorContent](compositorcontent.md)
+- [CompositorContent](compositorcontent.md): A type that describes content a scene renders directly with Metal, rather than composing from SwiftUI views.
 - [CompositorContentBuilder](compositorcontentbuilder.md): A result builder for composing a collection of [CompositorContent](compositorcontent.md) elements.
 - [AnyCompositorContent](anycompositorcontent.md): Type erased compositor content.

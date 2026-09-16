@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/writing_filters.txt](https://github.com/FFmpeg/FFmpeg/blob/17e6ed9dc0106fbf837bda5d675fae22360e6c3e/doc/writing_filters.txt)
+> Pinned source for FFmpeg master: [doc/writing_filters.txt](https://github.com/FFmpeg/FFmpeg/blob/9cf34b031f489dcecad5c579d0a22a956918cf36/doc/writing_filters.txt)
 
 This document is a tutorial/initiation for writing simple filters in
 libavfilter.

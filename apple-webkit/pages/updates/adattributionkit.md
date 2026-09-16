@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/updates/adattributionkit](https://developer.apple.com/documentation/updates/adattributionkit)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/updates/adattributionkit
 
 # AdAttributionKit Updates
 
@@ -45,4 +46,4 @@ Browse notable changes in [AdAttributionKit](https://developer.apple.com/documen
 - [AuthenticationServices updates](authenticationservices.md): Learn about important changes to AuthenticationServices.
 - [AVFAudio updates](avfaudio.md): Learn about important changes to AVFAudio.
 - [AVFoundation updates](avfoundation.md): Learn about important changes to AVFoundation.
-- [Background Tasks updates](backgroundtasks.md): Learn about important changes in Background Tasks.
+- [AVKit updates](avkit.md): Learn about important changes to AVKit.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/transition/symboleffect(_:options:)](https://developer.apple.com/documentation/swiftui/transition/symboleffect(_:options:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/transition/symboleffect(_:options:)
 
 # symbolEffect(\_:options:)
 
@@ -17,6 +18,7 @@ Creates a transition that applies the provided effect to symbol images within th
 ## Parameters
 
 - `effect`: The symbol effect value.
+- `options`: A set of options that configure how effects apply to symbol-based images.
 
 <a id="return-value"></a>
 

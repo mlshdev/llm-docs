@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/oncontinuoushover(coordinatespace:perform:)-8gyrl](https://developer.apple.com/documentation/swiftui/view/oncontinuoushover(coordinatespace:perform:)-8gyrl)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/oncontinuoushover(coordinatespace:perform:)-8gyrl
 
 # onContinuousHover(coordinateSpace:perform:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 16.0+ (deprecated in 27.0) · iPadOS 16.0+ (deprecated in 27.0) · Mac Catalyst 16.0+ (deprecated in 27.0) · macOS 13.0+ (deprecated in 27.0) · tvOS 16.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 16.0+ (deprecated in 27.2) · iPadOS 16.0+ (deprecated in 27.2) · Mac Catalyst 16.0+ (deprecated in 27.2) · macOS 13.0+ (deprecated in 27.2) · tvOS 16.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Adds an action to perform when the pointer enters, moves within, and exits the view’s bounds.
 

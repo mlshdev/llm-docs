@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.1: [docs/source/markdown/podman-network-connect.1.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-network-connect.1.md)
+> Pinned source for Podman v6.1.2: [docs/source/markdown/podman-network-connect.1.md](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-network-connect.1.md)
 
 # podman-network-connect
 
@@ -20,7 +20,7 @@ Once connected, the container can communicate with other containers in the same 
 #### **--alias**=*name*
 
 Add network-scoped alias for the container. If the network has DNS enabled (`podman network inspect -f {{.DNSEnabled}} <NAME>`),
-these aliases can be used for name resolution on the given network in addition to the container name.  Multiple *--alias* options may be specified as input. See **DNS NOTES** in **[podman-network(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-network.1.md)**.
+these aliases can be used for name resolution on the given network in addition to the container name.  Multiple *--alias* options may be specified as input. See **DNS NOTES** in **[podman-network(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-network.1.md)**.
 
 #### **--ip**=*address*
 
@@ -62,7 +62,7 @@ podman network connect --mac-address 92:d0:c6:0a:29:33 test web
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman.1.md)**, **[podman-network(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-network.1.md)**, **[podman-network-inspect(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-network-inspect.1.md)**, **[podman-network-disconnect(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-network-disconnect.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman.1.md)**, **[podman-network(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-network.1.md)**, **[podman-network-inspect(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-network-inspect.1.md)**, **[podman-network-disconnect(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-network-disconnect.1.md)**
 
 ## HISTORY
 

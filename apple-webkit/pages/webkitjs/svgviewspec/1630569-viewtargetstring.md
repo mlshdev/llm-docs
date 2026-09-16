@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgviewspec/1630569-viewtargetstring](https://developer.apple.com/documentation/webkitjs/svgviewspec/1630569-viewtargetstring)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgviewspec/1630569-viewtargetstring
 
 # viewTargetString
 

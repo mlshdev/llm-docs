@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/cktooljs/ckdbpermissiontype/read_only](https://developer.apple.com/documentation/cktooljs/ckdbpermissiontype/read_only)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/cktooljs/ckdbpermissiontype/read_only
 
 # READ_ONLY
 

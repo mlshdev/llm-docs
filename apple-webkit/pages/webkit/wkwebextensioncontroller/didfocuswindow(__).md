@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/wkwebextensioncontroller/didfocuswindow(_:)](https://developer.apple.com/documentation/webkit/wkwebextensioncontroller/didfocuswindow(_:))
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/wkwebextensioncontroller/didfocuswindow(_:)
 
 # didFocusWindow(\_:) (Swift)
 

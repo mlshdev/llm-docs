@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgangle/1633099-svg_angletype_grad](https://developer.apple.com/documentation/webkitjs/svgangle/1633099-svg_angletype_grad)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgangle/1633099-svg_angletype_grad
 
 # SVG_ANGLETYPE_GRAD
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/post-v1-inapppurchaseoffercodeonetimeusecodes](https://developer.apple.com/documentation/appstoreconnectapi/post-v1-inapppurchaseoffercodeonetimeusecodes)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/post-v1-inapppurchaseoffercodeonetimeusecodes
 
 # Create an In-App Purchase Offer Code One-Time Use Code
 

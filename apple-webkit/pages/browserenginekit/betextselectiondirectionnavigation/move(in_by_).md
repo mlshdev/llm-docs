@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginekit/betextselectiondirectionnavigation/move(in:by:)](https://developer.apple.com/documentation/browserenginekit/betextselectiondirectionnavigation/move(in:by:))
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/browserenginekit/betextselectiondirectionnavigation/move(in:by:)
 
 # move(in:by:) (Swift)
 

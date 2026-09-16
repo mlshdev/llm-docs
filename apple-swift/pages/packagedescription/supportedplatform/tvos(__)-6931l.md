@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/packagedescription/supportedplatform/tvos(_:)-6931l](https://developer.apple.com/documentation/packagedescription/supportedplatform/tvos(_:)-6931l)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/packagedescription/supportedplatform/tvos(_:)-6931l
 
 # tvOS(\_:)
 

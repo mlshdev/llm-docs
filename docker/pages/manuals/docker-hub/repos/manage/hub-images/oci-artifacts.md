@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/oci-artifacts.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/docker-hub/repos/manage/hub-images/oci-artifacts.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/oci-artifacts.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/docker-hub/repos/manage/hub-images/oci-artifacts.md)
 
 # Software artifacts on Docker Hub
 
@@ -94,13 +94,9 @@ Steps:
 5. Go to the repository page on Docker Hub. The **Tags** section of the page
    shows the Helm chart tag.
 
-![List of repository tags](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/docker-hub/repos/manage/hub-images/images/oci-helm.png)
-
 6. Select the tag name to go to the page for that tag.
 
    The page lists a few useful commands for working with Helm charts.
-
-![Tag page of a Helm chart artifact](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/docker-hub/repos/manage/hub-images/images/oci-helm-tagview.png)
 
 ### Push a volume
 
@@ -140,8 +136,6 @@ Steps:
 4. Go to the repository page on Docker Hub. The **Tags** section on that page
    shows the volume tag.
 
-![Repository page showing a volume in the tag list](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/docker-hub/repos/manage/hub-images/images/oci-volume.png)
-
 ### Push a generic artifact file
 
 The following procedure shows how to push a generic OCI artifact to Docker Hub.
@@ -172,5 +166,3 @@ Steps:
 
 4. Go to the repository page on Docker Hub. The **Tags** section on that page
    shows the artifact tag.
-
-![Repository page showing an artifact in the tag list](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/docker-hub/repos/manage/hub-images/images/oci-artifact.png)

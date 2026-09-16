@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/customizabletoolbarcontent/defaultcustomization(_:options:)](https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent/defaultcustomization(_:options:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent/defaultcustomization(_:options:)
 
 # defaultCustomization(\_:options:)
 
@@ -55,9 +56,3 @@ ContentView()
         .defaultCustomization(options: .alwaysAvailable)
     }
 ```
-
-## See Also
-
-### Using default options
-
-- [defaultCustomization()](defaultcustomization%28%29.md): Deprecated. Configures customizable toolbar content with the default visibility and options.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/mockcontentfiltersettings/1777758-decision_point_never](https://developer.apple.com/documentation/webkitjs/mockcontentfiltersettings/1777758-decision_point_never)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/mockcontentfiltersettings/1777758-decision_point_never
 
 # DECISION_POINT_NEVER
 

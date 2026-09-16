@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/environmentvalues/accessibilitypreferscrossfadetransitions](https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilitypreferscrossfadetransitions)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilitypreferscrossfadetransitions
 
 # accessibilityPrefersCrossFadeTransitions
 
@@ -37,7 +38,6 @@ On macOS, this value returns solely whether the Reduce Motion setting is in an e
 - [accessibilityQuickActionsEnabled](accessibilityquickactionsenabled.md): A Boolean that indicates whether the quick actions feature is enabled.
 - [accessibilityReduceMotion](accessibilityreducemotion.md): Whether the system preference for Reduce Motion is enabled.
 - [accessibilityReduceTransparency](accessibilityreducetransparency.md): Whether the system preference for Reduce Transparency is enabled.
-- [accessibilityShowButtonShapes](accessibilityshowbuttonshapes.md): Deprecated. Whether the system preference for Show Button Shapes is enabled.
 - [accessibilitySwitchControlEnabled](accessibilityswitchcontrolenabled.md): A Boolean value that indicates whether the Switch Control motor accessibility feature is in use.
 - [accessibilityVoiceOverEnabled](accessibilityvoiceoverenabled.md): A Boolean value that indicates whether the VoiceOver screen reader is in use.
 - [legibilityWeight](legibilityweight.md): The font weight to apply to text.

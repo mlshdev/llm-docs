@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/projectiontransform](https://developer.apple.com/documentation/swiftui/projectiontransform)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/projectiontransform
 
 # ProjectionTransform
 
@@ -6,11 +7,40 @@
 **Kind:** Structure  
 **Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
 
+A 3x3 matrix that transforms points in a plane.
+
 ## Declaration
 
 ```swift
 @frozen struct ProjectionTransform
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+A projection transform covers everything `CGAffineTransform` does - translation, rotation, scale, and skew - and adds perspective, which an affine transform cannot express. SwiftUI uses it to describe the geometry a view effect applies.
+
+Return a value of this type from [effectValue(size:)](geometryeffect/effectvalue%28size_%29.md) to write a custom effect. The following effect leans a view to one side by shearing it, and animates as `amount` changes:
+
+```swift
+struct ShearEffect: GeometryEffect {
+    var amount: CGFloat
+
+    var animatableData: CGFloat {
+        get { amount }
+        set { amount = newValue }
+    }
+
+    func effectValue(size: CGSize) -> ProjectionTransform {
+        ProjectionTransform(
+            CGAffineTransform(
+                a: 1, b: 0, c: amount, d: 1, tx: 0, ty: 0))
+    }
+}
+```
+
+Create a transform from a `CGAffineTransform` or a `CATransform3D` when you already have one, or set the nine elements directly. The elements are named for their row and column, so [m11](projectiontransform/m11.md) is the first row and first column.
 
 ## Topics
 

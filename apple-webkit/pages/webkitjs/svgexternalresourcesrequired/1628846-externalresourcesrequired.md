@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgexternalresourcesrequired/1628846-externalresourcesrequired](https://developer.apple.com/documentation/webkitjs/svgexternalresourcesrequired/1628846-externalresourcesrequired)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgexternalresourcesrequired/1628846-externalresourcesrequired
 
 # externalResourcesRequired
 

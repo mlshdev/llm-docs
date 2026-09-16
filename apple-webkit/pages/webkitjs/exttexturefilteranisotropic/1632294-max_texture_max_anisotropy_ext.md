@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/exttexturefilteranisotropic/1632294-max_texture_max_anisotropy_ext](https://developer.apple.com/documentation/webkitjs/exttexturefilteranisotropic/1632294-max_texture_max_anisotropy_ext)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/exttexturefilteranisotropic/1632294-max_texture_max_anisotropy_ext
 
 # MAX_TEXTURE_MAX_ANISOTROPY_EXT
 

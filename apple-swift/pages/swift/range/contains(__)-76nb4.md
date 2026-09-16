@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/range/contains(_:)-76nb4](https://developer.apple.com/documentation/swift/range/contains(_:)-76nb4)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/range/contains(_:)-76nb4
 
 # contains(\_:)
 

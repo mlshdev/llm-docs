@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applemusicapi/fetch-a-relationship-on-this-resource-by-name-165fz](https://developer.apple.com/documentation/applemusicapi/fetch-a-relationship-on-this-resource-by-name-165fz)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applemusicapi/fetch-a-relationship-on-this-resource-by-name-165fz
 
 # Get a Library Album's Relationship Directly by Name
 
@@ -531,6 +532,7 @@ https://api.music.apple.com/v1/me/library/albums/l.sticiFl/tracks
         "total": 15
     }
 }
+
 
 ```
 

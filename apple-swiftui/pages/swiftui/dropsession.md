@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/dropsession](https://developer.apple.com/documentation/swiftui/dropsession)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/dropsession
 
 # DropSession
 
@@ -6,11 +7,33 @@
 **Kind:** Structure  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · visionOS 26.0+
 
+A description of a drop that is in progress.
+
 ## Declaration
 
 ```swift
 struct DropSession
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+Read [location](dropsession/location.md) to find where the drop landed, [itemsCount](dropsession/itemscount.md) for how many items it carries, and [phase](dropsession/phase-swift.property.md) to follow the drag through its lifecycle.
+
+The following example animates a drop at the point of the drop:
+
+```swift
+Color.pink
+    .frame(width: 400, height: 400)
+    .dropDestination(for: String.self) { titles, session in
+        process(titles: titles)
+    }
+```
+
+To follow a drag while its phases change, apply [onDropSessionUpdated(\_:)](view/ondropsessionupdated%28__%29.md).
+
+Use [localSession](dropsession/localsession-swift.property.md) to recognize a drag that started inside your own app. It is `nil` for a drag that came from elsewhere.
 
 ## Topics
 

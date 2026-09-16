@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginecore/beaudiosession-6b7ig](https://developer.apple.com/documentation/browserenginecore/beaudiosession-6b7ig)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/browserenginecore/beaudiosession-6b7ig
 
 # BEAudioSession (Swift)
 

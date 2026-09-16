@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdks/graphql/manage-pod-templates.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/sdks/graphql/manage-pod-templates.mdx)
+> Pinned source for Runpod main: [sdks/graphql/manage-pod-templates.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/sdks/graphql/manage-pod-templates.mdx)
 > Canonical documentation: https://docs.runpod.io/sdks/graphql/manage-pod-templates
 
 # Manage templates

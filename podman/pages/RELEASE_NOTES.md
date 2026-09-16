@@ -1,6 +1,20 @@
-> Pinned source for Podman v6.1.1: [RELEASE_NOTES.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/RELEASE_NOTES.md)
+> Pinned source for Podman v6.1.2: [RELEASE_NOTES.md](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/RELEASE_NOTES.md)
 
 # Release Notes
+
+## 6.1.2
+
+### Security
+
+- This release addresses ([CVE-2025-11395](https://github.com/podman-container-tools/container-libs/security/advisories/GHSA-3gcv-x57j-xqxv)), where importing images containing crafted layer tarballs with the `podman load` command, or importing volumes containing crafted symlinks with `podman volume import`, allows overwriting files on the host.
+- This release also addresses [CVE-2026-79699](https://github.com/podman-container-tools/container-libs/security/advisories/GHSA-mmq6-9mjh-hvq3) and [CVE-2026-79705](https://github.com/podman-container-tools/buildah/security/advisories/GHSA-3528-5p26-cf44), though we do not believe these CVEs are exploitable through the Podman command line.
+
+### Misc
+
+- Updated Buildah to v1.45.1
+- Updated Common to v0.69.2
+- Updated Image to v5.41.2
+- Updated Storage to v1.64.1
 
 ## 6.1.1
 
@@ -105,7 +119,7 @@
 - Support for running on iptables has been removed. Please use nftables instead.
 - Support for CNI networking has been removed. Please use Netavark instead.
 - Support for the slirp4netns rootless network stack has been removed. Please use Pasta instead. As part of this, the `--network-cmd-path` global option, only used with `slirp4netns`, has been removed.
-- Podman's configuration file parsing logic has seen a major rewrite. Please see [this document](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/contrib/design-docs/config-file-parsing.md) for exact details.
+- Podman's configuration file parsing logic has seen a major rewrite. Please see [this document](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/contrib/design-docs/config-file-parsing.md) for exact details.
 - Podman's import path has changed from `github.com/containers/podman/v5` to `go.podman.io/podman/v6` as part of our move into a CNCF-owned GitHub organization.
 - Network isolation now defaults to enabled, improving Docker compatibility and security. A special workaround for the Docker-compatible API related to isolation being disabled has been removed ([#27349](https://github.com/podman-container-tools/podman/issues/27349)).
 - The way the `podman quadlet` suite of commands functions has been changed. Previously, Quadlets and their associated files were tracked using a `.app` file, ensuring that removing a Quadlet also removed all associated non-Quadlet files. Now, Quadlets and associated files are placed in subdirectories, which should reduce bugs and make manual management of Quadlets added by `podman quadlet install` much easier.

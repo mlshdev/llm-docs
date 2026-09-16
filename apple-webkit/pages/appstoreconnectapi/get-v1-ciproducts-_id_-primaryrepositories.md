@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-ciproducts-_id_-primaryrepositories](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-ciproducts-_id_-primaryrepositories)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-ciproducts-_id_-primaryrepositories
 
 # List all primary git repositories for an xcode cloud product
 

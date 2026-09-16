@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [whisper-asr-guide.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/whisper-asr-guide.mdx)
+> Pinned source for Vast.ai main: [whisper-asr-guide.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/whisper-asr-guide.mdx)
 > Canonical documentation: https://docs.vast.ai/whisper-asr-guide
 
 # Whisper ASR Guide
@@ -10,25 +10,25 @@
 1. Go to the templates tab and search for “*Whisper*” or click the provided link to the template [here](https://cloud.vast.ai/?ref_id=62897\&creator_id=62897\&name=Whisper%20ASR%20Webservice) .&#x20;
 2. After you select the template by pressing the triangle button the next step is to choose a gpu.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/use-cases-audio-to-text.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-audio-to-text.png)
 
 3\. **Select a GPU Offering&#x20;**
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/use-cases-audio-to-text-2.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-audio-to-text-2.png)
 
 The template you selected will give your instance access to both Jupyter and SSH. Additionally the Open button will connect you to the instance portal web interface.&#x20;
 
 4\. HTTP and token-based auth are both enabled by default. To avoid certificate errors in your browser, please follow the instructions for installing the TLS certificate [here](https://docs.vast.ai/guides/instances/jupyter#1SmCz) to allow secure HTTPS connections to your instance via its IP.&#x20;
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/use-cases-audio-to-text-3.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-audio-to-text-3.png)
 
 5\. Use the open button to open up the instance, if you are not using the open button the default username will be: vastai , and the password will be the value of the environment variable:*&#x20;OPEN\_BUTTON\_TOKEN*. You can also find the token value by accessing the terminal and executing this command: *echo $OPEN\_BUTTON\_TOKEN*
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/use-cases-audio-to-text-4.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-audio-to-text-4.png)
 
 6\. After accessing the SwaggerUi by clicking the triangle button first then waiting for the page to load, then clicking into the link aligning with SwaggerUI you should see the page below. (note: usually loads fast but can take 5-10 minutes)&#x20;
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/use-cases-audio-to-text-5.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-audio-to-text-5.png)
 
 **Usage**
 
@@ -38,7 +38,7 @@ Two POST endpoints are exposed in this template:
 
 Use this endpoint to automatically detect the spoken language in a given audio file.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/use-cases-audio-to-text-6.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-audio-to-text-6.png)
 
 **/asr**
 
@@ -46,25 +46,25 @@ Use this endpoint for both transcription and translation of audio files.
 
 *Both of these endpoints are documented using the OpenAPI standard and can be tested in a web browser.&#x20;*
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/use-cases-audio-to-text-7.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-audio-to-text-7.png)
 
 7\. *Select the detect language endpoint*
 
 8\. *Then click try it out.&#x20;*
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/use-cases-audio-to-text-8.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-audio-to-text-8.png)
 
 9.*&#x20;From here upload an audio clip*&#x20;
 
 10\. *Then press the execute button.&#x20;*
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/use-cases-audio-to-text-9.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-audio-to-text-9.png)
 
 11.*&#x20;If you look in the response body (see below) you can see it was able to detect the language was English.*&#x20;
 
 *Note: If you are getting an internal 500 error its most likely the file you selected to upload is to large.&#x20;*
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/use-cases-audio-to-text-10.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-audio-to-text-10.png)
 
 *For more information and specifics on things such as but not limited to Configuration, Additional Functionality, Instance Logs, Cloudflared, Api request, ssh tunnels and port reference mapping, and Caddy you can visit the*[ Readme linked here to learn more. ](https://cloud.vast.ai/template/readme/0c0c7d65cd4ebb2b340fbce39879703b)
 

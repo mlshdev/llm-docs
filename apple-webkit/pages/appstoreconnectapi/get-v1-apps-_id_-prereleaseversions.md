@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-apps-_id_-prereleaseversions](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-apps-_id_-prereleaseversions)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-apps-_id_-prereleaseversions
 
 # List all prerelease versions for an app
 
@@ -141,6 +142,7 @@ https://api.appstoreconnect.apple.com/v1/apps/6446998023/preReleaseVersions
     }
   }
 }
+
 
 ```
 

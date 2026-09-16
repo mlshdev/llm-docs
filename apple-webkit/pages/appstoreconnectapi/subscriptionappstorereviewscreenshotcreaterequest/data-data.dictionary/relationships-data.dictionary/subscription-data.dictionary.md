@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/subscriptionappstorereviewscreenshotcreaterequest/data-data.dictionary/relationships-data.dictionary/subscription-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/subscriptionappstorereviewscreenshotcreaterequest/data-data.dictionary/relationships-data.dictionary/subscription-data.dictionary)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/subscriptionappstorereviewscreenshotcreaterequest/data-data.dictionary/relationships-data.dictionary/subscription-data.dictionary
 
 # SubscriptionAppStoreReviewScreenshotCreateRequest.Data.Relationships.Subscription
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/mediastreamaudiosourcenode/1630555-mediastream](https://developer.apple.com/documentation/webkitjs/mediastreamaudiosourcenode/1630555-mediastream)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/mediastreamaudiosourcenode/1630555-mediastream
 
 # mediaStream
 

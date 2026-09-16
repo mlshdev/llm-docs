@@ -8,9 +8,9 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-15T17:08:12Z",
-  "documentationDigest": "4567a120a7456b35b4711559a2c40e63a605efb2f435a026f2703d9a60f40402",
-  "sourceCommit": "2465b5136acea8373d5c6a27e4672f4acf26c935",
+  "sourceCommittedAt": "2026-09-16T17:12:06Z",
+  "documentationDigest": "2cbc5c7b68266b15124ef73dd3bf06b58cc7c9a9639e53e6ab32faad07711441",
+  "sourceCommit": "aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4",
   "documentCount": 1631,
   "indexComplete": true,
   "corpusVolumes": [
@@ -18,28 +18,28 @@
       "name": "llms-full.txt",
       "byteLength": 687,
       "documentCount": 0,
-      "sha256": "13b1d84ccafa31a29179b972bc0706090c61409213c726646a456c6b463d284a"
+      "sha256": "13e6e39ffe5ca6aff248b463c2b10c96fe7e6c1714365b476a7c8eb33a6b4675"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8384515,
-      "documentCount": 785,
-      "sha256": "2ae734851b03970f077f0ad335e67d90b5fdb7a456fce7c2ce45802dff468148"
+      "byteLength": 8388529,
+      "documentCount": 786,
+      "sha256": "96fa5ba1177d5cab70cebc0dc22737938481ac84b23011dcc287b4f449db71b7"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 8308456,
-      "documentCount": 198,
-      "sha256": "fccffdd7f3b81f347244a8fe38546078daf360863496dd40ad2064190a09e9e1"
+      "byteLength": 8303747,
+      "documentCount": 197,
+      "sha256": "c03c4d8e97c2eb2cf74d9087bcffb66be7230ecae9ec023df447885dfbf8f762"
     },
     {
       "name": "llms-full.003.txt",
       "byteLength": 6689732,
       "documentCount": 648,
-      "sha256": "c72e063439f631a43baf94806ca916928b80037a11c07ecc8307278f2bb77d01"
+      "sha256": "fee39e58171d5473656782e9f6f1a13b0bd9f6dea25872ec67e09e3d4d27172a"
     }
   ],
-  "outputDigest": "2208d46d9b4d1150edd580cf4ab0bbb93d6030f88c70c11ea44469ffae6694fb",
+  "outputDigest": "222bf9ed8b403a83b8eaab23de98403e49c69526071ced391e43dfe25dcb47bc",
   "notes": [
     "Docker tracks the latest main-branch commit because docker/docs does not publish current releases.",
     "Hugo content and vendored Markdown mounts are normalized without executing Hugo; includes and documentation shortcodes are expanded into plain Markdown.",

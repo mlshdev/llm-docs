@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/stepper/init(value:step:oneditingchanged:label:)](https://developer.apple.com/documentation/swiftui/stepper/init(value:step:oneditingchanged:label:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/stepper/init(value:step:oneditingchanged:label:)
 
 # init(value:step:onEditingChanged:label:)
 
 **Framework:** SwiftUI  
 **Kind:** Initializer  
-**Availability:** iOS 13.0+ (deprecated in 27.0) · iPadOS 13.0+ (deprecated in 27.0) · Mac Catalyst 13.0+ (deprecated in 27.0) · macOS 10.15+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0) · watchOS 9.0+ (deprecated in 27.0)
+**Availability:** iOS 13.0+ (deprecated in 27.2) · iPadOS 13.0+ (deprecated in 27.2) · Mac Catalyst 13.0+ (deprecated in 27.2) · macOS 10.15+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2) · watchOS 9.0+ (deprecated in 27.2)
 
 Creates a stepper configured to increment or decrement a binding to a value using a step value you provide.
 

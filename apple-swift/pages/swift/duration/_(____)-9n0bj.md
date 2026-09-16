@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/duration/_(_:_:)-9n0bj](https://developer.apple.com/documentation/swift/duration/_(_:_:)-9n0bj)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/duration/_(_:_:)-9n0bj
 
 # /(\_:\_:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/layout-adjustments](https://developer.apple.com/documentation/swiftui/layout-adjustments)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/layout-adjustments
 
 # Layout adjustments
 
@@ -91,7 +92,7 @@ To get started with a basic layout, see [Layout fundamentals](layout-fundamental
 - [LayoutDirectionBehavior](layoutdirectionbehavior.md): A description of what should happen when the layout direction changes.
 - [layoutDirection](environmentvalues/layoutdirection.md): The layout direction associated with the current environment.
 - [LayoutDirection](layoutdirection.md): A direction in which SwiftUI can lay out content.
-- [LayoutRotationUnaryLayout](layoutrotationunarylayout.md)
+- [LayoutRotationUnaryLayout](layoutrotationunarylayout.md): A layout that rotates the space containing a view.
 
 ### Reacting to interface characteristics
 

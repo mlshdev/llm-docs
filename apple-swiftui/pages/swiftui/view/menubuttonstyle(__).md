@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/menubuttonstyle(_:)](https://developer.apple.com/documentation/swiftui/view/menubuttonstyle(_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/menubuttonstyle(_:)
 
 # menuButtonStyle(\_:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** macOS 10.15+ (deprecated in 27.0)
+**Availability:** macOS 10.15+ (deprecated in 27.2)
 
 Sets the style for menu buttons within this view.
 

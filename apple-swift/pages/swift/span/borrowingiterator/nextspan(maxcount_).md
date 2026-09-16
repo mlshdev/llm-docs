@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/span/borrowingiterator/nextspan(maxcount:)](https://developer.apple.com/documentation/swift/span/borrowingiterator/nextspan(maxcount:))
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/span/borrowingiterator/nextspan(maxcount:)
 
 # nextSpan(maxCount:)
 
@@ -11,7 +12,7 @@ Returns a span over the next group of elements that are ready to by visited, up 
 ## Declaration
 
 ```swift
-mutating func nextSpan(maxCount: Int) -> Span<Element>
+@export(implementation) mutating func nextSpan(maxCount: Int) -> Span<Element>
 ```
 
 <a id="discussion"></a>

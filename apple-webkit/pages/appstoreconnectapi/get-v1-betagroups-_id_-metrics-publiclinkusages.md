@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-betagroups-_id_-metrics-publiclinkusages](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-betagroups-_id_-metrics-publiclinkusages)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-betagroups-_id_-metrics-publiclinkusages
 
 # Read Public Link Usage Metrics for a Beta Group
 

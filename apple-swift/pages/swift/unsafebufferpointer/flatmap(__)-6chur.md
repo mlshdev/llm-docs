@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/unsafebufferpointer/flatmap(_:)-6chur](https://developer.apple.com/documentation/swift/unsafebufferpointer/flatmap(_:)-6chur)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/unsafebufferpointer/flatmap(_:)-6chur
 
 # flatMap(\_:)
 

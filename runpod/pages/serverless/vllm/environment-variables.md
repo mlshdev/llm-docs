@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/vllm/environment-variables.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/serverless/vllm/environment-variables.mdx)
+> Pinned source for Runpod main: [serverless/vllm/environment-variables.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/serverless/vllm/environment-variables.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/vllm/environment-variables
 
 # vLLM environment variables

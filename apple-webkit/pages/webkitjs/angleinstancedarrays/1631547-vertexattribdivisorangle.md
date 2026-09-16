@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/angleinstancedarrays/1631547-vertexattribdivisorangle](https://developer.apple.com/documentation/webkitjs/angleinstancedarrays/1631547-vertexattribdivisorangle)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/angleinstancedarrays/1631547-vertexattribdivisorangle
 
 # vertexAttribDivisorANGLE
 

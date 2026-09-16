@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgunittypes/1629252-svg_unit_type_unknown](https://developer.apple.com/documentation/webkitjs/svgunittypes/1629252-svg_unit_type_unknown)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgunittypes/1629252-svg_unit_type_unknown
 
 # SVG_UNIT_TYPE_UNKNOWN
 

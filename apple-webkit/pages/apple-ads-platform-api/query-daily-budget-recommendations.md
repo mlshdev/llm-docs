@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/query-daily-budget-recommendations](https://developer.apple.com/documentation/apple-ads-platform-api/query-daily-budget-recommendations)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/query-daily-budget-recommendations
 
 # Query Daily Budget Recommendations
 

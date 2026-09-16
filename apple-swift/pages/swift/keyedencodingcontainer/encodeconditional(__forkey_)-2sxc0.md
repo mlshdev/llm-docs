@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/keyedencodingcontainer/encodeconditional(_:forkey:)-2sxc0](https://developer.apple.com/documentation/swift/keyedencodingcontainer/encodeconditional(_:forkey:)-2sxc0)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/keyedencodingcontainer/encodeconditional(_:forkey:)-2sxc0
 
 # encodeConditional(\_:forKey:)
 

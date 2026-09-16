@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/get-adgroups-_id_](https://developer.apple.com/documentation/apple-ads-platform-api/get-adgroups-_id_)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/get-adgroups-_id_
 
 # Get an Ad Group
 

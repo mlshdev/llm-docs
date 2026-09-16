@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-webhooks-_id_-relationships-deliveries](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-webhooks-_id_-relationships-deliveries)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-webhooks-_id_-relationships-deliveries
 
 # List delivery IDs for a webhook
 

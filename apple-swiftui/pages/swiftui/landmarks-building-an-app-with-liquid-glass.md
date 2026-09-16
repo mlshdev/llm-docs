@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/landmarks-building-an-app-with-liquid-glass](https://developer.apple.com/documentation/swiftui/landmarks-building-an-app-with-liquid-glass)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/landmarks-building-an-app-with-liquid-glass
 
 # Landmarks: Building an app with Liquid Glass (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/post-v1-gamecenterenabledversions-_id_-relationships-compatibleversions](https://developer.apple.com/documentation/appstoreconnectapi/post-v1-gamecenterenabledversions-_id_-relationships-compatibleversions)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/post-v1-gamecenterenabledversions-_id_-relationships-compatibleversions
 
 # Add compatible versions to a game center enabled version
 

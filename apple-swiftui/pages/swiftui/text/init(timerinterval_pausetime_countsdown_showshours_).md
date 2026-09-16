@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/text/init(timerinterval:pausetime:countsdown:showshours:)](https://developer.apple.com/documentation/swiftui/text/init(timerinterval:pausetime:countsdown:showshours:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/text/init(timerinterval:pausetime:countsdown:showshours:)
 
 # init(timerInterval:pauseTime:countsDown:showsHours:)
 
@@ -32,6 +33,10 @@ Text(
 ```
 
 The example above shows a text that displays a timer counting down from “12:00” and will pause when reaching “10:00”.
+
+> **Note**
+
+> In a widget, this `Text` becomes horizontally flexible and expands to fill the available width, because its content keeps changing as the timer counts. Widgets can’t perform layout again after the system archives them, so the text can’t measure itself against its eventual content without risking clipping. If you want to constrain the width, apply a [frame(width:height:alignment:)](../view/frame%28width_height_alignment_%29.md) modifier, and use [multilineTextAlignment(\_:)](../view/multilinetextalignment%28__%29.md) to align the text within that frame.
 
 ## See Also
 

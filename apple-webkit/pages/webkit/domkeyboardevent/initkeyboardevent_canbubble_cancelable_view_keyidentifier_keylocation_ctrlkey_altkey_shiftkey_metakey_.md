@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/domkeyboardevent/initkeyboardevent:canbubble:cancelable:view:keyidentifier:keylocation:ctrlkey:altkey:shiftkey:metakey:](https://developer.apple.com/documentation/webkit/domkeyboardevent/initkeyboardevent:canbubble:cancelable:view:keyidentifier:keylocation:ctrlkey:altkey:shiftkey:metakey:)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/domkeyboardevent/initkeyboardevent:canbubble:cancelable:view:keyidentifier:keylocation:ctrlkey:altkey:shiftkey:metakey:
 
 # initKeyboardEvent:canBubble:cancelable:view:keyIdentifier:keyLocation:ctrlKey:altKey:shiftKey:metaKey:
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgfeblendelement/1629676-svg_feblend_mode_darken](https://developer.apple.com/documentation/webkitjs/svgfeblendelement/1629676-svg_feblend_mode_darken)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgfeblendelement/1629676-svg_feblend_mode_darken
 
 # SVG_FEBLEND_MODE_DARKEN
 

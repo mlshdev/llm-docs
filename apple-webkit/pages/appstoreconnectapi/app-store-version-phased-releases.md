@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/app-store-version-phased-releases](https://developer.apple.com/documentation/appstoreconnectapi/app-store-version-phased-releases)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/app-store-version-phased-releases
 
 # App Store Version Phased Releases
 

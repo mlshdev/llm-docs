@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgfeblendelement/1629856-svg_feblend_mode_screen](https://developer.apple.com/documentation/webkitjs/svgfeblendelement/1629856-svg_feblend_mode_screen)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgfeblendelement/1629856-svg_feblend_mode_screen
 
 # SVG_FEBLEND_MODE_SCREEN
 

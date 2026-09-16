@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/path/addquadcurve(to:control:)](https://developer.apple.com/documentation/swiftui/path/addquadcurve(to:control:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/path/addquadcurve(to:control:)
 
 # addQuadCurve(to:control:)
 
@@ -16,6 +17,7 @@ mutating func addQuadCurve(to end: CGPoint, control: CGPoint)
 
 ## Parameters
 
+- `end`: The point, in user space coordinates, at which to end the curve.
 - `control`: The control point of the curve, in user space coordinates.
 
 <a id="discussion"></a>

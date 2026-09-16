@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/ondrop(of:delegate:)-2vr9o](https://developer.apple.com/documentation/swiftui/view/ondrop(of:delegate:)-2vr9o)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/ondrop(of:delegate:)-2vr9o
 
 # onDrop(of:delegate:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 13.4+ (deprecated in 27.0) · iPadOS 13.4+ (deprecated in 27.0) · Mac Catalyst 13.4+ (deprecated in 27.0) · macOS 10.15+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 13.4+ (deprecated in 27.2) · iPadOS 13.4+ (deprecated in 27.2) · Mac Catalyst 13.4+ (deprecated in 27.2) · macOS 10.15+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Defines the destination for a drag and drop operation with the same size and position as this view, with behavior controlled by the given delegate.
 

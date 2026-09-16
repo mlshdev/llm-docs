@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/dom_dom_delta_line](https://developer.apple.com/documentation/webkit/dom_dom_delta_line)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/dom_dom_delta_line
 
 # DOM_DOM_DELTA_LINE (Swift)
 

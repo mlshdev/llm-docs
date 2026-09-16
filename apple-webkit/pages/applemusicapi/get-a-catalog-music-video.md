@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applemusicapi/get-a-catalog-music-video](https://developer.apple.com/documentation/applemusicapi/get-a-catalog-music-video)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applemusicapi/get-a-catalog-music-video
 
 # Get a Catalog Music Video
 
@@ -124,6 +125,7 @@ https://api.music.apple.com/v1/catalog/us/music-videos/1553279848
         }
     ]
 }
+
 
 ```
 

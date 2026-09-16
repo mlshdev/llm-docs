@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/appentityidentifier(forselectiontype:identifier:)](https://developer.apple.com/documentation/swiftui/view/appentityidentifier(forselectiontype:identifier:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/appentityidentifier(forselectiontype:identifier:)
 
 # appEntityIdentifier(forSelectionType:identifier:)
 
@@ -48,6 +49,6 @@ For more information, refer to doc:providing-contextual-cues-to-Apple-Intelligen
 
 - [appEntityIdentifier(\_:)](appentityidentifier%28__%29.md): Associates a SwiftUI view with an app entity to make its content discoverable by Apple Intelligence and Siri.
 - [appEntityUIElements(\_:)](appentityuielements%28__%29.md): Provides the system with additional context to make a custom view’s content discoverable by Apple Intelligence and Siri.
-- [onAppIntentExecution(\_:perform:)](onappintentexecution%28__perform_%29.md): Registers a handler to invoke in response to the specified app intent that your app receives.
+- [onAppIntentExecution(\_:perform:)](onappintentexecution%28__perform_%29.md): Registers a handler to run when the app receives an app intent that targets the associated scene.
 - [shortcutsLinkStyle(\_:)](shortcutslinkstyle%28__%29.md): Sets the given style for ShortcutsLinks within the view hierarchy
 - [siriTipViewStyle(\_:)](siritipviewstyle%28__%29.md): Sets the given style for SiriTipView within the view hierarchy

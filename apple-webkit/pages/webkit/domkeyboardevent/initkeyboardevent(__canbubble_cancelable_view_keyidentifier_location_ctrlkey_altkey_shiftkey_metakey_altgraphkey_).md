@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/domkeyboardevent/initkeyboardevent(_:canbubble:cancelable:view:keyidentifier:location:ctrlkey:altkey:shiftkey:metakey:altgraphkey:)](https://developer.apple.com/documentation/webkit/domkeyboardevent/initkeyboardevent(_:canbubble:cancelable:view:keyidentifier:location:ctrlkey:altkey:shiftkey:metakey:altgraphkey:))
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/domkeyboardevent/initkeyboardevent(_:canbubble:cancelable:view:keyidentifier:location:ctrlkey:altkey:shiftkey:metakey:altgraphkey:)
 
 # initKeyboardEvent(\_:canBubble:cancelable:view:keyIdentifier:location:ctrlKey:altKey:shiftKey:metaKey:altGraphKey:) (Swift)
 

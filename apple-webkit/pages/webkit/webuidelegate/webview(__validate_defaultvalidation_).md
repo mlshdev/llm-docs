@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/webuidelegate/webview(_:validate:defaultvalidation:)](https://developer.apple.com/documentation/webkit/webuidelegate/webview(_:validate:defaultvalidation:))
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/webuidelegate/webview(_:validate:defaultvalidation:)
 
 # webView(\_:validate:defaultValidation:) (Swift)
 

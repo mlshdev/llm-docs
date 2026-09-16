@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/accessibilityrotorentry/init(_:textrange:prepare:)](https://developer.apple.com/documentation/swiftui/accessibilityrotorentry/init(_:textrange:prepare:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/accessibilityrotorentry/init(_:textrange:prepare:)
 
 # init(\_:textRange:prepare:)
 
@@ -17,6 +18,7 @@ Create a Rotor entry with a specific label and range. This Rotor entry will be a
 ## Parameters
 
 - `label`: Localized string used to show this Rotor entry to users. If no label is specified, the Rotor entry will be labeled based on the text at that range.
+- `textRange`: Range of text associated with this Rotor entry.
 - `prepare`: Optional closure to run before a Rotor entry is navigated to, to prepare the UI as needed. This can be used to bring the UI element or text on-screen if it isn’t already, and SwiftUI not able to automatically scroll to it.
 
 ## See Also

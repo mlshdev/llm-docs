@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/customizabletoolbarcontent](https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent
 
 # CustomizableToolbarContent
 
@@ -18,23 +19,30 @@ protocol CustomizableToolbarContent : ToolbarContent where Self.Body : Customiza
 
 ### Using default options
 
-- [defaultCustomization()](customizabletoolbarcontent/defaultcustomization%28%29.md): Deprecated. Configures customizable toolbar content with the default visibility and options.
 - [defaultCustomization(\_:options:)](customizabletoolbarcontent/defaultcustomization%28__options_%29.md): Configures the way customizable toolbar items with the default behavior behave.
 
-### Customizing the behavior
+### Customizing behaviors
 
+- [axisBehavior(\_:)](customizabletoolbarcontent/axisbehavior%28__%29.md): Beta. The bar axis behavior of the toolbar item.
 - [customizationBehavior(\_:)](customizabletoolbarcontent/customizationbehavior%28__%29.md): Configures the customization behavior of customizable toolbar content.
 
 ### Setting visibility
 
+- [hidden(\_:)](customizabletoolbarcontent/hidden%28__%29.md): Hides a toolbar item within its toolbar.
+- [sharedBackgroundVisibility(\_:)](customizabletoolbarcontent/sharedbackgroundvisibility%28__%29.md): Controls the visibility of the glass background effect on items in the toolbar. In certain contexts, such as the navigation bar on iOS and the window toolbar on macOS, toolbar items will be given a glass background effect that is shared with other items in the same logical grouping.
 - [visibilityPriority(\_:)](customizabletoolbarcontent/visibilitypriority%28__%29.md): Defines the visibility priority for a toolbar item.
 
-### Instance Methods
+### Coordinating with animations
+
+- [matchedTransitionSource(id:in:)](customizabletoolbarcontent/matchedtransitionsource%28id_in_%29.md): Identifies this toolbar content as the source of a navigation transition, such as a zoom transition.
+
+### Adjusting content margins
 
 - [contentMarginsRemoved(\_:)](customizabletoolbarcontent/contentmarginsremoved%28__%29.md): Configures whether the content margins are removed.
-- [hidden(\_:)](customizabletoolbarcontent/hidden%28__%29.md): Hides a toolbar item within its toolbar.
-- [matchedTransitionSource(id:in:)](customizabletoolbarcontent/matchedtransitionsource%28id_in_%29.md): Identifies this toolbar content as the source of a navigation transition, such as a zoom transition.
-- [sharedBackgroundVisibility(\_:)](customizabletoolbarcontent/sharedbackgroundvisibility%28__%29.md): Controls the visibility of the glass background effect on items in the toolbar. In certain contexts, such as the navigation bar on iOS and the window toolbar on macOS, toolbar items will be given a glass background effect that is shared with other items in the same logical grouping.
+
+### Deprecated
+
+- [defaultCustomization()](customizabletoolbarcontent/defaultcustomization%28%29.md): Deprecated. Configures customizable toolbar content with the default visibility and options.
 
 ## Relationships
 

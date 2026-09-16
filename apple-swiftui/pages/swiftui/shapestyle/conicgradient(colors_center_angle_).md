@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/shapestyle/conicgradient(colors:center:angle:)](https://developer.apple.com/documentation/swiftui/shapestyle/conicgradient(colors:center:angle:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/shapestyle/conicgradient(colors:center:angle:)
 
 # conicGradient(colors:center:angle:)
 

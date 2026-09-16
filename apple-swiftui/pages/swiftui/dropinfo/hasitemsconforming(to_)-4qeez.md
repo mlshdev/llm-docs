@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/dropinfo/hasitemsconforming(to:)-4qeez](https://developer.apple.com/documentation/swiftui/dropinfo/hasitemsconforming(to:)-4qeez)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/dropinfo/hasitemsconforming(to:)-4qeez
 
 # hasItemsConforming(to:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 13.4+ (deprecated in 27.0) · iPadOS 13.4+ (deprecated in 27.0) · Mac Catalyst 13.4+ (deprecated in 27.0) · macOS 10.15+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 13.4+ (deprecated in 27.2) · iPadOS 13.4+ (deprecated in 27.2) · Mac Catalyst 13.4+ (deprecated in 27.2) · macOS 10.15+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Returns whether at least one item conforms to at least one of the specified uniform type identifiers.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-gamecenterappversions-_id_-relationships-appstoreversion](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-gamecenterappversions-_id_-relationships-appstoreversion)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-gamecenterappversions-_id_-relationships-appstoreversion
 
 # Get the App Store version ID for a Game Center app version
 

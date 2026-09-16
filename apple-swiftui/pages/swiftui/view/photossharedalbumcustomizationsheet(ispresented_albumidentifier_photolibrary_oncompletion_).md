@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/photossharedalbumcustomizationsheet(ispresented:albumidentifier:photolibrary:oncompletion:)](https://developer.apple.com/documentation/swiftui/view/photossharedalbumcustomizationsheet(ispresented:albumidentifier:photolibrary:oncompletion:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/photossharedalbumcustomizationsheet(ispresented:albumidentifier:photolibrary:oncompletion:)
 
 # photosSharedAlbumCustomizationSheet(isPresented:albumIdentifier:photoLibrary:onCompletion:)
 
@@ -46,3 +47,6 @@ nonisolated func photosSharedAlbumCustomizationSheet(isPresented: Binding<Bool>,
 - [photosPickerMetadataOptions(\_:)](photospickermetadataoptions%28__%29.md): Sets metadata options for the Photos picker.
 - [photosSharedAlbumCreationSheet(isPresented:defaultTitle:defaultSharingPolicy:photoLibrary:onCompletion:)](photossharedalbumcreationsheet%28ispresented_defaulttitle_defaultsharingpolicy_photolibrary_oncompletion_%29.md): Presents a view for allowing the user to create a new shared album.
 - [photosSharedAlbumPostingSheet(isPresented:items:defaultAlbumIdentifier:photoLibrary:completion:)](photossharedalbumpostingsheet%28ispresented_items_defaultalbumidentifier_photolibrary_completion_%29.md): Presents an “Add to Shared Album” sheet that allows the user to post the given items to a shared album.
+- [photosReferenceImageViewer(asset:onProcessingCompletion:)](photosreferenceimageviewer%28asset_onprocessingcompletion_%29.md): Presents an image viewer for an asset in a photo library that contains Apple Reference Image data when `isPresented` is set to true.
+- [photosReferenceImageViewer(fileURL:onProcessingCompletion:)](photosreferenceimageviewer%28fileurl_onprocessingcompletion_%29.md): Presents an image viewer for a given image file containing Apple Reference Image data when `fileURL` is set.
+- [photosReferenceImageViewer(pickerItem:onProcessingCompletion:)](photosreferenceimageviewer%28pickeritem_onprocessingcompletion_%29.md): Presents an image viewer for an image containing Apple Reference Image data selected from the Photos picker when `isPresented` is set to true.

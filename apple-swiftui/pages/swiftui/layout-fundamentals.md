@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/layout-fundamentals](https://developer.apple.com/documentation/swiftui/layout-fundamentals)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/layout-fundamentals
 
 # Layout fundamentals
 
@@ -51,6 +52,17 @@ To fine-tune the position, alignment, and other elements of a layout that you bu
 - [LazyHGrid](lazyhgrid.md): A container view that arranges its child views in a grid that grows horizontally, creating items only as needed.
 - [LazyVGrid](lazyvgrid.md): A container view that arranges its child views in a grid that grows vertically, creating items only as needed.
 - [GridItem](griditem.md): A description of a row or a column in a lazy grid.
+
+### Dynamically arranging a primary and secondary view
+
+- [ArrangementView](arrangementview.md): Beta. A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
+- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Beta. Sets the style for arrangement views within this view.
+- [ArrangementViewStyle](arrangementviewstyle.md): Beta. A style that configures an `ArrangementView` with an arrangement.
+- [overlayArrangementEdge(\_:)](view/overlayarrangementedge%28__%29.md): Beta. The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
+- [splitArrangementFixedLayoutSize(horizontal:vertical:)](view/splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Beta. Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
+- [splitArrangementLayoutRatio(\_:)](view/splitarrangementlayoutratio%28__%29.md): Beta. Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](view/splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Beta. Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](view/splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Beta. Sets the size constraints for an arrangement view in a split style.
 
 ### Layering views
 

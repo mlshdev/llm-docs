@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/contenttoolbarplacement](https://developer.apple.com/documentation/swiftui/contenttoolbarplacement)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/contenttoolbarplacement
 
 # ContentToolbarPlacement
 
@@ -6,11 +7,41 @@
 **Kind:** Structure  
 **Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
 
+A region of the interface that hosts its own toolbar content.
+
 ## Declaration
 
 ```swift
 struct ContentToolbarPlacement
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+Some containers draw a bar that belongs to the container as a whole rather than to the view currently on screen, such as the sidebar of a [TabView](tabview.md) that uses the [sidebarAdaptable](tabviewstyle/sidebaradaptable.md) style. Pass a value of this type to [contentToolbar(for:content:)](view/contenttoolbar%28for_content_%29.md) to put items in one of those bars.
+
+The following example adds a button to the sidebar of a tab view, where it stays put as someone moves between tabs:
+
+```swift
+TabView {
+    Tab("Lights", systemImage: "lightbulb") {
+        LightsView()
+    }
+
+    Tab("Locks", systemImage: "lock") {
+        LocksView()
+    }
+}
+.tabViewStyle(.sidebarAdaptable)
+.contentToolbar(for: .tabViewSidebar) {
+    ToolbarItem {
+        DisconnectDevicesButton()
+    }
+}
+```
+
+Each placement accepts only some [ToolbarItemPlacement](toolbaritemplacement.md) values. Check the documentation of the placement you use before you rely on a position.
 
 ## Topics
 

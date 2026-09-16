@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/ornament(visibility:attachmentanchor:contentalignment:ornament:)](https://developer.apple.com/documentation/swiftui/view/ornament(visibility:attachmentanchor:contentalignment:ornament:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/ornament(visibility:attachmentanchor:contentalignment:ornament:)
 
 # ornament(visibility:attachmentAnchor:contentAlignment:ornament:)
 
@@ -20,6 +21,7 @@ Presents an ornament.
 - `visibility`: The visibility of the ornament.
 - `attachmentAnchor`: The positioning anchor that defines the attachment point of the ornament.
 - `contentAlignment`: The alignment of the ornament with its attachment anchor.
+- `ornament`: The content of the ornament.
 
 <a id="discussion"></a>
 

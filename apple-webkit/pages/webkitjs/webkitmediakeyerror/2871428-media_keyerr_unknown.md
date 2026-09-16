@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webkitmediakeyerror/2871428-media_keyerr_unknown](https://developer.apple.com/documentation/webkitjs/webkitmediakeyerror/2871428-media_keyerr_unknown)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeyerror/2871428-media_keyerr_unknown
 
 # MEDIA_KEYERR_UNKNOWN
 

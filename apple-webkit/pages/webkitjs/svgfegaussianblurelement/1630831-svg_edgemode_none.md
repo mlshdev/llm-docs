@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgfegaussianblurelement/1630831-svg_edgemode_none](https://developer.apple.com/documentation/webkitjs/svgfegaussianblurelement/1630831-svg_edgemode_none)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgfegaussianblurelement/1630831-svg_edgemode_none
 
 # SVG_EDGEMODE_NONE
 

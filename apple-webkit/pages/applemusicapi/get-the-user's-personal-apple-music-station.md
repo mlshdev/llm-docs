@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applemusicapi/get-the-user's-personal-apple-music-station](https://developer.apple.com/documentation/applemusicapi/get-the-user's-personal-apple-music-station)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applemusicapi/get-the-user's-personal-apple-music-station
 
 # Get the User's Personal Apple Music Station
 

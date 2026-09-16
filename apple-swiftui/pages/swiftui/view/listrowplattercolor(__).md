@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/listrowplattercolor(_:)](https://developer.apple.com/documentation/swiftui/view/listrowplattercolor(_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/listrowplattercolor(_:)
 
 # listRowPlatterColor(\_:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** watchOS 6.0+ (deprecated in 27.0)
+**Availability:** watchOS 6.0+ (deprecated in 27.2)
 
 Sets the color that the system applies to the row background when this view is placed in a list.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/picker/init(_:selection:content:currentvaluelabel:)](https://developer.apple.com/documentation/swiftui/picker/init(_:selection:content:currentvaluelabel:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/picker/init(_:selection:content:currentvaluelabel:)
 
 # init(\_:selection:content:currentValueLabel:)
 

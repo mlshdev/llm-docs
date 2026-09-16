@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/cloudkitjs/cloudkit.queryfiltercomparator/greater_than_or_equals](https://developer.apple.com/documentation/cloudkitjs/cloudkit.queryfiltercomparator/greater_than_or_equals)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/cloudkitjs/cloudkit.queryfiltercomparator/greater_than_or_equals
 
 # GREATER_THAN_OR_EQUALS
 

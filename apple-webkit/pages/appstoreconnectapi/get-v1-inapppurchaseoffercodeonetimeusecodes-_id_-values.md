@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-inapppurchaseoffercodeonetimeusecodes-_id_-values](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-inapppurchaseoffercodeonetimeusecodes-_id_-values)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-inapppurchaseoffercodeonetimeusecodes-_id_-values
 
 # List All Values for an In-App Purchase Offer Code One-Time Use Code
 

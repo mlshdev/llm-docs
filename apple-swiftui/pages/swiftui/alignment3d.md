@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/alignment3d](https://developer.apple.com/documentation/swiftui/alignment3d)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/alignment3d
 
 # Alignment3D
 
@@ -73,5 +74,5 @@ An alignment in all three axes.
 - [UnitPoint](unitpoint.md): A normalized 2D point in a view’s coordinate space.
 - [UnitPoint3D](unitpoint3d.md): A normalized 3D point in a view’s coordinate space.
 - [Anchor](anchor.md): An opaque value derived from an anchor source and a particular view.
-- [DepthAlignmentID](depthalignmentid.md)
+- [DepthAlignmentID](depthalignmentid.md): A type that defines a custom depth alignment guide.
 - [GeometryProxyCoordinateSpace3D](geometryproxycoordinatespace3d.md): A representation of a `GeometryProxy3D` which can be used for `CoordinateSpace3D` based conversions.

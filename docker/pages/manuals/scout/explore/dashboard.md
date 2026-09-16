@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/explore/dashboard.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/scout/explore/dashboard.md)
+> Pinned source for Docker main: [content/manuals/scout/explore/dashboard.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/scout/explore/dashboard.md)
 
 # Dashboard
 
@@ -10,8 +10,6 @@ as security, compliance, and operations to know what vulnerabilities and issues
 they need to focus on.
 
 ## Overview
-
-![A screenshot of the Docker Scout Dashboard overview](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/scout/images/dashboard-overview.webp?border=true)
 
 The **Overview** tab provides a summary for the repositories in the selected
 organization.
@@ -37,8 +35,6 @@ sections of the Docker Scout Dashboard:
 
 The **Images** view shows all images in Scout-enabled repositories for the selected environment.
 You can filter the list by selecting a different environment, or by repository name using the text filter.
-
-![Screenshot of the images view](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/scout/images/dashboard-images.webp)
 
 For each repository, the list displays the following details:
 

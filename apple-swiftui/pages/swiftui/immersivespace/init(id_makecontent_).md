@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/immersivespace/init(id:makecontent:)](https://developer.apple.com/documentation/swiftui/immersivespace/init(id:makecontent:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/immersivespace/init(id:makecontent:)
 
 # init(id:makeContent:)
 
@@ -17,6 +18,7 @@ Creates the immersive space associated with the specified identifier.
 ## Parameters
 
 - `id`: A string that uniquely identifies the immersive space. Ensure that identifiers are unique among the immersive spaces in your app.
+- `makeContent`: An immersive space content builder that defines the content of the space.
 
 <a id="discussion"></a>
 

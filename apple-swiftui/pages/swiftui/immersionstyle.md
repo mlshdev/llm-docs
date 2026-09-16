@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/immersionstyle](https://developer.apple.com/documentation/swiftui/immersionstyle)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/immersionstyle
 
 # ImmersionStyle
 
@@ -74,4 +75,4 @@ struct SolarSystemApp: App {
 - [immersionStyle(selection:in:)](scene/immersionstyle%28selection_in_%29.md): Sets the style for an immersive space.
 - [immersiveSpaceDisplacement](environmentvalues/immersivespacedisplacement.md): The displacement that the system applies to the immersive space when moving the space away from its default position, in meters.
 - [ImmersiveEnvironmentBehavior](immersiveenvironmentbehavior.md): The behavior of the system-provided immersive environments when a scene is opened by your app.
-- [ProgressiveImmersionAspectRatio](progressiveimmersionaspectratio.md)
+- [ProgressiveImmersionAspectRatio](progressiveimmersionaspectratio.md): The shape of the portal that a progressive immersion style opens.

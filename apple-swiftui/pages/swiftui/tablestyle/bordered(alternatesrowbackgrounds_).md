@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/tablestyle/bordered(alternatesrowbackgrounds:)](https://developer.apple.com/documentation/swiftui/tablestyle/bordered(alternatesrowbackgrounds:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/tablestyle/bordered(alternatesrowbackgrounds:)
 
 # bordered(alternatesRowBackgrounds:)
 
 **Framework:** SwiftUI  
 **Kind:** Type Method  
-**Availability:** macOS 12.0+ (deprecated in 27.0)
+**Availability:** macOS 12.0+ (deprecated in 27.2)
 
 The table style that describes the behavior and appearance of a table with standard border.
 

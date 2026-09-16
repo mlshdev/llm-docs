@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/spring/velocity(fromvalue:tovalue:initialvelocity:time:)](https://developer.apple.com/documentation/swiftui/spring/velocity(fromvalue:tovalue:initialvelocity:time:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/spring/velocity(fromvalue:tovalue:initialvelocity:time:)
 
 # velocity(fromValue:toValue:initialVelocity:time:)
 

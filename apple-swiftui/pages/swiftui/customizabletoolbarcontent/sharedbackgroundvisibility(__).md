@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/customizabletoolbarcontent/sharedbackgroundvisibility(_:)](https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent/sharedbackgroundvisibility(_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent/sharedbackgroundvisibility(_:)
 
 # sharedBackgroundVisibility(\_:)
 
@@ -34,3 +35,10 @@ ContentView()
         .sharedBackgroundVisibility(.hidden)
     }
 ```
+
+## See Also
+
+### Setting visibility
+
+- [hidden(\_:)](hidden%28__%29.md): Hides a toolbar item within its toolbar.
+- [visibilityPriority(\_:)](visibilitypriority%28__%29.md): Defines the visibility priority for a toolbar item.

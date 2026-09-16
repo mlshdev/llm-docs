@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/webresourceloaddelegate/webview(_:resource:willsend:redirectresponse:from:)](https://developer.apple.com/documentation/webkit/webresourceloaddelegate/webview(_:resource:willsend:redirectresponse:from:))
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/webresourceloaddelegate/webview(_:resource:willsend:redirectresponse:from:)
 
 # webView(\_:resource:willSend:redirectResponse:from:) (Swift)
 

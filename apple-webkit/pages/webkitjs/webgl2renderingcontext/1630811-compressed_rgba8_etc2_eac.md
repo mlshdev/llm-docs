@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webgl2renderingcontext/1630811-compressed_rgba8_etc2_eac](https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1630811-compressed_rgba8_etc2_eac)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1630811-compressed_rgba8_etc2_eac
 
 # COMPRESSED_RGBA8_ETC2_EAC
 

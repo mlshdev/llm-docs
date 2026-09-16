@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/textencoder/2871198-encoding](https://developer.apple.com/documentation/webkitjs/textencoder/2871198-encoding)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/textencoder/2871198-encoding
 
 # encoding
 

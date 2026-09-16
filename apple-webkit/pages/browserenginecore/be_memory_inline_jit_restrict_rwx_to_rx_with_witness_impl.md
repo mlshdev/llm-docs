@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginecore/be_memory_inline_jit_restrict_rwx_to_rx_with_witness_impl](https://developer.apple.com/documentation/browserenginecore/be_memory_inline_jit_restrict_rwx_to_rx_with_witness_impl)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/browserenginecore/be_memory_inline_jit_restrict_rwx_to_rx_with_witness_impl
 
 # be_memory_inline_jit_restrict_rwx_to_rx_with_witness_impl
 

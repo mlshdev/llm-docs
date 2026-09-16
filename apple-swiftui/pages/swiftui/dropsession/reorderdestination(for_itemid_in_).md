@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/dropsession/reorderdestination(for:itemid:in:)](https://developer.apple.com/documentation/swiftui/dropsession/reorderdestination(for:itemid:in:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/dropsession/reorderdestination(for:itemid:in:)
 
 # reorderDestination(for:itemID:in:)
 
@@ -17,6 +18,7 @@ nonisolated func reorderDestination<Item, ItemID, CollectionID>(for item: Item.T
 ## Parameters
 
 - `item`: The type of reorderable items in the container.
+- `itemID`: A keypath to the identifier used to represent an item.
 - `collectionID`: The identifier type for collections in your container.
 
 <a id="discussion"></a>

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/navigationviewstyle/columns](https://developer.apple.com/documentation/swiftui/navigationviewstyle/columns)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/navigationviewstyle/columns
 
 # columns
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 15.0+ (deprecated in 27.0) · iPadOS 15.0+ (deprecated in 27.0) · Mac Catalyst 15.0+ (deprecated in 27.0) · macOS 12.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 15.0+ (deprecated in 27.2) · iPadOS 15.0+ (deprecated in 27.2) · Mac Catalyst 15.0+ (deprecated in 27.2) · macOS 12.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 A navigation view style represented by a series of views in columns.
 

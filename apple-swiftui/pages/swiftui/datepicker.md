@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/datepicker](https://developer.apple.com/documentation/swiftui/datepicker)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/datepicker
 
 # DatePicker
 
@@ -114,7 +115,7 @@ var body: some View {
 ### Setting date picker components
 
 - [DatePicker.Components](datepicker/components.md)
-- [DatePickerComponents](datepickercomponents.md)
+- [DatePickerComponents](datepickercomponents.md): The date and time components that a date picker shows.
 
 ## Relationships
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/release-notes/platform.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/scout/release-notes/platform.md)
+> Pinned source for Docker main: [content/manuals/scout/release-notes/platform.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/scout/release-notes/platform.md)
 
 # Docker Scout release notes
 
@@ -296,8 +296,6 @@ The following new features are included in this release:
 Policy Evaluation is an early access feature that helps you ensure software
 integrity and track how your artifacts are doing over time. This release ships
 with four out-of-the-box policies, enabled by default for all organizations.
-
-![Policy overview in Dashboard](https://raw.githubusercontent.com/docker/docs/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/scout/images/release-notes/policy-ea.webp)
 
 - **Base images not up-to-date** evaluates whether the base images are out of
   date, and require updating. Up-to-date base images help you ensure that your

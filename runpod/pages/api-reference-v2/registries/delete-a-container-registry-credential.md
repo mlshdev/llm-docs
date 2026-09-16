@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/registries/delete-a-container-registry-credential.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/api-reference-v2/registries/delete-a-container-registry-credential.mdx)
+> Pinned source for Runpod main: [api-reference-v2/registries/delete-a-container-registry-credential.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/registries/delete-a-container-registry-credential.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/registries/delete-a-container-registry-credential
 
 # Delete A Container Registry Credential

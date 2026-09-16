@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/sceneaccessorycontent](https://developer.apple.com/documentation/swiftui/sceneaccessorycontent)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/sceneaccessorycontent
 
 # SceneAccessoryContent
 
@@ -32,6 +33,7 @@ Conforming types represent items which define content for scene accessories.
 
 ### Conforming Types
 
+- [CameraCaptureAccessory](cameracaptureaccessory.md)
 - [EmptyView](emptyview.md)
 - [ExternalNonInteractiveAccessory](externalnoninteractiveaccessory.md)
 - [ForEach](foreach.md)
@@ -43,4 +45,5 @@ Conforming types represent items which define content for scene accessories.
 ### Presenting content on an external display
 
 - [sceneAccessory(content:)](view/sceneaccessory%28content_%29.md): Defines any scene accessories associated with `self`.
+- [CameraCaptureAccessory](cameracaptureaccessory.md): Beta. A scene accessory that presents content during camera capture.
 - [ExternalNonInteractiveAccessory](externalnoninteractiveaccessory.md): A scene accessory that presents non-interactive content on an external display.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webglrenderingcontextbase/1629263-one_minus_constant_alpha](https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1629263-one_minus_constant_alpha)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1629263-one_minus_constant_alpha
 
 # ONE_MINUS_CONSTANT_ALPHA
 

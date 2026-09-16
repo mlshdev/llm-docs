@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/packagedescription/target/testtarget(name:dependencies:path:exclude:sources:csettings:cxxsettings:swiftsettings:linkersettings:)](https://developer.apple.com/documentation/packagedescription/target/testtarget(name:dependencies:path:exclude:sources:csettings:cxxsettings:swiftsettings:linkersettings:))
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/packagedescription/target/testtarget(name:dependencies:path:exclude:sources:csettings:cxxsettings:swiftsettings:linkersettings:)
 
 # testTarget(name:dependencies:path:exclude:sources:cSettings:cxxSettings:swiftSettings:linkerSettings:)
 

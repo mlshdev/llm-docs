@@ -6,21 +6,21 @@
   "title": "Podman",
   "homepage": "https://docs.podman.io/",
   "repository": "podman-container-tools/podman",
-  "tag": "v6.1.1",
-  "releaseId": 381417560,
-  "releasePublishedAt": "2026-09-02T16:35:51Z",
-  "sourceCommit": "8303f2e25b675ea7f82099d615c60969aec15870",
+  "tag": "v6.1.2",
+  "releaseId": 389552633,
+  "releasePublishedAt": "2026-09-16T00:07:38Z",
+  "sourceCommit": "04f3aa430e6df81bea059978bc5bafbc846ba3e7",
   "documentCount": 231,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 2907889,
+      "byteLength": 2908729,
       "documentCount": 231,
-      "sha256": "ea9d73ddf5af1c962c9c29b0693418156e072ec6bb44609fb78d6419c7edd02a"
+      "sha256": "8d5bc69104d369b8de8f93bc71d160dbcdb0f35c486f360b7e612e31495479cf"
     }
   ],
-  "outputDigest": "7fca14c489cca90aa51f894496719546dbfcd580d9c97687ec249cc15248df93",
+  "outputDigest": "40c3c49130f6245114dc114052637d80a9d75e42e734455d6d2d003da7b3e934",
   "notes": [
     "Podman man-page templates are expanded by a non-executing implementation of the tagged repository's documented preprocessing rules.",
     "Generated aliases, duplicate rootless/troubleshooting pages, translations, assets, and vendored code are omitted."

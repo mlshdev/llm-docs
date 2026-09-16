@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/mockcontentfiltersettings/1630518-decision_point_after_will_send_r](https://developer.apple.com/documentation/webkitjs/mockcontentfiltersettings/1630518-decision_point_after_will_send_r)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/mockcontentfiltersettings/1630518-decision_point_after_will_send_r
 
 # DECISION_POINT_AFTER_WILL_SEND_REQUEST
 

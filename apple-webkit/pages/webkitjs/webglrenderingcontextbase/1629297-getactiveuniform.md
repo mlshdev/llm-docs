@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webglrenderingcontextbase/1629297-getactiveuniform](https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1629297-getactiveuniform)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1629297-getactiveuniform
 
 # getActiveUniform
 

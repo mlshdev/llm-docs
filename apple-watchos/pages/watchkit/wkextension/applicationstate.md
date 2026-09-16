@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple watchOS snapshot-2bb3946a9b15; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple watchOS snapshot-4bff84466040; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/watchkit/wkextension/applicationstate
 
 # applicationState (Swift)
@@ -27,7 +27,7 @@ The Watch app may be active, inactive, or running in the background. Use this pr
 
 - [WKApplicationState](../wkapplicationstate.md): The running states of the Watch app.
 - [isApplicationRunningInDock](isapplicationrunningindock.md): Deprecated. A Boolean value that indicates whether the app is running in the dock.
-- [scheduleBackgroundRefresh(withPreferredDate:userInfo:scheduledCompletion:)](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Schedules a background task to refresh the app’s data.
+- [scheduleBackgroundRefresh(withPreferredDate:userInfo:scheduledCompletion:)](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Deprecated. Schedules a background task to refresh the app’s data.
 - [isFrontmostTimeoutExtended](isfrontmosttimeoutextended.md): Deprecated. A Boolean value that determines whether the app extends its time as the frontmost app.
 
 # applicationState (Objective-C)
@@ -56,5 +56,5 @@ The Watch app may be active, inactive, or running in the background. Use this pr
 
 - [WKApplicationState](../wkapplicationstate.md): The running states of the Watch app.
 - [isApplicationRunningInDock](isapplicationrunningindock.md): Deprecated. A Boolean value that indicates whether the app is running in the dock.
-- [scheduleBackgroundRefreshWithPreferredDate:userInfo:scheduledCompletion:](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Schedules a background task to refresh the app’s data.
+- [scheduleBackgroundRefreshWithPreferredDate:userInfo:scheduledCompletion:](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Deprecated. Schedules a background task to refresh the app’s data.
 - [frontmostTimeoutExtended](isfrontmosttimeoutextended.md): Deprecated. A Boolean value that determines whether the app extends its time as the frontmost app.

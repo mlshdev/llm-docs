@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/controlgroup/init(_:image:content:)](https://developer.apple.com/documentation/swiftui/controlgroup/init(_:image:content:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/controlgroup/init(_:image:content:)
 
 # init(\_:image:content:)
 
@@ -17,6 +18,8 @@ Creates a new control group with the specified content that generates its label 
 ## Parameters
 
 - `titleResource`: Text resource for the group’s localized title, that describes the contents of the group.
+- `image`: The name of the image resource to look up.
+- `content`: The content to display.
 
 ## See Also
 

@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/17e6ed9dc0106fbf837bda5d675fae22360e6c3e/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/9cf34b031f489dcecad5c579d0a22a956918cf36/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -17784,10 +17784,14 @@ Limits the pixel components values to the specified range \[min, max].
 The filter accepts the following options:
 
 - min
-  Lower bound. Defaults to the lowest allowed value for the input.
+  Lower bound. Defaults to the lowest representable value for the input.
+  Set to *auto* to use the minimum signal level for the input colorspace
+  (only affects TV-range YUV signals).
 
 - max
-  Upper bound. Defaults to the highest allowed value for the input.
+  Upper bound. Defaults to the highest representable value for the input.
+  Set to *auto* to use the maximum signal level for the input colorspace
+  (only affects TV-range YUV signals).
 
 - planes
   Specify which planes will be processed. Defaults to all available.

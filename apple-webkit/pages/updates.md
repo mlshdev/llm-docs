@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/updates](https://developer.apple.com/documentation/updates)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/updates
 
 # Updates
 
@@ -235,6 +236,7 @@ LazyVStack {
 - [AuthenticationServices updates](updates/authenticationservices.md): Learn about important changes to AuthenticationServices.
 - [AVFAudio updates](updates/avfaudio.md): Learn about important changes to AVFAudio.
 - [AVFoundation updates](updates/avfoundation.md): Learn about important changes to AVFoundation.
+- [AVKit updates](updates/avkit.md): Learn about important changes to AVKit.
 - [Background Tasks updates](updates/backgroundtasks.md): Learn about important changes in Background Tasks.
 - [Bundle Resources updates](updates/bundleresources.md): Learn about important changes to Bundle Resources.
 - [CallKit updates](updates/callkit.md): Learn about important changes to CallKit.

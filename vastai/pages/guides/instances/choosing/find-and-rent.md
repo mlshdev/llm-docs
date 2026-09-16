@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/choosing/find-and-rent.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/instances/choosing/find-and-rent.mdx)
+> Pinned source for Vast.ai main: [guides/instances/choosing/find-and-rent.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/instances/choosing/find-and-rent.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/choosing/find-and-rent
 
 # Finding & Renting Instances
@@ -33,7 +33,7 @@ One important concept is the category of machine which is displayed on the offer
 
 ### Card Details
 
-![Offer Card](https://vast.ai/uploads/offer-card.PNG)
+![Offer Card](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/find-and-rent-offer-card.webp)
 
 All stats shown are the portion of the total machine rented.
 
@@ -63,7 +63,7 @@ The storage slider is both a search filter and a parameter input which determine
 
 When the instance is created, the disk size is set and cannot be modified. It is important to estimate how much disk you will need and then to move the slider to the desired disk size. The default disk size for an instance is 10GB. Use the slider to allocate more or less, taking into consideration that providers charge for disk allocation even when the instance is stopped.
 
-![Diskspace](https://vast.ai/uploads/Search/DiskSpace.png)
+![Diskspace](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/find-and-rent-diskspace.webp)
 
 ## Instance Configuration
 
@@ -72,7 +72,7 @@ Vast.ai provides out Linux docker instances. One key step during setup is specif
 The instance configuration menu is accessible in the upper left of the create instance interface. The current template is always displayed in the upper left.
 Click on the "Change Template" button to bring up the template config menu that allows selecting and editing templates. For a quick overview, see [Choosing a Template](https://docs.vast.ai/guides/instances/choosing/templates). For detailed template creation and Docker configuration, see the main [Templates documentation](https://docs.vast.ai/guides/templates/introduction)
 
-![Edit](https://vast.ai/uploads/Search/Edit.png)
+![Edit](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/find-and-rent-edit.webp)
 
 ## Common Questions
 

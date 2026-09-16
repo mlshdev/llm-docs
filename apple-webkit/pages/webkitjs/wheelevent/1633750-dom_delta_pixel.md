@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/wheelevent/1633750-dom_delta_pixel](https://developer.apple.com/documentation/webkitjs/wheelevent/1633750-dom_delta_pixel)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/wheelevent/1633750-dom_delta_pixel
 
 # DOM_DELTA_PIXEL
 

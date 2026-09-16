@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/logging.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/serverless/logging.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/logging.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/serverless/logging.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/logging
 
 # Endpoint and Worker Logs
@@ -11,7 +11,7 @@ Endpoint and worker logs provide real-time visibility into the behavior of your 
 
 Endpoint logs are available under the **"All Workergroups"** tab in the Serverless endpoint, within the Vast console UI.
 
-![Endpoint Log](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/endpoint-log.webp)
+![Endpoint Log](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/endpoint-log.webp)
 
 These logs include low-level details about scaling decisions made by the serverless engine. They are useful for understanding how the system responds to traffic and workload changes, and include:
 
@@ -23,7 +23,7 @@ These logs include low-level details about scaling decisions made by the serverl
 
 Worker logs are accessible on a per-worker basis. To view worker logs, navigate to the serverless endpoint in question and click on this icon next to the worker.
 
-![Worker Log](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/worker-log.webp)
+![Worker Log](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/worker-log.webp)
 
 Worker logs provide detailed runtime output for individual workers, helping you debug model loading, request handling, container behavior, and other worker-specific events.
 

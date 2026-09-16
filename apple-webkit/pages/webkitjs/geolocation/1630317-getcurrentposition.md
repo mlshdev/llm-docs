@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/geolocation/1630317-getcurrentposition](https://developer.apple.com/documentation/webkitjs/geolocation/1630317-getcurrentposition)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/geolocation/1630317-getcurrentposition
 
 # getCurrentPosition
 

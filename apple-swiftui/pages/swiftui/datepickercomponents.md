@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/datepickercomponents](https://developer.apple.com/documentation/swiftui/datepickercomponents)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/datepickercomponents
 
 # DatePickerComponents
 
@@ -6,11 +7,29 @@
 **Kind:** Structure  
 **Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · visionOS 1.0+ · watchOS 10.0+
 
+The date and time components that a date picker shows.
+
 ## Declaration
 
 ```swift
 struct DatePickerComponents
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+Pass a value of this type as the `displayedComponents` argument of a [DatePicker](datepicker.md) initializer to choose which parts of a date someone can edit. Combine options to show more than one group.
+
+```swift
+DatePicker(
+    "Departure",
+    selection: $departure,
+    displayedComponents: [.hourAndMinute, .date]
+)
+```
+
+A picker shows `[.hourAndMinute, .date]` unless you choose otherwise. Each option respects the current locale, so [date](datepickercomponents/date.md) orders the day, month, and year the way the person’s region expects.
 
 ## Topics
 

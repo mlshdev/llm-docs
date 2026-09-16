@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/customizabletoolbarcontent/defaultcustomization()](https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent/defaultcustomization())
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent/defaultcustomization()
 
 # defaultCustomization()
 
@@ -22,9 +23,3 @@ func defaultCustomization() -> some CustomizableToolbarContent
 ## Discussion
 
 Use the [defaultCustomization(\_:options:)](defaultcustomization%28__options_%29.md) modifier providing either a `defaultVisibility` or `options` instead.
-
-## See Also
-
-### Using default options
-
-- [defaultCustomization(\_:options:)](defaultcustomization%28__options_%29.md): Configures the way customizable toolbar items with the default behavior behave.

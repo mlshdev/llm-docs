@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/simd16/clamped(lowerbound:upperbound:)-5lop0](https://developer.apple.com/documentation/swift/simd16/clamped(lowerbound:upperbound:)-5lop0)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/simd16/clamped(lowerbound:upperbound:)-5lop0
 
 # clamped(lowerBound:upperBound:)
 

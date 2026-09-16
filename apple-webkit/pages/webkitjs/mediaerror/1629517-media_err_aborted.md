@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/mediaerror/1629517-media_err_aborted](https://developer.apple.com/documentation/webkitjs/mediaerror/1629517-media_err_aborted)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/mediaerror/1629517-media_err_aborted
 
 # MEDIA_ERR_ABORTED
 

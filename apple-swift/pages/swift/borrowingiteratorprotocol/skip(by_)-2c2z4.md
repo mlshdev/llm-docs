@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/borrowingiteratorprotocol/skip(by:)-2c2z4](https://developer.apple.com/documentation/swift/borrowingiteratorprotocol/skip(by:)-2c2z4)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/borrowingiteratorprotocol/skip(by:)-2c2z4
 
 # skip(by:)
 
@@ -11,7 +12,7 @@ Advances the position of this iterator by the specified offset, or until the end
 ## Declaration
 
 ```swift
-mutating func skip(by offset: Int) throws(Self.Failure) -> Int
+@export(implementation) mutating func skip(by offset: Int) throws(Self.Failure) -> Int
 ```
 
 <a id="return-value"></a>

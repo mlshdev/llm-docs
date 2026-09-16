@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/defaultindices/formindex(before:)-6w7lf](https://developer.apple.com/documentation/swift/defaultindices/formindex(before:)-6w7lf)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/defaultindices/formindex(before:)-6w7lf
 
 # formIndex(before:)
 

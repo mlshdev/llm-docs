@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgtextpathelement/1631089-textpath_methodtype_align](https://developer.apple.com/documentation/webkitjs/svgtextpathelement/1631089-textpath_methodtype_align)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgtextpathelement/1631089-textpath_methodtype_align
 
 # TEXTPATH_METHODTYPE_ALIGN
 

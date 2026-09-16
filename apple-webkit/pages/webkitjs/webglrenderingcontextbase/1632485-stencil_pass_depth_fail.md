@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webglrenderingcontextbase/1632485-stencil_pass_depth_fail](https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1632485-stencil_pass_depth_fail)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1632485-stencil_pass_depth_fail
 
 # STENCIL_PASS_DEPTH_FAIL
 

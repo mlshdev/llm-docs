@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/layoutrotationunarylayout](https://developer.apple.com/documentation/swiftui/layoutrotationunarylayout)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/layoutrotationunarylayout
 
 # LayoutRotationUnaryLayout
 
@@ -6,11 +7,19 @@
 **Kind:** Structure  
 **Availability:** visionOS 26.0+
 
+A layout that rotates the space containing a view.
+
 ## Declaration
 
 ```swift
 nonisolated struct LayoutRotationUnaryLayout
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+`View/layoutRotation3D(_:)` returns a view modified with this type. You don’t create it directly.
 
 ## Relationships
 

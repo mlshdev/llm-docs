@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepayontheweb/apple-pay-js-change-log](https://developer.apple.com/documentation/applepayontheweb/apple-pay-js-change-log)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applepayontheweb/apple-pay-js-change-log
 
 # Apple Pay JS change log
 

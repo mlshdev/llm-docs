@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/image/dynamicrange](https://developer.apple.com/documentation/swiftui/image/dynamicrange)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/image/dynamicrange
 
 # Image.DynamicRange
 
@@ -6,11 +7,26 @@
 **Kind:** Structure  
 **Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+
 
+The range of brightness that an image is allowed to draw.
+
 ## Declaration
 
 ```swift
 struct DynamicRange
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+A high dynamic range image stores highlights brighter than white. Pass a value of this type to [allowedDynamicRange(\_:)](alloweddynamicrange%28__%29.md) to say how much of that extra brightness reaches the display:
+
+```swift
+Image("sunset")
+    .allowedDynamicRange(.constrainedHigh)
+```
+
+Use [high](dynamicrange/high.md) when the image is the subject of the screen and you want it at full brightness. Prefer [constrainedHigh](dynamicrange/constrainedhigh.md) when the image appears next to an ordinary interface, because an unrestricted image can make the content around it look dim. [standard](dynamicrange/standard.md) holds the image to the same range as the rest of the interface.
 
 ## Topics
 

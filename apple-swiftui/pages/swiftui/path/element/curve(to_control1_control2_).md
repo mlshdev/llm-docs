@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/path/element/curve(to:control1:control2:)](https://developer.apple.com/documentation/swiftui/path/element/curve(to:control1:control2:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/path/element/curve(to:control1:control2:)
 
 # Path.Element.curve(to:control1:control2:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/compositorcontent](https://developer.apple.com/documentation/swiftui/compositorcontent)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/compositorcontent
 
 # CompositorContent
 
@@ -6,11 +7,43 @@
 **Kind:** Protocol  
 **Availability:** macOS 26.0+ · visionOS 26.0+
 
+A type that describes content a scene renders directly with Metal, rather than composing from SwiftUI views.
+
 ## Declaration
 
 ```swift
 @MainActor protocol CompositorContent
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+Conform to this protocol when you draw an immersive scene with your own Metal renderer. Implement [body](compositorcontent/body-swift.property.md) to describe the content, then pass the type to an [ImmersiveSpace](immersivespace.md) in place of a view. The `CompositorLayer` type in CompositorServices gives you the render loop to draw into.
+
+The following example wraps a renderer in a type that an immersive space can present:
+
+```swift
+struct StarField: CompositorContent {
+    var body: some CompositorContent {
+        CompositorLayer(configuration: StarFieldConfiguration()) {
+            layerRenderer in
+            renderLoop(layerRenderer)
+        }
+    }
+}
+
+@main
+struct StarFieldApp: App {
+    var body: some Scene {
+        ImmersiveSpace {
+            StarField()
+        }
+    }
+}
+```
+
+Compose these types the same way you compose views: a body can contain another [CompositorContent](compositorcontent.md), and [AnyCompositorContent](anycompositorcontent.md) erases the concrete type when you need to return one of several kinds.
 
 ## Topics
 

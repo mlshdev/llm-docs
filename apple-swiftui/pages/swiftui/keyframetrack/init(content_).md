@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/keyframetrack/init(content:)](https://developer.apple.com/documentation/swiftui/keyframetrack/init(content:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/keyframetrack/init(content:)
 
 # init(content:)
 
@@ -13,6 +14,10 @@ Creates an instance that animates the entire value from the root of the key path
 ```swift
 init(@KeyframeTrackContentBuilder<Root> content: () -> Content) where Root == Value
 ```
+
+## Parameters
+
+- `content`: A keyframe collection builder closure containing the keyframes that control the interpolation curve.
 
 ## See Also
 

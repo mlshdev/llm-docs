@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgfeturbulenceelement/1630382-svg_turbulence_type_turbulence](https://developer.apple.com/documentation/webkitjs/svgfeturbulenceelement/1630382-svg_turbulence_type_turbulence)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgfeturbulenceelement/1630382-svg_turbulence_type_turbulence
 
 # SVG_TURBULENCE_TYPE_TURBULENCE
 

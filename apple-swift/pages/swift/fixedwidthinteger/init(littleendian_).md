@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/fixedwidthinteger/init(littleendian:)](https://developer.apple.com/documentation/swift/fixedwidthinteger/init(littleendian:))
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/fixedwidthinteger/init(littleendian:)
 
 # init(littleEndian:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/synchronization/atomic/compareexchange(expected:desired:successordering:failureordering:)-5obt4](https://developer.apple.com/documentation/synchronization/atomic/compareexchange(expected:desired:successordering:failureordering:)-5obt4)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/synchronization/atomic/compareexchange(expected:desired:successordering:failureordering:)-5obt4
 
 # compareExchange(expected:desired:successOrdering:failureOrdering:)
 

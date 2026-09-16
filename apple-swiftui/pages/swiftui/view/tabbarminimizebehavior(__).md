@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/tabbarminimizebehavior(_:)](https://developer.apple.com/documentation/swiftui/view/tabbarminimizebehavior(_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/tabbarminimizebehavior(_:)
 
 # tabBarMinimizeBehavior(\_:)
 
@@ -59,5 +60,5 @@ struct ContentView: View {
 - [tabBarPlacement](../environmentvalues/tabbarplacement.md): The current placement of the tab bar.
 - [TabBarPlacement](../tabbarplacement.md): A placement for tabs in a tab view.
 - [isTabBarShowingSections](../environmentvalues/istabbarshowingsections.md): A Boolean value that determines whether a tab view shows the expanded contents of a tab section.
-- [TabBarMinimizeBehavior](../tabbarminimizebehavior.md)
+- [TabBarMinimizeBehavior](../tabbarminimizebehavior.md): A behavior that determines when a tab bar minimizes.
 - [TabViewBottomAccessoryPlacement](../tabviewbottomaccessoryplacement.md): A placement of the bottom accessory in a tab view. You can use this to adjust the content of the accessory view based on the placement.

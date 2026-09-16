@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgtransform/1632637-svg_transform_rotate](https://developer.apple.com/documentation/webkitjs/svgtransform/1632637-svg_transform_rotate)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgtransform/1632637-svg_transform_rotate
 
 # SVG_TRANSFORM_ROTATE
 

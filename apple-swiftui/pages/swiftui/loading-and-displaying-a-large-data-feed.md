@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/loading-and-displaying-a-large-data-feed](https://developer.apple.com/documentation/swiftui/loading-and-displaying-a-large-data-feed)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/loading-and-displaying-a-large-data-feed
 
 # Loading and displaying a large data feed
 

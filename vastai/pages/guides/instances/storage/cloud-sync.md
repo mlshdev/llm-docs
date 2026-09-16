@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/storage/cloud-sync.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/instances/storage/cloud-sync.mdx)
+> Pinned source for Vast.ai main: [guides/instances/storage/cloud-sync.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/instances/storage/cloud-sync.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/storage/cloud-sync
 
 # Cloud Sync
@@ -25,7 +25,7 @@ Prerequisites: A Google Drive account — ideally one dedicated to Vast, since V
 3. Submit the name, after which a new tab should open up asking if you would like to give Vast access to your Google Drive.
 4. Once the verification prompt has been accepted, you will be redirected back to vast with your Google Drive fully integrated.
 
-![Gdrive](https://vast.ai/uploads/gdrive.png)
+![Gdrive](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/cloud-sync-gdrive.webp)
 
 You have now connected your Google Drive with Vast. This will allow you to move data to and from instances even while inactive.
 
@@ -36,7 +36,7 @@ Prerequisites: An active Amazon Web Services (AWS) account. Vast connects at the
 1. Create a S3 Bucket in AWS
 2. Create an IAM User and Grant Access to the S3 Bucket, we recommend you create a user with access to your specific bucket for this process rather than full access.
 
-![Awss3](https://vast.ai/uploads/awss3.png)
+![Awss3](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/cloud-sync-awss3.webp)
 
 1. Once the user is created, click the user and go Security credentials.
 2. Click Create access key, and enable for Command Line interface
@@ -81,15 +81,15 @@ Vast connects to Hugging Face through its S3-compatible Storage Buckets: generat
 
 2. Under **Token type**, select **Write**, name the token, and select **Create token**.
 
-   ![Hugging Face Write token](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/huggingfacetoken.png)
+   ![Hugging Face Write token](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/huggingfacetoken.png)
 
 3. Back on the token list, open the three-dot menu at the far right of your token and select **Generate S3 credentials**.
 
-   ![Generate S3 credentials](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/huggingfaces3credentials.png)
+   ![Generate S3 credentials](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/huggingfaces3credentials.png)
 
 4. Copy the **Access Key ID** (it begins with `HFAK`) and the **Secret Access Key**. The secret is shown only once. Your namespace is the last segment of the **Endpoint URL** (`https://s3.hf.co/<namespace>`).
 
-   ![Hugging Face S3-compatible credentials](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/huggingfaces3compatiblecredentials.png)
+   ![Hugging Face S3-compatible credentials](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/huggingfaces3compatiblecredentials.png)
 
 5. Create a bucket on your Hugging Face account — this is the bucket you'll point your Vast instance at later in the Cloud Copy UI on the [Instances page](https://cloud.vast.ai/instances/).
 
@@ -97,6 +97,6 @@ Vast connects to Hugging Face through its S3-compatible Storage Buckets: generat
 
 7. Enter a name for the connection, your Hugging Face namespace (your username or organization), and the Access Key ID and Secret Access Key from step 4.
 
-   ![Connect Hugging Face on Vast](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/credentialssettings.png)
+   ![Connect Hugging Face on Vast](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/credentialssettings.png)
 
 You have now connected Hugging Face with Vast. When copying data, enter the bucket name (for example, `my-bucket`) and the path within it (for example, `checkpoints`) in their separate fields in the Cloud Copy UI. The namespace is part of the connection and is not repeated in either field.

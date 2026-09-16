@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view](https://developer.apple.com/documentation/swiftui/view)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view
 
 # View
 
@@ -88,13 +89,6 @@ A type conforming to this protocol inherits `@preconcurrency @MainActor` isolati
 
 - [Deprecated modifiers](view-deprecated.md): Review unsupported modifiers and their replacements.
 
-### Instance Methods
-
-- [photosReferenceImageViewer(asset:onProcessingCompletion:)](view/photosreferenceimageviewer%28asset_onprocessingcompletion_%29.md): Presents an image viewer for an asset in a photo library that contains Apple Reference Image data when `isPresented` is set to true.
-- [photosReferenceImageViewer(fileURL:onProcessingCompletion:)](view/photosreferenceimageviewer%28fileurl_onprocessingcompletion_%29.md): Presents an image viewer for a given image file containing Apple Reference Image data when `fileURL` is set.
-- [photosReferenceImageViewer(pickerItem:onProcessingCompletion:)](view/photosreferenceimageviewer%28pickeritem_onprocessingcompletion_%29.md): Presents an image viewer for an image containing Apple Reference Image data selected from the Photos picker when `isPresented` is set to true.
-- [photosReferenceImageViewer(pickerResult:onProcessingCompletion:)](view/photosreferenceimageviewer%28pickerresult_onprocessingcompletion_%29.md): Presents an image viewer for the resulting image containing Apple Reference Image data from `PHPickerViewController` when `isPresented` is set to true.
-
 ## Relationships
 
 ### Inherited By
@@ -115,6 +109,9 @@ A type conforming to this protocol inherits `@preconcurrency @MainActor` isolati
 - [AngularGradient](angulargradient.md)
 - [AnyShape](anyshape.md)
 - [AnyView](anyview.md)
+- [ArrangementView](arrangementview.md)
+- [ArrangementViewStyleConfiguration.Primary](arrangementviewstyleconfiguration/primary-swift.struct.md)
+- [ArrangementViewStyleConfiguration.Secondary](arrangementviewstyleconfiguration/secondary-swift.struct.md)
 - [AsyncImage](asyncimage.md)
 - [Button](button.md)
 - [ButtonBorderShape](buttonbordershape.md)

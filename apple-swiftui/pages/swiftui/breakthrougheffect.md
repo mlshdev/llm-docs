@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/breakthrougheffect](https://developer.apple.com/documentation/swiftui/breakthrougheffect)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/breakthrougheffect
 
 # BreakthroughEffect
 
@@ -6,11 +7,31 @@
 **Kind:** Structure  
 **Availability:** visionOS 26.0+
 
+The way a presentation shows through content in front of it.
+
 ## Declaration
 
 ```swift
 struct BreakthroughEffect
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+In a volumetric scene, 3D models and other app content can end up between the person using your app and a sheet or popover. Breakthrough keeps the presentation legible anyway. Pass a value of this type to [presentationBreakthroughEffect(\_:)](view/presentationbreakthrougheffect%28__%29.md) to choose how strongly it comes through:
+
+```swift
+Button("Show Details") {
+    isShowingDetails = true
+}
+.popover(isPresented: $isShowingDetails) {
+    DetailsView()
+        .presentationBreakthroughEffect(.prominent)
+}
+```
+
+Most system presentations already break through, so use this only when the default is too strong or too faint against your content. Only popovers can turn the effect off with [none](breakthrougheffect/none.md); passing that value for a sheet has no effect.
 
 ## Topics
 

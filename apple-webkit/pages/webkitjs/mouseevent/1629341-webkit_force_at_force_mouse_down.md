@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/mouseevent/1629341-webkit_force_at_force_mouse_down](https://developer.apple.com/documentation/webkitjs/mouseevent/1629341-webkit_force_at_force_mouse_down)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/mouseevent/1629341-webkit_force_at_force_mouse_down
 
 # WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
 

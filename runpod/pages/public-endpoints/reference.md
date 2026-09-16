@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/reference.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/public-endpoints/reference.mdx)
+> Pinned source for Runpod main: [public-endpoints/reference.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/public-endpoints/reference.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/reference
 
 # Available models

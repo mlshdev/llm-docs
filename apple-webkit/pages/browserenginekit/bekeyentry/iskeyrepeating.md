@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginekit/bekeyentry/iskeyrepeating](https://developer.apple.com/documentation/browserenginekit/bekeyentry/iskeyrepeating)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/browserenginekit/bekeyentry/iskeyrepeating
 
 # isKeyRepeating (Swift)
 

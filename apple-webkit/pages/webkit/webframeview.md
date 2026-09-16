@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/webframeview](https://developer.apple.com/documentation/webkit/webframeview)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/webframeview
 
 # WebFrameView (Swift)
 
@@ -59,8 +60,6 @@ class WebFrameView
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
 - [NSUserActivityRestoring](https://developer.apple.com/documentation/appkit/nsuseractivityrestoring)
 - [NSUserInterfaceItemIdentification](https://developer.apple.com/documentation/appkit/nsuserinterfaceitemidentification)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/signinwithapple/transferring-your-apps-and-users-to-another-team](https://developer.apple.com/documentation/signinwithapple/transferring-your-apps-and-users-to-another-team)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/signinwithapple/transferring-your-apps-and-users-to-another-team
 
 # Transferring your apps and users to another team
 

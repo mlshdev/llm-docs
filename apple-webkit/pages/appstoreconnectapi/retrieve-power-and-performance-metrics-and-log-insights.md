@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/retrieve-power-and-performance-metrics-and-log-insights](https://developer.apple.com/documentation/appstoreconnectapi/retrieve-power-and-performance-metrics-and-log-insights)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/retrieve-power-and-performance-metrics-and-log-insights
 
 # Retrieve Power and Performance Metrics and Log Insights
 

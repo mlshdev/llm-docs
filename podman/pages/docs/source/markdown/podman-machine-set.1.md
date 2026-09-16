@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.1: [docs/source/markdown/podman-machine-set.1.md.in](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-machine-set.1.md.in)
+> Pinned source for Podman v6.1.2: [docs/source/markdown/podman-machine-set.1.md.in](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-machine-set.1.md.in)
 
 # podman-machine-set
 
@@ -56,7 +56,7 @@ container execution. This option updates the current podman
 remote connection default if it is currently pointing at the specified
 machine name (or `podman-machine-default` if no name is specified).
 
-Unlike [**podman system connection default**](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-system-connection-default.1.md)
+Unlike [**podman system connection default**](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-system-connection-default.1.md)
 this option makes the API socket, if available, forward to the rootful/rootless
 socket in the VM.
 
@@ -128,7 +128,7 @@ $ podman machine set --rootful myvm
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman.1.md)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-machine.1.md)**, **containers.conf(5)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman.1.md)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-machine.1.md)**, **containers.conf(5)**
 
 ## HISTORY
 

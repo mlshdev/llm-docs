@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/searchable(text:placement:prompt:suggestions:)](https://developer.apple.com/documentation/swiftui/view/searchable(text:placement:prompt:suggestions:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/searchable(text:placement:prompt:suggestions:)
 
 # searchable(text:placement:prompt:suggestions:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 15.0+ (deprecated in 27.0) · iPadOS 15.0+ (deprecated in 27.0) · Mac Catalyst 15.0+ (deprecated in 27.0) · macOS 12.0+ (deprecated in 27.0) · tvOS 15.0+ (deprecated in 27.0) · visionOS 1.0+ · watchOS 8.0+ (deprecated in 27.0)
+**Availability:** iOS 15.0+ (deprecated in 27.2) · iPadOS 15.0+ (deprecated in 27.2) · Mac Catalyst 15.0+ (deprecated in 27.2) · macOS 12.0+ (deprecated in 27.2) · tvOS 15.0+ (deprecated in 27.2) · visionOS 1.0+ · watchOS 8.0+ (deprecated in 27.2)
 
 Marks this view as searchable, which configures the display of a search field.
 

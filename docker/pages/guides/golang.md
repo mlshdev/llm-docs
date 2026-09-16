@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/golang.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/guides/golang.md)
+> Pinned source for Docker main: [content/guides/golang.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/guides/golang.md)
 
 This guide will show you how to create, test, and deploy containerized Go applications using Docker.
 
@@ -477,7 +477,7 @@ FROM build-stage AS run-test-stage
 RUN go test -v ./...
 
 # Deploy the application binary into a lean image
-FROM gcr.io/distroless/base-debian11 AS build-release-stage
+FROM gcr.io/distroless/base-debian12 AS build-release-stage
 
 WORKDIR /
 
@@ -1474,7 +1474,7 @@ FROM build-stage AS run-test-stage
 RUN go test -v ./...
 
 # Deploy the application binary into a lean image
-FROM gcr.io/distroless/base-debian11 AS build-release-stage
+FROM gcr.io/distroless/base-debian12 AS build-release-stage
 
 WORKDIR /
 

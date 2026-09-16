@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webgl2renderingcontext/1631536-framebuffer_attachment_alpha_siz](https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1631536-framebuffer_attachment_alpha_siz)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1631536-framebuffer_attachment_alpha_siz
 
 # FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE
 

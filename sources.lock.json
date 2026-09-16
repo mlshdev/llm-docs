@@ -15,18 +15,18 @@
       "docsCommit": "d905fda2a3f04a2066746875d09e51a3fe62dfed"
     },
     "podman": {
-      "tag": "v6.1.1",
-      "releaseId": 381417560,
-      "releasePublishedAt": "2026-09-02T16:35:51Z",
-      "sourceCommit": "8303f2e25b675ea7f82099d615c60969aec15870"
+      "tag": "v6.1.2",
+      "releaseId": 389552633,
+      "releasePublishedAt": "2026-09-16T00:07:38Z",
+      "sourceCommit": "04f3aa430e6df81bea059978bc5bafbc846ba3e7"
     },
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "2465b5136acea8373d5c6a27e4672f4acf26c935",
-      "sourceCommittedAt": "2026-09-15T17:08:12Z",
-      "observedCommit": "2465b5136acea8373d5c6a27e4672f4acf26c935",
-      "documentationDigest": "4567a120a7456b35b4711559a2c40e63a605efb2f435a026f2703d9a60f40402"
+      "sourceCommit": "aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4",
+      "sourceCommittedAt": "2026-09-16T17:12:06Z",
+      "observedCommit": "aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4",
+      "documentationDigest": "2cbc5c7b68266b15124ef73dd3bf06b58cc7c9a9639e53e6ab32faad07711441"
     },
     "container": {
       "tag": "1.4.1",
@@ -87,10 +87,10 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "17e6ed9dc0106fbf837bda5d675fae22360e6c3e",
-      "sourceCommittedAt": "2026-09-02T10:04:03Z",
-      "observedCommit": "17e6ed9dc0106fbf837bda5d675fae22360e6c3e",
-      "documentationDigest": "f0ce8039b102c960f021ccc37cc4d2b5a432623e46511de04837af7c4bfe451b"
+      "sourceCommit": "9cf34b031f489dcecad5c579d0a22a956918cf36",
+      "sourceCommittedAt": "2026-07-16T17:26:50Z",
+      "observedCommit": "9cf34b031f489dcecad5c579d0a22a956918cf36",
+      "documentationDigest": "22ce0cf4daace89bb3764c68d8d4dd39b57fcffed7911aa83e9de0dc332b9661"
     },
     "yt-dlp": {
       "tag": "2026.08.19",
@@ -104,7 +104,7 @@
       "sourceCommit": "d4ce87c23431f607162fc5c39ce52c538d64588f",
       "sourceCommittedAt": "2026-09-12T18:29:15Z",
       "documentationDigest": "ae2c8c30c6354eb9063067784b1f30ee0b11fea851fe3fa7285fa36a31eb96e6",
-      "observedCommit": "ca49650407a04cc0cc043759d5cb2cd2c92efd20"
+      "observedCommit": "461f174b09fc151f49257aa5206417aca8930efa"
     },
     "bun": {
       "tag": "bun-v1.4.2",
@@ -132,18 +132,18 @@
     "vastai": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "1f62d7e4ed71d62a858e7a800ff8096e25f07b8f",
-      "sourceCommittedAt": "2026-09-15T16:55:10Z",
-      "observedCommit": "1f62d7e4ed71d62a858e7a800ff8096e25f07b8f",
-      "documentationDigest": "9a57ff063e774051ea0f15ac2bc6912aff9374ce761460018443116d59199938"
+      "sourceCommit": "efed71d49da6451aeb4f9be763c284bb555cd206",
+      "sourceCommittedAt": "2026-09-15T23:40:24Z",
+      "observedCommit": "efed71d49da6451aeb4f9be763c284bb555cd206",
+      "documentationDigest": "7638895b8d255b30bb816dec6990ae5ab2d7e4ddb231aa0ae6bcf65b9c9f4561"
     },
     "runpod": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "ceb79977df03b21e40ceaec3fdea8c9869897b7e",
-      "sourceCommittedAt": "2026-09-15T16:47:13Z",
-      "observedCommit": "ceb79977df03b21e40ceaec3fdea8c9869897b7e",
-      "documentationDigest": "2242d0153dbba5dfcef16fea4454c4d7abb8bdeb72d12c9f338e66e129a6a2be"
+      "sourceCommit": "1ac8c64f9623ca776ec994c36b22d4329facbb1d",
+      "sourceCommittedAt": "2026-09-15T23:17:59Z",
+      "observedCommit": "1ac8c64f9623ca776ec994c36b22d4329facbb1d",
+      "documentationDigest": "1c79622042731763d2a12902c45b5832c89ca73287dd14482f52d9fb94aa0315"
     },
     "discord-py-self": {
       "tag": "v2.1.0",
@@ -157,22 +157,22 @@
       "taggedAt": "2026-03-03T18:38:56Z"
     },
     "apple-swift": {
-      "tag": "snapshot-eebba30a4ab9",
-      "snapshotDigest": "eebba30a4ab9373b19010bdf3b1cdcfadf5599b64611c1dd07958482a85ddfa6",
-      "capturedAt": "2026-09-12T21:04:59.660Z",
-      "contentDigest": "a75ea1b797dba81590ef806324478845f3824ddec90b657f9212b5df093d17f9"
+      "tag": "snapshot-5915b24a1311",
+      "snapshotDigest": "5915b24a13116058563ec2085adb7610a331e7e4aea596f8d2f1f1b39a6e0f1c",
+      "capturedAt": "2026-09-16T18:21:42.073Z",
+      "contentDigest": "8b137be1ef278f1d522a4d88c557c8c07b458d20c03cd9e5596b61253f263486"
     },
     "apple-swiftui": {
-      "tag": "snapshot-5ae2cd850b20",
-      "snapshotDigest": "5ae2cd850b20ad5728652e071419f71b5604c76d38870605d23e5c435d0a59c5",
-      "capturedAt": "2026-09-12T21:04:59.662Z",
-      "contentDigest": "703f64dbbf46fa77015dc2b9add2f8d46ac554ae7c160089a93bf18774664edb"
+      "tag": "snapshot-8b55d19a707e",
+      "snapshotDigest": "8b55d19a707ef89040e675038f5d9370df5025b13779e4c7d74995445f93294d",
+      "capturedAt": "2026-09-16T18:21:42.082Z",
+      "contentDigest": "af6870304bfe66f126acaccc9d5b2922f7e585e382e3bcd46dff2e79583a42cb"
     },
     "apple-webkit": {
-      "tag": "snapshot-3530be43aacd",
-      "snapshotDigest": "3530be43aacd786e94701d657cc3a93abfa572e6b5a0934bdcf16e0dbccf2ad4",
-      "capturedAt": "2026-09-12T21:04:59.668Z",
-      "contentDigest": "f4cf52294e833b8ca99becb45ffbf67e6eab5b0429dc04f3d496ea6b5a00e9a5"
+      "tag": "snapshot-f54edb363a08",
+      "snapshotDigest": "f54edb363a083e89fbb57583763fb82cc6f82b664cabb36a74bc0b6812e025c6",
+      "capturedAt": "2026-09-16T18:21:42.106Z",
+      "contentDigest": "bfe64edc2dc1f17ae82411b196f0116d1792fb859c52f04313168761d0296804"
     },
     "apple-xcode": {
       "tag": "snapshot-ef15f2517b3c",
@@ -193,10 +193,10 @@
       "contentDigest": "261899149f391f58bc46c468881d82ec07fe2e3d04902a9c297d1c68eece64b1"
     },
     "apple-watchos": {
-      "tag": "snapshot-2bb3946a9b15",
-      "snapshotDigest": "2bb3946a9b15cc8ceb5f7b1ca7876717dce6cec8a1d63e63162a599dc521ee18",
-      "capturedAt": "2026-09-14T18:21:41.403Z",
-      "contentDigest": "3eb712b8054721d0f1ca6e28086c17a048719696d888268474ffc8299bf8a73f"
+      "tag": "snapshot-4bff84466040",
+      "snapshotDigest": "4bff8446604017f7d50029c94e521f55e311ea5e5ac9b46cdfb847f859b3bc1c",
+      "capturedAt": "2026-09-16T18:21:42.211Z",
+      "contentDigest": "bdfe1621bbc2d42c8cb4a682bb7e57f9bfa7a7a59f6b911797e34642e4791127"
     },
     "apple-frameworks": {
       "tag": "snapshot-75c95c22eb2a",

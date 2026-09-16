@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/regexbuilder/zeroormore/init(_:_:)-9uicg](https://developer.apple.com/documentation/regexbuilder/zeroormore/init(_:_:)-9uicg)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/regexbuilder/zeroormore/init(_:_:)-9uicg
 
 # init(\_:\_:)
 

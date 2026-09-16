@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v2-appavailabilities-_id_-relationships-territoryavailabilities](https://developer.apple.com/documentation/appstoreconnectapi/get-v2-appavailabilities-_id_-relationships-territoryavailabilities)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v2-appavailabilities-_id_-relationships-territoryavailabilities
 
 # List territory availability IDs for an app availability
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-subscriptionpricepoints-_id_-adjustedequalizations](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-subscriptionpricepoints-_id_-adjustedequalizations)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-subscriptionpricepoints-_id_-adjustedequalizations
 
 # List adjusted equalizations for a subscription price point
 
@@ -37,7 +38,7 @@ GET https://api.appstoreconnect.apple.com/v1/subscriptionPricePoints/{id}/adjust
 
 ## Response Codes
 
-- `200` OK — `csv`: The request completed successfully.
+- `200` OK — `SubscriptionPricePointsResponse`: The request completed successfully.
 - `400` Bad Request — `ErrorResponse`: An error occurred with your request.
 - `401` Unauthorized — `ErrorResponse`: Authentication failed.
 - `403` Forbidden — `ErrorResponse`: Request not authorized.

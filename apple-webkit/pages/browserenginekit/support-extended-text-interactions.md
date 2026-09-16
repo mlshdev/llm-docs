@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginekit/support-extended-text-interactions](https://developer.apple.com/documentation/browserenginekit/support-extended-text-interactions)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/browserenginekit/support-extended-text-interactions
 
 # Supporting extended text interactions (Swift)
 

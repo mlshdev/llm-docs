@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/agentic-platform/sandboxes.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/agentic-platform/sandboxes.md)
+> Pinned source for Docker main: [content/manuals/agentic-platform/sandboxes.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/agentic-platform/sandboxes.md)
 
 # Sandboxes
 
@@ -46,6 +46,10 @@ Use the terminal to interact with the sandbox.
 
 Open **Sandboxes** to review each sandbox's name, type, status, hourly rate,
 expiration, and age. Select a sandbox to reopen its detail page and terminal.
+
+In a Claude Code sandbox, paste an image from your clipboard or drag an image
+file onto the terminal to attach it to your prompt. Wait for the upload to
+finish, type your question, and press Enter to send it.
 
 ## Manage the lifecycle
 

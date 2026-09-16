@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/keyboardevent/1631288-dom_key_location_right](https://developer.apple.com/documentation/webkitjs/keyboardevent/1631288-dom_key_location_right)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/keyboardevent/1631288-dom_key_location_right
 
 # DOM_KEY_LOCATION_RIGHT
 

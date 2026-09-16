@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/onlongpressgesture(minimumduration:pressing:perform:)](https://developer.apple.com/documentation/swiftui/view/onlongpressgesture(minimumduration:pressing:perform:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/onlongpressgesture(minimumduration:pressing:perform:)
 
 # onLongPressGesture(minimumDuration:pressing:perform:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** tvOS 14.0+ (deprecated in 27.0)
+**Availability:** tvOS 14.0+ (deprecated in 27.2)
 
 Adds an action to perform when this view recognizes a long press gesture.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/simd8/addingproduct(_:_:)-94v6i](https://developer.apple.com/documentation/swift/simd8/addingproduct(_:_:)-94v6i)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/simd8/addingproduct(_:_:)-94v6i
 
 # addingProduct(\_:\_:)
 

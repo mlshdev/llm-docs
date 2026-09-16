@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [blender-in-the-cloud.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/blender-in-the-cloud.mdx)
+> Pinned source for Vast.ai main: [blender-in-the-cloud.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/blender-in-the-cloud.mdx)
 > Canonical documentation: https://docs.vast.ai/blender-in-the-cloud
 
 # Blender in the Cloud
@@ -17,7 +17,7 @@ Click on this link [Blender in the Cloud Template](https://cloud.vast.ai?ref_id=
 
 You can narrow your search results to only data center machines if you want insured security standards from our trusted datacenters.
 
-![Highlighted Secure Cloud](https://vast.ai/uploads/highlighted_secure_cloud.png)
+![Highlighted Secure Cloud](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/highlighted-secure-cloud.webp)
 
 ## Step 3 - Filter for a GPU that you feel best suits your needs
 
@@ -29,26 +29,26 @@ Go to the GPUs filter and check the box for RTX 4090 or another GPU instance.
 
 For example,
 
-![Highlighted Rtx 4090 Filter Pic](https://vast.ai/uploads/highlighted_rtx_4090_filter_pic.png)
+![Highlighted Rtx 4090 Filter Pic](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/highlighted-rtx-4090-filter-pic.webp)
 
 ## Step 4 - Choose a GPU by Clicking "RENT"
 
 Choose a GPU that meets your budget, desired reliability %, and other constraints by clicking "RENT". GPUs are sorted by a complex proprietary algorithm that aims to give users the best machines for their value by default.
 You can filter GPUs further per your requirements if desired.
 
-![Highlighted Rent](https://vast.ai/uploads/highlighted_rent.png)
+![Highlighted Rent](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/highlighted-rent.webp)
 
 ## Step 5 - Use Jupyter Direct HTTPS Launch Mode
 
 Follow the instructions related to adding a certificate to your browser if you need to when it asks you to "Setup Jupyter Direct HTTPS" and click "CONTINUE". Here's more information on the Jupyter direct HTTPS Launch Mode and Installing the TLS certificate: [Jupyter](https://docs.vast.ai/guides/instances/jupyter)&#x20;
 
-![Updated Jupyter Direct Https Continue](https://vast.ai/uploads/updated_jupyter_direct_https_continue.png)
+![Updated Jupyter Direct Https Continue](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/updated-jupyter-direct-https-continue.webp)
 
 ## Step 6 - Open Blender
 
 Go to the Instances tab to see your instance being created with it "Creating". When the message on the blue button changes to "Open", click on Open to open Blender.
 
-![Original Open Jupyter Notebook](https://vast.ai/uploads/original_open_jupyter_notebook.png)
+![Original Open Jupyter Notebook](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/blender-in-the-cloud-original-open-jupyter-notebook.webp)
 
 Here's more info about instances at Vast if you need to reference it: [Instances Guide](https://docs.vast.ai/guides/instances/managing-instances)&#x20;
 
@@ -56,37 +56,37 @@ If you see an error that says something like "'clipboard-read' is not a valid va
 
 You should now see Blender!
 
-![Blender In The Cloud](https://vast.ai/uploads/blender_in_the_cloud.png)
+![Blender In The Cloud](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/blender-in-the-cloud-blender-in-the-cloud.webp)
 
 ## Step 7 - Upload .blend file(s) through Jupyter Notebook
 
 Click the Jupyter Notebook button to open Jupyter Notebook.
 
-![Jupyter Notebook Button](https://vast.ai/uploads/jupyter_notebook_button.png)
+![Jupyter Notebook Button](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/jupyter-notebook-button.webp)
 
 Go to your Jupyter Notebook, click the upload button on the top right, and upload one of your .blend files from your local computer to a directory in the Jupyter Notebook.
 In this case, I'm uploading basic\_particle\_simulation.blend to the Desktop directory.
 
-![Original Upload Blend File To Jupyter](https://vast.ai/uploads/original_upload_blend_file_to_jupyter.png)
+![Original Upload Blend File To Jupyter](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/blender-in-the-cloud-original-upload-blend-file-to-jupyter.webp)
 
 \\
 
-![Highlighted Upload](https://vast.ai/uploads/highlighted_upload.png)
+![Highlighted Upload](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/blender-in-the-cloud-highlighted-upload.webp)
 
 ## Step 8 - Open .blend file in Blender
 
 Go back to the tab where Blender is running, click on File, click on Open, find your file, and open it. In this case, my basic\_particle\_simulation.blend is in the Desktop directory since that's where I uploaded it in Jupyter Notebook
 
-![Open File](https://vast.ai/uploads/open_file.png)
+![Open File](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/blender-in-the-cloud-open-file.webp)
 
 ## Step 9 - Work on Your .blend file in Blender!
 
 1. There you go! You should now able to see your .blend file in Blender in the Cloud using Vast.
 
-![Particle Simulation Blend](https://vast.ai/uploads/particle_simulation_blend.png)
+![Particle Simulation Blend](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/blender-in-the-cloud-particle-simulation-blend.webp)
 
 ## Step 10 - Download files as needed from Jupyter Notebook
 
 1. You can save files in Blender and download them by selecting the file(s) and clicking the Download button in Jupyter Notebook.
 
-![Highlighted File To Download](https://vast.ai/uploads/highlighted_file_to_download.png)
+![Highlighted File To Download](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/blender-in-the-cloud-highlighted-file-to-download.webp)

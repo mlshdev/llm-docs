@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/updates/swiftui](https://developer.apple.com/documentation/updates/swiftui)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/updates/swiftui
 
 # SwiftUI updates
 
@@ -12,6 +13,55 @@ Learn about important changes to SwiftUI.
 ## Overview
 
 Browse notable changes in [SwiftUI](https://developer.apple.com/documentation/swiftui).
+
+<a id="September-2026"></a>
+
+## September 2026
+
+<a id="Arrangement-views"></a>
+
+### Arrangement views
+
+- Arrange primary and secondary content using an adaptive layout that responds to the environment with [ArrangementView](https://developer.apple.com/documentation/swiftui/arrangementview).
+- Configure the style of an [ArrangementView](https://developer.apple.com/documentation/swiftui/arrangementview) using the [arrangementViewStyle(\_:)](https://developer.apple.com/documentation/swiftui/view/arrangementviewstyle%28_:%29) modifier.
+- Create a custom arrangement style by conforming to [ArrangementViewStyle](https://developer.apple.com/documentation/swiftui/arrangementviewstyle) and implementing [makeBody(configuration:)](https://developer.apple.com/documentation/swiftui/arrangementviewstyle/makebody%28configuration:%29), which provides access to the arrangement’s [primary](https://developer.apple.com/documentation/swiftui/arrangementviewstyleconfiguration/primary-swift.property) and [secondary](https://developer.apple.com/documentation/swiftui/arrangementviewstyleconfiguration/secondary-swift.property) content.
+- Place the primary and secondary views of an arrangement view side by side along one or more axes using the [split](https://developer.apple.com/documentation/swiftui/arrangementviewstyle/split) style, and restrict which axes the split arrangement can use with [axes(\_:)](https://developer.apple.com/documentation/swiftui/splitarrangementviewstyle/axes%28_:%29).
+- Set the preferred or constrained size ratio for a view relative to its related view in a split arrangement using [splitArrangementLayoutRatio(\_:)](https://developer.apple.com/documentation/swiftui/view/splitarrangementlayoutratio%28_:%29) or [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](https://developer.apple.com/documentation/swiftui/view/splitarrangementlayoutratio%28minhorizontal:idealhorizontal:maxhorizontal:minvertical:idealvertical:maxvertical:%29).
+- Set size constraints for a view in a split arrangement using absolute width and height values with [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](https://developer.apple.com/documentation/swiftui/view/splitarrangementlayoutsize%28minwidth:idealwidth:maxwidth:minheight:idealheight:maxheight:%29), or prefer the view’s own ideal size with [splitArrangementFixedLayoutSize(horizontal:vertical:)](https://developer.apple.com/documentation/swiftui/view/splitarrangementfixedlayoutsize%28horizontal:vertical:%29).
+- Read the axis of the current split arrangement from a subview using the [splitArrangementAxis](https://developer.apple.com/documentation/swiftui/environmentvalues/splitarrangementaxis) environment value.
+- Layer the primary view over the secondary view in z-order using the [overlay](https://developer.apple.com/documentation/swiftui/arrangementviewstyle/overlay) style, and restrict the axes on which the overlay can transition to a side-by-side layout with [axes(\_:)](https://developer.apple.com/documentation/swiftui/overlayarrangementviewstyle/axes%28_:%29). Anchor the overlaid content to a specific vertical or horizontal edge with the [overlayArrangementEdge(\_:)](https://developer.apple.com/documentation/swiftui/view/overlayarrangementedge%28_:%29) modifier.
+- Read the z-index of a view within an overlay arrangement using the [overlayArrangementZIndex](https://developer.apple.com/documentation/swiftui/environmentvalues/overlayarrangementzindex) environment value.
+
+<a id="Reserved-regions"></a>
+
+### Reserved regions
+
+- Identify and avoid a region of a view reserved by hardware, such as a camera or the hinge, using [ReservedRegion](https://developer.apple.com/documentation/swiftui/reservedregion).
+- Query the reserved regions that intersect a view using the [reservedRegions(kind:options:layoutDirectionBehavior:)](https://developer.apple.com/documentation/swiftui/geometryproxy/reservedregions%28kind:options:layoutdirectionbehavior:%29) method, specifying a [ReservedRegion.Kind](https://developer.apple.com/documentation/swiftui/reservedregion/kind-swift.struct) such as `.occlusion` or `.division`.
+- Include inactive reserved regions in a query using the [includeInactive](https://developer.apple.com/documentation/swiftui/reservedregion/queryoptions/includeinactive) option.
+- Identify a reserved region across coordinate spaces, or track it over time, using its opaque [ReservedRegion.ID](https://developer.apple.com/documentation/swiftui/reservedregion/id-swift.struct) identifier.
+
+<a id="Hinge"></a>
+
+### Hinge
+
+- Observe changes to the state of the hinge on iPhone Duo using the [onHingeChange(isEnabled:\_:)](https://developer.apple.com/documentation/swiftui/view/onhingechange%28isenabled:_:%29) modifier, which delivers updates through [DeviceHingeContext](https://developer.apple.com/documentation/swiftui/devicehingecontext).
+- Read the hinge’s current angle and status, such as `.closed`, `.partiallyOpen`, or `.fullyOpen`, using [DeviceHinge](https://developer.apple.com/documentation/swiftui/devicehinge).
+
+<a id="Scene-accessories"></a>
+
+### Scene accessories
+
+- Present content on the outer display of iPhone Duo while the device is open, the app is in the foreground, and a camera capture session is active, using [CameraCaptureAccessory](https://developer.apple.com/documentation/swiftui/cameracaptureaccessory).
+
+<a id="Controls-on-the-vertical-axis"></a>
+
+### Controls on the vertical axis
+
+- Read the edge where the system places controls on the vertical axis using the [toolbarVerticalEdge](https://developer.apple.com/documentation/swiftui/environmentvalues/toolbarverticaledge) environment value, then position custom bars or other UI relative to the system’s placement.
+- Opt a view out of showing bar content on the vertical axis, causing bar content to fall back to the standard horizontal top and bottom toolbars, using the [toolbarVerticalBehavior(\_:)](https://developer.apple.com/documentation/swiftui/view/toolbarverticalbehavior%28_:%29) modifier.
+- Control whether a toolbar item appears on the vertical or horizontal axis using the [axisBehavior(\_:)](https://developer.apple.com/documentation/swiftui/toolbarcontent/axisbehavior%28_:%29) and [axisBehavior(\_:)](https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent/axisbehavior%28_:%29) modifiers with a [ToolbarItemAxisBehavior](https://developer.apple.com/documentation/swiftui/toolbaritemaxisbehavior) value, such as `.horizontalOnly` or `.verticalPreferred`.
+- Manage how bars compress when the system renders different types of bars together and space is constrained using the [toolbarVerticalCompressionBehavior(\_:)](https://developer.apple.com/documentation/swiftui/view/toolbarverticalcompressionbehavior%28_:%29) modifier with a [ToolbarVerticalCompressionBehavior](https://developer.apple.com/documentation/swiftui/toolbarverticalcompressionbehavior) value, such as `.prefersToolbarItems` or `.prefersTabBar`.
 
 <a id="June-2026"></a>
 
@@ -45,7 +95,7 @@ Browse notable changes in [SwiftUI](https://developer.apple.com/documentation/sw
 - Use the [visibilityPriority(\_:)](https://developer.apple.com/documentation/swiftui/toolbarcontent/visibilitypriority%28_:%29) modifier to prioritize important toolbar actions so SwiftUI keeps them visible as space shrinks, moving lower-priority items to the overflow menu first.
 - Send secondary toolbar actions, like archive or delete, directly to the overflow menu by wrapping them in a [ToolbarOverflowMenu](https://developer.apple.com/documentation/swiftui/toolbaroverflowmenu), keeping your primary toolbar focused on key actions.
 - Anchor a toolbar item to the trailing edge of the top bar using the [topBarPinnedTrailing](https://developer.apple.com/documentation/swiftui/toolbaritemplacement/topbarpinnedtrailing) placement so it stays in place even as other items shift or move to the overflow menu.
-- Control how toolbars minimize in response to scrolling using the doc://com.apple.documentation/documentation/swiftui/view/toolbarminimizebehavior(\_:for:) modifier.
+- Control how toolbars minimize in response to scrolling using the [toolbarMinimizationBehavior(\_:for:)](https://developer.apple.com/documentation/swiftui/view/toolbarminimizationbehavior%28_:for:%29) modifier.
 
 <a id="Documents"></a>
 

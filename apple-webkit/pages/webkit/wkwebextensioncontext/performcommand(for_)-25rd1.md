@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/wkwebextensioncontext/performcommand(for:)-25rd1](https://developer.apple.com/documentation/webkit/wkwebextensioncontext/performcommand(for:)-25rd1)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/wkwebextensioncontext/performcommand(for:)-25rd1
 
 # performCommand(for:) (Swift)
 

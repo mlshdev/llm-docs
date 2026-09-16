@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgfecolormatrixelement/1633516-svg_fecolormatrix_type_saturate](https://developer.apple.com/documentation/webkitjs/svgfecolormatrixelement/1633516-svg_fecolormatrix_type_saturate)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgfecolormatrixelement/1633516-svg_fecolormatrix_type_saturate
 
 # SVG_FECOLORMATRIX_TYPE_SATURATE
 

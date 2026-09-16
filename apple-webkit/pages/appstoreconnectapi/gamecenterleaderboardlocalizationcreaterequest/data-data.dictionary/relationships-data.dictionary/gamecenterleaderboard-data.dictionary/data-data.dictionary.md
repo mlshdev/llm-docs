@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/gamecenterleaderboardlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterleaderboard-data.dictionary/data-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/gamecenterleaderboardlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterleaderboard-data.dictionary/data-data.dictionary)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/gamecenterleaderboardlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterleaderboard-data.dictionary/data-data.dictionary
 
 # GameCenterLeaderboardLocalizationCreateRequest.Data.Relationships.GameCenterLeaderboard.Data
 

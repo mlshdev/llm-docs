@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/implementing-oauth-for-the-apple-ads-platform-api](https://developer.apple.com/documentation/apple-ads-platform-api/implementing-oauth-for-the-apple-ads-platform-api)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/implementing-oauth-for-the-apple-ads-platform-api
 
 # Implementing OAuth for the Apple Ads Platform API
 
@@ -123,6 +124,7 @@ import datetime as dt
 from authlib.jose import jwt
 from Crypto.PublicKey import ECC
 
+
 private_key_file = "private-key.pem"
 public_key_file = "public-key.pem"
 client_id = "SEARCHADS.8b8cdf43-5299-41d1-be59-cfa5ccd99228"
@@ -143,6 +145,7 @@ else:
     if not os.path.isfile(public_key_file):
         with open(public_key_file, 'wt') as file:
             file.write(public_key.export_key(format='PEM'))
+
 
 # Use timezone-aware UTC datetime so .timestamp() is correct on all systems.
 issued_at_timestamp = int(dt.datetime.now(dt.timezone.utc).timestamp())

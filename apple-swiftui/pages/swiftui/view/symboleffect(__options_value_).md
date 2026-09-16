@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/symboleffect(_:options:value:)](https://developer.apple.com/documentation/swiftui/view/symboleffect(_:options:value:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/symboleffect(_:options:value:)
 
 # symbolEffect(\_:options:value:)
 
@@ -18,6 +19,7 @@ Returns a new view with a symbol effect added to it.
 ## Parameters
 
 - `effect`: A symbol effect to add to the view. Existing effects added by ancestors of the view are preserved, but may be overridden by the new effect. Added effects will be applied to the [Image](../image.md) views contained by the child view.
+- `options`: A set of options that configure how effects apply to symbol-based images.
 - `value`: The value to monitor for changes, the animation is triggered each time the value changes.
 
 <a id="return-value"></a>

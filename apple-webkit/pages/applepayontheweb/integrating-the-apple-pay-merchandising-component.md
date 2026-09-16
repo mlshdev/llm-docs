@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepayontheweb/integrating-the-apple-pay-merchandising-component](https://developer.apple.com/documentation/applepayontheweb/integrating-the-apple-pay-merchandising-component)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applepayontheweb/integrating-the-apple-pay-merchandising-component
 
 # Integrating the Apple Pay merchandising component
 

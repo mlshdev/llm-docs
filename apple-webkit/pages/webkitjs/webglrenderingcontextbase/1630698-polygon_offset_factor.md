@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webglrenderingcontextbase/1630698-polygon_offset_factor](https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1630698-polygon_offset_factor)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1630698-polygon_offset_factor
 
 # POLYGON_OFFSET_FACTOR
 

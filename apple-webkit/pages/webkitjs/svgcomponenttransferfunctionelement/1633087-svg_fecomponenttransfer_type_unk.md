@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgcomponenttransferfunctionelement/1633087-svg_fecomponenttransfer_type_unk](https://developer.apple.com/documentation/webkitjs/svgcomponenttransferfunctionelement/1633087-svg_fecomponenttransfer_type_unk)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgcomponenttransferfunctionelement/1633087-svg_fecomponenttransfer_type_unk
 
 # SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build-cloud/usage.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/build-cloud/usage.md)
+> Pinned source for Docker main: [content/manuals/build-cloud/usage.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/build-cloud/usage.md)
 
 # Building with Docker Build Cloud
 
@@ -27,8 +27,6 @@ $ docker buildx use cloud-<ORG>-<BUILDER_NAME> --global
 1. Open the Docker Desktop settings and navigate to the **Builders** tab.
 2. Find the cloud builder under **Available builders**.
 3. Open the drop-down menu and select **Use**.
-
-![Selecting the cloud builder as default using the Docker Desktop GUI](https://docs.docker.com/build/images/set-default-builder-gui.webp)
 
 Changing your default builder with `docker buildx use` only changes the default
 builder for the `docker buildx build` command. The `docker build` command still

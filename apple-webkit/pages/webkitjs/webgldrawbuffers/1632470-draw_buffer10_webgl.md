@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webgldrawbuffers/1632470-draw_buffer10_webgl](https://developer.apple.com/documentation/webkitjs/webgldrawbuffers/1632470-draw_buffer10_webgl)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webgldrawbuffers/1632470-draw_buffer10_webgl
 
 # DRAW_BUFFER10_WEBGL
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-subscriptions-_id_-relationships-offercodes](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-subscriptions-_id_-relationships-offercodes)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-subscriptions-_id_-relationships-offercodes
 
 # List offer code IDs for an auto-renewable subscription
 

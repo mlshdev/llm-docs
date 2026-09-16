@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/environmentvalues](https://developer.apple.com/documentation/swiftui/environmentvalues)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/environmentvalues
 
 # EnvironmentValues
 
@@ -90,7 +91,6 @@ Clients of your value then access the value in the usual way, reading it with th
 - [accessibilityQuickActionsEnabled](environmentvalues/accessibilityquickactionsenabled.md): A Boolean that indicates whether the quick actions feature is enabled.
 - [accessibilityReduceMotion](environmentvalues/accessibilityreducemotion.md): Whether the system preference for Reduce Motion is enabled.
 - [accessibilityReduceTransparency](environmentvalues/accessibilityreducetransparency.md): Whether the system preference for Reduce Transparency is enabled.
-- [accessibilityShowButtonShapes](environmentvalues/accessibilityshowbuttonshapes.md): Deprecated. Whether the system preference for Show Button Shapes is enabled.
 - [accessibilitySwitchControlEnabled](environmentvalues/accessibilityswitchcontrolenabled.md): A Boolean value that indicates whether the Switch Control motor accessibility feature is in use.
 - [accessibilityVoiceOverEnabled](environmentvalues/accessibilityvoiceoverenabled.md): A Boolean value that indicates whether the VoiceOver screen reader is in use.
 - [legibilityWeight](environmentvalues/legibilityweight.md): The font weight to apply to text.
@@ -112,6 +112,11 @@ Clients of your value then access the value in the usual way, reading it with th
 - [rename](environmentvalues/rename.md): An action that activates the standard rename interaction.
 - [resetFocus](environmentvalues/resetfocus.md): An action that requests the focus system to reevaluate default focus.
 - [openSettings](environmentvalues/opensettings.md): A Settings presentation action stored in a view’s environment.
+
+### Arrangement views
+
+- [overlayArrangementZIndex](environmentvalues/overlayarrangementzindex.md): Beta. The z-index for a view within an overlay arrangement view.
+- [splitArrangementAxis](environmentvalues/splitarrangementaxis.md): Beta. The axis of the split for a view within a split arrangement view.
 
 ### Authentication
 
@@ -146,6 +151,7 @@ Clients of your value then access the value in the usual way, reading it with th
 - [materialActiveAppearance](environmentvalues/materialactiveappearance.md): The behavior materials should use for their active state, defaulting to `automatic`.
 - [TabBarPlacement](tabbarplacement.md): A placement for tabs in a tab view.
 - [toolbarLabelStyle](environmentvalues/toolbarlabelstyle.md): The label style to apply to controls within a toolbar.
+- [toolbarVerticalEdge](environmentvalues/toolbarverticaledge.md): Beta. This value reflects the system’s preferred edge for the vertical bar in the current context, regardless of whether a vertical bar is currently visible. Use it to position custom bars or other UI relative to the system’s bar placement.
 
 ### Global objects
 
@@ -233,12 +239,13 @@ Clients of your value then access the value in the usual way, reading it with th
 
 ### Deprecated environment values
 
-- [disableAutocorrection](environmentvalues/disableautocorrection.md): Deprecated. A Boolean value that determines whether the view hierarchy has auto-correction enabled.
-- [sizeCategory](environmentvalues/sizecategory.md): Deprecated. The size of content.
-- [presentationMode](environmentvalues/presentationmode.md): Deprecated. A binding to the current presentation mode of the view associated with this environment.
-- [PresentationMode](presentationmode.md): Deprecated. An indication whether a view is currently presented by another view.
+- [accessibilityShowButtonShapes](environmentvalues/accessibilityshowbuttonshapes.md): Deprecated. Whether the system preference for Show Button Shapes is enabled.
 - [complicationRenderingMode](environmentvalues/complicationrenderingmode.md): Deprecated. The complication rendering mode for the current environment.
 - [controlActiveState](environmentvalues/controlactivestate.md): Deprecated. The active appearance expected of controls in a window.
+- [disableAutocorrection](environmentvalues/disableautocorrection.md): Deprecated. A Boolean value that determines whether the view hierarchy has auto-correction enabled.
+- [presentationMode](environmentvalues/presentationmode.md): Deprecated. A binding to the current presentation mode of the view associated with this environment.
+- [PresentationMode](presentationmode.md): Deprecated. An indication whether a view is currently presented by another view.
+- [sizeCategory](environmentvalues/sizecategory.md): Deprecated. The size of content.
 
 ### Instance Properties
 

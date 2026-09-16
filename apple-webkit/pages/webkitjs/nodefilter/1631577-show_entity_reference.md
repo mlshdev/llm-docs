@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/nodefilter/1631577-show_entity_reference](https://developer.apple.com/documentation/webkitjs/nodefilter/1631577-show_entity_reference)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/nodefilter/1631577-show_entity_reference
 
 # SHOW_ENTITY_REFERENCE
 

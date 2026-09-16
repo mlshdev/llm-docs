@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/subscription-group-localizations-v1](https://developer.apple.com/documentation/appstoreconnectapi/subscription-group-localizations-v1)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/subscription-group-localizations-v1
 
 # Subscription group localizations (v1)
 

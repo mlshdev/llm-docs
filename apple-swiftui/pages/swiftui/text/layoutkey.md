@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/text/layoutkey](https://developer.apple.com/documentation/swiftui/text/layoutkey)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/text/layoutkey
 
 # Text.LayoutKey
 
@@ -18,7 +19,7 @@ struct LayoutKey
 
 ### Structures
 
-- [Text.LayoutKey.AnchoredLayout](layoutkey/anchoredlayout.md)
+- [Text.LayoutKey.AnchoredLayout](layoutkey/anchoredlayout.md): The layout of one text view, together with an anchor for the position of that view.
 
 ## Relationships
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/filedocument](https://developer.apple.com/documentation/swiftui/filedocument)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/filedocument
 
 # FileDocument
 
 **Framework:** SwiftUI  
 **Kind:** Protocol  
-**Availability:** iOS 14.0+ (deprecated in 27.0) · iPadOS 14.0+ (deprecated in 27.0) · Mac Catalyst 14.0+ (deprecated in 27.0) · macOS 11.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 14.0+ (deprecated in 27.2) · iPadOS 14.0+ (deprecated in 27.2) · Mac Catalyst 14.0+ (deprecated in 27.2) · macOS 11.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 A type that you use to serialize documents to and from file.
 
@@ -30,11 +31,13 @@ To store a document as a value type — like a structure — create a type that 
 
 > The `fileWrapper(configuration:)` method can either serialize the whole document into a single file, or use a document package — a directory `FileWrapper` — to store the document as a collection of files. With a package, you can improve performance by rewriting only the specific files that changed since the last save. For examples, see [fileWrapper(configuration:)](filedocument/filewrapper%28configuration_%29.md).
 
+Because `FileDocument` is a value type, SwiftUI automatically registers an undo action whenever your document’s value changes. You don’t need to call `UndoManager/registerUndo(withTarget:handler:)` yourself.
+
 Ensure that types that conform to this protocol are `Sendable`. In particular, SwiftUI calls the protocol’s methods from different isolation domains. Don’t perform serialization and deserialization on `MainActor`.
 
 > **Important**
 
-> If you store your document as a reference type — like a class — use [ReferenceFileDocument](referencefiledocument.md) instead.
+> If you store your document as a reference type — like a class — use [ReferenceFileDocument](referencefiledocument.md) instead. Because SwiftUI can’t detect changes to a reference type’s properties on its own, you’re responsible for registering undo actions yourself.
 
 ## Topics
 

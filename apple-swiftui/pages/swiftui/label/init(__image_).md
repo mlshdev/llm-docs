@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/label/init(_:image:)](https://developer.apple.com/documentation/swiftui/label/init(_:image:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/label/init(_:image:)
 
 # init(\_:image:)
 
@@ -17,6 +18,7 @@ Creates a label with an icon image and a title generated from a localized string
 ## Parameters
 
 - `titleResource`: A title generated from a localized string.
+- `name`: The name of the image resource to lookup.
 
 ## See Also
 

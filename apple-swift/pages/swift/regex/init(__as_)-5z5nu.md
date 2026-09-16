@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/regex/init(_:as:)-5z5nu](https://developer.apple.com/documentation/swift/regex/init(_:as:)-5z5nu)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/regex/init(_:as:)-5z5nu
 
 # init(\_:as:)
 

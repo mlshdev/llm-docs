@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `ceb79977df03b21e40ceaec3fdea8c9869897b7e`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `1ac8c64f9623ca776ec994c36b22d4329facbb1d`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -12,7 +12,7 @@
 ## Get started
 
 - [Welcome to Runpod](pages/overview.md): Explore our guides and examples to deploy your AI/ML application on Runpod. Review setup and usage guidance in the Runpod documentation. (4471 bytes)
-- [Deploy your first Pod](pages/get-started.md): Run code on a remote GPU in minutes. Review setup steps, core concepts, and recommended next actions for building on Runpod. (13527 bytes)
+- [Deploy your first Pod](pages/get-started.md): Run code on a remote GPU in minutes. Review setup steps, core concepts, and recommended next actions for building on Runpod. (14033 bytes)
 - [Choose a workflow](pages/get-started/connect-to-runpod.md): Review available methods for accessing and managing Runpod resources. Review setup steps and core concepts for building on Runpod. (2219 bytes)
 - [Concepts](pages/get-started/concepts.md): Key concepts and terminology for understanding Runpod's platform and products. Review setup steps and core concepts for building on Runpod. (2935 bytes)
 - [Manage API keys](pages/get-started/api-keys.md): Create, edit, and disable Runpod API keys. Review setup steps, core concepts, and recommended next actions for building on Runpod. (2177 bytes)
@@ -127,7 +127,7 @@
 - [Connect to a Pod with VSCode or Cursor](pages/pods/configuration/connect-to-ide.md): Set up remote development on your Pod using VSCode or Cursor. Review setup, configuration, and operations guidance for Runpod Pods. (8147 bytes)
 - [Expose ports](pages/pods/configuration/expose-ports.md): Learn how to make your Pod services accessible from the internet using HTTP proxy and TCP port forwarding (8772 bytes)
 - [Global networking](pages/pods/networking.md): Connect your Pods through a secure private network for internal communication. Review setup, configuration, and operations guidance for Runpod Pods. (4717 bytes)
-- [Storage options](pages/pods/storage/types.md): Choose the right type of storage for your Pods. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (4776 bytes)
+- [Storage options](pages/pods/storage/types.md): Choose the right type of storage for your Pods. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (6512 bytes)
 - [Transfer files](pages/pods/storage/transfer-files.md): Move files between your local machine and Pods with a variety of secure transfer methods. See setup and usage details for Runpod Pods. (7928 bytes)
 - [Sync Pod data with cloud storage providers](pages/pods/storage/cloud-sync.md): Learn how to sync your Pod data with popular cloud storage providers. Review setup, configuration, and operations guidance for Runpod Pods. (10224 bytes)
 - [Overview](pages/pods/templates/overview.md): Streamline your Pod deployments with templates, bundling prebuilt container images with hardware specs and network settings. (2670 bytes)
@@ -170,7 +170,7 @@
 - [Network volumes](pages/storage/network-volumes.md): Persistent, portable storage for your AI workloads. Review configuration, access methods, and usage guidance for managing storage on Runpod. (7924 bytes)
 - [High-performance storage](pages/storage/high-performance-storage.md): Premium storage tier for demanding AI workloads with up to 3x throughput and 4x IOPS. Review configuration and usage guidance for Runpod storage. (5239 bytes)
 - [S3-compatible API](pages/storage/s3-api.md): Use Runpod's S3-compatible API to access and manage your network volumes. Review configuration and usage guidance for Runpod storage. (26469 bytes)
-- [Global volumes](pages/storage/globalvolume.md): Learn how to create a global volume in Runpod and access your data from Pods across all data centers, with storage that persists across sessions. (5901 bytes)
+- [Global volumes](pages/storage/globalvolume.md): Learn how to create a global volume in Runpod and access your data from Pods across all data centers, with storage that persists across sessions. (6342 bytes)
 
 ## Public Endpoints
 
@@ -200,6 +200,8 @@
 - [Cost centers](pages/accounts-billing/cost-centers.md): Track and organize Runpod spending by team, project, or department. Review account, billing, and management details for Runpod. (6433 bytes)
 - [Referral, affiliate, and creator programs](pages/accounts-billing/referrals.md): Earn additional revenue through Runpod's referral, affiliate, and creator programs. Review account, billing, and management details for Runpod. (6036 bytes)
 - [Troubleshoot payment card declines](pages/accounts-billing/manage-payment-cards.md): Resolve declined payment cards and prevent service interruptions on Runpod. Review account, billing, and management details for Runpod. (4017 bytes)
+- [Sales tax on Runpod purchases](pages/accounts-billing/sales-tax.md): Understand how sales tax applies to Runpod purchases, what determines your rate, and how it appears on your receipts. (2082 bytes)
+- [Adding your tax ID](pages/accounts-billing/add-tax-id.md): Add a tax ID to your Runpod account to update how tax is applied to your purchases. (1776 bytes)
 
 ## Integrations
 
@@ -431,4 +433,4 @@
 
 ## Release notes
 
-- [Product updates](pages/release-notes.md): New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation. (29506 bytes)
+- [Product updates](pages/release-notes.md): New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation. (29909 bytes)

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/regexcomponent/date(_:locale:timezone:calendar:)](https://developer.apple.com/documentation/swift/regexcomponent/date(_:locale:timezone:calendar:))
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/regexcomponent/date(_:locale:timezone:calendar:)
 
 # date(\_:locale:timeZone:calendar:)
 

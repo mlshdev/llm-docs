@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/mutationrecord/1631893-addednodes](https://developer.apple.com/documentation/webkitjs/mutationrecord/1631893-addednodes)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/mutationrecord/1631893-addednodes
 
 # addedNodes
 

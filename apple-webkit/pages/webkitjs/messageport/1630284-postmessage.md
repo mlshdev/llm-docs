@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/messageport/1630284-postmessage](https://developer.apple.com/documentation/webkitjs/messageport/1630284-postmessage)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/messageport/1630284-postmessage
 
 # postMessage
 

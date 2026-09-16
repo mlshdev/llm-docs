@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/progressviewstyle/makebody(configuration:)](https://developer.apple.com/documentation/swiftui/progressviewstyle/makebody(configuration:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/progressviewstyle/makebody(configuration:)
 
 # makeBody(configuration:)
 
@@ -16,7 +17,7 @@ Creates a view representing the body of a progress view.
 
 ## Parameters
 
-- `configuration`: The properties of the progress view being created.
+- `configuration`: The properties of the progress view, such as its preferred progress type.
 
 <a id="discussion"></a>
 

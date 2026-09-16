@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/slider/init(value:in:neutralvalue:enabledbounds:label:currentvaluelabel:minimumvaluelabel:maximumvaluelabel:ticks:oneditingchanged:)](https://developer.apple.com/documentation/swiftui/slider/init(value:in:neutralvalue:enabledbounds:label:currentvaluelabel:minimumvaluelabel:maximumvaluelabel:ticks:oneditingchanged:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/slider/init(value:in:neutralvalue:enabledbounds:label:currentvaluelabel:minimumvaluelabel:maximumvaluelabel:ticks:oneditingchanged:)
 
 # init(value:in:neutralValue:enabledBounds:label:currentValueLabel:minimumValueLabel:maximumValueLabel:ticks:onEditingChanged:)
 
@@ -24,6 +25,7 @@ nonisolated init<V>(value: Binding<V>, in bounds: ClosedRange<V> = 0...1, neutra
 - `currentValueLabel`: A view that describes `value`.
 - `minimumValueLabel`: A view that describes `bounds.lowerBound`.
 - `maximumValueLabel`: A view that describes `bounds.lowerBound`.
+- `ticks`: The ticks to display along the slider.
 - `onEditingChanged`: A callback for when editing begins and ends.
 
 <a id="discussion"></a>

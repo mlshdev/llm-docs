@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/templates/template-settings.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/templates/template-settings.mdx)
+> Pinned source for Vast.ai main: [guides/templates/template-settings.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/templates/template-settings.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/templates/template-settings
 
 # Template Settings
@@ -15,7 +15,7 @@ For advanced customization techniques, see [Advanced Setup](https://docs.vast.ai
 
 The first section helps you to keep your templates organized.
 
-![Identification section of the template editor](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-templates-5.webp)
+![Identification section of the template editor](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-5.webp)
 
 **Template Name**
 
@@ -29,7 +29,7 @@ This field helps describe the function and purpose of the template. Completely o
 
 This is where you define the Docker image you want to run, along with any options we want to pass into the container.
 
-![Docker section of the template editor](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-templates-6.webp)
+![Docker section of the template editor](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-6.webp)
 
 **Image Path:Tag**
 
@@ -89,7 +89,7 @@ You can find out more about port mapping and special environment variables in ou
 
 Templates offer three launch modes you can select from. Our recommended templates will usually launch in Jupyter mode for easiest access, but you are free to choose whichever suits your needs.
 
-![Launch mode selection options](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-templates-7.webp)
+![Launch mode selection options](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-7.webp)
 
 **Jupyter-python notebook + SSH**
 
@@ -109,13 +109,13 @@ In this mode, your Docker image will run precisely as it is. We will not include
 
 An additional field will be shown when using this launch mode to allow passing arguments to the image entrypoint.
 
-![Field allowing for argument passing](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-templates-8.webp)
+![Field allowing for argument passing](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-8.webp)
 
 ## On-start Script
 
 Here you can enter a short Bash script which will be run during instance startup. It is only available when using the Jupyter or SSH launch modes, and is most useful for starting any services that your docker image would have launched if the entrypoint had been executed.
 
-![On-start Script](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-templates-9.webp)
+![On-start Script](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-9.webp)
 
 **Additional On-start Script Examples**
 
@@ -152,13 +152,13 @@ Also make sure to find the image's ENTRYPOINT or CMD command and call that comma
 
 Use this area to place restrictions on the machines that should show up in the search page when the template is selected.
 
-![Extra filters showing this template is configured for both AMD64 and ARM64 CPUs](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-templates-10.webp)
+![Extra filters showing this template is configured for both AMD64 and ARM64 CPUs](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-10.webp)
 
 ## Docker Repository Authentication
 
 If you are using a private Docker image then you will need to add authentication credentials so the machine running the instance can download it.
 
-![Docker Repository Authentication](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-templates-11.webp)
+![Docker Repository Authentication](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-11.webp)
 
 **Docker Registry Server Names**
 
@@ -173,7 +173,7 @@ You do have to specify your server name if your repository is something else. Fo
 
 By setting the disk space in the template, you can ensure that new instances created from the template will use this amount as a minimum.&#x20;
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-templates-12.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-12.webp)
 
 ## Template Visibility
 
@@ -181,7 +181,7 @@ Any template marked as public will be available in the template search system, w
 
 Private templates can still be used by others if you have shared the template URL.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-templates-13.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-13.webp)
 
 > **Danger**
 >
@@ -191,7 +191,7 @@ Private templates can still be used by others if you have shared the template UR
 
 Templates can be translated directly into CLI launch commands. This read-only area shows what you would need to type or copy to the CLI if you wanted to programatically launch an instance this way.
 
-![Launch a template via the CLI](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-templates-14.webp)
+![Launch a template via the CLI](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-14.webp)
 
 To learn more about starting instance from the CLI, check out our [quickstart guide](https://docs.vast.ai/cli/hello-world).
 
@@ -199,6 +199,6 @@ To learn more about starting instance from the CLI, check out our [quickstart gu
 
 Finally, you can save the template. If you are creating a new template or editing one which is not associated with your account - Such as one of our recommended templates - The buttons you see will be labelled 'Create'. For your own templates, you will see them labelled 'Save'
 
-![Buttons for saving](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-templates-15.webp)
+![Buttons for saving](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-15.webp)
 
 The 'Create' button will create a copy of the template in the 'My Templates' section of the [templates page](https://cloud.vast.ai/templates/) for you to use later. The 'Create & Use' button will save the template, load it and then open up the [offers page](https://cloud.vast.ai/create/).

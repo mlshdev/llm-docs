@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/dom_document_position_preceding](https://developer.apple.com/documentation/webkit/dom_document_position_preceding)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/dom_document_position_preceding
 
 # DOM_DOCUMENT_POSITION_PRECEDING (Swift)
 

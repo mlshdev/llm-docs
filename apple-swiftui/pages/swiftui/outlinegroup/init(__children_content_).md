@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/outlinegroup/init(_:children:content:)](https://developer.apple.com/documentation/swiftui/outlinegroup/init(_:children:content:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/outlinegroup/init(_:children:content:)
 
 # init(\_:children:content:)
 

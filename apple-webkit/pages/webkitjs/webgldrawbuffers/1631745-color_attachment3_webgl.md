@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webgldrawbuffers/1631745-color_attachment3_webgl](https://developer.apple.com/documentation/webkitjs/webgldrawbuffers/1631745-color_attachment3_webgl)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webgldrawbuffers/1631745-color_attachment3_webgl
 
 # COLOR_ATTACHMENT3_WEBGL
 

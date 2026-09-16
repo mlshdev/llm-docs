@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepayontheweb/setting-up-your-server](https://developer.apple.com/documentation/applepayontheweb/setting-up-your-server)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applepayontheweb/setting-up-your-server
 
 # Setting Up Your Server
 
@@ -50,6 +51,7 @@ This name resolves to the IP addresses / CIDR block below:
 17.32.214.7/32, 17.157.96.181/32
 17.33.194.239/32, 17.33.192.38/32, 17.33.193.110/32
 17.33.202.35/32, 17.33.201.101/32, 17.33.200.169/32
+
 
 Domain
 cn-apple-pay-gateway.apple.com (China Region)

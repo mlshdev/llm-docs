@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applemusicapi/get-equivalent-ids-for-the-albums-8tp4l](https://developer.apple.com/documentation/applemusicapi/get-equivalent-ids-for-the-albums-8tp4l)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applemusicapi/get-equivalent-ids-for-the-albums-8tp4l
 
 # Get Equivalent Catalog Music Videos by ID
 

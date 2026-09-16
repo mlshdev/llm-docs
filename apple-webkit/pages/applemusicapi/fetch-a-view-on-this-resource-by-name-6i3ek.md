@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applemusicapi/fetch-a-view-on-this-resource-by-name-6i3ek](https://developer.apple.com/documentation/applemusicapi/fetch-a-view-on-this-resource-by-name-6i3ek)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applemusicapi/fetch-a-view-on-this-resource-by-name-6i3ek
 
 # Get a Catalog Playlist’s Relationship View Directly by Name
 

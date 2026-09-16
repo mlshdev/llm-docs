@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/graphicscontext/shading/color(_:red:green:blue:opacity:)](https://developer.apple.com/documentation/swiftui/graphicscontext/shading/color(_:red:green:blue:opacity:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/graphicscontext/shading/color(_:red:green:blue:opacity:)
 
 # color(\_:red:green:blue:opacity:)
 

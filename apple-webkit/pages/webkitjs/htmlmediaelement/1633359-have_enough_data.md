@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/htmlmediaelement/1633359-have_enough_data](https://developer.apple.com/documentation/webkitjs/htmlmediaelement/1633359-have_enough_data)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/htmlmediaelement/1633359-have_enough_data
 
 # HAVE_ENOUGH_DATA
 

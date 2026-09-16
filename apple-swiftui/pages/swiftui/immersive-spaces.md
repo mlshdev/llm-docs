@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/immersive-spaces](https://developer.apple.com/documentation/swiftui/immersive-spaces)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/immersive-spaces
 
 # Immersive spaces
 
@@ -33,7 +34,7 @@ When you open an immersive space, the system continues to display all of your ap
 - [ImmersionStyle](immersionstyle.md): The styles that an immersive space can have.
 - [immersiveSpaceDisplacement](environmentvalues/immersivespacedisplacement.md): The displacement that the system applies to the immersive space when moving the space away from its default position, in meters.
 - [ImmersiveEnvironmentBehavior](immersiveenvironmentbehavior.md): The behavior of the system-provided immersive environments when a scene is opened by your app.
-- [ProgressiveImmersionAspectRatio](progressiveimmersionaspectratio.md)
+- [ProgressiveImmersionAspectRatio](progressiveimmersionaspectratio.md): The shape of the portal that a progressive immersion style opens.
 
 ### Opening an immersive space
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/packagedescription/package/dependency/package(id:_:traits:)-5x94p](https://developer.apple.com/documentation/packagedescription/package/dependency/package(id:_:traits:)-5x94p)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/packagedescription/package/dependency/package(id:_:traits:)-5x94p
 
 # package(id:\_:traits:)
 

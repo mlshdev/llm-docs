@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/array](https://developer.apple.com/documentation/swift/array)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/array
 
 # Array
 
@@ -513,6 +514,7 @@ Use bridged reference types when you need reference semantics or Foundation-spec
 - [Encodable Implementations](array/encodable-implementations.md)
 - [Equatable Implementations](array/equatable-implementations.md)
 - [ExpressibleByArrayLiteral Implementations](array/expressiblebyarrayliteral-implementations.md)
+- [Generable Implementations](array/generable-implementations.md)
 - [Hashable Implementations](array/hashable-implementations.md)
 - [IntentValueConvertible Implementations](array/intentvalueconvertible-implementations.md)
 - [IntentValueExpressing Implementations](array/intentvalueexpressing-implementations.md)

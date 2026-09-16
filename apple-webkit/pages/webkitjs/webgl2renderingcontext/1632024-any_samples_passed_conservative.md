@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webgl2renderingcontext/1632024-any_samples_passed_conservative](https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1632024-any_samples_passed_conservative)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1632024-any_samples_passed_conservative
 
 # ANY_SAMPLES_PASSED_CONSERVATIVE
 

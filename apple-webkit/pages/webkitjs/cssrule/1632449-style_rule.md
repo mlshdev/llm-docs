@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/cssrule/1632449-style_rule](https://developer.apple.com/documentation/webkitjs/cssrule/1632449-style_rule)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/cssrule/1632449-style_rule
 
 # STYLE_RULE
 

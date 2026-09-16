@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/dismissalconfirmationdialog(_:shouldpresent:actions:message:)](https://developer.apple.com/documentation/swiftui/view/dismissalconfirmationdialog(_:shouldpresent:actions:message:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/dismissalconfirmationdialog(_:shouldpresent:actions:message:)
 
 # dismissalConfirmationDialog(\_:shouldPresent:actions:message:)
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 15.0+
 
-Presents a confirmation dialog when a dismiss action has been triggered.
+Presents a confirmation dialog upon an attempt to dismiss the window for this view.
 
 ## Declaration
 
@@ -26,7 +27,7 @@ Presents a confirmation dialog when a dismiss action has been triggered.
 
 ## Discussion
 
-On macOS, the dialog will be presented when attempting to dismiss the window for this view.
+On macOS, the dialog will be presented when attempting to dismiss the window for this view, either through a user-initiated dismissal or a programmatic dismiss action. On iOS, the dialog will only be presented for a user-initiated dismissal.
 
 For example, you could present a dialog asking to persist unsaved changes:
 

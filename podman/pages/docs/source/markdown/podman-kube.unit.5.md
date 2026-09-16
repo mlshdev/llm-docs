@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.1: [docs/source/markdown/podman-kube.unit.5.md.in](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-kube.unit.5.md.in)
+> Pinned source for Podman v6.1.2: [docs/source/markdown/podman-kube.unit.5.md.in](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-kube.unit.5.md.in)
 
 # podman-kube.unit
 
@@ -53,7 +53,7 @@ Supported keys in the `[Kube]` section are:
 
 ### `AutoUpdate=`
 
-Indicates whether pods and containers from this Kubernetes workload are auto-updated ([podman-auto-update(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-auto-update.1.md.in)). `AutoUpdate` can be specified multiple times. The following values are supported:
+Indicates whether pods and containers from this Kubernetes workload are auto-updated ([podman-auto-update(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-auto-update.1.md.in)). `AutoUpdate` can be specified multiple times. The following values are supported:
 
 - `registry`: Requires a fully-qualified image reference (e.g., quay.io/podman/stable:latest) to be used to create the container. This enforcement is necessary to know which images to actually check and pull. If an image ID was used, Podman does not know which image to check/pull anymore.
 
@@ -149,7 +149,7 @@ Valid *mode* values are:
 
   For example, to set a static IPv4 address and a static mac address, use `--network bridge:ip=10.88.0.10,mac=44:33:22:11:00:99`.
 
-- *\<network name or ID>***\[:OPTIONS,...]**: Connect to a user-defined network; this is the network name or ID from a network created by **[podman network create](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-network-create.1.md.in)**. It is possible to specify the same options described under the bridge mode above. Use the **--network** option multiple times to specify additional networks. \
+- *\<network name or ID>***\[:OPTIONS,...]**: Connect to a user-defined network; this is the network name or ID from a network created by **[podman network create](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-network-create.1.md.in)**. It is possible to specify the same options described under the bridge mode above. Use the **--network** option multiple times to specify additional networks. \
   For backwards compatibility it is also possible to specify comma-separated networks on the first **--network** argument, however this prevents you from using the options described under the bridge section above.
 
 - **none**: Create a network namespace for the container but do not configure network interfaces for it, thus the container has no network connectivity.
@@ -359,7 +359,7 @@ WantedBy=multi-user.target default.target
 
 # SEE ALSO
 
-[podman-kube-generate(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-kube-generate.1.md),
-[podman-kube-play(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-kube-play.1.md.in),
-[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-systemd.unit.5.md),
+[podman-kube-generate(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-kube-generate.1.md),
+[podman-kube-play(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-kube-play.1.md.in),
+[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-systemd.unit.5.md),
 [systemd.unit(5)](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)

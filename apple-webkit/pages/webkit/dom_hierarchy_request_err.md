@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/dom_hierarchy_request_err](https://developer.apple.com/documentation/webkit/dom_hierarchy_request_err)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/dom_hierarchy_request_err
 
 # DOM_HIERARCHY_REQUEST_ERR (Swift)
 

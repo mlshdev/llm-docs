@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgfecolormatrixelement/1633154-svg_fecolormatrix_type_matrix](https://developer.apple.com/documentation/webkitjs/svgfecolormatrixelement/1633154-svg_fecolormatrix_type_matrix)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgfecolormatrixelement/1633154-svg_fecolormatrix_type_matrix
 
 # SVG_FECOLORMATRIX_TYPE_MATRIX
 

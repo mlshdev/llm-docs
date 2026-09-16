@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webglrenderingcontextbase/1628940-max_vertex_attribs](https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1628940-max_vertex_attribs)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webglrenderingcontextbase/1628940-max_vertex_attribs
 
 # MAX_VERTEX_ATTRIBS
 

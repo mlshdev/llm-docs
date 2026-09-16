@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/onimmersionchange(initial:_:)](https://developer.apple.com/documentation/swiftui/view/onimmersionchange(initial:_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/onimmersionchange(initial:_:)
 
 # onImmersionChange(initial:\_:)
 
@@ -19,6 +20,9 @@ nonisolated func onImmersionChange(initial: Bool = true, _ action: @escaping (Im
 
 - `initial`: Whether the action should be run when this view initially appears.
 - `action`: A closure to run when the immersion changes.
+
+  - **oldValue**: The value representing the old state of immersion.
+  - **newValue**: The value representing the current state of immersion.
 
 <a id="discussion"></a>
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/squareazimuth/set](https://developer.apple.com/documentation/swiftui/squareazimuth/set)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/squareazimuth/set
 
 # SquareAzimuth.Set
 
@@ -6,11 +7,26 @@
 **Kind:** Structure  
 **Availability:** visionOS 2.0+
 
+A set of horizontal directions that specify how someone can look at a volume.
+
 ## Declaration
 
 ```swift
 @frozen struct Set
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+Combine the [SquareAzimuth](../squareazimuth.md) constants to name several directions at once. Pass a set to [supportedVolumeViewpoints(\_:)](../view/supportedvolumeviewpoints%28__%29.md) to say which sides the window bar and ornaments of a volume should follow someone to.
+
+```swift
+VolumeContentView()
+    .supportedVolumeViewpoints([.front, .left])
+```
+
+A volume supports [all](set/all.md) unless you narrow it. Narrow the set when your content only makes sense from certain sides, such as a model with a defined back that you never want someone to see the controls through.
 
 ## Topics
 

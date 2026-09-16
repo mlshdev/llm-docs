@@ -1,6 +1,6 @@
 # Vast.ai main
 
-> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `1f62d7e4ed71d62a858e7a800ff8096e25f07b8f`.
+> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `efed71d49da6451aeb4f9be763c284bb555cd206`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Vast.ai main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -24,20 +24,20 @@
 - [Overview](pages/guides/instances/overview.md): Instances are Docker containers that give you exclusive GPU access for training, inference, and development. Pay by the second, connect via SSH or Jupyter. (2468 bytes)
 - [Pricing](pages/guides/instances/pricing.md): Understand Vast.ai's marketplace pricing model, rental types, reserved discounts, and costs for GPU instances. (5734 bytes)
 - [Choosing Instances Overview](pages/guides/instances/choosing/overview.md): Learn the complete process of selecting and renting a GPU instance on Vast.ai, from choosing templates to configuring and launching. (2661 bytes)
-- [Finding & Renting Instances](pages/guides/instances/choosing/find-and-rent.md): Find and rent GPU instances on Vast.ai. Learn how to search, filter, understand offer cards, and configure your instance. (6556 bytes)
+- [Finding & Renting Instances](pages/guides/instances/choosing/find-and-rent.md): Find and rent GPU instances on Vast.ai. Learn how to search, filter, understand offer cards, and configure your instance. (6800 bytes)
 - [Instance Types](pages/guides/instances/choosing/instance-types.md): Understand Vast.ai instance types - On-demand, Reserved, and Interruptible. Learn how each type works, their differences, and when to use each. (4820 bytes)
 - [Choosing a Template](pages/guides/instances/choosing/templates.md): Select the right template for your Vast.ai instance. Templates define your Docker image, launch mode, and initialization settings. (4508 bytes)
 - [Reserved Instances](pages/guides/instances/choosing/reserved-instances.md): Save up to 50% on GPU costs by pre-paying for reserved instances. Learn how to convert on-demand instances to reserved pricing. (6153 bytes)
 - [Overview](pages/guides/instances/connect/overview.md): Learn about Vast.ai connection methods-SSH, Jupyter, and Entrypoint-and how each controls instance access and workflow. (3131 bytes)
-- [SSH Connection](pages/guides/instances/connect/ssh.md): Learn how to securely connect to Vast.ai instances using SSH. Generate keys, establish connections, use port forwarding, and integrate with VS Code. (10582 bytes)
-- [Jupyter](pages/guides/instances/connect/jupyter.md): Run Jupyter on Vast.ai with proxy or direct HTTPS. Learn setup, TLS certificate installation, and secure connections for smooth AI/ML development. (5108 bytes)
+- [SSH Connection](pages/guides/instances/connect/ssh.md): Learn how to securely connect to Vast.ai instances using SSH. Generate keys, establish connections, use port forwarding, and integrate with VS Code. (10578 bytes)
+- [Jupyter](pages/guides/instances/connect/jupyter.md): Run Jupyter on Vast.ai with proxy or direct HTTPS. Learn setup, TLS certificate installation, and secure connections for smooth AI/ML development. (5588 bytes)
 - [Windows SSH Guide](pages/guides/instances/connect/windows-guide.md): Learn how to securely connect to Vast.ai instances using SSH on Windows. Understand the basics of SSH, how to generate and add keys, and how to use PuTTY and MobaXterm for GUI-based connections. (6947 bytes)
 - [Instance Portal](pages/guides/instances/connect/instance-portal.md): The Instance Portal is the first application you will see after clicking the 'Open' button to access an instance that has been loaded with a Vast.ai Docker image. Many of our recommended templates include the Instance P… (8221 bytes)
 - [Networking & Ports](pages/guides/instances/connect/networking.md): Understand how Vast.ai handles networking, port mapping, and environment variables for Docker instances. (5285 bytes)
 - [Storage Types](pages/guides/instances/storage/types.md): Understand the different storage options available on Vast.ai instances, including container storage and volumes. (4239 bytes)
 - [Volumes](pages/guides/instances/storage/volumes.md): The Storage page allows you to easily access and manage your volumes - storage that can be attached to your instances for data storage. (9220 bytes)
-- [Data Movement](pages/guides/instances/storage/data-movement.md): Learn how to move data on Vast.ai using Cloud Sync, instance-to-instance transfers, CLI copy, VM migration, scp, and other efficient methods. (10055 bytes)
-- [Cloud Sync](pages/guides/instances/storage/cloud-sync.md): Learn how to connect Vast.ai instances with cloud storage providers like Google Drive, S3, Backblaze, Dropbox, and Hugging Face for secure data sync. (7196 bytes)
+- [Data Movement](pages/guides/instances/storage/data-movement.md): Learn how to move data on Vast.ai using Cloud Sync, instance-to-instance transfers, CLI copy, VM migration, scp, and other efficient methods. (10331 bytes)
+- [Cloud Sync](pages/guides/instances/storage/cloud-sync.md): Learn how to connect Vast.ai instances with cloud storage providers like Google Drive, S3, Backblaze, Dropbox, and Hugging Face for secure data sync. (7362 bytes)
 - [Scheduled Cloud Backups](pages/guides/instances/storage/cloud-backups.md): Learn how to set up and schedule automated Vast.ai cloud backups using CLI or cron. Keep your data safe with best practices and easy management. (10192 bytes)
 - [Managing Instances](pages/guides/instances/manage-instances.md): Learn how to manage running instances - start, stop, destroy, monitor status, and handle common operational tasks. (6860 bytes)
 - [Docker Execution Environment](pages/guides/instances/docker-environment.md): Learn how Vast.ai Docker instances handle resource allocation, environment variables, networking, ports, and CLI usage. (11011 bytes)
@@ -87,7 +87,7 @@
 - [Managing Templates](pages/guides/templates/managing-templates.md): If you want to make changes to a template you previously saved, simply navigate back to the templates page and select 'My Templates'. Here you'll be able to make your changes by clicking the pencil icon. (2445 bytes)
 - [Template Settings](pages/guides/templates/template-settings.md): This guide documents all settings and options available when configuring a template. Use this guide when you need to understand what a specific setting does or how to configure a particular option. (10593 bytes)
 - [Advanced Setup](pages/guides/templates/advanced-setup.md): This guide covers advanced customization techniques available on the Vast.ai platform. These features allow you to extend and enhance your templates beyond basic configuration. (6903 bytes)
-- [Creating Templates for GROBID](pages/guides/templates/examples/grobid.md): This guide demonstrates creating a template using an existing Docker image. See our Creating Templates guide for more details on template configuration. We will be using the image from GROBID on dockerhub. (4997 bytes)
+- [Creating Templates for GROBID](pages/guides/templates/examples/grobid.md): This guide demonstrates creating a template using an existing Docker image. See our Creating Templates guide for more details on template configuration. We will be using the image from GROBID on dockerhub. (5661 bytes)
 
 ## Teams
 
@@ -99,8 +99,8 @@
 ## Account & billing
 
 - [Pricing overview](pages/guides/pricing.md): How Vast.ai pricing works across instances, reserved, interruptible, and serverless, and how to choose between them. (4619 bytes)
-- [Account Settings](pages/guides/reference/account-settings.md): On this page you can view and edit important information about your client account. (5924 bytes)
-- [Billing](pages/guides/reference/billing.md): Vast requires pre-payment of credits for GPU rentals. Once credits are purchased, they appear in your account balance. (10380 bytes)
+- [Account Settings](pages/guides/reference/account-settings.md): On this page you can view and edit important information about your client account. (7259 bytes)
+- [Billing](pages/guides/reference/billing.md): Vast requires pre-payment of credits for GPU rentals. Once credits are purchased, they appear in your account balance. (10540 bytes)
 - [Notifications](pages/guides/reference/notifications.md): Choose which Vast.ai account, billing, and instance events reach you by email or through webhooks. (11872 bytes)
 - [Notification Webhooks](pages/guides/reference/notification-webhooks.md): Send Vast.ai notification events to your own HTTPS endpoint for automation, monitoring, and audit workflows. (9646 bytes)
 - [Keys](pages/guides/reference/keys.md): The Keys page helps you manage secure access to your Vast.ai account. Here, you'll find different types of keys used for authentication and connection. (3074 bytes)
@@ -479,7 +479,7 @@
 
 - [Ollama + Webui](pages/ollama-webui.md): Below is a step-by-step guide on how to configure and run Ollama. Our template will automatically setup Open WebUI as a web based interface as well as expose a port for the Ollama API. (4127 bytes)
 - [Oobabooga (LLM webui)](pages/oobabooga-llm-webui.md): A large language model(LLM) learns to predict the next word in a sentence by analyzing the patterns and structures in the text it has been trained on. This enables it to generate human-like text based on the input it re… (5076 bytes)
-- [Huggingface TGI with LLama3](pages/huggingface-tgi-with-llama3.md): This is a guide on how to setup and expose an API for Llama3 Text Generation. (3179 bytes)
+- [Huggingface TGI with LLama3](pages/huggingface-tgi-with-llama3.md): This is a guide on how to setup and expose an API for Llama3 Text Generation. (3655 bytes)
 - [Quantized GGUF models (cloned)](pages/quantized-gguf-models-cloned.md): Here's a step-by-step guide to running quantized LLM models in multi-part GGUF format. We will use Unsloth's Deepseek-R1 Q8\0 model as an example. This model is very large and will require an 8xH200 machine configuratio… (4197 bytes)
 - [vLLM (LLM inference and serving)](pages/vllm-llm-inference-and-serving.md): Below is a guide for runing the vLLM template on Vast. The template contains everything you need to get started, so you will only need to specify the model you want to serve and the corresponding vLLM configuration. (4829 bytes)
 - [MiniMax-M2](pages/examples/text-generation/minimax-m2.md): MiniMax-M2 is a breakthrough 230 billion parameter Mixture of Experts (MoE) language model that activates only 10 billion parameters per inference, making it incredibly fast and cost-effective. This guide shows you how… (10117 bytes)
@@ -489,8 +489,8 @@
 ## Image generation
 
 - [Image Generation](pages/image-generation.md): This guide walks you through setting up and running image generation workloads on Vast.ai, a marketplace for renting GPU compute power. Whether you're using Stable Diffusion or other image generation models, this guide… (7418 bytes)
-- [Stable Diffusion](pages/stable-diffusion.md): Stable Diffusion is a deep learning, text-to-image model that has been publicly released. It uses a variant of the diffusion model called latent diffusion. There are a few popular Open Source repos that create an easy t… (5469 bytes)
-- [Disco Diffusion](pages/disco-diffusion.md): Disco diffusion is an incredibly powerful free and open source AI image generator, which is easy to use on vast.ai. With the right settings and powerful GPUs, it can generate artist quality high-res images for a wide va… (9587 bytes)
+- [Stable Diffusion](pages/stable-diffusion.md): Stable Diffusion is a deep learning, text-to-image model that has been publicly released. It uses a variant of the diffusion model called latent diffusion. There are a few popular Open Source repos that create an easy t… (5740 bytes)
+- [Disco Diffusion](pages/disco-diffusion.md): Disco diffusion is an incredibly powerful free and open source AI image generator, which is easy to use on vast.ai. With the right settings and powerful GPUs, it can generate artist quality high-res images for a wide va… (9881 bytes)
 
 ## Video generation
 
@@ -507,7 +507,7 @@
 
 - [Running RolmOCR](pages/examples/ocr/rolmocr.md): RolmOCR from Reducto is an open-source document OCR model built on Qwen2.5-VL-7B. Unlike traditional OCR tools like Tesseract that rely on character-level pattern matching, RolmOCR uses vision-language understanding to… (5970 bytes)
 - [GLiNER2](pages/examples/ner/gliner2.md): Named Entity Recognition (NER) extracts structured data from text-people, companies, dates, etc. Traditional NER models only recognize entity types they were trained on. LLMs can extract anything but are slow and expens… (10696 bytes)
-- [Infinity Embeddings](pages/infinity-embeddings.md): Infinity Embeddings is a helpful serving framework to serve embedding models. It is particularly great at enabling embedding, re-ranking, and classification out of the box. It supports multiple different runtime framewo… (6471 bytes)
+- [Infinity Embeddings](pages/infinity-embeddings.md): Infinity Embeddings is a helpful serving framework to serve embedding models. It is particularly great at enabling embedding, re-ranking, and classification out of the box. It supports multiple different runtime framewo… (6655 bytes)
 - [Serving Rerankers with vLLM](pages/examples/embeddings/serving-rerankers-vllm.md): Rerankers determine relevance between text pairs-matching search queries to documents, evaluating LLM outputs, or finding similar content. They perform detailed comparisons that capture nuanced relationships simple meth… (6557 bytes)
 
 ## Virtual desktops & VMs
@@ -517,8 +517,8 @@
 
 ## Graphics & GPU programming
 
-- [Blender in the Cloud](pages/blender-in-the-cloud.md): Blender is a free, open source 3D creation suite. It can be used to create animated films, visual effects, art, 3D-printed models, motion graphics, interactive 3D applications, virtual reality, and video games. It suppo… (4999 bytes)
-- [Blender Batch Rendering](pages/blender-batch-rendering.md): Blender is a free, open source 3D creation suite. It can be used to create animated films, visual effects, art, 3D-printed models, motion graphics, interactive 3D applications, virtual reality, and video games. It suppo… (6160 bytes)
+- [Blender in the Cloud](pages/blender-in-the-cloud.md): Blender is a free, open source 3D creation suite. It can be used to create animated films, visual effects, art, 3D-printed models, motion graphics, interactive 3D applications, virtual reality, and video games. It suppo… (6010 bytes)
+- [Blender Batch Rendering](pages/blender-batch-rendering.md): Blender is a free, open source 3D creation suite. It can be used to create animated films, visual effects, art, 3D-printed models, motion graphics, interactive 3D applications, virtual reality, and video games. It suppo… (7768 bytes)
 - [CUDA](pages/cuda.md): This guide walks you through setting up and running CUDA applications on Vast.ai's cloud platform. You'll learn how to set up a CUDA development environment, connect to your instance, and develop CUDA applications effic… (6119 bytes)
 - [RTX 5 Series](pages/rtx-5-series.md): Optimize your GPU experience with our comprehensive guide on RTX 5 Series GPUs (5090/5080/5070) and CUDA 12.8 compatibility. Learn how to rent an RTX 5090 on Vast.ai, select the right templates, and customize your stora… (3009 bytes)
 

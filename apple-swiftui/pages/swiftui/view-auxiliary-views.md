@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view-auxiliary-views](https://developer.apple.com/documentation/swiftui/view-auxiliary-views)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view-auxiliary-views
 
 # Auxiliary view modifiers
 
@@ -82,6 +83,8 @@ For information about toolbars, see [Toolbars](toolbars.md).
 - [toolbarMinimizationSafeAreaAdjustment(\_:for:)](view/toolbarminimizationsafeareaadjustment%28__for_%29.md): Sets the safe area adjustment for the specified bars during minimization.
 - [toolbarTitleMenu(content:)](view/toolbartitlemenu%28content_%29.md): Configure the title menu of a toolbar.
 - [toolbarTitleDisplayMode(\_:)](view/toolbartitledisplaymode%28__%29.md): Configures the toolbar title display mode for this view.
+- [toolbarVerticalBehavior(\_:)](view/toolbarverticalbehavior%28__%29.md): Beta. Sets the behavior for the vertical bar.
+- [toolbarVerticalCompressionBehavior(\_:)](view/toolbarverticalcompressionbehavior%28__%29.md): Beta. Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
 - [ornament(visibility:attachmentAnchor:contentAlignment:ornament:)](view/ornament%28visibility_attachmentanchor_contentalignment_ornament_%29.md): Presents an ornament.
 
 ### Context menus

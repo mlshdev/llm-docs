@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepayontheweb/applepaysession/status_invalid_billing_postal_address](https://developer.apple.com/documentation/applepayontheweb/applepaysession/status_invalid_billing_postal_address)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applepayontheweb/applepaysession/status_invalid_billing_postal_address
 
 # STATUS_INVALID_BILLING_POSTAL_ADDRESS
 

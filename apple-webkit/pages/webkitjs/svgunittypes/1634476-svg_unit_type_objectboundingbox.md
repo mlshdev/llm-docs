@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgunittypes/1634476-svg_unit_type_objectboundingbox](https://developer.apple.com/documentation/webkitjs/svgunittypes/1634476-svg_unit_type_objectboundingbox)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgunittypes/1634476-svg_unit_type_objectboundingbox
 
 # SVG_UNIT_TYPE_OBJECTBOUNDINGBOX
 

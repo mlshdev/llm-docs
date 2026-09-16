@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/confirmationdialog(_:ispresented:titlevisibility:actions:message:)](https://developer.apple.com/documentation/swiftui/view/confirmationdialog(_:ispresented:titlevisibility:actions:message:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/confirmationdialog(_:ispresented:titlevisibility:actions:message:)
 
 # confirmationDialog(\_:isPresented:titleVisibility:actions:message:)
 
@@ -69,4 +70,4 @@ This modifier creates a [Text](../text.md) view for the title on your behalf. Se
 ### Showing a confirmation dialog with a message
 
 - [confirmationDialog(\_:isPresented:titleVisibility:presenting:actions:message:)](confirmationdialog%28__ispresented_titlevisibility_presenting_actions_message_%29.md): Presents a confirmation dialog with a message using data to produce the dialog’s content and a localized string resource for the title.
-- [dismissalConfirmationDialog(\_:shouldPresent:actions:message:)](dismissalconfirmationdialog%28__shouldpresent_actions_message_%29.md): Presents a confirmation dialog when a dismiss action has been triggered.
+- [dismissalConfirmationDialog(\_:shouldPresent:actions:message:)](dismissalconfirmationdialog%28__shouldpresent_actions_message_%29.md): Presents a confirmation dialog upon an attempt to dismiss the window for this view.

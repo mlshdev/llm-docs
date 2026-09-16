@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/environmentvalues/accessibilityvoiceoverenabled](https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityvoiceoverenabled)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityvoiceoverenabled
 
 # accessibilityVoiceOverEnabled
 
@@ -36,6 +37,5 @@ The state changes as the user turns on or off the VoiceOver screen reader.
 - [accessibilityQuickActionsEnabled](accessibilityquickactionsenabled.md): A Boolean that indicates whether the quick actions feature is enabled.
 - [accessibilityReduceMotion](accessibilityreducemotion.md): Whether the system preference for Reduce Motion is enabled.
 - [accessibilityReduceTransparency](accessibilityreducetransparency.md): Whether the system preference for Reduce Transparency is enabled.
-- [accessibilityShowButtonShapes](accessibilityshowbuttonshapes.md): Deprecated. Whether the system preference for Show Button Shapes is enabled.
 - [accessibilitySwitchControlEnabled](accessibilityswitchcontrolenabled.md): A Boolean value that indicates whether the Switch Control motor accessibility feature is in use.
 - [legibilityWeight](legibilityweight.md): The font weight to apply to text.

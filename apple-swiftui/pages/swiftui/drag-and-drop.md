@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/drag-and-drop](https://developer.apple.com/documentation/swiftui/drag-and-drop)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/drag-and-drop
 
 # Drag and drop
 
@@ -40,7 +41,7 @@ For design guidance, see [Drag and drop](https://developer.apple.com/design/huma
 ### Moving items
 
 - [DragSession](dragsession.md): Describes the ongoing dragging session.
-- [DropSession](dropsession.md)
+- [DropSession](dropsession.md): A description of a drop that is in progress.
 
 ### Moving transferable items
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/customizabletoolbarcontent/customizationbehavior(_:)](https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent/customizationbehavior(_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent/customizationbehavior(_:)
 
 # customizationBehavior(\_:)
 
@@ -65,3 +66,9 @@ ContentView()
         .customizationBehavior(.reorderable)
     }
 ```
+
+## See Also
+
+### Customizing behaviors
+
+- [axisBehavior(\_:)](axisbehavior%28__%29.md): Beta. The bar axis behavior of the toolbar item.

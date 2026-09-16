@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/image/alloweddynamicrange(_:)](https://developer.apple.com/documentation/swiftui/image/alloweddynamicrange(_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/image/alloweddynamicrange(_:)
 
 # allowedDynamicRange(\_:)
 
@@ -39,4 +40,4 @@ Image("hdr-asset").allowedDynamicRange(.high)
 ### Specifying dynamic range
 
 - [allowedDynamicRange](../environmentvalues/alloweddynamicrange.md): The allowed dynamic range for the view, or nil.
-- [Image.DynamicRange](dynamicrange.md)
+- [Image.DynamicRange](dynamicrange.md): The range of brightness that an image is allowed to draw.

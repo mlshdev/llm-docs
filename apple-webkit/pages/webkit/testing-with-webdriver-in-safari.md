@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/testing-with-webdriver-in-safari](https://developer.apple.com/documentation/webkit/testing-with-webdriver-in-safari)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/testing-with-webdriver-in-safari
 
 # Testing with WebDriver in Safari
 
@@ -80,6 +81,7 @@ def setup_module(module):
 def teardown_module(module):
     WebKitFeatureStatusTest.driver.quit()
 
+
 class WebKitFeatureStatusTest(unittest.TestCase):
     
     def test_feature_status_page_search(self):
@@ -117,6 +119,7 @@ class WebKitFeatureStatusTest(unittest.TestCase):
     
     def shown_feature_count(self):
                 return len(self.driver.execute_script("return document.querySelectorAll('li.feature:not(.is-hidden)')"))
+
 
 if __name__ == "__main__":
     unittest.main()

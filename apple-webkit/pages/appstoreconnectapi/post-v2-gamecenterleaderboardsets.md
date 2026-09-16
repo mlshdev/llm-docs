@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/post-v2-gamecenterleaderboardsets](https://developer.apple.com/documentation/appstoreconnectapi/post-v2-gamecenterleaderboardsets)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/post-v2-gamecenterleaderboardsets
 
 # Create a Game Center Leaderboard Set
 

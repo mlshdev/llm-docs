@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [infinity-embeddings.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/infinity-embeddings.mdx)
+> Pinned source for Vast.ai main: [infinity-embeddings.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/infinity-embeddings.mdx)
 > Canonical documentation: https://docs.vast.ai/infinity-embeddings
 
 # Infinity Embeddings
@@ -47,11 +47,11 @@ vastai create instance <instance-id> --image michaelf34/infinity:latest --env '-
 
 Once your instance is done setting up, you should see something like this:
 
-![IP\_address\_view](https://vast.ai/uploads/ip_address_view_infinity.png)
+![IP\_address\_view](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/infinity-embeddings-ip-address-view-infinity.webp)
 
 Click on the highlighted button to see the IP address and correct port for our requests. To connect to your instance, we'll first need to get the IP address and port number.
 
-![Instance\_view](https://vast.ai/uploads/instance_view_infinity.png)
+![Instance\_view](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/infinity-embeddings-instance-view-infinity.webp)
 
 Now we'll call this with the Open AI SDK:
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/spring/settlingduration(fromvalue:tovalue:initialvelocity:epsilon:)](https://developer.apple.com/documentation/swiftui/spring/settlingduration(fromvalue:tovalue:initialvelocity:epsilon:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/spring/settlingduration(fromvalue:tovalue:initialvelocity:epsilon:)
 
 # settlingDuration(fromValue:toValue:initialVelocity:epsilon:)
 

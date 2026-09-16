@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v3-apppricepoints-_id_-relationships-equalizations](https://developer.apple.com/documentation/appstoreconnectapi/get-v3-apppricepoints-_id_-relationships-equalizations)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v3-apppricepoints-_id_-relationships-equalizations
 
 # List equalization price point IDs for an app price point
 

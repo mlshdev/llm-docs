@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webgl2renderingcontext/1629300-max_combined_fragment_uniform_co](https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1629300-max_combined_fragment_uniform_co)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1629300-max_combined_fragment_uniform_co
 
 # MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS
 

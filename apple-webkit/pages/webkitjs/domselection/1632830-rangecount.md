@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/domselection/1632830-rangecount](https://developer.apple.com/documentation/webkitjs/domselection/1632830-rangecount)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/domselection/1632830-rangecount
 
 # rangeCount
 

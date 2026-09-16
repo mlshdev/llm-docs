@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/opaquepointer/init(_:)-7zxvo](https://developer.apple.com/documentation/swift/opaquepointer/init(_:)-7zxvo)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/opaquepointer/init(_:)-7zxvo
 
 # init(\_:)
 

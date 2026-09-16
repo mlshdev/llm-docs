@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/text-input-and-output](https://developer.apple.com/documentation/swiftui/text-input-and-output)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/text-input-and-output
 
 # Text input and output
 
@@ -144,8 +145,8 @@ For design guidance, see [Typography](https://developer.apple.com/design/human-i
 ### Dictating text
 
 - [searchDictationBehavior(\_:)](view/searchdictationbehavior%28__%29.md): Configures the dictation behavior for any search fields configured by the searchable modifier.
-- [TextInputDictationActivation](textinputdictationactivation.md)
-- [TextInputDictationBehavior](textinputdictationbehavior.md)
+- [TextInputDictationActivation](textinputdictationactivation.md): A configuration that determines what starts dictation in a search field.
+- [TextInputDictationBehavior](textinputdictationbehavior.md): A behavior that determines whether a search field offers dictation, and what starts it.
 
 ### Configuring the Writing Tools behavior
 

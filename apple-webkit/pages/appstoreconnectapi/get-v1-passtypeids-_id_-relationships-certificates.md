@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-passtypeids-_id_-relationships-certificates](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-passtypeids-_id_-relationships-certificates)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-passtypeids-_id_-relationships-certificates
 
 # List certificate ids for a passtypeid
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/image](https://developer.apple.com/documentation/swiftui/image)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/image
 
 # Image
 
@@ -105,7 +106,7 @@ To use an image as a control, use one of the initializers that takes a `label` p
 
 - [allowedDynamicRange(\_:)](image/alloweddynamicrange%28__%29.md): Returns a new image configured with the specified allowed dynamic range.
 - [allowedDynamicRange](environmentvalues/alloweddynamicrange.md): The allowed dynamic range for the view, or nil.
-- [Image.DynamicRange](image/dynamicrange.md)
+- [Image.DynamicRange](image/dynamicrange.md): The range of brightness that an image is allowed to draw.
 
 ### Instance Methods
 

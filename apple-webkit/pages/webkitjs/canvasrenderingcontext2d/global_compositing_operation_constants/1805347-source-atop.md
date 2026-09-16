@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/canvasrenderingcontext2d/global_compositing_operation_constants/1805347-source-atop](https://developer.apple.com/documentation/webkitjs/canvasrenderingcontext2d/global_compositing_operation_constants/1805347-source-atop)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/canvasrenderingcontext2d/global_compositing_operation_constants/1805347-source-atop
 
 # source-atop
 

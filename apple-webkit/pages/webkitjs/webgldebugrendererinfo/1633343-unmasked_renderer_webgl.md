@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webgldebugrendererinfo/1633343-unmasked_renderer_webgl](https://developer.apple.com/documentation/webkitjs/webgldebugrendererinfo/1633343-unmasked_renderer_webgl)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webgldebugrendererinfo/1633343-unmasked_renderer_webgl
 
 # UNMASKED_RENDERER_WEBGL
 

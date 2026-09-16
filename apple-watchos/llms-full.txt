@@ -1,9 +1,9 @@
-# Apple watchOS snapshot-2bb3946a9b15: full documentation
+# Apple watchOS snapshot-4bff84466040: full documentation
 
 Source: https://developer.apple.com/watchos/
-Catalog snapshot: 2bb3946a9b15cc8ceb5f7b1ca7876717dce6cec8a1d63e63162a599dc521ee18
-Content digest: 3eb712b8054721d0f1ca6e28086c17a048719696d888268474ffc8299bf8a73f
-Captured at: 2026-09-14T18:21:41.403Z
+Catalog snapshot: 4bff8446604017f7d50029c94e521f55e311ea5e5ac9b46cdfb847f859b3bc1c
+Content digest: bdfe1621bbc2d42c8cb4a682bb7e57f9bfa7a7a59f6b911797e34642e4791127
+Captured at: 2026-09-16T18:21:42.211Z
 
 # Document: WatchKit
 
@@ -16632,7 +16632,7 @@ As relevant events occur within your WatchKit app, the extension object notifies
 - [applicationState](wkextension/applicationstate.md): Deprecated. The runtime state of the Watch app.
 - [WKApplicationState](wkapplicationstate.md): The running states of the Watch app.
 - [isApplicationRunningInDock](wkextension/isapplicationrunningindock.md): Deprecated. A Boolean value that indicates whether the app is running in the dock.
-- [scheduleBackgroundRefresh(withPreferredDate:userInfo:scheduledCompletion:)](wkextension/schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Schedules a background task to refresh the app’s data.
+- [scheduleBackgroundRefresh(withPreferredDate:userInfo:scheduledCompletion:)](wkextension/schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Deprecated. Schedules a background task to refresh the app’s data.
 - [isFrontmostTimeoutExtended](wkextension/isfrontmosttimeoutextended.md): Deprecated. A Boolean value that determines whether the app extends its time as the frontmost app.
 
 ### Managing the user interface
@@ -16644,7 +16644,7 @@ As relevant events occur within your WatchKit app, the extension object notifies
 
 ### Managing the snapshot
 
-- [scheduleSnapshotRefresh(withPreferredDate:userInfo:scheduledCompletion:)](wkextension/schedulesnapshotrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Schedules a background task to refresh your app’s snapshot.
+- [scheduleSnapshotRefresh(withPreferredDate:userInfo:scheduledCompletion:)](wkextension/schedulesnapshotrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Deprecated. Schedules a background task to refresh your app’s snapshot.
 
 ### Observing messages from the notification center
 
@@ -16742,7 +16742,7 @@ As relevant events occur within your WatchKit app, the extension object notifies
 - [applicationState](wkextension/applicationstate.md): Deprecated. The runtime state of the Watch app.
 - [WKApplicationState](wkapplicationstate.md): The running states of the Watch app.
 - [isApplicationRunningInDock](wkextension/isapplicationrunningindock.md): Deprecated. A Boolean value that indicates whether the app is running in the dock.
-- [scheduleBackgroundRefreshWithPreferredDate:userInfo:scheduledCompletion:](wkextension/schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Schedules a background task to refresh the app’s data.
+- [scheduleBackgroundRefreshWithPreferredDate:userInfo:scheduledCompletion:](wkextension/schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Deprecated. Schedules a background task to refresh the app’s data.
 - [frontmostTimeoutExtended](wkextension/isfrontmosttimeoutextended.md): Deprecated. A Boolean value that determines whether the app extends its time as the frontmost app.
 
 ### Managing the user interface
@@ -16754,7 +16754,7 @@ As relevant events occur within your WatchKit app, the extension object notifies
 
 ### Managing the snapshot
 
-- [scheduleSnapshotRefreshWithPreferredDate:userInfo:scheduledCompletion:](wkextension/schedulesnapshotrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Schedules a background task to refresh your app’s snapshot.
+- [scheduleSnapshotRefreshWithPreferredDate:userInfo:scheduledCompletion:](wkextension/schedulesnapshotrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Deprecated. Schedules a background task to refresh your app’s snapshot.
 
 ### Registering for remote notifications
 
@@ -16916,7 +16916,7 @@ The Watch app may be active, inactive, or running in the background. Use this pr
 
 - [WKApplicationState](../wkapplicationstate.md): The running states of the Watch app.
 - [isApplicationRunningInDock](isapplicationrunningindock.md): Deprecated. A Boolean value that indicates whether the app is running in the dock.
-- [scheduleBackgroundRefresh(withPreferredDate:userInfo:scheduledCompletion:)](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Schedules a background task to refresh the app’s data.
+- [scheduleBackgroundRefresh(withPreferredDate:userInfo:scheduledCompletion:)](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Deprecated. Schedules a background task to refresh the app’s data.
 - [isFrontmostTimeoutExtended](isfrontmosttimeoutextended.md): Deprecated. A Boolean value that determines whether the app extends its time as the frontmost app.
 
 # applicationState (Objective-C)
@@ -16945,7 +16945,7 @@ The Watch app may be active, inactive, or running in the background. Use this pr
 
 - [WKApplicationState](../wkapplicationstate.md): The running states of the Watch app.
 - [isApplicationRunningInDock](isapplicationrunningindock.md): Deprecated. A Boolean value that indicates whether the app is running in the dock.
-- [scheduleBackgroundRefreshWithPreferredDate:userInfo:scheduledCompletion:](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Schedules a background task to refresh the app’s data.
+- [scheduleBackgroundRefreshWithPreferredDate:userInfo:scheduledCompletion:](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Deprecated. Schedules a background task to refresh the app’s data.
 - [frontmostTimeoutExtended](isfrontmosttimeoutextended.md): Deprecated. A Boolean value that determines whether the app extends its time as the frontmost app.
 
 # Document: applicationWillEnterForegroundNotification
@@ -17261,7 +17261,7 @@ Check this property (for example, in your extension delegate’s [applicationWil
 
 - [applicationState](applicationstate.md): Deprecated. The runtime state of the Watch app.
 - [WKApplicationState](../wkapplicationstate.md): The running states of the Watch app.
-- [scheduleBackgroundRefresh(withPreferredDate:userInfo:scheduledCompletion:)](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Schedules a background task to refresh the app’s data.
+- [scheduleBackgroundRefresh(withPreferredDate:userInfo:scheduledCompletion:)](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Deprecated. Schedules a background task to refresh the app’s data.
 - [isFrontmostTimeoutExtended](isfrontmosttimeoutextended.md): Deprecated. A Boolean value that determines whether the app extends its time as the frontmost app.
 
 # isApplicationRunningInDock (Objective-C)
@@ -17297,7 +17297,7 @@ Check this property (for example, in your extension delegate’s [applicationWil
 
 - [applicationState](applicationstate.md): Deprecated. The runtime state of the Watch app.
 - [WKApplicationState](../wkapplicationstate.md): The running states of the Watch app.
-- [scheduleBackgroundRefreshWithPreferredDate:userInfo:scheduledCompletion:](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Schedules a background task to refresh the app’s data.
+- [scheduleBackgroundRefreshWithPreferredDate:userInfo:scheduledCompletion:](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Deprecated. Schedules a background task to refresh the app’s data.
 - [frontmostTimeoutExtended](isfrontmosttimeoutextended.md): Deprecated. A Boolean value that determines whether the app extends its time as the frontmost app.
 
 # Document: isAutorotated
@@ -17493,7 +17493,7 @@ Don’t just extend the app’s frontmost time globally. Instead, enable it only
 - [applicationState](applicationstate.md): Deprecated. The runtime state of the Watch app.
 - [WKApplicationState](../wkapplicationstate.md): The running states of the Watch app.
 - [isApplicationRunningInDock](isapplicationrunningindock.md): Deprecated. A Boolean value that indicates whether the app is running in the dock.
-- [scheduleBackgroundRefresh(withPreferredDate:userInfo:scheduledCompletion:)](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Schedules a background task to refresh the app’s data.
+- [scheduleBackgroundRefresh(withPreferredDate:userInfo:scheduledCompletion:)](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Deprecated. Schedules a background task to refresh the app’s data.
 
 # frontmostTimeoutExtended (Objective-C)
 
@@ -17530,7 +17530,7 @@ Don’t just extend the app’s frontmost time globally. Instead, enable it only
 - [applicationState](applicationstate.md): Deprecated. The runtime state of the Watch app.
 - [WKApplicationState](../wkapplicationstate.md): The running states of the Watch app.
 - [isApplicationRunningInDock](isapplicationrunningindock.md): Deprecated. A Boolean value that indicates whether the app is running in the dock.
-- [scheduleBackgroundRefreshWithPreferredDate:userInfo:scheduledCompletion:](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Schedules a background task to refresh the app’s data.
+- [scheduleBackgroundRefreshWithPreferredDate:userInfo:scheduledCompletion:](schedulebackgroundrefresh%28withpreferreddate_userinfo_scheduledcompletion_%29.md): Deprecated. Schedules a background task to refresh the app’s data.
 
 # Document: isRegisteredForRemoteNotifications
 
@@ -17792,13 +17792,13 @@ The root interface controller is located in the app’s main storyboard and has 
 
 Source path: documentation/watchkit/wkextension/schedulebackgroundrefresh(withpreferreddate:userinfo:scheduledcompletion:)
 Canonical documentation: https://developer.apple.com/documentation/watchkit/wkextension/schedulebackgroundrefresh(withpreferreddate:userinfo:scheduledcompletion:)
-Description: Framework: WatchKit Kind: Instance Method Availability: watchOS 3.0+
+Description: Framework: WatchKit Kind: Instance Method Availability: watchOS 3.0+ (deprecated in 9.2)
 
 # scheduleBackgroundRefresh(withPreferredDate:userInfo:scheduledCompletion:) (Swift)
 
 **Framework:** WatchKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 3.0+
+**Availability:** watchOS 3.0+ (deprecated in 9.2)
 
 Schedules a background task to refresh the app’s data.
 
@@ -17843,7 +17843,7 @@ Use this task to update your application’s state. You can only schedule one ba
 
 **Framework:** WatchKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 3.0+
+**Availability:** watchOS 3.0+ (deprecated in 9.2)
 
 Schedules a background task to refresh the app’s data.
 
@@ -17888,13 +17888,13 @@ Use this task to update your application’s state. You can only schedule one ba
 
 Source path: documentation/watchkit/wkextension/schedulesnapshotrefresh(withpreferreddate:userinfo:scheduledcompletion:)
 Canonical documentation: https://developer.apple.com/documentation/watchkit/wkextension/schedulesnapshotrefresh(withpreferreddate:userinfo:scheduledcompletion:)
-Description: Framework: WatchKit Kind: Instance Method Availability: watchOS 3.0+
+Description: Framework: WatchKit Kind: Instance Method Availability: watchOS 3.0+ (deprecated in 9.2)
 
 # scheduleSnapshotRefresh(withPreferredDate:userInfo:scheduledCompletion:) (Swift)
 
 **Framework:** WatchKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 3.0+
+**Availability:** watchOS 3.0+ (deprecated in 9.2)
 
 Schedules a background task to refresh your app’s snapshot.
 
@@ -17936,7 +17936,7 @@ These requests do not cancel or replace any of your scheduled requests.
 
 **Framework:** WatchKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 3.0+
+**Availability:** watchOS 3.0+ (deprecated in 9.2)
 
 Schedules a background task to refresh your app’s snapshot.
 
@@ -57303,6 +57303,7 @@ For issues not mentioned in release notes, file bugs through [Feedback Assistant
 
 ### watchOS 27
 
+- [watchOS 27.2 Beta Release Notes](watchos-release-notes/watchos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [watchOS 27 Release Notes](watchos-release-notes/watchos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### watchOS 26
@@ -60104,6 +60105,54 @@ The watchOS 27 SDK provides support to develop watchOS apps for Apple Watch devi
 
 - Fixed: Mirrored Playback might not start on iPhone when started on Apple Watch. (176497682)
 - Fixed: When Siri AI is enabled on the paired iPhone and Apple Watch is operating in standalone, watch-only mode, Workout Alerts including Workout Buddy might fail to deliver audio announcements during an active workout. (181296052)
+
+## See Also
+
+### watchOS 27
+
+- [watchOS 27.2 Beta Release Notes](watchos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+
+# Document: watchOS 27.2 Beta Release Notes
+
+Source path: documentation/watchos-release-notes/watchos-27_2-release-notes
+Canonical documentation: https://developer.apple.com/documentation/watchos-release-notes/watchos-27_2-release-notes
+Description: Kind: Article
+
+# watchOS 27.2 Beta Release Notes
+
+**Kind:** Article
+
+Update your apps to use new features, and test your apps against API changes.
+
+<a id="Overview"></a>
+
+## Overview
+
+The watchOS 27.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 27.2 beta. The SDK comes bundled with Xcode 27.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
+
+<a id="StoreKit-Testing-in-Xcode"></a>
+
+### StoreKit Testing in Xcode
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed: Intro offer eligibility does not reset immediately after calling `SKTestSession.clearTransactions()`. (183933307) (FB24137836)
+- Fixed: Changing the storefront or locale using `SKTestSession` doesn’t propagate through `Storefront.updates`. (184155259)
+- Fixed: Failed purchases using `SKTestSession` might display error dialogs even when `dialogsDisabled` is set to true. (184255116)
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- Making a purchase in-app for a subscription that is a member of a subscription bundle incorrectly allows the user to unbundle instead of throwing an error. (186018916)
+
+## See Also
+
+### watchOS 27
+
+- [watchOS 27 Release Notes](watchos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 # Document: watchOS 5 Release Notes
 

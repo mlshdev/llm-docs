@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/gamecenterleaderboardv2versionslinkagesresponse](https://developer.apple.com/documentation/appstoreconnectapi/gamecenterleaderboardv2versionslinkagesresponse)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/gamecenterleaderboardv2versionslinkagesresponse
 
 # GameCenterLeaderboardV2VersionsLinkagesResponse
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/carouseltabviewstyle](https://developer.apple.com/documentation/swiftui/carouseltabviewstyle)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/carouseltabviewstyle
 
 # CarouselTabViewStyle
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 A style that implements the carousel interaction and appearance.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepayontheweb/applepaypaymentmethodtype/prepaid](https://developer.apple.com/documentation/applepayontheweb/applepaypaymentmethodtype/prepaid)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applepayontheweb/applepaypaymentmethodtype/prepaid
 
 # prepaid
 

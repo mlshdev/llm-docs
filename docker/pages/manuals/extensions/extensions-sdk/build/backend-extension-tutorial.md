@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/build/backend-extension-tutorial.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/extensions/extensions-sdk/build/backend-extension-tutorial.md)
+> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/build/backend-extension-tutorial.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/extensions/extensions-sdk/build/backend-extension-tutorial.md)
 
 Your extension can ship a backend part with which the frontend can interact with. This page provides information on why and how to add a backend.
 

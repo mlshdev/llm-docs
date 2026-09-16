@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/alert/sidebysidebuttons(title:message:primarybutton:secondarybutton:)](https://developer.apple.com/documentation/swiftui/alert/sidebysidebuttons(title:message:primarybutton:secondarybutton:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/alert/sidebysidebuttons(title:message:primarybutton:secondarybutton:)
 
 # sideBySideButtons(title:message:primaryButton:secondaryButton:)
 
 **Framework:** SwiftUI  
 **Kind:** Type Method  
-**Availability:** watchOS 6.0+ (deprecated in 27.0)
+**Availability:** watchOS 6.0+ (deprecated in 27.2)
 
 Creates a side by side button alert.
 

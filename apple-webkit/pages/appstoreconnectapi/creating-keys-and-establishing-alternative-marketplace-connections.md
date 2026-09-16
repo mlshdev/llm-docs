@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/creating-keys-and-establishing-alternative-marketplace-connections](https://developer.apple.com/documentation/appstoreconnectapi/creating-keys-and-establishing-alternative-marketplace-connections)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/creating-keys-and-establishing-alternative-marketplace-connections
 
 # Creating keys and establishing alternative marketplace connections
 

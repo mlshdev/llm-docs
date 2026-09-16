@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/cloudkitjs/cloudkit.shareparticipantpermission/read_write](https://developer.apple.com/documentation/cloudkitjs/cloudkit.shareparticipantpermission/read_write)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/cloudkitjs/cloudkit.shareparticipantpermission/read_write
 
 # READ_WRITE
 

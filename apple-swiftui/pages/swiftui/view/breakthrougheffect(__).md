@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/breakthrougheffect(_:)](https://developer.apple.com/documentation/swiftui/view/breakthrougheffect(_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/breakthrougheffect(_:)
 
 # breakthroughEffect(\_:)
 
@@ -90,4 +91,4 @@ This also applies to RealityKit presentations using `RealityKit/PresentationComp
 
 - [preferredSurroundingsEffect(\_:)](preferredsurroundingseffect%28__%29.md): Applies an effect to passthrough video.
 - [SurroundingsEffect](../surroundingseffect.md): Effects that the system can apply to passthrough video.
-- [BreakthroughEffect](../breakthrougheffect.md)
+- [BreakthroughEffect](../breakthrougheffect.md): The way a presentation shows through content in front of it.

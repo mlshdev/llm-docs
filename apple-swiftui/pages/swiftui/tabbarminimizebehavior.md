@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/tabbarminimizebehavior](https://developer.apple.com/documentation/swiftui/tabbarminimizebehavior)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/tabbarminimizebehavior
 
 # TabBarMinimizeBehavior
 
@@ -6,10 +7,33 @@
 **Kind:** Structure  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
 
+A behavior that determines when a tab bar minimizes.
+
 ## Declaration
 
 ```swift
 struct TabBarMinimizeBehavior
+```
+
+<a id="overview"></a>
+
+## Overview
+
+A minimized tab bar becomes smaller so that the content behind it has more room. Pass a value of this type to the [tabBarMinimizeBehavior(\_:)](view/tabbarminimizebehavior%28__%29.md) modifier to specify the behavior.
+
+The following example minimizes the tab bar as soon as someone scrolls down through a feed, and restores it when they scroll back up:
+
+```swift
+TabView {
+    Tab("Feed", systemImage: "list.bullet") {
+        FeedView()
+    }
+
+    Tab("Profile", systemImage: "person") {
+        ProfileView()
+    }
+}
+.tabBarMinimizeBehavior(.onScrollDown)
 ```
 
 ## Topics

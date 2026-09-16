@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/templates/managing-templates.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/templates/managing-templates.mdx)
+> Pinned source for Vast.ai main: [guides/templates/managing-templates.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/templates/managing-templates.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/templates/managing-templates
 
 # Managing Templates
@@ -7,7 +7,7 @@
 
 If you want to make changes to a template you previously saved, simply navigate back to the templates page and select 'My Templates'.  Here you'll be able to make your changes by clicking the pencil icon.
 
-![My templates showing the NVIDIA CUDA - Demo template](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-templates-16.webp)
+![My templates showing the NVIDIA CUDA - Demo template](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-16.webp)
 
 ## Sharing a Template
 
@@ -15,7 +15,7 @@ It's really easy to share your template with other users.  We have two special l
 
 To share, click the three dots icon in the bottom right of the template card.
 
-![Menu shows sharing options](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-templates-17.webp)
+![Menu shows sharing options](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-17.webp)
 
 ### Copy referral link
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/safari-developer-tools/connecting-an-ai-agent-to-safari](https://developer.apple.com/documentation/safari-developer-tools/connecting-an-ai-agent-to-safari)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/safari-developer-tools/connecting-an-ai-agent-to-safari
 
 # Connecting an AI agent to Safari
 

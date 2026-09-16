@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/gamecentermatchmakingqueuerequestsv1metricresponse/data-data.dictionary/dimensions-data.dictionary/result-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/gamecentermatchmakingqueuerequestsv1metricresponse/data-data.dictionary/dimensions-data.dictionary/result-data.dictionary)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/gamecentermatchmakingqueuerequestsv1metricresponse/data-data.dictionary/dimensions-data.dictionary/result-data.dictionary
 
 # GameCenterMatchmakingQueueRequestsV1MetricResponse.Data.Dimensions.Result
 

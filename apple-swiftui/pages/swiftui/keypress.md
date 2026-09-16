@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/keypress](https://developer.apple.com/documentation/swiftui/keypress)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/keypress
 
 # KeyPress
 
@@ -6,11 +7,42 @@
 **Kind:** Structure  
 **Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+
 
+A hardware keyboard event that a focused view receives.
+
 ## Declaration
 
 ```swift
 struct KeyPress
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+The [onKeyPress(phases:action:)](view/onkeypress%28phases_action_%29.md) family of modifiers passes a value of this type to your action. Read [key](keypress/key.md) and [modifiers](keypress/modifiers.md) to decide what to do, then return [KeyPress.Result.handled](keypress/result/handled.md) to consume the event or [KeyPress.Result.ignored](keypress/result/ignored.md) to let other views receive it.
+
+The following example removes the selected item when someone presses Delete, clears the selection on Escape, and leaves every other key to the rest of the app:
+
+```swift
+LibraryView(selection: $selection)
+    .focusable()
+    .onKeyPress(phases: .down) { keyPress in
+        switch keyPress.key {
+        case .delete:
+            library.remove(selection)
+            return .handled
+        case .escape:
+            selection = nil
+            return .handled
+        default:
+            return .ignored
+        }
+    }
+```
+
+A view only receives key presses while it has focus, so pair these modifiers with [focusable(\_:)](view/focusable%28__%29.md) or another source of focus.
+
+To respond to the arrow keys, use [onMoveCommand(perform:)](view/onmovecommand%28perform_%29.md) instead. That modifier also responds to the Siri Remote on tvOS.
 
 ## Topics
 

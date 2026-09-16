@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginekit/betextinput/canperformaction(_:withsender:)](https://developer.apple.com/documentation/browserenginekit/betextinput/canperformaction(_:withsender:))
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/browserenginekit/betextinput/canperformaction(_:withsender:)
 
 # canPerformAction(\_:withSender:) (Swift)
 

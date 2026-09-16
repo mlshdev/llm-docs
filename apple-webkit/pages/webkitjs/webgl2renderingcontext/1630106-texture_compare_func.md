@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webgl2renderingcontext/1630106-texture_compare_func](https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1630106-texture_compare_func)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1630106-texture_compare_func
 
 # TEXTURE_COMPARE_FUNC
 

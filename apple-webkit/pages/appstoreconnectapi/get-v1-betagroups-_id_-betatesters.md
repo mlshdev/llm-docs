@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-betagroups-_id_-betatesters](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-betagroups-_id_-betatesters)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-betagroups-_id_-betatesters
 
 # List all beta testers in a beta group
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/collectiondifference/allsatisfy(_:)](https://developer.apple.com/documentation/swift/collectiondifference/allsatisfy(_:))
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/collectiondifference/allsatisfy(_:)
 
 # allSatisfy(\_:)
 

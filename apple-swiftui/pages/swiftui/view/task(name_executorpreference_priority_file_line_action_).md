@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/task(name:executorpreference:priority:file:line:action:)](https://developer.apple.com/documentation/swiftui/view/task(name:executorpreference:priority:file:line:action:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/task(name:executorpreference:priority:file:line:action:)
 
 # task(name:executorPreference:priority:file:line:action:)
 
@@ -18,6 +19,7 @@ nonisolated func task(name: String? = nil, executorPreference taskExecutor: any 
 ## Parameters
 
 - `name`: Human readable name for the task. A name will be generated if this argument is `nil`.
+- `taskExecutor`: The task executor that the child task should be started on and keep using.
 - `priority`: The task priority to use when creating the asynchronous task. The default priority is [userInitiated](https://developer.apple.com/documentation/swift/taskpriority/userinitiated).
 - `file`: File name used in default task name. SwiftUI uses the callsite of .task by default.
 - `line`: Line number used in default task name. SwiftUI uses the callsite of .task by default.

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/explore/exceptions.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/scout/explore/exceptions.md)
+> Pinned source for Docker main: [content/manuals/scout/explore/exceptions.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/scout/explore/exceptions.md)
 
 # Manage vulnerability exceptions
 
@@ -76,8 +76,6 @@ To view all exceptions for a specific image tag:
 Vulnerability exceptions are highlighted in the CLI when you run `docker scout
 cves <image>`. If a CVE is suppressed by an exception, a `SUPPRESSED` label
 appears next to the CVE ID. Details about the exception are also displayed.
-
-![SUPPRESSED label in the CLI output](https://docs.docker.com/scout/images/suppressed-cve-cli.png)
 
 > \[!IMPORTANT]
 > In order to view exceptions in the CLI, you must configure the CLI to use

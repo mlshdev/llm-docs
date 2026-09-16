@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-cibuildactions-_id_-relationships-testresults](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-cibuildactions-_id_-relationships-testresults)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-cibuildactions-_id_-relationships-testresults
 
 # List test result IDs for a CI build action
 

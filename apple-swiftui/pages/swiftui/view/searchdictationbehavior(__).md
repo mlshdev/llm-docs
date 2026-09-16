@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/searchdictationbehavior(_:)](https://developer.apple.com/documentation/swiftui/view/searchdictationbehavior(_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/searchdictationbehavior(_:)
 
 # searchDictationBehavior(\_:)
 
@@ -27,5 +28,5 @@ See the [TextInputDictationBehavior](../textinputdictationbehavior.md) type for 
 
 ### Dictating text
 
-- [TextInputDictationActivation](../textinputdictationactivation.md)
-- [TextInputDictationBehavior](../textinputdictationbehavior.md)
+- [TextInputDictationActivation](../textinputdictationactivation.md): A configuration that determines what starts dictation in a search field.
+- [TextInputDictationBehavior](../textinputdictationbehavior.md): A behavior that determines whether a search field offers dictation, and what starts it.

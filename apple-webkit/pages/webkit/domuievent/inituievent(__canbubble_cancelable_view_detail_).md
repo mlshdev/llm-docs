@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/domuievent/inituievent(_:canbubble:cancelable:view:detail:)](https://developer.apple.com/documentation/webkit/domuievent/inituievent(_:canbubble:cancelable:view:detail:))
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkit/domuievent/inituievent(_:canbubble:cancelable:view:detail:)
 
 # initUIEvent(\_:canBubble:cancelable:view:detail:) (Swift)
 

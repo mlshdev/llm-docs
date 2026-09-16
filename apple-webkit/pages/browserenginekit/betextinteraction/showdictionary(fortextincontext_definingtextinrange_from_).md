@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginekit/betextinteraction/showdictionary(fortextincontext:definingtextinrange:from:)](https://developer.apple.com/documentation/browserenginekit/betextinteraction/showdictionary(fortextincontext:definingtextinrange:from:))
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/browserenginekit/betextinteraction/showdictionary(fortextincontext:definingtextinrange:from:)
 
 # showDictionary(forTextInContext:definingTextInRange:from:) (Swift)
 

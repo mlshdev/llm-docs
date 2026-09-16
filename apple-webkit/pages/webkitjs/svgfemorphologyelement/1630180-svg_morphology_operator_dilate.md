@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgfemorphologyelement/1630180-svg_morphology_operator_dilate](https://developer.apple.com/documentation/webkitjs/svgfemorphologyelement/1630180-svg_morphology_operator_dilate)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgfemorphologyelement/1630180-svg_morphology_operator_dilate
 
 # SVG_MORPHOLOGY_OPERATOR_DILATE
 

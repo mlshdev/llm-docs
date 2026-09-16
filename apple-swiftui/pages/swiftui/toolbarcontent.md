@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/toolbarcontent](https://developer.apple.com/documentation/swiftui/toolbarcontent)
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbarcontent
 
 # ToolbarContent
 
@@ -41,16 +42,24 @@ extension MyCustomType: Transition {
 - [body](toolbarcontent/body-swift.property.md): The composition of content that comprise the toolbar content.
 - [Body](toolbarcontent/body-swift.associatedtype.md): The type of content representing the body of this toolbar content.
 
+### Customizing behaviors
+
+- [axisBehavior(\_:)](toolbarcontent/axisbehavior%28__%29.md): Beta. The bar axis behavior of the toolbar item.
+- [ToolbarItemAxisBehavior](toolbaritemaxisbehavior.md): Beta. Describes the bar axis behavior of a toolbar item.
+
 ### Setting visibility
 
+- [hidden(\_:)](toolbarcontent/hidden%28__%29.md): Hides a toolbar item within its toolbar.
+- [sharedBackgroundVisibility(\_:)](toolbarcontent/sharedbackgroundvisibility%28__%29.md): Controls the visibility of the glass background effect on items in the toolbar. In certain contexts, such as the navigation bar on iOS and the window toolbar on macOS, toolbar items will be given a glass background effect that is shared with other items in the same logical grouping.
 - [visibilityPriority(\_:)](toolbarcontent/visibilitypriority%28__%29.md): Defines the visibility priority for a toolbar item.
 
-### Instance Methods
+### Coordinating with animations
+
+- [matchedTransitionSource(id:in:)](toolbarcontent/matchedtransitionsource%28id_in_%29.md): Identifies this toolbar content as the source of a navigation transition, such as a zoom transition.
+
+### Adjusting content margins
 
 - [contentMarginsRemoved(\_:)](toolbarcontent/contentmarginsremoved%28__%29.md): Configures whether the content margins are removed.
-- [hidden(\_:)](toolbarcontent/hidden%28__%29.md): Hides a toolbar item within its toolbar.
-- [matchedTransitionSource(id:in:)](toolbarcontent/matchedtransitionsource%28id_in_%29.md): Identifies this toolbar content as the source of a navigation transition, such as a zoom transition.
-- [sharedBackgroundVisibility(\_:)](toolbarcontent/sharedbackgroundvisibility%28__%29.md): Controls the visibility of the glass background effect on items in the toolbar. In certain contexts, such as the navigation bar on iOS and the window toolbar on macOS, toolbar items will be given a glass background effect that is shared with other items in the same logical grouping.
 
 ## Relationships
 

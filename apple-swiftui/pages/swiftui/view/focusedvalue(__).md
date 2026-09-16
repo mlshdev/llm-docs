@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/focusedvalue(_:)](https://developer.apple.com/documentation/swiftui/view/focusedvalue(_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/focusedvalue(_:)
 
 # focusedValue(\_:)
 
@@ -14,6 +15,10 @@ Sets the focused value for the given object type.
 nonisolated func focusedValue<T>(_ object: T?) -> some View where T : AnyObject, T : Observable
 
 ```
+
+## Parameters
+
+- `object`: The object to read the focus value for.
 
 ## Mentioned In
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/toolbar(_:for:)](https://developer.apple.com/documentation/swiftui/view/toolbar(_:for:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/toolbar(_:for:)
 
 # toolbar(\_:for:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 16.0+ (deprecated in 27.0) · iPadOS 16.0+ (deprecated in 27.0) · Mac Catalyst 16.0+ (deprecated in 27.0) · macOS 13.0+ (deprecated in 27.0) · tvOS 16.0+ (deprecated in 27.0) · visionOS 1.0+ · watchOS 9.0+ (deprecated in 27.0)
+**Availability:** iOS 16.0+ (deprecated in 27.2) · iPadOS 16.0+ (deprecated in 27.2) · Mac Catalyst 16.0+ (deprecated in 27.2) · macOS 13.0+ (deprecated in 27.2) · tvOS 16.0+ (deprecated in 27.2) · visionOS 1.0+ · watchOS 9.0+ (deprecated in 27.2)
 
 Specifies the visibility of a bar managed by SwiftUI.
 
@@ -69,4 +70,4 @@ Depending on the specified bars, the requested visibility may not be able to be 
 - [toolbarVisibility(\_:for:)](toolbarvisibility%28__for_%29.md): Specifies the visibility of a bar managed by SwiftUI.
 - [toolbarBackgroundVisibility(\_:for:)](toolbarbackgroundvisibility%28__for_%29.md): Specifies the preferred visibility of backgrounds on a bar managed by SwiftUI.
 - [ToolbarPlacement](../toolbarplacement.md): The placement of a toolbar.
-- [ContentToolbarPlacement](../contenttoolbarplacement.md)
+- [ContentToolbarPlacement](../contenttoolbarplacement.md): A region of the interface that hosts its own toolbar content.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/projectioneffect(_:)](https://developer.apple.com/documentation/swiftui/view/projectioneffect(_:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/projectioneffect(_:)
 
 # projectionEffect(\_:)
 
@@ -56,5 +57,5 @@ Text("Projection effects using transforms")
 - [rotation3DEffect(\_:axis:anchor:)](rotation3deffect%28__axis_anchor_%29.md): Rotates the view’s content by an angle about an axis that you specify as a tuple of elements.
 - [transformEffect(\_:)](transformeffect%28__%29.md): Applies an affine transformation to this view’s rendered output.
 - [transform3DEffect(\_:)](transform3deffect%28__%29.md): Applies a 3D transformation to this view’s rendered output.
-- [ProjectionTransform](../projectiontransform.md)
+- [ProjectionTransform](../projectiontransform.md): A 3x3 matrix that transforms points in a plane.
 - [ContentMode](../contentmode.md): Constants that define how a view’s content fills the available space.

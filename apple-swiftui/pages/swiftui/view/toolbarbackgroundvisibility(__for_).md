@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/toolbarbackgroundvisibility(_:for:)](https://developer.apple.com/documentation/swiftui/view/toolbarbackgroundvisibility(_:for:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/view/toolbarbackgroundvisibility(_:for:)
 
 # toolbarBackgroundVisibility(\_:for:)
 
@@ -60,4 +61,4 @@ TabView {
 - [toolbar(\_:for:)](toolbar%28__for_%29.md): Deprecated. Specifies the visibility of a bar managed by SwiftUI.
 - [toolbarVisibility(\_:for:)](toolbarvisibility%28__for_%29.md): Specifies the visibility of a bar managed by SwiftUI.
 - [ToolbarPlacement](../toolbarplacement.md): The placement of a toolbar.
-- [ContentToolbarPlacement](../contenttoolbarplacement.md)
+- [ContentToolbarPlacement](../contenttoolbarplacement.md): A region of the interface that hosts its own toolbar content.

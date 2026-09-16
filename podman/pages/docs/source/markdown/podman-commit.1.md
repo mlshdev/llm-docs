@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.1: [docs/source/markdown/podman-commit.1.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-commit.1.md)
+> Pinned source for Podman v6.1.2: [docs/source/markdown/podman-commit.1.md](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-commit.1.md)
 
 # podman-commit
 
@@ -60,7 +60,7 @@ Write the image ID to the file.
 
 #### **--include-volumes**
 
-Include in the committed image any volumes added to the container by the **--volume** or **--mount** OPTIONS to the **[podman create](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-create.1.md.in)** and **[podman run](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-run.1.md.in)** commands.\
+Include in the committed image any volumes added to the container by the **--volume** or **--mount** OPTIONS to the **[podman create](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-create.1.md.in)** and **[podman run](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-run.1.md.in)** commands.\
 The default is **false**.
 
 #### **--message**, **-m**=*message*
@@ -138,11 +138,11 @@ $ podman commit -q --change LABEL=io.containers.capabilities=setuid,setgid epic_
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman.1.md)**, **[podman-run(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-run.1.md.in)**, **[podman-create(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-create.1.md.in)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman.1.md)**, **[podman-run(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-run.1.md.in)**, **[podman-create(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-create.1.md.in)**
 
 ### Troubleshooting
 
-See [podman-troubleshooting(7)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md)
+See [podman-troubleshooting(7)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/troubleshooting.md)
 for solutions to common issues.
 
 ## HISTORY

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/uploading-assets-to-app-store-connect](https://developer.apple.com/documentation/appstoreconnectapi/uploading-assets-to-app-store-connect)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/uploading-assets-to-app-store-connect
 
 # Uploading Assets to App Store Connect
 

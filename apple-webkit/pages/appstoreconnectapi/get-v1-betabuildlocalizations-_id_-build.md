@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-betabuildlocalizations-_id_-build](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-betabuildlocalizations-_id_-build)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-betabuildlocalizations-_id_-build
 
 # Read the build information of a beta build localization
 

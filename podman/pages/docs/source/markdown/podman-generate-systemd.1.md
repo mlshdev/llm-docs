@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.1: [docs/source/markdown/podman-generate-systemd.1.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-generate-systemd.1.md)
+> Pinned source for Podman v6.1.2: [docs/source/markdown/podman-generate-systemd.1.md](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-generate-systemd.1.md)
 
 # podman-generate-systemd
 
@@ -13,7 +13,7 @@ podman-generate-systemd - \[DEPRECATED] Generate systemd unit file(s) for a cont
 ## DESCRIPTION
 
 DEPRECATED:
-Note: **podman generate systemd** is deprecated. We recommend using [Quadlet](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-systemd.unit.5.md)
+Note: **podman generate systemd** is deprecated. We recommend using [Quadlet](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-systemd.unit.5.md)
 files when running Podman containers or pods under systemd.  There are no plans to remove the command.
 It will receive urgent bug fixes but no new features.
 
@@ -321,7 +321,7 @@ bb310a0780ae  docker.io/library/alpine:latest  /bin/sh  3 minutes ago  Created  
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman.1.md)**, **[podman-container(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-container.1.md)**, **systemctl(1)**, **systemd.unit(5)**, **systemd.service(5)**, **[conmon(8)](https://github.com/containers/conmon/blob/main/docs/conmon.8.md)**, **[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-systemd.unit.5.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman.1.md)**, **[podman-container(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-container.1.md)**, **systemctl(1)**, **systemd.unit(5)**, **systemd.service(5)**, **[conmon(8)](https://github.com/containers/conmon/blob/main/docs/conmon.8.md)**, **[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-systemd.unit.5.md)**
 
 ## HISTORY
 

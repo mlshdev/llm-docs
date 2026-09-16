@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/result/publisher-swift.struct/init(_:)-516t](https://developer.apple.com/documentation/swift/result/publisher-swift.struct/init(_:)-516t)
+> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift/result/publisher-swift.struct/init(_:)-516t
 
 # init(\_:)
 

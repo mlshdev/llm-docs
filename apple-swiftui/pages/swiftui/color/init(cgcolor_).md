@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/color/init(cgcolor:)](https://developer.apple.com/documentation/swiftui/color/init(cgcolor:))
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftui/color/init(cgcolor:)
 
 # init(cgColor:)
 
@@ -13,6 +14,10 @@ Creates a color from a Core Graphics color.
 ```swift
 init(cgColor: CGColor)
 ```
+
+## Parameters
+
+- `cgColor`: A [CGColor](https://developer.apple.com/documentation/coregraphics/cgcolor) instance from which to create a color.
 
 ## See Also
 

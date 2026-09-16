@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applemusicapi/get-all-library-songs](https://developer.apple.com/documentation/applemusicapi/get-all-library-songs)
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applemusicapi/get-all-library-songs
 
 # Get All Library Songs
 
@@ -153,6 +154,7 @@ https://api.music.apple.com/v1/me/library/songs
         "total": 100
     }
 }
+
 
 ```
 
