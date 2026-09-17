@@ -1,40 +1,10 @@
-# Apple WebKit and Safari snapshot-f54edb363a08: full documentation
+# Apple WebKit and Safari snapshot-a0a4b8d281c3: full documentation
 
 Source: https://developer.apple.com/documentation/webkit
-Catalog snapshot: f54edb363a083e89fbb57583763fb82cc6f82b664cabb36a74bc0b6812e025c6
-Content digest: bfe64edc2dc1f17ae82411b196f0116d1792fb859c52f04313168761d0296804
-Captured at: 2026-09-16T18:21:42.106Z
+Catalog snapshot: a0a4b8d281c3f7aea28b686494365f12c4270621bbf6d43cdea12ffe295fbfab
+Content digest: 734bf10815a2acca72e71faa3a510eace5521c5201527ea636458dac7a773b04
+Captured at: 2026-09-17T18:22:51.558Z
 Volume 4
-
-# Document: lengthComputable
-
-Source path: documentation/webkit/domprogressevent/lengthcomputable
-Canonical documentation: https://developer.apple.com/documentation/webkit/domprogressevent/lengthcomputable
-Description: Framework: WebKit Kind: Instance Property Availability: macOS 10.6+ (deprecated in 10.14)
-
-# lengthComputable (Swift)
-
-**Framework:** WebKit  
-**Kind:** Instance Property  
-**Availability:** macOS 10.6+ (deprecated in 10.14)
-
-## Declaration
-
-```swift
-var lengthComputable: Bool { get }
-```
-
-# lengthComputable (Objective-C)
-
-**Framework:** WebKit  
-**Kind:** Instance Property  
-**Availability:** macOS 10.6+ (deprecated in 10.14)
-
-## Declaration
-
-```objectivec
-@property (readonly) BOOL lengthComputable;
-```
 
 # Document: loaded
 
@@ -16930,6 +16900,8 @@ class WebFrameView
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
 - [NSUserActivityRestoring](https://developer.apple.com/documentation/appkit/nsuseractivityrestoring)
 - [NSUserInterfaceItemIdentification](https://developer.apple.com/documentation/appkit/nsuserinterfaceitemidentification)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 

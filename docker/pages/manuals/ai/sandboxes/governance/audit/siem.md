@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/audit/siem.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/ai/sandboxes/governance/audit/siem.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/audit/siem.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/ai/sandboxes/governance/audit/siem.md)
 
 # SIEM forwarding
 
@@ -19,6 +19,7 @@ with the supplied credential before saving.
 | Splunk Cloud (HEC) | Hosted Splunk using the HTTP Event Collector      |
 | Dynatrace          | Dynatrace Log Management using the Log Ingest API |
 | Datadog            | Datadog Logs using the HTTP log intake API        |
+| Sumo Logic         | Sumo Logic using an HTTP Source                   |
 
 ## Before you begin
 
@@ -40,6 +41,8 @@ Gather credentials from your SIEM before configuring forwarding:
   scope. See [Dynatrace documentation](https://docs.dynatrace.com/).
 - **Datadog**: Logs intake URL for your Datadog site and an API key. See
   [Datadog documentation](https://docs.datadoghq.com/).
+- **Sumo Logic**: HTTP Source URL and an auth token from an HTTP Logs &
+  Metrics source. See [Sumo Logic documentation](https://www.sumologic.com/help/).
 
 ## Add a SIEM destination
 

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/machines/{machine_id}/dnotify](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/api-reference/openapi.yaml%23put%20/api/v0/machines/%7Bmachine_id%7D/dnotify)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/machines/{machine_id}/dnotify](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/api-reference/openapi.yaml%23put%20/api/v0/machines/%7Bmachine_id%7D/dnotify)
 > Canonical documentation: https://docs.vast.ai/api-reference/machines/schedule-maint
 
 # schedule maint

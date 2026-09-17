@@ -1,8 +1,8 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/tui/index.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/_vendor/github.com/docker/docker-agent/docs/features/tui/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/tui/index.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/_vendor/github.com/docker/docker-agent/docs/features/tui/index.md)
 
 *Docker Agent's default interface is a rich, interactive terminal UI with file attachments, themes, session management, and more.*
 
-![Docker Agent TUI in action showing an interactive agent session](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/_vendor/github.com/docker/docker-agent/docs/demo.gif)
+![Docker Agent TUI in action showing an interactive agent session](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/_vendor/github.com/docker/docker-agent/docs/demo.gif)
 
 ## Launching the TUI
 

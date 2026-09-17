@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/list-serverless-endpoint-builds.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/serverless/list-serverless-endpoint-builds.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/list-serverless-endpoint-builds.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/serverless/list-serverless-endpoint-builds.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/list-serverless-endpoint-builds
 
 # List Serverless Endpoint Builds
@@ -9,9 +9,10 @@ List a Runpod Serverless endpoint's GitHub build history, newest first, capped t
 
 **List serverless endpoint builds**
 
-Returns the endpoint's GitHub build history, newest first (RunPod
-GitHub-build integration). At most the 100 most recent builds are
-returned; any older build can still be fetched by id via
+Returns the endpoint's GitHub build history, newest first (Runpod
+GitHub-build integration), cursor-paginated; an omitted `limit`
+defaults to 100, so a bare request returns at most the 100 most
+recent builds. Any build can also be fetched by id via
 `GET /v2/serverless/{id}/builds/{buildId}`. Stream a build's logs via
 `/v2/serverless/{id}/builds/{buildId}/logs`.
 
@@ -21,6 +22,10 @@ returned; any older build can still be fetched by id via
 
 - `id` (path; required; string): Serverless endpoint identifier
   - Example: `ep_abc123`
+- `cursor` (query; string; minimum length: `1`): Opaque resume cursor — pass the previous response's `pagination.nextCursor` through verbatim; omit for the first page. A cursor is only valid for the operation and parameters that issued it; a malformed or foreign cursor is rejected with 422.
+  - Example: `Y3JlYXRlZEF0PTE3NDg3ODA0MDA`
+- `limit` (query; integer; minimum: `1`; maximum: `100`): Page size, 1–100. Defaults to 100 when omitted.
+  - Example: `50`
 
 **Responses**
 
@@ -29,7 +34,7 @@ returned; any older build can still be fetched by id via
   - Header `RateLimit-Policy` (string)
   - Media type: `application/json`
     - Schema (object)
-      - `builds` (required; array): Build history, newest first. At most the 100 most recent builds are returned; any older build can still be fetched by id via `GET /v2/serverless/{id}/builds/{buildId}`.
+      - `builds` (required; array): Build history, newest first, cursor-paginated (an omitted `limit` defaults to 100). Page with `cursor`/`limit` to walk the full history, or fetch any build by id via `GET /v2/serverless/{id}/builds/{buildId}`.
         - `items` (object)
           - `id` (required; string)
           - `status` (required; string; enum: `PENDING`, `BUILDING`, `UPLOADING`, `TESTING`, `COMPLETED`, `FAILED`, `CANCELLED`, `TEST_FAILED`): GitHub build lifecycle state. `COMPLETED`, `FAILED`, `CANCELLED`, and `TEST_FAILED` are terminal; `PENDING`, `BUILDING`, `UPLOADING`, and `TESTING` are live.
@@ -41,7 +46,10 @@ returned; any older build can still be fetched by id via
           - `startedAt` (format: date-time; nullable): When the build started. Null while the build is still pending.
           - `completedAt` (format: date-time; nullable): When the build reached a terminal state. Null while the build is live.
           - `error` (nullable): Failure detail for `FAILED` / `TEST_FAILED` builds; null otherwise.
-    - Example `builds`: `{"builds":[{"id":"build_abc123","status":"COMPLETED","commitHash":"abc1234","commitMessage":"bump model","branch":"main","commitDate":"2026-06-01T12:00:00Z","imageName":"registry.runpod.net/repo:abc1234","startedAt":"2026-06-01T12:00:05Z","completedAt":"2026-06-01T12:04:31Z","error":null}]}`
+      - `pagination` (required; object): Cursor-pagination metadata, uniform across list endpoints. Every response carries it: follow `nextCursor` while `hasNextPage` is true to walk the full result set.
+        - `nextCursor` (required; nullable): Pass as the `cursor` query parameter to fetch the next page. Null on the last page.
+        - `hasNextPage` (required; boolean): Whether more items exist after this page.
+    - Example `builds`: `{"builds":[{"id":"build_abc123","status":"COMPLETED","commitHash":"abc1234","commitMessage":"bump model","branch":"main","commitDate":"2026-06-01T12:00:00Z","imageName":"registry.runpod.net/repo:abc1234","startedAt":"2026-06-01T12:00:05Z","completedAt":"2026-06-01T12:04:31Z","error":null}],"pagination":{"nextCursor":null,"hasNextPage":false}}`
 - `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
   - Media type: `application/problem+json`
     - Schema (object)

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/billing/get-aggregated-billing-history.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/billing/get-aggregated-billing-history.mdx)
+> Pinned source for Runpod main: [api-reference-v2/billing/get-aggregated-billing-history.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/billing/get-aggregated-billing-history.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/billing/get-aggregated-billing-history
 
 # Get Aggregated Billing History
@@ -36,7 +36,7 @@ Returns time-bucketed total spend across all billable Runpod resources for the a
             - `variant 1` (object): Half-open time range \[startTime, endTime) in RFC 3339. On a record it is the time bucket; on a query echo it is the resolved window.
               - `startTime` (required; string; format: date-time): Start of the range, inclusive (RFC 3339).
               - `endTime` (required; string; format: date-time): End of the range, exclusive (RFC 3339).
-            - `variant 2` (object): Total spend across all billable Runpod resources with each cost component broken out, fully prefixed by resource. Backs the aggregate record's amounts and the metadata totals.
+            - `variant 2` (object): Total spend across all billable Runpod resources with each cost component broken out, fully prefixed by resource. Backs the aggregate record's amounts and the metadata totals. Serverless amounts are inclusive of platform charges.
               - `totalAmount` (required; number; format: double): Total cost in USD for the bucket across all resources.
               - `podGpuAmount` (required; number; format: double): GPU pod compute cost in USD for the bucket.
               - `podCpuAmount` (required; number; format: double): CPU pod compute cost in USD for the bucket.
@@ -44,7 +44,7 @@ Returns time-bucketed total spend across all billable Runpod resources for the a
               - `serverlessGpuAmount` (required; number; format: double): Serverless GPU compute cost in USD for the bucket.
               - `serverlessCpuAmount` (required; number; format: double): Serverless CPU compute cost in USD for the bucket.
               - `serverlessDiskAmount` (required; number; format: double): Serverless disk cost in USD for the bucket.
-              - `serverlessFeeAmount` (required; number; format: double): Serverless platform fee in USD for the bucket.
+              - `serverlessFeeAmount` (required; number; format: double): Unused and always 0. Platform charges are included in the serverless compute amounts.
               - `storageStandardAmount` (required; number; format: double): Standard network volume storage cost in USD for the bucket.
               - `storageHighPerformanceAmount` (required; number; format: double): High-performance network volume storage cost in USD for the bucket.
               - `endpointAmount` (required; number; format: double): Runpod public endpoint cost in USD for the bucket.
@@ -60,7 +60,7 @@ Returns time-bucketed total spend across all billable Runpod resources for the a
             - `variant 2` (object)
               - `bucketSize` (required; string; enum: `hour`, `day`, `week`, `month`, `year`; default: `day`): Length of each billing time bucket.
         - `recordCount` (required; integer): Number of records returned.
-        - `totals` (required; object): Total spend across all billable Runpod resources with each cost component broken out, fully prefixed by resource. Backs the aggregate record's amounts and the metadata totals.
+        - `totals` (required; object): Total spend across all billable Runpod resources with each cost component broken out, fully prefixed by resource. Backs the aggregate record's amounts and the metadata totals. Serverless amounts are inclusive of platform charges.
           - `totalAmount` (required; number; format: double): Total cost in USD for the bucket across all resources.
           - `podGpuAmount` (required; number; format: double): GPU pod compute cost in USD for the bucket.
           - `podCpuAmount` (required; number; format: double): CPU pod compute cost in USD for the bucket.
@@ -68,14 +68,14 @@ Returns time-bucketed total spend across all billable Runpod resources for the a
           - `serverlessGpuAmount` (required; number; format: double): Serverless GPU compute cost in USD for the bucket.
           - `serverlessCpuAmount` (required; number; format: double): Serverless CPU compute cost in USD for the bucket.
           - `serverlessDiskAmount` (required; number; format: double): Serverless disk cost in USD for the bucket.
-          - `serverlessFeeAmount` (required; number; format: double): Serverless platform fee in USD for the bucket.
+          - `serverlessFeeAmount` (required; number; format: double): Unused and always 0. Platform charges are included in the serverless compute amounts.
           - `storageStandardAmount` (required; number; format: double): Standard network volume storage cost in USD for the bucket.
           - `storageHighPerformanceAmount` (required; number; format: double): High-performance network volume storage cost in USD for the bucket.
           - `endpointAmount` (required; number; format: double): Runpod public endpoint cost in USD for the bucket.
           - `clusterGpuAmount` (required; number; format: double): Cluster GPU compute cost in USD for the bucket.
           - `clusterDiskAmount` (required; number; format: double): Cluster disk cost in USD for the bucket.
           - `clusterNetworkingAmount` (required; number; format: double): Cluster inter-node networking cost in USD for the bucket.
-    - Example `billing`: `{"records":[{"startTime":"2026-06-01T00:00:00Z","endTime":"2026-06-02T00:00:00Z","totalAmount":42.34,"podGpuAmount":18.2,"podCpuAmount":0,"podDiskAmount":1.1,"serverlessGpuAmount":12.6,"serverlessCpuAmount":0,"serverlessDiskAmount":0.44,"serverlessFeeAmount":1.25,"storageStandardAmount":0,"storageHighPerformanceAmount":2.5,"endpointAmount":3.21,"clusterGpuAmount":2.5,"clusterDiskAmount":0.3,"clusterNetworkingAmount":0.24}],"metadata":{"query":{"startTime":"2026-06-01T00:00:00Z","endTime":"2026-06-02T00:00:00Z","bucketSize":"day"},"recordCount":1,"totals":{"totalAmount":42.34,"podGpuAmount":18.2,"podCpuAmount":0,"podDiskAmount":1.1,"serverlessGpuAmount":12.6,"serverlessCpuAmount":0,"serverlessDiskAmount":0.44,"serverlessFeeAmount":1.25,"storageStandardAmount":0,"storageHighPerformanceAmount":2.5,"endpointAmount":3.21,"clusterGpuAmount":2.5,"clusterDiskAmount":0.3,"clusterNetworkingAmount":0.24}}}`
+    - Example `billing`: `{"records":[{"startTime":"2026-06-01T00:00:00Z","endTime":"2026-06-02T00:00:00Z","totalAmount":42.34,"podGpuAmount":18.2,"podCpuAmount":0,"podDiskAmount":1.1,"serverlessGpuAmount":13.85,"serverlessCpuAmount":0,"serverlessDiskAmount":0.44,"serverlessFeeAmount":0,"storageStandardAmount":0,"storageHighPerformanceAmount":2.5,"endpointAmount":3.21,"clusterGpuAmount":2.5,"clusterDiskAmount":0.3,"clusterNetworkingAmount":0.24}],"metadata":{"query":{"startTime":"2026-06-01T00:00:00Z","endTime":"2026-06-02T00:00:00Z","bucketSize":"day"},"recordCount":1,"totals":{"totalAmount":42.34,"podGpuAmount":18.2,"podCpuAmount":0,"podDiskAmount":1.1,"serverlessGpuAmount":13.85,"serverlessCpuAmount":0,"serverlessDiskAmount":0.44,"serverlessFeeAmount":0,"storageStandardAmount":0,"storageHighPerformanceAmount":2.5,"endpointAmount":3.21,"clusterGpuAmount":2.5,"clusterDiskAmount":0.3,"clusterNetworkingAmount":0.24}}}`
 - `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
   - Media type: `application/problem+json`
     - Schema (object)

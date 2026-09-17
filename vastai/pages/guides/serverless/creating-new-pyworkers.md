@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/creating-new-pyworkers.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/serverless/creating-new-pyworkers.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/creating-new-pyworkers.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/serverless/creating-new-pyworkers.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/creating-new-pyworkers
 
 # Creating Custom PyWorkers

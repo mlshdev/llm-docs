@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/templates/quickstart.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/templates/quickstart.mdx)
+> Pinned source for Vast.ai main: [guides/templates/quickstart.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/templates/quickstart.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/templates/quickstart
 
 # Quick Start
@@ -9,15 +9,15 @@ To jump right in and run a template, follow these steps.
 
 Visit the templates section of the console where you will find all of our recommended templates.
 
-![Recommended Templates page](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates.webp)
+![Recommended Templates page](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-templates.webp)
 
 Browse through the templates until you find one that meets your requirements.  In this guide we will use NVIDIA CUDA, which is the first on the list. It's a great starter template as it just includes the CUDA development environment, plus a few extras to improve the user experience.
 
-![NVIDIA CUDA Template whos play button in bottom left corner](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-2.webp)
+![NVIDIA CUDA Template whos play button in bottom left corner](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-templates-2.webp)
 
 Now, click the 'play' button.  This will load the template and take you to the available offers.
 
-![Offers page with GPU filter active](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-3.webp)
+![Offers page with GPU filter active](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-templates-3.webp)
 
 There are filters available at the top of the page to help you target a particular GPU.  You will also find many additional filters on the left of the page for more fine-grained control over the instances you find.
 
@@ -25,7 +25,7 @@ When you have found a suitable offer, simply click the 'RENT' button to create y
 
 You can now visit [cloud.vast.ai/instances](https://cloud.vast.ai/instances/) where you will find your running instance.  It may take a few minutes to be ready as everything is being set up.
 
-![Instance view with blue open button](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-4.webp)
+![Instance view with blue open button](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-templates-4.webp)
 
 When it is ready you will see the blue open button.  This indicates that the instance is ready to connect.
 

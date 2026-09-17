@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [langflow-ollama.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/langflow-ollama.mdx)
+> Pinned source for Vast.ai main: [langflow-ollama.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/langflow-ollama.mdx)
 > Canonical documentation: https://docs.vast.ai/langflow-ollama
 
 # Langflow + Ollama
@@ -17,7 +17,7 @@ Let's get started with the configuration - There is not much you need to change 
 
 You can find the Langflow template in our [recommended templates](https://cloud.vast.ai/templates/) page.  Before loading it up, click the pencil icon to open up the template editor
 
-![Langflow template card](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-agents.webp)
+![Langflow template card](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-agents.webp)
 
 ### Custom configuration
 
@@ -26,7 +26,7 @@ In the template editor you'll find two really useful configuration variables.
 - `OLLAMA_MODEL` is the most important variable.  Here you can choose which model should be downloaded when the instance starts.
 - `LANGFLOW_ARGS`allows you to pass alternative startup arguments to the langflow application.  The defaults should be fine for this demo, but you are free to change these as you need.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-agents-2.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-agents-2.webp)
 
 When you have finished entering your settings click the '**Create & Use**' button to save your copy of the template.
 
@@ -54,11 +54,11 @@ When you have found a suitable instance it's time to click the '**Rent**' button
 
 After a short time, your instance will be ready to access.  Simply click the 'Open' button to get started.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-agents-3.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-agents-3.webp)
 
 You will now find the Instance Portal has opened.&#x20;
 
-![Instance Portal](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-agents-4.webp)
+![Instance Portal](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-agents-4.webp)
 
 This page gives you easy access to both the Langflow application and the Ollama API.  Click Langflow's 'Launch Application' button.&#x20;
 
@@ -70,31 +70,31 @@ This page gives you easy access to both the Langflow application and the Ollama 
 
 After opening Langflow, click the '**Create first flow**' button.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-agents-5.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-agents-5.webp)
 
 While Langflow is extremely powerful, for this example we will create a simple blow post writer.
 
 Select **Content Generation** -> **Blog Writer**
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-agents-6.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-agents-6.webp)
 
 Initially, the flow will look like this
 
-![blog writer flow](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-agents-7.webp)
+![blog writer flow](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-agents-7.webp)
 
 We will need to replace the Language Model with the Ollama alternative to make use of the GPU and avoid having to make API calls to external services.&#x20;
 
 Click on the **Language Model** node and using the three dot icon, choose **Delete.**
 
-![delete language model](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-agents-8.webp)
+![delete language model](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-agents-8.webp)
 
 Next, from the left side menu, select the **Ollama** component and drag it to the space created by deleting the original language model component.
 
-![Add Ollama node](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-agents-9.webp)
+![Add Ollama node](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-agents-9.webp)
 
 Now that is in place it must be configured to communicate with the Ollama API. Enter `http://localhost:11434` in the Base URL field.  You'll need to then select your Ollama model and re-connect the nodes as shown below.
 
-![Ollama node connected](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-agents-10.webp)
+![Ollama node connected](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-agents-10.webp)
 
 > **Note**
 >
@@ -112,7 +112,7 @@ Change the **Text** in the **Instructions node** to `Use the references above fo
 
 Simply click the **Playground** button followed by the **Run flow** button and wait for the agent to learn about the subject matter and write a blog post.  It'll only take a few seconds.
 
-![Completed Blog Post](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-agents-11.webp)
+![Completed Blog Post](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-agents-11.webp)
 
 ## Advanced Usage
 

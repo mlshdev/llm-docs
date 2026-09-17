@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.1: [docs/how-it-works.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/how-it-works.mdx)
+> Pinned source for Trigger.dev v4.6.3: [docs/how-it-works.mdx](https://github.com/triggerdotdev/trigger.dev/blob/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/how-it-works.mdx)
 > Canonical documentation: https://trigger.dev/docs/how-it-works
 
 # How Trigger.dev works
@@ -435,7 +435,7 @@ For additional isolated environments, you can use [preview branches](https://tri
 
 The Trigger.dev logging and task dashboard is powered by OpenTelemetry traces and logs, which allows you to trace your tasks and auto-instrument your code. We also auto-correlate logs from subtasks and parent tasks, making it easy view the entire trace of a task execution. A single run of the video processing task above looks like this in the dashboard:
 
-![OpenTelemetry trace](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/opentelemetry-trace.png)
+![OpenTelemetry trace](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/images/opentelemetry-trace.png)
 
 Because we use standard OpenTelemetry, you can instrument your code and OpenTelemetry compatible libraries to get detailed traces and logs of your tasks. The above trace instruments both Prisma and the AWS SDK:
 

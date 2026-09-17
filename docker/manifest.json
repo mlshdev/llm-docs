@@ -8,38 +8,38 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-16T17:12:06Z",
-  "documentationDigest": "2cbc5c7b68266b15124ef73dd3bf06b58cc7c9a9639e53e6ab32faad07711441",
-  "sourceCommit": "aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4",
-  "documentCount": 1631,
+  "sourceCommittedAt": "2026-09-17T16:04:43Z",
+  "documentationDigest": "b79df828dd941b0b3dad7e1ccc5b254f73f93aab54a32664ae1acef9cdc2509f",
+  "sourceCommit": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+  "documentCount": 1628,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
       "byteLength": 687,
       "documentCount": 0,
-      "sha256": "13e6e39ffe5ca6aff248b463c2b10c96fe7e6c1714365b476a7c8eb33a6b4675"
+      "sha256": "185e3707f073b0466367b29114cfa832a5b92c2166a6e8e927eda648b644e478"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8388529,
-      "documentCount": 786,
-      "sha256": "96fa5ba1177d5cab70cebc0dc22737938481ac84b23011dcc287b4f449db71b7"
+      "byteLength": 8371511,
+      "documentCount": 784,
+      "sha256": "44366992a76666da618fa81f2d19b880eeebea7aeee44db35abe60dc0c1fac77"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 8303747,
-      "documentCount": 197,
-      "sha256": "c03c4d8e97c2eb2cf74d9087bcffb66be7230ecae9ec023df447885dfbf8f762"
+      "byteLength": 8317677,
+      "documentCount": 198,
+      "sha256": "4d47a06e4679bdb78e1d09116c284a1d64287830b326904098c1bb66306a0a39"
     },
     {
       "name": "llms-full.003.txt",
-      "byteLength": 6689732,
-      "documentCount": 648,
-      "sha256": "fee39e58171d5473656782e9f6f1a13b0bd9f6dea25872ec67e09e3d4d27172a"
+      "byteLength": 6518620,
+      "documentCount": 646,
+      "sha256": "fa0653717e1d2c95c58e1dec7d80fd8bb22f6a23701226d64b325e3a561141c1"
     }
   ],
-  "outputDigest": "222bf9ed8b403a83b8eaab23de98403e49c69526071ced391e43dfe25dcb47bc",
+  "outputDigest": "6abf8501de58a0d072280c87082661eafe329de0538b4235932f3ce00fffa20e",
   "notes": [
     "Docker tracks the latest main-branch commit because docker/docs does not publish current releases.",
     "Hugo content and vendored Markdown mounts are normalized without executing Hugo; includes and documentation shortcodes are expanded into plain Markdown.",

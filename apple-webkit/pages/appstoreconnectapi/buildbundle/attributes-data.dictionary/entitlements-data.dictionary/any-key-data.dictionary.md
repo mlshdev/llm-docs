@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/buildbundle/attributes-data.dictionary/entitlements-data.dictionary/any-key-data.dictionary
 
 # BuildBundle.Attributes.Entitlements.Any Key

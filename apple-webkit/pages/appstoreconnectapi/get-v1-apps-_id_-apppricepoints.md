@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-apps-_id_-apppricepoints
 
 # List All Price Points for an App
@@ -37,7 +37,7 @@ GET https://api.appstoreconnect.apple.com/v1/apps/{id}/appPricePoints
 
 ## Response Codes
 
-- `200` OK — `AppPricePointsV3Response`:
+- `200` OK — `csv`:
 - `400` Bad Request — `ErrorResponse`:
 - `401` Unauthorized — `ErrorResponse`:
 - `403` Forbidden — `ErrorResponse`:

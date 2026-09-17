@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/choosing/reserved-instances.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/instances/choosing/reserved-instances.mdx)
+> Pinned source for Vast.ai main: [guides/instances/choosing/reserved-instances.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/instances/choosing/reserved-instances.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/choosing/reserved-instances
 
 # Reserved Instances
@@ -31,15 +31,15 @@ You can **convert an on-demand instance into a reserved instance** with a lower 
 1. Go to the [**Instances**](https://cloud.vast.ai/instances/) page.
 2. On your instance card, find the **green** **discount badge**.
 
-   ![Save badge](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/instances-reserved.webp)
+   ![Save badge](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/instances-reserved.webp)
 3. Click the badge, a new window will open with the **available pre-paid periods** (e.g., 1 month, 3 months, 6 months).
 
-   ![Reserved Discount](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/instances-reserved-2.webp)
+   ![Reserved Discount](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/instances-reserved-2.webp)
 4. Select your preferred period and confirm. The system calculates deposit and discount automatically.
 
 Your instance is now reserved at the discounted rate. When an instance is converted to a reserved instance, you will see **Saved %** badge on the instance card to indicate the reserved discount is active.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/instances-reserved-3.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/instances-reserved-3.webp)
 
 1. **Add credits** to your account (if needed).
 2. Create an instance, get the instance id. CLI:`vastai show instances`
@@ -100,11 +100,11 @@ You can check the reserved price before committing:
 1. Go to the **Search** page.
 2. Switch the **On-demand** filter to the **Reserved** filter.
 
-   ![Reserved Filter](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/instances-reserved-5.webp)
+   ![Reserved Filter](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/instances-reserved-5.webp)
 3. Set the **duration filter** (e.g., 1 month), if needed.
 4. Hover over the **Rent** button, you'll see a breakdown, including a **Reserved cost** section.
 
-   ![Price](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/instances-reserved-6.webp)
+   ![Price](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/instances-reserved-6.webp)
 5. If you like the price, click **Rent** and follow the steps to convert it to a reserved instance.
 
 ## Common Questions
@@ -121,7 +121,7 @@ Yes, you can extend it anytime via the same discount badge in the Instances page
 
 You'll receive a partial refund of your unused pre-paid balance, minus the total discount received so far plus a 5% fee. The refund amount will be displayed in the delete instance modal and will also appear on the Billing page after you delete the instance.
 
-![image.png](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/image.png)
+![image.png](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/image.png)
 
 ### What happens if I stop a reserved instance?
 

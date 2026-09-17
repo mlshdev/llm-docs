@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [huggingface-tgi-with-llama3.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/huggingface-tgi-with-llama3.mdx)
+> Pinned source for Vast.ai main: [huggingface-tgi-with-llama3.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/huggingface-tgi-with-llama3.mdx)
 > Canonical documentation: https://docs.vast.ai/huggingface-tgi-with-llama3
 
 # Huggingface TGI with LLama3
@@ -23,7 +23,7 @@ The template comes with some filters that are minimum requirements for TGI to ru
 
 After selecting the template your screen should look like this:
 
-![Select](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/Select.png)
+![Select](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/Select.png)
 
 ## 2) Modifying the Template
 
@@ -33,7 +33,7 @@ Once you have selected the template, you will need to then add in your huggingfa
 
 You can add your huggingface token with the rest of the docker run options.
 
-![Edithf](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/huggingface-tgi-with-llama3-edithf.webp)
+![Edithf](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/huggingface-tgi-with-llama3-edithf.webp)
 
 This is the only modification you will need to make on this template.
 
@@ -45,7 +45,7 @@ Once you have selected the template, you can then choose to rent a GPU of your c
 
 For someone just getting started I recommend either an Nvidia RTX 4090, or an A5000.
 
-![Rent](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/huggingface-tgi-with-llama3-rent.webp)
+![Rent](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/huggingface-tgi-with-llama3-rent.webp)
 
 ## 4) Monitor Your Instance
 
@@ -53,17 +53,17 @@ Once you rent a GPU your instance will being spinning up on the Instances page.
 
 You know the API will be ready when your instance looks like this:
 
-![Llama3Tgiinstances](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/huggingface-tgi-with-llama3-llama3tgiinstances.webp)
+![Llama3Tgiinstances](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/huggingface-tgi-with-llama3-llama3tgiinstances.webp)
 
 Once your instance is ready you will need to find where your API is exposed. Go to the IP & Config by pressing the blue button on the top of the instance card. You can see the networking configuration here.
 
-![Llama3Ip](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/huggingface-tgi-with-llama3-llama3ip.webp)
+![Llama3Ip](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/huggingface-tgi-with-llama3-llama3ip.webp)
 
 After opening the IP & Port Config you should see a forwarded port from 5001, this is where your API resides. To hit TGI you can use the '/generate' endpoint on that port.
 
 Here is an example:
 
-![Llama3Tgipostman](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/huggingface-tgi-with-llama3-llama3tgipostman.webp)
+![Llama3Tgipostman](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/huggingface-tgi-with-llama3-llama3tgipostman.webp)
 
 ## 5) Congratulations!
 

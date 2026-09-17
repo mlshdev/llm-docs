@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/provisioning/scim/provision-scim.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/security/provisioning/scim/provision-scim.md)
+> Pinned source for Docker main: [content/manuals/security/provisioning/scim/provision-scim.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/security/provisioning/scim/provision-scim.md)
 
 # Set up SCIM provisioning
 
@@ -25,7 +25,7 @@ Docker supports the following SCIM attributes:
 | `active`          | Indicates if a user is enabled or disabled, set to "false" to de-provision a user |
 
 For additional details about supported attributes and SCIM, see
-[Docker Hub API SCIM reference](https://docs.docker.com/reference/api/hub/latest/#tag/scim).
+[Docker Hub API SCIM reference](https://docs.docker.com/reference/api/hub/latest/#tag-scim).
 
 > \[!IMPORTANT]
 >

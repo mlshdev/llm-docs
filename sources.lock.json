@@ -23,10 +23,10 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4",
-      "sourceCommittedAt": "2026-09-16T17:12:06Z",
-      "observedCommit": "aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4",
-      "documentationDigest": "2cbc5c7b68266b15124ef73dd3bf06b58cc7c9a9639e53e6ab32faad07711441"
+      "sourceCommit": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "sourceCommittedAt": "2026-09-17T16:04:43Z",
+      "observedCommit": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "documentationDigest": "b79df828dd941b0b3dad7e1ccc5b254f73f93aab54a32664ae1acef9cdc2509f"
     },
     "container": {
       "tag": "1.4.1",
@@ -87,10 +87,10 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "9cf34b031f489dcecad5c579d0a22a956918cf36",
-      "sourceCommittedAt": "2026-07-16T17:26:50Z",
-      "observedCommit": "9cf34b031f489dcecad5c579d0a22a956918cf36",
-      "documentationDigest": "22ce0cf4daace89bb3764c68d8d4dd39b57fcffed7911aa83e9de0dc332b9661"
+      "sourceCommit": "a79a84a9fe02999169ac9ff40f06c5d5aa823b96",
+      "sourceCommittedAt": "2026-09-17T14:02:06Z",
+      "observedCommit": "a79a84a9fe02999169ac9ff40f06c5d5aa823b96",
+      "documentationDigest": "a09bf6b1de5fece0b4b25b416c7f9ad5c6e27b6d3f6be68a688f36105e8a2a97"
     },
     "yt-dlp": {
       "tag": "2026.08.19",
@@ -104,7 +104,7 @@
       "sourceCommit": "d4ce87c23431f607162fc5c39ce52c538d64588f",
       "sourceCommittedAt": "2026-09-12T18:29:15Z",
       "documentationDigest": "ae2c8c30c6354eb9063067784b1f30ee0b11fea851fe3fa7285fa36a31eb96e6",
-      "observedCommit": "461f174b09fc151f49257aa5206417aca8930efa"
+      "observedCommit": "274b63b677abe1dad8c7f8284a90a365b9f16658"
     },
     "bun": {
       "tag": "bun-v1.4.2",
@@ -113,10 +113,10 @@
       "sourceCommit": "744846f844374847c902b5e7fd59b4342a51ef99"
     },
     "trigger-dev": {
-      "tag": "v4.6.1",
-      "releaseId": 389281977,
-      "releasePublishedAt": "2026-09-15T15:55:44Z",
-      "sourceCommit": "4132259b9da38c0131570ab7561fca8e016162df"
+      "tag": "v4.6.3",
+      "releaseId": 390655698,
+      "releasePublishedAt": "2026-09-17T11:27:28Z",
+      "sourceCommit": "2d03fee2e3ff368128302ed4c783ba4e32d1cb00"
     },
     "aria2": {
       "tag": "release-1.37.0",
@@ -132,18 +132,18 @@
     "vastai": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "efed71d49da6451aeb4f9be763c284bb555cd206",
-      "sourceCommittedAt": "2026-09-15T23:40:24Z",
-      "observedCommit": "efed71d49da6451aeb4f9be763c284bb555cd206",
-      "documentationDigest": "7638895b8d255b30bb816dec6990ae5ab2d7e4ddb231aa0ae6bcf65b9c9f4561"
+      "sourceCommit": "b8a3a45b02508573367fc8479ce3a9206139e2a8",
+      "sourceCommittedAt": "2026-09-16T22:20:19Z",
+      "observedCommit": "b8a3a45b02508573367fc8479ce3a9206139e2a8",
+      "documentationDigest": "6eb7965dbd69ae3ed98ea4f468d6bc7206dbd2a58e7ae2090a623a1dd94c27dd"
     },
     "runpod": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "1ac8c64f9623ca776ec994c36b22d4329facbb1d",
-      "sourceCommittedAt": "2026-09-15T23:17:59Z",
-      "observedCommit": "1ac8c64f9623ca776ec994c36b22d4329facbb1d",
-      "documentationDigest": "1c79622042731763d2a12902c45b5832c89ca73287dd14482f52d9fb94aa0315"
+      "sourceCommit": "fa4985146919262a6e9cdb946c50eec1ed81ffc9",
+      "sourceCommittedAt": "2026-09-17T16:17:54Z",
+      "observedCommit": "fa4985146919262a6e9cdb946c50eec1ed81ffc9",
+      "documentationDigest": "b61e3836ee69f194a7ca73d3f557358362eec6b08006ebe45105cfbdfb2c5362"
     },
     "discord-py-self": {
       "tag": "v2.1.0",
@@ -169,10 +169,10 @@
       "contentDigest": "af6870304bfe66f126acaccc9d5b2922f7e585e382e3bcd46dff2e79583a42cb"
     },
     "apple-webkit": {
-      "tag": "snapshot-f54edb363a08",
-      "snapshotDigest": "f54edb363a083e89fbb57583763fb82cc6f82b664cabb36a74bc0b6812e025c6",
-      "capturedAt": "2026-09-16T18:21:42.106Z",
-      "contentDigest": "bfe64edc2dc1f17ae82411b196f0116d1792fb859c52f04313168761d0296804"
+      "tag": "snapshot-a0a4b8d281c3",
+      "snapshotDigest": "a0a4b8d281c3f7aea28b686494365f12c4270621bbf6d43cdea12ffe295fbfab",
+      "capturedAt": "2026-09-17T18:22:51.558Z",
+      "contentDigest": "734bf10815a2acca72e71faa3a510eace5521c5201527ea636458dac7a773b04"
     },
     "apple-xcode": {
       "tag": "snapshot-ef15f2517b3c",

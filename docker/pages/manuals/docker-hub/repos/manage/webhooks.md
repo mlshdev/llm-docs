@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/webhooks.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/docker-hub/repos/manage/webhooks.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/webhooks.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/docker-hub/repos/manage/webhooks.md)
 
 # Webhooks
 
@@ -75,3 +75,8 @@ Webhook payloads have the following JSON format:
 > \[!NOTE]
 >
 > The `callback_url` field is a legacy field and is no longer supported.
+
+Webhooks on a mirrored [Docker Hardened Image](https://docs.docker.com/dhi/) repository include an
+additional `dhi_metadata` object describing the vulnerability and package
+changes in the pushed build. For details, see [Automate syncing with
+webhooks](https://docs.docker.com/dhi/how-to/mirror/#automate-syncing-with-webhooks).

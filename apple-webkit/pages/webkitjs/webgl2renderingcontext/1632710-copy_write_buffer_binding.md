@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1632710-copy_write_buffer_binding
 
 # COPY_WRITE_BUFFER_BINDING

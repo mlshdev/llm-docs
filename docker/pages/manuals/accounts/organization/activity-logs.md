@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/activity-logs.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/accounts/organization/activity-logs.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/activity-logs.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/accounts/organization/activity-logs.md)
 
 # Activity logs
 
@@ -32,7 +32,7 @@ To view activity logs in Docker Home:
 
 **API**
 
-To view activity logs using the Docker Hub API, use the [Audit logs endpoints](https://docs.docker.com/reference/api/hub/latest/#tag/audit-logs).
+To view activity logs using the Docker Hub API, use the [Audit logs endpoints](https://docs.docker.com/reference/api/hub/latest/#tag-audit-logs).
 
 ## Filter and customize activity logs
 
@@ -40,7 +40,7 @@ To view activity logs using the Docker Hub API, use the [Audit logs endpoints](h
 >
 > Docker Home retains activity logs for 30 days. To retrieve
 > activities beyond 30 days, you must use the
-> [Docker Hub API](https://docs.docker.com/reference/api/hub/latest/#tag/audit-logs).
+> [Docker Hub API](https://docs.docker.com/reference/api/hub/latest/#tag-audit-logs).
 
 By default, the **Activity** tab displays all recorded events within
 the last 30 days. To narrow your view, use the calendar to select a specific

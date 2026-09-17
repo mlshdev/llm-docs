@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/list-serverless-endpoint-releases.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/serverless/list-serverless-endpoint-releases.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/list-serverless-endpoint-releases.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/serverless/list-serverless-endpoint-releases.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/list-serverless-endpoint-releases
 
 # List Serverless Endpoint Releases
@@ -15,12 +15,20 @@ release is a versioned configuration snapshot with a `diff` of what
 changed; build-driven releases carry a `buildId` (fetch build detail via
 the builds sub-routes).
 
+Releases are cursor-paginated newest-first; an omitted `limit`
+defaults to 1000. The rollout summary always describes the endpoint's
+current state, independent of the page requested.
+
 **Authentication:** `bearerAuth`
 
 **Parameters**
 
 - `id` (path; required; string): Serverless endpoint identifier
   - Example: `ep_abc123`
+- `cursor` (query; string; minimum length: `1`): Opaque resume cursor — pass the previous response's `pagination.nextCursor` through verbatim; omit for the first page. A cursor is only valid for the operation and parameters that issued it; a malformed or foreign cursor is rejected with 422.
+  - Example: `Y3JlYXRlZEF0PTE3NDg3ODA0MDA`
+- `limit` (query; integer; minimum: `1`; maximum: `1000`): Page size, 1–1000. Defaults to 1000 when omitted.
+  - Example: `50`
 
 **Responses**
 
@@ -49,7 +57,10 @@ the builds sub-routes).
               - `field` (required; string): The changed configuration field. Top-level (e.g. `gpuCount`, `locations`) or template-scoped (e.g. `template.imageName`, `template.env`).
               - `old` (required): Previous value, as raw JSON. Null when the field was added.
               - `new` (required): New value, as raw JSON. Null when the field was removed.
-    - Example `releases`: `{"endpointVersion":4,"rollout":{"inProgress":true,"workersOnLatest":1,"workersTotal":2,"percentOnLatest":50},"releases":[{"id":"5r9x2m7q","version":4,"source":"MANUAL","buildId":null,"createdByUserId":null,"workerCount":2,"createdAt":"2026-06-01T12:10:00Z","diff":[{"field":"workers.max","old":5,"new":10}]}]}`
+      - `pagination` (required; object): Cursor-pagination metadata, uniform across list endpoints. Every response carries it: follow `nextCursor` while `hasNextPage` is true to walk the full result set.
+        - `nextCursor` (required; nullable): Pass as the `cursor` query parameter to fetch the next page. Null on the last page.
+        - `hasNextPage` (required; boolean): Whether more items exist after this page.
+    - Example `releases`: `{"endpointVersion":4,"rollout":{"inProgress":true,"workersOnLatest":1,"workersTotal":2,"percentOnLatest":50},"releases":[{"id":"5r9x2m7q","version":4,"source":"MANUAL","buildId":null,"createdByUserId":null,"workerCount":2,"createdAt":"2026-06-01T12:10:00Z","diff":[{"field":"workers.max","old":5,"new":10}]}],"pagination":{"nextCursor":null,"hasNextPage":false}}`
 - `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
   - Media type: `application/problem+json`
     - Schema (object)

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/gordon/_index.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/ai/gordon/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/gordon/_index.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/ai/gordon/_index.md)
 
 # Gordon
 
@@ -74,7 +74,7 @@ Before you begin:
 3. Select your project directory.
 4. Type a question: "What containers are running?"
 
-![Gordon running in Docker Desktop](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/ai/gordon/images/gordon_gui.avif)
+![Gordon running in Docker Desktop](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/ai/gordon/images/gordon_gui.avif)
 
 5. Review Gordon's proposed actions and approve.
 
@@ -90,7 +90,7 @@ Before you begin:
 
 2. Type a question: "what containers are running?" and press <kbd>Enter</kbd>.
 
-![Gordon running in the terminal](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/ai/gordon/images/gordon_tui.avif)
+![Gordon running in the terminal](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/ai/gordon/images/gordon_tui.avif)
 
 3. Review Gordon's proposed actions and approve by typing `y`.
 
@@ -99,7 +99,7 @@ Before you begin:
 By default, Gordon asks for approval before executing actions. You can approve
 individual actions or allow all actions for the current session.
 
-![Gordon permission request](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/ai/gordon/images/gordon_permissions_prompt.avif)
+![Gordon permission request](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/ai/gordon/images/gordon_permissions_prompt.avif)
 
 Permissions reset for each session. To configure default permissions or enable
 auto-approve mode, see [Permissions](https://docs.docker.com/ai/gordon/how-to/permissions/).

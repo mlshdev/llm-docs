@@ -1,8 +1,8 @@
-# Trigger.dev v4.6.1
+# Trigger.dev v4.6.3
 
-> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `4132259b9da38c0131570ab7561fca8e016162df`.
+> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `2d03fee2e3ff368128302ed4c783ba4e32d1cb00`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.6.1.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.6.3.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow the navigation declared in docs/docs.json at the immutable release tag; snippets are inlined into the pages that import them rather than published separately.
 - API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.
@@ -67,7 +67,7 @@
 - [Migrate from an AI SDK route handler](pages/ai-chat/migrating-from-a-route-handler.md): Move an existing useChat + streamText chat app to chat.agent — what stays identical, what you delete, and a prompt you can hand to a coding agent. (33833 bytes)
 - [Anatomy of an agent](pages/ai-chat/anatomy.md): The three parts of a chat agent — the agent task that runs the turn loop, the durable session that carries messages, and the frontend transport — what each does and where it's documented. (4793 bytes)
 - [Backend](pages/ai-chat/backend.md): Three approaches to building your chat backend — chat.agent(), session iterator, or raw task primitives. (43034 bytes)
-- [Lifecycle hooks](pages/ai-chat/lifecycle-hooks.md): Hook into every stage of a chat agent's run: preload, turn start, turn complete, suspend, resume, and more. (42081 bytes)
+- [Lifecycle hooks](pages/ai-chat/lifecycle-hooks.md): Hook into every stage of a chat agent's run: preload, turn start, turn complete, suspend, resume, and more. (42401 bytes)
 - [Tools](pages/ai-chat/tools.md): Declare tools on chat.agent so toModelOutput survives across turns, get them back typed in run(), and type your messages from them. (10766 bytes)
 - [Frontend](pages/ai-chat/frontend.md): Transport setup, session management, client data, and frontend patterns for AI Chat. (29186 bytes)
 - [Server-Side Chat](pages/ai-chat/server-chat.md): Use AgentChat to interact with chat agents from server-side code — tasks, webhooks, scripts, or other agents. (13037 bytes)
@@ -102,7 +102,7 @@
 - [Recovery boot](pages/ai-chat/patterns/recovery-boot.md): Recover from cancel-mid-stream, crashes, and OOM kills with full conversational context. The smart default Just Works; the onRecoveryBoot hook is the override path for advanced policies. (11689 bytes)
 - [Trusted edge signals](pages/ai-chat/patterns/trusted-edge-signals.md): How to safely deliver server-trusted signals (bot scores, JA4, ASN, ReCAPTCHA verdicts) to a chat.agent run via an edge proxy. (15855 bytes)
 - [Native compaction & provider fallback](pages/ai-chat/patterns/native-compaction.md): Persist provider-native compaction (Anthropic context editing, OpenAI stored responses) across chat.agent turns so history is never re-sent, and fall back between providers without losing the conversation. (15385 bytes)
-- [API Reference](pages/ai-chat/reference.md): Complete API reference for the AI Agents SDK — backend options, events, frontend transport, and hooks. (137986 bytes)
+- [API Reference](pages/ai-chat/reference.md): Complete API reference for the AI Agents SDK — backend options, events, frontend transport, and hooks. (138326 bytes)
 - [Client Protocol](pages/ai-chat/client-protocol.md): The wire protocol for building custom chat transports — how clients communicate with chat agents over Sessions and SSE. (76362 bytes)
 - [Testing](pages/ai-chat/testing.md): Drive a chat.agent through real turns in unit tests — no network, no task runtime, no mocking the SDK. (32125 bytes)
 - [MCP Server](pages/ai-chat/mcp.md): Chat with your agents from any AI coding tool using the Trigger.dev MCP server. (4246 bytes)

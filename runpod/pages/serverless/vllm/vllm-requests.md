@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/vllm/vllm-requests.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/serverless/vllm/vllm-requests.mdx)
+> Pinned source for Runpod main: [serverless/vllm/vllm-requests.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/serverless/vllm/vllm-requests.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/vllm/vllm-requests
 
 # Send requests to vLLM workers

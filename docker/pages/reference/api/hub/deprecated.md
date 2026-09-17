@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/api/hub/deprecated.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/reference/api/hub/deprecated.md)
+> Pinned source for Docker main: [content/reference/api/hub/deprecated.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/reference/api/hub/deprecated.md)
 
 # Deprecated Docker Hub API endpoints
 
@@ -33,15 +33,15 @@ The endpoint may be removed, disabled, or change behavior in a future release.
 
 Deprecate undocumented endpoints :
 
-- `POST /v2/repositories` and `POST /v2/repositories/{namespace}` replaced by [Create repository](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/CreateRepository).
-- `GET /v2/repositories/{namespace}/{repository}` replaced by [Get repository](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/GetRepository).
-- `HEAD /v2/repositories/{namespace}/{repository}` replaced by [Check repository](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/CheckRepository).
+- `POST /v2/repositories` and `POST /v2/repositories/{namespace}` replaced by [Create repository](https://docs.docker.com/reference/api/hub/latest/operations/CreateRepository/).
+- `GET /v2/repositories/{namespace}/{repository}` replaced by [Get repository](https://docs.docker.com/reference/api/hub/latest/operations/GetRepository/).
+- `HEAD /v2/repositories/{namespace}/{repository}` replaced by [Check repository](https://docs.docker.com/reference/api/hub/latest/operations/CheckRepository/).
 
 ***
 
 ### Deprecate legacy ListNamespaceRepositories
 
-Deprecate undocumented endpoint `GET /v2/repositories/{namespace}` replaced by [List repositories](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/listNamespaceRepositories).
+Deprecate undocumented endpoint `GET /v2/repositories/{namespace}` replaced by [List repositories](https://docs.docker.com/reference/api/hub/latest/operations/listNamespaceRepositories/).
 
 ***
 
@@ -66,11 +66,11 @@ The following API routes within the v1 path will no longer work and will return 
 
 If you want to continue using the Docker Hub API in your current applications, update your clients to use v2 endpoints.
 
-| **OLD**                                                                                                                                                               | **NEW**                                                                                                                                                          |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [/v1/repositories/{name}/tags](https://github.com/moby/moby/blob/v1.8.3/docs/reference/api/registry_api.md#list-repository-tags)                                      | [/v2/namespaces/{namespace}/repositories/{repository}/tags](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/ListRepositoryTags)     |
-| [/v1/repositories/{namespace}/{name}/tags](https://github.com/moby/moby/blob/v1.8.3/docs/reference/api/registry_api.md#list-repository-tags)                          | [/v2/namespaces/{namespace}/repositories/{repository}/tags](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/ListRepositoryTags)     |
-| [/v1/repositories/{namespace}/{name}/tags](https://github.com/moby/moby/blob/v1.8.3/docs/reference/api/registry_api.md#get-image-id-for-a-particular-tag)             | [/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/GetRepositoryTag) |
-| [/v1/repositories/{namespace}/{name}/tags/{tag\_name}](https://github.com/moby/moby/blob/v1.8.3/docs/reference/api/registry_api.md#get-image-id-for-a-particular-tag) | [/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/GetRepositoryTag) |
+| **OLD**                                                                                                                                                               | **NEW**                                                                                                                                          |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [/v1/repositories/{name}/tags](https://github.com/moby/moby/blob/v1.8.3/docs/reference/api/registry_api.md#list-repository-tags)                                      | [/v2/namespaces/{namespace}/repositories/{repository}/tags](https://docs.docker.com/reference/api/hub/latest/operations/ListRepositoryTags/)     |
+| [/v1/repositories/{namespace}/{name}/tags](https://github.com/moby/moby/blob/v1.8.3/docs/reference/api/registry_api.md#list-repository-tags)                          | [/v2/namespaces/{namespace}/repositories/{repository}/tags](https://docs.docker.com/reference/api/hub/latest/operations/ListRepositoryTags/)     |
+| [/v1/repositories/{namespace}/{name}/tags](https://github.com/moby/moby/blob/v1.8.3/docs/reference/api/registry_api.md#get-image-id-for-a-particular-tag)             | [/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}](https://docs.docker.com/reference/api/hub/latest/operations/GetRepositoryTag/) |
+| [/v1/repositories/{namespace}/{name}/tags/{tag\_name}](https://github.com/moby/moby/blob/v1.8.3/docs/reference/api/registry_api.md#get-image-id-for-a-particular-tag) | [/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}](https://docs.docker.com/reference/api/hub/latest/operations/GetRepositoryTag/) |
 
 ***

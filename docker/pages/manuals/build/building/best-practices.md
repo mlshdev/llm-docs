@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/building/best-practices.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/build/building/best-practices.md)
+> Pinned source for Docker main: [content/manuals/build/building/best-practices.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/build/building/best-practices.md)
 
 ## Use multi-stage builds
 
@@ -46,7 +46,7 @@ it small.
 When you pick your base image, look out for the badges indicating that the
 image is part of these programs.
 
-![Docker Hub Official and Verified Publisher images](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/build/images/hub-official-images.webp)
+![Docker Hub Official and Verified Publisher images](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/build/images/hub-official-images.webp)
 
 When building your own image from a Dockerfile, ensure you choose a minimal base
 image that matches your requirements. A smaller base image not only offers

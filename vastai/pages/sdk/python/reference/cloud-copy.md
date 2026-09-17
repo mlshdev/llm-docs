@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [sdk/python/reference/cloud-copy.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/sdk/python/reference/cloud-copy.mdx)
+> Pinned source for Vast.ai main: [sdk/python/reference/cloud-copy.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/sdk/python/reference/cloud-copy.mdx)
 > Canonical documentation: https://docs.vast.ai/sdk/python/reference/cloud-copy
 
 # VastAI.cloud_copy

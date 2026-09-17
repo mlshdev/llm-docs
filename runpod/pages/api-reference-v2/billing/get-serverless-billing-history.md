@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/billing/get-serverless-billing-history.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/billing/get-serverless-billing-history.mdx)
+> Pinned source for Runpod main: [api-reference-v2/billing/get-serverless-billing-history.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/billing/get-serverless-billing-history.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/billing/get-serverless-billing-history
 
 # Get Serverless Billing History
@@ -9,7 +9,7 @@ Retrieve time-bucketed billing history for one or all Runpod Serverless endpoint
 
 **Get serverless billing history**
 
-Returns serverless endpoint billing detail for the authenticated user, split into time buckets by startTime/endTime with bucketSize or by lastN recent buckets. Use serverlessId to filter to one endpoint; without it, records are emitted per serverless endpoint per bucket. Each record reports endpoint-level GPU, CPU, disk, platform fee, and total amounts. This is distinct from pod billing, which covers standalone GPU and CPU pod costs rather than serverless endpoint workloads.
+Returns serverless endpoint billing detail for the authenticated user, split into time buckets by startTime/endTime with bucketSize or by lastN recent buckets. Use serverlessId to filter to one endpoint; without it, records are emitted per serverless endpoint per bucket. Each record reports endpoint-level GPU, CPU, disk, and total amounts. This is distinct from pod billing, which covers standalone GPU and CPU pod costs rather than serverless endpoint workloads.
 
 **Authentication:** `bearerAuth`
 
@@ -38,12 +38,12 @@ Returns serverless endpoint billing detail for the authenticated user, split int
             - `variant 1` (object): Half-open time range \[startTime, endTime) in RFC 3339. On a record it is the time bucket; on a query echo it is the resolved window.
               - `startTime` (required; string; format: date-time): Start of the range, inclusive (RFC 3339).
               - `endTime` (required; string; format: date-time): End of the range, exclusive (RFC 3339).
-            - `variant 2` (object): Serverless cost components. Backs a record's amounts and the metadata totals.
+            - `variant 2` (object): Serverless cost components, inclusive of platform charges. Backs a record's amounts and the metadata totals.
               - `totalAmount` (required; number; format: double): Total serverless cost in USD for the bucket.
               - `gpuAmount` (required; number; format: double): Serverless GPU compute cost in USD for the bucket.
               - `cpuAmount` (required; number; format: double): Serverless CPU compute cost in USD for the bucket.
               - `diskAmount` (required; number; format: double): Serverless disk cost in USD for the bucket.
-              - `feeAmount` (required; number; format: double): Serverless platform fee in USD for the bucket.
+              - `feeAmount` (required; number; format: double): Unused and always 0. Platform charges are included in the GPU and CPU amounts.
             - `variant 3` (object)
               - `serverlessId` (required; string): The serverless endpoint this record bills. When the serverlessId filter is set every record carries that id; otherwise one record is emitted per serverless endpoint per bucket.
       - `metadata` (required; object)
@@ -60,13 +60,13 @@ Returns serverless endpoint billing detail for the authenticated user, split int
               - `serverlessId` (nullable): The serverlessId filter applied, if any.
         - `recordCount` (required; integer): Number of records returned (buckets times distinct endpoints).
         - `uniqueServerlessCount` (required; integer): Number of distinct serverless endpoints the records span.
-        - `totals` (required; object): Serverless cost components. Backs a record's amounts and the metadata totals.
+        - `totals` (required; object): Serverless cost components, inclusive of platform charges. Backs a record's amounts and the metadata totals.
           - `totalAmount` (required; number; format: double): Total serverless cost in USD for the bucket.
           - `gpuAmount` (required; number; format: double): Serverless GPU compute cost in USD for the bucket.
           - `cpuAmount` (required; number; format: double): Serverless CPU compute cost in USD for the bucket.
           - `diskAmount` (required; number; format: double): Serverless disk cost in USD for the bucket.
-          - `feeAmount` (required; number; format: double): Serverless platform fee in USD for the bucket.
-    - Example `serverlessBilling`: `{"records":[{"startTime":"2026-06-01T00:00:00Z","endTime":"2026-06-02T00:00:00Z","serverlessId":"4m7x2k9q","totalAmount":8.9,"gpuAmount":7.5,"cpuAmount":0,"diskAmount":0.4,"feeAmount":1}],"metadata":{"query":{"startTime":"2026-06-01T00:00:00Z","endTime":"2026-06-02T00:00:00Z","bucketSize":"day","serverlessId":"4m7x2k9q"},"recordCount":1,"totals":{"totalAmount":8.9,"gpuAmount":7.5,"cpuAmount":0,"diskAmount":0.4,"feeAmount":1},"uniqueServerlessCount":1}}`
+          - `feeAmount` (required; number; format: double): Unused and always 0. Platform charges are included in the GPU and CPU amounts.
+    - Example `serverlessBilling`: `{"records":[{"startTime":"2026-06-01T00:00:00Z","endTime":"2026-06-02T00:00:00Z","serverlessId":"4m7x2k9q","totalAmount":8.9,"gpuAmount":8.5,"cpuAmount":0,"diskAmount":0.4,"feeAmount":0}],"metadata":{"query":{"startTime":"2026-06-01T00:00:00Z","endTime":"2026-06-02T00:00:00Z","bucketSize":"day","serverlessId":"4m7x2k9q"},"recordCount":1,"totals":{"totalAmount":8.9,"gpuAmount":8.5,"cpuAmount":0,"diskAmount":0.4,"feeAmount":0},"uniqueServerlessCount":1}}`
 - `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
   - Media type: `application/problem+json`
     - Schema (object)

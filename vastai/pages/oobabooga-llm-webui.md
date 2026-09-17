@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [oobabooga-llm-webui.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/oobabooga-llm-webui.mdx)
+> Pinned source for Vast.ai main: [oobabooga-llm-webui.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/oobabooga-llm-webui.mdx)
 > Canonical documentation: https://docs.vast.ai/oobabooga-llm-webui
 
 # Oobabooga (LLM webui)
@@ -21,7 +21,7 @@ Go to the [Templates tab](https://cloud.vast.ai/templates/) and search for "Ooba
 
 The default storage amount will not be enough for downloading an LLM. Use the slider under the Instance Configuration to allocate more storage. 100GB should be enough.
 
-![Ooobaboogasize](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-text-generation-oobabooga.png)
+![Ooobaboogasize](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-text-generation-oobabooga.png)
 
 ## 4) Pick a GPU offer
 
@@ -29,7 +29,7 @@ You will need to understand how much GPU RAM the LLM requires before you pick a 
 
 For this guide, we will load the Falcon 40B Instruct model on a 2X A6000 instance, which has 96GB of GPU RAM in total.
 
-![Oobaboogasearch](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-text-generation-oobabooga-2.png)
+![Oobaboogasearch](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-text-generation-oobabooga-2.png)
 
 Click on the RENT button to start the instance which will download the docker container and boot up.
 
@@ -45,7 +45,7 @@ Click on the Model tab in the interface. Enter the Hugging Face username/model p
 
 The download will take 15-20 minutes depending on the machine's internet connection.
 
-![Oob Downloading](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-text-generation-oobabooga-3.png)
+![Oob Downloading](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-text-generation-oobabooga-3.png)
 
 To check the progress of the download, you can click on the log button on the Vast instance card on [cloud.vast.ai/instances/](https://cloud.vast.ai/instances/) which will show you the download speed for each of the LLM file segments.
 
@@ -53,7 +53,7 @@ To check the progress of the download, you can click on the log button on the Va
 
 If you are using multiple GPUs such as the 2X A6000 selected in this guide, you will need to move the memory slider all the way over for all the GPUs. You may also have to select the "trust-remote-code" option if you get that error. Once those items are fixed, you can reload the model.
 
-![Oob Model Load](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/use-cases-ai-text-generation-oobabooga-4.png)
+![Oob Model Load](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/use-cases-ai-text-generation-oobabooga-4.png)
 
 Any errrors loading the model will appear under the download button.
 

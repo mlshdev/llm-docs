@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/templates/list-templates.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/templates/list-templates.mdx)
+> Pinned source for Runpod main: [api-reference-v2/templates/list-templates.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/templates/list-templates.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/templates/list-templates
 
 # List Templates
@@ -9,9 +9,19 @@ List all reusable Runpod templates owned by the authenticated user, including Po
 
 **List templates**
 
-Returns all templates owned by the authenticated user.
+Returns templates owned by the authenticated user (including
+team/organization-scoped ones), cursor-paginated; an omitted `limit`
+defaults to 1000. Follow `pagination.nextCursor` until `hasNextPage`
+is false.
 
 **Authentication:** `bearerAuth`
+
+**Parameters**
+
+- `cursor` (query; string; minimum length: `1`): Opaque resume cursor — pass the previous response's `pagination.nextCursor` through verbatim; omit for the first page. A cursor is only valid for the operation and parameters that issued it; a malformed or foreign cursor is rejected with 422.
+  - Example: `Y3JlYXRlZEF0PTE3NDg3ODA0MDA`
+- `limit` (query; integer; minimum: `1`; maximum: `1000`): Page size, 1–1000. Defaults to 1000 when omitted.
+  - Example: `50`
 
 **Responses**
 
@@ -19,37 +29,47 @@ Returns all templates owned by the authenticated user.
   - Header `RateLimit` (string)
   - Header `RateLimit-Policy` (string)
   - Media type: `application/json`
-    - Schema (object)
-      - `templates` (required; array)
-        - `items`
-          - allOf:
-            - `variant 1`: Reusable container configuration shared across templates, pods, and serverless endpoints. Adding a field here automatically propagates to all three resources.
+    - Schema
+      - allOf:
+        - `variant 1` (object): A bare list of templates. `GET /v2/catalog/templates` returns it as-is (the catalog is a capped, curated set); `GET /v2/templates` composes it with the pagination block via ListTemplatesResponse.
+          - `templates` (required; array)
+            - `items`
               - allOf:
-                - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support private registries (clusters, until the upstream input accepts a registry credential).
-                  - `args` (string): Arguments passed to the container entrypoint
-                  - `disk` (integer; minimum: `1`): Container disk in GB (ephemeral, wiped on restart)
-                  - `env` (object): Environment variables as key-value pairs
-                    - `additional properties` (string)
-                  - `image` (string): Docker image reference
-                  - `ports` (array): Exposed ports, formatted as port/protocol
-                    - `items` (string)
+                - `variant 1`: Reusable container configuration shared across templates, pods, and serverless endpoints. Adding a field here automatically propagates to all three resources.
+                  - allOf:
+                    - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support a direct registry credential (clusters — there the registry credential arrives via a pod template, see CreateClusterRequest.templateId).
+                      - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
+                      - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+                        - `items` (string)
+                      - `entrypoint` (array): Container ENTRYPOINT in exec form, overriding the image's own. Encoded into `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+                        - `items` (string)
+                      - `disk` (integer; minimum: `1`): Container disk in GB (ephemeral, wiped on restart)
+                      - `env` (object): Environment variables as key-value pairs
+                        - `additional properties` (string)
+                      - `image` (string): Docker image reference
+                      - `ports` (array): Exposed ports, formatted as port/protocol
+                        - `items` (string)
+                    - `variant 2` (object)
+                      - `registry` (nullable): Container registry credential ID (for private images)
                 - `variant 2` (object)
-                  - `registry` (nullable): Container registry credential ID (for private images)
-            - `variant 2` (object)
-              - `id` (required; string)
-              - `name` (required; string)
-              - `mounts` (required; object): Storage mounts attached to a template. Templates support only a single persistent mount today; any `network` property is rejected with 422 by the schema validator. PATCH semantics: omitting `mounts` or sending `{}` leaves the existing mount unchanged.
-                - `persistent` (object): Host-local persistent storage. Pinned to the pod's host machine — data does not survive a host failure. Disallowed on CPU pods. Mutually exclusive with NetworkMount. Deprecated: prefer NetworkMount for any data you cannot recreate.
-                  - `size` (required; integer; minimum: `10`): Host-local persistent storage in GB. Upstream enforces a 10 GB floor.
-                  - `path` (required; string): Mount path inside the container. May be changed via PATCH.
-              - `serverless` (required; boolean): Whether this template is for serverless workers (true) or pods (false)
-              - `public` (required; boolean): Whether this template is visible to other Runpod users
-              - `category` (required; string; enum: `CPU`, `NVIDIA`, `AMD`): Controls how the template is grouped and filtered in the Runpod console. It does not affect hardware selection, scheduling, or billing. - `CPU` — CPU-only workloads - `NVIDIA` — NVIDIA GPU workloads - `AMD` — AMD GPU workloads
-              - `startSsh` (required; boolean): Whether containers created from this template get SSH access provisioned at startup (`PUBLIC_KEY` env injection).
-              - `startJupyter` (required; boolean): Whether containers created from this template start JupyterLab at startup (`JUPYTER_PASSWORD` env injection).
-              - `allowedCudaVersions` (required; array): Acceptable CUDA versions for containers created from this template, as `major.minor`. Empty means any version. Expanded into GPU pod and serverless endpoint creates; CPU pods ignore it.
-                - `items` (string)
-    - Example `templates`: `{"templates":[{"id":"9x4m2p7v","name":"PyTorch GPU Template","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":50,"mounts":{"persistent":{"size":20,"path":"/workspace"}},"ports":["8888/http"],"env":{"JUPYTER_ENABLE_LAB":"yes"},"registry":null,"serverless":false,"public":false,"category":"NVIDIA","startSsh":true,"startJupyter":false,"allowedCudaVersions":[]}]}`
+                  - `id` (required; string)
+                  - `name` (required; string)
+                  - `mounts` (required; object): Storage mounts attached to a template. Templates support only a single persistent mount today; any `network` property is rejected with 422 by the schema validator. PATCH semantics: omitting `mounts` or sending `{}` leaves the existing mount unchanged.
+                    - `persistent` (object): Host-local persistent storage. Pinned to the pod's host machine — data does not survive a host failure. Disallowed on CPU pods. Mutually exclusive with NetworkMount. Deprecated: prefer NetworkMount for any data you cannot recreate.
+                      - `size` (required; integer; minimum: `10`): Host-local persistent storage in GB. Upstream enforces a 10 GB floor.
+                      - `path` (required; string): Mount path inside the container. May be changed via PATCH.
+                  - `serverless` (required; boolean): Whether this template is for serverless workers (true) or pods (false)
+                  - `public` (required; boolean): Whether this template is visible to other Runpod users
+                  - `category` (required; string; enum: `CPU`, `NVIDIA`, `AMD`): Controls how the template is grouped and filtered in the Runpod console. It does not affect hardware selection, scheduling, or billing. - `CPU` — CPU-only workloads - `NVIDIA` — NVIDIA GPU workloads - `AMD` — AMD GPU workloads
+                  - `startSsh` (required; boolean): Whether containers created from this template get SSH access provisioned at startup (`PUBLIC_KEY` env injection).
+                  - `startJupyter` (required; boolean): Whether containers created from this template start JupyterLab at startup (`JUPYTER_PASSWORD` env injection).
+                  - `allowedCudaVersions` (required; array): Acceptable CUDA versions for containers created from this template, as `major.minor`. Empty means any version. Expanded into GPU pod and serverless endpoint creates; CPU pods ignore it.
+                    - `items` (string)
+        - `variant 2` (object): Mixin for cursor-paginated list responses. Compose it with `allOf` next to the resource's bare list schema so that a list shape shared with a non-paginated endpoint (e.g. a cluster's member pods) does not inherit a pagination block it cannot honour.
+          - `pagination` (required; object): Cursor-pagination metadata, uniform across list endpoints. Every response carries it: follow `nextCursor` while `hasNextPage` is true to walk the full result set.
+            - `nextCursor` (required; nullable): Pass as the `cursor` query parameter to fetch the next page. Null on the last page.
+            - `hasNextPage` (required; boolean): Whether more items exist after this page.
+    - Example `templates`: `{"templates":[{"id":"9x4m2p7v","name":"PyTorch GPU Template","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":50,"mounts":{"persistent":{"size":20,"path":"/workspace"}},"ports":["8888/http"],"env":{"JUPYTER_ENABLE_LAB":"yes"},"registry":null,"serverless":false,"public":false,"category":"NVIDIA","startSsh":true,"startJupyter":false,"allowedCudaVersions":[]}],"pagination":{"nextCursor":null,"hasNextPage":false}}`
 - `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
   - Media type: `application/problem+json`
     - Schema (object)

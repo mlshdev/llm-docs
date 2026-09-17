@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/webkitjs/svgmarkerelement/1631050-svg_marker_orient_auto
 
 # SVG_MARKER_ORIENT_AUTO

@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `1ac8c64f9623ca776ec994c36b22d4329facbb1d`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `fa4985146919262a6e9cdb946c50eec1ed81ffc9`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -104,16 +104,16 @@
 - [Update an endpoint](pages/api-reference/endpoints/PATCH/endpoints/endpointId.md): PATCH /endpoints/{endpointId} (25454 bytes)
 - [Delete an endpoint](pages/api-reference/endpoints/DELETE/endpoints/endpointId.md): DELETE /endpoints/{endpointId} (444 bytes)
 - [Update an endpoint](pages/api-reference/endpoints/POST/endpoints/endpointId/update.md): POST /endpoints/{endpointId}/update (25466 bytes)
-- [List Serverless Endpoints](pages/api-reference-v2/serverless/list-serverless-endpoints.md): List all Runpod Serverless endpoints owned by the authenticated user, including compute, worker, scaling, and deployment settings. (14623 bytes)
-- [Create A Serverless Endpoint](pages/api-reference-v2/serverless/create-a-serverless-endpoint.md): Create a Runpod Serverless endpoint with GPU or CPU compute, container or template settings, worker limits, and scaling policies. (28471 bytes)
-- [Get A Serverless Endpoint](pages/api-reference-v2/serverless/get-a-serverless-endpoint.md): Retrieve a Runpod Serverless endpoint by ID with its compute, worker, scaling, container, storage, and current status settings. (14559 bytes)
+- [List Serverless Endpoints](pages/api-reference-v2/serverless/list-serverless-endpoints.md): List all Runpod Serverless endpoints owned by the authenticated user, including compute, worker, scaling, and deployment settings. (17719 bytes)
+- [Create A Serverless Endpoint](pages/api-reference-v2/serverless/create-a-serverless-endpoint.md): Create a Runpod Serverless endpoint with GPU or CPU compute, container or template settings, worker limits, and scaling policies. (32461 bytes)
+- [Get A Serverless Endpoint](pages/api-reference-v2/serverless/get-a-serverless-endpoint.md): Retrieve a Runpod Serverless endpoint by ID with its compute, worker, scaling, container, storage, and current status settings. (16558 bytes)
 - [Delete A Serverless Endpoint](pages/api-reference-v2/serverless/delete-a-serverless-endpoint.md): Permanently delete a Runpod Serverless endpoint, terminate its workers, cancel queued and active jobs, and remove its bound template. (3773 bytes)
-- [Update A Serverless Endpoint](pages/api-reference-v2/serverless/update-a-serverless-endpoint.md): Update selected settings on a Runpod Serverless endpoint, including compute, workers, scaling, storage, and container configuration. (24527 bytes)
+- [Update A Serverless Endpoint](pages/api-reference-v2/serverless/update-a-serverless-endpoint.md): Update selected settings on a Runpod Serverless endpoint, including compute, workers, scaling, storage, and container configuration. (28704 bytes)
 - [List Serverless Endpoint Workers](pages/api-reference-v2/serverless/list-serverless-endpoint-workers.md): List active workers for a Runpod Serverless endpoint with worker status, runtime details, and summary counts grouped by status. (7390 bytes)
-- [List Serverless Endpoint Releases](pages/api-reference-v2/serverless/list-serverless-endpoint-releases.md): List a Serverless endpoint's release history, configuration changes, build IDs, and current worker rollout status, newest release first. (6284 bytes)
-- [List Serverless Endpoint Builds](pages/api-reference-v2/serverless/list-serverless-endpoint-builds.md): List a Runpod Serverless endpoint's GitHub build history, newest first, capped to the 100 most recent builds, with older builds fetchable by ID. (5587 bytes)
-- [Get A Serverless Endpoint Build](pages/api-reference-v2/serverless/get-a-serverless-endpoint-build.md): Retrieve a single GitHub build for a Runpod Serverless endpoint by its build ID, returning that build regardless of how old it is. (5271 bytes)
-- [Stream Serverless Worker Logs](pages/api-reference-v2/serverless/stream-serverless-worker-logs.md): GET /v2/serverless/{id}/workers/{workerId}/logs (5236 bytes)
+- [List Serverless Endpoint Releases](pages/api-reference-v2/serverless/list-serverless-endpoint-releases.md): List a Serverless endpoint's release history, configuration changes, build IDs, and current worker rollout status, newest release first. (7407 bytes)
+- [List Serverless Endpoint Builds](pages/api-reference-v2/serverless/list-serverless-endpoint-builds.md): List a Runpod Serverless endpoint's GitHub build history, newest first, capped to the 100 most recent builds, with older builds fetchable by ID. (6624 bytes)
+- [Get A Serverless Endpoint Build](pages/api-reference-v2/serverless/get-a-serverless-endpoint-build.md): Retrieve a single GitHub build for a Runpod Serverless endpoint by its build ID, returning that build regardless of how old it is. (5289 bytes)
+- [Stream Serverless Worker Logs](pages/api-reference-v2/serverless/stream-serverless-worker-logs.md): Stream a Runpod Serverless worker's logs in real time as Server-Sent Events, with resumable reconnects via Last-Event-ID. (5549 bytes)
 
 ## Pods
 
@@ -157,13 +157,13 @@
 - [Stop a Pod](pages/api-reference/pods/POST/pods/podId/stop.md): POST /pods/{podId}/stop (391 bytes)
 - [Reset a Pod](pages/api-reference/pods/POST/pods/podId/reset.md): POST /pods/{podId}/reset (394 bytes)
 - [Restart a pod](pages/api-reference/pods/POST/pods/podId/restart.md): POST /pods/{podId}/restart (371 bytes)
-- [List Pods](pages/api-reference-v2/pods/list-pods.md): List Pods owned by the authenticated Runpod user, with an option to include member Pods that belong to Runpod Clusters. (16203 bytes)
-- [Create A Pod](pages/api-reference-v2/pods/create-a-pod.md): Create a Runpod Pod with GPU or CPU compute, container or template settings, storage, networking, and deployment constraints. (30153 bytes)
-- [Get A Pod](pages/api-reference-v2/pods/get-a-pod.md): Retrieve a Runpod Pod by ID with its compute, container, storage, networking, lifecycle status, and connection details. (16073 bytes)
+- [List Pods](pages/api-reference-v2/pods/list-pods.md): List Pods owned by the authenticated Runpod user, with an option to include member Pods that belong to Runpod Clusters. (19750 bytes)
+- [Create A Pod](pages/api-reference-v2/pods/create-a-pod.md): Create a Runpod Pod with GPU or CPU compute, container or template settings, storage, networking, and deployment constraints. (33705 bytes)
+- [Get A Pod](pages/api-reference-v2/pods/get-a-pod.md): Retrieve a Runpod Pod by ID with its compute, container, storage, networking, lifecycle status, and connection details. (17391 bytes)
 - [Terminate A Pod](pages/api-reference-v2/pods/terminate-a-pod.md): Permanently terminate a Runpod Pod, release its compute, and understand what happens to persistent mounts, network volumes, and Cluster members. (4385 bytes)
-- [Update A Pod](pages/api-reference-v2/pods/update-a-pod.md): Update selected settings on an existing Runpod Pod while preserving omitted fields, with guidance on mutable fields and restart behavior. (22726 bytes)
-- [Stream Pod Logs](pages/api-reference-v2/pods/stream-pod-logs.md): GET /v2/pods/{id}/logs (5029 bytes)
-- [Trigger A Pod State Transition](pages/api-reference-v2/pods/trigger-a-pod-state-transition.md): Start, stop, or restart a Runpod Pod by sending a supported state transition action and retrieving the Pod's updated lifecycle state. (19216 bytes)
+- [Update A Pod](pages/api-reference-v2/pods/update-a-pod.md): Update selected settings on an existing Runpod Pod while preserving omitted fields, with guidance on mutable fields and restart behavior. (25354 bytes)
+- [Stream Pod Logs](pages/api-reference-v2/pods/stream-pod-logs.md): Stream a Runpod Pod's container and system logs in real time as Server-Sent Events, with resumable reconnects via Last-Event-ID. (5345 bytes)
+- [Trigger A Pod State Transition](pages/api-reference-v2/pods/trigger-a-pod-state-transition.md): Start, stop, or restart a Runpod Pod by sending a supported state transition action and retrieving the Pod's updated lifecycle state. (20534 bytes)
 
 ## Storage
 
@@ -309,11 +309,11 @@
 - [Update a template](pages/api-reference/templates/PATCH/templates/templateId.md): PATCH /templates/{templateId} (5552 bytes)
 - [Delete a template](pages/api-reference/templates/DELETE/templates/templateId.md): DELETE /templates/{templateId} (441 bytes)
 - [Update a template](pages/api-reference/templates/POST/templates/templateId/update.md): POST /templates/{templateId}/update (5564 bytes)
-- [List Templates](pages/api-reference-v2/templates/list-templates.md): List all reusable Runpod templates owned by the authenticated user, including Pod and Serverless container configuration details. (6612 bytes)
-- [Create A Template](pages/api-reference-v2/templates/create-a-template.md): Create a reusable Runpod template for Pod and Serverless container settings, including images, storage, ports, environment, and mounts. (11975 bytes)
-- [Get A Template](pages/api-reference-v2/templates/get-a-template.md): Retrieve the complete configuration of an owned or public Runpod template by ID, including settings used to create Pods and endpoints. (7244 bytes)
+- [List Templates](pages/api-reference-v2/templates/list-templates.md): List all reusable Runpod templates owned by the authenticated user, including Pod and Serverless container configuration details. (9716 bytes)
+- [Create A Template](pages/api-reference-v2/templates/create-a-template.md): Create a reusable Runpod template for Pod and Serverless container settings, including images, storage, ports, environment, and mounts. (14603 bytes)
+- [Get A Template](pages/api-reference-v2/templates/get-a-template.md): Retrieve the complete configuration of an owned or public Runpod template by ID, including settings used to create Pods and endpoints. (8562 bytes)
 - [Delete A Template](pages/api-reference-v2/templates/delete-a-template.md): Permanently delete an owned Runpod template by ID and understand restrictions when Pods or Serverless endpoints still reference it. (4297 bytes)
-- [Update A Template](pages/api-reference-v2/templates/update-a-template.md): Update selected fields on a Runpod template while preserving omitted settings, with ownership rules and behavior for existing resources. (11862 bytes)
+- [Update A Template](pages/api-reference-v2/templates/update-a-template.md): Update selected fields on a Runpod template while preserving omitted settings, with ownership rules and behavior for existing resources. (14490 bytes)
 
 ## Container registry auth
 
@@ -327,9 +327,9 @@
 - [Pod billing history](pages/api-reference/billing/GET/billing/pods.md): GET /billing/pods (2841 bytes)
 - [Serverless billing history](pages/api-reference/billing/GET/billing/endpoints.md): GET /billing/endpoints (2008 bytes)
 - [Network Volume billing history](pages/api-reference/billing/GET/billing/networkvolumes.md): GET /billing/networkvolumes (1412 bytes)
-- [Get Aggregated Billing History](pages/api-reference-v2/billing/get-aggregated-billing-history.md): Retrieve time-bucketed total Runpod spend across Pods, Serverless, storage, Public Endpoints, and Clusters for the authenticated account. (10827 bytes)
+- [Get Aggregated Billing History](pages/api-reference-v2/billing/get-aggregated-billing-history.md): Retrieve time-bucketed total Runpod spend across Pods, Serverless, storage, Public Endpoints, and Clusters for the authenticated account. (11009 bytes)
 - [Get Pod Billing History](pages/api-reference-v2/billing/get-pod-billing-history.md): Retrieve time-bucketed billing details for one or all Runpod Pods, including GPU, CPU, disk, total costs, and query metadata. (8199 bytes)
-- [Get Serverless Billing History](pages/api-reference-v2/billing/get-serverless-billing-history.md): Retrieve time-bucketed billing history for one or all Runpod Serverless endpoints, including compute, disk, platform, and total costs. (8586 bytes)
+- [Get Serverless Billing History](pages/api-reference-v2/billing/get-serverless-billing-history.md): Retrieve time-bucketed billing history for one or all Runpod Serverless endpoints, including compute, disk, platform, and total costs. (8698 bytes)
 - [Get Public Endpoint Billing History](pages/api-reference-v2/billing/get-public-endpoint-billing-history.md): Retrieve time-bucketed billing history for Runpod Public Endpoints, including endpoint totals and resolved query metadata. (6743 bytes)
 - [Get Network Volume Billing History](pages/api-reference-v2/billing/get-network-volume-billing-history.md): Retrieve time-bucketed billing history for one or all Runpod network volumes, including storage tiers, totals, and query metadata. (8488 bytes)
 - [Get Cluster Billing History](pages/api-reference-v2/billing/get-cluster-billing-history.md): Retrieve time-bucketed Runpod Cluster billing history, including GPU compute, disk, inter-node networking, and total costs. (8353 bytes)
@@ -343,15 +343,20 @@
 
 - [List Registered Ssh Public Keys](pages/api-reference-v2/account/list-registered-ssh-public-keys.md): List the SSH public keys registered to your Runpod account and used to authenticate secure connections to newly created Pods. (3441 bytes)
 - [Replace Registered Ssh Public Keys](pages/api-reference-v2/account/replace-registered-ssh-public-keys.md): Replace all SSH public keys registered to your Runpod account, remove omitted keys, and apply the new set to subsequently created Pods. (4860 bytes)
+- [List Secrets](pages/api-reference-v2/account/list-secrets.md): List the encrypted secrets on your Runpod account that Pods, Serverless endpoints, and templates reference from environment variables. Values are never returned. (4424 bytes)
+- [Create A Secret](pages/api-reference-v2/account/create-a-secret.md): Create an encrypted Runpod account secret that Pods, Serverless endpoints, and templates can reference from environment variables at boot. (7016 bytes)
+- [Get A Secret](pages/api-reference-v2/account/get-a-secret.md): Retrieve a Runpod account secret's metadata by ID. The secret value is write-only and is never returned. (4630 bytes)
+- [Delete A Secret](pages/api-reference-v2/account/delete-a-secret.md): Delete a Runpod account secret so Pods, Serverless endpoints, and templates can no longer resolve it from environment variables. (3697 bytes)
+- [Update A Secret](pages/api-reference-v2/account/update-a-secret.md): Update a Runpod account secret's description or rotate its value. The new value takes effect the next time a referencing Pod or worker boots. (7099 bytes)
 
 ## Clusters
 
 - [List Clusters](pages/api-reference-v2/clusters/list-clusters.md): List all Runpod Clusters owned by the authenticated user, including each Cluster's configuration, status, and aggregate Pod counts. (6697 bytes)
-- [Create A Cluster](pages/api-reference-v2/clusters/create-a-cluster.md): Create a multi-node Runpod Cluster with a consistent compute shape and container configuration across every member Pod. (12673 bytes)
-- [Get A Cluster](pages/api-reference-v2/clusters/get-a-cluster.md): GET /v2/clusters/{id} (6971 bytes)
+- [Create A Cluster](pages/api-reference-v2/clusters/create-a-cluster.md): Create a multi-node Runpod Cluster with a consistent compute shape and container configuration across every member Pod. (14605 bytes)
+- [Get A Cluster](pages/api-reference-v2/clusters/get-a-cluster.md): Retrieve a Runpod Cluster by ID with its configuration, status, and an aggregate summary of member Pods by status. (7087 bytes)
 - [Delete A Cluster](pages/api-reference-v2/clusters/delete-a-cluster.md): Permanently delete a Runpod Cluster and terminate all of its member Pods, with the response confirming the deleted Cluster. (3250 bytes)
-- [Rename A Cluster](pages/api-reference-v2/clusters/rename-a-cluster.md): PATCH /v2/clusters/{id} (8528 bytes)
-- [List A Clusters Pods](pages/api-reference-v2/clusters/list-a-clusters-pods.md): List every Pod in a Runpod Cluster with each member's complete configuration and status, beyond the aggregate counts in the Cluster summary. (15433 bytes)
+- [Rename A Cluster](pages/api-reference-v2/clusters/rename-a-cluster.md): Rename a Runpod Cluster. Compute shape, type, and container configuration are fixed at creation and cannot be changed. (8648 bytes)
+- [List A Clusters Pods](pages/api-reference-v2/clusters/list-a-clusters-pods.md): List every Pod in a Runpod Cluster with each member's complete configuration and status, beyond the aggregate counts in the Cluster summary. (16959 bytes)
 
 ## Network Volumes
 
@@ -359,17 +364,17 @@
 - [Create A Network Volume](pages/api-reference-v2/network-volumes/create-a-network-volume.md): Create a persistent Runpod network volume with a name, size, data center, and storage tier for use by Pods and Serverless workers. (6275 bytes)
 - [Get A Network Volume](pages/api-reference-v2/network-volumes/get-a-network-volume.md): Retrieve a Runpod network volume by ID with its name, size, data center, storage tier, and current resource details. (4324 bytes)
 - [Delete A Network Volume](pages/api-reference-v2/network-volumes/delete-a-network-volume.md): Permanently delete a Runpod network volume, release its persistent storage, and confirm the removed volume in the response. (3652 bytes)
-- [Update A Network Volume](pages/api-reference-v2/network-volumes/update-a-network-volume.md): PATCH /v2/network-volumes/{id} (5889 bytes)
+- [Update A Network Volume](pages/api-reference-v2/network-volumes/update-a-network-volume.md): Update a Runpod network volume's mutable fields, such as its name or size. Size can only be increased, never reduced. (6008 bytes)
 
 ## Registries
 
 - [List Container Registries](pages/api-reference-v2/registries/list-container-registries.md): List all container registry credentials owned by the authenticated Runpod user, with secret usernames and passwords excluded. (3229 bytes)
-- [Create A Container Registry Credential](pages/api-reference-v2/registries/create-a-container-registry-credential.md): Store credentials for a private container registry in Runpod for authenticated image pulls while keeping the saved secrets write-only. (4925 bytes)
+- [Create A Container Registry Credential](pages/api-reference-v2/registries/create-a-container-registry-credential.md): Store credentials for a private container registry in Runpod for authenticated image pulls while keeping the saved secrets write-only. (4996 bytes)
 - [Get A Container Registry Credential](pages/api-reference-v2/registries/get-a-container-registry-credential.md): Retrieve a Runpod container registry credential by ID while keeping stored usernames and passwords excluded from the response. (3920 bytes)
 - [Delete A Container Registry Credential](pages/api-reference-v2/registries/delete-a-container-registry-credential.md): Delete a Runpod container registry credential by ID and understand how active Pods and templates that reference it are handled. (4350 bytes)
-- [List All Ecr Delegations](pages/api-reference-v2/registries/list-all-ecr-delegations.md): GET /v2/registries/delegations (2341 bytes)
-- [Register An Ecr Delegation](pages/api-reference-v2/registries/register-an-ecr-delegation.md): POST /v2/registries/delegations (2454 bytes)
-- [Revoke An Ecr Delegation](pages/api-reference-v2/registries/revoke-an-ecr-delegation.md): DELETE /v2/registries/delegations/{id} (2124 bytes)
+- [List All Ecr Delegations](pages/api-reference-v2/registries/list-all-ecr-delegations.md): List the Amazon ECR delegations that let Runpod pull private container images from your AWS registries. (3609 bytes)
+- [Register An Ecr Delegation](pages/api-reference-v2/registries/register-an-ecr-delegation.md): Register an Amazon ECR delegation that lets Runpod pull private container images from your AWS registry for Pods and Serverless endpoints. (3757 bytes)
+- [Revoke An Ecr Delegation](pages/api-reference-v2/registries/revoke-an-ecr-delegation.md): Revoke an Amazon ECR delegation so Runpod can no longer pull private container images from that AWS registry on your behalf. (3413 bytes)
 
 ## Catalog
 
@@ -378,8 +383,8 @@
 - [List Cpu Types](pages/api-reference-v2/catalog/list-cpu-types.md): List available Runpod CPU types with pricing and optional availability details for a specified product and deployment context. (5756 bytes)
 - [Get A Cpu Type](pages/api-reference-v2/catalog/get-a-cpu-type.md): Retrieve one Runpod CPU type with pricing and optional availability details for a specified product and deployment context. (6281 bytes)
 - [List Data Centers](pages/api-reference-v2/catalog/list-data-centers.md): List Runpod data centers with region, compliance, storage, networking, and optional GPU or CPU availability details. (6771 bytes)
-- [Get A Data Center](pages/api-reference-v2/catalog/get-a-data-center.md): GET /v2/catalog/datacenters/{id} (6029 bytes)
-- [List Public Templates](pages/api-reference-v2/catalog/list-public-templates.md): List Runpod public templates by official, verified, or community source and inspect reusable Pod and Serverless configurations. (7462 bytes)
+- [Get A Data Center](pages/api-reference-v2/catalog/get-a-data-center.md): Retrieve a single Runpod data center by ID, optionally including current GPU or CPU availability for Pod deployment. (6147 bytes)
+- [List Public Templates](pages/api-reference-v2/catalog/list-public-templates.md): List Runpod public templates by official, verified, or community source and inspect reusable Pod and Serverless configurations. (9146 bytes)
 
 ## Image models
 

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/teams/managing-teams.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/teams/managing-teams.mdx)
+> Pinned source for Vast.ai main: [guides/teams/managing-teams.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/teams/managing-teams.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/teams/managing-teams
 
 # Managing Your Team
@@ -11,7 +11,7 @@ The Members page is the main hub for managing your team. Here you can view team 
 
 Here's an example of what a Members page looks like in the console:
 
-![Members Page](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-members.webp)
+![Members Page](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-members.webp)
 
 From this page, you can:
 
@@ -27,7 +27,7 @@ To invite a team member, go to the **Members Page** and click on the **Invite** 
 
 This will bring up a popup where you can enter the email and team role for the person you want to invite. Once complete, click **Invite** to send the invitation email.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/teams-quickstart-6.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/teams-quickstart-6.webp)
 
 Anyone with the proper permissions (currently **team\_write**) can send invitations to invite team members at any role level.
 
@@ -49,7 +49,7 @@ Anyone with the proper permissions (currently **team\_write**) can send invitati
 
 You can change a member's role by clicking on the directional arrow next to their name and selecting a new role.
 
-![Roles](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-members-2.webp)
+![Roles](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-members-2.webp)
 
 Every team comes with two default roles:
 
@@ -69,27 +69,27 @@ You must be a team owner or team manager to update the team name. Here is how to
 3. Open the Members Page
 4. Click the three-dot menu and select 'Edit Team Name'
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/teams-quickstart-edit.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/teams-quickstart-edit.webp)
 
 The 'Edit team name' option opens a pop-up that allows you to enter and save a new team name.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/teams-quickstart-edit-2.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/teams-quickstart-edit-2.webp)
 
 ## Transferring Team Ownership
 
 The Transfer Team Ownership feature allows an owner to seamlessly reassign the team to another member within it. To do so, navigate to the **Members** page and click the three-dot menu in the upper right corner.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/teams-transfer.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/teams-transfer.webp)
 
 From there, you can click **Transfer Team Ownership** and open a pop-up, select a new owner (who must already be a member of the team), and confirm the transfer. Once confirmed, ownership will be reassigned, and your role will be changed to a manager.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/teams-transfer-2.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/teams-transfer-2.webp)
 
 ## Removing Team Members
 
 You can remove a team member by clicking on 'Delete' next to their name, which will trigger a confirmation pop-up.
 
-![Remove Member](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-members-3.webp)
+![Remove Member](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-members-3.webp)
 
 ## Deleting a Team
 

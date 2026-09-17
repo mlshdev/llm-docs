@@ -1,0 +1,160 @@
+> Pinned source for Vast.ai main: [host/set-maintenance-window.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/host/set-maintenance-window.mdx)
+> Canonical documentation: https://docs.vast.ai/host/set-maintenance-window
+
+# Set a Maintenance Window
+
+Schedule a maintenance window on one machine or on many at once from the Machines page, so renters are warned before you take hardware down.
+
+A maintenance window tells renters that you are going to take a machine down. When
+you schedule one, everybody with a running or stopped instance on that machine is
+notified with the start time and duration, and a warning appears on their instance
+card so they can save their work.
+
+Scheduling a window is a notification, not an action. It does not stop instances,
+unlist the machine, or block new rentals. You still take the machine down yourself
+when the window arrives.
+
+> **Note**
+>
+> The screenshots on this page use the redesigned **Machines** page, which is
+> currently in Early Access. See [Using the classic Machines page](#using-the-classic-machines-page)
+> if you have not opted in — the steps are nearly the same, but you cannot set a
+> reason.
+
+***
+
+## Set a window on one machine
+
+1. Go to [Host → Machines](https://cloud.vast.ai/host/machines/) and find the
+   machine you want to take down.
+2. Click **Settings** on the machine's card.
+
+   ![Machines page with the Settings button on a machine card circled](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/set-maintenance-window-machines-page-settings.webp)
+3. The settings dialog opens on **Listing Settings**. Switch to **Machine
+   Maintenances**.
+
+   ![Machine settings dialog open on Listing Settings with the Machine Maintenances tab circled](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/set-maintenance-window-maintenances-tab.webp)
+4. Fill in all three fields:
+
+   - **Maintenance start** — the date and time the machine goes down. It
+     defaults to 24 hours from now.
+   - **Duration (hours)** — how long the machine will be unavailable, as a
+     whole number of hours.
+   - **Reason** — what the maintenance is for. See
+     [Reasons](#reasons) for the full list.
+
+   ![Maintenance start, duration, and reason filled in, with the Add button circled](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/set-maintenance-window-form-filled.webp)
+5. **Add** stays disabled until the duration is a positive whole number and a
+   reason is selected. Once you click it, the window is created and renters are
+   notified.
+
+   The new window appears in the table below the form, marked **Upcoming**.
+
+   ![Maintenance table listing a 48 hour window marked Upcoming, with its start, duration, and reason](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/set-maintenance-window-scheduled-table.webp)
+
+***
+
+## Set one window across several machines
+
+If several machines go down together — a rack, a circuit, everything behind one
+switch — you can schedule a single window for all of them in one pass.
+
+1. Tick the checkbox on each machine you want to include, or use **Select all**
+   to take every machine in the current view. A bar appears showing how many are
+   selected, with a **Bulk Edit** button on the right.
+
+   ![Machines page with a machine checked and the Bulk Edit button in the selection bar](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/set-maintenance-window-bulk-select.webp)
+2. The same settings dialog opens, titled with the number of machines selected
+   instead of a single machine ID.
+3. Go to **Machine Maintenances** and fill in the start, duration, and reason
+   exactly as above, then click **Add**. Every selected machine gets the same
+   window, and renters on all of them are notified.
+
+   The list below the form gains a **Machine** column so you can tell the
+   windows apart, and a summary tells you which machines succeeded and which
+   failed.
+
+> **Note**
+>
+> A bulk request covers at most 100 machines. Select fewer and repeat if you have
+> more than that.
+
+***
+
+## Review or cancel a window
+
+The **Machine Maintenances** tab lists every window on the machine, past and
+upcoming, with a status:
+
+| Status        | Meaning                        |
+| ------------- | ------------------------------ |
+| **Upcoming**  | Scheduled, has not started yet |
+| **Ongoing**   | The window is open now         |
+| **Completed** | The window has passed          |
+
+To cancel a window, click the **✕** at the end of its row. Upcoming and ongoing
+windows can be cancelled; completed ones cannot.
+
+> **Warning**
+>
+> A window that Vast scheduled on your machine cannot be cancelled from this page.
+> Contact support if one needs to be removed.
+
+***
+
+## Field reference
+
+### Start time
+
+The start must be in the future, and no more than a year out.
+
+### Duration
+
+Duration is recorded in whole hours, with a minimum of one. A fractional value is
+rounded down, so anything under an hour becomes one hour.
+
+### Reasons
+
+| Reason              | Use it for                                            |
+| ------------------- | ----------------------------------------------------- |
+| **Power issues**    | Electrical work, UPS or PDU changes, a planned outage |
+| **Internet issues** | Switch, router, uplink, or ISP work                   |
+| **Disk issues**     | Replacing or rebuilding storage                       |
+| **GPU issues**      | Pulling, replacing, or reseating a GPU                |
+| **Updates**         | Driver, kernel, or host software upgrades             |
+| **Other**           | Anything that does not fit the above                  |
+
+***
+
+## Using the classic Machines page
+
+The redesigned Machines page is opt-in while it is in Early Access. To turn it on,
+open [Account Settings](https://cloud.vast.ai/account/), find the **Early Access**
+section, and enable **Machines page**.
+
+![Early Access section of Account Settings with the Machines page toggle](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/set-maintenance-window-early-access-toggle.webp)
+
+You get there the same way: **Settings** on a single machine, or **Bulk Edit**
+once you have selected several. The dialog is what differs. It has no tabs — the
+window is set from a **Set Machine Maintenance** section partway down it — and it
+has no **Reason** field, so every window scheduled there is recorded as
+**Other**. Set the start date and **Duration (hours)**, then click **Schedule
+Maintenance**.
+
+Existing windows appear under **Scheduled Maintenances**, with a **Category**
+column that shows the stored value rather than the label used on the redesigned
+page — a window set to **Updates** reads as `software` here.
+
+![Set Machine Maintenance section of the classic machine settings dialog](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/set-maintenance-window-classic-modal.webp)
+
+***
+
+## Related
+
+- [Host notifications](https://docs.vast.ai/host/notifications) — control how maintenance
+  confirmations reach you
+- [`vastai schedule maintenance`](https://docs.vast.ai/host/cli/schedule-maint) — schedule a window
+  from the CLI
+- [`vastai show maints`](https://docs.vast.ai/host/cli/show-maints) — list scheduled windows
+- [`vastai cancel maint`](https://docs.vast.ai/host/cli/cancel-maint) — cancel a machine's windows
+- [Upgrade the Kernel](https://docs.vast.ai/host/upgrade-kernel) — a task that needs a window first

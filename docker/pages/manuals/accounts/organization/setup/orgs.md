@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/setup/orgs.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/accounts/organization/setup/orgs.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/setup/orgs.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/accounts/organization/setup/orgs.md)
 
 # Create your organization
 
@@ -71,7 +71,3 @@ the following steps:
 
 If your organization has a Docker Business subscription with a purchase
 order, contact Support or your Account Manager at Docker.
-
-## More resources
-
-- [Video: Docker Hub Organizations](https://www.youtube.com/watch?v=WKlT1O-4Du8)

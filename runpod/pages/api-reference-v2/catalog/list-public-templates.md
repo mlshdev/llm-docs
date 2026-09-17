@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/catalog/list-public-templates.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/catalog/list-public-templates.mdx)
+> Pinned source for Runpod main: [api-reference-v2/catalog/list-public-templates.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/catalog/list-public-templates.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/catalog/list-public-templates
 
 # List Public Templates
@@ -18,7 +18,9 @@ apart. `registry` is always null for templates you don't own. Your own
 templates (public or private) are managed under `/v2/templates`; fetch
 any individual template — catalog or owned — via `/v2/templates/{id}`.
 
-At most 100 templates are returned. Pagination is not yet supported.
+At most 100 templates are returned. Cursor pagination is not yet
+supported here; `pagination` is always the exhausted marker
+(`nextCursor: null`, `hasNextPage: false`).
 
 **Authentication:** `bearerAuth`
 
@@ -33,14 +35,18 @@ At most 100 templates are returned. Pagination is not yet supported.
   - Header `RateLimit` (string)
   - Header `RateLimit-Policy` (string)
   - Media type: `application/json`
-    - Schema (object)
+    - Schema (object): A bare list of templates. `GET /v2/catalog/templates` returns it as-is (the catalog is a capped, curated set); `GET /v2/templates` composes it with the pagination block via ListTemplatesResponse.
       - `templates` (required; array)
         - `items`
           - allOf:
             - `variant 1`: Reusable container configuration shared across templates, pods, and serverless endpoints. Adding a field here automatically propagates to all three resources.
               - allOf:
-                - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support private registries (clusters, until the upstream input accepts a registry credential).
-                  - `args` (string): Arguments passed to the container entrypoint
+                - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support a direct registry credential (clusters — there the registry credential arrives via a pod template, see CreateClusterRequest.templateId).
+                  - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
+                  - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+                    - `items` (string)
+                  - `entrypoint` (array): Container ENTRYPOINT in exec form, overriding the image's own. Encoded into `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+                    - `items` (string)
                   - `disk` (integer; minimum: `1`): Container disk in GB (ephemeral, wiped on restart)
                   - `env` (object): Environment variables as key-value pairs
                     - `additional properties` (string)
@@ -63,7 +69,7 @@ At most 100 templates are returned. Pagination is not yet supported.
               - `startJupyter` (required; boolean): Whether containers created from this template start JupyterLab at startup (`JUPYTER_PASSWORD` env injection).
               - `allowedCudaVersions` (required; array): Acceptable CUDA versions for containers created from this template, as `major.minor`. Empty means any version. Expanded into GPU pod and serverless endpoint creates; CPU pods ignore it.
                 - `items` (string)
-    - Example `templates`: `{"templates":[{"id":"30zmvf89kd","name":"PyTorch 2.8","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":50,"mounts":{},"ports":["8888/http","22/tcp"],"env":{},"registry":null,"serverless":false,"public":true,"category":"NVIDIA","startSsh":true,"startJupyter":true,"allowedCudaVersions":[]}]}`
+    - Example `templates`: `{"templates":[{"id":"30zmvf89kd","name":"PyTorch 2.8","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":50,"mounts":{},"ports":["8888/http","22/tcp"],"env":{},"registry":null,"serverless":false,"public":true,"category":"NVIDIA","startSsh":true,"startJupyter":true,"allowedCudaVersions":[]}],"pagination":{"nextCursor":null,"hasNextPage":false}}`
 - `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
   - Media type: `application/problem+json`
     - Schema (object)

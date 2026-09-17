@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/earning.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/host/earning.mdx)
+> Pinned source for Vast.ai main: [host/earning.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/host/earning.mdx)
 > Canonical documentation: https://docs.vast.ai/host/earning
 
 # Earning
@@ -9,7 +9,7 @@ This page in the console allows you to manage your earnings from referrals. You 
 
 # Pages Walkthrough
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-earning.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-earning.webp)
 
 The **Earnings&#x20;**&#x70;age gives you a transparent view of your referral program performance and accumulated rewards. Here’s what each section means:&#x20;
 
@@ -21,7 +21,7 @@ The **Earnings&#x20;**&#x70;age gives you a transparent view of your referral pr
 
 Additionally, there is the **Earning Chart** section that provides a clear visual overview of your earning history.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-earning-2.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-earning-2.webp)
 
 The **Template Performance** chart displays the earnings history from templates.
 
@@ -29,11 +29,11 @@ The **Template Performance** chart displays the earnings history from templates.
 
 You can view your payout history for a selected date range. Here you can generate and download invoices for your earning payouts.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-earning-3.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-earning-3.webp)
 
 In the **Payout Account** section, you can set up a payout account.&#x20;
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-earning-4.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-earning-4.webp)
 
 ## Common Questions
 

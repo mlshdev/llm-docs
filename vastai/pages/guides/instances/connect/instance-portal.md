@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/connect/instance-portal.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/instances/connect/instance-portal.mdx)
+> Pinned source for Vast.ai main: [guides/instances/connect/instance-portal.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/instances/connect/instance-portal.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/connect/instance-portal
 
 # Instance Portal
@@ -7,13 +7,13 @@
 
 The Instance Portal is the first application you will see after clicking the 'Open' button to access an instance that has been loaded with a [Vast.ai Docker image](https://github.com/vast-ai/base-image/). Many of our recommended templates include the Instance Portal.
 
-![Instance card interface shows the open button](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-instance-portal.webp)
+![Instance card interface shows the open button](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-templates-instance-portal.webp)
 
 ## Loading Process
 
 Upon opening the Instance Portal you will see a loading indicator for a short time.&#x20;
 
-![Loading Indicator](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-instance-portal-2.webp)
+![Loading Indicator](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-templates-instance-portal-2.webp)
 
 During this loading phase, a secure Cloudflare tunnel will be created for each of your instance's open ports and the browser will test whether these tunnel links are accessible.
 
@@ -27,7 +27,7 @@ If it is taking too long for the tunnels to be ready, you will see the Instance 
 
 If you would like the default application URLs to be **https\://** rather than **http\://** you can add the following environment variable to your [account level environment variables](https://cloud.vast.ai/account/):
 
-![Enable HTTPS Variable](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-instance-portal-3.webp)
+![Enable HTTPS Variable](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-templates-instance-portal-3.webp)
 
 If you set this variable, it is important to add the Vast.ai Jupyter certificate  to your local system to avoid browser warnings.  See [this page](https://docs.vast.ai/guides/instances/jupyter#1SmCz) for more information about installing the certificate.
 
@@ -35,7 +35,7 @@ If you set this variable, it is important to add the Vast.ai Jupyter certificate
 
 The instance Portal has a simple interface to help you access other web applications that may be running in the instance. See the configuration section of this document for further details on application startup.
 
-![Landing Page](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-instance-portal-4.webp)
+![Landing Page](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-templates-instance-portal-4.webp)
 
 The large blue 'Launch Application' buttons will open your running applications in a new browser tab. &#x20;
 
@@ -49,7 +49,7 @@ You can also click the 'Advanced Connection Options' link to see all available c
 
 Use this page to manage existing secure tunnels and add new tunnels to get access to ports that have not directly been opened in the instance
 
-![Tunnels Page](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-instance-portal-5.webp)
+![Tunnels Page](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-templates-instance-portal-5.webp)
 
 Use this interface to create links to applications you have started after configuring your instance. For example:
 
@@ -67,13 +67,13 @@ The logs page will show a live stream of entries added to any `.log` files in th
 
 Use the 'Copy Logs' button to copy the currently displayed logging output to your clipboard.  You can also use the 'Download Logs' button to download a zip file containing all files and directories in the `/var/log/` directory of your instance.
 
-![Logs Page](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-instance-portal-6.webp)
+![Logs Page](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-templates-instance-portal-6.webp)
 
 ## Tools & Help Page
 
 This page links to useful pages in the Vast.ai documentation to help you get the most from your instance.
 
-![Instance Portal tools and help page](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-instance-portal-7.webp)
+![Instance Portal tools and help page](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-templates-instance-portal-7.webp)
 
 ## Configuration
 
@@ -117,7 +117,7 @@ To do this you will need a free [Cloudflare Zero Trust](https://developers.cloud
 
 Here's an example of how your tunnel configuration might look in the Cloudflare dashboard:
 
-![Example named tunnel configuration](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-templates-instance-portal-8.webp)
+![Example named tunnel configuration](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-templates-instance-portal-8.webp)
 
 Once you have created your named tunnel, you can link it to your instance by providing the token associated with your tunnel as the value of environment variable `CF_TUNNEL_TOKEN`. You can save this in the 'Environment Variables' section in your [account settings](https://cloud.vast.ai/account/) or directly in the template if you are saving it privately.
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/get-a-serverless-endpoint-build.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/serverless/get-a-serverless-endpoint-build.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/get-a-serverless-endpoint-build.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/serverless/get-a-serverless-endpoint-build.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/get-a-serverless-endpoint-build
 
 # Get A Serverless Endpoint Build
@@ -10,7 +10,7 @@ Retrieve a single GitHub build for a Runpod Serverless endpoint by its build ID,
 **Get a serverless endpoint build**
 
 Returns one of the endpoint's GitHub builds by id, regardless of age —
-unlike the list, which is capped to recent history.
+no need to page through `GET /v2/serverless/{id}/builds` to reach it.
 
 **Authentication:** `bearerAuth`
 

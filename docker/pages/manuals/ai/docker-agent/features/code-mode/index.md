@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/code-mode/index.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/_vendor/github.com/docker/docker-agent/docs/features/code-mode/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/code-mode/index.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/_vendor/github.com/docker/docker-agent/docs/features/code-mode/index.md)
 
 *Let an agent write JavaScript that orchestrates several tool calls in one turn instead of calling tools one at a time.*
 

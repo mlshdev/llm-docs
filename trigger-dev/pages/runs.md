@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.1: [docs/runs.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/runs.mdx)
+> Pinned source for Trigger.dev v4.6.3: [docs/runs.mdx](https://github.com/triggerdotdev/trigger.dev/blob/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/runs.mdx)
 > Canonical documentation: https://trigger.dev/docs/runs
 
 # Runs
@@ -20,7 +20,7 @@ A run is created when you trigger a task (e.g. calling `yourTask.trigger({ foo: 
 
 A run can go through **various** states during its lifecycle. The following diagram illustrates a typical state transition where a single run is triggered and completes successfully:
 
-![Run Lifecycle](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/run-lifecycle.png)
+![Run Lifecycle](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/images/run-lifecycle.png)
 
 Runs can also find themselves in lots of other states depending on what's happening at any given time. The following sections describe all the possible states in more detail.
 
@@ -78,7 +78,7 @@ An attempt represents a single execution of a task within a run. A run can have 
 
 When a task fails, it will be retried according to its retry settings, creating new attempts until it either succeeds or reaches the retry limit.
 
-![Run with retries](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/run-with-retries.png)
+![Run with retries](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/images/run-with-retries.png)
 
 ## Run completion
 
@@ -215,7 +215,7 @@ If the run hasn't started within the specified TTL, it will automatically expire
 
 Dev runs automatically have a 10-minute TTL. On Trigger.dev Cloud, staging and production runs have a maximum TTL of 14 days applied automatically (runs without an explicit TTL get 14 days; longer TTLs are clamped). See [Limits — Maximum run TTL](https://trigger.dev/docs/limits#maximum-run-ttl) for details.
 
-![Run with TTL](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/run-with-ttl.png)
+![Run with TTL](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/images/run-with-ttl.png)
 
 ### Delayed runs
 
@@ -227,7 +227,7 @@ await yourTask.trigger({ foo: "bar" }, { delay: "1h" });
 
 This is useful for tasks that need to be executed at a specific time in the future.
 
-![Run with delay](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/run-with-delay.png)
+![Run with delay](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/images/run-with-delay.png)
 
 ### Replaying runs
 
@@ -247,13 +247,13 @@ You can also replay runs from the dashboard using the same or different payload.
 
 The `triggerAndWait()` function triggers a task and then lets you wait for the result before continuing. [Learn more about triggerAndWait()](https://trigger.dev/docs/triggering#yourtask-triggerandwait).
 
-![Run with triggerAndWait](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/run-with-triggerAndWait\(\).png)
+![Run with triggerAndWait](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/images/run-with-triggerAndWait\(\).png)
 
 #### batchTriggerAndWait()
 
 Similar to `triggerAndWait()`, the `batchTriggerAndWait()` function lets you batch trigger a task and wait for all the results [Learn more about batchTriggerAndWait()](https://trigger.dev/docs/triggering#yourtask-batchtriggerandwait).
 
-![Run with batchTriggerAndWait](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/run-with-batchTriggerAndWait\(\).png)
+![Run with batchTriggerAndWait](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/images/run-with-batchTriggerAndWait\(\).png)
 
 ### Runs API
 

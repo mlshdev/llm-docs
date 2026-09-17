@@ -1,7 +1,9 @@
-> Pinned source for Runpod main: [api-reference-v2/registries/revoke-an-ecr-delegation.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/registries/revoke-an-ecr-delegation.mdx)
+> Pinned source for Runpod main: [api-reference-v2/registries/revoke-an-ecr-delegation.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/registries/revoke-an-ecr-delegation.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/registries/revoke-an-ecr-delegation
 
 # Revoke An Ecr Delegation
+
+Revoke an Amazon ECR delegation so Runpod can no longer pull private container images from that AWS registry on your behalf.
 
 `DELETE /v2/registries/delegations/{id}`
 
@@ -19,6 +21,26 @@
 - `204`: Delegation revoked
   - Header `RateLimit` (string)
   - Header `RateLimit-Policy` (string)
+- `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `missingBearerToken`: `{"title":"Unauthorized","status":401,"detail":"missing bearer token"}`
+- `403`: The bearer token is valid, but it does not grant access to the requested resource or action.
+  - Header `RateLimit` (string)
+  - Header `RateLimit-Policy` (string)
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
 - `404`: Delegation not found
   - Header `RateLimit` (string)
   - Header `RateLimit-Policy` (string)

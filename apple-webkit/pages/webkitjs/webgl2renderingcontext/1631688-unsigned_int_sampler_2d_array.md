@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/webkitjs/webgl2renderingcontext/1631688-unsigned_int_sampler_2d_array
 
 # UNSIGNED_INT_SAMPLER_2D_ARRAY

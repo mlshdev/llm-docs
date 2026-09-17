@@ -1,7 +1,9 @@
-> Pinned source for Runpod main: [api-reference-v2/clusters/rename-a-cluster.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/clusters/rename-a-cluster.mdx)
+> Pinned source for Runpod main: [api-reference-v2/clusters/rename-a-cluster.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/clusters/rename-a-cluster.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/clusters/rename-a-cluster
 
 # Rename A Cluster
+
+Rename a Runpod Cluster. Compute shape, type, and container configuration are fixed at creation and cannot be changed.
 
 `PATCH /v2/clusters/{id}`
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.1: [docs/guides/ai-agents/verify-news-article.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/guides/ai-agents/verify-news-article.mdx)
+> Pinned source for Trigger.dev v4.6.3: [docs/guides/ai-agents/verify-news-article.mdx](https://github.com/triggerdotdev/trigger.dev/blob/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/guides/ai-agents/verify-news-article.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/ai-agents/verify-news-article
 
 # Verify a news article
@@ -9,7 +9,7 @@ Create an AI agent workflow that verifies the facts in a news article
 
 This example demonstrates the **orchestrator-workers** pattern, where a central AI agent dynamically breaks down complex tasks and delegates them to specialized worker agents. This pattern is particularly effective when tasks require multiple perspectives or parallel processing streams, with the orchestrator synthesizing the results into a cohesive output.
 
-![Orchestrator](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/guides/ai-agents/orchestrator-workers.png)
+![Orchestrator](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/guides/ai-agents/orchestrator-workers.png)
 
 ## Example task
 

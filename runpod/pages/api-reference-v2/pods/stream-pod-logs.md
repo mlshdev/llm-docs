@@ -1,13 +1,21 @@
-> Pinned source for Runpod main: [api-reference-v2/pods/stream-pod-logs.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/pods/stream-pod-logs.mdx)
+> Pinned source for Runpod main: [api-reference-v2/pods/stream-pod-logs.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/pods/stream-pod-logs.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/pods/stream-pod-logs
 
 # Stream Pod Logs
+
+Stream a Runpod Pod's container and system logs in real time as Server-Sent Events, with resumable reconnects via Last-Event-ID.
 
 `GET /v2/pods/{id}/logs`
 
 **Stream pod logs**
 
-Stream Pod logs as Server-Sent Events. Choose a log source, receive source, line, and ts fields, and resume using Last-Event-ID.
+Streams pod logs as Server-Sent Events. The `source` query parameter
+selects which log source to include.
+
+The SSE `data` payload shape is:
+`{ "source": "container", "line": "...", "ts": "..." }`.
+Log-event `id` values are the event `ts` timestamp so
+browser/EventSource reconnects can resume with `Last-Event-ID`.
 
 **Authentication:** `bearerAuth`
 

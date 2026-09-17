@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/9cf34b031f489dcecad5c579d0a22a956918cf36/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/a79a84a9fe02999169ac9ff40f06c5d5aa823b96/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -23308,9 +23308,22 @@ Allows for the same expressions as the scale filter.
 
   - point
     Point
+    AMF returns an unwritten surface for this algorithm when the format is
+    `nv12` or `p010`, so inputs in those formats are converted to a packed
+    RGB format automatically. This is a driver bug rather than a documented
+    restriction; the conversion can be dropped once a driver that scales
+    `nv12` and `p010` correctly with `point` is in wide use.
 
   - sr1-1
     Video SR1.1
+    This algorithm only supports packed RGB formats and requires a DirectX 11 or
+    DirectX 12 device, so it is available on Windows only. Inputs in other formats
+    such as `nv12` or `p010` are converted to a packed RGB format
+    automatically.
+    Note that the VideoSR algorithms (`sr1-0` and `sr1-1`) do not
+    preserve the alpha channel (it is left zeroed); drop it after the download,
+    e.g. with `hwdownload,format=rgba,format=rgb24`, if an opaque result is
+    required.
 
 - sharpness
   Control hq scaler sharpening. The value is a float in the range of \[0.0, 2.0]
@@ -23318,6 +23331,16 @@ Allows for the same expressions as the scale filter.
 - format
   Controls the output pixel format. By default, or if none is specified, the input
   pixel format is used.
+
+The `point` and `sr1-1` algorithms emit the packed RGB format the
+scaler receives, so for them this option must name one of `rgba`,
+`bgra`, `x2bgr10le` or `rgbaf16le`. A named format also decides
+what software input is converted to, and what a hardware surface in another
+format is converted to on the GPU. Without it, `x2bgr10le` is selected for
+`p010` input and `rgba` for other non-RGB input, and the result is
+tagged as full range RGB. libswscale cannot convert other software formats to
+`rgbaf16le`; use software input already in that format or a hardware
+input for GPU conversion.
 
 - keep-ratio
   Force the scaler to keep the aspect ratio of the input image when the output size has a different aspect ratio.
@@ -23331,10 +23354,12 @@ Allows for the same expressions as the scale filter.
 
 -
 
-Scale input to 720p, keeping aspect ratio and ensuring the output is yuv420p.
+Upscale to 720p, keeping aspect ratio, and read the result back into system
+memory. The filter always outputs AMF surfaces, so a hwdownload is needed
+to feed a software encoder.
 
 ```text
-sr_amf=-2:720:format=yuv420p
+sr_amf=-2:720,hwdownload,format=nv12
 ```
 
 -
@@ -26213,9 +26238,11 @@ The accepted values for in\_primaries and out\_primaries are:
 -
 
 Scale input to 720p, keeping aspect ratio and ensuring the output is yuv420p.
+The filter always outputs AMF surfaces, so a hwdownload is needed to feed a
+software encoder.
 
 ```text
-vpp_amf=-2:720:format=yuv420p
+vpp_amf=-2:720:format=yuv420p,hwdownload,format=yuv420p
 ```
 
 -

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/patch-v1-gamecentergroups-_id_-relationships-gamecenterleaderboardsetsv2
 
 # Modify the Leaderboard Sets for a Game Center Group

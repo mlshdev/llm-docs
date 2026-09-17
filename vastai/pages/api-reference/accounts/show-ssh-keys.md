@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/ssh](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/api-reference/openapi.yaml%23get%20/api/v0/ssh)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/ssh](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/api-reference/openapi.yaml%23get%20/api/v0/ssh)
 > Canonical documentation: https://docs.vast.ai/api-reference/accounts/show-ssh-keys
 
 # show ssh keys

@@ -1,9 +1,9 @@
-# Apple WebKit and Safari snapshot-f54edb363a08: full documentation
+# Apple WebKit and Safari snapshot-a0a4b8d281c3: full documentation
 
 Source: https://developer.apple.com/documentation/webkit
-Catalog snapshot: f54edb363a083e89fbb57583763fb82cc6f82b664cabb36a74bc0b6812e025c6
-Content digest: bfe64edc2dc1f17ae82411b196f0116d1792fb859c52f04313168761d0296804
-Captured at: 2026-09-16T18:21:42.106Z
+Catalog snapshot: a0a4b8d281c3f7aea28b686494365f12c4270621bbf6d43cdea12ffe295fbfab
+Content digest: 734bf10815a2acca72e71faa3a510eace5521c5201527ea636458dac7a773b04
+Captured at: 2026-09-17T18:22:51.558Z
 Volume 3
 
 # Document: Subscription images
@@ -53108,8 +53108,6 @@ To connect a view hierarchy in another process, create an instance of this class
 - [Hashable](https://developer.apple.com/documentation/swift/hashable)
 - [NSCoding](https://developer.apple.com/documentation/foundation/nscoding)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIAccessibilityIdentification](https://developer.apple.com/documentation/uikit/uiaccessibilityidentification)
 - [UIActivityItemsConfigurationProviding](https://developer.apple.com/documentation/uikit/uiactivityitemsconfigurationproviding)
 - [UIAppearance](https://developer.apple.com/documentation/uikit/uiappearance)
@@ -164323,8 +164321,8 @@ Check out a selection of documentation for new technologies, frameworks, and API
 
 ### App Store
 
-- [StoreKit](https://developer.apple.com/documentation/storekit): Support In-App Purchases and interactions with the App Store.
-- [In-App Purchase](https://developer.apple.com/documentation/storekit/in-app-purchase): Offer content and services in your app across Apple platforms using a Swift-based interface.
+- [StoreKit](https://developer.apple.com/documentation/storekit): Support Apple In-App Purchases and interactions with the App Store.
+- [Apple In-App Purchase](https://developer.apple.com/documentation/storekit/in-app-purchase): Offer content and services in your app across Apple platforms using a Swift-based interface.
 - [Transaction](https://developer.apple.com/documentation/storekit/transaction): Information that represents the customer’s purchase of a product in your app.
 - [App Store Connect API](../appstoreconnectapi.md): The data structure that represents an app store connect api resource.
 - [App Store Server Notifications](https://developer.apple.com/documentation/appstoreservernotifications): Monitor In-App Purchase events in real time and learn of unreported external purchase tokens, with server notifications from the App Store.
@@ -164640,7 +164638,7 @@ For a comprehensive list of downloadable sample code projects, see [WWDC22 Sampl
 
 ### App Store and Distribution
 
-- [StoreKit](https://developer.apple.com/documentation/storekit): Support In-App Purchases and interactions with the App Store.
+- [StoreKit](https://developer.apple.com/documentation/storekit): Support Apple In-App Purchases and interactions with the App Store.
 - [App Store Server API](https://developer.apple.com/documentation/appstoreserverapi): Manage your customers’ App Store transactions from your server.
 - [App Store Server Notifications](https://developer.apple.com/documentation/appstoreservernotifications): Monitor In-App Purchase events in real time and learn of unreported external purchase tokens, with server notifications from the App Store.
 - [Notary API](../notaryapi.md): Submit your macOS software for notarization through a web interface.
@@ -164858,7 +164856,7 @@ With Metal debugging and performance analysis tools, you can make your apps and 
 
 ### App Store and distribution
 
-- [StoreKit](https://developer.apple.com/documentation/storekit): Support In-App Purchases and interactions with the App Store.
+- [StoreKit](https://developer.apple.com/documentation/storekit): Support Apple In-App Purchases and interactions with the App Store.
 - [App Store Server API](https://developer.apple.com/documentation/appstoreserverapi): Manage your customers’ App Store transactions from your server.
 - [App Store Server Notifications changelog](https://developer.apple.com/documentation/appstoreservernotifications/app-store-server-notifications-changelog): Learn about changes to the App Store Server Notifications service.
 - [App Store Connect API Release Notes](../appstoreconnectapi/app-store-connect-api-release-notes.md): Learn about new features and updates in the App Store Connect API.
@@ -220420,3 +220418,33 @@ class DOMProgressEvent
 - [DOMCSSPrimitiveValue](domcssprimitivevalue.md): Deprecated.
 - [DOMCSSRule](domcssrule.md): Deprecated.
 - [DOMCSSRuleList](domcssrulelist.md): Deprecated.
+
+# Document: lengthComputable
+
+Source path: documentation/webkit/domprogressevent/lengthcomputable
+Canonical documentation: https://developer.apple.com/documentation/webkit/domprogressevent/lengthcomputable
+Description: Framework: WebKit Kind: Instance Property Availability: macOS 10.6+ (deprecated in 10.14)
+
+# lengthComputable (Swift)
+
+**Framework:** WebKit  
+**Kind:** Instance Property  
+**Availability:** macOS 10.6+ (deprecated in 10.14)
+
+## Declaration
+
+```swift
+var lengthComputable: Bool { get }
+```
+
+# lengthComputable (Objective-C)
+
+**Framework:** WebKit  
+**Kind:** Instance Property  
+**Availability:** macOS 10.6+ (deprecated in 10.14)
+
+## Declaration
+
+```objectivec
+@property (readonly) BOOL lengthComputable;
+```

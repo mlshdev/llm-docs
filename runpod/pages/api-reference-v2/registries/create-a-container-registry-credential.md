@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/registries/create-a-container-registry-credential.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/registries/create-a-container-registry-credential.mdx)
+> Pinned source for Runpod main: [api-reference-v2/registries/create-a-container-registry-credential.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/registries/create-a-container-registry-credential.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/registries/create-a-container-registry-credential
 
 # Create A Container Registry Credential
@@ -17,9 +17,9 @@ Stores credentials for a private container registry. Credentials are write-only.
 
 - Media type: `application/json`
   - Schema (object)
-    - `name` (required; string; minimum length: `1`)
-    - `password` (required; string; minimum length: `1`): Registry password (write-only, not returned in responses)
-    - `username` (required; string; minimum length: `1`): Registry username (write-only, not returned in responses)
+    - `name` (required; string; minimum length: `1`; maximum length: `191`)
+    - `password` (required; string; minimum length: `1`; maximum length: `16384`): Registry password (write-only, not returned in responses)
+    - `username` (required; string; minimum length: `1`; maximum length: `191`): Registry username (write-only, not returned in responses)
   - Example `dockerHubRegistry`: `{"name":"dockerhub-private","username":"runpod-user","password":"correct-horse-battery-staple"}`
 
 **Responses**

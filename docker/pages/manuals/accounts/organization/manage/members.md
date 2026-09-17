@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/members.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/accounts/organization/manage/members.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/members.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/accounts/organization/manage/members.md)
 
 # Invite and manage organization members
 
@@ -245,7 +245,7 @@ After you invite and manage members, explore these related topics:
 
 [licenses-and-invites]: /manuals/accounts/organization/manage/manage-licenses.md#licenses-and-invites
 
-[bulk-invites]: /reference/api/hub/latest/#tag/invites/paths/~1v2~1invites~1bulk/post
+[bulk-invites]: /reference/api/hub/latest/operations/postV2InvitesBulk/
 
 [docker-pricing]: https://www.docker.com/pricing?ref=Docs&refAction=DocsAdminMembers
 

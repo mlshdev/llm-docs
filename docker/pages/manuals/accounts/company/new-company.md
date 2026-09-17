@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/company/new-company.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/accounts/company/new-company.md)
+> Pinned source for Docker main: [content/manuals/accounts/company/new-company.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/accounts/company/new-company.md)
 
 # Create new company
 
@@ -48,7 +48,3 @@ see [Add more organizations](https://docs.docker.com/accounts/company/manage/#ad
 - [Add organizations](https://docs.docker.com/accounts/company/manage/#add-more-organizations)
 - [Invite company members](https://docs.docker.com/accounts/company/manage/#company-invitations)
 - [Manage company owners](https://docs.docker.com/accounts/company/manage/#company-owners)
-
-## More resources
-
-- [Video: Create a company](https://youtu.be/XZ5_i6qiKho?feature=shared\&t=359)

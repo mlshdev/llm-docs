@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/templates/create-a-template.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/templates/create-a-template.mdx)
+> Pinned source for Runpod main: [api-reference-v2/templates/create-a-template.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/templates/create-a-template.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/templates/create-a-template
 
 # Create A Template
@@ -24,8 +24,12 @@ directly. Returns the created template.
     - allOf:
       - `variant 1`: Reusable container configuration shared across templates, pods, and serverless endpoints. Adding a field here automatically propagates to all three resources.
         - allOf:
-          - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support private registries (clusters, until the upstream input accepts a registry credential).
-            - `args` (string): Arguments passed to the container entrypoint
+          - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support a direct registry credential (clusters — there the registry credential arrives via a pod template, see CreateClusterRequest.templateId).
+            - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
+            - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+              - `items` (string)
+            - `entrypoint` (array): Container ENTRYPOINT in exec form, overriding the image's own. Encoded into `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+              - `items` (string)
             - `disk` (integer; minimum: `1`): Container disk in GB (ephemeral, wiped on restart)
             - `env` (object): Environment variables as key-value pairs
               - `additional properties` (string)
@@ -47,8 +51,8 @@ directly. Returns the created template.
             - `path` (required; string): Mount path inside the container. May be changed via PATCH.
         - `public` (boolean; default: `false`)
         - `serverless` (boolean; default: `false`)
-        - `startJupyter` (boolean; default: `true`): Start JupyterLab in containers created from this template: injects a generated `JUPYTER_PASSWORD` environment variable, unless `env` already sets one. Only images that honor the convention start Jupyter from it (RunPod official images do); expose `8888/http` in `ports` to reach it. Defaults to `true` when omitted, matching console-created templates.
-        - `startSsh` (boolean; default: `true`): Provision SSH access in containers created from this template: injects a `PUBLIC_KEY` environment variable carrying the deployer's registered SSH public keys (`PUT /v2/account/ssh-keys` — with none registered the flag does nothing), unless `env` already sets one. Only images that honor the convention start sshd from it (all RunPod official images do); direct SSH also needs a `22/tcp` entry in `ports`. Defaults to `true` when omitted, matching console-created templates.
+        - `startJupyter` (boolean; default: `true`): Start JupyterLab in containers created from this template: injects a generated `JUPYTER_PASSWORD` environment variable, unless `env` already sets one. Only images that honor the convention start Jupyter from it (Runpod official images do); expose `8888/http` in `ports` to reach it. Defaults to `true` when omitted, matching console-created templates.
+        - `startSsh` (boolean; default: `true`): Provision SSH access in containers created from this template: injects a `PUBLIC_KEY` environment variable carrying the deployer's registered SSH public keys (`PUT /v2/account/ssh-keys` — with none registered the flag does nothing), unless `env` already sets one. Only images that honor the convention start sshd from it (all Runpod official images do); direct SSH also needs a `22/tcp` entry in `ports`. Defaults to `true` when omitted, matching console-created templates.
   - Example `podTemplate`: `{"name":"PyTorch GPU Template","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","category":"NVIDIA","disk":50,"ports":["8888/http"],"env":{"JUPYTER_ENABLE_LAB":"yes"},"mounts":{"persistent":{"size":20,"path":"/workspace"}},"serverless":false,"public":false}`
 
 **Responses**
@@ -61,8 +65,12 @@ directly. Returns the created template.
       - allOf:
         - `variant 1`: Reusable container configuration shared across templates, pods, and serverless endpoints. Adding a field here automatically propagates to all three resources.
           - allOf:
-            - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support private registries (clusters, until the upstream input accepts a registry credential).
-              - `args` (string): Arguments passed to the container entrypoint
+            - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support a direct registry credential (clusters — there the registry credential arrives via a pod template, see CreateClusterRequest.templateId).
+              - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
+              - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+                - `items` (string)
+              - `entrypoint` (array): Container ENTRYPOINT in exec form, overriding the image's own. Encoded into `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+                - `items` (string)
               - `disk` (integer; minimum: `1`): Container disk in GB (ephemeral, wiped on restart)
               - `env` (object): Environment variables as key-value pairs
                 - `additional properties` (string)

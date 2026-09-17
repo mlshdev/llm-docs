@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/release-notes/platform.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/dhi/release-notes/platform.md)
+> Pinned source for Docker main: [content/manuals/dhi/release-notes/platform.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/dhi/release-notes/platform.md)
 
 # Docker Hardened Images release notes
 
@@ -18,6 +18,11 @@ New features and enhancements released in the third quarter of 2026.
 - DHI API: VEX statements and suppressed CVEs for a Docker Hardened Image are
   now available to query by digest through the DHI GraphQL API. For more
   information, see [Use the DHI API](https://docs.docker.com/dhi/tools/api/).
+- DHI webhook payloads: Webhooks on a mirrored Docker Hardened Image repository
+  now include a `dhi_metadata` object describing the vulnerability fixes,
+  package changes, and configuration changes between builds. For more
+  information, see [Automate syncing with
+  webhooks](https://docs.docker.com/dhi/how-to/mirror/#automate-syncing-with-webhooks).
 
 ## Q2 2026
 

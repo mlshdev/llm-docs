@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/use-desktop/resource-saver.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/desktop/use-desktop/resource-saver.md)
+> Pinned source for Docker main: [content/manuals/desktop/use-desktop/resource-saver.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/desktop/use-desktop/resource-saver.md)
 
 # Docker Desktop's Resource Saver mode
 
@@ -16,7 +16,7 @@ experience.
 Resource Saver is enabled by default but can be disabled by navigating to the **Resources** tab, in **Settings**. You can also configure the idle
 timer as shown below.
 
-![Resource Saver Settings](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/desktop/images/resource-saver-settings.webp)
+![Resource Saver Settings](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/desktop/images/resource-saver-settings.webp)
 
 If the values available aren't sufficient for your
 needs, you can reconfigure it to any value, as long as the value is larger than 30 seconds, by

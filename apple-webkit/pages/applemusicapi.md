@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f54edb363a08; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/applemusicapi
 
 # Apple Music API
@@ -114,4 +114,4 @@ Use this API to retrieve information about albums, songs, artists, playlists, mu
 ### Related Documentation
 
 - [Media Player](https://developer.apple.com/documentation/mediaplayer): Find and play songs, audio podcasts, audio books, and more from within your app.
-- [StoreKit](https://developer.apple.com/documentation/storekit): Support In-App Purchases and interactions with the App Store.
+- [StoreKit](https://developer.apple.com/documentation/storekit): Support Apple In-App Purchases and interactions with the App Store.

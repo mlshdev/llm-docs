@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/bun.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/guides/bun.md)
+> Pinned source for Docker main: [content/guides/bun.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/guides/bun.md)
 
 The Bun getting started guide teaches you how to create a containerized Bun application using Docker.
 

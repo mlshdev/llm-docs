@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.1: [docs/runs/metadata.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/runs/metadata.mdx)
+> Pinned source for Trigger.dev v4.6.3: [docs/runs/metadata.mdx](https://github.com/triggerdotdev/trigger.dev/blob/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/runs/metadata.mdx)
 > Canonical documentation: https://trigger.dev/docs/runs/metadata
 
 # Run metadata
@@ -699,7 +699,7 @@ export const myTask = task({
 
 You can view the metadata for a run in the Trigger.dev dashboard. The metadata will be displayed in the run details view:
 
-![View run metadata dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/run-metadata.png)
+![View run metadata dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/images/run-metadata.png)
 
 ### API
 

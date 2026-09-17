@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/checks.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/build/checks.md)
+> Pinned source for Docker main: [content/manuals/build/checks.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/build/checks.md)
 
 **Build checks requirements**
 
@@ -74,7 +74,7 @@ jobs:
         uses: docker/build-push-action@v7
 ```
 
-![GitHub Actions build check annotations](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/build/images/gha-check-annotations.png)
+![GitHub Actions build check annotations](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/build/images/gha-check-annotations.png)
 
 ### More verbose output
 

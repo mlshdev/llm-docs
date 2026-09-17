@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.1: [docs/guides/frameworks/nextjs-webhooks.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/guides/frameworks/nextjs-webhooks.mdx)
+> Pinned source for Trigger.dev v4.6.3: [docs/guides/frameworks/nextjs-webhooks.mdx](https://github.com/triggerdotdev/trigger.dev/blob/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/guides/frameworks/nextjs-webhooks.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/nextjs-webhooks
 
 # Triggering tasks with webhooks in Next.js

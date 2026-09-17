@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/storage/volumes.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/instances/storage/volumes.mdx)
+> Pinned source for Vast.ai main: [guides/instances/storage/volumes.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/instances/storage/volumes.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/storage/volumes
 
 # Volumes
@@ -23,36 +23,36 @@ This guide will walk you through the process of creating a volume using a templa
 
 1. Select a template then click on **Add volume** dropdown. You will see an option labeled **Local volume** with a + (plus) button next to it.
 
-   ![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/volumes.webp)
+   ![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/volumes.webp)
 2. Click + button. This will allow you to adjust the volume size using the slider. Once enabled, offes will display the available volume size.&#x20;
 
-   ![Create local volume](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/volumes-2.webp)
+   ![Create local volume](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/volumes-2.webp)
 3. Click **Rent&#x20;**&#x62;utton to launch your instance along with the volume. Once the instance is running, your volume will be automatically mounted and available inside the container at the /data directory.
 
-   ![Volume on instance](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/volumes-3.webp)
+   ![Volume on instance](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/volumes-3.webp)
 4. You can find your volume information on **Storage&#x20;**&#x70;age.
 
-   ![Volume info](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/volumes-4.webp)
+   ![Volume info](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/volumes-4.webp)
 
 ### **How to create a volume using a template?**
 
 1. Choose  a Template. You can either choose an existing template from the [**Recommended**](https://cloud.vast.ai/templates/) list or create your own [custom template](https://docs.vast.ai/guides/templates/creating-templates).
 2. Open Template Editor (Click on pencil icon on a template card). Scroll down until you see the **Disk Space (Container + Volume)&#x20;**&#x73;ection.&#x20;
 
-   ![Volume settings](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/volumes-5.webp)
+   ![Volume settings](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/volumes-5.webp)
 3. In this section, check the box **Add recommended volume settings**. Once selected, a new configuration area will appear where you can enter the **volume size&#x20;**&#x61;nd specify the **installation path.&#x20;**&#x41; default path is provided, but you can modify it if needed.&#x20;
 
-   ![Volume settings](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/volumes-6.webp)
+   ![Volume settings](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/volumes-6.webp)
 4. After filling in the volume details, click **Save\&Use&#x20;**&#x6F;r **Create\&Use Template&#x20;**&#x74;o apply your changes and navigate to the Search page. Offers that support volumes will now display a volume badge showing the available volume size. You can adjust the volume size using the slider in the Search page after your template is configured.
 
-   ![Volume settings](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/volumes-7.webp)
+   ![Volume settings](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/volumes-7.webp)
 5. Select a GPU and click **Rent&#x20;**&#x62;utton.
 
 ### **How to view volume pricing?**
 
 To view pricing details, simply hover over the Rent button for any offer.&#x20;
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/volumes-8.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/volumes-8.webp)
 
 ### Deleting volume
 
@@ -65,7 +65,7 @@ Delete a Volume:
 2. Once the volume is detached, go to the **Storage** page.
 3. Find the volume you want to delete, click on the **three-dot menu** (⋮) next to it, and select **"Delete volume"**.
 
-   ![Delete volume](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/volumes-9.webp)
+   ![Delete volume](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/volumes-9.webp)
 4. Confirm the deletion. This action is **permanent** and cannot be undone.
 
 > **Warning**
@@ -80,7 +80,7 @@ If you already have a volume and want to launch a new instance using it, follow 
 
 2. In the **Volume Info** section, you will see a button labeled **Rent instance using this volume**.
 
-   ![Rent instance using this volume](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/volumes-10.webp)
+   ![Rent instance using this volume](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/volumes-10.webp)
 
 3. Click this button. You will be redirected to the **Search Page**, where available offers are automatically filtered to match the **same machine** where the volume is located.
 

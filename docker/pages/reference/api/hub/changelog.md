@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/api/hub/changelog.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/reference/api/hub/changelog.md)
+> Pinned source for Docker main: [content/reference/api/hub/changelog.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/reference/api/hub/changelog.md)
 
 # Docker Hub API changelog
 
@@ -11,12 +11,12 @@ issues for Docker Service APIs.
 
 ### Updates
 
-- Document that [Update org member (role)](https://docs.docker.com/reference/api/hub/latest/#tag/orgs)
+- Document that [Update org member (role)](https://docs.docker.com/reference/api/hub/latest/#tag-orgs)
   accepts a custom role name in `role`.
 - Document the `role` field on
-  [Update some details for an organization group](https://docs.docker.com/reference/api/hub/latest/#tag/groups).
+  [Update some details for an organization group](https://docs.docker.com/reference/api/hub/latest/#tag-groups).
 - Add `Editor` to `org_member.role` on
-  [organization members](https://docs.docker.com/reference/api/hub/latest/#tag/orgs).
+  [organization members](https://docs.docker.com/reference/api/hub/latest/#tag-orgs).
 
 ***
 
@@ -25,9 +25,9 @@ issues for Docker Service APIs.
 ### Updates
 
 - Document organization access token (OAT) support for
-  [repository management](https://docs.docker.com/reference/api/hub/latest/#tag/repositories)
+  [repository management](https://docs.docker.com/reference/api/hub/latest/#tag-repositories)
   endpoints, the scope-dependent behavior of
-  [List repositories](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/listNamespaceRepositories),
+  [List repositories](https://docs.docker.com/reference/api/hub/latest/operations/listNamespaceRepositories/),
   and legacy paths that are OAT unsupported.
 
 ***
@@ -36,13 +36,13 @@ issues for Docker Service APIs.
 
 ### Updates
 
-- Add missing `expires_at` fields on [PAT management](https://docs.docker.com/reference/api/hub/latest/#tag/access-tokens) endpoints.
+- Add missing `expires_at` fields on [PAT management](https://docs.docker.com/reference/api/hub/latest/#tag-access-tokens) endpoints.
 
 ## 2025-09-25
 
 ### Updates
 
-- Fix [Assign repository group](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/CreateRepositoryGroup) endpoints request/response
+- Fix [Assign repository group](https://docs.docker.com/reference/api/hub/latest/operations/CreateRepositoryGroup/) endpoints request/response
 
 ***
 
@@ -50,16 +50,16 @@ issues for Docker Service APIs.
 
 ### New
 
-- Add [Create repository](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/CreateRepository) endpoints for a given `namespace`.
-- Add [Get repository](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/GetRepository) endpoints for a given `namespace`.
-- Add [Check repository](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/CheckRepository) endpoints for a given `namespace`.
+- Add [Create repository](https://docs.docker.com/reference/api/hub/latest/operations/CreateRepository/) endpoints for a given `namespace`.
+- Add [Get repository](https://docs.docker.com/reference/api/hub/latest/operations/GetRepository/) endpoints for a given `namespace`.
+- Add [Check repository](https://docs.docker.com/reference/api/hub/latest/operations/CheckRepository/) endpoints for a given `namespace`.
 
 ### Deprecations
 
-- [Deprecate POST /v2/repositories](https://docs.docker.com/reference/api/hub/deprecated/#deprecate-legacy-createrepository)
-- [Deprecate POST /v2/repositories/{namespace}](https://docs.docker.com/reference/api/hub/deprecated/#deprecate-legacy-createrepository)
-- [Deprecate GET /v2/repositories/{namespace}/{repository}](https://docs.docker.com/reference/api/hub/deprecated/#deprecate-legacy-getrepository)
-- [Deprecate HEAD /v2/repositories/{namespace}/{repository}](https://docs.docker.com/reference/api/hub/deprecated/#deprecate-legacy-getrepository)
+- [Deprecate POST /v2/repositories](https://docs.docker.com/reference/api/hub/deprecated/#deprecate-legacy-createrepository-and-getrepository)
+- [Deprecate POST /v2/repositories/{namespace}](https://docs.docker.com/reference/api/hub/deprecated/#deprecate-legacy-createrepository-and-getrepository)
+- [Deprecate GET /v2/repositories/{namespace}/{repository}](https://docs.docker.com/reference/api/hub/deprecated/#deprecate-legacy-createrepository-and-getrepository)
+- [Deprecate HEAD /v2/repositories/{namespace}/{repository}](https://docs.docker.com/reference/api/hub/deprecated/#deprecate-legacy-createrepository-and-getrepository)
 
 ***
 
@@ -67,8 +67,8 @@ issues for Docker Service APIs.
 
 ### New
 
-- Add [Update repository immutable tags settings](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/UpdateRepositoryImmutableTags) endpoints for a given `namespace` and `repository`.
-- Add [Verify repository immutable tags](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/VerifyRepositoryImmutableTags) endpoints for a given `namespace` and `repository`.
+- Add [Update repository immutable tags settings](https://docs.docker.com/reference/api/hub/latest/operations/UpdateRepositoryImmutableTags/) endpoints for a given `namespace` and `repository`.
+- Add [Verify repository immutable tags](https://docs.docker.com/reference/api/hub/latest/operations/VerifyRepositoryImmutableTags/) endpoints for a given `namespace` and `repository`.
 
 ***
 
@@ -76,7 +76,7 @@ issues for Docker Service APIs.
 
 ### New
 
-- Add [List repositories](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/listNamespaceRepositories) endpoints for a given `namespace`.
+- Add [List repositories](https://docs.docker.com/reference/api/hub/latest/operations/listNamespaceRepositories/) endpoints for a given `namespace`.
 
 ### Deprecations
 
@@ -88,7 +88,7 @@ issues for Docker Service APIs.
 
 ### New
 
-- Add [APIs](https://docs.docker.com/reference/api/hub/latest/#tag/org-access-tokens) for organization access token (OATs) management.
+- Add [APIs](https://docs.docker.com/reference/api/hub/latest/#tag-org-access-tokens) for organization access token (OATs) management.
 
 ***
 
@@ -96,5 +96,5 @@ issues for Docker Service APIs.
 
 ### New
 
-- Add access to [audit logs](https://docs.docker.com/reference/api/hub/latest/#tag/audit-logs) for org
+- Add access to [audit logs](https://docs.docker.com/reference/api/hub/latest/#tag-audit-logs) for org
   access tokens.

@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/filter_design.txt](https://github.com/FFmpeg/FFmpeg/blob/9cf34b031f489dcecad5c579d0a22a956918cf36/doc/filter_design.txt)
+> Pinned source for FFmpeg master: [doc/filter_design.txt](https://github.com/FFmpeg/FFmpeg/blob/a79a84a9fe02999169ac9ff40f06c5d5aa823b96/doc/filter_design.txt)
 
 # Filter design
 

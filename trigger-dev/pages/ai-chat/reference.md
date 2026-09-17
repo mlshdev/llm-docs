@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.1: [docs/ai-chat/reference.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/ai-chat/reference.mdx)
+> Pinned source for Trigger.dev v4.6.3: [docs/ai-chat/reference.mdx](https://github.com/triggerdotdev/trigger.dev/blob/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/ai-chat/reference.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/reference
 
 # API Reference
@@ -300,26 +300,28 @@ Passed to the `onTurnStart` callback.
 
 Passed to the `onTurnComplete` callback.
 
-| Field                | Type                              | Description                                                             |
-| -------------------- | --------------------------------- | ----------------------------------------------------------------------- |
-| `ctx`                | `TaskRunContext`                  | Full task run context — see [Task context](#task-context-ctx)           |
-| `chatId`             | `string`                          | Chat session ID                                                         |
-| `messages`           | `ModelMessage[]`                  | Full accumulated conversation (model format)                            |
-| `uiMessages`         | `UIMessage[]`                     | Full accumulated conversation (UI format)                               |
-| `newMessages`        | `ModelMessage[]`                  | Only this turn's messages (model format)                                |
-| `newUIMessages`      | `UIMessage[]`                     | Only this turn's messages (UI format)                                   |
-| `responseMessage`    | `UIMessage \| undefined`          | The assistant's response for this turn                                  |
-| `rawResponseMessage` | `UIMessage \| undefined`          | Raw response before abort cleanup                                       |
-| `turn`               | `number`                          | Turn number (0-indexed)                                                 |
-| `runId`              | `string`                          | The Trigger.dev run ID                                                  |
-| `chatAccessToken`    | `string`                          | Scoped access token for this run                                        |
-| `lastEventId`        | `string \| undefined`             | Stream position for resumption                                          |
-| `stopped`            | `boolean`                         | Whether the user stopped generation during this turn                    |
-| `continuation`       | `boolean`                         | Whether this run is continuing an existing chat                         |
-| `usage`              | `LanguageModelUsage \| undefined` | Token usage for this turn                                               |
-| `totalUsage`         | `LanguageModelUsage`              | Cumulative token usage across all turns                                 |
-| `finishReason`       | `FinishReason \| undefined`       | Why the LLM stopped (`"stop"`, `"tool-calls"`, `"error"`, …)            |
-| `error`              | `unknown`                         | Set when the turn threw; `responseMessage` is then undefined or partial |
+Same-ID approval and handover continuations include a full replacement assistant response. Persist `messages` for future model context, or upsert `newUIMessages` by message ID for the visible conversation. `newMessages` includes steps summarized during the turn and is not an append-only delta for these continuations.
+
+| Field                | Type                              | Description                                                              |
+| -------------------- | --------------------------------- | ------------------------------------------------------------------------ |
+| `ctx`                | `TaskRunContext`                  | Full task run context — see [Task context](#task-context-ctx)            |
+| `chatId`             | `string`                          | Chat session ID                                                          |
+| `messages`           | `ModelMessage[]`                  | Full accumulated conversation (model format)                             |
+| `uiMessages`         | `UIMessage[]`                     | Full accumulated conversation (UI format)                                |
+| `newMessages`        | `ModelMessage[]`                  | This turn's model messages, including full same-ID replacement responses |
+| `newUIMessages`      | `UIMessage[]`                     | New or updated UI messages; upsert by message ID                         |
+| `responseMessage`    | `UIMessage \| undefined`          | The assistant's response for this turn                                   |
+| `rawResponseMessage` | `UIMessage \| undefined`          | Raw response before abort cleanup                                        |
+| `turn`               | `number`                          | Turn number (0-indexed)                                                  |
+| `runId`              | `string`                          | The Trigger.dev run ID                                                   |
+| `chatAccessToken`    | `string`                          | Scoped access token for this run                                         |
+| `lastEventId`        | `string \| undefined`             | Stream position for resumption                                           |
+| `stopped`            | `boolean`                         | Whether the user stopped generation during this turn                     |
+| `continuation`       | `boolean`                         | Whether this run is continuing an existing chat                          |
+| `usage`              | `LanguageModelUsage \| undefined` | Token usage for this turn                                                |
+| `totalUsage`         | `LanguageModelUsage`              | Cumulative token usage across all turns                                  |
+| `finishReason`       | `FinishReason \| undefined`       | Why the LLM stopped (`"stop"`, `"tool-calls"`, `"error"`, …)             |
+| `error`              | `unknown`                         | Set when the turn threw; `responseMessage` is then undefined or partial  |
 
 ## BeforeTurnCompleteEvent
 

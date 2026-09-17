@@ -1,7 +1,9 @@
-> Pinned source for Runpod main: [api-reference-v2/clusters/get-a-cluster.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/clusters/get-a-cluster.mdx)
+> Pinned source for Runpod main: [api-reference-v2/clusters/get-a-cluster.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/clusters/get-a-cluster.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/clusters/get-a-cluster
 
 # Get A Cluster
+
+Retrieve a Runpod Cluster by ID with its configuration, status, and an aggregate summary of member Pods by status.
 
 `GET /v2/clusters/{id}`
 

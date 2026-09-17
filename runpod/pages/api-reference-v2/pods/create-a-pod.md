@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/pods/create-a-pod.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/pods/create-a-pod.mdx)
+> Pinned source for Runpod main: [api-reference-v2/pods/create-a-pod.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/pods/create-a-pod.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/pods/create-a-pod
 
 # Create A Pod
@@ -65,6 +65,15 @@ Which failures are worth retrying:
 | `429`  | Rate limited.                                                                                                                                      | Back off using `Retry-After`, then resume. |
 | `5xx`  | Transient upstream failure.                                                                                                                        | Retry the same candidate with backoff.     |
 
+Requests larger than 102400 bytes receive `413` before authentication
+or processing. Reduce the serialized JSON request body and retry.
+
+This limit also applies to the deployment request built from your input
+and any referenced template. A small request can therefore receive `413`
+if inherited template settings make the combined request too large.
+Reduce environment variables or command values in your request or template
+and retry.
+
 `400` covers both "your request breaks a rule" and "no capacity",
 because capacity exhaustion currently carries no machine-readable code
 of its own — only a human-readable `detail`. A rule violation is
@@ -81,8 +90,12 @@ request rather than as absent capacity.
     - allOf:
       - `variant 1`: Reusable container configuration shared across templates, pods, and serverless endpoints. Adding a field here automatically propagates to all three resources.
         - allOf:
-          - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support private registries (clusters, until the upstream input accepts a registry credential).
-            - `args` (string): Arguments passed to the container entrypoint
+          - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support a direct registry credential (clusters — there the registry credential arrives via a pod template, see CreateClusterRequest.templateId).
+            - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
+            - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+              - `items` (string)
+            - `entrypoint` (array): Container ENTRYPOINT in exec form, overriding the image's own. Encoded into `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+              - `items` (string)
             - `disk` (integer; minimum: `1`): Container disk in GB (ephemeral, wiped on restart)
             - `env` (object): Environment variables as key-value pairs
               - `additional properties` (string)
@@ -123,8 +136,8 @@ request rather than as absent capacity.
             - `items` (object): Reference to a NetworkVolume. Custom paths are honored at runtime on both GPU and CPU pods. The underlying `volumeId` is immutable post-create; the mount `path` may be changed via PATCH.
               - `volumeId` (required; string): ID of an existing NetworkVolume in the same data center as the pod.
               - `path` (required; string): Mount path inside the container. No default — must be specified explicitly.
-        - `startJupyter` (boolean; default: `false`): Create-time flag telling the provisioner to start JupyterLab: injects a generated `JUPYTER_PASSWORD` environment variable, unless the request already sets one. Only images that honor the convention start Jupyter from it (RunPod official images do); expose `8888/http` in `ports` to reach it. Not part of the pod's readable config — never returned by GET and not changeable by PATCH.
-        - `startSsh` (boolean; default: `false`): Create-time flag telling the provisioner to set up SSH access: injects a `PUBLIC_KEY` environment variable carrying your account's registered SSH public keys, unless the request already sets one. **Requires registered keys** (`PUT /v2/account/ssh-keys`) — with none registered the flag does nothing and the pod has no SSH access. Only images that honor the convention start sshd from it (all RunPod official images do). Connect using the pod's `ssh` block; the `ssh.direct` variant additionally needs a `22/tcp` entry in `ports`. Not part of the pod's readable config — never returned by GET and not changeable by PATCH.
+        - `startJupyter` (boolean; default: `false`): Create-time flag telling the provisioner to start JupyterLab: injects a generated `JUPYTER_PASSWORD` environment variable, unless the request already sets one. Only images that honor the convention start Jupyter from it (Runpod official images do); expose `8888/http` in `ports` to reach it. Not part of the pod's readable config — never returned by GET and not changeable by PATCH.
+        - `startSsh` (boolean; default: `false`): Create-time flag telling the provisioner to set up SSH access: injects a `PUBLIC_KEY` environment variable carrying your account's registered SSH public keys, unless the request already sets one. **Requires registered keys** (`PUT /v2/account/ssh-keys`) — with none registered the flag does nothing and the pod has no SSH access. Only images that honor the convention start sshd from it (all Runpod official images do). Connect using the pod's `ssh` block; the `ssh.direct` variant additionally needs a `22/tcp` entry in `ports`. Not part of the pod's readable config — never returned by GET and not changeable by PATCH.
         - `templateId` (string; minimum length: `1`): ID of a pod template to base this pod on. The template is resolved at create time into the same container settings you could otherwise spread into this body (image, args, disk, ports, env, registry, persistent mount, startSsh, startJupyter, allowedCudaVersions); explicit body fields override the template's, except `env`, which is merged per key with body values winning. Sending either CUDA field (`gpu.allowedCudaVersions` or `gpu.minCudaVersion`) replaces the template's CUDA constraint entirely, and CPU pods ignore it (like the persistent mount). The template is a one-time source of settings: later template edits do not affect the pod, and the created pod does not retain a link to the template (`template` stays null). The template may be one of your own or a public catalog template — see `GET /v2/catalog/templates` (unknown or inaccessible ID → 404) — and must not be a serverless template (→ 422). CPU pods do not inherit a template's persistent mount.
   - Example `gpuPod`: `{"name":"pytorch-training","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","gpu":{"id":"NVIDIA GeForce RTX 4090","count":1,"minRamPerGpu":32,"minVcpuCountPerGpu":8},"disk":50}`
 
@@ -138,8 +151,12 @@ request rather than as absent capacity.
       - allOf:
         - `variant 1`: Reusable container configuration shared across templates, pods, and serverless endpoints. Adding a field here automatically propagates to all three resources.
           - allOf:
-            - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support private registries (clusters, until the upstream input accepts a registry credential).
-              - `args` (string): Arguments passed to the container entrypoint
+            - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support a direct registry credential (clusters — there the registry credential arrives via a pod template, see CreateClusterRequest.templateId).
+              - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
+              - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+                - `items` (string)
+              - `entrypoint` (array): Container ENTRYPOINT in exec form, overriding the image's own. Encoded into `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+                - `items` (string)
               - `disk` (integer; minimum: `1`): Container disk in GB (ephemeral, wiped on restart)
               - `env` (object): Environment variables as key-value pairs
                 - `additional properties` (string)
@@ -283,6 +300,14 @@ request rather than as absent capacity.
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `notFound`: `{"title":"Not Found","status":404,"detail":"resource not found"}`
+- `413`: The incoming request body or expanded upstream request exceeds the 102400 byte limit, or the upstream rejects the request as too large.
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
 - `422`: The request body or parameters were syntactically valid but failed validation.
   - Header `RateLimit` (string)
   - Header `RateLimit-Policy` (string)

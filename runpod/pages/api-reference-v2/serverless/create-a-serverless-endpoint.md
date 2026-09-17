@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/create-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/serverless/create-a-serverless-endpoint.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/create-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/serverless/create-a-serverless-endpoint.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/create-a-serverless-endpoint
 
 # Create A Serverless Endpoint
@@ -64,8 +64,12 @@ none.
     - allOf:
       - `variant 1`: Reusable container configuration shared across templates, pods, and serverless endpoints. Adding a field here automatically propagates to all three resources.
         - allOf:
-          - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support private registries (clusters, until the upstream input accepts a registry credential).
-            - `args` (string): Arguments passed to the container entrypoint
+          - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support a direct registry credential (clusters — there the registry credential arrives via a pod template, see CreateClusterRequest.templateId).
+            - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
+            - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+              - `items` (string)
+            - `entrypoint` (array): Container ENTRYPOINT in exec form, overriding the image's own. Encoded into `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+              - `items` (string)
             - `disk` (integer; minimum: `1`): Container disk in GB (ephemeral, wiped on restart)
             - `env` (object): Environment variables as key-value pairs
               - `additional properties` (string)
@@ -79,7 +83,7 @@ none.
         - `gpu`: GPU request for an endpoint create. Carries the CUDA constraints, which live here rather than at the body's top level so they are unrepresentable on a CPU endpoint.
           - allOf:
             - `variant 1` (object)
-              - `pools` (array; minimum items: `1`): Serverless GPU pool IDs (as returned by `GET /v2/catalog/gpus` in `pool`). Workers are placed on whichever listed pool has capacity. Narrow a pool down to specific cards with `excludedTypes`.
+              - `pools` (array; minimum items: `1`): Serverless GPU pool IDs (as returned by `GET /v2/catalog/gpus` in `pool`). Workers are placed on whichever listed pool has capacity. Narrow a pool down to specific cards with `excludedTypes`. On `PATCH`, `pools` and `excludedTypes` are one selection and are replaced together, so sending `pools` by itself **clears the exclusions**. Two cases: - **Changing pools, keeping exclusions** — send both fields in one request: `{"gpu": {"pools": ["ADA_24"], "excludedTypes": ["NVIDIA L40"]}}`. `GET` the endpoint first to read the current `excludedTypes` and resend the ones that still apply to the new pools; an exclusion naming a type outside `pools` is a 400. - **Changing only `count` or a CUDA constraint** — omit `pools`: `{"gpu": {"minCudaVersion": "12.4"}}`. The pool list and the exclusions are both left exactly as they are. `excludedTypes` documents the full rule.
                 - `items` (string)
               - `excludedTypes` (array; unique items): GPU **type** IDs to subtract from the selected pools — the `id` field of `GET /v2/catalog/gpus`, the same identifiers pods take in `gpu.id`. Workers run on every type in `pools` except these. Omit to use the whole pool. Pools stay the unit of selection; types are the unit of subtraction. There is no inclusive allowlist: a card later added to one of your pools becomes eligible, which is the honest reading of "this pool, minus these". Tied to `pools`, because the two together are one selection: supplying `pools` replaces that selection wholesale, so a `PATCH` sending `pools` **without `excludedTypes`** **clears** them — restate them to keep them. A `PATCH` that omits `pools` leaves both the pools and the exclusions untouched, so changing only a CUDA constraint cannot widen a pinned endpoint. Rejected with 400 if a value is not a GPU type in one of `pools`; upstream accepts unrecognized exclusions silently, so a typo would otherwise produce a filter that does nothing. Surrounding whitespace is trimmed, so `" NVIDIA L40"` and `"NVIDIA L40"` mean the same card.
                 - `items` (string; pattern: `^\s*[^-\s]`)
@@ -137,8 +141,12 @@ none.
       - allOf:
         - `variant 1`: Reusable container configuration shared across templates, pods, and serverless endpoints. Adding a field here automatically propagates to all three resources.
           - allOf:
-            - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support private registries (clusters, until the upstream input accepts a registry credential).
-              - `args` (string): Arguments passed to the container entrypoint
+            - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support a direct registry credential (clusters — there the registry credential arrives via a pod template, see CreateClusterRequest.templateId).
+              - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
+              - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+                - `items` (string)
+              - `entrypoint` (array): Container ENTRYPOINT in exec form, overriding the image's own. Encoded into `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+                - `items` (string)
               - `disk` (integer; minimum: `1`): Container disk in GB (ephemeral, wiped on restart)
               - `env` (object): Environment variables as key-value pairs
                 - `additional properties` (string)
@@ -170,7 +178,7 @@ none.
               - `variant 1`
                 - allOf:
                   - `variant 1` (object)
-                    - `pools` (array; minimum items: `1`): Serverless GPU pool IDs (as returned by `GET /v2/catalog/gpus` in `pool`). Workers are placed on whichever listed pool has capacity. Narrow a pool down to specific cards with `excludedTypes`.
+                    - `pools` (array; minimum items: `1`): Serverless GPU pool IDs (as returned by `GET /v2/catalog/gpus` in `pool`). Workers are placed on whichever listed pool has capacity. Narrow a pool down to specific cards with `excludedTypes`. On `PATCH`, `pools` and `excludedTypes` are one selection and are replaced together, so sending `pools` by itself **clears the exclusions**. Two cases: - **Changing pools, keeping exclusions** — send both fields in one request: `{"gpu": {"pools": ["ADA_24"], "excludedTypes": ["NVIDIA L40"]}}`. `GET` the endpoint first to read the current `excludedTypes` and resend the ones that still apply to the new pools; an exclusion naming a type outside `pools` is a 400. - **Changing only `count` or a CUDA constraint** — omit `pools`: `{"gpu": {"minCudaVersion": "12.4"}}`. The pool list and the exclusions are both left exactly as they are. `excludedTypes` documents the full rule.
                       - `items` (string)
                     - `excludedTypes` (array; unique items): GPU **type** IDs to subtract from the selected pools — the `id` field of `GET /v2/catalog/gpus`, the same identifiers pods take in `gpu.id`. Workers run on every type in `pools` except these. Omit to use the whole pool. Pools stay the unit of selection; types are the unit of subtraction. There is no inclusive allowlist: a card later added to one of your pools becomes eligible, which is the honest reading of "this pool, minus these". Tied to `pools`, because the two together are one selection: supplying `pools` replaces that selection wholesale, so a `PATCH` sending `pools` **without `excludedTypes`** **clears** them — restate them to keep them. A `PATCH` that omits `pools` leaves both the pools and the exclusions untouched, so changing only a CUDA constraint cannot widen a pinned endpoint. Rejected with 400 if a value is not a GPU type in one of `pools`; upstream accepts unrecognized exclusions silently, so a typo would otherwise produce a filter that does nothing. Surrounding whitespace is trimmed, so `" NVIDIA L40"` and `"NVIDIA L40"` mean the same card.
                       - `items` (string; pattern: `^\s*[^-\s]`)

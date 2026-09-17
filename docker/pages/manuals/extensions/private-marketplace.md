@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/private-marketplace.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/extensions/private-marketplace.md)
+> Pinned source for Docker main: [content/manuals/extensions/private-marketplace.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/extensions/private-marketplace.md)
 
 **Private marketplace requirements**
 
@@ -176,7 +176,7 @@ It's recommended that you try the private marketplace on your Docker Desktop ins
 
 When you select the **Extensions** tab, you should see the private marketplace listing only the extensions you have allowed in `extensions.txt`.
 
-![Extensions Private Marketplace](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/static/assets/images/extensions-private-marketplace.webp)
+![Extensions Private Marketplace](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/static/assets/images/extensions-private-marketplace.webp)
 
 ## Step six: Distribute the private marketplace
 

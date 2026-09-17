@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/connect/jupyter.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/instances/connect/jupyter.mdx)
+> Pinned source for Vast.ai main: [guides/instances/connect/jupyter.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/instances/connect/jupyter.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/connect/jupyter
 
 # Jupyter
@@ -38,7 +38,7 @@ In most operating systems, double clicking on the certificate will start an inst
 3. Click Next and then click Import and find the downloaded [jvastai\_root.cer](https://console.vast.ai/static/jvastai_root.cer) file.
 4. Click "Place all certificates in the following store" and then use the browse button. Click on the **Trusted Root Certification Authorities** folder.
 
-![Cert Chrome Windows 1](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/jupyter-cert-chrome-windows-1.webp)
+![Cert Chrome Windows 1](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/jupyter-cert-chrome-windows-1.webp)
 
 1. Click finish and agree to finalize the import. No reboot is necessary and all new instances created will then not have the warning pop-up.
 
@@ -56,16 +56,16 @@ In most operating systems, double clicking on the certificate will start an inst
 1. After downloading the [certificate](https://console.vast.ai/static/jvastai_root.cer), double click on it to open the installation wizard.
 2. Click "Open".
 
-![Cert Windows 1](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/jupyter-cert-windows-1.webp)
+![Cert Windows 1](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/jupyter-cert-windows-1.webp)
 
 1. Click on the "Install Certificate" button. Select either the current user or local machine and hit next.
 
-![Cert Windows 2](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/jupyter-cert-windows-2.webp)
+![Cert Windows 2](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/jupyter-cert-windows-2.webp)
 
 1. Click "Place all certificates in the following store".
 2. Click Browse and select the folder "Trusted Root Certification Authorities". Click OK. Then click Next. Click "Finish" to install the certificate.
 
-![Cert Windows 3](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/jupyter-cert-windows-3.webp)
+![Cert Windows 3](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/jupyter-cert-windows-3.webp)
 
 1. Reboot the machine so the change can take effect.
 
@@ -73,11 +73,11 @@ In most operating systems, double clicking on the certificate will start an inst
 
 1. Double click the [certificate](https://console.vast.ai/static/jvastai_root.cer) after downloading it. It will then be added to your Keychain under the Login default keychain. Make sure that the Keychain Access application is opened and that there is an entry for Vast.ai Jupyter in the list of certificates. If it does not appear, then use the import button to manually import the certificate so that it appears in your list of certificates.
 
-![Cert Macos 1](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/jupyter-cert-macos-1.webp)
+![Cert Macos 1](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/jupyter-cert-macos-1.webp)
 
 1. Double click the entry and then click on the "Trust" box.
 2. Change the "When using this certificate" box to "Always Trust".
 
-![Cert Macos 2](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/jupyter-cert-macos-2.webp)
+![Cert Macos 2](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/jupyter-cert-macos-2.webp)
 
 1. Close the window. The change should take effect immediately for all instances you have running and create in the future.

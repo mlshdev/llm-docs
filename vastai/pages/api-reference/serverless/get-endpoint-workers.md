@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /get_endpoint_workers](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/api-reference/openapi.yaml%23post%20/get_endpoint_workers)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /get_endpoint_workers](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/api-reference/openapi.yaml%23post%20/get_endpoint_workers)
 > Canonical documentation: https://docs.vast.ai/api-reference/serverless/get-endpoint-workers
 
 # get endpoint workers

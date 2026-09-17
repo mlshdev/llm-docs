@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/reference/keys.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/reference/keys.mdx)
+> Pinned source for Vast.ai main: [guides/reference/keys.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/reference/keys.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/reference/keys
 
 # Keys
@@ -9,19 +9,19 @@ The Keys page helps you manage secure access to your Vast.ai account. Here, you'
 
 You can add, edit, or remove your ssh keys in the SSH Keys section of the Keys page of your console.
 
-![SSH Keys empty section](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-keys-2.webp)
+![SSH Keys empty section](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-keys-2.webp)
 
 Add a new ssh key by clicking on the **+New** button. Copy and paste your key into the input in order for it to be attached to your account. You can use this ssh key to log into instances remotely. More [here](https://docs.vast.ai/guides/instances/sshscp).
 
-![Add SSH Key](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-keys-3.webp)
+![Add SSH Key](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-keys-3.webp)
 
 Once the SSH key is saved, it will appear in the SSH Keys section and will be automatically added to your future instances.
 
-![SSH Keys](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-keys-4.webp)
+![SSH Keys](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-keys-4.webp)
 
 You can edit an existing ssh key by clicking on the **Edit** button and changing the text.
 
-![Edit SSH Key](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-keys-5.webp)
+![Edit SSH Key](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-keys-5.webp)
 
 Delete an existing ssh key by selecting the **Delete** button.
 
@@ -33,11 +33,11 @@ You can view, copy, edit, and update your API keys in the Keys section of the co
 
 To create an API key click on the **+New** button. It will trigger API key creation pop-up.
 
-![API Keys](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-keys-6.webp)
+![API Keys](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-keys-6.webp)
 
 Here, you can select specific permissions and assign a name to the key (by default, all you account permissions are selected).
 
-![API Keys](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-keys-7.webp)
+![API Keys](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-keys-7.webp)
 
 You can reset an API key by clicking the **Reset** button. A new key will be automatically generated. To remove a key, simply click the **Delete** button.
 
@@ -47,4 +47,4 @@ A **session key** is a temporary key that allows access to your Vast.ai account.
 
 However, for security reasons, it's important to review your session keys regularly. You can view a list of all active session keys and see which devices are currently logged into your account. If you notice any session keys that you don't recognize, or if a device is no longer in use, you can delete those keys to immediately remove access. This helps keep your account secure and ensures only your devices remain connected.
 
-![Session Keys](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-keys.webp)
+![Session Keys](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-keys.webp)

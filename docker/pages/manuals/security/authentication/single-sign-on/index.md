@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/_index.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/security/authentication/single-sign-on/_index.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/_index.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/security/authentication/single-sign-on/_index.md)
 
 # Single sign-on overview
 
@@ -22,7 +22,7 @@ by signing in to Docker Hub or Docker Desktop.
 The following diagram illustrates how SSO operates and is managed between
 Docker Hub, Docker Desktop, and your IdP.
 
-![SSO architecture](https://raw.githubusercontent.com/docker/docs/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/security/authentication/single-sign-on/images/SSO.png)
+![SSO architecture](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/security/authentication/single-sign-on/images/SSO.png)
 
 ## Set up SSO
 

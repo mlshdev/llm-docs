@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/quickstart.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/serverless/quickstart.mdx)
+> Pinned source for Runpod main: [serverless/quickstart.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/serverless/quickstart.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/quickstart
 
 # Quickstart
@@ -175,7 +175,7 @@ The system will redirect you to a dedicated detail page for your new endpoint.
 
 To test your endpoint, click the **Requests** tab in the endpoint detail page:
 
-![Runpod serverless endpoint details page](https://raw.githubusercontent.com/runpod/docs/1ac8c64f9623ca776ec994c36b22d4329facbb1d/images/8f34ba77-serverless-get-started-endpoint-details.png)
+![Runpod serverless endpoint details page](https://raw.githubusercontent.com/runpod/docs/fa4985146919262a6e9cdb946c50eec1ed81ffc9/images/8f34ba77-serverless-get-started-endpoint-details.png)
 
 On the left you should see the default test request:
 

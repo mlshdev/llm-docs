@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/templates/advanced-setup.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/templates/advanced-setup.mdx)
+> Pinned source for Vast.ai main: [guides/templates/advanced-setup.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/templates/advanced-setup.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/templates/advanced-setup
 
 # Advanced Setup
@@ -50,7 +50,7 @@ https://raw.githubusercontent.com/karthik-vast-ai/vast-cli/distributed-inference
 5. Make sure to click "+" to add the environment variable
 6. Click Create and Use
 
-![](https://raw.githubusercontent.com/vast-ai/docs/efed71d49da6451aeb4f9be763c284bb555cd206/images/console-create-custom-template.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-create-custom-template.webp)
 
 ### Example PROVISIONING\_SCRIPT
 

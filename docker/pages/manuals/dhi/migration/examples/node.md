@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/migration/examples/node.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/dhi/migration/examples/node.md)
+> Pinned source for Docker main: [content/manuals/dhi/migration/examples/node.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/dhi/migration/examples/node.md)
 
 This example shows how to migrate a Node.js application to Docker Hardened Images.
 

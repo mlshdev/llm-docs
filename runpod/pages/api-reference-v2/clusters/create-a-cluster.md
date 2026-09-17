@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/clusters/create-a-cluster.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/clusters/create-a-cluster.mdx)
+> Pinned source for Runpod main: [api-reference-v2/clusters/create-a-cluster.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/clusters/create-a-cluster.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/clusters/create-a-cluster
 
 # Create A Cluster
@@ -20,21 +20,26 @@ from a template response.
 - Media type: `application/json`
   - Schema
     - allOf:
-      - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support private registries (clusters, until the upstream input accepts a registry credential).
-        - `args` (string): Arguments passed to the container entrypoint
+      - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support a direct registry credential (clusters — there the registry credential arrives via a pod template, see CreateClusterRequest.templateId).
+        - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
+        - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+          - `items` (string)
+        - `entrypoint` (array): Container ENTRYPOINT in exec form, overriding the image's own. Encoded into `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+          - `items` (string)
         - `disk` (integer; minimum: `1`): Container disk in GB (ephemeral, wiped on restart)
         - `env` (object): Environment variables as key-value pairs
           - `additional properties` (string)
         - `image` (string): Docker image reference
         - `ports` (array): Exposed ports, formatted as port/protocol
           - `items` (string)
-      - `variant 2` (object): Request body for creating a cluster. `compute` defines the homogeneous pod shape; the container configuration (image, env, ports, …) applies to every pod and can be spread from a template response. Private registries are not yet supported for clusters — there is no `registry` field here, unlike the other create requests.
+      - `variant 2` (object): Request body for creating a cluster. `compute` defines the homogeneous pod shape; the container configuration (image, env, ports, …) applies to every pod. Pass `templateId` to provision every member pod from a pod template instead of inline container fields — the template also supplies the container registry credential, the only private-image path for clusters (a bare `registry` property on this body is rejected).
         - `compute` (required; object): The homogeneous compute shape of a cluster. Every pod in the cluster is identical: `podCount` pods, each with `gpuCountPerPod` GPUs of type `gpuTypeId`. Total GPUs = `podCount` \* `gpuCountPerPod`.
           - `gpuTypeId` (required; string; minimum length: `1`): GPU type for every pod in the cluster, as returned by GET /v2/catalog/gpus.
           - `gpuCountPerPod` (required; integer; minimum: `1`): Number of GPUs on each pod. Bounded above by the GPU type's per-cloud maximum (GpuType.maxCount); the upstream rejects values beyond it.
           - `podCount` (required; integer; minimum: `2`; maximum: `250`): Number of pods (nodes) in the cluster.
         - `name` (required; string; minimum length: `1`)
         - `type` (required; string; enum: `APPLICATION`, `TRAINING`, `SLURM`, `RAY`): Cluster type. TRAINING is the generic distributed-training cluster; SLURM provisions a managed Slurm controller/compute topology; RAY provisions a managed Ray head/worker topology; APPLICATION is a general multi-node application cluster.
+        - `templateId` (string; minimum length: `1`): ID of a pod template to provision every member pod from. The template supplies the container settings (image, args, disk, env, ports) and the container registry credential for private images — the only private-image path for clusters. Mutually exclusive with `image`, `args`, `entrypoint`, `cmd`, `disk`, `env`, `ports`, and `mounts` (rejected with 400). The cluster retains the link: the `template` response field is set. Must be a non-serverless pod template accessible to the caller.
         - `dataCenterIds` (array): Preferred data centers for placement. Omit or pass an empty array to let the scheduler choose. A cluster is always placed within a single data center.
           - Example: `["US-TX-3"]`
           - `items` (string)

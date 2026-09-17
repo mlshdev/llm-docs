@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/local.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/ai/sandboxes/governance/access-controls/local.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/local.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/ai/sandboxes/governance/access-controls/local.md)
 
 # Local policy
 
@@ -53,7 +53,25 @@ Initialize the global network policy for your sandboxes:
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Open        | All outbound traffic is allowed. Equivalent to adding a wildcard allow rule with `sbx policy allow network "**"`.                                 |
 | Balanced    | Default deny, with a baseline allowlist covering AI provider APIs, package managers, code hosts, container registries, and common cloud services. |
-| Locked Down | All outbound traffic is blocked, including model provider APIs (for example, `api.anthropic.com`). You must explicitly allow everything you need. |
+| Locked Down | No baseline allow rules. Destinations need an allow rule from you or a kit.                                                                       |
+
+Presets initialize the global policy. Built-in agent kits and other kits can
+add per-sandbox allow rules, including under **Locked Down** (`deny-all`). The
+preset isn't an explicit deny rule that overrides those allowances. To inspect
+the rules a kit adds to a sandbox, run:
+
+```console
+$ sbx policy ls my-sandbox --source kit --type network --wide
+```
+
+To block a destination allowed by a kit, add an explicit deny rule:
+
+```console
+$ sbx policy deny network --sandbox my-sandbox openrouter.ai
+```
+
+Deny rules take precedence over allow rules. See
+[Policy precedence](https://docs.docker.com/ai/sandboxes/governance/concepts/#precedence).
 
 The **Balanced** preset's baseline allowlist is a good starting point for most
 workflows. Run `sbx policy ls` to see exactly which rules it includes. As of

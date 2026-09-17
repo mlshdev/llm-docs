@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/comfy-ui.mdx](https://github.com/vast-ai/docs/blob/efed71d49da6451aeb4f9be763c284bb555cd206/guides/serverless/comfy-ui.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/comfy-ui.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/serverless/comfy-ui.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/comfy-ui
 
 # Comfy UI

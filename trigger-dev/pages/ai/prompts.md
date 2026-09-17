@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.1: [docs/ai/prompts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/ai/prompts.mdx)
+> Pinned source for Trigger.dev v4.6.3: [docs/ai/prompts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/ai/prompts.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai/prompts
 
 # Prompts

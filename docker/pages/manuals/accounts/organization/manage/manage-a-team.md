@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/manage-a-team.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/accounts/organization/manage/manage-a-team.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/manage-a-team.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/accounts/organization/manage/manage-a-team.md)
 
 # Create and manage a team
 
@@ -122,8 +122,3 @@ won't delete any resources.
 3. Select the **Actions** icon next to the name of the team you want to delete.
 4. Select **Delete team**.
 5. Review the confirmation message, then select **Delete**.
-
-## More resources
-
-- [Video: Docker Teams](https://youtu.be/WKlT1O-4Du8?feature=shared\&t=348)
-- [Video: Roles, teams, and repositories](https://youtu.be/WKlT1O-4Du8?feature=shared\&t=435)

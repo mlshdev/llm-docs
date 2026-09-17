@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/release-notes.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/docker-hub/release-notes.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/release-notes.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/docker-hub/release-notes.md)
 
 # Docker Hub release notes
 
@@ -198,7 +198,7 @@ The updated [Docker Subscription Service Agreement](https://www.docker.com/legal
 
 When managing the content of your repositories, you can now filter the results based on the currentness of the tags and more easily identify your untagged images.
 
-For Docker Hub API documentation, see [Docker Hub API Reference](https://docs.docker.com/reference/api/hub/latest/#operation/GetNamespacesRepositoriesImages).
+For Docker Hub API documentation, see [Docker Hub API Reference](https://docs.docker.com/reference/api/hub/latest/).
 
 ## 2021-04-13
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/access-tokens/organization-access-tokens.md](https://github.com/docker/docs/blob/aabe8d1f704ebbcc85d29cc6eac88459ce9e00a4/content/manuals/security/access-tokens/organization-access-tokens.md)
+> Pinned source for Docker main: [content/manuals/security/access-tokens/organization-access-tokens.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/security/access-tokens/organization-access-tokens.md)
 
 # Organization access tokens
 
@@ -188,11 +188,11 @@ allowed`, regardless of the token's scopes. Use the linked replacement
 endpoints instead:
 
 - `GET /v2/repositories/{namespace}/{repository}` — use
-  [Get repository](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/GetRepository).
+  [Get repository](https://docs.docker.com/reference/api/hub/latest/operations/GetRepository/).
 - `GET /v2/repositories/{namespace}` — use
-  [List repositories](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/listNamespaceRepositories).
+  [List repositories](https://docs.docker.com/reference/api/hub/latest/operations/listNamespaceRepositories/).
 - `GET /v2/users/{username}/repositories` — use
-  [List repositories](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/operation/listNamespaceRepositories).
+  [List repositories](https://docs.docker.com/reference/api/hub/latest/operations/listNamespaceRepositories/).
 
 ## Organization access token best practices
 

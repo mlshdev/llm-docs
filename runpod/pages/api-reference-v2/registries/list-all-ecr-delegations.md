@@ -1,7 +1,9 @@
-> Pinned source for Runpod main: [api-reference-v2/registries/list-all-ecr-delegations.mdx](https://github.com/runpod/docs/blob/1ac8c64f9623ca776ec994c36b22d4329facbb1d/api-reference-v2/registries/list-all-ecr-delegations.mdx)
+> Pinned source for Runpod main: [api-reference-v2/registries/list-all-ecr-delegations.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/registries/list-all-ecr-delegations.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/registries/list-all-ecr-delegations
 
 # List All Ecr Delegations
+
+List the Amazon ECR delegations that let Runpod pull private container images from your AWS registries.
 
 `GET /v2/registries/delegations`
 
@@ -27,6 +29,26 @@
           - `awsRegion` (required; string): AWS region
           - `dockerRegistryUri` (string): Formatted ECR registry URI for Docker login
           - `createdAt` (required; string; format: date-time): When the delegation was created
+- `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `missingBearerToken`: `{"title":"Unauthorized","status":401,"detail":"missing bearer token"}`
+- `403`: The bearer token is valid, but it does not grant access to the requested resource or action.
+  - Header `RateLimit` (string)
+  - Header `RateLimit-Policy` (string)
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
 - `429`: The caller exceeded its per-user rate limit. The response identifies the window that was exceeded and how long to wait. The `RateLimit` and `RateLimit-Policy` headers (per the IETF ratelimit-headers draft) also accompany successful responses, so clients can track quota before a 429.
   - Header `Retry-After` (integer): Seconds to wait before retrying, per the exceeded window.
   - Header `RateLimit` (string)

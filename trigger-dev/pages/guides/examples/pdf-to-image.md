@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.1: [docs/guides/examples/pdf-to-image.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/guides/examples/pdf-to-image.mdx)
+> Pinned source for Trigger.dev v4.6.3: [docs/guides/examples/pdf-to-image.mdx](https://github.com/triggerdotdev/trigger.dev/blob/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/guides/examples/pdf-to-image.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/examples/pdf-to-image
 
 # Turn a PDF into an image using MuPDF
