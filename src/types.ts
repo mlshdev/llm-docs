@@ -25,6 +25,7 @@ export const projectIds = [
   "runpod",
   "discord-py-self",
   "discord-py",
+  "qdrant",
   "apple-swift",
   "apple-swiftui",
   "apple-webkit",

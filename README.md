@@ -26,6 +26,7 @@ This repository converts documentation from immutable upstream commits or conten
 - [PostgreSQL 18](https://github.com/postgres/postgres)
 - [discord.py-self](https://github.com/dolfies/discord.py-self)
 - [discord.py](https://github.com/Rapptz/discord.py)
+- [Qdrant](https://github.com/qdrant/landing_page/tree/master/qdrant-landing/content/documentation)
 - [Apple Swift](https://developer.apple.com/documentation/swift)
 - [Apple SwiftUI](https://developer.apple.com/documentation/swiftui)
 - [Apple WebKit and Safari](https://developer.apple.com/documentation/webkit)
@@ -43,6 +44,7 @@ This repository converts documentation from immutable upstream commits or conten
 - Docker tracks the latest `docker/docs` `main` commit because that repository does not publish current GitHub releases or release tags.
 - n8n tracks the latest `n8n-io/n8n-docs` `main` commit because that repository does not publish releases or tags.
 - FFmpeg and SearXNG track their latest `master` commits because they do not publish stable GitHub releases.
+- Qdrant tracks the latest `qdrant/landing_page` `master` commit because its public documentation is published continuously from that branch rather than versioned as GitHub releases.
 - Branch-tracked projects record both the immutable commit that produced the published snapshot and a normalized `documentationDigest`. The latest inspected branch head is recorded separately; when a new head produces the same digest after commit tokens are removed, only that observation advances and the generated corpus does not churn. Immutable source archives are cached by commit SHA, so a resumed build does not download the same repository again.
 - PostgreSQL 18 tracks the highest `REL_18_<minor>` tag in `postgres/postgres`, which publishes no GitHub releases. The series pin follows that major version's own maintenance releases and nothing else: beta and release-candidate tags do not match, a pin never moves backwards, and a tag that is repointed at a different commit fails the update rather than silently changing the corpus.
 - discord.py tracks the highest final `vX.Y.Z` tag because the repository publishes stable tags but does not create GitHub Releases. Prerelease and unrelated tags are ignored, a pin never moves backwards, and a moved tag fails reconciliation.
@@ -100,7 +102,7 @@ llms-full.txt
   pages/
 ```
 
-Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `container`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, `zitadel`, `ffmpeg`, `yt-dlp`, `searxng`, `bun`, `trigger-dev`, `aria2`, `postgres-18`, `vastai`, `runpod`, `discord-py-self`, `discord-py`, `apple-swift`, `apple-swiftui`, `apple-webkit`, `apple-xcode`, `apple-ios`, `apple-macos`, `apple-watchos`, and `apple-frameworks`.
+Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `container`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, `zitadel`, `ffmpeg`, `yt-dlp`, `searxng`, `bun`, `trigger-dev`, `aria2`, `postgres-18`, `vastai`, `runpod`, `discord-py-self`, `discord-py`, `qdrant`, `apple-swift`, `apple-swiftui`, `apple-webkit`, `apple-xcode`, `apple-ios`, `apple-macos`, `apple-watchos`, and `apple-frameworks`.
 
 Corpora below the retrieval-shard threshold use one `llms-full.txt`. Larger corpora keep `llms-full.txt` as a checksum-bearing ordered index and store the complete text in deterministic numbered volumes capped at 8 MiB. This is comfortably below GitHub's 100 MiB hard limit and lets retrieval clients fetch a useful slice without downloading a tens-of-megabytes archival chunk; standalone pages remain the most selective interface.
 
@@ -143,7 +145,8 @@ not a storage or serving fallback.
 - Vast.ai publishes the pages its `docs.json` navigation declares and, for the navigation group that names a specification without listing pages, generates one page per endpoint the way the site itself does — routed by tag and operation summary from `api-reference/openapi.yaml`.
 - Runpod publishes the pages its `docs.json` navigation declares, renders each API reference page from the OpenAPI operation the page names in front matter, and substitutes each glossary tooltip with the term it labels, parsed from the checked-in module rather than executed.
 - discord.py-self and discord.py convert their release-pinned Sphinx RST guides and API-reference layout directly. Autodoc descriptions and public members are reproduced by statically extracting checked-in Python signatures and docstrings; Sphinx, extension modules, and library code are never executed.
-- Neither Vast.ai nor Runpod publishes its documentation repository under a license; both snapshots carry a copyright notice in `LICENSE.upstream` instead of a grant.
+- Qdrant publishes the rendered pages in `qdrant-landing/content/documentation`, expands generated multi-language code snippets and shared Markdown includes from the pinned headless tree, and reduces figures, accordions, and interactive islands to static Markdown without executing Hugo or JavaScript. Drafts, navigation delimiters, external-link placeholders, and pages marked not to render are excluded.
+- Vast.ai, Runpod, and Qdrant do not publish their documentation repositories under a repository-level license; their snapshots carry a copyright notice in `LICENSE.upstream` instead of a grant.
 - Apple walks every internal page in the public DocC framework indexes and converts render JSON directly to Markdown without a browser. The eight catalogs cover Swift, SwiftUI, WebKit and Safari, Xcode and developer tools, platform-exclusive iOS/macOS/watchOS frameworks, and every remaining cross-platform, tvOS, visionOS, DriverKit, and hardware framework without duplicating pages between catalogs. Same-path Swift, Objective-C, and data variants are materialized from DocC JSON patches and combined in one page. Declarations, availability, prose, lists, tables, asides, REST schemas, relationships, topic groups, media, samples, and stable anchors are preserved; internal links stay local within a catalog and cross-catalog links resolve to Apple.
 
 ## Local commands

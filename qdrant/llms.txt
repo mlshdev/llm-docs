@@ -1,0 +1,438 @@
+# Qdrant master
+
+> Documentation generated from the latest `master` branch commit of [qdrant/landing_page](https://github.com/qdrant/landing_page) and pinned to immutable source commit `4d8a8ceb08486decdbf0f0016772c7f120ea7d56`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for Qdrant master.
+- [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
+- Pages are selected from qdrant-landing/content/documentation at the pinned master commit; drafts, navigation delimiters, external-link placeholders, non-rendered pages, and headless fragments are excluded.
+- Hugo code-snippet and include shortcodes are expanded from pinned headless Markdown, while figures, accordions, and interactive islands are reduced to their authored static Markdown content without executing Hugo or JavaScript.
+- Published documentation links resolve to https://qdrant.tech; repository assets resolve to immutable raw URLs at the pinned commit.
+- The upstream documentation repository declares no license, so LICENSE.upstream records a copyright notice rather than a license grant.
+
+## Documentation
+
+- [Welcome to Qdrant Cloud](pages/cloud-tab.md): Welcome to Qdrant Cloud — the managed home for production vector search across Managed, Hybrid, and Private Cloud deployments. (26 bytes)
+- [Deploy Qdrant](pages/deploy-tab.md): Deploy Qdrant your way — managed in Qdrant Cloud, Hybrid Cloud, Private Cloud, or self-hosted with Docker or Kubernetes. (6049 bytes)
+- [Explore the Qdrant Ecosystem](pages/ecosystem-tab.md): Explore the Qdrant ecosystem of integrations, partners, frameworks, and community tools built around vector search. (2308 bytes)
+- [Documentation](pages/index.md): Build with Qdrant: install, run, and scale a vector search engine across self-hosted, Cloud, Hybrid Cloud, and Private Cloud deployments. (5993 bytes)
+- [Installation](pages/installation.md): Install Qdrant on Linux, macOS, or Windows using Docker, Kubernetes, or a binary, with hardware and storage guidance. (11434 bytes)
+- [Local Quickstart](pages/quickstart.md): Run Qdrant locally with Docker, connect a client SDK, and create your first collection for vector search. (15650 bytes)
+- [Capacity Planning](pages/capacity-planning.md): Size a Qdrant cluster by balancing RAM and disk for vectors, payload, indexes, replication, and quantization workloads. (16722 bytes)
+- [Cloud Quickstart](pages/cloud-quickstart.md): Spin up a free Qdrant Cloud cluster, connect with the official SDKs, and run your first semantic search in minutes. (42830 bytes)
+- [Migration and Recovery](pages/migration-recovery-options.md): Compare the migration tool, core snapshots, and cloud backups to choose the right approach for moving or recovering your Qdrant data. (9776 bytes)
+- [Snapshots](pages/snapshots.md): Back up and restore Qdrant collections with snapshots for archiving, disaster recovery, and replicating deployments. (20785 bytes)
+- [Upgrades](pages/upgrades.md): Upgrade Qdrant safely on Cloud, Kubernetes, or Docker with rolling restarts, replica-aware planning, and SDK compatibility checks. (2421 bytes)
+- [Security](pages/security.md): Harden self-hosted Qdrant with API keys, network binding, TLS encryption, and JWT-based access control. (35867 bytes)
+- [Production Checklist](pages/production-checklist.md): Run through the Qdrant production checklist — sharding, replication, quantization, load balancing, and observability before launch. (8737 bytes)
+- [Troubleshooting](pages/common-errors.md): Diagnose and resolve common Qdrant errors, from open-file limits and quota rejections to incompatible file systems and corrupted collection metadata. (6292 bytes)
+- [Getting Started](pages/cloud-getting-started.md): Get started with Qdrant Managed Cloud: prepare access, size your cluster, deploy, and prepare a workload for production. (2639 bytes)
+- [Account Setup](pages/cloud-account-setup.md): Set up your Qdrant Cloud account: register, switch between accounts, invite teammates, and manage account settings and ownership. (6699 bytes)
+- [User Profile](pages/cloud-user-profile.md): Manage your Qdrant Cloud user profile: profile details, color scheme, cookie consent, account invitations, and deactivation. (3482 bytes)
+- [Qdrant Web UI](pages/web-ui.md): Manage Qdrant collections, run REST calls, and explore data through the Qdrant Web UI for local and Cloud deployments. (1376 bytes)
+- [API & SDKs](pages/interfaces.md): Talk to Qdrant through REST or gRPC and use official client SDKs for Python, JavaScript, Rust, Go, Java, and .NET. (5281 bytes)
+- [Cloud Security](pages/cloud-security.md): Run Qdrant Cloud on isolated, encrypted infrastructure with RBAC, API keys, IP allowlists, and SOC 2 and HIPAA compliance. (6026 bytes)
+- [Qdrant Cloud API](pages/cloud-api.md): Automate Qdrant Cloud with the gRPC and REST/JSON management API — provision clusters, backups, auth, and Hybrid Cloud resources. (3161 bytes)
+- [Qdrant Cloud CLI](pages/cloud-cli.md): Manage Qdrant Cloud from your terminal with qcloud — create clusters, rotate keys, and switch between accounts and environments. (3070 bytes)
+- [Billing & Payments](pages/cloud-pricing-payments.md): Understand Qdrant Cloud pricing based on CPU, memory, and storage, and pay by credit card or AWS, GCP, or Azure Marketplace. (5432 bytes)
+- [Premium Tier](pages/cloud-premium.md): Upgrade to Qdrant Cloud Premium for 24/7 support, higher uptime SLAs, SSO, VPC private links, and customer-managed encryption keys. (1615 bytes)
+- [Agent Skills](pages/skills.md): Qdrant agent skills encode solutions architect knowledge for AI coding assistants, helping them diagnose vector search problems, recommend the right configuration, and navigate to the exact documentation without install… (5785 bytes)
+- [Support](pages/support.md): Open Qdrant Cloud support tickets through the JSM portal with severity levels and request types matched to your issue. (3458 bytes)
+- [Overview](pages/tutorials-lp-overview.md): Browse Qdrant tutorials covering basics, search engineering, retrieval quality, operations, migrations, and integrations. (12164 bytes)
+- [Practice Datasets](pages/datasets.md): Skip the embedding step with ready-made Qdrant snapshots of public datasets you can import and explore right away. (10595 bytes)
+
+## Data Management
+
+- [Airbyte](pages/data-management/airbyte.md): Replicate data into Qdrant with Airbyte to power vector search pipelines from hundreds of source connectors with minimal code. (4253 bytes)
+- [Apache Airflow](pages/data-management/airflow.md): Schedule and monitor Qdrant ingestion workflows with Apache Airflow's Python-native DAGs and provider hooks for vector pipelines. (3373 bytes)
+- [Chonkie](pages/data-management/chonkie.md): Chunk, embed, and store text in Qdrant directly from the Chonkie SDK for fast, lightweight RAG ingestion pipelines. (2921 bytes)
+- [CocoIndex](pages/data-management/cocoindex.md): Build incremental ETL flows that transform documents into Qdrant-ready embeddings with CocoIndex for real-time AI pipelines. (1726 bytes)
+- [Confluent Kafka](pages/data-management/confluent.md): Stream events from Confluent Cloud Kafka topics into Qdrant collections for real-time, event-driven vector ingestion. (7821 bytes)
+- [DLT](pages/data-management/dlt.md): Load messy data into Qdrant with DLT, an open-source Python library for declarative, schema-aware vector ingestion. (3517 bytes)
+- [InfinyOn Fluvio](pages/data-management/fluvio.md): Stream records from InfinyOn Fluvio topics into Qdrant collections for low-latency, real-time vector ingestion. (6564 bytes)
+- [POMA](pages/data-management/poma.md): Pair POMA structure-aware document chunking with Qdrant for clean, retrieval-ready vector indexes and RAG datasets. (5138 bytes)
+- [Redpanda Connect](pages/data-management/redpanda.md): Build declarative, stateless streaming pipelines that sink data from Redpanda Connect into Qdrant collections. (2233 bytes)
+- [Apache Spark](pages/data-management/spark.md): Write big-data embeddings into Qdrant from Apache Spark jobs using the Qdrant-Spark connector for distributed ingestion. (11393 bytes)
+- [Unstructured](pages/data-management/unstructured.md): Preprocess documents with Unstructured and ingest the cleaned text and embeddings into Qdrant for retrieval-ready RAG datasets. (3506 bytes)
+- [Data Management](pages/data-management/index.md): Connect Qdrant to data integration, ETL, and streaming tools to ingest, transform, and sync vectors at scale. (2405 bytes)
+
+## Embeddings
+
+- [Aleph Alpha](pages/embeddings/aleph-alpha.md): Pair Aleph Alpha multilingual and multimodal embeddings with Qdrant to build cross-language and cross-modal semantic search over text and images. (1661 bytes)
+- [AWS Bedrock](pages/embeddings/bedrock.md): Generate embeddings with AWS Bedrock and store them in Qdrant to run semantic search and RAG fully within your AWS environment. (3138 bytes)
+- [Cohere](pages/embeddings/cohere.md): Index documents and queries with Cohere embeddings in Qdrant to power high-quality semantic search, classification, and RAG applications. (2868 bytes)
+- [Fusion Embedding 2](pages/embeddings/fusion-embedding-2.md): Embed text, image, video, and audio into one vector space with the open-weight Fusion Embedding 2 model and search it with Qdrant. (2121 bytes)
+- [Gemini](pages/embeddings/gemini.md): Embed text, images, video, and audio with Google Gemini and store vectors in Qdrant for unified, multilingual multimodal retrieval. (6380 bytes)
+- [Jina Embeddings](pages/embeddings/jina-embeddings.md): Combine Jina AI embeddings with Qdrant for multilingual retrieval, code search, late chunking, and Matryoshka-style adjustable vector dimensions. (8589 bytes)
+- [Mistral](pages/embeddings/mistral.md): Embed documents with Mistral and store vectors in Qdrant to run semantic search at scale, optionally compressed with binary quantization. (3910 bytes)
+- [MixedBread](pages/embeddings/mixedbread.md): Use MixedBread embeddings with Qdrant to build versatile semantic search and RAG systems across multiple domains and content types. (1354 bytes)
+- [Mixpeek](pages/embeddings/mixpeek.md): Chunk and embed video with Mixpeek, then store the resulting vectors in Qdrant for fast text- and video-query similarity search. (3791 bytes)
+- [Nomic](pages/embeddings/nomic.md): Generate long-context Nomic text embeddings via the Nomic SDK or FastEmbed and index them in Qdrant for high-quality semantic search. (2581 bytes)
+- [Nvidia](pages/embeddings/nvidia.md): Generate embeddings with NVIDIA's retrieval models and store them in Qdrant for accurate, GPU-accelerated semantic search and RAG workflows. (3964 bytes)
+- [Ollama](pages/embeddings/ollama.md): Run local-first RAG by pairing Ollama embedding models with Qdrant for fully on-machine retrieval and generation pipelines. (1613 bytes)
+- [OpenAI](pages/embeddings/openai.md): Use OpenAI embeddings with Qdrant for semantic search and RAG across documents, with optional binary quantization for compact vector storage. (3533 bytes)
+- [Prem AI](pages/embeddings/premai.md): Generate embeddings on the PremAI generative AI platform and store them in Qdrant to ship semantic search backed by tunable, monitored models. (4895 bytes)
+- [Snowflake Models](pages/embeddings/snowflake.md): Combine Snowflake Arctic Embed text models with Qdrant to power compact, high-quality semantic search using FastEmbed for inference. (3188 bytes)
+- [Superlinked](pages/embeddings/superlinked.md): Serve dense, sparse, and multivector embeddings from a single Superlinked endpoint and feed them into Qdrant for hybrid and ColBERT-style retrieval. (7985 bytes)
+- [Twelve Labs](pages/embeddings/twelvelabs.md): Embed video, text, image, and audio in a unified vector space with Twelve Labs and search across modalities using Qdrant. (6063 bytes)
+- [Upstage](pages/embeddings/upstage.md): Embed queries and documents with Upstage Solar Embeddings and store them in Qdrant to power performant text retrieval and RAG. (4193 bytes)
+- [Voyage AI](pages/embeddings/voyage.md): Index Voyage AI embeddings in Qdrant to power high-accuracy semantic search and retrieval-augmented generation over your documents. (3689 bytes)
+- [Embeddings](pages/embeddings/index.md): Connect Qdrant to text, image, and multimodal embedding providers including OpenAI, Cohere, Jina, Mistral, AWS Bedrock, Voyage, and many more. (4740 bytes)
+
+## Frameworks
+
+- [Agno](pages/frameworks/agno.md): Power Agno multi-agent systems with Qdrant as the vector knowledge base for fast retrieval, memory, and tool-augmented agent workflows. (2131 bytes)
+- [AutoGen](pages/frameworks/autogen.md): Build multi-agent RetrieveChat workflows with Microsoft AutoGen and Qdrant, giving cooperating agents fast vector search over your documents. (4085 bytes)
+- [CamelAI](pages/frameworks/camel.md): Use Qdrant as the vector storage backend in CAMEL-AI to ingest, retrieve, and reason over data inside LLM-based agents. (2854 bytes)
+- [Cheshire Cat](pages/frameworks/cheshire-cat.md): Run Cheshire Cat agents on Qdrant as the default vector memory, taking advantage of collection aliases, quantization, and snapshots. (3282 bytes)
+- [Cognee](pages/frameworks/cognee.md): Pair Qdrant's vector breadth with Cognee's graph precision to give agents semantic memory grounded in entities, relationships, and time. (6116 bytes)
+- [CrewAI](pages/frameworks/crewai.md): Back CrewAI's short-term and entity memory with Qdrant so role-playing agents can recall context, relationships, and past interactions reliably. (4453 bytes)
+- [Dagster](pages/frameworks/dagster.md): Orchestrate AI data pipelines in Dagster with the Qdrant resource to ingest, embed, and query vector collections from declarative assets. (1616 bytes)
+- [DeepEval](pages/frameworks/deepeval.md): Evaluate Qdrant-backed RAG pipelines with DeepEval, scoring answer relevancy, faithfulness, hallucination, and contextual precision against your retrieval results. (3628 bytes)
+- [Stanford DSPy](pages/frameworks/dspy.md): Use Qdrant as the retrieval model in Stanford DSPy programs to ground prompting, reasoning, and self-improving LLM pipelines in your data. (2571 bytes)
+- [Dynamiq](pages/frameworks/dynamiq.md): Add Qdrant as a writer, retriever, or agent memory inside Dynamiq Gen AI workflows to orchestrate RAG and tool-using LLM agents. (2392 bytes)
+- [Feast](pages/frameworks/feast.md): Use Qdrant as the online vector store in Feast to serve embedding features and similarity lookups in production ML systems at scale. (1794 bytes)
+- [FiftyOne](pages/frameworks/fifty-one.md): Run image and text similarity search over computer vision datasets in FiftyOne, backed by Qdrant for fast vector retrieval. (804 bytes)
+- [Firebase Genkit](pages/frameworks/genkit.md): Build production AI apps with Firebase Genkit using Qdrant for indexing and semantic retrieval via the official Qdrant Genkit plugin. (2867 bytes)
+- [Google ADK](pages/frameworks/google-adk.md): Connect Google Agent Development Kit agents to Qdrant via the Qdrant MCP Server for semantic memory, retrieval, and tool-augmented reasoning. (1760 bytes)
+- [Haystack](pages/frameworks/haystack.md): Build generative AI, QA, and semantic search systems in Haystack with the Qdrant document store, including support for quantization and advanced indexing. (1925 bytes)
+- [HoneyHive](pages/frameworks/honeyhive.md): Trace and evaluate Qdrant-powered RAG pipelines in HoneyHive to monitor latency, retrieval quality, and embedding performance in production. (9233 bytes)
+- [AWS Lakechain](pages/frameworks/lakechain.md): Stream document embeddings from AWS Project Lakechain pipelines into Qdrant collections using the Qdrant storage connector and AWS CDK. (3497 bytes)
+- [LangChain](pages/frameworks/langchain.md): Build LangChain apps with Qdrant as the vector store, supporting dense, sparse, and hybrid retrieval for semantic search and RAG. (7584 bytes)
+- [LangChain4j](pages/frameworks/langchain4j.md): Use Qdrant as the embedding store in LangChain4j to build context-aware AI applications in Java with full semantic retrieval support. (2206 bytes)
+- [LangGraph](pages/frameworks/langgraph.md): Add Qdrant retrieval nodes to LangGraph workflows in Python or JavaScript to ground stateful, multi-actor agent applications in your data. (3476 bytes)
+- [LlamaIndex](pages/frameworks/llama-index.md): Index and retrieve private data in LlamaIndex with Qdrant as the vector store, augmenting LLMs with grounded context from your documents. (1509 bytes)
+- [Mastra](pages/frameworks/mastra.md): Add Qdrant as the vector store in Mastra TypeScript AI apps to power RAG, agents, workflows, and evaluations on local or serverless deployments. (3665 bytes)
+- [Mem0](pages/frameworks/mem0.md): Power Mem0's self-improving memory layer with Qdrant to give chatbots and AI assistants personalized, long-lasting recall of user preferences. (1994 bytes)
+- [Microsoft GraphRAG](pages/frameworks/microsoft-graphrag.md): Plug Qdrant in as a custom vector store for Microsoft GraphRAG to combine knowledge-graph indexing with fast vector retrieval. (3491 bytes)
+- [VectaX - Mirror Security](pages/frameworks/mirror-security.md): Secure vector search in Qdrant with Mirror Security VectaX — encrypt embeddings and enforce role-based access on similarity queries. (5456 bytes)
+- [Neo4j GraphRAG](pages/frameworks/neo4j-graphrag.md): Run GraphRAG with Neo4j and Qdrant — vector search in Qdrant retrieves candidates that the Neo4j knowledge graph turns into grounded answers. (2568 bytes)
+- [Microsoft NLWeb](pages/frameworks/nlweb.md): Add natural language interfaces to websites with Microsoft NLWeb backed by Qdrant as the vector store for embedding storage and context retrieval. (2636 bytes)
+- [Rig-rs](pages/frameworks/rig-rs.md): Build scalable LLM apps in Rust with Rig and use Qdrant as the vector store for semantic ingestion, retrieval, and RAG workflows. (2541 bytes)
+- [RocketRide](pages/frameworks/rocketride.md): Build RAG pipelines and AI agents with RocketRide's multithreaded C++ runtime and Qdrant for vector search, retrieval, and memory. (4885 bytes)
+- [Semantic-Router](pages/frameworks/semantic-router.md): Route LLM and agent requests by semantic meaning using Semantic-Router with Qdrant as the vector index for fast, embedding-based decisions. (2665 bytes)
+- [SmolAgents](pages/frameworks/smolagents.md): Pair Hugging Face SmolAgents with Qdrant retrieval to build code-writing agents that query vector collections through reusable tools. (3586 bytes)
+- [Spring AI](pages/frameworks/spring-ai.md): Add Qdrant as the vector store in Spring AI Java apps to power semantic search and RAG with Spring Boot configuration and starter packages. (2644 bytes)
+- [Swiftide](pages/frameworks/swiftide.md): Build streaming indexing and querying pipelines in Rust with Swiftide using Qdrant as the vector store for dense and hybrid retrieval. (5648 bytes)
+- [Sycamore](pages/frameworks/sycamore.md): Process complex unstructured documents with Sycamore and write or read embeddings against Qdrant collections for GenAI and RAG analytics. (3071 bytes)
+- [Testcontainers](pages/frameworks/testcontainers.md): Spin up disposable Qdrant instances inside integration tests with Testcontainers modules for Java, Go, Node.js, Python, and .NET. (1495 bytes)
+- [txtai](pages/frameworks/txtai.md): Use Qdrant as the embedding backend for txtai semantic applications, powering similarity search over Transformer-based neural embeddings. (653 bytes)
+- [Vanna.AI](pages/frameworks/vanna-ai.md): Train Vanna.AI text-to-SQL agents with Qdrant as the RAG vector store to generate accurate SQL queries grounded in your database schema and docs. (2682 bytes)
+- [VoltAgent](pages/frameworks/voltagent.md): Build TypeScript AI agents with VoltAgent and Qdrant retrieval, using the framework's observability dashboard to monitor agent actions and tool calls. (9130 bytes)
+- [Frameworks](pages/frameworks/index.md): Browse Qdrant integrations with AI agent frameworks, RAG libraries, evaluation tools, and orchestration platforms across Python, TypeScript, Java, Rust, and more. (8641 bytes)
+
+## Observability
+
+- [Datadog](pages/observability/datadog.md): Monitor Qdrant in Datadog with the official integration to track REST and gRPC performance, cluster readiness, and deployment health. (2633 bytes)
+- [New Relic](pages/observability/newrelic.md): Monitor Qdrant in New Relic by forwarding Prometheus metrics via remote write or the OpenMetrics integration, or by sending OpenTelemetry data over OTLP. (3074 bytes)
+- [OpenLLMetry](pages/observability/openllmetry.md): Trace Qdrant operations with OpenLLMetry, the OpenTelemetry-based LLM observability toolkit from Traceloop, for end-to-end visibility. (1482 bytes)
+- [OpenLIT](pages/observability/openlit.md): Instrument Qdrant with OpenLIT, an OpenTelemetry-native LLM observability tool, to trace operations and surface performance insights. (1666 bytes)
+- [Observability](pages/observability/index.md): Connect Qdrant to your observability stack with integrations for Datadog, New Relic, OpenLIT, and OpenLLMetry to monitor performance and traces. (1062 bytes)
+
+## Platforms
+
+- [Apify](pages/platforms/apify.md): Use Apify to crawl and clean web content, then load it into Qdrant for RAG and semantic search powered by the official Apify integration. (3276 bytes)
+- [BuildShip](pages/platforms/buildship.md): Add semantic search to BuildShip workflows with the Qdrant integration, building AI-assisted APIs and backend automations without code. (1640 bytes)
+- [Keboola](pages/platforms/keboola.md): Connect Keboola to Qdrant to load embeddings from your data pipelines and orchestrate vector search as part of end-to-end data operations. (1862 bytes)
+- [Kotaemon](pages/platforms/kotaemon.md): Configure Kotaemon to use Qdrant as its vector store for chatting with your documents through a customizable open-source RAG UI. (1096 bytes)
+- [Make.com](pages/platforms/make.md): Add Qdrant to Make scenarios with the official app to automate vector search and AI workflows alongside thousands of other integrations. (2296 bytes)
+- [Salesforce Mulesoft](pages/platforms/mulesoft.md): Bring vector search into Salesforce MuleSoft Anypoint by connecting Qdrant through the open-source MuleSoft Vectors connector for AI-powered integrations. (4267 bytes)
+- [N8N](pages/platforms/n8n.md): Add semantic search to n8n workflows with the official Qdrant node for managing collections, indexing points, and running vector queries. (4914 bytes)
+- [Pipedream](pages/platforms/pipedream.md): Connect Qdrant to Pipedream workflows with the official app to add vector search to automations spanning thousands of APIs and data sources. (2170 bytes)
+- [Power Apps](pages/platforms/powerapps.md): Use the Qdrant connector in Microsoft Power Apps to add vector search to custom business apps and Power Platform automation flows. (1861 bytes)
+- [PrivateGPT](pages/platforms/privategpt.md): Configure PrivateGPT to use Qdrant as its default vector store for offline, private question-answering over your own documents. (4293 bytes)
+- [ToolJet](pages/platforms/tooljet.md): Connect ToolJet to Qdrant with the marketplace plugin to build low-code business apps backed by collections, filtered search, and vector queries. (2925 bytes)
+- [Vectorize.io](pages/platforms/vectorize.md): Use Vectorize.io to extract data from many sources and stream embeddings into Qdrant, deploying real-time RAG pipelines that stay in sync. (2557 bytes)
+- [Platforms](pages/platforms/index.md): Connect Qdrant to low-code, automation, and data-ops platforms like n8n, Make, Pipedream, Power Apps, and more to add vector search to your workflows. (2249 bytes)
+
+## Basics
+
+- [Semantic Search 101](pages/tutorials-basics/search-beginners-local.md): Build a semantic search engine locally with Qdrant in five minutes using sentence-transformer embeddings and the Python SDK. (9753 bytes)
+- [Hugging Face Dataset Ingestion](pages/tutorials-basics/huggingface-datasets.md): Load Hugging Face datasets directly into Qdrant collections, including precomputed embeddings, with batched uploads and streaming. (3752 bytes)
+- [Semantic Search 101](pages/tutorials-basics/search-beginners.md): Run your first semantic search on Qdrant Cloud: create a cluster, upload a small dataset, and query by meaning instead of keywords. (34950 bytes)
+- [Multimodal Search](pages/tutorials-basics/multimodal-search.md): Build a multimodal, multilingual vector earch application with Cohere Embed 4.0 and Qdrant Cloud Inference that searches across image and text modalities. (30023 bytes)
+- [Hybrid Search](pages/tutorials-basics/cloud-inference-hybrid-search.md): Step-by-step tutorial: build hybrid search in Qdrant combining dense semantic and sparse keyword retrieval with reciprocal rank fusion. (19737 bytes)
+- [Hybrid Search with Reranking](pages/tutorials-basics/reranking-hybrid-search.md): Combine dense, sparse, and late-interaction embeddings in Qdrant to build hybrid search with reranking for high-precision results. (47710 bytes)
+- [Basics](pages/tutorials-basics/index.md): Beginner Qdrant tutorials: spin up a cluster, ingest datasets, and build your first semantic search application in minutes. (1725 bytes)
+
+## FAQ
+
+- [Qdrant Fundamentals](pages/faq/qdrant-fundamentals.md): FAQ covering Qdrant fundamentals: vector dimensions, payload metadata, real-time updates, multivectors, and search behavior. (30015 bytes)
+- [Database Optimization](pages/faq/database-optimization.md): Answers to common Qdrant optimization questions: reducing memory usage, sizing hardware, on-disk storage, and resolving slow queries. (4895 bytes)
+
+## Search Enhancement
+
+- [Reranking for Better Search](pages/search-precision/reranking-semantic-search.md): Boost RAG and semantic search relevance in Qdrant with cross-encoder reranking layered on top of vector retrieval. (24991 bytes)
+- [LLM-Powered Filter Automation](pages/search-precision/automate-filtering-with-llms.md): Use LLMs to translate natural-language queries into Qdrant payload filters for precise, conversational search. (14022 bytes)
+
+## Search
+
+- [Text Filtering](pages/search/text-search/text-filtering.md): Filter Qdrant search results on keyword and text strings, including exact string, multi-value, full-text, and phrase filters. (58373 bytes)
+- [Full-Text Search](pages/search/text-search/full-text-search.md): Perform ranked full-text search in Qdrant using BM25 and sparse vector models like SPLADE++ and miniCOIL. (45383 bytes)
+- [Hybrid Search](pages/search/text-search/hybrid-search.md): Combine dense and sparse vectors in Qdrant for hybrid search that handles both semantic queries and keyword lookups in a single request. (11520 bytes)
+- [Search](pages/search/search.md): Run similarity search in Qdrant to find points whose vectors are nearest to a query in the configured vector space. (86802 bytes)
+- [Filtering](pages/search/filtering.md): Combine vector similarity with payload filters in Qdrant to enforce business rules and refine search results. (82332 bytes)
+- [Hybrid Queries](pages/search/hybrid-queries.md): Combine dense, sparse, and multivector queries in Qdrant with hybrid search, weighted RRF tuning, DBSF, and multi-stage rescoring with Formula Query. (55714 bytes)
+- [Explore](pages/search/explore.md): Explore Qdrant data beyond similarity search with recommendation, discovery, and dissimilar-vector search APIs. (49204 bytes)
+- [Search Relevance](pages/search/search-relevance.md): Tune Qdrant search relevance with custom scoring, payload-based ranking, and business-aware result ordering. (48031 bytes)
+- [Low-Latency Search](pages/search/low-latency-search.md): Tune Qdrant for low-latency vector search with quantization, HNSW indexing, sharding, and replica routing strategies. (11871 bytes)
+- [Text Search](pages/search/text-search/index.md): Combine semantic vector search with lexical text features in Qdrant, including BM25 and full-text payload filters. (15882 bytes)
+- [Search](pages/search/index.md): Run similarity, hybrid, and multimodal search in Qdrant with filters, multi-stage pipelines, and relevance tuning. (1668 bytes)
+
+## Search Engineering
+
+- [Multivectors and Late Interaction](pages/tutorials-search-engineering/using-multivector-representations.md): Use multivector representations and late interaction reranking in Qdrant to improve precision without exploding RAM or insert times. (8489 bytes)
+- [Relevance Feedback Retrieval in Qdrant](pages/tutorials-search-engineering/using-relevance-feedback.md): Add relevance feedback to a Qdrant retriever to nudge search toward more relevant results across the entire vector space. (22776 bytes)
+- [Collaborative Filtering](pages/tutorials-search-engineering/collaborative-filtering.md): Build an effective movie recommendation system using collaborative filtering and Qdrant's similarity search. (10061 bytes)
+- [Multivector Document Retrieval](pages/tutorials-search-engineering/pdf-retrieval-at-scale.md): Optimizing PDF retrieval at scale with Qdrant and Vision Large Language Models (VLLMs) such as ColPali and ColQwen. (17248 bytes)
+- [Measuring ANN Recall](pages/tutorials-search-engineering/ann-recall.md): This tutorial focuses on ANN recall: how closely approximate nearest-neighbor (ANN) search matches exact kNN search, measured with recall@k. (4999 bytes)
+- [Multi-Representation Search](pages/tutorials-search-engineering/multi-representation-search.md): A document is rarely well-represented by a single embedding. A paper has a title, an abstract, body chunks, and category tags, each carrying a different signal. Treat all four as one dense vector and the title gets aver… (17073 bytes)
+- [Branch-Aware Search](pages/tutorials-search-engineering/branch-aware-search.md): Scope search to a version-controlled branch in Qdrant so a query returns that branch's live view, inherited from its ancestors. (26141 bytes)
+- [Indexing Payloads of Random Shape](pages/tutorials-search-engineering/index-dynamic-payloads.md): Index open-ended payloads whose keys are data in Qdrant, using a nested filter over a fixed key-value array instead of one index per key. (11188 bytes)
+- [Compressed Multivector Search](pages/tutorials-search-engineering/turbo4-multivector-search.md): Combine the turbo4 datatype with multivector late interaction to cut on-disk vector size at a bounded recall cost. (10380 bytes)
+- [Deterministic Collection Slicing](pages/tutorials-search-engineering/slicing-filter.md): Split a Qdrant collection into disjoint, deterministic subsets with the slice filter for parallel scroll and reproducible sampling. (11844 bytes)
+- [Static Embeddings](pages/tutorials-search-engineering/static-embeddings.md): Use static embeddings in Qdrant for fast, low-resource semantic search with minimal quality trade-offs versus transformer models. (8919 bytes)
+- [Search Engineering](pages/tutorials-search-engineering/index.md): Search engineering tutorials for Qdrant: hybrid search, reranking, multivectors, late interaction, and retrieval quality evaluation. (3623 bytes)
+
+## Develop & Implement
+
+- [Async API](pages/tutorials-develop/async-api.md): Build high-throughput, concurrent applications on Qdrant with the async Python client and ASGI-style web frameworks. (3989 bytes)
+- [Semantic Search for Code](pages/tutorials-develop/code-search.md): Build a semantic code search engine on Qdrant using natural-language and code-to-code embeddings for navigating large codebases. (29198 bytes)
+- [Build a Semantic Search API](pages/tutorials-develop/neural-search.md): Build a neural semantic search service on Qdrant using sentence-transformer embeddings and a FastAPI search endpoint. (12685 bytes)
+- [Build a Hybrid Search API](pages/tutorials-develop/hybrid-search-fastembed.md): Build a hybrid search service with Qdrant and FastEmbed by combining dense and sparse embeddings behind a FastAPI endpoint. (13769 bytes)
+- [Develop & Implement](pages/tutorials-develop/index.md): Developer tutorials for building with Qdrant: async APIs, bulk operations, and core SDK patterns for production vector workloads. (1271 bytes)
+
+## Cloud RBAC
+
+- [Role Management](pages/cloud-rbac/role-management.md): Build custom Qdrant Cloud roles with fine-grained permissions, or assign built-in Base, Admin, and Owner roles to your team. (3439 bytes)
+- [User Management](pages/cloud-rbac/user-management.md): Invite users, assign roles, and transfer account ownership in Qdrant Cloud through the User Management console. (3920 bytes)
+- [Permission Reference](pages/cloud-rbac/permission-reference.md): Reference of Qdrant Cloud RBAC permissions for IAM, clusters, API keys, backups, Hybrid Cloud, billing, and account management. (6489 bytes)
+- [Cloud RBAC](pages/cloud-rbac/index.md): Manage permissions for Qdrant Cloud resources with role-based access control across billing, IAM, clusters, and Hybrid Cloud. (1146 bytes)
+
+## Infrastructure Tools
+
+- [Pulumi](pages/cloud-tools/pulumi.md): Provision Qdrant Cloud clusters with Pulumi using your preferred language to define, deploy, and manage vector database infrastructure as code. (3814 bytes)
+- [Terraform](pages/cloud-tools/terraform.md): Manage the Qdrant Cloud lifecycle declaratively with the Terraform provider — version, share, and reuse vector database infrastructure across teams. (3832 bytes)
+- [Infrastructure Tools](pages/cloud-tools/index.md): Provision and manage Qdrant Cloud clusters with infrastructure-as-code tools like Terraform and Pulumi for repeatable, version-controlled deployments. (692 bytes)
+
+## Managed Cloud
+
+- [Create a Cluster](pages/cloud/create-cluster.md): Launch a free or standard Qdrant Cloud cluster on AWS, GCP, or Azure, with options for high availability, GPUs, and Hybrid Cloud. (8956 bytes)
+- [Authentication](pages/cloud/authentication.md): Create Qdrant Cloud Database API keys with granular access control, set expirations, and connect securely to your clusters. (5928 bytes)
+- [Cluster Access](pages/cloud/cluster-access.md): Connect to Qdrant Cloud clusters through the Cluster UI, REST API, and gRPC API with load-balanced endpoints and IP allowlists. (3111 bytes)
+- [Scale Clusters](pages/cloud/cluster-scaling.md): Scale Qdrant Cloud clusters vertically or horizontally with automatic shard rebalancing as your data and traffic grow. (6030 bytes)
+- [Configure Clusters](pages/cloud/configure-cluster.md): Tune Qdrant Cloud clusters with collection defaults, strict mode, replication factor, and advanced optimizer settings. (9407 bytes)
+- [Encryption at Rest](pages/cloud/encryption.md): Use your own AWS KMS, GCP Cloud KMS, or Azure Key Vault key to encrypt Qdrant Managed Cloud storage volumes as a Premium customer. (2339 bytes)
+- [Monitor Clusters](pages/cloud/cluster-monitoring.md): Monitor Qdrant Cloud cluster health with built-in metrics, logs, and email alerts for memory, disk, and availability issues. (45251 bytes)
+- [Update Clusters](pages/cloud/cluster-upgrades.md): Upgrade Qdrant Cloud clusters to new versions with rolling, zero-downtime updates on multi-node clusters with replicated collections. (1689 bytes)
+- [Backup Clusters](pages/cloud/backups.md): Schedule automatic snapshots and restore Qdrant Cloud clusters for disaster recovery, with retention controls and point-in-time recovery. (4548 bytes)
+- [Inference](pages/cloud/inference.md): Generate dense, sparse, and multimodal embeddings inside Qdrant Cloud, or proxy to OpenAI, Cohere, and Jina without external infrastructure. (2896 bytes)
+- [Managed Cloud](pages/cloud/index.md): Run Qdrant as a managed SaaS on AWS, GCP, or Azure with high availability, automatic scaling, backups, and zero-downtime upgrades. (1362 bytes)
+
+## Data Synchronization
+
+- [Keeping Postgres and Qdrant in Sync](pages/data-synchronization/with-postgres.md): Keep Postgres and Qdrant in sync using dual-write, queue-based, or CDC architectures for reliable hybrid search backends. (21133 bytes)
+- [Data Synchronization](pages/data-synchronization/index.md): Keep Qdrant in sync with your source databases using event-driven CDC, batch reindexing, or dual-write patterns for fresh search results. (1137 bytes)
+
+## Build Prototypes
+
+- [GraphRAG with Qdrant and Neo4j](pages/examples/graphrag-qdrant-neo4j.md): Integrating Qdrant and Neo4j for Graph Retrieval-Augmented Generation (GraphRAG) with structured and unstructured data. (33376 bytes)
+- [Building a Chain-of-Thought Medical Chatbot with Qdrant and DSPy](pages/examples/Qdrant-DSPy-medicalbot.md): Build a trustworthy medical chatbot with Qdrant and DSPy, combining RAG, dense vectors, and ColBERT multivector retrieval for grounded answers. (9149 bytes)
+- [Multitenancy with LlamaIndex](pages/examples/llama-index-multitenancy.md): Set up multitenancy in LlamaIndex with Qdrant using payload-based partitioning to keep each user's data fully isolated in one collection. (8415 bytes)
+- [Private Chatbot for Interactive Learning](pages/examples/rag-chatbot-red-hat-openshift-haystack.md): Build a fully private interactive learning chatbot with Qdrant Hybrid Cloud, Haystack, and an open-source LLM running on Red Hat OpenShift. (21373 bytes)
+- [Implement Cohere RAG connector](pages/examples/cohere-rag-connector.md): Implement a custom Cohere RAG connector backed by Qdrant to expose your collections to Cohere LLMs with inline citations. (14436 bytes)
+- [Question-Answering System for AI Customer Support](pages/examples/rag-customer-support-cohere-airbyte-aws.md): Build a private customer-support QA system on AWS using Qdrant Hybrid Cloud, Cohere, and Airbyte to keep ticket data inside your infrastructure. (12976 bytes)
+- [Chat With Product PDF Manuals Using Hybrid Search](pages/examples/hybrid-search-llamaindex-jinaai.md): Build a PDF-manual chatbot with Qdrant Hybrid Cloud, LlamaIndex, and Jina embeddings, using hybrid search to answer product-support questions. (9841 bytes)
+- [Region-Specific Contract Management System](pages/examples/rag-contract-management-stackit-aleph-alpha.md): Build a region-specific contract management RAG system on STACKIT with Qdrant Hybrid Cloud and Aleph Alpha for GDPR-compliant document search. (15185 bytes)
+- [RAG System for Employee Onboarding](pages/examples/natural-language-search-oracle-cloud-infrastructure-cohere-langchain.md): Build an employee onboarding RAG assistant on Oracle Cloud using Qdrant Hybrid Cloud, Cohere, and LangChain for natural-language access to internal docs. (15554 bytes)
+- [Private RAG Information Extraction Engine](pages/examples/rag-chatbot-vultr-dspy-ollama.md): Run a private information-extraction engine on Vultr with Qdrant Hybrid Cloud, DSPy, and Ollama to structure unstructured documents on-premises. (17666 bytes)
+- [Movie Recommendation System](pages/examples/recommendation-system-ovhcloud.md): Build a movie recommendation system on OVHcloud with Qdrant Hybrid Cloud and sparse vectors using collaborative filtering over user preferences. (9945 bytes)
+- [Blog-Reading Chatbot with GPT-4o](pages/examples/rag-chatbot-scaleway.md): Build a blog-reading RAG chatbot with Qdrant Hybrid Cloud on Scaleway, LangChain, and OpenAI for grounded answers over your own content. (11063 bytes)
+- [Build Prototypes](pages/examples/index.md): End-to-end Qdrant tutorials and notebooks covering RAG, hybrid search, multitenancy, recommendations, and multimodal semantic search. (7983 bytes)
+
+## Hybrid Cloud
+
+- [Setup Hybrid Cloud](pages/hybrid-cloud/hybrid-cloud-setup.md): Set up a Qdrant Hybrid Cloud Environment by installing the Operator and Cloud Agent into your own Kubernetes cluster. (13813 bytes)
+- [Create a Cluster](pages/hybrid-cloud/hybrid-cloud-cluster-creation.md): Create a Qdrant cluster in Hybrid Cloud with Kubernetes scheduling controls, node selectors, and secret-based API key authentication. (10369 bytes)
+- [Configure, Scale & Update Clusters](pages/hybrid-cloud/configure-scale-upgrade.md): Configure, scale, reshard, and upgrade Qdrant Hybrid Cloud clusters with automatic shard rebalancing across your Kubernetes nodes. (1460 bytes)
+- [Configure the Qdrant Operator](pages/hybrid-cloud/operator-configuration.md): Tune the Qdrant Operator in Hybrid Cloud with options for scheduling, security, ingress, networking, and snapshot management. (9563 bytes)
+- [Networking, Logging & Monitoring](pages/hybrid-cloud/networking-logging-monitoring.md): Configure network policies, logs, and Prometheus-compatible metrics for Qdrant Hybrid Cloud, with a ready-made Grafana dashboard. (3343 bytes)
+- [Deployment Platforms](pages/hybrid-cloud/platform-deployment-options.md): Deploy Qdrant Hybrid Cloud on managed Kubernetes platforms including AWS EKS, GCP GKE, Azure AKS, and Linode LKE. (21765 bytes)
+- [Hybrid Cloud](pages/hybrid-cloud/index.md): Run Qdrant in your own Kubernetes cluster while managing it through Qdrant Cloud, keeping all data inside your network. (4800 bytes)
+
+## Manage Data
+
+- [Points](pages/manage-data/points.md): Insert, update, and delete points in Qdrant — the core records that pair a vector with an optional payload. (84250 bytes)
+- [Vectors](pages/manage-data/vectors.md): Configure dense, sparse, and multivector representations in Qdrant to model text, images, and multimodal data. (61624 bytes)
+- [Payload](pages/manage-data/payload.md): Attach JSON payloads to Qdrant points to store metadata alongside vectors and filter or rank results on it. (35826 bytes)
+- [Collections](pages/manage-data/collections.md): Create and configure Qdrant collections — named sets of points sharing vector dimensions and a distance metric. (66080 bytes)
+- [Storage](pages/manage-data/storage.md): Tune how Qdrant stores vectors and payloads across segments, with options for in-memory, mmap, and on-disk storage. (14718 bytes)
+- [Indexing](pages/manage-data/indexing.md): Combine HNSW vector indexes with payload indexes in Qdrant for fast filtered search across structured fields. (83735 bytes)
+- [Quantization](pages/manage-data/quantization.md): Compress vectors with scalar, product, or binary quantization to shrink memory use and speed up Qdrant search. (73049 bytes)
+- [Multitenancy](pages/manage-data/multitenancy.md): Partition tenants in a single Qdrant collection with payload-based filtering and per-tenant indexes for clean isolation. (58501 bytes)
+- [Bulk Upload](pages/manage-data/bulk-upload.md): Speed up large dataset uploads to Qdrant by batching points, parallelizing threads, tuning sharding, and managing read-write contention. (7300 bytes)
+- [Manage Data](pages/manage-data/index.md): Structure, store, and organize data in Qdrant — points, vectors, payloads, collections, indexes, and quantization. (2107 bytes)
+
+## Migration Tool
+
+- [From Pinecone](pages/migrate-to-qdrant/from-pinecone.md): Migrate Pinecone serverless indexes into Qdrant collections, preserving vectors, metadata, and namespaces in transit. (4515 bytes)
+- [From Weaviate](pages/migrate-to-qdrant/from-weaviate.md): Migrate Weaviate classes, vectors, and properties into Qdrant collections with a streamed, resumable, batched transfer. (5061 bytes)
+- [From Milvus](pages/migrate-to-qdrant/from-milvus.md): Migrate Milvus and Zilliz Cloud collections to Qdrant, preserving vectors and metadata in a single streamed transfer. (4287 bytes)
+- [From Elasticsearch](pages/migrate-to-qdrant/from-elasticsearch.md): Migrate vector indexes from Elasticsearch into Qdrant collections to consolidate semantic search on a vector-native engine. (4616 bytes)
+- [From OpenSearch](pages/migrate-to-qdrant/from-opensearch.md): Migrate OpenSearch k-NN indexes into Qdrant collections to consolidate vector workloads on a dedicated engine. (3504 bytes)
+- [From Azure AI Search](pages/migrate-to-qdrant/from-azure-search.md): Migrate Azure AI Search vector indexes into Qdrant collections to consolidate vector workloads on a dedicated engine. (3156 bytes)
+- [From pgvector](pages/migrate-to-qdrant/from-pgvector.md): Move vector data out of pgvector tables into Qdrant for higher recall, advanced filtering, and horizontal scale. (4429 bytes)
+- [From S3 Vectors](pages/migrate-to-qdrant/from-s3-vectors.md): Migrate vector data stored in Amazon S3 Vectors into Qdrant collections for richer filtering and search APIs. (2022 bytes)
+- [From Chroma](pages/migrate-to-qdrant/from-chroma.md): Migrate Chroma collections into Qdrant, transferring vectors and metadata in a streamed, resumable transfer. (3858 bytes)
+- [From Redis](pages/migrate-to-qdrant/from-redis.md): Migrate Redis vector data out of RediSearch full-text indexes and into Qdrant for a dedicated vector search backend. (3514 bytes)
+- [From MongoDB](pages/migrate-to-qdrant/from-mongodb.md): Move embeddings from MongoDB Atlas Vector Search into Qdrant for purpose-built vector retrieval and filtering. (3618 bytes)
+- [From FAISS](pages/migrate-to-qdrant/from-faiss.md): Move vectors from a FAISS index file into Qdrant to gain managed storage, payload filtering, and distributed search. (2917 bytes)
+- [From Apache Solr](pages/migrate-to-qdrant/from-solr.md): Move dense vector fields from Apache Solr collections into Qdrant for purpose-built vector search and filtering. (3416 bytes)
+- [From Qdrant](pages/migrate-to-qdrant/from-qdrant.md): Copy collections between Qdrant instances or within one cluster, preserving vector config, indexes, and quantization. (5895 bytes)
+- [Migration Tool](pages/migrate-to-qdrant/index.md): Move vectors, payloads, and sparse embeddings into Qdrant from other vector databases with the Qdrant Migration Tool. (5146 bytes)
+
+## Migration Guidance
+
+- [Pre-Migration Baseline](pages/migration-guidance/pre-migration-baseline.md): Capture a pre-migration baseline of collection inventory, metadata, and search behavior before moving to Qdrant. (7799 bytes)
+- [Data Integrity](pages/migration-guidance/data-integrity.md): Verify that all points and payloads arrived intact after migrating to Qdrant, with vector counts and field-level checks. (11012 bytes)
+- [Search Quality](pages/migration-guidance/search-quality.md): Validate search quality after migrating to Qdrant with tiered checks for ranking, recall, and filter behavior. (16703 bytes)
+- [Diagnosing Discrepancies](pages/migration-guidance/diagnosing-discrepancies.md): Diagnose post-migration mismatches in Qdrant — separate data issues from configuration drift with a guided decision tree. (15491 bytes)
+- [Migration Guidance](pages/migration-guidance/index.md): A structured framework for verifying vector database migrations to Qdrant that catch silent data and search regressions. (4251 bytes)
+
+## Configuration
+
+- [Configuration](pages/ops-configuration/configuration.md): Customize Qdrant with config files and environment variables to control storage, networking, performance tuning, and feature flags. (21831 bytes)
+- [Resource Quotas](pages/ops-configuration/quotas.md): Cap node memory and disk usage cluster-wide so a full node stops taking writes before it destabilizes the cluster. (8912 bytes)
+- [Administration](pages/ops-configuration/administration.md): Administer a running Qdrant instance with runtime tools for recovery mode, strict mode, and limiting expensive query patterns. (66682 bytes)
+- [Memory Tiers](pages/ops-configuration/memory-tiers.md): Control how vectors, indexes, quantized data, and payloads are cached in RAM: pinned, warmed into a disk cache, or left on disk. (20069 bytes)
+- [Usage Statistics](pages/ops-configuration/usage-statistics.md): Understand and control the anonymized usage statistics collected by the Qdrant open-source container, including how to opt out. (4119 bytes)
+- [Running with GPU](pages/ops-configuration/running-with-GPU.md): Accelerate Qdrant vector indexing with GPU support using dedicated Docker images for NVIDIA and AMD hardware via the Vulkan API. (7781 bytes)
+- [Configuration](pages/ops-configuration/index.md): Configure and administer Qdrant with guides on config files, environment variables, runtime administration, telemetry, and GPU support. (1681 bytes)
+
+## Monitoring & Telemetry
+
+- [Monitoring & Telemetry](pages/ops-monitoring/monitoring.md): Expose Qdrant metrics in Prometheus and OpenMetrics format and integrate with Grafana for cluster, collection, and node-level dashboards. (16991 bytes)
+- [Memory Usage](pages/ops-monitoring/memory-usage.md): Inspect disk space, RAM, and OS page cache usage for a Qdrant collection across the cluster, broken down by component. (3750 bytes)
+- [Slow Request Log](pages/ops-monitoring/slow-request-log.md): Identify the slowest queries in your Qdrant deployment with the built-in slow request log, which records the slowest unique operations on each node since startup. (3384 bytes)
+- [Managed Cloud Prometheus Monitoring](pages/ops-monitoring/managed-cloud-prometheus.md): Monitor Qdrant Managed Cloud clusters with Prometheus and Grafana running in your own Kubernetes environment for full visibility. (3387 bytes)
+- [Self-Hosted Prometheus Monitoring](pages/ops-monitoring/hybrid-cloud-prometheus.md): Monitor Qdrant Hybrid Cloud and Private Cloud deployments by deploying Prometheus and Grafana into your Kubernetes cluster. (3817 bytes)
+- [Monitoring with Datadog](pages/ops-monitoring/hybrid-cloud-datadog.md): Monitor Qdrant Hybrid Cloud and Private Cloud deployments by setting up the Datadog Operator and Agent in your Kubernetes cluster. (4394 bytes)
+- [Monitoring & Telemetry](pages/ops-monitoring/index.md): Monitor Qdrant deployments with built-in metrics endpoints, Prometheus and Grafana integrations, and built-in tools for diagnosing memory usage and slow requests. (1893 bytes)
+
+## Optimization
+
+- [Optimize Performance](pages/ops-optimization/optimize.md): Tune Qdrant performance with quantization, on-disk storage, and HNSW parameters to balance speed, precision, and memory usage. (36744 bytes)
+- [Optimizer](pages/ops-optimization/optimizer.md): Understand how Qdrant's background optimizer rebuilds segments through vacuum, merge, and indexing stages to maintain efficient storage. (17925 bytes)
+- [Read-Write Contention](pages/ops-optimization/read-write-contention.md): Tune Qdrant under continuous ingestion to reduce optimizer contention and keep query latency low. (24119 bytes)
+- [Optimization](pages/ops-optimization/index.md): Tune Qdrant for high-speed search, high precision, or low memory usage, and troubleshoot read-write contention under continuous write load. (1081 bytes)
+
+## Overview
+
+- [What is Qdrant?](pages/overview/what-is-qdrant.md): Introduction to Qdrant, the vector similarity search engine that stores points with vectors and payloads for semantic search and RAG. (9392 bytes)
+- [Understanding Vector Search in Qdrant](pages/overview/vector-search.md): Understand how vector search works, why it goes beyond keyword matching, and where Qdrant fits in the modern retrieval ecosystem. (10654 bytes)
+- [Overview](pages/overview/index.md): Get oriented with Qdrant: how vector search works, the retrieval process, the client-server architecture, and core data structures. (16457 bytes)
+
+## Private Cloud
+
+- [Setup Private Cloud](pages/private-cloud/private-cloud-setup.md): Install Qdrant Private Cloud into your Kubernetes cluster with Helm, using the Qdrant Operator and container registry credentials. (10531 bytes)
+- [Configuration](pages/private-cloud/configuration.md): Configure the Qdrant Private Cloud Helm chart for the Operator, networking, scheduling, ingress, and backup management. (19466 bytes)
+- [Managing a Cluster](pages/private-cloud/qdrant-cluster-management.md): Manage Qdrant Private Cloud clusters declaratively with Kubernetes resources to scale, upgrade, and expose them via Service or Ingress. (15900 bytes)
+- [Backups](pages/private-cloud/backups.md): Create one-time and recurring snapshots and restore Qdrant Private Cloud clusters using declarative Kubernetes resources. (1597 bytes)
+- [Logging & Monitoring](pages/private-cloud/logging-monitoring.md): Collect application logs, audit logs, and Prometheus-compatible metrics from Qdrant Private Cloud clusters, with a ready-made Grafana dashboard. (3282 bytes)
+- [API Reference](pages/private-cloud/api-reference.md): Reference for Qdrant Private Cloud Kubernetes APIs covering clusters, snapshots, restores, scheduled backups, and authentication. (168865 bytes)
+- [Changelog](pages/private-cloud/changelog.md): Release notes for Qdrant Private Cloud, including supported Qdrant versions, new features, and stability improvements. (11372 bytes)
+- [Private Cloud](pages/private-cloud/index.md): Run Qdrant Private Cloud in your own Kubernetes cluster with full control over scheduling, security, and disaster recovery. (1675 bytes)
+
+## Scaling & Resilience
+
+- [Vertical Scaling](pages/scaling/vertical-scaling.md): Scale Qdrant by increasing CPU, RAM, or disk on existing nodes, with RAM sizing guidelines and signs it's time to scale horizontally instead. (4316 bytes)
+- [Horizontal Scaling](pages/scaling/horizontal-scaling.md): Understand how Qdrant scales out across nodes through sharding, replication, Raft consensus, and consistency guarantees. (9873 bytes)
+- [Resilience](pages/scaling/resilience.md): Configure Qdrant's replication factor, node count, and Multi-AZ settings for fault tolerance, plus failover best practices for production. (7468 bytes)
+- [Distributed Deployment](pages/scaling/distributed_deployment.md): Run Qdrant in distributed mode across multiple nodes for higher availability, scalable throughput, and fault-tolerant vector search. (39284 bytes)
+- [Consistency Guarantees](pages/scaling/consistency-guarantees.md): Configure Qdrant's write consistency factor, read consistency, and write ordering to trade throughput for stronger consistency guarantees. (22661 bytes)
+- [Node Failure Recovery](pages/scaling/node-failure-recovery.md): Recover a Qdrant cluster after a node fails, from restarting a replicated node to recreating one from a snapshot. (4349 bytes)
+- [Scaling & Resilience](pages/scaling/index.md): Scale Qdrant vertically or horizontally as your data and traffic grow, and configure replication, node count, and Multi-AZ for production resilience. (4045 bytes)
+
+## Send Data to Qdrant
+
+- [Databricks Ingestion](pages/send-data/databricks.md): Vectorize and ingest Databricks datasets into Qdrant using Apache Spark and the Qdrant Spark connector for large-scale embedding workflows. (7143 bytes)
+- [Querying with Airflow](pages/send-data/qdrant-airflow-astronomer.md): Orchestrate Qdrant ingestion and semantic queries with Apache Airflow and Astronomer using the official Qdrant Airflow provider. (11110 bytes)
+- [Kafka Streaming into Qdrant](pages/send-data/data-streaming-kafka-qdrant.md): Stream real-time data into Qdrant with Apache Kafka and Confluent for change-data-capture pipelines powering semantic search and RAG. (13691 bytes)
+- [Send Data to Qdrant](pages/send-data/index.md): Load data into Qdrant from streaming, batch, and orchestration sources including Kafka, Databricks, and Apache Airflow. (1482 bytes)
+
+## Essential Examples
+
+- [Agentic RAG with CrewAI](pages/tutorials-build-essentials/agentic-rag-crewai-zoom.md): Combine Qdrant vector search with CrewAI agents and Streamlit to extract insights from meeting transcripts and recordings. (15269 bytes)
+- [S3 Ingestion with LangChain](pages/tutorials-build-essentials/data-ingestion-beginners.md): Stream documents from AWS S3 into Qdrant with LangChain to build a vector ingestion pipeline for unstructured data. (16254 bytes)
+- [Agentic RAG with LangGraph](pages/tutorials-build-essentials/agentic-rag-langgraph.md): Build an agentic RAG system with LangGraph and Qdrant that orchestrates multi-step retrieval, web search, and tool selection. (17995 bytes)
+- [Discord RAG Bot](pages/tutorials-build-essentials/agentic-rag-camelai-discord.md): Build an agentic RAG Discord bot powered by Qdrant vector search, CAMEL-AI agents, and OpenAI embeddings for context-aware answers. (13202 bytes)
+- [5-Minute RAG with DeepSeek](pages/tutorials-build-essentials/rag-deepseek.md): Build a five-minute RAG pipeline pairing Qdrant vector search with the DeepSeek LLM to enrich prompts with retrieved context. (19875 bytes)
+- [n8n Workflow Automation](pages/tutorials-build-essentials/qdrant-n8n.md): Automate Qdrant workflows in n8n: build no-code pipelines for vector search, recommendations, and unstructured data analysis. (20736 bytes)
+- [Video Anomaly Detection Part 1: Architecture, Twelve Labs, and NVIDIA VSS](pages/tutorials-build-essentials/video-anomaly-edge-part-1.md): Architect a real-time video anomaly detection system on Qdrant Edge with Twelve Labs video intelligence and NVIDIA Metropolis VSS. (26098 bytes)
+- [Video Anomaly Detection Part 2: Edge-to-Cloud Pipeline](pages/tutorials-build-essentials/video-anomaly-edge-part-2.md): Build the edge-to-cloud pipeline for video anomaly detection using Qdrant Edge shards, snapshot sync, and offline-capable kNN search. (24652 bytes)
+- [Video Anomaly Detection Part 3: Scoring, Governance, and Deployment](pages/tutorials-build-essentials/video-anomaly-edge-part-3.md): Score, govern, and deploy a video anomaly detection system on Qdrant Edge with incident formation and baseline protection. (14726 bytes)
+- [Essential Examples](pages/tutorials-build-essentials/index.md): Hands-on Qdrant integration tutorials: connect AI agents, RAG pipelines, ingestion stacks, and automation tools to a vector database. (2085 bytes)
+
+## Improve Search
+
+- [Measuring Retrieval Relevance](pages/improve-search/retrieval-relevance.md): This tutorial focuses on retrieval relevance: how well retrieved results match real user intent. To measure retrieval relevance, you need a labeled dataset of queries paired with their expected relevant documents (commo… (10745 bytes)
+- [Evaluating Pipeline Output Quality](pages/improve-search/pipeline-output-quality.md): This tutorial focuses on pipeline output quality: whether the full retrieval pipeline produces the right output once retrieved results reach a consumer, most often an LLM generator in a RAG system. To measure pipeline o… (13541 bytes)
+- [Query Decomposition for Multi-Hop Questions](pages/improve-search/query-decomposition.md): Answer multi-hop questions by retrieving in steps: an LLM asks each follow-up sub-question, then fuse the per-hop results with RRF. (6056 bytes)
+- [Improve Search](pages/improve-search/index.md): Embedding choice, chunking strategies, and retrieval evaluation using Python ecosystem tools. (1350 bytes)
+
+## Qdrant Edge
+
+- [Edge API](pages/edge/edge-api/index.md): Reference for the Qdrant Edge API: the EdgeShard methods available in Python and Rust, with their parameters and return values. (3285 bytes)
+- [Shard Lifecycle](pages/edge/edge-api/shard-lifecycle.md): Create, load, inspect, flush, and close a Qdrant Edge Shard, and read its metadata with info. (6810 bytes)
+- [Quickstart](pages/edge/edge-quickstart.md): Get started with Qdrant Edge: install the Python or Rust bindings, configure a shard, and run local vector search in minutes. (15025 bytes)
+- [On-Device Embeddings](pages/edge/edge-fastembed-embeddings.md): Generate text and image embeddings on-device by pairing FastEmbed with Qdrant Edge for fully offline vector search. (3761 bytes)
+- [BM25](pages/edge/edge-bm25.md): Generate BM25 sparse embeddings for keyword search with Qdrant Edge, compatible with server-side BM25 collections. (6821 bytes)
+- [Configuration](pages/edge/edge-api/configuration.md): Configure a Qdrant Edge Shard with EdgeConfig: vector params, quantization, optimizers, WAL, and search threads. (13566 bytes)
+- [Data Synchronization Patterns](pages/edge/edge-data-synchronization-patterns.md): Sync Qdrant Edge Shards with server collections using snapshots, partial updates, and dual-write patterns for offline-first apps. (11722 bytes)
+- [Updating Data](pages/edge/edge-api/updating-data.md): Write to a Qdrant Edge Shard with the update method and the full set of update operations. (6614 bytes)
+- [Synchronize with a Server](pages/edge/edge-synchronization-guide.md): Combine mutable and immutable Qdrant Edge Shards with a server to offload indexing, back up data, and synchronize edge devices. (14915 bytes)
+- [Reading Data](pages/edge/edge-api/reading-data.md): Read from a Qdrant Edge Shard with query, scroll, retrieve, count, and facet. (10301 bytes)
+- [Snapshots](pages/edge/edge-api/snapshots.md): Move data between a Qdrant Edge Shard and a server collection with snapshot methods. (3044 bytes)
+- [Qdrant Edge](pages/edge/index.md): Embed Qdrant Edge for in-process vector search on robots, kiosks, and mobile devices with low-latency local retrieval. (4246 bytes)
+
+## FastEmbed
+
+- [Quickstart](pages/fastembed/fastembed-quickstart.md): Get started with FastEmbed: install the library, load a default text embedding model, and generate vectors from sample documents in minutes. (2264 bytes)
+- [FastEmbed & Qdrant](pages/fastembed/fastembed-semantic-search.md): Build semantic search end-to-end using Qdrant Client and FastEmbed — generate embeddings, create a collection, and run vector queries in a few lines. (2805 bytes)
+- [Optimize Throughput](pages/fastembed/fastembed-optimize.md): Tune FastEmbed for higher throughput with parallel workers, lazy model loading, and batch processing across CPU and GPU hardware. (4421 bytes)
+- [Working with miniCOIL](pages/fastembed/fastembed-minicoil.md): Run sparse neural retrieval with miniCOIL and FastEmbed, ranking exact keyword matches by contextual meaning beyond classic BM25 scoring. (8620 bytes)
+- [Working with SPLADE](pages/fastembed/fastembed-splade.md): Generate sparse text vectors with SPLADE in FastEmbed for interpretable, large-scale lexical retrieval that outperforms classic BM25. (8207 bytes)
+- [Working with ColBERT](pages/fastembed/fastembed-colbert.md): Generate ColBERT multivector embeddings with FastEmbed and store them in Qdrant to use late-interaction retrieval and reranking out of the box. (16138 bytes)
+- [Reranking with FastEmbed](pages/fastembed/fastembed-rerankers.md): Refine vector search results with cross-encoder rerankers in FastEmbed, combining fast first-stage retrieval with precise relevance scoring. (12914 bytes)
+- [Multi-Vector Postprocessing](pages/fastembed/fastembed-postprocessing.md): Compress multivector embeddings into single fixed-size vectors with MUVERA in FastEmbed for fast first-stage search and accurate multivector reranking. (13354 bytes)
+- [FastEmbed](pages/fastembed/index.md): FastEmbed is a lightweight, ONNX-based embedding library from Qdrant for fast, accurate dense, sparse, and multivector inference in Python. (3204 bytes)
+
+## Inference
+
+- [Inference API](pages/inference/inference-api.md): When using Qdrant Cloud Inference or Qdrant's BM25 model, embeddings are generated server-side. Instead of pre-computed vectors, you pass Inference Objects when ingesting or querying data. An Inference Object tells Qdra… (14431 bytes)
+- [BM25](pages/inference/inference-bm25.md): BM25 (Best Matching 25) is a ranking function for text search. BM25 uses sparse vectors that represent documents, where each dimension corresponds to a word. Qdrant can generate these sparse embeddings from input text d… (7556 bytes)
+- [Cloud Inference](pages/inference/cloud-inference.md): Clusters on Qdrant Managed Cloud can use Qdrant Cloud Inference to generate embeddings. For a list of available models and their dimensions, visit the Inference tab of the Cluster Detail page in the Qdrant Cloud Console… (18242 bytes)
+- [External Providers](pages/inference/external-inference-providers.md): Qdrant Cloud can act as a proxy for the APIs of external embedding model providers: (48458 bytes)
+- [Matryoshka Models](pages/inference/matryoshka-models.md): Matryoshka Representation Learning (MRL) is a technique used to train embedding models to produce vectors that can be reduced in size with minimal loss of information. On Qdrant Cloud, for supported models, you can spec… (15309 bytes)
+- [Inference](pages/inference/index.md): Generate vector embeddings inside Qdrant — server-side inference removes the need to run separate embedding infrastructure. (3921 bytes)
+
+## Operations & Scale
+
+- [Snapshots](pages/tutorials-operations/create-snapshot.md): Back up and restore Qdrant collections with snapshots across single-node and distributed multi-node clusters. (11194 bytes)
+- [Data Migration](pages/tutorials-operations/migration.md): Migrate vector data into Qdrant from Pinecone, Weaviate, Chroma, or other Qdrant clusters using the Qdrant Migration Tool. (4321 bytes)
+- [Migrate to a New Embedding Model](pages/tutorials-operations/embedding-model-migration.md): Migrate a Qdrant collection to a new embedding model with zero downtime using a blue-green dual-collection strategy. (50134 bytes)
+- [Incremental Embedding Updates](pages/tutorials-operations/incremental-embedding-updates.md): Sync embeddings with raw text data that changes over time. (69778 bytes)
+- [Prevent Unoptimized Usage](pages/tutorials-operations/prevent-unoptimized-usage.md): Defer visibility of unindexed points to stop bulk uploads from slowing down search. (13004 bytes)
+- [Blue-Green Cluster Deployment](pages/tutorials-operations/blue-green-deployment.md): Deploy changes to Qdrant with zero production risk using a blue-green cluster strategy: build and test on a new cluster, then switch traffic over. (9111 bytes)
+- [Time-Based Sharding](pages/tutorials-operations/time-based-sharding.md): Implement time-based sharding in Qdrant to route fast-moving data by timestamp and prune old shards without expensive re-indexing. (44936 bytes)
+- [Large-Scale Search](pages/tutorials-operations/large-scale-search.md): Index and search hundreds of millions of vectors in Qdrant cost-efficiently with minimal hardware and tuned configuration. (17190 bytes)
+- [GPU-Accelerated HNSW Indexing](pages/tutorials-operations/gpu-accelerated-hnsw-indexing.md): Speed up HNSW index builds with GPU acceleration on Qdrant Cloud, and measure the effect on indexing time, query latency, and cost. (23096 bytes)
+- [Secure a Self-Hosted Qdrant Instance](pages/tutorials-operations/secure-qdrant.md): Harden a self-hosted Qdrant deployment with TLS, an Admin API key, a Read-Only key, and Granular Access Control. (23462 bytes)
+- [Operations & Scale](pages/tutorials-operations/index.md): Production operations tutorials for Qdrant: snapshots, migrations, sharding, and large-scale indexing for high-volume workloads. (3700 bytes)
+
+## Tutorials & Examples
+
+- [Tutorials & Examples](pages/tutorials-and-examples/index.md): Step-by-step Qdrant tutorials and examples covering hybrid search, RAG, ingestion, and Qdrant Cloud workflows for developers. (859 bytes)
+
+## Integration Tutorials
+
+- [Integration Tutorials](pages/tutorials-ecosystem/index.md): Integrate Qdrant with cloud providers, data streams, and ETL tools through hands-on ecosystem tutorials. (191 bytes)

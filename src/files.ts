@@ -48,6 +48,114 @@ export async function withRepositoryArchive<T>(
   }
 }
 
+export async function withSparseGithubCheckout<T>(
+  repository: string,
+  ref: string,
+  sparsePaths: readonly string[],
+  callback: (
+    directory: string,
+    repositoryFiles: ReadonlySet<string>,
+  ) => Promise<T>,
+): Promise<T> {
+  if (!/^[^/\s]+\/[^/\s]+$/.test(repository) || !/^[0-9a-f]{40}$/.test(ref)) {
+    throw new Error(
+      `Sparse GitHub checkouts must be addressed by owner/name and immutable commit SHA: ${repository}@${ref}`,
+    );
+  }
+  if (
+    sparsePaths.length === 0 ||
+    sparsePaths.some(
+      (entry) =>
+        path.isAbsolute(entry) ||
+        entry.includes("\\") ||
+        entry.includes("\0") ||
+        entry.split("/").includes(".."),
+    )
+  ) {
+    throw new Error(`Invalid sparse checkout paths for ${repository}`);
+  }
+  const cacheRoot =
+    process.env.GITHUB_SPARSE_CACHE_DIR ??
+    path.join(tmpdir(), "docs-llm-github-sparse");
+  const repositoryDirectory = path.join(
+    cacheRoot,
+    repository.replace("/", "--"),
+  );
+  const checkout = path.join(repositoryDirectory, ref);
+  await mkdir(repositoryDirectory, { recursive: true });
+  if (!(await exists(checkout))) {
+    const staging = await mkdtemp(path.join(repositoryDirectory, `${ref}.`));
+    const source = path.join(staging, "source");
+    try {
+      await runProcess([
+        "gh",
+        "repo",
+        "clone",
+        repository,
+        source,
+        "--",
+        "--filter=blob:none",
+        "--no-checkout",
+        "--depth=1",
+      ]);
+      await runProcess([
+        "git",
+        "-C",
+        source,
+        "sparse-checkout",
+        "set",
+        "--cone",
+        ...sparsePaths,
+      ]);
+      await runProcess([
+        "git",
+        "-C",
+        source,
+        "fetch",
+        "--depth=1",
+        "origin",
+        ref,
+      ]);
+      await runProcess(["git", "-C", source, "checkout", "--detach", ref]);
+      await rename(source, checkout);
+    } finally {
+      await rm(staging, { recursive: true, force: true });
+    }
+  }
+  const head = (
+    await runProcess(["git", "-C", checkout, "rev-parse", "HEAD"])
+  ).trim();
+  if (head !== ref) {
+    await rm(checkout, { recursive: true, force: true });
+    throw new Error(
+      `Sparse GitHub checkout resolved ${repository}@${ref} to ${head}`,
+    );
+  }
+  const tracked = await runProcess(["git", "-C", checkout, "ls-files", "-z"]);
+  return callback(
+    checkout,
+    new Set(tracked.split("\0").filter((entry) => entry !== "")),
+  );
+}
+
+async function runProcess(arguments_: readonly string[]): Promise<string> {
+  const child = Bun.spawn([...arguments_], {
+    stdout: "pipe",
+    stderr: "pipe",
+  });
+  const [exitCode, stdout, stderr] = await Promise.all([
+    child.exited,
+    new Response(child.stdout).text(),
+    new Response(child.stderr).text(),
+  ]);
+  if (exitCode !== 0) {
+    throw new Error(
+      `${arguments_[0] ?? "Process"} exited with ${exitCode}: ${stderr.trim() || stdout.trim()}`,
+    );
+  }
+  return stdout;
+}
+
 async function repositoryArchive(
   repository: string,
   ref: string,

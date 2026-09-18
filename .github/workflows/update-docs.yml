@@ -55,6 +55,8 @@ jobs:
         run: bun run update
       - name: Rebuild pinned documentation after repository changes
         if: github.event_name != 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: bun run build
       # Upstream drift never fails this workflow: `bun run update` keeps the
       # previous pin for a project it cannot convert and quarantines individual

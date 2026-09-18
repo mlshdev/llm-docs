@@ -198,6 +198,7 @@ export async function writeRootIndexes(
     "- Docker documentation tracks the latest `main` commit because docker/docs does not publish current GitHub releases.",
     "- n8n documentation tracks the latest `main` commit because n8n-docs does not publish releases or tags.",
     "- discord.py tracks the latest final semantic-version tag because the repository publishes tags but no GitHub Releases.",
+    "- Qdrant documentation tracks the latest `qdrant/landing_page` `master` commit because the site publishes continuously from that branch.",
     "- NetBird updates only after the separate documentation repository contains the API-generation commit for the same product tag.",
     "- Apple documentation is captured from public DocC index and render endpoints. Each catalog is pinned by an inventory digest and a full-build render-payload digest; daily inventory reconciliation cannot detect prose-only edits, so those require an explicit fresh full rebuild.",
   ];

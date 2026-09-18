@@ -1,0 +1,16 @@
+Qdrant documentation snapshot
+
+The pages in this directory are a normalized rendering of the documentation
+Qdrant publishes at https://qdrant.tech/documentation/ from the public
+repository https://github.com/qdrant/landing_page.
+
+Qdrant has not released that repository under an open-source license: it
+carries no repository-level LICENSE file or GitHub license declaration, and the
+documentation remains Qdrant's copyrighted material, reproduced here as a
+machine-readable reference only.
+
+Terms and conditions: https://qdrant.tech/legal/terms_and_conditions/
+Privacy policy: https://qdrant.tech/legal/privacy-policy/
+
+Qdrant is a trademark of Qdrant Solutions GmbH. This snapshot is not affiliated
+with or endorsed by Qdrant Solutions GmbH.
