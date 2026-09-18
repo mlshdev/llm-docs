@@ -11,6 +11,7 @@ import { buildNetbird } from "./netbird.ts";
 import { buildN8n } from "./n8n.ts";
 import { buildPodman } from "./podman.ts";
 import { buildPostgres } from "./postgres.ts";
+import { buildQdrant } from "./qdrant.ts";
 import { buildRunpod } from "./runpod.ts";
 import { buildSearxng } from "./searxng.ts";
 import { buildTraefik } from "./traefik.ts";
@@ -106,5 +107,7 @@ function runAdapter(
     case "discord-py-self":
     case "discord-py":
       return buildDiscordPy(project, lock);
+    case "qdrant":
+      return buildQdrant(project, lock);
   }
 }

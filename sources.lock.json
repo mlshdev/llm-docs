@@ -156,6 +156,14 @@
       "sourceCommit": "dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee",
       "taggedAt": "2026-03-03T18:38:56Z"
     },
+    "qdrant": {
+      "tag": "master",
+      "branch": "master",
+      "sourceCommit": "4d8a8ceb08486decdbf0f0016772c7f120ea7d56",
+      "sourceCommittedAt": "2026-09-17T18:44:22Z",
+      "observedCommit": "4d8a8ceb08486decdbf0f0016772c7f120ea7d56",
+      "documentationDigest": "78bb79dc351b0e9e60c377c0954a6e942de1c0ca10b4eee152ef625edad756de"
+    },
     "apple-swift": {
       "tag": "snapshot-5915b24a1311",
       "snapshotDigest": "5915b24a13116058563ec2085adb7610a331e7e4aea596f8d2f1f1b39a6e0f1c",

@@ -1,17 +1,26 @@
 node_modules/
 _generated/
+.DS_Store
+
+# Agent and editor scaffolding. Local tooling state, not project artifacts.
 .serena/
 .claude/
-.DS_Store
-/*session*.md
-/resume.txt
+.opencode/
+opencode.json
+.vscode/
+.idea/
 
-# Audit and handoff scaffolding for the generator rewrite. Process notes, not
-# project artifacts.
+# Audit, session, and handoff scaffolding for the generator rewrite. Process
+# notes, not project artifacts.
 /CODEBASE_AUDIT.md
 /CONTINUATION_HANDOFF.md
-/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]-*.txt
+/*session*.md
+/resume.txt
+/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*.txt
+/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*.md
+
 *.tmp
+*.log
 .env
 .env.*
 .npmrc
@@ -28,3 +37,8 @@ build-report.json
 .generated-update-transaction.json
 *.staging/
 *.backup/
+
+# Source caches when GITHUB_ARCHIVE_CACHE_DIR, GITHUB_SPARSE_CACHE_DIR, or
+# DOCC_CACHE_DIR are pointed inside the checkout instead of the system
+# temporary directory.
+/.cache/

@@ -28,6 +28,7 @@
 - [Runpod main](runpod/llms.txt): [full corpus](runpod/llms-full.txt), [manifest](runpod/manifest.json)
 - [discord.py-self v2.1.0](discord-py-self/llms.txt): [full corpus](discord-py-self/llms-full.txt), [manifest](discord-py-self/manifest.json)
 - [discord.py v2.7.1](discord-py/llms.txt): [full corpus](discord-py/llms-full.txt), [manifest](discord-py/manifest.json)
+- [Qdrant master](qdrant/llms.txt): [full corpus](qdrant/llms-full.txt), [manifest](qdrant/manifest.json)
 - [Apple Swift snapshot-5915b24a1311](apple-swift/llms.txt): [full corpus](apple-swift/llms-full.txt), [manifest](apple-swift/manifest.json)
 - [Apple SwiftUI snapshot-8b55d19a707e](apple-swiftui/llms.txt): [full corpus](apple-swiftui/llms-full.txt), [manifest](apple-swiftui/manifest.json)
 - [Apple WebKit and Safari snapshot-a0a4b8d281c3](apple-webkit/llms.txt): [full corpus](apple-webkit/llms-full.txt), [manifest](apple-webkit/manifest.json)
@@ -44,5 +45,6 @@
 - Docker documentation tracks the latest `main` commit because docker/docs does not publish current GitHub releases.
 - n8n documentation tracks the latest `main` commit because n8n-docs does not publish releases or tags.
 - discord.py tracks the latest final semantic-version tag because the repository publishes tags but no GitHub Releases.
+- Qdrant documentation tracks the latest `qdrant/landing_page` `master` commit because the site publishes continuously from that branch.
 - NetBird updates only after the separate documentation repository contains the API-generation commit for the same product tag.
 - Apple documentation is captured from public DocC index and render endpoints. Each catalog is pinned by an inventory digest and a full-build render-payload digest; daily inventory reconciliation cannot detect prose-only edits, so those require an explicit fresh full rebuild.

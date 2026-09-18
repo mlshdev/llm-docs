@@ -179,6 +179,14 @@
       "homepage": "https://discordpy.readthedocs.io/"
     },
     {
+      "id": "qdrant",
+      "kind": "github",
+      "title": "Qdrant",
+      "repository": "qdrant/landing_page",
+      "branch": "master",
+      "homepage": "https://qdrant.tech/documentation/"
+    },
+    {
       "id": "apple-swift",
       "kind": "docc",
       "catalog": "swift",

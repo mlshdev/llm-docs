@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "generatorVersion": 3,
+  "generatorDigest": "c9e2ef5f2a17fa250af2ded1f7d74e31435cd2eab4290d8038fc797c9971d846",
+  "project": "qdrant",
+  "title": "Qdrant",
+  "homepage": "https://qdrant.tech/documentation/",
+  "repository": "qdrant/landing_page",
+  "tag": "master",
+  "branch": "master",
+  "sourceCommittedAt": "2026-09-17T18:44:22Z",
+  "documentationDigest": "78bb79dc351b0e9e60c377c0954a6e942de1c0ca10b4eee152ef625edad756de",
+  "sourceCommit": "4d8a8ceb08486decdbf0f0016772c7f120ea7d56",
+  "documentCount": 320,
+  "indexComplete": true,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 4027294,
+      "documentCount": 320,
+      "sha256": "f35988e36bdf004f70a222843ee1044447409fa88ebee3a3a600887c00223634"
+    }
+  ],
+  "outputDigest": "84d57203b0bd448ad380f0ae7255ef9921a5d5124467552b4738a05b2b971f7d",
+  "notes": [
+    "Pages are selected from qdrant-landing/content/documentation at the pinned master commit; drafts, navigation delimiters, external-link placeholders, non-rendered pages, and headless fragments are excluded.",
+    "Hugo code-snippet and include shortcodes are expanded from pinned headless Markdown, while figures, accordions, and interactive islands are reduced to their authored static Markdown content without executing Hugo or JavaScript.",
+    "Published documentation links resolve to https://qdrant.tech; repository assets resolve to immutable raw URLs at the pinned commit.",
+    "The upstream documentation repository declares no license, so LICENSE.upstream records a copyright notice rather than a license grant."
+  ]
+}
