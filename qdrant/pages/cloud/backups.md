@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/backups.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/cloud/backups.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/backups.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/cloud/backups.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud/backups/
 
 # Backing up Qdrant Cloud Clusters
@@ -54,7 +54,7 @@ After you have taken the prerequisite steps, you can configure a backup with the
    deleted.
 3. Alternatively, you can select **Backup now** to take an immediate snapshot.
 
-![Configure a cluster backup](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/backup-schedule.png)
+![Configure a cluster backup](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/backup-schedule.png)
 
 ### Restore a Backup
 
@@ -64,7 +64,7 @@ Backups can be restored into the same cluster. This will revert the configuratio
 
 Or you can restore the backup into a new cluster.
 
-![Restore or delete a cluster backup](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/restore-delete.png)
+![Restore or delete a cluster backup](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/restore-delete.png)
 
 ## Backups With a Snapshot
 

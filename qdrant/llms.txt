@@ -1,6 +1,6 @@
 # Qdrant master
 
-> Documentation generated from the latest `master` branch commit of [qdrant/landing_page](https://github.com/qdrant/landing_page) and pinned to immutable source commit `4d8a8ceb08486decdbf0f0016772c7f120ea7d56`.
+> Documentation generated from the latest `master` branch commit of [qdrant/landing_page](https://github.com/qdrant/landing_page) and pinned to immutable source commit `3b58061329eedce2091c9dd380b8c47fcaa1cb64`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Qdrant master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -233,6 +233,22 @@
 - [Keeping Postgres and Qdrant in Sync](pages/data-synchronization/with-postgres.md): Keep Postgres and Qdrant in sync using dual-write, queue-based, or CDC architectures for reliable hybrid search backends. (21133 bytes)
 - [Data Synchronization](pages/data-synchronization/index.md): Keep Qdrant in sync with your source databases using event-driven CDC, batch reindexing, or dual-write patterns for fresh search results. (1137 bytes)
 
+## Qdrant Edge
+
+- [Edge vs. Qdrant Cluster](pages/edge/edge-vs-qdrant-cluster.md): Compare Qdrant Edge and Qdrant Server across architecture, deployment, operations, and API surface. (7422 bytes)
+- [Edge API](pages/edge/edge-api/index.md): Reference for the Qdrant Edge API: the EdgeShard methods available in Python and Rust, with their parameters and return values. (3285 bytes)
+- [Shard Lifecycle](pages/edge/edge-api/shard-lifecycle.md): Create, load, inspect, flush, and close a Qdrant Edge Shard, and read its metadata with info. (6810 bytes)
+- [Quickstart](pages/edge/edge-quickstart.md): Get started with Qdrant Edge: install the Python or Rust bindings, configure a shard, and run local vector search in minutes. (15025 bytes)
+- [On-Device Embeddings](pages/edge/edge-fastembed-embeddings.md): Generate text and image embeddings on-device by pairing FastEmbed with Qdrant Edge for fully offline vector search. (3761 bytes)
+- [BM25](pages/edge/edge-bm25.md): Generate BM25 sparse embeddings for keyword search with Qdrant Edge, compatible with server-side BM25 collections. (6821 bytes)
+- [Configuration](pages/edge/edge-api/configuration.md): Configure a Qdrant Edge Shard with EdgeConfig: vector params, quantization, optimizers, WAL, and search threads. (13566 bytes)
+- [Data Synchronization Patterns](pages/edge/edge-data-synchronization-patterns.md): Sync Qdrant Edge Shards with server collections using snapshots, partial updates, and dual-write patterns for offline-first apps. (11722 bytes)
+- [Updating Data](pages/edge/edge-api/updating-data.md): Write to a Qdrant Edge Shard with the update method and the full set of update operations. (6614 bytes)
+- [Synchronize with a Server](pages/edge/edge-synchronization-guide.md): Combine mutable and immutable Qdrant Edge Shards with a server to offload indexing, back up data, and synchronize edge devices. (14915 bytes)
+- [Reading Data](pages/edge/edge-api/reading-data.md): Read from a Qdrant Edge Shard with query, scroll, retrieve, count, and facet. (10301 bytes)
+- [Snapshots](pages/edge/edge-api/snapshots.md): Move data between a Qdrant Edge Shard and a server collection with snapshot methods. (3044 bytes)
+- [Qdrant Edge](pages/edge/index.md): Embed Qdrant Edge for in-process vector search on robots, kiosks, and mobile devices with low-latency local retrieval. (4491 bytes)
+
 ## Build Prototypes
 
 - [GraphRAG with Qdrant and Neo4j](pages/examples/graphrag-qdrant-neo4j.md): Integrating Qdrant and Neo4j for Graph Retrieval-Augmented Generation (GraphRAG) with structured and unstructured data. (33376 bytes)
@@ -378,21 +394,6 @@
 - [Evaluating Pipeline Output Quality](pages/improve-search/pipeline-output-quality.md): This tutorial focuses on pipeline output quality: whether the full retrieval pipeline produces the right output once retrieved results reach a consumer, most often an LLM generator in a RAG system. To measure pipeline o… (13541 bytes)
 - [Query Decomposition for Multi-Hop Questions](pages/improve-search/query-decomposition.md): Answer multi-hop questions by retrieving in steps: an LLM asks each follow-up sub-question, then fuse the per-hop results with RRF. (6056 bytes)
 - [Improve Search](pages/improve-search/index.md): Embedding choice, chunking strategies, and retrieval evaluation using Python ecosystem tools. (1350 bytes)
-
-## Qdrant Edge
-
-- [Edge API](pages/edge/edge-api/index.md): Reference for the Qdrant Edge API: the EdgeShard methods available in Python and Rust, with their parameters and return values. (3285 bytes)
-- [Shard Lifecycle](pages/edge/edge-api/shard-lifecycle.md): Create, load, inspect, flush, and close a Qdrant Edge Shard, and read its metadata with info. (6810 bytes)
-- [Quickstart](pages/edge/edge-quickstart.md): Get started with Qdrant Edge: install the Python or Rust bindings, configure a shard, and run local vector search in minutes. (15025 bytes)
-- [On-Device Embeddings](pages/edge/edge-fastembed-embeddings.md): Generate text and image embeddings on-device by pairing FastEmbed with Qdrant Edge for fully offline vector search. (3761 bytes)
-- [BM25](pages/edge/edge-bm25.md): Generate BM25 sparse embeddings for keyword search with Qdrant Edge, compatible with server-side BM25 collections. (6821 bytes)
-- [Configuration](pages/edge/edge-api/configuration.md): Configure a Qdrant Edge Shard with EdgeConfig: vector params, quantization, optimizers, WAL, and search threads. (13566 bytes)
-- [Data Synchronization Patterns](pages/edge/edge-data-synchronization-patterns.md): Sync Qdrant Edge Shards with server collections using snapshots, partial updates, and dual-write patterns for offline-first apps. (11722 bytes)
-- [Updating Data](pages/edge/edge-api/updating-data.md): Write to a Qdrant Edge Shard with the update method and the full set of update operations. (6614 bytes)
-- [Synchronize with a Server](pages/edge/edge-synchronization-guide.md): Combine mutable and immutable Qdrant Edge Shards with a server to offload indexing, back up data, and synchronize edge devices. (14915 bytes)
-- [Reading Data](pages/edge/edge-api/reading-data.md): Read from a Qdrant Edge Shard with query, scroll, retrieve, count, and facet. (10301 bytes)
-- [Snapshots](pages/edge/edge-api/snapshots.md): Move data between a Qdrant Edge Shard and a server collection with snapshot methods. (3044 bytes)
-- [Qdrant Edge](pages/edge/index.md): Embed Qdrant Edge for in-process vector search on robots, kiosks, and mobile devices with low-latency local retrieval. (4246 bytes)
 
 ## FastEmbed
 

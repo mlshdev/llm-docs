@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/web-ui.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/web-ui.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/web-ui.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/web-ui.md)
 > Canonical documentation: https://qdrant.tech/documentation/web-ui/
 
 # Qdrant Web UI
@@ -18,7 +18,7 @@ Qdrant's Web UI is an intuitive and efficient graphic interface for your Qdrant 
 
 In the **Console**, you may use the REST API to interact with Qdrant, while in **Collections**, you can manage all the collections and upload Snapshots.
 
-![Qdrant Web UI](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/docs/gettingstarted/web-ui.png)
+![Qdrant Web UI](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/docs/gettingstarted/web-ui.png)
 
 ### Qdrant Web UI features
 

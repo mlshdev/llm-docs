@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/data-ingestion-beginners.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/tutorials-build-essentials/data-ingestion-beginners.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/data-ingestion-beginners.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/tutorials-build-essentials/data-ingestion-beginners.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-build-essentials/data-ingestion-beginners/
 
 # S3 Ingestion with LangChain and Qdrant
@@ -16,7 +16,7 @@ We’ll set up a powerful document ingestion and analysis pipeline in this workf
 
 **Figure 1: Data Ingestion Workflow Architecture**
 
-![data-ingestion-beginners-5](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-5.png)
+![data-ingestion-beginners-5](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-5.png)
 
 Let's break down each component of this workflow:
 
@@ -26,7 +26,7 @@ Let's break down each component of this workflow:
 
 ## Prerequisites
 
-![data-ingestion-beginners-11](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-11.png)
+![data-ingestion-beginners-11](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-11.png)
 
 In this section, you’ll get a step-by-step guide on ingesting data from an S3 bucket. But before we dive in, let’s make sure you’re set up with all the prerequisites:
 
@@ -74,7 +74,7 @@ QDRANT_KEY = ""
 
 ## Step 1: Ingesting Data from S3
 
-![data-ingestion-beginners-9.png](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-9.png)
+![data-ingestion-beginners-9.png](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-9.png)
 
 The LangChain framework makes it easy to ingest data from storage services like AWS S3, with built-in support for loading documents in formats such as PDFs, images, and text files.
 
@@ -116,7 +116,7 @@ To get things rolling, we’ll use two powerful models:
 
 ### Document Processing Function
 
-![data-ingestion-beginners-8.png](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-8.png)
+![data-ingestion-beginners-8.png](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-8.png)
 
 Next, we’ll define two functions — `process_text` and `process_image` to handle different file types in our document pipeline. The `process_text` function extracts and returns the raw content from a text-based document, while `process_image` retrieves an image from an S3 source and loads it into memory.
 
@@ -158,7 +158,7 @@ def parse_s3_url(s3_url):
 
 ## Step 3: Loading Embeddings into Qdrant
 
-![data-ingestion-beginners-10](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-10.png)
+![data-ingestion-beginners-10](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-10.png)
 
 Now that your documents have been processed and converted into embeddings, the next step is to load these embeddings into Qdrant.
 
@@ -274,29 +274,29 @@ Once the embeddings are loaded into Qdrant, you can use the WebUI dashboard to v
 To start visualizing your data in the Qdrant WebUI, head to the **Overview** section and select **Access the database**.
 
 **Figure 2: Accessing the Database from the Qdrant UI**
-![data-ingestion-beginners-2.png](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-2.png)
+![data-ingestion-beginners-2.png](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-2.png)
 
 When prompted, enter your API key. Once inside, you’ll be able to view your collections and the corresponding data points. You should see your collection displayed like this:
 
 **Figure 3: The product-data Collection in Qdrant**
-![data-ingestion-beginners-4.png](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-4.png)
+![data-ingestion-beginners-4.png](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-4.png)
 
 Here’s a look at the most recent point ingested into Qdrant:
 
 **Figure 4: The Latest Point Added to the product-data Collection**
-![data-ingestion-beginners-6.png](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-6.png)
+![data-ingestion-beginners-6.png](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-6.png)
 
 The Qdrant WebUI’s search functionality allows you to perform vector searches across your collections. With options to apply filters and parameters, retrieving relevant embeddings and exploring relationships within your data becomes easy. To start, head over to the **Console** in the left panel, where you can create queries:
 
 **Figure 5: Overview of Console in Qdrant**
-![data-ingestion-beginners-1.png](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-1.png)
+![data-ingestion-beginners-1.png](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-1.png)
 
 The first query retrieves all collections, the second fetches points from the product-data collection, and the third performs a sample query. This demonstrates how straightforward it is to interact with your data in the Qdrant UI.
 
 Now, let’s retrieve some documents from the database using a query!.
 
 **Figure 6: Querying the Qdrant Client to Retrieve Relevant Documents**
-![data-ingestion-beginners-3.png](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-3.png)
+![data-ingestion-beginners-3.png](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-3.png)
 
 In this example, we queried **Phones with improved design**. Then, we converted the text to vectors using OpenAI and retrieved a relevant phone review highlighting design improvements.
 
@@ -306,4 +306,4 @@ In this guide, we set up an S3 bucket, ingested various data types, and stored e
 
 Now, it’s your turn. Try experimenting with different data types, such as videos, and explore Qdrant’s advanced features to enhance your applications. To get started, [sign up](https://cloud.qdrant.io/signup) for Qdrant today.
 
-![data-ingestion-beginners-12](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-12.png)
+![data-ingestion-beginners-12](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-ingestion-beginners/data-ingestion-12.png)

@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/result_types/infobox.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/result_types/infobox.rst)
+> Pinned source for SearXNG master: [docs/dev/result_types/infobox.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/infobox.rst)
 
 <a id="result-types-infobox"></a>
 
@@ -10,7 +10,7 @@
 
 The [area info box](https://docs.searxng.org/dev/result_types/index.html#area-info-box) is an area where addtional infos shown to the user.
 
-Fields used in the [infobox.html](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/elements/infobox.html):
+Fields used in the [infobox.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/elements/infobox.html):
 
 **img\_src: `str`**
 

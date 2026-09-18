@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/support.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/support.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/support.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/support.md)
 > Canonical documentation: https://qdrant.tech/documentation/support/
 
 # Qdrant Cloud Support and Troubleshooting
@@ -7,13 +7,13 @@
 
 All Qdrant Cloud users are welcome to join our [Discord community](https://qdrant.to/discord/).
 
-![Discord](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/discord.png)
+![Discord](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/discord.png)
 
 ## Qdrant Cloud Support
 
 Paying customers have access to our Support team. Links to the support portal are available in the Qdrant Cloud Console.
 
-![Support Portal](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/support-portal.png)
+![Support Portal](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/support-portal.png)
 
 Support is handled via **Jira Service Management (JSM)**. When creating a support ticket, you will be asked to select a request type and provide information to help us understand and prioritize your issue.
 

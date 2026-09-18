@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/explore/metrics-exporter.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/scout/explore/metrics-exporter.md)
+> Pinned source for Docker main: [content/manuals/scout/explore/metrics-exporter.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/scout/explore/metrics-exporter.md)
 
 # Docker Scout metrics exporter
 
@@ -305,13 +305,13 @@ to see the metrics collected from this example. This configuration will collect
 all exposed metrics starting with `scout_` under the namespace
 `scout_metrics_exporter`.
 
-![datadog\_metrics\_summary](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/scout/images/datadog_metrics_summary.png)
+![datadog\_metrics\_summary](https://raw.githubusercontent.com/docker/docs/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/scout/images/datadog_metrics_summary.png)
 
 The following screenshots show examples of a Datadog dashboard containing
 graphs about vulnerability and policy compliance for a specific stream.
 
-![datadog\_dashboard\_1](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/scout/images/datadog_dashboard_1.png)
-![datadog\_dashboard\_2](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/scout/images/datadog_dashboard_2.png)
+![datadog\_dashboard\_1](https://raw.githubusercontent.com/docker/docs/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/scout/images/datadog_dashboard_1.png)
+![datadog\_dashboard\_2](https://raw.githubusercontent.com/docker/docs/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/scout/images/datadog_dashboard_2.png)
 
 > The reason why the lines in the graphs look flat is due to the own nature of
 > vulnerabilities (they don't change too often) and the short time interval

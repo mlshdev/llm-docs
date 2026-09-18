@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/engines/offline/sql-engines.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/offline/sql-engines.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/offline/sql-engines.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/offline/sql-engines.rst)
 
 <a id="sql-engines"></a>
 
@@ -21,7 +21,7 @@ Relational Database Management System (RDBMS) are supported:
 - [engine postgresql](https://docs.searxng.org/dev/engines/offline/sql-engines.html#engine-postgresql)
 - [engine mysql\_server](https://docs.searxng.org/dev/engines/offline/sql-engines.html#engine-mysql-server) & [engine mariadb\_server](https://docs.searxng.org/dev/engines/offline/sql-engines.html#engine-mariadb-server)
 
-All of the engines above are just commented out in the [settings.yml](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/settings.yml), as you have to set the required attributes for the
+All of the engines above are just commented out in the [settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/settings.yml), as you have to set the required attributes for the
 engines, e.g. `database:` ...
 
 ```yaml
@@ -33,7 +33,7 @@ engines, e.g. `database:` ...
 ```
 
 By default, the engines use the `key-value` template for displaying results /
-see [simple](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/result_templates/key-value.html)
+see [simple](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/key-value.html)
 theme.  If you are not satisfied with the original result layout, you can use
 your own template, set `result_template` attribute to `{template_name}` and
 place the templates at:
@@ -76,7 +76,7 @@ returned results use the option `limit`.
 
 ### info
 
-- [sqlite.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/engines/sqlite.py)
+- [sqlite.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines/sqlite.py)
 
 #### `searx.engines.sqlite`
 
@@ -90,7 +90,7 @@ Static Python API reference (`automodule`).
 
 ### info
 
-- [postgresql.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/engines/postgresql.py)
+- [postgresql.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines/postgresql.py)
 - `pip install` [psycopg2-binary](https://docs.searxng.org/dev/engines/offline/sql-engines.html#psycopg2)
 
 #### `searx.engines.postgresql`
@@ -103,7 +103,7 @@ Static Python API reference (`automodule`).
 
 ### info
 
-- [mysql\_server.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/engines/mysql_server.py)
+- [mysql\_server.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines/mysql_server.py)
 - `pip install` [mysql-connector-python](https://pypi.org/project/mysql-connector-python/)
 
 #### `searx.engines.mysql_server`
@@ -116,7 +116,7 @@ Static Python API reference (`automodule`).
 
 ### info
 
-- [mariadb\_server.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/engines/mariadb_server.py)
+- [mariadb\_server.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines/mariadb_server.py)
 - `pip install` [mariadb](https://pypi.org/project/mariadb/)
 
 #### `searx.engines.mariadb_server`

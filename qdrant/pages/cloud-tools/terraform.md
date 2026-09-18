@@ -1,9 +1,9 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-tools/terraform.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/cloud-tools/terraform.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-tools/terraform.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/cloud-tools/terraform.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud-tools/terraform/
 
 # Terraform
 
-![Terraform Logo](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/platforms/terraform/terraform.png)
+![Terraform Logo](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/platforms/terraform/terraform.png)
 
 HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle.
 

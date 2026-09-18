@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/reST.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/reST.rst)
+> Pinned source for SearXNG master: [docs/dev/reST.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/reST.rst)
 
 <a id="rest-primer"></a>
 
@@ -16,7 +16,7 @@ generated and deployed at docs.searxng.org\_.  For build prerequisites read
 
 <a id="docs-searxng-org"></a>
 
-The source files of SearXNG's documentation are located at [docs](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs).
+The source files of SearXNG's documentation are located at [docs](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs).
 Sphinx assumes source files to be encoded in UTF-8 by default.  Run [make docs.live](https://docs.searxng.org/dev/contribution_guide.html#make-docs-live) to build HTML while editing.
 
 ### Further reading
@@ -62,21 +62,21 @@ trained author brings with, to reach a well feedback from readers:
   view.
 - Limit the subject, use cross links for any further reading.
 
-To be more concrete what a *point of view* means.  In the ([docs](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs))
+To be more concrete what a *point of view* means.  In the ([docs](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs))
 folder we have three sections (and the *blog* folder), each dedicate to a
 different group of audience.
 
-**User's POV: [docs/user](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/user)**
+**User's POV: [docs/user](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/user)**
 
 A typical user knows about search engines and might have heard about
 meta crawlers and privacy.
 
-**Admin's POV: [docs/admin](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin)**
+**Admin's POV: [docs/admin](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin)**
 
 A typical Admin knows about setting up services on a linux system, but he does
 not know all the pros and cons of a SearXNG setup.
 
-**Developer's POV: [docs/dev](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev)**
+**Developer's POV: [docs/dev](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev)**
 
 Depending on the readability\_ of code, a typical developer is able to read and
 understand source code.  Describe what a item aims to do (e.g. a function).
@@ -264,7 +264,7 @@ content becomes smart.
 | -------------------------- | ----------------------------------                                                                                      | ------------------------------------                                                                                      |
 | project's wiki article     | [Offline-engines](https://en.wikipedia.org/wiki/Offline-engines)                                                        | `[Offline-engines](https://en.wikipedia.org/wiki/Offline-engines)`                                                        |
 | to docs public URL         | [dev/reST.html](https://docs.searxng.org/dev/reST.html)                                                                 | `[dev/reST.html](https://docs.searxng.org/dev/reST.html)`                                                                 |
-| files & folders origin     | [docs/dev/reST.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/reST.rst) | `[docs/dev/reST.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/reST.rst)` |
+| files & folders origin     | [docs/dev/reST.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/reST.rst) | `[docs/dev/reST.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/reST.rst)` |
 | pull request               | [4](https://github.com/searxng/searxng/pull/4)                                                                          | `[4](https://github.com/searxng/searxng/pull/4)`                                                                          |
 | patch                      | [af2cae6](https://github.com/searxng/searxng/commit/af2cae6)                                                            | `[af2cae6](https://github.com/searxng/searxng/commit/af2cae6)`                                                            |
 | PyPi package               | [curl\_cffi](https://pypi.org/project/curl_cffi/)                                                                       | `[curl_cffi](https://pypi.org/project/curl_cffi/)`                                                                        |
@@ -276,7 +276,7 @@ content becomes smart.
 | python code object         | `datetime.datetime`                                                                                                     | `datetime.datetime`                                                                                                       |
 | flask code object          | `flask.Flask`                                                                                                           | `flask.Flask`                                                                                                             |
 
-Intersphinx is configured in [docs/conf.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/conf.py):
+Intersphinx is configured in [docs/conf.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/conf.py):
 
 ```python
 intersphinx_mapping = {
@@ -481,7 +481,7 @@ directives.  E.g. to insert a figure with a scalable image format use SVG
 
 <a id="svg-image-example"></a>
 
-![SVG image example](https://raw.githubusercontent.com/searxng/searxng/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/svg_image.svg)
+![SVG image example](https://raw.githubusercontent.com/searxng/searxng/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/svg_image.svg)
 
 *Simple SVG image.*
 
@@ -513,7 +513,7 @@ A simple example is shown in [dot file example](https://docs.searxng.org/dev/reS
 >
 > <a id="dot-file-example"></a>
 >
-> ![hello world](https://raw.githubusercontent.com/searxng/searxng/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/hello.dot)
+> ![hello world](https://raw.githubusercontent.com/searxng/searxng/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/hello.dot)
 >
 > *DOT's hello world example*
 
@@ -1185,12 +1185,12 @@ All *generic-doc* tasks are running in the [make install](https://docs.searxng.o
 Templating is suitable for documentation which is created generic at the build
 time.  The sphinx-jinja\_ extension evaluates jinja\_ templates in the [make install](https://docs.searxng.org/dev/makefile.html#make-install) (with SearXNG modules installed).  We use this e.g. to build chapter:
 [configured engines](https://docs.searxng.org/user/configured_engines.html#configured-engines).  Below the jinja directive from the
-[docs/admin/engines.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/engines.rst) is shown:
+[docs/admin/engines.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/engines.rst) is shown:
 
 Build-time include: `../user/configured_engines.rst`
 
 The context for the template is selected in the line `.. jinja:: searx`.  In
-sphinx's build configuration ([docs/conf.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/conf.py)) the `searx` context
+sphinx's build configuration ([docs/conf.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/conf.py)) the `searx` context
 contains the `engines` and `plugins`.
 
 ```py

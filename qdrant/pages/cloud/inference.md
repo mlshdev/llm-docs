@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/inference.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/cloud/inference.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/inference.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/cloud/inference.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud/inference/
 
 # Inference in Qdrant Managed Cloud
@@ -11,7 +11,7 @@ Qdrant Managed Cloud allows you to use inference directly in the cloud, without 
 >
 > Inference is executed within the EU for Qdrant clusters in EU regions and in the US for Qdrant Clusters in all other regions. Free models are hosted on US region only.
 
-![Cluster Cluster UI](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-inference.png)
+![Cluster Cluster UI](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-inference.png)
 
 ## Enabling/Disabling Inference
 

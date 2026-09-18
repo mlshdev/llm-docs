@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/release-notes.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/ai/sandboxes/release-notes.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/release-notes.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/ai/sandboxes/release-notes.md)
 
 # Docker Sandboxes release notes
 
@@ -119,6 +119,11 @@ the full release history, including pre-releases and downloads, see the
 - BREAKING: `sbx ports --publish` and kit-declared ports now default to `tcp4` instead of dual-stack `tcp`, so a published port no longer listens on `::1` unless you name the protocol explicitly (`--publish 8080:3000/tcp`); this makes `http://localhost:<port>/` reach a sandbox service that listens only on IPv4.
 - `sbx run` and `sbx create` now accept sandbox kit references as the agent positional: `sbx run <sandbox-kit-ref>`. The old form `sbx run <sandbox-kit-name> --kit <sandbox-kit-ref>` is deprecated; use the `--kit` flag for mixins.
 - Sandboxes can now be created without a workspace bind mount by omitting the path in `sbx create`. Note that this only affects the `create` command; `sbx run` still defaults to mounting the current directory as the primary workspace.
+
+### Security
+
+- Fixed [CVE-2026-77179](https://www.cve.org/cverecord?id=CVE-2026-77179), a symlink vulnerability in the virtio-fs host server on macOS that could let a malicious guest read or modify arbitrary host files outside the shared workspace, potentially leading to code execution on the host.
+- Fixed [CVE-2026-79994](https://www.cve.org/cverecord?id=CVE-2026-79994), a symlink race in the guest-to-host Unix domain socket relay that could let a malicious guest connect to arbitrary host Unix sockets outside the shared workspace, exposing data or host-side capabilities.
 
 ### What's New
 

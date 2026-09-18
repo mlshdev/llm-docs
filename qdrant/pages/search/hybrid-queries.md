@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/hybrid-queries.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/search/hybrid-queries.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/hybrid-queries.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/search/hybrid-queries.md)
 > Canonical documentation: https://qdrant.tech/documentation/search/hybrid-queries/
 
 # Hybrid and Multi-Stage Queries
@@ -27,7 +27,7 @@ Additionally, prefetches can have prefetches themselves, so you can have nested 
 
 One of the most common problems when you have different representations of the same data is to combine the queried points for each representation into a single result.
 
-![Fusing results from multiple queries](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/docs/fusion-idea.png)
+![Fusing results from multiple queries](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/docs/fusion-idea.png)
 
 *Fusing results from multiple queries*
 

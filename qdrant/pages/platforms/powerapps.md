@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/platforms/powerapps.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/platforms/powerapps.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/platforms/powerapps.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/platforms/powerapps.md)
 > Canonical documentation: https://qdrant.tech/documentation/platforms/powerapps/
 
 # Power Apps
@@ -16,11 +16,11 @@ You can use the [Qdrant Connector](https://learn.microsoft.com/en-us/connectors/
 
 Search for the Qdrant connector when adding a new action in a Power Apps flow. The connector offers an exhaustive list of pre-built Qdrant actions.
 
-![Qdrant Connector](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/platforms/powerapps/qdrant-operations.png)
+![Qdrant Connector](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/platforms/powerapps/qdrant-operations.png)
 
 Set up a connection with the credentials of your Qdrant instance. The connection is verified upon creation.
 
-![Qdrant Connection Credentials](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/platforms/powerapps/qdrant-connection.png)
+![Qdrant Connection Credentials](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/platforms/powerapps/qdrant-connection.png)
 
 Once a connection is set up, you can now build flows paired with the various connectors [supported by Power Apps](https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-powerapps-connectors/).
 

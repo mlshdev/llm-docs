@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/bake.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/guides/bake.md)
+> Pinned source for Docker main: [content/guides/bake.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/guides/bake.md)
 
 # Mastering multi-platform builds, testing, and more with Docker Buildx Bake
 

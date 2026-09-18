@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/using-multivector-representations.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/tutorials-search-engineering/using-multivector-representations.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/using-multivector-representations.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/tutorials-search-engineering/using-multivector-representations.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-search-engineering/using-multivector-representations/
 
 # Multivector Representations for Reranking in Qdrant
@@ -16,7 +16,7 @@ In most vector engines, each document is represented by a single vector - an app
 
 Multivector representations offer a more fine-grained alternative where a single document is represented using multiple vectors, often at the token or phrase level. This enables more precise matching between specific query terms and relevant parts of the document. Matching is especially effective in Late Interaction models like [ColBERT](https://qdrant.tech/documentation/fastembed/fastembed-colbert/), which retain token-level embeddings and perform interaction during query time leading to relevance scoring.
 
-![Multivector Representations](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/advanced-tutorials/multivectors.png)
+![Multivector Representations](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/advanced-tutorials/multivectors.png)
 
 As you will see later in the tutorial, Qdrant supports multivectors and thus late interaction models natively.
 

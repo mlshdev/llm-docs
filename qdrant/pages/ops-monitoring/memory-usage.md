@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/ops-monitoring/memory-usage.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/ops-monitoring/memory-usage.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/ops-monitoring/memory-usage.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/ops-monitoring/memory-usage.md)
 > Canonical documentation: https://qdrant.tech/documentation/ops-monitoring/memory-usage/
 
 # Monitor Collection Memory Usage
@@ -13,7 +13,7 @@ This information is available in the [Qdrant Web UI](https://qdrant.tech/documen
 
 Open the collection detail page and select the **Memory** tab. It shows the memory breakdown for the collection, updated on demand.
 
-![](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/docs/memory-usage.png)
+![](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/docs/memory-usage.png)
 
   <figcaption>
     The Memory tab shows the breakdown of disk, RAM, and cached usage for each component of the collection.

@@ -8,20 +8,20 @@
   "repository": "qdrant/landing_page",
   "tag": "master",
   "branch": "master",
-  "sourceCommittedAt": "2026-09-17T18:44:22Z",
-  "documentationDigest": "78bb79dc351b0e9e60c377c0954a6e942de1c0ca10b4eee152ef625edad756de",
-  "sourceCommit": "4d8a8ceb08486decdbf0f0016772c7f120ea7d56",
-  "documentCount": 320,
+  "sourceCommittedAt": "2026-09-18T12:02:33Z",
+  "documentationDigest": "2b741f44726aedfaabae0f2918180717102ff5f68a515440d4dfbaa10267b979",
+  "sourceCommit": "3b58061329eedce2091c9dd380b8c47fcaa1cb64",
+  "documentCount": 321,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 4027294,
-      "documentCount": 320,
-      "sha256": "f35988e36bdf004f70a222843ee1044447409fa88ebee3a3a600887c00223634"
+      "byteLength": 4035451,
+      "documentCount": 321,
+      "sha256": "03dfa481a9e76ae3ee13a1d88e94624738b66d65783bf6a303f55bcc2250c2da"
     }
   ],
-  "outputDigest": "84d57203b0bd448ad380f0ae7255ef9921a5d5124467552b4738a05b2b971f7d",
+  "outputDigest": "b751a4f2884aecf494828ff4aafacd337206ed646831084cb3178b8e19b5d17e",
   "notes": [
     "Pages are selected from qdrant-landing/content/documentation at the pinned master commit; drafts, navigation delimiters, external-link placeholders, non-rendered pages, and headless fragments are excluded.",
     "Hugo code-snippet and include shortcodes are expanded from pinned headless Markdown, while figures, accordions, and interactive islands are reduced to their authored static Markdown content without executing Hugo or JavaScript.",

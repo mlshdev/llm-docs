@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/docker-concepts/running-containers/publishing-ports.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/get-started/docker-concepts/running-containers/publishing-ports.md)
+> Pinned source for Docker main: [content/get-started/docker-concepts/running-containers/publishing-ports.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/get-started/docker-concepts/running-containers/publishing-ports.md)
 
 # Publishing and exposing ports
 
@@ -110,11 +110,11 @@ In this step, you will run a container and publish its port using the Docker CLI
 
 3. Verify the published port by going to the **Containers** view of the Docker Desktop Dashboard.
 
-![A screenshot of Docker Desktop Dashboard showing the published port](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/get-started/docker-concepts/running-containers/images/published-ports.webp?w=5000\&border=true)
+![A screenshot of Docker Desktop Dashboard showing the published port](https://raw.githubusercontent.com/docker/docs/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/get-started/docker-concepts/running-containers/images/published-ports.webp?w=5000\&border=true)
 
 4. Open the website by either selecting the link in the **Port(s)** column of your container or visiting <http://localhost:8080> in your browser.
 
-![A screenshot of the landing page of the Nginx web server running in a container](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/get-started/docker-concepts/the-basics/images/access-the-frontend.webp?border=true)
+![A screenshot of the landing page of the Nginx web server running in a container](https://raw.githubusercontent.com/docker/docs/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/get-started/docker-concepts/the-basics/images/access-the-frontend.webp?border=true)
 
 ### Use Docker Compose
 

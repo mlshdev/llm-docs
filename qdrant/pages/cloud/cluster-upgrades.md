@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/cluster-upgrades.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/cloud/cluster-upgrades.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/cluster-upgrades.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/cloud/cluster-upgrades.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud/cluster-upgrades/
 
 # Updating Qdrant Cloud Clusters
@@ -11,7 +11,7 @@ If you are several versions behind, multiple updates might be required to reach 
 
 We recommend first updating the client SDKs, and after that update the cluster to ensure a smooth update process. All client SDKs are tested to be backwards compatible with the latest 3 minor versions of Qdrant.
 
-![Cluster Updates](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cluster-upgrades.png)
+![Cluster Updates](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cluster-upgrades.png)
 
 If you have a multi-node cluster and if your collections have a replication factor of at least **2**, the update process will be zero-downtime and done in a rolling fashion. You will be able to use your database cluster normally.
 

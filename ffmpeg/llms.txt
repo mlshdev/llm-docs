@@ -1,6 +1,6 @@
 # FFmpeg master
 
-> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `a79a84a9fe02999169ac9ff40f06c5d5aa823b96`.
+> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `88f7fd9ec5250d8e35c789d1eb0603ac80e8c547`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for FFmpeg master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -12,7 +12,7 @@
 
 - [Synopsis](pages/doc/ffmpeg.md): ffmpeg \[global\options] {\[input\file\options] -i inputurl} ... {\[output\file\options] outputurl} ... (148583 bytes)
 - [Synopsis](pages/doc/ffplay.md): ffplay \[options] \[inputurl] (22644 bytes)
-- [Synopsis](pages/doc/ffprobe.md): ffprobe \[options] inputurl (33561 bytes)
+- [Synopsis](pages/doc/ffprobe.md): ffprobe \[options] inputurl (33978 bytes)
 - [Description](pages/doc/ffmpeg-utils.md): This document describes some generic features and utilities provided by the libavutil library. (22298 bytes)
 - [Description](pages/doc/ffmpeg-scaler.md): The FFmpeg rescaler provides a high-level interface to the libswscale library image conversion utilities. In particular it allows one to perform image rescaling and pixel format conversion. (5815 bytes)
 - [Description](pages/doc/ffmpeg-resampler.md): The FFmpeg resampler provides a high-level interface to the libswresample library audio resampling utilities. In particular it allows one to perform audio resampling, audio channel layout rematrixing, and convert audio… (7850 bytes)

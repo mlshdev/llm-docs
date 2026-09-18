@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/data-synchronization/with-postgres.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/data-synchronization/with-postgres.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/data-synchronization/with-postgres.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/data-synchronization/with-postgres.md)
 > Canonical documentation: https://qdrant.tech/documentation/data-synchronization/with-postgres/
 
 # Keeping Postgres and Qdrant in Sync
@@ -19,7 +19,7 @@ Not sure if you need a dedicated vector store alongside Postgres? Read our [pgve
 
 ## Choosing Your Tier
 
-![Choosing your sync tier](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/data-synchronization/tier_descision_tree.png)
+![Choosing your sync tier](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/data-synchronization/tier_descision_tree.png)
 
 These tiers aren't permanent decisions. Start with Tier 1. When you hit its limits — Qdrant outages generating too much drift, write latency becoming noticeable — move to Tier 2. Only when Tier 2 becomes a bottleneck or you need replay capability should you invest in Tier 3.
 
@@ -33,7 +33,7 @@ These tiers aren't permanent decisions. Start with Tier 1. When you hit its limi
 
 Every CRUD endpoint writes to Postgres first, then to Qdrant, in the same request handler. If the Qdrant write fails, the error is logged but the request succeeds — Postgres is the source of truth, and a reconciliation job can fix drift later.
 
-![Tier 1: Dual-write architecture](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/data-synchronization/tier_1_dual_writes.png)
+![Tier 1: Dual-write architecture](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/data-synchronization/tier_1_dual_writes.png)
 
 ## The Code
 
@@ -96,7 +96,7 @@ Instead of writing to Qdrant directly from the request handler, we write an *eve
 
 The outbox event exists if and only if the product write succeeded. There's no window between the two — they commit atomically.
 
-![Tier 2: Transactional outbox architecture](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/data-synchronization/tier_2_background_worker.png)
+![Tier 2: Transactional outbox architecture](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/data-synchronization/tier_2_background_worker.png)
 
 ## The Outbox Table
 
@@ -240,7 +240,7 @@ You also have a new table to manage: the outbox table grows over time and needs 
 
 CDC is architecturally different from the previous two approaches in a fundamental way: **the application code has no awareness of Qdrant**. The FastAPI routes are pure Postgres CRUD — they don't import the Qdrant client, they don't write to an outbox. Sync is handled entirely in the infrastructure layer.
 
-![Tier 3: Change Data Capture architecture](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/data-synchronization/tier_3_debezium_kafka.png)
+![Tier 3: Change Data Capture architecture](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/data-synchronization/tier_3_debezium_kafka.png)
 
 ## How It Works
 

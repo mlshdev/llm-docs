@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/edge/edge-synchronization-guide.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/edge/edge-synchronization-guide.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/edge/edge-synchronization-guide.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/edge/edge-synchronization-guide.md)
 > Canonical documentation: https://qdrant.tech/documentation/edge/edge-synchronization-guide/
 
 # Synchronize Qdrant Edge with a Server
@@ -19,7 +19,7 @@ To support having local updates as well as updates from a centralized server, im
 
 When querying data, merge results from both Edge Shards to provide a unified view. This way, new points added locally are available for search alongside the data synchronized from the server.
 
-![Qdrant Edge Shards can be synchronized with a central server](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/edge/qdrant-edge-sync-with-server.png)
+![Qdrant Edge Shards can be synchronized with a central server](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/edge/qdrant-edge-sync-with-server.png)
 
 Implementing a dual-write mechanism that writes data to both the mutable Edge Shard and the server collection ensures that data is indexed on the server and synchronized back to the immutable Edge Shard, benefitting search performance.
 

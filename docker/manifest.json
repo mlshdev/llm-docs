@@ -8,9 +8,9 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-17T16:04:43Z",
-  "documentationDigest": "b79df828dd941b0b3dad7e1ccc5b254f73f93aab54a32664ae1acef9cdc2509f",
-  "sourceCommit": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+  "sourceCommittedAt": "2026-09-18T14:19:00Z",
+  "documentationDigest": "f47c272dbeecd102fe148462e7706bda8f2631e0bfc09092226d409dc8f6715c",
+  "sourceCommit": "7d6c8bf81ab88fc6f5c4893b6259864d29de574c",
   "documentCount": 1628,
   "indexComplete": true,
   "corpusVolumes": [
@@ -18,28 +18,28 @@
       "name": "llms-full.txt",
       "byteLength": 687,
       "documentCount": 0,
-      "sha256": "185e3707f073b0466367b29114cfa832a5b92c2166a6e8e927eda648b644e478"
+      "sha256": "4c3b2e12cf07c6853622224bb12429ad46d1f8cf34dd754ce9a1d04c12b798da"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8371511,
+      "byteLength": 8372092,
       "documentCount": 784,
-      "sha256": "44366992a76666da618fa81f2d19b880eeebea7aeee44db35abe60dc0c1fac77"
+      "sha256": "40db9811a326e350c4062b9a4d365a34195c98a56ab6c30b598e757ccb92a524"
     },
     {
       "name": "llms-full.002.txt",
       "byteLength": 8317677,
       "documentCount": 198,
-      "sha256": "4d47a06e4679bdb78e1d09116c284a1d64287830b326904098c1bb66306a0a39"
+      "sha256": "62e4a5b9344c0959c86f00f53a2f6478b93373c71d3d4ecd2b72b2c49b475f63"
     },
     {
       "name": "llms-full.003.txt",
       "byteLength": 6518620,
       "documentCount": 646,
-      "sha256": "fa0653717e1d2c95c58e1dec7d80fd8bb22f6a23701226d64b325e3a561141c1"
+      "sha256": "fc8353216d1306e3b44acd09d44a0dd3e6d6bafa9e5fb1babe2ddd017d9a6302"
     }
   ],
-  "outputDigest": "6abf8501de58a0d072280c87082661eafe329de0538b4235932f3ce00fffa20e",
+  "outputDigest": "bdf540f7b73ad3324031ef4f2f506c5287ba145f487d0d2e4503fb88c99c6ace",
   "notes": [
     "Docker tracks the latest main-branch commit because docker/docs does not publish current releases.",
     "Hugo content and vendored Markdown mounts are normalized without executing Hugo; includes and documentation shortcodes are expanded into plain Markdown.",
