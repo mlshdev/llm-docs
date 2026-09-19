@@ -5,14 +5,20 @@
   "type": "module",
   "packageManager": "bun@1.4.2",
   "scripts": {
-    "build": "bun run src/cli.ts build",
-    "check": "bun run typecheck && bun test && bun run format:check && bun run src/cli.ts verify",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "build": "bun run src/cli.ts build --scope=github",
+    "build:all": "bun run src/cli.ts build --scope=all",
+    "build:apple": "bun run src/cli.ts build --scope=docc",
+    "check": "bun run typecheck && bun test && bun run format:check && bun run verify",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
     "test": "bun test",
     "typecheck": "tsc --noEmit",
-    "update": "bun run src/cli.ts update",
-    "verify": "bun run src/cli.ts verify"
+    "update": "bun run src/cli.ts update --scope=github",
+    "update:all": "bun run src/cli.ts update --scope=all",
+    "update:apple": "bun run src/cli.ts update --scope=docc",
+    "verify": "bun run src/cli.ts verify --scope=github",
+    "verify:all": "bun run src/cli.ts verify --scope=all",
+    "verify:apple": "bun run src/cli.ts verify --scope=docc"
   },
   "dependencies": {
     "remark-gfm": "4.0.1",
@@ -24,10 +30,10 @@
     "yaml": "2.9.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.5.14",
     "@types/bun": "1.4.2",
     "@types/estree": "1.0.9",
     "@types/mdast": "4.0.4",
-    "prettier": "3.9.6",
     "typescript": "7.0.2"
   }
 }

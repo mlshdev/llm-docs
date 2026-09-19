@@ -1,0 +1,70 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.14/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "includes": [
+      "**",
+      "!!.serena",
+      "!!traefik",
+      "!!netbird",
+      "!!podman",
+      "!!docker",
+      "!!container",
+      "!!n8n",
+      "!!grafana",
+      "!!victoriametrics",
+      "!!victorialogs",
+      "!!victoriametrics-datasource",
+      "!!victorialogs-datasource",
+      "!!vmestimator",
+      "!!zitadel",
+      "!!ffmpeg",
+      "!!yt-dlp",
+      "!!searxng",
+      "!!bun",
+      "!!trigger-dev",
+      "!!aria2",
+      "!!postgres-18",
+      "!!vastai",
+      "!!runpod",
+      "!!discord-py-self",
+      "!!discord-py",
+      "!!qdrant",
+      "!!apple-*",
+      "!!llms.txt",
+      "!!llms-full.txt",
+      "!!bun.lock",
+      "!!*session*.md",
+      "!!resume.txt",
+      "!!build-report.json",
+      "!!CODEBASE_AUDIT.md",
+      "!!CONTINUATION_HANDOFF.md"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80
+  },
+  "linter": {
+    "enabled": false
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "always",
+      "bracketSameLine": false,
+      "bracketSpacing": true,
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "quoteStyle": "double",
+      "semicolons": "always",
+      "trailingCommas": "all"
+    }
+  }
+}

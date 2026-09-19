@@ -49,7 +49,7 @@ This repository converts documentation from immutable upstream commits or conten
 - PostgreSQL 18 tracks the highest `REL_18_<minor>` tag in `postgres/postgres`, which publishes no GitHub releases. The series pin follows that major version's own maintenance releases and nothing else: beta and release-candidate tags do not match, a pin never moves backwards, and a tag that is repointed at a different commit fails the update rather than silently changing the corpus.
 - discord.py tracks the highest final `vX.Y.Z` tag because the repository publishes stable tags but does not create GitHub Releases. Prerelease and unrelated tags are ignored, a pin never moves backwards, and a moved tag fails reconciliation.
 - NetBird public documentation is maintained in the separate, untagged `netbirdio/docs` repository. A NetBird update is accepted only after that repository contains the exact `Update API pages with <tag>` commit. Until then, the previous complete product/docs pair remains published.
-- Apple exposes a live DocC catalog rather than release tags or an immutable repository. The generator checks the public index daily, partitions every indexed page into one non-overlapping catalog, and pins each catalog with two SHA-256 digests: a `snapshotDigest` over the catalog inventory, which the daily run re-derives from a few hundred index documents, and a `contentDigest` over the exact render payload bytes every published page was converted from, which a full build computes. The inexpensive daily inventory check cannot detect a prose-only edit that leaves every index unchanged; such edits are detected only by an explicit full rebuild (`DOCC_REBUILD=1`, normally with a fresh cache). A captured Apple snapshot remains committed when the live endpoint changes, and Apple does not provide historical render JSON from which an old snapshot can be regenerated.
+- Apple exposes a live DocC catalog rather than release tags or an immutable repository. A dedicated weekly workflow checks the public index, partitions every indexed page into one non-overlapping catalog, and pins each catalog with two SHA-256 digests: a `snapshotDigest` over the catalog inventory and a `contentDigest` over the exact render payload bytes every published page was converted from. Apple catalogs are rebuilt only when their inventory pin changes; normal daily and local commands do not inspect or verify the multi-gigabyte Apple corpus. The inexpensive weekly inventory check cannot detect a prose-only edit that leaves every index unchanged, so those edits require an explicit full rebuild (`DOCC_REBUILD=1 bun run build:apple`, normally with a fresh cache). A captured Apple snapshot remains committed when the live endpoint changes, and Apple does not provide historical render JSON from which an old snapshot can be regenerated.
 - Generated files are committed so repository clones, GitHub's file browser,
   raw GitHub URLs, and local tools all expose the same corpus. `llms.txt` links
   to each project index, while `llms-full.txt` and the volume names recorded in
@@ -80,8 +80,9 @@ scope and always reported.
   with backoff and honor primary and secondary rate-limit headers.
 - **Everything held back is escalated.** `bun run update` writes
   `build-report.json`; the scheduled workflow turns it into a single tracking
-  issue labelled `pipeline-health`, rewrites it only when the set of problems
-  changes, and closes it once every source converts cleanly again.
+  issue labelled for the active source scope, rewrites it only when the set of
+  problems changes, and closes it once every source in that scope converts
+  cleanly again.
 
 The result is that upstream drift never breaks publication and never requires a
 manual repair to restore the schedule. Adding the missing handler is normal
@@ -155,9 +156,11 @@ not a storage or serving fallback.
 bun ci
 bun run update
 bun run check
+bun run update:apple
+bun run verify:apple
 ```
 
-`bun run update` contacts the GitHub API, checks Apple's DocC catalogs, downloads source archives only when stable pins change, and writes `build-report.json` describing anything it had to hold back plus per-project request counts and elapsed time. Immutable GitHub archives are cached by commit SHA under the operating system's temporary directory; set `GITHUB_ARCHIVE_CACHE_DIR` to retain them at a deliberate location. `bun run build` rebuilds commit-backed projects from `sources.lock.json` and retains already-captured DocC projects because Apple does not serve historical snapshots. `bun run src/cli.ts report` renders the last report as the tracking-issue body. Set `SOURCE_CONCURRENCY` to bound simultaneous source resolution, `DOCC_CONCURRENCY` to control concurrent Apple reads, `DOCC_CACHE_DIR` to retain render JSON between interrupted runs, `DOCC_CACHE_TTL` to control cache freshness in seconds, `DOCC_REFRESH=1` to bypass the cache, or `DOCC_REBUILD=1` to rebuild a captured catalog when its exact render JSON remains cached.
+`bun run update`, `bun run build`, `bun run verify`, and `bun run check` operate only on GitHub-backed projects, keeping normal local work away from the multi-gigabyte Apple corpus. The corresponding `:apple` commands select only DocC projects, while `:all` selects both source classes. `bun run update` contacts the GitHub API, downloads source archives only when stable pins change, and writes `build-report.json` describing anything it had to hold back plus per-project request counts and elapsed time. `bun run update:apple` compares Apple's current catalog inventory with the committed pins and rebuilds only changed catalogs. Immutable GitHub archives are cached by commit SHA under the operating system's temporary directory; set `GITHUB_ARCHIVE_CACHE_DIR` to retain them at a deliberate location. `bun run build:apple` retains already-captured DocC projects unless `DOCC_REBUILD=1` is set because Apple does not serve historical snapshots. `bun run src/cli.ts report` renders the last report as the tracking-issue body. Set `SOURCE_CONCURRENCY` to bound simultaneous source resolution, `DOCC_CONCURRENCY` to control concurrent Apple reads, `DOCC_CACHE_DIR` to retain render JSON between interrupted runs, `DOCC_CACHE_TTL` to control cache freshness in seconds, or `DOCC_REFRESH=1` to bypass the cache.
 
 ## Adding a project
 

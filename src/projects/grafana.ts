@@ -377,7 +377,7 @@ function expandPage(context: RenderContext): string {
 
 function scanShortcodes(source: string, sourcePath: string): Shortcode[] {
   const found: Shortcode[] = [];
-  for (let index = 0; index < source.length;) {
+  for (let index = 0; index < source.length; ) {
     const open = source.indexOf("{{", index);
     if (open < 0) {
       break;

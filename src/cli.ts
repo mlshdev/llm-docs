@@ -18,7 +18,6 @@ import {
   generatedPaths,
   computeDocumentationDigest,
   orderedLock,
-  refreshManifestGeneratorDigest,
   snapshotMatchesPin,
   stageProjectReplacement,
   verifyOutputs,
@@ -33,6 +32,8 @@ import {
   writePipelineReport,
 } from "./report.ts";
 import type { RetainedProject } from "./report.ts";
+import { parseProjectScope, projectsInScope } from "./scope.ts";
+import type { ProjectScope } from "./scope.ts";
 import { projectIds } from "./types.ts";
 import { isBranchLockedSource } from "./types.ts";
 import type {
@@ -43,41 +44,43 @@ import type {
 } from "./types.ts";
 
 const command = process.argv[2];
+const scope = parseProjectScope(process.argv.slice(3));
 const updateTransactionPath = path.join(
   rootDirectory,
   ".generated-update-transaction.json",
 );
 
 if (["build", "update", "verify"].includes(command ?? "")) {
-  await recoverUpdateTransaction();
+  await recoverUpdateTransaction(scope);
 }
 
 switch (command) {
   case "build":
-    await buildAll();
+    await buildAll(scope);
     break;
   case "update":
-    await update();
+    await update(scope);
     break;
   case "verify":
-    await verify();
+    await verify(scope);
     break;
   case "report":
     await report();
     break;
   case "paths":
-    await paths();
+    await paths(scope);
     break;
   default:
     throw new Error(
-      "Usage: bun run src/cli.ts <build|update|verify|report|paths>",
+      "Usage: bun run src/cli.ts <build|update|verify|report|paths> [--scope=github|docc|all]",
     );
 }
 
-async function buildAll(): Promise<void> {
+async function buildAll(scope: ProjectScope): Promise<void> {
   const config = await loadConfig();
   const lock = await requireLock();
-  for (const project of config.projects) {
+  const projects = projectsInScope(config.projects, scope);
+  for (const project of projects) {
     if (
       project.kind === "docc" &&
       process.env.DOCC_REBUILD !== "1" &&
@@ -86,7 +89,6 @@ async function buildAll(): Promise<void> {
       console.log(
         `Keeping captured ${project.id} ${lock.projects[project.id].tag}`,
       );
-      await refreshManifestGeneratorDigest(project.id);
       continue;
     }
     const pin = lock.projects[project.id];
@@ -102,26 +104,42 @@ async function buildAll(): Promise<void> {
     await writeProject(build);
   }
   await writeRootIndexes(config.projects, lock);
-  await verifyOutputs(config.projects, lock);
+  await verifyOutputs(projects, lock);
 }
 
 // Reconciliation must always leave the repository in a publishable state. A
 // project whose new upstream pin cannot be converted keeps the pin and the
 // snapshot it already published; the run continues, publishes every project
 // that did convert, and reports what was held back.
-async function update(): Promise<void> {
+async function update(scope: ProjectScope): Promise<void> {
   const config = await loadConfig();
   const current = await loadLock();
+  if (scope !== "all" && (!current || !hasEveryProject(current))) {
+    throw new Error(
+      "A scoped update requires a complete sources.lock.json; run bun run update:all first",
+    );
+  }
+  const projects = projectsInScope(config.projects, scope);
   const resolved = await resolveLatestSources(
-    config.projects,
+    projects,
     current?.projects ?? {},
   );
-  const pins: Record<ProjectId, LockedSource> = { ...resolved.projects };
+  const partialPins: Partial<Record<ProjectId, LockedSource>> = {
+    ...current?.projects,
+    ...resolved.projects,
+  };
+  const missingPins = projectIds.filter((id) => partialPins[id] === undefined);
+  if (missingPins.length > 0) {
+    throw new Error(
+      `Source resolution produced no pin for ${missingPins.join(", ")}`,
+    );
+  }
+  const pins = partialPins as Record<ProjectId, LockedSource>;
   const changed = changedProjects(current, orderedLock(pins));
   const retained: RetainedProject[] = [];
   const staged: string[] = [];
   try {
-    for (const project of config.projects) {
+    for (const project of projects) {
       if (!changed.includes(project.id)) {
         continue;
       }
@@ -214,7 +232,7 @@ async function update(): Promise<void> {
     await commitDirectoryReplacements(staged, async () => {
       await writeRootIndexes(config.projects, next);
       await writeUtf8Atomic(lockPath, JSON.stringify(next, null, 2));
-      await verifyOutputs(config.projects, next);
+      await verifyOutputs(projects, next);
       await writeUtf8Atomic(
         updateTransactionPath,
         JSON.stringify({ ...transaction, state: "committed" }, null, 2),
@@ -227,7 +245,7 @@ async function update(): Promise<void> {
       await writeRootIndexes(config.projects, previous);
       await writeUtf8Atomic(lockPath, JSON.stringify(previous, null, 2));
       await rm(updateTransactionPath, { force: true });
-      await verifyOutputs(config.projects, previous);
+      await verifyOutputs(projects, previous);
     } else {
       await rm(updateTransactionPath, { force: true });
     }
@@ -237,7 +255,7 @@ async function update(): Promise<void> {
     console.log("All projects already match their latest stable release");
   }
   await writePipelineReport(
-    config.projects,
+    projects,
     resolved.failures,
     [...retained].sort((left, right) =>
       left.project < right.project ? -1 : 1,
@@ -261,13 +279,14 @@ interface UpdateTransaction {
   readonly targetLock: CompleteSourcesLock;
 }
 
-async function recoverUpdateTransaction(): Promise<void> {
+async function recoverUpdateTransaction(scope: ProjectScope): Promise<void> {
   if (!(await exists(updateTransactionPath))) return;
   const value: unknown = JSON.parse(
     await readFile(updateTransactionPath, "utf8"),
   );
   const transaction = parseUpdateTransaction(value);
   const config = await loadConfig();
+  const projects = projectsInScope(config.projects, scope);
   if (transaction.state === "committed") {
     for (const entry of transaction.projects) {
       const destination = path.join(rootDirectory, entry.project);
@@ -279,7 +298,7 @@ async function recoverUpdateTransaction(): Promise<void> {
       lockPath,
       JSON.stringify(transaction.targetLock, null, 2),
     );
-    await verifyOutputs(config.projects, transaction.targetLock);
+    await verifyOutputs(projects, transaction.targetLock);
     await rm(updateTransactionPath, { force: true });
     return;
   }
@@ -302,7 +321,7 @@ async function recoverUpdateTransaction(): Promise<void> {
       JSON.stringify(transaction.previousLock, null, 2),
     );
     await rm(updateTransactionPath, { force: true });
-    await verifyOutputs(config.projects, transaction.previousLock);
+    await verifyOutputs(projects, transaction.previousLock);
   } else {
     await rm(updateTransactionPath, { force: true });
   }
@@ -352,15 +371,20 @@ async function report(): Promise<void> {
   console.log(renderIssueBody(await loadPipelineReport()));
 }
 
-async function paths(): Promise<void> {
+async function paths(scope: ProjectScope): Promise<void> {
   const config = await loadConfig();
-  console.log(generatedPaths(config.projects).join("\n"));
+  console.log(
+    generatedPaths(projectsInScope(config.projects, scope)).join("\n"),
+  );
 }
 
-async function verify(): Promise<void> {
+async function verify(scope: ProjectScope): Promise<void> {
   const config = await loadConfig();
-  await verifyOutputs(config.projects, await requireLock());
-  console.log("Generated documentation matches sources.lock.json");
+  const projects = projectsInScope(config.projects, scope);
+  await verifyOutputs(projects, await requireLock());
+  console.log(
+    `${scope === "all" ? "All" : scope} generated documentation matches sources.lock.json`,
+  );
 }
 
 async function requireLock(): Promise<CompleteSourcesLock> {

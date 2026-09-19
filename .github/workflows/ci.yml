@@ -56,5 +56,5 @@ jobs:
           while IFS= read -r target; do
             [[ -n "${target}" ]] || continue
             generated+=("${target}")
-          done < <(bun run src/cli.ts paths)
+          done < <(bun run src/cli.ts paths --scope=github)
           git diff --exit-code -- "${generated[@]}"

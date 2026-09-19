@@ -1229,7 +1229,9 @@ function dropDockerBlockAttributes(source: string): string {
   let presentationDiv = false;
   for (const line of source.split("\n")) {
     const marker = line.match(/^\s*(?:>\s*)*(```|~~~)/)?.[1] as
-      "```" | "~~~" | undefined;
+      | "```"
+      | "~~~"
+      | undefined;
     if (marker) {
       fence = fence === marker ? undefined : marker;
     }
@@ -1263,7 +1265,9 @@ function withoutFencedCode(source: string): string {
   let fence: "```" | "~~~" | undefined;
   for (const line of source.split("\n")) {
     const marker = line.match(/^\s*(?:>\s*)*(```|~~~)/)?.[1] as
-      "```" | "~~~" | undefined;
+      | "```"
+      | "~~~"
+      | undefined;
     if (marker) {
       fence = fence === marker ? undefined : marker;
       continue;

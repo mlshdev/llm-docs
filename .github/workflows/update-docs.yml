@@ -5,6 +5,26 @@ on:
     - cron: "0 20 * * *"
       timezone: "Europe/Warsaw"
   workflow_dispatch:
+    inputs:
+      scope:
+        description: "Documentation source scope"
+        type: choice
+        required: true
+        default: "github"
+        options:
+          - "github"
+          - "docc"
+          - "all"
+  workflow_call:
+    inputs:
+      scope:
+        description: "Documentation source scope"
+        type: string
+        required: false
+        default: "github"
+    secrets:
+      PUBLISH_TOKEN:
+        required: true
 
 permissions:
   contents: read
@@ -20,6 +40,7 @@ jobs:
     timeout-minutes: 360
     env:
       DOCC_CONCURRENCY: "48"
+      DOCS_SCOPE: ${{ inputs.scope || 'github' }}
     permissions:
       contents: read
       issues: write
@@ -52,12 +73,12 @@ jobs:
       - name: Reconcile stable releases
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: bun run update
+        run: bun run src/cli.ts update --scope="${DOCS_SCOPE}"
       - name: Rebuild pinned documentation after repository changes
         if: github.event_name != 'schedule'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: bun run build
+        run: bun run src/cli.ts build --scope="${DOCS_SCOPE}"
       # Upstream drift never fails this workflow: `bun run update` keeps the
       # previous pin for a project it cannot convert and quarantines individual
       # pages it cannot render, so publication continues. The drift is escalated
@@ -69,7 +90,8 @@ jobs:
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
-          ISSUE_TITLE: "Documentation pipeline: upstream conversion drift"
+          HEALTH_LABEL: pipeline-health-${{ inputs.scope || 'github' }}
+          ISSUE_TITLE: "Documentation pipeline (${{ inputs.scope || 'github' }}): upstream conversion drift"
         run: |
           set -euo pipefail
           if [[ ! -f build-report.json ]]; then
@@ -77,7 +99,7 @@ jobs:
             exit 0
           fi
           healthy="$(jq -r '.healthy' build-report.json)"
-          existing="$(gh issue list --state open --label pipeline-health --limit 1 --json number --jq '.[0].number // empty')"
+          existing="$(gh issue list --state open --label "${HEALTH_LABEL}" --limit 1 --json number --jq '.[0].number // empty')"
 
           if [[ "${healthy}" == "true" ]]; then
             if [[ -n "${existing}" ]]; then
@@ -95,8 +117,8 @@ jobs:
           fingerprint_marker="pipeline-fingerprint: ${fingerprint}"
 
           if [[ -z "${existing}" ]]; then
-            gh label create pipeline-health --color "d93f0b" --description "Upstream documentation the generator cannot convert yet" --force
-            gh issue create --title "${ISSUE_TITLE}" --label pipeline-health --body-file issue-body.md
+            gh label create "${HEALTH_LABEL}" --color "d93f0b" --description "Upstream documentation the generator cannot convert yet" --force
+            gh issue create --title "${ISSUE_TITLE}" --label "${HEALTH_LABEL}" --body-file issue-body.md
             exit 0
           fi
 
@@ -119,7 +141,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          bun run src/cli.ts paths > generated-paths.txt
+          bun run src/cli.ts paths --scope="${DOCS_SCOPE}" > generated-paths.txt
           generated=()
           while IFS= read -r target; do
             [[ -n "${target}" ]] || continue

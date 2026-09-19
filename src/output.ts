@@ -195,7 +195,7 @@ export async function writeRootIndexes(
     "- discord.py tracks the latest final semantic-version tag because the repository publishes tags but no GitHub Releases.",
     "- Qdrant documentation tracks the latest `qdrant/landing_page` `master` commit because the site publishes continuously from that branch.",
     "- NetBird updates only after the separate documentation repository contains the API-generation commit for the same product tag.",
-    "- Apple documentation is captured from public DocC index and render endpoints. Each catalog is pinned by an inventory digest and a full-build render-payload digest; daily inventory reconciliation cannot detect prose-only edits, so those require an explicit fresh full rebuild.",
+    "- Apple documentation is captured from public DocC index and render endpoints. Each catalog is pinned by an inventory digest and a full-build render-payload digest; weekly inventory reconciliation rebuilds only changed catalogs and cannot detect prose-only edits, so those require an explicit fresh full rebuild.",
   ];
   await writeUtf8Atomic(
     path.join(rootDirectory, "llms.txt"),
@@ -266,23 +266,6 @@ export async function snapshotMatchesPin(
   );
 }
 
-export async function refreshManifestGeneratorDigest(
-  projectId: ProjectId,
-): Promise<void> {
-  const manifestPath = path.join(rootDirectory, projectId, "manifest.json");
-  const manifest = parseProjectManifest(
-    JSON.parse(await readFile(manifestPath, "utf8")),
-  );
-  const generatorDigest = await currentGeneratorDigest();
-  if (manifest.generatorDigest === generatorDigest) {
-    return;
-  }
-  await writeUtf8Atomic(
-    manifestPath,
-    serializeProjectManifest({ ...manifest, generatorDigest }),
-  );
-}
-
 // Every path the pipeline writes, so the publishing workflow does not keep its
 // own copy of the project list. A hand-maintained allowlist that misses a new
 // project publishes root indexes describing it while its directory is managed
@@ -340,7 +323,12 @@ export async function verifyOutputs(
         `${project.id}/manifest.json does not match project configuration`,
       );
     }
-    if (manifest.generatorDigest !== generatorDigest) {
+    // An unchanged DocC snapshot remains tied to the converter that captured it
+    // until the weekly inventory check determines that it needs rebuilding.
+    if (
+      project.kind !== "docc" &&
+      manifest.generatorDigest !== generatorDigest
+    ) {
       throw new Error(
         `${project.id}/manifest.json was produced by a different generator revision`,
       );
@@ -1211,7 +1199,7 @@ function upgradedManifestNotes(
     : [];
   if (typeof legacy.catalog !== "string") return notes;
   const limitation =
-    "Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.";
+    "Weekly reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive weekly check.";
   if (notes.includes(limitation)) return notes;
   const copyrightIndex = notes.findIndex((note) =>
     note.startsWith("Documentation content remains Apple Inc."),

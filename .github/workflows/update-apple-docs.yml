@@ -1,0 +1,18 @@
+name: Update Apple documentation
+
+on:
+  schedule:
+    - cron: "0 20 * * 0"
+      timezone: "Europe/Warsaw"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  update:
+    uses: ./.github/workflows/update-docs.yml
+    with:
+      scope: "docc"
+    secrets: inherit
