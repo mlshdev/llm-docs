@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fsvolume/operations/renameitem(_:indirectory:named:to:indirectory:overitem:replyhandler:)](https://developer.apple.com/documentation/fskit/fsvolume/operations/renameitem(_:indirectory:named:to:indirectory:overitem:replyhandler:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/fskit/fsvolume/operations/renameitem(_:indirectory:named:to:indirectory:overitem:replyhandler:)
 
 # renameItem(\_:inDirectory:named:to:inDirectory:overItem:replyHandler:) (Swift)
 
@@ -31,6 +32,10 @@ func renameItem(_ item: FSItem, inDirectory sourceDirectory: FSItem, named sourc
 <a id="discussion"></a>
 
 ## Discussion
+
+> **Note**
+
+> This method only implements plain `rename(2)` semantics. FSKit fails `renamex_np(2)` calls that pass flags, such as `RENAME_SWAP` or `RENAME_EXCL`, with `ENOTSUP` without calling this method.
 
 Implement renaming along the lines of this algorithm:
 
@@ -108,6 +113,10 @@ Renames an item from one path in the file system to another.
 <a id="discussion"></a>
 
 ## Discussion
+
+> **Note**
+
+> This method only implements plain `rename(2)` semantics. FSKit fails `renamex_np(2)` calls that pass flags, such as `RENAME_SWAP` or `RENAME_EXCL`, with `ENOTSUP` without calling this method.
 
 Implement renaming along the lines of this algorithm:
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3755393-kdebug_timestamp_from_continuous](https://developer.apple.com/documentation/kernel/3755393-kdebug_timestamp_from_continuous)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3755393-kdebug_timestamp_from_continuous
 
 # kdebug_timestamp_from_continuous
 

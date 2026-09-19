@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/iofirewirelocalisochportinterface/1569239-setfinalizecallback](https://developer.apple.com/documentation/iokit/iofirewirelocalisochportinterface/1569239-setfinalizecallback)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/iofirewirelocalisochportinterface/1569239-setfinalizecallback
 
 # SetFinalizeCallback
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/charactercontrollercomponent/collision/init(characterentity:hitentity:hitposition:hitnormal:movedirection:movedistance:)](https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/init(characterentity:hitentity:hitposition:hitnormal:movedirection:movedistance:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/init(characterentity:hitentity:hitposition:hitnormal:movedirection:movedistance:)
 
 # init(characterEntity:hitEntity:hitPosition:hitNormal:moveDirection:moveDistance:)
 

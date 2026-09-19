@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3727995-task_dyld_process_info_notify_de](https://developer.apple.com/documentation/kernel/3727995-task_dyld_process_info_notify_de)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3727995-task_dyld_process_info_notify_de
 
 # task_dyld_process_info_notify_deregister
 

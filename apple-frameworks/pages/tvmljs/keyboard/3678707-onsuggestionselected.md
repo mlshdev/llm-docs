@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tvmljs/keyboard/3678707-onsuggestionselected](https://developer.apple.com/documentation/tvmljs/keyboard/3678707-onsuggestionselected)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/tvmljs/keyboard/3678707-onsuggestionselected
 
 # onSuggestionSelected
 

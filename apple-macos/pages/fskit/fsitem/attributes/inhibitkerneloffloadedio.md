@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fsitem/attributes/inhibitkerneloffloadedio](https://developer.apple.com/documentation/fskit/fsitem/attributes/inhibitkerneloffloadedio)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/fskit/fsitem/attributes/inhibitkerneloffloadedio
 
 # inhibitKernelOffloadedIO (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** macOS 15.4+
 
-A Boolean value that indicates whether the file system overrides the per-volume settings for kernel offloaded I/O for a specific file.
+A Boolean value that indicates whether the file system overrides the per-volume settings for kernel offloaded I/O for a specific file. FSKit reads this value the first time the module reports attributes for a given file; It then sets the file’s kernel-offloaded-I/O routing accordingly. The routing stays in effect for the item’s lifetime; later changes are ignored.
 
 ## Declaration
 
@@ -18,7 +19,7 @@ var inhibitKernelOffloadedIO: Bool { get set }
 
 ## Discussion
 
-This property has no meaning if the volume doesn’t conform to [FSVolumeKernelOffloadedIOOperations](../../fsvolumekerneloffloadediooperations.md).
+This property has no meaning if the volume doesn’t conform to [FSVolumeKernelOffloadedIOOperations](../../fsvolumekerneloffloadediooperations.md) or [FSVolume.KernelOffloadedIOHandler](../../fsvolume/kerneloffloadediohandler.md).
 
 ## See Also
 
@@ -40,7 +41,7 @@ This property has no meaning if the volume doesn’t conform to [FSVolumeKernelO
 **Kind:** Instance Property  
 **Availability:** macOS 15.4+
 
-A Boolean value that indicates whether the file system overrides the per-volume settings for kernel offloaded I/O for a specific file.
+A Boolean value that indicates whether the file system overrides the per-volume settings for kernel offloaded I/O for a specific file. FSKit reads this value the first time the module reports attributes for a given file; It then sets the file’s kernel-offloaded-I/O routing accordingly. The routing stays in effect for the item’s lifetime; later changes are ignored.
 
 ## Declaration
 
@@ -52,7 +53,7 @@ A Boolean value that indicates whether the file system overrides the per-volume 
 
 ## Discussion
 
-This property has no meaning if the volume doesn’t conform to [FSVolumeKernelOffloadedIOOperations](../../fsvolumekerneloffloadediooperations.md).
+This property has no meaning if the volume doesn’t conform to [FSVolumeKernelOffloadedIOOperations](../../fsvolumekerneloffloadediooperations.md) or [FSVolumeKernelOffloadedIOHandler](../../fsvolume/kerneloffloadediohandler.md).
 
 ## See Also
 

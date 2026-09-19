@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsvisualeffectview/material-swift.enum/sheet](https://developer.apple.com/documentation/appkit/nsvisualeffectview/material-swift.enum/sheet)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsvisualeffectview/material-swift.enum/sheet
 
 # NSVisualEffectView.Material.sheet (Swift)
 

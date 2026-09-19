@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/setting-up-storekit-testing-in-xcode](https://developer.apple.com/documentation/xcode/setting-up-storekit-testing-in-xcode)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/setting-up-storekit-testing-in-xcode
 
 # Setting up StoreKit Testing in Xcode
 

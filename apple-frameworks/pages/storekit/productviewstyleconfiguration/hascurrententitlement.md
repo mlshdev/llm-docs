@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/productviewstyleconfiguration/hascurrententitlement](https://developer.apple.com/documentation/storekit/productviewstyleconfiguration/hascurrententitlement)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/productviewstyleconfiguration/hascurrententitlement
 
 # hasCurrentEntitlement
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
 
-A Boolean value that indicates whether an in-app purchase transaction exists for the product.
+A Boolean value that indicates whether an Apple In-App Purchase transaction exists for the product.
 
 ## Declaration
 
@@ -22,11 +23,11 @@ Use the [hasCurrentEntitlement](hascurrententitlement.md) property to determine 
 
 > **Important**
 
->  Don’t use this value to determine whether to enable access to the product; check the in-app purchase transaction information instead ([Transaction](../transaction.md)).
+>  Don’t use this value to determine whether to enable access to the product; check the Apple In-App Purchase transaction information instead ([Transaction](../transaction.md)).
 
 ## See Also
 
 ### Getting a product’s information
 
-- [product](product.md): The in-app purchase product to merchandise.
+- [product](product.md): The Apple In-App Purchase product to merchandise.
 - [state](state.md): The product task state that indicates the product’s loading phase.

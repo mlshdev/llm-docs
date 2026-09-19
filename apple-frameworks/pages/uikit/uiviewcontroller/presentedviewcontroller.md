@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiviewcontroller/presentedviewcontroller](https://developer.apple.com/documentation/uikit/uiviewcontroller/presentedviewcontroller)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiviewcontroller/presentedviewcontroller
 
 # presentedViewController (Swift)
 
@@ -29,6 +30,7 @@ When you present a view controller modally (either explicitly or implicitly) usi
 - [splitViewController](splitviewcontroller.md): The nearest ancestor in the view controller hierarchy that is a split view controller.
 - [navigationController](navigationcontroller.md): The nearest ancestor in the view controller hierarchy that is a navigation controller.
 - [tabBarController](tabbarcontroller.md): The nearest ancestor in the view controller hierarchy that is a tab bar controller.
+- [arrangementViewController](arrangementviewcontroller.md): Beta. The nearest ancestor arrangement view controller.
 
 # presentedViewController (Objective-C)
 
@@ -59,3 +61,4 @@ When you present a view controller modally (either explicitly or implicitly) usi
 - [splitViewController](splitviewcontroller.md): The nearest ancestor in the view controller hierarchy that is a split view controller.
 - [navigationController](navigationcontroller.md): The nearest ancestor in the view controller hierarchy that is a navigation controller.
 - [tabBarController](tabbarcontroller.md): The nearest ancestor in the view controller hierarchy that is a tab bar controller.
+- [arrangementViewController](arrangementviewcontroller.md): Beta. The nearest ancestor arrangement view controller.

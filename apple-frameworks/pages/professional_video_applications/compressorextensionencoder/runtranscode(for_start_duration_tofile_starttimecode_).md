@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional_video_applications/compressorextensionencoder/runtranscode(for:start:duration:tofile:starttimecode:)](https://developer.apple.com/documentation/professional_video_applications/compressorextensionencoder/runtranscode(for:start:duration:tofile:starttimecode:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/compressorextensionencoder/runtranscode(for:start:duration:tofile:starttimecode:)
 
 # runTranscode(for:start:duration:toFile:startTimeCode:) (Swift)
 

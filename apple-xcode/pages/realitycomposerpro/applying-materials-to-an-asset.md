@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/realitycomposerpro/applying-materials-to-an-asset](https://developer.apple.com/documentation/realitycomposerpro/applying-materials-to-an-asset)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitycomposerpro/applying-materials-to-an-asset
 
 # Applying materials to an asset
 
@@ -145,3 +146,4 @@ The following property appears when you set **Shader** to **Shader Graph**.
 
 - [Building materials in Reality Composer Pro](building-materials-in-reality-composer-pro.md): Apply surface properties to 3D entities to control how they look in your scene.
 - [Designing materials with Shader Graph](designing-materials-with-shader-graph.md): Create realistic materials with Reality Composer Pro’s Shader Graph.
+- [Creating a procedural Shader Graph material](creating-a-procedural-shader-graph-material.md): Learn how to build an organic, pulsing, color-shifting material in the Reality Composer Pro 3 Shader Graph.

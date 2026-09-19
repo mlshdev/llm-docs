@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/advancedcommerceapi/targetproductid](https://developer.apple.com/documentation/advancedcommerceapi/targetproductid)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/advancedcommerceapi/targetproductid
 
 # targetProductId
 
@@ -22,7 +23,7 @@ string targetProductId
 
 You provide the `targetProductId` when you migrate a product using the [Migrate a Subscription to Advanced Commerce API](migrate-subscription-to-advanced-commerce-api.md) endpoint.
 
-For more information about generic product IDs, see [Creating SKUs for your In-App Purchases](creating-your-purchases.md).
+For more information about generic product IDs, see [Creating SKUs for your Apple In-App Purchases](creating-your-purchases.md).
 
 ## See Also
 
@@ -40,6 +41,6 @@ For more information about generic product IDs, see [Creating SKUs for your In-A
 - [refundAmount](refundamount.md): A refund amount, in milliunits of the currency.
 - [refundReason](refundreason.md): A reason to request a refund.
 - [refundRiskingPreference](refundriskingpreference.md): A Boolean value that indicates whether the App Store asks you for consumption data to help inform the refund decision.
-- [SKU](sku.md): The product identifier of an in-app purchase product you manage in your own system.
+- [SKU](sku.md): The product identifier of an Apple In-App Purchase product you manage in your own system.
 - [storefront](storefront.md): A three-letter code that represents the country or region associated with the App Store storefront.
 - [taxCode](taxcode.md): A tax code that applies to a SKU.

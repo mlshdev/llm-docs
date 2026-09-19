@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreml/analyzing-a-core-ml-model-s-performance-in-xcode](https://developer.apple.com/documentation/coreml/analyzing-a-core-ml-model-s-performance-in-xcode)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreml/analyzing-a-core-ml-model-s-performance-in-xcode
 
 # Analyzing a Core ML model’s performance in Xcode (Swift)
 
@@ -38,6 +39,8 @@ You can open a model file, such as an `.mlpackage`, directly in Xcode by double-
 The numbers in a report reflect what the device is doing while the report runs. Before you start, close other apps and nonessential processes on the device you’re testing. This helps ensure background work doesn’t affect the results.
 
 Open the Performance tab and click the Add button (+) in the lower-left corner to create a report. Choose where to run it, either your Mac or a connected device, and choose a compute-unit configuration to test.
+
+![Screenshot of the Choose a connected device dialog in Xcode. The dialog shows My Mac selected in the list of available devices, with Cancel and Next buttons.](https://developer.apple.com/images/com.apple.coreml/coreml-performance-report-connected-devices@2x.png)
 
 The configuration sets which compute units the model may use, such as All, CPU only, CPU and GPU, or CPU and Neural Engine. After you start the report, Xcode runs the model on the device and shows the report once it’s done; you don’t see intermediate results while it runs.
 
@@ -173,6 +176,8 @@ You can open a model file, such as an `.mlpackage`, directly in Xcode by double-
 The numbers in a report reflect what the device is doing while the report runs. Before you start, close other apps and nonessential processes on the device you’re testing. This helps ensure background work doesn’t affect the results.
 
 Open the Performance tab and click the Add button (+) in the lower-left corner to create a report. Choose where to run it, either your Mac or a connected device, and choose a compute-unit configuration to test.
+
+![Screenshot of the Choose a connected device dialog in Xcode. The dialog shows My Mac selected in the list of available devices, with Cancel and Next buttons.](https://developer.apple.com/images/com.apple.coreml/coreml-performance-report-connected-devices@2x.png)
 
 The configuration sets which compute units the model may use, such as All, CPU only, CPU and GPU, or CPU and Neural Engine. After you start the report, Xcode runs the model on the device and shows the report once it’s done; you don’t see intermediate results while it runs.
 

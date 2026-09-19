@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/kiostreammemorytypeinputqueue](https://developer.apple.com/documentation/videodriverkit/kiostreammemorytypeinputqueue)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/kiostreammemorytypeinputqueue
 
 # kIOStreamMemoryTypeInputQueue
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,7 +19,7 @@ kIOStreamMemoryTypeInputQueue
 
 ### Stream memory types
 
-- [kIOStreamMemoryTypeBufferControl](kiostreammemorytypebuffercontrol.md)
-- [kIOStreamMemoryTypeBufferData](kiostreammemorytypebufferdata.md)
-- [kIOStreamMemoryTypeMask](kiostreammemorytypemask.md)
-- [kIOStreamMemoryTypeOutputQueue](kiostreammemorytypeoutputqueue.md)
+- [kIOStreamMemoryTypeBufferControl](kiostreammemorytypebuffercontrol.md): Beta.
+- [kIOStreamMemoryTypeBufferData](kiostreammemorytypebufferdata.md): Beta.
+- [kIOStreamMemoryTypeMask](kiostreammemorytypemask.md): Beta.
+- [kIOStreamMemoryTypeOutputQueue](kiostreammemorytypeoutputqueue.md): Beta.

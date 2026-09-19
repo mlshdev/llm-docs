@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoclockdevice/getcurrentzerotimestamp](https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/getcurrentzerotimestamp)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/getcurrentzerotimestamp
 
 # GetCurrentZeroTimestamp
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the current zero timestamp value.
 
@@ -25,4 +26,4 @@ void GetCurrentZeroTimestamp(uint64_t *out_sample_time, uint64_t *out_host_time)
 
 ### Accessing timestamps
 
-- [UpdateCurrentZeroTimestamp](updatecurrentzerotimestamp.md): Update the current timestamp value.
+- [UpdateCurrentZeroTimestamp](updatecurrentzerotimestamp.md): Beta. Update the current timestamp value.

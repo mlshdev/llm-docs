@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideochannellabel/verticalheightleft](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/verticalheightleft)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/verticalheightleft
 
 # VerticalHeightLeft
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 WAVE: “Top Front Left”
 
@@ -20,10 +21,10 @@ VerticalHeightLeft
 
 ### Left channels
 
-- [Left](left.md)
-- [LeftCenter](leftcenter.md)
-- [LeftTopFront](lefttopfront.md)
-- [LeftTopMiddle](lefttopmiddle.md)
-- [LeftTopRear](lefttoprear.md)
-- [LeftTotal](lefttotal.md): matrix encoded 4 channels
-- [LeftWide](leftwide.md)
+- [Left](left.md): Beta.
+- [LeftCenter](leftcenter.md): Beta.
+- [LeftTopFront](lefttopfront.md): Beta.
+- [LeftTopMiddle](lefttopmiddle.md): Beta.
+- [LeftTopRear](lefttoprear.md): Beta.
+- [LeftTotal](lefttotal.md): Beta. matrix encoded 4 channels
+- [LeftWide](leftwide.md): Beta.

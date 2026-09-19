@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiview](https://developer.apple.com/documentation/uikit/uiview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiview
 
 # UIView (Swift)
 
@@ -361,9 +362,16 @@ Lay out views manually if your app doesn’t use Auto Layout.
 ### Accessing insets and layout guides
 
 - [UIView.LayoutRegion](uiview/layoutregion.md)
+- [bar(onEdge:extent:)](uiview/layoutregion/bar%28onedge_extent_%29-2tj1g.md): Beta.
+- [bar(onEdge:extent:)](uiview/layoutregion/bar%28onedge_extent_%29-8rmhq.md): Beta.
 - [directionalEdgeInsets(for:)](uiview/directionaledgeinsets%28for_%29.md)
 - [edgeInsets(for:)](uiview/edgeinsets%28for_%29.md)
 - [layoutGuide(for:)](uiview/layoutguide%28for_%29.md)
+
+### Inspecting reserved regions
+
+- [UIView.ReservedRegion](uiview/reservedregion.md): Beta. A region within a view’s coordinate space that another entity occupies.
+- [reservedRegions(kind:options:)](uiview/reservedregions%28kind_options_%29.md): Beta. Returns the reserved regions of a given kind and options.
 
 ### Adjusting the user interface
 
@@ -980,6 +988,12 @@ Lay out views manually if your app doesn’t use Auto Layout.
 
 - [UIViewLayoutRegion](uiviewlayoutregion.md)
 - [UIViewLayoutRegionAdaptivityAxis](uiviewlayoutregionadaptivityaxis.md)
+
+### Inspecting reserved regions
+
+- [UIViewReservedRegion](uiviewreservedregion.md): Beta. A region within a view’s coordinate space that another entity occupies.
+- [reservedRegionsOfKind:](uiview/reservedregionsofkind_.md): Beta. Returns the reserved regions of a given kind.
+- [reservedRegionsOfKind:options:](uiview/reservedregionsofkind_options_.md): Beta. Returns the reserved regions of a given kind and options.
 
 ### Adjusting the user interface
 

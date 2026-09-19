@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/swiftdata/schema/init(_:version:)-8jo9o](https://developer.apple.com/documentation/swiftdata/schema/init(_:version:)-8jo9o)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftdata/schema/init(_:version:)-8jo9o
 
 # init(\_:version:)
 

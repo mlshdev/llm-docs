@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/attachment](https://developer.apple.com/documentation/foundationmodels/transcript/attachment)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/attachment
 
 # Transcript.Attachment
 
@@ -11,14 +12,18 @@ The types of attached content.
 ## Declaration
 
 ```swift
-enum Attachment
+@nonexhaustive enum Attachment
 ```
 
 ## Topics
 
 ### Image attachment case
 
-- [Transcript.Attachment.image(\_:)](attachment/image%28__%29.md)
+- [Transcript.Attachment.image(\_:)](attachment/image%28__%29.md): An attached image.
+
+### Enumeration Cases
+
+- [Transcript.Attachment.data(\_:)](attachment/data%28__%29.md): Beta. An attached data payload identified by a content type identifier.
 
 ## Relationships
 

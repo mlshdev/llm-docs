@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1400244-ebcdic_and_ibm_host_text_encodin](https://developer.apple.com/documentation/coreservices/1400244-ebcdic_and_ibm_host_text_encodin)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/1400244-ebcdic_and_ibm_host_text_encodin
 
 # EBCDIC and IBM Host Text Encodings
 

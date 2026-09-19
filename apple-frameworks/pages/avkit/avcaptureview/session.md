@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcaptureview/session](https://developer.apple.com/documentation/avkit/avcaptureview/session)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcaptureview/session
 
 # session (Swift)
 
@@ -22,7 +23,7 @@ This property’s default value is a capture session configured for movie file r
 
 ## See Also
 
-### Configuring the Capture Session
+### Configuring the capture session
 
 - [setSession(\_:showVideoPreview:showAudioPreview:)](setsession%28__showvideopreview_showaudiopreview_%29.md): Sets the view’s capture session.
 
@@ -48,6 +49,6 @@ This property’s default value is a capture session configured for movie file r
 
 ## See Also
 
-### Configuring the Capture Session
+### Configuring the capture session
 
 - [setSession:showVideoPreview:showAudioPreview:](setsession%28__showvideopreview_showaudiopreview_%29.md): Sets the view’s capture session.

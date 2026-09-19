@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/intel_sec_algs_length](https://developer.apple.com/documentation/security/intel_sec_algs_length)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/intel_sec_algs_length
 
 # INTEL_SEC_ALGS_LENGTH (Swift)
 

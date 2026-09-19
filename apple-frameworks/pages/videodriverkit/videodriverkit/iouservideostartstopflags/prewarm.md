@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideostartstopflags/prewarm](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideostartstopflags/prewarm)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideostartstopflags/prewarm
 
 # Prewarm
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 A flag that indicates starting or stopping for prewarming.
 
@@ -26,4 +27,4 @@ This option causes the minimal enabling or disabling of hardware, to minimize th
 
 ### Start/stop behaviors
 
-- [None](none.md): A flag that indicates starting or stopping for normal I/O operation.
+- [None](none.md): Beta. A flag that indicates starting or stopping for normal I/O operation.

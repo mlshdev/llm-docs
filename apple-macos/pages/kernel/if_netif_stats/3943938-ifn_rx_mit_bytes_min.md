@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/if_netif_stats/3943938-ifn_rx_mit_bytes_min](https://developer.apple.com/documentation/kernel/if_netif_stats/3943938-ifn_rx_mit_bytes_min)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/if_netif_stats/3943938-ifn_rx_mit_bytes_min
 
 # ifn_rx_mit_bytes_min
 

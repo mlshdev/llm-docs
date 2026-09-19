@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uibezierpath/addarc(withcenter:radius:startangle:endangle:clockwise:)](https://developer.apple.com/documentation/uikit/uibezierpath/addarc(withcenter:radius:startangle:endangle:clockwise:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uibezierpath/addarc(withcenter:radius:startangle:endangle:clockwise:)
 
 # addArc(withCenter:radius:startAngle:endAngle:clockwise:) (Swift)
 

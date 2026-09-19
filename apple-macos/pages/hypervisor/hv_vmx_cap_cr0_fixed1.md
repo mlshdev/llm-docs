@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_vmx_cap_cr0_fixed1](https://developer.apple.com/documentation/hypervisor/hv_vmx_cap_cr0_fixed1)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_vmx_cap_cr0_fixed1
 
 # HV_VMX_CAP_CR0_FIXED1 (Swift)
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uisearchcontroller/searchcontrollerobservedscrollview](https://developer.apple.com/documentation/uikit/uisearchcontroller/searchcontrollerobservedscrollview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uisearchcontroller/searchcontrollerobservedscrollview
 
 # searchControllerObservedScrollView (Swift)
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** tvOS 13.0+ (deprecated in 27.0)
+**Availability:** tvOS 13.0+ (deprecated in 27.2)
 
 The view with which the controller coordinates scrolling animations.
 
@@ -26,7 +27,7 @@ var searchControllerObservedScrollView: UIScrollView? { get set }
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** tvOS 13.0+ (deprecated in 27.0)
+**Availability:** tvOS 13.0+ (deprecated in 27.2)
 
 The view with which the controller coordinates scrolling animations.
 

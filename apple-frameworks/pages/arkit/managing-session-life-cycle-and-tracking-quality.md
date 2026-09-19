@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/managing-session-life-cycle-and-tracking-quality](https://developer.apple.com/documentation/arkit/managing-session-life-cycle-and-tracking-quality)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/managing-session-life-cycle-and-tracking-quality
 
 # Managing Session Life Cycle and Tracking Quality (Swift)
 

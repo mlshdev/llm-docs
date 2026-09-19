@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/adattributionkit/presenting-ads-in-your-app](https://developer.apple.com/documentation/adattributionkit/presenting-ads-in-your-app)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/adattributionkit/presenting-ads-in-your-app
 
 # Presenting ads in your app
 
@@ -33,9 +34,11 @@ struct AdContentView: View {
         .onTapGesture(perform: { handleAdTapped() })
     }
 
+
     init(impression: AppImpression) {
         self.impression = impression
     }
+
 
     func handleAdDisappeared() {
         guard shouldRecordView() else {

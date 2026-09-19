@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mediaintelligence/finding-the-best-moments-in-a-video](https://developer.apple.com/documentation/mediaintelligence/finding-the-best-moments-in-a-video)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mediaintelligence/finding-the-best-moments-in-a-video
 
 # Finding the best moments in a video
 

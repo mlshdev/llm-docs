@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturedevice/rotationcoordinator/videorotationangleforhorizonlevelcapture](https://developer.apple.com/documentation/avfoundation/avcapturedevice/rotationcoordinator/videorotationangleforhorizonlevelcapture)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturedevice/rotationcoordinator/videorotationangleforhorizonlevelcapture
 
 # videoRotationAngleForHorizonLevelCapture (Swift)
 
@@ -33,6 +34,7 @@ Alternatively, if your app uses an [AVCaptureVideoDataOutput](../../avcapturevid
 ### Compensating for a device’s rotation
 
 - [videoRotationAngleForHorizonLevelPreview](videorotationangleforhorizonlevelpreview.md): An angle the coordinator provides your app to apply to the preview layer so that it’s level relative to gravity.
+- [videoRotationAngleRelative(toDeviceOrientation:)](videorotationanglerelative%28todeviceorientation_%29.md): An angle the coordinator provides your app to apply to photos or videos it takes with the capture device so that they’re upright relative to an orientation your app provides.
 
 # videoRotationAngleForHorizonLevelCapture (Objective-C)
 
@@ -67,3 +69,4 @@ Alternatively, if your app uses an [AVCaptureVideoDataOutput](../../avcapturevid
 ### Compensating for a device’s rotation
 
 - [videoRotationAngleForHorizonLevelPreview](videorotationangleforhorizonlevelpreview.md): An angle the coordinator provides your app to apply to the preview layer so that it’s level relative to gravity.
+- [videoRotationAngleRelativeToDeviceOrientation:](videorotationanglerelative%28todeviceorientation_%29.md): An angle the coordinator provides your app to apply to photos or videos it takes with the capture device so that they’re upright relative to an orientation your app provides.

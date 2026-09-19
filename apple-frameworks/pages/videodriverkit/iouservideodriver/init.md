@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideodriver/init](https://developer.apple.com/documentation/videodriverkit/iouservideodriver/init)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideodriver/init
 
 # init
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,6 +19,6 @@ virtual bool init();
 
 ### Running the driver service
 
-- [Start](start.md)
-- [Stop](stop.md)
-- [free](free.md)
+- [Start](start.md): Beta.
+- [Stop](stop.md): Beta.
+- [free](free.md): Beta.

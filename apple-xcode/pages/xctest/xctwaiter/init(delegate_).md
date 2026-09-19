@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xctest/xctwaiter/init(delegate:)](https://developer.apple.com/documentation/xctest/xctwaiter/init(delegate:))
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xctest/xctwaiter/init(delegate:)
 
 # init(delegate:) (Swift)
 

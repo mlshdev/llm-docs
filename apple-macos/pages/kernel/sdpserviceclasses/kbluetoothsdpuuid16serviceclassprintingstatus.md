@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/sdpserviceclasses/kbluetoothsdpuuid16serviceclassprintingstatus](https://developer.apple.com/documentation/kernel/sdpserviceclasses/kbluetoothsdpuuid16serviceclassprintingstatus)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/sdpserviceclasses/kbluetoothsdpuuid16serviceclassprintingstatus
 
 # kBluetoothSDPUUID16ServiceClassPrintingStatus
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/musickit/using-automatic-token-generation-for-apple-music-api](https://developer.apple.com/documentation/musickit/using-automatic-token-generation-for-apple-music-api)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/musickit/using-automatic-token-generation-for-apple-music-api
 
 # Using Automatic Developer Token Generation for Apple Music API
 

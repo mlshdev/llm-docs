@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtimetraveldirections/backward](https://developer.apple.com/documentation/clockkit/clkcomplicationtimetraveldirections/backward)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtimetraveldirections/backward
 
 # backward (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Type Property  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Past data support. Use this option when it makes sense to provide past data for your complication.
 
@@ -26,7 +27,7 @@ static var backward: CLKComplicationTimeTravelDirections { get }
 
 **Framework:** ClockKit  
 **Kind:** Enumeration Case  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Past data support. Use this option when it makes sense to provide past data for your complication.
 

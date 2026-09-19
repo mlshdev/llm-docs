@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1472022-digital_signature_version_select/gestaltdigitalsignatureversion](https://developer.apple.com/documentation/coreservices/1472022-digital_signature_version_select/gestaltdigitalsignatureversion)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/1472022-digital_signature_version_select/gestaltdigitalsignatureversion
 
 # gestaltDigitalSignatureVersion
 

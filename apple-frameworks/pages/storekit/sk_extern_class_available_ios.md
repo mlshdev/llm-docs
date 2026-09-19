@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/sk_extern_class_available_ios](https://developer.apple.com/documentation/storekit/sk_extern_class_available_ios)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/sk_extern_class_available_ios
 
 # SK_EXTERN_CLASS_AVAILABLE_IOS
 

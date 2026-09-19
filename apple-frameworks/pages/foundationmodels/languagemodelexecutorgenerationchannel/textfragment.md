@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationchannel/textfragment](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/textfragment)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/textfragment
 
 # LanguageModelExecutorGenerationChannel.TextFragment
 
@@ -24,9 +25,9 @@ Use this type when appending text with [LanguageModelExecutorGenerationChannel.R
 
 ### Handling the text fragment
 
-- [content](textfragment/content.md)
-- [tokenCount](textfragment/tokencount.md)
-- [segmentID](textfragment/segmentid.md)
+- [content](textfragment/content.md): The text to append to the entry’s current text segment.
+- [tokenCount](textfragment/tokencount.md): The number of tokens the text carries.
+- [segmentID](textfragment/segmentid.md): The identifier of the text segment to append to, or empty to append to the current segment.
 
 ## Relationships
 

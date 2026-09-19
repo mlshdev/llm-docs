@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skproductsrequestdelegate/productsrequest(_:didreceive:)](https://developer.apple.com/documentation/storekit/skproductsrequestdelegate/productsrequest(_:didreceive:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skproductsrequestdelegate/productsrequest(_:didreceive:)
 
 # productsRequest(\_:didReceive:) (Swift)
 
@@ -25,7 +26,7 @@ func productsRequest(_ request: SKProductsRequest, didReceive response: SKProduc
 
 ### Related Documentation
 
-- [In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267)
+- [Apple In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267)
 
 # productsRequest:didReceiveResponse: (Objective-C)
 
@@ -52,4 +53,4 @@ Accepts the App Store response that contains the app-requested product informati
 
 ### Related Documentation
 
-- [In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267)
+- [Apple In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267)

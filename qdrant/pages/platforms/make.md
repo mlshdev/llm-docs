@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/platforms/make.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/platforms/make.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/platforms/make.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/platforms/make.md)
 > Canonical documentation: https://qdrant.tech/documentation/platforms/make/
 
 # Make.com
@@ -9,7 +9,7 @@ Find the comprehensive list of available Make apps [here](https://www.make.com/e
 
 Qdrant is available as an [app](https://www.make.com/en/integrations/qdrant) within Make to add to your scenarios.
 
-![Qdrant Make hero](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/frameworks/make/hero-page.png)
+![Qdrant Make hero](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/frameworks/make/hero-page.png)
 
 ## Prerequisites
 
@@ -21,18 +21,18 @@ Before you start, make sure you have the following:
 ## Setting up a connection
 
 Navigate to your scenario on the Make dashboard and select a Qdrant app module to start a connection.
-![Qdrant Make connection](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/frameworks/make/connection.png)
+![Qdrant Make connection](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/frameworks/make/connection.png)
 
 You can now establish a connection to Qdrant using your [instance credentials](https://qdrant.tech/documentation/cloud/authentication/).
 
-![Qdrant Make form](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/frameworks/make/connection-form.png)
+![Qdrant Make form](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/frameworks/make/connection-form.png)
 
 ## Modules
 
 Modules represent actions that Make performs with an app.
 
 The Qdrant Make app enables you to trigger the following app modules.
-![Qdrant Make modules](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/frameworks/make/modules.png)
+![Qdrant Make modules](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/frameworks/make/modules.png)
 
 The modules support mapping to connect the data retrieved by one module to another module to perform the desired action. You can read more about the data processing options available for the modules in the [Make reference](https://www.make.com/en/help/modules).
 

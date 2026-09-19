@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/screencapturekit/scstreamconfiguration/preset/capturehdrstreamcanonicaldisplay](https://developer.apple.com/documentation/screencapturekit/scstreamconfiguration/preset/capturehdrstreamcanonicaldisplay)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/screencapturekit/scstreamconfiguration/preset/capturehdrstreamcanonicaldisplay
 
 # SCStreamConfiguration.Preset.captureHDRStreamCanonicalDisplay (Swift)
 

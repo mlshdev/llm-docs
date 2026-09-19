@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/applibrary](https://developer.apple.com/documentation/marketplacekit/applibrary)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/marketplacekit/applibrary
 
 # AppLibrary
 
@@ -26,31 +27,44 @@ A class that represents a catalog of all installed apps, and offers various serv
 
 Alternative app marketplaces call methods of this class to retrieve the set of currently installed apps, to request the installation of available apps, or to update the license for a specific app. Browser apps that use an alternative browser engine make a call to this class to install alternative app marketplaces from a webpage. You can also customize Spotlight search results and manage age-rating exception requests to install apps with an age rating beyond the maximum allowed for the device.
 
+<a id="Perform-app-installation"></a>
+
+## Perform app installation
+
+To install apps with this class, the system requires the following criteria:
+
+- **[requestAppInstallation(\_:)](applibrary/requestappinstallation%28__%29.md)**: Your app needs to have the [com.apple.developer.marketplace.app-installation](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.marketplace.app-installation) entitlement.
+- **[requestAppInstallationFromBrowser(for:referrer:)](applibrary/requestappinstallationfrombrowser%28for_referrer_%29.md)**: Your app needs to have the [com.apple.developer.browser.app-installation](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.browser.app-installation) entitlement.
+- **[requestInlineAppInstallation(\_:subjectToken:)](applibrary/requestinlineappinstallation%28__subjecttoken_%29.md)**: The app to install must be from the same developer account as the one that distributes the app that calls the method. The app to install also needs to be owned or controlled by you.
+
 <a id="Observe-runtime-changes"></a>
 
 ## Observe runtime changes
 
 The class is observable (through [SwiftUI](https://developer.apple.com/documentation/swiftui) or the [Observation](https://developer.apple.com/documentation/observation) framework), so you can provide reactive updates when finishing, installing, updating, or loading (see [isLoading](applibrary/isloading.md)).
 
-> **Important**
-
-> iOS ignores calls to this class for apps that lack one of the required entitlements: [com.apple.developer.marketplace.app-installation](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.marketplace.app-installation), or [com.apple.developer.browser.app-installation](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.browser.app-installation).
-
 ## Topics
 
 ### Accessing app library and account authorization information
 
 - [current](applibrary/current.md): A global accessor for the device’s app library instance.
-- [didAuthenticate(account:)](applibrary/didauthenticate%28account_%29.md): Instructs iOS to reinstall an app after a required reuthorization completes.
+- [didAuthenticate(account:)](applibrary/didauthenticate%28account_%29.md): Instructs the system to reinstall an app after a required reuthorization completes.
 
-### Managing app installation
+### Installing apps as a marketplace
 
 - [AppLibrary.App](applibrary/app.md): Information about an app that someone installs from a marketplace, including its ID and installation status.
 - [AppLibrary.InstallationRequest](applibrary/installationrequest.md): A request to install an app distribution package for a given account.
 - [installingApps](applibrary/installingapps.md): The set of apps that are pending installation completion.
 - [isLoading](applibrary/isloading.md): A Boolean value that indicates whether the library is currently loading apps.
 - [requestAppInstallation(\_:)](applibrary/requestappinstallation%28__%29.md): Requests the installation of the given app distribution package for the given account.
+
+### Installing apps as a web browser
+
 - [requestAppInstallationFromBrowser(for:referrer:)](applibrary/requestappinstallationfrombrowser%28for_referrer_%29.md): Forwards an app installation request from the developer’s webpage.
+
+### Installing web-distributed apps from your app
+
+- [requestInlineAppInstallation(\_:subjectToken:)](applibrary/requestinlineappinstallation%28__subjecttoken_%29.md): Beta. Requests the installation of a web-distributed app that you also distribute.
 
 ### Accessing installed apps
 
@@ -66,12 +80,12 @@ The class is observable (through [SwiftUI](https://developer.apple.com/documenta
 ### Filtering app searches
 
 - [searchTerritory](applibrary/searchterritory.md): A country code that the framework uses to filter the search results of apps that aren’t available in that country.
-- [setSearchTerritory(\_:)](applibrary/setsearchterritory%28__%29.md): Defines a country code that iOS uses to filter the search results of apps that aren’t available in that country.
+- [setSearchTerritory(\_:)](applibrary/setsearchterritory%28__%29.md): Defines a country code that the system uses to filter the search results of apps that aren’t available in that country.
 
 ### Updating apps
 
 - [requestAppUpdate(\_:)](applibrary/requestappupdate%28__%29.md): Requests an app update for the given app distribution package and account information.
-- [requestLicenseRenewal(appleItemIDs:)](applibrary/requestlicenserenewal%28appleitemids_%29.md): Instructs iOS to request an updated app license from your marketplace server for the given app identifier.
+- [requestLicenseRenewal(appleItemIDs:)](applibrary/requestlicenserenewal%28appleitemids_%29.md): Instructs the system to request an updated app license from your marketplace server for the given app identifier.
 
 ### Determining device region
 

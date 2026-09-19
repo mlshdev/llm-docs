@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_event_sudo_t/init(success:reject_info:has_from_uid:from_uid:from_username:has_to_uid:to_uid:to_username:command:)](https://developer.apple.com/documentation/endpointsecurity/es_event_sudo_t/init(success:reject_info:has_from_uid:from_uid:from_username:has_to_uid:to_uid:to_username:command:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_event_sudo_t/init(success:reject_info:has_from_uid:from_uid:from_username:has_to_uid:to_uid:to_username:command:)
 
 # init(success:reject_info:has_from_uid:from_uid:from_username:has_to_uid:to_uid:to_username:command:)
 

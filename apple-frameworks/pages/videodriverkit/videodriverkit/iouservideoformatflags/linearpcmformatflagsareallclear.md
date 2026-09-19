@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoformatflags/linearpcmformatflagsareallclear](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoformatflags/linearpcmformatflagsareallclear)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoformatflags/linearpcmformatflagsareallclear
 
 # LinearPCMFormatFlagsAreAllClear
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Synonym for `FormatFlagsAreAllClear`.
 
@@ -20,4 +21,4 @@ LinearPCMFormatFlagsAreAllClear
 
 ### Special purpose flags
 
-- [FormatFlagsAreAllClear](formatflagsareallclear.md): Set if all the flags would be clear.
+- [FormatFlagsAreAllClear](formatflagsareallclear.md): Beta. Set if all the flags would be clear.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/offer-swift.property](https://developer.apple.com/documentation/storekit/transaction/offer-swift.property)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/offer-swift.property
 
 # offer
 
@@ -25,7 +26,7 @@ let offer: Transaction.Offer?
 
 This value is `nil` if the transaction doesn’t include an offer.
 
-You set up offers for auto-renewable subscriptions and other In-App Purchase product types in App Store Connect. If a customer redeems an offer, this property contains the offer details, including its [type](offer-swift.struct/type.md), [paymentMode](offer-swift.struct/paymentmode-swift.property.md), and [id](id.md). For more information, see [Transaction.Offer](offer-swift.struct.md).
+You set up offers for auto-renewable subscriptions and other Apple In-App Purchase product types in App Store Connect. If a customer redeems an offer, this property contains the offer details, including its [type](offer-swift.struct/type.md), [paymentMode](offer-swift.struct/paymentmode-swift.property.md), and [id](id.md). For more information, see [Transaction.Offer](offer-swift.struct.md).
 
 ## See Also
 

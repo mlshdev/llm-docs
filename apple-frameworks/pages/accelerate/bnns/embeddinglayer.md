@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnns/embeddinglayer](https://developer.apple.com/documentation/accelerate/bnns/embeddinglayer)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/bnns/embeddinglayer
 
 # BNNS.EmbeddingLayer
 
@@ -80,6 +81,7 @@ The embedding layer supports clipping to a maximum norm. The following code acce
 let lookupIndices: [Int8] = [1, 2]
 let input = BNNSNDArrayDescriptor.allocate(initializingFrom: lookupIndices,
                                            shape: .vector(lookupIndices.count))
+
 
 // The dictionary contains 3 embeddings of 2 x 3 matrices.
 let dictionaryData: [Float] = [0.1, 0.2, 0.3,

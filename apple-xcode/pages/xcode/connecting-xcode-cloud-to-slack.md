@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/connecting-xcode-cloud-to-slack](https://developer.apple.com/documentation/xcode/connecting-xcode-cloud-to-slack)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/connecting-xcode-cloud-to-slack
 
 # Connecting Xcode Cloud to Slack
 
@@ -18,7 +19,7 @@ By connecting Xcode Cloud to Slack, you can:
 - Configure Xcode Cloud to send notifications to you as direct messages, or choose a Slack channel for team-level notifications.
 - Use different Slack channels for different workflows.
 
-Use Xcode or [App Store Connect](htts://appstoreconnect.apple.com) to connect Xcode Cloud to a single Slack workspace.
+Use Xcode or App Store Connect to connect Xcode Cloud to a single Slack workspace.
 
 > **Note**
 

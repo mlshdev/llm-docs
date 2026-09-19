@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/displaying-searchable-content-by-using-a-search-controller](https://developer.apple.com/documentation/uikit/displaying-searchable-content-by-using-a-search-controller)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/displaying-searchable-content-by-using-a-search-controller
 
 # Displaying searchable content by using a search controller
 

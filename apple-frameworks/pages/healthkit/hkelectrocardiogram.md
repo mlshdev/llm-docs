@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkelectrocardiogram](https://developer.apple.com/documentation/healthkit/hkelectrocardiogram)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkelectrocardiogram
 
 # HKElectrocardiogram (Swift)
 
@@ -25,6 +26,7 @@ You can query for [HKElectrocardiogram](hkelectrocardiogram.md) samples using an
 ```swift
 // Create the electrocardiogram sample type.
 let ecgType = HKObjectType.electrocardiogramType()
+
 
 // Query for electrocardiogram samples
 let ecgQuery = HKSampleQuery(sampleType: ecgType,
@@ -154,6 +156,7 @@ You can query for [HKElectrocardiogram](hkelectrocardiogram.md) samples using an
 ```swift
 // Create the electrocardiogram sample type.
 let ecgType = HKObjectType.electrocardiogramType()
+
 
 // Query for electrocardiogram samples
 let ecgQuery = HKSampleQuery(sampleType: ecgType,

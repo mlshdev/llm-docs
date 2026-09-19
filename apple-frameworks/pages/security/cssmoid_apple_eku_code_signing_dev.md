@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmoid_apple_eku_code_signing_dev](https://developer.apple.com/documentation/security/cssmoid_apple_eku_code_signing_dev)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmoid_apple_eku_code_signing_dev
 
 # CSSMOID_APPLE_EKU_CODE_SIGNING_DEV
 

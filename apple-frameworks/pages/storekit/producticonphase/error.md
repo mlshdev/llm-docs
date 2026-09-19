@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/producticonphase/error](https://developer.apple.com/documentation/storekit/producticonphase/error)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/producticonphase/error
 
 # error
 
@@ -18,4 +19,4 @@ var error: (any Error)? { get }
 
 ## Discussion
 
-The [error](error.md) value is `nil` while the icon is loading, if the icon successfully loads, or if you haven’t set up a promotional image for the in-app purchase in App Store Connect. Use this value as a convenience to access the error value in code that assumes you’ve set up a promotional image.
+The [error](error.md) value is `nil` while the icon is loading, if the icon successfully loads, or if you haven’t set up a promotional image for the Apple In-App Purchase in App Store Connect. Use this value as a convenience to access the error value in code that assumes you’ve set up a promotional image.

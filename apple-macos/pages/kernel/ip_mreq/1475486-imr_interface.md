@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ip_mreq/1475486-imr_interface](https://developer.apple.com/documentation/kernel/ip_mreq/1475486-imr_interface)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ip_mreq/1475486-imr_interface
 
 # imr_interface
 

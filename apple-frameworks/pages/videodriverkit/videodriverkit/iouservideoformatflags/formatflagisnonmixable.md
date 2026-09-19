@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoformatflags/formatflagisnonmixable](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoformatflags/formatflagisnonmixable)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoformatflags/formatflagisnonmixable
 
 # FormatFlagIsNonMixable
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Set to indicate when a format is non-mixable.
 
@@ -26,4 +27,4 @@ This flag is used  only when interacting with the HAL’s stream format informat
 
 ### Mixability flags
 
-- [LinearPCMFormatFlagIsNonMixable](linearpcmformatflagisnonmixable.md): Synonym for `FormatFlagIsNonMixable`.
+- [LinearPCMFormatFlagIsNonMixable](linearpcmformatflagisnonmixable.md): Beta. Synonym for `FormatFlagIsNonMixable`.

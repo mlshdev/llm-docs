@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/supporting-subscription-offer-codes-in-your-app](https://developer.apple.com/documentation/storekit/supporting-subscription-offer-codes-in-your-app)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/supporting-subscription-offer-codes-in-your-app
 
 # Supporting subscription offer codes in your app (Swift)
 
@@ -41,7 +42,7 @@ The redemption sheet takes care of the redemption flow, including alerting users
 
 When customers redeem an offer code, StoreKit emits the resulting transaction in [updates](transaction/updates.md). Set up a transaction listener as soon as your app launches to receive new transactions while the app is running.
 
-Including the redemption sheet in your app is recommended, but optional. For more guidance on supporting offer code redemption within your app, see Human Interface Guidelines \> [In-app purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase).
+Including the redemption sheet in your app is recommended, but optional. For more guidance on supporting offer code redemption within your app, see Human Interface Guidelines \> [Apple In-App Purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase).
 
 <a id="Support-offer-codes-redeemed-outside-of-your-app"></a>
 
@@ -127,7 +128,7 @@ The redemption sheet takes care of the redemption flow, including alerting users
 
 When customers redeem an offer code, StoreKit emits the resulting transaction in [updates](transaction/updates.md). Set up a transaction listener as soon as your app launches to receive new transactions while the app is running.
 
-Including the redemption sheet in your app is recommended, but optional. For more guidance on supporting offer code redemption within your app, see Human Interface Guidelines \> [In-app purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase).
+Including the redemption sheet in your app is recommended, but optional. For more guidance on supporting offer code redemption within your app, see Human Interface Guidelines \> [Apple In-App Purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase).
 
 <a id="Support-offer-codes-redeemed-outside-of-your-app"></a>
 

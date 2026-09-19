@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appleschoolmanagerapi/create-an-orgdeviceactivity](https://developer.apple.com/documentation/appleschoolmanagerapi/create-an-orgdeviceactivity)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appleschoolmanagerapi/create-an-orgdeviceactivity
 
 # Assign or Unassign Devices to a Device Management Service
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple School Manager API  
 **Kind:** Web Service Endpoint  
-**Availability:** Apple School Manager API 1.6+
+**Availability:** Apple School Manager API 1.7+
 
 Assign or unassign devices to a device management service, or manage a device management service for devices.
 

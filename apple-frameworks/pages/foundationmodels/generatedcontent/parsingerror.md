@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generatedcontent/parsingerror](https://developer.apple.com/documentation/foundationmodels/generatedcontent/parsingerror)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generatedcontent/parsingerror
 
 # GeneratedContent.ParsingError
 
@@ -6,7 +7,7 @@
 **Kind:** Structure  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
 
-A failure that occurs when a string cannot be parsed into GeneratedContent.
+A failure that occurs when a string cannot be parsed into generated content.
 
 ## Declaration
 

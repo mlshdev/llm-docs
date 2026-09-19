@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/host_sched_info_data_t/1586775-min_quantum](https://developer.apple.com/documentation/kernel/host_sched_info_data_t/1586775-min_quantum)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/host_sched_info_data_t/1586775-min_quantum
 
 # min_quantum
 

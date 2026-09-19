@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/storeview](https://developer.apple.com/documentation/storekit/storeview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/storeview
 
 # StoreView
 
@@ -6,7 +7,7 @@
 **Kind:** Structure  
 **Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
 
-A view that merchandises a collection of In-App Purchase products.
+A view that merchandises a collection of Apple In-App Purchase products.
 
 ## Declaration
 
@@ -18,7 +19,7 @@ A view that merchandises a collection of In-App Purchase products.
 
 ## Overview
 
-A `StoreView` displays a collection of in-app purchase products, including their localized names, descriptions, and prices, and displays a purchase button.
+A `StoreView` displays a collection of Apple In-App Purchase products, including their localized names, descriptions, and prices, and displays a purchase button.
 
 Create a store view by providing a collection of product identifiers for the view to load from the App Store, or a collection of [Product](product.md) values you previously loaded. If you provide product identifiers, the store view automatically loads the product information from the App Store, and updates the view when the products are available.
 
@@ -42,7 +43,7 @@ To achieve a custom layout, you can compose [ProductView](productview.md) instan
 
 You can customize the store by displaying additional buttons, and applying styles.
 
-To display a button that syncs in-app purchase entitlements with the App Store, modify the in-app store view or an ancestor view using the `storeButton(_:for:)` modifier with the parameters [Visibility.visible](https://developer.apple.com/documentation/swiftui/visibility/visible) and [restorePurchases](storebuttonkind/restorepurchases.md). The app calls the [sync()](appstore/sync%28%29.md) method when people use this button.
+To display a button that syncs Apple In-App Purchase entitlements with the App Store, modify the in-app store view or an ancestor view using the `storeButton(_:for:)` modifier with the parameters [Visibility.visible](https://developer.apple.com/documentation/swiftui/visibility/visible) and [restorePurchases](storebuttonkind/restorepurchases.md). The app calls the [sync()](appstore/sync%28%29.md) method when people use this button.
 
 You can customize the appearance of the products using product view styles, such as [CompactProductViewStyle](compactproductviewstyle.md), [LargeProductViewStyle](largeproductviewstyle.md), and [RegularProductViewStyle](regularproductviewstyle.md). To apply the style, call the [productViewStyle(\_:)](https://developer.apple.com/documentation/swiftui/view/productviewstyle%28_:%29) modifier.
 
@@ -75,9 +76,9 @@ You can customize the appearance of the products using product view styles, such
 
 ## See Also
 
-### Merchandising In-App Purchases, subscriptions, and offers
+### Merchandising Apple In-App Purchases, subscriptions, and offers
 
-- [ProductView](productview.md): A view that merchandises an individual In-App Purchase product.
+- [ProductView](productview.md): A view that merchandises an individual Apple In-App Purchase product.
 - [SubscriptionStoreView](subscriptionstoreview.md): A view that merchandises a collection of auto-renewable subscription options that belong to the same subscription group.
 - [SubscriptionOfferView](subscriptionofferview.md)
 - [Backyard Birds: Building an app with SwiftData and widgets](https://developer.apple.com/documentation/swiftui/backyard-birds-sample): Create an app with persistent data, interactive widgets, and an all new in-app purchase experience.

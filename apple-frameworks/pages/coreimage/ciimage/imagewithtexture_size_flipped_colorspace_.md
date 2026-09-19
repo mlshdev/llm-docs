@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/ciimage/imagewithtexture:size:flipped:colorspace:](https://developer.apple.com/documentation/coreimage/ciimage/imagewithtexture:size:flipped:colorspace:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreimage/ciimage/imagewithtexture:size:flipped:colorspace:
 
 # imageWithTexture:size:flipped:colorSpace:
 

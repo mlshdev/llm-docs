@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/la_splat_from_vector_element(_:_:)](https://developer.apple.com/documentation/accelerate/la_splat_from_vector_element(_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/la_splat_from_vector_element(_:_:)
 
 # la_splat_from_vector_element(\_:\_:) (Swift)
 

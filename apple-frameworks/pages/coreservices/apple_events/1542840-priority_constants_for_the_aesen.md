@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/apple_events/1542840-priority_constants_for_the_aesen](https://developer.apple.com/documentation/coreservices/apple_events/1542840-priority_constants_for_the_aesen)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/apple_events/1542840-priority_constants_for_the_aesen
 
 # Priority Constants for the AESend Function (Deprecated in macOS)
 

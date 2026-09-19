@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_event_type_notify_btm_launch_item_remove](https://developer.apple.com/documentation/endpointsecurity/es_event_type_notify_btm_launch_item_remove)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_event_type_notify_btm_launch_item_remove
 
 # ES_EVENT_TYPE_NOTIFY_BTM_LAUNCH_ITEM_REMOVE (Swift)
 

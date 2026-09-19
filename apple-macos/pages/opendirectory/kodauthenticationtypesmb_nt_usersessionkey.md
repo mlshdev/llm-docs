@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/opendirectory/kodauthenticationtypesmb_nt_usersessionkey](https://developer.apple.com/documentation/opendirectory/kodauthenticationtypesmb_nt_usersessionkey)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opendirectory/kodauthenticationtypesmb_nt_usersessionkey
 
 # kODAuthenticationTypeSMB_NT_UserSessionKey (Swift)
 

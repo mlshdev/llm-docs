@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/charts/ruleplot/init(_:x:ystart:yend:)-13wts](https://developer.apple.com/documentation/charts/ruleplot/init(_:x:ystart:yend:)-13wts)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/charts/ruleplot/init(_:x:ystart:yend:)-13wts
 
 # init(\_:x:yStart:yEnd:)
 

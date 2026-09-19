@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode-release-notes/interface-builder-release-notes-for-xcode-10](https://developer.apple.com/documentation/xcode-release-notes/interface-builder-release-notes-for-xcode-10)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode-release-notes/interface-builder-release-notes-for-xcode-10
 
 # Interface Builder Release Notes for Xcode 10
 

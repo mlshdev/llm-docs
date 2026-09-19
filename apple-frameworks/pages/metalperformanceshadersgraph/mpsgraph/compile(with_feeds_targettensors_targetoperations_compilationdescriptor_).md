@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshadersgraph/mpsgraph/compile(with:feeds:targettensors:targetoperations:compilationdescriptor:)](https://developer.apple.com/documentation/metalperformanceshadersgraph/mpsgraph/compile(with:feeds:targettensors:targetoperations:compilationdescriptor:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshadersgraph/mpsgraph/compile(with:feeds:targettensors:targetoperations:compilationdescriptor:)
 
 # compile(with:feeds:targetTensors:targetOperations:compilationDescriptor:) (Swift)
 

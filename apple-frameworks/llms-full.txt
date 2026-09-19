@@ -1,71 +1,77 @@
-# Apple cross-platform frameworks snapshot-75c95c22eb2a: full documentation
+# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 75c95c22eb2ad852f60a6fa16fc5b2a8bd2d83fed230b5c9ef73230b7dff2438
-Content digest: e6d3efcb96fcdebbc411a497a66265ee7cc6bedd94b4398515f60b69812f30c4
-Captured at: 2026-09-12T21:04:59.784Z
-This corpus is published as 63 retrieval-sized volumes. Read the volumes in order for the complete corpus.
+Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
+Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
+Captured at: 2026-09-19T05:14:28.876Z
 
-- [Volume 1](llms-full.001.txt): 2547 documents, 8365969 bytes, SHA-256 `6f963552005e5dd9a316c31d9057838beb0a13c452720a5acd1121d3fe995139`.
-- [Volume 2](llms-full.002.txt): 2148 documents, 8384909 bytes, SHA-256 `36077a2f1bf5d877815bede46adde01e97f6e1f0cebdd23656044d1394c8a1e7`.
-- [Volume 3](llms-full.003.txt): 2607 documents, 8387932 bytes, SHA-256 `105ee2dac3b059917e4c1533c9d315b55f49a8a9ca90a67eb36d461c180bbcf8`.
-- [Volume 4](llms-full.004.txt): 2191 documents, 8384662 bytes, SHA-256 `ba23ff864867a1ae6ee9ab98a767dffbf4d35e0e9034ed6cb6731e15cdb41c72`.
-- [Volume 5](llms-full.005.txt): 4219 documents, 8384811 bytes, SHA-256 `97772ef23f8405e64c4edc9f4c1556986883026e7eff098bd6d98219bafc3de0`.
-- [Volume 6](llms-full.006.txt): 3805 documents, 8386256 bytes, SHA-256 `04a46fb106365a1cc9e7b52a93871cbe0fb3aae6e53d3821c22bdaf7834cf64e`.
-- [Volume 7](llms-full.007.txt): 3520 documents, 8386384 bytes, SHA-256 `f23df8858729949aacfb9a8a0225cb73e64cf5ea015ab6ef76e11d1a63d3ec20`.
-- [Volume 8](llms-full.008.txt): 2852 documents, 8387736 bytes, SHA-256 `8f31bef93845bd9ae1728bc4d066a32993e6e86db4b2cbf431d3f13aed6b4b42`.
-- [Volume 9](llms-full.009.txt): 3317 documents, 8388282 bytes, SHA-256 `ce3a5cccfdd80de6c9291148825ccd4d21ee38d7e7e9fcda799ae6faf1b81447`.
-- [Volume 10](llms-full.010.txt): 2717 documents, 8387738 bytes, SHA-256 `637b689fb9a361092c9ddea2d93d173eee314b658fc056db44b683a816a7809d`.
-- [Volume 11](llms-full.011.txt): 2476 documents, 8383867 bytes, SHA-256 `6748e36ab0a40de3518eeaafa559e12a1274024c3ae30729c8983b5ab23e1089`.
-- [Volume 12](llms-full.012.txt): 2806 documents, 8388211 bytes, SHA-256 `75ad6501dcfa21394015c437e3b0b6bb9ceedca94e97d929ad1d681434552128`.
-- [Volume 13](llms-full.013.txt): 3616 documents, 8388107 bytes, SHA-256 `9cb076517d9d67ca188e533995ffeff73f9306fffe71e270c41ea2d301d14f53`.
-- [Volume 14](llms-full.014.txt): 4316 documents, 8385062 bytes, SHA-256 `2213cc36086bb4c73ce453124730fe42b5abf316c40e44cd0943c77e1ae36e39`.
-- [Volume 15](llms-full.015.txt): 2504 documents, 8388173 bytes, SHA-256 `f49ba651f2a9970dfb31c3916065c10ac1c35af34c041a4a83fc235299b0cec0`.
-- [Volume 16](llms-full.016.txt): 2499 documents, 8387384 bytes, SHA-256 `a01feecbb1dbb1ac255b43b90fa212b872d0f1ad78d3dea0e0d4304d0c0c5a7d`.
-- [Volume 17](llms-full.017.txt): 2455 documents, 8388209 bytes, SHA-256 `dfec11b97037abcaa3637cdbbe13186edf9e2d36c399187757cb0acc0d06e04c`.
-- [Volume 18](llms-full.018.txt): 2818 documents, 8387968 bytes, SHA-256 `9e10d49c9731bb7b3a703b55fe7d0c9f352345e454fef15f508bbf54e31284da`.
-- [Volume 19](llms-full.019.txt): 3540 documents, 8386404 bytes, SHA-256 `ba5a0b4f253e20123fb67eb5129224dfa4fab17bebde114ea0619b544bd73a9a`.
-- [Volume 20](llms-full.020.txt): 8111 documents, 8388265 bytes, SHA-256 `1af1bc4b3dd0f764b847cfddd078d371e30f2e55a16f3111c7ac25f0a6ceedc2`.
-- [Volume 21](llms-full.021.txt): 8774 documents, 8388237 bytes, SHA-256 `99234a3cbf518993ef985da51ee0fa2b6af177edecc48cba416658a072e7ce7d`.
-- [Volume 22](llms-full.022.txt): 3832 documents, 8386316 bytes, SHA-256 `d4a6b4114f549ee191bc2af5fe3891ba2b3275ec47a661b40458a25e98d34570`.
-- [Volume 23](llms-full.023.txt): 5216 documents, 8387376 bytes, SHA-256 `9a0e15e4d279525486dc6649ecdf5203aa92017721aba0ba027ea89debe89918`.
-- [Volume 24](llms-full.024.txt): 4907 documents, 8388546 bytes, SHA-256 `0e93a41b00b5f70ec1df9ce550804311dfde5611b2bb9ddfbec623d20d6809fe`.
-- [Volume 25](llms-full.025.txt): 4052 documents, 8387840 bytes, SHA-256 `ddb5216df2033577577787853c6e09fd7f5fb381fab6d26f4da6ee07e3af6b0d`.
-- [Volume 26](llms-full.026.txt): 3532 documents, 8386969 bytes, SHA-256 `c2d026d858d3f718da2798d2ecafd71c7fbbbf743fde046017173537f199b2f6`.
-- [Volume 27](llms-full.027.txt): 2658 documents, 8387451 bytes, SHA-256 `643625f4aed85646d15dc12cb413d01bc39849239f9368055d79a4586310250a`.
-- [Volume 28](llms-full.028.txt): 2801 documents, 8379512 bytes, SHA-256 `a529ad222a1d0b263e8dc5d79c420403ed8c549870e75b6d2bbe361be9ac01f5`.
-- [Volume 29](llms-full.029.txt): 2922 documents, 8388301 bytes, SHA-256 `9133e4bc68a4dfe5eab57a08138a3a2cc7f8c646064767be5884e74dced13bac`.
-- [Volume 30](llms-full.030.txt): 3092 documents, 8388168 bytes, SHA-256 `46445154b9257b7f1e558f64190b32ea2b0195981cd272beec3d5e47343a2e32`.
-- [Volume 31](llms-full.031.txt): 2824 documents, 8364736 bytes, SHA-256 `0ff6a471e59d0c27e2c1d13507598d7a93751252f8b1e5983cfd4a8719a61bcc`.
-- [Volume 32](llms-full.032.txt): 4111 documents, 8384077 bytes, SHA-256 `54b39e3e84aee8d87a5e62593f44a3497e53cfcf5e58550b00ef6f99e942367c`.
-- [Volume 33](llms-full.033.txt): 3593 documents, 8385178 bytes, SHA-256 `a284dc4f11a51584161ca772703fb6ba31c8aa6885cde7e16cf2c475a27e09c5`.
-- [Volume 34](llms-full.034.txt): 2800 documents, 8384650 bytes, SHA-256 `7a44958161c30b9ae2a0f07f8fe5e039aa1bbae4f7cea8a1947a7bbfd632f32c`.
-- [Volume 35](llms-full.035.txt): 8787 documents, 8387465 bytes, SHA-256 `f8ad2f9dacdf58938827116c4e9973d13b70ecd6371be15e33c5ca9fa81c97b8`.
-- [Volume 36](llms-full.036.txt): 6740 documents, 8387287 bytes, SHA-256 `679d8e977b5de8f903b7fe911341a84d7f9deb6627d5f233cddc16f7787f9acf`.
-- [Volume 37](llms-full.037.txt): 4461 documents, 8387394 bytes, SHA-256 `def8977d382a52034a67811489959e6e08e0ef91a331ae079b3ece093d82c878`.
-- [Volume 38](llms-full.038.txt): 4253 documents, 8387320 bytes, SHA-256 `e239c48eb0986900d765df1acd094016db0e242ff31f5037fbc5e2f9fbf8e5b5`.
-- [Volume 39](llms-full.039.txt): 4181 documents, 8387735 bytes, SHA-256 `90777b3834e3537046ab6584199895ca5b338e894b4cd3eb2b103732c3caeeb6`.
-- [Volume 40](llms-full.040.txt): 4817 documents, 8388557 bytes, SHA-256 `4963376fc261e93e4c0e43572bd297b3d103ed79dab4b5678c9a63de52d575b0`.
-- [Volume 41](llms-full.041.txt): 6513 documents, 8388125 bytes, SHA-256 `b0597b22300d40432dcdc5e631cf2f5cb4d8e0b151bf089ceabea864b2e3ed5c`.
-- [Volume 42](llms-full.042.txt): 3829 documents, 8386558 bytes, SHA-256 `69dd84eea72918ccd01f20381ac9ce39c400235cdf62a7ad3c1cfe690cb429fb`.
-- [Volume 43](llms-full.043.txt): 3115 documents, 8387311 bytes, SHA-256 `e0741f77249beccc33f9419ce7b598c887c59f6b5874dff84e5f77ec930ce490`.
-- [Volume 44](llms-full.044.txt): 3598 documents, 8388040 bytes, SHA-256 `c449ea54f85023c03432b087f92379e5354cf9c857a6f7ed1a2ef1823cb11a7e`.
-- [Volume 45](llms-full.045.txt): 3480 documents, 8381694 bytes, SHA-256 `b1d6fafe911adba9bc3f06c3f063841591ee54d61643727baf3ec7f88edffa71`.
-- [Volume 46](llms-full.046.txt): 4050 documents, 8387558 bytes, SHA-256 `051d5da3a0a7f425b0f559e602ffec68377dc9ac6a701dd8e5316dae183c882e`.
-- [Volume 47](llms-full.047.txt): 4946 documents, 8388193 bytes, SHA-256 `9309c23a58f31c4d1941a495d81cb41b5419bf8929174984cba8f68930ff48f8`.
-- [Volume 48](llms-full.048.txt): 3969 documents, 8387434 bytes, SHA-256 `25d2f12f834878e6418b9eb088af4a1c7c1d20662b982de2c1b3da0551ab52cc`.
-- [Volume 49](llms-full.049.txt): 2970 documents, 8387100 bytes, SHA-256 `daa2c84f09163b8428c45fcbf4bfe5eb20c7e41a37b4ee086d99a4e9468c136d`.
-- [Volume 50](llms-full.050.txt): 4954 documents, 8388094 bytes, SHA-256 `5afb2e04947be7edb8b433dd83a6e8693290847d71e20dfccd9b754debb1b4e2`.
-- [Volume 51](llms-full.051.txt): 4701 documents, 8386511 bytes, SHA-256 `8c09c0280774dc70e8e0d1fc0e2b2362e665b0c3350ace57867133719dfc4965`.
-- [Volume 52](llms-full.052.txt): 6570 documents, 8388552 bytes, SHA-256 `aa2caaa13c6462c75afa638108ae0b52c499d0787dd14820fb245895db30d1f3`.
-- [Volume 53](llms-full.053.txt): 5518 documents, 8387631 bytes, SHA-256 `7ef4a27f48fe23556d177b7fd8f820424b279d8ea2510abf88854bd82dad2377`.
-- [Volume 54](llms-full.054.txt): 5086 documents, 8387453 bytes, SHA-256 `32edad3b6abd92d71f38a7e16c00767448a9b7016cff1d2c393461f49288acb2`.
-- [Volume 55](llms-full.055.txt): 3218 documents, 8387775 bytes, SHA-256 `c95dfc229d5bef2cedf3e5da31b214ba704225187698a5cabfd09de4a7a01757`.
-- [Volume 56](llms-full.056.txt): 4519 documents, 8388597 bytes, SHA-256 `210d7a9e65909c1ffd881e281f33cf899d822eb5d21ecffcd77cb9fb09eeb030`.
-- [Volume 57](llms-full.057.txt): 2499 documents, 8360105 bytes, SHA-256 `f45defdfee7cb1e325312c9ad799514669b517499972467976e46f070d978a9d`.
-- [Volume 58](llms-full.058.txt): 2936 documents, 8387250 bytes, SHA-256 `214b3599ce8dfc367c1adf8adc838f291e2786b86c1cf7d6bd3558f7c101f520`.
-- [Volume 59](llms-full.059.txt): 2846 documents, 8388233 bytes, SHA-256 `83acbe84044e73ebc24b7a44f2ec65a91b2c8e6848bc7f5a3b500ce358ffd8fc`.
-- [Volume 60](llms-full.060.txt): 3001 documents, 8387367 bytes, SHA-256 `55cf26a10af5ed0ae4771a1fe1902a2781d27fb1ac8361d8a039fbd5a5bb1891`.
-- [Volume 61](llms-full.061.txt): 3266 documents, 8388517 bytes, SHA-256 `37847c5f3d9c271c95c14f6f78262c49fa7af638f0b80c9eda8ca18b87456b8c`.
-- [Volume 62](llms-full.062.txt): 4749 documents, 8386542 bytes, SHA-256 `9f179534f8147978cb937c3a4fa85fea78e8ed6e88cbdb58a2b286cf92e63242`.
-- [Volume 63](llms-full.063.txt): 3120 documents, 8243004 bytes, SHA-256 `2c2ba9c366aeef51da5767be88601f0d517a54656dcfa44aa81bd0cfbc4ddf5d`.
+This corpus is published as 68 retrieval-sized volumes. Read the volumes in order for the complete corpus.
+
+- [Volume 1](llms-full.001.txt): 2457 documents, 8387615 bytes, SHA-256 `158583d71d2c47a34b15ef552b3a6cd3819b4891e874f98d217699e8914a60ef`.
+- [Volume 2](llms-full.002.txt): 2021 documents, 8379720 bytes, SHA-256 `162bd405d9b23efe894be6acfbd0058db260a26fa41922e1660e0467c5eef4db`.
+- [Volume 3](llms-full.003.txt): 2634 documents, 8384742 bytes, SHA-256 `806892b96115a673062b47e2d185c88d30aad676f6aaa0863f054b65a4df0856`.
+- [Volume 4](llms-full.004.txt): 1858 documents, 8386307 bytes, SHA-256 `2df4a458713289d9672c1539ebde4c4130d40285faa7544aec32ff6c588ea83a`.
+- [Volume 5](llms-full.005.txt): 3830 documents, 8388190 bytes, SHA-256 `274bb02c09a8d2da7e1421a9b019ca7f92c53121c5294a79086c227e7107180d`.
+- [Volume 6](llms-full.006.txt): 3589 documents, 8387099 bytes, SHA-256 `a0c30f2416eed99a33725cd9fe83496c9cb70a2969273a5efe8fc71cf65df419`.
+- [Volume 7](llms-full.007.txt): 3635 documents, 8386527 bytes, SHA-256 `27eb8be4a74252acbfa342990ece5d3d75fd1b9e1e6bad8640dd7a090027b55d`.
+- [Volume 8](llms-full.008.txt): 2723 documents, 8387047 bytes, SHA-256 `5666c7d8b5091e910936008bee1ae06fefc61db675407c645c8ec4eae9f9f06a`.
+- [Volume 9](llms-full.009.txt): 3212 documents, 8385529 bytes, SHA-256 `211b392dbbf3255996d33e4c5b9a034b794bd73a1d46365dcee4c24c2e6c9da6`.
+- [Volume 10](llms-full.010.txt): 2727 documents, 8387663 bytes, SHA-256 `eadd32965508399fe98b3dcc26e1417e346c8ab4a7beb2e29f21f4b21356d9c1`.
+- [Volume 11](llms-full.011.txt): 2205 documents, 8388347 bytes, SHA-256 `27b12949d046ef7fbef87d793edb5c67cc3002476169ce465737fadcbf00d6d7`.
+- [Volume 12](llms-full.012.txt): 2734 documents, 8386146 bytes, SHA-256 `cc5b50bd0de1b23f33d7657ebd93bc7fcd4413ffc6ddc2d970bb9e1adb71b57b`.
+- [Volume 13](llms-full.013.txt): 3235 documents, 8385755 bytes, SHA-256 `8764e5c521024031420aeb54f23545ce8fd85f135d5f3ba260a96c0558262445`.
+- [Volume 14](llms-full.014.txt): 3752 documents, 8388023 bytes, SHA-256 `c185b9e6ef5f8f4c0fc2a7f9b53ab3cc1307d80cb4f5098ed20861b4254895c7`.
+- [Volume 15](llms-full.015.txt): 3143 documents, 8386526 bytes, SHA-256 `a96c949c7ffe7b364105e64c46dcf30805db32f222dbc20529053d8060618742`.
+- [Volume 16](llms-full.016.txt): 2453 documents, 8386713 bytes, SHA-256 `9d7222625fdc77797646d5e205c6a2c04dbdfb28d3f61bba63e46c1469710c62`.
+- [Volume 17](llms-full.017.txt): 2342 documents, 8380717 bytes, SHA-256 `79fc59f26a3cf12846adf227ae775a1fbb019e842b22157158ec238ebaaf9554`.
+- [Volume 18](llms-full.018.txt): 2243 documents, 8387727 bytes, SHA-256 `fa1eb6bc035e4e3f4f29dce82d90dea78537a191e8d933ac298de1920c241354`.
+- [Volume 19](llms-full.019.txt): 2967 documents, 8360463 bytes, SHA-256 `ce5f1a1d7ef6fe703e7120b523b0af2ad94fe87e07d26eda79f61541dcabe0be`.
+- [Volume 20](llms-full.020.txt): 3247 documents, 8386649 bytes, SHA-256 `415ed18aebc09238417c3dd5f7968835b6fa147ac37a443bb7089a4accab6afb`.
+- [Volume 21](llms-full.021.txt): 7389 documents, 8388251 bytes, SHA-256 `494f2c0983e9716cd596fbdec53de9684655b08ed96f8ea9b360e081d42d5080`.
+- [Volume 22](llms-full.022.txt): 9095 documents, 8388119 bytes, SHA-256 `f4ba264b5ce40406b290d016ac2257474259b9fd3a303886c6ba1252d32bd48c`.
+- [Volume 23](llms-full.023.txt): 3502 documents, 8387719 bytes, SHA-256 `a19733a5256933e4c020e5506d0ed7519539032f8c69a5f03a55c36754423c4d`.
+- [Volume 24](llms-full.024.txt): 4824 documents, 8388445 bytes, SHA-256 `da01907ecbc0e0eb5e63562c93ecfb764792455d08777beeaaf1bd97869676a6`.
+- [Volume 25](llms-full.025.txt): 3517 documents, 8388519 bytes, SHA-256 `12028b3135634a79cc4a7fde0b78a1b9cd6527220c2091c23836beeb18a20da6`.
+- [Volume 26](llms-full.026.txt): 4458 documents, 8384604 bytes, SHA-256 `420ff5b909f5be7a860061d9b600429c6ee1e52660454054d50453904128fb05`.
+- [Volume 27](llms-full.027.txt): 4141 documents, 8386041 bytes, SHA-256 `d6a41bb7bac904bc2368d6aba29bf66730006fc0da99abcaeb3a77b001ba789c`.
+- [Volume 28](llms-full.028.txt): 2745 documents, 8387898 bytes, SHA-256 `a0e0f5dd523cea5e97c3679cf45a36fd498aa5615faf8542bcd8115b7622be68`.
+- [Volume 29](llms-full.029.txt): 2544 documents, 8384870 bytes, SHA-256 `b1e0fac714bbca332904cee5a7c8807d7a7dbb934416a37fb3c5bba3edf2b704`.
+- [Volume 30](llms-full.030.txt): 3023 documents, 8388156 bytes, SHA-256 `67969da7218a6364319b4be57ac868741cf26fee6213b4a0dd2f2a954de0fba4`.
+- [Volume 31](llms-full.031.txt): 2940 documents, 8388381 bytes, SHA-256 `da3872bf9b80718b304ddffd7ac05b65852fcb3b24c892ca88c62e2fcc691860`.
+- [Volume 32](llms-full.032.txt): 2379 documents, 8383553 bytes, SHA-256 `65e3722e9e326425cc24e1dbe4e1acbccde3e4a30c7d92eaa67c020980f8d4e1`.
+- [Volume 33](llms-full.033.txt): 2663 documents, 8387068 bytes, SHA-256 `e2cdb138bd3204294b3d1a1d4aa99a39b8e2fd937114d166a00a479d80e2eaa0`.
+- [Volume 34](llms-full.034.txt): 4233 documents, 8388029 bytes, SHA-256 `4966cf4138b574501651f5e53a86018d8da397f576426bd106cd40a05f1d5ff0`.
+- [Volume 35](llms-full.035.txt): 3303 documents, 8387812 bytes, SHA-256 `96c5a781692e49158fe59044f1d71e7ca94efca5f0668670d97dab203e51d4e4`.
+- [Volume 36](llms-full.036.txt): 2607 documents, 8386968 bytes, SHA-256 `95265cf5e2b8798295b79bd203e78cb66ec2ace93440f60864e0a8f2418b7dfc`.
+- [Volume 37](llms-full.037.txt): 8429 documents, 8388329 bytes, SHA-256 `f7fc085559a91cfa0ef4cbdff359197a9e175ae754ed86a534b24eb35ab71591`.
+- [Volume 38](llms-full.038.txt): 6781 documents, 8383384 bytes, SHA-256 `21cb3c289ac575bad599026a7164b2ece53e0f4994f6c552e032e8fe8a26fa05`.
+- [Volume 39](llms-full.039.txt): 3553 documents, 8387731 bytes, SHA-256 `3564cd59cfcf0ea471ec3687995f5d520239b8244568996c6ec87f66eb23ad17`.
+- [Volume 40](llms-full.040.txt): 4378 documents, 8387182 bytes, SHA-256 `afd26a11419977f228b7b4092c2acec022378cf32f2c38731450bf1419b5ddb8`.
+- [Volume 41](llms-full.041.txt): 3729 documents, 8388372 bytes, SHA-256 `bcdcb548b27623640d8bcf6346e67f513a904192195640e8456c10d62fa3ab67`.
+- [Volume 42](llms-full.042.txt): 3787 documents, 8329679 bytes, SHA-256 `3173c48aff4bbf7ccc59e5285de7572649c051f10a819c5db10ae439538248b3`.
+- [Volume 43](llms-full.043.txt): 4973 documents, 8387993 bytes, SHA-256 `8820fd81bd27a3a49b1f26ae9b59f7dc1b7e7dc2cb35eb667780f5f60d03f633`.
+- [Volume 44](llms-full.044.txt): 5898 documents, 8385800 bytes, SHA-256 `5b1627b150550276d55e5b20459ca7ee2a1e144c68e2579a52dd0704534f1dd8`.
+- [Volume 45](llms-full.045.txt): 2735 documents, 8379742 bytes, SHA-256 `b79cebb36023cc291cce4f0747be0be5d520670ff379f24b270eea4bdfd831b1`.
+- [Volume 46](llms-full.046.txt): 2865 documents, 8379114 bytes, SHA-256 `a94955ffea291fda4c0df3c20e58621bd573320f74622e5ac69047a60f987fa3`.
+- [Volume 47](llms-full.047.txt): 3595 documents, 8387937 bytes, SHA-256 `90ef2aaf5a681138ad1d35a4eff9e17d794d3c182feadcf40aee1216789e8340`.
+- [Volume 48](llms-full.048.txt): 3066 documents, 8387890 bytes, SHA-256 `bced06b384fadeb52ebb5a48eca37a65396f37a569b425fe119da062208dfb9a`.
+- [Volume 49](llms-full.049.txt): 3754 documents, 8388206 bytes, SHA-256 `73fc08aa2cc1540a02d6a22229563382366311af13cf6120f54755cec41abb27`.
+- [Volume 50](llms-full.050.txt): 4499 documents, 8387619 bytes, SHA-256 `59bbdecce08984131083a4be3f9dbf0c0787324c92d1783b348078fefd655185`.
+- [Volume 51](llms-full.051.txt): 3901 documents, 8388156 bytes, SHA-256 `1248afa980e73edcbca6d83000fede3f25af3ca602d0c05505c4676000eaf3c6`.
+- [Volume 52](llms-full.052.txt): 2583 documents, 8387081 bytes, SHA-256 `bda43b6d3091cc96a7691e942df6c932365019705f7e7dcdfc9b8b35153d255a`.
+- [Volume 53](llms-full.053.txt): 4215 documents, 8388387 bytes, SHA-256 `80b245a5f1241ebf137d68a9f0c39a2fe2454d224da0c8bfb710deb89dc1dba9`.
+- [Volume 54](llms-full.054.txt): 5378 documents, 8378247 bytes, SHA-256 `6cd90f9a5c60c1f892ad41162e2e892b72b2322aad24527cda147c9f188d2232`.
+- [Volume 55](llms-full.055.txt): 3037 documents, 8387476 bytes, SHA-256 `59f445d299c83ca7c82b545f2f918d317bdf3d75bb274f0c42d7707ba1c2291c`.
+- [Volume 56](llms-full.056.txt): 7046 documents, 8387759 bytes, SHA-256 `eb0536c560ae726ef6a12af5114b0856ff493aac98c1c7fa74abf5a01a79271e`.
+- [Volume 57](llms-full.057.txt): 5051 documents, 8384583 bytes, SHA-256 `fea006345431b1f41d0dd2734ba151ea85b9debc37165b1e06739537d01239d9`.
+- [Volume 58](llms-full.058.txt): 4428 documents, 8386650 bytes, SHA-256 `61e7f904db98143afc4dbb0a272eb220ff2c8b9a0a3342e8274edb72f4c27c5f`.
+- [Volume 59](llms-full.059.txt): 3616 documents, 8384606 bytes, SHA-256 `3673ba08a72f8bcbc4badad124b32a64d9ae436da3082a54158190bc1c44424c`.
+- [Volume 60](llms-full.060.txt): 3831 documents, 8387538 bytes, SHA-256 `33a4fccc132a1243caf9526a5395a93872d1d506adb60c8189453e38b639d7fb`.
+- [Volume 61](llms-full.061.txt): 2177 documents, 8378046 bytes, SHA-256 `34cdaf4a4b7e966fb3b3d899d8cc5a24f560cc50bb65f9da16e03c3490883f42`.
+- [Volume 62](llms-full.062.txt): 2788 documents, 8388138 bytes, SHA-256 `7303003e6b97f106bef7b6eb40c8275d6b3f107b3b2a9a53742118ef386958ac`.
+- [Volume 63](llms-full.063.txt): 2764 documents, 8387232 bytes, SHA-256 `54d5a62b8d79011390d3e10d31fabdb731284a453fa6b3c99a8292911a8a8877`.
+- [Volume 64](llms-full.064.txt): 2882 documents, 8388555 bytes, SHA-256 `7109fb5f4a25ee61fc05e6dff623edcfcb809079861f8a3c383ccc5cf8d382fd`.
+- [Volume 65](llms-full.065.txt): 3101 documents, 8388595 bytes, SHA-256 `f89cde8ab4c7116cf4d425742564f8e8ada1a9fd48368b071ea80d8ed1496614`.
+- [Volume 66](llms-full.066.txt): 4417 documents, 8388146 bytes, SHA-256 `f66b9027b9e6a6e9ae95c613b2d37d2fe6ff28eb7a21f1f2b29f1623f970a0b5`.
+- [Volume 67](llms-full.067.txt): 3057 documents, 8383762 bytes, SHA-256 `01a9356d77cdf656bae32985595c9dbd9152b36020a1fd5559560687e9ce1098`.
+- [Volume 68](llms-full.068.txt): 505 documents, 1219122 bytes, SHA-256 `b0f6b04ebb077d5f978cb11e4118f235a59dfbf5c85ece2bf75b332df34de27e`.

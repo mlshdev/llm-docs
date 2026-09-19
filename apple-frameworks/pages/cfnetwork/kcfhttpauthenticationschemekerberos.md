@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cfnetwork/kcfhttpauthenticationschemekerberos](https://developer.apple.com/documentation/cfnetwork/kcfhttpauthenticationschemekerberos)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/cfnetwork/kcfhttpauthenticationschemekerberos
 
 # kCFHTTPAuthenticationSchemeKerberos (Swift)
 

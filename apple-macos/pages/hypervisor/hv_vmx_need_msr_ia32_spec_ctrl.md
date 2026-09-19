@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_vmx_need_msr_ia32_spec_ctrl](https://developer.apple.com/documentation/hypervisor/hv_vmx_need_msr_ia32_spec_ctrl)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_vmx_need_msr_ia32_spec_ctrl
 
 # HV_VMX_NEED_MSR_IA32_SPEC_CTRL (Swift)
 

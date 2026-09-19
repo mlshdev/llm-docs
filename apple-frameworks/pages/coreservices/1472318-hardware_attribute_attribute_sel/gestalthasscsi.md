@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1472318-hardware_attribute_attribute_sel/gestalthasscsi](https://developer.apple.com/documentation/coreservices/1472318-hardware_attribute_attribute_sel/gestalthasscsi)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/1472318-hardware_attribute_attribute_sel/gestalthasscsi
 
 # gestaltHasSCSI
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/ios-ipados-release-notes/ios-12_1_3-release-notes](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-12_1_3-release-notes)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-12_1_3-release-notes
 
 # iOS 12.1.3 Release Notes
 

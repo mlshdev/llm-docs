@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/sockaddr_inarp/1590385-sin_srcaddr](https://developer.apple.com/documentation/kernel/sockaddr_inarp/1590385-sin_srcaddr)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/sockaddr_inarp/1590385-sin_srcaddr
 
 # sin_srcaddr
 

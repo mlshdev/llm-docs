@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/nfs_supported_kerberos_etypes/nfs_aes128_cts_hmac_sha1_96](https://developer.apple.com/documentation/kernel/nfs_supported_kerberos_etypes/nfs_aes128_cts_hmac_sha1_96)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/nfs_supported_kerberos_etypes/nfs_aes128_cts_hmac_sha1_96
 
 # NFS_AES128_CTS_HMAC_SHA1_96
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/fsforkioparam/1566009-allocationamount](https://developer.apple.com/documentation/coreservices/fsforkioparam/1566009-allocationamount)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/fsforkioparam/1566009-allocationamount
 
 # allocationAmount
 

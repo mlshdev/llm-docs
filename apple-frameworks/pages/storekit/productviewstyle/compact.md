@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/productviewstyle/compact](https://developer.apple.com/documentation/storekit/productviewstyle/compact)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/productviewstyle/compact
 
 # compact
 
@@ -19,5 +20,5 @@ An product view style suitable for layouts where less space is available, or for
 ### Getting built-in product view styles
 
 - [automatic](automatic.md): Conforms when `Self` is `AutomaticProductViewStyle`.
-- [large](large.md): Conforms when `Self` is `LargeProductViewStyle`. A product view style suitable for layouts where the in-app purchase content is prominent.
+- [large](large.md): Conforms when `Self` is `LargeProductViewStyle`. A product view style suitable for layouts where the Apple In-App Purchase content is prominent.
 - [regular](regular.md): Conforms when `Self` is `RegularProductViewStyle`. A product view style that uses a standard, platform-appropriate layout.

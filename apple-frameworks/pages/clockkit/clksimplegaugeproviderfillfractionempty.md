@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clksimplegaugeproviderfillfractionempty](https://developer.apple.com/documentation/clockkit/clksimplegaugeproviderfillfractionempty)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clksimplegaugeproviderfillfractionempty
 
 # CLKSimpleGaugeProviderFillFractionEmpty (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Global Variable  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 A fill value indicating an empty gauge.
 
@@ -35,7 +36,7 @@ For [CLKGaugeProviderStyle.ring](clkgaugeproviderstyle/ring.md) style gauges, th
 
 **Framework:** ClockKit  
 **Kind:** Global Variable  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 A fill value indicating an empty gauge.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corevideo/cvpixelbufferattributes/subscript(dynamicmember:)-jo6l](https://developer.apple.com/documentation/corevideo/cvpixelbufferattributes/subscript(dynamicmember:)-jo6l)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corevideo/cvpixelbufferattributes/subscript(dynamicmember:)-jo6l
 
 # subscript(dynamicMember:)
 

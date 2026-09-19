@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uisceneaccessory](https://developer.apple.com/documentation/uikit/uisceneaccessory)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uisceneaccessory
 
 # UISceneAccessory (Swift)
 
@@ -28,6 +29,11 @@ Use an instance of this type along with `UIViewController.registerSceneAccessory
 
 ## Topics
 
+### Creating a camera capture accessory
+
+- [cameraCapture(sceneConfiguration:)](uisceneaccessory/cameracapture%28sceneconfiguration_%29.md): Beta. Creates a scene accessory for presenting content during camera capture.
+- [cameraCapture(sceneConfiguration:userInfo:)](uisceneaccessory/cameracapture%28sceneconfiguration_userinfo_%29.md): Beta. Creates a scene accessory for presenting content during camera capture, passing additional context to the scene delegate.
+
 ### Type Methods
 
 - [externalNonInteractive(sceneConfiguration:)](uisceneaccessory/externalnoninteractive%28sceneconfiguration_%29.md): Creates a new scene accessory configuration for presenting non-interactive content on an external display.
@@ -53,6 +59,7 @@ Use an instance of this type along with `UIViewController.registerSceneAccessory
 
 ### Scene accessories
 
+- [Presenting content on a connected display](presenting-content-on-a-connected-display.md): Fill connected displays with additional content from your app.
 - [UISceneAccessoryRegistration](uisceneaccessoryregistration.md): A type which represents the registration for a given scene accessory.
 
 # UISceneAccessory (Objective-C)
@@ -83,6 +90,11 @@ Use an instance of this type along with `UIViewController.registerSceneAccessory
 
 ## Topics
 
+### Creating a camera capture accessory
+
+- [cameraCaptureSceneAccessoryWithConfiguration:](uisceneaccessory/cameracapture%28sceneconfiguration_%29.md): Beta. Creates a scene accessory for presenting content during camera capture.
+- [cameraCaptureSceneAccessoryWithConfiguration:userInfo:](uisceneaccessory/cameracapture%28sceneconfiguration_userinfo_%29.md): Beta. Creates a scene accessory for presenting content during camera capture, passing additional context to the scene delegate.
+
 ### Type Methods
 
 - [externalNonInteractiveSceneAccessoryWithConfiguration:](uisceneaccessory/externalnoninteractive%28sceneconfiguration_%29.md): Creates a new scene accessory configuration for presenting non-interactive content on an external display.
@@ -98,4 +110,5 @@ Use an instance of this type along with `UIViewController.registerSceneAccessory
 
 ### Scene accessories
 
+- [Presenting content on a connected display](presenting-content-on-a-connected-display.md): Fill connected displays with additional content from your app.
 - [UISceneAccessoryRegistration](uisceneaccessoryregistration.md): A type which represents the registration for a given scene accessory.

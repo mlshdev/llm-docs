@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoobject/removecustomproperty](https://developer.apple.com/documentation/videodriverkit/iouservideoobject/removecustomproperty)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoobject/removecustomproperty
 
 # RemoveCustomProperty
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Removes a custom property from the video object.
 
@@ -30,5 +31,5 @@ virtual kern_return_t RemoveCustomProperty(IOUserVideoCustomProperty *in_custom_
 
 ### Using custom properties
 
-- [AddCustomProperty](addcustomproperty.md): Adds an custom property object to this object.
-- [IOUserVideoCustomProperty](../iouservideocustomproperty.md): A custom property object that can be added to or associated with video objects.
+- [AddCustomProperty](addcustomproperty.md): Beta. Adds an custom property object to this object.
+- [IOUserVideoCustomProperty](../iouservideocustomproperty.md): Beta. A custom property object that can be added to or associated with video objects.

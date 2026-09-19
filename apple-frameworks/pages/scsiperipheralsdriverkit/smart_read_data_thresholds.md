@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scsiperipheralsdriverkit/smart_read_data_thresholds](https://developer.apple.com/documentation/scsiperipheralsdriverkit/smart_read_data_thresholds)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/scsiperipheralsdriverkit/smart_read_data_thresholds
 
 # SMART_Read_Data_Thresholds
 

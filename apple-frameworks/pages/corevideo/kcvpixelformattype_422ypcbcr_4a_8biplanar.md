@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corevideo/kcvpixelformattype_422ypcbcr_4a_8biplanar](https://developer.apple.com/documentation/corevideo/kcvpixelformattype_422ypcbcr_4a_8biplanar)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corevideo/kcvpixelformattype_422ypcbcr_4a_8biplanar
 
 # kCVPixelFormatType_422YpCbCr_4A_8BiPlanar (Swift)
 

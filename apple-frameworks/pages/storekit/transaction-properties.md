@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction-properties](https://developer.apple.com/documentation/storekit/transaction-properties)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction-properties
 
 # Transaction properties
 
@@ -27,8 +28,8 @@ The properties of a transaction, including identifiers, purchase and revocation 
 ### Identifying the app and product
 
 - [appBundleID](transaction/appbundleid.md): The bundle identifier for the app.
-- [productID](transaction/productid.md): The product identifier of the in-app purchase.
-- [productType](transaction/producttype.md): The type of the in-app purchase.
+- [productID](transaction/productid.md): The product identifier of the Apple In-App Purchase.
+- [productType](transaction/producttype.md): The type of the Apple In-App Purchase.
 - [subscriptionGroupID](transaction/subscriptiongroupid.md): The identifier of the subscription group that the subscription belongs to.
 
 ### Getting purchase and expiration dates
@@ -38,7 +39,7 @@ The properties of a transaction, including identifiers, purchase and revocation 
 
 ### Getting the product price and currency
 
-- [price](transaction/price.md): The price of the in-app purchase that the system records in the transaction.
+- [price](transaction/price.md): The price of the Apple In-App Purchase that the system records in the transaction.
 - [currency](transaction/currency.md): The currency of the price of the product.
 
 ### Getting purchase details

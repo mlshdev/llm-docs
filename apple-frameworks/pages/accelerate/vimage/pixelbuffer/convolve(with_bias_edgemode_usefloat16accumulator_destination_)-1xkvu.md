@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimage/pixelbuffer/convolve(with:bias:edgemode:usefloat16accumulator:destination:)-1xkvu](https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/convolve(with:bias:edgemode:usefloat16accumulator:destination:)-1xkvu)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/convolve(with:bias:edgemode:usefloat16accumulator:destination:)-1xkvu
 
 # convolve(with:bias:edgeMode:useFloat16Accumulator:destination:)
 

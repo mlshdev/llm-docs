@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/lck_wake_action_t/lck_wake_do_not_transfer_push](https://developer.apple.com/documentation/kernel/lck_wake_action_t/lck_wake_do_not_transfer_push)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/lck_wake_action_t/lck_wake_do_not_transfer_push
 
 # LCK_WAKE_DO_NOT_TRANSFER_PUSH
 

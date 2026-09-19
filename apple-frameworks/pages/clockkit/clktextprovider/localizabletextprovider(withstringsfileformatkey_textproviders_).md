@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clktextprovider/localizabletextprovider(withstringsfileformatkey:textproviders:)](https://developer.apple.com/documentation/clockkit/clktextprovider/localizabletextprovider(withstringsfileformatkey:textproviders:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clktextprovider/localizabletextprovider(withstringsfileformatkey:textproviders:)
 
 # localizableTextProvider(withStringsFileFormatKey:textProviders:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 3.0+ (deprecated in 27.0)
+**Availability:** watchOS 3.0+ (deprecated in 27.2)
 
 Creates a localizable text provider with a strings file key that resolves to a format string, and with text providers for the replacement arguments.
 
@@ -44,7 +45,7 @@ Use this method to create a compound text provider using a format string, with o
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 3.0+ (deprecated in 27.0)
+**Availability:** watchOS 3.0+ (deprecated in 27.2)
 
 Creates a localizable text provider with a strings file key that resolves to a format string, and with text providers for the replacement arguments.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/is_response_code_final_bit_set](https://developer.apple.com/documentation/iobluetooth/is_response_code_final_bit_set)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetooth/is_response_code_final_bit_set
 
 # IS_RESPONSE_CODE_FINAL_BIT_SET
 

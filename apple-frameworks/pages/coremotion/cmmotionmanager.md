@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremotion/cmmotionmanager](https://developer.apple.com/documentation/coremotion/cmmotionmanager)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremotion/cmmotionmanager
 
 # CMMotionManager (Swift)
 
@@ -143,6 +144,10 @@ To interpret accelerometer, gyroscope, or attitude information, you need to know
 ### Instance Properties
 
 - [deviceMotionBody](cmmotionmanager/devicemotionbody.md)
+
+### Type Methods
+
+- [authorizationStatus()](cmmotionmanager/authorizationstatus%28%29.md): Beta.
 
 ## Relationships
 
@@ -308,6 +313,10 @@ To interpret accelerometer, gyroscope, or attitude information, you need to know
 ### Instance Properties
 
 - [deviceMotionBody](cmmotionmanager/devicemotionbody.md)
+
+### Type Methods
+
+- [authorizationStatus](cmmotionmanager/authorizationstatus%28%29.md): Beta.
 
 ## Relationships
 

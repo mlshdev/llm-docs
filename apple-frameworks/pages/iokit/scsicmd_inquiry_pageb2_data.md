@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/scsicmd_inquiry_pageb2_data](https://developer.apple.com/documentation/iokit/scsicmd_inquiry_pageb2_data)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/scsicmd_inquiry_pageb2_data
 
 # SCSICmd_INQUIRY_PageB2_Data
 

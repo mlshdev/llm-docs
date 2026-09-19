@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generationoptions/toolcallingmode-swift.property](https://developer.apple.com/documentation/foundationmodels/generationoptions/toolcallingmode-swift.property)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generationoptions/toolcallingmode-swift.property
 
 # toolCallingMode
 
@@ -22,5 +23,5 @@ var toolCallingMode: GenerationOptions.ToolCallingMode?
 - [sampling](sampling.md): Deprecated. A sampling strategy for how the model picks tokens when generating a response.
 - [samplingMode](samplingmode-swift.property.md): A sampling strategy for how the model picks tokens when generating a response.
 - [GenerationOptions.SamplingMode](samplingmode-swift.struct.md): A type that defines how values are sampled from a probability distribution.
-- [GenerationOptions.ToolCallingMode](toolcallingmode-swift.struct.md): A value you use to describe the model behavior when it comes to tool usage.
+- [GenerationOptions.ToolCallingMode](toolcallingmode-swift.struct.md): A value that describes how the model uses tools.
 - [maximumResponseTokens](maximumresponsetokens.md): The maximum number of tokens the model is allowed to produce in its response.

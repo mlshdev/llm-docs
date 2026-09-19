@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstableviewdatasource/tableview(_:writerowswith:to:)](https://developer.apple.com/documentation/appkit/nstableviewdatasource/tableview(_:writerowswith:to:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstableviewdatasource/tableview(_:writerowswith:to:)
 
 # tableView(\_:writeRowsWith:to:) (Swift)
 

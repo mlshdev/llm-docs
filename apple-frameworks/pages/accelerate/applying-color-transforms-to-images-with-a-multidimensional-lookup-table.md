@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/applying-color-transforms-to-images-with-a-multidimensional-lookup-table](https://developer.apple.com/documentation/accelerate/applying-color-transforms-to-images-with-a-multidimensional-lookup-table)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/applying-color-transforms-to-images-with-a-multidimensional-lookup-table
 
 # Applying color transforms to images with a multidimensional lookup table (Swift)
 

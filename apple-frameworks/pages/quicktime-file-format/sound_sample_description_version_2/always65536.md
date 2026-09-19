@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/sound_sample_description_version_2/always65536](https://developer.apple.com/documentation/quicktime-file-format/sound_sample_description_version_2/always65536)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/quicktime-file-format/sound_sample_description_version_2/always65536
 
 # always65536
 

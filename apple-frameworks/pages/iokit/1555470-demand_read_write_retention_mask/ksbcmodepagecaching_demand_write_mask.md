@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1555470-demand_read_write_retention_mask/ksbcmodepagecaching_demand_write_mask](https://developer.apple.com/documentation/iokit/1555470-demand_read_write_retention_mask/ksbcmodepagecaching_demand_write_mask)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1555470-demand_read_write_retention_mask/ksbcmodepagecaching_demand_write_mask
 
 # kSBCModePageCaching_DEMAND_WRITE_Mask
 

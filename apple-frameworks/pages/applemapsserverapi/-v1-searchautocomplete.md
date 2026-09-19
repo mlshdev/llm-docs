@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applemapsserverapi/-v1-searchautocomplete](https://developer.apple.com/documentation/applemapsserverapi/-v1-searchautocomplete)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applemapsserverapi/-v1-searchautocomplete
 
 # Search for places that meet specific criteria to autocomplete a place search
 

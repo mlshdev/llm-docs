@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/mach_service_port_info_data_t/3753677-mspi_string_name](https://developer.apple.com/documentation/kernel/mach_service_port_info_data_t/3753677-mspi_string_name)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/mach_service_port_info_data_t/3753677-mspi_string_name
 
 # mspi_string_name
 

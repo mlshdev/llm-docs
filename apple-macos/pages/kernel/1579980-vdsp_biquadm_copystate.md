@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1579980-vdsp_biquadm_copystate](https://developer.apple.com/documentation/kernel/1579980-vdsp_biquadm_copystate)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1579980-vdsp_biquadm_copystate
 
 # vDSP_biquadm_CopyState
 

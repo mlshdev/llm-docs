@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avaudiosession/setactive(_:options:)](https://developer.apple.com/documentation/avfaudio/avaudiosession/setactive(_:options:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosession/setactive(_:options:)
 
 # setActive(\_:options:) (Swift)
 
@@ -41,7 +42,7 @@ When your app deactivates a session, the return value is [false](../../foundatio
 
 ## See Also
 
-### Activating the audio configuration
+### Activating and deactivating the session
 
 - [activate(options:completionHandler:)](activate%28options_completionhandler_%29.md): Activates an audio session asynchronously.
 - [deactivate(options:completionHandler:)](deactivate%28options_completionhandler_%29.md): Deactivates the audio session asynchronously.
@@ -96,7 +97,7 @@ When your app deactivates a session, the return value is [falseExpression](../..
 
 ## See Also
 
-### Activating the audio configuration
+### Activating and deactivating the session
 
 - [setActive:error:](setactive_error_.md): Activates or deactivates your app’s audio session.
 - [activateWithOptions:completionHandler:](activate%28options_completionhandler_%29.md): Activates an audio session asynchronously.

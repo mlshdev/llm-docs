@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsgesturerecognizer/name](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/name)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsgesturerecognizer/name
 
 # name (Swift)
 
@@ -18,7 +19,7 @@ var name: String? { get set }
 
 - [allowedTouchTypes](allowedtouchtypes.md)
 - [isCancellableByScrollGesture](iscancellablebyscrollgesture.md): Causes the receiver to be cancelled when its enclosing scroll view’s gesture recognizer begins.
-- [modifierFlags](modifierflags.md)
+- [modifierFlags](modifierflags.md): The keyboard modifier flags in effect while the receiver last processed an event.
 
 # name (Objective-C)
 
@@ -38,4 +39,4 @@ var name: String? { get set }
 
 - [allowedTouchTypes](allowedtouchtypes.md)
 - [cancellableByScrollGesture](iscancellablebyscrollgesture.md): Causes the receiver to be cancelled when its enclosing scroll view’s gesture recognizer begins.
-- [modifierFlags](modifierflags.md)
+- [modifierFlags](modifierflags.md): The keyboard modifier flags in effect while the receiver last processed an event.

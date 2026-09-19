@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/vol_capabilities_attr_t/1555314-capabilities](https://developer.apple.com/documentation/kernel/vol_capabilities_attr_t/1555314-capabilities)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/vol_capabilities_attr_t/1555314-capabilities
 
 # capabilities
 

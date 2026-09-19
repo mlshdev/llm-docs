@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/ksecoidapple_extension_wwdr_intermediate](https://developer.apple.com/documentation/security/ksecoidapple_extension_wwdr_intermediate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/ksecoidapple_extension_wwdr_intermediate
 
 # kSecOIDAPPLE_EXTENSION_WWDR_INTERMEDIATE (Swift)
 

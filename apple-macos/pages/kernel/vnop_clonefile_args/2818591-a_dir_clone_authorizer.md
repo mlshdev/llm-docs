@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/vnop_clonefile_args/2818591-a_dir_clone_authorizer](https://developer.apple.com/documentation/kernel/vnop_clonefile_args/2818591-a_dir_clone_authorizer)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/vnop_clonefile_args/2818591-a_dir_clone_authorizer
 
 # a_dir_clone_authorizer
 

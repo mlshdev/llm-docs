@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/coremediaio/kcmiosamplebufferattachment_mouseandkeyboardmodifierskey_cursorpositionx](https://developer.apple.com/documentation/coremediaio/kcmiosamplebufferattachment_mouseandkeyboardmodifierskey_cursorpositionx)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremediaio/kcmiosamplebufferattachment_mouseandkeyboardmodifierskey_cursorpositionx
 
 # kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorPositionX
 

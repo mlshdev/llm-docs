@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideocustomproperty/removecustomproperty](https://developer.apple.com/documentation/videodriverkit/iouservideocustomproperty/removecustomproperty)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideocustomproperty/removecustomproperty
 
 # RemoveCustomProperty
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Always returns an error, because a custom property cannot have a custom property.
 
@@ -20,4 +21,4 @@ virtual kern_return_t RemoveCustomProperty(IOUserVideoCustomProperty *in_custom_
 
 ### Working with custom properties
 
-- [AddCustomProperty](addcustomproperty.md): Always returns `kIOReturnError` because a custom property cannot have a custom property.
+- [AddCustomProperty](addcustomproperty.md): Beta. Always returns `kIOReturnError` because a custom property cannot have a custom property.

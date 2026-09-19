@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcaptureevent](https://developer.apple.com/documentation/avkit/avcaptureevent)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcaptureevent
 
 # AVCaptureEvent (Swift)
 
@@ -49,15 +50,10 @@ Inspect a capture event’s [phase](avcaptureevent/phase.md) to determine whethe
 
 ## See Also
 
-### iOS playback and capture
+### Capture events
 
-- [Playing video content in a standard user interface](playing-video-content-in-a-standard-user-interface.md): Play media full screen, embedded inline, or in a floating Picture in Picture (PiP) window using a player view controller.
-- [AVPlayerViewController](avplayerviewcontroller.md): A view controller that displays content from a player and presents a native user interface to control playback.
-- [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md): A protocol that defines the methods to implement to respond to player view controller events.
 - [AVCaptureEventInteraction](avcaptureeventinteraction.md): An object that registers handlers to respond to capture events from system hardware buttons.
 - [AVCaptureEventSound](avcaptureeventsound.md): A sound object for a capture event.
-- [AVInputPickerInteraction](avinputpickerinteraction.md): Use `AVInputPickerInteraction` to present an input picker.
-- [Third-party casting support](third-party-casting-support.md): Provide custom playback controls for third-party casting services and other media sources.
 
 # AVCaptureEvent (Objective-C)
 
@@ -99,11 +95,7 @@ Inspect a capture event’s [phase](avcaptureevent/phase.md) to determine whethe
 
 ## See Also
 
-### iOS playback and capture
+### Capture events
 
-- [AVPlayerViewController](avplayerviewcontroller.md): A view controller that displays content from a player and presents a native user interface to control playback.
-- [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md): A protocol that defines the methods to implement to respond to player view controller events.
 - [AVCaptureEventInteraction](avcaptureeventinteraction.md): An object that registers handlers to respond to capture events from system hardware buttons.
 - [AVCaptureEventSound](avcaptureeventsound.md): A sound object for a capture event.
-- [AVInputPickerInteraction](avinputpickerinteraction.md): Use `AVInputPickerInteraction` to present an input picker.
-- [Third-party casting support](third-party-casting-support.md): Provide custom playback controls for third-party casting services and other media sources.

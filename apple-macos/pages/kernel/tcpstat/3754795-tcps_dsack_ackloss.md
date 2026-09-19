@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/tcpstat/3754795-tcps_dsack_ackloss](https://developer.apple.com/documentation/kernel/tcpstat/3754795-tcps_dsack_ackloss)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/tcpstat/3754795-tcps_dsack_ackloss
 
 # tcps_dsack_ackloss
 

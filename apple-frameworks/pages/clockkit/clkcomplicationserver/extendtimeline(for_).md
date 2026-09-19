@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationserver/extendtimeline(for:)](https://developer.apple.com/documentation/clockkit/clkcomplicationserver/extendtimeline(for:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationserver/extendtimeline(for:)
 
 # extendTimeline(for:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Asks the system to extend the data in your complication’s timeline.
 
@@ -40,7 +41,7 @@ Call this method when your existing complication data is still valid and you’v
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Asks the system to extend the data in your complication’s timeline.
 

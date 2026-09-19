@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/adding-supplemental-content-to-a-documentation-catalog](https://developer.apple.com/documentation/xcode/adding-supplemental-content-to-a-documentation-catalog)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/adding-supplemental-content-to-a-documentation-catalog
 
 # Adding supplemental content to a documentation catalog
 

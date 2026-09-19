@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoslidercontrol/getbaseclassid](https://developer.apple.com/documentation/videodriverkit/iouservideoslidercontrol/getbaseclassid)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoslidercontrol/getbaseclassid
 
 # GetBaseClassID
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the class identifier of the base class object.
 
@@ -32,5 +33,5 @@ This method overrides the base class’s implementation.
 
 ### Getting information about the class
 
-- [GetClassID](getclassid.md): Gets the class identifier of the object.
-- [IOUserVideoClassID](../videodriverkit/iouservideoclassid.md): Video class identifiers of an video object.
+- [GetClassID](getclassid.md): Beta. Gets the class identifier of the object.
+- [IOUserVideoClassID](../videodriverkit/iouservideoclassid.md): Beta. Video class identifiers of an video object.

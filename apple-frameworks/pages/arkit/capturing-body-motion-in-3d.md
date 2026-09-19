@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/capturing-body-motion-in-3d](https://developer.apple.com/documentation/arkit/capturing-body-motion-in-3d)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/capturing-body-motion-in-3d
 
 # Capturing Body Motion in 3D
 

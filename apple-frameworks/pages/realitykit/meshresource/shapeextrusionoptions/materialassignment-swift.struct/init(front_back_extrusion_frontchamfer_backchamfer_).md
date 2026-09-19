@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/meshresource/shapeextrusionoptions/materialassignment-swift.struct/init(front:back:extrusion:frontchamfer:backchamfer:)](https://developer.apple.com/documentation/realitykit/meshresource/shapeextrusionoptions/materialassignment-swift.struct/init(front:back:extrusion:frontchamfer:backchamfer:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/meshresource/shapeextrusionoptions/materialassignment-swift.struct/init(front:back:extrusion:frontchamfer:backchamfer:)
 
 # init(front:back:extrusion:frontChamfer:backChamfer:)
 

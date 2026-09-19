@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generationguide/maximumcount(_:)](https://developer.apple.com/documentation/foundationmodels/generationguide/maximumcount(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generationguide/maximumcount(_:)
 
 # maximumCount(\_:)
 
@@ -25,7 +26,7 @@ static func maximumCount<Element>(_ count: Int) -> GenerationGuide<[Element]> wh
 
 The bounds are inclusive.
 
-A `maximumCount` generation guide may be used when you want to ensure the model produces a number of array elements less than or equal to to some maximum value, such as the number of items in a game’s shop.
+A `maximumCount` generation guide may be used when you want to ensure the model produces a number of array elements less than or equal to some maximum value, such as the number of items in a game’s shop.
 
 ```swift
 @Generable

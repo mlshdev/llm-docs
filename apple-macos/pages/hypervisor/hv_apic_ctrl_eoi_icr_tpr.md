@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_apic_ctrl_eoi_icr_tpr](https://developer.apple.com/documentation/hypervisor/hv_apic_ctrl_eoi_icr_tpr)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_apic_ctrl_eoi_icr_tpr
 
 # HV_APIC_CTRL_EOI_ICR_TPR (Swift)
 

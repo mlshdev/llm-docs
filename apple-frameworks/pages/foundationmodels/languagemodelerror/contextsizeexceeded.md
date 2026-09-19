@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelerror/contextsizeexceeded](https://developer.apple.com/documentation/foundationmodels/languagemodelerror/contextsizeexceeded)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelerror/contextsizeexceeded
 
 # LanguageModelError.ContextSizeExceeded
 
@@ -18,14 +19,14 @@ struct ContextSizeExceeded
 
 ### Creating an error instance
 
-- [init(contextSize:tokenCount:debugDescription:metadata:)](contextsizeexceeded/init%28contextsize_tokencount_debugdescription_metadata_%29.md)
+- [init(contextSize:tokenCount:debugDescription:metadata:)](contextsizeexceeded/init%28contextsize_tokencount_debugdescription_metadata_%29.md): Creates information describing a transcript that exceeded the model’s context size.
 
 ### Inspecting context size errors
 
-- [metadata](contextsizeexceeded/metadata.md)
-- [tokenCount](contextsizeexceeded/tokencount.md)
-- [contextSize](contextsizeexceeded/contextsize.md)
-- [debugDescription](contextsizeexceeded/debugdescription.md)
+- [metadata](contextsizeexceeded/metadata.md): Additional information about the failure, keyed by name.
+- [tokenCount](contextsizeexceeded/tokencount.md): The number of tokens in the transcript that exceeded the model’s context size.
+- [contextSize](contextsizeexceeded/contextsize.md): The model’s maximum context size, in tokens.
+- [debugDescription](contextsizeexceeded/debugdescription.md): A debug description to help developers diagnose issues during development.
 
 ## Relationships
 

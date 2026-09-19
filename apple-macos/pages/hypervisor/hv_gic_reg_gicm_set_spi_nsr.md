@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_gic_reg_gicm_set_spi_nsr](https://developer.apple.com/documentation/hypervisor/hv_gic_reg_gicm_set_spi_nsr)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_gic_reg_gicm_set_spi_nsr
 
 # HV_GIC_REG_GICM_SET_SPI_NSR (Swift)
 

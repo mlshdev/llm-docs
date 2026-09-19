@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tvuikit/tvmonogramview/image](https://developer.apple.com/documentation/tvuikit/tvmonogramview/image)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/tvuikit/tvmonogramview/image
 
 # image (Swift)
 
 **Framework:** TVUIKit  
 **Kind:** Instance Property  
-**Availability:** tvOS 12.0+ (deprecated in 27.0)
+**Availability:** tvOS 12.0+ (deprecated in 27.2)
 
 The custom image for the monogram.
 
@@ -32,7 +33,7 @@ If you supply an image, the system uses this image instead of a generic image or
 
 **Framework:** TVUIKit  
 **Kind:** Instance Property  
-**Availability:** tvOS 12.0+ (deprecated in 27.0)
+**Availability:** tvOS 12.0+ (deprecated in 27.2)
 
 The custom image for the monogram.
 

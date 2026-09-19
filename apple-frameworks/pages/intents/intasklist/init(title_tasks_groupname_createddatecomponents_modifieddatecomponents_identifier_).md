@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/intasklist/init(title:tasks:groupname:createddatecomponents:modifieddatecomponents:identifier:)](https://developer.apple.com/documentation/intents/intasklist/init(title:tasks:groupname:createddatecomponents:modifieddatecomponents:identifier:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/intents/intasklist/init(title:tasks:groupname:createddatecomponents:modifieddatecomponents:identifier:)
 
 # init(title:tasks:groupName:createdDateComponents:modifiedDateComponents:identifier:) (Swift)
 

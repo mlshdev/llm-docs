@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideodevice/setpreferredchannelsforstereo](https://developer.apple.com/documentation/videodriverkit/iouservideodevice/setpreferredchannelsforstereo)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideodevice/setpreferredchannelsforstereo
 
 # SetPreferredChannelsForStereo
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Sets the channel indices for the preferred stereo pair
 
@@ -25,7 +26,7 @@ kern_return_t SetPreferredChannelsForStereo(uint32_t in_left_channel, uint32_t i
 
 ### Working with channel layouts
 
-- [GetPreferredChannelsForStereo](getpreferredchannelsforstereo.md): Gets the channel indices for the preferred stereo pair.
-- [SetPreferredInputChannelLayout](setpreferredinputchannellayout.md): Sets the input channel layout with IOUserVideoChannelLabel values
-- [SetPreferredOutputChannelLayout](setpreferredoutputchannellayout.md): Sets the output channel layout.
-- [IOUserVideoChannelLabel](../videodriverkit/iouservideochannellabel.md): These constants are to set the preferred channel layout on video device.
+- [GetPreferredChannelsForStereo](getpreferredchannelsforstereo.md): Beta. Gets the channel indices for the preferred stereo pair.
+- [SetPreferredInputChannelLayout](setpreferredinputchannellayout.md): Beta. Sets the input channel layout with IOUserVideoChannelLabel values
+- [SetPreferredOutputChannelLayout](setpreferredoutputchannellayout.md): Beta. Sets the output channel layout.
+- [IOUserVideoChannelLabel](../videodriverkit/iouservideochannellabel.md): Beta. These constants are to set the preferred channel layout on video device.

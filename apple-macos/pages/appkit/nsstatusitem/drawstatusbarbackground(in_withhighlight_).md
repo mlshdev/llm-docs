@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsstatusitem/drawstatusbarbackground(in:withhighlight:)](https://developer.apple.com/documentation/appkit/nsstatusitem/drawstatusbarbackground(in:withhighlight:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsstatusitem/drawstatusbarbackground(in:withhighlight:)
 
 # drawStatusBarBackground(in:withHighlight:) (Swift)
 
@@ -8,7 +9,7 @@
 
 Draws the menu background pattern for a custom status-bar item in regular or highlight pattern.
 
-> Custom views should not be set on a status item. Use the [button](button.md) property instead.
+> The standard [button](button.md) handles highlight drawing automatically, so this method is no longer necessary.
 
 ## Declaration
 
@@ -50,7 +51,7 @@ You can use this method to help a custom status-bar item emulate the behavior of
 
 Draws the menu background pattern for a custom status-bar item in regular or highlight pattern.
 
-> Custom views should not be set on a status item. Use the [button](button.md) property instead.
+> The standard [button](button.md) handles highlight drawing automatically, so this method is no longer necessary.
 
 ## Declaration
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/coremediaio/kcmiodeviceavcsignalmodehdv1_50](https://developer.apple.com/documentation/coremediaio/kcmiodeviceavcsignalmodehdv1_50)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremediaio/kcmiodeviceavcsignalmodehdv1_50
 
 # kCMIODeviceAVCSignalModeHDV1_50 (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/previouschannelinterstitialviewcontroller(for:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/previouschannelinterstitialviewcontroller(for:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/previouschannelinterstitialviewcontroller(for:)
 
 # previousChannelInterstitialViewController(for:) (Swift)
 
@@ -30,7 +31,7 @@ The framework calls this method when the user initiates, but hasn’t yet commit
 
 ## See Also
 
-### Responding to Channel Changes
+### Responding to channel changes
 
 - [playerViewController(\_:skipToNextChannel:)](playerviewcontroller%28__skiptonextchannel_%29.md): Tells the delegate when the user wants to skip to the next channel.
 - [playerViewController(\_:skipToPreviousChannel:)](playerviewcontroller%28__skiptopreviouschannel_%29.md): Tells the delegate when the user wants to skip to the previous channel.
@@ -66,7 +67,7 @@ The framework calls this method when the user initiates, but hasn’t yet commit
 
 ## See Also
 
-### Responding to Channel Changes
+### Responding to channel changes
 
 - [playerViewController:skipToNextChannel:](playerviewcontroller%28__skiptonextchannel_%29.md): Tells the delegate when the user wants to skip to the next channel.
 - [playerViewController:skipToPreviousChannel:](playerviewcontroller%28__skiptopreviouschannel_%29.md): Tells the delegate when the user wants to skip to the previous channel.

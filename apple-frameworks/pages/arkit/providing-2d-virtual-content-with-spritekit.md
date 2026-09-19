@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/providing-2d-virtual-content-with-spritekit](https://developer.apple.com/documentation/arkit/providing-2d-virtual-content-with-spritekit)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/providing-2d-virtual-content-with-spritekit
 
 # Providing 2D Virtual Content with SpriteKit (Swift)
 

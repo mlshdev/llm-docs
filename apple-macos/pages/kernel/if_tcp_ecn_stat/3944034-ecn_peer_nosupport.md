@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/if_tcp_ecn_stat/3944034-ecn_peer_nosupport](https://developer.apple.com/documentation/kernel/if_tcp_ecn_stat/3944034-ecn_peer_nosupport)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/if_tcp_ecn_stat/3944034-ecn_peer_nosupport
 
 # ecn_peer_nosupport
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationchannel/textsegmentreplacement](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/textsegmentreplacement)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/textsegmentreplacement
 
 # LanguageModelExecutorGenerationChannel.TextSegmentReplacement
 
@@ -18,15 +19,15 @@ struct TextSegmentReplacement
 
 ## Overview
 
-The `tokenCount` is the producer’s count of tokens carried by `content` and is used by safety or usage accounting to credit the replacement against
+The `tokenCount` is the producer’s count of tokens carried by `content` and is used by safety or usage accounting to credit the replacement against.
 
 ## Topics
 
 ### Handling the replacement
 
-- [content](textsegmentreplacement/content.md)
-- [tokenCount](textsegmentreplacement/tokencount.md)
-- [segmentID](textsegmentreplacement/segmentid.md)
+- [content](textsegmentreplacement/content.md): The replacement text for the entry’s current text segment.
+- [tokenCount](textsegmentreplacement/tokencount.md): The number of tokens the replacement text carries.
+- [segmentID](textsegmentreplacement/segmentid.md): The identifier of the text segment to replace, or empty for the current segment.
 
 ## Relationships
 

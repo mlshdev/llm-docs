@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:shouldpresent:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:shouldpresent:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:shouldpresent:)
 
 # playerViewController(\_:shouldPresent:) (Swift)
 
@@ -27,11 +28,11 @@ optional func playerViewController(_ playerViewController: AVPlayerViewControlle
 
 ## Mentioned In
 
-- [Presenting Content Proposals in tvOS](../presenting-content-proposals-in-tvos.md)
+- [Presenting content proposals in tvOS](../presenting-content-proposals-in-tvos.md)
 
 ## See Also
 
-### Responding to Content Proposals
+### Responding to content proposals
 
 - [playerViewController(\_:didAccept:)](playerviewcontroller%28__didaccept_%29.md): Tells the delegate when the user accepts the proposed content.
 - [playerViewController(\_:didReject:)](playerviewcontroller%28__didreject_%29.md): Tells the delegate when the user rejects the proposed content.
@@ -63,11 +64,11 @@ Asks the delegate whether the player view controller presents a content proposal
 
 ## Mentioned In
 
-- [Presenting Content Proposals in tvOS](../presenting-content-proposals-in-tvos.md)
+- [Presenting content proposals in tvOS](../presenting-content-proposals-in-tvos.md)
 
 ## See Also
 
-### Responding to Content Proposals
+### Responding to content proposals
 
 - [playerViewController:didAcceptContentProposal:](playerviewcontroller%28__didaccept_%29.md): Tells the delegate when the user accepts the proposed content.
 - [playerViewController:didRejectContentProposal:](playerviewcontroller%28__didreject_%29.md): Tells the delegate when the user rejects the proposed content.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationchannel/reasoning/action-swift.struct](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/reasoning/action-swift.struct)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/reasoning/action-swift.struct
 
 # LanguageModelExecutorGenerationChannel.Reasoning.Action
 
@@ -24,11 +25,11 @@ struct Action
 
 ### Reasoning actions
 
-- [appendText(\_:segmentID:tokenCount:)](action-swift.struct/appendtext%28__segmentid_tokencount_%29.md)
-- [replaceTextSegment(\_:segmentID:tokenCount:)](action-swift.struct/replacetextsegment%28__segmentid_tokencount_%29.md)
-- [updateMetadata(\_:)](action-swift.struct/updatemetadata%28__%29.md)
-- [updateSignature(\_:tokenCount:)](action-swift.struct/updatesignature%28__tokencount_%29.md)
-- [updateUsage(input:output:metadata:)](action-swift.struct/updateusage%28input_output_metadata_%29.md)
+- [appendText(\_:segmentID:tokenCount:)](action-swift.struct/appendtext%28__segmentid_tokencount_%29.md): Creates an action that appends text to the entry’s current text segment.
+- [replaceTextSegment(\_:segmentID:tokenCount:)](action-swift.struct/replacetextsegment%28__segmentid_tokencount_%29.md): Creates an action that replaces the entry’s current text segment.
+- [updateMetadata(\_:)](action-swift.struct/updatemetadata%28__%29.md): Creates an action that replaces the entry’s metadata.
+- [updateSignature(\_:tokenCount:)](action-swift.struct/updatesignature%28__tokencount_%29.md): Creates an action that replaces the reasoning entry’s signature.
+- [updateUsage(input:output:metadata:)](action-swift.struct/updateusage%28input_output_metadata_%29.md): Creates an action that replaces the entry’s token-usage totals.
 
 ## Relationships
 

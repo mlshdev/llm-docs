@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/simd_make_short16(_:)-4ubc7](https://developer.apple.com/documentation/simd/simd_make_short16(_:)-4ubc7)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/simd/simd_make_short16(_:)-4ubc7
 
 # simd_make_short16(\_:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/entity/configurationcatalog/configurationset/init(id:configurations:defaultconfigurationid:)-5erwz](https://developer.apple.com/documentation/realitykit/entity/configurationcatalog/configurationset/init(id:configurations:defaultconfigurationid:)-5erwz)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/entity/configurationcatalog/configurationset/init(id:configurations:defaultconfigurationid:)-5erwz
 
 # init(id:configurations:defaultConfigurationId:)
 

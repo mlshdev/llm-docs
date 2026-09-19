@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applearchive/aacompressionalgorithms/aa_compression_algorithm_lzfse](https://developer.apple.com/documentation/applearchive/aacompressionalgorithms/aa_compression_algorithm_lzfse)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applearchive/aacompressionalgorithms/aa_compression_algorithm_lzfse
 
 # AA_COMPRESSION_ALGORITHM_LZFSE
 

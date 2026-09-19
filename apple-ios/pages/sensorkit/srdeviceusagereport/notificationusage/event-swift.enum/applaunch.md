@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/sensorkit/srdeviceusagereport/notificationusage/event-swift.enum/applaunch](https://developer.apple.com/documentation/sensorkit/srdeviceusagereport/notificationusage/event-swift.enum/applaunch)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/sensorkit/srdeviceusagereport/notificationusage/event-swift.enum/applaunch
 
 # SRDeviceUsageReport.NotificationUsage.Event.appLaunch (Swift)
 

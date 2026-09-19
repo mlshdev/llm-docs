@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/mb_class_stat_t/2919843-mbcl_mc_nwretry_cnt](https://developer.apple.com/documentation/kernel/mb_class_stat_t/2919843-mbcl_mc_nwretry_cnt)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/mb_class_stat_t/2919843-mbcl_mc_nwretry_cnt
 
 # mbcl_mc_nwretry_cnt
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/automaticassessmentconfiguration/aeassessmentbinaryexecutable/init(binaryexecutableurl:teamidentifier:)](https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentbinaryexecutable/init(binaryexecutableurl:teamidentifier:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentbinaryexecutable/init(binaryexecutableurl:teamidentifier:)
 
 # init(binaryExecutableURL:teamIdentifier:) (Swift)
 

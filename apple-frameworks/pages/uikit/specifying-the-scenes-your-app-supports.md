@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/specifying-the-scenes-your-app-supports](https://developer.apple.com/documentation/uikit/specifying-the-scenes-your-app-supports)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/specifying-the-scenes-your-app-supports
 
 # Specifying the scenes your app supports (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/sourcealphablendfactor](https://developer.apple.com/documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/sourcealphablendfactor)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/sourcealphablendfactor
 
 # sourceAlphaBlendFactor (Swift)
 
@@ -18,7 +19,7 @@ var sourceAlphaBlendFactor: MTLBlendFactor { get set }
 
 ## Discussion
 
-This property defaults to `MTLBlendFactorOne`.
+This property defaults to [MTLBlendFactor.one](../mtlblendfactor/one.md).
 
 # sourceAlphaBlendFactor (Objective-C)
 
@@ -38,4 +39,4 @@ Configures the source-alpha blend factor.
 
 ## Discussion
 
-This property defaults to `MTLBlendFactorOne`.
+This property defaults to [MTLBlendFactorOne](../mtlblendfactor/one.md).

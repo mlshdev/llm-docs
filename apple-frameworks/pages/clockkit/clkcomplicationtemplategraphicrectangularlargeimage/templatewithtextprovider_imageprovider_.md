@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphicrectangularlargeimage/templatewithtextprovider:imageprovider:](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphicrectangularlargeimage/templatewithtextprovider:imageprovider:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphicrectangularlargeimage/templatewithtextprovider:imageprovider:
 
 # templateWithTextProvider:imageProvider:
 
@@ -6,7 +7,7 @@
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Creates a new template with a text provider and an image provider.
 

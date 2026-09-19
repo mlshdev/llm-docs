@@ -1,6 +1,7 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/authenticationservices/implementing-user-authentication-with-sign-in-with-apple](https://developer.apple.com/documentation/authenticationservices/implementing-user-authentication-with-sign-in-with-apple)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/authenticationservices/implementing-user-authentication-with-sign-in-with-apple
 
-# Implementing User Authentication with Sign in with Apple (Swift, Data)
+# Implementing User Authentication with Sign in with Apple (Swift)
 
 **Framework:** Authentication Services  
 **Kind:** Sample Code  

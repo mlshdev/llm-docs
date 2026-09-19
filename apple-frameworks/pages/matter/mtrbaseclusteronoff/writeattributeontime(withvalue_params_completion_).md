@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusteronoff/writeattributeontime(withvalue:params:completion:)](https://developer.apple.com/documentation/matter/mtrbaseclusteronoff/writeattributeontime(withvalue:params:completion:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrbaseclusteronoff/writeattributeontime(withvalue:params:completion:)
 
 # writeAttributeOnTime(withValue:params:completion:) (Swift)
 

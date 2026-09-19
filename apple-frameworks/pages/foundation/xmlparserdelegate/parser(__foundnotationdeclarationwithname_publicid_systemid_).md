@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/xmlparserdelegate/parser(_:foundnotationdeclarationwithname:publicid:systemid:)](https://developer.apple.com/documentation/foundation/xmlparserdelegate/parser(_:foundnotationdeclarationwithname:publicid:systemid:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/xmlparserdelegate/parser(_:foundnotationdeclarationwithname:publicid:systemid:)
 
 # parser(\_:foundNotationDeclarationWithName:publicID:systemID:) (Swift)
 

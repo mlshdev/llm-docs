@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_framebuffer_attachment_texture_cube_map_face_oes](https://developer.apple.com/documentation/opengles/gl_framebuffer_attachment_texture_cube_map_face_oes)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_framebuffer_attachment_texture_cube_map_face_oes
 
 # GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_OES (Swift)
 

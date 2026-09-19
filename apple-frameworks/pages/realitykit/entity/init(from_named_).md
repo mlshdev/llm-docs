@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/entity/init(from:named:)](https://developer.apple.com/documentation/realitykit/entity/init(from:named:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/entity/init(from:named:)
 
 # init(from:named:)
 
 **Framework:** RealityKit  
 **Kind:** Initializer  
-**Availability:** iOS 26.0+ (deprecated in 27.0) · iPadOS 26.0+ (deprecated in 27.0) · Mac Catalyst 26.0+ (deprecated in 27.0) · macOS 26.0+ (deprecated in 27.0) · tvOS 26.0+ (deprecated in 27.0) · visionOS 26.0+ (deprecated in 27.0)
+**Availability:** iOS 26.0+ (deprecated in 27.2) · iPadOS 26.0+ (deprecated in 27.2) · Mac Catalyst 26.0+ (deprecated in 27.0) · macOS 26.0+ (deprecated in 27.2) · tvOS 26.0+ (deprecated in 27.2) · visionOS 26.0+ (deprecated in 27.2)
 
 Creates an entity by asynchronously loading it from the in-memory contents of a file stored in a Data object.
 

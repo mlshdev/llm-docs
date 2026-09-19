@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/appschema/audioenum/invocationsource](https://developer.apple.com/documentation/appintents/appschema/audioenum/invocationsource)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/appschema/audioenum/invocationsource
 
 # invocationSource
 
@@ -29,8 +30,8 @@ enum InvocationSource: String {
     case suggestedByApp
 
     static let caseDisplayRepresentations: [Self: DisplayRepresentation] = [
-        .userInitiated: "UserInitiated",
-        .suggestedByApp: "SuggestedByApp"
+        .userInitiated: "User Initiated",
+        .suggestedByApp: "Suggested by App"
     ]
 }
 ```

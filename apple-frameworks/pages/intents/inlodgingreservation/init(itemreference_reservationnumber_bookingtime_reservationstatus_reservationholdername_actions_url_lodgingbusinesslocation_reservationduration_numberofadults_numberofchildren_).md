@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/inlodgingreservation/init(itemreference:reservationnumber:bookingtime:reservationstatus:reservationholdername:actions:url:lodgingbusinesslocation:reservationduration:numberofadults:numberofchildren:)](https://developer.apple.com/documentation/intents/inlodgingreservation/init(itemreference:reservationnumber:bookingtime:reservationstatus:reservationholdername:actions:url:lodgingbusinesslocation:reservationduration:numberofadults:numberofchildren:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/intents/inlodgingreservation/init(itemreference:reservationnumber:bookingtime:reservationstatus:reservationholdername:actions:url:lodgingbusinesslocation:reservationduration:numberofadults:numberofchildren:)
 
 # init(itemReference:reservationNumber:bookingTime:reservationStatus:reservationHolderName:actions:url:lodgingBusinessLocation:reservationDuration:numberOfAdults:numberOfChildren:)
 

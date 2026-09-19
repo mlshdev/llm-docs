@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_all_shader_bits_ext](https://developer.apple.com/documentation/opengles/gl_all_shader_bits_ext)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_all_shader_bits_ext
 
 # GL_ALL_SHADER_BITS_EXT (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quartzcore/calayer/convert(_:from:)-4kx9l](https://developer.apple.com/documentation/quartzcore/calayer/convert(_:from:)-4kx9l)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/quartzcore/calayer/convert(_:from:)-4kx9l
 
 # convert(\_:from:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/backtrace_control/3753579-btc_user_thread](https://developer.apple.com/documentation/kernel/backtrace_control/3753579-btc_user_thread)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/backtrace_control/3753579-btc_user_thread
 
 # btc_user_thread
 

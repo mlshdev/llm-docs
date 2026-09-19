@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplaybackuserinterfacemetadataproviding-814y4](https://developer.apple.com/documentation/avkit/avplaybackuserinterfacemetadataproviding-814y4)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplaybackuserinterfacemetadataproviding-814y4
 
 # AVPlaybackUserInterfaceMetadataProviding
 
@@ -32,7 +33,7 @@ Provides metadata information about media content including title, artwork, and 
 
 ## See Also
 
-### Metadata
+### Content metadata
 
 - [AVPlaybackUserInterfaceContentMetadata](avplaybackuserinterfacecontentmetadata-swift.struct.md): A Swift-friendly structure representing media metadata.
 - [AVPlaybackUserInterfaceContentArtwork](avplaybackuserinterfacecontentartwork.md): Base class representing artwork or cover art for media content.

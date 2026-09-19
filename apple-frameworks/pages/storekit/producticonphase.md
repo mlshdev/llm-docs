@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/producticonphase](https://developer.apple.com/documentation/storekit/producticonphase)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/producticonphase
 
 # ProductIconPhase
 
@@ -37,7 +38,7 @@ StoreView(products: [
  }
 ```
 
-You set up promotional images for in-app purchases in App Store Connect. For more information, see [Promote in-app purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/promote-in-app-purchases).
+You set up promotional images for Apple In-App Purchases in App Store Connect. For more information, see [Promote Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/promote-in-app-purchases).
 
 ## Topics
 

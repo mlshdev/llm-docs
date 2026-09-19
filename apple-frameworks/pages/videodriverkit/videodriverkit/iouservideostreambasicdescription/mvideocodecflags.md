@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideostreambasicdescription/mvideocodecflags](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideostreambasicdescription/mvideocodecflags)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideostreambasicdescription/mvideocodecflags
 
 # mVideoCodecFlags
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Property  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,6 +19,6 @@ uint32_t mVideoCodecFlags;
 
 ### Identifying the codec
 
-- [mVideoCodecType](mvideocodectype.md)
-- [IOUserVideoFormatID](../iouservideoformatid.md): Identifiers used for formats of audio data.
-- [IOUserVideoFormatFlags](../iouservideoformatflags.md): Standard format flags for a basic description.
+- [mVideoCodecType](mvideocodectype.md): Beta.
+- [IOUserVideoFormatID](../iouservideoformatid.md): Beta. Identifiers used for formats of audio data.
+- [IOUserVideoFormatFlags](../iouservideoformatflags.md): Beta. Standard format flags for a basic description.

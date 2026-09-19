@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/scsitaskstatus/kscsitaskstatus_check_condition](https://developer.apple.com/documentation/kernel/scsitaskstatus/kscsitaskstatus_check_condition)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/scsitaskstatus/kscsitaskstatus_check_condition
 
 # kSCSITaskStatus_CHECK_CONDITION
 

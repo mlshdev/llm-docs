@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4commandbuffer](https://developer.apple.com/documentation/metal/mtl4commandbuffer)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtl4commandbuffer
 
 # MTL4CommandBuffer (Swift)
 
@@ -29,7 +30,7 @@ protocol MTL4CommandBuffer : NSObjectProtocol
 
 - [beginCommandBuffer(allocator:)](mtl4commandbuffer/begincommandbuffer%28allocator_%29.md): Prepares a command buffer for encoding.
 - [beginCommandBuffer(allocator:options:)](mtl4commandbuffer/begincommandbuffer%28allocator_options_%29.md): Prepares a command buffer for encoding with additional options.
-- [endCommandBuffer()](mtl4commandbuffer/endcommandbuffer%28%29.md): Closes a command buffer to prepare it for submission to a command queue.
+- [endCommandBuffer()](mtl4commandbuffer/endcommandbuffer%28%29.md): Finalizes a command buffer which makes it ready for you to submit it to a command queue.
 - [makeComputeCommandEncoder()](mtl4commandbuffer/makecomputecommandencoder%28%29.md): Creates a compute command encoder.
 - [makeMachineLearningCommandEncoder()](mtl4commandbuffer/makemachinelearningcommandencoder%28%29.md): Creates a machine learning command encoder.
 - [makeRenderCommandEncoder(descriptor:options:)](mtl4commandbuffer/makerendercommandencoder%28descriptor_options_%29.md): Creates a render command encoder from a render pass descriptor with additional options.
@@ -95,7 +96,7 @@ Records a sequence of GPU commands.
 
 - [beginCommandBufferWithAllocator:](mtl4commandbuffer/begincommandbuffer%28allocator_%29.md): Prepares a command buffer for encoding.
 - [beginCommandBufferWithAllocator:options:](mtl4commandbuffer/begincommandbuffer%28allocator_options_%29.md): Prepares a command buffer for encoding with additional options.
-- [endCommandBuffer](mtl4commandbuffer/endcommandbuffer%28%29.md): Closes a command buffer to prepare it for submission to a command queue.
+- [endCommandBuffer](mtl4commandbuffer/endcommandbuffer%28%29.md): Finalizes a command buffer which makes it ready for you to submit it to a command queue.
 - [computeCommandEncoder](mtl4commandbuffer/makecomputecommandencoder%28%29.md): Creates a compute command encoder.
 - [machineLearningCommandEncoder](mtl4commandbuffer/makemachinelearningcommandencoder%28%29.md): Creates a machine learning command encoder.
 - [renderCommandEncoderWithDescriptor:options:](mtl4commandbuffer/makerendercommandencoder%28descriptor_options_%29.md): Creates a render command encoder from a render pass descriptor with additional options.

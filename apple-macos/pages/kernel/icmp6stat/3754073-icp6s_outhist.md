@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/icmp6stat/3754073-icp6s_outhist](https://developer.apple.com/documentation/kernel/icmp6stat/3754073-icp6s_outhist)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/icmp6stat/3754073-icp6s_outhist
 
 # icp6s_outhist
 

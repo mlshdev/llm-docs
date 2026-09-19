@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnnslstmdatadescriptor/init(data_desc:hidden_desc:cell_state_desc:)](https://developer.apple.com/documentation/accelerate/bnnslstmdatadescriptor/init(data_desc:hidden_desc:cell_state_desc:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/bnnslstmdatadescriptor/init(data_desc:hidden_desc:cell_state_desc:)
 
 # init(data_desc:hidden_desc:cell_state_desc:)
 

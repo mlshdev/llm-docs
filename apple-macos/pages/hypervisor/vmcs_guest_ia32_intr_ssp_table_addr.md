@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/vmcs_guest_ia32_intr_ssp_table_addr](https://developer.apple.com/documentation/hypervisor/vmcs_guest_ia32_intr_ssp_table_addr)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/vmcs_guest_ia32_intr_ssp_table_addr
 
 # VMCS_GUEST_IA32_INTR_SSP_TABLE_ADDR (Swift)
 

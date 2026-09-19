@@ -1,9 +1,9 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/inference/_index.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/inference/_index.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/inference/_index.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/inference/_index.md)
 > Canonical documentation: https://qdrant.tech/documentation/inference/
 
 # Inference
 
-![Inference generates vectors embeddings from documents or images](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/docs/inference.png)
+![Inference generates vectors embeddings from documents or images](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/docs/inference.png)
 
 Inference is the process of using a machine learning model to create vector embeddings from text, images, or other data types. While you can create embeddings on the client side, you can also use Qdrant's [Inference API](https://qdrant.tech/documentation/inference/inference-api/) to generate them server-side using a single, unified API across sparse, managed, and externally hosted models.
 

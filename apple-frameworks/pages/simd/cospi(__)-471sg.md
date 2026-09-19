@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/cospi(_:)-471sg](https://developer.apple.com/documentation/simd/cospi(_:)-471sg)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/simd/cospi(_:)-471sg
 
 # cospi(\_:)
 

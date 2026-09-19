@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/callkit/sending-end-to-end-encrypted-voip-calls](https://developer.apple.com/documentation/callkit/sending-end-to-end-encrypted-voip-calls)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/callkit/sending-end-to-end-encrypted-voip-calls
 
 # Sending End-to-End Encrypted VoIP Calls (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1400246-national_standard_text_encodings/ktextencodingjis_x0201_76](https://developer.apple.com/documentation/coreservices/1400246-national_standard_text_encodings/ktextencodingjis_x0201_76)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/1400246-national_standard_text_encodings/ktextencodingjis_x0201_76
 
 # kTextEncodingJIS_X0201_76
 

@@ -1,6 +1,7 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/macos-release-notes/macos-27-release-notes](https://developer.apple.com/documentation/macos-release-notes/macos-27-release-notes)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/macos-release-notes/macos-27-release-notes
 
-# macOS 27 Golden Gate RC Release Notes
+# macOS 27 Golden Gate Release Notes
 
 **Kind:** Article
 
@@ -10,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 27 SDK provides support to develop apps for Mac computers running macOS 27 Golden Gate RC. The SDK comes bundled with Xcode 27, available from the Mac App Store. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
+The macOS 27 SDK provides support to develop apps for Mac computers running macOS 27 Golden Gate. The SDK comes bundled with Xcode 27, available from the Mac App Store. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
 
 <a id="General"></a>
 
@@ -435,7 +436,7 @@ The macOS 27 SDK provides support to develop apps for Mac computers running macO
 
 #### New Features
 
-- arm64e.x1 introduces additional hardware security and performance instructions, including CPA2 for stronger MIE protection. Devices with support for arm64e.x1 include iPhone models with A20 Pro or later chips, Mac computers with M6 or later chips, and Apple Watch models with S11 or later chips. You can access arm64e.x1 and CPA2 in Xcode through the enhanced security pane and a build setting. Learn more in the [Enhanced Security article](https://docs.devpubs.apple.com/drafts/f16-dspector-161940504-rapid-isa-adoption-documentation/documentation/xcode/enabling-enhanced-security-for-your-app). (152103975)
+- arm64e.x1 introduces additional hardware security and performance instructions, including CPA2 for stronger MIE protection. Devices with support for arm64e.x1 include iPhone models with A20 Pro or later chips, Mac computers with M6 or later chips, and Apple Watch models with S11 or later chips. You can access arm64e.x1 and CPA2 in Xcode through the enhanced security pane and a build setting. Learn more in the [Enhanced Security article](https://developer.apple.com/documentation/xcode/enabling-enhanced-security-for-your-app). (152103975)
 
 <a id="HomeKit"></a>
 
@@ -1285,3 +1286,9 @@ The macOS 27 SDK provides support to develop apps for Mac computers running macO
 #### Resolved Issues
 
 - Fixed: Clicking on X11 windows while XQuartz is in the background does not activate the XQuartz application. (180761569)
+
+## See Also
+
+### macOS 27
+
+- [macOS 27.2 Golden Gate Beta Release Notes](macos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.

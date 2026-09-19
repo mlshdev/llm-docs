@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideostream/getoutputqueuememorydescriptor](https://developer.apple.com/documentation/videodriverkit/iouservideostream/getoutputqueuememorydescriptor)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideostream/getoutputqueuememorydescriptor
 
 # GetOutputQueueMemoryDescriptor
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Returns an memory descriptorrepesenting the shared memory output queue buffer.
 
@@ -20,7 +21,7 @@ OSSharedPtr<IOMemoryDescriptor> GetOutputQueueMemoryDescriptor();
 
 ### Working with memory descriptors
 
-- [GetOutputControlMemoryDescriptor](getoutputcontrolmemorydescriptor.md): Gets the memory descriptor used for the control data part of a buffer.
-- [GetOutputDataMemoryDescriptor](getoutputdatamemorydescriptor.md): Gets the memory descriptor used for the video data part of a buffer.
-- [GetInputQueueMemoryDescriptor](getinputqueuememorydescriptor.md): Returns an memory descriptor for the shared memory input queue buffer.
-- [GetMemoryObjectID](getmemoryobjectid.md): Gets the video object identifier for a memory object.
+- [GetOutputControlMemoryDescriptor](getoutputcontrolmemorydescriptor.md): Beta. Gets the memory descriptor used for the control data part of a buffer.
+- [GetOutputDataMemoryDescriptor](getoutputdatamemorydescriptor.md): Beta. Gets the memory descriptor used for the video data part of a buffer.
+- [GetInputQueueMemoryDescriptor](getinputqueuememorydescriptor.md): Beta. Returns an memory descriptor for the shared memory input queue buffer.
+- [GetMemoryObjectID](getmemoryobjectid.md): Beta. Gets the video object identifier for a memory object.

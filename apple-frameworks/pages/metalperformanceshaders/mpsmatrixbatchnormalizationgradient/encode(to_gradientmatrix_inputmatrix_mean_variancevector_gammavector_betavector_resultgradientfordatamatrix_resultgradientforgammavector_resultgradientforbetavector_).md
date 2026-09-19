@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsmatrixbatchnormalizationgradient/encode(to:gradientmatrix:inputmatrix:mean:variancevector:gammavector:betavector:resultgradientfordatamatrix:resultgradientforgammavector:resultgradientforbetavector:)](https://developer.apple.com/documentation/metalperformanceshaders/mpsmatrixbatchnormalizationgradient/encode(to:gradientmatrix:inputmatrix:mean:variancevector:gammavector:betavector:resultgradientfordatamatrix:resultgradientforgammavector:resultgradientforbetavector:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpsmatrixbatchnormalizationgradient/encode(to:gradientmatrix:inputmatrix:mean:variancevector:gammavector:betavector:resultgradientfordatamatrix:resultgradientforgammavector:resultgradientforbetavector:)
 
 # encode(to:gradientMatrix:inputMatrix:mean:varianceVector:gammaVector:betaVector:resultGradientForDataMatrix:resultGradientForGammaVector:resultGradientForBetaVector:) (Swift)
 

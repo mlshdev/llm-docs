@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/intentparameter/init(title:description:default:supportedcontenttypes:size:inputconnectionbehavior:resolvers:)-26ujo](https://developer.apple.com/documentation/appintents/intentparameter/init(title:description:default:supportedcontenttypes:size:inputconnectionbehavior:resolvers:)-26ujo)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/intentparameter/init(title:description:default:supportedcontenttypes:size:inputconnectionbehavior:resolvers:)-26ujo
 
 # init(title:description:default:supportedContentTypes:size:inputConnectionBehavior:resolvers:)
 

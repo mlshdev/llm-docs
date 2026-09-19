@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/f5bigip.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/integrations/builtin/credentials/f5bigip.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/f5bigip.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/integrations/builtin/credentials/f5bigip.md)
 
 # F5 Big-IP credentials <a id="f5-big-ip-credentials"></a>
 

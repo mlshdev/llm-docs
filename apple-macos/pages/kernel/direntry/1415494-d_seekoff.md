@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/direntry/1415494-d_seekoff](https://developer.apple.com/documentation/kernel/direntry/1415494-d_seekoff)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/direntry/1415494-d_seekoff
 
 # d_seekoff
 

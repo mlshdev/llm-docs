@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/carplay/cppanelbuttonconfiguration/secondaryaction](https://developer.apple.com/documentation/carplay/cppanelbuttonconfiguration/secondaryaction)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/carplay/cppanelbuttonconfiguration/secondaryaction
 
 # secondaryAction (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
-The secondary action button, or @c nil if excluded.
+An optional action button to display in the panel.
 
 ## Declaration
 
@@ -14,16 +15,28 @@ The secondary action button, or @c nil if excluded.
 @NSCopying var secondaryAction: CPTextButton? { get }
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+Specify this button at initialization time and use this property to retrieve it later.
+
 # secondaryAction (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Instance Property  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
-The secondary action button, or @c nil if excluded.
+An optional action button to display in the panel.
 
 ## Declaration
 
 ```objectivec
 @property (nonatomic, copy, readonly, nullable) CPTextButton * secondaryAction;
 ```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Specify this button at initialization time and use this property to retrieve it later.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsmenudelegate/menu(_:update:at:shouldcancel:)](https://developer.apple.com/documentation/appkit/nsmenudelegate/menu(_:update:at:shouldcancel:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsmenudelegate/menu(_:update:at:shouldcancel:)
 
 # menu(\_:update:at:shouldCancel:) (Swift)
 

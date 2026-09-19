@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelerror/ratelimited](https://developer.apple.com/documentation/foundationmodels/languagemodelerror/ratelimited)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelerror/ratelimited
 
 # LanguageModelError.RateLimited
 
@@ -18,13 +19,13 @@ struct RateLimited
 
 ### Creating an error instance
 
-- [init(resetDate:debugDescription:metadata:)](ratelimited/init%28resetdate_debugdescription_metadata_%29.md)
+- [init(resetDate:debugDescription:metadata:)](ratelimited/init%28resetdate_debugdescription_metadata_%29.md): Creates information describing a rate-limiting event.
 
 ### Inspecting rate-limit errors
 
-- [metadata](ratelimited/metadata.md)
-- [resetDate](ratelimited/resetdate.md)
-- [debugDescription](ratelimited/debugdescription.md)
+- [metadata](ratelimited/metadata.md): Additional information about the failure, keyed by name.
+- [resetDate](ratelimited/resetdate.md): The date after which retrying is likely to succeed, if known.
+- [debugDescription](ratelimited/debugdescription.md): A debug description to help developers diagnose issues during development.
 
 ## Relationships
 

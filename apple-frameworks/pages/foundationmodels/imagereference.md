@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/imagereference](https://developer.apple.com/documentation/foundationmodels/imagereference)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/imagereference
 
 # ImageReference
 
@@ -54,6 +55,10 @@ struct MyTool: Tool {
 ### Accessing the referenced image
 
 - [resolved(in:)](imagereference/resolved%28in_%29.md): Returns the referenced image from the transcript.
+
+### Default Implementations
+
+- [Generable Implementations](imagereference/generable-implementations.md)
 
 ## Relationships
 

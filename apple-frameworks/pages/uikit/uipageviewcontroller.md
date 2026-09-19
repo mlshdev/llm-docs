@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uipageviewcontroller](https://developer.apple.com/documentation/uikit/uipageviewcontroller)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uipageviewcontroller
 
 # UIPageViewController (Swift)
 
@@ -116,6 +117,7 @@ This class is generally used as-is, but can also be subclassed.
 - [UITabAccessory](uitabaccessory.md)
 - [UISearchTab](uisearchtab.md): A tab subclass that represents the system’s search tab.
 - [UITabGroup](uitabgroup.md): An object that manages a collection of tab objects.
+- [UIArrangementViewController](uiarrangementviewcontroller.md): Beta. A view controller that presents its container view controllers through an arrangement.
 
 # UIPageViewController (Objective-C)
 
@@ -209,3 +211,4 @@ This class is generally used as-is, but can also be subclassed.
 - [UITabAccessory](uitabaccessory.md)
 - [UISearchTab](uisearchtab.md): A tab subclass that represents the system’s search tab.
 - [UITabGroup](uitabgroup.md): An object that manages a collection of tab objects.
+- [UIArrangementViewController](uiarrangementviewcontroller.md): Beta. A view controller that presents its container view controllers through an arrangement.

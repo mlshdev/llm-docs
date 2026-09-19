@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/running-a-machine-learning-model-on-the-gpu-timeline](https://developer.apple.com/documentation/metal/running-a-machine-learning-model-on-the-gpu-timeline)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/running-a-machine-learning-model-on-the-gpu-timeline
 
 # Running a machine learning model on the GPU timeline (Swift)
 

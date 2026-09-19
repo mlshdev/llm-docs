@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationcolumnalignment/leading](https://developer.apple.com/documentation/clockkit/clkcomplicationcolumnalignment/leading)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationcolumnalignment/leading
 
 # CLKComplicationColumnAlignment.leading (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Case  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Leading alignment for the designated column.
 
@@ -28,7 +29,7 @@ case leading
 
 **Framework:** ClockKit  
 **Kind:** Enumeration Case  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Leading alignment for the designated column.
 

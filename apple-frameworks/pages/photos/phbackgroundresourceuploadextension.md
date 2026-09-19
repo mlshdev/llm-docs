@@ -1,10 +1,13 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photos/phbackgroundresourceuploadextension](https://developer.apple.com/documentation/photos/phbackgroundresourceuploadextension)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photos/phbackgroundresourceuploadextension
 
 # PHBackgroundResourceUploadExtension
 
 **Framework:** Photos  
 **Kind:** Protocol  
 **Availability:** iOS 26.1+ (deprecated in 27.0) · iPadOS 26.1+ (deprecated in 27.0)
+
+A protocol to interact with asset resource upload jobs during background processing.
 
 > Adopt PHBackgroundResourceUploadJobExtension instead
 
@@ -17,6 +20,12 @@ protocol PHBackgroundResourceUploadExtension : AppExtension
 ## Mentioned In
 
 - [Uploading asset resources in the background](../photokit/uploading-asset-resources-in-the-background.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Use this protocol to create, acknowledge, retry asset resource upload jobs.
 
 ## Topics
 

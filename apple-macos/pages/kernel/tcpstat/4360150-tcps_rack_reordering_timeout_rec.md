@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/tcpstat/4360150-tcps_rack_reordering_timeout_rec](https://developer.apple.com/documentation/kernel/tcpstat/4360150-tcps_rack_reordering_timeout_rec)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/tcpstat/4360150-tcps_rack_reordering_timeout_rec
 
 # tcps_rack_reordering_timeout_recovery_episode
 

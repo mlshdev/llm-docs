@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nscompositingoperation/overlay](https://developer.apple.com/documentation/appkit/nscompositingoperation/overlay)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nscompositingoperation/overlay
 
 # NSCompositingOperation.overlay (Swift)
 

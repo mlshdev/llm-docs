@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/combine/subscribers/demand/_=(_:_:)-9cywv](https://developer.apple.com/documentation/combine/subscribers/demand/_=(_:_:)-9cywv)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/combine/subscribers/demand/_=(_:_:)-9cywv
 
 # \<=(\_:\_:)
 

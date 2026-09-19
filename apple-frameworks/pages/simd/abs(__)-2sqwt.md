@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/abs(_:)-2sqwt](https://developer.apple.com/documentation/simd/abs(_:)-2sqwt)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/simd/abs(_:)-2sqwt
 
 # abs(\_:)
 

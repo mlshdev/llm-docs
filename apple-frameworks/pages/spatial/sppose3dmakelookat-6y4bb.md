@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/sppose3dmakelookat-6y4bb](https://developer.apple.com/documentation/spatial/sppose3dmakelookat-6y4bb)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatial/sppose3dmakelookat-6y4bb
 
 # SPPose3DMakeLookAt
 

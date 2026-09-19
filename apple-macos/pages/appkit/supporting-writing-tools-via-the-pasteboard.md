@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/supporting-writing-tools-via-the-pasteboard](https://developer.apple.com/documentation/appkit/supporting-writing-tools-via-the-pasteboard)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/supporting-writing-tools-via-the-pasteboard
 
 # Supporting Writing Tools via the pasteboard (Swift)
 

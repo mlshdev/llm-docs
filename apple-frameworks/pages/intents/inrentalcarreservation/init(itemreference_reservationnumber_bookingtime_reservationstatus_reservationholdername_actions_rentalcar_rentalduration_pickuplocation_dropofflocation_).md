@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/inrentalcarreservation/init(itemreference:reservationnumber:bookingtime:reservationstatus:reservationholdername:actions:rentalcar:rentalduration:pickuplocation:dropofflocation:)](https://developer.apple.com/documentation/intents/inrentalcarreservation/init(itemreference:reservationnumber:bookingtime:reservationstatus:reservationholdername:actions:rentalcar:rentalduration:pickuplocation:dropofflocation:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/intents/inrentalcarreservation/init(itemreference:reservationnumber:bookingtime:reservationstatus:reservationholdername:actions:rentalcar:rentalduration:pickuplocation:dropofflocation:)
 
 # init(itemReference:reservationNumber:bookingTime:reservationStatus:reservationHolderName:actions:rentalCar:rentalDuration:pickupLocation:dropOffLocation:) (Swift)
 

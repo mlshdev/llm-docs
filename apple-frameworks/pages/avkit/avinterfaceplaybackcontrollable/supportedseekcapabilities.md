@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avinterfaceplaybackcontrollable/supportedseekcapabilities](https://developer.apple.com/documentation/avkit/avinterfaceplaybackcontrollable/supportedseekcapabilities)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avinterfaceplaybackcontrollable/supportedseekcapabilities
 
 # supportedSeekCapabilities
 
@@ -14,11 +15,3 @@ An option set indicating which timeline navigation operations are supported by t
 ```objectivec
 @property (nonatomic, readonly) AVInterfaceSeekCapabilities supportedSeekCapabilities;
 ```
-
-## See Also
-
-### Controlling playback speed
-
-- [playbackSpeed](playbackspeed.md): The current playback speed multiplier. A value of 1.0 represents normal speed, values greater than 1.0 represent faster playback, and values between 0.0 and 1.0 represent slower playback. Must be key-value observable.
-- [defaultPlaybackSpeed](defaultplaybackspeed.md): The default playback speed to use when playback begins. This value is used to set the initial playback rate when starting playback. A value of 1.0 represents normal speed. Must be key-value observable.
-- [scanSpeed](scanspeed.md): The scanning speed multiplier used during fast-forward or rewind operations. A positive value indicates forward scanning, negative indicates backward scanning. Must be key-value observable.

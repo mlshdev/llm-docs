@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_interrupt_type_fiq](https://developer.apple.com/documentation/hypervisor/hv_interrupt_type_fiq)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_interrupt_type_fiq
 
 # HV_INTERRUPT_TYPE_FIQ (Swift)
 

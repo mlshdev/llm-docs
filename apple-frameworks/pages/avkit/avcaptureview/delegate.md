@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcaptureview/delegate](https://developer.apple.com/documentation/avkit/avcaptureview/delegate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcaptureview/delegate
 
 # delegate (Swift)
 
@@ -22,7 +23,7 @@ The capture view disables the start recording button if you don’t provide a de
 
 ## See Also
 
-### Configuring the Delegate
+### Configuring the delegate
 
 - [AVCaptureViewDelegate](../avcaptureviewdelegate.md): The protocol that defines the methods you can implement to respond to capture view events.
 
@@ -48,6 +49,6 @@ The capture view disables the start recording button if you don’t provide a de
 
 ## See Also
 
-### Configuring the Delegate
+### Configuring the delegate
 
 - [AVCaptureViewDelegate](../avcaptureviewdelegate.md): The protocol that defines the methods you can implement to respond to capture view events.

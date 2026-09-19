@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avinterfacetimecontrollable/seekabletimeranges](https://developer.apple.com/documentation/avkit/avinterfacetimecontrollable/seekabletimeranges)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avinterfacetimecontrollable/seekabletimeranges
 
 # seekableTimeRanges
 
@@ -14,12 +15,3 @@ An array of time ranges within the timeline where seeking operations are permitt
 ```objectivec
 @property (nonatomic, copy, readonly, nullable) NSArray<NSValue *> * seekableTimeRanges;
 ```
-
-## See Also
-
-### Inspecting the timeline
-
-- [timeRange](timerange.md): The time range representing the total duration and bounds of the media content. This defines the overall playable timeline, with all segments and seekable ranges falling within this range. Must be key-value observable.
-- [currentPlaybackPosition](currentplaybackposition.md): The current playback position within the media time, expressed in seconds from the start of the content. This value should be within the bounds defined by the start and duration properties and represents the exact temporal position of playback. Must be key-value observable.
-- [currentSegment](currentsegment.md): The segment containing the current playback position. This property automatically updates as playback progresses through different timeline segments. Use this to determine the current content type (primary vs. secondary) and any special playback characteristics that apply to the current position. Must be key-value observable.
-- [segments](segments.md): Segments representing different content types within the timeline. All segments should be contiguous and collectively cover the entire timeline duration without gaps or overlaps. Each segment defines a specific portion of content (such as main program, advertisements, or bonus material) with its own playback characteristics. Must be key-value observable.

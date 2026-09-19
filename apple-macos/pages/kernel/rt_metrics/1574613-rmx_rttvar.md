@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/rt_metrics/1574613-rmx_rttvar](https://developer.apple.com/documentation/kernel/rt_metrics/1574613-rmx_rttvar)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/rt_metrics/1574613-rmx_rttvar
 
 # rmx_rttvar
 

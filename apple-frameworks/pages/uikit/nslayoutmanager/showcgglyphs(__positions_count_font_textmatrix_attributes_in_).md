@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/nslayoutmanager/showcgglyphs(_:positions:count:font:textmatrix:attributes:in:)](https://developer.apple.com/documentation/uikit/nslayoutmanager/showcgglyphs(_:positions:count:font:textmatrix:attributes:in:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/nslayoutmanager/showcgglyphs(_:positions:count:font:textmatrix:attributes:in:)
 
 # showCGGlyphs(\_:positions:count:font:textMatrix:attributes:in:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideocustompropertyinfo/mselector](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideocustompropertyinfo/mselector)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideocustompropertyinfo/mselector
 
 # mSelector
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Property  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 The property selector of the custom property.
 
@@ -20,5 +21,5 @@ IOUserVideoObjectPropertySelector mSelector;
 
 ### Property metadata
 
-- [mPropertyDataType](mpropertydatatype.md): The data type of the data of the custom property.
-- [mQualifierDataType](mqualifierdatatype.md): The data type of the qualifier data of the custom property.
+- [mPropertyDataType](mpropertydatatype.md): Beta. The data type of the data of the custom property.
+- [mQualifierDataType](mqualifierdatatype.md): Beta. The data type of the qualifier data of the custom property.

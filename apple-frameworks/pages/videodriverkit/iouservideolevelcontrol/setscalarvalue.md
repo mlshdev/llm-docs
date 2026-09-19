@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideolevelcontrol/setscalarvalue](https://developer.apple.com/documentation/videodriverkit/iouservideolevelcontrol/setscalarvalue)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideolevelcontrol/setscalarvalue
 
 # SetScalarValue
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Sets the current scalar level value.
 
@@ -26,6 +27,6 @@ Changing the scalar level value will send a notification to the host to update t
 
 ### Accessing the value
 
-- [SetDecibelValue](setdecibelvalue.md): Sets the current decibel level value.
-- [GetScalarValue](getscalarvalue.md): Gets the scalar level value for the control.
-- [GetDecibelValue](getdecibelvalue.md): Gets the decibel level value for the control.
+- [SetDecibelValue](setdecibelvalue.md): Beta. Sets the current decibel level value.
+- [GetScalarValue](getscalarvalue.md): Beta. Gets the scalar level value for the control.
+- [GetDecibelValue](getdecibelvalue.md): Beta. Gets the decibel level value for the control.

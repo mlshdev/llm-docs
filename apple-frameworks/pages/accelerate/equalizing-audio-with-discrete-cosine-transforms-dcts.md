@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/equalizing-audio-with-discrete-cosine-transforms-dcts](https://developer.apple.com/documentation/accelerate/equalizing-audio-with-discrete-cosine-transforms-dcts)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/equalizing-audio-with-discrete-cosine-transforms-dcts
 
 # Equalizing audio with discrete cosine transforms (DCTs) (Swift)
 

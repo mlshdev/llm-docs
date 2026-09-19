@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/base-files/standard-parameters.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/connect/create-nodes/build-your-node/reference/base-files/standard-parameters.md)
+> Pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/base-files/standard-parameters.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/connect/create-nodes/build-your-node/reference/base-files/standard-parameters.md)
 
 # Standard parameters <a id="standard-parameters"></a>
 
@@ -43,7 +43,7 @@ n8n recommends using an SVG for your node icon, but you can also use PNG. If usi
 > **Info**
 > **Don't reference Font Awesome**
 >
-> If you want to use a Font Awesome icon in your node, download and embed the image.
+> If you want to use a Font Awesome icon in your node, download and embed the image. Don't set `defaults.color`: it only tints Font Awesome icons, and n8n 3.0 removes it.
 
 ## `group` <a id="group"></a>
 
@@ -71,7 +71,7 @@ Contains essential brand and name settings.
 The object can include:
 
 - `name`: String. Used as the node name on the canvas if the `displayName` is too long.
-- `color`: String. Hex color code. Provide the brand color of the integration for use in n8n.
+- `color`: String. Deprecated since n8n 1.52.0 and removed in n8n 3.0. It only tinted Font Awesome icons. Use a file [icon](#icon) instead.
 
 ## `forceInputNodeExecution` <a id="forceinputnodeexecution"></a>
 

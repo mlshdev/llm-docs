@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmoid_pkcs12_pbewithshaand128bitrc2cbc](https://developer.apple.com/documentation/security/cssmoid_pkcs12_pbewithshaand128bitrc2cbc)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmoid_pkcs12_pbewithshaand128bitrc2cbc
 
 # CSSMOID_PKCS12_pbeWithSHAAnd128BitRC2CBC
 

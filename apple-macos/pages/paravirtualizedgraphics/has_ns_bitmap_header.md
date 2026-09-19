@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/paravirtualizedgraphics/has_ns_bitmap_header](https://developer.apple.com/documentation/paravirtualizedgraphics/has_ns_bitmap_header)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/paravirtualizedgraphics/has_ns_bitmap_header
 
 # HAS_NS_BITMAP_HEADER (Swift)
 

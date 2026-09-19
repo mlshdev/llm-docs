@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/shadergraph/procedural/matrix2x2-(float)](https://developer.apple.com/documentation/shadergraph/procedural/matrix2x2-(float))
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/shadergraph/procedural/matrix2x2-(float)
 
 # Matrix2x2 (Float)
 

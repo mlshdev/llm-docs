@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_api_available_x86_64](https://developer.apple.com/documentation/hypervisor/hv_api_available_x86_64)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_api_available_x86_64
 
 # HV_API_AVAILABLE_X86_64
 

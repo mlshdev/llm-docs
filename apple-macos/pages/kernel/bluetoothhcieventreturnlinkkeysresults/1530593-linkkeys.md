@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/bluetoothhcieventreturnlinkkeysresults/1530593-linkkeys](https://developer.apple.com/documentation/kernel/bluetoothhcieventreturnlinkkeysresults/1530593-linkkeys)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/bluetoothhcieventreturnlinkkeysresults/1530593-linkkeys
 
 # linkKeys
 

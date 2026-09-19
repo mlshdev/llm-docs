@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/diskimagekit/openconfigurationprotocol/open(url:mode:)](https://developer.apple.com/documentation/diskimagekit/openconfigurationprotocol/open(url:mode:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/diskimagekit/openconfigurationprotocol/open(url:mode:)
 
 # open(url:mode:)
 

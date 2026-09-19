@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/vm_region_submap_info_data_t/1573703-pages_dirtied](https://developer.apple.com/documentation/kernel/vm_region_submap_info_data_t/1573703-pages_dirtied)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/vm_region_submap_info_data_t/1573703-pages_dirtied
 
 # pages_dirtied
 

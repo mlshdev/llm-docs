@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/uisceneappintent/performnavigation(forscene:)](https://developer.apple.com/documentation/appintents/uisceneappintent/performnavigation(forscene:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/uisceneappintent/performnavigation(forscene:)
 
 # performNavigation(forScene:)
 
@@ -34,4 +35,4 @@ If you don’t implement this method in your app intent type, the default implem
 
 ### UISceneAppIntent Implementations
 
-- [performNavigation(forScene:)](performnavigation%28forscene_%29-7qecn.md)
+- [performNavigation(forScene:)](performnavigation%28forscene_%29-7qecn.md): Tells the app intent that the system is about to show the specified scene.

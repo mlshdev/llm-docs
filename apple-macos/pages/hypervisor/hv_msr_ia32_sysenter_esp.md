@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_msr_ia32_sysenter_esp](https://developer.apple.com/documentation/hypervisor/hv_msr_ia32_sysenter_esp)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_msr_ia32_sysenter_esp
 
 # HV_MSR_IA32_SYSENTER_ESP (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/calendar/date(bysettinghour:minute:second:of:matchingpolicy:repeatedtimepolicy:direction:)](https://developer.apple.com/documentation/foundation/calendar/date(bysettinghour:minute:second:of:matchingpolicy:repeatedtimepolicy:direction:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/calendar/date(bysettinghour:minute:second:of:matchingpolicy:repeatedtimepolicy:direction:)
 
 # date(bySettingHour:minute:second:of:matchingPolicy:repeatedTimePolicy:direction:)
 

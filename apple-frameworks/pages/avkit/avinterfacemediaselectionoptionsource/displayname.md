@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avinterfacemediaselectionoptionsource/displayname](https://developer.apple.com/documentation/avkit/avinterfacemediaselectionoptionsource/displayname)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avinterfacemediaselectionoptionsource/displayname
 
 # displayName
 
@@ -14,9 +15,3 @@ Human-readable name for this media option displayed in user interfaces (e.g., â€
 ```objectivec
 @property (nonatomic, copy, readonly) NSString * displayName;
 ```
-
-## See Also
-
-### Inspecting the option source
-
-- [identifier](identifier.md): Unique system identifier for this media option, used for programmatic selection and persistence across sessions.

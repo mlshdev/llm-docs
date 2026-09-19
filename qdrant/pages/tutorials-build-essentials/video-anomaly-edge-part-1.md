@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-1.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-1.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-1.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-1.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-build-essentials/video-anomaly-edge-part-1/
 
 # Video Anomaly Detection: Architecture, Twelve Labs, and NVIDIA VSS
@@ -44,7 +44,7 @@ Specifically, you will build a platform that transforms live surveillance stream
 >
 > The concepts and technology demonstrated here apply beyond surveillance. You can use this same architecture for manufacturing safety, retail analytics, traffic monitoring, or anything you need anomaly detection for. Just swap out the baseline data and adjust the detection threshold to fit your new domain.
 
-![Tech stack overview: NVIDIA Jetson, Qdrant Edge, Twelve Labs, and Qdrant Cloud connected in an edge-to-cloud pipeline](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/articles_data/video-anomaly-edge/tech-stack-overview.png)
+![Tech stack overview: NVIDIA Jetson, Qdrant Edge, Twelve Labs, and Qdrant Cloud connected in an edge-to-cloud pipeline](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/video-anomaly-edge/tech-stack-overview.png)
 
 ***
 
@@ -56,7 +56,7 @@ Before we begin coding, check out the project repository and live demo to get fa
 
 **Live Demo**: [qdrant-edge-video-anomaly.vercel.app](https://qdrant-edge-video-anomaly.vercel.app/)
 
-![Sentinel dashboard screenshot](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/articles_data/video-anomaly-edge/sentinel-screenshot.png)
+![Sentinel dashboard screenshot](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/video-anomaly-edge/sentinel-screenshot.png)
 
 ***
 
@@ -169,7 +169,7 @@ Binary classifiers require labeled examples of every anomaly type you want to de
 
 **Concept drift.** What counts as "normal" changes over time. A school hallway looks different during class hours versus recess. kNN baselines can be updated continuously without retraining.
 
-![Why classifiers fail: CLIP single-frame scores 0.23 AUC-ROC while Twelve Labs Marengo temporal embeddings score 0.9696, a 4.2x improvement](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/articles_data/video-anomaly-edge/why-classifiers-fail.png)
+![Why classifiers fail: CLIP single-frame scores 0.23 AUC-ROC while Twelve Labs Marengo temporal embeddings score 0.9696, a 4.2x improvement](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/video-anomaly-edge/why-classifiers-fail.png)
 
 The kNN approach is simple and effective. Embed video clips into a vector space, build a baseline of normal embeddings in Qdrant, and flag clips whose nearest neighbors are far away:
 
@@ -181,7 +181,7 @@ A clip surrounded by similar normal clips scores near 0. A clip far from anythin
 
 The design also makes debugging easy, you can follow exactly what is happening throughout the process.
 
-![Vector reframe: how raw footage is transformed into vector space and scored against a Qdrant baseline for anomaly detection](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/articles_data/video-anomaly-edge/vector-reframe.png)
+![Vector reframe: how raw footage is transformed into vector space and scored against a Qdrant baseline for anomaly detection](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/video-anomaly-edge/vector-reframe.png)
 
 Let's prove why this matters with some numbers. We tested CLIP ViT-B/32 (512-dim, single-frame image embeddings) as an alternative and it scored **0.23 AUC-ROC**, near random. This failure is instructive. Surveillance anomalies are defined by *temporal* patterns: a person running, a fight developing, a car crash unfolding. Single-frame embeddings cannot distinguish "person standing" from "person falling" because the anomaly exists *between* frames, not within them.
 
@@ -193,7 +193,7 @@ Let's prove why this matters with some numbers. We tested CLIP ViT-B/32 (512-dim
 
 This is why we use Twelve Labs Marengo in the cloud. It's purpose-built for video understanding, processing temporal dynamics, object interactions, and scene context as a unified signal.
 
-![kNN lookup: incoming clip embedded by Marengo, searched against k=5 nearest neighbors, scored by 1 minus mean cosine similarity](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/articles_data/video-anomaly-edge/knn-lookup.png)
+![kNN lookup: incoming clip embedded by Marengo, searched against k=5 nearest neighbors, scored by 1 minus mean cosine similarity](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/video-anomaly-edge/knn-lookup.png)
 
 ***
 
@@ -243,7 +243,7 @@ We prefer false positives over false negatives on the edge because accidentally 
 
 **Dashboard**: Next.js frontend with real-time WebSocket updates showing incidents, device status, and anomaly score timelines.
 
-![Three stages of the pipeline: Capture (NVIDIA Metropolis), Detect (Twelve Labs and Qdrant), Triage (Sentinel Console)](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/articles_data/video-anomaly-edge/three-stages.png)
+![Three stages of the pipeline: Capture (NVIDIA Metropolis), Detect (Twelve Labs and Qdrant), Triage (Sentinel Console)](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/video-anomaly-edge/three-stages.png)
 
 ***
 

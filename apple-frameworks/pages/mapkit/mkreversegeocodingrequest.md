@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mapkit/mkreversegeocodingrequest](https://developer.apple.com/documentation/mapkit/mkreversegeocodingrequest)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mapkit/mkreversegeocodingrequest
 
 # MKReverseGeocodingRequest (Swift)
 
@@ -24,6 +25,7 @@ Use this class to look up an address by a coordinate you provide. This example s
 
     struct MyReverseGeocoderView: View {
 
+
     let fountainCoordinates = [
         CLLocation(latitude: 39.042617, longitude: -94.587526),
         CLLocation(latitude: 40.774313, longitude: -73.970835),
@@ -31,8 +33,10 @@ Use this class to look up an address by a coordinate you provide. This example s
         CLLocation(latitude: 41.875790, longitude: -87.618953),
         ]
 
+
         // An array that holds resolved information about the fountains.
         @State var fountains: [MKMapItem] = []
+
 
         var body: some View {
         // SwiftUI body views
@@ -125,6 +129,7 @@ Use this class to look up an address by a coordinate you provide. This example s
 
     struct MyReverseGeocoderView: View {
 
+
     let fountainCoordinates = [
         CLLocation(latitude: 39.042617, longitude: -94.587526),
         CLLocation(latitude: 40.774313, longitude: -73.970835),
@@ -132,8 +137,10 @@ Use this class to look up an address by a coordinate you provide. This example s
         CLLocation(latitude: 41.875790, longitude: -87.618953),
         ]
 
+
         // An array that holds resolved information about the fountains.
         @State var fountains: [MKMapItem] = []
+
 
         var body: some View {
         // SwiftUI body views

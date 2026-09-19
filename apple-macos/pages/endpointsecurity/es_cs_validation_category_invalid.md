@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_cs_validation_category_invalid](https://developer.apple.com/documentation/endpointsecurity/es_cs_validation_category_invalid)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_cs_validation_category_invalid
 
 # ES_CS_VALIDATION_CATEGORY_INVALID (Swift)
 

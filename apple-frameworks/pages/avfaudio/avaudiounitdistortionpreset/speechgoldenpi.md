@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avaudiounitdistortionpreset/speechgoldenpi](https://developer.apple.com/documentation/avfaudio/avaudiounitdistortionpreset/speechgoldenpi)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiounitdistortionpreset/speechgoldenpi
 
 # AVAudioUnitDistortionPreset.speechGoldenPi (Swift)
 

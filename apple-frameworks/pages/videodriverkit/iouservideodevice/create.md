@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideodevice/create](https://developer.apple.com/documentation/videodriverkit/iouservideodevice/create)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideodevice/create
 
 # Create
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Static Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 A static factory method that allocates and initializes a video device.
 
@@ -39,5 +40,5 @@ If IOUserVideoDevice is subclassed to override behavior, don’t use this method
 
 ### Creating a video device
 
-- [init](init.md): Initializes a video device.
-- [IOUserVideoDriver](../iouservideodriver.md): A video driver.
+- [init](init.md): Beta. Initializes a video device.
+- [IOUserVideoDriver](../iouservideodriver.md): Beta. A video driver.

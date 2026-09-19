@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avaudiosession/deactivationsource](https://developer.apple.com/documentation/avfaudio/avaudiosession/deactivationsource)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosession/deactivationsource
 
 # AVAudioSession.DeactivationSource (Swift)
 
@@ -16,14 +17,14 @@ enum DeactivationSource
 
 ## Topics
 
+### Creating a deactivation source
+
+- [init(rawValue:)](deactivationsource/init%28rawvalue_%29.md)
+
 ### Getting the source
 
 - [AVAudioSession.DeactivationSource.app](deactivationsource/app.md)
 - [AVAudioSession.DeactivationSource.system](deactivationsource/system.md)
-
-### Creating a deactivation source
-
-- [init(rawValue:)](deactivationsource/init%28rawvalue_%29.md)
 
 ## Relationships
 
@@ -38,17 +39,8 @@ enum DeactivationSource
 
 ## See Also
 
-### Observing activation lifecycle
+### Getting activation context details
 
-- [didBecomeActiveNotification](didbecomeactivenotification.md): Notification sent when the audio session becomes active.
-- [didBecomeInactiveNotification](didbecomeinactivenotification.md): Notification sent when the audio session becomes inactive.
-- [resumptionRecommendationNotification](resumptionrecommendationnotification.md): Notification sent when the system provides a resumption recommendation.
-- [deactivationContextKey](deactivationcontextkey.md): Keys for [didBecomeInactiveNotification](didbecomeinactivenotification.md) Value is an [AVAudioSession.DeactivationContext](deactivationcontext.md) object describing the deactivation.
-- [resumptionContextKey](resumptioncontextkey.md): Keys for [resumptionRecommendationNotification](resumptionrecommendationnotification.md) Value is an [AVAudioSession.ResumptionContext](resumptioncontext.md) describing the resumption recommendation.
-- [AVAudioSession.DidBecomeActiveMessage](didbecomeactivemessage.md)
-- [AVAudioSession.DidBecomeInactiveMessage](didbecomeinactivemessage.md)
-- [AVAudioSession.ResumptionRecommendationMessage](resumptionrecommendationmessage.md)
-- [AVAudioSession.DeactivationResult](deactivationresult.md): Type-safe representation of audio session deactivation results.
 - [AVAudioSession.DeactivationContext](deactivationcontext.md): An object that describes why and how the audio session deactivated.
 - [AVAudioSession.InterruptionContext](interruptioncontext.md): An object that provides context about an audio session interruption.
 - [AVAudioSession.ResumptionContext](resumptioncontext.md): An object that provides context when resumption becomes available.
@@ -77,13 +69,8 @@ enum AVAudioSessionDeactivationSource : NSInteger;
 
 ## See Also
 
-### Observing activation lifecycle
+### Getting activation context details
 
-- [AVAudioSessionDidBecomeActiveNotification](didbecomeactivenotification.md): Notification sent when the audio session becomes active.
-- [AVAudioSessionDidBecomeInactiveNotification](didbecomeinactivenotification.md): Notification sent when the audio session becomes inactive.
-- [AVAudioSessionResumptionRecommendationNotification](resumptionrecommendationnotification.md): Notification sent when the system provides a resumption recommendation.
-- [AVAudioSessionDeactivationContextKey](deactivationcontextkey.md): Keys for [AVAudioSessionDidBecomeInactiveNotification](didbecomeinactivenotification.md) Value is an [AVAudioSessionDeactivationContext](deactivationcontext.md) object describing the deactivation.
-- [AVAudioSessionResumptionContextKey](resumptioncontextkey.md): Keys for [AVAudioSessionResumptionRecommendationNotification](resumptionrecommendationnotification.md) Value is an [AVAudioSessionResumptionContext](resumptioncontext.md) describing the resumption recommendation.
 - [AVAudioSessionDeactivationContext](deactivationcontext.md): An object that describes why and how the audio session deactivated.
 - [AVAudioSessionInterruptionContext](interruptioncontext.md): An object that provides context about an audio session interruption.
 - [AVAudioSessionResumptionContext](resumptioncontext.md): An object that provides context when resumption becomes available.

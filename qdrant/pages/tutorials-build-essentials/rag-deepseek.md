@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/rag-deepseek.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/tutorials-build-essentials/rag-deepseek.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/rag-deepseek.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/tutorials-build-essentials/rag-deepseek.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-build-essentials/rag-deepseek/
 
 # RAG in 5 Minutes with DeepSeek and Qdrant
@@ -21,7 +21,7 @@ In this tutorial, we will:
 
 #### Architecture:
 
-![deepseek-rag-architecture](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/rag-deepseek/architecture.png)
+![deepseek-rag-architecture](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/rag-deepseek/architecture.png)
 
 ***
 

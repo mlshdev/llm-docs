@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcaptureview/setsession(_:showvideopreview:showaudiopreview:)](https://developer.apple.com/documentation/avkit/avcaptureview/setsession(_:showvideopreview:showaudiopreview:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcaptureview/setsession(_:showvideopreview:showaudiopreview:)
 
 # setSession(\_:showVideoPreview:showAudioPreview:) (Swift)
 
@@ -30,7 +31,7 @@ The capture view automatically starts and stops the default session. If you set 
 
 ## See Also
 
-### Configuring the Capture Session
+### Configuring the capture session
 
 - [session](session.md): The view’s associated capture session.
 
@@ -64,6 +65,6 @@ The capture view automatically starts and stops the default session. If you set 
 
 ## See Also
 
-### Configuring the Capture Session
+### Configuring the capture session
 
 - [session](session.md): The view’s associated capture session.

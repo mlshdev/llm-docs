@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/kcdata_subtype_descriptor_t/1588387-kcs_elem_offset](https://developer.apple.com/documentation/kernel/kcdata_subtype_descriptor_t/1588387-kcs_elem_offset)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/kcdata_subtype_descriptor_t/1588387-kcs_elem_offset
 
 # kcs_elem_offset
 

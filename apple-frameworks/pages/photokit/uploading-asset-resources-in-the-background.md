@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photokit/uploading-asset-resources-in-the-background](https://developer.apple.com/documentation/photokit/uploading-asset-resources-in-the-background)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photokit/uploading-asset-resources-in-the-background
 
 # Uploading asset resources in the background (Swift)
 
@@ -517,12 +518,12 @@ While testing, keep the following in mind to help your extension run reliably un
 
 ### Related Documentation
 
-- [PHBackgroundResourceUploadJobExtension](../photos/phbackgroundresourceuploadjobextension.md)
+- [PHBackgroundResourceUploadJobExtension](../photos/phbackgroundresourceuploadjobextension.md): A protocol to interact with asset resource upload jobs during background processing.
 - [assetResource(forUploadJob:)](../photos/phassetresource/assetresource%28foruploadjob_%29.md): Returns the asset resource associated with the given upload job.
 
 ### Background resource upload extensions
 
-- [PHBackgroundResourceUploadExtension](../photos/phbackgroundresourceuploadextension.md): Deprecated.
+- [PHBackgroundResourceUploadExtension](../photos/phbackgroundresourceuploadextension.md): Deprecated. A protocol to interact with asset resource upload jobs during background processing.
 - [PHAssetResourceUploadJob](../photos/phassetresourceuploadjob.md): An object that represents a request to upload an asset resource.
 - [PHAssetResourceUploadJobChangeRequest](../photos/phassetresourceuploadjobchangerequest.md): Use within an application’s `com.apple.photos.background-upload` extension to create and change [PHAssetResourceUploadJob](../photos/phassetresourceuploadjob.md) records.
 

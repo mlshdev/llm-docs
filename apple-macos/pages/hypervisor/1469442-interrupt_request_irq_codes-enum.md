@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/1469442-interrupt_request_irq_codes-enum](https://developer.apple.com/documentation/hypervisor/1469442-interrupt_request_irq_codes-enum)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/1469442-interrupt_request_irq_codes-enum
 
 # Interrupt request (IRQ) codes
 

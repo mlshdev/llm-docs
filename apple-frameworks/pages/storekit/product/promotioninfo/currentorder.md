@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/product/promotioninfo/currentorder](https://developer.apple.com/documentation/storekit/product/promotioninfo/currentorder)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/product/promotioninfo/currentorder
 
 # currentOrder
 
@@ -16,7 +17,7 @@ static var currentOrder: [Product.PromotionInfo] { get async throws }
 
 ## Mentioned In
 
-- [Supporting promoted In-App Purchases in your app](../../supporting-promoted-in-app-purchases-in-your-app.md)
+- [Supporting promoted Apple In-App Purchases in your app](../../supporting-promoted-in-app-purchases-in-your-app.md)
 
 <a id="Discussion"></a>
 
@@ -28,4 +29,4 @@ This asynchronous array returns a list of [Product.PromotionInfo](../promotionin
 
 >  This list is empty if you don’t override the order, and the App Store displays the products in their default order.
 
-For information about setting the default order using App Store Connect, see [Promote in-app purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/promote-in-app-purchases).
+For information about setting the default order using App Store Connect, see [Promote Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/promote-in-app-purchases).

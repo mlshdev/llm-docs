@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cirawfilteroption/propertieskey](https://developer.apple.com/documentation/coreimage/cirawfilteroption/propertieskey)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreimage/cirawfilteroption/propertieskey
 
 # propertiesKey (Swift)
 
 **Framework:** Core Image  
 **Kind:** Type Property  
-**Availability:** iOS 15.0+ (deprecated in 27.0) · iPadOS 15.0+ (deprecated in 27.0) · Mac Catalyst 15.0+ (deprecated in 27.0) · macOS 12.0+ (deprecated in 27.0) · tvOS 15.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 15.0+ (deprecated in 27.2) · iPadOS 15.0+ (deprecated in 27.2) · Mac Catalyst 15.0+ (deprecated in 27.2) · macOS 12.0+ (deprecated in 27.2) · tvOS 15.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 > Use new CIRAWFilter class instead.
 
@@ -38,7 +39,7 @@ static let propertiesKey: CIRAWFilterOption
 
 **Framework:** Core Image  
 **Kind:** Global Variable  
-**Availability:** iOS 15.0+ (deprecated in 27.0) · iPadOS 15.0+ (deprecated in 27.0) · Mac Catalyst 15.0+ (deprecated in 27.0) · macOS 12.0+ (deprecated in 27.0) · tvOS 15.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 15.0+ (deprecated in 27.2) · iPadOS 15.0+ (deprecated in 27.2) · Mac Catalyst 15.0+ (deprecated in 27.2) · macOS 12.0+ (deprecated in 27.2) · tvOS 15.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 > Use new CIRAWFilter class instead.
 

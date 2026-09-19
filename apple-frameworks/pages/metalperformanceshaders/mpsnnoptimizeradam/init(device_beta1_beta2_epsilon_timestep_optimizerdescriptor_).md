@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsnnoptimizeradam/init(device:beta1:beta2:epsilon:timestep:optimizerdescriptor:)](https://developer.apple.com/documentation/metalperformanceshaders/mpsnnoptimizeradam/init(device:beta1:beta2:epsilon:timestep:optimizerdescriptor:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpsnnoptimizeradam/init(device:beta1:beta2:epsilon:timestep:optimizerdescriptor:)
 
 # init(device:beta1:beta2:epsilon:timeStep:optimizerDescriptor:) (Swift)
 

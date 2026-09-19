@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphiccircularstacktext/line2textprovider](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircularstacktext/line2textprovider)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircularstacktext/line2textprovider
 
 # line2TextProvider (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 6.0+ (deprecated in 27.0)
+**Availability:** watchOS 6.0+ (deprecated in 27.2)
 
 The text to display on the bottom row.
 
@@ -32,7 +33,7 @@ This property supports multicolor text.
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 6.0+ (deprecated in 27.0)
+**Availability:** watchOS 6.0+ (deprecated in 27.2)
 
 The text to display on the bottom row.
 

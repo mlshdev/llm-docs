@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/if_data/1492489-ifi_obytes](https://developer.apple.com/documentation/kernel/if_data/1492489-ifi_obytes)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/if_data/1492489-ifi_obytes
 
 # ifi_obytes
 

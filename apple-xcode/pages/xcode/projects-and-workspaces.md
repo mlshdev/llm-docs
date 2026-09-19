@@ -1,12 +1,11 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/projects-and-workspaces](https://developer.apple.com/documentation/xcode/projects-and-workspaces)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/projects-and-workspaces
 
 # Projects and workspaces
 
 Manage the code and resources you use to build apps, libraries, and other software for Apple platforms.
 
 ## Topics
-
-- [Downloading and installing additional Xcode components](downloading-and-installing-additional-xcode-components.md): Add more simulated devices, optional features, and support for additional platforms.
 
 ### Navigation
 
@@ -15,6 +14,7 @@ Manage the code and resources you use to build apps, libraries, and other softwa
 
 ### Project configuration
 
+- [Updating your Xcode project configuration file format](updating-your-xcode-project-configuration-file-format.md): Beta. Configure your Xcode project to use the JSON project configuration file format that’s more human-readable and editable by coding intelligence agents.
 - [Managing your app’s information property list values](https://developer.apple.com/documentation/bundleresources/managing-your-app-s-information-property-list): Customize the information property list values for your app using Xcode.
 - [Adding package dependencies to your app](adding-package-dependencies-to-your-app.md): Integrate package dependencies to share code between projects, or leverage code from other developers.
 - [Creating a Mac version of your iPad app](https://developer.apple.com/documentation/uikit/creating-a-mac-version-of-your-ipad-app): Bring your iPad app to macOS with Mac Catalyst.
@@ -23,6 +23,7 @@ Manage the code and resources you use to build apps, libraries, and other softwa
 
 ### Customization
 
+- [Downloading and installing additional Xcode components](downloading-and-installing-additional-xcode-components.md): Add more simulated devices, optional features, and support for additional platforms.
 - [Customizing your workspace using themes](customizing-your-workspace-using-themes.md): Personalize the appearance of Xcode on your Mac.
 
 ### Associated domains and universal links

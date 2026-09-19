@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstoolbar/sizemode-swift.enum/default](https://developer.apple.com/documentation/appkit/nstoolbar/sizemode-swift.enum/default)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstoolbar/sizemode-swift.enum/default
 
 # NSToolbar.SizeMode.default (Swift)
 
 **Framework:** AppKit  
 **Kind:** Case  
-**Availability:** Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.0+ (deprecated in 27.0)
+**Availability:** Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.0+ (deprecated in 27.0)
 
 The toolbar uses the system-defined default size, which is `NSToolbarSizeModeRegular`.
 
@@ -27,7 +28,7 @@ case `default`
 
 **Framework:** AppKit  
 **Kind:** Enumeration Case  
-**Availability:** Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.0+ (deprecated in 27.0)
+**Availability:** Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.0+ (deprecated in 27.0)
 
 The toolbar uses the system-defined default size, which is `NSToolbarSizeModeRegular`.
 

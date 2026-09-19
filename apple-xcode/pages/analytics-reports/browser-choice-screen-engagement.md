@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/analytics-reports/browser-choice-screen-engagement](https://developer.apple.com/documentation/analytics-reports/browser-choice-screen-engagement)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/analytics-reports/browser-choice-screen-engagement
 
 # Browser Choice Screen Engagement (iOS versions before 18.2)
 

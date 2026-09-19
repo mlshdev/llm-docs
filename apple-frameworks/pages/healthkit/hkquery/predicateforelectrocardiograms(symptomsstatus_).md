@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkquery/predicateforelectrocardiograms(symptomsstatus:)](https://developer.apple.com/documentation/healthkit/hkquery/predicateforelectrocardiograms(symptomsstatus:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkquery/predicateforelectrocardiograms(symptomsstatus:)
 
 # predicateForElectrocardiograms(symptomsStatus:) (Swift)
 
@@ -34,6 +35,7 @@ Use this convenience method to create a predicate that matches electrocardiogram
 let forSymptomStatus = HKQuery.predicateForElectrocardiograms(symptomsStatus: .present)
 
 let status = HKElectrocardiogram.SymptomsStatus.present.rawValue
+
 
 let explicitForSymptomStatus = NSPredicate(format: "%K == %d", HKPredicateKeyPathECGSymptomsStatus, status)
 ```
@@ -83,6 +85,7 @@ Use this convenience method to create a predicate that matches electrocardiogram
 let forSymptomStatus = HKQuery.predicateForElectrocardiograms(symptomsStatus: .present)
 
 let status = HKElectrocardiogram.SymptomsStatus.present.rawValue
+
 
 let explicitForSymptomStatus = NSPredicate(format: "%K == %d", HKPredicateKeyPathECGSymptomsStatus, status)
 ```

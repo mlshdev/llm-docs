@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ifnet_stats_per_flow/4520153-linkheur_rxmtfloor](https://developer.apple.com/documentation/kernel/ifnet_stats_per_flow/4520153-linkheur_rxmtfloor)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ifnet_stats_per_flow/4520153-linkheur_rxmtfloor
 
 # linkheur_rxmtfloor
 

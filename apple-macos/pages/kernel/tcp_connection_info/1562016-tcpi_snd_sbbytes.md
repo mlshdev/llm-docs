@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/tcp_connection_info/1562016-tcpi_snd_sbbytes](https://developer.apple.com/documentation/kernel/tcp_connection_info/1562016-tcpi_snd_sbbytes)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/tcp_connection_info/1562016-tcpi_snd_sbbytes
 
 # tcpi_snd_sbbytes
 

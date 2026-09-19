@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/environment-variable-reference](https://developer.apple.com/documentation/xcode/environment-variable-reference)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/environment-variable-reference
 
 # Environment variable reference
 
@@ -109,7 +110,7 @@ The availability of the following environment variables depends on the action Xc
 
 > **Note**
 
-> Xcode Cloud makes all the environment variables for test actions available to the processes that execute your tests, known as *test runners*. This includes environment variables set by the system as well as any custom environment variables you set in the Environment section of your workflow. When executing your test action, Xcode Cloud adds the prefix `TEST_RUNNER_` to each variable’s name, which is required by `xcodebuild` for the test runner process to access each variable by its original name. For more information on using the `TEST_RUNNER_` prefix on your environment variables when running `xcodebuild`, see the Environment Variables section of `xcodebuild`’s [man page](x-man-page://1/xcodebuild).
+> Xcode Cloud makes all the environment variables for test actions available to the processes that execute your tests, known as *test runners*. This includes environment variables set by the system as well as any custom environment variables you set in the Environment section of your workflow. When executing your test action, Xcode Cloud adds the prefix `TEST_RUNNER_` to each variable’s name, which is required by `xcodebuild` for the test runner process to access each variable by its original name. For more information on using the `TEST_RUNNER_` prefix on your environment variables when running `xcodebuild`, see the Environment Variables section of `xcodebuild`’s man page.
 
 <a id="Variables-for-archive-actions"></a>
 

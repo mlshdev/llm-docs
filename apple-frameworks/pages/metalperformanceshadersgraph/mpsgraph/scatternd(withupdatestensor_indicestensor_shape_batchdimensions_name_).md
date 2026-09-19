@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshadersgraph/mpsgraph/scatternd(withupdatestensor:indicestensor:shape:batchdimensions:name:)](https://developer.apple.com/documentation/metalperformanceshadersgraph/mpsgraph/scatternd(withupdatestensor:indicestensor:shape:batchdimensions:name:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshadersgraph/mpsgraph/scatternd(withupdatestensor:indicestensor:shape:batchdimensions:name:)
 
 # scatterND(withUpdatesTensor:indicesTensor:shape:batchDimensions:name:) (Swift)
 

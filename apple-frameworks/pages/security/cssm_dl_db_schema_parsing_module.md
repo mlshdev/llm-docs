@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_dl_db_schema_parsing_module](https://developer.apple.com/documentation/security/cssm_dl_db_schema_parsing_module)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_dl_db_schema_parsing_module
 
 # CSSM_DL_DB_SCHEMA_PARSING_MODULE (Swift)
 

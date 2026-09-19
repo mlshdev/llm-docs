@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/sec_protocol_options_set_tls_pre_shared_key_identity_hint(_:_:)](https://developer.apple.com/documentation/security/sec_protocol_options_set_tls_pre_shared_key_identity_hint(_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/sec_protocol_options_set_tls_pre_shared_key_identity_hint(_:_:)
 
 # sec_protocol_options_set_tls_pre_shared_key_identity_hint(\_:\_:) (Swift)
 

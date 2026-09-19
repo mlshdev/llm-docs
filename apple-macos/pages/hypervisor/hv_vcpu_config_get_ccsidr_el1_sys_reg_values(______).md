@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_vcpu_config_get_ccsidr_el1_sys_reg_values(_:_:_:)](https://developer.apple.com/documentation/hypervisor/hv_vcpu_config_get_ccsidr_el1_sys_reg_values(_:_:_:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_vcpu_config_get_ccsidr_el1_sys_reg_values(_:_:_:)
 
 # hv_vcpu_config_get_ccsidr_el1_sys_reg_values(\_:\_:\_:) (Swift)
 

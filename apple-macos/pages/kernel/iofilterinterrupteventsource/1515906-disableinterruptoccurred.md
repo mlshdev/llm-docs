@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iofilterinterrupteventsource/1515906-disableinterruptoccurred](https://developer.apple.com/documentation/kernel/iofilterinterrupteventsource/1515906-disableinterruptoccurred)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iofilterinterrupteventsource/1515906-disableinterruptoccurred
 
 # disableInterruptOccurred
 

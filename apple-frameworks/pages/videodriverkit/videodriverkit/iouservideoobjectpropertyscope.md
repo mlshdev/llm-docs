@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyscope](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyscope)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyscope
 
 # IOUserVideoObjectPropertyScope
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 A four character code which, along with the selector and element, identifies a specific piece of information about a video object.
 
@@ -26,16 +27,16 @@ The scope specifies the section of the object in which to look for the property,
 
 ### Property scopes
 
-- [Global](iouservideoobjectpropertyscope/global.md): The scope for properties that apply to the object as a whole.
-- [Input](iouservideoobjectpropertyscope/input.md): The scope for properties that apply to the input side of an object.
-- [Output](iouservideoobjectpropertyscope/output.md): The scope for properties that apply to the output side of an object.
-- [PlayThrough](iouservideoobjectpropertyscope/playthrough.md): The scope for properties that apply to the play-through side of an object.
+- [Global](iouservideoobjectpropertyscope/global.md): Beta. The scope for properties that apply to the object as a whole.
+- [Input](iouservideoobjectpropertyscope/input.md): Beta. The scope for properties that apply to the input side of an object.
+- [Output](iouservideoobjectpropertyscope/output.md): Beta. The scope for properties that apply to the output side of an object.
+- [PlayThrough](iouservideoobjectpropertyscope/playthrough.md): Beta. The scope for properties that apply to the play-through side of an object.
 
 ## See Also
 
 ### Creating a Boolean control
 
-- [Create](../iouservideobooleancontrol/create.md): A static factory method that allocates and initializes a video Boolean control.
-- [init](../iouservideobooleancontrol/init.md): Initializes an IOUserVideoBooleanControl.
-- [IOUserVideoDriver](../iouservideodriver.md): A video driver.
-- [IOUserVideoObjectPropertyElement](iouservideoobjectpropertyelement.md): An integer that identifies, along with the property selector and scope, a specific piece of information about a video object.
+- [Create](../iouservideobooleancontrol/create.md): Beta. A static factory method that allocates and initializes a video Boolean control.
+- [init](../iouservideobooleancontrol/init.md): Beta. Initializes an IOUserVideoBooleanControl.
+- [IOUserVideoDriver](../iouservideodriver.md): Beta. A video driver.
+- [IOUserVideoObjectPropertyElement](iouservideoobjectpropertyelement.md): Beta. An integer that identifies, along with the property selector and scope, a specific piece of information about a video object.

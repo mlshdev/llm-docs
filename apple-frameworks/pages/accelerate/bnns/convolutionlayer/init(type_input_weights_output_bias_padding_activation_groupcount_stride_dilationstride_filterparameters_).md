@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnns/convolutionlayer/init(type:input:weights:output:bias:padding:activation:groupcount:stride:dilationstride:filterparameters:)](https://developer.apple.com/documentation/accelerate/bnns/convolutionlayer/init(type:input:weights:output:bias:padding:activation:groupcount:stride:dilationstride:filterparameters:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/bnns/convolutionlayer/init(type:input:weights:output:bias:padding:activation:groupcount:stride:dilationstride:filterparameters:)
 
 # init(type:input:weights:output:bias:padding:activation:groupCount:stride:dilationStride:filterParameters:)
 

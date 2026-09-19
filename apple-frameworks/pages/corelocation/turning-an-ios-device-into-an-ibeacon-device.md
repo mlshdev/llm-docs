@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corelocation/turning-an-ios-device-into-an-ibeacon-device](https://developer.apple.com/documentation/corelocation/turning-an-ios-device-into-an-ibeacon-device)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corelocation/turning-an-ios-device-into-an-ibeacon-device
 
 # Turning an iOS device into an iBeacon device (Swift)
 

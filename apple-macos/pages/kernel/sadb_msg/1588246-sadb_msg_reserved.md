@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/sadb_msg/1588246-sadb_msg_reserved](https://developer.apple.com/documentation/kernel/sadb_msg/1588246-sadb_msg_reserved)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/sadb_msg/1588246-sadb_msg_reserved
 
 # sadb_msg_reserved
 

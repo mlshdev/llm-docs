@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/audioqueuebuffer/init(maudiodatabytescapacity:maudiodata:maudiodatabytesize:muserdata:mpacketdescriptioncapacity:mpacketdescriptions:mpacketdescriptioncount:)](https://developer.apple.com/documentation/audiotoolbox/audioqueuebuffer/init(maudiodatabytescapacity:maudiodata:maudiodatabytesize:muserdata:mpacketdescriptioncapacity:mpacketdescriptions:mpacketdescriptioncount:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/audioqueuebuffer/init(maudiodatabytescapacity:maudiodata:maudiodatabytesize:muserdata:mpacketdescriptioncapacity:mpacketdescriptions:mpacketdescriptioncount:)
 
 # init(mAudioDataBytesCapacity:mAudioData:mAudioDataByteSize:mUserData:mPacketDescriptionCapacity:mPacketDescriptions:mPacketDescriptionCount:)
 

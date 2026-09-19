@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimageconvert_argbtoypcbcr_generateconversion(_:_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimageconvert_argbtoypcbcr_generateconversion(_:_:_:_:_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vimageconvert_argbtoypcbcr_generateconversion(_:_:_:_:_:_:)
 
 # vImageConvert_ARGBToYpCbCr_GenerateConversion(\_:\_:\_:\_:\_:\_:) (Swift)
 
@@ -53,6 +54,8 @@ The following example shows how to prepare for the conversion of ARGB8888 to a Y
  pixelRange.CbCrMin         =    0;     // a clamping limit above which the value is not allowed to go. 0 is fastest.  Use (2*pixelRange.CbCr_bias - pixelRange.CbCrRangeMax), if you don't want CbCr < -0.5
  
  err = vImageConvert_ARGBToYpCbCr_GenerateConversion(kvImage_ARGBToYpCbCrMatrix_ITU_R_601_4, &pixelRange, &outInfo, kvImageARGB8888, kvImage422YpCbYpCr8, flags);
+
+
 
 ```
 
@@ -158,6 +161,8 @@ The following example shows how to prepare for the conversion of ARGB8888 to a Y
  pixelRange.CbCrMin         =    0;     // a clamping limit above which the value is not allowed to go. 0 is fastest.  Use (2*pixelRange.CbCr_bias - pixelRange.CbCrRangeMax), if you don't want CbCr < -0.5
  
  err = vImageConvert_ARGBToYpCbCr_GenerateConversion(kvImage_ARGBToYpCbCrMatrix_ITU_R_601_4, &pixelRange, &outInfo, kvImageARGB8888, kvImage422YpCbYpCr8, flags);
+
+
 
 ```
 

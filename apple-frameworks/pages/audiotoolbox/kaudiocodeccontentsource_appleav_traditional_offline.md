@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/kaudiocodeccontentsource_appleav_traditional_offline](https://developer.apple.com/documentation/audiotoolbox/kaudiocodeccontentsource_appleav_traditional_offline)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiocodeccontentsource_appleav_traditional_offline
 
 # kAudioCodecContentSource_AppleAV_Traditional_Offline (Swift)
 

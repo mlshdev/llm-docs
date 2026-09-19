@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1591698-anonymous/khidusage_snsr_environmental_winddirection](https://developer.apple.com/documentation/iokit/1591698-anonymous/khidusage_snsr_environmental_winddirection)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1591698-anonymous/khidusage_snsr_environmental_winddirection
 
 # kHIDUsage_Snsr_Environmental_WindDirection
 

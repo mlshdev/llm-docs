@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avdisplaydynamicrange/automatic](https://developer.apple.com/documentation/avkit/avdisplaydynamicrange/automatic)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avdisplaydynamicrange/automatic
 
 # AVDisplayDynamicRange.automatic (Swift)
 
@@ -16,7 +17,7 @@ case automatic
 
 ## See Also
 
-### Dynamic Ranges
+### Dynamic ranges
 
 - [AVDisplayDynamicRange.standard](standard.md): Defines a standard dynamic range. Restricts the video content dynamic range to the standard range regardless of the actual range of the video content.
 - [AVDisplayDynamicRange.constrainedHigh](constrainedhigh.md): Defines a constrained high dynamic range. Allows for constrained High Dynamic Range (HDR) video content which is useful for mixing HDR and Standard Dynamic Range (SDR) content.
@@ -38,7 +39,7 @@ AVDisplayDynamicRangeAutomatic
 
 ## See Also
 
-### Dynamic Ranges
+### Dynamic ranges
 
 - [AVDisplayDynamicRangeStandard](standard.md): Defines a standard dynamic range. Restricts the video content dynamic range to the standard range regardless of the actual range of the video content.
 - [AVDisplayDynamicRangeConstrainedHigh](constrainedhigh.md): Defines a constrained high dynamic range. Allows for constrained High Dynamic Range (HDR) video content which is useful for mixing HDR and Standard Dynamic Range (SDR) content.

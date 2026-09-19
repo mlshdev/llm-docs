@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skstoreproductparameterproductidentifier](https://developer.apple.com/documentation/storekit/skstoreproductparameterproductidentifier)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skstoreproductparameterproductidentifier
 
 # SKStoreProductParameterProductIdentifier (Swift)
 
@@ -22,7 +23,7 @@ The value for this key is an instance of [NSString](../foundation/nsstring.md).
 
 When your app uses an [SKStoreProductViewController](skstoreproductviewcontroller.md) to render an app page for another app, you can optionally choose to highlight an in-app purchase by displaying it at the top of the store page.  Set  [SKStoreProductParameterProductIdentifier](skstoreproductparameterproductidentifier.md) to the identifier of the product you want displayed at the top of the page.
 
-The product indicated by the identifier must be set up as a promoted product in the App Store, otherwise the identifier is ignored. See [Promoting In-App Purchases](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/PromotingIn-AppPurchases/PromotingIn-AppPurchases.html#//apple_ref/doc/uid/TP40008267-CH11).
+The product indicated by the identifier must be set up as a promoted product in the App Store, otherwise the identifier is ignored. See [Promoting Apple In-App Purchases](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/PromotingIn-AppPurchases/PromotingIn-AppPurchases.html#//apple_ref/doc/uid/TP40008267-CH11).
 
 > **Note**
 
@@ -60,7 +61,7 @@ The value for this key is an instance of [NSString](../foundation/nsstring.md).
 
 When your app uses an [SKStoreProductViewController](skstoreproductviewcontroller.md) to render an app page for another app, you can optionally choose to highlight an in-app purchase by displaying it at the top of the store page.  Set  [SKStoreProductParameterProductIdentifier](skstoreproductparameterproductidentifier.md) to the identifier of the product you want displayed at the top of the page.
 
-The product indicated by the identifier must be set up as a promoted product in the App Store, otherwise the identifier is ignored. See [Promoting In-App Purchases](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/PromotingIn-AppPurchases/PromotingIn-AppPurchases.html#//apple_ref/doc/uid/TP40008267-CH11).
+The product indicated by the identifier must be set up as a promoted product in the App Store, otherwise the identifier is ignored. See [Promoting Apple In-App Purchases](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/PromotingIn-AppPurchases/PromotingIn-AppPurchases.html#//apple_ref/doc/uid/TP40008267-CH11).
 
 > **Note**
 

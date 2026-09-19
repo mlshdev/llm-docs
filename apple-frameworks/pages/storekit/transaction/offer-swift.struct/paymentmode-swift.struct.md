@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/offer-swift.struct/paymentmode-swift.struct](https://developer.apple.com/documentation/storekit/transaction/offer-swift.struct/paymentmode-swift.struct)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/offer-swift.struct/paymentmode-swift.struct
 
 # Transaction.Offer.PaymentMode
 
@@ -28,7 +29,7 @@ The following images describe payment modes for auto-renewable subscriptions.
 
 ![A timeline titled “Pay Up Front” that is divided into three sections. The first section, labeled “Introductory price” has a different timespan than the following sections, labelled “Regular price”. The timeline starts with the initial purchase at the introductory price, followed by the first renewal and second renewals, both at the regular price. Three dots at the end of the timeline indicate the pattern continues with renewals at the regular price.](https://developer.apple.com/images/com.apple.storekit/media-4311731@2x.png)
 
-For more information about payment modes, see [In-app purchase and subscriptions pricing and availability](https://developer.apple.com/help/app-store-connect/reference/in-app-purchase-and-subscriptions-pricing-and-availability).
+For more information about payment modes, see [Apple In-App Purchase and subscriptions pricing and availability](https://developer.apple.com/help/app-store-connect/reference/in-app-purchase-and-subscriptions-pricing-and-availability).
 
 ## Topics
 

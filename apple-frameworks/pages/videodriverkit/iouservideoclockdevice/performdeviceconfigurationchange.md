@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoclockdevice/performdeviceconfigurationchange](https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/performdeviceconfigurationchange)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/performdeviceconfigurationchange
 
 # PerformDeviceConfigurationChange
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 The host calls this method to allow the clock device to perform a configuration change that had been previously requested via a call to the host via RequestDeviceConfigChange or a change to an IO state that requires a configuration change
 
@@ -30,4 +31,4 @@ Subclass and override this method to handle any custom configuration change requ
 
 ### Supporting device configuration changes
 
-- [AbortDeviceConfigurationChange](abortdeviceconfigurationchange.md): The host calls this method to tell the driver not to perform a configuration change that had been requested via a call to the Host method, RequestDeviceConfigurationChange().
+- [AbortDeviceConfigurationChange](abortdeviceconfigurationchange.md): Beta. The host calls this method to tell the driver not to perform a configuration change that had been requested via a call to the Host method, RequestDeviceConfigurationChange().

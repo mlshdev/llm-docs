@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelsession/responsestream](https://developer.apple.com/documentation/foundationmodels/languagemodelsession/responsestream)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelsession/responsestream
 
 # LanguageModelSession.ResponseStream
 
@@ -23,6 +24,10 @@ struct ResponseStream<Content> where Content : Generable
 ### Getting a snapshot of a partial response
 
 - [LanguageModelSession.ResponseStream.Snapshot](responsestream/snapshot.md): Conforms when `Content` conforms to `Generable`. A snapshot of partially generated content.
+
+### Default Implementations
+
+- [AsyncSequence Implementations](responsestream/asyncsequence-implementations.md)
 
 ## Relationships
 

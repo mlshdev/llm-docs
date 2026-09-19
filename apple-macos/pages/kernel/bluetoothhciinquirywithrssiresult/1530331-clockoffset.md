@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/bluetoothhciinquirywithrssiresult/1530331-clockoffset](https://developer.apple.com/documentation/kernel/bluetoothhciinquirywithrssiresult/1530331-clockoffset)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/bluetoothhciinquirywithrssiresult/1530331-clockoffset
 
 # clockOffset
 

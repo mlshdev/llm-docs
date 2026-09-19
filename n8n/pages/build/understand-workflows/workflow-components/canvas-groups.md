@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/understand-workflows/workflow-components/canvas-groups.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/understand-workflows/workflow-components/canvas-groups.md)
+> Pinned source for n8n main: [docs/build/understand-workflows/workflow-components/canvas-groups.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/understand-workflows/workflow-components/canvas-groups.md)
 
 # Canvas Groups <a id="canvas-groups"></a>
 
@@ -9,12 +9,12 @@
 
 Canvas Groups let you organize related nodes into a single named group on the canvas. Group the nodes that handle one part of a workflow, name it, and collapse it when you want a cleaner view. A Canvas Group saves with the workflow, so anyone who opens it sees the same structure. You can collapse a Canvas Group for a cleaner view, which is a personal preference saved in your browser. And you can also give a Canvas Group a description, so anyone reading the workflow can see what that part does at a glance.
 
-![A workflow with expanded and collapsed Canvas Groups, some with descriptions](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/canvas-groups-overview.png)
+![A workflow with expanded and collapsed Canvas Groups, some with descriptions](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/canvas-groups-overview.png)
 
 ## Create a Canvas Group <a id="create-a-canvas-group"></a>
 
 1. Select the nodes you want to group. Drag a selection box around them, or hold `Ctrl/Cmd` and click each node.
-2. Select the **Group nodes** icon ![Group nodes icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/group.svg) in the toolbar above the selection, select **Group nodes** in the selection's right-click menu, or press `Ctrl/Cmd` + `G`.
+2. Select the **Group nodes** icon ![Group nodes icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/group.svg) in the toolbar above the selection, select **Group nodes** in the selection's right-click menu, or press `Ctrl/Cmd` + `G`.
 3. n8n creates the Canvas Group and highlights the name field so you can type a name straight away.
 
 You can only group a selection when it forms a valid Canvas Group. See [What you can group](#what-you-can-group) for the rules.
@@ -47,7 +47,7 @@ n8n remembers which Canvas Groups you've expanded and keeps your view the same w
 
 ## Ungroup <a id="ungroup"></a>
 
-To break a Canvas Group back into separate nodes, select the **Ungroup** icon ![Ungroup icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/ungroup.svg) above it, select **Ungroup nodes** in its right-click menu, or press `Ctrl/Cmd` + `Shift` + `G`. The nodes stay on the canvas.
+To break a Canvas Group back into separate nodes, select the **Ungroup** icon ![Ungroup icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/ungroup.svg) above it, select **Ungroup nodes** in its right-click menu, or press `Ctrl/Cmd` + `Shift` + `G`. The nodes stay on the canvas.
 
 ## Group actions from the context menu <a id="group-actions-from-the-context-menu"></a>
 
@@ -57,7 +57,7 @@ Right-click an empty part of the canvas to use **Expand all groups** and **Colla
 
 ## What you can group <a id="what-you-can-group"></a>
 
-Not every selection can become a Canvas Group. When you select nodes, n8n checks a few rules and only displays the **Group nodes** icon ![Group nodes icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/group.svg) when they all pass. If the icon doesn't appear, check your selection against these rules:
+Not every selection can become a Canvas Group. When you select nodes, n8n checks a few rules and only displays the **Group nodes** icon ![Group nodes icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/group.svg) when they all pass. If the icon doesn't appear, check your selection against these rules:
 
 - The nodes aren't already part of another Canvas Group.
 - The selection doesn't include a trigger node. Triggers anchor the start of a workflow and stay outside Canvas Groups.
@@ -82,3 +82,11 @@ When a workflow is shown read-only, such as in workflow history or a shared view
 | Expand Canvas Groups (selection, or all)   | `Alt` + `G`                |
 | Collapse Canvas Groups (selection, or all) | `Shift` + `Alt` + `G`      |
 | Rename selected Canvas Group               | `Space`                    |
+
+## Related resources
+
+- [Workflow components](https://docs.n8n.io/build/understand-workflows/workflow-components)
+- [Work with nodes](https://docs.n8n.io/build/understand-workflows/workflow-components/work-with-nodes)
+- [Connect nodes together](https://docs.n8n.io/build/understand-workflows/workflow-components/connect-nodes-together)
+- [Add notes and documentation](https://docs.n8n.io/build/understand-workflows/workflow-components/add-notes-and-documentation)
+- [Find your workflow ID](https://docs.n8n.io/build/understand-workflows/workflow-components/find-your-workflow-id)

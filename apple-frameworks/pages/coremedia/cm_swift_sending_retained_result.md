@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/cm_swift_sending_retained_result](https://developer.apple.com/documentation/coremedia/cm_swift_sending_retained_result)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremedia/cm_swift_sending_retained_result
 
 # CM_SWIFT_SENDING_RETAINED_RESULT
 

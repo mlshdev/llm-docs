@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/cmformatdescription/extensions-swift.struct/value/mpeg2videoprofile/xdcam_hd_540p](https://developer.apple.com/documentation/coremedia/cmformatdescription/extensions-swift.struct/value/mpeg2videoprofile/xdcam_hd_540p)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremedia/cmformatdescription/extensions-swift.struct/value/mpeg2videoprofile/xdcam_hd_540p
 
 # xdcam_HD_540p
 

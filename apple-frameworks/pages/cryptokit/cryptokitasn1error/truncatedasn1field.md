@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cryptokit/cryptokitasn1error/truncatedasn1field](https://developer.apple.com/documentation/cryptokit/cryptokitasn1error/truncatedasn1field)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/cryptokit/cryptokitasn1error/truncatedasn1field
 
 # CryptoKitASN1Error.truncatedASN1Field
 

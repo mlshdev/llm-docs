@@ -1,6 +1,6 @@
 # SearXNG master
 
-> Documentation generated from the latest `master` branch commit of [searxng/searxng](https://github.com/searxng/searxng) and pinned to immutable source commit `d4ce87c23431f607162fc5c39ce52c538d64588f`.
+> Documentation generated from the latest `master` branch commit of [searxng/searxng](https://github.com/searxng/searxng) and pinned to immutable source commit `c0042add30116a315ebacfcb84781bb3e1e4e77e`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for SearXNG master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -106,7 +106,6 @@
 - [Jina Engine](pages/docs/dev/engines/online/jina.md): Static Python API reference (automodule). (112 bytes)
 - [Kagi Engines](pages/docs/dev/engines/online/kagi.md): Autocomplete from Kagi. (160 bytes)
 - [Lemmy](pages/docs/dev/engines/online/lemmy.md): Static Python API reference (automodule). (108 bytes)
-- [Library of Congress](pages/docs/dev/engines/online/loc.md): Static Python API reference (automodule). (118 bytes)
 - [Marginalia Search](pages/docs/dev/engines/online/marginalia.md): Static Python API reference (automodule). (130 bytes)
 - [Mastodon](pages/docs/dev/engines/online/mastodon.md): Static Python API reference (automodule). (117 bytes)
 - [Moviepilot](pages/docs/dev/engines/online/moviepilot.md): Static Python API reference (automodule). (123 bytes)
@@ -171,7 +170,7 @@
 - [Suggestion Results](pages/docs/dev/result_types/suggestion.md): The area suggestions results shows the user alternative search terms. (1058 bytes)
 - [Search API](pages/docs/dev/search_api.md): SearXNG supports querying via a simple HTTP API. Two endpoints, / and /search, are supported for both GET and POST methods. The GET method expects parameters as URL query parameters, while the POST method expects parame… (3192 bytes)
 - [Tooling box searxngextra](pages/docs/dev/searxng_extra/index.md): In the folder searxng\extra/ we maintain some tools useful for CI and developers. (291 bytes)
-- [searxngextra/update/](pages/docs/dev/searxng_extra/update.md): [\[source\]](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searxngextra/update/init.py) (3033 bytes)
+- [searxngextra/update/](pages/docs/dev/searxng_extra/update.md): [\[source\]](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxngextra/update/init.py) (3033 bytes)
 - [Simple Theme Templates](pages/docs/dev/templates.md): The simple template is complex, it consists of many different elements and also uses macros and include statements. The following is a rough overview that we would like to give the developer at hand, details must still… (12633 bytes)
 - [Translation](pages/docs/dev/translation.md): Translation takes place on translate.codeberg.org\. (3352 bytes)
 

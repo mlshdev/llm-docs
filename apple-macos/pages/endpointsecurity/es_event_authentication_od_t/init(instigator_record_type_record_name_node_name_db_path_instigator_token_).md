@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_event_authentication_od_t/init(instigator:record_type:record_name:node_name:db_path:instigator_token:)](https://developer.apple.com/documentation/endpointsecurity/es_event_authentication_od_t/init(instigator:record_type:record_name:node_name:db_path:instigator_token:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_event_authentication_od_t/init(instigator:record_type:record_name:node_name:db_path:instigator_token:)
 
 # init(instigator:record_type:record_name:node_name:db_path:instigator_token:)
 

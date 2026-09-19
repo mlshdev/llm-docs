@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/pose3d/init(position:rotation:)-zc2j](https://developer.apple.com/documentation/spatial/pose3d/init(position:rotation:)-zc2j)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatial/pose3d/init(position:rotation:)-zc2j
 
 # init(position:rotation:)
 

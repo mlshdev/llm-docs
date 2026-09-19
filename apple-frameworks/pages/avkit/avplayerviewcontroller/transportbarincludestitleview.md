@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontroller/transportbarincludestitleview](https://developer.apple.com/documentation/avkit/avplayerviewcontroller/transportbarincludestitleview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontroller/transportbarincludestitleview
 
 # transportBarIncludesTitleView (Swift)
 
@@ -16,7 +17,7 @@ var transportBarIncludesTitleView: Bool { get set }
 
 ## Mentioned In
 
-- [Customizing the tvOS Playback Experience](../customizing-the-tvos-playback-experience.md)
+- [Customizing the tvOS playback experience](../customizing-the-tvos-playback-experience.md)
 
 <a id="Discussion"></a>
 
@@ -56,7 +57,7 @@ A Boolean value that indicates whether the player user interface shows the title
 
 ## Mentioned In
 
-- [Customizing the tvOS Playback Experience](../customizing-the-tvos-playback-experience.md)
+- [Customizing the tvOS playback experience](../customizing-the-tvos-playback-experience.md)
 
 <a id="Discussion"></a>
 

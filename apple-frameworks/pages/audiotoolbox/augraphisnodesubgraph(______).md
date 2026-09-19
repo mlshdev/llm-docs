@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/augraphisnodesubgraph(_:_:_:)](https://developer.apple.com/documentation/audiotoolbox/augraphisnodesubgraph(_:_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/augraphisnodesubgraph(_:_:_:)
 
 # AUGraphIsNodeSubGraph(\_:\_:\_:) (Swift)
 
 **Framework:** Audio Toolbox  
 **Kind:** Function  
-**Availability:** macOS 10.2+ (deprecated in 27.0)
+**Availability:** macOS 10.2+ (deprecated in 27.2)
 
 Determines whether a node object represent an audio processing graph or an audio unit.
 
@@ -56,7 +57,7 @@ A result code.
 
 **Framework:** Audio Toolbox  
 **Kind:** Function  
-**Availability:** macOS 10.2+ (deprecated in 27.0)
+**Availability:** macOS 10.2+ (deprecated in 27.2)
 
 Determines whether a node object represent an audio processing graph or an audio unit.
 

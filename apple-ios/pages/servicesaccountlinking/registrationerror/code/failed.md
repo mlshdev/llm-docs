@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/servicesaccountlinking/registrationerror/code/failed](https://developer.apple.com/documentation/servicesaccountlinking/registrationerror/code/failed)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/servicesaccountlinking/registrationerror/code/failed
 
 # RegistrationError.Code.failed (Swift)
 

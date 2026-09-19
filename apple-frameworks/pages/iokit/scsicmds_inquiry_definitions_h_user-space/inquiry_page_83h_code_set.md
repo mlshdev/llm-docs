@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/scsicmds_inquiry_definitions_h_user-space/inquiry_page_83h_code_set](https://developer.apple.com/documentation/iokit/scsicmds_inquiry_definitions_h_user-space/inquiry_page_83h_code_set)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/scsicmds_inquiry_definitions_h_user-space/inquiry_page_83h_code_set
 
 # INQUIRY Page 83h Code Set
 

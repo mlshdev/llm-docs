@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3955507-vdsp_biquadm_settargetssingled](https://developer.apple.com/documentation/kernel/3955507-vdsp_biquadm_settargetssingled)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3955507-vdsp_biquadm_settargetssingled
 
 # vDSP_biquadm_SetTargetsSingleD
 

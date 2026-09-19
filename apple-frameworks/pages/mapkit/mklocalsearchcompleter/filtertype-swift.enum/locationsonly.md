@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mapkit/mklocalsearchcompleter/filtertype-swift.enum/locationsonly](https://developer.apple.com/documentation/mapkit/mklocalsearchcompleter/filtertype-swift.enum/locationsonly)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mapkit/mklocalsearchcompleter/filtertype-swift.enum/locationsonly
 
 # MKLocalSearchCompleter.FilterType.locationsOnly (Swift)
 

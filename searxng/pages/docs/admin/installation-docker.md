@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/admin/installation-docker.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/installation-docker.rst)
+> Pinned source for SearXNG master: [docs/admin/installation-docker.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-docker.rst)
 
 <a id="installation-container"></a>
 
@@ -230,7 +230,7 @@ Two volumes are exposed that should be mounted to preserve its contents:
 The following environment variables can be configured:
 
 - `$SEARXNG_*`: Controls the SearXNG configuration options, look out for
-  environment `$SEARXNG_*` in [settings server](https://docs.searxng.org/admin/settings/settings_server.html#settings-server), [settings general](https://docs.searxng.org/admin/settings/settings_general.html#settings-general) and the [container/.env.example](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/container/.env.example) template.
+  environment `$SEARXNG_*` in [settings server](https://docs.searxng.org/admin/settings/settings_server.html#settings-server), [settings general](https://docs.searxng.org/admin/settings/settings_general.html#settings-general) and the [container/.env.example](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/container/.env.example) template.
 - `$GRANIAN_*`: Controls the [Granian server options](https://docs.searxng.org/admin/installation-granian.html#granian-configuration).
 - `$FORCE_OWNERSHIP`: Ensures mounted volumes/files are owned by the
   `searxng:searxng` user (default: `true`)
@@ -299,7 +299,7 @@ $ mv ./searxng-docker/searxng/* ./searxng/core-config/
 ```
 
 If using Valkey features like bot protection (limiter), you will need to update
-the URL hostname in [searx/settings.yml](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/settings.yml) file to `valkey` or
+the URL hostname in [searx/settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/settings.yml) file to `valkey` or
 `searxng-valkey`.
 
 If you have any environment variables in the old `.env` file, make

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/toolcall/init(id:toolname:arguments:)](https://developer.apple.com/documentation/foundationmodels/transcript/toolcall/init(id:toolname:arguments:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/toolcall/init(id:toolname:arguments:)
 
 # init(id:toolName:arguments:)
 
@@ -6,14 +7,22 @@
 **Kind:** Initializer  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · visionOS 26.0+ · watchOS 27.0+
 
+Creates a tool call that invokes a tool with the arguments you provide.
+
 ## Declaration
 
 ```swift
 init(id: String, toolName: String, arguments: GeneratedContent)
 ```
 
+## Parameters
+
+- `id`: A unique identifier for the tool call.
+- `toolName`: The name of the tool to invoke.
+- `arguments`: The arguments to pass to the invoked tool.
+
 ## See Also
 
 ### Creating a tool call
 
-- [init(id:metadata:toolName:arguments:)](init%28id_metadata_toolname_arguments_%29.md)
+- [init(id:metadata:toolName:arguments:)](init%28id_metadata_toolname_arguments_%29.md): Creates a tool call that invokes a tool with the metadata and arguments you provide.

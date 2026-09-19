@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generationoptions/init(samplingmode:temperature:maximumresponsetokens:toolcallingmode:)](https://developer.apple.com/documentation/foundationmodels/generationoptions/init(samplingmode:temperature:maximumresponsetokens:toolcallingmode:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generationoptions/init(samplingmode:temperature:maximumresponsetokens:toolcallingmode:)
 
 # init(samplingMode:temperature:maximumResponseTokens:toolCallingMode:)
 
@@ -19,10 +20,11 @@ init(samplingMode: GenerationOptions.SamplingMode? = nil, temperature: Double? =
 - `samplingMode`: A strategy to use for sampling from a distribution.
 - `temperature`: A value between `0` and `1`, inclusive, that controls how sharply the model favors its most likely responses. A higher value increases variety.
 - `maximumResponseTokens`: The maximum number of tokens the model is allowed to produce before being artificially halted. Must be positive.
+- `toolCallingMode`: The requirements defining how the model should call tools.
 
 ## See Also
 
 ### Creating options
 
-- [init(samplingMode:temperature:maximumResponseTokens:)](init%28samplingmode_temperature_maximumresponsetokens_%29.md)
+- [init(samplingMode:temperature:maximumResponseTokens:)](init%28samplingmode_temperature_maximumresponsetokens_%29.md): Creates generation options that control token sampling behavior.
 - [init(sampling:temperature:maximumResponseTokens:)](init%28sampling_temperature_maximumresponsetokens_%29.md): Deprecated. Creates generation options that control token sampling behavior.

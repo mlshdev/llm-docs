@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generationoptions/toolcallingmode-swift.struct](https://developer.apple.com/documentation/foundationmodels/generationoptions/toolcallingmode-swift.struct)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generationoptions/toolcallingmode-swift.struct
 
 # GenerationOptions.ToolCallingMode
 
@@ -6,7 +7,7 @@
 **Kind:** Structure  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
 
-A value you use to describe the model behavior when it comes to tool usage.
+A value that describes how the model uses tools.
 
 ## Declaration
 
@@ -65,8 +66,8 @@ struct RecipeDynamicProfile: LanguageModelSession.DynamicProfile {
 
 ### Accessing the content
 
-- [kind](toolcallingmode-swift.struct/kind-swift.property.md)
-- [GenerationOptions.ToolCallingMode.Kind](toolcallingmode-swift.struct/kind-swift.enum.md)
+- [kind](toolcallingmode-swift.struct/kind-swift.property.md): The tool-calling behavior this mode represents.
+- [GenerationOptions.ToolCallingMode.Kind](toolcallingmode-swift.struct/kind-swift.enum.md): A representation of the different ways a model can use tools.
 
 ## Relationships
 

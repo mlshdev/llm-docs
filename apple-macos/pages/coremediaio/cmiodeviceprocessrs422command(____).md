@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/coremediaio/cmiodeviceprocessrs422command(_:_:)](https://developer.apple.com/documentation/coremediaio/cmiodeviceprocessrs422command(_:_:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremediaio/cmiodeviceprocessrs422command(_:_:)
 
 # CMIODeviceProcessRS422Command(\_:\_:) (Swift)
 

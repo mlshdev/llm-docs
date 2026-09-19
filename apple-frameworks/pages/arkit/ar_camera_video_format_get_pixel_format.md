@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/ar_camera_video_format_get_pixel_format](https://developer.apple.com/documentation/arkit/ar_camera_video_format_get_pixel_format)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/ar_camera_video_format_get_pixel_format
 
 # ar_camera_video_format_get_pixel_format
 

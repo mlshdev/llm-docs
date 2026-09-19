@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avlegiblemediaoptionsmenucontroller/menucontents/captionappearance](https://developer.apple.com/documentation/avkit/avlegiblemediaoptionsmenucontroller/menucontents/captionappearance)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avlegiblemediaoptionsmenucontroller/menucontents/captionappearance
 
 # captionAppearance (Swift)
 
@@ -14,7 +15,7 @@ static var captionAppearance: AVLegibleMediaOptionsMenuController.MenuContents {
 
 ## See Also
 
-### Menu Content Options
+### Menu content options
 
 - [all](all.md)
 - [legible](legible.md)
@@ -33,7 +34,7 @@ AVLegibleMediaOptionsMenuContentsCaptionAppearance
 
 ## See Also
 
-### Menu Content Options
+### Menu content options
 
 - [AVLegibleMediaOptionsMenuContentsAll](all.md)
 - [AVLegibleMediaOptionsMenuContentsLegible](legible.md)

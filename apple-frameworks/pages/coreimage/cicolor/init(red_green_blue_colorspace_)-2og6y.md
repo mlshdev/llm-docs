@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cicolor/init(red:green:blue:colorspace:)-2og6y](https://developer.apple.com/documentation/coreimage/cicolor/init(red:green:blue:colorspace:)-2og6y)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreimage/cicolor/init(red:green:blue:colorspace:)-2og6y
 
 # init(red:green:blue:colorSpace:) (Swift)
 

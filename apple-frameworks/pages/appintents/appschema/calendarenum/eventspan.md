@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/appschema/calendarenum/eventspan](https://developer.apple.com/documentation/appintents/appschema/calendarenum/eventspan)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/appschema/calendarenum/eventspan
 
 # eventSpan
 
@@ -30,9 +31,9 @@ enum EventSpan: String {
     case all
 
     static let caseDisplayRepresentations: [Self: DisplayRepresentation] = [
-        .this: "This",
-        .future: "Future",
-        .all: "All"
+        .this: "This Event Only",
+        .future: "Future Events",
+        .all: "All Events"
     ]
 }
 ```

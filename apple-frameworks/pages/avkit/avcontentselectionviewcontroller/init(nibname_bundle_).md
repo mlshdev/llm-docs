@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcontentselectionviewcontroller/init(nibname:bundle:)](https://developer.apple.com/documentation/avkit/avcontentselectionviewcontroller/init(nibname:bundle:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcontentselectionviewcontroller/init(nibname:bundle:)
 
 # init(nibName:bundle:)
 
@@ -16,6 +17,6 @@ Creates a view controller with the nib file in the specified bundle.
 
 ## See Also
 
-### Creating a view controller.
+### Creating a view controller
 
 - [init(coder:)](init%28coder_%29.md): Creates a view controller with data in an unarchiver.

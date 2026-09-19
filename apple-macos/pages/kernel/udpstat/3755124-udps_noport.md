@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/udpstat/3755124-udps_noport](https://developer.apple.com/documentation/kernel/udpstat/3755124-udps_noport)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/udpstat/3755124-udps_noport
 
 # udps_noport
 

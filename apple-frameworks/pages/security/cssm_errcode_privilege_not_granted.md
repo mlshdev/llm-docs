@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_errcode_privilege_not_granted](https://developer.apple.com/documentation/security/cssm_errcode_privilege_not_granted)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_errcode_privilege_not_granted
 
 # CSSM_ERRCODE_PRIVILEGE_NOT_GRANTED (Swift)
 

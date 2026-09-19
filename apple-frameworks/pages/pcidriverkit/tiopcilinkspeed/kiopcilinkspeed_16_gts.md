@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/pcidriverkit/tiopcilinkspeed/kiopcilinkspeed_16_gts](https://developer.apple.com/documentation/pcidriverkit/tiopcilinkspeed/kiopcilinkspeed_16_gts)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/pcidriverkit/tiopcilinkspeed/kiopcilinkspeed_16_gts
 
 # kIOPCILinkSpeed_16_GTs
 

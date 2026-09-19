@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/shadergraph/procedural/vector3-(float)](https://developer.apple.com/documentation/shadergraph/procedural/vector3-(float))
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/shadergraph/procedural/vector3-(float)
 
 # Vector3 (Float)
 

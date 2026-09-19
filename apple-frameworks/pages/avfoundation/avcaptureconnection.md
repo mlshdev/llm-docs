@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcaptureconnection](https://developer.apple.com/documentation/avfoundation/avcaptureconnection)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcaptureconnection
 
 # AVCaptureConnection (Swift)
 
@@ -44,7 +45,7 @@ You can add an `AVCaptureConnection` instance to a session using the [addConnect
 ### Rotating a video
 
 - [isVideoRotationAngleSupported(\_:)](avcaptureconnection/isvideorotationanglesupported%28__%29.md): Returns a Boolean value that indicates whether the connection supports a rotation angle.
-- [videoRotationAngle](avcaptureconnection/videorotationangle.md): A rotation angle the connection applies to a video flowing through it.
+- [videoRotationAngle](avcaptureconnection/videorotationangle.md): A rotation angle the connection applies to the video flowing through it.
 
 ### Mirroring a video
 
@@ -122,6 +123,7 @@ You can add an `AVCaptureConnection` instance to a session using the [addConnect
 - [Supporting Center Stage front camera in your iOS app](supporting-center-stage-front-camera-in-your-ios-app.md): Enable Center Stage for photos and videos on the iPhone front camera.
 - [AVMultiCamPiP: Capturing from Multiple Cameras](avmulticampip-capturing-from-multiple-cameras.md): Simultaneously record the output from the front and back cameras into a single movie file by using a multi-camera capture session.
 - [AVCamBarcode: detecting barcodes and faces](avcambarcode-detecting-barcodes-and-faces.md): Identify machine readable codes or faces by using the camera.
+- [Registering a camera capture accessory on iPhone Duo](registering-a-camera-capture-accessory-on-iphone-duo.md): Provide content to the person in front of the camera by pairing it with your capture interface.
 - [AVCaptureSession](avcapturesession.md): An object that configures capture behavior and coordinates the flow of data from input devices to capture outputs.
 - [AVCaptureMultiCamSession](avcapturemulticamsession.md): A capture session that supports simultaneous capture from multiple inputs of the same media type.
 - [AVCaptureInput](avcaptureinput.md): An abstract superclass for objects that provide input data to a capture session.
@@ -173,7 +175,7 @@ You can add an `AVCaptureConnection` instance to a session using the [addConnect
 ### Rotating a video
 
 - [isVideoRotationAngleSupported:](avcaptureconnection/isvideorotationanglesupported%28__%29.md): Returns a Boolean value that indicates whether the connection supports a rotation angle.
-- [videoRotationAngle](avcaptureconnection/videorotationangle.md): A rotation angle the connection applies to a video flowing through it.
+- [videoRotationAngle](avcaptureconnection/videorotationangle.md): A rotation angle the connection applies to the video flowing through it.
 
 ### Mirroring a video
 
@@ -240,6 +242,7 @@ You can add an `AVCaptureConnection` instance to a session using the [addConnect
 - [Capturing Cinematic video](capturing-cinematic-video.md): Capture video with an adjustable depth of field and focus points.
 - [AVMultiCamPiP: Capturing from Multiple Cameras](avmulticampip-capturing-from-multiple-cameras.md): Simultaneously record the output from the front and back cameras into a single movie file by using a multi-camera capture session.
 - [AVCamBarcode: detecting barcodes and faces](avcambarcode-detecting-barcodes-and-faces.md): Identify machine readable codes or faces by using the camera.
+- [Registering a camera capture accessory on iPhone Duo](registering-a-camera-capture-accessory-on-iphone-duo.md): Provide content to the person in front of the camera by pairing it with your capture interface.
 - [AVCaptureSession](avcapturesession.md): An object that configures capture behavior and coordinates the flow of data from input devices to capture outputs.
 - [AVCaptureMultiCamSession](avcapturemulticamsession.md): A capture session that supports simultaneous capture from multiple inputs of the same media type.
 - [AVCaptureInput](avcaptureinput.md): An abstract superclass for objects that provide input data to a capture session.

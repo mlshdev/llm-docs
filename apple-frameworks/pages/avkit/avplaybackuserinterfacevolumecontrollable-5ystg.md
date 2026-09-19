@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplaybackuserinterfacevolumecontrollable-5ystg](https://developer.apple.com/documentation/avkit/avplaybackuserinterfacevolumecontrollable-5ystg)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplaybackuserinterfacevolumecontrollable-5ystg
 
 # AVPlaybackUserInterfaceVolumeControllable
 

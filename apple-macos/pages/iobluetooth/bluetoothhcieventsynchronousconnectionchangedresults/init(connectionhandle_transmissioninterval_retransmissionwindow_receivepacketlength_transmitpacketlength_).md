@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/bluetoothhcieventsynchronousconnectionchangedresults/init(connectionhandle:transmissioninterval:retransmissionwindow:receivepacketlength:transmitpacketlength:)](https://developer.apple.com/documentation/iobluetooth/bluetoothhcieventsynchronousconnectionchangedresults/init(connectionhandle:transmissioninterval:retransmissionwindow:receivepacketlength:transmitpacketlength:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetooth/bluetoothhcieventsynchronousconnectionchangedresults/init(connectionhandle:transmissioninterval:retransmissionwindow:receivepacketlength:transmitpacketlength:)
 
 # init(connectionHandle:transmissionInterval:retransmissionWindow:receivePacketLength:transmitPacketLength:)
 

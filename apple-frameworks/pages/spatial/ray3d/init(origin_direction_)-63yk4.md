@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/ray3d/init(origin:direction:)-63yk4](https://developer.apple.com/documentation/spatial/ray3d/init(origin:direction:)-63yk4)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatial/ray3d/init(origin:direction:)-63yk4
 
 # init(origin:direction:)
 

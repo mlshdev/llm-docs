@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontroller/custominfoviewcontrollers](https://developer.apple.com/documentation/avkit/avplayerviewcontroller/custominfoviewcontrollers)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontroller/custominfoviewcontrollers
 
 # customInfoViewControllers (Swift)
 
@@ -17,7 +18,7 @@ var customInfoViewControllers: [UIViewController] { get set }
 ## Mentioned In
 
 - [Adopting the system player interface in visionOS](../adopting-the-system-player-interface-in-visionos.md)
-- [Customizing the tvOS Playback Experience](../customizing-the-tvos-playback-experience.md)
+- [Customizing the tvOS playback experience](../customizing-the-tvos-playback-experience.md)
 
 <a id="Discussion"></a>
 
@@ -62,7 +63,7 @@ An array of view controllers to display as content tabs in the player user inter
 ## Mentioned In
 
 - [Adopting the system player interface in visionOS](../adopting-the-system-player-interface-in-visionos.md)
-- [Customizing the tvOS Playback Experience](../customizing-the-tvos-playback-experience.md)
+- [Customizing the tvOS playback experience](../customizing-the-tvos-playback-experience.md)
 
 <a id="Discussion"></a>
 

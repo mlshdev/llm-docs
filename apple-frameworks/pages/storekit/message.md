@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/message](https://developer.apple.com/documentation/storekit/message)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/message
 
 # Message
 
@@ -18,8 +19,8 @@ struct Message
 
 - [Merchandising win-back offers in your app](merchandising-win-back-offers-in-your-app.md)
 - [Testing win-back offers in the sandbox environment](testing-win-back-offers-in-the-sandbox-environment.md)
-- [Choosing a StoreKit API for In-App Purchases](choosing-a-storekit-api-for-in-app-purchases.md)
-- [Testing failing subscription renewals and In-App Purchases](testing-failing-subscription-renewals-and-in-app-purchases.md)
+- [Choosing a StoreKit API for Apple In-App Purchases](choosing-a-storekit-api-for-in-app-purchases.md)
+- [Testing failing subscription renewals and Apple In-App Purchases](testing-failing-subscription-renewals-and-in-app-purchases.md)
 
 <a id="overview"></a>
 

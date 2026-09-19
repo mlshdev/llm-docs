@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ifa_msghdr/1564013-ifam_type](https://developer.apple.com/documentation/kernel/ifa_msghdr/1564013-ifam_type)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ifa_msghdr/1564013-ifam_type
 
 # ifam_type
 

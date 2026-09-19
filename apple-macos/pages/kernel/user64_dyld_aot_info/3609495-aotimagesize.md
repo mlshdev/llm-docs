@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/user64_dyld_aot_info/3609495-aotimagesize](https://developer.apple.com/documentation/kernel/user64_dyld_aot_info/3609495-aotimagesize)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/user64_dyld_aot_info/3609495-aotimagesize
 
 # aotImageSize
 

@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/rag-customer-support-cohere-airbyte-aws.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/examples/rag-customer-support-cohere-airbyte-aws.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/rag-customer-support-cohere-airbyte-aws.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/examples/rag-customer-support-cohere-airbyte-aws.md)
 > Canonical documentation: https://qdrant.tech/documentation/examples/rag-customer-support-cohere-airbyte-aws/
 
 # Question-Answering System for AI Customer Support
@@ -11,7 +11,7 @@ Your support team's expertise is typically kept private, but you can still use A
 
 In this tutorial we will setup a private AI service that answers customer support queries with high accuracy and effectiveness. By leveraging Cohere's powerful models (deployed to [AWS](https://cohere.com/deployment-options/aws)) with Qdrant Hybrid Cloud, you can create a fully private customer support system. Data synchronization, facilitated by [Airbyte](https://airbyte.com/), will complete the setup.
 
-![Architecture diagram](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/customer-support-cohere-airbyte/architecture-diagram.png)
+![Architecture diagram](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/customer-support-cohere-airbyte/architecture-diagram.png)
 
 ## System design
 
@@ -107,18 +107,18 @@ use the following connectors:
 Airbyte UI will guide you through the process of setting up the source and destination and connecting them. Here is how
 the configuration of the source might look like:
 
-![Airbyte source configuration](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/customer-support-cohere-airbyte/airbyte-excel-source.png)
+![Airbyte source configuration](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/customer-support-cohere-airbyte/airbyte-excel-source.png)
 
 Qdrant is our target destination, so we need to set up the connection to it. We need to specify which fields should be
 included to generate the embeddings. In our case it makes complete sense to embed just the questions, as we are going
 to look for similar questions asked in the past and provide the answers.
 
-![Airbyte destination configuration](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/customer-support-cohere-airbyte/airbyte-qdrant-destination.png)
+![Airbyte destination configuration](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/customer-support-cohere-airbyte/airbyte-qdrant-destination.png)
 
 Once we have the destination set up, we can finally configure a connection. The connection will define the schedule
 of the data synchronization.
 
-![Airbyte connection configuration](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/customer-support-cohere-airbyte/airbyte-connection.png)
+![Airbyte connection configuration](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/customer-support-cohere-airbyte/airbyte-connection.png)
 
 Airbyte should now be ready to accept any data updates from the source and load them into Qdrant. You can monitor the
 progress of the synchronization in the UI.

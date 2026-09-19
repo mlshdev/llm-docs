@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skpaymentqueue/restorecompletedtransactions(withapplicationusername:)](https://developer.apple.com/documentation/storekit/skpaymentqueue/restorecompletedtransactions(withapplicationusername:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skpaymentqueue/restorecompletedtransactions(withapplicationusername:)
 
 # restoreCompletedTransactions(withApplicationUsername:) (Swift)
 
@@ -24,7 +25,7 @@ func restoreCompletedTransactions(withApplicationUsername username: String?)
 
 - [Choosing a receipt validation technique](../choosing-a-receipt-validation-technique.md)
 - [Restoring purchased products](../restoring-purchased-products.md)
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 
 ## See Also
 
@@ -60,7 +61,7 @@ Asks the payment queue to restore previously completed purchases, providing an o
 
 - [Choosing a receipt validation technique](../choosing-a-receipt-validation-technique.md)
 - [Restoring purchased products](../restoring-purchased-products.md)
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 
 ## See Also
 

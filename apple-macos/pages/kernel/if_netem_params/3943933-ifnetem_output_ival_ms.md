@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/if_netem_params/3943933-ifnetem_output_ival_ms](https://developer.apple.com/documentation/kernel/if_netem_params/3943933-ifnetem_output_ival_ms)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/if_netem_params/3943933-ifnetem_output_ival_ms
 
 # ifnetem_output_ival_ms
 

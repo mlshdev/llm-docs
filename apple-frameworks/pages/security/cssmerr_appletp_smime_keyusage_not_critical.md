@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_appletp_smime_keyusage_not_critical](https://developer.apple.com/documentation/security/cssmerr_appletp_smime_keyusage_not_critical)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_appletp_smime_keyusage_not_critical
 
 # CSSMERR_APPLETP_SMIME_KEYUSAGE_NOT_CRITICAL (Swift)
 

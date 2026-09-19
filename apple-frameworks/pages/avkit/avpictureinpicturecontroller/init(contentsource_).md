@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avpictureinpicturecontroller/init(contentsource:)](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/init(contentsource:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/init(contentsource:)
 
 # init(contentSource:) (Swift)
 
@@ -30,7 +31,7 @@ Use this initializer to create a controller that displays its content in a playe
 
 ## See Also
 
-### Creating a Controller
+### Creating a controller
 
 - [init(playerLayer:)](init%28playerlayer_%29.md): Creates a Picture in Picture controller with a player layer.
 
@@ -64,6 +65,6 @@ Use this initializer to create a controller that displays its content in a playe
 
 ## See Also
 
-### Creating a Controller
+### Creating a controller
 
 - [initWithPlayerLayer:](init%28playerlayer_%29.md): Creates a Picture in Picture controller with a player layer.

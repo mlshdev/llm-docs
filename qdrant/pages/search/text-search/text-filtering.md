@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/text-search/text-filtering.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/search/text-search/text-filtering.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/text-search/text-filtering.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/search/text-search/text-filtering.md)
 > Canonical documentation: https://qdrant.tech/documentation/search/text-search/text-filtering/
 
 # Text Filtering
@@ -1039,7 +1039,7 @@ In contrast to keyword filtering, filtering on text strings enables you to filte
 
 To enable efficient full-text filtering, Qdrant processes text strings by breaking them down into individual tokens (words) and applying several normalization steps. This process ensures that searches are more flexible and can match variations of words. At query time, Qdrant applies the same processing steps to the filter string, ensuring that the filter matches the indexed tokens correctly.
 
-![Text processing can break down a sentence like"The quick brown fox" into the tokens "quick", "brown", and "fox".](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/docs/text-processing.png)
+![Text processing can break down a sentence like"The quick brown fox" into the tokens "quick", "brown", and "fox".](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/docs/text-processing.png)
 
 The following text processing steps are applied to text strings:
 

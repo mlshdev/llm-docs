@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/dylib_module/1525476-ninit_nterm](https://developer.apple.com/documentation/kernel/dylib_module/1525476-ninit_nterm)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/dylib_module/1525476-ninit_nterm
 
 # ninit_nterm
 

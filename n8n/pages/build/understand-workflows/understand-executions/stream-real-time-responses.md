@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/understand-workflows/understand-executions/stream-real-time-responses.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/understand-workflows/understand-executions/stream-real-time-responses.md)
+> Pinned source for n8n main: [docs/build/understand-workflows/understand-executions/stream-real-time-responses.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/understand-workflows/understand-executions/stream-real-time-responses.md)
 
 # Stream real-time responses
 
@@ -31,3 +31,13 @@ Keep in mind the following details when configuring streaming responses:
 
 - **Trigger**: Your trigger node must support streaming and have streaming configured. Without this, the workflow behaves according to your response mode settings.
 - **Node configuration**: Even with streaming enabled on the trigger, you need at least one node configured to stream data. Otherwise, your workflow will send no data.
+
+## Related resources
+
+- [Understand executions](https://docs.n8n.io/build/understand-workflows/understand-executions)
+- [Manual, partial, and production executions](https://docs.n8n.io/build/understand-workflows/understand-executions/types-of-executions)
+- [View all executions](https://docs.n8n.io/build/understand-workflows/understand-executions/view-all-executions)
+- [View executions for a single workflow](https://docs.n8n.io/build/understand-workflows/understand-executions/view-executions-for-a-single-workflow)
+- [Debug and re-run past executions](https://docs.n8n.io/build/understand-workflows/understand-executions/debug-executions)
+- [Customize executions data](https://docs.n8n.io/build/understand-workflows/understand-executions/customize-executions-data)
+- [Dirty nodes](https://docs.n8n.io/build/understand-workflows/understand-executions/understand-dirty-nodes)

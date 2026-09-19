@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/visionkit/datascannerviewcontroller/scanningunavailable/camerarestricted](https://developer.apple.com/documentation/visionkit/datascannerviewcontroller/scanningunavailable/camerarestricted)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/visionkit/datascannerviewcontroller/scanningunavailable/camerarestricted
 
 # DataScannerViewController.ScanningUnavailable.cameraRestricted
 

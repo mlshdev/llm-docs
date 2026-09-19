@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationchannel/toolcalls/toolcall/action-swift.struct](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/toolcalls/toolcall/action-swift.struct)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/toolcalls/toolcall/action-swift.struct
 
 # LanguageModelExecutorGenerationChannel.ToolCalls.ToolCall.Action
 
@@ -24,8 +25,8 @@ struct Action
 
 ### Tool call actions
 
-- [appendArguments(\_:tokenCount:)](action-swift.struct/appendarguments%28__tokencount_%29.md)
-- [updateMetadata(\_:)](action-swift.struct/updatemetadata%28__%29.md)
+- [appendArguments(\_:tokenCount:)](action-swift.struct/appendarguments%28__tokencount_%29.md): Creates an action that appends argument text to the tool call.
+- [updateMetadata(\_:)](action-swift.struct/updatemetadata%28__%29.md): Creates an action that replaces the metadata for a tool call.
 
 ## Relationships
 

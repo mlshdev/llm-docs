@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/scsi_sense_data/1410599-sksv_sense_key_specific_msb](https://developer.apple.com/documentation/kernel/scsi_sense_data/1410599-sksv_sense_key_specific_msb)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/scsi_sense_data/1410599-sksv_sense_key_specific_msb
 
 # SKSV_SENSE_KEY_SPECIFIC_MSB
 

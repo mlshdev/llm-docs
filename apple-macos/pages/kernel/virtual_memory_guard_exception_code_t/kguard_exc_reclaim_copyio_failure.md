@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/virtual_memory_guard_exception_code_t/kguard_exc_reclaim_copyio_failure](https://developer.apple.com/documentation/kernel/virtual_memory_guard_exception_code_t/kguard_exc_reclaim_copyio_failure)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/virtual_memory_guard_exception_code_t/kguard_exc_reclaim_copyio_failure
 
 # kGUARD_EXC_RECLAIM_COPYIO_FAILURE
 

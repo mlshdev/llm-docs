@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcaptureview](https://developer.apple.com/documentation/avkit/avcaptureview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcaptureview
 
 # AVCaptureView (Swift)
 
@@ -16,23 +17,23 @@ class AVCaptureView
 
 ## Topics
 
-### Configuring the Capture Session
+### Configuring the capture session
 
 - [session](avcaptureview/session.md): The view’s associated capture session.
 - [setSession(\_:showVideoPreview:showAudioPreview:)](avcaptureview/setsession%28__showvideopreview_showaudiopreview_%29.md): Sets the view’s capture session.
 
-### Customizing the View
+### Customizing the view
 
 - [controlsStyle](avcaptureview/controlsstyle.md): The style of the capture controls presented by the view.
 - [AVCaptureViewControlsStyle](avcaptureviewcontrolsstyle.md): Constants that describe the capture view’s supported controls styles.
 - [videoGravity](avcaptureview/videogravity.md): A string value that defines how the capture view displays video within its bounds.
 
-### Configuring the Delegate
+### Configuring the delegate
 
 - [delegate](avcaptureview/delegate.md): The capture view’s delegate object.
 - [AVCaptureViewDelegate](avcaptureviewdelegate.md): The protocol that defines the methods you can implement to respond to capture view events.
 
-### Recording Media
+### Recording media
 
 - [fileOutput](avcaptureview/fileoutput.md): The capture file output used to record media data.
 
@@ -65,10 +66,9 @@ class AVCaptureView
 
 ## See Also
 
-### macOS playback and capture
+### Capture views
 
-- [Implementing Trimming in a macOS Player](implementing-trimming-in-a-macos-player.md): Provide a QuickTime media-trimming experience in your macOS app.
-- [AVPlayerView](avplayerview.md): A view that displays content from a player and presents a native user interface to control playback.
+- [AVCaptureViewDelegate](avcaptureviewdelegate.md): The protocol that defines the methods you can implement to respond to capture view events.
 
 # AVCaptureView (Objective-C)
 
@@ -86,23 +86,23 @@ A view that displays standard user interface controls for capturing media data.
 
 ## Topics
 
-### Configuring the Capture Session
+### Configuring the capture session
 
 - [session](avcaptureview/session.md): The view’s associated capture session.
 - [setSession:showVideoPreview:showAudioPreview:](avcaptureview/setsession%28__showvideopreview_showaudiopreview_%29.md): Sets the view’s capture session.
 
-### Customizing the View
+### Customizing the view
 
 - [controlsStyle](avcaptureview/controlsstyle.md): The style of the capture controls presented by the view.
 - [AVCaptureViewControlsStyle](avcaptureviewcontrolsstyle.md): Constants that describe the capture view’s supported controls styles.
 - [videoGravity](avcaptureview/videogravity.md): A string value that defines how the capture view displays video within its bounds.
 
-### Configuring the Delegate
+### Configuring the delegate
 
 - [delegate](avcaptureview/delegate.md): The capture view’s delegate object.
 - [AVCaptureViewDelegate](avcaptureviewdelegate.md): The protocol that defines the methods you can implement to respond to capture view events.
 
-### Recording Media
+### Recording media
 
 - [fileOutput](avcaptureview/fileoutput.md): The capture file output used to record media data.
 
@@ -114,7 +114,6 @@ A view that displays standard user interface controls for capturing media data.
 
 ## See Also
 
-### macOS playback and capture
+### Capture views
 
-- [Implementing Trimming in a macOS Player](implementing-trimming-in-a-macos-player.md): Provide a QuickTime media-trimming experience in your macOS app.
-- [AVPlayerView](avplayerview.md): A view that displays content from a player and presents a native user interface to control playback.
+- [AVCaptureViewDelegate](avcaptureviewdelegate.md): The protocol that defines the methods you can implement to respond to capture view events.

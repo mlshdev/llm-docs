@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1592264-anonymous/khidusage_pid_et_inertia](https://developer.apple.com/documentation/iokit/1592264-anonymous/khidusage_pid_et_inertia)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1592264-anonymous/khidusage_pid_et_inertia
 
 # kHIDUsage_PID_ET_Inertia
 

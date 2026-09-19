@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/if_packet_stats/3943977-ifi_udp_port_unreach](https://developer.apple.com/documentation/kernel/if_packet_stats/3943977-ifi_udp_port_unreach)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/if_packet_stats/3943977-ifi_udp_port_unreach
 
 # ifi_udp_port_unreach
 

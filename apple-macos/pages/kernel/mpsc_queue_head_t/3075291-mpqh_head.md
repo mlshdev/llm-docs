@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/mpsc_queue_head_t/3075291-mpqh_head](https://developer.apple.com/documentation/kernel/mpsc_queue_head_t/3075291-mpqh_head)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/mpsc_queue_head_t/3075291-mpqh_head
 
 # mpqh_head
 

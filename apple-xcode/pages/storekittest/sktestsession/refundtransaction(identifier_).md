@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/storekittest/sktestsession/refundtransaction(identifier:)](https://developer.apple.com/documentation/storekittest/sktestsession/refundtransaction(identifier:))
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekittest/sktestsession/refundtransaction(identifier:)
 
 # refundTransaction(identifier:) (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
 
-Simulates a refund for an in-app purchase that completes outside of the app.
+Simulates a refund for an Apple In-App Purchase that completes outside of the app.
 
 ## Declaration
 
@@ -16,7 +17,7 @@ func refundTransaction(identifier: Int) throws
 
 ## Parameters
 
-- `identifier`: The transaction [identifier](../sktesttransaction/identifier.md) of an in-app purchase to get a refund.
+- `identifier`: The transaction [identifier](../sktesttransaction/identifier.md) of an Apple In-App Purchase to get a refund.
 
 <a id="discussion"></a>
 
@@ -30,7 +31,7 @@ After calling this function, handle the new transaction in [updates](https://dev
 
 ### Testing externally performed transactions
 
-- [buyProduct(productIdentifier:)](buyproduct%28productidentifier_%29.md): Deprecated. Simulates buying an in-app purchase or subscription outside the app.
+- [buyProduct(productIdentifier:)](buyproduct%28productidentifier_%29.md): Deprecated. Simulates buying an Apple In-App Purchase or subscription outside the app.
 
 # refundTransactionWithIdentifier:error: (Objective-C)
 
@@ -38,7 +39,7 @@ After calling this function, handle the new transaction in [updates](https://dev
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
 
-Simulates a refund for an in-app purchase that completes outside of the app.
+Simulates a refund for an Apple In-App Purchase that completes outside of the app.
 
 ## Declaration
 
@@ -48,7 +49,7 @@ Simulates a refund for an in-app purchase that completes outside of the app.
 
 ## Parameters
 
-- `identifier`: The transaction [identifier](../sktesttransaction/identifier.md) of an in-app purchase to get a refund.
+- `identifier`: The transaction [identifier](../sktesttransaction/identifier.md) of an Apple In-App Purchase to get a refund.
 - `error`: On output, a pointer to an error object that describes why the method failed, or `nil` if no error occurred. If you are not interested in the error information, pass `nil` for this parameter.
 
 <a id="return-value"></a>
@@ -69,4 +70,4 @@ After calling this function, handle the new transaction in [updates](https://dev
 
 ### Testing externally performed transactions
 
-- [buyProductWithIdentifier:error:](buyproduct%28productidentifier_%29.md): Deprecated. Simulates buying an in-app purchase or subscription outside the app.
+- [buyProductWithIdentifier:error:](buyproduct%28productidentifier_%29.md): Deprecated. Simulates buying an Apple In-App Purchase or subscription outside the app.

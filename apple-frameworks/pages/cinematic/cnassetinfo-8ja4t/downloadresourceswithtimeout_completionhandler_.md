@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cinematic/cnassetinfo-8ja4t/downloadresourceswithtimeout:completionhandler:](https://developer.apple.com/documentation/cinematic/cnassetinfo-8ja4t/downloadresourceswithtimeout:completionhandler:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/cinematic/cnassetinfo-8ja4t/downloadresourceswithtimeout:completionhandler:
 
 # downloadResourcesWithTimeout:completionHandler:
 
@@ -19,7 +20,7 @@ Downloads the resources required to render cinematic effects for the given asset
 ## Parameters
 
 - `downloadTimeout`: Maximum seconds to wait before timeout. Pass \\c defaultResourceDownloadTimeout for the system default.
-- `completionHandler`: Called on completion; On success, \\c newAssetInfo is a refreshed instance with the downloaded resources available; \\c error is non-nil on failure
+- `completionHandler`: Called on completion; On success, \\c newAssetInfo is a refreshed instance with the downloaded resources available or self if the resources are already available; \\c error is non-nil on failure
 
 <a id="return-value"></a>
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideostreambasicdescription/mwidth](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideostreambasicdescription/mwidth)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideostreambasicdescription/mwidth
 
 # mWidth
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Property  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,4 +19,4 @@ uint32_t mWidth;
 
 ### Accessing spatial properties
 
-- [mHeight](mheight.md)
+- [mHeight](mheight.md): Beta.

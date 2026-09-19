@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uistoryboardpopoversegue](https://developer.apple.com/documentation/uikit/uistoryboardpopoversegue)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uistoryboardpopoversegue
 
 # UIStoryboardPopoverSegue (Swift)
 
@@ -42,6 +43,8 @@ For popover segues, the destination view controller contains the content to be d
 - [Equatable](https://developer.apple.com/documentation/swift/equatable)
 - [Hashable](https://developer.apple.com/documentation/swift/hashable)
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/hiddriverkit/khidusage_ad_screensaverenable](https://developer.apple.com/documentation/hiddriverkit/khidusage_ad_screensaverenable)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hiddriverkit/khidusage_ad_screensaverenable
 
 # kHIDUsage_AD_ScreenSaverEnable
 

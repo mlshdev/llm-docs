@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_atpic_state_ext_ver](https://developer.apple.com/documentation/hypervisor/hv_atpic_state_ext_ver)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_atpic_state_ext_ver
 
 # HV_ATPIC_STATE_EXT_VER (Swift)
 

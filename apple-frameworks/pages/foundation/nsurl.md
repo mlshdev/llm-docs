@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsurl](https://developer.apple.com/documentation/foundation/nsurl)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsurl
 
 # NSURL (Swift)
 
@@ -324,7 +325,6 @@ if (!success) {
 - [init(fileURLWithFileSystemRepresentation:isDirectory:relativeToURL:)](nsurl/init%28fileurlwithfilesystemrepresentation_isdirectory_relativetourl_%29.md)
 - [init(fileURLWithPath:isDirectory:relativeToURL:)](nsurl/init%28fileurlwithpath_isdirectory_relativetourl_%29.md)
 - [init(fileURLWithPath:relativeToURL:)](nsurl/init%28fileurlwithpath_relativetourl_%29.md)
-- [init(pasteboardPropertyList:ofType:)](nsurl/init%28pasteboardpropertylist_oftype_%29.md)
 - [init(string:relativeToURL:)](nsurl/init%28string_relativetourl_%29-48a3i.md)
 - [init(string:relativeToURL:)](nsurl/init%28string_relativetourl_%29-6beup.md)
 

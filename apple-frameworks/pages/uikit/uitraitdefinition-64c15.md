@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitraitdefinition-64c15](https://developer.apple.com/documentation/uikit/uitraitdefinition-64c15)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uitraitdefinition-64c15
 
 # UITraitDefinition
 
@@ -86,6 +87,7 @@ Traits defined in Swift aren’t automatically bridged to Objective-C. If you ne
 - [UITraitLayoutDirection](uitraitlayoutdirection-swift.struct.md)
 - [UITraitLegibilityWeight](uitraitlegibilityweight-swift.struct.md)
 - [UITraitListEnvironment](uitraitlistenvironment-swift.struct.md)
+- [UITraitNavigationTitleAlignment](uitraitnavigationtitlealignment-swift.struct.md)
 - [UITraitPreferredContentSizeCategory](uitraitpreferredcontentsizecategory-swift.struct.md)
 - [UITraitResolvesNaturalAlignmentWithBaseWritingDirection](uitraitresolvesnaturalalignmentwithbasewritingdirection-swift.struct.md)
 - [UITraitSceneCaptureState](uitraitscenecapturestate-swift.struct.md)

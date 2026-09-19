@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applearchive/aaentrytypes/aa_entry_type_wht](https://developer.apple.com/documentation/applearchive/aaentrytypes/aa_entry_type_wht)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applearchive/aaentrytypes/aa_entry_type_wht
 
 # AA_ENTRY_TYPE_WHT
 

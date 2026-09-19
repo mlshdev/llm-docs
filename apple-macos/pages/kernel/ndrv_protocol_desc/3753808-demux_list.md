@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ndrv_protocol_desc/3753808-demux_list](https://developer.apple.com/documentation/kernel/ndrv_protocol_desc/3753808-demux_list)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ndrv_protocol_desc/3753808-demux_list
 
 # demux_list
 

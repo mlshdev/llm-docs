@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ipc_info_space_t/1563476-iis_tree_small](https://developer.apple.com/documentation/kernel/ipc_info_space_t/1563476-iis_tree_small)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ipc_info_space_t/1563476-iis_tree_small
 
 # iis_tree_small
 

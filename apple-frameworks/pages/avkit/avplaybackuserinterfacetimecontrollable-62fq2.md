@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplaybackuserinterfacetimecontrollable-62fq2](https://developer.apple.com/documentation/avkit/avplaybackuserinterfacetimecontrollable-62fq2)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplaybackuserinterfacetimecontrollable-62fq2
 
 # AVPlaybackUserInterfaceTimeControllable
 
@@ -42,7 +43,7 @@ Provides time control and navigation capabilities for media content.
 
 ## See Also
 
-### Timeline
+### Timeline and segments
 
 - [AVPlaybackUserInterfacePlaybackPosition](avplaybackuserinterfaceplaybackposition.md): A snapshot comprising a playback position recorded at a known host time and the rate of position advancement.
 - [AVPlaybackUserInterfaceTimelineSegment](avplaybackuserinterfacetimelinesegment.md): Represents a contiguous segment of timeline content with specific playback characteristics.

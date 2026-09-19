@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/storekittest/sktestsession](https://developer.apple.com/documentation/storekittest/sktestsession)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekittest/sktestsession
 
 # SKTestSession (Swift)
 
@@ -24,7 +25,7 @@ This class controls the settings that the server uses when it processes transact
 
 >  There’s a single instance of the test environment. All `SKTestSession` instances control the same test environment.
 
-The test environment creates an [SKTestTransaction](sktesttransaction.md) instance each time your test code calls any method of `SKTestSession` that affects in-app purchases, including:
+The test environment creates an [SKTestTransaction](sktesttransaction.md) instance each time your test code calls any method of `SKTestSession` that affects Apple In-App Purchases, including:
 
 - [buyProduct(productIdentifier:)](sktestsession/buyproduct%28productidentifier_%29.md)
 - [refundTransaction(identifier:)](sktestsession/refundtransaction%28identifier_%29.md)
@@ -99,8 +100,8 @@ Before automating a test session with `SKTestSession`, you must create a StoreKi
 
 ### Testing externally performed transactions
 
-- [buyProduct(productIdentifier:)](sktestsession/buyproduct%28productidentifier_%29.md): Deprecated. Simulates buying an in-app purchase or subscription outside the app.
-- [refundTransaction(identifier:)](sktestsession/refundtransaction%28identifier_%29.md): Simulates a refund for an in-app purchase that completes outside of the app.
+- [buyProduct(productIdentifier:)](sktestsession/buyproduct%28productidentifier_%29.md): Deprecated. Simulates buying an Apple In-App Purchase or subscription outside the app.
+- [refundTransaction(identifier:)](sktestsession/refundtransaction%28identifier_%29.md): Simulates a refund for an Apple In-App Purchase that completes outside of the app.
 
 ### Instance Methods
 
@@ -160,7 +161,7 @@ This class controls the settings that the server uses when it processes transact
 
 >  There’s a single instance of the test environment. All `SKTestSession` instances control the same test environment.
 
-The test environment creates an [SKTestTransaction](sktesttransaction.md) instance each time your test code calls any method of `SKTestSession` that affects in-app purchases, including:
+The test environment creates an [SKTestTransaction](sktesttransaction.md) instance each time your test code calls any method of `SKTestSession` that affects Apple In-App Purchases, including:
 
 - [buyProductWithIdentifier:error:](sktestsession/buyproduct%28productidentifier_%29.md)
 - [refundTransactionWithIdentifier:error:](sktestsession/refundtransaction%28identifier_%29.md)
@@ -235,8 +236,8 @@ Before automating a test session with `SKTestSession`, you must create a StoreKi
 
 ### Testing externally performed transactions
 
-- [buyProductWithIdentifier:error:](sktestsession/buyproduct%28productidentifier_%29.md): Deprecated. Simulates buying an in-app purchase or subscription outside the app.
-- [refundTransactionWithIdentifier:error:](sktestsession/refundtransaction%28identifier_%29.md): Simulates a refund for an in-app purchase that completes outside of the app.
+- [buyProductWithIdentifier:error:](sktestsession/buyproduct%28productidentifier_%29.md): Deprecated. Simulates buying an Apple In-App Purchase or subscription outside the app.
+- [refundTransactionWithIdentifier:error:](sktestsession/refundtransaction%28identifier_%29.md): Simulates a refund for an Apple In-App Purchase that completes outside of the app.
 
 ## Relationships
 

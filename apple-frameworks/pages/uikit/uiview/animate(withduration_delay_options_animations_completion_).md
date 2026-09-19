@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiview/animate(withduration:delay:options:animations:completion:)](https://developer.apple.com/documentation/uikit/uiview/animate(withduration:delay:options:animations:completion:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiview/animate(withduration:delay:options:animations:completion:)
 
 # animate(withDuration:delay:options:animations:completion:) (Swift)
 
@@ -11,7 +12,7 @@ Animate changes to one or more views using the specified duration, delay, option
 ## Declaration
 
 ```swift
-class func animate(withDuration duration: TimeInterval, delay: TimeInterval, options: UIView.AnimationOptions = [], animations: @escaping () -> Void, completion: ((Bool) -> Void)? = nil)
+class func animate(withDuration duration: TimeInterval, delay: TimeInterval, options: UIView.AnimationOptions = [], animations: () -> Void, completion: ((Bool) -> Void)? = nil)
 ```
 
 ## Parameters

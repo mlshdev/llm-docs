@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/kaudiocomponenterr_initializationtimedout](https://developer.apple.com/documentation/audiotoolbox/kaudiocomponenterr_initializationtimedout)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiocomponenterr_initializationtimedout
 
 # kAudioComponentErr_InitializationTimedOut (Swift)
 

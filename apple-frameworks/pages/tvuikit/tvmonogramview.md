@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tvuikit/tvmonogramview](https://developer.apple.com/documentation/tvuikit/tvmonogramview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/tvuikit/tvmonogramview
 
 # TVMonogramView (Swift)
 
 **Framework:** TVUIKit  
 **Kind:** Class  
-**Availability:** tvOS 12.0+ (deprecated in 27.0)
+**Availability:** tvOS 12.0+ (deprecated in 27.2)
 
 A specialized lockup view that contains a circular image of a person or the person’s initials, along with a footer view.
 
@@ -83,7 +84,7 @@ If you don’t provide an image, the system provides a generic placeholder image
 
 **Framework:** TVUIKit  
 **Kind:** Class  
-**Availability:** tvOS 12.0+ (deprecated in 27.0)
+**Availability:** tvOS 12.0+ (deprecated in 27.2)
 
 A specialized lockup view that contains a circular image of a person or the person’s initials, along with a footer view.
 

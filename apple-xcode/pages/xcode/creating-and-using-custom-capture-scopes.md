@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/creating-and-using-custom-capture-scopes](https://developer.apple.com/documentation/xcode/creating-and-using-custom-capture-scopes)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/creating-and-using-custom-capture-scopes
 
 # Creating and using custom capture scopes
 

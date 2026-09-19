@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/cpu_based2_apic_reg_virt](https://developer.apple.com/documentation/hypervisor/cpu_based2_apic_reg_virt)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/cpu_based2_apic_reg_virt
 
 # CPU_BASED2_APIC_REG_VIRT (Swift)
 

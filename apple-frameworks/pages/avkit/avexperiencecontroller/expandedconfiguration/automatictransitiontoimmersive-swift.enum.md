@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avexperiencecontroller/expandedconfiguration/automatictransitiontoimmersive-swift.enum](https://developer.apple.com/documentation/avkit/avexperiencecontroller/expandedconfiguration/automatictransitiontoimmersive-swift.enum)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avexperiencecontroller/expandedconfiguration/automatictransitiontoimmersive-swift.enum
 
 # AVExperienceController.ExpandedConfiguration.AutomaticTransitionToImmersive
 
@@ -22,7 +23,7 @@ Use this enum to describe the desired automatic transition behavior into the imm
 
 ## Topics
 
-### Enumeration Cases
+### Transition behaviors
 
 - [AVExperienceController.ExpandedConfiguration.AutomaticTransitionToImmersive.default](automatictransitiontoimmersive-swift.enum/default.md): Describes the system default behavior.
 - [AVExperienceController.ExpandedConfiguration.AutomaticTransitionToImmersive.none](automatictransitiontoimmersive-swift.enum/none.md): Describes no behavior.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideostream/handlechangestreamisactive](https://developer.apple.com/documentation/videodriverkit/iouservideostream/handlechangestreamisactive)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideostream/handlechangestreamisactive
 
 # HandleChangeStreamIsActive
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 The system calls this virtual method when the stream active state changes.
 
@@ -32,5 +33,5 @@ The default implementation calls `SetStreamIsActive()` and returns `kIOReturnSuc
 
 ### Managing stream changes
 
-- [HandleChangeCurrentStreamFormat](handlechangecurrentstreamformat.md): The system calls this virtual method when the stream’s format changes.
-- [DeviceSampleRateChanged](devicesampleratechanged.md): Call to update stream formats when the owning video device changes sample rate
+- [HandleChangeCurrentStreamFormat](handlechangecurrentstreamformat.md): Beta. The system calls this virtual method when the stream’s format changes.
+- [DeviceSampleRateChanged](devicesampleratechanged.md): Beta. Call to update stream formats when the owning video device changes sample rate

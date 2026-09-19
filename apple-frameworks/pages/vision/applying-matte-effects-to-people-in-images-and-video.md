@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/vision/applying-matte-effects-to-people-in-images-and-video](https://developer.apple.com/documentation/vision/applying-matte-effects-to-people-in-images-and-video)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/vision/applying-matte-effects-to-people-in-images-and-video
 
 # Applying Matte Effects to People in Images and Video (Swift)
 

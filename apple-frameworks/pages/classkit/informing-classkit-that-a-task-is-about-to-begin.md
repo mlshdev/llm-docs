@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/classkit/informing-classkit-that-a-task-is-about-to-begin](https://developer.apple.com/documentation/classkit/informing-classkit-that-a-task-is-about-to-begin)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/classkit/informing-classkit-that-a-task-is-about-to-begin
 
 # Informing ClassKit that a task is about to begin (Swift)
 

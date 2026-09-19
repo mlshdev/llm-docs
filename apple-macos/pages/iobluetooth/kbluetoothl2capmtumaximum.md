@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/kbluetoothl2capmtumaximum](https://developer.apple.com/documentation/iobluetooth/kbluetoothl2capmtumaximum)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetooth/kbluetoothl2capmtumaximum
 
 # kBluetoothL2CAPMTUMaximum (Swift)
 

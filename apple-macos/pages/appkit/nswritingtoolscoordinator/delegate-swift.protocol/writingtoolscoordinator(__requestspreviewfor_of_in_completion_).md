@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nswritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:requestspreviewfor:of:in:completion:)](https://developer.apple.com/documentation/appkit/nswritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:requestspreviewfor:of:in:completion:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nswritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:requestspreviewfor:of:in:completion:)
 
 # writingToolsCoordinator(\_:requestsPreviewFor:of:in:completion:) (Swift)
 
@@ -36,7 +37,11 @@ func writingToolsCoordinator(_ writingToolsCoordinator: NSWritingToolsCoordinato
 
 During an interactive evaluation of your view’s text, Writing Tools creates different animations to provide feedback on what’s happening. As part of the preparation for those animations, Writing Tools asks you to provide a preview of the affected content in your view. Writing Tools uses this preview to build and execute the animations in the view stored in the [effectContainerView](../effectcontainerview.md) property of the coordinator object.
 
-To build a preview of your content in macOS, render the specified range of text into an image with a transparent background and use that image to create your [NSTextPreview](../../nstextpreview.md) object directly. Set the [presentationFrame](../../nstextpreview/presentationframe.md) property to the rectangle in your view’s coordinate space that contains the text you captured. Set the [candidateRects](../../nstextpreview/candidaterects.md) property to the selection rectangles for the text, which you get from your view’s layout manager. Writing Tools uses this information to place your image directly above the text in your view.
+To build a preview of your content in macOS, render the specified range of text into an image with a transparent background and use that image to create your [NSTextPreview](../../nstextpreview.md) object directly. Set the [presentationFrame](../../nstextpreview/presentationframe.md) property to the rectangle in your view’s coordinate space that contains the text you captured. Set the [candidateRects](../../nstextpreview/candidaterects.md) property to an array containing one rectangle per line of the selected text, which you get from your view’s layout manager.
+
+> **Important**
+
+> Provide one rectangle per line in `candidateRects`. Writing Tools uses each rectangle to animate its line independently, producing a bounce effect. If you provide a single rectangle that spans the entire range instead, Writing Tools can only animate the text as one unit, which produces a shimmer instead of a bounce.
 
 For a single animation type, the system calls the [writingToolsCoordinator(\_:prepareFor:for:in:completion:)](writingtoolscoordinator%28__preparefor_for_in_completion_%29.md) method, followed sequentially by this method and then the [writingToolsCoordinator(\_:finish:for:in:completion:)](writingtoolscoordinator%28__finish_for_in_completion_%29.md) method. Each method executes asynchronously, but the system calls the next method in the sequence only after you call the completion handler of the previous method. However, multiple animations can run simultaneously, so check the `textAnimation` parameter to differentiate sequences.
 
@@ -80,7 +85,11 @@ Asks the delegate for a preview image and layout information for the specified t
 
 During an interactive evaluation of your view’s text, Writing Tools creates different animations to provide feedback on what’s happening. As part of the preparation for those animations, Writing Tools asks you to provide a preview of the affected content in your view. Writing Tools uses this preview to build and execute the animations in the view stored in the [effectContainerView](../effectcontainerview.md) property of the coordinator object.
 
-To build a preview of your content in macOS, render the specified range of text into an image with a transparent background and use that image to create your [NSTextPreview](../../nstextpreview.md) object directly. Set the [presentationFrame](../../nstextpreview/presentationframe.md) property to the rectangle in your view’s coordinate space that contains the text you captured. Set the [candidateRects](../../nstextpreview/candidaterects.md) property to the selection rectangles for the text, which you get from your view’s layout manager. Writing Tools uses this information to place your image directly above the text in your view.
+To build a preview of your content in macOS, render the specified range of text into an image with a transparent background and use that image to create your [NSTextPreview](../../nstextpreview.md) object directly. Set the [presentationFrame](../../nstextpreview/presentationframe.md) property to the rectangle in your view’s coordinate space that contains the text you captured. Set the [candidateRects](../../nstextpreview/candidaterects.md) property to an array containing one rectangle per line of the selected text, which you get from your view’s layout manager.
+
+> **Important**
+
+> Provide one rectangle per line in `candidateRects`. Writing Tools uses each rectangle to animate its line independently, producing a bounce effect. If you provide a single rectangle that spans the entire range instead, Writing Tools can only animate the text as one unit, which produces a shimmer instead of a bounce.
 
 For a single animation type, the system calls the [writingToolsCoordinator:prepareForTextAnimation:forRange:inContext:completion:](writingtoolscoordinator%28__preparefor_for_in_completion_%29.md) method, followed sequentially by this method and then the [writingToolsCoordinator:finishTextAnimation:forRange:inContext:completion:](writingtoolscoordinator%28__finish_for_in_completion_%29.md) method. Each method executes asynchronously, but the system calls the next method in the sequence only after you call the completion handler of the previous method. However, multiple animations can run simultaneously, so check the `textAnimation` parameter to differentiate sequences.
 

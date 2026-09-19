@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/response](https://developer.apple.com/documentation/foundationmodels/transcript/response)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/response
 
 # Transcript.Response
 
@@ -18,13 +19,13 @@ struct Response
 
 ### Creating a response
 
-- [init(id:assetIDs:segments:)](response/init%28id_assetids_segments_%29.md)
-- [init(id:metadata:segments:)](response/init%28id_metadata_segments_%29.md)
+- [init(id:assetIDs:segments:)](response/init%28id_assetids_segments_%29.md): Creates a response that contains the segments you provide.
+- [init(id:metadata:segments:)](response/init%28id_metadata_segments_%29.md): Creates a response that contains the metadata and segments you provide.
 
 ### Inspecting a response
 
-- [segments](response/segments.md): Ordered prompt segments.
-- [assetIDs](response/assetids.md): Version aware identifiers for all assets used to generate this response.
+- [segments](response/segments.md): Ordered response segments.
+- [assetIDs](response/assetids.md): Version-aware identifiers for all assets used to generate this response.
 - [metadata](response/metadata.md): Metadata associated with generating the response.
 
 ## Relationships

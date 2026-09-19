@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/sbcmodepageformatdevice/1476569-data_bytes_per_physical_sector](https://developer.apple.com/documentation/kernel/sbcmodepageformatdevice/1476569-data_bytes_per_physical_sector)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/sbcmodepageformatdevice/1476569-data_bytes_per_physical_sector
 
 # DATA_BYTES_PER_PHYSICAL_SECTOR
 

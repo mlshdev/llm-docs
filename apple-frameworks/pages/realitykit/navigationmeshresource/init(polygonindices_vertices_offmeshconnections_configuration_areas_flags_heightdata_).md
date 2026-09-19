@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/navigationmeshresource/init(polygonindices:vertices:offmeshconnections:configuration:areas:flags:heightdata:)](https://developer.apple.com/documentation/realitykit/navigationmeshresource/init(polygonindices:vertices:offmeshconnections:configuration:areas:flags:heightdata:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/navigationmeshresource/init(polygonindices:vertices:offmeshconnections:configuration:areas:flags:heightdata:)
 
 # init(polygonIndices:vertices:offMeshConnections:configuration:areas:flags:heightData:)
 

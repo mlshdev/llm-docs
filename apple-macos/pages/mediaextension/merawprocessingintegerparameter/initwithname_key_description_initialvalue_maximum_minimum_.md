@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/mediaextension/merawprocessingintegerparameter/initwithname:key:description:initialvalue:maximum:minimum:](https://developer.apple.com/documentation/mediaextension/merawprocessingintegerparameter/initwithname:key:description:initialvalue:maximum:minimum:)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mediaextension/merawprocessingintegerparameter/initwithname:key:description:initialvalue:maximum:minimum:
 
 # initWithName:key:description:initialValue:maximum:minimum:
 

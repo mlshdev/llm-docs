@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/computegraphcomponent/models](https://developer.apple.com/documentation/realitykit/computegraphcomponent/models)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/computegraphcomponent/models
 
 # models
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
 
-Per-output model component overrides, keyed by output node identifier.
+The model component used to render each graph output, keyed by output node identifier.
 
 ## Declaration
 
@@ -18,4 +19,4 @@ var models: [ComputeNodeGraph.NodeID : ModelComponent] { get set }
 
 ## Discussion
 
-When non-`nil`, these model components replace those defined in [resource](resource.md). Set to `[:]` to restore resource-defined models.
+Assigning a [resource](resource.md) initializes this dictionary from the models the resource defines for its outputs. Assign a new value to replace them.

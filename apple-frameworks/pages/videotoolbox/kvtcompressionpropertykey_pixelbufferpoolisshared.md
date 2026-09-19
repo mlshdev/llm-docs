@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videotoolbox/kvtcompressionpropertykey_pixelbufferpoolisshared](https://developer.apple.com/documentation/videotoolbox/kvtcompressionpropertykey_pixelbufferpoolisshared)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videotoolbox/kvtcompressionpropertykey_pixelbufferpoolisshared
 
 # kVTCompressionPropertyKey_PixelBufferPoolIsShared (Swift)
 

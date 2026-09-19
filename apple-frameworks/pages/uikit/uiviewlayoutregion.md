@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiviewlayoutregion](https://developer.apple.com/documentation/uikit/uiviewlayoutregion)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiviewlayoutregion
 
 # UIViewLayoutRegion
 
@@ -18,6 +19,8 @@
 
 ### Type Methods
 
+- [layoutRegionForBarOnDirectionalEdge:extent:](uiviewlayoutregion/layoutregionforbarondirectionaledge_extent_.md): Beta. Returns a bar layout region of a given extent on a given directional edge.
+- [layoutRegionForBarOnEdge:extent:](uiviewlayoutregion/layoutregionforbaronedge_extent_.md): Beta. Returns a bar layout region of a given extent on a given edge.
 - [marginsLayoutRegionWithCornerAdaptation:](uiviewlayoutregion/marginslayoutregionwithcorneradaptation_.md)
 - [readableContentLayoutRegionWithCornerAdaptation:](uiviewlayoutregion/readablecontentlayoutregionwithcorneradaptation_.md)
 - [safeAreaLayoutRegionWithCornerAdaptation:](uiviewlayoutregion/safearealayoutregionwithcorneradaptation_.md)

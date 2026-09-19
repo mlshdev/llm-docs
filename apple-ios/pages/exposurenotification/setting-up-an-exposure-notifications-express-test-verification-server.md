@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/exposurenotification/setting-up-an-exposure-notifications-express-test-verification-server](https://developer.apple.com/documentation/exposurenotification/setting-up-an-exposure-notifications-express-test-verification-server)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/exposurenotification/setting-up-an-exposure-notifications-express-test-verification-server
 
 # Setting Up an Exposure Notifications Express Test Verification Server
 

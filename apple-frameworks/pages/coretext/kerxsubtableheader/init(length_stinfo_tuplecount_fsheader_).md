@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coretext/kerxsubtableheader/init(length:stinfo:tuplecount:fsheader:)](https://developer.apple.com/documentation/coretext/kerxsubtableheader/init(length:stinfo:tuplecount:fsheader:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coretext/kerxsubtableheader/init(length:stinfo:tuplecount:fsheader:)
 
 # init(length:stInfo:tupleCount:fsHeader:)
 

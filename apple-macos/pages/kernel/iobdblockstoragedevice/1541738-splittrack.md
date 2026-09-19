@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iobdblockstoragedevice/1541738-splittrack](https://developer.apple.com/documentation/kernel/iobdblockstoragedevice/1541738-splittrack)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iobdblockstoragedevice/1541738-splittrack
 
 # splitTrack
 

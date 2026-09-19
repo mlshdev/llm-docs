@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applebusinessapi/get-org-devices](https://developer.apple.com/documentation/applebusinessapi/get-org-devices)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/get-org-devices
 
 # Get Organization Devices
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Web Service Endpoint  
-**Availability:** Apple Business API 2.4+
+**Availability:** Apple Business API 2.5+
 
 Get a list of devices in an organization that enroll using Automated Device Enrollment.
 
@@ -85,6 +86,11 @@ curl "https://api-business.apple.com/v1/orgDevices" \
           "appleCareCoverage": {
             "links": {
               "related": "https://api-business.apple.com/v1/orgDevices/XABC123X0ABC123X0/appleCareCoverage"
+            }
+          },
+          "activationLockStatus": {
+            "links": {
+              "related": "https://api-business.apple.com/v1/orgDevices/XABC123X0ABC123X0/activationLockStatus"
             }
           }
         },

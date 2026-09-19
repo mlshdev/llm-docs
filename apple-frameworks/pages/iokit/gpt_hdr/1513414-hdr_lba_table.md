@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/gpt_hdr/1513414-hdr_lba_table](https://developer.apple.com/documentation/iokit/gpt_hdr/1513414-hdr_lba_table)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/gpt_hdr/1513414-hdr_lba_table
 
 # hdr_lba_table
 

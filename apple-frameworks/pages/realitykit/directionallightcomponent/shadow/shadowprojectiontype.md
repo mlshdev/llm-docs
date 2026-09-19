@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/directionallightcomponent/shadow/shadowprojectiontype](https://developer.apple.com/documentation/realitykit/directionallightcomponent/shadow/shadowprojectiontype)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/directionallightcomponent/shadow/shadowprojectiontype
 
 # DirectionalLightComponent.Shadow.ShadowProjectionType
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/writing-64-bit-intel-code-for-apple-platforms](https://developer.apple.com/documentation/xcode/writing-64-bit-intel-code-for-apple-platforms)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/writing-64-bit-intel-code-for-apple-platforms
 
 # Writing 64-bit Intel code for Apple Platforms
 

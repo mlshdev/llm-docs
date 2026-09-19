@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/xmlelement/setattributesas(_:)](https://developer.apple.com/documentation/foundation/xmlelement/setattributesas(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/xmlelement/setattributesas(_:)
 
 # setAttributesAs(\_:) (Swift)
 
 **Framework:** Foundation  
 **Kind:** Instance Method  
-**Availability:** iOS 2.0+ (deprecated in 27.0) · iPadOS 2.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.0+ (deprecated in 27.0)
+**Availability:** iOS 2.0+ (deprecated in 27.2) · iPadOS 2.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.0+ (deprecated in 27.2)
 
 Sets the attributes of the receiver based on the key-value pairs specified in the passed-in dictionary.
 
@@ -41,7 +42,7 @@ The method uses these names and object values to create [XMLNode](../xmlnode.md)
 
 **Framework:** Foundation  
 **Kind:** Instance Method  
-**Availability:** Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.0+ (deprecated in 27.0)
+**Availability:** Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.0+ (deprecated in 27.2)
 
 Sets the attributes of the receiver based on the key-value pairs specified in the passed-in dictionary.
 

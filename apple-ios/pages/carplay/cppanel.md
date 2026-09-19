@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/carplay/cppanel](https://developer.apple.com/documentation/carplay/cppanel)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/carplay/cppanel
 
 # CPPanel (Swift)
 
@@ -6,11 +7,19 @@
 **Kind:** Class  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
+A type that provides the common behaviors for panels you display on top of your app’s content.
+
 ## Declaration
 
 ```swift
 class CPPanel
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+The `CPPanel` type defines the default behaviors for panels you display in your app. You don’t create or present this type directly. Instead, instantiate one of the defined subclasses and present that type from your app’s interface. For example, create a [CPMapPanel](cpmappanel.md) and configure it with navigation-related data, and present it from a [CPMapTemplate](cpmaptemplate.md) to overlay that information on top of your custom map.
 
 ## Topics
 
@@ -20,11 +29,11 @@ class CPPanel
 
 ### Instance Properties
 
-- [showsCloseButton](cppanel/showsclosebutton.md): A Boolean value indicating whether the close button is allowed to appear.
+- [showsCloseButton](cppanel/showsclosebutton.md): A Boolean value that indicates whether the panel displays a close button.
 
 ### Type Properties
 
-- [maximumPanelItemsCount](cppanel/maximumpanelitemscount.md): The maximum panel items count.
+- [maximumPanelItemsCount](cppanel/maximumpanelitemscount.md): The maximum number of items the panel is able to display.
 
 ## Relationships
 
@@ -53,21 +62,29 @@ class CPPanel
 **Kind:** Class  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
+A type that provides the common behaviors for panels you display on top of your app’s content.
+
 ## Declaration
 
 ```objectivec
 @interface CPPanel : NSObject
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+The `CPPanel` type defines the default behaviors for panels you display in your app. You don’t create or present this type directly. Instead, instantiate one of the defined subclasses and present that type from your app’s interface. For example, create a [CPMapPanel](cpmappanel.md) and configure it with navigation-related data, and present it from a [CPMapTemplate](cpmaptemplate.md) to overlay that information on top of your custom map.
+
 ## Topics
 
 ### Instance Properties
 
-- [showsCloseButton](cppanel/showsclosebutton.md): A Boolean value indicating whether the close button is allowed to appear.
+- [showsCloseButton](cppanel/showsclosebutton.md): A Boolean value that indicates whether the panel displays a close button.
 
 ### Type Properties
 
-- [maximumPanelItemsCount](cppanel/maximumpanelitemscount.md): The maximum panel items count.
+- [maximumPanelItemsCount](cppanel/maximumpanelitemscount.md): The maximum number of items the panel is able to display.
 
 ## Relationships
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/analyzing-cpu-profiles-with-call-tree-views](https://developer.apple.com/documentation/xcode/analyzing-cpu-profiles-with-call-tree-views)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/analyzing-cpu-profiles-with-call-tree-views
 
 # Analyzing CPU profiles with call tree views
 

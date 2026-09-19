@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/preview(_:traits:arguments:body:)-6gm4c](https://developer.apple.com/documentation/uikit/preview(_:traits:arguments:body:)-6gm4c)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/preview(_:traits:arguments:body:)-6gm4c
 
 # Preview(\_:traits:arguments:body:)
 

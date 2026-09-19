@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cinematic/cndetectiontrack-2bxtd/detection(nearest:)](https://developer.apple.com/documentation/cinematic/cndetectiontrack-2bxtd/detection(nearest:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/cinematic/cndetectiontrack-2bxtd/detection(nearest:)
 
 # detection(nearest:)
 

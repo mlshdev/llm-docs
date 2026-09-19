@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/testing-transactions-that-use-custom-link-tokens](https://developer.apple.com/documentation/storekit/testing-transactions-that-use-custom-link-tokens)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/testing-transactions-that-use-custom-link-tokens
 
 # Testing transactions that use custom link tokens (Swift)
 
@@ -23,7 +24,7 @@ Apps running in the sandbox environment need to satisfy the same requirements as
 
 ### Handle custom link tokens in the sandbox environment
 
-The [ExternalPurchaseCustomLink](externalpurchasecustomlink.md) API generates custom link tokens, which have a token type and an expiration date. There are two possible token types, `ACQUISITION` and `SERVICES`. Your app requests a token by calling the [token(for:)](externalpurchasecustomlink/token%28for_%29.md) method and specifying the token type. The first time you request a token in the sandbox environment, the system creates the token and initiates an *active token period*.
+The [ExternalPurchaseCustomLink](externalpurchasecustomlink.md) API generates custom link tokens, which have a token type and an expiration date. There are two possible token types, `ACQUISITION` and `SERVICES`. Your app requests a token by calling the `ExternalPurchaseCustomLink/token(for:)` method and specifying the token type. The first time you request a token in the sandbox environment, the system creates the token and initiates an *active token period*.
 
 > **Note**
 
@@ -76,7 +77,7 @@ Apps running in the sandbox environment need to satisfy the same requirements as
 
 ### Handle custom link tokens in the sandbox environment
 
-The [ExternalPurchaseCustomLink](externalpurchasecustomlink.md) API generates custom link tokens, which have a token type and an expiration date. There are two possible token types, `ACQUISITION` and `SERVICES`. Your app requests a token by calling the [token(for:)](externalpurchasecustomlink/token%28for_%29.md) method and specifying the token type. The first time you request a token in the sandbox environment, the system creates the token and initiates an *active token period*.
+The [ExternalPurchaseCustomLink](externalpurchasecustomlink.md) API generates custom link tokens, which have a token type and an expiration date. There are two possible token types, `ACQUISITION` and `SERVICES`. Your app requests a token by calling the `ExternalPurchaseCustomLink/token(for:)` method and specifying the token type. The first time you request a token in the sandbox environment, the system creates the token and initiates an *active token period*.
 
 > **Note**
 

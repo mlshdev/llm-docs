@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/weatherkitrestapi/get-api-v1-weatheralert-_language_-_id_](https://developer.apple.com/documentation/weatherkitrestapi/get-api-v1-weatheralert-_language_-_id_)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/weatherkitrestapi/get-api-v1-weatheralert-_language_-_id_
 
 # GET /api/v1/weatherAlert/{language}/{id}
 

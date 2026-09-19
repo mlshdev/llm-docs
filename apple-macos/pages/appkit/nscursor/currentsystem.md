@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nscursor/currentsystem](https://developer.apple.com/documentation/appkit/nscursor/currentsystem)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nscursor/currentsystem
 
 # currentSystem (Swift)
 
 **Framework:** AppKit  
 **Kind:** Type Property  
-**Availability:** Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.6+ (deprecated in 27.0)
+**Availability:** Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.6+ (deprecated in 27.0)
 
 Returns the current system cursor.
 
@@ -54,7 +55,7 @@ This method replaces the now deprecated QDGetCursorData function.
 
 **Framework:** AppKit  
 **Kind:** Type Property  
-**Availability:** Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.6+ (deprecated in 27.0)
+**Availability:** Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.6+ (deprecated in 27.0)
 
 Returns the current system cursor.
 

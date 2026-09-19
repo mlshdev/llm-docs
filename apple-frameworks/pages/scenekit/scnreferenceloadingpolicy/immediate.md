@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scenekit/scnreferenceloadingpolicy/immediate](https://developer.apple.com/documentation/scenekit/scnreferenceloadingpolicy/immediate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/scenekit/scnreferenceloadingpolicy/immediate
 
 # SCNReferenceLoadingPolicy.immediate (Swift)
 

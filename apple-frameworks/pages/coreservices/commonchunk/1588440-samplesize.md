@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/commonchunk/1588440-samplesize](https://developer.apple.com/documentation/coreservices/commonchunk/1588440-samplesize)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/commonchunk/1588440-samplesize
 
 # sampleSize
 

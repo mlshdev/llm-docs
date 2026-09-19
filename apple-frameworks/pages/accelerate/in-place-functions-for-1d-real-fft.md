@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/in-place-functions-for-1d-real-fft](https://developer.apple.com/documentation/accelerate/in-place-functions-for-1d-real-fft)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/in-place-functions-for-1d-real-fft
 
 # In-Place Functions for 1D Real FFT (Swift)
 
@@ -69,6 +70,7 @@ for (k = 0; k < N/2; ++k)
     C->realp[k*IC] = H[2*k+0];
     C->imagp[k*IC] = H[2*k+1];
 }
+
 
 ```
 
@@ -149,6 +151,7 @@ for (k = 0; k < N/2; ++k)
     C->realp[k*IC] = H[2*k+0];
     C->imagp[k*IC] = H[2*k+1];
 }
+
 
 ```
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avmediacharacteristic](https://developer.apple.com/documentation/avfoundation/avmediacharacteristic)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmediacharacteristic
 
 # AVMediaCharacteristic (Swift)
 
@@ -86,6 +87,10 @@ AVMutableMetadataItem *myTaggedMediaCharacteristic = [[AVMutableMetadataItem all
 
 - [init(\_:)](avmediacharacteristic/init%28__%29.md): Creates a media characteristic.
 - [init(rawValue:)](avmediacharacteristic/init%28rawvalue_%29.md): Creates a media characteristic with a string value.
+
+### Type Properties
+
+- [signLanguageInterpretationForAccessibility](avmediacharacteristic/signlanguageinterpretationforaccessibility.md): A media characteristic that indicates that a track or media selection option provides a sign language interpretation of the spoken dialog and other significant aspects of the presentation.
 
 ## Relationships
 

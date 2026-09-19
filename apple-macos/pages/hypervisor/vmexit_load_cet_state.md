@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/vmexit_load_cet_state](https://developer.apple.com/documentation/hypervisor/vmexit_load_cet_state)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/vmexit_load_cet_state
 
 # VMEXIT_LOAD_CET_STATE (Swift)
 

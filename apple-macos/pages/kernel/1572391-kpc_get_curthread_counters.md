@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1572391-kpc_get_curthread_counters](https://developer.apple.com/documentation/kernel/1572391-kpc_get_curthread_counters)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1572391-kpc_get_curthread_counters
 
 # kpc_get_curthread_counters
 

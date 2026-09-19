@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_tcc_authorization_reason_missing_usage_string](https://developer.apple.com/documentation/endpointsecurity/es_tcc_authorization_reason_missing_usage_string)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_tcc_authorization_reason_missing_usage_string
 
 # ES_TCC_AUTHORIZATION_REASON_MISSING_USAGE_STRING (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationchannel/toolcalls/toolcall/argumentsfragment](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/toolcalls/toolcall/argumentsfragment)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/toolcalls/toolcall/argumentsfragment
 
 # LanguageModelExecutorGenerationChannel.ToolCalls.ToolCall.ArgumentsFragment
 
@@ -24,8 +25,8 @@ The first event for a given id opens the tool call (using `name` from the enclos
 
 ### Handling the arguments fragment
 
-- [content](argumentsfragment/content.md)
-- [tokenCount](argumentsfragment/tokencount.md)
+- [content](argumentsfragment/content.md): The argument text to append to the tool call.
+- [tokenCount](argumentsfragment/tokencount.md): The number of tokens the argument text carries.
 
 ## Relationships
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avaupresetevent/init(scope:element:dictionary:)](https://developer.apple.com/documentation/avfaudio/avaupresetevent/init(scope:element:dictionary:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaupresetevent/init(scope:element:dictionary:)
 
 # init(scope:element:dictionary:) (Swift)
 

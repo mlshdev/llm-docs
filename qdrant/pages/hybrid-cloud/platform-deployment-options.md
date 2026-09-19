@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/hybrid-cloud/platform-deployment-options.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/hybrid-cloud/platform-deployment-options.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/hybrid-cloud/platform-deployment-options.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/hybrid-cloud/platform-deployment-options.md)
 > Canonical documentation: https://qdrant.tech/documentation/hybrid-cloud/platform-deployment-options/
 
 # Qdrant Hybrid Cloud: Hosting Platforms & Deployment Options
@@ -7,7 +7,7 @@ This page provides an overview of how to deploy Qdrant Hybrid Cloud on various m
 
 For a general list of prerequisites and installation steps, see our [Hybrid Cloud setup guide](https://qdrant.tech/documentation/hybrid-cloud/hybrid-cloud-setup/). This platform specific documentation also applies to Qdrant Private Cloud.
 
-![Akamai](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-providers/akamai.jpg)
+![Akamai](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-providers/akamai.jpg)
 
 ## Akamai (Linode)
 
@@ -23,7 +23,7 @@ First, consult Linode's managed Kubernetes instructions below. Then, **to set up
 
 At the time of writing, Linode [does not support CSI Volume Snapshots](https://github.com/linode/linode-blockstorage-csi-driver/issues/107).
 
-![AWS](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-providers/aws.jpg)
+![AWS](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-providers/aws.jpg)
 
 ## Amazon Web Services (AWS)
 
@@ -78,7 +78,7 @@ deletionPolicy: Delete
 driver: ebs.csi.aws.com
 ```
 
-![Civo](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-providers/civo.jpg)
+![Civo](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-providers/civo.jpg)
 
 ## Civo
 
@@ -103,7 +103,7 @@ deletionPolicy: Delete
 driver: csi.civo.com
 ```
 
-![Digital Ocean](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-providers/digital-ocean.jpg)
+![Digital Ocean](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-providers/digital-ocean.jpg)
 
 ## Digital Ocean
 
@@ -117,7 +117,7 @@ First, consult Digital Ocean's managed Kubernetes instructions below. Then, **to
 - [DOKS - How To Guides](https://docs.digitalocean.com/products/kubernetes/how-to/)
 - [DOKS - Reference Manual](https://docs.digitalocean.com/products/kubernetes/reference/)
 
-![Gcore](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-providers/gcore.svg)
+![Gcore](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-providers/gcore.svg)
 
 ## Gcore
 
@@ -129,7 +129,7 @@ First, consult Gcore's managed Kubernetes instructions below. Then, **to set up 
 
 - [Getting Started with Kubnetes on Gcore](https://gcore.com/docs/cloud/kubernetes/about-gcore-kubernetes)
 
-![Google Cloud Platform](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-providers/gcp.jpg)
+![Google Cloud Platform](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-providers/gcp.jpg)
 
 ## Google Cloud Platform (GCP)
 
@@ -161,7 +161,7 @@ deletionPolicy: Delete
 driver: pd.csi.storage.gke.io
 ```
 
-![Microsoft Azure](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-providers/azure.jpg)
+![Microsoft Azure](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-providers/azure.jpg)
 
 ## Mircrosoft Azure
 
@@ -193,7 +193,7 @@ deletionPolicy: Delete
 driver: disk.csi.azure.com
 ```
 
-![Oracle Cloud Infrastructure](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-providers/oracle.jpg)
+![Oracle Cloud Infrastructure](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-providers/oracle.jpg)
 
 ## Oracle Cloud Infrastructure
 
@@ -221,7 +221,7 @@ deletionPolicy: Delete
 driver: blockvolume.csi.oraclecloud.com
 ```
 
-![OVHcloud](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-providers/ovh.jpg)
+![OVHcloud](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-providers/ovh.jpg)
 
 ## OVHcloud
 
@@ -235,7 +235,7 @@ First, consult OVHcloud's managed Kubernetes instructions below. Then, **to set 
 - [OVH Managed Kubernetes Documentation](https://help.ovhcloud.com/csm/en-in-documentation-public-cloud-containers-orchestration-managed-kubernetes-k8s)
 - [OVH Managed Kubernetes Tutorials](https://help.ovhcloud.com/csm/en-in-documentation-public-cloud-containers-orchestration-managed-kubernetes-k8s-tutorials)
 
-![Red Hat](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-providers/redhat.jpg)
+![Red Hat](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-providers/redhat.jpg)
 
 ## Red Hat OpenShift
 
@@ -255,7 +255,7 @@ To allow vertical scaling, you need a StorageClass with [volume expansion enable
 
 To allow backups and restores, your OpenShift cluster needs the [CSI snapshot controller](https://docs.openshift.com/container-platform/4.15/storage/container_storage_interface/persistent-storage-csi-snapshots.html), and you need to create a VolumeSnapshotClass.
 
-![Scaleway](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-providers/scaleway.jpg)
+![Scaleway](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-providers/scaleway.jpg)
 
 ## Scaleway
 
@@ -269,7 +269,7 @@ First, consult Scaleway's managed Kubernetes instructions below. Then, **to set 
 - [Scaleway Kubernetes Documentation](https://www.scaleway.com/en/docs/containers/kubernetes/)
 - [Frequently Asked Questions on Scaleway Kubernetes](https://www.scaleway.com/en/docs/faq/kubernetes/)
 
-![STACKIT](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-providers/stackit.jpg)
+![STACKIT](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-providers/stackit.jpg)
 
 ## STACKIT
 
@@ -294,7 +294,7 @@ deletionPolicy: Delete
 driver: cinder.csi.openstack.org
 ```
 
-![Vultr](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-providers/vultr.jpg)
+![Vultr](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-providers/vultr.jpg)
 
 ## Vultr
 
@@ -310,7 +310,7 @@ First, consult Vultr's managed Kubernetes instructions below. Then, **to set up 
 
 At the time of writing, Vultr does not support CSI Volume Snapshots.
 
-![Kubernetes](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/cloud-providers/kubernetes.jpg)
+![Kubernetes](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/cloud-providers/kubernetes.jpg)
 
 ## Generic Kubernetes Support (on-premises, cloud, edge)
 

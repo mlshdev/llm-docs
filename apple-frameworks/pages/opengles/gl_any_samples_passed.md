@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_any_samples_passed](https://developer.apple.com/documentation/opengles/gl_any_samples_passed)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_any_samples_passed
 
 # GL_ANY_SAMPLES_PASSED (Swift)
 

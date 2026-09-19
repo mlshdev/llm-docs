@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1427558-extmod_statistics_incr_thread_se](https://developer.apple.com/documentation/kernel/1427558-extmod_statistics_incr_thread_se)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1427558-extmod_statistics_incr_thread_se
 
 # extmod_statistics_incr_thread_set_state
 

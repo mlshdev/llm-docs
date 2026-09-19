@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/if_wifi_status_v1/3944202-dl_effective_latency](https://developer.apple.com/documentation/kernel/if_wifi_status_v1/3944202-dl_effective_latency)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/if_wifi_status_v1/3944202-dl_effective_latency
 
 # dl_effective_latency
 

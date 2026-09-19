@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/nefiltercontrolprovider/handlenewflow(_:completionhandler:)](https://developer.apple.com/documentation/networkextension/nefiltercontrolprovider/handlenewflow(_:completionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/networkextension/nefiltercontrolprovider/handlenewflow(_:completionhandler:)
 
 # handleNewFlow(\_:completionHandler:) (Swift)
 

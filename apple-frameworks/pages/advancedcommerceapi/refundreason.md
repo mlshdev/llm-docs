@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/advancedcommerceapi/refundreason](https://developer.apple.com/documentation/advancedcommerceapi/refundreason)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/advancedcommerceapi/refundreason
 
 # refundReason
 
@@ -18,9 +19,9 @@ string refundReason
 
 ## Possible Values
 
-- `UNINTENDED_PURCHASE`: The customer didn’t intend to make the in-app purchase.
-- `FULFILLMENT_ISSUE`: The customer had issues with receiving or using the in-app purchase.
-- `UNSATISFIED_WITH_PURCHASE`: The customer wasn’t satisfied with the in-app purchase.
+- `UNINTENDED_PURCHASE`: The customer didn’t intend to make the Apple In-App Purchase.
+- `FULFILLMENT_ISSUE`: The customer had issues with receiving or using the Apple In-App Purchase.
+- `UNSATISFIED_WITH_PURCHASE`: The customer wasn’t satisfied with the Apple In-App Purchase.
 - `LEGAL`: The customer requested a refund based on a legal reason.
 - `OTHER`: The customer requested a refund for other reasons.
 - `MODIFY_ITEMS_REFUND`: The customer modified one or more items in the subscription, which results in a refund.
@@ -41,7 +42,7 @@ string refundReason
 - [retainBillingCycle](retainbillingcycle.md): A Boolean value that determines whether to keep the existing billing cycle with the change you request.
 - [refundAmount](refundamount.md): A refund amount, in milliunits of the currency.
 - [refundRiskingPreference](refundriskingpreference.md): A Boolean value that indicates whether the App Store asks you for consumption data to help inform the refund decision.
-- [SKU](sku.md): The product identifier of an in-app purchase product you manage in your own system.
+- [SKU](sku.md): The product identifier of an Apple In-App Purchase product you manage in your own system.
 - [storefront](storefront.md): A three-letter code that represents the country or region associated with the App Store storefront.
 - [taxCode](taxcode.md): A tax code that applies to a SKU.
 - [targetProductId](targetproductid.md): A generic product identifier that represents all Advanced Commerce API products to App Store Connect, which you use when you migrate a product.

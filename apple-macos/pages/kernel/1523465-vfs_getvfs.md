@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1523465-vfs_getvfs](https://developer.apple.com/documentation/kernel/1523465-vfs_getvfs)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1523465-vfs_getvfs
 
 # vfs_getvfs
 

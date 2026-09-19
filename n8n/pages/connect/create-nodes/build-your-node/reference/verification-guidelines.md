@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/verification-guidelines.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/connect/create-nodes/build-your-node/reference/verification-guidelines.md)
+> Pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/verification-guidelines.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/connect/create-nodes/build-your-node/reference/verification-guidelines.md)
 
 # Community node verification guidelines <a id="community-node-verification-guidelines"></a>
 
@@ -25,7 +25,8 @@ All verified community node authors should use the [`n8n-node` tool](https://doc
 
 - The node **MUST** not be an existing node, If your node is an iteration on an existing node create a pull request instead.
 - n8n isn't accepting Logic or Flow control nodes at the moment.
-- Each package should integrate exactly one third-party service. A trigger node for the same service may be included alongside the main node. Packages that wrap multiple unrelated APIs or act as a proxy layer for several services generally don't qualify for verification. Submit each service as its own separate package.
+- Each package should integrate one third-party service. Most packages that wrap multiple unrelated APIs or act as a proxy layer for several services don't qualify for verification. Submit each service as its own separate package.
+- You can include a trigger node for the same service alongside the main node. Build the trigger node in the programmatic style, because the [declarative style](https://docs.n8n.io/connect/create-nodes/plan-your-node/choose-a-node-building-style) doesn't support triggers. A package can mix styles, so a declarative-style action node and a programmatic-style trigger node can live in the same package.
 
 ## Package source verification <a id="package-source-verification"></a>
 

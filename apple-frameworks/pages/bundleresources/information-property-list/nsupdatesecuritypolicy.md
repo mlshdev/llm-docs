@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/bundleresources/information-property-list/nsupdatesecuritypolicy](https://developer.apple.com/documentation/bundleresources/information-property-list/nsupdatesecuritypolicy)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/bundleresources/information-property-list/nsupdatesecuritypolicy
 
 # NSUpdateSecurityPolicy
 
@@ -102,7 +103,8 @@ The following sample code describes a complete update policy, in JSON format, th
 
 - [NSAppBundlesUsageDescription](nsappbundlesusagedescription.md): A message that tells people why the app needs to access the contents of other apps’ bundles.
 - [NSAppDataUsageDescription](nsappdatausagedescription.md): A message that tells people why the app needs to access files in other apps’ sandbox containers.
-- [NSUserTrackingUsageDescription](nsusertrackingusagedescription.md): A message that informs the user why an app is requesting permission to use data for tracking the user or the device.
+- [NSUserTrackingUsageDescription](nsusertrackingusagedescription.md): A message that explains the purpose for accessing data that an app can use to track a person or device.
+- [NSUserTrackingMarkdownUsageDescription](nsusertrackingmarkdownusagedescription.md): Beta. A message that explains the purpose for accessing data that an application can use to track a person or device.
 - [NSAppleEventsUsageDescription](nsappleeventsusagedescription.md): A message that tells people why the app is requesting the ability to send Apple events.
 - [NSSystemAdministrationUsageDescription](nssystemadministrationusagedescription.md): A message in macOS that tells people why the app is requesting to manipulate the system configuration.
 - [ITSAppUsesNonExemptEncryption](itsappusesnonexemptencryption.md): A Boolean value indicating whether the app uses encryption.

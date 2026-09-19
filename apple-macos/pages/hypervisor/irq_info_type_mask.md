@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/irq_info_type_mask](https://developer.apple.com/documentation/hypervisor/irq_info_type_mask)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/irq_info_type_mask
 
 # IRQ_INFO_TYPE_MASK (Swift)
 

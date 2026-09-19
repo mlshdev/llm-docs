@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/kinquiry_byte6_multip_bit](https://developer.apple.com/documentation/driverkit/kinquiry_byte6_multip_bit)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/kinquiry_byte6_multip_bit
 
 # kINQUIRY_Byte6_MULTIP_Bit
 

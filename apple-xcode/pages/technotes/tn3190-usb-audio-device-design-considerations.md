@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/technotes/tn3190-usb-audio-device-design-considerations](https://developer.apple.com/documentation/technotes/tn3190-usb-audio-device-design-considerations)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/technotes/tn3190-usb-audio-device-design-considerations
 
 # TN3190: USB audio device design considerations
 
@@ -913,7 +914,7 @@ Please see Developer support below if you need further guidance on making associ
 
 ## Developer support
 
-If you have questions regarding USB Audio Class support, please contact Apple through [Feedback Assistant](applefeedback://new?form_identifier=dev.tech&answers%5B%3Aarea%5D=seedmacos%3Ausbaudio) selecting the following option:
+If you have questions regarding USB Audio Class support, please contact Apple through Feedback Assistant selecting the following option:
 
 Developer Technologies & SDKs \> USB Audio
 

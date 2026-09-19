@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/host_load_info_data_t/1586782-mach_factor](https://developer.apple.com/documentation/kernel/host_load_info_data_t/1586782-mach_factor)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/host_load_info_data_t/1586782-mach_factor
 
 # mach_factor
 

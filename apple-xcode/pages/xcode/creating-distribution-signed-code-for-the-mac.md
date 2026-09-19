@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/creating-distribution-signed-code-for-the-mac](https://developer.apple.com/documentation/xcode/creating-distribution-signed-code-for-the-mac)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/creating-distribution-signed-code-for-the-mac
 
 # Creating distribution-signed code for macOS
 

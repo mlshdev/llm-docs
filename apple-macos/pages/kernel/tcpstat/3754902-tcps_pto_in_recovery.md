@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/tcpstat/3754902-tcps_pto_in_recovery](https://developer.apple.com/documentation/kernel/tcpstat/3754902-tcps_pto_in_recovery)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/tcpstat/3754902-tcps_pto_in_recovery
 
 # tcps_pto_in_recovery
 

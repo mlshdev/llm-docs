@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsimagedilate/init(device:kernelwidth:kernelheight:values:)](https://developer.apple.com/documentation/metalperformanceshaders/mpsimagedilate/init(device:kernelwidth:kernelheight:values:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpsimagedilate/init(device:kernelwidth:kernelheight:values:)
 
 # init(device:kernelWidth:kernelHeight:values:) (Swift)
 

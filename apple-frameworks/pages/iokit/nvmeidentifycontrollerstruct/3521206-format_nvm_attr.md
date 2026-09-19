@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/nvmeidentifycontrollerstruct/3521206-format_nvm_attr](https://developer.apple.com/documentation/iokit/nvmeidentifycontrollerstruct/3521206-format_nvm_attr)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/nvmeidentifycontrollerstruct/3521206-format_nvm_attr
 
 # FORMAT_NVM_ATTR
 

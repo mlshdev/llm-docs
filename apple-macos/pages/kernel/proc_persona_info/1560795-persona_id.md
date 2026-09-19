@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/proc_persona_info/1560795-persona_id](https://developer.apple.com/documentation/kernel/proc_persona_info/1560795-persona_id)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/proc_persona_info/1560795-persona_id
 
 # persona_id
 

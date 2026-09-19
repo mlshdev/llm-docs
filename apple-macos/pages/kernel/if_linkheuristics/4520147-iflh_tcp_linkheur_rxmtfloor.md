@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/if_linkheuristics/4520147-iflh_tcp_linkheur_rxmtfloor](https://developer.apple.com/documentation/kernel/if_linkheuristics/4520147-iflh_tcp_linkheur_rxmtfloor)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/if_linkheuristics/4520147-iflh_tcp_linkheur_rxmtfloor
 
 # iflh_tcp_linkheur_rxmtfloor
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/homekit/hmactionset/removeaction(_:completionhandler:)](https://developer.apple.com/documentation/homekit/hmactionset/removeaction(_:completionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/homekit/hmactionset/removeaction(_:completionhandler:)
 
 # removeAction(\_:completionHandler:) (Swift)
 

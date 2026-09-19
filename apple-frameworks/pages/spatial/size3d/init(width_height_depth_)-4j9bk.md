@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/size3d/init(width:height:depth:)-4j9bk](https://developer.apple.com/documentation/spatial/size3d/init(width:height:depth:)-4j9bk)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatial/size3d/init(width:height:depth:)-4j9bk
 
 # init(width:height:depth:)
 

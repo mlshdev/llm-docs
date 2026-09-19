@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iousbhostiosource/1520597-getstategated](https://developer.apple.com/documentation/kernel/iousbhostiosource/1520597-getstategated)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iousbhostiosource/1520597-getstategated
 
 # getStateGated
 

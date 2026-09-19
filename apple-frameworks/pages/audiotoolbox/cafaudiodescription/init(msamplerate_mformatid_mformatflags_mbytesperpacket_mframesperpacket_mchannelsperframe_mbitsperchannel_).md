@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/cafaudiodescription/init(msamplerate:mformatid:mformatflags:mbytesperpacket:mframesperpacket:mchannelsperframe:mbitsperchannel:)](https://developer.apple.com/documentation/audiotoolbox/cafaudiodescription/init(msamplerate:mformatid:mformatflags:mbytesperpacket:mframesperpacket:mchannelsperframe:mbitsperchannel:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/cafaudiodescription/init(msamplerate:mformatid:mformatflags:mbytesperpacket:mframesperpacket:mchannelsperframe:mbitsperchannel:)
 
 # init(mSampleRate:mFormatID:mFormatFlags:mBytesPerPacket:mFramesPerPacket:mChannelsPerFrame:mBitsPerChannel:)
 

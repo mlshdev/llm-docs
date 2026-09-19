@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtldynamiclibraryerror-swift.struct/code/unsupported](https://developer.apple.com/documentation/metal/mtldynamiclibraryerror-swift.struct/code/unsupported)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtldynamiclibraryerror-swift.struct/code/unsupported
 
 # MTLDynamicLibraryError.Code.unsupported (Swift)
 

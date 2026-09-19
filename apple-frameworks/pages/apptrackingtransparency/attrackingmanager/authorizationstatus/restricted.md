@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/apptrackingtransparency/attrackingmanager/authorizationstatus/restricted](https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/authorizationstatus/restricted)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/authorizationstatus/restricted
 
 # ATTrackingManager.AuthorizationStatus.restricted (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Case  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
 
-The value that returns if authorization to access app-related data for tracking the user or the device has a restricted status.
+A value that indicates the system restricts tracking authorization.
 
 ## Declaration
 
@@ -18,15 +19,18 @@ case restricted
 
 ## Discussion
 
-A restricted condition means the device does not prompt for tracking authorization when [requestTrackingAuthorization(completionHandler:)](../requesttrackingauthorization%28completionhandler_%29.md) is called, nor is it displayed when the [NSUserTrackingUsageDescription](../../../bundleresources/information-property-list/nsusertrackingusagedescription.md) is triggered. Also, on restricted devices, the Allow Apps To Request To Track setting is disabled and cannot be changed. This setting allows users to opt in or out of allowing apps to request user consent to access app-related data that can be used for tracking the user or the device.
+When the system restricts tracking for the device:
+
+- Tracking request methods (for example, [requestTrackingAuthorization(completionHandler:)](../requesttrackingauthorization%28completionhandler_%29.md)) run their completion handlers immediately, without prompting the person.
+- The system disables “Allow Apps to Request to Track” (called “Allow Apps to Request to Link Your Activity Across Companies” in the European Union) in Settings \> Privacy & Security \> Tracking.
 
 ## See Also
 
-### Cases
+### Determining the status
 
-- [ATTrackingManager.AuthorizationStatus.authorized](authorized.md): The value that returns if the user authorizes access to app-related data for tracking the user or the device.
-- [ATTrackingManager.AuthorizationStatus.denied](denied.md): The value that returns if the user denies authorization to access app-related data for tracking the user or the device.
-- [ATTrackingManager.AuthorizationStatus.notDetermined](notdetermined.md): The value that returns when the app can’t determine the user’s authorization status for access to app-related data for tracking the user or the device.
+- [ATTrackingManager.AuthorizationStatus.authorized](authorized.md): A value that indicates someone grants your app permission to access data your app can use to track a person or device.
+- [ATTrackingManager.AuthorizationStatus.denied](denied.md): A value that indicates someone denies your app permission to access data your app can use to track a person or device.
+- [ATTrackingManager.AuthorizationStatus.notDetermined](notdetermined.md): A value that indicates the person hasn’t responded to a tracking authorization request.
 
 # ATTrackingManagerAuthorizationStatusRestricted (Objective-C)
 
@@ -34,7 +38,7 @@ A restricted condition means the device does not prompt for tracking authorizati
 **Kind:** Enumeration Case  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
 
-The value that returns if authorization to access app-related data for tracking the user or the device has a restricted status.
+A value that indicates the system restricts tracking authorization.
 
 ## Declaration
 
@@ -46,12 +50,15 @@ ATTrackingManagerAuthorizationStatusRestricted
 
 ## Discussion
 
-A restricted condition means the device does not prompt for tracking authorization when [requestTrackingAuthorizationWithCompletionHandler:](../requesttrackingauthorization%28completionhandler_%29.md) is called, nor is it displayed when the [NSUserTrackingUsageDescription](../../../bundleresources/information-property-list/nsusertrackingusagedescription.md) is triggered. Also, on restricted devices, the Allow Apps To Request To Track setting is disabled and cannot be changed. This setting allows users to opt in or out of allowing apps to request user consent to access app-related data that can be used for tracking the user or the device.
+When the system restricts tracking for the device:
+
+- Tracking request methods (for example, [requestTrackingAuthorizationWithCompletionHandler:](../requesttrackingauthorization%28completionhandler_%29.md)) run their completion handlers immediately, without prompting the person.
+- The system disables “Allow Apps to Request to Track” (called “Allow Apps to Request to Link Your Activity Across Companies” in the European Union) in Settings \> Privacy & Security \> Tracking.
 
 ## See Also
 
-### Cases
+### Determining the status
 
-- [ATTrackingManagerAuthorizationStatusAuthorized](authorized.md): The value that returns if the user authorizes access to app-related data for tracking the user or the device.
-- [ATTrackingManagerAuthorizationStatusDenied](denied.md): The value that returns if the user denies authorization to access app-related data for tracking the user or the device.
-- [ATTrackingManagerAuthorizationStatusNotDetermined](notdetermined.md): The value that returns when the app can’t determine the user’s authorization status for access to app-related data for tracking the user or the device.
+- [ATTrackingManagerAuthorizationStatusAuthorized](authorized.md): A value that indicates someone grants your app permission to access data your app can use to track a person or device.
+- [ATTrackingManagerAuthorizationStatusDenied](denied.md): A value that indicates someone denies your app permission to access data your app can use to track a person or device.
+- [ATTrackingManagerAuthorizationStatusNotDetermined](notdetermined.md): A value that indicates the person hasn’t responded to a tracking authorization request.

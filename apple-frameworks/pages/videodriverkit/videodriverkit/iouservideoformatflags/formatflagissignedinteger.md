@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoformatflags/formatflagissignedinteger](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoformatflags/formatflagissignedinteger)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoformatflags/formatflagissignedinteger
 
 # FormatFlagIsSignedInteger
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Set for signed integer, clear for unsigned integer.
 
@@ -26,6 +27,6 @@ This flag is only valid if `FormatFlagIsFloat` is clear.
 
 ### Numeric representation flags
 
-- [FormatFlagIsFloat](formatflagisfloat.md): Set for floating point, clear for integer.
-- [LinearPCMFormatFlagIsFloat](linearpcmformatflagisfloat.md): Synonym for `FormatFlagIsFloat`.
-- [LinearPCMFormatFlagIsSignedInteger](linearpcmformatflagissignedinteger.md): Synonym for `FormatFlagIsSignedInteger`.
+- [FormatFlagIsFloat](formatflagisfloat.md): Beta. Set for floating point, clear for integer.
+- [LinearPCMFormatFlagIsFloat](linearpcmformatflagisfloat.md): Beta. Synonym for `FormatFlagIsFloat`.
+- [LinearPCMFormatFlagIsSignedInteger](linearpcmformatflagissignedinteger.md): Beta. Synonym for `FormatFlagIsSignedInteger`.

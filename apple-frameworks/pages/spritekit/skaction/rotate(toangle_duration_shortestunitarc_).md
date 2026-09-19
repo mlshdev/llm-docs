@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spritekit/skaction/rotate(toangle:duration:shortestunitarc:)](https://developer.apple.com/documentation/spritekit/skaction/rotate(toangle:duration:shortestunitarc:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spritekit/skaction/rotate(toangle:duration:shortestunitarc:)
 
 # rotate(toAngle:duration:shortestUnitArc:) (Swift)
 

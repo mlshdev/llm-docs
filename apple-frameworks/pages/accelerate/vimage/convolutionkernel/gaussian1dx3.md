@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimage/convolutionkernel/gaussian1dx3](https://developer.apple.com/documentation/accelerate/vimage/convolutionkernel/gaussian1dx3)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vimage/convolutionkernel/gaussian1dx3
 
 # gaussian1Dx3
 

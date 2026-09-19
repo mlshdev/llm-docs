@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsglyphinfo/init(cgglyph:for:basestring:)](https://developer.apple.com/documentation/appkit/nsglyphinfo/init(cgglyph:for:basestring:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsglyphinfo/init(cgglyph:for:basestring:)
 
 # init(cgGlyph:for:baseString:) (Swift)
 

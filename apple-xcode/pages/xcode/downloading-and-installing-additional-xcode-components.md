@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/downloading-and-installing-additional-xcode-components](https://developer.apple.com/documentation/xcode/downloading-and-installing-additional-xcode-components)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/downloading-and-installing-additional-xcode-components
 
 # Downloading and installing additional Xcode components
 
@@ -146,3 +147,9 @@ Then, install the toolchain into Xcode:
 ```
 xcodebuild -importComponent metalToolchain ~/Downloads/metalToolchain.dmg
 ```
+
+## See Also
+
+### Customization
+
+- [Customizing your workspace using themes](customizing-your-workspace-using-themes.md): Personalize the appearance of Xcode on your Mac.

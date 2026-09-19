@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreai/aimodelasset/metadata-swift.struct/subscript(_:_:)-5o1kb](https://developer.apple.com/documentation/coreai/aimodelasset/metadata-swift.struct/subscript(_:_:)-5o1kb)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreai/aimodelasset/metadata-swift.struct/subscript(_:_:)-5o1kb
 
 # subscript(\_:\_:)
 

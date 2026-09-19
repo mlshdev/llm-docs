@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/productid](https://developer.apple.com/documentation/storekit/transaction/productid)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/productid
 
 # productID
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
 
-The product identifier of the in-app purchase.
+The product identifier of the Apple In-App Purchase.
 
 ## Declaration
 
@@ -18,12 +19,12 @@ let productID: String
 
 ## Discussion
 
-You create product identifiers for in-app purchases in App Store Connect.
+You create product identifiers for Apple In-App Purchases in App Store Connect.
 
 ## See Also
 
 ### Identifying the app and product
 
 - [appBundleID](appbundleid.md): The bundle identifier for the app.
-- [productType](producttype.md): The type of the in-app purchase.
+- [productType](producttype.md): The type of the Apple In-App Purchase.
 - [subscriptionGroupID](subscriptiongroupid.md): The identifier of the subscription group that the subscription belongs to.

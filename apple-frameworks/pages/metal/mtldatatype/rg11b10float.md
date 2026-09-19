@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtldatatype/rg11b10float](https://developer.apple.com/documentation/metal/mtldatatype/rg11b10float)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtldatatype/rg11b10float
 
 # MTLDataType.rg11b10Float (Swift)
 

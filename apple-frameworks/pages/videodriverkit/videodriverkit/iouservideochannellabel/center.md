@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideochannellabel/center](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/center)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/center
 
 # Center
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,7 +19,7 @@ Center
 
 ### Center channels
 
-- [CenterTopFront](centertopfront.md)
-- [VerticalHeightCenter](verticalheightcenter.md): WAVE: “Top Front Center”
-- [CenterTopMiddle](centertopmiddle.md)
-- [CenterTopRear](centertoprear.md)
+- [CenterTopFront](centertopfront.md): Beta.
+- [VerticalHeightCenter](verticalheightcenter.md): Beta. WAVE: “Top Front Center”
+- [CenterTopMiddle](centertopmiddle.md): Beta.
+- [CenterTopRear](centertoprear.md): Beta.

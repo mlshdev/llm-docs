@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/hiddriverkit/khidusage_dig_transducerindex](https://developer.apple.com/documentation/hiddriverkit/khidusage_dig_transducerindex)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hiddriverkit/khidusage_dig_transducerindex
 
 # kHIDUsage_Dig_TransducerIndex
 

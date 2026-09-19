@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/carplay/cpmappanel/title](https://developer.apple.com/documentation/carplay/cpmappanel/title)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanel/title
 
 # title (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
-The title of the page.
+The title to display at the top of the panel.
 
 ## Declaration
 
@@ -20,7 +21,7 @@ var title: String? { get }
 **Kind:** Instance Property  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
-The title of the page.
+The title to display at the top of the panel.
 
 ## Declaration
 

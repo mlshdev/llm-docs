@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsstring/draw(with:options:attributes:)](https://developer.apple.com/documentation/foundation/nsstring/draw(with:options:attributes:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsstring/draw(with:options:attributes:)
 
 # draw(with:options:attributes:) (Swift)
 
 **Framework:** Foundation  
 **Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Draws the receiver with the specified options and other display characteristics of the given attributes, within the specified rectangle in the current graphics context.
 
@@ -54,7 +55,7 @@ You should only invoke this method when there is a current graphics context.
 
 **Framework:** Foundation  
 **Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Draws the receiver with the specified options and other display characteristics of the given attributes, within the specified rectangle in the current graphics context.
 

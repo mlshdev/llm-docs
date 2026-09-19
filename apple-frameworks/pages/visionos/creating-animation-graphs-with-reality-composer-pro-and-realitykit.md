@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/visionos/creating-animation-graphs-with-reality-composer-pro-and-realitykit](https://developer.apple.com/documentation/visionos/creating-animation-graphs-with-reality-composer-pro-and-realitykit)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/visionos/creating-animation-graphs-with-reality-composer-pro-and-realitykit
 
 # Creating animation graphs with Reality Composer Pro and RealityKit
 

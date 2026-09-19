@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_mount_disposition_internal](https://developer.apple.com/documentation/endpointsecurity/es_mount_disposition_internal)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_mount_disposition_internal
 
 # ES_MOUNT_DISPOSITION_INTERNAL (Swift)
 

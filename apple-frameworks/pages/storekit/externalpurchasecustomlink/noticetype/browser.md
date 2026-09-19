@@ -1,12 +1,15 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/externalpurchasecustomlink/noticetype/browser](https://developer.apple.com/documentation/storekit/externalpurchasecustomlink/noticetype/browser)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/externalpurchasecustomlink/noticetype/browser
 
 # ExternalPurchaseCustomLink.NoticeType.browser
 
 **Framework:** StoreKit  
 **Kind:** Case  
-**Availability:** iOS 18.1+ · iPadOS 18.1+ · Mac Catalyst 18.1+ · macOS 15.1+ · tvOS 18.1+ · visionOS 2.1+ · watchOS 11.1+
+**Availability:** iOS 18.1+ (deprecated in 27.2) · iPadOS 18.1+ (deprecated in 27.2) · Mac Catalyst 18.1+ (deprecated in 27.2) · macOS 15.1+ (deprecated in 27.2) · tvOS 18.1+ (deprecated in 27.2) · visionOS 2.1+ (deprecated in 27.2) · watchOS 11.1+ (deprecated in 27.2)
 
 A notice type that indicates your app displays external purchases in a destination of your choice.
+
+> Use \`ExternalPurchaseType\` instead.
 
 ## Declaration
 
@@ -24,4 +27,4 @@ After displaying a notice with this notice type using [showNotice(type:)](../sho
 
 ### Getting notice types
 
-- [ExternalPurchaseCustomLink.NoticeType.withinApp](withinapp.md): A notice type that indicates that you display the destination in a web view or native experience within the app.
+- [ExternalPurchaseCustomLink.NoticeType.withinApp](withinapp.md): Deprecated. A notice type that indicates that you display the destination in a web view or native experience within the app.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/kbluetoothl2captcicommandl2ca_connectresp](https://developer.apple.com/documentation/iobluetooth/kbluetoothl2captcicommandl2ca_connectresp)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetooth/kbluetoothl2captcicommandl2ca_connectresp
 
 # kBluetoothL2CAPTCICommandL2CA_ConnectResp (Swift)
 

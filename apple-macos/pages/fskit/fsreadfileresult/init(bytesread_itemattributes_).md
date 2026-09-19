@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fsreadfileresult/init(bytesread:itemattributes:)](https://developer.apple.com/documentation/fskit/fsreadfileresult/init(bytesread:itemattributes:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/fskit/fsreadfileresult/init(bytesread:itemattributes:)
 
 # init(bytesRead:itemAttributes:) (Swift)
 

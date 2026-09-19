@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appleschoolmanagerapi/get-all-device-ids-for-a-device-management-service](https://developer.apple.com/documentation/appleschoolmanagerapi/get-all-device-ids-for-a-device-management-service)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appleschoolmanagerapi/get-all-device-ids-for-a-device-management-service
 
 # Get All Device IDs for a Device Management Service
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple School Manager API  
 **Kind:** Web Service Endpoint  
-**Availability:** Apple School Manager API 1.6+
+**Availability:** Apple School Manager API 1.7+
 
 ## URL
 

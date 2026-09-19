@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/process/launch()](https://developer.apple.com/documentation/foundation/process/launch())
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/process/launch()
 
 # launch() (Swift)
 
 **Framework:** Foundation  
 **Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Launches the task represented by the receiver.
 
@@ -39,7 +40,7 @@ Raises an `NSInvalidArgumentException` if the launch path has not been set or is
 
 **Framework:** Foundation  
 **Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Launches the task represented by the receiver.
 

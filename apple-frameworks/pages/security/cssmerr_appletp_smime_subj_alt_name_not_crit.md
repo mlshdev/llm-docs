@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_appletp_smime_subj_alt_name_not_crit](https://developer.apple.com/documentation/security/cssmerr_appletp_smime_subj_alt_name_not_crit)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_appletp_smime_subj_alt_name_not_crit
 
 # CSSMERR_APPLETP_SMIME_SUBJ_ALT_NAME_NOT_CRIT (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels](https://developer.apple.com/documentation/foundationmodels)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels
 
 # Foundation Models
 
@@ -76,7 +77,7 @@ To use Apple Foundation Models, people need a device that supports Apple Intelli
 - [Composing dynamic sessions with instructions and profiles](foundationmodels/composing-dynamic-sessions-with-instructions-and-profiles.md): Adapt sessions dynamically at runtime by loading instructions and tools based on the state of your app.
 - [Origami: Crafting a dynamic tutorial for Apple Intelligence](foundationmodels/origami-crafting-a-dynamic-tutorial-for-apple-intelligence.md): Build interactive experiences with Foundation Models and Private Cloud Compute using multimodal prompts.
 - [DynamicInstructions](foundationmodels/dynamicinstructions.md): A type that represents dynamic instructions.
-- [DynamicInstructionsForEach](foundationmodels/dynamicinstructionsforeach.md)
+- [DynamicInstructionsForEach](foundationmodels/dynamicinstructionsforeach.md): Dynamic instructions that produce content for each element of a collection.
 - [LanguageModelSession.DynamicProfile](foundationmodels/languagemodelsession/dynamicprofile.md): A dynamic profile that contains one or more profiles.
 - [LanguageModelSession.DynamicProfileModifier](foundationmodels/languagemodelsession/dynamicprofilemodifier.md): A protocol for creating reusable wrappers around dynamic profile content.
 - [LanguageModelSession.Profile](foundationmodels/languagemodelsession/profile.md): A profile that contains dynamic instructions.
@@ -138,3 +139,8 @@ To use Apple Foundation Models, people need a device that supports Apple Intelli
 - [Evaluating prompts to measure performance and improve model responses](foundationmodels/evaluating-prompts-to-measure-performance-and-improve-model-responses.md): Systematically measure and improve the quality of your prompts by using structured evaluation.
 - [Evaluating language model responses](evaluations/evaluating-language-model-responses.md): Build an evaluation that runs your intelligence-powered feature against samples and scores each response.
 - [Analyzing the runtime performance of your Foundation Models app](foundationmodels/analyzing-the-runtime-performance-of-your-foundation-models-app.md): Measure how prompts, responses, and tool calls affect token consumption and response times in Instruments.
+
+### Protocols
+
+- [DataAttachmentRepresentable](foundationmodels/dataattachmentrepresentable.md): Beta. A type that you use as the content of a data attachment.
+- [DataEntryRepresentable](foundationmodels/dataentryrepresentable.md): Beta. A type that a model can produce and represent as a top-level transcript entry.

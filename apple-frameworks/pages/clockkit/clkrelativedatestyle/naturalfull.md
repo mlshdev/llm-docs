@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkrelativedatestyle/naturalfull](https://developer.apple.com/documentation/clockkit/clkrelativedatestyle/naturalfull)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkrelativedatestyle/naturalfull
 
 # CLKRelativeDateStyle.naturalFull (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Case  
-**Availability:** watchOS 6.0+ (deprecated in 27.0)
+**Availability:** watchOS 6.0+ (deprecated in 27.2)
 
 A natural date style using unabbreviated units, when possible.
 
@@ -34,7 +35,7 @@ The text provider breaks the time interval into various components. If there’s
 
 **Framework:** ClockKit  
 **Kind:** Enumeration Case  
-**Availability:** watchOS 6.0+ (deprecated in 27.0)
+**Availability:** watchOS 6.0+ (deprecated in 27.2)
 
 A natural date style using unabbreviated units, when possible.
 

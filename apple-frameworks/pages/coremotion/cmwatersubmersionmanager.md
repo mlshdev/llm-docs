@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremotion/cmwatersubmersionmanager](https://developer.apple.com/documentation/coremotion/cmwatersubmersionmanager)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremotion/cmwatersubmersionmanager
 
 # CMWaterSubmersionManager (Swift)
 
@@ -47,6 +48,7 @@ If the [waterSubmersionAvailable](cmwatersubmersionmanager/watersubmersionavaila
 ```swift
 // Instantiate the submersion manager.
 submersionManager = CMWaterSubmersionManager()
+
 
 // Assign the submersion manager delegate.
 submersionManager.delegate = self
@@ -141,6 +143,7 @@ If the [waterSubmersionAvailable](cmwatersubmersionmanager/watersubmersionavaila
 ```swift
 // Instantiate the submersion manager.
 submersionManager = CMWaterSubmersionManager()
+
 
 // Assign the submersion manager delegate.
 submersionManager.delegate = self

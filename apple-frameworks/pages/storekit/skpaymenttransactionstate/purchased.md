@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skpaymenttransactionstate/purchased](https://developer.apple.com/documentation/storekit/skpaymenttransactionstate/purchased)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skpaymenttransactionstate/purchased
 
 # SKPaymentTransactionState.purchased (Swift)
 
@@ -18,7 +19,7 @@ case purchased
 
 ## Mentioned In
 
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 - [Implementing offer codes in your app](../implementing-offer-codes-in-your-app.md)
 - [Implementing promotional offers in your app](../implementing-promotional-offers-in-your-app.md)
 - [Processing a transaction](../processing-a-transaction.md)
@@ -60,7 +61,7 @@ SKPaymentTransactionStatePurchased
 
 ## Mentioned In
 
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 - [Implementing offer codes in your app](../implementing-offer-codes-in-your-app.md)
 - [Implementing promotional offers in your app](../implementing-promotional-offers-in-your-app.md)
 - [Processing a transaction](../processing-a-transaction.md)

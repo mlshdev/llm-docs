@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/custommaterial/basecolor-swift.struct/init(tint:texture:)-71h0i](https://developer.apple.com/documentation/realitykit/custommaterial/basecolor-swift.struct/init(tint:texture:)-71h0i)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/custommaterial/basecolor-swift.struct/init(tint:texture:)-71h0i
 
 # init(tint:texture:)
 

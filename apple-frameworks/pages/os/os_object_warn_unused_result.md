@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/os/os_object_warn_unused_result](https://developer.apple.com/documentation/os/os_object_warn_unused_result)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/os/os_object_warn_unused_result
 
 # OS_OBJECT_WARN_UNUSED_RESULT
 

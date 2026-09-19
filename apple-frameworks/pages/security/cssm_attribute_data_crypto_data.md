@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_attribute_data_crypto_data](https://developer.apple.com/documentation/security/cssm_attribute_data_crypto_data)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_attribute_data_crypto_data
 
 # CSSM_ATTRIBUTE_DATA_CRYPTO_DATA (Swift)
 

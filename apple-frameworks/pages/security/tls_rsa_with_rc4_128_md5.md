@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/tls_rsa_with_rc4_128_md5](https://developer.apple.com/documentation/security/tls_rsa_with_rc4_128_md5)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/tls_rsa_with_rc4_128_md5
 
 # TLS_RSA_WITH_RC4_128_MD5 (Swift)
 

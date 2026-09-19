@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/vfsconf/1523523-vfc_reserved1](https://developer.apple.com/documentation/kernel/vfsconf/1523523-vfc_reserved1)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/vfsconf/1523523-vfc_reserved1
 
 # vfc_reserved1
 

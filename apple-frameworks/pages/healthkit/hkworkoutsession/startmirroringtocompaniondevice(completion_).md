@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkworkoutsession/startmirroringtocompaniondevice(completion:)](https://developer.apple.com/documentation/healthkit/hkworkoutsession/startmirroringtocompaniondevice(completion:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkworkoutsession/startmirroringtocompaniondevice(completion:)
 
 # startMirroringToCompanionDevice(completion:) (Swift)
 
@@ -72,6 +73,7 @@ do {
 catch {
     fatalError("*** Unable to start the mirrored workout: \(error.localizedDescription) ***")
 }
+
 
 // Start the workout session.
 session.startActivity(with: start)
@@ -158,6 +160,7 @@ do {
 catch {
     fatalError("*** Unable to start the mirrored workout: \(error.localizedDescription) ***")
 }
+
 
 // Start the workout session.
 session.startActivity(with: start)

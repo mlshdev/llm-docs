@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrformaldehydeconcentrationmeasurementmeasurementunit/pm3](https://developer.apple.com/documentation/matter/mtrformaldehydeconcentrationmeasurementmeasurementunit/pm3)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrformaldehydeconcentrationmeasurementmeasurementunit/pm3
 
 # MTRFormaldehydeConcentrationMeasurementMeasurementUnit.PM3 (Swift)
 

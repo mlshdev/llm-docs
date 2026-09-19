@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationprivacybehavior/hideonlockscreen](https://developer.apple.com/documentation/clockkit/clkcomplicationprivacybehavior/hideonlockscreen)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationprivacybehavior/hideonlockscreen
 
 # CLKComplicationPrivacyBehavior.hideOnLockScreen (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Case  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Don’t show the complication data when the Apple Watch is locked.
 
@@ -32,7 +33,7 @@ For circular, modular small, and utilitarian small complications, ClockKit displ
 
 **Framework:** ClockKit  
 **Kind:** Enumeration Case  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Don’t show the complication data when the Apple Watch is locked.
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clktimeintervalgaugeprovider/endfillfraction](https://developer.apple.com/documentation/clockkit/clktimeintervalgaugeprovider/endfillfraction)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clktimeintervalgaugeprovider/endfillfraction
 
 # endFillFraction (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 The position of the trailing edge of the time bar within the specified time interval.
 
@@ -28,7 +29,7 @@ var endFillFraction: Float { get }
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 The position of the trailing edge of the time bar within the specified time interval.
 

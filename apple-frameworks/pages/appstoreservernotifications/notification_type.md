@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appstoreservernotifications/notification_type](https://developer.apple.com/documentation/appstoreservernotifications/notification_type)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreservernotifications/notification_type
 
 # notification_type
 
@@ -107,7 +108,7 @@ Your development-signed apps use the sandbox environment when you sign in to App
 
 If you enabled App Store Server Notifications, test your logic for transactions in the sandbox environment. To determine if a notification for a subscription event occurred in the test environment, check whether the value of the `environment` field in the JSON [responseBodyV1](responsebodyv1.md) object equals `Sandbox`.
 
-The following notification types are available in sandbox: `INITIAL_BUY`, `DID_CHANGE_RENEWAL_PREF`, `DID_CHANGE_RENEWAL_STATUS`, `DID_RENEW`, `INTERACTIVE_RENEWAL`, `CANCEL`, and `REFUND`. Notifications in the sandbox environment are for the purchaser only, and have [in_app_ownership_type](../appstorereceipts/in_app_ownership_type.md) equal to `PURCHASED`. For more information about testing in-app purchases, see [Testing In-App Purchases with sandbox](../storekit/testing-in-app-purchases-with-sandbox.md).
+The following notification types are available in sandbox: `INITIAL_BUY`, `DID_CHANGE_RENEWAL_PREF`, `DID_CHANGE_RENEWAL_STATUS`, `DID_RENEW`, `INTERACTIVE_RENEWAL`, `CANCEL`, and `REFUND`. Notifications in the sandbox environment are for the purchaser only, and have [in_app_ownership_type](../appstorereceipts/in_app_ownership_type.md) equal to `PURCHASED`. For more information about testing in-app purchases, see [Testing Apple In-App Purchases with sandbox](../storekit/testing-in-app-purchases-with-sandbox.md).
 
 ## See Also
 

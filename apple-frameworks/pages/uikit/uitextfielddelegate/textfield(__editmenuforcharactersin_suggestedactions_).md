@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitextfielddelegate/textfield(_:editmenuforcharactersin:suggestedactions:)](https://developer.apple.com/documentation/uikit/uitextfielddelegate/textfield(_:editmenuforcharactersin:suggestedactions:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uitextfielddelegate/textfield(_:editmenuforcharactersin:suggestedactions:)
 
 # textField(\_:editMenuForCharactersIn:suggestedActions:) (Swift)
 
 **Framework:** UIKit  
 **Kind:** Instance Method  
-**Availability:** iOS 16.0+ (deprecated in 27.0) · iPadOS 16.0+ (deprecated in 27.0) · Mac Catalyst 16.0+ (deprecated in 27.0) · tvOS 16.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 16.0+ (deprecated in 27.0) · iPadOS 16.0+ (deprecated in 27.0) · Mac Catalyst 16.0+ (deprecated in 27.2) · tvOS 16.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Asks the delegate for the menu to display in the text field, based on the text range and actions the system provides.
 
@@ -48,7 +49,7 @@ func textField(_ textField: UITextField, editMenuForCharactersIn range: NSRange,
 
 **Framework:** UIKit  
 **Kind:** Instance Method  
-**Availability:** iOS 16.0+ (deprecated in 27.0) · iPadOS 16.0+ (deprecated in 27.0) · Mac Catalyst 16.0+ (deprecated in 27.0) · tvOS 16.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 16.0+ (deprecated in 27.0) · iPadOS 16.0+ (deprecated in 27.0) · Mac Catalyst 16.0+ (deprecated in 27.2) · tvOS 16.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Asks the delegate for the menu to display in the text field, based on the text range and actions the system provides.
 

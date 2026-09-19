@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/quartz/qcrenderer/init(cglcontext:pixelformat:colorspace:composition:)-7at42](https://developer.apple.com/documentation/quartz/qcrenderer/init(cglcontext:pixelformat:colorspace:composition:)-7at42)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/quartz/qcrenderer/init(cglcontext:pixelformat:colorspace:composition:)-7at42
 
 # init(cglContext:pixelFormat:colorSpace:composition:) (Swift)
 

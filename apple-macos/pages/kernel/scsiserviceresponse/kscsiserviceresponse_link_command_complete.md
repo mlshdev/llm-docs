@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/scsiserviceresponse/kscsiserviceresponse_link_command_complete](https://developer.apple.com/documentation/kernel/scsiserviceresponse/kscsiserviceresponse_link_command_complete)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/scsiserviceresponse/kscsiserviceresponse_link_command_complete
 
 # kSCSIServiceResponse_LINK_COMMAND_COMPLETE
 

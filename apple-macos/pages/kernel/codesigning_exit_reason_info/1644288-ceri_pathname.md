@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/codesigning_exit_reason_info/1644288-ceri_pathname](https://developer.apple.com/documentation/kernel/codesigning_exit_reason_info/1644288-ceri_pathname)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/codesigning_exit_reason_info/1644288-ceri_pathname
 
 # ceri_pathname
 

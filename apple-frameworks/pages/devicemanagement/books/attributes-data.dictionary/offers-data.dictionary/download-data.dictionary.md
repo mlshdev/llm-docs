@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/books/attributes-data.dictionary/offers-data.dictionary/download-data.dictionary](https://developer.apple.com/documentation/devicemanagement/books/attributes-data.dictionary/offers-data.dictionary/download-data.dictionary)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/devicemanagement/books/attributes-data.dictionary/offers-data.dictionary/download-data.dictionary
 
 # Books.Attributes.Offers.Download
 

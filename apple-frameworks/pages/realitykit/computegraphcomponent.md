@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/computegraphcomponent](https://developer.apple.com/documentation/realitykit/computegraphcomponent)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/computegraphcomponent
 
 # ComputeGraphComponent
 
@@ -38,8 +39,8 @@ entity.components.set(component)
 
 ### Instance Properties
 
-- [materials](computegraphcomponent/materials.md): Per-output material overrides, keyed by output node identifier.
-- [models](computegraphcomponent/models.md): Per-output model component overrides, keyed by output node identifier.
+- [materials](computegraphcomponent/materials.md): The material used to render each graph output, keyed by output node identifier.
+- [models](computegraphcomponent/models.md): The model component used to render each graph output, keyed by output node identifier.
 - [pipelines](computegraphcomponent/pipelines.md): The compiled pipelines used to execute the simulation.
 - [randomSeed](computegraphcomponent/randomseed.md): An optional fixed random seed for the simulation.
 - [resource](computegraphcomponent/resource.md): The compute graph resource that defines the simulation.

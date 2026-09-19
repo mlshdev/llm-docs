@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nscollectionviewdelegate/collectionview(_:draggingsession:willbeginat:foritemsat:)-68x2y](https://developer.apple.com/documentation/appkit/nscollectionviewdelegate/collectionview(_:draggingsession:willbeginat:foritemsat:)-68x2y)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nscollectionviewdelegate/collectionview(_:draggingsession:willbeginat:foritemsat:)-68x2y
 
 # collectionView(\_:draggingSession:willBeginAt:forItemsAt:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/thread_extended_info_data_t/1579036-pth_cpu_usage](https://developer.apple.com/documentation/kernel/thread_extended_info_data_t/1579036-pth_cpu_usage)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/thread_extended_info_data_t/1579036-pth_cpu_usage
 
 # pth_cpu_usage
 

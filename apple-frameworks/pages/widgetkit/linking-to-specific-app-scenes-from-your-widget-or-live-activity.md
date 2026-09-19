@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/widgetkit/linking-to-specific-app-scenes-from-your-widget-or-live-activity](https://developer.apple.com/documentation/widgetkit/linking-to-specific-app-scenes-from-your-widget-or-live-activity)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/widgetkit/linking-to-specific-app-scenes-from-your-widget-or-live-activity
 
 # Linking to specific app scenes from your widget or Live Activity (Swift)
 
@@ -77,6 +78,7 @@ In CarPlay, linking from your widget to your app works differently to match the 
 
 - [Adding interactivity to widgets and Live Activities](adding-interactivity-to-widgets-and-live-activities.md): Include buttons or toggles in a widget or Live Activity to offer app functionality without launching the app.
 - [Animating data updates in widgets and Live Activities](animating-data-updates-in-widgets-and-live-activities.md): Use SwiftUI animations to indicate data updates in your widgets and Live Activities.
+- [widgetURL(\_:)](https://developer.apple.com/documentation/swiftui/view/widgeturl%28_:%29): Sets the URL to open in the containing app when the user clicks the widget.
 
 # Linking to specific app scenes from your widget or Live Activity (Objective-C)
 

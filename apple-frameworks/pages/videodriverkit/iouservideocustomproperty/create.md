@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideocustomproperty/create](https://developer.apple.com/documentation/videodriverkit/iouservideocustomproperty/create)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideocustomproperty/create
 
 # Create
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Static Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 A static factory method that allocates and initializes a custom property.
 
@@ -40,6 +41,6 @@ If IOUserVideoCustomProperty is subclassed to override behavior, don’t use thi
 
 ### Creating a custom property
 
-- [init](init.md): Initializes a custom property.
-- [IOUserVideoObjectPropertyAddress](../videodriverkit/iouservideoobjectpropertyaddress.md): A data structure that contains all the three parts to identify a specific property, for easy transmission.
-- [IOUserVideoCustomPropertyDataType](../videodriverkit/iouservideocustompropertydatatype.md): Data qualifier types used for custom properties.
+- [init](init.md): Beta. Initializes a custom property.
+- [IOUserVideoObjectPropertyAddress](../videodriverkit/iouservideoobjectpropertyaddress.md): Beta. A data structure that contains all the three parts to identify a specific property, for easy transmission.
+- [IOUserVideoCustomPropertyDataType](../videodriverkit/iouservideocustompropertydatatype.md): Beta. Data qualifier types used for custom properties.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/modelio/mdlanimatedvector3array/setfloat3array:count:attime:](https://developer.apple.com/documentation/modelio/mdlanimatedvector3array/setfloat3array:count:attime:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/modelio/mdlanimatedvector3array/setfloat3array:count:attime:
 
 # setFloat3Array:count:atTime:
 

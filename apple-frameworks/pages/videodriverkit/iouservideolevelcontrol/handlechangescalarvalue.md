@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideolevelcontrol/handlechangescalarvalue](https://developer.apple.com/documentation/videodriverkit/iouservideolevelcontrol/handlechangescalarvalue)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideolevelcontrol/handlechangescalarvalue
 
 # HandleChangeScalarValue
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 The system calls this virtual method when the control’s value changes.
 
@@ -36,4 +37,4 @@ The default implementation calls SetScalarValue() and returns `kIOReturnSuccess`
 
 ### Supporting value changes
 
-- [HandleChangeDecibelValue](handlechangedecibelvalue.md): The system calls this virtual method when the control’s value changes.
+- [HandleChangeDecibelValue](handlechangedecibelvalue.md): Beta. The system calls this virtual method when the control’s value changes.

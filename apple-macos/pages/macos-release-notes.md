@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/macos-release-notes](https://developer.apple.com/documentation/macos-release-notes)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/macos-release-notes
 
 # macOS Release Notes
 
@@ -14,7 +15,7 @@ Release notes provide details on API changes, known issues, fixes, workarounds, 
 
 ### Bug Reporting
 
-For issues not mentioned in release notes, send feedback through [Feedback Assistant](applefeedback://).
+For issues not mentioned in release notes, send feedback through Feedback Assistant.
 
 When writing your report, please include the full version number in the title and in the description. This looks like “14 (23A_xxxx\_).” You can find the full version number in About this Mac \> macOS (click on it for expanded version numbers). For more information, visit [Bug Reporting](https://developer.apple.com/bug-reporting/).
 
@@ -22,7 +23,8 @@ When writing your report, please include the full version number in the title an
 
 ### macOS 27
 
-- [macOS 27 Golden Gate RC Release Notes](macos-release-notes/macos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [macOS 27.2 Golden Gate Beta Release Notes](macos-release-notes/macos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [macOS 27 Golden Gate Release Notes](macos-release-notes/macos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### macOS 26
 

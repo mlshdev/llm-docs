@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skpayment/paymentdiscount](https://developer.apple.com/documentation/storekit/skpayment/paymentdiscount)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skpayment/paymentdiscount
 
 # paymentDiscount (Swift)
 
@@ -18,7 +19,7 @@ The details of the discount offer to apply to the payment.
 
 ## Mentioned In
 
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 
 ## See Also
 
@@ -44,7 +45,7 @@ The details of the discount offer to apply to the payment.
 
 ## Mentioned In
 
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 
 ## See Also
 

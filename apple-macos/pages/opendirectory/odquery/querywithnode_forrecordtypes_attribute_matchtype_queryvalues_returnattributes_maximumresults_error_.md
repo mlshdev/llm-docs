@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/opendirectory/odquery/querywithnode:forrecordtypes:attribute:matchtype:queryvalues:returnattributes:maximumresults:error:](https://developer.apple.com/documentation/opendirectory/odquery/querywithnode:forrecordtypes:attribute:matchtype:queryvalues:returnattributes:maximumresults:error:)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opendirectory/odquery/querywithnode:forrecordtypes:attribute:matchtype:queryvalues:returnattributes:maximumresults:error:
 
 # queryWithNode:forRecordTypes:attribute:matchType:queryValues:returnAttributes:maximumResults:error:
 

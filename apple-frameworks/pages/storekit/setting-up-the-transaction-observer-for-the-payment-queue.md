@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/setting-up-the-transaction-observer-for-the-payment-queue](https://developer.apple.com/documentation/storekit/setting-up-the-transaction-observer-for-the-payment-queue)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/setting-up-the-transaction-observer-for-the-payment-queue
 
 # Setting up the transaction observer for the payment queue (Swift)
 
@@ -85,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 It’s important to add the observer at launch, in [application(\_:didFinishLaunchingWithOptions:)](../uikit/uiapplicationdelegate/application%28__didfinishlaunchingwithoptions_%29.md), to ensure that it persists during all launches of your app, receives all payment queue notifications, and continues transactions that may initiate outside the app, such as:
 
-- Promoted in-app purchases. For more information, see [Promoting In-App Purchases](promoting-in-app-purchases.md).
+- Promoted Apple In-App Purchases. For more information, see [Promoting Apple In-App Purchases](promoting-in-app-purchases.md).
 - Background subscription renewals
 - Interrupted purchases
 
@@ -99,9 +100,9 @@ The observer needs to be persistent so the system doesn’t deallocate it when i
 
 ### Essentials
 
-- [Offering, completing, and restoring in-app purchases](offering-completing-and-restoring-in-app-purchases.md): Fetch, display, purchase, validate, and finish transactions in your app.
+- [Offering, completing, and restoring Apple In-App Purchases](offering-completing-and-restoring-in-app-purchases.md): Fetch, display, purchase, validate, and finish transactions in your app.
 - [SKPaymentQueue](skpaymentqueue.md): Deprecated. A queue of payment transactions for the App Store to process.
-- [SKPaymentTransactionObserver](skpaymenttransactionobserver.md): Deprecated. A set of methods that process transactions, unlock purchased functionality, and continue promoted In-App Purchases.
+- [SKPaymentTransactionObserver](skpaymenttransactionobserver.md): Deprecated. A set of methods that process transactions, unlock purchased functionality, and continue promoted Apple In-App Purchases.
 - [SKPaymentQueueDelegate](skpaymentqueuedelegate.md): Deprecated. The protocol that provides information needed to complete transactions.
 - [SKRequest](skrequest.md): Deprecated. An abstract class that represents a request to the App Store.
 
@@ -190,7 +191,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 It’s important to add the observer at launch, in [application:didFinishLaunchingWithOptions:](../uikit/uiapplicationdelegate/application%28__didfinishlaunchingwithoptions_%29.md), to ensure that it persists during all launches of your app, receives all payment queue notifications, and continues transactions that may initiate outside the app, such as:
 
-- Promoted in-app purchases. For more information, see [Promoting In-App Purchases](promoting-in-app-purchases.md).
+- Promoted Apple In-App Purchases. For more information, see [Promoting Apple In-App Purchases](promoting-in-app-purchases.md).
 - Background subscription renewals
 - Interrupted purchases
 
@@ -204,8 +205,8 @@ The observer needs to be persistent so the system doesn’t deallocate it when i
 
 ### Essentials
 
-- [Offering, completing, and restoring in-app purchases](offering-completing-and-restoring-in-app-purchases.md): Fetch, display, purchase, validate, and finish transactions in your app.
+- [Offering, completing, and restoring Apple In-App Purchases](offering-completing-and-restoring-in-app-purchases.md): Fetch, display, purchase, validate, and finish transactions in your app.
 - [SKPaymentQueue](skpaymentqueue.md): Deprecated. A queue of payment transactions for the App Store to process.
-- [SKPaymentTransactionObserver](skpaymenttransactionobserver.md): Deprecated. A set of methods that process transactions, unlock purchased functionality, and continue promoted In-App Purchases.
+- [SKPaymentTransactionObserver](skpaymenttransactionobserver.md): Deprecated. A set of methods that process transactions, unlock purchased functionality, and continue promoted Apple In-App Purchases.
 - [SKPaymentQueueDelegate](skpaymentqueuedelegate.md): Deprecated. The protocol that provides information needed to complete transactions.
 - [SKRequest](skrequest.md): Deprecated. An abstract class that represents a request to the App Store.

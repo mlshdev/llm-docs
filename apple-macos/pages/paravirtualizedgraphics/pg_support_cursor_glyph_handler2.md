@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/paravirtualizedgraphics/pg_support_cursor_glyph_handler2](https://developer.apple.com/documentation/paravirtualizedgraphics/pg_support_cursor_glyph_handler2)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/paravirtualizedgraphics/pg_support_cursor_glyph_handler2
 
 # PG_SUPPORT_CURSOR_GLYPH_HANDLER2 (Swift)
 

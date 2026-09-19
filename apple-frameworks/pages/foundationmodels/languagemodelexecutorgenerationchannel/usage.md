@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationchannel/usage](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/usage)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/usage
 
 # LanguageModelExecutorGenerationChannel.Usage
 
@@ -18,7 +19,7 @@ struct Usage
 
 ## Overview
 
-Producers report the current cumulative totals on every update and consumers replace prior totals wholesale.
+Producers report the current cumulative totals on every update, and consumers replace prior totals wholesale.
 
 ## Topics
 

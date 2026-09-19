@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/sbcmodepagerigiddiskgeometry/1555565-starting_cylinder_reduced_write_](https://developer.apple.com/documentation/iokit/sbcmodepagerigiddiskgeometry/1555565-starting_cylinder_reduced_write_)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/sbcmodepagerigiddiskgeometry/1555565-starting_cylinder_reduced_write_
 
 # STARTING_CYLINDER_REDUCED_WRITE_CURRENT
 

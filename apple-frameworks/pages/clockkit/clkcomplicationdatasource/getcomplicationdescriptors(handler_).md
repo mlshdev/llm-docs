@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationdatasource/getcomplicationdescriptors(handler:)](https://developer.apple.com/documentation/clockkit/clkcomplicationdatasource/getcomplicationdescriptors(handler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationdatasource/getcomplicationdescriptors(handler:)
 
 # getComplicationDescriptors(handler:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Returns the list of complication descriptors.
 
@@ -100,7 +101,7 @@ To update the descriptors, call [reloadComplicationDescriptors()](../clkcomplica
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Returns the list of complication descriptors.
 

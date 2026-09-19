@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1643400-anonymous/ksbccmd_lock_unlock_cache](https://developer.apple.com/documentation/kernel/1643400-anonymous/ksbccmd_lock_unlock_cache)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1643400-anonymous/ksbccmd_lock_unlock_cache
 
 # kSBCCmd_LOCK_UNLOCK_CACHE
 

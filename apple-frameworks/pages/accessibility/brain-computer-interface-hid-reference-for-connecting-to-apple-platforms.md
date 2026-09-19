@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accessibility/brain-computer-interface-hid-reference-for-connecting-to-apple-platforms](https://developer.apple.com/documentation/accessibility/brain-computer-interface-hid-reference-for-connecting-to-apple-platforms)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accessibility/brain-computer-interface-hid-reference-for-connecting-to-apple-platforms
 
 # Brain-computer interface HID reference for connecting to Apple platforms
 
@@ -352,6 +353,7 @@ typedef struct {
     uint8_t uiScanningLatencyFrac;
 } BCIOutputScanInfoReport;
 
+
 // --- Register the Callback Function ---
 void setup_and_register_callback(IOHIDUserDeviceRef userDevice) {
     // Allocate a buffer for incoming reports. Make sure its size is at least
@@ -427,6 +429,7 @@ typedef struct {
     UInt8 reportId;
     SInt8 position[3]; // 3 8-bit fields for x, y, z positioning: -127-127
 } BCIInputPointerReport;
+
 
 static char BCIDescriptor[] = {
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/technotes/tn3106-customizing-uinavigationbar-appearance](https://developer.apple.com/documentation/technotes/tn3106-customizing-uinavigationbar-appearance)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/technotes/tn3106-customizing-uinavigationbar-appearance
 
 # TN3106: Customizing the appearance of UINavigationBar
 

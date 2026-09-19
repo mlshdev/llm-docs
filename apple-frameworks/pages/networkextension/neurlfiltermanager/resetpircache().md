@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/neurlfiltermanager/resetpircache()](https://developer.apple.com/documentation/networkextension/neurlfiltermanager/resetpircache())
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/networkextension/neurlfiltermanager/resetpircache()
 
 # resetPIRCache()
 
@@ -24,7 +25,7 @@ The PIR system on device caches previous PIR queries and responses to minimize e
 
 ### Working with a Private Information Retrieval server
 
-- [pirServerURL](pirserverurl.md): A URL that contains the domain name of the PIR server.
-- [pirPrivacyPassIssuerURL](pirprivacypassissuerurl.md): A URL that contains the domain name of Privacy Pass issuer.
 - [pirAuthenticationToken](pirauthenticationtoken.md): A PIR per-user authentication token string.
 - [refreshPIRParameters()](refreshpirparameters%28%29.md): Refetches PIR parameters from the server.
+- [pirServerURL](pirserverurl.md): Deprecated. A URL that contains the domain name of the PIR server.
+- [pirPrivacyPassIssuerURL](pirprivacypassissuerurl.md): Deprecated. A URL that contains the domain name of Privacy Pass issuer.

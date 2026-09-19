@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsmatrixbatchnormalization/encode(commandbuffer:inputmatrix:meanvector:variancevector:gammavector:betavector:resultmatrix:)](https://developer.apple.com/documentation/metalperformanceshaders/mpsmatrixbatchnormalization/encode(commandbuffer:inputmatrix:meanvector:variancevector:gammavector:betavector:resultmatrix:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpsmatrixbatchnormalization/encode(commandbuffer:inputmatrix:meanvector:variancevector:gammavector:betavector:resultmatrix:)
 
 # encode(commandBuffer:inputMatrix:meanVector:varianceVector:gammaVector:betaVector:resultMatrix:) (Swift)
 

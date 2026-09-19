@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1593368-ml_get_interrupts_enabled](https://developer.apple.com/documentation/kernel/1593368-ml_get_interrupts_enabled)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1593368-ml_get_interrupts_enabled
 
 # ml_get_interrupts_enabled
 

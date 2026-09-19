@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/vision/vnbarcodesymbology/ean8-9qg0n](https://developer.apple.com/documentation/vision/vnbarcodesymbology/ean8-9qg0n)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/vision/vnbarcodesymbology/ean8-9qg0n
 
 # ean8 (Swift)
 

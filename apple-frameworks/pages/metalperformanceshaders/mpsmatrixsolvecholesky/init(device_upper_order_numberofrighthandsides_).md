@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsmatrixsolvecholesky/init(device:upper:order:numberofrighthandsides:)](https://developer.apple.com/documentation/metalperformanceshaders/mpsmatrixsolvecholesky/init(device:upper:order:numberofrighthandsides:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpsmatrixsolvecholesky/init(device:upper:order:numberofrighthandsides:)
 
 # init(device:upper:order:numberOfRightHandSides:) (Swift)
 

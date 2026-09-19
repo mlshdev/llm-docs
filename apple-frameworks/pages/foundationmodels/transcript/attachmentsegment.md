@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/attachmentsegment](https://developer.apple.com/documentation/foundationmodels/transcript/attachmentsegment)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/attachmentsegment
 
 # Transcript.AttachmentSegment
 
@@ -18,12 +19,12 @@ struct AttachmentSegment
 
 ### Creating an attachment segment
 
-- [init(id:content:label:)](attachmentsegment/init%28id_content_label_%29.md)
+- [init(id:content:label:)](attachmentsegment/init%28id_content_label_%29.md): Creates an attachment segment that wraps the content you provide.
 
 ### Inspecting an attachment segment
 
-- [content](attachmentsegment/content.md)
-- [label](attachmentsegment/label.md)
+- [content](attachmentsegment/content.md): The attached file or image.
+- [label](attachmentsegment/label.md): An optional label that identifies the attachment.
 
 ## Relationships
 

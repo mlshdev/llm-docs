@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideodriver/getclassid](https://developer.apple.com/documentation/videodriverkit/iouservideodriver/getclassid)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideodriver/getclassid
 
 # GetClassID
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the class identifier of the object.
 
@@ -26,8 +27,8 @@ A video class identifier.
 
 ### Getting information about the class
 
-- [GetBaseClassID](getbaseclassid.md): Gets the class identifier of the base class object.
-- [IOUserVideoClassID](../videodriverkit/iouservideoclassid.md): Video class identifiers of an video object.
-- [GetWorkQueue](getworkqueue.md): Gets the work queue created by the video object.
-- [GetName](getname.md): Gets the name of the driver.
-- [SetName](setname.md): Sets the name of the video driver.
+- [GetBaseClassID](getbaseclassid.md): Beta. Gets the class identifier of the base class object.
+- [IOUserVideoClassID](../videodriverkit/iouservideoclassid.md): Beta. Video class identifiers of an video object.
+- [GetWorkQueue](getworkqueue.md): Beta. Gets the work queue created by the video object.
+- [GetName](getname.md): Beta. Gets the name of the driver.
+- [SetName](setname.md): Beta. Sets the name of the video driver.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstoolbaritemgroup/init(itemidentifier:titles:selectionmode:labels:target:action:)](https://developer.apple.com/documentation/appkit/nstoolbaritemgroup/init(itemidentifier:titles:selectionmode:labels:target:action:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstoolbaritemgroup/init(itemidentifier:titles:selectionmode:labels:target:action:)
 
 # init(itemIdentifier:titles:selectionMode:labels:target:action:) (Swift)
 

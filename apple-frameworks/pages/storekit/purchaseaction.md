@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/purchaseaction](https://developer.apple.com/documentation/storekit/purchaseaction)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/purchaseaction
 
 # PurchaseAction
 
@@ -6,7 +7,7 @@
 **Kind:** Structure  
 **Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
 
-An action that starts an In-App Purchase.
+An action that starts an Apple In-App Purchase.
 
 ## Declaration
 
@@ -32,13 +33,13 @@ StoreKit provides several APIs you can use to enable customers to initiate a pur
 
 ### Use the purchase action API
 
-Use `PurchaseAction` instead of [purchase(options:)](product/purchase%28options_%29.md) for SwiftUI implementations, including multi-scene apps for visionOS. Call the instance to start an in-app purchase.
+Use `PurchaseAction` instead of [purchase(options:)](product/purchase%28options_%29.md) for SwiftUI implementations, including multi-scene apps for visionOS. Call the instance to start an Apple In-App Purchase.
 
 To use this API, read the `PurchaseAction` environment value to get an instance of the structure for a given [Environment](https://developer.apple.com/documentation/swiftui/environment). You call the instance directly because it defines a [callAsFunction(\_:options:)](purchaseaction/callasfunction%28__options_%29.md) method that Swift calls when you call the instance.
 
-When you initiate an in-app purchase, the system presents UI for the customer to confirm the purchase details. The purchase action you get from the environment automatically includes the UI context. It presents the confirmation UI in proximity to the scene in which the view displays.
+When you initiate an Apple In-App Purchase, the system presents UI for the customer to confirm the purchase details. The purchase action you get from the environment automatically includes the UI context. It presents the confirmation UI in proximity to the scene in which the view displays.
 
-The following code shows an example of starting an in-app purchase when a person taps a button:
+The following code shows an example of starting an Apple In-App Purchase when a person taps a button:
 
 ```swift
 struct PurchaseExample: View {
@@ -69,7 +70,7 @@ Note that the second line in the code example can omit the type name, as follows
 
 ### Calling the action
 
-- [callAsFunction(\_:options:)](purchaseaction/callasfunction%28__options_%29.md): Starts an in-app purchase for the indicated product and purchase options.
+- [callAsFunction(\_:options:)](purchaseaction/callasfunction%28__options_%29.md): Starts an Apple In-App Purchase for the indicated product and purchase options.
 
 ### Instance Methods
 

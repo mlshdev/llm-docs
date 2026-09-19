@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremidi/midiumpmutableendpoint/registerfunctionblocks(_:markasstatic:)](https://developer.apple.com/documentation/coremidi/midiumpmutableendpoint/registerfunctionblocks(_:markasstatic:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremidi/midiumpmutableendpoint/registerfunctionblocks(_:markasstatic:)
 
 # registerFunctionBlocks(\_:markAsStatic:) (Swift)
 

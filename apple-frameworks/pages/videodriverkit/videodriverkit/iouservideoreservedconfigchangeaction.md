@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoreservedconfigchangeaction](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoreservedconfigchangeaction)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoreservedconfigchangeaction
 
 # IOUserVideoReservedConfigChangeAction
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Reserved configuration change identifiers when changing object state that requires a configuration change.
 
@@ -20,10 +21,10 @@ enum IOUserVideoReservedConfigChangeAction : uint64_t;
 
 ### Configuration change identifiers
 
-- [RingBufferFrameSize](iouservideoreservedconfigchangeaction/ringbufferframesize.md)
-- [SampleRate](iouservideoreservedconfigchangeaction/samplerate.md)
-- [StreamFormat](iouservideoreservedconfigchangeaction/streamformat.md)
-- [StreamAddition](iouservideoreservedconfigchangeaction/streamaddition.md)
-- [StreamCount](iouservideoreservedconfigchangeaction/streamcount.md)
-- [StreamDirection](iouservideoreservedconfigchangeaction/streamdirection.md)
-- [StreamRemoval](iouservideoreservedconfigchangeaction/streamremoval.md)
+- [RingBufferFrameSize](iouservideoreservedconfigchangeaction/ringbufferframesize.md): Beta.
+- [SampleRate](iouservideoreservedconfigchangeaction/samplerate.md): Beta.
+- [StreamFormat](iouservideoreservedconfigchangeaction/streamformat.md): Beta.
+- [StreamAddition](iouservideoreservedconfigchangeaction/streamaddition.md): Beta.
+- [StreamCount](iouservideoreservedconfigchangeaction/streamcount.md): Beta.
+- [StreamDirection](iouservideoreservedconfigchangeaction/streamdirection.md): Beta.
+- [StreamRemoval](iouservideoreservedconfigchangeaction/streamremoval.md): Beta.

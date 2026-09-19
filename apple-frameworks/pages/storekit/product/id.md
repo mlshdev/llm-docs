@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/product/id](https://developer.apple.com/documentation/storekit/product/id)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/product/id
 
 # id
 
@@ -22,11 +23,11 @@ let id: String
 
 ## Discussion
 
-You configure In-App Purchases, including the product ID, in App Store Connect. For information, see [Overview for configuring In-App Purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/overview-for-configuring-in-app-purchases).
+You configure Apple In-App Purchases, including the product ID, in App Store Connect. For information, see [Overview for configuring Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/overview-for-configuring-in-app-purchases).
 
 ## See Also
 
 ### Getting product identifiers and type
 
-- [type](type.md): The in-app purchase product type.
-- [Product.ProductType](producttype.md): The types of in-app purchases.
+- [type](type.md): The Apple In-App Purchase product type.
+- [Product.ProductType](producttype.md): The types of Apple In-App Purchases.

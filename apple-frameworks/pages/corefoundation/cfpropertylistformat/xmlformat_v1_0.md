@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corefoundation/cfpropertylistformat/xmlformat_v1_0](https://developer.apple.com/documentation/corefoundation/cfpropertylistformat/xmlformat_v1_0)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corefoundation/cfpropertylistformat/xmlformat_v1_0
 
 # CFPropertyListFormat.xmlFormat_v1_0 (Swift)
 

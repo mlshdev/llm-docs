@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/kauth_acl_t/1547490-acl_flags](https://developer.apple.com/documentation/kernel/kauth_acl_t/1547490-acl_flags)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/kauth_acl_t/1547490-acl_flags
 
 # acl_flags
 

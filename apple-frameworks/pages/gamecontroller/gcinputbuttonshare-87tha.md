@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gamecontroller/gcinputbuttonshare-87tha](https://developer.apple.com/documentation/gamecontroller/gcinputbuttonshare-87tha)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/gamecontroller/gcinputbuttonshare-87tha
 
 # GCInputButtonShare
 

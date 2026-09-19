@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/xmlparser/externalentityresolvingpolicy-swift.enum/sameoriginonly](https://developer.apple.com/documentation/foundation/xmlparser/externalentityresolvingpolicy-swift.enum/sameoriginonly)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/xmlparser/externalentityresolvingpolicy-swift.enum/sameoriginonly
 
 # XMLParser.ExternalEntityResolvingPolicy.sameOriginOnly (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_msr_ia32_fixed_ctr3](https://developer.apple.com/documentation/hypervisor/hv_msr_ia32_fixed_ctr3)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_msr_ia32_fixed_ctr3
 
 # HV_MSR_IA32_FIXED_CTR3 (Swift)
 

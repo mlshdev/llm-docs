@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/externalpurchasecustomlink/noticeresult](https://developer.apple.com/documentation/storekit/externalpurchasecustomlink/noticeresult)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/externalpurchasecustomlink/noticeresult
 
 # ExternalPurchaseCustomLink.NoticeResult
 
@@ -42,5 +43,5 @@ If the value is [ExternalPurchaseCustomLink.NoticeResult.continued](noticeresult
 
 ### Displaying the disclosure sheet
 
-- [showNotice(type:)](shownotice%28type_%29.md): Displays the system disclosure notice sheet and asks the customer whether to continue.
-- [ExternalPurchaseCustomLink.NoticeType](noticetype.md): The custom link out style that informs the type of disclosure notice to display.
+- [showNotice(for:)](shownotice%28for_%29.md): Beta. Displays the system disclosure notice sheet for a custom link type and asks the customer whether to continue.
+- [ExternalPurchaseCustomLink.ExternalPurchaseType](externalpurchasetype.md): Beta. Values that represent the types of external purchase an app can perform.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/virtualization/vzvirtualmachineviewadaptor](https://developer.apple.com/documentation/virtualization/vzvirtualmachineviewadaptor)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/virtualization/vzvirtualmachineviewadaptor
 
 # VZVirtualMachineViewAdaptor
 
@@ -25,6 +26,7 @@ The following example demonstrates how to create and run a `VZVirtualMachineView
 ```swift
     // Create an adaptor from a virtual machine.
     let adaptor = VZVirtualMachineViewAdaptor(virtualMachine: vm)
+
 
     // Pass the adaptor to a view on the main actor.
     await MainActor.run {

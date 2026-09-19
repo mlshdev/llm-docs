@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1576937-anonymous/kscsicmd_read_cd_msf](https://developer.apple.com/documentation/iokit/1576937-anonymous/kscsicmd_read_cd_msf)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1576937-anonymous/kscsicmd_read_cd_msf
 
 # kSCSICmd_READ_CD_MSF
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsndarraymultiarybase/kernelsizes(forsourceindex:)](https://developer.apple.com/documentation/metalperformanceshaders/mpsndarraymultiarybase/kernelsizes(forsourceindex:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpsndarraymultiarybase/kernelsizes(forsourceindex:)
 
 # kernelSizes(forSourceIndex:) (Swift)
 

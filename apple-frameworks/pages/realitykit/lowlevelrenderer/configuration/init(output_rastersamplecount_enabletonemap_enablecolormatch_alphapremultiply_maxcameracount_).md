@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/lowlevelrenderer/configuration/init(output:rastersamplecount:enabletonemap:enablecolormatch:alphapremultiply:maxcameracount:)](https://developer.apple.com/documentation/realitykit/lowlevelrenderer/configuration/init(output:rastersamplecount:enabletonemap:enablecolormatch:alphapremultiply:maxcameracount:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/lowlevelrenderer/configuration/init(output:rastersamplecount:enabletonemap:enablecolormatch:alphapremultiply:maxcameracount:)
 
 # init(output:rasterSampleCount:enableTonemap:enableColorMatch:alphaPremultiply:maxCameraCount:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/inparameter/index(forsubkeypath:)](https://developer.apple.com/documentation/intents/inparameter/index(forsubkeypath:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/intents/inparameter/index(forsubkeypath:)
 
 # index(forSubKeyPath:) (Swift)
 

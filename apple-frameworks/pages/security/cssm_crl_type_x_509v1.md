@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_crl_type_x_509v1](https://developer.apple.com/documentation/security/cssm_crl_type_x_509v1)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_crl_type_x_509v1
 
 # CSSM_CRL_TYPE_X_509v1 (Swift)
 

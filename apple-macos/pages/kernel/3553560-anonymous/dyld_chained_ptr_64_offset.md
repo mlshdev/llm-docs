@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3553560-anonymous/dyld_chained_ptr_64_offset](https://developer.apple.com/documentation/kernel/3553560-anonymous/dyld_chained_ptr_64_offset)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3553560-anonymous/dyld_chained_ptr_64_offset
 
 # DYLD_CHAINED_PTR_64_OFFSET
 

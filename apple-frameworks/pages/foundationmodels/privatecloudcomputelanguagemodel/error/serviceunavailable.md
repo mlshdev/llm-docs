@@ -1,10 +1,13 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/privatecloudcomputelanguagemodel/error/serviceunavailable](https://developer.apple.com/documentation/foundationmodels/privatecloudcomputelanguagemodel/error/serviceunavailable)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/privatecloudcomputelanguagemodel/error/serviceunavailable
 
 # PrivateCloudComputeLanguageModel.Error.ServiceUnavailable
 
 **Framework:** Foundation Models  
 **Kind:** Structure  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+Information about the model service being unable to handle a request.
 
 ## Declaration
 
@@ -16,11 +19,11 @@ struct ServiceUnavailable
 
 ### Creating a service unavailable error
 
-- [init(debugDescription:)](serviceunavailable/init%28debugdescription_%29.md)
+- [init(debugDescription:)](serviceunavailable/init%28debugdescription_%29.md): Creates a service unavailable instance.
 
 ### Getting the error description
 
-- [debugDescription](serviceunavailable/debugdescription.md)
+- [debugDescription](serviceunavailable/debugdescription.md): A debug description of why the service is unavailable.
 
 ## Relationships
 

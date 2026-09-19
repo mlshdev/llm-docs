@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/image_params/1543559-ip_interp_sugid_fd](https://developer.apple.com/documentation/kernel/image_params/1543559-ip_interp_sugid_fd)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/image_params/1543559-ip_interp_sugid_fd
 
 # ip_interp_sugid_fd
 

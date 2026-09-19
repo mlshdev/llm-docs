@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/http-live-streaming/hls-authoring-specification-for-apple-devices-appendixes](https://developer.apple.com/documentation/http-live-streaming/hls-authoring-specification-for-apple-devices-appendixes)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/http-live-streaming/hls-authoring-specification-for-apple-devices-appendixes
 
 # HTTP Live Streaming (HLS) Authoring Specification for Apple devices appendixes
 
@@ -397,6 +398,7 @@ large/prog_index.m3u8
 #EXT-X-MEDIA:TYPE=VIDEO,GROUP-ID="stereo-40",NAME="Director's Cut",DEFAULT=YES,CHARACTERISTICS="com.apple.position.dirs-cut",URI="Video/40Mb/prog_index.m3u8"
 #EXT-X-MEDIA:TYPE=VIDEO,GROUP-ID="stereo-50",NAME="Director's Cut",DEFAULT=YES,CHARACTERISTICS="com.apple.position.dirs-cut",URI="Video/50Mb/prog_index.m3u8"
 #EXT-X-MEDIA:TYPE=VIDEO,GROUP-ID="stereo-100",NAME="Director's Cut",DEFAULT=YES,CHARACTERISTICS="com.apple.position.dirs-cut",URI="Video/100Mb/prog_index.m3u8"
+
 
 #== Variants
 #EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=18077520,BANDWIDTH=30636545,AUDIO="apac",SUBTITLES="subs",VIDEO="stereo-16",VIDEO-RANGE=PQ,CODECS="hvc1.2.20000000.H183.B0,apac.31.00",RESOLUTION=3600x3600,FRAME-RATE=90.000,CLOSED-CAPTIONS=NONE,REQ-VIDEO-LAYOUT="CH-STEREO/PROJ-AIV"

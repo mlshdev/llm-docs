@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/corenfc/nfcpaymenttagreadersession/init(delegate:queue:)](https://developer.apple.com/documentation/corenfc/nfcpaymenttagreadersession/init(delegate:queue:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corenfc/nfcpaymenttagreadersession/init(delegate:queue:)
 
 # init(delegate:queue:)
 
 **Framework:** Core NFC  
 **Kind:** Initializer  
-**Availability:** iOS 26.0+ · iPadOS 26.0+
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
 Creates a new session instance for processing NFC payment tags.
 

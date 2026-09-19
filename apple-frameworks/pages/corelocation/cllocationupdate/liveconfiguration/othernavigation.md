@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corelocation/cllocationupdate/liveconfiguration/othernavigation](https://developer.apple.com/documentation/corelocation/cllocationupdate/liveconfiguration/othernavigation)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corelocation/cllocationupdate/liveconfiguration/othernavigation
 
 # CLLocationUpdate.LiveConfiguration.otherNavigation
 

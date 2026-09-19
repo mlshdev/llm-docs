@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avkiterror-swift.struct/code](https://developer.apple.com/documentation/avkit/avkiterror-swift.struct/code)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avkiterror-swift.struct/code
 
 # AVKitError.Code (Swift)
 
@@ -20,7 +21,7 @@ enum Code
 
 - [init(rawValue:)](code/init%28rawvalue_%29.md)
 
-### Error Codes
+### Error codes
 
 - [AVKitError.Code.unknown](code/unknown.md): An unknown error.
 - [AVKitError.Code.contentRatingUnknown](code/contentratingunknown.md): The media content rating is missing or unrecognized.
@@ -45,6 +46,7 @@ enum Code
 
 - [AVKitErrorDomain](../avkiterrordomain.md): The domain of errors the framework generates.
 - [AVKitError](../avkiterror-swift.struct.md): A structure that represents a framework error.
+- [Error constants](../error-constants.md): Error code constants for framework operations.
 
 # AVKitError (Objective-C)
 
@@ -62,7 +64,7 @@ enum AVKitError : NSInteger;
 
 ## Topics
 
-### Error Codes
+### Error codes
 
 - [AVKitErrorUnknown](code/unknown.md): An unknown error.
 - [AVKitErrorContentRatingUnknown](code/contentratingunknown.md): The media content rating is missing or unrecognized.
@@ -79,3 +81,4 @@ enum AVKitError : NSInteger;
 ### Errors
 
 - [AVKitErrorDomain](../avkiterrordomain.md): The domain of errors the framework generates.
+- [Error constants](../error-constants.md): Error code constants for framework operations.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/oid_itu_rfcdata_2342_ucl_directorypilot_attributes_userid_length](https://developer.apple.com/documentation/security/oid_itu_rfcdata_2342_ucl_directorypilot_attributes_userid_length)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/oid_itu_rfcdata_2342_ucl_directorypilot_attributes_userid_length
 
 # OID_ITU_RFCDATA_2342_UCL_DIRECTORYPILOT_ATTRIBUTES_USERID_LENGTH (Swift)
 

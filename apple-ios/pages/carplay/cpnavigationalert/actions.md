@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/carplay/cpnavigationalert/actions](https://developer.apple.com/documentation/carplay/cpnavigationalert/actions)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationalert/actions
 
 # actions (Swift)
 
@@ -20,6 +21,10 @@ var actions: [CPAlertAction] { get }
 
 If the alert was created with the older @c primaryAction / @c secondaryAction initializer, this property returns those actions as an array for backward compatibility.
 
+> **Note**
+
+> CPAlertActionStyleCancel actions are rendered as standard labeled buttons in the primary action row.
+
 # actions (Objective-C)
 
 **Framework:** CarPlay  
@@ -39,3 +44,7 @@ The array of actions associated with this navigation alert.
 ## Discussion
 
 If the alert was created with the older @c primaryAction / @c secondaryAction initializer, this property returns those actions as an array for backward compatibility.
+
+> **Note**
+
+> CPAlertActionStyleCancel actions are rendered as standard labeled buttons in the primary action row.

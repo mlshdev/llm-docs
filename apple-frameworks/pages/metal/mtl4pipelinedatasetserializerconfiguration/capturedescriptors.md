@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4pipelinedatasetserializerconfiguration/capturedescriptors](https://developer.apple.com/documentation/metal/mtl4pipelinedatasetserializerconfiguration/capturedescriptors)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtl4pipelinedatasetserializerconfiguration/capturedescriptors
 
 # captureDescriptors (Swift)
 
@@ -18,7 +19,7 @@ static var captureDescriptors: MTL4PipelineDataSetSerializerConfiguration { get 
 
 ## Discussion
 
-Set this mask to use `MTL4PipelineDataSetSerializer.serializeAsPipelinesScriptWithError`.
+Set this mask to use [serializeAsPipelinesScript()](../mtl4pipelinedatasetserializer/serializeaspipelinesscript%28%29.md).
 
 This for the default behavior.
 
@@ -40,6 +41,6 @@ MTL4PipelineDataSetSerializerConfigurationCaptureDescriptors
 
 ## Discussion
 
-Set this mask to use `MTL4PipelineDataSetSerializer.serializeAsPipelinesScriptWithError`.
+Set this mask to use [serializeAsPipelinesScriptWithError:](../mtl4pipelinedatasetserializer/serializeaspipelinesscript%28%29.md).
 
 This for the default behavior.

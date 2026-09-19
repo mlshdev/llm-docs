@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatialpreview/usdpreviewsession/changelistdelegate/didapplychanges(instanceidentifier:operationidentifier:)](https://developer.apple.com/documentation/spatialpreview/usdpreviewsession/changelistdelegate/didapplychanges(instanceidentifier:operationidentifier:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatialpreview/usdpreviewsession/changelistdelegate/didapplychanges(instanceidentifier:operationidentifier:)
 
 # didApplyChanges(instanceIdentifier:operationIdentifier:)
 
@@ -18,3 +19,9 @@ An event emitted to the ChangelistDelegate indicating the end of a USD change.
 
 - `instanceIdentifier`: The Spatial Preview receiver instance making the change.
 - `operationIdentifier`: Multiple changes with the same operation identifier can be grouped together.
+
+## See Also
+
+### Responding to changes
+
+- [willApplyChanges(instanceIdentifier:operationIdentifier:)](willapplychanges%28instanceidentifier_operationidentifier_%29.md): An event emitted to the ChangeListDelegate indicating the start of a USD change.

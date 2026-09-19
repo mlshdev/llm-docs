@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/testing/trait/bug(_:id:_:)-3vtpl](https://developer.apple.com/documentation/testing/trait/bug(_:id:_:)-3vtpl)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/testing/trait/bug(_:id:_:)-3vtpl
 
 # bug(\_:id:\_:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/interacting-with-your-visionos-app-in-device-hub](https://developer.apple.com/documentation/xcode/interacting-with-your-visionos-app-in-device-hub)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/interacting-with-your-visionos-app-in-device-hub
 
 # Interacting with your visionOS app in Device Hub
 
@@ -20,7 +21,7 @@ To take screenshots and record videos, see [Capturing screenshots and videos fro
 
 > **Tip**
 
-> If you build and run your app on a physical device, you can interact with Xcode running side-by-side. For more information, see [Use Mac Virtual Display on Apple Vision Pro](https://support.apple.com/guide/apple-vision-pro/use-mac-virtual-display-tan357ede966/26/visionos/26).
+> If you build and run your app on a physical visionOS device, you can’t interact with your app in Device Hub. Instead, use [Mac Virtual Display on Apple Vision Pro](https://support.apple.com/guide/apple-vision-pro/use-mac-virtual-display-tan357ede966/26/visionos/26) to interact with your app with Xcode running side-by-side.
 
 <a id="Interact-with-your-visionOS-app-in-the-canvas"></a>
 

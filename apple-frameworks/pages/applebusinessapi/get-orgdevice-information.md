@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applebusinessapi/get-orgdevice-information](https://developer.apple.com/documentation/applebusinessapi/get-orgdevice-information)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/get-orgdevice-information
 
 # Get Device Information
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Web Service Endpoint  
-**Availability:** Apple Business API 2.4+
+**Availability:** Apple Business API 2.5+
 
 Get information about a device in an organization.
 
@@ -86,6 +87,11 @@ curl "https://api-business.apple.com/v1/orgDevices/{id}" \
           "appleCareCoverage": {
             "links": {
               "related": "https://api-business.apple.com/v1/orgDevices/XABC123X0ABC123X0/appleCareCoverage"
+            }
+          },
+          "activationLockStatus": {
+            "links": {
+              "related": "https://api-business.apple.com/v1/orgDevices/XABC123X0ABC123X0/activationLockStatus"
             }
           }
         },

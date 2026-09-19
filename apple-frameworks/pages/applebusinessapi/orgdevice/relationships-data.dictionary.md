@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applebusinessapi/orgdevice/relationships-data.dictionary](https://developer.apple.com/documentation/applebusinessapi/orgdevice/relationships-data.dictionary)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/orgdevice/relationships-data.dictionary
 
 # OrgDevice.Relationships
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Object  
-**Availability:** Apple Business API 2.4+
+**Availability:** Apple Business API 2.5+
 
 The relationships you include in the request, and those that you can operate on.
 
@@ -20,10 +21,12 @@ object OrgDevice.Relationships
 
 - `assignedServer` — `OrgDevice.Relationships.AssignedServer`: The relationship representing a device and its assigned device management service.
 - `appleCareCoverage` — `OrgDevice.Relationships.AppleCareCoverage`: The relationship representing a device and its AppleCare coverage.
+- `activationLockStatus` — `OrgDevice.Relationships.ActivationLockStatus`: The relationship representing a device and its Activation Lock status.
 
 ## Topics
 
 ### Dictionaries
 
+- [OrgDevice.Relationships.ActivationLockStatus](relationships-data.dictionary/activationlockstatus-data.dictionary.md)
 - [OrgDevice.Relationships.AppleCareCoverage](relationships-data.dictionary/applecarecoverage-data.dictionary.md)
 - [OrgDevice.Relationships.AssignedServer](relationships-data.dictionary/assignedserver-data.dictionary.md): The links that describe the relationship between the resources.

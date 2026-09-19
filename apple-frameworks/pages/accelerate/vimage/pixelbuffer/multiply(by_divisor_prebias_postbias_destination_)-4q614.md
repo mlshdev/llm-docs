@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimage/pixelbuffer/multiply(by:divisor:prebias:postbias:destination:)-4q614](https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/multiply(by:divisor:prebias:postbias:destination:)-4q614)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/multiply(by:divisor:prebias:postbias:destination:)-4q614
 
 # multiply(by:divisor:preBias:postBias:destination:)
 

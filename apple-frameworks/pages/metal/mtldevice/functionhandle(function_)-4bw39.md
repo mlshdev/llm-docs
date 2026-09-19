@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtldevice/functionhandle(function:)-4bw39](https://developer.apple.com/documentation/metal/mtldevice/functionhandle(function:)-4bw39)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtldevice/functionhandle(function:)-4bw39
 
 # functionHandle(function:) (Swift)
 
@@ -6,17 +7,30 @@
 **Kind:** Instance Method  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
 
+Returns the handle for a function that you can add to a function table.
+
 ## Declaration
 
 ```swift
 func functionHandle(function: any MTLFunction) -> (any MTLFunctionHandle)?
 ```
 
+## Parameters
+
+- `function`: A function that the Metal compiler created with both of the following settings:
+
+<a id="return-value"></a>
+
+## Return Value
+
+A function handle if the method succeeds, otherwise `nil`.
+
 <a id="discussion"></a>
 
 ## Discussion
 
-Returns the function handle for a function that was compiled with MTLFunctionOptionPipelineIndependent and MTLFunctionOptionCompileToBinary.
+- [compileToBinary](../mtlfunctionoptions/compiletobinary.md)
+- [pipelineIndependent](../mtlfunctionoptions/pipelineindependent.md)
 
 # functionHandleWithFunction: (Objective-C)
 
@@ -24,14 +38,27 @@ Returns the function handle for a function that was compiled with MTLFunctionOpt
 **Kind:** Instance Method  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
 
+Returns the handle for a function that you can add to a function table.
+
 ## Declaration
 
 ```objectivec
 - (id<MTLFunctionHandle>) functionHandleWithFunction:(id<MTLFunction>) function;
 ```
 
+## Parameters
+
+- `function`: A function that the Metal compiler created with both of the following settings:
+
+<a id="return-value"></a>
+
+## Return Value
+
+A function handle if the method succeeds, otherwise `nil`.
+
 <a id="discussion"></a>
 
 ## Discussion
 
-Returns the function handle for a function that was compiled with MTLFunctionOptionPipelineIndependent and MTLFunctionOptionCompileToBinary.
+- [MTLFunctionOptionCompileToBinary](../mtlfunctionoptions/compiletobinary.md)
+- [MTLFunctionOptionPipelineIndependent](../mtlfunctionoptions/pipelineindependent.md)

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mapkit/interacting-with-nearby-points-of-interest](https://developer.apple.com/documentation/mapkit/interacting-with-nearby-points-of-interest)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mapkit/interacting-with-nearby-points-of-interest
 
 # Interacting with nearby points of interest (Swift)
 

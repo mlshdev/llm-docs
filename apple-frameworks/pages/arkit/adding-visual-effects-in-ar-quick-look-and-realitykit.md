@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/adding-visual-effects-in-ar-quick-look-and-realitykit](https://developer.apple.com/documentation/arkit/adding-visual-effects-in-ar-quick-look-and-realitykit)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/adding-visual-effects-in-ar-quick-look-and-realitykit
 
 # Adding Visual Effects in AR Quick Look and RealityKit (Swift)
 

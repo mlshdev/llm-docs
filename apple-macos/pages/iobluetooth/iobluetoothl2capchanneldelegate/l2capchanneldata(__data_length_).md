@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/iobluetoothl2capchanneldelegate/l2capchanneldata(_:data:length:)](https://developer.apple.com/documentation/iobluetooth/iobluetoothl2capchanneldelegate/l2capchanneldata(_:data:length:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetooth/iobluetoothl2capchanneldelegate/l2capchanneldata(_:data:length:)
 
 # l2capChannelData(\_:data:length:) (Swift)
 

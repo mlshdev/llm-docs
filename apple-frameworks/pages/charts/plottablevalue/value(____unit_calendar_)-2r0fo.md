@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/charts/plottablevalue/value(_:_:unit:calendar:)-2r0fo](https://developer.apple.com/documentation/charts/plottablevalue/value(_:_:unit:calendar:)-2r0fo)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/charts/plottablevalue/value(_:_:unit:calendar:)-2r0fo
 
 # value(\_:\_:unit:calendar:)
 

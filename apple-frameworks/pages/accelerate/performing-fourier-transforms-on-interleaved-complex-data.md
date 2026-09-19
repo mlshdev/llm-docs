@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/performing-fourier-transforms-on-interleaved-complex-data](https://developer.apple.com/documentation/accelerate/performing-fourier-transforms-on-interleaved-complex-data)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/performing-fourier-transforms-on-interleaved-complex-data
 
 # Performing Fourier transforms on interleaved-complex data
 
@@ -85,6 +86,7 @@ if let splitComplexSetup = vDSP_DFT_zop_CreateSetup(nil,
     
     vDSP_DFT_DestroySetup(splitComplexSetup)
 }
+
 
 let splitComplexDominantFrequency = vDSP.indexOfMaximum(splitOutputReal)
 

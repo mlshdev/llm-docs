@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/contactprovider/contactitemsyncanchor/init(generationmarker:offset:)](https://developer.apple.com/documentation/contactprovider/contactitemsyncanchor/init(generationmarker:offset:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/contactprovider/contactitemsyncanchor/init(generationmarker:offset:)
 
 # init(generationMarker:offset:)
 

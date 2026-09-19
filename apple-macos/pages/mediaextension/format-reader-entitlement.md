@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/mediaextension/format-reader-entitlement](https://developer.apple.com/documentation/mediaextension/format-reader-entitlement)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mediaextension/format-reader-entitlement
 
 # Format reader entitlement
 
@@ -13,19 +14,20 @@ Include an entitlement to indicate your extension is a MediaExtension format rea
 
 ## Overview
 
-`MediaExtension` format readers must include an special entitlement key with a Boolean value set to true. To add the entitlement key in Xcode, follow these steps:
+MediaExtension format readers must include a special entitlement key with a Boolean value set to `true`. To add the entitlement key in Xcode, follow these steps:
 
-1. Select the build target for your format reader extension
-2. Go to the Signing & Capabilities tab
-3. Click + to add a new capability
-4. Choose Media Extension Format Reader from the list
+1. Select the build target for your format reader extension.
+2. Go to the Signing & Capabilities tab.
+3. Click + to add a new capability.
+4. Choose Media Extension Format Reader from the list.
 
-The entitlement key is `com.apple.developer.mediaextension.formatreader` and it must have a Boolean value set to true. A developer provisioning profile will be needed to use this entitlement.
+The entitlement key is `com.apple.developer.mediaextension.formatreader` and it must have a Boolean value set to `true`. Using this entitlement requires a developer provisioning profile.
 
 ## See Also
 
 ### Format readers
 
+- [Supporting custom media formats and decoders](supporting-custom-media-formats-and-decoders.md): Extend the media formats the system can open by providing a format reader and a video decoder.
 - [MEFormatReader](meformatreader.md): A protocol that defines the requirements for a format reader, which represents a single media asset.
 - [MEFormatReaderExtension](meformatreaderextension.md): A protocol that defines a factory to create a new format reader with a byte source.
 - [MEFormatReaderInstantiationOptions](meformatreaderinstantiationoptions.md): An object that contains options to pass to a format reader extension.

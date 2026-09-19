@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnnsvectordescriptor/init(size:data_type:data_scale:data_bias:)](https://developer.apple.com/documentation/accelerate/bnnsvectordescriptor/init(size:data_type:data_scale:data_bias:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/bnnsvectordescriptor/init(size:data_type:data_scale:data_bias:)
 
 # init(size:data_type:data_scale:data_bias:)
 

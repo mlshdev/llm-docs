@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vdsp/correlate(_:withkernel:result:)-377zj](https://developer.apple.com/documentation/accelerate/vdsp/correlate(_:withkernel:result:)-377zj)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vdsp/correlate(_:withkernel:result:)-377zj
 
 # correlate(\_:withKernel:result:)
 

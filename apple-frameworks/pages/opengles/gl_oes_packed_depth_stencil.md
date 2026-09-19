@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_oes_packed_depth_stencil](https://developer.apple.com/documentation/opengles/gl_oes_packed_depth_stencil)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_oes_packed_depth_stencil
 
 # GL_OES_packed_depth_stencil (Swift)
 

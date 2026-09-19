@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/appshortcutoptionscollectionprotocol/provider](https://developer.apple.com/documentation/appintents/appshortcutoptionscollectionprotocol/provider)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/appshortcutoptionscollectionprotocol/provider
 
 # Provider
 

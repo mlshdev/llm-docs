@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideostream/getinputqueue](https://developer.apple.com/documentation/videodriverkit/iouservideostream/getinputqueue)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideostream/getinputqueue
 
 # GetInputQueue
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the buffer queue for the stream.
 
@@ -26,10 +27,10 @@ The input buffer queue for the stream, or `NULL` if the stream is not open and t
 
 ### Working with queues
 
-- [GetOutputQueue](getoutputqueue.md): Gets the memory descriptor used for video IO that was initialized with or set on the video stream.
-- [createQueues](createqueues.md): Creates the shared input and output queues, without regard to whether the stream is open or not.
-- [destroyQueues](destroyqueues.md): Releases the shared input and output queues.
-- [dequeueInputEntry](dequeueinputentry.md)
-- [enqueueOutputEntry](enqueueoutputentry.md)
-- [SendBufferQueueChange](sendbufferqueuechange.md): Sends a notification to the host that the buffer queue has changed.
-- [IOStreamBufferQueue](../iostreambufferqueue.md)
+- [GetOutputQueue](getoutputqueue.md): Beta. Gets the memory descriptor used for video IO that was initialized with or set on the video stream.
+- [createQueues](createqueues.md): Beta. Creates the shared input and output queues, without regard to whether the stream is open or not.
+- [destroyQueues](destroyqueues.md): Beta. Releases the shared input and output queues.
+- [dequeueInputEntry](dequeueinputentry.md): Beta.
+- [enqueueOutputEntry](enqueueoutputentry.md): Beta.
+- [SendBufferQueueChange](sendbufferqueuechange.md): Beta. Sends a notification to the host that the buffer queue has changed.
+- [IOStreamBufferQueue](../iostreambufferqueue.md): Beta.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uimodaltransitionstyle/coververtical](https://developer.apple.com/documentation/uikit/uimodaltransitionstyle/coververtical)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uimodaltransitionstyle/coververtical
 
 # UIModalTransitionStyle.coverVertical (Swift)
 

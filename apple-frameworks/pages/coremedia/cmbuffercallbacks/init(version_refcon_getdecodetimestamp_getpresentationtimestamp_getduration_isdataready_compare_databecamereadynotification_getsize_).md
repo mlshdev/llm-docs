@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/cmbuffercallbacks/init(version:refcon:getdecodetimestamp:getpresentationtimestamp:getduration:isdataready:compare:databecamereadynotification:getsize:)](https://developer.apple.com/documentation/coremedia/cmbuffercallbacks/init(version:refcon:getdecodetimestamp:getpresentationtimestamp:getduration:isdataready:compare:databecamereadynotification:getsize:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremedia/cmbuffercallbacks/init(version:refcon:getdecodetimestamp:getpresentationtimestamp:getduration:isdataready:compare:databecamereadynotification:getsize:)
 
 # init(version:refcon:getDecodeTimeStamp:getPresentationTimeStamp:getDuration:isDataReady:compare:dataBecameReadyNotification:getSize:)
 

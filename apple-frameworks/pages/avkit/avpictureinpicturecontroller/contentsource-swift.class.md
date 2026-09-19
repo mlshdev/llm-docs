@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avpictureinpicturecontroller/contentsource-swift.class](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/contentsource-swift.class)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/contentsource-swift.class
 
 # AVPictureInPictureController.ContentSource (Swift)
 
@@ -26,29 +27,29 @@ The system supports displaying content from an [AVPlayerLayer](../../avfoundatio
 
 ## Topics
 
-### Creating a Content Source
+### Creating a content source
 
 - [init(playerLayer:)](contentsource-swift.class/init%28playerlayer_%29.md): Creates a content source with a player layer.
 - [init(sampleBufferDisplayLayer:playbackDelegate:)](contentsource-swift.class/init%28samplebufferdisplaylayer_playbackdelegate_%29.md): Creates a content source with a sample buffer display layer.
 - [init(activeVideoCallSourceView:contentViewController:)](contentsource-swift.class/init%28activevideocallsourceview_contentviewcontroller_%29.md): Creates a content source with an active video call.
 
-### Accessing the Presentation Layer
+### Accessing the presentation layer
 
 - [playerLayer](contentsource-swift.class/playerlayer.md): The presenting player layer.
 - [sampleBufferDisplayLayer](contentsource-swift.class/samplebufferdisplaylayer.md): The presenting sample buffer display layer.
 
-### Accessing the Active Call Presentation
+### Accessing the active call presentation
 
 - [activeVideoCallSourceView](contentsource-swift.class/activevideocallsourceview.md): The view that contains the video content of the call.
 - [activeVideoCallContentViewController](contentsource-swift.class/activevideocallcontentviewcontroller.md): The view controller that presents the video call content.
 - [AVPictureInPictureVideoCallViewController](../avpictureinpicturevideocallviewcontroller.md): A view controller that presents content from a video call in Picture in Picture.
 
-### Configuring the Delegate
+### Configuring the delegate
 
 - [sampleBufferPlaybackDelegate](contentsource-swift.class/samplebufferplaybackdelegate.md): A delegate object that responds to sample buffer playback events.
 - [AVPictureInPictureSampleBufferPlaybackDelegate](../avpictureinpicturesamplebufferplaybackdelegate.md): A protocol for controlling playback from a sample buffer display layer in Picture in Picture.
 
-### Invalidating State
+### Invalidating state
 
 - [invalidatePlaybackState()](invalidateplaybackstate%28%29.md): Invalidates the controller’s current playback state and fetches the updated state from the sample buffer playback delegate object.
 
@@ -69,7 +70,7 @@ The system supports displaying content from an [AVPlayerLayer](../../avfoundatio
 
 ## See Also
 
-### Configuring the Content Source
+### Configuring the content source
 
 - [contentSource](contentsource-swift.property.md): The source of the controller’s content.
 
@@ -99,29 +100,29 @@ The system supports displaying content from an [AVPlayerLayer](../../avfoundatio
 
 ## Topics
 
-### Creating a Content Source
+### Creating a content source
 
 - [initWithPlayerLayer:](contentsource-swift.class/init%28playerlayer_%29.md): Creates a content source with a player layer.
 - [initWithSampleBufferDisplayLayer:playbackDelegate:](contentsource-swift.class/init%28samplebufferdisplaylayer_playbackdelegate_%29.md): Creates a content source with a sample buffer display layer.
 - [initWithActiveVideoCallSourceView:contentViewController:](contentsource-swift.class/init%28activevideocallsourceview_contentviewcontroller_%29.md): Creates a content source with an active video call.
 
-### Accessing the Presentation Layer
+### Accessing the presentation layer
 
 - [playerLayer](contentsource-swift.class/playerlayer.md): The presenting player layer.
 - [sampleBufferDisplayLayer](contentsource-swift.class/samplebufferdisplaylayer.md): The presenting sample buffer display layer.
 
-### Accessing the Active Call Presentation
+### Accessing the active call presentation
 
 - [activeVideoCallSourceView](contentsource-swift.class/activevideocallsourceview.md): The view that contains the video content of the call.
 - [activeVideoCallContentViewController](contentsource-swift.class/activevideocallcontentviewcontroller.md): The view controller that presents the video call content.
 - [AVPictureInPictureVideoCallViewController](../avpictureinpicturevideocallviewcontroller.md): A view controller that presents content from a video call in Picture in Picture.
 
-### Configuring the Delegate
+### Configuring the delegate
 
 - [sampleBufferPlaybackDelegate](contentsource-swift.class/samplebufferplaybackdelegate.md): A delegate object that responds to sample buffer playback events.
 - [AVPictureInPictureSampleBufferPlaybackDelegate](../avpictureinpicturesamplebufferplaybackdelegate.md): A protocol for controlling playback from a sample buffer display layer in Picture in Picture.
 
-### Invalidating State
+### Invalidating state
 
 - [invalidatePlaybackState](invalidateplaybackstate%28%29.md): Invalidates the controller’s current playback state and fetches the updated state from the sample buffer playback delegate object.
 
@@ -133,6 +134,6 @@ The system supports displaying content from an [AVPlayerLayer](../../avfoundatio
 
 ## See Also
 
-### Configuring the Content Source
+### Configuring the content source
 
 - [contentSource](contentsource-swift.property.md): The source of the controller’s content.

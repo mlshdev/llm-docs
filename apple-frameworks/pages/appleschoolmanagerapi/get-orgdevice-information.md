@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appleschoolmanagerapi/get-orgdevice-information](https://developer.apple.com/documentation/appleschoolmanagerapi/get-orgdevice-information)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appleschoolmanagerapi/get-orgdevice-information
 
 # Get Device Information
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple School Manager API  
 **Kind:** Web Service Endpoint  
-**Availability:** Apple School Manager API 1.6+
+**Availability:** Apple School Manager API 1.7+
 
 Get information about a device in an organization.
 
@@ -86,6 +87,11 @@ curl "https://api-school.apple.com/v1/orgDevices/{id}" \
           "appleCareCoverage": {
             "links": {
               "related": "https://api-school.apple.com/v1/orgDevices/XABC123X0ABC123X0/appleCareCoverage"
+            }
+          },
+          "activationLockStatus": {
+            "links": {
+              "related": "https://api-school.apple.com/v1/orgDevices/XABC123X0ABC123X0/activationLockStatus"
             }
           }
         },

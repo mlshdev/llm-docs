@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_csp_tok_prot_authentication](https://developer.apple.com/documentation/security/cssm_csp_tok_prot_authentication)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_csp_tok_prot_authentication
 
 # CSSM_CSP_TOK_PROT_AUTHENTICATION (Swift)
 

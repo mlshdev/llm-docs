@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/vmcs_ctrl_pf_error_match](https://developer.apple.com/documentation/hypervisor/vmcs_ctrl_pf_error_match)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/vmcs_ctrl_pf_error_match
 
 # VMCS_CTRL_PF_ERROR_MATCH (Swift)
 

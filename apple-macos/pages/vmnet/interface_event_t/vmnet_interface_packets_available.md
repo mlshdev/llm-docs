@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/vmnet/interface_event_t/vmnet_interface_packets_available](https://developer.apple.com/documentation/vmnet/interface_event_t/vmnet_interface_packets_available)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/vmnet/interface_event_t/vmnet_interface_packets_available
 
 # VMNET_INTERFACE_PACKETS_AVAILABLE (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4logicaltophysicalcolorattachmentmappingstate/inherited](https://developer.apple.com/documentation/metal/mtl4logicaltophysicalcolorattachmentmappingstate/inherited)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtl4logicaltophysicalcolorattachmentmappingstate/inherited
 
 # MTL4LogicalToPhysicalColorAttachmentMappingState.inherited (Swift)
 
@@ -18,7 +19,10 @@ case inherited
 
 ## Discussion
 
-Use this setting to indicate Metal should inherit the mapping from the `colorAttachmentMap` property of the current [MTL4RenderCommandEncoder](../mtl4rendercommandencoder.md) or [MTLRenderCommandEncoder](../mtlrendercommandencoder.md) in use at draw time.
+This setting instructs the pipeline state to inherit the color attachment map of the current render encoder:
+
+- For an [MTL4RenderCommandEncoder](../mtl4rendercommandencoder.md), call its [setColorAttachmentMap(\_:)](../mtl4rendercommandencoder/setcolorattachmentmap%28__%29.md) method.
+- For an [MTLRenderCommandEncoder](../mtlrendercommandencoder.md), call its [setColorAttachmentMap(\_:)](../mtlrendercommandencoder/setcolorattachmentmap%28__%29.md) method.
 
 # MTL4LogicalToPhysicalColorAttachmentMappingStateInherited (Objective-C)
 
@@ -38,4 +42,7 @@ MTL4LogicalToPhysicalColorAttachmentMappingStateInherited
 
 ## Discussion
 
-Use this setting to indicate Metal should inherit the mapping from the `colorAttachmentMap` property of the current [MTL4RenderCommandEncoder](../mtl4rendercommandencoder.md) or [MTLRenderCommandEncoder](../mtlrendercommandencoder.md) in use at draw time.
+This setting instructs the pipeline state to inherit the color attachment map of the current render encoder:
+
+- For an [MTL4RenderCommandEncoder](../mtl4rendercommandencoder.md), call its [setColorAttachmentMap:](../mtl4rendercommandencoder/setcolorattachmentmap%28__%29.md) method.
+- For an [MTLRenderCommandEncoder](../mtlrendercommandencoder.md), call its [setColorAttachmentMap:](../mtlrendercommandencoder/setcolorattachmentmap%28__%29.md) method.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/realitycomposerpro/configuring-how-materials-respond-to-light](https://developer.apple.com/documentation/realitycomposerpro/configuring-how-materials-respond-to-light)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitycomposerpro/configuring-how-materials-respond-to-light
 
 # Configuring how materials respond to light
 

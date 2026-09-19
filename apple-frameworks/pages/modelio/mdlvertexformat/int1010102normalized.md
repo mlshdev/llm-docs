@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/modelio/mdlvertexformat/int1010102normalized](https://developer.apple.com/documentation/modelio/mdlvertexformat/int1010102normalized)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/modelio/mdlvertexformat/int1010102normalized
 
 # MDLVertexFormat.int1010102Normalized (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/responding-to-changing-display-modes-on-apple-tv](https://developer.apple.com/documentation/uikit/responding-to-changing-display-modes-on-apple-tv)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/responding-to-changing-display-modes-on-apple-tv
 
 # Responding to changing display modes on Apple TV (Swift)
 

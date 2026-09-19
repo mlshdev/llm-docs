@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/sampling-gpu-data-into-counter-sample-buffers](https://developer.apple.com/documentation/metal/sampling-gpu-data-into-counter-sample-buffers)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/sampling-gpu-data-into-counter-sample-buffers
 
 # Sampling GPU data into counter sample buffers (Swift)
 
@@ -212,6 +213,7 @@ You do this by calling an encoder’s [sampleCounters(sampleBuffer:sampleIndex:b
 renderEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 6)
 
 ...
+
 
 // Store the GPU counter data in the sample buffer.
 renderEncoder.sampleCounters(sampleBuffer: self.counterSampleBuffer,
@@ -480,6 +482,7 @@ You do this by calling an encoder’s [sampleCountersInBuffer:atSampleIndex:with
 renderEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 6)
 
 ...
+
 
 // Store the GPU counter data in the sample buffer.
 renderEncoder.sampleCounters(sampleBuffer: self.counterSampleBuffer,

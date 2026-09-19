@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/4030002-disposespeecherrorupp](https://developer.apple.com/documentation/applicationservices/4030002-disposespeecherrorupp)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applicationservices/4030002-disposespeecherrorupp
 
 # DisposeSpeechErrorUPP(\_:)
 

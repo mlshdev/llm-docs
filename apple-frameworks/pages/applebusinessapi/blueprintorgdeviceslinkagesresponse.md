@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applebusinessapi/blueprintorgdeviceslinkagesresponse](https://developer.apple.com/documentation/applebusinessapi/blueprintorgdeviceslinkagesresponse)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/blueprintorgdeviceslinkagesresponse
 
 # BlueprintOrgDevicesLinkagesResponse
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Object  
-**Availability:** Apple Business API 2.4+
+**Availability:** Apple Business API 2.5+
 
 A response that contains a list of device resource linkages for a Blueprint.
 

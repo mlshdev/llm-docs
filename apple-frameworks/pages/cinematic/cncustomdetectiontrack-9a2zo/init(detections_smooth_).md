@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cinematic/cncustomdetectiontrack-9a2zo/init(detections:smooth:)](https://developer.apple.com/documentation/cinematic/cncustomdetectiontrack-9a2zo/init(detections:smooth:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/cinematic/cncustomdetectiontrack-9a2zo/init(detections:smooth:)
 
 # init(detections:smooth:)
 

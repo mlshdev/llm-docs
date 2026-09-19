@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/scsi_sense_data/1587994-sksv_sense_key_specific_msb](https://developer.apple.com/documentation/iokit/scsi_sense_data/1587994-sksv_sense_key_specific_msb)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/scsi_sense_data/1587994-sksv_sense_key_specific_msb
 
 # SKSV_SENSE_KEY_SPECIFIC_MSB
 

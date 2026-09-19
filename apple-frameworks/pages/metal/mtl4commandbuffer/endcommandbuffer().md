@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4commandbuffer/endcommandbuffer()](https://developer.apple.com/documentation/metal/mtl4commandbuffer/endcommandbuffer())
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtl4commandbuffer/endcommandbuffer()
 
 # endCommandBuffer() (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
 
-Closes a command buffer to prepare it for submission to a command queue.
+Finalizes a command buffer which makes it ready for you to submit it to a command queue.
 
 ## Declaration
 
@@ -22,7 +23,11 @@ func endCommandBuffer()
 
 ## Discussion
 
-Explicitly ending the command buffer allows you to reuse the [MTL4CommandAllocator](../mtl4commandallocator.md) to start servicing other command buffers. It is an error to call `commit` on a command buffer previously recording before calling this method.
+Metal generates an error if you submit a command buffer to a queue, such as with its [commit:count:](../mtl4commandqueue/commit_count_.md) method, before calling this method.
+
+> **Note**
+
+> Ending a command buffer also marks its [MTL4CommandAllocator](../mtl4commandallocator.md) as available for you to assign it to work with another command buffer.
 
 # endCommandBuffer (Objective-C)
 
@@ -30,7 +35,7 @@ Explicitly ending the command buffer allows you to reuse the [MTL4CommandAllocat
 **Kind:** Instance Method  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
 
-Closes a command buffer to prepare it for submission to a command queue.
+Finalizes a command buffer which makes it ready for you to submit it to a command queue.
 
 ## Declaration
 
@@ -46,4 +51,8 @@ Closes a command buffer to prepare it for submission to a command queue.
 
 ## Discussion
 
-Explicitly ending the command buffer allows you to reuse the [MTL4CommandAllocator](../mtl4commandallocator.md) to start servicing other command buffers. It is an error to call `commit` on a command buffer previously recording before calling this method.
+Metal generates an error if you submit a command buffer to a queue, such as with its [commit:count:](../mtl4commandqueue/commit_count_.md) method, before calling this method.
+
+> **Note**
+
+> Ending a command buffer also marks its [MTL4CommandAllocator](../mtl4commandallocator.md) as available for you to assign it to work with another command buffer.

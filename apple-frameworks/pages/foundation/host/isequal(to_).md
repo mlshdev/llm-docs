@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/host/isequal(to:)](https://developer.apple.com/documentation/foundation/host/isequal(to:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/host/isequal(to:)
 
 # isEqual(to:) (Swift)
 
 **Framework:** Foundation  
 **Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Indicates whether the receiver represents the same host as another `NSHost` object.
 
@@ -36,7 +37,7 @@ func isEqual(to aHost: Host) -> Bool
 
 **Framework:** Foundation  
 **Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Indicates whether the receiver represents the same host as another `NSHost` object.
 

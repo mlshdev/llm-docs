@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ifnet_traffic_descriptor_common/3944283-itd_flags](https://developer.apple.com/documentation/kernel/ifnet_traffic_descriptor_common/3944283-itd_flags)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ifnet_traffic_descriptor_common/3944283-itd_flags
 
 # itd_flags
 

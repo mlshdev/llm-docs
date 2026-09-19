@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/sirikit/specifying-synonyms-for-your-app-name](https://developer.apple.com/documentation/sirikit/specifying-synonyms-for-your-app-name)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/sirikit/specifying-synonyms-for-your-app-name
 
 # Specifying Synonyms for Your App Name
 

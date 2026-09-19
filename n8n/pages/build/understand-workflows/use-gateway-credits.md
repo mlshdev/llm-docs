@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/understand-workflows/use-gateway-credits.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/understand-workflows/use-gateway-credits.md)
+> Pinned source for n8n main: [docs/build/understand-workflows/use-gateway-credits.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/understand-workflows/use-gateway-credits.md)
 
 # Use Gateway credits
 
@@ -66,3 +66,12 @@ Instance owners can turn Gateway credits off for everyone on the instance:
 3. Save your workspace settings. The instance goes offline for one to two minutes while the new settings apply.
 
 When it's off, the Gateway credits option doesn't appear on nodes for anyone on the instance.
+
+## Related resources
+
+- [Understand workflows](https://docs.n8n.io/build/understand-workflows)
+- [Create and run workflows](https://docs.n8n.io/build/understand-workflows/create-and-run-workflows)
+- [Save and publish workflows](https://docs.n8n.io/build/understand-workflows/save-and-publish-workflows)
+- [Create and edit credentials](https://docs.n8n.io/build/understand-workflows/create-and-edit-credentials)
+- [Workflow components](https://docs.n8n.io/build/understand-workflows/workflow-components)
+- [Understand executions](https://docs.n8n.io/build/understand-workflows/understand-executions)

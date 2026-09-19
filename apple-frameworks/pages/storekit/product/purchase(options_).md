@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/product/purchase(options:)](https://developer.apple.com/documentation/storekit/product/purchase(options:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/product/purchase(options:)
 
 # purchase(options:)
 
@@ -26,7 +27,7 @@ Returns a [Product.PurchaseResult](purchaseresult.md).
 
 ## Mentioned In
 
-- [Supporting promoted In-App Purchases in your app](../supporting-promoted-in-app-purchases-in-your-app.md)
+- [Supporting promoted Apple In-App Purchases in your app](../supporting-promoted-in-app-purchases-in-your-app.md)
 - [Merchandising win-back offers in your app](../merchandising-win-back-offers-in-your-app.md)
 - [Sending Advanced Commerce API requests from your app](../sending-advanced-commerce-api-requests-from-your-app.md)
 - [Supporting win-back offers in your app](../supporting-win-back-offers-in-your-app.md)
@@ -50,7 +51,7 @@ StoreKit provides several APIs you can use to enable customers to initiate a pur
 
 ### Use the purchase API
 
-Call the [purchase(options:)](purchase%28options_%29.md) method when a customer initiates a purchase, either within your app or after selecting a promoted in-app purchase on the App Store. This method brings up the system-confirmation sheet. The user can confirm to complete the transaction or cancel it.
+Call the [purchase(options:)](purchase%28options_%29.md) method when a customer initiates a purchase, either within your app or after selecting a promoted Apple In-App Purchase on the App Store. This method brings up the system-confirmation sheet. The user can confirm to complete the transaction or cancel it.
 
 Include the purchase options to provide additional information about the purchase, such as:
 
@@ -71,11 +72,11 @@ If you’re testing your app in the sandbox environment, test an Ask to Buy scen
 
 This method may throw a [Product.PurchaseError](purchaseerror.md) or [StoreKitError](../storekiterror.md).
 
-For more information about purchases that users initiate on the App Store, see [Promoting In-App Purchases](../promoting-in-app-purchases.md).
+For more information about purchases that users initiate on the App Store, see [Promoting Apple In-App Purchases](../promoting-in-app-purchases.md).
 
 ## See Also
 
 ### Purchase requests and results
 
-- [PurchaseAction](../purchaseaction.md): An action that starts an In-App Purchase.
+- [PurchaseAction](../purchaseaction.md): An action that starts an Apple In-App Purchase.
 - [Product.PurchaseResult](purchaseresult.md): The result of a purchase.

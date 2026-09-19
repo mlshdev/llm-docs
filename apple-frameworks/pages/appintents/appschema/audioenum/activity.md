@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/appschema/audioenum/activity](https://developer.apple.com/documentation/appintents/appschema/audioenum/activity)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/appschema/audioenum/activity
 
 # activity
 
@@ -71,16 +72,16 @@ enum AudioActivity: String {
         .cleaning: "Cleaning",
         .relaxing: "Relaxing",
         .sleeping: "Sleeping",
-        .indoorActivity: "IndoorActivity",
+        .indoorActivity: "Indoor Activity",
         .partying: "Partying",
         .commuting: "Commuting",
         .driving: "Driving",
         .traveling: "Traveling",
         .gardening: "Gardening",
         .barbecuing: "Barbecuing",
-        .beachDay: "BeachDay",
-        .roadTrip: "RoadTrip",
-        .outdoorActivity: "OutdoorActivity",
+        .beachDay: "Beach Day",
+        .roadTrip: "Road Trip",
+        .outdoorActivity: "Outdoor Activity",
         .meditating: "Meditating",
         .yoga: "Yoga",
         .walking: "Walking",
@@ -88,11 +89,11 @@ enum AudioActivity: String {
         .strength: "Strength",
         .cycling: "Cycling",
         .dance: "Dance",
-        .hiit: "Hiit",
+        .hiit: "HIIT",
         .rowing: "Rowing",
-        .workoutLowIntensity: "WorkoutLowIntensity",
-        .workoutMediumIntensity: "WorkoutMediumIntensity",
-        .workoutHighIntensity: "WorkoutHighIntensity"
+        .workoutLowIntensity: "Low-Intensity Workout",
+        .workoutMediumIntensity: "Medium-Intensity Workout",
+        .workoutHighIntensity: "High-Intensity Workout"
     ]
 }
 ```

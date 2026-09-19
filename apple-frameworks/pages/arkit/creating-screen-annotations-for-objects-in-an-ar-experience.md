@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/creating-screen-annotations-for-objects-in-an-ar-experience](https://developer.apple.com/documentation/arkit/creating-screen-annotations-for-objects-in-an-ar-experience)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/creating-screen-annotations-for-objects-in-an-ar-experience
 
 # Creating screen annotations for objects in an AR experience (Swift)
 
@@ -189,6 +190,7 @@ extension ViewController: UITextViewDelegate {
     
     // - Tag: TextViewDidBeginEditing
     func textViewDidBeginEditing(_ textView: UITextView) {
+
 
         // Get the main view for this sticky note.
         guard let stickyView = textView.firstSuperViewOfType(StickyNoteView.self) else { return }
@@ -473,6 +475,7 @@ extension ViewController: UITextViewDelegate {
     
     // - Tag: TextViewDidBeginEditing
     func textViewDidBeginEditing(_ textView: UITextView) {
+
 
         // Get the main view for this sticky note.
         guard let stickyView = textView.firstSuperViewOfType(StickyNoteView.self) else { return }

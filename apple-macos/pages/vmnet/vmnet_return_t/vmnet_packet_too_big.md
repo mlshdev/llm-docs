@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/vmnet/vmnet_return_t/vmnet_packet_too_big](https://developer.apple.com/documentation/vmnet/vmnet_return_t/vmnet_packet_too_big)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/vmnet/vmnet_return_t/vmnet_packet_too_big
 
 # vmnet_return_t.VMNET_PACKET_TOO_BIG (Swift)
 

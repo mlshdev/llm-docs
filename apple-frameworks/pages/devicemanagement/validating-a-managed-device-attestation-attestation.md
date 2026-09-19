@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/validating-a-managed-device-attestation-attestation](https://developer.apple.com/documentation/devicemanagement/validating-a-managed-device-attestation-attestation)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/devicemanagement/validating-a-managed-device-attestation-attestation
 
 # Validating a Managed Device Attestation
 

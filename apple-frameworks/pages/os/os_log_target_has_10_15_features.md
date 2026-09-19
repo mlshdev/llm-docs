@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/os/os_log_target_has_10_15_features](https://developer.apple.com/documentation/os/os_log_target_has_10_15_features)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/os/os_log_target_has_10_15_features
 
 # OS_LOG_TARGET_HAS_10_15_FEATURES (Swift)
 

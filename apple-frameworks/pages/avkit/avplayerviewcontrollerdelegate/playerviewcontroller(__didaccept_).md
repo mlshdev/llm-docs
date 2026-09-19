@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:didaccept:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:didaccept:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:didaccept:)
 
 # playerViewController(\_:didAccept:) (Swift)
 
@@ -21,7 +22,7 @@ optional func playerViewController(_ playerViewController: AVPlayerViewControlle
 
 ## Mentioned In
 
-- [Presenting Content Proposals in tvOS](../presenting-content-proposals-in-tvos.md)
+- [Presenting content proposals in tvOS](../presenting-content-proposals-in-tvos.md)
 
 <a id="Discussion"></a>
 
@@ -31,7 +32,7 @@ Implement this method to replace the player’s current player item with a playe
 
 ## See Also
 
-### Responding to Content Proposals
+### Responding to content proposals
 
 - [playerViewController(\_:shouldPresent:)](playerviewcontroller%28__shouldpresent_%29.md): Asks the delegate whether the player view controller presents a content proposal.
 - [playerViewController(\_:didReject:)](playerviewcontroller%28__didreject_%29.md): Tells the delegate when the user rejects the proposed content.
@@ -57,7 +58,7 @@ Tells the delegate when the user accepts the proposed content.
 
 ## Mentioned In
 
-- [Presenting Content Proposals in tvOS](../presenting-content-proposals-in-tvos.md)
+- [Presenting content proposals in tvOS](../presenting-content-proposals-in-tvos.md)
 
 <a id="Discussion"></a>
 
@@ -67,7 +68,7 @@ Implement this method to replace the player’s current player item with a playe
 
 ## See Also
 
-### Responding to Content Proposals
+### Responding to content proposals
 
 - [playerViewController:shouldPresentContentProposal:](playerviewcontroller%28__shouldpresent_%29.md): Asks the delegate whether the player view controller presents a content proposal.
 - [playerViewController:didRejectContentProposal:](playerviewcontroller%28__didreject_%29.md): Tells the delegate when the user rejects the proposed content.

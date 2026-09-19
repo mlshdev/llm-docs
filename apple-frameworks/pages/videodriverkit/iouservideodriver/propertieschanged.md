@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideodriver/propertieschanged](https://developer.apple.com/documentation/videodriverkit/iouservideodriver/propertieschanged)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideodriver/propertieschanged
 
 # PropertiesChanged
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 This method informs the host when the state of an driver’s object changes.
 
@@ -37,5 +38,5 @@ For device objects, this method is only used for state changes that don’t affe
 
 ### Communicating with the host
 
-- [IOUserVideoObjectID](../videodriverkit/iouservideoobjectid.md): A handle for a a specific video object.
-- [IOUserVideoObjectPropertySelector](../videodriverkit/iouservideoobjectpropertyselector.md): A four character code which, along with the scope and element, specifies a specific piece of information about a video object.
+- [IOUserVideoObjectID](../videodriverkit/iouservideoobjectid.md): Beta. A handle for a a specific video object.
+- [IOUserVideoObjectPropertySelector](../videodriverkit/iouservideoobjectpropertyselector.md): Beta. A four character code which, along with the scope and element, specifies a specific piece of information about a video object.

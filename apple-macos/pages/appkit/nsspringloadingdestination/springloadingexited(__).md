@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsspringloadingdestination/springloadingexited(_:)](https://developer.apple.com/documentation/appkit/nsspringloadingdestination/springloadingexited(_:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsspringloadingdestination/springloadingexited(_:)
 
 # springLoadingExited(\_:) (Swift)
 

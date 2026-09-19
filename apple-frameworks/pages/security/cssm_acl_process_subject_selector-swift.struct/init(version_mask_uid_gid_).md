@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_acl_process_subject_selector-swift.struct/init(version:mask:uid:gid:)](https://developer.apple.com/documentation/security/cssm_acl_process_subject_selector-swift.struct/init(version:mask:uid:gid:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_acl_process_subject_selector-swift.struct/init(version:mask:uid:gid:)
 
 # init(version:mask:uid:gid:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/purchaseaction/callasfunction(_:options:)](https://developer.apple.com/documentation/storekit/purchaseaction/callasfunction(_:options:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/purchaseaction/callasfunction(_:options:)
 
 # callAsFunction(\_:options:)
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
 
-Starts an in-app purchase for the indicated product and purchase options.
+Starts an Apple In-App Purchase for the indicated product and purchase options.
 
 ## Declaration
 
@@ -16,7 +17,7 @@ Starts an in-app purchase for the indicated product and purchase options.
 
 ## Parameters
 
-- `product`: The in-app purchase [Product](../product.md) the customer is purchasing.
+- `product`: The Apple In-App Purchase [Product](../product.md) the customer is purchasing.
 - `options`: A set of options you may associate with the purchase ([Product.PurchaseOption](../product/purchaseoption.md)).
 
 <a id="return-value"></a>

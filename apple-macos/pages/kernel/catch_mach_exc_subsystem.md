@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/catch_mach_exc_subsystem](https://developer.apple.com/documentation/kernel/catch_mach_exc_subsystem)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/catch_mach_exc_subsystem
 
 # catch_mach_exc_subsystem
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/widgetkit/accessorywidgetgroupstyle/automatic](https://developer.apple.com/documentation/widgetkit/accessorywidgetgroupstyle/automatic)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/widgetkit/accessorywidgetgroupstyle/automatic
 
 # automatic
 
@@ -13,3 +14,10 @@ The default style that is set to circular.
 ```swift
 static let automatic: AccessoryWidgetGroupStyle
 ```
+
+## See Also
+
+### Getting styles
+
+- [circular](circular.md): Masks each content view with a circle.
+- [roundedSquare](roundedsquare.md): Masks each content view with a rounded square.

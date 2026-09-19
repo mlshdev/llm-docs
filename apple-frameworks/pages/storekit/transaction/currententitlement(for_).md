@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/currententitlement(for:)](https://developer.apple.com/documentation/storekit/transaction/currententitlement(for:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/currententitlement(for:)
 
 # currentEntitlement(for:)
 
@@ -18,13 +19,13 @@ static func currentEntitlement(for productID: String) async -> VerificationResul
 
 ## Parameters
 
-- `productID`: In-App Purchase product identifier.
+- `productID`: Apple In-App Purchase product identifier.
 
 <a id="return-value"></a>
 
 ## Return Value
 
-A [VerificationResult](../verificationresult.md) or `nil` if the customer has no current In-App Purchases.
+A [VerificationResult](../verificationresult.md) or `nil` if the customer has no current Apple In-App Purchases.
 
 ## See Also
 

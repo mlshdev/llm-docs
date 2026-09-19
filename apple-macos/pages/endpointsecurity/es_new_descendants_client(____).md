@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_new_descendants_client(_:_:)](https://developer.apple.com/documentation/endpointsecurity/es_new_descendants_client(_:_:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_new_descendants_client(_:_:)
 
 # es_new_descendants_client(\_:\_:) (Swift)
 
@@ -49,6 +50,10 @@ Process muting works, but only for processes that are already in the descendant 
 
 > Events will be delivered when a descendant submits the event or instigates it
 
+> **Note**
+
+> The caller and its descendants can’t execute setuid/setgid binaries unless the caller has an effective uid of 0. Blocked execs are killed before they run and generate no exec event; subscribers observe the process dying via ES_EVENT_TYPE_NOTIFY_EXIT.
+
 # es_new_descendants_client (Objective-C)
 
 **Framework:** Endpoint Security  
@@ -97,3 +102,7 @@ Process muting works, but only for processes that are already in the descendant 
 > **Note**
 
 > Events will be delivered when a descendant submits the event or instigates it
+
+> **Note**
+
+> The caller and its descendants can’t execute setuid/setgid binaries unless the caller has an effective uid of 0. Blocked execs are killed before they run and generate no exec event; subscribers observe the process dying via ES_EVENT_TYPE_NOTIFY_EXIT.

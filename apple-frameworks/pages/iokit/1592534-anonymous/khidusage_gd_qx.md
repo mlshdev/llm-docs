@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1592534-anonymous/khidusage_gd_qx](https://developer.apple.com/documentation/iokit/1592534-anonymous/khidusage_gd_qx)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1592534-anonymous/khidusage_gd_qx
 
 # kHIDUsage_GD_Qx
 

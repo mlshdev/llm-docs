@@ -1,9 +1,9 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/graphrag-qdrant-neo4j.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/examples/graphrag-qdrant-neo4j.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/graphrag-qdrant-neo4j.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/examples/graphrag-qdrant-neo4j.md)
 > Canonical documentation: https://qdrant.tech/documentation/examples/graphrag-qdrant-neo4j/
 
 # Build a GraphRAG Agent with Neo4j and Qdrant
 
-![image0](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/graphrag-qdrant-neo4j/image0.png)
+![image0](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/graphrag-qdrant-neo4j/image0.png)
 
 | Time: 30 min | Level: Intermediate | Output: [GitHub](https://github.com/qdrant/examples/blob/master/graphrag_neo4j/graphrag.py) |
 | ------------ | ------------------- | ------------------------------------------------------------------------------------------- |
@@ -44,7 +44,7 @@ The workflow of GraphRAG is as follows:
 2. A bottom-up clustering algorithm organizes the KG into hierarchical semantic groups. This creates meaningful segments of related information, enabling understanding at different levels of abstraction.
 3. GraphRAG uses both the KG and semantic clusters to select a relevant context for the LLM when answering queries.
 
-![image2](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/graphrag-qdrant-neo4j/image2.png)
+![image2](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/graphrag-qdrant-neo4j/image2.png)
 
 [Fig](https://arxiv.org/pdf/2404.16130) 1: A Complete Picture of GraphRAG Ingestion and Retrieval
 
@@ -68,7 +68,7 @@ This process is divided into two steps: **Ingestion**, where data is prepared an
 
 The GraphRAG ingestion pipeline combines a **Graph Database** and a **Vector Database** to improve RAG workflows.
 
-![image1](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/graphrag-qdrant-neo4j/image1.png)
+![image1](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/graphrag-qdrant-neo4j/image1.png)
 
 Fig 2: Overview of Ingestion Pipeline
 
@@ -85,7 +85,7 @@ Let’s break it down:
 
 The **Retrieval and Generation** process is designed to handle user queries by leveraging both semantic search and graph-based context extraction.
 
-![image3](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/graphrag-qdrant-neo4j/image3.png)
+![image3](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/graphrag-qdrant-neo4j/image3.png)
 
 Fig 3: Overview of Retrieval and Generation Pipeline
 
@@ -352,7 +352,7 @@ Here, we create nodes and relationships in the Neo4j graph database. Nodes are e
 
 This will ingest the data into Neo4j and on a sample dataset it looks something like this:
 
-![image4](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/graphrag-qdrant-neo4j/image4.png)
+![image4](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/graphrag-qdrant-neo4j/image4.png)
 
 Fig 4: Visualization of the Knowledge Graph
 

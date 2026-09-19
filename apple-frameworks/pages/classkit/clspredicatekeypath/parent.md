@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/classkit/clspredicatekeypath/parent](https://developer.apple.com/documentation/classkit/clspredicatekeypath/parent)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/classkit/clspredicatekeypath/parent
 
 # parent (Swift)
 

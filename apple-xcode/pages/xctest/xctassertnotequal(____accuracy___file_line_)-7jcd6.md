@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xctest/xctassertnotequal(_:_:accuracy:_:file:line:)-7jcd6](https://developer.apple.com/documentation/xctest/xctassertnotequal(_:_:accuracy:_:file:line:)-7jcd6)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xctest/xctassertnotequal(_:_:accuracy:_:file:line:)-7jcd6
 
 # XCTAssertNotEqual(\_:\_:accuracy:\_:file:line:)
 

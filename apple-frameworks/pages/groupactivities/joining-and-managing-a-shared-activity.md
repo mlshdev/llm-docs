@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/groupactivities/joining-and-managing-a-shared-activity](https://developer.apple.com/documentation/groupactivities/joining-and-managing-a-shared-activity)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/groupactivities/joining-and-managing-a-shared-activity
 
 # Joining and managing a shared activity
 

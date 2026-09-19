@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/vm_region_basic_info_data_t/1573642-max_protection](https://developer.apple.com/documentation/kernel/vm_region_basic_info_data_t/1573642-max_protection)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/vm_region_basic_info_data_t/1573642-max_protection
 
 # max_protection
 

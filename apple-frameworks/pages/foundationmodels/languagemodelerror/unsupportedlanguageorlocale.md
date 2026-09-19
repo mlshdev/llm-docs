@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelerror/unsupportedlanguageorlocale](https://developer.apple.com/documentation/foundationmodels/languagemodelerror/unsupportedlanguageorlocale)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelerror/unsupportedlanguageorlocale
 
 # LanguageModelError.UnsupportedLanguageOrLocale
 
@@ -18,13 +19,13 @@ struct UnsupportedLanguageOrLocale
 
 ### Creating an error instance
 
-- [init(languageCode:debugDescription:metadata:)](unsupportedlanguageorlocale/init%28languagecode_debugdescription_metadata_%29.md)
+- [init(languageCode:debugDescription:metadata:)](unsupportedlanguageorlocale/init%28languagecode_debugdescription_metadata_%29.md): Creates information describing a language or locale the model doesn’t support.
 
 ### Inspecting unsupported language or locale errors
 
-- [metadata](unsupportedlanguageorlocale/metadata.md)
-- [languageCode](unsupportedlanguageorlocale/languagecode.md)
-- [debugDescription](unsupportedlanguageorlocale/debugdescription.md)
+- [metadata](unsupportedlanguageorlocale/metadata.md): Additional information about the failure, keyed by name.
+- [languageCode](unsupportedlanguageorlocale/languagecode.md): The language code that the model doesn’t support.
+- [debugDescription](unsupportedlanguageorlocale/debugdescription.md): A debug description to help developers diagnose issues during development.
 
 ## Relationships
 

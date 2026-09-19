@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:restoreuserinterfaceforfullscreenexitwithcompletionhandler:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:restoreuserinterfaceforfullscreenexitwithcompletionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:restoreuserinterfaceforfullscreenexitwithcompletionhandler:)
 
 # playerViewController(\_:restoreUserInterfaceForFullScreenExitWithCompletionHandler:) (Swift)
 
@@ -25,7 +26,7 @@ optional func playerViewControllerRestoreUserInterfaceForFullScreenExit(_ player
 
 ## See Also
 
-### Responding to Full-Screen Presentations
+### Responding to full-screen presentations
 
 - [playerViewController(\_:willBeginFullScreenPresentationWithAnimationCoordinator:)](playerviewcontroller%28__willbeginfullscreenpresentationwithanimationcoordinator_%29.md): Tells the delegate when the player view controller is about to start full-screen display.
 - [playerViewController(\_:willEndFullScreenPresentationWithAnimationCoordinator:)](playerviewcontroller%28__willendfullscreenpresentationwithanimationcoordinator_%29.md): Tells the delegate when the player view controller is about to end full-screen display.
@@ -51,7 +52,7 @@ Tells the delegate to restore the app’s user interface after returning from a 
 
 ## See Also
 
-### Responding to Full-Screen Presentations
+### Responding to full-screen presentations
 
 - [playerViewController:willBeginFullScreenPresentationWithAnimationCoordinator:](playerviewcontroller%28__willbeginfullscreenpresentationwithanimationcoordinator_%29.md): Tells the delegate when the player view controller is about to start full-screen display.
 - [playerViewController:willEndFullScreenPresentationWithAnimationCoordinator:](playerviewcontroller%28__willendfullscreenpresentationwithanimationcoordinator_%29.md): Tells the delegate when the player view controller is about to end full-screen display.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoobject/getelementname](https://developer.apple.com/documentation/videodriverkit/iouservideoobject/getelementname)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoobject/getelementname
 
 # GetElementName
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the name for the given element and scope of the video object.
 
@@ -37,8 +38,8 @@ The object’s work queue synchronizes access to the value.
 
 ### Working with elements
 
-- [GetElementCategoryName](getelementcategoryname.md): Gets the category name for the given element and scope of the video object.
-- [SetElementCategoryName](setelementcategoryname.md): Sets the category name for the given element and scope of the video object.
-- [SetElementName](setelementname.md): Sets the name for the given element and scope of the video object.
-- [GetElementNumberName](getelementnumbername.md): Gets the number name for the given element and scope of the video object.
-- [SetElementNumberName](setelementnumbername.md): Sets the number name for the given element of the video object.
+- [GetElementCategoryName](getelementcategoryname.md): Beta. Gets the category name for the given element and scope of the video object.
+- [SetElementCategoryName](setelementcategoryname.md): Beta. Sets the category name for the given element and scope of the video object.
+- [SetElementName](setelementname.md): Beta. Sets the name for the given element and scope of the video object.
+- [GetElementNumberName](getelementnumbername.md): Beta. Gets the number name for the given element and scope of the video object.
+- [SetElementNumberName](setelementnumbername.md): Beta. Sets the number name for the given element of the video object.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/sec_asn1_class_mask](https://developer.apple.com/documentation/security/sec_asn1_class_mask)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/sec_asn1_class_mask
 
 # SEC_ASN1_CLASS_MASK (Swift)
 

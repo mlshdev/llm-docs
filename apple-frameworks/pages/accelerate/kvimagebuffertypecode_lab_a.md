@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/kvimagebuffertypecode_lab_a](https://developer.apple.com/documentation/accelerate/kvimagebuffertypecode_lab_a)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/kvimagebuffertypecode_lab_a
 
 # kvImageBufferTypeCode_LAB_A (Swift)
 

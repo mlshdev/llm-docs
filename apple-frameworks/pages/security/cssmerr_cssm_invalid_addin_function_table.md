@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_cssm_invalid_addin_function_table](https://developer.apple.com/documentation/security/cssmerr_cssm_invalid_addin_function_table)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_cssm_invalid_addin_function_table
 
 # CSSMERR_CSSM_INVALID_ADDIN_FUNCTION_TABLE (Swift)
 

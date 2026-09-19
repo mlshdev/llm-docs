@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremidi/midipacketlistinit(_:)](https://developer.apple.com/documentation/coremidi/midipacketlistinit(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremidi/midipacketlistinit(_:)
 
 # MIDIPacketListInit(\_:) (Swift)
 
 **Framework:** Core MIDI  
 **Kind:** Function  
-**Availability:** iOS 4.2+ (deprecated in 27.0) · iPadOS 4.2+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 4.2+ (deprecated in 27.2) · iPadOS 4.2+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Prepares a MIDIPacketList to be built up dynamically.
 
@@ -45,7 +46,7 @@ A pointer to the first MIDIPacket in the packet list.
 
 **Framework:** Core MIDI  
 **Kind:** Function  
-**Availability:** iOS 4.2+ (deprecated in 27.0) · iPadOS 4.2+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 4.2+ (deprecated in 27.2) · iPadOS 4.2+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Prepares a MIDIPacketList to be built up dynamically.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:willresumeplaybackafterusernavigatedfrom:to:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:willresumeplaybackafterusernavigatedfrom:to:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:willresumeplaybackafterusernavigatedfrom:to:)
 
 # playerViewController(\_:willResumePlaybackAfterUserNavigatedFrom:to:) (Swift)
 
@@ -30,7 +31,7 @@ You can use this method to present interstitial content before resuming playback
 
 ## See Also
 
-### Responding to Navigation Events
+### Responding to navigation events
 
 - [playerViewController(\_:timeToSeekAfterUserNavigatedFrom:to:)](playerviewcontroller%28__timetoseekafterusernavigatedfrom_to_%29.md): Tells the delegate when the user skips, scrubs, or otherwise navigates to a new time and wants to resume playback at the target time.
 - [skipToPreviousItem(for:)](skiptopreviousitem%28for_%29.md): Tells the delegate when the user requests skipping to the previous item in the timeline.
@@ -66,7 +67,7 @@ You can use this method to present interstitial content before resuming playback
 
 ## See Also
 
-### Responding to Navigation Events
+### Responding to navigation events
 
 - [playerViewController:timeToSeekAfterUserNavigatedFromTime:toTime:](playerviewcontroller%28__timetoseekafterusernavigatedfrom_to_%29.md): Tells the delegate when the user skips, scrubs, or otherwise navigates to a new time and wants to resume playback at the target time.
 - [skipToPreviousItemForPlayerViewController:](skiptopreviousitem%28for_%29.md): Tells the delegate when the user requests skipping to the previous item in the timeline.

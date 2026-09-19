@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/vmnet/operating_modes_t/vmnet_host_mode](https://developer.apple.com/documentation/vmnet/operating_modes_t/vmnet_host_mode)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/vmnet/operating_modes_t/vmnet_host_mode
 
 # operating_modes_t.VMNET_HOST_MODE (Swift)
 

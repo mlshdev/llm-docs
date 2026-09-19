@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsurl/fileurl(withpath:isdirectory:relativeto:)](https://developer.apple.com/documentation/foundation/nsurl/fileurl(withpath:isdirectory:relativeto:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsurl/fileurl(withpath:isdirectory:relativeto:)
 
 # fileURL(withPath:isDirectory:relativeTo:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1567146-re_queue_tail](https://developer.apple.com/documentation/kernel/1567146-re_queue_tail)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1567146-re_queue_tail
 
 # re_queue_tail
 

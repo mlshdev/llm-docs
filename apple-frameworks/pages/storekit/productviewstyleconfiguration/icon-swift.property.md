@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/productviewstyleconfiguration/icon-swift.property](https://developer.apple.com/documentation/storekit/productviewstyleconfiguration/icon-swift.property)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/productviewstyleconfiguration/icon-swift.property
 
 # icon
 
@@ -18,4 +19,4 @@ let icon: ProductViewStyleConfiguration.Icon
 
 ### Getting a product view’s icon
 
-- [ProductViewStyleConfiguration.Icon](icon-swift.struct.md): A type-erased icon of an in-app purchase product.
+- [ProductViewStyleConfiguration.Icon](icon-swift.struct.md): A type-erased icon of an Apple In-App Purchase product.

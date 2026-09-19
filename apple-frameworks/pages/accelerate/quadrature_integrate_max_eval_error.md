@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/quadrature_integrate_max_eval_error](https://developer.apple.com/documentation/accelerate/quadrature_integrate_max_eval_error)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/quadrature_integrate_max_eval_error
 
 # QUADRATURE_INTEGRATE_MAX_EVAL_ERROR (Swift)
 

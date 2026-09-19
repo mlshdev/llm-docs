@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/building-a-workout-app-for-iphone-and-ipad](https://developer.apple.com/documentation/healthkit/building-a-workout-app-for-iphone-and-ipad)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/building-a-workout-app-for-iphone-and-ipad
 
 # Building a workout app for iPhone and iPad
 

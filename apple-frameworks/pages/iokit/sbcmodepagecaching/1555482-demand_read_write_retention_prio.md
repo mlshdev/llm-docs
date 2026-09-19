@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/sbcmodepagecaching/1555482-demand_read_write_retention_prio](https://developer.apple.com/documentation/iokit/sbcmodepagecaching/1555482-demand_read_write_retention_prio)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/sbcmodepagecaching/1555482-demand_read_write_retention_prio
 
 # DEMAND_READ_WRITE_RETENTION_PRIORITY
 

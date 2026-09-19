@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/processor_set_load_info_data_t/1494030-load_average](https://developer.apple.com/documentation/kernel/processor_set_load_info_data_t/1494030-load_average)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/processor_set_load_info_data_t/1494030-load_average
 
 # load_average
 

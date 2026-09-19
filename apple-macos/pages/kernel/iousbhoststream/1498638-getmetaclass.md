@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iousbhoststream/1498638-getmetaclass](https://developer.apple.com/documentation/kernel/iousbhoststream/1498638-getmetaclass)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iousbhoststream/1498638-getmetaclass
 
 # getMetaClass
 

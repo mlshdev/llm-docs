@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreml/mlmodelstructure-swift.enum/program/binding/value(_:)](https://developer.apple.com/documentation/coreml/mlmodelstructure-swift.enum/program/binding/value(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreml/mlmodelstructure-swift.enum/program/binding/value(_:)
 
 # MLModelStructure.Program.Binding.value(\_:)
 

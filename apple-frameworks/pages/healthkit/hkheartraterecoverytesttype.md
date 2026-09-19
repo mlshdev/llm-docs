@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkheartraterecoverytesttype](https://developer.apple.com/documentation/healthkit/hkheartraterecoverytesttype)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkheartraterecoverytesttype
 
 # HKHeartRateRecoveryTestType (Swift)
 
@@ -21,6 +22,10 @@ enum HKHeartRateRecoveryTestType
 - [HKHeartRateRecoveryTestType.maxExercise](hkheartraterecoverytesttype/maxexercise.md): Measures a person’s actual heart-rate recovery.
 - [HKHeartRateRecoveryTestType.predictionNonExercise](hkheartraterecoverytesttype/predictionnonexercise.md): A test that estimates a person’s heart-rate recovery without using exercise.
 - [HKHeartRateRecoveryTestType.predictionSubMaxExercise](hkheartraterecoverytesttype/predictionsubmaxexercise.md): A test that estimates a person’s heart-rate recovery using lower-intensity exercise.
+
+### Enumeration Cases
+
+- [HKHeartRateRecoveryTestType.stepTest](hkheartraterecoverytesttype/steptest.md)
 
 ### Initializers
 
@@ -58,3 +63,7 @@ enum HKHeartRateRecoveryTestType : NSInteger;
 - [HKHeartRateRecoveryTestTypeMaxExercise](hkheartraterecoverytesttype/maxexercise.md): Measures a person’s actual heart-rate recovery.
 - [HKHeartRateRecoveryTestTypePredictionNonExercise](hkheartraterecoverytesttype/predictionnonexercise.md): A test that estimates a person’s heart-rate recovery without using exercise.
 - [HKHeartRateRecoveryTestTypePredictionSubMaxExercise](hkheartraterecoverytesttype/predictionsubmaxexercise.md): A test that estimates a person’s heart-rate recovery using lower-intensity exercise.
+
+### Enumeration Cases
+
+- [HKHeartRateRecoveryTestTypeStepTest](hkheartraterecoverytesttype/steptest.md)

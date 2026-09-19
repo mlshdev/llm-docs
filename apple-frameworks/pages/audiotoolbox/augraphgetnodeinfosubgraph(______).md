@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/augraphgetnodeinfosubgraph(_:_:_:)](https://developer.apple.com/documentation/audiotoolbox/augraphgetnodeinfosubgraph(_:_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/augraphgetnodeinfosubgraph(_:_:_:)
 
 # AUGraphGetNodeInfoSubGraph(\_:\_:\_:) (Swift)
 
 **Framework:** Audio Toolbox  
 **Kind:** Function  
-**Availability:** macOS 10.2+ (deprecated in 27.0)
+**Availability:** macOS 10.2+ (deprecated in 27.2)
 
 Gets the audio processing subgraph object represented by a node.
 
@@ -52,7 +53,7 @@ A result code.
 
 **Framework:** Audio Toolbox  
 **Kind:** Function  
-**Availability:** macOS 10.2+ (deprecated in 27.0)
+**Availability:** macOS 10.2+ (deprecated in 27.2)
 
 Gets the audio processing subgraph object represented by a node.
 

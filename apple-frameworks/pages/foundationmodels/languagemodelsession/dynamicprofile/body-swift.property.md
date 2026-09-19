@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelsession/dynamicprofile/body-swift.property](https://developer.apple.com/documentation/foundationmodels/languagemodelsession/dynamicprofile/body-swift.property)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelsession/dynamicprofile/body-swift.property
 
 # body
 
@@ -19,6 +20,6 @@ The content of the dynamic profile.
 ### Implementing a dynamic profile
 
 - [Body](body-swift.associatedtype.md): The type of dynamic profile that represent this profile.
-- [LanguageModelSession.DynamicProfile.DynamicProfile](dynamicprofile.md)
-- [LanguageModelSession.DynamicProfile.Profile](profile.md)
-- [LanguageModelSession.DynamicProfile.SessionProperty](sessionproperty.md)
+- [LanguageModelSession.DynamicProfile.DynamicProfile](dynamicprofile.md): The dynamic profile type that a dynamic profile’s body composes.
+- [LanguageModelSession.DynamicProfile.Profile](profile.md): The profile type that a dynamic profile activates.
+- [LanguageModelSession.DynamicProfile.SessionProperty](sessionproperty.md): A property wrapper that provides access to a session property from within a dynamic profile.

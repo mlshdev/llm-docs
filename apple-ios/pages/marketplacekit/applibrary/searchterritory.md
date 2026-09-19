@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/applibrary/searchterritory](https://developer.apple.com/documentation/marketplacekit/applibrary/searchterritory)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/marketplacekit/applibrary/searchterritory
 
 # searchTerritory
 
@@ -24,4 +25,4 @@ This property is an optional two-letter country code in the ISO 3166-1 alpha-2 s
 
 ### Filtering app searches
 
-- [setSearchTerritory(\_:)](setsearchterritory%28__%29.md): Defines a country code that iOS uses to filter the search results of apps that aren’t available in that country.
+- [setSearchTerritory(\_:)](setsearchterritory%28__%29.md): Defines a country code that the system uses to filter the search results of apps that aren’t available in that country.

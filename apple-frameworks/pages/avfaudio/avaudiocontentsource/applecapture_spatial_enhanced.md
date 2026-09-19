@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avaudiocontentsource/applecapture_spatial_enhanced](https://developer.apple.com/documentation/avfaudio/avaudiocontentsource/applecapture_spatial_enhanced)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiocontentsource/applecapture_spatial_enhanced
 
 # AVAudioContentSource.appleCapture_Spatial_Enhanced (Swift)
 

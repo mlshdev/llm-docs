@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/apptrackingtransparency/attrackingmanager/authorizationstatus/authorized](https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/authorizationstatus/authorized)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/authorizationstatus/authorized
 
 # ATTrackingManager.AuthorizationStatus.authorized (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Case  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
 
-The value that returns if the user authorizes access to app-related data for tracking the user or the device.
+A value that indicates someone grants your app permission to access data your app can use to track a person or device.
 
 ## Declaration
 
@@ -14,19 +15,13 @@ The value that returns if the user authorizes access to app-related data for tra
 case authorized
 ```
 
-<a id="discussion"></a>
-
-## Discussion
-
-This setting allows users to opt in or out of allowing apps to request user consent to access app-related data for tracking the user or the device. End users can revoke permission at any time through the Allow Apps to Request to Track privacy setting on the device.
-
 ## See Also
 
-### Cases
+### Determining the status
 
-- [ATTrackingManager.AuthorizationStatus.denied](denied.md): The value that returns if the user denies authorization to access app-related data for tracking the user or the device.
-- [ATTrackingManager.AuthorizationStatus.notDetermined](notdetermined.md): The value that returns when the app can’t determine the user’s authorization status for access to app-related data for tracking the user or the device.
-- [ATTrackingManager.AuthorizationStatus.restricted](restricted.md): The value that returns if authorization to access app-related data for tracking the user or the device has a restricted status.
+- [ATTrackingManager.AuthorizationStatus.denied](denied.md): A value that indicates someone denies your app permission to access data your app can use to track a person or device.
+- [ATTrackingManager.AuthorizationStatus.notDetermined](notdetermined.md): A value that indicates the person hasn’t responded to a tracking authorization request.
+- [ATTrackingManager.AuthorizationStatus.restricted](restricted.md): A value that indicates the system restricts tracking authorization.
 
 # ATTrackingManagerAuthorizationStatusAuthorized (Objective-C)
 
@@ -34,7 +29,7 @@ This setting allows users to opt in or out of allowing apps to request user cons
 **Kind:** Enumeration Case  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
 
-The value that returns if the user authorizes access to app-related data for tracking the user or the device.
+A value that indicates someone grants your app permission to access data your app can use to track a person or device.
 
 ## Declaration
 
@@ -42,16 +37,10 @@ The value that returns if the user authorizes access to app-related data for tra
 ATTrackingManagerAuthorizationStatusAuthorized
 ```
 
-<a id="discussion"></a>
-
-## Discussion
-
-This setting allows users to opt in or out of allowing apps to request user consent to access app-related data for tracking the user or the device. End users can revoke permission at any time through the Allow Apps to Request to Track privacy setting on the device.
-
 ## See Also
 
-### Cases
+### Determining the status
 
-- [ATTrackingManagerAuthorizationStatusDenied](denied.md): The value that returns if the user denies authorization to access app-related data for tracking the user or the device.
-- [ATTrackingManagerAuthorizationStatusNotDetermined](notdetermined.md): The value that returns when the app can’t determine the user’s authorization status for access to app-related data for tracking the user or the device.
-- [ATTrackingManagerAuthorizationStatusRestricted](restricted.md): The value that returns if authorization to access app-related data for tracking the user or the device has a restricted status.
+- [ATTrackingManagerAuthorizationStatusDenied](denied.md): A value that indicates someone denies your app permission to access data your app can use to track a person or device.
+- [ATTrackingManagerAuthorizationStatusNotDetermined](notdetermined.md): A value that indicates the person hasn’t responded to a tracking authorization request.
+- [ATTrackingManagerAuthorizationStatusRestricted](restricted.md): A value that indicates the system restricts tracking authorization.

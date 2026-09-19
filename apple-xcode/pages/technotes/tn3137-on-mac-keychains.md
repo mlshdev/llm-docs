@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/technotes/tn3137-on-mac-keychains](https://developer.apple.com/documentation/technotes/tn3137-on-mac-keychains)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/technotes/tn3137-on-mac-keychains
 
 # TN3137: On Mac keychain APIs and implementations
 

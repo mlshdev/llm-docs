@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applenewsapi/get-articles-_articleid_](https://developer.apple.com/documentation/applenewsapi/get-articles-_articleid_)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applenewsapi/get-articles-_articleid_
 
 # Read Article Information
 
@@ -53,6 +54,7 @@ Authorization: HHMAC; key="1e3gfc5e-e9f8-4232-a6be-17bf40edad09"; signature="irq
 **Response**
 
 ```json
+
 
 HTTP/1.1 200 OK
 Date: Sat, 28 Feb 2015 00:51:41 GMT

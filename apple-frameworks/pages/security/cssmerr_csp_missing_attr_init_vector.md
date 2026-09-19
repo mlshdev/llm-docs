@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_csp_missing_attr_init_vector](https://developer.apple.com/documentation/security/cssmerr_csp_missing_attr_init_vector)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_csp_missing_attr_init_vector
 
 # CSSMERR_CSP_MISSING_ATTR_INIT_VECTOR (Swift)
 

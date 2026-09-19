@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/assistantschemas/photosenum/assettype](https://developer.apple.com/documentation/appintents/assistantschemas/photosenum/assettype)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/assistantschemas/photosenum/assettype
 
 # assetType
 
@@ -25,6 +26,7 @@ Use Swift macros that generate additional properties and add protocol conformanc
 enum PhotoAssetType: AppEnum {
     case photo
     case video
+
 
     static var caseDisplayRepresentations: [PhotoAssetType: AppIntents.DisplayRepresentation] = [
         .photo: "Photo",

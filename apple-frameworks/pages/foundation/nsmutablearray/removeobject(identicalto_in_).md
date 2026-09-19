@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsmutablearray/removeobject(identicalto:in:)](https://developer.apple.com/documentation/foundation/nsmutablearray/removeobject(identicalto:in:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsmutablearray/removeobject(identicalto:in:)
 
 # removeObject(identicalTo:in:) (Swift)
 

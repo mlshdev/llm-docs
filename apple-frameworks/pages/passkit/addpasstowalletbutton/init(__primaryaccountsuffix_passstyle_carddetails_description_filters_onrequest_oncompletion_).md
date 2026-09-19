@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/passkit/addpasstowalletbutton/init(_:primaryaccountsuffix:passstyle:carddetails:description:filters:onrequest:oncompletion:)](https://developer.apple.com/documentation/passkit/addpasstowalletbutton/init(_:primaryaccountsuffix:passstyle:carddetails:description:filters:onrequest:oncompletion:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/passkit/addpasstowalletbutton/init(_:primaryaccountsuffix:passstyle:carddetails:description:filters:onrequest:oncompletion:)
 
 # init(\_:primaryAccountSuffix:passStyle:cardDetails:description:filters:onRequest:onCompletion:)
 

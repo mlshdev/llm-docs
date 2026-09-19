@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ioregistryentry/3538558-runpropertyactionblock](https://developer.apple.com/documentation/kernel/ioregistryentry/3538558-runpropertyactionblock)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ioregistryentry/3538558-runpropertyactionblock
 
 # runPropertyActionBlock
 

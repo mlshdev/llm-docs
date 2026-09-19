@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photos/phassetresource/pixelwidth](https://developer.apple.com/documentation/photos/phassetresource/pixelwidth)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photos/phassetresource/pixelwidth
 
 # pixelWidth (Swift)
 
@@ -20,13 +21,13 @@ var pixelWidth: Int { get }
 
 - [type](type.md): The relationship of an asset resource to its owning asset.
 - [PHAssetResourceType](../phassetresourcetype.md): Describes the relationship of an asset resource to its owning asset.
-- [contentType](contenttype.md): The content type of the data associated with this asset resource (the data can be retrieved via `PHAssetResourceManager`)
+- [contentType](contenttype.md): The content type of the data associated with this asset resource
 - [assetLocalIdentifier](assetlocalidentifier.md): The unique identifier the system associates for a local asset object.
 - [uniformTypeIdentifier](uniformtypeidentifier.md): Deprecated. The uniform type identifier for the asset resource’s image or video data.
 - [originalFilename](originalfilename.md): Deprecated. The original filename of the asset resource from when it was created or imported.
 - [filename](filename.md): The filename associated with this asset resource (if any)
 - [pixelHeight](pixelheight.md): The height of the resource, in pixels.
-- [dataSize](datasize-5lxva.md): The size of the resource in bytes if known, `nil` if unavailable (may not be available until resource download/processing is complete)
+- [dataSize](datasize-5lxva.md): The size of the resource in bytes
 
 # pixelWidth (Objective-C)
 
@@ -48,10 +49,10 @@ The width of the resource, in pixels.
 
 - [type](type.md): The relationship of an asset resource to its owning asset.
 - [PHAssetResourceType](../phassetresourcetype.md): Describes the relationship of an asset resource to its owning asset.
-- [contentType](contenttype.md): The content type of the data associated with this asset resource (the data can be retrieved via `PHAssetResourceManager`)
+- [contentType](contenttype.md): The content type of the data associated with this asset resource
 - [assetLocalIdentifier](assetlocalidentifier.md): The unique identifier the system associates for a local asset object.
 - [uniformTypeIdentifier](uniformtypeidentifier.md): Deprecated. The uniform type identifier for the asset resource’s image or video data.
 - [originalFilename](originalfilename.md): Deprecated. The original filename of the asset resource from when it was created or imported.
 - [filename](filename.md): The filename associated with this asset resource (if any)
 - [pixelHeight](pixelheight.md): The height of the resource, in pixels.
-- [dataSize](https://developer.apple.com/documentation/photos/phassetresource/datasize-6cf5k): The size of the resource in bytes if known, `nil` if unavailable (may not be available until resource download/processing is complete)
+- [dataSize](https://developer.apple.com/documentation/photos/phassetresource/datasize-6cf5k): The size of the resource in bytes

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_keyblob_raw_format_openssh](https://developer.apple.com/documentation/security/cssm_keyblob_raw_format_openssh)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_keyblob_raw_format_openssh
 
 # CSSM_KEYBLOB_RAW_FORMAT_OPENSSH (Swift)
 

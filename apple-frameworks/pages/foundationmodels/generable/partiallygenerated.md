@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generable/partiallygenerated](https://developer.apple.com/documentation/foundationmodels/generable/partiallygenerated)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generable/partiallygenerated
 
 # PartiallyGenerated
 
@@ -18,7 +19,7 @@ associatedtype PartiallyGenerated : ConvertibleFromGeneratedContent = Self
 
 ### Generable Implementations
 
-- [Generable.PartiallyGenerated](partiallygenerated-swift.typealias.md): A representation of partially generated content
+- [Generable.PartiallyGenerated](partiallygenerated-swift.typealias.md): A representation of partially generated content, which defaults to the conforming type itself.
 
 ## See Also
 

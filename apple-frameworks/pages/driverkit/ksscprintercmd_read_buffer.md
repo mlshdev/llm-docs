@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/ksscprintercmd_read_buffer](https://developer.apple.com/documentation/driverkit/ksscprintercmd_read_buffer)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/ksscprintercmd_read_buffer
 
 # kSSCPrinterCmd_READ_BUFFER
 

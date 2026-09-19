@@ -1,9 +1,9 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-tools/pulumi.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/cloud-tools/pulumi.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-tools/pulumi.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/cloud-tools/pulumi.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud-tools/pulumi/
 
 # Pulumi
 
-![Pulumi Logo](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/platforms/pulumi/pulumi-logo.png)
+![Pulumi Logo](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/platforms/pulumi/pulumi-logo.png)
 
 Pulumi is an open source infrastructure as code tool for creating, deploying, and managing cloud infrastructure.
 

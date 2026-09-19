@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/privatecloudcomputelanguagemodel/error](https://developer.apple.com/documentation/foundationmodels/privatecloudcomputelanguagemodel/error)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/privatecloudcomputelanguagemodel/error
 
 # PrivateCloudComputeLanguageModel.Error
 
@@ -24,12 +25,12 @@ enum Error
 ### Network failure error
 
 - [PrivateCloudComputeLanguageModel.Error.networkFailure(\_:)](error/networkfailure%28__%29.md): An error that occurs when a network is available, but PCC is inaccessible.
-- [PrivateCloudComputeLanguageModel.Error.NetworkFailure](error/networkfailure.md)
+- [PrivateCloudComputeLanguageModel.Error.NetworkFailure](error/networkfailure.md): Information about a network problem that prevented a request from completing.
 
 ### Service unavailable error
 
 - [PrivateCloudComputeLanguageModel.Error.serviceUnavailable(\_:)](error/serviceunavailable%28__%29.md): Services are unavailable.
-- [PrivateCloudComputeLanguageModel.Error.ServiceUnavailable](error/serviceunavailable.md)
+- [PrivateCloudComputeLanguageModel.Error.ServiceUnavailable](error/serviceunavailable.md): Information about the model service being unable to handle a request.
 
 ## Relationships
 

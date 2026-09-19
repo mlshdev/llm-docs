@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideodriver/bufferqueuechange](https://developer.apple.com/documentation/videodriverkit/iouservideodriver/bufferqueuechange)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideodriver/bufferqueuechange
 
 # BufferQueueChange
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,4 +19,4 @@ kern_return_t BufferQueueChange(IOUserVideoObjectID in_device_id, uint64_t in_ch
 
 ### Working with buffers
 
-- [OutputBufferNotification](outputbuffernotification.md)
+- [OutputBufferNotification](outputbuffernotification.md): Beta.

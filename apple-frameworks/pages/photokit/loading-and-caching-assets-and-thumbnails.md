@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photokit/loading-and-caching-assets-and-thumbnails](https://developer.apple.com/documentation/photokit/loading-and-caching-assets-and-thumbnails)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photokit/loading-and-caching-assets-and-thumbnails
 
 # Loading and Caching Assets and Thumbnails
 

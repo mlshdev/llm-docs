@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gss/gss_krb5_nt_principal](https://developer.apple.com/documentation/gss/gss_krb5_nt_principal)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/gss/gss_krb5_nt_principal
 
 # GSS_KRB5_NT_PRINCIPAL
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/ar_reference_object_get_input_file_path](https://developer.apple.com/documentation/arkit/ar_reference_object_get_input_file_path)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/ar_reference_object_get_input_file_path
 
 # ar_reference_object_get_input_file_path
 

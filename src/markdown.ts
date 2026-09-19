@@ -605,6 +605,21 @@ export function normalizeNewlines(value: string): string {
   return value.replace(/\r\n?/g, "\n");
 }
 
+// Keep the generator's validators and adapters aligned when upstreams use
+// private editor or feedback schemes that readers cannot follow.
+export function isPublishableUrl(url: string, kind: "link" | "image"): boolean {
+  const scheme = url.match(/^([a-z][a-z0-9+.-]*):/i)?.[1]?.toLowerCase();
+  if (!scheme) {
+    return true;
+  }
+  return (
+    scheme === "http" ||
+    scheme === "https" ||
+    (kind === "link" && (scheme === "mailto" || scheme === "tel")) ||
+    (kind === "image" && scheme === "data")
+  );
+}
+
 export function githubBlobUrl(
   repository: string,
   ref: string,

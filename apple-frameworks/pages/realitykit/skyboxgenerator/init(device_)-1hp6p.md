@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/skyboxgenerator/init(device:)-1hp6p](https://developer.apple.com/documentation/realitykit/skyboxgenerator/init(device:)-1hp6p)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/skyboxgenerator/init(device:)-1hp6p
 
 # init(device:)
 

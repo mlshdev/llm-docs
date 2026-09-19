@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/charts/rulemark/init(xstart:xend:y:)-6jsoi](https://developer.apple.com/documentation/charts/rulemark/init(xstart:xend:y:)-6jsoi)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/charts/rulemark/init(xstart:xend:y:)-6jsoi
 
 # init(xStart:xEnd:y:)
 

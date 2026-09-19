@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/vm_info_region_64_t/1571731-vir_protection](https://developer.apple.com/documentation/kernel/vm_info_region_64_t/1571731-vir_protection)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/vm_info_region_64_t/1571731-vir_protection
 
 # vir_protection
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/network/nw_path_unsatisfied_reason_cellular_denied](https://developer.apple.com/documentation/network/nw_path_unsatisfied_reason_cellular_denied)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/network/nw_path_unsatisfied_reason_cellular_denied
 
 # nw_path_unsatisfied_reason_cellular_denied (Swift)
 

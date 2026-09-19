@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/appdistributor/current](https://developer.apple.com/documentation/marketplacekit/appdistributor/current)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/marketplacekit/appdistributor/current
 
 # current
 
@@ -23,6 +24,6 @@ static var current: AppDistributor { get async throws }
 
 ## Discussion
 
-iOS sets the value of this property to an [AppDistributor](../appdistributor.md) enumeration case that describes the running app’s manner of distribution. If your app installs from more than one source, you can implement conditional code to do something different based on the value of this property at runtime, for example, your app can display a different graphic.
+The system sets the value of this property to an [AppDistributor](../appdistributor.md) enumeration case that describes the running app’s manner of distribution. If your app installs from more than one source, you can implement conditional code to do something different based on the value of this property at runtime; for example, your app can display a different graphic.
 
 For more information, see [Distributing your app on an alternative app marketplace](../distributing-your-app-on-an-alternative-marketplace.md).

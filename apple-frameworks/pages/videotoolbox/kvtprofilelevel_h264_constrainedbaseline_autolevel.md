@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videotoolbox/kvtprofilelevel_h264_constrainedbaseline_autolevel](https://developer.apple.com/documentation/videotoolbox/kvtprofilelevel_h264_constrainedbaseline_autolevel)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videotoolbox/kvtprofilelevel_h264_constrainedbaseline_autolevel
 
 # kVTProfileLevel_H264_ConstrainedBaseline_AutoLevel (Swift)
 

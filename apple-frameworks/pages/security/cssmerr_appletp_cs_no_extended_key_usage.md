@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_appletp_cs_no_extended_key_usage](https://developer.apple.com/documentation/security/cssmerr_appletp_cs_no_extended_key_usage)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_appletp_cs_no_extended_key_usage
 
 # CSSMERR_APPLETP_CS_NO_EXTENDED_KEY_USAGE (Swift)
 

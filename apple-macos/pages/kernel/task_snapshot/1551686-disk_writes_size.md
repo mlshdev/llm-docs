@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/task_snapshot/1551686-disk_writes_size](https://developer.apple.com/documentation/kernel/task_snapshot/1551686-disk_writes_size)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/task_snapshot/1551686-disk_writes_size
 
 # disk_writes_size
 

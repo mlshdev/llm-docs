@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/os/customizing-logging-behavior-while-debugging](https://developer.apple.com/documentation/os/customizing-logging-behavior-while-debugging)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/os/customizing-logging-behavior-while-debugging
 
 # Customizing Logging Behavior While Debugging
 

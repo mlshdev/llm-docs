@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/installing-the-command-line-tools](https://developer.apple.com/documentation/xcode/installing-the-command-line-tools)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/installing-the-command-line-tools
 
 # Installing the command-line tools
 
@@ -76,11 +77,11 @@ You can find the entire list of command-line tools the package includes at `/Lib
 
 To update the Command Line Tools for Xcode package, install the latest release for the current macOS. The update replaces the old version of the package.
 
-To install new releases of the package, use [Software Update](https://support.apple.com/en-us/108382) in System Settings or the [softwareupdate](x-man-page://softwareupdate) command. Software Update and the command find and display updates of the package that are compatible with your macOS.
+To install new releases of the package, use [Software Update](https://support.apple.com/en-us/108382) in System Settings or the softwareupdate command. Software Update and the command find and display updates of the package that are compatible with your macOS.
 
 > **Note**
 
-> After a macOS upgrade, check for new releases of the command-line tool package using Software Update or the [`softwareupdate`](x-man-page://softwareupdate) command. The version of the installed package may be incompatible with the new macOS.
+> After a macOS upgrade, check for new releases of the command-line tool package using Software Update or the `softwareupdate` command. The version of the installed package may be incompatible with the new macOS.
 
 <a id="Uninstall-the-Command-Line-Tools-for-Xcode-package"></a>
 

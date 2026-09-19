@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlviewport/init(originx:originy:width:height:znear:zfar:)](https://developer.apple.com/documentation/metal/mtlviewport/init(originx:originy:width:height:znear:zfar:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtlviewport/init(originx:originy:width:height:znear:zfar:)
 
 # init(originX:originY:width:height:znear:zfar:)
 

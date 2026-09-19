@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/net_event_data/1492534-if_family](https://developer.apple.com/documentation/kernel/net_event_data/1492534-if_family)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/net_event_data/1492534-if_family
 
 # if_family
 

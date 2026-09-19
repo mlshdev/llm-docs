@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/sharedwithyou/swremoveparticipantalert/show(withparticipant:highlight:in:)](https://developer.apple.com/documentation/sharedwithyou/swremoveparticipantalert/show(withparticipant:highlight:in:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swremoveparticipantalert/show(withparticipant:highlight:in:)
 
 # show(withParticipant:highlight:in:) (Swift)
 

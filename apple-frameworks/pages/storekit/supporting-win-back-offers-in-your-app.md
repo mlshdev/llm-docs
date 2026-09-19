@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/supporting-win-back-offers-in-your-app](https://developer.apple.com/documentation/storekit/supporting-win-back-offers-in-your-app)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/supporting-win-back-offers-in-your-app
 
 # Supporting win-back offers in your app (Swift)
 
@@ -44,7 +45,7 @@ Set up win-back offers in App Store Connect by following the instructions in [Se
 When you set up your win-back offer, you can also set the Streamlined Purchasing option in App Store Connect. This setting applies to all win-back offers and contingent pricing in your app. It affects how your app handles a win-back offer redemption, as follows:
 
 - With Streamlined Purchasing on (default), the customer completes the win-back offer purchase outside of your app. Your app receives a completed purchase transaction in the [updates](transaction/updates.md) sequence if it’s running, and in the [all](transaction/all.md) or [currentEntitlements](transaction/currententitlements.md) sequences otherwise. Your app is responsible for unlocking the purchased product, as usual.
-- With Streamlined Purchasing turned off, your app has the opportunity to perform processing related to the win-back offer before it enables the customer to complete the purchase. The workflow starts when the customer initiates the purchase outside of your app. The system prompts them to install the app if it isn’t already installed. Your app receives a\_ \_purchase intent in the [intents](purchaseintent/intents.md) sequence, instead of a transaction, and must use the [PurchaseIntent](purchaseintent.md) API to complete the purchase.
+- With Streamlined Purchasing turned off, your app has the opportunity to perform processing related to the win-back offer before it enables the customer to complete the purchase. The workflow starts when the customer initiates the purchase outside of your app. The system prompts them to install the app if it isn’t already installed. Your app receives a purchase intent in the [intents](purchaseintent/intents.md) sequence, instead of a transaction, and must use the [PurchaseIntent](purchaseintent.md) API to complete the purchase.
 - If customers redeem a win-back offer through the manage subscriptions page in their Apple account, the redemption always behaves as if Streamline Purchasing is on, and your app receives a completed purchase transaction.
 
 > **Important**
@@ -186,7 +187,7 @@ Set up win-back offers in App Store Connect by following the instructions in [Se
 When you set up your win-back offer, you can also set the Streamlined Purchasing option in App Store Connect. This setting applies to all win-back offers and contingent pricing in your app. It affects how your app handles a win-back offer redemption, as follows:
 
 - With Streamlined Purchasing on (default), the customer completes the win-back offer purchase outside of your app. Your app receives a completed purchase transaction in the [updates](transaction/updates.md) sequence if it’s running, and in the [all](transaction/all.md) or [currentEntitlements](transaction/currententitlements.md) sequences otherwise. Your app is responsible for unlocking the purchased product, as usual.
-- With Streamlined Purchasing turned off, your app has the opportunity to perform processing related to the win-back offer before it enables the customer to complete the purchase. The workflow starts when the customer initiates the purchase outside of your app. The system prompts them to install the app if it isn’t already installed. Your app receives a\_ \_purchase intent in the [intents](purchaseintent/intents.md) sequence, instead of a transaction, and must use the [PurchaseIntent](purchaseintent.md) API to complete the purchase.
+- With Streamlined Purchasing turned off, your app has the opportunity to perform processing related to the win-back offer before it enables the customer to complete the purchase. The workflow starts when the customer initiates the purchase outside of your app. The system prompts them to install the app if it isn’t already installed. Your app receives a purchase intent in the [intents](purchaseintent/intents.md) sequence, instead of a transaction, and must use the [PurchaseIntent](purchaseintent.md) API to complete the purchase.
 - If customers redeem a win-back offer through the manage subscriptions page in their Apple account, the redemption always behaves as if Streamline Purchasing is on, and your app receives a completed purchase transaction.
 
 > **Important**

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplication/identifier](https://developer.apple.com/documentation/clockkit/clkcomplication/identifier)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplication/identifier
 
 # identifier (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 An identifier that specifies a complication if your app supports multiple complications per family.
 
@@ -46,7 +47,7 @@ Because default identifiers can come from shared watch faces, your data sourceâ€
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 An identifier that specifies a complication if your app supports multiple complications per family.
 

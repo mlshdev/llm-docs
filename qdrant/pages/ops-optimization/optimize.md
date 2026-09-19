@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/ops-optimization/optimize.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/ops-optimization/optimize.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/ops-optimization/optimize.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/ops-optimization/optimize.md)
 > Canonical documentation: https://qdrant.tech/documentation/ops-optimization/optimize/
 
 # Optimizing Qdrant Performance: Three Scenarios
@@ -11,7 +11,7 @@ This guide will walk you three main optimization strategies:
 - High Precision & Low Memory Usage
 - High Precision & High Speed Search
 
-![qdrant resource tradeoffs](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/docs/tradeoff.png)
+![qdrant resource tradeoffs](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/docs/tradeoff.png)
 
 > **Note**
 >

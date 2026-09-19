@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1646699-anonymous/ksense_key_blank_check](https://developer.apple.com/documentation/kernel/1646699-anonymous/ksense_key_blank_check)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1646699-anonymous/ksense_key_blank_check
 
 # kSENSE_KEY_BLANK_CHECK
 

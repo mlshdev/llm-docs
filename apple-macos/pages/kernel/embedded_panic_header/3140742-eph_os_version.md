@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/embedded_panic_header/3140742-eph_os_version](https://developer.apple.com/documentation/kernel/embedded_panic_header/3140742-eph_os_version)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/embedded_panic_header/3140742-eph_os_version
 
 # eph_os_version
 

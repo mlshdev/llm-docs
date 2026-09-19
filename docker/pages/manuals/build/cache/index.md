@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/cache/_index.md](https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/build/cache/_index.md)
+> Pinned source for Docker main: [content/manuals/build/cache/_index.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/build/cache/_index.md)
 
 When you build the same Docker image multiple times, knowing how to optimize
 the build cache is a great tool for making sure the builds run fast.
@@ -24,7 +24,7 @@ Each instruction in this Dockerfile translates to a layer in your final image.
 You can think of image layers as a stack, with each layer adding more content
 on top of the layers that came before it:
 
-![Image layer diagram](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/build/images/cache-stack.png)
+![Image layer diagram](https://raw.githubusercontent.com/docker/docs/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/build/images/cache-stack.png)
 
 Whenever a layer changes, that layer will need to be re-built. For example,
 suppose you make a change to your program in the `main.c` file. After this
@@ -36,7 +36,7 @@ If a layer changes, all other layers that come after it are also affected. When
 the layer with the `COPY` command gets invalidated, all layers that follow will
 need to run again, too:
 
-![Image layer diagram, showing cache invalidation](https://raw.githubusercontent.com/docker/docs/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/build/images/cache-stack-invalidated.png)
+![Image layer diagram, showing cache invalidation](https://raw.githubusercontent.com/docker/docs/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/build/images/cache-stack-invalidated.png)
 
 And that's the Docker build cache in a nutshell. Once a layer changes, then all
 downstream layers need to be rebuilt as well. Even if they wouldn't build

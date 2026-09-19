@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/1469436-virtual_machine_control_structur-enum](https://developer.apple.com/documentation/hypervisor/1469436-virtual_machine_control_structur-enum)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/1469436-virtual_machine_control_structur-enum
 
 # Virtual Machine control structure (VMCS) Field IDs (Swift)
 

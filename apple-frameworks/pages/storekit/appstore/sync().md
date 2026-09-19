@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/appstore/sync()](https://developer.apple.com/documentation/storekit/appstore/sync())
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/appstore/sync()
 
 # sync()
 
@@ -18,7 +19,7 @@ static func sync() async throws
 
 ## Discussion
 
-Include some mechanism in your app, such as a Restore Purchases button, to let users restore their in-app purchases. In rare cases when a user suspects the app isn’t showing all the transactions, call [sync()](sync%28%29.md). By calling [sync()](sync%28%29.md), you force the app to obtain transaction information and subscription status from the App Store.
+Include some mechanism in your app, such as a Restore Purchases button, to let users restore their Apple In-App Purchases. In rare cases when a user suspects the app isn’t showing all the transactions, call [sync()](sync%28%29.md). By calling [sync()](sync%28%29.md), you force the app to obtain transaction information and subscription status from the App Store.
 
 > **Important**
 

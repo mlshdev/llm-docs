@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/network/nwprotocolquic/options/direction-swift.enum/unidirectional](https://developer.apple.com/documentation/network/nwprotocolquic/options/direction-swift.enum/unidirectional)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolquic/options/direction-swift.enum/unidirectional
 
 # NWProtocolQUIC.Options.Direction.unidirectional
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skproductstorepromotioncontroller/update(storepromotionorder:completionhandler:)](https://developer.apple.com/documentation/storekit/skproductstorepromotioncontroller/update(storepromotionorder:completionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skproductstorepromotioncontroller/update(storepromotionorder:completionhandler:)
 
 # update(storePromotionOrder:completionHandler:) (Swift)
 
@@ -22,17 +23,17 @@ func update(promotionOrder: [SKProduct]) async throws
 
 ## Mentioned In
 
-- [Promoting In-App Purchases](../promoting-in-app-purchases.md)
+- [Promoting Apple In-App Purchases](../promoting-in-app-purchases.md)
 
 <a id="Discussion"></a>
 
 ## Discussion
 
-The default order of promoted in-app purchase products is set in App Store Connect. You can override this order per device. For example, you can promote an in-app purchase product that unlocks a specific level in your game when a user reaches the level immediately before the specified level.
+The default order of promoted Apple In-App Purchase products is set in App Store Connect. You can override this order per device. For example, you can promote an Apple In-App Purchase product that unlocks a specific level in your game when a user reaches the level immediately before the specified level.
 
-To override the default product order, put the product information for the subset of products you want to reorder into an array, in the order you want them to appear in. Pass the array to the [update(storePromotionOrder:completionHandler:)](update%28storepromotionorder_completionhandler_%29.md) method. The products in the array are shown at the beginning of the list, followed by the remaining in-app purchase products, which are listed in the same relative order that you set in App Store Connect.
+To override the default product order, put the product information for the subset of products you want to reorder into an array, in the order you want them to appear in. Pass the array to the [update(storePromotionOrder:completionHandler:)](update%28storepromotionorder_completionhandler_%29.md) method. The products in the array are shown at the beginning of the list, followed by the remaining Apple In-App Purchase products, which are listed in the same relative order that you set in App Store Connect.
 
-To cancel order overrides, send an empty product array to the [update(storePromotionOrder:completionHandler:)](update%28storepromotionorder_completionhandler_%29.md) method.  The in-app purchase products will be displayed in the default order.
+To cancel order overrides, send an empty product array to the [update(storePromotionOrder:completionHandler:)](update%28storepromotionorder_completionhandler_%29.md) method.  The Apple In-App Purchase products will be displayed in the default order.
 
 ## See Also
 
@@ -58,17 +59,17 @@ Overrides the promoted product order on this device.
 
 ## Mentioned In
 
-- [Promoting In-App Purchases](../promoting-in-app-purchases.md)
+- [Promoting Apple In-App Purchases](../promoting-in-app-purchases.md)
 
 <a id="Discussion"></a>
 
 ## Discussion
 
-The default order of promoted in-app purchase products is set in App Store Connect. You can override this order per device. For example, you can promote an in-app purchase product that unlocks a specific level in your game when a user reaches the level immediately before the specified level.
+The default order of promoted Apple In-App Purchase products is set in App Store Connect. You can override this order per device. For example, you can promote an Apple In-App Purchase product that unlocks a specific level in your game when a user reaches the level immediately before the specified level.
 
-To override the default product order, put the product information for the subset of products you want to reorder into an array, in the order you want them to appear in. Pass the array to the [updateStorePromotionOrder:completionHandler:](update%28storepromotionorder_completionhandler_%29.md) method. The products in the array are shown at the beginning of the list, followed by the remaining in-app purchase products, which are listed in the same relative order that you set in App Store Connect.
+To override the default product order, put the product information for the subset of products you want to reorder into an array, in the order you want them to appear in. Pass the array to the [updateStorePromotionOrder:completionHandler:](update%28storepromotionorder_completionhandler_%29.md) method. The products in the array are shown at the beginning of the list, followed by the remaining Apple In-App Purchase products, which are listed in the same relative order that you set in App Store Connect.
 
-To cancel order overrides, send an empty product array to the [updateStorePromotionOrder:completionHandler:](update%28storepromotionorder_completionhandler_%29.md) method.  The in-app purchase products will be displayed in the default order.
+To cancel order overrides, send an empty product array to the [updateStorePromotionOrder:completionHandler:](update%28storepromotionorder_completionhandler_%29.md) method.  The Apple In-App Purchase products will be displayed in the default order.
 
 ## See Also
 

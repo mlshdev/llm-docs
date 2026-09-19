@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/coremedia_cmbaseclass_version_is_pointer_aligned](https://developer.apple.com/documentation/coremedia/coremedia_cmbaseclass_version_is_pointer_aligned)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremedia/coremedia_cmbaseclass_version_is_pointer_aligned
 
 # COREMEDIA_CMBASECLASS_VERSION_IS_POINTER_ALIGNED (Swift)
 

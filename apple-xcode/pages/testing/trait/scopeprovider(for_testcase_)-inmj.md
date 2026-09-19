@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/testing/trait/scopeprovider(for:testcase:)-inmj](https://developer.apple.com/documentation/testing/trait/scopeprovider(for:testcase:)-inmj)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/testing/trait/scopeprovider(for:testcase:)-inmj
 
 # scopeProvider(for:testCase:)
 

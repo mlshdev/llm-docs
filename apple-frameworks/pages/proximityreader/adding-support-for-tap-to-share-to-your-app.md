@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/proximityreader/adding-support-for-tap-to-share-to-your-app](https://developer.apple.com/documentation/proximityreader/adding-support-for-tap-to-share-to-your-app)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/proximityreader/adding-support-for-tap-to-share-to-your-app
 
 # Adding support for Tap to Share to your app (Swift)
 
@@ -52,6 +53,7 @@ Task { @MainActor [weak self] in
     for await status in events {
         
         guard let self else { return }
+
 
         switch status {
             case .connected: 
@@ -115,6 +117,7 @@ func addShippingAddress() async throws {
 }
 
 func createCustomerAccount() async throws {
+
 
     // Ask the customer for their name, email, phone number, and marketing preferences.
     let signup = try await session.requestSignup(for: .membership,
@@ -313,6 +316,7 @@ Task { @MainActor [weak self] in
         
         guard let self else { return }
 
+
         switch status {
             case .connected: 
                 // Update the connection status.
@@ -375,6 +379,7 @@ func addShippingAddress() async throws {
 }
 
 func createCustomerAccount() async throws {
+
 
     // Ask the customer for their name, email, phone number, and marketing preferences.
     let signup = try await session.requestSignup(for: .membership,

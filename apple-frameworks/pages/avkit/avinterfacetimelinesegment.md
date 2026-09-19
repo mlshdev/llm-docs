@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avinterfacetimelinesegment](https://developer.apple.com/documentation/avkit/avinterfacetimelinesegment)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avinterfacetimelinesegment
 
 # AVInterfaceTimelineSegment
 
@@ -23,16 +24,13 @@ Timeline segments divide media content into distinct regions, each with its own 
 
 ## Topics
 
-### Inspecting the segment
-
-- [timeRange](avinterfacetimelinesegment/timerange.md): The time range defining the segment’s position and duration within the overall timeline.
-- [identifier](avinterfacetimelinesegment/identifier.md): Optional external identifier for tracking or analytics purposes. May correspond to advertisement IDs, chapter markers, or other external systems.
-- [requiresLinearPlayback](avinterfacetimelinesegment/requireslinearplayback.md): Indicates whether this segment must be played sequentially without seeking or skipping. Typically used for advertisements or important announcements.
-
 ### Instance Properties
 
 - [auxiliaryContent](avinterfacetimelinesegment/auxiliarycontent.md): Indicates whether this segment consists of auxiliary or main content. Returns YES for auxiliary content, such as advertisements, interludes, or bonus material, and NO for main content, such as the main program material.
+- [identifier](avinterfacetimelinesegment/identifier.md): Optional external identifier for tracking or analytics purposes. May correspond to advertisement IDs, chapter markers, or other external systems.
 - [marked](avinterfacetimelinesegment/marked.md): Indicates whether this segment should be visually highlighted or marked in the timeline UI.
+- [requiresLinearPlayback](avinterfacetimelinesegment/requireslinearplayback.md): Indicates whether this segment must be played sequentially without seeking or skipping. Typically used for advertisements or important announcements.
+- [timeRange](avinterfacetimelinesegment/timerange.md): The time range defining the segment’s position and duration within the overall timeline.
 
 ### Instance Methods
 

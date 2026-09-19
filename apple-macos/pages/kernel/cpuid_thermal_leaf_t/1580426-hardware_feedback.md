@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/cpuid_thermal_leaf_t/1580426-hardware_feedback](https://developer.apple.com/documentation/kernel/cpuid_thermal_leaf_t/1580426-hardware_feedback)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/cpuid_thermal_leaf_t/1580426-hardware_feedback
 
 # hardware_feedback
 

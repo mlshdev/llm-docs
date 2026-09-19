@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller:didselectexternalsubtitleoptionlanguage:](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller:didselectexternalsubtitleoptionlanguage:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller:didselectexternalsubtitleoptionlanguage:
 
 # playerViewController:didSelectExternalSubtitleOptionLanguage:
 
@@ -29,6 +30,6 @@ The framework calls this method only for external subtitle languages specified b
 
 ## See Also
 
-### Responding to Media Selection
+### Responding to media selection
 
 - [playerViewController:didSelectMediaSelectionOption:inMediaSelectionGroup:](playerviewcontroller%28__didselect_in_%29.md): Tells the delegate when the user selects a media option from a media selection group.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/tls_psk_with_chacha20_poly1305_sha256](https://developer.apple.com/documentation/security/tls_psk_with_chacha20_poly1305_sha256)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/tls_psk_with_chacha20_poly1305_sha256
 
 # TLS_PSK_WITH_CHACHA20_POLY1305_SHA256 (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/rpc_routine_descriptor_t/1459677-arg_descr](https://developer.apple.com/documentation/kernel/rpc_routine_descriptor_t/1459677-arg_descr)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/rpc_routine_descriptor_t/1459677-arg_descr
 
 # arg_descr
 

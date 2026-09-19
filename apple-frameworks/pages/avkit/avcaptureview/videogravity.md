@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcaptureview/videogravity](https://developer.apple.com/documentation/avkit/avcaptureview/videogravity)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcaptureview/videogravity
 
 # videoGravity (Swift)
 
@@ -22,7 +23,7 @@ See [AVLayerVideoGravity](../../avfoundation/avlayervideogravity.md) for support
 
 ## See Also
 
-### Customizing the View
+### Customizing the view
 
 - [controlsStyle](controlsstyle.md): The style of the capture controls presented by the view.
 - [AVCaptureViewControlsStyle](../avcaptureviewcontrolsstyle.md): Constants that describe the capture view’s supported controls styles.
@@ -49,7 +50,7 @@ See [AVLayerVideoGravity](../../avfoundation/avlayervideogravity.md) for support
 
 ## See Also
 
-### Customizing the View
+### Customizing the view
 
 - [controlsStyle](controlsstyle.md): The style of the capture controls presented by the view.
 - [AVCaptureViewControlsStyle](../avcaptureviewcontrolsstyle.md): Constants that describe the capture view’s supported controls styles.

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/attributescopes/uikitattributes/obliqueness](https://developer.apple.com/documentation/foundation/attributescopes/uikitattributes/obliqueness)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/attributescopes/uikitattributes/obliqueness
 
 # obliqueness
 
 **Framework:** Foundation  
 **Kind:** Instance Property  
-**Availability:** iOS 15.0+ (deprecated in 27.0) · iPadOS 15.0+ (deprecated in 27.0) · Mac Catalyst 15.0+ (deprecated in 27.0) · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+**Availability:** iOS 15.0+ (deprecated in 27.2) · iPadOS 15.0+ (deprecated in 27.2) · Mac Catalyst 15.0+ (deprecated in 27.2) · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
 
 A property for accessing an obliqueness attribute.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/beginrefundrequest(for:in:)-9mscy](https://developer.apple.com/documentation/storekit/transaction/beginrefundrequest(for:in:)-9mscy)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/beginrefundrequest(for:in:)-9mscy
 
 # beginRefundRequest(for:in:)
 
@@ -33,9 +34,9 @@ static func beginRefundRequest(for transactionID: UInt64, in controller: NSViewC
 
 ## Discussion
 
-Call this function from account settings or a help menu to enable customers to request a refund for an in-app purchase within your app. When you call this function, the system displays a refund sheet with the customer’s purchase details and a list of reason codes for the customer to choose from. For design guidance, see [Human Interface Guidelines \> In-app purchase \> Providing help with in-app purchases](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase/overview/introduction/#providing-help-with-in-app-purchases).
+Call this function from account settings or a help menu to enable customers to request a refund for an Apple In-App Purchase within your app. When you call this function, the system displays a refund sheet with the customer’s purchase details and a list of reason codes for the customer to choose from. For design guidance, see [Human Interface Guidelines \> Apple In-App Purchase \> Providing help with Apple In-App Purchases](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase/overview/introduction/#providing-help-with-in-app-purchases).
 
-When a customer requests a refund for consumable in-app purchases through your app, the App Stores sends a `CONSUMPTION_REQUEST` [notificationType](../../appstoreservernotifications/notificationtype.md) to your server. If the customer provided consent, respond by sending consumption data to the App Store using the [Send Consumption Information](../../appstoreserverapi/send-consumption-information.md) endpoint. If not, don’t respond to the `CONSUMPTION_REQUEST` notification.
+When a customer requests a refund for consumable Apple In-App Purchases through your app, the App Stores sends a `CONSUMPTION_REQUEST` [notificationType](../../appstoreservernotifications/notificationtype.md) to your server. If the customer provided consent, respond by sending consumption data to the App Store using the [Send Consumption Information](../../appstoreserverapi/send-consumption-information.md) endpoint. If not, don’t respond to the `CONSUMPTION_REQUEST` notification.
 
 The App Store takes up to 48 hours to either approve or deny a refund.
 

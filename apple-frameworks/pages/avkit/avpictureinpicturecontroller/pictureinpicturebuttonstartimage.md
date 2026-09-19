@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avpictureinpicturecontroller/pictureinpicturebuttonstartimage](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/pictureinpicturebuttonstartimage)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/pictureinpicturebuttonstartimage
 
 # pictureInPictureButtonStartImage (Swift)
 
@@ -20,11 +21,11 @@ class var pictureInPictureButtonStartImage: NSImage { get }
 
 ## Mentioned In
 
-- [Adopting Picture in Picture in a Custom Player](../adopting-picture-in-picture-in-a-custom-player.md)
+- [Adopting Picture in Picture in a custom player](../adopting-picture-in-picture-in-a-custom-player.md)
 
 ## See Also
 
-### Retrieving Picture in Picture Template Images
+### Retrieving Picture in Picture template images
 
 - [pictureInPictureButtonStopImage](pictureinpicturebuttonstopimage.md): A system-default template image for the button that stops Picture in Picture in your app.
 - [pictureInPictureButtonStartImage(compatibleWith:)](pictureinpicturebuttonstartimage%28compatiblewith_%29.md): Returns a system-default template image that’s compatible with a trait collection for the button that starts Picture in Picture in your app.
@@ -50,11 +51,11 @@ A system-default template image for the button that starts Picture in Picture in
 
 ## Mentioned In
 
-- [Adopting Picture in Picture in a Custom Player](../adopting-picture-in-picture-in-a-custom-player.md)
+- [Adopting Picture in Picture in a custom player](../adopting-picture-in-picture-in-a-custom-player.md)
 
 ## See Also
 
-### Retrieving Picture in Picture Template Images
+### Retrieving Picture in Picture template images
 
 - [pictureInPictureButtonStopImage](pictureinpicturebuttonstopimage.md): A system-default template image for the button that stops Picture in Picture in your app.
 - [pictureInPictureButtonStartImageCompatibleWithTraitCollection:](pictureinpicturebuttonstartimage%28compatiblewith_%29.md): Returns a system-default template image that’s compatible with a trait collection for the button that starts Picture in Picture in your app.

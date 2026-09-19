@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/javascriptcore/jsvalue/init(point:incontext:)](https://developer.apple.com/documentation/javascriptcore/jsvalue/init(point:incontext:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsvalue/init(point:incontext:)
 
 # init(point:inContext:)
 

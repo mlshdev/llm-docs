@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstypesetter/layoutcharacters(in:for:maximumnumberoflinefragments:)](https://developer.apple.com/documentation/appkit/nstypesetter/layoutcharacters(in:for:maximumnumberoflinefragments:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstypesetter/layoutcharacters(in:for:maximumnumberoflinefragments:)
 
 # layoutCharacters(in:for:maximumNumberOfLineFragments:) (Swift)
 

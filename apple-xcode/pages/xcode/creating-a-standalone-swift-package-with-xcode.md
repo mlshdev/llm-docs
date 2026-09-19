@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/creating-a-standalone-swift-package-with-xcode](https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode
 
 # Creating a standalone Swift package with Xcode
 

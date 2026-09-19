@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_apple_dotmac_req_server_service_error](https://developer.apple.com/documentation/security/cssmerr_apple_dotmac_req_server_service_error)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_apple_dotmac_req_server_service_error
 
 # CSSMERR_APPLE_DOTMAC_REQ_SERVER_SERVICE_ERROR (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/task_delta_snapshot_v2/1644398-tds_system_time_in_terminated_th](https://developer.apple.com/documentation/kernel/task_delta_snapshot_v2/1644398-tds_system_time_in_terminated_th)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/task_delta_snapshot_v2/1644398-tds_system_time_in_terminated_th
 
 # tds_system_time_in_terminated_threads
 

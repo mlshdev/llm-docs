@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/vfsops/1523325-vfs_start](https://developer.apple.com/documentation/kernel/vfsops/1523325-vfs_start)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/vfsops/1523325-vfs_start
 
 # vfs_start
 

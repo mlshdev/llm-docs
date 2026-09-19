@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/nvmelbaformatdatastruct/3521256-metadata_size](https://developer.apple.com/documentation/iokit/nvmelbaformatdatastruct/3521256-metadata_size)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/nvmelbaformatdatastruct/3521256-metadata_size
 
 # METADATA_SIZE
 

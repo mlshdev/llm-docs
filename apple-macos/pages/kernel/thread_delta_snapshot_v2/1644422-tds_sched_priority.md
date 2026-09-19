@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/thread_delta_snapshot_v2/1644422-tds_sched_priority](https://developer.apple.com/documentation/kernel/thread_delta_snapshot_v2/1644422-tds_sched_priority)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/thread_delta_snapshot_v2/1644422-tds_sched_priority
 
 # tds_sched_priority
 

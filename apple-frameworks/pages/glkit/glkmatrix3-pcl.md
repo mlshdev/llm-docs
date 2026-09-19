@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/glkit/glkmatrix3-pcl](https://developer.apple.com/documentation/glkit/glkmatrix3-pcl)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/glkit/glkmatrix3-pcl
 
 # GLKMatrix3 (Swift)
 

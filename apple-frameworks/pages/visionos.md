@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/visionos](https://developer.apple.com/documentation/visionos)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/visionos
 
 # visionOS
 
@@ -101,7 +102,7 @@ Explore the core concepts for all visionOS apps with Hello World. Understand how
 - [Implementing object tracking in your app](visionos/implementing-object-tracking-in-your-app.md): Create engaging interactions by training models to recognize and track real-world objects in people’s surroundings.
 - [Placing entities using head and device transform](visionos/placing-entities-using-head-and-device-transform.md): Query and react to changes in the position and rotation of Apple Vision Pro.
 - [Manipulating entities with solid collisions](visionos/manipulating-entities-with-solid-collisions.md): Extend the capabilities of your app by using entities, components, and systems to maintain solid collisions when manipulating entities.
-- [Gaussian splats on visionOS](visionos/gaussian-splats-on-visionos.md): Use the new Gaussian splat APIs available in RealityKit in visionOS 27.
+- [Rendering Gaussian splats with RealityKit](visionos/working-with-gaussian-splats-with-realitykit.md): Bring a real-world scan into your app by loading splat data from a USD or PLY file.
 - [Manipulating models with RealityKit](realitykit/manipulating-models-with-realitykit.md): Interact with detailed 3D models using manipulation and clipping controls.
 
 ### ARKit

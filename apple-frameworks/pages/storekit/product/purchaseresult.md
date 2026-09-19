@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/product/purchaseresult](https://developer.apple.com/documentation/storekit/product/purchaseresult)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/product/purchaseresult
 
 # Product.PurchaseResult
 
@@ -73,5 +74,5 @@ case .userCancelled:
 
 ### Purchase requests and results
 
-- [PurchaseAction](../purchaseaction.md): An action that starts an In-App Purchase.
+- [PurchaseAction](../purchaseaction.md): An action that starts an Apple In-App Purchase.
 - [purchase(options:)](purchase%28options_%29.md): Initiates a purchase for the product with the App Store and displays the confirmation sheet.

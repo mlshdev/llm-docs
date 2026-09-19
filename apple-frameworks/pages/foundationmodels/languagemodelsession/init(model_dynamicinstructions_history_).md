@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelsession/init(model:dynamicinstructions:history:)](https://developer.apple.com/documentation/foundationmodels/languagemodelsession/init(model:dynamicinstructions:history:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelsession/init(model:dynamicinstructions:history:)
 
 # init(model:dynamicInstructions:history:)
 
@@ -34,9 +35,9 @@ convenience init(model: some LanguageModel, dynamicInstructions: sending some Dy
 - [init(profile:history:)](init%28profile_history_%29.md): Creates a session with a profile.
 - [LanguageModelSession.DynamicProfile](dynamicprofile.md): A dynamic profile that contains one or more profiles.
 - [LanguageModelSession.DynamicProfileModifier](dynamicprofilemodifier.md): A protocol for creating reusable wrappers around dynamic profile content.
-- [LanguageModelSession.ConditionalDynamicProfile](conditionaldynamicprofile.md)
+- [LanguageModelSession.ConditionalDynamicProfile](conditionaldynamicprofile.md): A dynamic profile that resolves to one of two profiles, depending on a condition.
 - [LanguageModelSession.DynamicProfileBuilder](dynamicprofilebuilder.md): A type that represents a dynamic profile builder.
-- [LanguageModelSession.DynamicProfileModifierContent](dynamicprofilemodifiercontent.md)
-- [LanguageModelSession.ModifiedDynamicProfile](modifieddynamicprofile.md)
-- [LanguageModelSession.AnyDynamicProfile](anydynamicprofile.md)
+- [LanguageModelSession.DynamicProfileModifierContent](dynamicprofilemodifiercontent.md): A type that represents the dynamic profile a modifier applies to.
+- [LanguageModelSession.ModifiedDynamicProfile](modifieddynamicprofile.md): A dynamic profile with a modifier applied to it.
+- [LanguageModelSession.AnyDynamicProfile](anydynamicprofile.md): A type-erased dynamic profile.
 - [LanguageModelSession.Profile](profile.md): A profile that contains dynamic instructions.

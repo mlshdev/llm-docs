@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkgaugeproviderstyle/ring](https://developer.apple.com/documentation/clockkit/clkgaugeproviderstyle/ring)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkgaugeproviderstyle/ring
 
 # CLKGaugeProviderStyle.ring (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Case  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 A gauge that indicates a value with a sliding ring.
 
@@ -32,7 +33,7 @@ The system draws the entire gauge and positions a ring along the gauge to indica
 
 **Framework:** ClockKit  
 **Kind:** Enumeration Case  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 A gauge that indicates a value with a sliding ring.
 

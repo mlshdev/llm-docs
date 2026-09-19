@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoobject/init-5dkv4](https://developer.apple.com/documentation/videodriverkit/iouservideoobject/init-5dkv4)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoobject/init-5dkv4
 
 # init
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -36,4 +37,4 @@ Always pass in the IOUserVideoDriver.  init() will always return false;
 
 ### Creating a video object
 
-- [init](init-853a8.md)
+- [init](init-853a8.md): Beta.

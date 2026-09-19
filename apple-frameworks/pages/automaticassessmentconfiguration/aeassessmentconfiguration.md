@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/automaticassessmentconfiguration/aeassessmentconfiguration](https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentconfiguration)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentconfiguration
 
 # AEAssessmentConfiguration (Swift)
 
@@ -229,10 +230,6 @@ While you provide a configuration instance when creating a session on iOS, iPadO
 
 ### Instance Properties
 
-- [allowLockdownMode](aeassessmentconfiguration/allowlockdownmode.md): A Boolean value that indicates whether the assessment allows Lockdown Mode to be active.
-- [allowOnlyParticipantsToRun](aeassessmentconfiguration/allowonlyparticipantstorun.md): A Boolean value that indicates whether only participant applications are allowed to run during an assessment.
-- [allowPrivateRelay](aeassessmentconfiguration/allowprivaterelay.md): A Boolean value that indicates whether the assessment allows iCloud Private Relay to be active.
-- [allowVirtualMachine](aeassessmentconfiguration/allowvirtualmachine.md): A Boolean value that indicates whether the assessment allows running inside a virtual machine.
 - [allowedAppleMenuItems](aeassessmentconfiguration/allowedapplemenuitems.md): The set of allowed Apple menu items during an assessment.
 - [allowedDirectoriesAndFiles](aeassessmentconfiguration/alloweddirectoriesandfiles.md): The set of directories and files that remain visible in the Finder during an assessment.
 - [allowedMenuBarItems](aeassessmentconfiguration/allowedmenubaritems.md): The set of menu bar items that should remain visible during an assessment.
@@ -253,7 +250,6 @@ While you provide a configuration instance when creating a session on iOS, iPadO
 - [allowsAutoFill](aeassessmentconfiguration/allowsautofill.md): A Boolean value that indicates whether to allow autofill during an assessment.
 - [allowsDock](aeassessmentconfiguration/allowsdock.md): A Boolean value that indicates whether to allow the Dock during an assessment.
 - [allowsEmojiKeyboard](aeassessmentconfiguration/allowsemojikeyboard.md): A Boolean value that indicates whether to allow the emoji keyboard during an assessment.
-- [allowsForceQuit](aeassessmentconfiguration/allowsforcequit.md): A Boolean value that indicates whether to allow force quitting apps during an assessment.
 - [allowsForceQuitKeyboardShortcuts](aeassessmentconfiguration/allowsforcequitkeyboardshortcuts.md): A Boolean value that indicates whether to allow force quitting apps during an assessment.
 - [allowsLockdownMode](aeassessmentconfiguration/allowslockdownmode.md): A Boolean value that indicates whether the assessment allows Lockdown Mode to be active.
 - [allowsMenuBar](aeassessmentconfiguration/allowsmenubar.md): A Boolean value that indicates whether to allow the menu bar during an assessment.

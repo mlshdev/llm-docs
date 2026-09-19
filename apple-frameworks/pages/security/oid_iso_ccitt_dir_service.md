@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/oid_iso_ccitt_dir_service](https://developer.apple.com/documentation/security/oid_iso_ccitt_dir_service)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/oid_iso_ccitt_dir_service
 
 # OID_ISO_CCITT_DIR_SERVICE (Swift)
 

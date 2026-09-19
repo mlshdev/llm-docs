@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iofirewiresbp2managementorb/1813171-getcommandfunction](https://developer.apple.com/documentation/kernel/iofirewiresbp2managementorb/1813171-getcommandfunction)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iofirewiresbp2managementorb/1813171-getcommandfunction
 
 # getCommandFunction()
 

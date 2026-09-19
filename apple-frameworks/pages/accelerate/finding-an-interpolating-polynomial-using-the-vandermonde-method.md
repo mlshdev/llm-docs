@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/finding-an-interpolating-polynomial-using-the-vandermonde-method](https://developer.apple.com/documentation/accelerate/finding-an-interpolating-polynomial-using-the-vandermonde-method)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/finding-an-interpolating-polynomial-using-the-vandermonde-method
 
 # Finding an interpolating polynomial using the Vandermonde method (Swift)
 

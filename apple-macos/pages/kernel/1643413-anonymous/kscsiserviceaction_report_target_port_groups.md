@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1643413-anonymous/kscsiserviceaction_report_target_port_groups](https://developer.apple.com/documentation/kernel/1643413-anonymous/kscsiserviceaction_report_target_port_groups)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1643413-anonymous/kscsiserviceaction_report_target_port_groups
 
 # kSCSIServiceAction_REPORT_TARGET_PORT_GROUPS
 

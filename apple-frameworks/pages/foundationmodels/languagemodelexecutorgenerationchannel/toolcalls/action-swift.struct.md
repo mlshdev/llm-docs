@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationchannel/toolcalls/action-swift.struct](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/toolcalls/action-swift.struct)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/toolcalls/action-swift.struct
 
 # LanguageModelExecutorGenerationChannel.ToolCalls.Action
 
@@ -24,10 +25,10 @@ struct Action
 
 ### Tool calling actions
 
-- [toolCall(id:name:action:)](action-swift.struct/toolcall%28id_name_action_%29.md)
-- [removeToolCall(id:)](action-swift.struct/removetoolcall%28id_%29.md)
-- [updateMetadata(\_:)](action-swift.struct/updatemetadata%28__%29.md)
-- [updateUsage(input:output:metadata:)](action-swift.struct/updateusage%28input_output_metadata_%29.md)
+- [toolCall(id:name:action:)](action-swift.struct/toolcall%28id_name_action_%29.md): Creates an action that routes an event to a specific tool call within the entry.
+- [removeToolCall(id:)](action-swift.struct/removetoolcall%28id_%29.md): Creates an action that removes a tool call.
+- [updateMetadata(\_:)](action-swift.struct/updatemetadata%28__%29.md): Creates an action that replaces the tool call’s metadata.
+- [updateUsage(input:output:metadata:)](action-swift.struct/updateusage%28input_output_metadata_%29.md): Creates an action that replaces the entry’s token-usage totals.
 
 ## Relationships
 

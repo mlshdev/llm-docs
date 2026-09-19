@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlpixelformat/astc_10x6_srgb](https://developer.apple.com/documentation/metal/mtlpixelformat/astc_10x6_srgb)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtlpixelformat/astc_10x6_srgb
 
 # MTLPixelFormat.astc_10x6_srgb (Swift)
 

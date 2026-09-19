@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/rotationaxis3d/init(_:)-804sx](https://developer.apple.com/documentation/spatial/rotationaxis3d/init(_:)-804sx)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatial/rotationaxis3d/init(_:)-804sx
 
 # init(\_:)
 

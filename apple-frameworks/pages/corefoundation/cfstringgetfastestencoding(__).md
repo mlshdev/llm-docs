@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corefoundation/cfstringgetfastestencoding(_:)](https://developer.apple.com/documentation/corefoundation/cfstringgetfastestencoding(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corefoundation/cfstringgetfastestencoding(_:)
 
 # CFStringGetFastestEncoding(\_:) (Swift)
 

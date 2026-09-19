@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uikit_class_available_tvos_only](https://developer.apple.com/documentation/uikit/uikit_class_available_tvos_only)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uikit_class_available_tvos_only
 
 # UIKIT_CLASS_AVAILABLE_TVOS_ONLY
 

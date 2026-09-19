@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fsvolume/handler/createitem(named:type:in:attributes:context:replyhandler:)](https://developer.apple.com/documentation/fskit/fsvolume/handler/createitem(named:type:in:attributes:context:replyhandler:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/fskit/fsvolume/handler/createitem(named:type:in:attributes:context:replyhandler:)
 
 # createItem(named:type:in:attributes:context:replyHandler:) (Swift)
 

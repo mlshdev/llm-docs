@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideocustomproperty/getcustompropertyvaluewithqualifier](https://developer.apple.com/documentation/videodriverkit/iouservideocustomproperty/getcustompropertyvaluewithqualifier)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideocustomproperty/getcustompropertyvaluewithqualifier
 
 # GetCustomPropertyValueWithQualifier
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the custom property value for a given qualifier.
 
@@ -37,6 +38,6 @@ The base class returns the custom property value set on the object without looki
 
 ### Accessing the data value
 
-- [SetQualifierAndDataValue](setqualifieranddatavalue.md): Sets the custom property’s data value.
-- [GetCustomPropertyInfo](getcustompropertyinfo.md): Gets the custom property information.
-- [IOUserVideoCustomPropertyInfo](../videodriverkit/iouservideocustompropertyinfo.md): A description of a a custom property that allow the Host to marshal the data between the Host and its clients.
+- [SetQualifierAndDataValue](setqualifieranddatavalue.md): Beta. Sets the custom property’s data value.
+- [GetCustomPropertyInfo](getcustompropertyinfo.md): Beta. Gets the custom property information.
+- [IOUserVideoCustomPropertyInfo](../videodriverkit/iouservideocustompropertyinfo.md): Beta. A description of a a custom property that allow the Host to marshal the data between the Host and its clients.

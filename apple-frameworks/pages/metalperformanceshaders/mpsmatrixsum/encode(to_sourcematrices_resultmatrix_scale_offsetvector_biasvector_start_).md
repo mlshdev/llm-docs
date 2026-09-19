@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsmatrixsum/encode(to:sourcematrices:resultmatrix:scale:offsetvector:biasvector:start:)](https://developer.apple.com/documentation/metalperformanceshaders/mpsmatrixsum/encode(to:sourcematrices:resultmatrix:scale:offsetvector:biasvector:start:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpsmatrixsum/encode(to:sourcematrices:resultmatrix:scale:offsetvector:biasvector:start:)
 
 # encode(to:sourceMatrices:resultMatrix:scale:offsetVector:biasVector:start:) (Swift)
 

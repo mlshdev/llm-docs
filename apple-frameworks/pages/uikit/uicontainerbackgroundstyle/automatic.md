@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uicontainerbackgroundstyle/automatic](https://developer.apple.com/documentation/uikit/uicontainerbackgroundstyle/automatic)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uicontainerbackgroundstyle/automatic
 
 # UIContainerBackgroundStyle.automatic (Swift)
 

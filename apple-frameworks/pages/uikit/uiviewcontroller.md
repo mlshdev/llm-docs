@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiviewcontroller](https://developer.apple.com/documentation/uikit/uiviewcontroller)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiviewcontroller
 
 # UIViewController (Swift)
 
@@ -302,6 +303,7 @@ For more information about how the system determines which view controllers to p
 - [splitViewController](uiviewcontroller/splitviewcontroller.md): The nearest ancestor in the view controller hierarchy that is a split view controller.
 - [navigationController](uiviewcontroller/navigationcontroller.md): The nearest ancestor in the view controller hierarchy that is a navigation controller.
 - [tabBarController](uiviewcontroller/tabbarcontroller.md): The nearest ancestor in the view controller hierarchy that is a tab bar controller.
+- [arrangementViewController](uiviewcontroller/arrangementviewcontroller.md): Beta. The nearest ancestor arrangement view controller.
 
 ### Configuring a navigation interface
 
@@ -357,6 +359,13 @@ For more information about how the system determines which view controllers to p
 - [prefersPointerLocked](uiviewcontroller/preferspointerlocked.md): A Boolean value that indicates whether the view controller prefers to lock the pointer to a specific scene.
 - [setNeedsUpdateOfPrefersPointerLocked()](uiviewcontroller/setneedsupdateofpreferspointerlocked%28%29.md): Indicates that the view controller changed the pointer lock preference.
 - [childViewControllerForPointerLock](uiviewcontroller/childviewcontrollerforpointerlock.md): A child view controller to query for the pointer lock preference.
+
+### Configuring bars on the vertical axis
+
+- [preferredVerticalBarBehavior](uiviewcontroller/preferredverticalbarbehavior.md): Beta. The vertical bar behavior that this view controller prefers.
+- [UIVerticalBarBehavior](uiverticalbarbehavior.md): Beta. A behavior that determines whether the vertical bar is used.
+- [childForPreferredVerticalBarBehavior](uiviewcontroller/childforpreferredverticalbarbehavior.md): Beta. Which child view controller, if any, should control the vertical bar behavior.
+- [setNeedsUpdateOfVerticalBarConfiguration()](uiviewcontroller/setneedsupdateofverticalbarconfiguration%28%29.md): Beta. Signals to the system that the preferred vertical bar configuration, such as its behavior, has changed.
 
 ### Managing the status bar
 
@@ -422,6 +431,7 @@ For more information about how the system determines which view controllers to p
 
 - [UIActivityViewController](uiactivityviewcontroller.md)
 - [UIAlertController](uialertcontroller.md)
+- [UIArrangementViewController](uiarrangementviewcontroller.md)
 - [UICloudSharingController](uicloudsharingcontroller.md)
 - [UICollectionViewController](uicollectionviewcontroller.md)
 - [UIColorPickerViewController](uicolorpickerviewcontroller.md)
@@ -777,6 +787,7 @@ For more information about how the system determines which view controllers to p
 - [splitViewController](uiviewcontroller/splitviewcontroller.md): The nearest ancestor in the view controller hierarchy that is a split view controller.
 - [navigationController](uiviewcontroller/navigationcontroller.md): The nearest ancestor in the view controller hierarchy that is a navigation controller.
 - [tabBarController](uiviewcontroller/tabbarcontroller.md): The nearest ancestor in the view controller hierarchy that is a tab bar controller.
+- [arrangementViewController](uiviewcontroller/arrangementviewcontroller.md): Beta. The nearest ancestor arrangement view controller.
 
 ### Configuring a navigation interface
 
@@ -831,6 +842,13 @@ For more information about how the system determines which view controllers to p
 - [prefersPointerLocked](uiviewcontroller/preferspointerlocked.md): A Boolean value that indicates whether the view controller prefers to lock the pointer to a specific scene.
 - [setNeedsUpdateOfPrefersPointerLocked](uiviewcontroller/setneedsupdateofpreferspointerlocked%28%29.md): Indicates that the view controller changed the pointer lock preference.
 - [childViewControllerForPointerLock](uiviewcontroller/childviewcontrollerforpointerlock.md): A child view controller to query for the pointer lock preference.
+
+### Configuring bars on the vertical axis
+
+- [preferredVerticalBarBehavior](uiviewcontroller/preferredverticalbarbehavior.md): Beta. The vertical bar behavior that this view controller prefers.
+- [UIVerticalBarBehavior](uiverticalbarbehavior.md): Beta. A behavior that determines whether the vertical bar is used.
+- [childViewControllerForPreferredVerticalBarBehavior](uiviewcontroller/childforpreferredverticalbarbehavior.md): Beta. Which child view controller, if any, should control the vertical bar behavior.
+- [setNeedsUpdateOfVerticalBarConfiguration](uiviewcontroller/setneedsupdateofverticalbarconfiguration%28%29.md): Beta. Signals to the system that the preferred vertical bar configuration, such as its behavior, has changed.
 
 ### Managing the status bar
 
@@ -896,6 +914,7 @@ For more information about how the system determines which view controllers to p
 
 - [UIActivityViewController](uiactivityviewcontroller.md)
 - [UIAlertController](uialertcontroller.md)
+- [UIArrangementViewController](uiarrangementviewcontroller.md)
 - [UICloudSharingController](uicloudsharingcontroller.md)
 - [UICollectionViewController](uicollectionviewcontroller.md)
 - [UIColorPickerViewController](uicolorpickerviewcontroller.md)

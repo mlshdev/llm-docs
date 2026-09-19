@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/messages/msconversation/send(_:completionhandler:)-9krz](https://developer.apple.com/documentation/messages/msconversation/send(_:completionhandler:)-9krz)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/messages/msconversation/send(_:completionhandler:)-9krz
 
 # send(\_:completionHandler:) (Swift)
 

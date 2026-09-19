@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/mds_cdsadir_emm_recordtype](https://developer.apple.com/documentation/security/mds_cdsadir_emm_recordtype)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/mds_cdsadir_emm_recordtype
 
 # MDS_CDSADIR_EMM_RECORDTYPE
 

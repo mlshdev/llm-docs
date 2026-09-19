@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vdsp/convolve(_:rowcount:columncount:with3x3kernel:)-1r5oa](https://developer.apple.com/documentation/accelerate/vdsp/convolve(_:rowcount:columncount:with3x3kernel:)-1r5oa)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vdsp/convolve(_:rowcount:columncount:with3x3kernel:)-1r5oa
 
 # convolve(\_:rowCount:columnCount:with3x3Kernel:)
 

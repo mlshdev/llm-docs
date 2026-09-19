@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/qdrant-n8n.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/tutorials-build-essentials/qdrant-n8n.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/qdrant-n8n.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/tutorials-build-essentials/qdrant-n8n.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-build-essentials/qdrant-n8n/
 
 # Automate Qdrant Workflows with n8n
@@ -74,7 +74,7 @@ Vector search's ability to determine semantic similarity between objects is ofte
 
 The combination of similarity and dissimilarity metrics in vector space expands vector search to recommendations, discovery search, and large-scale unstructured data analysis.
 
-![overview](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/qdrant-n8n-2/overview.png)
+![overview](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/qdrant-n8n-2/overview.png)
 
 ### Recommendations
 
@@ -82,7 +82,7 @@ When searching for new music, films, books, or food, it can be difficult to arti
 
 The [Qdrant Recommendation API](https://qdrant.tech/articles/new-recommendation-api/) is built to make these discovery searches possible by using positive and negative examples as anchors. It helps find new relevant results based on your preferences.
 
-![recommendations](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/qdrant-n8n-2/recommendations.png)
+![recommendations](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/qdrant-n8n-2/recommendations.png)
 
 #### Movie Recommendations
 
@@ -130,7 +130,7 @@ One definition of "anomaly" comes intuitively after projecting vector representa
 
 Points that don't belong to any clusters are more likely to be anomalous.
 
-![anomalies-on-2D](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/qdrant-n8n-2/anomalies-2D.png)
+![anomalies-on-2D](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/qdrant-n8n-2/anomalies-2D.png)
 
 With that intuition comes the recipe for building an anomaly detection tool. We will demonstrate it on anomaly detection in agricultural crops. Qdrant will be used to:
 
@@ -139,7 +139,7 @@ With that intuition comes the recipe for building an anomaly detection tool. We 
 3. Define the borders of each cluster.
 4. Check if new images fall within these boundaries. If an image does not fit within any cluster, it is flagged as anomalous. Alternatively, you can check if an image is anomalous to a specific cluster.
 
-![anomaly-detection](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/qdrant-n8n-2/anomaly-detection.png)
+![anomaly-detection](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/qdrant-n8n-2/anomaly-detection.png)
 
 **Setup:**
 
@@ -229,7 +229,7 @@ The anomaly detection tool can also be used for classification, but there's a si
 
 > "Show me your friends, and I will tell you who you are."
 
-![KNN-2D](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/examples/qdrant-n8n-2/classification.png)
+![KNN-2D](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/qdrant-n8n-2/classification.png)
 
 The KNN method labels a data point by analyzing its classified neighbors and assigning this point the majority class in the neighborhood. This approach doesn't require all data points to be labeled—a subset of labeled examples can serve as anchors to propagate labels across the dataset.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/icmp_ra_addr/3754619-ira_preference](https://developer.apple.com/documentation/kernel/icmp_ra_addr/3754619-ira_preference)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/icmp_ra_addr/3754619-ira_preference
 
 # ira_preference
 

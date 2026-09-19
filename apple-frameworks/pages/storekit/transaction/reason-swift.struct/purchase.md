@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/reason-swift.struct/purchase](https://developer.apple.com/documentation/storekit/transaction/reason-swift.struct/purchase)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/reason-swift.struct/purchase
 
 # purchase
 
@@ -18,7 +19,7 @@ static let purchase: Transaction.Reason
 
 ## Discussion
 
-The customer initiated the purchase, which may be for any in-app purchase type: consumable, non-consumable, non-renewing subscription, or auto-renewable subscription.
+The customer initiated the purchase, which may be for any Apple In-App Purchase type: consumable, non-consumable, non-renewing subscription, or auto-renewable subscription.
 
 ## See Also
 

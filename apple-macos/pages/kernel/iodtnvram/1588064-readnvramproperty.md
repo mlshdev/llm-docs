@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iodtnvram/1588064-readnvramproperty](https://developer.apple.com/documentation/kernel/iodtnvram/1588064-readnvramproperty)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iodtnvram/1588064-readnvramproperty
 
 # readNVRAMProperty
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/carbon_accessibility/accessibility_event_class](https://developer.apple.com/documentation/applicationservices/carbon_accessibility/accessibility_event_class)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applicationservices/carbon_accessibility/accessibility_event_class
 
 # Accessibility Event Class (Swift)
 

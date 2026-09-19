@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generationguide/minimumcount(_:)](https://developer.apple.com/documentation/foundationmodels/generationguide/minimumcount(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generationguide/minimumcount(_:)
 
 # minimumCount(\_:)
 
@@ -20,7 +21,7 @@ static func minimumCount<Element>(_ count: Int) -> GenerationGuide<[Element]> wh
 
 The bounds are inclusive.
 
-A `minimumCount` generation guide may be used when you want to ensure the model produces a number of array elements greater than or equal to to some minimum value, such as the number of items in a game’s shop.
+A `minimumCount` generation guide may be used when you want to ensure the model produces a number of array elements greater than or equal to some minimum value, such as the number of items in a game’s shop.
 
 ```swift
 @Generable

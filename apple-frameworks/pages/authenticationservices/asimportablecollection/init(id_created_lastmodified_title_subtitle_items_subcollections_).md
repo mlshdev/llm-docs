@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/authenticationservices/asimportablecollection/init(id:created:lastmodified:title:subtitle:items:subcollections:)](https://developer.apple.com/documentation/authenticationservices/asimportablecollection/init(id:created:lastmodified:title:subtitle:items:subcollections:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/authenticationservices/asimportablecollection/init(id:created:lastmodified:title:subtitle:items:subcollections:)
 
 # init(id:created:lastModified:title:subtitle:items:subcollections:)
 

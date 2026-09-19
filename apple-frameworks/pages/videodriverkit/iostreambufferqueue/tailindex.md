@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iostreambufferqueue/tailindex](https://developer.apple.com/documentation/videodriverkit/iostreambufferqueue/tailindex)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iostreambufferqueue/tailindex
 
 # tailIndex
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Property  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,7 +19,7 @@ volatile uint32_t tailIndex;
 
 ### Accessing queue contents
 
-- [entryCount](entrycount.md)
-- [headIndex](headindex.md)
-- [queue](queue.md)
-- [IOStreamBufferQueueEntry](../iostreambufferqueueentry.md)
+- [entryCount](entrycount.md): Beta.
+- [headIndex](headindex.md): Beta.
+- [queue](queue.md): Beta.
+- [IOStreamBufferQueueEntry](../iostreambufferqueueentry.md): Beta.

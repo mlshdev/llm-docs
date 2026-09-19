@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `7d6c8bf81ab88fc6f5c4893b6259864d29de574c`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -370,7 +370,7 @@
 - [Connect T3 Code to a sandbox](pages/manuals/ai/sandboxes/integrations/t3-code.md): Docker Sandboxes SSH requirements (5863 bytes)
 - [Connect VS Code to a sandbox](pages/manuals/ai/sandboxes/integrations/vscode.md): Docker Sandboxes SSH requirements (2613 bytes)
 - [MCP gateway](pages/manuals/ai/sandboxes/mcp-gateway.md): Docker Sandboxes includes an MCP gateway for connecting agents to Model Context Protocol servers. The gateway gives the agent inside the sandbox one MCP endpoint, while sbx manages the registered servers, OAuth credenti… (20305 bytes)
-- [Docker Sandboxes release notes](pages/manuals/ai/sandboxes/release-notes.md): This page lists changes in recent stable releases of Docker Sandboxes. For the full release history, including pre-releases and downloads, see the Docker Sandboxes releases on GitHub. (24156 bytes)
+- [Docker Sandboxes release notes](pages/manuals/ai/sandboxes/release-notes.md): This page lists changes in recent stable releases of Docker Sandboxes. For the full release history, including pre-releases and downloads, see the Docker Sandboxes releases on GitHub. (24737 bytes)
 - [Default security posture](pages/manuals/ai/sandboxes/security/defaults.md): A sandbox created with sbx run claude and no additional flags has the following security posture. (3813 bytes)
 - [Security model](pages/manuals/ai/sandboxes/security/index.md): Docker Sandboxes run AI agents in microVMs so they can execute code, install packages, and use tools without accessing host resources beyond those you share. Multiple isolation layers protect your host system. (7852 bytes)
 - [Isolation layers](pages/manuals/ai/sandboxes/security/isolation.md): AI coding agents need to execute code, install packages, and run tools on your behalf. Docker Sandboxes run each agent in its own microVM. Five isolation layers protect your host: hypervisor, network, Docker Engine, wor… (12680 bytes)

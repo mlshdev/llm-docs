@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/blendtreeblendnode/init(sources:name:weight:isadditive:)](https://developer.apple.com/documentation/realitykit/blendtreeblendnode/init(sources:name:weight:isadditive:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/blendtreeblendnode/init(sources:name:weight:isadditive:)
 
 # init(sources:name:weight:isAdditive:)
 

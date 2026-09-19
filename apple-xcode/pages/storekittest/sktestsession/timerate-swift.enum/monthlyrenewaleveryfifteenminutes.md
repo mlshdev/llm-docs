@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/storekittest/sktestsession/timerate-swift.enum/monthlyrenewaleveryfifteenminutes](https://developer.apple.com/documentation/storekittest/sktestsession/timerate-swift.enum/monthlyrenewaleveryfifteenminutes)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekittest/sktestsession/timerate-swift.enum/monthlyrenewaleveryfifteenminutes
 
 # SKTestSession.TimeRate.monthlyRenewalEveryFifteenMinutes (Swift)
 
@@ -29,7 +30,7 @@ The following table shows how this time rate affects subscriptions with various 
 | Semiannually | 1 hour 30 minutes |
 | Annually | 3 hours |
 
-The sandbox environment also supports this subscription renewal rate. For more information about renewal rates in the sandbox environment, see [Test in-app purchases](https://help.apple.com/app-store-connect/#/dev7e89e149d).
+The sandbox environment also supports this subscription renewal rate. For more information about renewal rates in the sandbox environment, see [Test Apple In-App Purchases](https://help.apple.com/app-store-connect/#/dev7e89e149d).
 
 The time rate also affects the billing grace period and the billing retry period in the testing environment, as the table below shows:
 
@@ -78,7 +79,7 @@ The following table shows how this time rate affects subscriptions with various 
 | Semiannually | 1 hour 30 minutes |
 | Annually | 3 hours |
 
-The sandbox environment also supports this subscription renewal rate. For more information about renewal rates in the sandbox environment, see [Test in-app purchases](https://help.apple.com/app-store-connect/#/dev7e89e149d).
+The sandbox environment also supports this subscription renewal rate. For more information about renewal rates in the sandbox environment, see [Test Apple In-App Purchases](https://help.apple.com/app-store-connect/#/dev7e89e149d).
 
 The time rate also affects the billing grace period and the billing retry period in the testing environment, as the table below shows:
 

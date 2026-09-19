@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tabletopkit/implementing-playing-card-overlap-and-physical-characteristics](https://developer.apple.com/documentation/tabletopkit/implementing-playing-card-overlap-and-physical-characteristics)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/tabletopkit/implementing-playing-card-overlap-and-physical-characteristics
 
 # Implementing playing card overlap and physical characteristics
 

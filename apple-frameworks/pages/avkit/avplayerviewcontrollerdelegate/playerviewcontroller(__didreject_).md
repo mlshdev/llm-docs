@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:didreject:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:didreject:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:didreject:)
 
 # playerViewController(\_:didReject:) (Swift)
 
@@ -21,11 +22,11 @@ optional func playerViewController(_ playerViewController: AVPlayerViewControlle
 
 ## Mentioned In
 
-- [Presenting Content Proposals in tvOS](../presenting-content-proposals-in-tvos.md)
+- [Presenting content proposals in tvOS](../presenting-content-proposals-in-tvos.md)
 
 ## See Also
 
-### Responding to Content Proposals
+### Responding to content proposals
 
 - [playerViewController(\_:shouldPresent:)](playerviewcontroller%28__shouldpresent_%29.md): Asks the delegate whether the player view controller presents a content proposal.
 - [playerViewController(\_:didAccept:)](playerviewcontroller%28__didaccept_%29.md): Tells the delegate when the user accepts the proposed content.
@@ -51,11 +52,11 @@ Tells the delegate when the user rejects the proposed content.
 
 ## Mentioned In
 
-- [Presenting Content Proposals in tvOS](../presenting-content-proposals-in-tvos.md)
+- [Presenting content proposals in tvOS](../presenting-content-proposals-in-tvos.md)
 
 ## See Also
 
-### Responding to Content Proposals
+### Responding to content proposals
 
 - [playerViewController:shouldPresentContentProposal:](playerviewcontroller%28__shouldpresent_%29.md): Asks the delegate whether the player view controller presents a content proposal.
 - [playerViewController:didAcceptContentProposal:](playerviewcontroller%28__didaccept_%29.md): Tells the delegate when the user accepts the proposed content.

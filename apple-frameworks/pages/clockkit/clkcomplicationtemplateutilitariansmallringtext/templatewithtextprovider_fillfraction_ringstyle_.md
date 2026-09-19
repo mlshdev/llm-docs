@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplateutilitariansmallringtext/templatewithtextprovider:fillfraction:ringstyle:](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplateutilitariansmallringtext/templatewithtextprovider:fillfraction:ringstyle:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplateutilitariansmallringtext/templatewithtextprovider:fillfraction:ringstyle:
 
 # templateWithTextProvider:fillFraction:ringStyle:
 
@@ -6,7 +7,7 @@
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Returns a new template from the provided text, fill fraction, and ring style.
 

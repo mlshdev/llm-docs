@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1643288-anonymous/kinquiry_byte6_bque_mask](https://developer.apple.com/documentation/kernel/1643288-anonymous/kinquiry_byte6_bque_mask)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1643288-anonymous/kinquiry_byte6_bque_mask
 
 # kINQUIRY_Byte6_BQUE_Mask
 

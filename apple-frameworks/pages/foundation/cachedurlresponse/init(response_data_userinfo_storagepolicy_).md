@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/cachedurlresponse/init(response:data:userinfo:storagepolicy:)](https://developer.apple.com/documentation/foundation/cachedurlresponse/init(response:data:userinfo:storagepolicy:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/cachedurlresponse/init(response:data:userinfo:storagepolicy:)
 
 # init(response:data:userInfo:storagePolicy:) (Swift)
 

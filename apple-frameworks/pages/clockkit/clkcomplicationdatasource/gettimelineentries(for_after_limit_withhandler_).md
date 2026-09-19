@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationdatasource/gettimelineentries(for:after:limit:withhandler:)](https://developer.apple.com/documentation/clockkit/clkcomplicationdatasource/gettimelineentries(for:after:limit:withhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationdatasource/gettimelineentries(for:after:limit:withhandler:)
 
 # getTimelineEntries(for:after:limit:withHandler:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Retrieves future timeline entries for the complication.
 
@@ -70,7 +71,7 @@ If you don’t implement this method, ClockKit doesn’t try to add later entrie
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Retrieves future timeline entries for the complication.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/task_snapshot_v2/1551742-ts_unique_pid](https://developer.apple.com/documentation/kernel/task_snapshot_v2/1551742-ts_unique_pid)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/task_snapshot_v2/1551742-ts_unique_pid
 
 # ts_unique_pid
 

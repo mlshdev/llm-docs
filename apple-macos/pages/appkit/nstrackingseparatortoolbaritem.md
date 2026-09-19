@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstrackingseparatortoolbaritem](https://developer.apple.com/documentation/appkit/nstrackingseparatortoolbaritem)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstrackingseparatortoolbaritem
 
 # NSTrackingSeparatorToolbarItem (Swift)
 
@@ -50,8 +51,6 @@ The `splitView` must be in the same window as the toolbar containing this item b
 - [NSMenuItemValidation](nsmenuitemvalidation.md)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSValidatedUserInterfaceItem](nsvalidateduserinterfaceitem.md)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 

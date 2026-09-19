@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4computecommandencoder/copyfrombuffer:sourceoffset:sourcebytesperrow:sourcebytesperimage:sourcesize:totexture:destinationslice:destinationlevel:destinationorigin:](https://developer.apple.com/documentation/metal/mtl4computecommandencoder/copyfrombuffer:sourceoffset:sourcebytesperrow:sourcebytesperimage:sourcesize:totexture:destinationslice:destinationlevel:destinationorigin:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtl4computecommandencoder/copyfrombuffer:sourceoffset:sourcebytesperrow:sourcebytesperimage:sourcesize:totexture:destinationslice:destinationlevel:destinationorigin:
 
 # copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/sharing-texture-data-between-the-model-io-framework-and-the-vimage-library](https://developer.apple.com/documentation/accelerate/sharing-texture-data-between-the-model-io-framework-and-the-vimage-library)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/sharing-texture-data-between-the-model-io-framework-and-the-vimage-library
 
 # Sharing texture data between the Model I/O framework and the vImage library
 

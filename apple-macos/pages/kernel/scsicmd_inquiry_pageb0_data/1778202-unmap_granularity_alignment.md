@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/scsicmd_inquiry_pageb0_data/1778202-unmap_granularity_alignment](https://developer.apple.com/documentation/kernel/scsicmd_inquiry_pageb0_data/1778202-unmap_granularity_alignment)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/scsicmd_inquiry_pageb0_data/1778202-unmap_granularity_alignment
 
 # UNMAP_GRANULARITY_ALIGNMENT
 

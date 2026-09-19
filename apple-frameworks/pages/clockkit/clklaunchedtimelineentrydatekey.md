@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clklaunchedtimelineentrydatekey](https://developer.apple.com/documentation/clockkit/clklaunchedtimelineentrydatekey)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clklaunchedtimelineentrydatekey
 
 # CLKLaunchedTimelineEntryDateKey (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Global Variable  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 A key that indicates the date when the system launched the complication.
 
@@ -46,7 +47,7 @@ The value of this key is an [NSDate](../foundation/nsdate.md) object. When the u
 
 **Framework:** ClockKit  
 **Kind:** Global Variable  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 A key that indicates the date when the system launched the complication.
 

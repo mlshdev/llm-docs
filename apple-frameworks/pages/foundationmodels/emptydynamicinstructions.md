@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/emptydynamicinstructions](https://developer.apple.com/documentation/foundationmodels/emptydynamicinstructions)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/emptydynamicinstructions
 
 # EmptyDynamicInstructions
 
@@ -32,7 +33,7 @@ struct EmptyDynamicInstructions
 
 ### Building dynamic instructions
 
-- [DynamicInstructionsBuilder](dynamicinstructionsbuilder.md)
+- [DynamicInstructionsBuilder](dynamicinstructionsbuilder.md): A result builder that combines tools and other content into dynamic instructions.
 - [ConditionalDynamicInstructions](conditionaldynamicinstructions.md): A dynamic instructions type that conditionally selects between two conditions.
 - [AnyDynamicInstructions](anydynamicinstructions.md): A dynamic instructions type that’s type-erased.
 - [TupleDynamicInstructions](tupledynamicinstructions.md): A dynamic instructions type that represents a tuple.

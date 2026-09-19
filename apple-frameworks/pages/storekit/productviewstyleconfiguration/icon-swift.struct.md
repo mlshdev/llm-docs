@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/productviewstyleconfiguration/icon-swift.struct](https://developer.apple.com/documentation/storekit/productviewstyleconfiguration/icon-swift.struct)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/productviewstyleconfiguration/icon-swift.struct
 
 # ProductViewStyleConfiguration.Icon
 
@@ -6,7 +7,7 @@
 **Kind:** Structure  
 **Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
 
-A type-erased icon of an in-app purchase product.
+A type-erased icon of an Apple In-App Purchase product.
 
 ## Declaration
 

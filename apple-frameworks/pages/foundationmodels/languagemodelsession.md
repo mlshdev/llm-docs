@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelsession](https://developer.apple.com/documentation/foundationmodels/languagemodelsession)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelsession
 
 # LanguageModelSession
 
@@ -32,7 +33,7 @@ final class LanguageModelSession
 
 ## Overview
 
-A session is a single context that you use to generate content with, and maintains state between requests. You can reuse the existing instance or create a new one each time you call the model. When you create a session you can provide instructions that tells the model what its role is and provides guidance on how to respond.
+A session is a single context that you use to generate content with, and maintains state between requests. You can reuse the existing instance or create a new one each time you call the model. When you create a session you can provide instructions that tell the model what its role is and provide guidance on how to respond.
 
 ```swift
 let session = LanguageModelSession(instructions: """
@@ -61,11 +62,11 @@ Use Instruments to analyze token consumption while your app is running and to lo
 - [init(model:dynamicInstructions:history:)](languagemodelsession/init%28model_dynamicinstructions_history_%29.md): Creates a session with dynamic instructions.
 - [LanguageModelSession.DynamicProfile](languagemodelsession/dynamicprofile.md): A dynamic profile that contains one or more profiles.
 - [LanguageModelSession.DynamicProfileModifier](languagemodelsession/dynamicprofilemodifier.md): A protocol for creating reusable wrappers around dynamic profile content.
-- [LanguageModelSession.ConditionalDynamicProfile](languagemodelsession/conditionaldynamicprofile.md)
+- [LanguageModelSession.ConditionalDynamicProfile](languagemodelsession/conditionaldynamicprofile.md): A dynamic profile that resolves to one of two profiles, depending on a condition.
 - [LanguageModelSession.DynamicProfileBuilder](languagemodelsession/dynamicprofilebuilder.md): A type that represents a dynamic profile builder.
-- [LanguageModelSession.DynamicProfileModifierContent](languagemodelsession/dynamicprofilemodifiercontent.md)
-- [LanguageModelSession.ModifiedDynamicProfile](languagemodelsession/modifieddynamicprofile.md)
-- [LanguageModelSession.AnyDynamicProfile](languagemodelsession/anydynamicprofile.md)
+- [LanguageModelSession.DynamicProfileModifierContent](languagemodelsession/dynamicprofilemodifiercontent.md): A type that represents the dynamic profile a modifier applies to.
+- [LanguageModelSession.ModifiedDynamicProfile](languagemodelsession/modifieddynamicprofile.md): A dynamic profile with a modifier applied to it.
+- [LanguageModelSession.AnyDynamicProfile](languagemodelsession/anydynamicprofile.md): A type-erased dynamic profile.
 - [LanguageModelSession.Profile](languagemodelsession/profile.md): A profile that contains dynamic instructions.
 
 ### Preloading the model
@@ -74,7 +75,7 @@ Use Instruments to analyze token consumption while your app is running and to lo
 
 ### Accessing session properties
 
-- [properties](languagemodelsession/properties.md)
+- [properties](languagemodelsession/properties.md): The values of the session’s managed properties.
 
 ### Inspecting the accumulated usage
 
@@ -132,8 +133,8 @@ Use Instruments to analyze token consumption while your app is running and to lo
 ### Generating feedback
 
 - [logFeedbackAttachment(sentiment:issues:desiredOutput:)](languagemodelsession/logfeedbackattachment%28sentiment_issues_desiredoutput_%29.md): Logs and serializes a feedback attachment that can be submitted to Apple.
-- [logFeedbackAttachment(sentiment:issues:desiredResponseContent:)](languagemodelsession/logfeedbackattachment%28sentiment_issues_desiredresponsecontent_%29.md)
-- [logFeedbackAttachment(sentiment:issues:desiredResponseText:)](languagemodelsession/logfeedbackattachment%28sentiment_issues_desiredresponsetext_%29.md)
+- [logFeedbackAttachment(sentiment:issues:desiredResponseContent:)](languagemodelsession/logfeedbackattachment%28sentiment_issues_desiredresponsecontent_%29.md): Logs and serializes a feedback attachment that includes the content you expected.
+- [logFeedbackAttachment(sentiment:issues:desiredResponseText:)](languagemodelsession/logfeedbackattachment%28sentiment_issues_desiredresponsetext_%29.md): Logs and serializes a feedback attachment that includes the response text you expected.
 - [LanguageModelFeedback](languagemodelfeedback.md): Feedback appropriate for logging or attaching to Feedback Assistant.
 
 ### Session properties

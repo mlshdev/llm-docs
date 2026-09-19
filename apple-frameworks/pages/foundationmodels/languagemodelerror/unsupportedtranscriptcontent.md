@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelerror/unsupportedtranscriptcontent](https://developer.apple.com/documentation/foundationmodels/languagemodelerror/unsupportedtranscriptcontent)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelerror/unsupportedtranscriptcontent
 
 # LanguageModelError.UnsupportedTranscriptContent
 
@@ -18,13 +19,13 @@ struct UnsupportedTranscriptContent
 
 ### Creating an error instance
 
-- [init(unsupportedContent:debugDescription:metadata:)](unsupportedtranscriptcontent/init%28unsupportedcontent_debugdescription_metadata_%29.md)
+- [init(unsupportedContent:debugDescription:metadata:)](unsupportedtranscriptcontent/init%28unsupportedcontent_debugdescription_metadata_%29.md): Creates information describing transcript content the model can’t process.
 
 ### Inspecting unsupported transcript content errors
 
-- [metadata](unsupportedtranscriptcontent/metadata.md)
-- [unsupportedContent](unsupportedtranscriptcontent/unsupportedcontent.md)
-- [debugDescription](unsupportedtranscriptcontent/debugdescription.md)
+- [metadata](unsupportedtranscriptcontent/metadata.md): Additional information about the failure, keyed by name.
+- [unsupportedContent](unsupportedtranscriptcontent/unsupportedcontent.md): The transcript entries that the model can’t process.
+- [debugDescription](unsupportedtranscriptcontent/debugdescription.md): A debug description to help developers diagnose issues during development.
 
 ## Relationships
 

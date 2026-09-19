@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/vmcs_ctrl_cr4_mask](https://developer.apple.com/documentation/hypervisor/vmcs_ctrl_cr4_mask)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/vmcs_ctrl_cr4_mask
 
 # VMCS_CTRL_CR4_MASK (Swift)
 

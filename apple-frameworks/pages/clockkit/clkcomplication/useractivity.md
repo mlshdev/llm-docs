@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplication/useractivity](https://developer.apple.com/documentation/clockkit/clkcomplication/useractivity)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplication/useractivity
 
 # userActivity (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 An object that represents the state of the app at a moment in time.
 
@@ -38,7 +39,7 @@ Because the system can pass configurations as part of a shared watch face, only 
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 An object that represents the state of the app at a moment in time.
 

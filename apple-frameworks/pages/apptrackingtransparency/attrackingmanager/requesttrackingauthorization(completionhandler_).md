@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/apptrackingtransparency/attrackingmanager/requesttrackingauthorization(completionhandler:)](https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/requesttrackingauthorization(completionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/requesttrackingauthorization(completionhandler:)
 
 # requestTrackingAuthorization(completionHandler:) (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Type Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
 
-The request for user authorization to access app-related data.
+Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
 
 ## Declaration
 
@@ -22,15 +23,44 @@ class func requestTrackingAuthorization() async -> ATTrackingManager.Authorizati
 
 ## Discussion
 
-The [requestTrackingAuthorization(completionHandler:)](requesttrackingauthorization%28completionhandler_%29.md) is a one-time request to authorize or deny access to app-related data that can be used for tracking the user or the device. The system remembers the user’s choice and doesn’t prompt again unless a user uninstalls and then reinstalls the app on the device.
+This method requests authorization to access app-related data that the app can use to track the person or the device. In France, Germany, Italy, Poland, and Romania, the system presents a full-page sheet; otherwise, the system prompts the person with an alert.
 
-Calls to the API only prompt when the application state is `UIApplicationStateActive`. The authorization prompt doesn’t display if another permission request is pending user confirmation. Concurrent requests aren’t preserved by iOS, and calls to the API through an app extension don’t prompt. Check the [trackingAuthorizationStatus](trackingauthorizationstatus.md) for a status of [ATTrackingManager.AuthorizationStatus.notDetermined](authorizationstatus/notdetermined.md) to determine if you need to make an additional call.
+<a id="Handle-the-persons-response"></a>
 
-The completion handler will be called with the result of the user’s decision for granting or denying permission to use application tracking. The completion handler will be called immediately if access to request authorization is restricted.
+## Handle the person’s response
 
-> **Important**
+When the person answers the prompt, the system calls the completion handler with a status object ([ATTrackingManager.AuthorizationStatus](authorizationstatus.md)) set to [ATTrackingManager.AuthorizationStatus.authorized](authorizationstatus/authorized.md) or [ATTrackingManager.AuthorizationStatus.denied](authorizationstatus/denied.md), depending on the person’s response.
 
-> To use [requestTrackingAuthorization(completionHandler:)](requesttrackingauthorization%28completionhandler_%29.md), the [NSUserTrackingUsageDescription](../../bundleresources/information-property-list/nsusertrackingusagedescription.md) key must be in the [Information Property List](../../bundleresources/information-property-list.md).
+The status is [ATTrackingManager.AuthorizationStatus.notDetermined](authorizationstatus/notdetermined.md) if the system dismisses the prompt without a decision from the person; in this scenario, your app needs to call the method again to receive an authorization answer from the person.
+
+In some cases, the system doesn’t display the prompt and instead runs your completion handler immediately. The system doesn’t prompt the person when:
+
+- Tracking is restricted for the device; in this case, the [trackingAuthorizationStatus](trackingauthorizationstatus.md) is [ATTrackingManager.AuthorizationStatus.restricted](authorizationstatus/restricted.md) regardless of whether the system has shown the person the prompt.
+- The person disables “Allow Apps to Request to Track” (called “Allow Apps to Request to Link Your Activity Across Companies” in the European Union) in Settings \> Privacy & Security \> Tracking.
+- An existing permission request is pending.
+- Your code invokes this method through an app extension.
+- The app’s state is a value other than `UIApplicationStateActive`.
+
+<a id="Prompt-again-after-a-year"></a>
+
+## Prompt again after a year
+
+In the European Union, if a person answers the prompt, the system notes the date and doesn’t allow the prompt to display again until a year passes. You can make an additional request after a year whether the person approves or denies your app’s previous tracking request, unless the person disables tracking in Settings \> Privacy & Security \> Tracking.
+
+<a id="Configure-the-apps-target-properties"></a>
+
+## Configure the app’s target properties
+
+To use this method, add the [NSUserTrackingUsageDescription](../../bundleresources/information-property-list/nsusertrackingusagedescription.md) key to your app’s target properties in Xcode.
+
+In France, Germany, Italy, Poland, and Romania, the full-page sheet displays the [NSUserTrackingMarkdownUsageDescription](../../bundleresources/information-property-list/nsusertrackingmarkdownusagedescription.md) string with support for rich-text elements if you include it in your app’s target configuration in Xcode.
+
+## See Also
+
+### Authorization requests
+
+- [requestTrackingAuthorization(usingExpandedInterface:additionalInformationAction:completionHandler:)](requesttrackingauthorization%28usingexpandedinterface_additionalinformationaction_completionhandler_%29.md): Beta. Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
+- [NSUserTrackingMarkdownUsageDescription](../../bundleresources/information-property-list/nsusertrackingmarkdownusagedescription.md): Beta. A message that explains the purpose for accessing data that an application can use to track a person or device.
 
 # requestTrackingAuthorizationWithCompletionHandler: (Objective-C)
 
@@ -38,7 +68,7 @@ The completion handler will be called with the result of the user’s decision f
 **Kind:** Type Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
 
-The request for user authorization to access app-related data.
+Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
 
 ## Declaration
 
@@ -50,12 +80,41 @@ The request for user authorization to access app-related data.
 
 ## Discussion
 
-The [requestTrackingAuthorizationWithCompletionHandler:](requesttrackingauthorization%28completionhandler_%29.md) is a one-time request to authorize or deny access to app-related data that can be used for tracking the user or the device. The system remembers the user’s choice and doesn’t prompt again unless a user uninstalls and then reinstalls the app on the device.
+This method requests authorization to access app-related data that the app can use to track the person or the device. In France, Germany, Italy, Poland, and Romania, the system presents a full-page sheet; otherwise, the system prompts the person with an alert.
 
-Calls to the API only prompt when the application state is `UIApplicationStateActive`. The authorization prompt doesn’t display if another permission request is pending user confirmation. Concurrent requests aren’t preserved by iOS, and calls to the API through an app extension don’t prompt. Check the [trackingAuthorizationStatus](trackingauthorizationstatus.md) for a status of [ATTrackingManagerAuthorizationStatusNotDetermined](authorizationstatus/notdetermined.md) to determine if you need to make an additional call.
+<a id="Handle-the-persons-response"></a>
 
-The completion handler will be called with the result of the user’s decision for granting or denying permission to use application tracking. The completion handler will be called immediately if access to request authorization is restricted.
+## Handle the person’s response
 
-> **Important**
+When the person answers the prompt, the system calls the completion handler with a status object ([ATTrackingManagerAuthorizationStatus](authorizationstatus.md)) set to [ATTrackingManagerAuthorizationStatusAuthorized](authorizationstatus/authorized.md) or [ATTrackingManagerAuthorizationStatusDenied](authorizationstatus/denied.md), depending on the person’s response.
 
-> To use [requestTrackingAuthorizationWithCompletionHandler:](requesttrackingauthorization%28completionhandler_%29.md), the [NSUserTrackingUsageDescription](../../bundleresources/information-property-list/nsusertrackingusagedescription.md) key must be in the [Information Property List](../../bundleresources/information-property-list.md).
+The status is [ATTrackingManagerAuthorizationStatusNotDetermined](authorizationstatus/notdetermined.md) if the system dismisses the prompt without a decision from the person; in this scenario, your app needs to call the method again to receive an authorization answer from the person.
+
+In some cases, the system doesn’t display the prompt and instead runs your completion handler immediately. The system doesn’t prompt the person when:
+
+- Tracking is restricted for the device; in this case, the [trackingAuthorizationStatus](trackingauthorizationstatus.md) is [ATTrackingManagerAuthorizationStatusRestricted](authorizationstatus/restricted.md) regardless of whether the system has shown the person the prompt.
+- The person disables “Allow Apps to Request to Track” (called “Allow Apps to Request to Link Your Activity Across Companies” in the European Union) in Settings \> Privacy & Security \> Tracking.
+- An existing permission request is pending.
+- Your code invokes this method through an app extension.
+- The app’s state is a value other than `UIApplicationStateActive`.
+
+<a id="Prompt-again-after-a-year"></a>
+
+## Prompt again after a year
+
+In the European Union, if a person answers the prompt, the system notes the date and doesn’t allow the prompt to display again until a year passes. You can make an additional request after a year whether the person approves or denies your app’s previous tracking request, unless the person disables tracking in Settings \> Privacy & Security \> Tracking.
+
+<a id="Configure-the-apps-target-properties"></a>
+
+## Configure the app’s target properties
+
+To use this method, add the [NSUserTrackingUsageDescription](../../bundleresources/information-property-list/nsusertrackingusagedescription.md) key to your app’s target properties in Xcode.
+
+In France, Germany, Italy, Poland, and Romania, the full-page sheet displays the [NSUserTrackingMarkdownUsageDescription](../../bundleresources/information-property-list/nsusertrackingmarkdownusagedescription.md) string with support for rich-text elements if you include it in your app’s target configuration in Xcode.
+
+## See Also
+
+### Authorization requests
+
+- [requestTrackingAuthorizationUsingExpandedInterface:additionalInformationAction:completionHandler:](requesttrackingauthorization%28usingexpandedinterface_additionalinformationaction_completionhandler_%29.md): Beta. Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
+- [NSUserTrackingMarkdownUsageDescription](../../bundleresources/information-property-list/nsusertrackingmarkdownusagedescription.md): Beta. A message that explains the purpose for accessing data that an application can use to track a person or device.

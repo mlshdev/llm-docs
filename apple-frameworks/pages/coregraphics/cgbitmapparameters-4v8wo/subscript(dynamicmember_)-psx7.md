@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/cgbitmapparameters-4v8wo/subscript(dynamicmember:)-psx7](https://developer.apple.com/documentation/coregraphics/cgbitmapparameters-4v8wo/subscript(dynamicmember:)-psx7)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coregraphics/cgbitmapparameters-4v8wo/subscript(dynamicmember:)-psx7
 
 # subscript(dynamicMember:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/identitylookup/livecalleridlookupextensioncontext](https://developer.apple.com/documentation/identitylookup/livecalleridlookupextensioncontext)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/identitylookup/livecalleridlookupextensioncontext
 
 # LiveCallerIDLookupExtensionContext
 
@@ -32,8 +33,8 @@ The extension context allows the system to obtain information from your app.
 
 ### Configuring the system
 
-- [serviceURL](livecalleridlookupextensioncontext/serviceurl.md): The endpoint of the service to fetch identity and blocking information.
-- [tokenIssuerURL](livecalleridlookupextensioncontext/tokenissuerurl.md): The URL of the Privacy Pass token issuer.
+- [serviceURL](livecalleridlookupextensioncontext/serviceurl.md): Deprecated. The endpoint of the service to fetch identity and blocking information.
+- [tokenIssuerURL](livecalleridlookupextensioncontext/tokenissuerurl.md): Deprecated. The URL of the Privacy Pass token issuer.
 - [userTierToken](livecalleridlookupextensioncontext/usertiertoken.md): An HTTP bearer token that authenticates the person using your app.
 
 ## Relationships

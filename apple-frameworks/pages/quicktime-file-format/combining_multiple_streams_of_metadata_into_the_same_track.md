@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/combining_multiple_streams_of_metadata_into_the_same_track](https://developer.apple.com/documentation/quicktime-file-format/combining_multiple_streams_of_metadata_into_the_same_track)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/quicktime-file-format/combining_multiple_streams_of_metadata_into_the_same_track
 
 # Combining multiple streams of metadata into the same track
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/refundrequesterror/duplicaterequest](https://developer.apple.com/documentation/storekit/transaction/refundrequesterror/duplicaterequest)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/refundrequesterror/duplicaterequest
 
 # Transaction.RefundRequestError.duplicateRequest
 
@@ -6,7 +7,7 @@
 **Kind:** Case  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
 
-The App Store has already received a refund request for this in-app purchase.
+The App Store has already received a refund request for this Apple In-App Purchase.
 
 ## Declaration
 

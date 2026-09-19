@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/uisceneappintent](https://developer.apple.com/documentation/appintents/uisceneappintent)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/uisceneappintent
 
 # UISceneAppIntent
 
@@ -38,6 +39,10 @@ For more information about how to use app intents to configure your app’s inte
 ### Updating the app’s interface
 
 - [performNavigation(forScene:)](uisceneappintent/performnavigation%28forscene_%29.md): Tells the app intent that the system is about to show the specified scene.
+
+### Default Implementations
+
+- [TargetContentProvidingIntent Implementations](uisceneappintent/targetcontentprovidingintent-implementations.md)
 
 ## Relationships
 

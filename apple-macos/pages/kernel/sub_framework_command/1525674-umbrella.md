@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/sub_framework_command/1525674-umbrella](https://developer.apple.com/documentation/kernel/sub_framework_command/1525674-umbrella)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/sub_framework_command/1525674-umbrella
 
 # umbrella
 

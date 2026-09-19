@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/apptrackingtransparency/attrackingmanager/authorizationstatus](https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/authorizationstatus)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/authorizationstatus
 
 # ATTrackingManager.AuthorizationStatus (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Enumeration  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
 
-The status values for app tracking authorization.
+A type that represents the tracking-authorization status of an app.
 
 ## Declaration
 
@@ -18,27 +19,20 @@ enum AuthorizationStatus
 
 ## Overview
 
-After a device receives an authorization request to approve access to app-related data that can be used for tracking the user or the device, the returned value is either:
-
-- [ATTrackingManager.AuthorizationStatus.authorized](authorizationstatus/authorized.md), or
-- [ATTrackingManager.AuthorizationStatus.denied](authorizationstatus/denied.md).
-
-Before a device receives an authorization request to approve access to app-related data that can be used for tracking the user or the device, the returned value is: [ATTrackingManager.AuthorizationStatus.notDetermined](authorizationstatus/notdetermined.md).
-
-If authorization to use app tracking data is restricted, the value is: [ATTrackingManager.AuthorizationStatus.restricted](authorizationstatus/restricted.md).
+[trackingAuthorizationStatus](trackingauthorizationstatus.md) returns this type, and [requestTrackingAuthorization(completionHandler:)](requesttrackingauthorization%28completionhandler_%29.md) passes an instance of this type to your completion handler when a person answers the system alert.
 
 ## Topics
 
-### Cases
+### Determining the status
 
-- [ATTrackingManager.AuthorizationStatus.authorized](authorizationstatus/authorized.md): The value that returns if the user authorizes access to app-related data for tracking the user or the device.
-- [ATTrackingManager.AuthorizationStatus.denied](authorizationstatus/denied.md): The value that returns if the user denies authorization to access app-related data for tracking the user or the device.
-- [ATTrackingManager.AuthorizationStatus.notDetermined](authorizationstatus/notdetermined.md): The value that returns when the app can’t determine the user’s authorization status for access to app-related data for tracking the user or the device.
-- [ATTrackingManager.AuthorizationStatus.restricted](authorizationstatus/restricted.md): The value that returns if authorization to access app-related data for tracking the user or the device has a restricted status.
+- [ATTrackingManager.AuthorizationStatus.authorized](authorizationstatus/authorized.md): A value that indicates someone grants your app permission to access data your app can use to track a person or device.
+- [ATTrackingManager.AuthorizationStatus.denied](authorizationstatus/denied.md): A value that indicates someone denies your app permission to access data your app can use to track a person or device.
+- [ATTrackingManager.AuthorizationStatus.notDetermined](authorizationstatus/notdetermined.md): A value that indicates the person hasn’t responded to a tracking authorization request.
+- [ATTrackingManager.AuthorizationStatus.restricted](authorizationstatus/restricted.md): A value that indicates the system restricts tracking authorization.
 
-### Initializers
+### Creating a status
 
-- [init(rawValue:)](authorizationstatus/init%28rawvalue_%29.md)
+- [init(rawValue:)](authorizationstatus/init%28rawvalue_%29.md): Initializes an authorization status.
 
 ## Relationships
 
@@ -53,9 +47,9 @@ If authorization to use app tracking data is restricted, the value is: [ATTracki
 
 ## See Also
 
-### Determining Tracking Authorization Status
+### Authorization status and results
 
-- [trackingAuthorizationStatus](trackingauthorizationstatus.md): The authorization status that is current for the calling application.
+- [trackingAuthorizationStatus](trackingauthorizationstatus.md): A value that indicates the status of the app’s tracking authorization.
 
 # ATTrackingManagerAuthorizationStatus (Objective-C)
 
@@ -63,7 +57,7 @@ If authorization to use app tracking data is restricted, the value is: [ATTracki
 **Kind:** Enumeration  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
 
-The status values for app tracking authorization.
+A type that represents the tracking-authorization status of an app.
 
 ## Declaration
 
@@ -75,26 +69,19 @@ enum ATTrackingManagerAuthorizationStatus : NSUInteger;
 
 ## Overview
 
-After a device receives an authorization request to approve access to app-related data that can be used for tracking the user or the device, the returned value is either:
-
-- [ATTrackingManagerAuthorizationStatusAuthorized](authorizationstatus/authorized.md), or
-- [ATTrackingManagerAuthorizationStatusDenied](authorizationstatus/denied.md).
-
-Before a device receives an authorization request to approve access to app-related data that can be used for tracking the user or the device, the returned value is: [ATTrackingManagerAuthorizationStatusNotDetermined](authorizationstatus/notdetermined.md).
-
-If authorization to use app tracking data is restricted, the value is: [ATTrackingManagerAuthorizationStatusRestricted](authorizationstatus/restricted.md).
+[trackingAuthorizationStatus](trackingauthorizationstatus.md) returns this type, and [requestTrackingAuthorizationWithCompletionHandler:](requesttrackingauthorization%28completionhandler_%29.md) passes an instance of this type to your completion handler when a person answers the system alert.
 
 ## Topics
 
-### Cases
+### Determining the status
 
-- [ATTrackingManagerAuthorizationStatusAuthorized](authorizationstatus/authorized.md): The value that returns if the user authorizes access to app-related data for tracking the user or the device.
-- [ATTrackingManagerAuthorizationStatusDenied](authorizationstatus/denied.md): The value that returns if the user denies authorization to access app-related data for tracking the user or the device.
-- [ATTrackingManagerAuthorizationStatusNotDetermined](authorizationstatus/notdetermined.md): The value that returns when the app can’t determine the user’s authorization status for access to app-related data for tracking the user or the device.
-- [ATTrackingManagerAuthorizationStatusRestricted](authorizationstatus/restricted.md): The value that returns if authorization to access app-related data for tracking the user or the device has a restricted status.
+- [ATTrackingManagerAuthorizationStatusAuthorized](authorizationstatus/authorized.md): A value that indicates someone grants your app permission to access data your app can use to track a person or device.
+- [ATTrackingManagerAuthorizationStatusDenied](authorizationstatus/denied.md): A value that indicates someone denies your app permission to access data your app can use to track a person or device.
+- [ATTrackingManagerAuthorizationStatusNotDetermined](authorizationstatus/notdetermined.md): A value that indicates the person hasn’t responded to a tracking authorization request.
+- [ATTrackingManagerAuthorizationStatusRestricted](authorizationstatus/restricted.md): A value that indicates the system restricts tracking authorization.
 
 ## See Also
 
-### Determining Tracking Authorization Status
+### Authorization status and results
 
-- [trackingAuthorizationStatus](trackingauthorizationstatus.md): The authorization status that is current for the calling application.
+- [trackingAuthorizationStatus](trackingauthorizationstatus.md): A value that indicates the status of the app’s tracking authorization.

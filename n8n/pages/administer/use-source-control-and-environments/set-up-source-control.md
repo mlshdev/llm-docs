@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/administer/use-source-control-and-environments/set-up-source-control.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/administer/use-source-control-and-environments/set-up-source-control.md)
+> Pinned source for n8n main: [docs/administer/use-source-control-and-environments/set-up-source-control.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/administer/use-source-control-and-environments/set-up-source-control.md)
 
 # Set up source control for environments <a id="set-up-source-control-for-environments"></a>
 
@@ -64,6 +64,17 @@ Required permissions for your token:
 - Repository read/write access
 - Contents read/write (for GitHub)
 - Source code pull/push (for GitLab)
+
+#### Git hosts with a private certificate authority
+
+> **Info**
+> **Feature availability**
+>
+> Private certificate authorities for Git connections are available from n8n 2.40.0.
+
+If your Git host uses a certificate from a private certificate authority (CA), set the `GIT_SSL_CAINFO` environment variable on the n8n instance to the path of a PEM file that contains the CA certificate. Git uses its own trust store, so the [custom certificate authority](https://docs.n8n.io/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-custom-ssl-certificate-authorities) configuration for n8n doesn't apply to Git connections. If you keep the certificates in a directory indexed with `c_rehash`, set `GIT_SSL_CAPATH` to the directory instead.
+
+The file or directory replaces the default trust store for Git. If the instance also connects to public Git hosts, include their root certificates.
 
 ## Step 4: Connect n8n and configure your instance <a id="step-4-connect-n8n-and-configure-your-instance"></a>
 

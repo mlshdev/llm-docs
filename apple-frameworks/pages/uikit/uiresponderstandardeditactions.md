@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiresponderstandardeditactions](https://developer.apple.com/documentation/uikit/uiresponderstandardeditactions)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiresponderstandardeditactions
 
 # UIResponderStandardEditActions (Swift)
 
@@ -103,6 +104,7 @@ Responder objects can implement the methods of this protocol to handle standard 
 - [UIAlertController](uialertcontroller.md)
 - [UIAlertView](uialertview.md)
 - [UIApplication](uiapplication.md)
+- [UIArrangementViewController](uiarrangementviewcontroller.md)
 - [UIBackgroundExtensionView](uibackgroundextensionview.md)
 - [UIButton](uibutton.md)
 - [UICalendarView](uicalendarview.md)

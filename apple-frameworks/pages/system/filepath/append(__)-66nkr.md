@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/system/filepath/append(_:)-66nkr](https://developer.apple.com/documentation/system/filepath/append(_:)-66nkr)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/system/filepath/append(_:)-66nkr
 
 # append(\_:)
 

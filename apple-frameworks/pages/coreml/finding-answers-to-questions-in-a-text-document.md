@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreml/finding-answers-to-questions-in-a-text-document](https://developer.apple.com/documentation/coreml/finding-answers-to-questions-in-a-text-document)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreml/finding-answers-to-questions-in-a-text-document
 
 # Finding answers to questions in a text document
 

@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-api.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/cloud-api.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-api.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/cloud-api.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud-api/
 
 # Qdrant Cloud API: Powerful gRPC and Flexible REST/JSON Interfaces
@@ -30,7 +30,7 @@ Most of the Qdrant Cloud API requests must be authenticated. Authentication is h
 Replace \<YOUR\_MANAGEMENT\_KEY> with the actual API key obtained from your Qdrant Cloud dashboard or generated programmatically.
 
 You can create a Cloud Management Keys in the Cloud Console UI. Go to **Access Management** > **Cloud Management Keys**.
-![Authentication](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/authentication.png)
+![Authentication](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/authentication.png)
 
 **Note:** Ensure that the API key is kept secure and not exposed in public repositories or logs.  Once authenticated, the API allows you to manage clusters, backup schedules, and perform other operations available to your account.
 

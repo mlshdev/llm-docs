@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideochannellabel/righttotal](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/righttotal)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/righttotal
 
 # RightTotal
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 matrix encoded 4 channels
 
@@ -20,10 +21,10 @@ RightTotal
 
 ### Right channels
 
-- [Right](right.md)
-- [RightCenter](rightcenter.md)
-- [RightTopFront](righttopfront.md)
-- [VerticalHeightRight](verticalheightright.md): WAVE: “Top Front Right”
-- [RightTopMiddle](righttopmiddle.md)
-- [RightTopRear](righttoprear.md)
-- [RightWide](rightwide.md)
+- [Right](right.md): Beta.
+- [RightCenter](rightcenter.md): Beta.
+- [RightTopFront](righttopfront.md): Beta.
+- [VerticalHeightRight](verticalheightright.md): Beta. WAVE: “Top Front Right”
+- [RightTopMiddle](righttopmiddle.md): Beta.
+- [RightTopRear](righttoprear.md): Beta.
+- [RightWide](rightwide.md): Beta.

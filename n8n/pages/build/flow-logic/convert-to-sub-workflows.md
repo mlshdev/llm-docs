@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/flow-logic/convert-to-sub-workflows.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/flow-logic/convert-to-sub-workflows.md)
+> Pinned source for n8n main: [docs/build/flow-logic/convert-to-sub-workflows.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/flow-logic/convert-to-sub-workflows.md)
 
 # Sub-workflow conversion <a id="sub-workflow-conversion"></a>
 
@@ -7,7 +7,7 @@
 >
 > Sub-workflow conversion is available from n8n 1.97.0.
 
-Use sub-workflow conversion to refactor your workflows into reusable parts. Expressions referencing other nodes are automatically updated and added as parameters in the [Execute Workflow Trigger](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) node.
+Use sub-workflow conversion to refactor your workflows into reusable parts, as part of your workflow's [flow logic](https://docs.n8n.io/build/flow-logic). Expressions referencing other nodes are automatically updated and added as parameters in the [Execute Workflow Trigger](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) node.
 
 See [sub-workflows](https://docs.n8n.io/build/flow-logic/break-workflows-into-smaller-parts) for a general introduction to the concept.
 
@@ -47,3 +47,14 @@ Most sub-workflow conversions work without issues, but there are some caveats an
   > n8n adds suffixes like `_firstItem`, `_lastItem`, and `_allItems` to variable names accessed by these functions. This helps preserve information about the original expression, since item ordering may be different in the sub-workflow context.
 
 - **The `itemMatching` function requires a fixed index**: You can't use expressions for the index value when using the [`itemMatching` function](https://docs.n8n.io/build/work-with-data/reference-data/reference-previous-nodes). You must pass it a fixed number.
+
+## Related resources
+
+- [Flow logic](https://docs.n8n.io/build/flow-logic)
+- [Split with conditionals](https://docs.n8n.io/build/flow-logic/split-with-conditionals)
+- [Merge data](https://docs.n8n.io/build/flow-logic/merge-data)
+- [Loop](https://docs.n8n.io/build/flow-logic/loop)
+- [Wait](https://docs.n8n.io/build/flow-logic/wait)
+- [Understand execution order](https://docs.n8n.io/build/flow-logic/understand-execution-order)
+- [Break workflows into smaller parts](https://docs.n8n.io/build/flow-logic/break-workflows-into-smaller-parts)
+- [Handle errors gracefully](https://docs.n8n.io/build/flow-logic/handle-errors-gracefully)

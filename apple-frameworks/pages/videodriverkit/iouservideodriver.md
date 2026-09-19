@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideodriver](https://developer.apple.com/documentation/videodriverkit/iouservideodriver)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideodriver
 
 # IOUserVideoDriver
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Class  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 A video driver.
 
@@ -44,64 +45,64 @@ The host is in control of IO. It tells the drivers’s [IOUserVideoDevice](iouse
 
 ### Running the driver service
 
-- [init](iouservideodriver/init.md)
-- [Start](iouservideodriver/start.md)
-- [Stop](iouservideodriver/stop.md)
-- [free](iouservideodriver/free.md)
+- [init](iouservideodriver/init.md): Beta.
+- [Start](iouservideodriver/start.md): Beta.
+- [Stop](iouservideodriver/stop.md): Beta.
+- [free](iouservideodriver/free.md): Beta.
 
 ### Getting information about the class
 
-- [GetClassID](iouservideodriver/getclassid.md): Gets the class identifier of the object.
-- [GetBaseClassID](iouservideodriver/getbaseclassid.md): Gets the class identifier of the base class object.
-- [IOUserVideoClassID](videodriverkit/iouservideoclassid.md): Video class identifiers of an video object.
-- [GetWorkQueue](iouservideodriver/getworkqueue.md): Gets the work queue created by the video object.
-- [GetName](iouservideodriver/getname.md): Gets the name of the driver.
-- [SetName](iouservideodriver/setname.md): Sets the name of the video driver.
+- [GetClassID](iouservideodriver/getclassid.md): Beta. Gets the class identifier of the object.
+- [GetBaseClassID](iouservideodriver/getbaseclassid.md): Beta. Gets the class identifier of the base class object.
+- [IOUserVideoClassID](videodriverkit/iouservideoclassid.md): Beta. Video class identifiers of an video object.
+- [GetWorkQueue](iouservideodriver/getworkqueue.md): Beta. Gets the work queue created by the video object.
+- [GetName](iouservideodriver/getname.md): Beta. Gets the name of the driver.
+- [SetName](iouservideodriver/setname.md): Beta. Sets the name of the video driver.
 
 ### Getting the driver’s video object identifier
 
-- [kIOUserVideoObjectIDDriver](videodriverkit/kiouservideoobjectiddriver.md): The video object identifier of the driver.
+- [kIOUserVideoObjectIDDriver](videodriverkit/kiouservideoobjectiddriver.md): Beta. The video object identifier of the driver.
 
 ### Starting and stopping the driver
 
-- [StartDevice](iouservideodriver/startdevice.md): Tells the driver to start IO on an video device.
-- [StopDevice](iouservideodriver/stopdevice.md): Tells the driver to stop IO on an video device.
-- [IOUserVideoObjectID](videodriverkit/iouservideoobjectid.md): A handle for a a specific video object.
-- [IOUserVideoStartStopFlags](videodriverkit/iouservideostartstopflags.md): Flags used to indicate how I/O is starting or stopping.
+- [StartDevice](iouservideodriver/startdevice.md): Beta. Tells the driver to start IO on an video device.
+- [StopDevice](iouservideodriver/stopdevice.md): Beta. Tells the driver to stop IO on an video device.
+- [IOUserVideoObjectID](videodriverkit/iouservideoobjectid.md): Beta. A handle for a a specific video object.
+- [IOUserVideoStartStopFlags](videodriverkit/iouservideostartstopflags.md): Beta. Flags used to indicate how I/O is starting or stopping.
 
 ### Creating a new client
 
-- [NewUserClient](iouservideodriver/newuserclient.md)
+- [NewUserClient](iouservideodriver/newuserclient.md): Beta.
 
 ### Working with transport types
 
-- [GetTransportType](iouservideodriver/gettransporttype.md): Gets the transport type of the driver.
-- [SetTransportType](iouservideodriver/settransporttype.md): Sets the transport type of the video driver.
-- [IOUserVideoTransportType](videodriverkit/iouservideotransporttype.md): The transport type of a video stream.
+- [GetTransportType](iouservideodriver/gettransporttype.md): Beta. Gets the transport type of the driver.
+- [SetTransportType](iouservideodriver/settransporttype.md): Beta. Sets the transport type of the video driver.
+- [IOUserVideoTransportType](videodriverkit/iouservideotransporttype.md): Beta. The transport type of a video stream.
 
 ### Working with video objects
 
-- [AddObject](iouservideodriver/addobject.md): Adds a video object to the driver.
-- [RemoveObject](iouservideodriver/removeobject.md): Removes a video object from the driver.
-- [IOUserVideoObject](iouservideoobject.md): The base class for all video objects.
-- [GetVideoObjectForObjectID](iouservideodriver/getvideoobjectforobjectid.md): Gets the video object that corresponds to a video object identifier.
+- [AddObject](iouservideodriver/addobject.md): Beta. Adds a video object to the driver.
+- [RemoveObject](iouservideodriver/removeobject.md): Beta. Removes a video object from the driver.
+- [IOUserVideoObject](iouservideoobject.md): Beta. The base class for all video objects.
+- [GetVideoObjectForObjectID](iouservideodriver/getvideoobjectforobjectid.md): Beta. Gets the video object that corresponds to a video object identifier.
 
 ### Communicating with the host
 
-- [PropertiesChanged](iouservideodriver/propertieschanged.md): This method informs the host when the state of an driver’s object changes.
-- [IOUserVideoObjectID](videodriverkit/iouservideoobjectid.md): A handle for a a specific video object.
-- [IOUserVideoObjectPropertySelector](videodriverkit/iouservideoobjectpropertyselector.md): A four character code which, along with the scope and element, specifies a specific piece of information about a video object.
+- [PropertiesChanged](iouservideodriver/propertieschanged.md): Beta. This method informs the host when the state of an driver’s object changes.
+- [IOUserVideoObjectID](videodriverkit/iouservideoobjectid.md): Beta. A handle for a a specific video object.
+- [IOUserVideoObjectPropertySelector](videodriverkit/iouservideoobjectpropertyselector.md): Beta. A four character code which, along with the scope and element, specifies a specific piece of information about a video object.
 
 ### Working with custom properties
 
-- [AddCustomProperty](iouservideodriver/addcustomproperty.md): Adds a custom property object to the video driver.
-- [RemoveCustomProperty](iouservideodriver/removecustomproperty.md): Removes a custom property object from the video driver.
-- [IOUserVideoCustomProperty](iouservideocustomproperty.md): A custom property object that can be added to or associated with video objects.
+- [AddCustomProperty](iouservideodriver/addcustomproperty.md): Beta. Adds a custom property object to the video driver.
+- [RemoveCustomProperty](iouservideodriver/removecustomproperty.md): Beta. Removes a custom property object from the video driver.
+- [IOUserVideoCustomProperty](iouservideocustomproperty.md): Beta. A custom property object that can be added to or associated with video objects.
 
 ### Working with buffers
 
-- [OutputBufferNotification](iouservideodriver/outputbuffernotification.md)
-- [BufferQueueChange](iouservideodriver/bufferqueuechange.md)
+- [OutputBufferNotification](iouservideodriver/outputbuffernotification.md): Beta.
+- [BufferQueueChange](iouservideodriver/bufferqueuechange.md): Beta.
 
 ## Relationships
 
@@ -113,4 +114,4 @@ The host is in control of IO. It tells the drivers’s [IOUserVideoDevice](iouse
 
 ### Essentials
 
-- [IOUserVideoObject](iouservideoobject.md): The base class for all video objects.
+- [IOUserVideoObject](iouservideoobject.md): Beta. The base class for all video objects.

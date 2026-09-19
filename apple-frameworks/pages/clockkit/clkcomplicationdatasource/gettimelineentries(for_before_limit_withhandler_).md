@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationdatasource/gettimelineentries(for:before:limit:withhandler:)](https://developer.apple.com/documentation/clockkit/clkcomplicationdatasource/gettimelineentries(for:before:limit:withhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationdatasource/gettimelineentries(for:before:limit:withhandler:)
 
 # getTimelineEntries(for:before:limit:withHandler:) (Swift)
 

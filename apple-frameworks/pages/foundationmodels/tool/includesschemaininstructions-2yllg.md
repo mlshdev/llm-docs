@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/tool/includesschemaininstructions-2yllg](https://developer.apple.com/documentation/foundationmodels/tool/includesschemaininstructions-2yllg)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/tool/includesschemaininstructions-2yllg
 
 # includesSchemaInInstructions
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · visionOS 26.0+ · watchOS 27.0+
 
-A Boolean value that indicates whether the tool’s name, description, and parameters schema are injected into the instructions of sessions that leverage this tool.
+A Boolean value that indicates whether the framework includes this tool’s definition in the session’s instructions.
 
 ## Declaration
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/hiddriverkit/khidusage_bcs_upc_awith128optical](https://developer.apple.com/documentation/hiddriverkit/khidusage_bcs_upc_awith128optical)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hiddriverkit/khidusage_bcs_upc_awith128optical
 
 # kHIDUsage_BCS_UPC_AWith128Optical
 

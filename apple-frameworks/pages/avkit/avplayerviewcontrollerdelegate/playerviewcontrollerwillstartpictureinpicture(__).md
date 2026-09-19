@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontrollerwillstartpictureinpicture(_:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontrollerwillstartpictureinpicture(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontrollerwillstartpictureinpicture(_:)
 
 # playerViewControllerWillStartPictureInPicture(\_:) (Swift)
 
@@ -20,7 +21,7 @@ optional func playerViewControllerWillStartPictureInPicture(_ playerViewControll
 
 ## Mentioned In
 
-- [Adopting Picture in Picture in a Standard Player](../adopting-picture-in-picture-in-a-standard-player.md)
+- [Adopting Picture in Picture in a standard player](../adopting-picture-in-picture-in-a-standard-player.md)
 
 <a id="Discussion"></a>
 
@@ -30,7 +31,7 @@ Implement this method to update your player user interface, such as hiding or di
 
 ## See Also
 
-### Responding to Picture in Picture Life Cycle Events
+### Responding to Picture in Picture life cycle events
 
 - [playerViewControllerShouldAutomaticallyDismissAtPictureInPictureStart(\_:)](playerviewcontrollershouldautomaticallydismissatpictureinpicturestart%28__%29.md): Asks the delegate whether the player view controller automatically dismisses itself when Picture in Picture starts.
 - [playerViewControllerDidStartPictureInPicture(\_:)](playerviewcontrollerdidstartpictureinpicture%28__%29.md): Tells the delegate when Picture in Picture starts.
@@ -59,7 +60,7 @@ Tells the delegate when Picture in Picture is about to start.
 
 ## Mentioned In
 
-- [Adopting Picture in Picture in a Standard Player](../adopting-picture-in-picture-in-a-standard-player.md)
+- [Adopting Picture in Picture in a standard player](../adopting-picture-in-picture-in-a-standard-player.md)
 
 <a id="Discussion"></a>
 
@@ -69,7 +70,7 @@ Implement this method to update your player user interface, such as hiding or di
 
 ## See Also
 
-### Responding to Picture in Picture Life Cycle Events
+### Responding to Picture in Picture life cycle events
 
 - [playerViewControllerShouldAutomaticallyDismissAtPictureInPictureStart:](playerviewcontrollershouldautomaticallydismissatpictureinpicturestart%28__%29.md): Asks the delegate whether the player view controller automatically dismisses itself when Picture in Picture starts.
 - [playerViewControllerDidStartPictureInPicture:](playerviewcontrollerdidstartpictureinpicture%28__%29.md): Tells the delegate when Picture in Picture starts.

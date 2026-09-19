@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsspellserverdelegate/spellserver(_:check:offset:types:options:orthography:wordcount:)](https://developer.apple.com/documentation/foundation/nsspellserverdelegate/spellserver(_:check:offset:types:options:orthography:wordcount:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsspellserverdelegate/spellserver(_:check:offset:types:options:orthography:wordcount:)
 
 # spellServer(\_:check:offset:types:options:orthography:wordCount:) (Swift)
 

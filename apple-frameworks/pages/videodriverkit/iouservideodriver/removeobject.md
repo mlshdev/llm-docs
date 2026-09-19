@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideodriver/removeobject](https://developer.apple.com/documentation/videodriverkit/iouservideodriver/removeobject)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideodriver/removeobject
 
 # RemoveObject
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Removes a video object from the driver.
 
@@ -36,6 +37,6 @@ The objects’s reference count will be decremented if it was successfully remov
 
 ### Working with video objects
 
-- [AddObject](addobject.md): Adds a video object to the driver.
-- [IOUserVideoObject](../iouservideoobject.md): The base class for all video objects.
-- [GetVideoObjectForObjectID](getvideoobjectforobjectid.md): Gets the video object that corresponds to a video object identifier.
+- [AddObject](addobject.md): Beta. Adds a video object to the driver.
+- [IOUserVideoObject](../iouservideoobject.md): Beta. The base class for all video objects.
+- [GetVideoObjectForObjectID](getvideoobjectforobjectid.md): Beta. Gets the video object that corresponds to a video object identifier.

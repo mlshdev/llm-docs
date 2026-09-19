@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1416179-ioaf_swapint16tofloat32](https://developer.apple.com/documentation/kernel/1416179-ioaf_swapint16tofloat32)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1416179-ioaf_swapint16tofloat32
 
 # IOAF_SwapInt16ToFloat32
 

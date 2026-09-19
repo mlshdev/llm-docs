@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mapkit/mkmapview/maptype](https://developer.apple.com/documentation/mapkit/mkmapview/maptype)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mapkit/mkmapview/maptype
 
 # mapType (Swift)
 
 **Framework:** MapKit  
 **Kind:** Instance Property  
-**Availability:** iOS 3.0+ (deprecated in 27.0) · iPadOS 3.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.9+ (deprecated in 27.0) · tvOS 9.2+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 3.0+ (deprecated in 27.2) · iPadOS 3.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.9+ (deprecated in 27.2) · tvOS 9.2+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 The type of data the map view displays.
 
@@ -40,7 +41,7 @@ Changing the value in this property may cause the receiver to begin loading new 
 
 **Framework:** MapKit  
 **Kind:** Instance Property  
-**Availability:** iOS 3.0+ (deprecated in 27.0) · iPadOS 3.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.9+ (deprecated in 27.0) · tvOS 9.2+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 3.0+ (deprecated in 27.2) · iPadOS 3.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.9+ (deprecated in 27.2) · tvOS 9.2+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 The type of data the map view displays.
 

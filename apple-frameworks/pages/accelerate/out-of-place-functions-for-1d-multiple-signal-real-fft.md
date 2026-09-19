@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/out-of-place-functions-for-1d-multiple-signal-real-fft](https://developer.apple.com/documentation/accelerate/out-of-place-functions-for-1d-multiple-signal-real-fft)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/out-of-place-functions-for-1d-multiple-signal-real-fft
 
 # Out-of-Place Functions for 1D Multiple-Signal Real FFT (Swift)
 
@@ -80,6 +81,7 @@ for (m = 0; m < M; ++m)
         C->imagp[m*IMC + k*IC] = H[2*k+1];
     }
 }
+
 
 ```
 
@@ -171,6 +173,7 @@ for (m = 0; m < M; ++m)
         C->imagp[m*IMC + k*IC] = H[2*k+1];
     }
 }
+
 
 ```
 

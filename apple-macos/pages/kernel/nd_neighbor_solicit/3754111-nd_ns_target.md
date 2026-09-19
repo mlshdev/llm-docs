@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/nd_neighbor_solicit/3754111-nd_ns_target](https://developer.apple.com/documentation/kernel/nd_neighbor_solicit/3754111-nd_ns_target)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/nd_neighbor_solicit/3754111-nd_ns_target
 
 # nd_ns_target
 

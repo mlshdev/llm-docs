@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/replaykit/rpbroadcastmp4cliphandler/processmp4clip(with:setupinfo:finished:)](https://developer.apple.com/documentation/replaykit/rpbroadcastmp4cliphandler/processmp4clip(with:setupinfo:finished:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/replaykit/rpbroadcastmp4cliphandler/processmp4clip(with:setupinfo:finished:)
 
 # processMP4Clip(with:setupInfo:finished:) (Swift)
 

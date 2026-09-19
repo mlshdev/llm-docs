@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photos/phphotolibrary/uploadjobextensionenabled](https://developer.apple.com/documentation/photos/phphotolibrary/uploadjobextensionenabled)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photos/phphotolibrary/uploadjobextensionenabled
 
 # uploadJobExtensionEnabled (Swift)
 
@@ -24,7 +25,7 @@ var uploadJobExtensionEnabled: Bool { get }
 
 The value is `true` if the extension is enabled and active, and is `false` otherwise.
 
-The extension’s host app uses this property to determine the background processing status. See [PHAssetResourceUploadJob](../phassetresourceuploadjob.md) and \`\`\`\`PHAssetResourceUploadJobChangeRequest\`\` for more information.
+The extension’s host app uses this property to determine the background processing status. See [PHAssetResourceUploadJob](../phassetresourceuploadjob.md) and [PHAssetResourceUploadJobChangeRequest](../phassetresourceuploadjobchangerequest.md) for more information.
 
 ## See Also
 
@@ -56,7 +57,7 @@ A Boolean value that indicates whether background asset resource uploading is en
 
 The value is `true` if the extension is enabled and active, and is `false` otherwise.
 
-The extension’s host app uses this property to determine the background processing status. See [PHAssetResourceUploadJob](../phassetresourceuploadjob.md) and \`\`\`\`PHAssetResourceUploadJobChangeRequest\`\` for more information.
+The extension’s host app uses this property to determine the background processing status. See [PHAssetResourceUploadJob](../phassetresourceuploadjob.md) and [PHAssetResourceUploadJobChangeRequest](../phassetresourceuploadjobchangerequest.md) for more information.
 
 ## See Also
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/visionos/placing-content-on-detected-planes](https://developer.apple.com/documentation/visionos/placing-content-on-detected-planes)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/visionos/placing-content-on-detected-planes
 
 # Placing content on detected planes
 

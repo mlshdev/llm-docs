@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/receiving-and-decoding-external-purchase-tokens](https://developer.apple.com/documentation/storekit/receiving-and-decoding-external-purchase-tokens)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/receiving-and-decoding-external-purchase-tokens
 
 # Receiving and decoding external purchase tokens
 
@@ -15,9 +16,9 @@ Receive tokens for external purchases that you use to report transactions to App
 
 An *external purchase token* is a unique string that your app or website receives when your customer chooses to view your external purchase offerings. You receive external purchase tokens within your app or appended to your website URL, depending on the API you call.
 
-- For apps in the European Union (EU) that have the [SKExternalPurchaseCustomLinkRegions](../bundleresources/information-property-list/skexternalpurchasecustomlinkregions.md) property list key configured, when you call [token(for:)](externalpurchasecustomlink/token%28for_%29.md), you receive an external purchase token for custom links (also called a *custom link token*). For more information about these tokens, see the following section, [Receive custom link tokens for apps in the European Union](receiving-and-decoding-external-purchase-tokens.md#Receive-custom-link-tokens-for-apps-in-the-European-Union).
-- For apps in Japan that have the [StoreKit external purchases or offers entitlement](../bundleresources/entitlements/com.apple.developer.storekit.custom-purchase-link.allowed-regions.md) entitlement configured, when you call [token(for:)](externalpurchasecustomlink/token%28for_%29.md), you receive external purchase tokens. For more information, see the following section, [Receive custom link tokens for apps in Japan](receiving-and-decoding-external-purchase-tokens.md#Receive-custom-link-tokens-for-apps-in-Japan).
-- For music streaming apps in the European Economic Area (EEA) that have the [SKExternalPurchaseLinkStreamingRegions](../bundleresources/information-property-list/skexternalpurchaselinkstreamingregions.md) property list key configured, when you call [token(for:)](externalpurchasecustomlink/token%28for_%29.md), you receive custom link tokens for a music streaming service.
+- For apps in the European Union (EU) that have the [SKExternalPurchaseCustomLinkRegions](../bundleresources/information-property-list/skexternalpurchasecustomlinkregions.md) property list key configured, when you call `ExternalPurchaseCustomLink/token(for:)`, you receive an external purchase token for custom links (also called a *custom link token*). For more information about these tokens, see the following section, [Receive custom link tokens for apps in the European Union](receiving-and-decoding-external-purchase-tokens.md#Receive-custom-link-tokens-for-apps-in-the-European-Union).
+- For apps in Japan that have the [StoreKit external purchases or offers entitlement](../bundleresources/entitlements/com.apple.developer.storekit.custom-purchase-link.allowed-regions.md) entitlement configured, when you call `ExternalPurchaseCustomLink/token(for:)`, you receive external purchase tokens. For more information, see the following section, [Receive custom link tokens for apps in Japan](receiving-and-decoding-external-purchase-tokens.md#Receive-custom-link-tokens-for-apps-in-Japan).
+- For music streaming apps in the European Economic Area (EEA) that have the [SKExternalPurchaseLinkStreamingRegions](../bundleresources/information-property-list/skexternalpurchaselinkstreamingregions.md) property list key configured, when you call `ExternalPurchaseCustomLink/token(for:)`, you receive custom link tokens for a music streaming service.
 - For apps in the EEA and South Korea, when you call [presentNoticeSheet()](externalpurchase/presentnoticesheet%28%29.md) and the response is [ExternalPurchase.NoticeResult.continuedWithExternalPurchaseToken(token:)](externalpurchase/noticeresult/continuedwithexternalpurchasetoken%28token_%29.md), you receive an external purchase token in your app.
 - For apps in the EEA and Russia, when you call [open()](externalpurchaselink/open%28%29.md) or [open(url:)](externalpurchaselink/open%28url_%29.md), you receive an external purchase token appended to the current storefront’s destination URL. You configure the URLs in the [SKExternalPurchaseLink](../bundleresources/information-property-list/skexternalpurchaselink.md) or [SKExternalPurchaseMultiLink](../bundleresources/information-property-list/skexternalpurchasemultilink.md) property list keys, respectively.
 
@@ -29,7 +30,7 @@ The External Purchase API returns tokens that are specific to the app’s enviro
 
 ### Receive custom link tokens for apps in the European Union
 
-The system automatically generates custom link tokens for your customer if your app configures the [SKExternalPurchaseCustomLinkRegions](../bundleresources/information-property-list/skexternalpurchasecustomlinkregions.md) or [SKExternalPurchaseLinkStreamingRegions](../bundleresources/information-property-list/skexternalpurchaselinkstreamingregions.md) property list keys. Your app calls the [token(for:)](externalpurchasecustomlink/token%28for_%29.md) method to receive the tokens. These tokens have two possible token types: `ACQUISITION` and `SERVICES`.
+The system automatically generates custom link tokens for your customer if your app configures the [SKExternalPurchaseCustomLinkRegions](../bundleresources/information-property-list/skexternalpurchasecustomlinkregions.md) or [SKExternalPurchaseLinkStreamingRegions](../bundleresources/information-property-list/skexternalpurchaselinkstreamingregions.md) property list keys. Your app calls the `ExternalPurchaseCustomLink/token(for:)` method to receive the tokens. These tokens have two possible token types: `ACQUISITION` and `SERVICES`.
 
 The system automatically generates new custom link tokens when the following qualifying events occur:
 
@@ -58,7 +59,7 @@ Custom link tokens are available only on devices running iOS 18.1 and later, iPa
 
 If your account receives the StoreKit External Custom Purchase Link Regions entitlement ([StoreKit external purchases or offers entitlement](../bundleresources/entitlements/com.apple.developer.storekit.custom-purchase-link.allowed-regions.md)), use the [ExternalPurchaseCustomLink](externalpurchasecustomlink.md) API to implement external purchases.
 
-Starting in iOS 26.4, call the [token(for:)](externalpurchasecustomlink/token%28for_%29.md) function before every potential transaction to request the external purchase tokens, as follows:
+Starting in iOS 26.4, call the `ExternalPurchaseCustomLink/token(for:)` function before every potential transaction to request the external purchase tokens, as follows:
 
 - Request an `IN_APP` token type for flows that use an alternative payment provider inside the app
 - Request a `LINK_OUT` token type for flows where customers can complete transactions on your website, outside of the app

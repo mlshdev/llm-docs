@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/kcmvideocodectype_appleprores4444xq](https://developer.apple.com/documentation/coremedia/kcmvideocodectype_appleprores4444xq)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremedia/kcmvideocodectype_appleprores4444xq
 
 # kCMVideoCodecType_AppleProRes4444XQ (Swift)
 

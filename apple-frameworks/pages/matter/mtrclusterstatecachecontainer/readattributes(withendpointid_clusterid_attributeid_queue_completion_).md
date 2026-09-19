@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrclusterstatecachecontainer/readattributes(withendpointid:clusterid:attributeid:queue:completion:)](https://developer.apple.com/documentation/matter/mtrclusterstatecachecontainer/readattributes(withendpointid:clusterid:attributeid:queue:completion:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrclusterstatecachecontainer/readattributes(withendpointid:clusterid:attributeid:queue:completion:)
 
 # readAttributes(withEndpointID:clusterID:attributeID:queue:completion:) (Swift)
 

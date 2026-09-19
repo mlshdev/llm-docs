@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/macos-release-notes/macos-mojave_10_14_4-release-notes](https://developer.apple.com/documentation/macos-release-notes/macos-mojave_10_14_4-release-notes)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/macos-release-notes/macos-mojave_10_14_4-release-notes
 
 # macOS Mojave 10.14.4 Release Notes
 

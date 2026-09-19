@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/bluetoothtransportinfo/init(productid:vendorid:type:productname:vendorname:totaldatabytessent:totalscobytessent:totaldatabytesreceived:totalscobytesreceived:)](https://developer.apple.com/documentation/iobluetooth/bluetoothtransportinfo/init(productid:vendorid:type:productname:vendorname:totaldatabytessent:totalscobytessent:totaldatabytesreceived:totalscobytesreceived:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetooth/bluetoothtransportinfo/init(productid:vendorid:type:productname:vendorname:totaldatabytessent:totalscobytessent:totaldatabytesreceived:totalscobytesreceived:)
 
 # init(productID:vendorID:type:productName:vendorName:totalDataBytesSent:totalSCOBytesSent:totalDataBytesReceived:totalSCOBytesReceived:)
 

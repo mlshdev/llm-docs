@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/realitycomposerpro/getting-started-with-script-graphs](https://developer.apple.com/documentation/realitycomposerpro/getting-started-with-script-graphs)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitycomposerpro/getting-started-with-script-graphs
 
 # Getting started with Script Graphs
 
@@ -80,3 +81,10 @@ Select your entity, then in the Inspector click **Add Component** \> **Scripting
 You can preview your Script Graphs in action using the Simulate feature in Reality Composer Pro. Click **Simulate** in the toolbar to run the scene — entry points such as **On Initialize** fire immediately and **On Update** runs each frame. Use the simulation to confirm your Script Graph executes as expected before deploying to a device.
 
 For more information about previewing and running simulations, see [Previewing content and running simulations](realitycomposerpro-essentials-previewcontentrunsimulations.md).
+
+## See Also
+
+### Script Graph
+
+- [Building custom interactive behavior with Script Graph](building-custom-interactive-behavior-with-script-graph.md): Build event-driven behavior with Script Graph with nodes, events, and components.
+- [Registering a Reality Composer Pro custom component](registering-a-reality-composer-pro-custom-component.md): Expose a custom component to the Reality Composer Pro editor and RealityKit Scripting.

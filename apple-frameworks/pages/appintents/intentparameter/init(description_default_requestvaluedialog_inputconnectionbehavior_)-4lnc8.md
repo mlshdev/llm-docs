@@ -1,0 +1,23 @@
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/intentparameter/init(description:default:requestvaluedialog:inputconnectionbehavior:)-4lnc8
+
+# init(description:default:requestValueDialog:inputConnectionBehavior:)
+
+**Framework:** App Intents  
+**Kind:** Initializer  
+**Availability:** iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta · watchOS 27.2+ beta
+
+Creates an app intent parameter.
+
+## Declaration
+
+```swift
+convenience init(description: LocalizedStringResource? = nil, default defaultValue: Value.UnwrappedType? = nil, requestValueDialog: IntentDialog? = nil, inputConnectionBehavior: InputConnectionBehavior = .default)
+```
+
+## Parameters
+
+- `description`: Additional details about this parameter.
+- `defaultValue`: The default value for this parameter. People can specify a different value.
+- `requestValueDialog`: A prompt that asks a person to provide the parameter value.
+- `inputConnectionBehavior`: An enum that indicates how this parameter receives the output from a preceding app intent.

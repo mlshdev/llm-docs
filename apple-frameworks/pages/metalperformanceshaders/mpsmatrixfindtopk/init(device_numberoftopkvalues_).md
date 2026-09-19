@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsmatrixfindtopk/init(device:numberoftopkvalues:)](https://developer.apple.com/documentation/metalperformanceshaders/mpsmatrixfindtopk/init(device:numberoftopkvalues:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpsmatrixfindtopk/init(device:numberoftopkvalues:)
 
 # init(device:numberOfTopKValues:) (Swift)
 

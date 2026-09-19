@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/appendix_e_summary_of_vr_world_and_node_atom_types](https://developer.apple.com/documentation/quicktime-file-format/appendix_e_summary_of_vr_world_and_node_atom_types)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/quicktime-file-format/appendix_e_summary_of_vr_world_and_node_atom_types
 
 # Summary of VR World and node atom types
 

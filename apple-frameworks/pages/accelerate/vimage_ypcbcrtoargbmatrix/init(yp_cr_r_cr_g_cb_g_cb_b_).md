@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimage_ypcbcrtoargbmatrix/init(yp:cr_r:cr_g:cb_g:cb_b:)](https://developer.apple.com/documentation/accelerate/vimage_ypcbcrtoargbmatrix/init(yp:cr_r:cr_g:cb_g:cb_b:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vimage_ypcbcrtoargbmatrix/init(yp:cr_r:cr_g:cb_g:cb_b:)
 
 # init(Yp:Cr_R:Cr_G:Cb_G:Cb_B:)
 

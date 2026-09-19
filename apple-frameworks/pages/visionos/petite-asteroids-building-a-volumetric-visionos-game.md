@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/visionos/petite-asteroids-building-a-volumetric-visionos-game](https://developer.apple.com/documentation/visionos/petite-asteroids-building-a-volumetric-visionos-game)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/visionos/petite-asteroids-building-a-volumetric-visionos-game
 
 # Petite Asteroids: Building a volumetric visionOS game
 
@@ -379,7 +380,7 @@ rotationComponent.angle
 
 ## Prepare assets for gameplay
 
-Using third-party digital content creation (DCC) tools to create the visual assets for this sample app, you can export those assets as USD files, and then import and arrange them inside Reality Composer Pro. Then you can apply custom components to the entities in a Reality Composer Pro scene, and custom systems can look for those components to process entities for gameplay. For more information, see doc://com.apple.documentation/documentation/realitycomposerpro/adding-assets-into-your-reality-composer-pro-scene.
+Using third-party digital content creation (DCC) tools to create the visual assets for this sample app, you can export those assets as USD files, and then import and arrange them inside Reality Composer Pro. Then you can apply custom components to the entities in a Reality Composer Pro scene, and custom systems can look for those components to process entities for gameplay. For more information, see [Adding entities and assets to a scene](https://developer.apple.com/documentation/realitycomposerpro/realitycomposerpro-essentials-addingentitiestoscene).
 
 To generate the collision component that uses the shape of the butte, you first use a DCC to generate a model that matches the shape of the butte and platforms, but that contains fewer vertices. In Reality Composer Pro, you apply a custom component to the model entity. The custom system looks for that component by subscribing to the [ComponentEvents.DidAdd](../realitykit/componentevents/didadd.md) event for a custom type in the initializer for a custom system.
 
@@ -639,6 +640,7 @@ class GameMovementSystem: System {
         if event.entityB == event.entityA.components[GameMovementComponent.self]?.currentlyTrackedCollisionEntity {
             event.entityA.components[GameMovementComponent.self]?.currentlyTrackedCollisionEntity = nil
     }
+
 
     private func updateCollisionClassification(entityA: Entity, entityB: Entity, contacts: [Contact]) {
         guard var collisionNormal = contacts.first?.normal else { return }

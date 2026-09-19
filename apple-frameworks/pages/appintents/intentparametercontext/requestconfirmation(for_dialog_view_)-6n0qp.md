@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/intentparametercontext/requestconfirmation(for:dialog:view:)-6n0qp](https://developer.apple.com/documentation/appintents/intentparametercontext/requestconfirmation(for:dialog:view:)-6n0qp)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/intentparametercontext/requestconfirmation(for:dialog:view:)-6n0qp
 
 # requestConfirmation(for:dialog:view:)
 

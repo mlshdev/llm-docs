@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional-video-applications/create-an-effect-template-for-use-in-final-cut-pro](https://developer.apple.com/documentation/professional-video-applications/create-an-effect-template-for-use-in-final-cut-pro)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional-video-applications/create-an-effect-template-for-use-in-final-cut-pro
 
 # Create an effect template for use in Final Cut Pro
 

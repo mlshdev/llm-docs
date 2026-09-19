@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avplannedvideosegmentwritingrequest/createresumablecompressionsession(width:height:codectype:encoderspecification:sourceimagebufferattributes:outputhandler:)](https://developer.apple.com/documentation/avfoundation/avplannedvideosegmentwritingrequest/createresumablecompressionsession(width:height:codectype:encoderspecification:sourceimagebufferattributes:outputhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avplannedvideosegmentwritingrequest/createresumablecompressionsession(width:height:codectype:encoderspecification:sourceimagebufferattributes:outputhandler:)
 
 # createResumableCompressionSession(width:height:codecType:encoderSpecification:sourceImageBufferAttributes:outputHandler:)
 

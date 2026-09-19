@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/responseformat](https://developer.apple.com/documentation/foundationmodels/transcript/responseformat)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/responseformat
 
 # Transcript.ResponseFormat
 
@@ -27,8 +28,8 @@ struct ResponseFormat
 
 ### Accessing the kind of format
 
-- [kind](responseformat/kind-swift.property.md)
-- [Transcript.ResponseFormat.Kind](responseformat/kind-swift.enum.md)
+- [kind](responseformat/kind-swift.property.md): The way the response format constrains the model’s output.
+- [Transcript.ResponseFormat.Kind](responseformat/kind-swift.enum.md): A representation of the different ways a response format can constrain model output.
 
 ## Relationships
 

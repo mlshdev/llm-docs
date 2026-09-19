@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsmutablecharacterset/removecharacters(in:)-762gt](https://developer.apple.com/documentation/foundation/nsmutablecharacterset/removecharacters(in:)-762gt)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsmutablecharacterset/removecharacters(in:)-762gt
 
 # removeCharacters(in:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/ios-ipados-release-notes](https://developer.apple.com/documentation/ios-ipados-release-notes)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes
 
 # iOS & iPadOS Release Notes
 
@@ -14,7 +15,7 @@ Release notes provide details on API changes, known issues, fixes, workarounds, 
 
 ### Bug Reporting
 
-For issues not mentioned in release notes, send feedback through [Feedback Assistant](applefeedback://).
+For issues not mentioned in release notes, send feedback through Feedback Assistant.
 
 When writing your report, please include the full version number in the title and in the description. This looks like “13 (17A_xxxx\_).” You can find the full version number in Settings \> General \> About \> Version. For more information, visit [Bug Reporting](https://developer.apple.com/bug-reporting/).
 
@@ -22,7 +23,8 @@ When writing your report, please include the full version number in the title an
 
 ### iOS & iPadOS 27
 
-- [iOS & iPadOS 27 RC Release Notes](ios-ipados-release-notes/ios-ipados-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 27.2 Beta Release Notes](ios-ipados-release-notes/ios-ipados-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 27 Release Notes](ios-ipados-release-notes/ios-ipados-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### iOS & iPadOS 26
 

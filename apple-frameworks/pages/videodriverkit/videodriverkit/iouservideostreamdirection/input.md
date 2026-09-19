@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideostreamdirection/input](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideostreamdirection/input)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideostreamdirection/input
 
 # Input
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Input stream direction.
 
@@ -20,4 +21,4 @@ Input
 
 ### Stream directions
 
-- [Output](output.md): Output stream direction.
+- [Output](output.md): Beta. Output stream direction.

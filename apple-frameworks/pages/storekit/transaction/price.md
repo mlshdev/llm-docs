@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/price](https://developer.apple.com/documentation/storekit/transaction/price)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/price
 
 # price
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
 
-The price of the in-app purchase that the system records in the transaction.
+The price of the Apple In-App Purchase that the system records in the transaction.
 
 ## Declaration
 
@@ -19,11 +20,11 @@ var price: Decimal? { get }
 
 ## Discussion
 
-This value represents the price of the in-app purchase, in units of the [currency](currency.md), that the system records in the transaction. The [price](price.md) value reflects all of the following:
+This value represents the price of the Apple In-App Purchase, in units of the [currency](currency.md), that the system records in the transaction. The [price](price.md) value reflects all of the following:
 
 - The price you configured in App Store Connect, which the system records on the purchase date ([purchaseDate](purchasedate.md)).
 - The discount from a subscription offer in the [offer](offer-swift.property.md) property, if the transaction includes an offer.
-- The [purchasedQuantity](purchasedquantity.md) of a consumable in-app purchase. The price value shows the total amount of the transaction for the quantity that the customer purchased.
+- The [purchasedQuantity](purchasedquantity.md) of a consumable Apple In-App Purchase. The price value shows the total amount of the transaction for the quantity that the customer purchased.
 
 > **Important**
 
@@ -31,7 +32,7 @@ This value represents the price of the in-app purchase, in units of the [currenc
 
 The decoded payloads of [jwsRepresentation](../verificationresult/jwsrepresentation-21vgo.md) and the [JWSTransaction](../../appstoreserverapi/jwstransaction.md) strings from the App Store server APIs contain [price](../../appstoreserverapi/price.md) fields specified in *milliunits* of the currency. StoreKit represents the [price](price.md) value in *units* of the currency. Take care not to confuse these two representations when working with both APIs.
 
-You configure prices in App Store Connect. For more information, see [Set a price for an in-app purchase](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/set-a-price-for-an-in-app-purchase).
+You configure prices in App Store Connect. For more information, see [Set a price for an Apple In-App Purchase](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/set-a-price-for-an-in-app-purchase).
 
 ## See Also
 

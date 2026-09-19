@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/attributescopes/appkitattributes/obliquenessattribute](https://developer.apple.com/documentation/foundation/attributescopes/appkitattributes/obliquenessattribute)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/attributescopes/appkitattributes/obliquenessattribute
 
 # AttributeScopes.AppKitAttributes.ObliquenessAttribute
 
 **Framework:** Foundation  
 **Kind:** Enumeration  
-**Availability:** macOS 12.0+ (deprecated in 27.0)
+**Availability:** macOS 12.0+ (deprecated in 27.2)
 
 > This attribute is not supported with TextKit 2
 

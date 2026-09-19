@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/distributing-your-app-on-an-alternative-marketplace](https://developer.apple.com/documentation/marketplacekit/distributing-your-app-on-an-alternative-marketplace)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/marketplacekit/distributing-your-app-on-an-alternative-marketplace
 
 # Distributing your app on an alternative app marketplace
 
@@ -42,7 +43,7 @@ If your app installs from more than one source, you can implement conditional co
 In apps that people install from alternative marketplaces, use APIs that vary from apps on the App Store. Specifically, use:
 
 - [AdAttributionKit](../adattributionkit.md) for ads
-- A custom e-commerce solution; API that rely on Apple’s App Store, such as [In-App Purchase](https://developer.apple.com/documentation/storekit/in-app-purchase) and [On Demand Resources](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/), don’t support alternative app marketplaces.
+- A custom e-commerce solution; API that rely on Apple’s App Store, such as [Apple In-App Purchase](https://developer.apple.com/documentation/storekit/in-app-purchase) and [On Demand Resources](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/), don’t support alternative app marketplaces.
 - [Background Assets](https://developer.apple.com/documentation/backgroundassets) to download large files in the background
 - A social gaming network other than [Game Center](https://developer.apple.com/documentation/appstoreconnectapi/game-center) unless your app is also on the App Store
 

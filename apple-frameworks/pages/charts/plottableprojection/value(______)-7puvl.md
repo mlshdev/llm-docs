@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/charts/plottableprojection/value(_:_:_:)-7puvl](https://developer.apple.com/documentation/charts/plottableprojection/value(_:_:_:)-7puvl)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/charts/plottableprojection/value(_:_:_:)-7puvl
 
 # value(\_:\_:\_:)
 

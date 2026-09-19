@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcaptureview/controlsstyle](https://developer.apple.com/documentation/avkit/avcaptureview/controlsstyle)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcaptureview/controlsstyle
 
 # controlsStyle (Swift)
 
@@ -16,7 +17,7 @@ var controlsStyle: AVCaptureViewControlsStyle { get set }
 
 ## See Also
 
-### Customizing the View
+### Customizing the view
 
 - [AVCaptureViewControlsStyle](../avcaptureviewcontrolsstyle.md): Constants that describe the capture view’s supported controls styles.
 - [videoGravity](videogravity.md): A string value that defines how the capture view displays video within its bounds.
@@ -37,7 +38,7 @@ The style of the capture controls presented by the view.
 
 ## See Also
 
-### Customizing the View
+### Customizing the view
 
 - [AVCaptureViewControlsStyle](../avcaptureviewcontrolsstyle.md): Constants that describe the capture view’s supported controls styles.
 - [videoGravity](videogravity.md): A string value that defines how the capture view displays video within its bounds.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/translation/translationsession/request/attributedsourcetext](https://developer.apple.com/documentation/translation/translationsession/request/attributedsourcetext)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/translation/translationsession/request/attributedsourcetext
 
 # attributedSourceText
 
@@ -18,7 +19,7 @@ var attributedSourceText: AttributedString? { get set }
 
 ## Discussion
 
-When you translate an attributed string, the framework makes a best effort to preserve formatting and attributes such as accessibility instructions or timestamps for synchronized captions or lyrics.
+When you translate an attributed string, the framework makes a best effort to preserve formatting and attributes such as accessibility instructions or timestamps for synchronized captions or lyrics. To exclude specific ranges of the string from translation, set the [skipsTranslation](../../../foundation/attributescopes/translationattributes/skipstranslation.md) attribute on those ranges before translating.
 
 The following example marks coordinates that VoiceOver spells out. When translated, VoiceOver spells out the translated coordinates character by character instead of reading them as full numbers:
 

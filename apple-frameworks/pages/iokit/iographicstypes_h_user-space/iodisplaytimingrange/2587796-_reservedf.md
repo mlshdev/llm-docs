@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/iographicstypes_h_user-space/iodisplaytimingrange/2587796-_reservedf](https://developer.apple.com/documentation/iokit/iographicstypes_h_user-space/iodisplaytimingrange/2587796-_reservedf)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/iographicstypes_h_user-space/iodisplaytimingrange/2587796-_reservedf
 
 # \__reservedF
 

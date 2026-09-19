@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1643412-anonymous/ksgccmd_test_unit_ready](https://developer.apple.com/documentation/kernel/1643412-anonymous/ksgccmd_test_unit_ready)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1643412-anonymous/ksgccmd_test_unit_ready
 
 # kSGCCmd_TEST_UNIT_READY
 

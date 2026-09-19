@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/contextoptions](https://developer.apple.com/documentation/foundationmodels/contextoptions)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/contextoptions
 
 # ContextOptions
 
@@ -32,8 +33,8 @@ Create a [ContextOptions](contextoptions.md) structure when you need to bias the
 
 ### Configuring the reasoning level
 
-- [reasoningLevel](contextoptions/reasoninglevel-swift.property.md): Controls the amount of reasoning that the model is allowed to output before producing a response.
-- [ContextOptions.ReasoningLevel](contextoptions/reasoninglevel-swift.enum.md): Controls the amount of reasoning that the model is allowed to output before producing a response.
+- [reasoningLevel](contextoptions/reasoninglevel-swift.property.md): A value that controls the amount of reasoning the model is allowed to output before producing a response.
+- [ContextOptions.ReasoningLevel](contextoptions/reasoninglevel-swift.enum.md): A level of reasoning the model is allowed to output before producing a response.
 
 ### Including the schema
 

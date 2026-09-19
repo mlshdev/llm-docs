@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md)
+> Pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md)
 
 # TheHive Trigger node <a id="thehive-trigger-node"></a>
 

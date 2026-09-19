@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skpaymenttransactionstate/failed](https://developer.apple.com/documentation/storekit/skpaymenttransactionstate/failed)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skpaymenttransactionstate/failed
 
 # SKPaymentTransactionState.failed (Swift)
 
@@ -21,7 +22,7 @@ case failed
 - [Implementing promotional offers in your app](../implementing-promotional-offers-in-your-app.md)
 - [Processing a transaction](../processing-a-transaction.md)
 - [Testing an interrupted purchase](../testing-an-interrupted-purchase.md)
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 
 <a id="Discussion"></a>
 
@@ -59,7 +60,7 @@ SKPaymentTransactionStateFailed
 - [Implementing promotional offers in your app](../implementing-promotional-offers-in-your-app.md)
 - [Processing a transaction](../processing-a-transaction.md)
 - [Testing an interrupted purchase](../testing-an-interrupted-purchase.md)
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 
 <a id="Discussion"></a>
 

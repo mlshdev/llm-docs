@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/managing-lifecycle-of-monthly-subscriptions-with-a-12-month-commitment-](https://developer.apple.com/documentation/storekit/managing-lifecycle-of-monthly-subscriptions-with-a-12-month-commitment-)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/managing-lifecycle-of-monthly-subscriptions-with-a-12-month-commitment-
 
 # Managing the life cycle of monthly subscriptions with a 12-month commitment (Swift)
 
@@ -134,7 +135,7 @@ In the sandbox environment, you can:
 
 ### Product and subscription information
 
-- [Implementing a store in your app using the StoreKit API](implementing-a-store-in-your-app-using-the-storekit-api.md): Offer In-App Purchases and manage entitlements using signed transactions and status information.
+- [Implementing a store in your app using the StoreKit API](implementing-a-store-in-your-app-using-the-storekit-api.md): Offer Apple In-App Purchases and manage entitlements using signed transactions and status information.
 - [Supporting monthly subscriptions with a 12-month commitment](supporting-monthly-subscriptions-with-a-12-month-commitment.md): Configure, merchandise, and grant access to a monthly subscription with a 12-month commitment.
 - [Product](product.md): Information about a product that you configure in App Store Connect.
 - [Product.SubscriptionInfo](product/subscriptioninfo.md): Information about an auto-renewable subscription, such as its status, period, subscription group, and subscription offer details.

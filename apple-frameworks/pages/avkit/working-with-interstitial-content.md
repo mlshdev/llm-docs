@@ -1,6 +1,7 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/working-with-interstitial-content](https://developer.apple.com/documentation/avkit/working-with-interstitial-content)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/working-with-interstitial-content
 
-# Working with Interstitial Content (Swift)
+# Working with interstitial content (Swift)
 
 **Framework:** AVKit  
 **Kind:** Article
@@ -13,9 +14,9 @@ Present additional content alongside your main media presentation using HTTP Liv
 
 Media playback apps often present additional content such as legal text, content warnings, or advertisements alongside their main media content. One method is to use HTTP Live Streaming’s (HLS) support for serving stitched playlists. Stitched playlists let you combine multiple media playlists into a single, unified playlist that’s delivered to the client as a single stream. This stream provides a smooth playback experience to users, with no breaks or interruptions in the action when the player presents the interstitial content. For more information about including ad content in your HLS playlist, see [Incorporating Ads into a Playlist](../http-live-streaming/incorporating-ads-into-a-playlist.md).
 
-<a id="Define-Interstitial-Time-Ranges"></a>
+<a id="Define-interstitial-time-ranges"></a>
 
-### Define Interstitial Time Ranges
+## Define interstitial time ranges
 
 AVKit in tvOS simplifies working with interstitial content delivered as part of a stitched playlist. You define the time ranges in your presentation that contain interstitial content. As the player encounters the time ranges during playback, you receive callbacks when they begin and end, giving you the opportunity to enforce business rules or capture analytics.
 
@@ -53,9 +54,9 @@ When you define interstitial time ranges, [AVPlayerViewController](avplayerviewc
 
 >  The player interface’s collapsing of time ranges is only visual. Any programmatic operations you perform, such as seeking, happen on the full asset timeline, inclusive of interstitial content.
 
-<a id="Enforce-Linear-Playback"></a>
+<a id="Enforce-linear-playback"></a>
 
-### Enforce Linear Playback
+## Enforce linear playback
 
 When you adopt the [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md) protocol, the player can notify your app as it traverses interstitial time ranges, which is useful to help you enforce business rules. For instance, a common requirement when presenting advertisements is to prevent users from skipping past them. You can use the [requiresLinearPlayback](avplayerviewcontroller/requireslinearplayback.md) property of [AVPlayerViewController](avplayerviewcontroller.md) to control whether users can navigate through the content using the Siri Remote. During playback, this property is normally set to `false`, but when presenting an advertisement, you can set it to `true` to prevent user navigation, as shown in the following example.
 
@@ -71,9 +72,9 @@ public func playerViewController(_ playerViewController: AVPlayerViewController,
 }
 ```
 
-<a id="Prevent-Skipping-of-Interstitial-Content"></a>
+<a id="Prevent-skipping-of-interstitial-content"></a>
 
-### Prevent Skipping of Interstitial Content
+## Prevent skipping of interstitial content
 
 If your app presents interstitial content, such as ads or legal text, you may want to prevent users from skipping past it. Implement this functionality by using the [playerViewController(\_:timeToSeekAfterUserNavigatedFrom:to:)](avplayerviewcontrollerdelegate/playerviewcontroller%28__timetoseekafterusernavigatedfrom_to_%29.md) delegate method. The system calls this method whenever a user performs a seek operation using the Siri Remote, which happens either by swiping left or right on the remote clickpad or by navigating chapter markers in the Info panel. The following code shows a simple example of how you might implement this method to prevent users from skipping past advertisements.
 
@@ -104,9 +105,9 @@ public func playerViewController(_ playerViewController: AVPlayerViewController,
 
 For any forward seeks, the example code ensures that the user can’t skip past an ad break. It attempts to find an interstitial time range within the time range of the user’s seek request. If it finds an interstitial time range, the code returns its start time, forcing playback to begin at the start of the advertisement.
 
-<a id="Generate-Interstitial-Events-Automatically"></a>
+<a id="Generate-interstitial-events-automatically"></a>
 
-### Generate Interstitial Events Automatically
+## Generate interstitial events automatically
 
 tvOS 15 adds support for coordinating and observing playback of interstitial assets. Automatic handling of interstitial events allows the system to make smooth transitions between your main and interstitial content, and doesn’t require you to coordinate playback between the players.
 
@@ -159,24 +160,13 @@ playerItem.interstitialTimeRanges = appInterstitials
 
 ## See Also
 
-### tvOS playback and capture
+### Interstitials and markers
 
-- [Customizing the tvOS Playback Experience](customizing-the-tvos-playback-experience.md): Adopt the latest features of the redesigned tvOS player user interface to provide a more streamlined way to watch your content.
-- [Presenting Navigation Markers](presenting-navigation-markers.md): Present navigation markers in the Chapters panel to help users quickly navigate your content.
-- [Presenting Content Proposals in tvOS](presenting-content-proposals-in-tvos.md): Display a preview of an upcoming media item at the conclusion of the currently playing media item.
-- [Working with Overlays and Parental Controls in tvOS](working-with-overlays-and-parental-controls-in-tvos.md): Add interactive overlays, parental controls, and livestream channel flipping using a player view controller.
-- [Supporting Continuity Camera in your tvOS app](supporting-continuity-camera-in-your-tvos-app.md): Capture high-quality photos, video, and audio in your Apple TV app by connecting an iPhone or iPad as a continuity device.
-- [AVPlayerViewController](avplayerviewcontroller.md): A view controller that displays content from a player and presents a native user interface to control playback.
-- [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md): A protocol that defines the methods to implement to respond to player view controller events.
+- [Presenting navigation markers](presenting-navigation-markers.md): Present navigation markers in the Chapters panel to help users quickly navigate your content.
 - [AVInterstitialTimeRange](avinterstitialtimerange.md): A time range in an audiovisual presentation for content with an interstitial designation, such as advertisements or legal notices.
 - [AVNavigationMarkersGroup](avnavigationmarkersgroup.md): A set of markers for navigating playback of an audiovisual presentation.
-- [AVContentProposalViewController](avcontentproposalviewcontroller.md): A view controller that proposes content to watch next.
-- [AVDisplayManager](avdisplaymanager.md): A tvOS management object that controls whether a TV switches modes to match the video’s native mode.
-- [AVContinuityDevicePickerViewController](avcontinuitydevicepickerviewcontroller.md): A view controller that provides an interface to a person so they can select and connect a continuity device to the system.
-- [AVContinuityDevicePickerViewControllerDelegate](avcontinuitydevicepickerviewcontrollerdelegate.md): An interface that responds to events from a continuity device picker view controller.
-- [Third-party casting support](third-party-casting-support.md): Provide custom playback controls for third-party casting services and other media sources.
 
-# Working with Interstitial Content (Objective-C)
+# Working with interstitial content (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Article
@@ -189,9 +179,9 @@ Present additional content alongside your main media presentation using HTTP Liv
 
 Media playback apps often present additional content such as legal text, content warnings, or advertisements alongside their main media content. One method is to use HTTP Live Streaming’s (HLS) support for serving stitched playlists. Stitched playlists let you combine multiple media playlists into a single, unified playlist that’s delivered to the client as a single stream. This stream provides a smooth playback experience to users, with no breaks or interruptions in the action when the player presents the interstitial content. For more information about including ad content in your HLS playlist, see [Incorporating Ads into a Playlist](../http-live-streaming/incorporating-ads-into-a-playlist.md).
 
-<a id="Define-Interstitial-Time-Ranges"></a>
+<a id="Define-interstitial-time-ranges"></a>
 
-### Define Interstitial Time Ranges
+## Define interstitial time ranges
 
 AVKit in tvOS simplifies working with interstitial content delivered as part of a stitched playlist. You define the time ranges in your presentation that contain interstitial content. As the player encounters the time ranges during playback, you receive callbacks when they begin and end, giving you the opportunity to enforce business rules or capture analytics.
 
@@ -229,9 +219,9 @@ When you define interstitial time ranges, [AVPlayerViewController](avplayerviewc
 
 >  The player interface’s collapsing of time ranges is only visual. Any programmatic operations you perform, such as seeking, happen on the full asset timeline, inclusive of interstitial content.
 
-<a id="Enforce-Linear-Playback"></a>
+<a id="Enforce-linear-playback"></a>
 
-### Enforce Linear Playback
+## Enforce linear playback
 
 When you adopt the [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md) protocol, the player can notify your app as it traverses interstitial time ranges, which is useful to help you enforce business rules. For instance, a common requirement when presenting advertisements is to prevent users from skipping past them. You can use the [requiresLinearPlayback](avplayerviewcontroller/requireslinearplayback.md) property of [AVPlayerViewController](avplayerviewcontroller.md) to control whether users can navigate through the content using the Siri Remote. During playback, this property is normally set to `false`, but when presenting an advertisement, you can set it to `true` to prevent user navigation, as shown in the following example.
 
@@ -247,9 +237,9 @@ public func playerViewController(_ playerViewController: AVPlayerViewController,
 }
 ```
 
-<a id="Prevent-Skipping-of-Interstitial-Content"></a>
+<a id="Prevent-skipping-of-interstitial-content"></a>
 
-### Prevent Skipping of Interstitial Content
+## Prevent skipping of interstitial content
 
 If your app presents interstitial content, such as ads or legal text, you may want to prevent users from skipping past it. Implement this functionality by using the [playerViewController:timeToSeekAfterUserNavigatedFromTime:toTime:](avplayerviewcontrollerdelegate/playerviewcontroller%28__timetoseekafterusernavigatedfrom_to_%29.md) delegate method. The system calls this method whenever a user performs a seek operation using the Siri Remote, which happens either by swiping left or right on the remote clickpad or by navigating chapter markers in the Info panel. The following code shows a simple example of how you might implement this method to prevent users from skipping past advertisements.
 
@@ -280,9 +270,9 @@ public func playerViewController(_ playerViewController: AVPlayerViewController,
 
 For any forward seeks, the example code ensures that the user can’t skip past an ad break. It attempts to find an interstitial time range within the time range of the user’s seek request. If it finds an interstitial time range, the code returns its start time, forcing playback to begin at the start of the advertisement.
 
-<a id="Generate-Interstitial-Events-Automatically"></a>
+<a id="Generate-interstitial-events-automatically"></a>
 
-### Generate Interstitial Events Automatically
+## Generate interstitial events automatically
 
 tvOS 15 adds support for coordinating and observing playback of interstitial assets. Automatic handling of interstitial events allows the system to make smooth transitions between your main and interstitial content, and doesn’t require you to coordinate playback between the players.
 
@@ -335,19 +325,8 @@ playerItem.interstitialTimeRanges = appInterstitials
 
 ## See Also
 
-### tvOS playback and capture
+### Interstitials and markers
 
-- [Customizing the tvOS Playback Experience](customizing-the-tvos-playback-experience.md): Adopt the latest features of the redesigned tvOS player user interface to provide a more streamlined way to watch your content.
-- [Presenting Navigation Markers](presenting-navigation-markers.md): Present navigation markers in the Chapters panel to help users quickly navigate your content.
-- [Presenting Content Proposals in tvOS](presenting-content-proposals-in-tvos.md): Display a preview of an upcoming media item at the conclusion of the currently playing media item.
-- [Working with Overlays and Parental Controls in tvOS](working-with-overlays-and-parental-controls-in-tvos.md): Add interactive overlays, parental controls, and livestream channel flipping using a player view controller.
-- [Supporting Continuity Camera in your tvOS app](supporting-continuity-camera-in-your-tvos-app.md): Capture high-quality photos, video, and audio in your Apple TV app by connecting an iPhone or iPad as a continuity device.
-- [AVPlayerViewController](avplayerviewcontroller.md): A view controller that displays content from a player and presents a native user interface to control playback.
-- [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md): A protocol that defines the methods to implement to respond to player view controller events.
+- [Presenting navigation markers](presenting-navigation-markers.md): Present navigation markers in the Chapters panel to help users quickly navigate your content.
 - [AVInterstitialTimeRange](avinterstitialtimerange.md): A time range in an audiovisual presentation for content with an interstitial designation, such as advertisements or legal notices.
 - [AVNavigationMarkersGroup](avnavigationmarkersgroup.md): A set of markers for navigating playback of an audiovisual presentation.
-- [AVContentProposalViewController](avcontentproposalviewcontroller.md): A view controller that proposes content to watch next.
-- [AVDisplayManager](avdisplaymanager.md): A tvOS management object that controls whether a TV switches modes to match the video’s native mode.
-- [AVContinuityDevicePickerViewController](avcontinuitydevicepickerviewcontroller.md): A view controller that provides an interface to a person so they can select and connect a continuity device to the system.
-- [AVContinuityDevicePickerViewControllerDelegate](avcontinuitydevicepickerviewcontrollerdelegate.md): An interface that responds to events from a continuity device picker view controller.
-- [Third-party casting support](third-party-casting-support.md): Provide custom playback controls for third-party casting services and other media sources.

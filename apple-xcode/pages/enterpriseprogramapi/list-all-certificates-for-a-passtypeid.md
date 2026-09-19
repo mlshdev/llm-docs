@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/enterpriseprogramapi/list-all-certificates-for-a-passtypeid](https://developer.apple.com/documentation/enterpriseprogramapi/list-all-certificates-for-a-passtypeid)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/enterpriseprogramapi/list-all-certificates-for-a-passtypeid
 
 # List All Certificates for a PassTypeId
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cloudkit/integrating-a-text-based-schema-into-your-workflow](https://developer.apple.com/documentation/cloudkit/integrating-a-text-based-schema-into-your-workflow)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/cloudkit/integrating-a-text-based-schema-into-your-workflow
 
 # Integrating a Text-Based Schema into Your Workflow (Swift)
 
@@ -62,6 +63,7 @@ primitive-type:
    
 list-type:
    | LIST "<" primitive-type ">"
+
 
 ```
 
@@ -271,6 +273,7 @@ primitive-type:
    
 list-type:
    | LIST "<" primitive-type ">"
+
 
 ```
 

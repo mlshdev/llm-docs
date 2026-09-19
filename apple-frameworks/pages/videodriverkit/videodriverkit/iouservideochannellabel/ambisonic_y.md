@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideochannellabel/ambisonic_y](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/ambisonic_y)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/ambisonic_y
 
 # Ambisonic_Y
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,6 +19,6 @@ Ambisonic_Y
 
 ### First-order ambisonic channels
 
-- [Ambisonic_W](ambisonic_w.md)
-- [Ambisonic_X](ambisonic_x.md)
-- [Ambisonic_Z](ambisonic_z.md)
+- [Ambisonic_W](ambisonic_w.md): Beta.
+- [Ambisonic_X](ambisonic_x.md): Beta.
+- [Ambisonic_Z](ambisonic_z.md): Beta.

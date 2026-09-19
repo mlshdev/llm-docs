@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/hvf/hvfpartrenderparameters/addcubic](https://developer.apple.com/documentation/hvf/hvfpartrenderparameters/addcubic)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hvf/hvfpartrenderparameters/addcubic
 
 # addCubic
 

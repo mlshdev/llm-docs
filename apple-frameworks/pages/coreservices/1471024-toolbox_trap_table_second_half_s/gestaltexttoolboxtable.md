@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1471024-toolbox_trap_table_second_half_s/gestaltexttoolboxtable](https://developer.apple.com/documentation/coreservices/1471024-toolbox_trap_table_second_half_s/gestaltexttoolboxtable)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/1471024-toolbox_trap_table_second_half_s/gestaltexttoolboxtable
 
 # gestaltExtToolboxTable
 

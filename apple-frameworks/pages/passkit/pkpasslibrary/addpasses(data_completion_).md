@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/passkit/pkpasslibrary/addpasses(data:completion:)](https://developer.apple.com/documentation/passkit/pkpasslibrary/addpasses(data:completion:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/passkit/pkpasslibrary/addpasses(data:completion:)
 
 # addPasses(data:completion:) (Swift)
 

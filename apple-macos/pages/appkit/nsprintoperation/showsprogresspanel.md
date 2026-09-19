@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsprintoperation/showsprogresspanel](https://developer.apple.com/documentation/appkit/nsprintoperation/showsprogresspanel)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsprintoperation/showsprogresspanel
 
 # showsProgressPanel (Swift)
 

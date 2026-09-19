@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/corenfc/cardsession](https://developer.apple.com/documentation/corenfc/cardsession)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corenfc/cardsession
 
 # CardSession
 
 **Framework:** Core NFC  
 **Kind:** Class  
-**Availability:** iOS 17.4+ · iPadOS 17.4+
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+
 
 An ISO 7816 card emulation session.
 

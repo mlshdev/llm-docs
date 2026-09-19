@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnnsarithmeticternary/init(in1:in1_type:in2:in2_type:in3:in3_type:out:out_type:)](https://developer.apple.com/documentation/accelerate/bnnsarithmeticternary/init(in1:in1_type:in2:in2_type:in3:in3_type:out:out_type:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/bnnsarithmeticternary/init(in1:in1_type:in2:in2_type:in3:in3_type:out:out_type:)
 
 # init(in1:in1_type:in2:in2_type:in3:in3_type:out:out_type:)
 

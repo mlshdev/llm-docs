@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/photogrammetrysession/init(input:configuration:)-7glmh](https://developer.apple.com/documentation/realitykit/photogrammetrysession/init(input:configuration:)-7glmh)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/photogrammetrysession/init(input:configuration:)-7glmh
 
 # init(input:configuration:)
 

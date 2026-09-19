@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoclockdevice/stopio](https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/stopio)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/stopio
 
 # StopIO
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Tells the clock device to stop IO.
 
@@ -30,5 +31,5 @@ The default implementation always returns `kIOReturnSuccess`. Subclass and overr
 
 ### Performing I/O
 
-- [StartIO](startio.md): Tells the clock device to start IO.
-- [IOUserVideoStartStopFlags](../videodriverkit/iouservideostartstopflags.md): Flags used to indicate how I/O is starting or stopping.
+- [StartIO](startio.md): Beta. Tells the clock device to start IO.
+- [IOUserVideoStartStopFlags](../videodriverkit/iouservideostartstopflags.md): Beta. Flags used to indicate how I/O is starting or stopping.

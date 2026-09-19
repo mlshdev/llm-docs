@@ -1,6 +1,7 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/working-with-overlays-and-parental-controls-in-tvos](https://developer.apple.com/documentation/avkit/working-with-overlays-and-parental-controls-in-tvos)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/working-with-overlays-and-parental-controls-in-tvos
 
-# Working with Overlays and Parental Controls in tvOS
+# Working with overlays and parental controls in tvOS
 
 **Interface languages:** Swift, Objective-C
 
@@ -18,9 +19,9 @@ Add interactive overlays, parental controls, and livestream channel flipping usi
 
 > This sample code project is associated with WWDC 2019 session [503: Delivering Intuitive Media Playback with AVKit](https://developer.apple.com/videos/play/wwdc19/503/).
 
-<a id="Configure-the-Sample-Code-Project"></a>
+<a id="Configure-the-sample-code-project"></a>
 
-### Configure the Sample Code Project
+## Configure the sample code project
 
 Only navigation from live streaming supports channel flipping, so you need to replace the assets in this sample with your live content to demonstrate this behavior.
 
@@ -39,19 +40,9 @@ This sample also demonstrates explicit support for parental restrictions by dire
 
 ## See Also
 
-### tvOS playback and capture
+### Content proposals and parental controls
 
-- [Customizing the tvOS Playback Experience](customizing-the-tvos-playback-experience.md): Adopt the latest features of the redesigned tvOS player user interface to provide a more streamlined way to watch your content.
-- [Presenting Navigation Markers](presenting-navigation-markers.md): Present navigation markers in the Chapters panel to help users quickly navigate your content.
-- [Working with Interstitial Content](working-with-interstitial-content.md): Present additional content alongside your main media presentation using HTTP Live Streaming support.
-- [Presenting Content Proposals in tvOS](presenting-content-proposals-in-tvos.md): Display a preview of an upcoming media item at the conclusion of the currently playing media item.
-- [Supporting Continuity Camera in your tvOS app](supporting-continuity-camera-in-your-tvos-app.md): Capture high-quality photos, video, and audio in your Apple TV app by connecting an iPhone or iPad as a continuity device.
-- [AVPlayerViewController](avplayerviewcontroller.md): A view controller that displays content from a player and presents a native user interface to control playback.
-- [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md): A protocol that defines the methods to implement to respond to player view controller events.
-- [AVInterstitialTimeRange](avinterstitialtimerange.md): A time range in an audiovisual presentation for content with an interstitial designation, such as advertisements or legal notices.
-- [AVNavigationMarkersGroup](avnavigationmarkersgroup.md): A set of markers for navigating playback of an audiovisual presentation.
+- [Presenting content proposals in tvOS](presenting-content-proposals-in-tvos.md): Display a preview of an upcoming media item at the conclusion of the currently playing media item.
+- [AVContentProposal](avcontentproposal.md): An object that describes the content to propose playing after the current item finishes.
+- [AVContentProposalAction](avcontentproposalaction.md): Constant that indicate the action a user takes when dismissing a content proposal.
 - [AVContentProposalViewController](avcontentproposalviewcontroller.md): A view controller that proposes content to watch next.
-- [AVDisplayManager](avdisplaymanager.md): A tvOS management object that controls whether a TV switches modes to match the video’s native mode.
-- [AVContinuityDevicePickerViewController](avcontinuitydevicepickerviewcontroller.md): A view controller that provides an interface to a person so they can select and connect a continuity device to the system.
-- [AVContinuityDevicePickerViewControllerDelegate](avcontinuitydevicepickerviewcontrollerdelegate.md): An interface that responds to events from a continuity device picker view controller.
-- [Third-party casting support](third-party-casting-support.md): Provide custom playback controls for third-party casting services and other media sources.

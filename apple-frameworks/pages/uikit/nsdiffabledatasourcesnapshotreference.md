@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/nsdiffabledatasourcesnapshotreference](https://developer.apple.com/documentation/uikit/nsdiffabledatasourcesnapshotreference)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/nsdiffabledatasourcesnapshotreference
 
 # NSDiffableDataSourceSnapshotReference (Swift)
 
@@ -42,9 +43,11 @@ For example, the following code creates an empty snapshot and populates it with 
 // Create a snapshot.
 NSDiffableDataSourceSnapshot<NSNumber *, NSUUID *> *snapshot = [[NSDiffableDataSourceSnapshot alloc] init];
 
+
 // Populate the snapshot.
 [snapshot appendSectionsWithIdentifiers:@[@0]];
 [snapshot appendItemsWithIdentifiers:@[[NSUUID UUID], [NSUUID UUID], [NSUUID UUID]]];
+
 
 // Apply the snapshot.
 [self.dataSource applySnapshot:snapshot animatingDifferences:YES];
@@ -176,9 +179,11 @@ For example, the following code creates an empty snapshot and populates it with 
 // Create a snapshot.
 NSDiffableDataSourceSnapshot<NSNumber *, NSUUID *> *snapshot = [[NSDiffableDataSourceSnapshot alloc] init];
 
+
 // Populate the snapshot.
 [snapshot appendSectionsWithIdentifiers:@[@0]];
 [snapshot appendItemsWithIdentifiers:@[[NSUUID UUID], [NSUUID UUID], [NSUUID UUID]]];
+
 
 // Apply the snapshot.
 [self.dataSource applySnapshot:snapshot animatingDifferences:YES];

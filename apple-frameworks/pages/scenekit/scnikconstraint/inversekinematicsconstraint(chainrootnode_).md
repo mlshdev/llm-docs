@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scenekit/scnikconstraint/inversekinematicsconstraint(chainrootnode:)](https://developer.apple.com/documentation/scenekit/scnikconstraint/inversekinematicsconstraint(chainrootnode:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/scenekit/scnikconstraint/inversekinematicsconstraint(chainrootnode:)
 
 # inverseKinematicsConstraint(chainRootNode:) (Swift)
 

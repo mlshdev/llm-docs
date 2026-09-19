@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/host/current()](https://developer.apple.com/documentation/foundation/host/current())
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/host/current()
 
 # current() (Swift)
 
 **Framework:** Foundation  
 **Kind:** Type Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Returns an `NSHost` object representing the host the process is running on.
 
@@ -39,7 +40,7 @@ This method executes synchronously. The execution time of this method can be hig
 
 **Framework:** Foundation  
 **Kind:** Type Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Returns an `NSHost` object representing the host the process is running on.
 

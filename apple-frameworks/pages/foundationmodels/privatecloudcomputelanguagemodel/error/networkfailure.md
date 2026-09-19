@@ -1,10 +1,13 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/privatecloudcomputelanguagemodel/error/networkfailure](https://developer.apple.com/documentation/foundationmodels/privatecloudcomputelanguagemodel/error/networkfailure)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/privatecloudcomputelanguagemodel/error/networkfailure
 
 # PrivateCloudComputeLanguageModel.Error.NetworkFailure
 
 **Framework:** Foundation Models  
 **Kind:** Structure  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+Information about a network problem that prevented a request from completing.
 
 ## Declaration
 
@@ -16,11 +19,11 @@ struct NetworkFailure
 
 ### Creating a network failure error
 
-- [init(debugDescription:)](networkfailure/init%28debugdescription_%29.md)
+- [init(debugDescription:)](networkfailure/init%28debugdescription_%29.md): Creates a network failure with the debug description you specify.
 
 ### Getting the error description
 
-- [debugDescription](networkfailure/debugdescription.md)
+- [debugDescription](networkfailure/debugdescription.md): A debug description of the network failure.
 
 ## Relationships
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/quartz/ikimagebrowserdelegate-protocol](https://developer.apple.com/documentation/quartz/ikimagebrowserdelegate-protocol)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/quartz/ikimagebrowserdelegate-protocol
 
 # IKImageBrowserDelegate Protocol (Swift)
 

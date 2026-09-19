@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideochannellabel/usecoordinates](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/usecoordinates)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/usecoordinates
 
 # UseCoordinates
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 channel is described by the mCoordinates fields.
 
@@ -20,5 +21,5 @@ UseCoordinates
 
 ### Special values
 
-- [Unused](unused.md): channel is present, but has no intended use or destination
-- [Unknown](unknown.md): unknown or unspecified other use
+- [Unused](unused.md): Beta. channel is present, but has no intended use or destination
+- [Unknown](unknown.md): Beta. unknown or unspecified other use

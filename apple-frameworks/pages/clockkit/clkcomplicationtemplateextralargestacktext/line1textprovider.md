@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplateextralargestacktext/line1textprovider](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplateextralargestacktext/line1textprovider)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplateextralargestacktext/line1textprovider
 
 # line1TextProvider (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 3.0+ (deprecated in 27.0)
+**Availability:** watchOS 3.0+ (deprecated in 27.2)
 
 The text to display on the top line of the complication.
 
@@ -35,7 +36,7 @@ When the [highlightLine2](highlightline2.md) property is [false](https://develop
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 3.0+ (deprecated in 27.0)
+**Availability:** watchOS 3.0+ (deprecated in 27.2)
 
 The text to display on the top line of the complication.
 

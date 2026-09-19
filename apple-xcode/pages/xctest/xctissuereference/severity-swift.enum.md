@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xctest/xctissuereference/severity-swift.enum](https://developer.apple.com/documentation/xctest/xctissuereference/severity-swift.enum)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xctest/xctissuereference/severity-swift.enum
 
 # XCTIssueReference.Severity (Swift)
 

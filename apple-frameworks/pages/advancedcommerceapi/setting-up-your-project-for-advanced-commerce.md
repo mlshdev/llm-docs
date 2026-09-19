@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/advancedcommerceapi/setting-up-your-project-for-advanced-commerce](https://developer.apple.com/documentation/advancedcommerceapi/setting-up-your-project-for-advanced-commerce)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/advancedcommerceapi/setting-up-your-project-for-advanced-commerce
 
 # Setting up your project for Advanced Commerce API
 
@@ -46,19 +47,19 @@ Review the tax codes you use for your SKUs from the list in [Choosing tax codes 
 
 ### Define and manage your SKUs
 
-Define your SKUs using the best practices for naming and design. For more information, and to learn where the system displays the SKU data you provide, see [Creating SKUs for your In-App Purchases](creating-your-purchases.md). For more design guidance, see Human Interface Guidelines \> [In-app purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase). To define SKUs for the Mini Apps Partner Program, see [Creating SKUs for the Mini Apps Partner Program](creating-skus-for-the-mini-app-partner-program.md).
+Define your SKUs using the best practices for naming and design. For more information, and to learn where the system displays the SKU data you provide, see [Creating SKUs for your Apple In-App Purchases](creating-your-purchases.md). For more design guidance, see Human Interface Guidelines \> [Apple In-App Purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase). To define SKUs for the Mini Apps Partner Program, see [Creating SKUs for the Mini Apps Partner Program](creating-skus-for-the-mini-app-partner-program.md).
 
 <a id="Test-your-app"></a>
 
 ### Test your app
 
-When you implement the Advanced Commerce API in your app and on your server, you can test in the sandbox environment before sending it to App Review. For more information, see [Testing In-App Purchases with sandbox](../storekit/testing-in-app-purchases-with-sandbox.md).
+When you implement the Advanced Commerce API in your app and on your server, you can test in the sandbox environment before sending it to App Review. For more information, see [Testing Apple In-App Purchases with sandbox](../storekit/testing-in-app-purchases-with-sandbox.md).
 
 <a id="Set-up-an-image-for-the-payment-sheet-to-display"></a>
 
 ### Set up an image for the payment sheet to display
 
-When customers make a purchase, the payment sheet displays your app icon by default. You can optionally provide an image to use instead, in App Store Connect. To set it up, see the [Add or remove an Image](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/view-and-edit-in-app-purchase-information) topic. Set up one image for the generic product ID that represents your subscriptions, and one for the generic product ID that represents your one-time purchases. For more information on the payment sheet and SKU information that the system displays to customers, see [Creating SKUs for your In-App Purchases](creating-your-purchases.md).
+When customers make a purchase, the payment sheet displays your app icon by default. You can optionally provide an image to use instead, in App Store Connect. To set it up, see the [Add or remove an Image](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/view-and-edit-in-app-purchase-information) topic. Set up one image for the generic product ID that represents your subscriptions, and one for the generic product ID that represents your one-time purchases. For more information on the payment sheet and SKU information that the system displays to customers, see [Creating SKUs for your Apple In-App Purchases](creating-your-purchases.md).
 
 ## See Also
 

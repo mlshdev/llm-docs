@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtldepthclipmode](https://developer.apple.com/documentation/metal/mtldepthclipmode)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtldepthclipmode
 
 # MTLDepthClipMode (Swift)
 
@@ -49,7 +50,7 @@ enum MTLDepthClipMode
 - [MTLPrimitiveType](mtlprimitivetype.md): The geometric primitive type for drawing commands.
 - [MTLIndexType](mtlindextype.md): The index type for an index buffer that references vertices of geometric primitives.
 - [MTLVisibilityResultMode](mtlvisibilityresultmode.md): The mode that determines what, if anything, the GPU writes to the results buffer, after the GPU executes the render pass.
-- [MTLVisibilityResultType](mtlvisibilityresulttype.md): This enumeration controls if Metal accumulates visibility results between render encoders or resets them.
+- [MTLVisibilityResultType](mtlvisibilityresulttype.md): Actions for visibility results between render passes.
 
 # MTLDepthClipMode (Objective-C)
 
@@ -85,4 +86,4 @@ enum MTLDepthClipMode : NSUInteger;
 - [MTLPrimitiveType](mtlprimitivetype.md): The geometric primitive type for drawing commands.
 - [MTLIndexType](mtlindextype.md): The index type for an index buffer that references vertices of geometric primitives.
 - [MTLVisibilityResultMode](mtlvisibilityresultmode.md): The mode that determines what, if anything, the GPU writes to the results buffer, after the GPU executes the render pass.
-- [MTLVisibilityResultType](mtlvisibilityresulttype.md): This enumeration controls if Metal accumulates visibility results between render encoders or resets them.
+- [MTLVisibilityResultType](mtlvisibilityresulttype.md): Actions for visibility results between render passes.

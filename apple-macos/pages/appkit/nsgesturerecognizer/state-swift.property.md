@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsgesturerecognizer/state-swift.property](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/state-swift.property)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsgesturerecognizer/state-swift.property
 
 # state (Swift)
 
@@ -24,7 +25,7 @@ For more information about the state transitions that can occur in a gesture rec
 
 ## See Also
 
-### Accessing the Recognizer’s State
+### Accessing the recognizer’s state
 
 - [view](view.md): The view to which the gesture recognizer is attached.
 - [isEnabled](isenabled.md): A Boolean value indicating whether the gesture recognizer is able to handle events.
@@ -53,7 +54,7 @@ For more information about the state transitions that can occur in a gesture rec
 
 ## See Also
 
-### Accessing the Recognizer’s State
+### Accessing the recognizer’s state
 
 - [view](view.md): The view to which the gesture recognizer is attached.
 - [enabled](isenabled.md): A Boolean value indicating whether the gesture recognizer is able to handle events.

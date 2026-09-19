@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photos](https://developer.apple.com/documentation/photos)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photos
 
 # Photos (Swift)
 
@@ -59,7 +60,7 @@ Use PhotoKit to access image and video assets that the Photos app manages in iOS
 ### Background resource upload extensions
 
 - [Uploading asset resources in the background](photokit/uploading-asset-resources-in-the-background.md): Enable reliable cloud backup for photo library assets with background processing.
-- [PHBackgroundResourceUploadExtension](photos/phbackgroundresourceuploadextension.md): Deprecated.
+- [PHBackgroundResourceUploadExtension](photos/phbackgroundresourceuploadextension.md): Deprecated. A protocol to interact with asset resource upload jobs during background processing.
 - [PHAssetResourceUploadJob](photos/phassetresourceuploadjob.md): An object that represents a request to upload an asset resource.
 - [PHAssetResourceUploadJobChangeRequest](photos/phassetresourceuploadjobchangerequest.md): Use within an application’s `com.apple.photos.background-upload` extension to create and change [PHAssetResourceUploadJob](photos/phassetresourceuploadjob.md) records.
 
@@ -85,7 +86,7 @@ Use PhotoKit to access image and video assets that the Photos app manages in iOS
 
 ### Protocols
 
-- [PHBackgroundResourceUploadJobExtension](photos/phbackgroundresourceuploadjobextension.md)
+- [PHBackgroundResourceUploadJobExtension](photos/phbackgroundresourceuploadjobextension.md): A protocol to interact with asset resource upload jobs during background processing.
 - [PHPhotoLibraryPersistentChangesObserver](photos/phphotolibrarypersistentchangesobserver.md)
 
 ## See Also

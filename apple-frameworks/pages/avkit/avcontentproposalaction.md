@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcontentproposalaction](https://developer.apple.com/documentation/avkit/avcontentproposalaction)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcontentproposalaction
 
 # AVContentProposalAction (Swift)
 
@@ -39,9 +40,12 @@ enum AVContentProposalAction
 
 ## See Also
 
-### Dismissing the Proposal
+### Content proposals and parental controls
 
-- [dismissContentProposal(for:animated:completion:)](avcontentproposalviewcontroller/dismisscontentproposal%28for_animated_completion_%29.md): Dismisses the current content proposal.
+- [Presenting content proposals in tvOS](presenting-content-proposals-in-tvos.md): Display a preview of an upcoming media item at the conclusion of the currently playing media item.
+- [Working with overlays and parental controls in tvOS](working-with-overlays-and-parental-controls-in-tvos.md): Add interactive overlays, parental controls, and livestream channel flipping using a player view controller.
+- [AVContentProposal](avcontentproposal.md): An object that describes the content to propose playing after the current item finishes.
+- [AVContentProposalViewController](avcontentproposalviewcontroller.md): A view controller that proposes content to watch next.
 
 # AVContentProposalAction (Objective-C)
 
@@ -67,6 +71,9 @@ enum AVContentProposalAction : NSInteger;
 
 ## See Also
 
-### Dismissing the Proposal
+### Content proposals and parental controls
 
-- [dismissContentProposalForAction:animated:completion:](avcontentproposalviewcontroller/dismisscontentproposal%28for_animated_completion_%29.md): Dismisses the current content proposal.
+- [Presenting content proposals in tvOS](presenting-content-proposals-in-tvos.md): Display a preview of an upcoming media item at the conclusion of the currently playing media item.
+- [Working with overlays and parental controls in tvOS](working-with-overlays-and-parental-controls-in-tvos.md): Add interactive overlays, parental controls, and livestream channel flipping using a player view controller.
+- [AVContentProposal](avcontentproposal.md): An object that describes the content to propose playing after the current item finishes.
+- [AVContentProposalViewController](avcontentproposalviewcontroller.md): A view controller that proposes content to watch next.

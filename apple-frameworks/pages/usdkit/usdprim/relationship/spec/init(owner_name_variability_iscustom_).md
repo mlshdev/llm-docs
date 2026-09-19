@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/usdkit/usdprim/relationship/spec/init(owner:name:variability:iscustom:)](https://developer.apple.com/documentation/usdkit/usdprim/relationship/spec/init(owner:name:variability:iscustom:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/usdkit/usdprim/relationship/spec/init(owner:name:variability:iscustom:)
 
 # init(owner:name:variability:isCustom:)
 

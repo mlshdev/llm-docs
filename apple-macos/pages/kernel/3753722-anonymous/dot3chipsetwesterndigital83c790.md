@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3753722-anonymous/dot3chipsetwesterndigital83c790](https://developer.apple.com/documentation/kernel/3753722-anonymous/dot3chipsetwesterndigital83c790)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3753722-anonymous/dot3chipsetwesterndigital83c790
 
 # dot3ChipSetWesternDigital83C790
 

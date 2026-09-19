@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/unfinished](https://developer.apple.com/documentation/storekit/transaction/unfinished)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/unfinished
 
 # unfinished
 
@@ -17,7 +18,7 @@ static var unfinished: Transaction.Transactions { get }
 ## Mentioned In
 
 - [Supporting offer codes in your app](../supporting-offer-codes-in-your-app.md)
-- [Getting started with In-App Purchase using StoreKit views](../getting-started-with-in-app-purchases-using-storekit-views.md)
+- [Getting started with Apple In-App Purchase using StoreKit views](../getting-started-with-in-app-purchases-using-storekit-views.md)
 
 <a id="Discussion"></a>
 
@@ -29,6 +30,6 @@ A transaction is unfinished until you call [finish()](finish%28%29.md). Use the 
 
 ### Getting transaction history
 
-- [latest(for:)](latest%28for_%29.md): Gets the customer’s most recent transaction for an In-App Purchase.
+- [latest(for:)](latest%28for_%29.md): Gets the customer’s most recent transaction for an Apple In-App Purchase.
 - [all](all.md): A sequence that emits all the customer’s transactions for your app.
 - [SKIncludeConsumableInAppPurchaseHistory](../../bundleresources/information-property-list/skincludeconsumableinapppurchasehistory.md): A Boolean value that determines whether StoreKit includes finished consumable In-App Purchases in transaction information.

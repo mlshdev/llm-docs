@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1426153-anonymous/kusb_sscompdesc_isoc_mult_shift](https://developer.apple.com/documentation/iokit/1426153-anonymous/kusb_sscompdesc_isoc_mult_shift)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1426153-anonymous/kusb_sscompdesc_isoc_mult_shift
 
 # kUSB_SSCompDesc_Isoc_Mult_Shift
 

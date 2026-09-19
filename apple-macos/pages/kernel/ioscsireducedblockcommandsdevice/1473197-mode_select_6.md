@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ioscsireducedblockcommandsdevice/1473197-mode_select_6](https://developer.apple.com/documentation/kernel/ioscsireducedblockcommandsdevice/1473197-mode_select_6)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ioscsireducedblockcommandsdevice/1473197-mode_select_6
 
 # MODE_SELECT_6
 

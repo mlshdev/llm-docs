@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appstoreservernotifications/receiving-app-store-server-notifications](https://developer.apple.com/documentation/appstoreservernotifications/receiving-app-store-server-notifications)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreservernotifications/receiving-app-store-server-notifications
 
 # Receiving App Store Server Notifications
 
@@ -17,7 +18,7 @@ The App Store delivers JSON objects using an HTTP POST to your server for notabl
 
 The body of the POST contains the data elements described in the [responseBodyV2](responsebodyv2.md) for version 2 notifications, and [responseBodyV1](responsebodyv1.md) for version 1. Parse them using the following information:
 
-- The version 2 response body, [responseBodyV2](responsebodyv2.md), contains a [signedPayload](signedpayload.md) that’s cryptographically signed by the App Store in JSON Web Signature (JWS) format. The JWS format increases security and enables you to decode and validate the signature on your server.  Some notifications include a [data](data.md) object, which has transaction and subscription renewal information that the App Store signs in JWS. The [App Store Server API](../appstoreserverapi.md) and the StoreKit [In-App Purchase](../storekit/in-app-purchase.md) API use the same JWS-signed format for transaction and subscription status information. For more information about JWS, see the [IETF RFC 7515](https://datatracker.ietf.org/doc/html/rfc7515) specification.
+- The version 2 response body, [responseBodyV2](responsebodyv2.md), contains a [signedPayload](signedpayload.md) that’s cryptographically signed by the App Store in JSON Web Signature (JWS) format. The JWS format increases security and enables you to decode and validate the signature on your server.  Some notifications include a [data](data.md) object, which has transaction and subscription renewal information that the App Store signs in JWS. The [App Store Server API](../appstoreserverapi.md) and the StoreKit [Apple In-App Purchase](../storekit/in-app-purchase.md) API use the same JWS-signed format for transaction and subscription status information. For more information about JWS, see the [IETF RFC 7515](https://datatracker.ietf.org/doc/html/rfc7515) specification.
 - The version 1 response body, [responseBodyV1](responsebodyv1.md), is a JSON object. It includes the receipt that contains the most recent in-app purchase transaction for the app. For more information, see the [unified_receipt](unified_receipt.md) object.
 
 > **Important**

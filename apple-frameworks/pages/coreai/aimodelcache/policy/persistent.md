@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreai/aimodelcache/policy/persistent](https://developer.apple.com/documentation/coreai/aimodelcache/policy/persistent)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreai/aimodelcache/policy/persistent
 
 # persistent
 
@@ -19,6 +20,10 @@ static let persistent: AIModelCache.Policy
 ## Discussion
 
 This policy ensures the system does not purge specialized assets until the next OS update. You can manually delete them, but the system does *not* automatically purge them under low storage or when the source `.aimodel` changes.
+
+> **Note**
+
+> On tvOS this setting is unavailable. Any policy must be purgeable for storagePressure.
 
 ## See Also
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsgesturerecognizer/target](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/target)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsgesturerecognizer/target
 
 # target (Swift)
 
@@ -22,7 +23,7 @@ The object in this property must implement the method specified by the [action](
 
 ## See Also
 
-### Accessing the Target and Action
+### Accessing the target and action
 
 - [action](action.md): The action method to call when the gesture is recognized.
 
@@ -48,6 +49,6 @@ The object in this property must implement the method specified by the [action](
 
 ## See Also
 
-### Accessing the Target and Action
+### Accessing the target and action
 
 - [action](action.md): The action method to call when the gesture is recognized.

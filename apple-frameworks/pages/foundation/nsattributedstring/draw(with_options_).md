@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsattributedstring/draw(with:options:)](https://developer.apple.com/documentation/foundation/nsattributedstring/draw(with:options:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsattributedstring/draw(with:options:)
 
 # draw(with:options:) (Swift)
 
 **Framework:** Foundation  
 **Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Draws the attributed string with the specified options within the specified rectangle in the current graphics context.
 
@@ -40,7 +41,7 @@ You should only invoke this method when there is a current graphics context.
 
 **Framework:** Foundation  
 **Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Draws the attributed string with the specified options within the specified rectangle in the current graphics context.
 

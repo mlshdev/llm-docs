@@ -184,6 +184,57 @@ describe("Apple DocC rendering", () => {
     ).toThrow('Unsupported DocC block "newDoccBlock"');
   });
 
+  test("degrades private links and images to readable text", () => {
+    const document = convertPage(
+      {
+        metadata: { title: "Root" },
+        primaryContentSections: [
+          {
+            kind: "content",
+            content: [
+              {
+                type: "paragraph",
+                inlineContent: [
+                  { type: "reference", identifier: "source-tag" },
+                  { type: "text", text: " " },
+                  {
+                    type: "link",
+                    title: "Send feedback",
+                    destination: "applefeedback://new",
+                  },
+                ],
+              },
+              { type: "image", identifier: "private-image" },
+            ],
+          },
+        ],
+        references: {
+          "source-tag": {
+            title: "Source tag",
+            url: "x-source-tag://ViewDidLoad",
+          },
+          "private-image": {
+            type: "image",
+            alt: "Private image",
+            variants: [{ url: "x-source-tag://Diagram" }],
+          },
+        },
+      },
+      {
+        documentationPath: rootPath,
+        owned: new Set([rootPath]),
+        outputPaths: new Map([[rootPath, "pages/swift/root.md"]]),
+        entries: new Map([[rootPath, entry(rootPath)]]),
+      },
+    );
+
+    expect(document.body).toContain(
+      "Source tag Send feedback\n\n[Image unavailable: Private image]",
+    );
+    expect(document.body).not.toContain("x-source-tag:");
+    expect(document.body).not.toContain("applefeedback:");
+  });
+
   test("materializes same-path interface-language patches", () => {
     const document = convertPage(
       {

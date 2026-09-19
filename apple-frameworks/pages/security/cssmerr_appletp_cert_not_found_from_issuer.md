@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_appletp_cert_not_found_from_issuer](https://developer.apple.com/documentation/security/cssmerr_appletp_cert_not_found_from_issuer)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_appletp_cert_not_found_from_issuer
 
 # CSSMERR_APPLETP_CERT_NOT_FOUND_FROM_ISSUER (Swift)
 

@@ -101,6 +101,16 @@ describe("document link validation", () => {
       ).toThrow();
     }
   });
+
+  test("rejects schemes that generated readers cannot follow", () => {
+    expect(() =>
+      validateDocumentLinks(
+        "apple-macos",
+        { ...document, body: "[Feedback](applefeedback://new)" },
+        new Set(["pages/guide.md"]),
+      ),
+    ).toThrow("unsupported link scheme");
+  });
 });
 
 describe("staged project integrity", () => {

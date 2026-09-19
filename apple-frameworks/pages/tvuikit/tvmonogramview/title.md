@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tvuikit/tvmonogramview/title](https://developer.apple.com/documentation/tvuikit/tvmonogramview/title)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/tvuikit/tvmonogramview/title
 
 # title (Swift)
 
 **Framework:** TVUIKit  
 **Kind:** Instance Property  
-**Availability:** tvOS 12.0+ (deprecated in 27.0)
+**Availability:** tvOS 12.0+ (deprecated in 27.2)
 
 The title for the monogram.
 
@@ -32,7 +33,7 @@ The title appears below the person’s name and usually describes the person’s
 
 **Framework:** TVUIKit  
 **Kind:** Instance Property  
-**Availability:** tvOS 12.0+ (deprecated in 27.0)
+**Availability:** tvOS 12.0+ (deprecated in 27.2)
 
 The title for the monogram.
 

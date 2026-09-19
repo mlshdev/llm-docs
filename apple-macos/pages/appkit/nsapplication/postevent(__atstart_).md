@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsapplication/postevent(_:atstart:)](https://developer.apple.com/documentation/appkit/nsapplication/postevent(_:atstart:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsapplication/postevent(_:atstart:)
 
 # postEvent(\_:atStart:) (Swift)
 

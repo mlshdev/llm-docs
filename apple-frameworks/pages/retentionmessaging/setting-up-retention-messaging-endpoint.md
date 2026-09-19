@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/retentionmessaging/setting-up-retention-messaging-endpoint](https://developer.apple.com/documentation/retentionmessaging/setting-up-retention-messaging-endpoint)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/retentionmessaging/setting-up-retention-messaging-endpoint
 
 # Setting up your Get Retention Message endpoint
 

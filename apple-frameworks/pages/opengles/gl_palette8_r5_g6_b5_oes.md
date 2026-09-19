@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_palette8_r5_g6_b5_oes](https://developer.apple.com/documentation/opengles/gl_palette8_r5_g6_b5_oes)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_palette8_r5_g6_b5_oes
 
 # GL_PALETTE8_R5_G6_B5_OES (Swift)
 

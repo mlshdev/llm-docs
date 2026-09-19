@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/appdistributor](https://developer.apple.com/documentation/marketplacekit/appdistributor)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/marketplacekit/appdistributor
 
 # AppDistributor
 
@@ -25,7 +26,7 @@ enum AppDistributor
 Apps on alternative app marketplaces need to use APIs that vary from apps on the App Store. Specifically, use:
 
 - [AdAttributionKit](../adattributionkit.md) for ads.
-- An e-commerce solution other than the App Store’s [In-App Purchase](https://developer.apple.com/documentation/storekit/in-app-purchase) system.
+- An e-commerce solution other than the App Store’s [Apple In-App Purchase](https://developer.apple.com/documentation/storekit/in-app-purchase) system.
 - A social gaming network other than [Game Center](https://developer.apple.com/documentation/appstoreconnectapi/game-center) unless your app is also on the App Store.
 - [Background Assets](https://developer.apple.com/documentation/backgroundassets) to download large files in the background rather than [On Demand Resources](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/).
 

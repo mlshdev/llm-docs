@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/icmp6errstat/3754048-icp6errs_dst_unreach_noroute](https://developer.apple.com/documentation/kernel/icmp6errstat/3754048-icp6errs_dst_unreach_noroute)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/icmp6errstat/3754048-icp6errs_dst_unreach_noroute
 
 # icp6errs_dst_unreach_noroute
 

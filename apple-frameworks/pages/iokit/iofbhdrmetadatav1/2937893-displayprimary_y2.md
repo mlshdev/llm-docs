@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/iofbhdrmetadatav1/2937893-displayprimary_y2](https://developer.apple.com/documentation/iokit/iofbhdrmetadatav1/2937893-displayprimary_y2)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/iofbhdrmetadatav1/2937893-displayprimary_y2
 
 # displayPrimary_Y2
 

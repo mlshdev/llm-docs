@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/audio_sample_rate_for_a_sample_entry](https://developer.apple.com/documentation/quicktime-file-format/audio_sample_rate_for_a_sample_entry)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/quicktime-file-format/audio_sample_rate_for_a_sample_entry
 
 # Audio sample rate for a sample entry
 

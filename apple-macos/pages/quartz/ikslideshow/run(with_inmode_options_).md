@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/quartz/ikslideshow/run(with:inmode:options:)](https://developer.apple.com/documentation/quartz/ikslideshow/run(with:inmode:options:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/quartz/ikslideshow/run(with:inmode:options:)
 
 # run(with:inMode:options:) (Swift)
 

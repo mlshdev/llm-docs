@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/making-app-entities-available-in-spotlight](https://developer.apple.com/documentation/appintents/making-app-entities-available-in-spotlight)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/making-app-entities-available-in-spotlight
 
 # Making app entities available in Spotlight
 
@@ -43,9 +44,11 @@ The following code from the [Adopting App Intents to support system experiences]
 struct LandmarkEntity: IndexedEntity {
     // ...
 
+
     // Maps the description variable to the Spotlight indexing key `contentDescription`.
     @ComputedProperty(indexingKey: \.contentDescription)
     var description: String { landmark.description }
+
 
     // Maps the continent variable to a custom Spotlight indexing key. 
     @ComputedProperty(

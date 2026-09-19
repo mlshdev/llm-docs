@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/implementing-platform-sso-during-automated-device-enrollment](https://developer.apple.com/documentation/devicemanagement/implementing-platform-sso-during-automated-device-enrollment)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/devicemanagement/implementing-platform-sso-during-automated-device-enrollment
 
 # Implementing Platform SSO during Automated Device Enrollment
 
@@ -106,6 +107,7 @@ A sample HTTP response:
 HTTP/1.1 403 Forbidden
 Content-Type: application/xml
 Content-Length: 601
+
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">

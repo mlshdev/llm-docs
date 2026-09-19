@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corevideo/cvpixelformatdescription/pixellayout/init(blocksize:bitsperblock:bitspercomponent:blockalignment:subsampling:blackblock:fillextendedpixels:cgbitmapinfo:)](https://developer.apple.com/documentation/corevideo/cvpixelformatdescription/pixellayout/init(blocksize:bitsperblock:bitspercomponent:blockalignment:subsampling:blackblock:fillextendedpixels:cgbitmapinfo:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corevideo/cvpixelformatdescription/pixellayout/init(blocksize:bitsperblock:bitspercomponent:blockalignment:subsampling:blackblock:fillextendedpixels:cgbitmapinfo:)
 
 # init(blockSize:bitsPerBlock:bitsPerComponent:blockAlignment:subsampling:blackBlock:fillExtendedPixels:cgBitmapInfo:)
 

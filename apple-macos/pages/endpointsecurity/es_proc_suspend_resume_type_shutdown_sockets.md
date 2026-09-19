@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_proc_suspend_resume_type_shutdown_sockets](https://developer.apple.com/documentation/endpointsecurity/es_proc_suspend_resume_type_shutdown_sockets)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_proc_suspend_resume_type_shutdown_sockets
 
 # ES_PROC_SUSPEND_RESUME_TYPE_SHUTDOWN_SOCKETS (Swift)
 

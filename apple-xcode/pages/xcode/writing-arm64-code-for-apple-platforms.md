@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/writing-arm64-code-for-apple-platforms](https://developer.apple.com/documentation/xcode/writing-arm64-code-for-apple-platforms)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/writing-arm64-code-for-apple-platforms
 
 # Writing ARM64 code for Apple platforms
 
@@ -158,6 +159,7 @@ To determine whether a device’s CPU supports DIT, test the `hw.optional.arm.FE
 ```c
 #include <sys/sysctl.h>
 #include <stdbool.h>
+
 
 bool is_DIT_supported(void) {
     static int has_DIT = -1;

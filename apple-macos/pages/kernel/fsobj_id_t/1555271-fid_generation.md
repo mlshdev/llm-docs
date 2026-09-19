@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/fsobj_id_t/1555271-fid_generation](https://developer.apple.com/documentation/kernel/fsobj_id_t/1555271-fid_generation)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/fsobj_id_t/1555271-fid_generation
 
 # fid_generation
 

@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/changelog/README.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/changelog/README.md)
+> Pinned source for n8n main: [docs/changelog/README.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/changelog/README.md)
 
 # Changelog
 
@@ -20,8 +20,8 @@ Every n8n release moves the platform forward. The changelog is where we call out
 >
 > n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 >
-> Current `stable`: 2.39.5
-> Current `beta`: 2.40.0
+> Current `stable`: 2.39.8
+> Current `beta`: 2.40.3
 
 ## Error workflow executions no longer count towards your quota
 
@@ -33,7 +33,7 @@ Until now each of those runs counted like any other execution. Handling a failur
 
 Attach an error workflow to a workflow in its **Workflow Settings** and its runs are excluded from the count. One error workflow can serve as many workflows as you like.
 
-On Cloud the change is already live. On self-hosted it applies from 2.38.0, or 1.123.60 if you're still on v1. If some of your workflows still run without an error workflow, refer to [Handle errors gracefully](https://docs.n8n.io/build/flow-logic/handle-errors-gracefully) to set one up.
+The change applies on Cloud from 2.38, and on self-hosted Business and Enterprise instances from 2.28.0, or 1.123.60 if you're still on v1. If some of your workflows still run without an error workflow, refer to [Handle errors gracefully](https://docs.n8n.io/build/flow-logic/handle-errors-gracefully) to set one up.
 
 ## Use AI models and tool services without setting up provider accounts or credentials
 
@@ -43,11 +43,11 @@ You can now use supported AI models and services in n8n Cloud without first crea
 
 Supported AI providers include OpenAI, Anthropic, Google Gemini, Alibaba Cloud Qwen, MiniMax, and Moonshot Kimi. You can also use credits with Brave Search, Firecrawl, Browserbase, LlamaParse, and PDF.co.
 
-![Agent using tool services available with Gateway credits](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/changelog/.gitbook/assets/form%20hero%203.png)
+![Agent using tool services available with Gateway credits](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/changelog/.gitbook/assets/form%20hero%203.png)
 
 On a supported node, select **Gateway credits** when setting up the credential and run your workflow. The choice is made per node, so the same workflow can use Gateway credits for one service and your own provider credentials for another.
 
-![Select Gateway credits in the Credetial dropdown ](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/changelog/.gitbook/assets/select%20credits.png)
+![Select Gateway credits in the Credetial dropdown ](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/changelog/.gitbook/assets/select%20credits.png)
 
 Usage is deducted from a shared prepaid balance for the n8n instance. We align Gateway credit rates with publicly listed provider pricing wherever possible, and publish the rates for every supported service on our [service pricing page](https://app.n8n.cloud/service-pricing).
 

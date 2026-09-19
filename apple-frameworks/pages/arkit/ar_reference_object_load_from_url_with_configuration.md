@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/ar_reference_object_load_from_url_with_configuration](https://developer.apple.com/documentation/arkit/ar_reference_object_load_from_url_with_configuration)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/ar_reference_object_load_from_url_with_configuration
 
 # ar_reference_object_load_from_url_with_configuration
 

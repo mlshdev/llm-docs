@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreml/creating-and-integrating-a-model-with-custom-layers](https://developer.apple.com/documentation/coreml/creating-and-integrating-a-model-with-custom-layers)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreml/creating-and-integrating-a-model-with-custom-layers
 
 # Creating and Integrating a Model with Custom Layers (Swift)
 

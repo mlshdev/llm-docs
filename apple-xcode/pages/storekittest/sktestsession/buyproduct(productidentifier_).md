@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/storekittest/sktestsession/buyproduct(productidentifier:)](https://developer.apple.com/documentation/storekittest/sktestsession/buyproduct(productidentifier:))
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekittest/sktestsession/buyproduct(productidentifier:)
 
 # buyProduct(productIdentifier:) (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ (deprecated in 17.0) · iPadOS 14.0+ (deprecated in 17.0) · Mac Catalyst 14.0+ (deprecated in 17.0) · macOS 11.0+ (deprecated in 14.0) · tvOS 14.0+ (deprecated in 17.0) · watchOS 7.0+ (deprecated in 10.0)
 
-Simulates buying an in-app purchase or subscription outside the app.
+Simulates buying an Apple In-App Purchase or subscription outside the app.
 
 > Use the Swift API: SKTestSession.buyProduct(identifier:, options:)
 
@@ -18,7 +19,7 @@ func buyProduct(productIdentifier: String) throws
 
 ## Parameters
 
-- `productIdentifier`: Product identifier of the in-app purchase.
+- `productIdentifier`: Product identifier of the Apple In-App Purchase.
 
 <a id="discussion"></a>
 
@@ -30,7 +31,7 @@ After calling this function, handle the new transaction in your payment queue.
 
 ### Testing externally performed transactions
 
-- [refundTransaction(identifier:)](refundtransaction%28identifier_%29.md): Simulates a refund for an in-app purchase that completes outside of the app.
+- [refundTransaction(identifier:)](refundtransaction%28identifier_%29.md): Simulates a refund for an Apple In-App Purchase that completes outside of the app.
 
 # buyProductWithIdentifier:error: (Objective-C)
 
@@ -38,7 +39,7 @@ After calling this function, handle the new transaction in your payment queue.
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ (deprecated in 17.0) · iPadOS 14.0+ (deprecated in 17.0) · Mac Catalyst 14.0+ (deprecated in 17.0) · macOS 11.0+ (deprecated in 14.0) · tvOS 14.0+ (deprecated in 17.0) · watchOS 7.0+ (deprecated in 10.0)
 
-Simulates buying an in-app purchase or subscription outside the app.
+Simulates buying an Apple In-App Purchase or subscription outside the app.
 
 > Use the Swift API: SKTestSession.buyProduct(identifier:, options:)
 
@@ -50,7 +51,7 @@ Simulates buying an in-app purchase or subscription outside the app.
 
 ## Parameters
 
-- `productIdentifier`: Product identifier of the in-app purchase.
+- `productIdentifier`: Product identifier of the Apple In-App Purchase.
 - `error`: On output, a pointer to an error object that describes why the method failed, or `nil` if no error occurred. If you are not interested in the error information, pass `nil` for this parameter.
 
 <a id="return-value"></a>
@@ -69,4 +70,4 @@ After calling this function, handle the new transaction in your payment queue.
 
 ### Testing externally performed transactions
 
-- [refundTransactionWithIdentifier:error:](refundtransaction%28identifier_%29.md): Simulates a refund for an in-app purchase that completes outside of the app.
+- [refundTransactionWithIdentifier:error:](refundtransaction%28identifier_%29.md): Simulates a refund for an Apple In-App Purchase that completes outside of the app.

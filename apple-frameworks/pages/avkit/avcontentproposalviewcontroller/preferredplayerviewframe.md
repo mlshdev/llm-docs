@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcontentproposalviewcontroller/preferredplayerviewframe](https://developer.apple.com/documentation/avkit/avcontentproposalviewcontroller/preferredplayerviewframe)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcontentproposalviewcontroller/preferredplayerviewframe
 
 # preferredPlayerViewFrame (Swift)
 
@@ -16,7 +17,7 @@ var preferredPlayerViewFrame: CGRect { get }
 
 ## Mentioned In
 
-- [Presenting Content Proposals in tvOS](../presenting-content-proposals-in-tvos.md)
+- [Presenting content proposals in tvOS](../presenting-content-proposals-in-tvos.md)
 
 <a id="Discussion"></a>
 
@@ -26,7 +27,7 @@ This value defaults to a rectangle that represents the entire screen bounds, but
 
 ## See Also
 
-### Configuring the Proposal
+### Configuring the proposal
 
 - [contentProposal](contentproposal.md): A prosal of content to play.
 - [AVContentProposal](../avcontentproposal.md): An object that describes the content to propose playing after the current item finishes.
@@ -49,7 +50,7 @@ The preferred presentation frame of the player view while the content proposal i
 
 ## Mentioned In
 
-- [Presenting Content Proposals in tvOS](../presenting-content-proposals-in-tvos.md)
+- [Presenting content proposals in tvOS](../presenting-content-proposals-in-tvos.md)
 
 <a id="Discussion"></a>
 
@@ -59,7 +60,7 @@ This value defaults to a rectangle that represents the entire screen bounds, but
 
 ## See Also
 
-### Configuring the Proposal
+### Configuring the proposal
 
 - [contentProposal](contentproposal.md): A prosal of content to play.
 - [AVContentProposal](../avcontentproposal.md): An object that describes the content to propose playing after the current item finishes.

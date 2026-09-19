@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/maximum_video_size_in_a_movie](https://developer.apple.com/documentation/quicktime-file-format/maximum_video_size_in_a_movie)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/quicktime-file-format/maximum_video_size_in_a_movie
 
 # Maximum video size in a movie
 

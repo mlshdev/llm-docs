@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iousbhost/iousbhostcontrollerinterface/initwithcapabilities:queue:interruptratehz:error:commandhandler:doorbellhandler:interesthandler:](https://developer.apple.com/documentation/iousbhost/iousbhostcontrollerinterface/initwithcapabilities:queue:interruptratehz:error:commandhandler:doorbellhandler:interesthandler:)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iousbhost/iousbhostcontrollerinterface/initwithcapabilities:queue:interruptratehz:error:commandhandler:doorbellhandler:interesthandler:
 
 # initWithCapabilities:queue:interruptRateHz:error:commandHandler:doorbellHandler:interestHandler:
 

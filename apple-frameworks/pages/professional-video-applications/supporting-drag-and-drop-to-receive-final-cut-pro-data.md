@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional-video-applications/supporting-drag-and-drop-to-receive-final-cut-pro-data](https://developer.apple.com/documentation/professional-video-applications/supporting-drag-and-drop-to-receive-final-cut-pro-data)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional-video-applications/supporting-drag-and-drop-to-receive-final-cut-pro-data
 
 # Supporting Drag and Drop to Receive Final Cut Pro Data
 

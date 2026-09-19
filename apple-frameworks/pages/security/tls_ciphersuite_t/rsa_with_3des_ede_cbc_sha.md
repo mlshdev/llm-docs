@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/tls_ciphersuite_t/rsa_with_3des_ede_cbc_sha](https://developer.apple.com/documentation/security/tls_ciphersuite_t/rsa_with_3des_ede_cbc_sha)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/tls_ciphersuite_t/rsa_with_3des_ede_cbc_sha
 
 # tls_ciphersuite_t.RSA_WITH_3DES_EDE_CBC_SHA (Swift)
 

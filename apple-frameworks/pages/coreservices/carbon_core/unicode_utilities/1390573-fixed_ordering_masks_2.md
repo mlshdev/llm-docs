@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/carbon_core/unicode_utilities/1390573-fixed_ordering_masks_2](https://developer.apple.com/documentation/coreservices/carbon_core/unicode_utilities/1390573-fixed_ordering_masks_2)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/carbon_core/unicode_utilities/1390573-fixed_ordering_masks_2
 
 # Fixed Ordering Masks 2
 

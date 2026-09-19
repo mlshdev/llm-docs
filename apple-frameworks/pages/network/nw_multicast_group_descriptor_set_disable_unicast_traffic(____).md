@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/network/nw_multicast_group_descriptor_set_disable_unicast_traffic(_:_:)](https://developer.apple.com/documentation/network/nw_multicast_group_descriptor_set_disable_unicast_traffic(_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/network/nw_multicast_group_descriptor_set_disable_unicast_traffic(_:_:)
 
 # nw_multicast_group_descriptor_set_disable_unicast_traffic(\_:\_:) (Swift)
 

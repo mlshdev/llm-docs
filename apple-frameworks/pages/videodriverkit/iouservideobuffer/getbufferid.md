@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideobuffer/getbufferid](https://developer.apple.com/documentation/videodriverkit/iouservideobuffer/getbufferid)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideobuffer/getbufferid
 
 # getBufferID
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,6 +19,6 @@ IOStreamBufferID getBufferID();
 
 ### Accessing buffer ID
 
-- [setBufferID](setbufferid.md)
-- [IOStreamBufferID](../iostreambufferid.md)
-- [kIOStreamBufferIDMask](../kiostreambufferidmask.md)
+- [setBufferID](setbufferid.md): Beta.
+- [IOStreamBufferID](../iostreambufferid.md): Beta.
+- [kIOStreamBufferIDMask](../kiostreambufferidmask.md): Beta.

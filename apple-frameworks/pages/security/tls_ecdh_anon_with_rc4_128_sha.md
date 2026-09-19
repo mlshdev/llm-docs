@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/tls_ecdh_anon_with_rc4_128_sha](https://developer.apple.com/documentation/security/tls_ecdh_anon_with_rc4_128_sha)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/tls_ecdh_anon_with_rc4_128_sha
 
 # TLS_ECDH_anon_WITH_RC4_128_SHA (Swift)
 

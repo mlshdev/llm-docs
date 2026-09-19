@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/host/init(address:)](https://developer.apple.com/documentation/foundation/host/init(address:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/host/init(address:)
 
 # init(address:) (Swift)
 
 **Framework:** Foundation  
 **Kind:** Initializer  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Returns the `NSHost` with the Internet address `address`.
 
@@ -37,7 +38,7 @@ The host for `address`.
 
 **Framework:** Foundation  
 **Kind:** Type Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Returns the `NSHost` with the Internet address `address`.
 

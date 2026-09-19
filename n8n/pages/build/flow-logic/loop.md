@@ -1,14 +1,16 @@
-> Pinned source for n8n main: [docs/build/flow-logic/loop.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/flow-logic/loop.md)
+> Pinned source for n8n main: [docs/build/flow-logic/loop.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/flow-logic/loop.md)
 
 # Looping in n8n <a id="looping-in-n8n"></a>
 
 Looping is useful when you want to process multiple items or perform an action repeatedly, such as sending a message to every contact in your address book. n8n handles this repetitive processing automatically, meaning you don't need to specifically build loops into your workflows. There are [some nodes](#node-exceptions) where this isn't true.
 
+Looping is one part of n8n's [flow logic](https://docs.n8n.io/build/flow-logic), alongside [splitting](https://docs.n8n.io/build/flow-logic/split-with-conditionals) and [merging](https://docs.n8n.io/build/flow-logic/merge-data) data streams, and [waiting](https://docs.n8n.io/build/flow-logic/wait) between executions.
+
 ## Using loops in n8n <a id="using-loops-in-n8n"></a>
 
 n8n nodes take any number of items as input, process these items, and output the results. You can think of each item as a single data point, or a single row in the output table of a node.
 
-![The Customer Datastore node output](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/customer_datastore_node.png)
+![The Customer Datastore node output](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/customer_datastore_node.png)
 
 Nodes usually run once for each item. For example, if you wanted to send the name and notes of the customers in the Customer Datastore node as a message on Slack, you would:
 
@@ -34,13 +36,13 @@ To create a loop in an n8n workflow, connect the output of one node to the input
 
 Here is an [example workflow](https://n8n.io/workflows/1130) that implements a loop with an `IF` node:
 
-![Workflow canvas showing an IF node connected back to a previous node to form a loop, checking a condition to stop it](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/example_workflow.png)
+![Workflow canvas showing an IF node connected back to a previous node to form a loop, checking a condition to stop it](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/example_workflow.png)
 
 ### Loop until all items are processed <a id="loop-until-all-items-are-processed"></a>
 
 Use the [Loop Over Items](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches) node when you want to loop until all items are processed. To process each item individually, set **Batch Size** to `1`.
 
-You can batch the data in groups and process these batches. This approach is useful for avoiding API rate limits when processing large incoming data or when you want to process a specific group of returned items.
+You can batch the data in groups and process these batches. This approach is useful for avoiding API rate limits when processing large incoming data or when you want to process a specific group of returned items. Combine batching with a [Wait](https://docs.n8n.io/build/flow-logic/wait) node between batches to slow down processing further.
 
 The Loop Over Items node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow so it's not necessary to add an IF node to stop the loop.
 
@@ -59,3 +61,14 @@ Nodes and operations where you need to design a loop into your workflow:
   - Info: this operation executes only once, regardless of the number of items in the incoming data.
 - [RSS Read](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread) executes once for the requested URL.
 - [TimescaleDB](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb) executes once for `insert` and `update`.
+
+## Related resources
+
+- [Flow logic](https://docs.n8n.io/build/flow-logic)
+- [Split with conditionals](https://docs.n8n.io/build/flow-logic/split-with-conditionals)
+- [Merge data](https://docs.n8n.io/build/flow-logic/merge-data)
+- [Wait](https://docs.n8n.io/build/flow-logic/wait)
+- [Understand execution order](https://docs.n8n.io/build/flow-logic/understand-execution-order)
+- [Break workflows into smaller parts](https://docs.n8n.io/build/flow-logic/break-workflows-into-smaller-parts)
+- [Convert to sub-workflows](https://docs.n8n.io/build/flow-logic/convert-to-sub-workflows)
+- [Handle errors gracefully](https://docs.n8n.io/build/flow-logic/handle-errors-gracefully)

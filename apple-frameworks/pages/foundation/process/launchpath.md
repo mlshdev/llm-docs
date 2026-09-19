@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/process/launchpath](https://developer.apple.com/documentation/foundation/process/launchpath)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/process/launchpath
 
 # launchPath (Swift)
 
 **Framework:** Foundation  
 **Kind:** Instance Property  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Sets the receiver’s executable.
 
@@ -32,7 +33,7 @@ var launchPath: String? { get set }
 
 **Framework:** Foundation  
 **Kind:** Instance Property  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Sets the receiver’s executable.
 

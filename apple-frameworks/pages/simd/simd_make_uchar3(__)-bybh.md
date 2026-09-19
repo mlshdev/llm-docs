@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/simd_make_uchar3(_:)-bybh](https://developer.apple.com/documentation/simd/simd_make_uchar3(_:)-bybh)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/simd/simd_make_uchar3(_:)-bybh
 
 # simd_make_uchar3(\_:) (Swift)
 

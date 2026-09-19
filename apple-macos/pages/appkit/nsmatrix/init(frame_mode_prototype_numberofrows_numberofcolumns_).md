@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsmatrix/init(frame:mode:prototype:numberofrows:numberofcolumns:)](https://developer.apple.com/documentation/appkit/nsmatrix/init(frame:mode:prototype:numberofrows:numberofcolumns:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsmatrix/init(frame:mode:prototype:numberofrows:numberofcolumns:)
 
 # init(frame:mode:prototype:numberOfRows:numberOfColumns:) (Swift)
 

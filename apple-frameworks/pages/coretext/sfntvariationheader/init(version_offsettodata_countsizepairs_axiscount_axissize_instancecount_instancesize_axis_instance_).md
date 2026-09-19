@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coretext/sfntvariationheader/init(version:offsettodata:countsizepairs:axiscount:axissize:instancecount:instancesize:axis:instance:)](https://developer.apple.com/documentation/coretext/sfntvariationheader/init(version:offsettodata:countsizepairs:axiscount:axissize:instancecount:instancesize:axis:instance:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coretext/sfntvariationheader/init(version:offsettodata:countsizepairs:axiscount:axissize:instancecount:instancesize:axis:instance:)
 
 # init(version:offsetToData:countSizePairs:axisCount:axisSize:instanceCount:instanceSize:axis:instance:)
 

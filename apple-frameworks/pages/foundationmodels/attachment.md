@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/attachment](https://developer.apple.com/documentation/foundationmodels/attachment)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/attachment
 
 # Attachment
 
@@ -53,6 +54,10 @@ Prompt {
 ### Assigning a label
 
 - [label(\_:)](attachment/label%28__%29.md): Assigns a label to an attachment.
+
+### Initializers
+
+- [init(\_:)](attachment/init%28__%29.md): Beta. Conforms when `Content` conforms to `DataAttachmentRepresentable`. Creates an attachment from data content.
 
 ## Relationships
 

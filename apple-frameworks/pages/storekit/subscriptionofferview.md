@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/subscriptionofferview](https://developer.apple.com/documentation/storekit/subscriptionofferview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/subscriptionofferview
 
 # SubscriptionOfferView
 
@@ -39,9 +40,9 @@
 
 ## See Also
 
-### Merchandising In-App Purchases, subscriptions, and offers
+### Merchandising Apple In-App Purchases, subscriptions, and offers
 
-- [ProductView](productview.md): A view that merchandises an individual In-App Purchase product.
-- [StoreView](storeview.md): A view that merchandises a collection of In-App Purchase products.
+- [ProductView](productview.md): A view that merchandises an individual Apple In-App Purchase product.
+- [StoreView](storeview.md): A view that merchandises a collection of Apple In-App Purchase products.
 - [SubscriptionStoreView](subscriptionstoreview.md): A view that merchandises a collection of auto-renewable subscription options that belong to the same subscription group.
 - [Backyard Birds: Building an app with SwiftData and widgets](https://developer.apple.com/documentation/swiftui/backyard-birds-sample): Create an app with persistent data, interactive widgets, and an all new in-app purchase experience.

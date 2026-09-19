@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gamesave/gamesavesynceddirectory/state-swift.enum/syncing](https://developer.apple.com/documentation/gamesave/gamesavesynceddirectory/state-swift.enum/syncing)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/gamesave/gamesavesynceddirectory/state-swift.enum/syncing
 
 # GameSaveSyncedDirectory.State.syncing
 

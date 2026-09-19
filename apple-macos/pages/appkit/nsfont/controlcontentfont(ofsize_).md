@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsfont/controlcontentfont(ofsize:)](https://developer.apple.com/documentation/appkit/nsfont/controlcontentfont(ofsize:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsfont/controlcontentfont(ofsize:)
 
 # controlContentFont(ofSize:) (Swift)
 

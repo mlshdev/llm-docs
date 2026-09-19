@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiappearancecontainer](https://developer.apple.com/documentation/uikit/uiappearancecontainer)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiappearancecontainer
 
 # UIAppearanceContainer (Swift)
 
@@ -59,6 +60,7 @@ For example, [UIBarButtonItem](uibarbuttonitem.md) defines these methods:
 - [UIActivityViewController](uiactivityviewcontroller.md)
 - [UIAlertController](uialertcontroller.md)
 - [UIAlertView](uialertview.md)
+- [UIArrangementViewController](uiarrangementviewcontroller.md)
 - [UIBackgroundExtensionView](uibackgroundextensionview.md)
 - [UIButton](uibutton.md)
 - [UICalendarView](uicalendarview.md)

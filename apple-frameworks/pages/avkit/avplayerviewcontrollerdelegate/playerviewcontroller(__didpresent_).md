@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:didpresent:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:didpresent:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:didpresent:)
 
 # playerViewController(\_:didPresent:) (Swift)
 
@@ -29,7 +30,7 @@ Use the [interstitialTimeRanges](../../avfoundation/avplayeritem/interstitialtim
 
 ## See Also
 
-### Responding to Interstitial Content Playback Events
+### Responding to interstitial content playback events
 
 - [playerViewController(\_:willPresent:)](playerviewcontroller%28__willpresent_%29.md): Tells the delegate when the player view controller is about to start playing a range of interstitial content.
 
@@ -62,6 +63,6 @@ Use the [interstitialTimeRanges](../../avfoundation/avplayeritem/interstitialtim
 
 ## See Also
 
-### Responding to Interstitial Content Playback Events
+### Responding to interstitial content playback events
 
 - [playerViewController:willPresentInterstitialTimeRange:](playerviewcontroller%28__willpresent_%29.md): Tells the delegate when the player view controller is about to start playing a range of interstitial content.

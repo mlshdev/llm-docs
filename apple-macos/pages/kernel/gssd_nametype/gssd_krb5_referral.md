@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/gssd_nametype/gssd_krb5_referral](https://developer.apple.com/documentation/kernel/gssd_nametype/gssd_krb5_referral)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/gssd_nametype/gssd_krb5_referral
 
 # GSSD_KRB5_REFERRAL
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applearchive/aeacontextfields/aea_context_field_blocks_per_cluster](https://developer.apple.com/documentation/applearchive/aeacontextfields/aea_context_field_blocks_per_cluster)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applearchive/aeacontextfields/aea_context_field_blocks_per_cluster
 
 # AEA_CONTEXT_FIELD_BLOCKS_PER_CLUSTER
 

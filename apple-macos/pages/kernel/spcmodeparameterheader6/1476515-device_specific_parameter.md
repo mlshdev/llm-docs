@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/spcmodeparameterheader6/1476515-device_specific_parameter](https://developer.apple.com/documentation/kernel/spcmodeparameterheader6/1476515-device_specific_parameter)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/spcmodeparameterheader6/1476515-device_specific_parameter
 
 # DEVICE_SPECIFIC_PARAMETER
 

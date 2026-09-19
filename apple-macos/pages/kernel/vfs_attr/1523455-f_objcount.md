@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/vfs_attr/1523455-f_objcount](https://developer.apple.com/documentation/kernel/vfs_attr/1523455-f_objcount)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/vfs_attr/1523455-f_objcount
 
 # f_objcount
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/dcltransferbuffer/1510324-compilerdata](https://developer.apple.com/documentation/iokit/dcltransferbuffer/1510324-compilerdata)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/dcltransferbuffer/1510324-compilerdata
 
 # compilerData
 

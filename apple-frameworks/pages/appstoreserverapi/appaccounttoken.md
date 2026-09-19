@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appstoreserverapi/appaccounttoken](https://developer.apple.com/documentation/appstoreserverapi/appaccounttoken)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/appaccounttoken
 
 # appAccountToken
 
@@ -24,7 +25,7 @@ uuid appAccountToken
 
 ## Discussion
 
-When a customer initiates an In-App Purchase in your app, you can optionally generate an app account token and call [appAccountToken(\_:)](../storekit/product/purchaseoption/appaccounttoken%28__%29.md) to associate it with the purchase. If you use the [Original API for In-App Purchase](../storekit/original-api-for-in-app-purchase.md), you can provide a UUID in the [applicationUsername](../storekit/skmutablepayment/applicationusername.md) property. The App Store returns the same UUID in [appAccountToken](../storekit/transaction/appaccounttoken.md) in the transaction information and subscription renewal information after the customer completes the purchase.
+When a customer initiates an In-App Purchase in your app, you can optionally generate an app account token and call [appAccountToken(\_:)](../storekit/product/purchaseoption/appaccounttoken%28__%29.md) to associate it with the purchase. If you use the [Original API for Apple In-App Purchase](../storekit/original-api-for-in-app-purchase.md), you can provide a UUID in the [applicationUsername](../storekit/skmutablepayment/applicationusername.md) property. The App Store returns the same UUID in [appAccountToken](../storekit/transaction/appaccounttoken.md) in the transaction information and subscription renewal information after the customer completes the purchase.
 
 To provide an app account token for a transaction that the customer completes outside of your app, or to update the value of an existing app account token, call the [Set App Account Token](set-app-account-token.md) endpoint.
 

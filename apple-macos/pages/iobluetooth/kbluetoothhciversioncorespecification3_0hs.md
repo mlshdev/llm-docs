@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/kbluetoothhciversioncorespecification3_0hs](https://developer.apple.com/documentation/iobluetooth/kbluetoothhciversioncorespecification3_0hs)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetooth/kbluetoothhciversioncorespecification3_0hs
 
 # kBluetoothHCIVersionCoreSpecification3_0HS (Swift)
 

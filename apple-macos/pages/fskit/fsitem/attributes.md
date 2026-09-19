@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fsitem/attributes](https://developer.apple.com/documentation/fskit/fsitem/attributes)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/fskit/fsitem/attributes
 
 # FSItem.Attributes (Swift)
 
@@ -45,7 +46,7 @@ class Attributes
 - [size](attributes/size.md): The item’s size.
 - [allocSize](attributes/allocsize.md): The item’s allocated size.
 - [supportsLimitedXAttrs](attributes/supportslimitedxattrs.md): A Boolean value that indicates whether the item supports a limited set of extended attributes.
-- [inhibitKernelOffloadedIO](attributes/inhibitkerneloffloadedio.md): A Boolean value that indicates whether the file system overrides the per-volume settings for kernel offloaded I/O for a specific file.
+- [inhibitKernelOffloadedIO](attributes/inhibitkerneloffloadedio.md): A Boolean value that indicates whether the file system overrides the per-volume settings for kernel offloaded I/O for a specific file. FSKit reads this value the first time the module reports attributes for a given file; It then sets the file’s kernel-offloaded-I/O routing accordingly. The routing stays in effect for the item’s lifetime; later changes are ignored.
 
 ### Working with time attributes
 
@@ -133,7 +134,7 @@ Attributes of an item, such as size, creation and modification times, and user a
 - [size](attributes/size.md): The item’s size.
 - [allocSize](attributes/allocsize.md): The item’s allocated size.
 - [supportsLimitedXAttrs](attributes/supportslimitedxattrs.md): A Boolean value that indicates whether the item supports a limited set of extended attributes.
-- [inhibitKernelOffloadedIO](attributes/inhibitkerneloffloadedio.md): A Boolean value that indicates whether the file system overrides the per-volume settings for kernel offloaded I/O for a specific file.
+- [inhibitKernelOffloadedIO](attributes/inhibitkerneloffloadedio.md): A Boolean value that indicates whether the file system overrides the per-volume settings for kernel offloaded I/O for a specific file. FSKit reads this value the first time the module reports attributes for a given file; It then sets the file’s kernel-offloaded-I/O routing accordingly. The routing stays in effect for the item’s lifetime; later changes are ignored.
 
 ### Working with time attributes
 

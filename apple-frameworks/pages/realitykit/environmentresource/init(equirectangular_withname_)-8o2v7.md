@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/environmentresource/init(equirectangular:withname:)-8o2v7](https://developer.apple.com/documentation/realitykit/environmentresource/init(equirectangular:withname:)-8o2v7)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/environmentresource/init(equirectangular:withname:)-8o2v7
 
 # init(equirectangular:withName:)
 
 **Framework:** RealityKit  
 **Kind:** Initializer  
-**Availability:** iOS 18.0+ (deprecated in 27.0) · iPadOS 18.0+ (deprecated in 27.0) · Mac Catalyst 18.0+ · macOS 15.0+ (deprecated in 27.0) · tvOS 26.0+ (deprecated in 27.0) · visionOS 2.0+ (deprecated in 27.0)
+**Availability:** iOS 18.0+ (deprecated in 27.2) · iPadOS 18.0+ (deprecated in 27.2) · Mac Catalyst 18.0+ · macOS 15.0+ (deprecated in 27.2) · tvOS 26.0+ (deprecated in 27.2) · visionOS 2.0+ (deprecated in 27.2)
 
 Asynchronously generates an environment resource from an equirectangular image.
 

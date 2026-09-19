@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/sensorkit/srelectrocardiogramsample/lead-swift.enum/rightarmminusleftarm](https://developer.apple.com/documentation/sensorkit/srelectrocardiogramsample/lead-swift.enum/rightarmminusleftarm)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/sensorkit/srelectrocardiogramsample/lead-swift.enum/rightarmminusleftarm
 
 # SRElectrocardiogramSample.Lead.rightArmMinusLeftArm (Swift)
 

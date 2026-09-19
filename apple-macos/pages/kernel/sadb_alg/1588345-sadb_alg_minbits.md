@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/sadb_alg/1588345-sadb_alg_minbits](https://developer.apple.com/documentation/kernel/sadb_alg/1588345-sadb_alg_minbits)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/sadb_alg/1588345-sadb_alg_minbits
 
 # sadb_alg_minbits
 

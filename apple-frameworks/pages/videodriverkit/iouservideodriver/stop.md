@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideodriver/stop](https://developer.apple.com/documentation/videodriverkit/iouservideodriver/stop)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideodriver/stop
 
 # Stop
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,6 +19,6 @@ virtual kern_return_t Stop(IOService *provider);
 
 ### Running the driver service
 
-- [init](init.md)
-- [Start](start.md)
-- [free](free.md)
+- [init](init.md): Beta.
+- [Start](start.md): Beta.
+- [free](free.md): Beta.

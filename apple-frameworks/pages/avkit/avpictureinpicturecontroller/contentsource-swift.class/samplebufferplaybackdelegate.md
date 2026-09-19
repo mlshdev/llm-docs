@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avpictureinpicturecontroller/contentsource-swift.class/samplebufferplaybackdelegate](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/contentsource-swift.class/samplebufferplaybackdelegate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/contentsource-swift.class/samplebufferplaybackdelegate
 
 # sampleBufferPlaybackDelegate (Swift)
 
@@ -16,7 +17,7 @@ weak var sampleBufferPlaybackDelegate: (any AVPictureInPictureSampleBufferPlayba
 
 ## See Also
 
-### Configuring the Delegate
+### Configuring the delegate
 
 - [AVPictureInPictureSampleBufferPlaybackDelegate](../../avpictureinpicturesamplebufferplaybackdelegate.md): A protocol for controlling playback from a sample buffer display layer in Picture in Picture.
 
@@ -36,6 +37,6 @@ A delegate object that responds to sample buffer playback events.
 
 ## See Also
 
-### Configuring the Delegate
+### Configuring the delegate
 
 - [AVPictureInPictureSampleBufferPlaybackDelegate](../../avpictureinpicturesamplebufferplaybackdelegate.md): A protocol for controlling playback from a sample buffer display layer in Picture in Picture.

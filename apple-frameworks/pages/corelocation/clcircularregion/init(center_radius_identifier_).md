@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corelocation/clcircularregion/init(center:radius:identifier:)](https://developer.apple.com/documentation/corelocation/clcircularregion/init(center:radius:identifier:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corelocation/clcircularregion/init(center:radius:identifier:)
 
 # init(center:radius:identifier:) (Swift)
 
 **Framework:** Core Location  
 **Kind:** Initializer  
-**Availability:** iOS 7.0+ (deprecated in 27.0) · iPadOS 7.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.10+ (deprecated in 27.0) · tvOS 9.0+ (deprecated in 27.0) · watchOS 2.0+ (deprecated in 27.0)
+**Availability:** iOS 7.0+ (deprecated in 27.2) · iPadOS 7.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.10+ (deprecated in 27.2) · tvOS 9.0+ (deprecated in 27.0) · watchOS 2.0+ (deprecated in 27.2)
 
 Creates and returns a region object defining a circular geographic area.
 
@@ -36,7 +37,7 @@ When defining a geographic region, remember that the location manager doesn’t 
 
 **Framework:** Core Location  
 **Kind:** Instance Method  
-**Availability:** iOS 7.0+ (deprecated in 27.0) · iPadOS 7.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.10+ (deprecated in 27.0) · tvOS 9.0+ (deprecated in 27.0) · watchOS 2.0+ (deprecated in 27.0)
+**Availability:** iOS 7.0+ (deprecated in 27.2) · iPadOS 7.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.10+ (deprecated in 27.2) · tvOS 9.0+ (deprecated in 27.0) · watchOS 2.0+ (deprecated in 27.2)
 
 Creates and returns a region object defining a circular geographic area.
 

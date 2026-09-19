@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/kprogramtargetlevel_minus23db](https://developer.apple.com/documentation/audiotoolbox/kprogramtargetlevel_minus23db)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kprogramtargetlevel_minus23db
 
 # kProgramTargetLevel_Minus23dB (Swift)
 

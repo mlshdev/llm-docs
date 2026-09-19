@@ -3,6 +3,7 @@ import {
   cleanMarkdown,
   convertRst,
   documentLinks,
+  isPublishableUrl,
   markdownLinks,
   parseFrontmatter,
   rewriteMarkdownLinks,
@@ -127,6 +128,14 @@ still code
       "Paragraph.\n\n- One\n- Two\n\nNext paragraph.\n",
     );
     expect(cleaned).toBe("Paragraph.\n\n- One\n- Two\n\nNext paragraph.\n");
+  });
+
+  test("allows only reader-followable URL schemes", () => {
+    expect(isPublishableUrl("https://example.com", "link")).toBe(true);
+    expect(isPublishableUrl("mailto:docs@example.com", "link")).toBe(true);
+    expect(isPublishableUrl("data:image/png;base64,AA==", "image")).toBe(true);
+    expect(isPublishableUrl("applefeedback://new", "link")).toBe(false);
+    expect(isPublishableUrl("mailto:docs@example.com", "image")).toBe(false);
   });
 
   test("removes generated ID anchors without breaking normal HTML links", () => {

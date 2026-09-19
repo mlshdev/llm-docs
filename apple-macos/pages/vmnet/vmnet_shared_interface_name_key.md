@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/vmnet/vmnet_shared_interface_name_key](https://developer.apple.com/documentation/vmnet/vmnet_shared_interface_name_key)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/vmnet/vmnet_shared_interface_name_key
 
 # vmnet_shared_interface_name_key (Swift)
 

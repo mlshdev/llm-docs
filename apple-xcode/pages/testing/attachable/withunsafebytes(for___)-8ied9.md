@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/testing/attachable/withunsafebytes(for:_:)-8ied9](https://developer.apple.com/documentation/testing/attachable/withunsafebytes(for:_:)-8ied9)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/testing/attachable/withunsafebytes(for:_:)-8ied9
 
 # withUnsafeBytes(for:\_:)
 

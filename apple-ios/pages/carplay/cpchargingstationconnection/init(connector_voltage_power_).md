@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/carplay/cpchargingstationconnection/init(connector:voltage:power:)](https://developer.apple.com/documentation/carplay/cpchargingstationconnection/init(connector:voltage:power:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/carplay/cpchargingstationconnection/init(connector:voltage:power:)
 
 # init(connector:voltage:power:) (Swift)
 

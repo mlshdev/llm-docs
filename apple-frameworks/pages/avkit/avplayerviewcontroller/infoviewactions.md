@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontroller/infoviewactions](https://developer.apple.com/documentation/avkit/avplayerviewcontroller/infoviewactions)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontroller/infoviewactions
 
 # infoViewActions (Swift)
 
@@ -17,7 +18,7 @@ var infoViewActions: [UIAction]! { get set }
 ## Mentioned In
 
 - [Adopting the system player interface in visionOS](../adopting-the-system-player-interface-in-visionos.md)
-- [Customizing the tvOS Playback Experience](../customizing-the-tvos-playback-experience.md)
+- [Customizing the tvOS playback experience](../customizing-the-tvos-playback-experience.md)
 
 <a id="Discussion"></a>
 
@@ -56,7 +57,7 @@ An array of actions to present in the Info content view.
 ## Mentioned In
 
 - [Adopting the system player interface in visionOS](../adopting-the-system-player-interface-in-visionos.md)
-- [Customizing the tvOS Playback Experience](../customizing-the-tvos-playback-experience.md)
+- [Customizing the tvOS playback experience](../customizing-the-tvos-playback-experience.md)
 
 <a id="Discussion"></a>
 

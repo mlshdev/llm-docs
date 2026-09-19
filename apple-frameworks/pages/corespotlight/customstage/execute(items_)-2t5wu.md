@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corespotlight/customstage/execute(items:)-2t5wu](https://developer.apple.com/documentation/corespotlight/customstage/execute(items:)-2t5wu)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corespotlight/customstage/execute(items:)-2t5wu
 
 # execute(items:)
 

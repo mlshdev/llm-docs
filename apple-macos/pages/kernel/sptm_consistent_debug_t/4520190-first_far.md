@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/sptm_consistent_debug_t/4520190-first_far](https://developer.apple.com/documentation/kernel/sptm_consistent_debug_t/4520190-first_far)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/sptm_consistent_debug_t/4520190-first_far
 
 # first_far
 

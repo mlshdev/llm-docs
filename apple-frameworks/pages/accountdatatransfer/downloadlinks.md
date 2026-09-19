@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accountdatatransfer/downloadlinks](https://developer.apple.com/documentation/accountdatatransfer/downloadlinks)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accountdatatransfer/downloadlinks
 
 # DownloadLinks
 
@@ -18,38 +19,17 @@ object DownloadLinks
 
 ## Properties
 
-- `assetInfo` — `[string]`: An array of URLs to which you make `GET` requests to download someone’s account data if `jobStatus` is `completed`; otherwise, \[TBD\].
-- `jobStatus` — `string`: **Allowed values:** `completed`, `request_not_found`, `in_progress`, `error`, `completed_with_error`, `cancelled`
-- `status` — `string`: **Allowed values:** `success`
+- `assetInfo` — `[string]`: An array of URLs to which you make `GET` requests to download someone’s account data.
+- `jobStatus` — `string`: The result of the download request.
+  **Allowed values:** `completed`, `request_not_found`, `in_progress`, `error`, `completed_with_error`, `cancelled`
+- `status` — `string`: The result of the operation to request download links.
+  **Allowed values:** `success`
 
 <a id="Overview"></a>
 
 ## Overview
 
 The URLs you get from the `assetInfo` property are valid for 15 minutes after you receive them.
-
-=======
-
-- assetInfo: An array of URLs to which you make `GET` requests to download someone’s account data.
-
-> **Note**
-
-> > **Note**
->
-> > > **Note**
-> >
-> > > > **Note**
-> > >
-> > > > > **Note**
-> > > >
-> > > > > > **Note**
-> > > > >
-> > > > > > > **Note**
-> > > > > >
-> > > > > > > Main
-
-- jobStatus: The result of the download request.
-- status: The result of the operation to request download links.
 
 ## See Also
 

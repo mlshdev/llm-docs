@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstextlayoutfragment/state-swift.enum/calculatedusagebounds](https://developer.apple.com/documentation/appkit/nstextlayoutfragment/state-swift.enum/calculatedusagebounds)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstextlayoutfragment/state-swift.enum/calculatedusagebounds
 
 # NSTextLayoutFragment.State.calculatedUsageBounds (Swift)
 

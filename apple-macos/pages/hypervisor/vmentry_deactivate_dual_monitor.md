@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/vmentry_deactivate_dual_monitor](https://developer.apple.com/documentation/hypervisor/vmentry_deactivate_dual_monitor)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/vmentry_deactivate_dual_monitor
 
 # VMENTRY_DEACTIVATE_DUAL_MONITOR (Swift)
 

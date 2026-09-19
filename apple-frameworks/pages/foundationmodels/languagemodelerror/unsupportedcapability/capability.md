@@ -1,10 +1,13 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelerror/unsupportedcapability/capability](https://developer.apple.com/documentation/foundationmodels/languagemodelerror/unsupportedcapability/capability)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelerror/unsupportedcapability/capability
 
 # capability
 
 **Framework:** Foundation Models  
 **Kind:** Instance Property  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+The capability that the model doesn’t support.
 
 ## Declaration
 
@@ -16,5 +19,5 @@ var capability: LanguageModelCapabilities.Capability
 
 ### Inspecting unsupported capability errors
 
-- [metadata](metadata.md)
-- [debugDescription](debugdescription.md)
+- [metadata](metadata.md): Additional information about the failure, keyed by name.
+- [debugDescription](debugdescription.md): A debug description to help developers diagnose issues during development.

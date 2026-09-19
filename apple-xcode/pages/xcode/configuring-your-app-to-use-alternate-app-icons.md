@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/configuring-your-app-to-use-alternate-app-icons](https://developer.apple.com/documentation/xcode/configuring-your-app-to-use-alternate-app-icons)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/configuring-your-app-to-use-alternate-app-icons
 
 # Configuring your app to use alternate app icons
 

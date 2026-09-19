@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsmatrixcopy/encode(commandbuffer:copydescriptor:rowpermuteindices:rowpermuteoffset:columnpermuteindices:columnpermuteoffset:)](https://developer.apple.com/documentation/metalperformanceshaders/mpsmatrixcopy/encode(commandbuffer:copydescriptor:rowpermuteindices:rowpermuteoffset:columnpermuteindices:columnpermuteoffset:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpsmatrixcopy/encode(commandbuffer:copydescriptor:rowpermuteindices:rowpermuteoffset:columnpermuteindices:columnpermuteoffset:)
 
 # encode(commandBuffer:copyDescriptor:rowPermuteIndices:rowPermuteOffset:columnPermuteIndices:columnPermuteOffset:) (Swift)
 

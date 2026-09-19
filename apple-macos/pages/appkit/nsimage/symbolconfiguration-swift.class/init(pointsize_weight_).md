@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsimage/symbolconfiguration-swift.class/init(pointsize:weight:)](https://developer.apple.com/documentation/appkit/nsimage/symbolconfiguration-swift.class/init(pointsize:weight:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsimage/symbolconfiguration-swift.class/init(pointsize:weight:)
 
 # init(pointSize:weight:) (Swift)
 

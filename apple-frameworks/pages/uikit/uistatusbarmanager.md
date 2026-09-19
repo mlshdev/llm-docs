@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uistatusbarmanager](https://developer.apple.com/documentation/uikit/uistatusbarmanager)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uistatusbarmanager
 
 # UIStatusBarManager (Swift)
 
@@ -54,6 +55,8 @@ You don’t use this object to modify the configuration of the status bar. Inste
 ### Device environment
 
 - [UIDevice](uidevice.md): A representation of the current device.
+- [UIHinge](uihinge.md): Beta. An object encapsulating the state of a single hinge.
+- [UIHingeInteraction](uihingeinteraction.md): Beta. An interaction for observing the hinge state associated with the view’s hierarchy.
 
 # UIStatusBarManager (Objective-C)
 
@@ -99,3 +102,5 @@ You don’t use this object to modify the configuration of the status bar. Inste
 ### Device environment
 
 - [UIDevice](uidevice.md): A representation of the current device.
+- [UIHinge](uihinge.md): Beta. An object encapsulating the state of a single hinge.
+- [UIHingeInteraction](uihingeinteraction.md): Beta. An interaction for observing the hinge state associated with the view’s hierarchy.

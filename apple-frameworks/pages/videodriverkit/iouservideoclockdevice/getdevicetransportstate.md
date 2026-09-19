@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoclockdevice/getdevicetransportstate](https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/getdevicetransportstate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/getdevicetransportstate
 
 # GetDeviceTransportState
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the transport state of the device.
 
@@ -26,4 +27,4 @@ The object’s work queue synchronizes access to the value.
 
 ### Working with transport states
 
-- [IOUserVideoDeviceTransportState](../videodriverkit/iouservideodevicetransportstate.md): The current transport state of the device.
+- [IOUserVideoDeviceTransportState](../videodriverkit/iouservideodevicetransportstate.md): Beta. The current transport state of the device.

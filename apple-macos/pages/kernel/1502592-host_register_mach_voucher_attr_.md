@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1502592-host_register_mach_voucher_attr_](https://developer.apple.com/documentation/kernel/1502592-host_register_mach_voucher_attr_)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1502592-host_register_mach_voucher_attr_
 
 # host_register_mach_voucher_attr_manager
 

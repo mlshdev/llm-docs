@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corevideo/kcvpixelformattype_lossy_420ypcbcr8biplanarfullrange](https://developer.apple.com/documentation/corevideo/kcvpixelformattype_lossy_420ypcbcr8biplanarfullrange)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corevideo/kcvpixelformattype_lossy_420ypcbcr8biplanarfullrange
 
 # kCVPixelFormatType_Lossy_420YpCbCr8BiPlanarFullRange (Swift)
 

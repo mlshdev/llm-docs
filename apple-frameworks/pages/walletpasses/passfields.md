@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/walletpasses/passfields](https://developer.apple.com/documentation/walletpasses/passfields)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/walletpasses/passfields
 
 # PassFields
 
@@ -28,7 +29,7 @@ object PassFields
 ## Mentioned In
 
 - [Creating a coupon pass](creating-a-coupon-pass.md)
-- [Creating a poster generic pass](creating-a-poster-generic-pass.md)
+- [Creating a Poster Generic Pass](creating-a-poster-generic-pass.md)
 - [Creating a store card pass](creating-a-store-card-pass.md)
 
 ## Topics
@@ -63,7 +64,7 @@ object PassFields
 ### Essentials
 
 - [Creating a pass with Pass Designer](creating-a-pass-with-pass-designer.md): Construct and customize a variety of pass styles with this easy-to-use tool.
-- [Creating a poster generic pass](creating-a-poster-generic-pass.md): Construct a digital pass with information that enables people to take action.
+- [Creating a Poster Generic Pass](creating-a-poster-generic-pass.md): Construct a digital pass with information that enables people to take action.
 - [Creating the Source for a Pass](creating-the-source-for-a-pass.md): Create the directory structure and add source files and images to define a pass.
 - [Building a Pass](building-a-pass.md): Build a distributable pass.
 - [Defining the metadata of your Wallet Pass](defining-the-metadata-of-your-wallet-pass.md): Provide customizable information for your Wallet Pass.

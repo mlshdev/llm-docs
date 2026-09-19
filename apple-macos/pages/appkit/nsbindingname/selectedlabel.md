@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsbindingname/selectedlabel](https://developer.apple.com/documentation/appkit/nsbindingname/selectedlabel)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsbindingname/selectedlabel
 
 # selectedLabel (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyelement](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyelement)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyelement
 
 # IOUserVideoObjectPropertyElement
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Type Alias  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 An integer that identifies, along with the property selector and scope, a specific piece of information about a video object.
 
@@ -26,7 +27,7 @@ The element selects one of possibly many items in the section of the object in w
 
 ### Creating a Boolean control
 
-- [Create](../iouservideobooleancontrol/create.md): A static factory method that allocates and initializes a video Boolean control.
-- [init](../iouservideobooleancontrol/init.md): Initializes an IOUserVideoBooleanControl.
-- [IOUserVideoDriver](../iouservideodriver.md): A video driver.
-- [IOUserVideoObjectPropertyScope](iouservideoobjectpropertyscope.md): A four character code which, along with the selector and element, identifies a specific piece of information about a video object.
+- [Create](../iouservideobooleancontrol/create.md): Beta. A static factory method that allocates and initializes a video Boolean control.
+- [init](../iouservideobooleancontrol/init.md): Beta. Initializes an IOUserVideoBooleanControl.
+- [IOUserVideoDriver](../iouservideodriver.md): Beta. A video driver.
+- [IOUserVideoObjectPropertyScope](iouservideoobjectpropertyscope.md): Beta. A four character code which, along with the selector and element, identifies a specific piece of information about a video object.

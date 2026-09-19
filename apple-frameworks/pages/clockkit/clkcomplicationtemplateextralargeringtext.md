@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplateextralargeringtext](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplateextralargeringtext)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplateextralargeringtext
 
 # CLKComplicationTemplateExtraLargeRingText (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 3.0+ (deprecated in 27.0)
+**Availability:** watchOS 3.0+ (deprecated in 27.2)
 
 A template for displaying text encircled by a configurable progress ring.
 
@@ -64,7 +65,7 @@ This template belongs to the [CLKComplicationFamily.extraLarge](clkcomplicationf
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 3.0+ (deprecated in 27.0)
+**Availability:** watchOS 3.0+ (deprecated in 27.2)
 
 A template for displaying text encircled by a configurable progress ring.
 

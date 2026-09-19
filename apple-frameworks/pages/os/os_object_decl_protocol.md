@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/os/os_object_decl_protocol](https://developer.apple.com/documentation/os/os_object_decl_protocol)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/os/os_object_decl_protocol
 
 # OS_OBJECT_DECL_PROTOCOL
 

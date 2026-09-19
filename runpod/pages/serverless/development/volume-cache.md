@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/development/volume-cache.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/serverless/development/volume-cache.mdx)
+> Pinned source for Runpod main: [serverless/development/volume-cache.mdx](https://github.com/runpod/docs/blob/56a86f70b4ea8b225c0e5e2231e42a4925931686/serverless/development/volume-cache.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/development/volume-cache
 
 # Cache files to a network volume

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/appleplatformexpert/1553066-configure](https://developer.apple.com/documentation/kernel/appleplatformexpert/1553066-configure)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/appleplatformexpert/1553066-configure
 
 # configure
 

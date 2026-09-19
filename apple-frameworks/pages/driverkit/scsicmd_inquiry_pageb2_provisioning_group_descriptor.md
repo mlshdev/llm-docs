@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/scsicmd_inquiry_pageb2_provisioning_group_descriptor](https://developer.apple.com/documentation/driverkit/scsicmd_inquiry_pageb2_provisioning_group_descriptor)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/scsicmd_inquiry_pageb2_provisioning_group_descriptor
 
 # SCSICmd_INQUIRY_PageB2_Provisioning_Group_Descriptor
 

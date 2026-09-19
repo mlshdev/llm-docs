@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffprobe.texi](https://github.com/FFmpeg/FFmpeg/blob/a79a84a9fe02999169ac9ff40f06c5d5aa823b96/doc/ffprobe.texi)
+> Pinned source for FFmpeg master: [doc/ffprobe.texi](https://github.com/FFmpeg/FFmpeg/blob/bfac54a03b9c1046d8956b9674bb21167e230eb9/doc/ffprobe.texi)
 
 # Synopsis
 
@@ -628,6 +628,13 @@ sections:
 ```text
 stream_tags=title
 ```
+
+Selecting `stream` or `streams` does not by itself enable program or
+stream group output. To also show streams within programs or groups, use
+`-show_programs`, `-show_stream_groups`, or select their unique
+section name, for example `-show_entries program_stream=index` or
+`-show_entries stream_group_stream=index`. The shared names still select
+fields within programs and stream groups when their output is enabled.
 
 - -show\_packets
   Show information about each packet contained in the input multimedia

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iodvdmedia/1811197-readdiscinfo](https://developer.apple.com/documentation/kernel/iodvdmedia/1811197-readdiscinfo)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iodvdmedia/1811197-readdiscinfo
 
 # readDiscInfo
 

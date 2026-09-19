@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/dpme/1415771-dpme_goto_addr](https://developer.apple.com/documentation/kernel/dpme/1415771-dpme_goto_addr)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/dpme/1415771-dpme_goto_addr
 
 # dpme_goto_addr
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skproduct/isfamilyshareable](https://developer.apple.com/documentation/storekit/skproduct/isfamilyshareable)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skproduct/isfamilyshareable
 
 # isFamilyShareable (Swift)
 
@@ -24,7 +25,7 @@ var isFamilyShareable: Bool { get }
 
 ## Discussion
 
-Check the value of [isFamilyShareable](isfamilyshareable.md) to learn whether an in-app purchase is sharable with the family group.
+Check the value of [isFamilyShareable](isfamilyshareable.md) to learn whether an Apple In-App Purchase is sharable with the family group.
 
 ```swift
 // Determine whether an in-app purchase supports Family Sharing.
@@ -34,9 +35,9 @@ if myProduct.isFamilyShareable {
 }
 ```
 
-When displaying in-app purchases in your app, indicate whether the product includes Family Sharing to help customers make a selection that best fits their needs.
+When displaying Apple In-App Purchases in your app, indicate whether the product includes Family Sharing to help customers make a selection that best fits their needs.
 
-Configure your in-app purchases to allow Family Sharing in App Store Connect. For more information about setting up Family Sharing, see [Turn-on Family Sharing for in-app purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/turn-on-family-sharing-for-in-app-purchases).
+Configure your Apple In-App Purchases to allow Family Sharing in App Store Connect. For more information about setting up Family Sharing, see [Turn-on Family Sharing for Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/turn-on-family-sharing-for-in-app-purchases).
 
 ## See Also
 
@@ -69,7 +70,7 @@ A Boolean value that indicates whether the product is available for Family Shari
 
 ## Discussion
 
-Check the value of [isFamilyShareable](isfamilyshareable.md) to learn whether an in-app purchase is sharable with the family group.
+Check the value of [isFamilyShareable](isfamilyshareable.md) to learn whether an Apple In-App Purchase is sharable with the family group.
 
 ```swift
 // Determine whether an in-app purchase supports Family Sharing.
@@ -79,9 +80,9 @@ if myProduct.isFamilyShareable {
 }
 ```
 
-When displaying in-app purchases in your app, indicate whether the product includes Family Sharing to help customers make a selection that best fits their needs.
+When displaying Apple In-App Purchases in your app, indicate whether the product includes Family Sharing to help customers make a selection that best fits their needs.
 
-Configure your in-app purchases to allow Family Sharing in App Store Connect. For more information about setting up Family Sharing, see [Turn-on Family Sharing for in-app purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/turn-on-family-sharing-for-in-app-purchases).
+Configure your Apple In-App Purchases to allow Family Sharing in App Store Connect. For more information about setting up Family Sharing, see [Turn-on Family Sharing for Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/turn-on-family-sharing-for-in-app-purchases).
 
 ## See Also
 

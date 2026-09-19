@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/groupactivities/spatialtemplateseatelement/init(position:direction:role:)](https://developer.apple.com/documentation/groupactivities/spatialtemplateseatelement/init(position:direction:role:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/groupactivities/spatialtemplateseatelement/init(position:direction:role:)
 
 # init(position:direction:role:)
 

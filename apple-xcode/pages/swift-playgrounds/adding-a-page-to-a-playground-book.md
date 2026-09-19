@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/swift-playgrounds/adding-a-page-to-a-playground-book](https://developer.apple.com/documentation/swift-playgrounds/adding-a-page-to-a-playground-book)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift-playgrounds/adding-a-page-to-a-playground-book
 
 # Adding a Page to a Playground Book
 

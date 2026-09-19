@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scenekit/scnrenderingapi/metal](https://developer.apple.com/documentation/scenekit/scnrenderingapi/metal)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/scenekit/scnrenderingapi/metal
 
 # SCNRenderingAPI.metal (Swift)
 

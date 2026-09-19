@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrattributeidtype/clustermediaplaybackattributeseekrangestartid](https://developer.apple.com/documentation/matter/mtrattributeidtype/clustermediaplaybackattributeseekrangestartid)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clustermediaplaybackattributeseekrangestartid
 
 # clusterMediaPlaybackAttributeSeekRangeStartID (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avdisplaymanager/isdisplaymodeswitchinprogress](https://developer.apple.com/documentation/avkit/avdisplaymanager/isdisplaymodeswitchinprogress)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avdisplaymanager/isdisplaymodeswitchinprogress
 
 # isDisplayModeSwitchInProgress (Swift)
 
@@ -24,7 +25,7 @@ This property is key-value observable.
 
 ## See Also
 
-### Matching a Video’s Native Display Mode
+### Matching a video’s native display mode
 
 - [preferredDisplayCriteria](preferreddisplaycriteria.md): A hint for the TV to set the display mode to best match the currently playing content’s display criteria.
 - [isDisplayCriteriaMatchingEnabled](isdisplaycriteriamatchingenabled.md): A Boolean value that indicates whether the user has enabled display critera matching.
@@ -53,7 +54,7 @@ This property is key-value observable.
 
 ## See Also
 
-### Matching a Video’s Native Display Mode
+### Matching a video’s native display mode
 
 - [preferredDisplayCriteria](preferreddisplaycriteria.md): A hint for the TV to set the display mode to best match the currently playing content’s display criteria.
 - [displayCriteriaMatchingEnabled](isdisplaycriteriamatchingenabled.md): A Boolean value that indicates whether the user has enabled display critera matching.

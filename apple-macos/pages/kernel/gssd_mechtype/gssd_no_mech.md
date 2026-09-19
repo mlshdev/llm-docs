@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/gssd_mechtype/gssd_no_mech](https://developer.apple.com/documentation/kernel/gssd_mechtype/gssd_no_mech)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/gssd_mechtype/gssd_no_mech
 
 # GSSD_NO_MECH
 

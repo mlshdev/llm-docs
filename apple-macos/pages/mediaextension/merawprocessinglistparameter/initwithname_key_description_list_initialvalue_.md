@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/mediaextension/merawprocessinglistparameter/initwithname:key:description:list:initialvalue:](https://developer.apple.com/documentation/mediaextension/merawprocessinglistparameter/initwithname:key:description:list:initialvalue:)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mediaextension/merawprocessinglistparameter/initwithname:key:description:list:initialvalue:
 
 # initWithName:key:description:list:initialValue:
 

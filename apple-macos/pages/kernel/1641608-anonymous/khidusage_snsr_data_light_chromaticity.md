@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1641608-anonymous/khidusage_snsr_data_light_chromaticity](https://developer.apple.com/documentation/kernel/1641608-anonymous/khidusage_snsr_data_light_chromaticity)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1641608-anonymous/khidusage_snsr_data_light_chromaticity
 
 # kHIDUsage_Snsr_Data_Light_Chromaticity
 

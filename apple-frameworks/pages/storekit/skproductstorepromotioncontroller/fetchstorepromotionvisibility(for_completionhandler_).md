@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skproductstorepromotioncontroller/fetchstorepromotionvisibility(for:completionhandler:)](https://developer.apple.com/documentation/storekit/skproductstorepromotioncontroller/fetchstorepromotionvisibility(for:completionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skproductstorepromotioncontroller/fetchstorepromotionvisibility(for:completionhandler:)
 
 # fetchStorePromotionVisibility(for:completionHandler:) (Swift)
 
@@ -22,7 +23,7 @@ func promotionVisibility(for product: SKProduct) async throws -> SKProductStoreP
 
 ## Mentioned In
 
-- [Promoting In-App Purchases](../promoting-in-app-purchases.md)
+- [Promoting Apple In-App Purchases](../promoting-in-app-purchases.md)
 
 <a id="Discussion"></a>
 
@@ -35,7 +36,7 @@ The default visibility for a promoted product is set in App Store Connect. Call 
 ### Managing promoted product visibility
 
 - [update(storePromotionVisibility:for:completionHandler:)](update%28storepromotionvisibility_for_completionhandler_%29.md): Deprecated. Updates the visibility of the product on the App Store, per device.
-- [SKProductStorePromotionVisibility](../skproductstorepromotionvisibility.md): Deprecated. The visibility settings that determine if an in-app purchase is visible on a device.
+- [SKProductStorePromotionVisibility](../skproductstorepromotionvisibility.md): Deprecated. The visibility settings that determine if an Apple In-App Purchase is visible on a device.
 
 # fetchStorePromotionVisibilityForProduct:completionHandler: (Objective-C)
 
@@ -55,7 +56,7 @@ Reads the visibility setting of a promoted product in the App Store for this dev
 
 ## Mentioned In
 
-- [Promoting In-App Purchases](../promoting-in-app-purchases.md)
+- [Promoting Apple In-App Purchases](../promoting-in-app-purchases.md)
 
 <a id="Discussion"></a>
 
@@ -68,4 +69,4 @@ The default visibility for a promoted product is set in App Store Connect. Call 
 ### Managing promoted product visibility
 
 - [updateStorePromotionVisibility:forProduct:completionHandler:](update%28storepromotionvisibility_for_completionhandler_%29.md): Deprecated. Updates the visibility of the product on the App Store, per device.
-- [SKProductStorePromotionVisibility](../skproductstorepromotionvisibility.md): Deprecated. The visibility settings that determine if an in-app purchase is visible on a device.
+- [SKProductStorePromotionVisibility](../skproductstorepromotionvisibility.md): Deprecated. The visibility settings that determine if an Apple In-App Purchase is visible on a device.

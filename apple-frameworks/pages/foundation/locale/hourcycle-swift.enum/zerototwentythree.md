@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/locale/hourcycle-swift.enum/zerototwentythree](https://developer.apple.com/documentation/foundation/locale/hourcycle-swift.enum/zerototwentythree)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/locale/hourcycle-swift.enum/zerototwentythree
 
 # Locale.HourCycle.zeroToTwentyThree
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/mouse-keyboard-and-trackpad](https://developer.apple.com/documentation/appkit/mouse-keyboard-and-trackpad)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/mouse-keyboard-and-trackpad
 
 # Mouse, Keyboard, and Trackpad (Swift)
 

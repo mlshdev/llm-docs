@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nscompositingoperation/lighten](https://developer.apple.com/documentation/appkit/nscompositingoperation/lighten)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nscompositingoperation/lighten
 
 # NSCompositingOperation.lighten (Swift)
 

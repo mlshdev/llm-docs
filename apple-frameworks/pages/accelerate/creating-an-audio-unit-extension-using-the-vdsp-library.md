@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/creating-an-audio-unit-extension-using-the-vdsp-library](https://developer.apple.com/documentation/accelerate/creating-an-audio-unit-extension-using-the-vdsp-library)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/creating-an-audio-unit-extension-using-the-vdsp-library
 
 # Creating an audio unit extension using the vDSP library (Swift)
 

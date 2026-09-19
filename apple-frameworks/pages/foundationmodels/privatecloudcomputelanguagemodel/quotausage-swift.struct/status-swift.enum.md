@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/privatecloudcomputelanguagemodel/quotausage-swift.struct/status-swift.enum](https://developer.apple.com/documentation/foundationmodels/privatecloudcomputelanguagemodel/quotausage-swift.struct/status-swift.enum)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/privatecloudcomputelanguagemodel/quotausage-swift.struct/status-swift.enum
 
 # PrivateCloudComputeLanguageModel.QuotaUsage.Status
 
@@ -18,10 +19,10 @@ enum Status
 
 ### Quota status
 
-- [PrivateCloudComputeLanguageModel.QuotaUsage.Status.belowLimit(\_:)](status-swift.enum/belowlimit%28__%29.md)
-- [PrivateCloudComputeLanguageModel.QuotaUsage.Status.BelowLimit](status-swift.enum/belowlimit.md)
-- [PrivateCloudComputeLanguageModel.QuotaUsage.Status.limitReached(\_:)](status-swift.enum/limitreached%28__%29.md)
-- [PrivateCloudComputeLanguageModel.QuotaUsage.Status.LimitReached](status-swift.enum/limitreached.md)
+- [PrivateCloudComputeLanguageModel.QuotaUsage.Status.belowLimit(\_:)](status-swift.enum/belowlimit%28__%29.md): The model’s usage is below its usage limit.
+- [PrivateCloudComputeLanguageModel.QuotaUsage.Status.BelowLimit](status-swift.enum/belowlimit.md): Information about usage that hasn’t yet reached the usage limit.
+- [PrivateCloudComputeLanguageModel.QuotaUsage.Status.limitReached(\_:)](status-swift.enum/limitreached%28__%29.md): The model’s usage has reached its usage limit.
+- [PrivateCloudComputeLanguageModel.QuotaUsage.Status.LimitReached](status-swift.enum/limitreached.md): Information about usage that has reached the usage limit.
 
 ## Relationships
 

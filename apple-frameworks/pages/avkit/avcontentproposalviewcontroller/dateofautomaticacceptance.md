@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcontentproposalviewcontroller/dateofautomaticacceptance](https://developer.apple.com/documentation/avkit/avcontentproposalviewcontroller/dateofautomaticacceptance)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcontentproposalviewcontroller/dateofautomaticacceptance
 
 # dateOfAutomaticAcceptance (Swift)
 
@@ -24,7 +25,7 @@ Set this property to `nil` to cancel automatic acceptance.
 
 ## See Also
 
-### Configuring the Proposal
+### Configuring the proposal
 
 - [contentProposal](contentproposal.md): A prosal of content to play.
 - [AVContentProposal](../avcontentproposal.md): An object that describes the content to propose playing after the current item finishes.
@@ -55,7 +56,7 @@ Set this property to `nil` to cancel automatic acceptance.
 
 ## See Also
 
-### Configuring the Proposal
+### Configuring the proposal
 
 - [contentProposal](contentproposal.md): A prosal of content to play.
 - [AVContentProposal](../avcontentproposal.md): An object that describes the content to propose playing after the current item finishes.

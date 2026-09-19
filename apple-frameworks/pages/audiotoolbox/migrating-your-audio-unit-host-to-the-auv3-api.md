@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/migrating-your-audio-unit-host-to-the-auv3-api](https://developer.apple.com/documentation/audiotoolbox/migrating-your-audio-unit-host-to-the-auv3-api)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/migrating-your-audio-unit-host-to-the-auv3-api
 
 # Migrating Your Audio Unit Host to the AUv3 API (Swift)
 
@@ -36,6 +37,7 @@ let description = AudioComponentDescription(componentType: kAudioUnitType_Effect
                                             componentFlags: 0,
                                             componentFlagsMask: 0)
 let componentsByDesc = manager.components(matching: description)
+
 
 // Retrieve audio unit components by predicate.
 let predicate = NSPredicate(format: "typeName CONTAINS 'Effect'")
@@ -170,6 +172,7 @@ let description = AudioComponentDescription(componentType: kAudioUnitType_Effect
                                             componentFlags: 0,
                                             componentFlagsMask: 0)
 let componentsByDesc = manager.components(matching: description)
+
 
 // Retrieve audio unit components by predicate.
 let predicate = NSPredicate(format: "typeName CONTAINS 'Effect'")

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction](https://developer.apple.com/documentation/storekit/transaction)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction
 
 # Transaction
 
@@ -25,7 +26,7 @@ struct Transaction
 - [Testing refund requests](testing-refund-requests.md)
 - [Testing win-back offers in the sandbox environment](testing-win-back-offers-in-the-sandbox-environment.md)
 - [Choosing a receipt validation technique](choosing-a-receipt-validation-technique.md)
-- [Choosing a StoreKit API for In-App Purchases](choosing-a-storekit-api-for-in-app-purchases.md)
+- [Choosing a StoreKit API for Apple In-App Purchases](choosing-a-storekit-api-for-in-app-purchases.md)
 - [Implementing offer codes in your app](implementing-offer-codes-in-your-app.md)
 - [Validating receipts with the App Store](validating-receipts-with-the-app-store.md)
 
@@ -33,7 +34,7 @@ struct Transaction
 
 ## Overview
 
-A *transaction* represents a successful In-App Purchase. The App Store generates a transaction each time a customer purchases an In-App Purchase product or renews a subscription. For each transaction that represents a current purchase, your app unlocks the purchased content or service and finishes the transaction.
+A *transaction* represents a successful Apple In-App Purchase. The App Store generates a transaction each time a customer purchases an Apple In-App Purchase product or renews a subscription. For each transaction that represents a current purchase, your app unlocks the purchased content or service and finishes the transaction.
 
 Use the `Transaction` type to perform these transaction-related tasks:
 
@@ -52,16 +53,16 @@ Your app doesn’t create transaction objects. Instead, StoreKit automatically m
 
 > **Related sessions from WWDC22**
 
->  Session 110404: [Implement proactive in-app purchase restore](https://developer.apple.com/videos/play/wwdc2022/110404/)
+>  Session 110404: [Implement proactive Apple In-App Purchase restore](https://developer.apple.com/videos/play/wwdc2022/110404/)
 
 You access transactions in several ways:
 
 - Get transaction history anytime by accessing the static [all](transaction/all.md) sequence, or get just the most recent transaction for a product with the [latestTransaction](product/latesttransaction.md) property of [Product](product.md).
 - Receive notifications for new transactions while your app is running when customers complete a purchase outside of the app, including on another device, through the transaction listener, [updates](transaction/updates.md).
 - Access the latest transaction for a subscription group through the subscription status API, using [transaction](product/subscriptioninfo/status-swift.struct/transaction.md).
-- After a successful In-App Purchase, StoreKit returns the transaction through [Product.PurchaseResult.success(\_:)](product/purchaseresult/success%28__%29.md).
+- After a successful Apple In-App Purchase, StoreKit returns the transaction through [Product.PurchaseResult.success(\_:)](product/purchaseresult/success%28__%29.md).
 
-The most important use of transaction information is for determining which In-App Purchases the customer has paid access to, so your app can unlock the content or service. The [currentEntitlements](transaction/currententitlements.md) API provides the information you need to unlock all of the customer’s paid content in your app. Use `currentEntitlements` to get a list of transactions for all the products the customer is currently entitled to, including non-consumable In-App Purchases and currently active subscriptions.
+The most important use of transaction information is for determining which Apple In-App Purchases the customer has paid access to, so your app can unlock the content or service. The [currentEntitlements](transaction/currententitlements.md) API provides the information you need to unlock all of the customer’s paid content in your app. Use `currentEntitlements` to get a list of transactions for all the products the customer is currently entitled to, including non-consumable Apple In-App Purchases and currently active subscriptions.
 
 <a id="Verify-transactions"></a>
 
@@ -83,7 +84,7 @@ For more information about JWS, see the [IETF RFC 7515](https://datatracker.ietf
 
 ### Access purchases made with the original API
 
-All In-App Purchases that customers make are equally available to your app in this `Transaction` API, and in receipts using the [Original API for In-App Purchase](original-api-for-in-app-purchase.md), as follows:
+All Apple In-App Purchases that customers make are equally available to your app in this `Transaction` API, and in receipts using the [Original API for Apple In-App Purchase](original-api-for-in-app-purchase.md), as follows:
 
 - New purchases that customers make with the original API are available immediately using the `Transaction` API.
 - Purchases that customers make with the [purchase(options:)](product/purchase%28options_%29.md) method are available in the original API when your app refreshes the receipt. For more information, see [SKReceiptRefreshRequest](skreceiptrefreshrequest.md).
@@ -102,14 +103,14 @@ All In-App Purchases that customers make are equally available to your app in th
 
 ### Getting transaction history
 
-- [latest(for:)](transaction/latest%28for_%29.md): Gets the customer’s most recent transaction for an In-App Purchase.
+- [latest(for:)](transaction/latest%28for_%29.md): Gets the customer’s most recent transaction for an Apple In-App Purchase.
 - [all](transaction/all.md): A sequence that emits all the customer’s transactions for your app.
 - [unfinished](transaction/unfinished.md): A sequence that emits unfinished transactions for the customer.
 - [SKIncludeConsumableInAppPurchaseHistory](../bundleresources/information-property-list/skincludeconsumableinapppurchasehistory.md): A Boolean value that determines whether StoreKit includes finished consumable In-App Purchases in transaction information.
 
 ### Getting current entitlements
 
-- [currentEntitlements](transaction/currententitlements.md): A sequence of the latest transactions that entitle a customer to In-App Purchases and subscriptions.
+- [currentEntitlements](transaction/currententitlements.md): A sequence of the latest transactions that entitle a customer to Apple In-App Purchases and subscriptions.
 
 ### Getting transactions for a product
 
@@ -192,4 +193,4 @@ All In-App Purchases that customers make are equally available to your app in th
 
 - [updates](transaction/updates.md): The asynchronous sequence that emits a transaction when the system creates or updates transactions that occur outside the app or on other devices.
 - [all](transaction/all.md): A sequence that emits all the customer’s transactions for your app.
-- [currentEntitlements](transaction/currententitlements.md): A sequence of the latest transactions that entitle a customer to In-App Purchases and subscriptions.
+- [currentEntitlements](transaction/currententitlements.md): A sequence of the latest transactions that entitle a customer to Apple In-App Purchases and subscriptions.

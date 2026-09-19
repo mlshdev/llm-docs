@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/network/taking-advantage-of-third-party-network-debugging-tools](https://developer.apple.com/documentation/network/taking-advantage-of-third-party-network-debugging-tools)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/network/taking-advantage-of-third-party-network-debugging-tools
 
 # Taking Advantage of Third-Party Network Debugging Tools
 

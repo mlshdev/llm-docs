@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ipsec_wake_pkt_info/3181962-wake_pkt_seq](https://developer.apple.com/documentation/kernel/ipsec_wake_pkt_info/3181962-wake_pkt_seq)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ipsec_wake_pkt_info/3181962-wake_pkt_seq
 
 # wake_pkt_seq
 

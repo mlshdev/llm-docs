@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gamesave/gamesavesynceddirectory/state-swift.enum/error(_:)](https://developer.apple.com/documentation/gamesave/gamesavesynceddirectory/state-swift.enum/error(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/gamesave/gamesavesynceddirectory/state-swift.enum/error(_:)
 
 # GameSaveSyncedDirectory.State.error(\_:)
 

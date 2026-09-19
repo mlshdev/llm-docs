@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/categorizing-and-organizing-data-with-content-tags](https://developer.apple.com/documentation/foundationmodels/categorizing-and-organizing-data-with-content-tags)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/categorizing-and-organizing-data-with-content-tags
 
 # Categorizing and organizing data with content tags
 
@@ -97,6 +98,7 @@ Initialize your session by using the [contentTagging](systemlanguagemodel/usecas
 ```swift
 // Create an instance of the model with the content tagging use case.
 let model = SystemLanguageModel(useCase: .contentTagging)
+
 
 // Initialize a session with the model.
 let session = LanguageModelSession(model: model)

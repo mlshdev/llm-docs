@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/vmcs_ctrl_posted_int_n_vector](https://developer.apple.com/documentation/hypervisor/vmcs_ctrl_posted_int_n_vector)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/vmcs_ctrl_posted_int_n_vector
 
 # VMCS_CTRL_POSTED_INT_N_VECTOR (Swift)
 

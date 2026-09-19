@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphiccircularstackimage/templatewithline1imageprovider:line2textprovider:](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircularstackimage/templatewithline1imageprovider:line2textprovider:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircularstackimage/templatewithline1imageprovider:line2textprovider:
 
 # templateWithLine1ImageProvider:line2TextProvider:
 
@@ -6,7 +7,7 @@
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Returns a template that has an image and a small amount of text.
 

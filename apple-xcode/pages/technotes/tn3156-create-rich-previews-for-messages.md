@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/technotes/tn3156-create-rich-previews-for-messages](https://developer.apple.com/documentation/technotes/tn3156-create-rich-previews-for-messages)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/technotes/tn3156-create-rich-previews-for-messages
 
 # TN3156: Create rich previews for Messages
 

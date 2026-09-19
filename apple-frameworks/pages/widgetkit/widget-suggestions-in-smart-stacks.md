@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/widgetkit/widget-suggestions-in-smart-stacks](https://developer.apple.com/documentation/widgetkit/widget-suggestions-in-smart-stacks)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/widgetkit/widget-suggestions-in-smart-stacks
 
 # Increasing the visibility of widgets in Smart Stacks (Swift)
 

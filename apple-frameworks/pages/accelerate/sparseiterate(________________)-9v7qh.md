@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/sparseiterate(_:_:_:_:_:_:_:_:)-9v7qh](https://developer.apple.com/documentation/accelerate/sparseiterate(_:_:_:_:_:_:_:_:)-9v7qh)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/sparseiterate(_:_:_:_:_:_:_:_:)-9v7qh
 
 # SparseIterate(\_:\_:\_:\_:\_:\_:\_:\_:) (Swift)
 

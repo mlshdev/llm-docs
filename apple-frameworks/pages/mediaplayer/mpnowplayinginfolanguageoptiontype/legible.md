@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mediaplayer/mpnowplayinginfolanguageoptiontype/legible](https://developer.apple.com/documentation/mediaplayer/mpnowplayinginfolanguageoptiontype/legible)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mediaplayer/mpnowplayinginfolanguageoptiontype/legible
 
 # MPNowPlayingInfoLanguageOptionType.legible (Swift)
 

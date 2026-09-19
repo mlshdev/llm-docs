@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_float_32_unsigned_int_24_8_rev](https://developer.apple.com/documentation/opengles/gl_float_32_unsigned_int_24_8_rev)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_float_32_unsigned_int_24_8_rev
 
 # GL_FLOAT_32_UNSIGNED_INT_24_8_REV (Swift)
 

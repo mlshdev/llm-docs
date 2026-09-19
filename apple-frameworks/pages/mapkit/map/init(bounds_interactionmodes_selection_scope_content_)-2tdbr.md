@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mapkit/map/init(bounds:interactionmodes:selection:scope:content:)-2tdbr](https://developer.apple.com/documentation/mapkit/map/init(bounds:interactionmodes:selection:scope:content:)-2tdbr)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mapkit/map/init(bounds:interactionmodes:selection:scope:content:)-2tdbr
 
 # init(bounds:interactionModes:selection:scope:content:)
 

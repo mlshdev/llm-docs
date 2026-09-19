@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skpaymenttransactionobserver/paymentqueuerestorecompletedtransactionsfinished(_:)](https://developer.apple.com/documentation/storekit/skpaymenttransactionobserver/paymentqueuerestorecompletedtransactionsfinished(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skpaymenttransactionobserver/paymentqueuerestorecompletedtransactionsfinished(_:)
 
 # paymentQueueRestoreCompletedTransactionsFinished(\_:) (Swift)
 
@@ -23,7 +24,7 @@ optional func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymen
 ## Mentioned In
 
 - [Processing a transaction](../processing-a-transaction.md)
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 
 <a id="Discussion"></a>
 
@@ -60,7 +61,7 @@ Tells the observer that the payment queue has finished sending restored transact
 ## Mentioned In
 
 - [Processing a transaction](../processing-a-transaction.md)
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 
 <a id="Discussion"></a>
 

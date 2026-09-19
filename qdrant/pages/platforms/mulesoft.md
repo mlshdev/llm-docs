@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/platforms/mulesoft.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/platforms/mulesoft.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/platforms/mulesoft.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/platforms/mulesoft.md)
 > Canonical documentation: https://qdrant.tech/documentation/platforms/mulesoft/
 
 # Salesforce Mulesoft
@@ -70,7 +70,7 @@ Go to the `Global Elements` in your MuleSoft project, and create a new configura
 
 Upon selecting `Qdrant`, you'll be presented with the following parameters to set up the connection to a Qdrant instance.
 
-![Qdrant Connection](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/platforms/mulesoft/qdrant-connection.png)
+![Qdrant Connection](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/platforms/mulesoft/qdrant-connection.png)
 
 Once a connection is set up, you can now use the following Qdrant operations in your workflows.
 
@@ -78,25 +78,25 @@ Once a connection is set up, you can now use the following Qdrant operations in 
 
 The Add operation adds a document or text to a collection.
 
-![Qdrant Add](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/platforms/mulesoft/qdrant-add.png)
+![Qdrant Add](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/platforms/mulesoft/qdrant-add.png)
 
 ### Store List
 
 The List sources operation lists all entries in a collection.
 
-![Qdrant List](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/platforms/mulesoft/qdrant-list.png)
+![Qdrant List](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/platforms/mulesoft/qdrant-list.png)
 
 ### Store Query
 
 The Query operation retrieves information from a collection based on a query a embedding and an optional filter.
 
-![Qdrant Query](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/platforms/mulesoft/qdrant-query.png)
+![Qdrant Query](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/platforms/mulesoft/qdrant-query.png)
 
 ### Store Remove
 
 The Remove operation remove all entries from a collection based on a filter.
 
-![Qdrant Add](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/platforms/mulesoft/qdrant-remove.png)
+![Qdrant Add](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/platforms/mulesoft/qdrant-remove.png)
 
 ## Further reading
 

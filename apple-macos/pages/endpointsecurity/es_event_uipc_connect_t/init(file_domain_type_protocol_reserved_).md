@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_event_uipc_connect_t/init(file:domain:type:protocol:reserved:)](https://developer.apple.com/documentation/endpointsecurity/es_event_uipc_connect_t/init(file:domain:type:protocol:reserved:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_event_uipc_connect_t/init(file:domain:type:protocol:reserved:)
 
 # init(file:domain:type:protocol:reserved:)
 

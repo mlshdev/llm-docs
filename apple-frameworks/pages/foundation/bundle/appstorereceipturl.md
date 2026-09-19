@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/bundle/appstorereceipturl](https://developer.apple.com/documentation/foundation/bundle/appstorereceipturl)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/bundle/appstorereceipturl
 
 # appStoreReceiptURL (Swift)
 
@@ -22,7 +23,7 @@ var appStoreReceiptURL: URL? { get }
 
 > **Note**
 
->  The receipt isn’t necessary if you use [AppTransaction](../../storekit/apptransaction.md) to validate the app download, or [Transaction](../../storekit/transaction.md) to validate in-app purchases. Only use the receipt if your app uses the [Original API for In-App Purchase](../../storekit/original-api-for-in-app-purchase.md), or needs the receipt to validate the app download because it can’t use [AppTransaction](../../storekit/apptransaction.md).
+>  The receipt isn’t necessary if you use [AppTransaction](../../storekit/apptransaction.md) to validate the app download, or [Transaction](../../storekit/transaction.md) to validate in-app purchases. Only use the receipt if your app uses the [Original API for Apple In-App Purchase](../../storekit/original-api-for-in-app-purchase.md), or needs the receipt to validate the app download because it can’t use [AppTransaction](../../storekit/apptransaction.md).
 
 Use this app bundle property to locate the app receipt if it’s present; this property is `nil` if the receipt isn’t present. In the rare case a receipt is invalid or missing in an app that a user downloads from the App Store, use [SKReceiptRefreshRequest](../../storekit/skreceiptrefreshrequest.md) to request a new receipt. For information about validating receipts, see [Choosing a receipt validation technique](../../storekit/choosing-a-receipt-validation-technique.md).
 
@@ -73,7 +74,7 @@ The file URL for the bundle’s App Store receipt.
 
 > **Note**
 
->  The receipt isn’t necessary if you use [AppTransaction](../../storekit/apptransaction.md) to validate the app download, or [Transaction](../../storekit/transaction.md) to validate in-app purchases. Only use the receipt if your app uses the [Original API for In-App Purchase](../../storekit/original-api-for-in-app-purchase.md), or needs the receipt to validate the app download because it can’t use [AppTransaction](../../storekit/apptransaction.md).
+>  The receipt isn’t necessary if you use [AppTransaction](../../storekit/apptransaction.md) to validate the app download, or [Transaction](../../storekit/transaction.md) to validate in-app purchases. Only use the receipt if your app uses the [Original API for Apple In-App Purchase](../../storekit/original-api-for-in-app-purchase.md), or needs the receipt to validate the app download because it can’t use [AppTransaction](../../storekit/apptransaction.md).
 
 Use this app bundle property to locate the app receipt if it’s present; this property is `nil` if the receipt isn’t present. In the rare case a receipt is invalid or missing in an app that a user downloads from the App Store, use [SKReceiptRefreshRequest](../../storekit/skreceiptrefreshrequest.md) to request a new receipt. For information about validating receipts, see [Choosing a receipt validation technique](../../storekit/choosing-a-receipt-validation-technique.md).
 

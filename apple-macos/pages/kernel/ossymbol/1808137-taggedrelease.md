@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ossymbol/1808137-taggedrelease](https://developer.apple.com/documentation/kernel/ossymbol/1808137-taggedrelease)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ossymbol/1808137-taggedrelease
 
 # taggedRelease(const void \*)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/privatecloudcomputelanguagemodel](https://developer.apple.com/documentation/foundationmodels/privatecloudcomputelanguagemodel)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/privatecloudcomputelanguagemodel
 
 # PrivateCloudComputeLanguageModel
 
@@ -66,6 +67,10 @@ Before using the model, verify its availability. Model availability depends on w
 ### Accessing the error
 
 - [PrivateCloudComputeLanguageModel.Error](privatecloudcomputelanguagemodel/error.md): Errors that may occur when using Private Cloud Compute.
+
+### Default Implementations
+
+- [LanguageModel Implementations](privatecloudcomputelanguagemodel/languagemodel-implementations.md)
 
 ## Relationships
 

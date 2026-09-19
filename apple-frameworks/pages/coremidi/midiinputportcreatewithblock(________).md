@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremidi/midiinputportcreatewithblock(_:_:_:_:)](https://developer.apple.com/documentation/coremidi/midiinputportcreatewithblock(_:_:_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremidi/midiinputportcreatewithblock(_:_:_:_:)
 
 # MIDIInputPortCreateWithBlock(\_:\_:\_:\_:) (Swift)
 
 **Framework:** Core MIDI  
 **Kind:** Function  
-**Availability:** iOS 9.0+ (deprecated in 27.0) · iPadOS 9.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.11+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 9.0+ (deprecated in 27.2) · iPadOS 9.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.11+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Creates an input port through which the client may receive incoming MIDI messages from any MIDI source.
 
@@ -56,7 +57,7 @@ readBlock will be called on a separate high-priority thread owned by CoreMIDI.
 
 **Framework:** Core MIDI  
 **Kind:** Function  
-**Availability:** iOS 9.0+ (deprecated in 27.0) · iPadOS 9.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.11+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 9.0+ (deprecated in 27.2) · iPadOS 9.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.11+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Creates an input port through which the client may receive incoming MIDI messages from any MIDI source.
 

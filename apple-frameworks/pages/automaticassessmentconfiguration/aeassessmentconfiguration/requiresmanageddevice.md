@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/automaticassessmentconfiguration/aeassessmentconfiguration/requiresmanageddevice](https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentconfiguration/requiresmanageddevice)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentconfiguration/requiresmanageddevice
 
 # requiresManagedDevice (Swift)
 
@@ -18,7 +19,7 @@ var requiresManagedDevice: Bool { get set }
 
 ## Discussion
 
-When set to `true`, the assessment session will only start if the device is enrolled in a Mobile Device Management (MDM) solution. This requirement is disabled by default.
+When set to `true`, the assessment session will only start if the device is enrolled in a Mobile Device Management (MDM) solution. Defaults to `false`.
 
 # requiresManagedDevice (Objective-C)
 
@@ -38,4 +39,4 @@ A Boolean value that indicates whether the device must be managed to start an as
 
 ## Discussion
 
-When set to `true`, the assessment session will only start if the device is enrolled in a Mobile Device Management (MDM) solution. This requirement is disabled by default.
+When set to `true`, the assessment session will only start if the device is enrolled in a Mobile Device Management (MDM) solution. Defaults to `false`.

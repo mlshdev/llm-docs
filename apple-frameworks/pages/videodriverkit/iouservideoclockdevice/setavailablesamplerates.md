@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoclockdevice/setavailablesamplerates](https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/setavailablesamplerates)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/setavailablesamplerates
 
 # SetAvailableSampleRates
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Sets the available sample rates for the clock device.
 
@@ -31,7 +32,7 @@ Changing the available sample rates will send a notification to the host to upda
 
 ### Working with sample rates
 
-- [SetSampleRate](setsamplerate.md): Sets the current sample rate for the clock device.
-- [GetSampleRate](getsamplerate.md): Gets sample rate of the clock device.
-- [GetAvailableSampleRates](getavailablesamplerates.md): Gets available sample rates of the clock device.
-- [GetNumberAvailableSampleRates](getnumberavailablesamplerates.md): Gets number of available sample rates of the clock device.
+- [SetSampleRate](setsamplerate.md): Beta. Sets the current sample rate for the clock device.
+- [GetSampleRate](getsamplerate.md): Beta. Gets sample rate of the clock device.
+- [GetAvailableSampleRates](getavailablesamplerates.md): Beta. Gets available sample rates of the clock device.
+- [GetNumberAvailableSampleRates](getnumberavailablesamplerates.md): Beta. Gets number of available sample rates of the clock device.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideodevice/startio](https://developer.apple.com/documentation/videodriverkit/iouservideodevice/startio)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideodevice/startio
 
 # StartIO
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Tells the device to start IO.
 
@@ -36,8 +37,8 @@ The default implementation always returns `kIOReturnSuccess`. Subclass and overr
 
 ### Performing I/O
 
-- [StopIO](stopio.md): Tells the device to stop IO.
-- [IOUserVideoStartStopFlags](../videodriverkit/iouservideostartstopflags.md): Flags used to indicate how I/O is starting or stopping.
-- [GetCurrentClientIOTime](getcurrentclientiotime.md): Gets the current sample/host time pair in the ring buffer written to or read from by the client
-- [SetIOOperationHandler](setiooperationhandler.md): Sets the IOOperationHandler block on the device.
-- [IOOperationHandler](../videodriverkit/iooperationhandler.md): A block that tells the device to perform an IOUserVideoIOOperation.
+- [StopIO](stopio.md): Beta. Tells the device to stop IO.
+- [IOUserVideoStartStopFlags](../videodriverkit/iouservideostartstopflags.md): Beta. Flags used to indicate how I/O is starting or stopping.
+- [GetCurrentClientIOTime](getcurrentclientiotime.md): Beta. Gets the current sample/host time pair in the ring buffer written to or read from by the client
+- [SetIOOperationHandler](setiooperationhandler.md): Beta. Sets the IOOperationHandler block on the device.
+- [IOOperationHandler](../videodriverkit/iooperationhandler.md): Beta. A block that tells the device to perform an IOUserVideoIOOperation.

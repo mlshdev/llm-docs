@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideochannellabel/verticalheightcenter](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/verticalheightcenter)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/verticalheightcenter
 
 # VerticalHeightCenter
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 WAVE: “Top Front Center”
 
@@ -20,7 +21,7 @@ VerticalHeightCenter
 
 ### Center channels
 
-- [Center](center.md)
-- [CenterTopFront](centertopfront.md)
-- [CenterTopMiddle](centertopmiddle.md)
-- [CenterTopRear](centertoprear.md)
+- [Center](center.md): Beta.
+- [CenterTopFront](centertopfront.md): Beta.
+- [CenterTopMiddle](centertopmiddle.md): Beta.
+- [CenterTopRear](centertoprear.md): Beta.

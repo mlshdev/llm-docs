@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity](https://developer.apple.com/documentation/endpointsecurity)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity
 
 # Endpoint Security (Swift)
 
@@ -76,6 +77,15 @@ Develop your system extension with Endpoint Security and package it in an app th
 - [ES_EVENT_TYPE_NOTIFY_TCC_MODIFY](endpointsecurity/es_event_type_notify_tcc_modify.md)
 - [ES_EVENT_TYPE_RESERVED_0](endpointsecurity/es_event_type_reserved_0.md)
 - [ES_EVENT_TYPE_RESERVED_1](endpointsecurity/es_event_type_reserved_1.md)
+- [ES_EVENT_TYPE_RESERVED_10](endpointsecurity/es_event_type_reserved_10.md)
+- [ES_EVENT_TYPE_RESERVED_11](endpointsecurity/es_event_type_reserved_11.md)
+- [ES_EVENT_TYPE_RESERVED_12](endpointsecurity/es_event_type_reserved_12.md)
+- [ES_EVENT_TYPE_RESERVED_13](endpointsecurity/es_event_type_reserved_13.md)
+- [ES_EVENT_TYPE_RESERVED_14](endpointsecurity/es_event_type_reserved_14.md)
+- [ES_EVENT_TYPE_RESERVED_15](endpointsecurity/es_event_type_reserved_15.md)
+- [ES_EVENT_TYPE_RESERVED_16](endpointsecurity/es_event_type_reserved_16.md)
+- [ES_EVENT_TYPE_RESERVED_17](endpointsecurity/es_event_type_reserved_17.md)
+- [ES_EVENT_TYPE_RESERVED_18](endpointsecurity/es_event_type_reserved_18.md)
 - [ES_EVENT_TYPE_RESERVED_2](endpointsecurity/es_event_type_reserved_2.md)
 - [ES_EVENT_TYPE_RESERVED_3](endpointsecurity/es_event_type_reserved_3.md)
 - [ES_EVENT_TYPE_RESERVED_4](endpointsecurity/es_event_type_reserved_4.md)
@@ -83,6 +93,7 @@ Develop your system extension with Endpoint Security and package it in an app th
 - [ES_EVENT_TYPE_RESERVED_6](endpointsecurity/es_event_type_reserved_6.md)
 - [ES_EVENT_TYPE_RESERVED_7](endpointsecurity/es_event_type_reserved_7.md)
 - [ES_EVENT_TYPE_RESERVED_8](endpointsecurity/es_event_type_reserved_8.md)
+- [ES_EVENT_TYPE_RESERVED_9](endpointsecurity/es_event_type_reserved_9.md)
 - [ES_TCC_AUTHORIZATION_REASON_APP_TYPE_POLICY](endpointsecurity/es_tcc_authorization_reason_app_type_policy.md): A system process changed the authorization right
 - [ES_TCC_AUTHORIZATION_REASON_ENTITLED](endpointsecurity/es_tcc_authorization_reason_entitled.md): A system process changed the authorization right
 - [ES_TCC_AUTHORIZATION_REASON_ERROR](endpointsecurity/es_tcc_authorization_reason_error.md)

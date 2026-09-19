@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/simd_matrix_from_rows(_:_:_:)-96jbn](https://developer.apple.com/documentation/simd/simd_matrix_from_rows(_:_:_:)-96jbn)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/simd/simd_matrix_from_rows(_:_:_:)-96jbn
 
 # simd_matrix_from_rows(\_:\_:\_:) (Swift)
 

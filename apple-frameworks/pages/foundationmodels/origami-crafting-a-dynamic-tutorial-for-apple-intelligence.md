@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/origami-crafting-a-dynamic-tutorial-for-apple-intelligence](https://developer.apple.com/documentation/foundationmodels/origami-crafting-a-dynamic-tutorial-for-apple-intelligence)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/origami-crafting-a-dynamic-tutorial-for-apple-intelligence
 
 # Origami: Crafting a dynamic tutorial for Apple Intelligence
 
@@ -392,7 +393,7 @@ Origami also draws on other parts of the Foundation Models framework, like tool 
 
 - [Composing dynamic sessions with instructions and profiles](composing-dynamic-sessions-with-instructions-and-profiles.md): Adapt sessions dynamically at runtime by loading instructions and tools based on the state of your app.
 - [DynamicInstructions](dynamicinstructions.md): A type that represents dynamic instructions.
-- [DynamicInstructionsForEach](dynamicinstructionsforeach.md)
+- [DynamicInstructionsForEach](dynamicinstructionsforeach.md): Dynamic instructions that produce content for each element of a collection.
 - [LanguageModelSession.DynamicProfile](languagemodelsession/dynamicprofile.md): A dynamic profile that contains one or more profiles.
 - [LanguageModelSession.DynamicProfileModifier](languagemodelsession/dynamicprofilemodifier.md): A protocol for creating reusable wrappers around dynamic profile content.
 - [LanguageModelSession.Profile](languagemodelsession/profile.md): A profile that contains dynamic instructions.

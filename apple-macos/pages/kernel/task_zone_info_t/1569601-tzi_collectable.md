@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/task_zone_info_t/1569601-tzi_collectable](https://developer.apple.com/documentation/kernel/task_zone_info_t/1569601-tzi_collectable)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/task_zone_info_t/1569601-tzi_collectable
 
 # tzi_collectable
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1547453-kauth_unlisten_scope](https://developer.apple.com/documentation/kernel/1547453-kauth_unlisten_scope)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1547453-kauth_unlisten_scope
 
 # kauth_unlisten_scope
 

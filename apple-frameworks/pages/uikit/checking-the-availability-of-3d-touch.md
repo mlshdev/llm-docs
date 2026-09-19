@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/checking-the-availability-of-3d-touch](https://developer.apple.com/documentation/uikit/checking-the-availability-of-3d-touch)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/checking-the-availability-of-3d-touch
 
 # Checking the availability of 3D Touch (Swift)
 

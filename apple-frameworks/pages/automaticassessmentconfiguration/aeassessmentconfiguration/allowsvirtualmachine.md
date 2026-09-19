@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/automaticassessmentconfiguration/aeassessmentconfiguration/allowsvirtualmachine](https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentconfiguration/allowsvirtualmachine)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentconfiguration/allowsvirtualmachine
 
 # allowsVirtualMachine (Swift)
 
@@ -18,13 +19,15 @@ var allowsVirtualMachine: Bool { get set }
 
 ## Discussion
 
-When set to `false`, the assessment session will only start if the device is not a virtual machine. This requirement is not enforced by default; virtual machines are allowed unless you opt out.
+When set to `false`, the assessment session will only start if the device is not a virtual machine, and won’t start if that status can’t be determined. Defaults to `true`, which doesn’t enforce the requirement.
 
 > **Important**
 
-> This check is advisory, not a security guarantee. Setting `allowsVirtualMachine` to `false` may not block an assessment session in every virtualized environment. Use this property to steer proctored exams toward physical hardware; it doesn’t provide a cryptographic attestation that the session is running on a physical machine.
+> Setting this to `false` may not block a session in every virtualized environment.
 
-For stronger assurances about the runtime environment, pair this property with [App Attest](https://developer.apple.com/documentation/DeviceCheck) on macOS.
+> **See Also**
+
+> [AEAssessmentConfiguration](../aeassessmentconfiguration.md) for the limits that apply to every enablement requirement.
 
 # allowsVirtualMachine (Objective-C)
 
@@ -44,10 +47,12 @@ A Boolean value that indicates whether the assessment allows running inside a vi
 
 ## Discussion
 
-When set to `false`, the assessment session will only start if the device is not a virtual machine. This requirement is not enforced by default; virtual machines are allowed unless you opt out.
+When set to `false`, the assessment session will only start if the device is not a virtual machine, and won’t start if that status can’t be determined. Defaults to `true`, which doesn’t enforce the requirement.
 
 > **Important**
 
-> This check is advisory, not a security guarantee. Setting `allowsVirtualMachine` to `false` may not block an assessment session in every virtualized environment. Use this property to steer proctored exams toward physical hardware; it doesn’t provide a cryptographic attestation that the session is running on a physical machine.
+> Setting this to `false` may not block a session in every virtualized environment.
 
-For stronger assurances about the runtime environment, pair this property with [App Attest](https://developer.apple.com/documentation/DeviceCheck) on macOS.
+> **See Also**
+
+> [AEAssessmentConfiguration](../aeassessmentconfiguration.md) for the limits that apply to every enablement requirement.

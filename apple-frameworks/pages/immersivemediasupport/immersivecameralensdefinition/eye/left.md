@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/immersivemediasupport/immersivecameralensdefinition/eye/left](https://developer.apple.com/documentation/immersivemediasupport/immersivecameralensdefinition/eye/left)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/immersivemediasupport/immersivecameralensdefinition/eye/left
 
 # ImmersiveCameraLensDefinition.Eye.left
 

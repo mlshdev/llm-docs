@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_luminance8_alpha8_ext](https://developer.apple.com/documentation/opengles/gl_luminance8_alpha8_ext)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_luminance8_alpha8_ext
 
 # GL_LUMINANCE8_ALPHA8_EXT (Swift)
 

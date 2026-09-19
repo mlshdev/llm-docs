@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationchannel/usage/output-swift.struct](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/usage/output-swift.struct)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/usage/output-swift.struct
 
 # LanguageModelExecutorGenerationChannel.Usage.Output
 
@@ -18,7 +19,7 @@ struct Output
 
 ### Creating an output instance
 
-- [init(totalTokenCount:reasoningTokenCount:)](output-swift.struct/init%28totaltokencount_reasoningtokencount_%29.md)
+- [init(totalTokenCount:reasoningTokenCount:)](output-swift.struct/init%28totaltokencount_reasoningtokencount_%29.md): Creates output token counts for the response the model produces.
 
 ### Handling the output tokens
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/targetcontentprovidingintent/contentidentifier](https://developer.apple.com/documentation/appintents/targetcontentprovidingintent/contentidentifier)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/targetcontentprovidingintent/contentidentifier
 
 # contentIdentifier
 
@@ -28,9 +29,9 @@ The protocol provides a default implementation of this property and sets its val
 
 ### TargetContentProvidingIntent Implementations
 
-- [contentIdentifier](contentidentifier-4cvg3.md)
-- [contentIdentifier](contentidentifier-596wr.md): Conforms when `Self` conforms to `OpenIntent`.
+- [contentIdentifier](contentidentifier-4cvg3.md): A custom string your app uses to identify the app intent.
+- [contentIdentifier](contentidentifier-596wr.md): Conforms when `Self` conforms to `OpenIntent`. A custom string your app uses to identify the app intent.
 
 ### UISceneAppIntent Implementations
 
-- [contentIdentifier](../uisceneappintent/contentidentifier.md): Conforms when `Self` conforms to `OpenIntent`.
+- [contentIdentifier](../uisceneappintent/contentidentifier.md): Conforms when `Self` conforms to `OpenIntent`. A custom string your app uses to identify the app intent.

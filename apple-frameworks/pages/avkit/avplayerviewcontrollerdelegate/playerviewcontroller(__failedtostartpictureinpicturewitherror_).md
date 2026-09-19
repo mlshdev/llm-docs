@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:failedtostartpictureinpicturewitherror:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:failedtostartpictureinpicturewitherror:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:failedtostartpictureinpicturewitherror:)
 
 # playerViewController(\_:failedToStartPictureInPictureWithError:) (Swift)
 
@@ -21,7 +22,7 @@ optional func playerViewController(_ playerViewController: AVPlayerViewControlle
 
 ## See Also
 
-### Responding to Picture in Picture Life Cycle Events
+### Responding to Picture in Picture life cycle events
 
 - [playerViewControllerShouldAutomaticallyDismissAtPictureInPictureStart(\_:)](playerviewcontrollershouldautomaticallydismissatpictureinpicturestart%28__%29.md): Asks the delegate whether the player view controller automatically dismisses itself when Picture in Picture starts.
 - [playerViewControllerWillStartPictureInPicture(\_:)](playerviewcontrollerwillstartpictureinpicture%28__%29.md): Tells the delegate when Picture in Picture is about to start.
@@ -51,7 +52,7 @@ Tells the delegate when Picture in Picture fails to start.
 
 ## See Also
 
-### Responding to Picture in Picture Life Cycle Events
+### Responding to Picture in Picture life cycle events
 
 - [playerViewControllerShouldAutomaticallyDismissAtPictureInPictureStart:](playerviewcontrollershouldautomaticallydismissatpictureinpicturestart%28__%29.md): Asks the delegate whether the player view controller automatically dismisses itself when Picture in Picture starts.
 - [playerViewControllerWillStartPictureInPicture:](playerviewcontrollerwillstartpictureinpicture%28__%29.md): Tells the delegate when Picture in Picture is about to start.

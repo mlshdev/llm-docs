@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/tool](https://developer.apple.com/documentation/foundationmodels/tool)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/tool
 
 # Tool
 
@@ -69,11 +70,11 @@ Prompting the model with tools contributes to the available context window size.
 
 ### Inspecting a tool
 
-- [name](tool/name.md): A unique name for the tool, such as “get_weather”, “toggleDarkMode”, or “search contacts”.
+- [name](tool/name.md): A unique name for the tool.
 - [description](tool/description.md): A natural language description of when and how to use the tool.
 - [parameters](tool/parameters.md): A schema for the parameters this tool accepts.
-- [includesSchemaInInstructions](tool/includesschemaininstructions.md): A Boolean value that indicates whether the tool’s name, description, and parameters schema are injected into the instructions of sessions that leverage this tool.
-- [Tool.SessionProperty](tool/sessionproperty.md)
+- [includesSchemaInInstructions](tool/includesschemaininstructions.md): A Boolean value that indicates whether the framework includes this tool’s definition in the session’s instructions.
+- [Tool.SessionProperty](tool/sessionproperty.md): A property wrapper that provides access to a session property from within a tool.
 
 ## Relationships
 

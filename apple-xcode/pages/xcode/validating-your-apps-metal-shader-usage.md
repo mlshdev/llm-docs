@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/validating-your-apps-metal-shader-usage](https://developer.apple.com/documentation/xcode/validating-your-apps-metal-shader-usage)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/validating-your-apps-metal-shader-usage
 
 # Validating your app’s Metal shader usage
 

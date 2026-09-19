@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsgesturerecognizer/view](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/view)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsgesturerecognizer/view
 
 # view (Swift)
 
@@ -26,7 +27,7 @@ To attach a gesture recognizer to a view, call the [addGestureRecognizer(\_:)](.
 
 - [location(in:)](location%28in_%29.md): Returns the point computed as the location of the gesture.
 
-### Accessing the Recognizer’s State
+### Accessing the recognizer’s state
 
 - [state](state-swift.property.md): The current state of the gesture recognizer.
 - [isEnabled](isenabled.md): A Boolean value indicating whether the gesture recognizer is able to handle events.
@@ -57,7 +58,7 @@ To attach a gesture recognizer to a view, call the [addGestureRecognizer:](../ns
 
 - [locationInView:](location%28in_%29.md): Returns the point computed as the location of the gesture.
 
-### Accessing the Recognizer’s State
+### Accessing the recognizer’s state
 
 - [state](state-swift.property.md): The current state of the gesture recognizer.
 - [enabled](isenabled.md): A Boolean value indicating whether the gesture recognizer is able to handle events.

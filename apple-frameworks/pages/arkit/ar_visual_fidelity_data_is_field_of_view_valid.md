@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/ar_visual_fidelity_data_is_field_of_view_valid](https://developer.apple.com/documentation/arkit/ar_visual_fidelity_data_is_field_of_view_valid)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/ar_visual_fidelity_data_is_field_of_view_valid
 
 # ar_visual_fidelity_data_is_field_of_view_valid
 

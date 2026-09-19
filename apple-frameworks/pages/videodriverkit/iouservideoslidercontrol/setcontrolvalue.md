@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoslidercontrol/setcontrolvalue](https://developer.apple.com/documentation/videodriverkit/iouservideoslidercontrol/setcontrolvalue)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoslidercontrol/setcontrolvalue
 
 # SetControlValue
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Sets the current control value.
 
@@ -30,7 +31,7 @@ Changing the control value will send a notification to the host to update the ob
 
 ### Accessing the value
 
-- [GetControlValue](getcontrolvalue.md): Gets the current value of the control.
-- [SetRange](setrange.md): Sets the current range of the slider control.
-- [GetRange](getrange.md): Gets the current range of the slider control.
-- [IOUserVideoSliderRange](../iouservideosliderrange.md): The minimum and maximum range for the slider value.
+- [GetControlValue](getcontrolvalue.md): Beta. Gets the current value of the control.
+- [SetRange](setrange.md): Beta. Sets the current range of the slider control.
+- [GetRange](getrange.md): Beta. Gets the current range of the slider control.
+- [IOUserVideoSliderRange](../iouservideosliderrange.md): Beta. The minimum and maximum range for the slider value.

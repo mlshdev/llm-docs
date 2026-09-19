@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/sbcmodepageformatdevice/1476511-ssec_hsec_rmb_surf](https://developer.apple.com/documentation/kernel/sbcmodepageformatdevice/1476511-ssec_hsec_rmb_surf)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/sbcmodepageformatdevice/1476511-ssec_hsec_rmb_surf
 
 # SSEC_HSEC_RMB_SURF
 

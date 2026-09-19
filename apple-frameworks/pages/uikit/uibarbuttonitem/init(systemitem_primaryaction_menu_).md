@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uibarbuttonitem/init(systemitem:primaryaction:menu:)](https://developer.apple.com/documentation/uikit/uibarbuttonitem/init(systemitem:primaryaction:menu:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uibarbuttonitem/init(systemitem:primaryaction:menu:)
 
 # init(systemItem:primaryAction:menu:)
 

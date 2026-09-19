@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/pods/build-docker-images.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/tutorials/pods/build-docker-images.mdx)
+> Pinned source for Runpod main: [tutorials/pods/build-docker-images.mdx](https://github.com/runpod/docs/blob/56a86f70b4ea8b225c0e5e2231e42a4925931686/tutorials/pods/build-docker-images.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/pods/build-docker-images
 
 # Build Docker images on Runpod with Bazel

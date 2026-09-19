@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/instructionsbuilder](https://developer.apple.com/documentation/foundationmodels/instructionsbuilder)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/instructionsbuilder
 
 # InstructionsBuilder
 
@@ -30,5 +31,5 @@ A type that represents an instructions builder.
 
 ### Creating instructions
 
-- [init(\_:)](instructions/init%28__%29.md)
+- [init(\_:)](instructions/init%28__%29.md): Creates instructions from the content of a builder closure.
 - [InstructionsRepresentable](instructionsrepresentable.md): A type that can be represented as instructions.

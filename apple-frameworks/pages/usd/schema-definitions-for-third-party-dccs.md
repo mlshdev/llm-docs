@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/usd/schema-definitions-for-third-party-dccs](https://developer.apple.com/documentation/usd/schema-definitions-for-third-party-dccs)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/usd/schema-definitions-for-third-party-dccs
 
 # Schema definitions for third-party DCCs
 

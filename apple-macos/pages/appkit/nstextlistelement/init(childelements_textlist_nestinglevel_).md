@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstextlistelement/init(childelements:textlist:nestinglevel:)](https://developer.apple.com/documentation/appkit/nstextlistelement/init(childelements:textlist:nestinglevel:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstextlistelement/init(childelements:textlist:nestinglevel:)
 
 # init(childElements:textList:nestingLevel:)
 

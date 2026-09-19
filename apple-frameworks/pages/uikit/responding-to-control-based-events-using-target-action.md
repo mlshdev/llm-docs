@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/responding-to-control-based-events-using-target-action](https://developer.apple.com/documentation/uikit/responding-to-control-based-events-using-target-action)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/responding-to-control-based-events-using-target-action
 
 # Responding to control-based events using target-action (Swift)
 
@@ -145,11 +146,13 @@ In UIKit, use the [addTarget(\_:action:for:)](uicontrol/addtarget%28__action_for
 ```swift
 import UIKit
 
+
 class ViewController: UIViewController {
     let signInButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         signInButton.setTitle("Sign in", for: .normal)
@@ -424,11 +427,13 @@ In UIKit, use the [addTarget:action:forControlEvents:](uicontrol/addtarget%28__a
 ```swift
 import UIKit
 
+
 class ViewController: UIViewController {
     let signInButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         signInButton.setTitle("Sign in", for: .normal)

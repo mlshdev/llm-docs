@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/product/subscriptioninfo/status-swift.struct](https://developer.apple.com/documentation/storekit/product/subscriptioninfo/status-swift.struct)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/product/subscriptioninfo/status-swift.struct
 
 # Product.SubscriptionInfo.Status
 
@@ -16,7 +17,7 @@ struct Status
 
 ## Mentioned In
 
-- [Choosing a StoreKit API for In-App Purchases](../../choosing-a-storekit-api-for-in-app-purchases.md)
+- [Choosing a StoreKit API for Apple In-App Purchases](../../choosing-a-storekit-api-for-in-app-purchases.md)
 
 <a id="overview"></a>
 

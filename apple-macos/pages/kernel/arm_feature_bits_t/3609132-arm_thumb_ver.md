@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/arm_feature_bits_t/3609132-arm_thumb_ver](https://developer.apple.com/documentation/kernel/arm_feature_bits_t/3609132-arm_thumb_ver)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/arm_feature_bits_t/3609132-arm_thumb_ver
 
 # arm_thumb_ver
 

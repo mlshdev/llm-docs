@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/safetykit/saerror/code/invalidargument](https://developer.apple.com/documentation/safetykit/saerror/code/invalidargument)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/safetykit/saerror/code/invalidargument
 
 # SAError.Code.invalidArgument (Swift)
 

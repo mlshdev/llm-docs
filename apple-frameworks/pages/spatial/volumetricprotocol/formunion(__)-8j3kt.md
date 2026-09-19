@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/volumetricprotocol/formunion(_:)-8j3kt](https://developer.apple.com/documentation/spatial/volumetricprotocol/formunion(_:)-8j3kt)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatial/volumetricprotocol/formunion(_:)-8j3kt
 
 # formUnion(\_:)
 

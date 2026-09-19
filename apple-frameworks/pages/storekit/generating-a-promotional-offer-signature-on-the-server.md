@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/generating-a-promotional-offer-signature-on-the-server](https://developer.apple.com/documentation/storekit/generating-a-promotional-offer-signature-on-the-server)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/generating-a-promotional-offer-signature-on-the-server
 
 # Generating a Promotional Offer Signature on the Server
 

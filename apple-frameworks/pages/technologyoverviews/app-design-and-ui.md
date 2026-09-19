@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/technologyoverviews/app-design-and-ui](https://developer.apple.com/documentation/technologyoverviews/app-design-and-ui)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/technologyoverviews/app-design-and-ui
 
 # App design and UI
 
@@ -56,6 +57,7 @@ No matter which app-builder technology you choose, most of the components you us
 - Explore the design approaches for each platform, and learn how to make your app stand out.
 - Manage app-related assets, and learn how to load them locally or from a remote server.
 - Support common features like internationalization, accessibility, undo and redo, and the pasteboard.
+- Adapt iOS apps for dynamic resizing, vertical controls, and multiple displays on iPhone Duo. Read more at [Preparing your app for iPhone Duo](preparing-your-app-for-iphone-duo.md).
 
 ![](https://developer.apple.com/images/com.apple.TechnologyOverviews/window-based-interfaces.png)
 
@@ -85,4 +87,5 @@ Interfaces across Apple platforms feature a new dynamic material called Liquid G
 ### Interface
 
 - [Interface fundamentals](interface-fundamentals.md): Explore the components that go into building your app’s interface, and discover platform-specific features that improve the experience you offer to people.
+- [Preparing your app for iPhone Duo](preparing-your-app-for-iphone-duo.md): Update your iOS app to dynamically resize for inner and outer displays, adjust your layout for the folding display, and adapt bars for vertical layout.
 - [Liquid Glass](liquid-glass.md): Learn how to design and develop beautiful interfaces that leverage Liquid Glass.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/diskimagekit/diskimage/blocksize-swift.enum/bytes4096](https://developer.apple.com/documentation/diskimagekit/diskimage/blocksize-swift.enum/bytes4096)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/diskimagekit/diskimage/blocksize-swift.enum/bytes4096
 
 # DiskImage.BlockSize.bytes4096
 

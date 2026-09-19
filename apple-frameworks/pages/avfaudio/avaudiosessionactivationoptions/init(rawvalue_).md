@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avaudiosessionactivationoptions/init(rawvalue:)](https://developer.apple.com/documentation/avfaudio/avaudiosessionactivationoptions/init(rawvalue:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosessionactivationoptions/init(rawvalue:)
 
 # init(rawValue:)
 
@@ -6,7 +7,7 @@
 **Kind:** Initializer  
 **Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
 
-Creates a new instance with the raw value you specify.
+Creates an activation-options set from a raw bitmask.
 
 ## Declaration
 
@@ -16,4 +17,4 @@ init(rawValue: UInt)
 
 ## Parameters
 
-- `rawValue`: The raw value to use for the new instance.
+- `rawValue`: A bitwise combination of the defined [AVAudioSessionActivationOptions](../avaudiosessionactivationoptions.md) constants.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/vm_statistics_data_t/1573478-purgeable_count](https://developer.apple.com/documentation/kernel/vm_statistics_data_t/1573478-purgeable_count)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/vm_statistics_data_t/1573478-purgeable_count
 
 # purgeable_count
 

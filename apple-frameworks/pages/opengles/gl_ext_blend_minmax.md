@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_ext_blend_minmax](https://developer.apple.com/documentation/opengles/gl_ext_blend_minmax)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_ext_blend_minmax
 
 # GL_EXT_blend_minmax (Swift)
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/ituneslibrary/itlibplaylistpropertymaster](https://developer.apple.com/documentation/ituneslibrary/itlibplaylistpropertymaster)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/ituneslibrary/itlibplaylistpropertymaster
 
 # ITLibPlaylistPropertyMaster (Swift)
 
 **Framework:** iTunes Library  
 **Kind:** Global Variable  
-**Availability:** Mac Catalyst 14.0+ · macOS 10.6+ (deprecated in 27.0)
+**Availability:** Mac Catalyst 14.0+ · macOS 10.6+ (deprecated in 27.2)
 
 A Boolean value that indicates whether the playlist represents the entire iTunes library.
 
@@ -27,7 +28,7 @@ let ITLibPlaylistPropertyMaster: String
 
 **Framework:** iTunes Library  
 **Kind:** Global Variable  
-**Availability:** Mac Catalyst 14.0+ · macOS 10.6+ (deprecated in 27.0)
+**Availability:** Mac Catalyst 14.0+ · macOS 10.6+ (deprecated in 27.2)
 
 A Boolean value that indicates whether the playlist represents the entire iTunes library.
 

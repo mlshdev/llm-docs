@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkrelativedatetextprovider/relativetodate](https://developer.apple.com/documentation/clockkit/clkrelativedatetextprovider/relativetodate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkrelativedatetextprovider/relativetodate
 
 # relativeToDate (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 The end date that the text provider uses when calculating a fixed, relative date.
 
@@ -26,7 +27,7 @@ var relativeToDate: Date? { get set }
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 The end date that the text provider uses when calculating a fixed, relative date.
 

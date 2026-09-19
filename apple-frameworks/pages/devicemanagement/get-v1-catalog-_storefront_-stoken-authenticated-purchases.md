@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/get-v1-catalog-_storefront_-stoken-authenticated-purchases](https://developer.apple.com/documentation/devicemanagement/get-v1-catalog-_storefront_-stoken-authenticated-purchases)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/devicemanagement/get-v1-catalog-_storefront_-stoken-authenticated-purchases
 
 # Get Metadata for Your Authenticated Purchases
 

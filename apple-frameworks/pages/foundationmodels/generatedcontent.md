@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generatedcontent](https://developer.apple.com/documentation/foundationmodels/generatedcontent)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generatedcontent
 
 # GeneratedContent
 
@@ -36,7 +37,7 @@ Generated content may contain a single value, an array, or key-value pairs with 
 - [init(properties:id:uniquingKeysWith:)](generatedcontent/init%28properties_id_uniquingkeyswith_%29.md): Creates generated content from key-value pairs, resolving duplicate keys with a combining closure.
 - [init(json:)](generatedcontent/init%28json_%29.md): Creates equivalent content from a JSON string.
 - [init(kind:id:)](generatedcontent/init%28kind_id_%29.md): Creates content with the specified kind and generation identifier.
-- [GeneratedContent.ParsingError](generatedcontent/parsingerror.md): A failure that occurs when a string cannot be parsed into GeneratedContent.
+- [GeneratedContent.ParsingError](generatedcontent/parsingerror.md): A failure that occurs when a string cannot be parsed into generated content.
 
 ### Accessing the content
 

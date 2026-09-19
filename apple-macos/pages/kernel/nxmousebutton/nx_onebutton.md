@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/nxmousebutton/nx_onebutton](https://developer.apple.com/documentation/kernel/nxmousebutton/nx_onebutton)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/nxmousebutton/nx_onebutton
 
 # NX_OneButton
 

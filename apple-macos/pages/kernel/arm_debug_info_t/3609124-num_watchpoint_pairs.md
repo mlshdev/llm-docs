@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/arm_debug_info_t/3609124-num_watchpoint_pairs](https://developer.apple.com/documentation/kernel/arm_debug_info_t/3609124-num_watchpoint_pairs)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/arm_debug_info_t/3609124-num_watchpoint_pairs
 
 # num_watchpoint_pairs
 

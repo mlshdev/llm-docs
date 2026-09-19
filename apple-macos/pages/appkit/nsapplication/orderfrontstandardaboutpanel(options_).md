@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsapplication/orderfrontstandardaboutpanel(options:)](https://developer.apple.com/documentation/appkit/nsapplication/orderfrontstandardaboutpanel(options:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsapplication/orderfrontstandardaboutpanel(options:)
 
 # orderFrontStandardAboutPanel(options:) (Swift)
 

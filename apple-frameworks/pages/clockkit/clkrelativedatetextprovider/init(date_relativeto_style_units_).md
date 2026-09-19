@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkrelativedatetextprovider/init(date:relativeto:style:units:)](https://developer.apple.com/documentation/clockkit/clkrelativedatetextprovider/init(date:relativeto:style:units:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkrelativedatetextprovider/init(date:relativeto:style:units:)
 
 # init(date:relativeTo:style:units:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Creates a text provider that shows the difference in time between the provided dates.
 
@@ -37,7 +38,7 @@ This initializer creates a text provider that produces a fixed, relative date. I
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Creates a text provider that shows the difference in time between the provided dates.
 

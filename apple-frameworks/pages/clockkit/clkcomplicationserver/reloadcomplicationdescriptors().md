@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationserver/reloadcomplicationdescriptors()](https://developer.apple.com/documentation/clockkit/clkcomplicationserver/reloadcomplicationdescriptors())
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationserver/reloadcomplicationdescriptors()
 
 # reloadComplicationDescriptors() (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Reloads the complication descriptors from the complication data source.
 
@@ -30,7 +31,7 @@ If your data source removes a complication that’s already present on a watch f
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Reloads the complication descriptors from the complication data source.
 

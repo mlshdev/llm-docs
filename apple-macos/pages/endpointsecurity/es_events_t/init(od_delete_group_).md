@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_events_t/init(od_delete_group:)](https://developer.apple.com/documentation/endpointsecurity/es_events_t/init(od_delete_group:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_events_t/init(od_delete_group:)
 
 # init(od_delete_group:)
 

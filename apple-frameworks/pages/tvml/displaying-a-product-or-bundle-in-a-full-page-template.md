@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tvml/displaying-a-product-or-bundle-in-a-full-page-template](https://developer.apple.com/documentation/tvml/displaying-a-product-or-bundle-in-a-full-page-template)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/tvml/displaying-a-product-or-bundle-in-a-full-page-template
 
 # Displaying a Product or Bundle in a Full-Page Template
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avpictureinpicturecontroller/contentsource-swift.class/init(samplebufferdisplaylayer:playbackdelegate:)](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/contentsource-swift.class/init(samplebufferdisplaylayer:playbackdelegate:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/contentsource-swift.class/init(samplebufferdisplaylayer:playbackdelegate:)
 
 # init(sampleBufferDisplayLayer:playbackDelegate:) (Swift)
 
@@ -21,7 +22,7 @@ init(sampleBufferDisplayLayer: AVSampleBufferDisplayLayer, playbackDelegate: any
 
 ## See Also
 
-### Creating a Content Source
+### Creating a content source
 
 - [init(playerLayer:)](init%28playerlayer_%29.md): Creates a content source with a player layer.
 - [init(activeVideoCallSourceView:contentViewController:)](init%28activevideocallsourceview_contentviewcontroller_%29.md): Creates a content source with an active video call.
@@ -47,7 +48,7 @@ Creates a content source with a sample buffer display layer.
 
 ## See Also
 
-### Creating a Content Source
+### Creating a content source
 
 - [initWithPlayerLayer:](init%28playerlayer_%29.md): Creates a content source with a player layer.
 - [initWithActiveVideoCallSourceView:contentViewController:](init%28activevideocallsourceview_contentviewcontroller_%29.md): Creates a content source with an active video call.

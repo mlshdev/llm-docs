@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/widgetkit/accessorywidgetgroup](https://developer.apple.com/documentation/widgetkit/accessorywidgetgroup)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/widgetkit/accessorywidgetgroup
 
 # AccessoryWidgetGroup
 
@@ -43,7 +44,7 @@ You can change the shape with which the content views are masked using the `.acc
 
 ## Topics
 
-### Initializers
+### Creating an accessory widget group
 
 - [init(\_:content:)](accessorywidgetgroup/init%28__content_%29-3ij0e.md): Conforms when `Label` is `Text` and `Content` conforms to `View`. Creates an `AccessoryWidgetGroup` that generates its label from a string.
 - [init(\_:content:)](accessorywidgetgroup/init%28__content_%29-75rkg.md): Conforms when `Label` is `Text` and `Content` conforms to `View`. Creates an `AccessoryWidgetGroup` that generates its label from a localized string resource.
@@ -56,6 +57,10 @@ You can change the shape with which the content views are masked using the `.acc
 - [init(\_:systemImage:content:)](accessorywidgetgroup/init%28__systemimage_content_%29-7rnqc.md): Conforms when `Label` is `Label<Text, Image>` and `Content` conforms to `View`. Creates an `AccessoryWidgetGroup` that generates its label from a string and system image name.
 - [init(label:content:)](accessorywidgetgroup/init%28label_content_%29.md): Conforms when `Label` conforms to `View` and `Content` conforms to `View`. Creates an AccessoryWidgetGroup composed of a label and three circular or rounded square contents with equal spacing and vertical alignment.
 
+### Styling an accessory widget group
+
+- [AccessoryWidgetGroupStyle](accessorywidgetgroupstyle.md): The style for an accessory widget group view.
+
 ## Relationships
 
 ### Conforms To
@@ -67,5 +72,10 @@ You can change the shape with which the content views are masked using the `.acc
 ### Accessory and watchOS widgets
 
 - [Creating accessory widgets and watch complications](creating-accessory-widgets-and-watch-complications.md): Support accessory widgets that appear on the Lock Screen and as complications on Apple Watch.
-- [AccessoryWidgetGroupStyle](accessorywidgetgroupstyle.md): The style for an [AccessoryWidgetGroup](accessorywidgetgroup.md) view.
+- [AccessoryWidgetGroupStyle](accessorywidgetgroupstyle.md): The style for an accessory widget group view.
 - [Migrating ClockKit complications to WidgetKit](converting-a-clockkit-app.md): Leverage WidgetKit’s API to create watchOS complications using SwiftUI.
+- [widgetCurvesContent(\_:)](https://developer.apple.com/documentation/swiftui/view/widgetcurvescontent%28_:%29): Displays the widget’s content along a curve if the context allows it.
+- [widgetLabel(\_:)](https://developer.apple.com/documentation/swiftui/view/widgetlabel%28_:%29): Returns a localized text label that displays additional content outside the accessory family widget’s main SwiftUI view.
+- [widgetLabel(label:)](https://developer.apple.com/documentation/swiftui/view/widgetlabel%28label:%29): Creates a label for displaying additional content outside an accessory family widget’s main SwiftUI view.
+- [showsWidgetLabel](https://developer.apple.com/documentation/swiftui/environmentvalues/showswidgetlabel): A Boolean value that indicates whether an accessory family widget can display an accessory label.
+- [accessoryWidgetGroupStyle(\_:)](https://developer.apple.com/documentation/swiftui/view/accessorywidgetgroupstyle%28_:%29): The view modifier that can be applied to `AccessoryWidgetGroup` to specify the shape the three content views will be masked with. The value of `style` is set to `.automatic`, which is `.circular` by default.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/corenfc/nfciso15693tag/customcommand(requestflags:customcommandcode:customrequestparameters:resulthandler:)](https://developer.apple.com/documentation/corenfc/nfciso15693tag/customcommand(requestflags:customcommandcode:customrequestparameters:resulthandler:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corenfc/nfciso15693tag/customcommand(requestflags:customcommandcode:customrequestparameters:resulthandler:)
 
 # customCommand(requestFlags:customCommandCode:customRequestParameters:resultHandler:)
 
@@ -10,8 +11,4 @@
 
 ```swift
 @preconcurrency func customCommand(requestFlags flags: NFCISO15693RequestFlag, customCommandCode: Int, customRequestParameters: Data, resultHandler: @escaping @Sendable (Result<Data, any Error>) -> Void)
-```
-
-```swift
-func customCommand(requestFlags flags: NFCISO15693RequestFlag, customCommandCode: Int, customRequestParameters: Data, resultHandler: @escaping (Result<Data, any Error>) -> Void)
 ```

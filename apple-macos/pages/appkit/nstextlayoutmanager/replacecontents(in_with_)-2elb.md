@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstextlayoutmanager/replacecontents(in:with:)-2elb](https://developer.apple.com/documentation/appkit/nstextlayoutmanager/replacecontents(in:with:)-2elb)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstextlayoutmanager/replacecontents(in:with:)-2elb
 
 # replaceContents(in:with:) (Swift)
 

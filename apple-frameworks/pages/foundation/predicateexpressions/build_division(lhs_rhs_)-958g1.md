@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/predicateexpressions/build_division(lhs:rhs:)-958g1](https://developer.apple.com/documentation/foundation/predicateexpressions/build_division(lhs:rhs:)-958g1)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/predicateexpressions/build_division(lhs:rhs:)-958g1
 
 # build_Division(lhs:rhs:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/diskimagekit/diskimage/appending(_:)-4wifj](https://developer.apple.com/documentation/diskimagekit/diskimage/appending(_:)-4wifj)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/diskimagekit/diskimage/appending(_:)-4wifj
 
 # appending(\_:)
 

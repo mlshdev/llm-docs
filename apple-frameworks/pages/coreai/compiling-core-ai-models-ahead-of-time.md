@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreai/compiling-core-ai-models-ahead-of-time](https://developer.apple.com/documentation/coreai/compiling-core-ai-models-ahead-of-time)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreai/compiling-core-ai-models-ahead-of-time
 
 # Compiling Core AI models ahead of time
 

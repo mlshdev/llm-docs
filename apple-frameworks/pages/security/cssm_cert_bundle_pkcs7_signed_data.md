@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_cert_bundle_pkcs7_signed_data](https://developer.apple.com/documentation/security/cssm_cert_bundle_pkcs7_signed_data)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_cert_bundle_pkcs7_signed_data
 
 # CSSM_CERT_BUNDLE_PKCS7_SIGNED_DATA (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/callkit/cxprovider/reportcall(with:endedat:reason:)](https://developer.apple.com/documentation/callkit/cxprovider/reportcall(with:endedat:reason:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/callkit/cxprovider/reportcall(with:endedat:reason:)
 
 # reportCall(with:endedAt:reason:) (Swift)
 

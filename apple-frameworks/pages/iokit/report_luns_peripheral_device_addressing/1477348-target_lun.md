@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/report_luns_peripheral_device_addressing/1477348-target_lun](https://developer.apple.com/documentation/iokit/report_luns_peripheral_device_addressing/1477348-target_lun)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/report_luns_peripheral_device_addressing/1477348-target_lun
 
 # TARGET_LUN
 

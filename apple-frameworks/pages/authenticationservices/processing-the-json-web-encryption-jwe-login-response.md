@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/authenticationservices/processing-the-json-web-encryption-jwe-login-response](https://developer.apple.com/documentation/authenticationservices/processing-the-json-web-encryption-jwe-login-response)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/authenticationservices/processing-the-json-web-encryption-jwe-login-response
 
 # Processing the JSON Web Encryption (JWE) login response
 

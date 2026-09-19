@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiview/animatekeyframes(withduration:delay:options:animations:completion:)](https://developer.apple.com/documentation/uikit/uiview/animatekeyframes(withduration:delay:options:animations:completion:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiview/animatekeyframes(withduration:delay:options:animations:completion:)
 
 # animateKeyframes(withDuration:delay:options:animations:completion:) (Swift)
 
@@ -11,11 +12,11 @@ Creates an animation block object that can be used to set up keyframe-based anim
 ## Declaration
 
 ```swift
-class func animateKeyframes(withDuration duration: TimeInterval, delay: TimeInterval, options: UIView.KeyframeAnimationOptions = [], animations: @escaping () -> Void, completion: (@Sendable (Bool) -> Void)? = nil)
+class func animateKeyframes(withDuration duration: TimeInterval, delay: TimeInterval, options: UIView.KeyframeAnimationOptions = [], animations: () -> Void, completion: (@Sendable (Bool) -> Void)? = nil)
 ```
 
 ```swift
-class func animateKeyframes(withDuration duration: TimeInterval, delay: TimeInterval, options: UIView.KeyframeAnimationOptions = [], animations: @escaping () -> Void) async -> Bool
+class func animateKeyframes(withDuration duration: TimeInterval, delay: TimeInterval, options: UIView.KeyframeAnimationOptions = [], animations: () -> Void) async -> Bool
 ```
 
 ## Parameters

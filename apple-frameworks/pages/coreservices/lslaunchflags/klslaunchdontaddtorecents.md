@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/lslaunchflags/klslaunchdontaddtorecents](https://developer.apple.com/documentation/coreservices/lslaunchflags/klslaunchdontaddtorecents)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/lslaunchflags/klslaunchdontaddtorecents
 
 # kLSLaunchDontAddToRecents
 

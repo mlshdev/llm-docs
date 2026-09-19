@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/nvmeidentifycontrollerstruct/3521223-recommended_arbitration_burst](https://developer.apple.com/documentation/iokit/nvmeidentifycontrollerstruct/3521223-recommended_arbitration_burst)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/nvmeidentifycontrollerstruct/3521223-recommended_arbitration_burst
 
 # RECOMMENDED_ARBITRATION_BURST
 

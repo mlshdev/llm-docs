@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/restrictionsresponse/profilerestrictions-data.dictionary/any-profile-identifier-data.dictionary/union-data.dictionary/any-restriction-name-data.dictionary](https://developer.apple.com/documentation/devicemanagement/restrictionsresponse/profilerestrictions-data.dictionary/any-profile-identifier-data.dictionary/union-data.dictionary/any-restriction-name-data.dictionary)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/devicemanagement/restrictionsresponse/profilerestrictions-data.dictionary/any-profile-identifier-data.dictionary/union-data.dictionary/any-restriction-name-data.dictionary
 
 # RestrictionsResponse.ProfileRestrictions.ANY profile identifier.Union.ANY restriction name
 

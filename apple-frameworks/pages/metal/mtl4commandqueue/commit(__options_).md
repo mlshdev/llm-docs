@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4commandqueue/commit(_:options:)](https://developer.apple.com/documentation/metal/mtl4commandqueue/commit(_:options:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtl4commandqueue/commit(_:options:)
 
 # commit(\_:options:)
 
@@ -16,7 +17,7 @@ func commit(_ commandBuffers: [any MTL4CommandBuffer], options: MTL4CommitOption
 
 ## Parameters
 
-- `commandBuffers`: A Swift array of `MTL4CommandBuffers` to commit.
+- `commandBuffers`: A Swift array of [MTL4CommandBuffer](../mtl4commandbuffer.md) instances to commit.
 - `options`: An instance of [MTL4CommitOptions](../mtl4commitoptions.md) that configures the commit operation.
 
 <a id="discussion"></a>

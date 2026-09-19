@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/displaying-an-ar-experience-with-metal](https://developer.apple.com/documentation/arkit/displaying-an-ar-experience-with-metal)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/displaying-an-ar-experience-with-metal
 
 # Displaying an AR Experience with Metal (Swift)
 

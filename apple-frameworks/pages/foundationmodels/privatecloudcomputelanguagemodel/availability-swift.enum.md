@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/privatecloudcomputelanguagemodel/availability-swift.enum](https://developer.apple.com/documentation/foundationmodels/privatecloudcomputelanguagemodel/availability-swift.enum)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/privatecloudcomputelanguagemodel/availability-swift.enum
 
 # PrivateCloudComputeLanguageModel.Availability
 
@@ -18,9 +19,9 @@ The availability status for a specific PCC language model.
 
 ### Checking for availability
 
-- [PrivateCloudComputeLanguageModel.Availability.available](availability-swift.enum/available.md): The system is ready for making requests.
-- [PrivateCloudComputeLanguageModel.Availability.unavailable(\_:)](availability-swift.enum/unavailable%28__%29.md): Indicates that the system isn’t ready for requests.
-- [PrivateCloudComputeLanguageModel.Availability.UnavailableReason](availability-swift.enum/unavailablereason.md): The unavailable reason.
+- [PrivateCloudComputeLanguageModel.Availability.available](availability-swift.enum/available.md): The system is ready to make requests.
+- [PrivateCloudComputeLanguageModel.Availability.unavailable(\_:)](availability-swift.enum/unavailable%28__%29.md): The system isn’t ready for requests.
+- [PrivateCloudComputeLanguageModel.Availability.UnavailableReason](availability-swift.enum/unavailablereason.md): The reason the model is unavailable.
 
 ## Relationships
 

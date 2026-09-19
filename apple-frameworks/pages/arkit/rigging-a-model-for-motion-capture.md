@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/rigging-a-model-for-motion-capture](https://developer.apple.com/documentation/arkit/rigging-a-model-for-motion-capture)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/rigging-a-model-for-motion-capture
 
 # Rigging a Model for Motion Capture
 

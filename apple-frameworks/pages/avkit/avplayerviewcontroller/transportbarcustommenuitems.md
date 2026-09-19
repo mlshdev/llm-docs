@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontroller/transportbarcustommenuitems](https://developer.apple.com/documentation/avkit/avplayerviewcontroller/transportbarcustommenuitems)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontroller/transportbarcustommenuitems
 
 # transportBarCustomMenuItems (Swift)
 
@@ -16,7 +17,7 @@ var transportBarCustomMenuItems: [UIMenuElement] { get set }
 
 ## Mentioned In
 
-- [Customizing the tvOS Playback Experience](../customizing-the-tvos-playback-experience.md)
+- [Customizing the tvOS playback experience](../customizing-the-tvos-playback-experience.md)
 
 <a id="Discussion"></a>
 
@@ -54,7 +55,7 @@ An array of actions and menus to display with the default player controls.
 
 ## Mentioned In
 
-- [Customizing the tvOS Playback Experience](../customizing-the-tvos-playback-experience.md)
+- [Customizing the tvOS playback experience](../customizing-the-tvos-playback-experience.md)
 
 <a id="Discussion"></a>
 

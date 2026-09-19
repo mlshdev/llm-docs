@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/coremedia_declare_returns_retained_block](https://developer.apple.com/documentation/coremedia/coremedia_declare_returns_retained_block)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremedia/coremedia_declare_returns_retained_block
 
 # COREMEDIA_DECLARE_RETURNS_RETAINED_BLOCK (Swift)
 

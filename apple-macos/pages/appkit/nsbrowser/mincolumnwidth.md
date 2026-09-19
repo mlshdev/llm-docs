@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsbrowser/mincolumnwidth](https://developer.apple.com/documentation/appkit/nsbrowser/mincolumnwidth)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsbrowser/mincolumnwidth
 
 # minColumnWidth (Swift)
 

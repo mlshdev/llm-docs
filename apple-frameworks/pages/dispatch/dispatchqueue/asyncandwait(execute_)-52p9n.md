@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/dispatch/dispatchqueue/asyncandwait(execute:)-52p9n](https://developer.apple.com/documentation/dispatch/dispatchqueue/asyncandwait(execute:)-52p9n)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/dispatch/dispatchqueue/asyncandwait(execute:)-52p9n
 
 # asyncAndWait(execute:)
 

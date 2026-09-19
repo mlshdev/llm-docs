@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/dynamicinstructions](https://developer.apple.com/documentation/foundationmodels/dynamicinstructions)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/dynamicinstructions
 
 # DynamicInstructions
 
@@ -53,12 +54,12 @@ struct PresentationInstructions: DynamicInstructions {
 
 - [body](dynamicinstructions/body-swift.property.md): The content of the dynamic instructions.
 - [Body](dynamicinstructions/body-swift.associatedtype.md): The type of dynamic instructions that represent these instructions.
-- [DynamicInstructions.ForEach](dynamicinstructions/foreach.md)
-- [DynamicInstructions.SessionProperty](dynamicinstructions/sessionproperty.md)
+- [DynamicInstructions.ForEach](dynamicinstructions/foreach.md): A shorthand for producing content for each element of a collection.
+- [DynamicInstructions.SessionProperty](dynamicinstructions/sessionproperty.md): A property wrapper that provides access to a session property within dynamic instructions.
 
 ### Building dynamic instructions
 
-- [DynamicInstructionsBuilder](dynamicinstructionsbuilder.md)
+- [DynamicInstructionsBuilder](dynamicinstructionsbuilder.md): A result builder that combines tools and other content into dynamic instructions.
 - [EmptyDynamicInstructions](emptydynamicinstructions.md): An empty dynamic instructions type.
 - [ConditionalDynamicInstructions](conditionaldynamicinstructions.md): A dynamic instructions type that conditionally selects between two conditions.
 - [AnyDynamicInstructions](anydynamicinstructions.md): A dynamic instructions type that’s type-erased.
@@ -81,7 +82,7 @@ struct PresentationInstructions: DynamicInstructions {
 
 - [Composing dynamic sessions with instructions and profiles](composing-dynamic-sessions-with-instructions-and-profiles.md): Adapt sessions dynamically at runtime by loading instructions and tools based on the state of your app.
 - [Origami: Crafting a dynamic tutorial for Apple Intelligence](origami-crafting-a-dynamic-tutorial-for-apple-intelligence.md): Build interactive experiences with Foundation Models and Private Cloud Compute using multimodal prompts.
-- [DynamicInstructionsForEach](dynamicinstructionsforeach.md)
+- [DynamicInstructionsForEach](dynamicinstructionsforeach.md): Dynamic instructions that produce content for each element of a collection.
 - [LanguageModelSession.DynamicProfile](languagemodelsession/dynamicprofile.md): A dynamic profile that contains one or more profiles.
 - [LanguageModelSession.DynamicProfileModifier](languagemodelsession/dynamicprofilemodifier.md): A protocol for creating reusable wrappers around dynamic profile content.
 - [LanguageModelSession.Profile](languagemodelsession/profile.md): A profile that contains dynamic instructions.

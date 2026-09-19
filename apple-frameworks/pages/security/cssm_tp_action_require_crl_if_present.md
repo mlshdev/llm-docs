@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_tp_action_require_crl_if_present](https://developer.apple.com/documentation/security/cssm_tp_action_require_crl_if_present)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_tp_action_require_crl_if_present
 
 # CSSM_TP_ACTION_REQUIRE_CRL_IF_PRESENT (Swift)
 

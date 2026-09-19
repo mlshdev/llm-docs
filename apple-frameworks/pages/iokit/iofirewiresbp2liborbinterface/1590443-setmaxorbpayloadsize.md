@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/iofirewiresbp2liborbinterface/1590443-setmaxorbpayloadsize](https://developer.apple.com/documentation/iokit/iofirewiresbp2liborbinterface/1590443-setmaxorbpayloadsize)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/iofirewiresbp2liborbinterface/1590443-setmaxorbpayloadsize
 
 # setMaxORBPayloadSize
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avinputpickerinteraction](https://developer.apple.com/documentation/avkit/avinputpickerinteraction)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avinputpickerinteraction
 
 # AVInputPickerInteraction (Swift)
 
@@ -6,13 +7,23 @@
 **Kind:** Class  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
-Use `AVInputPickerInteraction` to present an input picker.
+An object that presents the system’s audio input picker so people can choose which microphone to use for recording audio.
 
 ## Declaration
 
 ```swift
 @MainActor class AVInputPickerInteraction
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+People expect the microphone they chose to be the one your app records with. Add an input picker interaction to a view, and your app presents the same picker the system uses, listing the audio inputs available at that moment.
+
+Create an interaction with [init(audioSession:)](avinputpickerinteraction/init%28audiosession_%29.md) to pick inputs for a specific audio session, or with [init()](avinputpickerinteraction/init%28%29.md) to use the shared session. Pass a session that records, or that you switch to recording, because a session in any other mode produces an empty list of inputs. Add the interaction to a view the way you add any [UIInteraction](../uikit/uiinteraction.md), then call [present()](avinputpickerinteraction/present%28%29.md) from the control that offers input selection. Call [dismiss()](avinputpickerinteraction/dismiss%28%29.md) to take the picker away, and read [isPresented](avinputpickerinteraction/ispresented.md) to find out whether it’s onscreen.
+
+Set [delegate](avinputpickerinteraction/delegate-swift.property.md) to a [AVInputPickerInteraction.Delegate](avinputpickerinteraction/delegate-swift.protocol.md) to learn when the picker begins and finishes presenting, and when it begins and finishes dismissing. The interaction reports those transitions around its own presentation, so an app that dims its interface while someone chooses an input has a place to do that work.
 
 ## Topics
 
@@ -53,31 +64,29 @@ Use `AVInputPickerInteraction` to present an input picker.
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [UIInteraction](../uikit/uiinteraction.md)
 
-## See Also
-
-### iOS playback and capture
-
-- [Playing video content in a standard user interface](playing-video-content-in-a-standard-user-interface.md): Play media full screen, embedded inline, or in a floating Picture in Picture (PiP) window using a player view controller.
-- [AVPlayerViewController](avplayerviewcontroller.md): A view controller that displays content from a player and presents a native user interface to control playback.
-- [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md): A protocol that defines the methods to implement to respond to player view controller events.
-- [AVCaptureEventInteraction](avcaptureeventinteraction.md): An object that registers handlers to respond to capture events from system hardware buttons.
-- [AVCaptureEvent](avcaptureevent.md): An object that describes a user interaction with a system hardware button.
-- [AVCaptureEventSound](avcaptureeventsound.md): A sound object for a capture event.
-- [Third-party casting support](third-party-casting-support.md): Provide custom playback controls for third-party casting services and other media sources.
-
 # AVInputPickerInteraction (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Class  
 **Availability:** iOS 26.0+ · iPadOS 26.0+
 
-Use `AVInputPickerInteraction` to present an input picker.
+An object that presents the system’s audio input picker so people can choose which microphone to use for recording audio.
 
 ## Declaration
 
 ```objectivec
 @interface AVInputPickerInteraction : NSObject
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+People expect the microphone they chose to be the one your app records with. Add an input picker interaction to a view, and your app presents the same picker the system uses, listing the audio inputs available at that moment.
+
+Create an interaction with [initWithAudioSession:](avinputpickerinteraction/init%28audiosession_%29.md) to pick inputs for a specific audio session, or with [init](avinputpickerinteraction/init%28%29.md) to use the shared session. Pass a session that records, or that you switch to recording, because a session in any other mode produces an empty list of inputs. Add the interaction to a view the way you add any [UIInteraction](../uikit/uiinteraction.md), then call [present](avinputpickerinteraction/present%28%29.md) from the control that offers input selection. Call [dismiss](avinputpickerinteraction/dismiss%28%29.md) to take the picker away, and read [presented](avinputpickerinteraction/ispresented.md) to find out whether it’s onscreen.
+
+Set [delegate](avinputpickerinteraction/delegate-swift.property.md) to a [AVInputPickerInteractionDelegate](avinputpickerinteraction/delegate-swift.protocol.md) to learn when the picker begins and finishes presenting, and when it begins and finishes dismissing. The interaction reports those transitions around its own presentation, so an app that dims its interface while someone chooses an input has a place to do that work.
 
 ## Topics
 
@@ -110,14 +119,3 @@ Use `AVInputPickerInteraction` to present an input picker.
 ### Conforms To
 
 - [UIInteraction](../uikit/uiinteraction.md)
-
-## See Also
-
-### iOS playback and capture
-
-- [AVPlayerViewController](avplayerviewcontroller.md): A view controller that displays content from a player and presents a native user interface to control playback.
-- [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md): A protocol that defines the methods to implement to respond to player view controller events.
-- [AVCaptureEventInteraction](avcaptureeventinteraction.md): An object that registers handlers to respond to capture events from system hardware buttons.
-- [AVCaptureEvent](avcaptureevent.md): An object that describes a user interaction with a system hardware button.
-- [AVCaptureEventSound](avcaptureeventsound.md): A sound object for a capture event.
-- [Third-party casting support](third-party-casting-support.md): Provide custom playback controls for third-party casting services and other media sources.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applearchive/aeacontextfieldvalues/aea_context_ciphersuite_hkdf_sha256_hmac](https://developer.apple.com/documentation/applearchive/aeacontextfieldvalues/aea_context_ciphersuite_hkdf_sha256_hmac)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applearchive/aeacontextfieldvalues/aea_context_ciphersuite_hkdf_sha256_hmac
 
 # AEA_CONTEXT_CIPHERSUITE_HKDF_SHA256_HMAC
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/civector/init(cgaffinetransform:)-61k8d](https://developer.apple.com/documentation/coreimage/civector/init(cgaffinetransform:)-61k8d)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreimage/civector/init(cgaffinetransform:)-61k8d
 
 # init(CGAffineTransform:)
 

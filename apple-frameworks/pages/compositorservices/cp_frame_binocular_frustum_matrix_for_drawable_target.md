@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/compositorservices/cp_frame_binocular_frustum_matrix_for_drawable_target](https://developer.apple.com/documentation/compositorservices/cp_frame_binocular_frustum_matrix_for_drawable_target)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/compositorservices/cp_frame_binocular_frustum_matrix_for_drawable_target
 
 # cp_frame_binocular_frustum_matrix_for_drawable_target
 

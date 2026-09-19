@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spritekit/resizing-a-sprite-in-nine-parts](https://developer.apple.com/documentation/spritekit/resizing-a-sprite-in-nine-parts)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spritekit/resizing-a-sprite-in-nine-parts
 
 # Resizing a Sprite in Nine Parts (Swift)
 

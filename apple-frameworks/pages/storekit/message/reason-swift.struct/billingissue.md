@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/message/reason-swift.struct/billingissue](https://developer.apple.com/documentation/storekit/message/reason-swift.struct/billingissue)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/message/reason-swift.struct/billingissue
 
 # billingIssue
 
@@ -16,7 +17,7 @@ static let billingIssue: Message.Reason
 
 ## Mentioned In
 
-- [Testing failing subscription renewals and In-App Purchases](../../testing-failing-subscription-renewals-and-in-app-purchases.md)
+- [Testing failing subscription renewals and Apple In-App Purchases](../../testing-failing-subscription-renewals-and-in-app-purchases.md)
 
 <a id="Discussion"></a>
 
@@ -47,7 +48,7 @@ For more information about the billing retry state, see [isInBillingRetry](../..
 
 ### Test the message in the sandbox environment
 
-You can simulate billing issues in the sandbox environment to test how the system presents the [billingIssue](billingissue.md) message in your app, and how your app handles it if you choose to delay or suppress its presentation. For more information, including step-by-step test cases, see [Testing failing subscription renewals and In-App Purchases](../../testing-failing-subscription-renewals-and-in-app-purchases.md).
+You can simulate billing issues in the sandbox environment to test how the system presents the [billingIssue](billingissue.md) message in your app, and how your app handles it if you choose to delay or suppress its presentation. For more information, including step-by-step test cases, see [Testing failing subscription renewals and Apple In-App Purchases](../../testing-failing-subscription-renewals-and-in-app-purchases.md).
 
 ## See Also
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/scsicmd_inquiry_page83_header_spc_16/peripheral_device_type](https://developer.apple.com/documentation/driverkit/scsicmd_inquiry_page83_header_spc_16/peripheral_device_type)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/scsicmd_inquiry_page83_header_spc_16/peripheral_device_type
 
 # PERIPHERAL_DEVICE_TYPE
 

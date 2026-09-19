@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiglasseffect/style/regular](https://developer.apple.com/documentation/uikit/uiglasseffect/style/regular)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiglasseffect/style/regular
 
 # UIGlassEffect.Style.regular (Swift)
 

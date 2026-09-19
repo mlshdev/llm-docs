@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tabletopkit/equipmentlayout/volumetric(layout:animationduration:)](https://developer.apple.com/documentation/tabletopkit/equipmentlayout/volumetric(layout:animationduration:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/tabletopkit/equipmentlayout/volumetric(layout:animationduration:)
 
 # volumetric(layout:animationDuration:)
 

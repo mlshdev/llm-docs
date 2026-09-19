@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/contribute/README.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/contribute/README.md)
+> Pinned source for n8n main: [docs/contribute/README.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/contribute/README.md)
 
 # Contribute to n8n
 
@@ -44,7 +44,7 @@ There are different ways in which you can contribute to the n8n code base:
 
 ## Contribute to the docs <a id="contribute-to-the-docs"></a>
 
-You can contribute to the n8n documentation, for example by documenting nodes or fixing issues. See the [contribution guide for n8n Docs](https://docs.n8n.io/contribute/contribution-guide-for-n8n-docs) for content types and the PR process, and the [style guide for n8n Docs](https://docs.n8n.io/contribute/style-guide-for-n8n-docs) for writing conventions.
+You can contribute to the n8n documentation, for example by documenting nodes or fixing issues. See the [contribution guide for n8n Docs](https://docs.n8n.io/contribute/contribution-guide-for-n8n-docs) for content types and the PR process, and the [style guide for n8n Docs](https://docs.n8n.io/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs) for writing conventions.
 
 The [n8n-docs repository](https://github.com/n8n-io/n8n-docs) hosts the source, with additional [contribution guidelines](https://github.com/n8n-io/n8n-docs/blob/master/CONTRIBUTING.md) for the pull request process.
 

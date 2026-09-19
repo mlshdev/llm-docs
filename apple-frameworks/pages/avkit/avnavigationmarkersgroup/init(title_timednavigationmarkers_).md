@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avnavigationmarkersgroup/init(title:timednavigationmarkers:)](https://developer.apple.com/documentation/avkit/avnavigationmarkersgroup/init(title:timednavigationmarkers:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avnavigationmarkersgroup/init(title:timednavigationmarkers:)
 
 # init(title:timedNavigationMarkers:) (Swift)
 
@@ -35,7 +36,7 @@ To create a chapter list, pass `nil` for the `title` parameter and set the group
 
 ## See Also
 
-### Creating a Navigation Marker Group
+### Creating a navigation marker group
 
 - [init(title:dateRangeNavigationMarkers:)](init%28title_daterangenavigationmarkers_%29.md): Initializes a navigation markers group with the specified title and array of date range navigation markers.
 
@@ -74,6 +75,6 @@ To create a chapter list, pass `nil` for the `title` parameter and set the group
 
 ## See Also
 
-### Creating a Navigation Marker Group
+### Creating a navigation marker group
 
 - [initWithTitle:dateRangeNavigationMarkers:](init%28title_daterangenavigationmarkers_%29.md): Initializes a navigation markers group with the specified title and array of date range navigation markers.

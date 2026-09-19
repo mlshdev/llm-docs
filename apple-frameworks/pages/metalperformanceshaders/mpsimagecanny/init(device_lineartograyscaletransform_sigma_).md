@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsimagecanny/init(device:lineartograyscaletransform:sigma:)](https://developer.apple.com/documentation/metalperformanceshaders/mpsimagecanny/init(device:lineartograyscaletransform:sigma:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpsimagecanny/init(device:lineartograyscaletransform:sigma:)
 
 # init(device:linearToGrayScaleTransform:sigma:) (Swift)
 

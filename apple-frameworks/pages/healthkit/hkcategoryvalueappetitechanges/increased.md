@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkcategoryvalueappetitechanges/increased](https://developer.apple.com/documentation/healthkit/hkcategoryvalueappetitechanges/increased)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkcategoryvalueappetitechanges/increased
 
 # HKCategoryValueAppetiteChanges.increased (Swift)
 

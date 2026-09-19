@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/synchronizing-events-across-multiple-devices-or-processes](https://developer.apple.com/documentation/metal/synchronizing-events-across-multiple-devices-or-processes)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/synchronizing-events-across-multiple-devices-or-processes
 
 # Synchronizing events across multiple devices or processes
 

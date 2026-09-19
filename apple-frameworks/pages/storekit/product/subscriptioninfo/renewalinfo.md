@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/product/subscriptioninfo/renewalinfo](https://developer.apple.com/documentation/storekit/product/subscriptioninfo/renewalinfo)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/product/subscriptioninfo/renewalinfo
 
 # Product.SubscriptionInfo.RenewalInfo
 
@@ -19,7 +20,7 @@ struct RenewalInfo
 - [Merchandising win-back offers in your app](../../merchandising-win-back-offers-in-your-app.md)
 - [Supporting offer codes in your app](../../supporting-offer-codes-in-your-app.md)
 - [Supporting subscription offer codes in your app](../../supporting-subscription-offer-codes-in-your-app.md)
-- [Testing failing subscription renewals and In-App Purchases](../../testing-failing-subscription-renewals-and-in-app-purchases.md)
+- [Testing failing subscription renewals and Apple In-App Purchases](../../testing-failing-subscription-renewals-and-in-app-purchases.md)
 
 <a id="overview"></a>
 

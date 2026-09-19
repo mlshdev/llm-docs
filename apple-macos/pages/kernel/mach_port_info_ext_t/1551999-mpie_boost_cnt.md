@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/mach_port_info_ext_t/1551999-mpie_boost_cnt](https://developer.apple.com/documentation/kernel/mach_port_info_ext_t/1551999-mpie_boost_cnt)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/mach_port_info_ext_t/1551999-mpie_boost_cnt
 
 # mpie_boost_cnt
 

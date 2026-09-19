@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/enhancing-your-ipad-app-with-pointer-interactions](https://developer.apple.com/documentation/uikit/enhancing-your-ipad-app-with-pointer-interactions)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/enhancing-your-ipad-app-with-pointer-interactions
 
 # Enhancing your iPad app with pointer interactions
 

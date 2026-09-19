@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsruleeditor/insertrow(at:with:assubrowofrow:animate:)](https://developer.apple.com/documentation/appkit/nsruleeditor/insertrow(at:with:assubrowofrow:animate:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsruleeditor/insertrow(at:with:assubrowofrow:animate:)
 
 # insertRow(at:with:asSubrowOfRow:animate:) (Swift)
 

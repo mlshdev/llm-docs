@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:timetoseekafterusernavigatedfrom:to:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:timetoseekafterusernavigatedfrom:to:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:timetoseekafterusernavigatedfrom:to:)
 
 # playerViewController(\_:timeToSeekAfterUserNavigatedFrom:to:) (Swift)
 
@@ -28,7 +29,7 @@ The time at which to begin playback.
 
 ## Mentioned In
 
-- [Working with Interstitial Content](../working-with-interstitial-content.md)
+- [Working with interstitial content](../working-with-interstitial-content.md)
 
 <a id="Discussion"></a>
 
@@ -38,7 +39,7 @@ The framework calls this method prior to beginning playback after a user-initiat
 
 ## See Also
 
-### Responding to Navigation Events
+### Responding to navigation events
 
 - [playerViewController(\_:willResumePlaybackAfterUserNavigatedFrom:to:)](playerviewcontroller%28__willresumeplaybackafterusernavigatedfrom_to_%29.md): Tells the delegate when the user navigates to a new time and playback is about to begin.
 - [skipToPreviousItem(for:)](skiptopreviousitem%28for_%29.md): Tells the delegate when the user requests skipping to the previous item in the timeline.
@@ -72,7 +73,7 @@ The time at which to begin playback.
 
 ## Mentioned In
 
-- [Working with Interstitial Content](../working-with-interstitial-content.md)
+- [Working with interstitial content](../working-with-interstitial-content.md)
 
 <a id="Discussion"></a>
 
@@ -82,7 +83,7 @@ The framework calls this method prior to beginning playback after a user-initiat
 
 ## See Also
 
-### Responding to Navigation Events
+### Responding to navigation events
 
 - [playerViewController:willResumePlaybackAfterUserNavigatedFromTime:toTime:](playerviewcontroller%28__willresumeplaybackafterusernavigatedfrom_to_%29.md): Tells the delegate when the user navigates to a new time and playback is about to begin.
 - [skipToPreviousItemForPlayerViewController:](skiptopreviousitem%28for_%29.md): Tells the delegate when the user requests skipping to the previous item in the timeline.

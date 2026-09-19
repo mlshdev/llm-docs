@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/createml/recording-or-choosing-training-videos](https://developer.apple.com/documentation/createml/recording-or-choosing-training-videos)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/createml/recording-or-choosing-training-videos
 
 # Gathering Training Videos for an Action Classifier
 

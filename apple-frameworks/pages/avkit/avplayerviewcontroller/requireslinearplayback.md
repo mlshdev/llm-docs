@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontroller/requireslinearplayback](https://developer.apple.com/documentation/avkit/avplayerviewcontroller/requireslinearplayback)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontroller/requireslinearplayback
 
 # requiresLinearPlayback (Swift)
 
@@ -16,8 +17,8 @@ var requiresLinearPlayback: Bool { get set }
 
 ## Mentioned In
 
-- [Adopting Picture in Picture in a Standard Player](../adopting-picture-in-picture-in-a-standard-player.md)
-- [Working with Interstitial Content](../working-with-interstitial-content.md)
+- [Adopting Picture in Picture in a standard player](../adopting-picture-in-picture-in-a-standard-player.md)
+- [Working with interstitial content](../working-with-interstitial-content.md)
 
 <a id="Discussion"></a>
 
@@ -43,8 +44,8 @@ A Boolean value that determines whether the player allows someone to skip media 
 
 ## Mentioned In
 
-- [Adopting Picture in Picture in a Standard Player](../adopting-picture-in-picture-in-a-standard-player.md)
-- [Working with Interstitial Content](../working-with-interstitial-content.md)
+- [Adopting Picture in Picture in a standard player](../adopting-picture-in-picture-in-a-standard-player.md)
+- [Working with interstitial content](../working-with-interstitial-content.md)
 
 <a id="Discussion"></a>
 

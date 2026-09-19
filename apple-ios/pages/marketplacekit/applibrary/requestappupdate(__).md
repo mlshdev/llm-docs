@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/applibrary/requestappupdate(_:)](https://developer.apple.com/documentation/marketplacekit/applibrary/requestappupdate(_:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/marketplacekit/applibrary/requestappupdate(_:)
 
 # requestAppUpdate(\_:)
 
@@ -18,4 +19,4 @@ nonisolated final func requestAppUpdate(_ request: AppLibrary.InstallationReques
 
 ### Updating apps
 
-- [requestLicenseRenewal(appleItemIDs:)](requestlicenserenewal%28appleitemids_%29.md): Instructs iOS to request an updated app license from your marketplace server for the given app identifier.
+- [requestLicenseRenewal(appleItemIDs:)](requestlicenserenewal%28appleitemids_%29.md): Instructs the system to request an updated app license from your marketplace server for the given app identifier.

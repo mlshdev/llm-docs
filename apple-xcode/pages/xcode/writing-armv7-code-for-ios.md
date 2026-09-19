@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/writing-armv7-code-for-ios](https://developer.apple.com/documentation/xcode/writing-armv7-code-for-ios)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/writing-armv7-code-for-ios
 
 # Writing ARMv7 code for iOS
 

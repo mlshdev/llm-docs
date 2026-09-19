@@ -1,12 +1,15 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/externalpurchasecustomlink/shownotice(type:)](https://developer.apple.com/documentation/storekit/externalpurchasecustomlink/shownotice(type:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/externalpurchasecustomlink/shownotice(type:)
 
 # showNotice(type:)
 
 **Framework:** StoreKit  
 **Kind:** Type Method  
-**Availability:** iOS 18.1+ · iPadOS 18.1+ · Mac Catalyst 18.1+ · macOS 15.1+ · tvOS 18.1+ · visionOS 2.1+ · watchOS 11.1+
+**Availability:** iOS 18.1+ (deprecated in 27.2) · iPadOS 18.1+ (deprecated in 27.2) · Mac Catalyst 18.1+ (deprecated in 27.2) · macOS 15.1+ (deprecated in 27.2) · tvOS 18.1+ (deprecated in 27.2) · visionOS 2.1+ (deprecated in 27.2) · watchOS 11.1+ (deprecated in 27.2)
 
 Displays the system disclosure notice sheet and asks the customer whether to continue.
+
+> Use \`showNotice(for:)\` instead.
 
 ## Declaration
 
@@ -43,7 +46,7 @@ For example code that calls this method, see [ExternalPurchaseCustomLink](../ext
 
 ## See Also
 
-### Displaying the disclosure sheet
+### Deprecated methods and values
 
-- [ExternalPurchaseCustomLink.NoticeType](noticetype.md): The custom link out style that informs the type of disclosure notice to display.
-- [ExternalPurchaseCustomLink.NoticeResult](noticeresult.md): The result of showing the disclosure notice.
+- [ExternalPurchaseCustomLink.NoticeType](noticetype.md): Deprecated. The custom link out style that informs the type of disclosure notice to display.
+- [token(for:)](token%28for_%29-1fyo.md): Deprecated. Returns an external purchase token of the specified type.

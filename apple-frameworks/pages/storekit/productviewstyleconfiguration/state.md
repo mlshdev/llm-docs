@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/productviewstyleconfiguration/state](https://developer.apple.com/documentation/storekit/productviewstyleconfiguration/state)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/productviewstyleconfiguration/state
 
 # state
 
@@ -18,5 +19,5 @@ let state: Product.TaskState
 
 ### Getting a product’s information
 
-- [product](product.md): The in-app purchase product to merchandise.
-- [hasCurrentEntitlement](hascurrententitlement.md): A Boolean value that indicates whether an in-app purchase transaction exists for the product.
+- [product](product.md): The Apple In-App Purchase product to merchandise.
+- [hasCurrentEntitlement](hascurrententitlement.md): A Boolean value that indicates whether an Apple In-App Purchase transaction exists for the product.

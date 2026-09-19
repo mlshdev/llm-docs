@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1643411-anonymous/kmmccmd_load_unload_medium](https://developer.apple.com/documentation/kernel/1643411-anonymous/kmmccmd_load_unload_medium)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1643411-anonymous/kmmccmd_load_unload_medium
 
 # kMMCCmd_LOAD_UNLOAD_MEDIUM
 

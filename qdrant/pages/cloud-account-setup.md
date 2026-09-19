@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-account-setup.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/cloud-account-setup.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-account-setup.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/cloud-account-setup.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud-account-setup/
 
 # Setting up a Qdrant Cloud Account
@@ -22,7 +22,7 @@ Once you sign in, the Qdrant Cloud Console is organized around three areas:
 - The **account switcher** at the top left lets you switch between the accounts you own or have been invited to, create new accounts, and open the accounts overview.
 - The **user menu** at the bottom left contains your personal, user-level options — like your user specific settings, invitations, and the management of your accounts. These are documented on the [User Profile](https://qdrant.tech/documentation/cloud-user-profile/) page.
 
-![Qdrant Cloud Console overview](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/console-overview.png)
+![Qdrant Cloud Console overview](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/console-overview.png)
 
 The **Get Started** page (**Explore Qdrant Cloud**) is your landing page for connecting to clusters, loading sample data, migrating data, and using Cloud Inference. See [Getting Started](https://qdrant.tech/documentation/cloud-getting-started/) for a guided walkthrough.
 
@@ -30,7 +30,7 @@ The **Get Started** page (**Explore Qdrant Cloud**) is your landing page for con
 
 If you have access to multiple accounts, you can switch between them with the account switcher at the top left of the Console. Each account shows your role in it, for example an **OWNER** badge for accounts you own.
 
-![Switching between accounts](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/account-switcher.png)
+![Switching between accounts](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/account-switcher.png)
 
 ## Creating Additional Accounts
 
@@ -46,7 +46,7 @@ When creating an account you provide:
 
 Each user can own up to **5 accounts**. The dialog shows how many you have created (for example, *4/5 Accounts Created*).
 
-![Create a new account](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/create-account-modal.png)
+![Create a new account](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/create-account-modal.png)
 
 ## Managing Accounts
 
@@ -54,13 +54,13 @@ Open the **Accounts** page from the user menu (**Accounts**) or from the account
 
 For each account you can set it as the default (**Make Default**) or open its **Settings**. Each account also displays its unique **Account ID**, which you may need when contacting support or using the Cloud API.
 
-![Managing accounts](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/accounts-list.png)
+![Managing accounts](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/accounts-list.png)
 
 ## Account Settings
 
 Open **Settings** for an account (from the **Accounts** page or the left navigation) to view and manage account details, including the **Account ID**, **Company**, **Account Owner**, and creation date.
 
-![Account settings](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/documentation/cloud/account-settings.png)
+![Account settings](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/account-settings.png)
 
 ### Editing Account Details
 

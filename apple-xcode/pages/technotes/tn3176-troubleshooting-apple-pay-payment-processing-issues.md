@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/technotes/tn3176-troubleshooting-apple-pay-payment-processing-issues](https://developer.apple.com/documentation/technotes/tn3176-troubleshooting-apple-pay-payment-processing-issues)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/technotes/tn3176-troubleshooting-apple-pay-payment-processing-issues
 
 # TN3176: Troubleshooting Apple Pay payment processing issues
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/setting-up-promotional-offers](https://developer.apple.com/documentation/storekit/setting-up-promotional-offers)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/setting-up-promotional-offers
 
 # Setting up promotional offers
 
@@ -19,7 +20,7 @@ Before you can provide promotional offers in your app, you must first generate a
 
 > **Note**
 
->  If your goal is to attract new users, use introductory offers and promote the in-app purchase on the App Store. Redeeming an introductory offer doesn’t affect a user’s eligibility for a promotional offer. For more information, see [Implementing introductory offers in your app](implementing-introductory-offers-in-your-app.md).
+>  If your goal is to attract new users, use introductory offers and promote the Apple In-App Purchase on the App Store. Redeeming an introductory offer doesn’t affect a user’s eligibility for a promotional offer. For more information, see [Implementing introductory offers in your app](implementing-introductory-offers-in-your-app.md).
 
 <a id="Generate-a-Private-Key"></a>
 

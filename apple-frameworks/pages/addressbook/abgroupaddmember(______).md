@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/addressbook/abgroupaddmember(_:_:_:)](https://developer.apple.com/documentation/addressbook/abgroupaddmember(_:_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/addressbook/abgroupaddmember(_:_:_:)
 
 # ABGroupAddMember(\_:\_:\_:) (Swift)
 
@@ -71,15 +72,14 @@ extern bool ABGroupAddMember(ABGroupRef group, ABPersonRef personToAdd);
 ## Parameters
 
 - `group`: The group you wish to add `person` to.
-- `personToAdd`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
 - `person`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
-- `error`: On output, a pointer to an error object that describes why the method failed, or `nil` if no error occurred. If you are not interested in the error information, pass `nil` for this parameter.
+- `personToAdd`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
 
 <a id="return-value"></a>
 
 ## Return Value
 
-`true` ifsuccessful, false otherwise. For example, if `person` isalready in `group`, this function doesnothing but returns `false`. On failure, this method returns `nil`.
+`true` ifsuccessful, false otherwise. For example, if `person` isalready in `group`, this function doesnothing but returns `false`.
 
 ## See Also
 

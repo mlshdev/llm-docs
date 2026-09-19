@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/widgetkit/creating-accessory-widgets-and-watch-complications](https://developer.apple.com/documentation/widgetkit/creating-accessory-widgets-and-watch-complications)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/widgetkit/creating-accessory-widgets-and-watch-complications
 
 # Creating accessory widgets and watch complications (Swift)
 
@@ -75,8 +76,13 @@ Additionally, consider adding support for iOS by adding an iOS app target to you
 ### Accessory and watchOS widgets
 
 - [AccessoryWidgetGroup](accessorywidgetgroup.md): A view type that has a label at the top and three content views masked with a circle or rounded square.
-- [AccessoryWidgetGroupStyle](accessorywidgetgroupstyle.md): The style for an [AccessoryWidgetGroup](accessorywidgetgroup.md) view.
+- [AccessoryWidgetGroupStyle](accessorywidgetgroupstyle.md): The style for an accessory widget group view.
 - [Migrating ClockKit complications to WidgetKit](converting-a-clockkit-app.md): Leverage WidgetKit’s API to create watchOS complications using SwiftUI.
+- [widgetCurvesContent(\_:)](https://developer.apple.com/documentation/swiftui/view/widgetcurvescontent%28_:%29): Displays the widget’s content along a curve if the context allows it.
+- [widgetLabel(\_:)](https://developer.apple.com/documentation/swiftui/view/widgetlabel%28_:%29): Returns a localized text label that displays additional content outside the accessory family widget’s main SwiftUI view.
+- [widgetLabel(label:)](https://developer.apple.com/documentation/swiftui/view/widgetlabel%28label:%29): Creates a label for displaying additional content outside an accessory family widget’s main SwiftUI view.
+- [showsWidgetLabel](https://developer.apple.com/documentation/swiftui/environmentvalues/showswidgetlabel): A Boolean value that indicates whether an accessory family widget can display an accessory label.
+- [accessoryWidgetGroupStyle(\_:)](https://developer.apple.com/documentation/swiftui/view/accessorywidgetgroupstyle%28_:%29): The view modifier that can be applied to `AccessoryWidgetGroup` to specify the shape the three content views will be masked with. The value of `style` is set to `.automatic`, which is `.circular` by default.
 
 # Creating accessory widgets and watch complications (Objective-C)
 

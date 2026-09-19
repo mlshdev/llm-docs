@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoselectorvaluedescription/m_name](https://developer.apple.com/documentation/videodriverkit/iouservideoselectorvaluedescription/m_name)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoselectorvaluedescription/m_name
 
 # m_name
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Property  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,5 +19,5 @@ OSSharedPtr<OSString> m_name;
 
 ### Accessing description properties
 
-- [m_value](m_value.md)
-- [IOUserVideoSelectorValue](../iouservideoselectorvalue.md): Selector value for controls.
+- [m_value](m_value.md): Beta.
+- [IOUserVideoSelectorValue](../iouservideoselectorvalue.md): Beta. Selector value for controls.

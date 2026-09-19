@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/corehid/hidelement/value/init(element:fromphysicalvalue:timestamp:)](https://developer.apple.com/documentation/corehid/hidelement/value/init(element:fromphysicalvalue:timestamp:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corehid/hidelement/value/init(element:fromphysicalvalue:timestamp:)
 
 # init(element:fromPhysicalValue:timestamp:)
 

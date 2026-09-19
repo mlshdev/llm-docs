@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/testing/expect(throws:_:sourcelocation:performing:)-1hfms](https://developer.apple.com/documentation/testing/expect(throws:_:sourcelocation:performing:)-1hfms)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/testing/expect(throws:_:sourcelocation:performing:)-1hfms
 
 # expect(throws:\_:sourceLocation:performing:)
 

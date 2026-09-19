@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_acl_preauth_tracking_unknown](https://developer.apple.com/documentation/security/cssm_acl_preauth_tracking_unknown)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_acl_preauth_tracking_unknown
 
 # CSSM_ACL_PREAUTH_TRACKING_UNKNOWN (Swift)
 

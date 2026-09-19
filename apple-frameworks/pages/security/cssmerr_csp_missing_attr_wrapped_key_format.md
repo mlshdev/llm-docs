@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_csp_missing_attr_wrapped_key_format](https://developer.apple.com/documentation/security/cssmerr_csp_missing_attr_wrapped_key_format)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_csp_missing_attr_wrapped_key_format
 
 # CSSMERR_CSP_MISSING_ATTR_WRAPPED_KEY_FORMAT (Swift)
 

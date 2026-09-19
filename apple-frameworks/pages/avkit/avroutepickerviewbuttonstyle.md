@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avroutepickerviewbuttonstyle](https://developer.apple.com/documentation/avkit/avroutepickerviewbuttonstyle)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avroutepickerviewbuttonstyle
 
 # AVRoutePickerViewButtonStyle (Swift)
 
@@ -20,7 +21,7 @@ enum AVRoutePickerViewButtonStyle
 
 - [init(rawValue:)](avroutepickerviewbuttonstyle/init%28rawvalue_%29.md)
 
-### Button Styles
+### Button styles
 
 - [AVRoutePickerViewButtonStyle.custom](avroutepickerviewbuttonstyle/custom.md): A custom button style.
 - [AVRoutePickerViewButtonStyle.plain](avroutepickerviewbuttonstyle/plain.md): A plain button style.
@@ -39,15 +40,10 @@ enum AVRoutePickerViewButtonStyle
 
 ## See Also
 
-### Configuring the route picker view
+### Route selection
 
-- [activeTintColor](avroutepickerview/activetintcolor.md): The view’s tint color when AirPlay is active.
-- [isRoutePickerButtonBordered](avroutepickerview/isroutepickerbuttonbordered.md): A Boolean value that indicates whether the route picker button has a border.
-- [prioritizesVideoDevices](avroutepickerview/prioritizesvideodevices.md): A Boolean value that indicates whether the route picker sorts video output devices to the top of the list.
-- [routePickerButtonStyle](avroutepickerview/routepickerbuttonstyle.md): The button style for the route picker.
-- [routePickerButtonColor(for:)](avroutepickerview/routepickerbuttoncolor%28for_%29.md): Returns the color of the picker button for the specified state.
-- [setRoutePickerButtonColor(\_:for:)](avroutepickerview/setroutepickerbuttoncolor%28__for_%29.md): Sets the route picker button color for the specified state.
-- [AVRoutePickerView.ButtonState](avroutepickerview/buttonstate.md): Constants that describe the available button states.
+- [AVRoutePickerView](avroutepickerview.md): A view that presents a list of nearby media receivers.
+- [AVRoutePickerViewDelegate](avroutepickerviewdelegate.md): A protocol that defines the methods to adopt to respond to route picker view presentation events.
 
 # AVRoutePickerViewButtonStyle (Objective-C)
 
@@ -65,7 +61,7 @@ enum AVRoutePickerViewButtonStyle : NSInteger;
 
 ## Topics
 
-### Button Styles
+### Button styles
 
 - [AVRoutePickerViewButtonStyleCustom](avroutepickerviewbuttonstyle/custom.md): A custom button style.
 - [AVRoutePickerViewButtonStylePlain](avroutepickerviewbuttonstyle/plain.md): A plain button style.
@@ -73,12 +69,8 @@ enum AVRoutePickerViewButtonStyle : NSInteger;
 
 ## See Also
 
-### Configuring the route picker view
+### Route selection
 
-- [activeTintColor](avroutepickerview/activetintcolor.md): The view’s tint color when AirPlay is active.
-- [routePickerButtonBordered](avroutepickerview/isroutepickerbuttonbordered.md): A Boolean value that indicates whether the route picker button has a border.
-- [prioritizesVideoDevices](avroutepickerview/prioritizesvideodevices.md): A Boolean value that indicates whether the route picker sorts video output devices to the top of the list.
-- [routePickerButtonStyle](avroutepickerview/routepickerbuttonstyle.md): The button style for the route picker.
-- [routePickerButtonColorForState:](avroutepickerview/routepickerbuttoncolor%28for_%29.md): Returns the color of the picker button for the specified state.
-- [setRoutePickerButtonColor:forState:](avroutepickerview/setroutepickerbuttoncolor%28__for_%29.md): Sets the route picker button color for the specified state.
-- [AVRoutePickerViewButtonState](avroutepickerview/buttonstate.md): Constants that describe the available button states.
+- [AVRoutePickerView](avroutepickerview.md): A view that presents a list of nearby media receivers.
+- [AVRoutePickerViewDelegate](avroutepickerviewdelegate.md): A protocol that defines the methods to adopt to respond to route picker view presentation events.
+- [AVAudioSessionRouteSelection](avaudiosessionrouteselection.md): Constants that indicate the audio route selection.

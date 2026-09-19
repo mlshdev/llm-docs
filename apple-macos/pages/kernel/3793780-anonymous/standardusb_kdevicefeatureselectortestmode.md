@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3793780-anonymous/standardusb_kdevicefeatureselectortestmode](https://developer.apple.com/documentation/kernel/3793780-anonymous/standardusb_kdevicefeatureselectortestmode)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3793780-anonymous/standardusb_kdevicefeatureselectortestmode
 
 # StandardUSB::kDeviceFeatureSelectorTestMode
 

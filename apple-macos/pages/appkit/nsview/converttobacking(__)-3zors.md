@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsview/converttobacking(_:)-3zors](https://developer.apple.com/documentation/appkit/nsview/converttobacking(_:)-3zors)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsview/converttobacking(_:)-3zors
 
 # convertToBacking(\_:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/kcd_compression_type_t/kcdct_zlib](https://developer.apple.com/documentation/kernel/kcd_compression_type_t/kcdct_zlib)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/kcd_compression_type_t/kcdct_zlib
 
 # KCDCT_ZLIB
 

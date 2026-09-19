@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/shadergraph/realitykit/image-3d-lod-pixel-(realitykit)](https://developer.apple.com/documentation/shadergraph/realitykit/image-3d-lod-pixel-(realitykit))
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/shadergraph/realitykit/image-3d-lod-pixel-(realitykit)
 
 # Image 3D LOD Pixel (RealityKit)
 

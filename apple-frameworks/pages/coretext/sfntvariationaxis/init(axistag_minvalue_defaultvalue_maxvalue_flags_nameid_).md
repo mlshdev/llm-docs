@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coretext/sfntvariationaxis/init(axistag:minvalue:defaultvalue:maxvalue:flags:nameid:)](https://developer.apple.com/documentation/coretext/sfntvariationaxis/init(axistag:minvalue:defaultvalue:maxvalue:flags:nameid:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coretext/sfntvariationaxis/init(axistag:minvalue:defaultvalue:maxvalue:flags:nameid:)
 
 # init(axisTag:minValue:defaultValue:maxValue:flags:nameID:)
 

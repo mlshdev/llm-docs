@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsbutton/bezelstyle-swift.enum/toolbar](https://developer.apple.com/documentation/appkit/nsbutton/bezelstyle-swift.enum/toolbar)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsbutton/bezelstyle-swift.enum/toolbar
 
 # NSButton.BezelStyle.toolbar (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_simd_fp_reg_q20](https://developer.apple.com/documentation/hypervisor/hv_simd_fp_reg_q20)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_simd_fp_reg_q20
 
 # HV_SIMD_FP_REG_Q20 (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/mediaextension/mevideodecoderextension](https://developer.apple.com/documentation/mediaextension/mevideodecoderextension)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mediaextension/mevideodecoderextension
 
 # MEVideoDecoderExtension (Swift)
 
@@ -37,6 +38,7 @@ This protocol provides a factory method to create a new [MEVideoDecoder](mevideo
 
 ### Video decoders
 
+- [Supporting custom media formats and decoders](supporting-custom-media-formats-and-decoders.md): Extend the media formats the system can open by providing a format reader and a video decoder.
 - [MEVideoDecoder](mevideodecoder.md): A protocol that defines the requirements for a video decoder.
 - [MEDecodeFrameOptions](medecodeframeoptions.md): An object that guides the video decoder operation on a per-frame basis.
 - [MEVideoDecoderPixelBufferManager](mevideodecoderpixelbuffermanager.md): Describes pixel buffer requirements and creates new pixel buffers.
@@ -80,6 +82,7 @@ This protocol provides a factory method to create a new [MEVideoDecoder](mevideo
 
 ### Video decoders
 
+- [Supporting custom media formats and decoders](supporting-custom-media-formats-and-decoders.md): Extend the media formats the system can open by providing a format reader and a video decoder.
 - [MEVideoDecoder](mevideodecoder.md): A protocol that defines the requirements for a video decoder.
 - [MEDecodeFrameOptions](medecodeframeoptions.md): An object that guides the video decoder operation on a per-frame basis.
 - [MEVideoDecoderPixelBufferManager](mevideodecoderpixelbuffermanager.md): Describes pixel buffer requirements and creates new pixel buffers.

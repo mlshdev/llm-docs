@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/analyzing-audio-performance-with-instruments](https://developer.apple.com/documentation/audiotoolbox/analyzing-audio-performance-with-instruments)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/analyzing-audio-performance-with-instruments
 
 # Analyzing audio performance with Instruments
 

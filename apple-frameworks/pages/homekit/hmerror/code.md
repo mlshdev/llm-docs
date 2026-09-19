@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/homekit/hmerror/code](https://developer.apple.com/documentation/homekit/hmerror/code)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/homekit/hmerror/code
 
 # HMError.Code (Swift)
 
@@ -184,6 +185,7 @@ enum Code
 
 - [HMError.Code.partialCommunicationFailure](code/partialcommunicationfailure.md)
 - [HMError.Code.homeUpgradeRequired](code/homeupgraderequired.md)
+- [HMError.Code.nfcReaderTooHot](code/nfcreadertoohot.md): Beta.
 
 ### Initializers
 
@@ -391,6 +393,7 @@ enum HMErrorCode : NSInteger;
 
 - [HMErrorCodePartialCommunicationFailure](code/partialcommunicationfailure.md)
 - [HMErrorCodeHomeUpgradeRequired](code/homeupgraderequired.md)
+- [HMErrorCodeNFCReaderTooHot](code/nfcreadertoohot.md): Beta.
 - [HMErrorCodeIncompatibleHomeHub](../hmerrorcode/hmerrorcodeincompatiblehomehub.md): Deprecated. An error indicating an incompatible home hub.
 
 ## See Also

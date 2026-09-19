@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vforce/asin(_:result:)-94jmy](https://developer.apple.com/documentation/accelerate/vforce/asin(_:result:)-94jmy)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vforce/asin(_:result:)-94jmy
 
 # asin(\_:result:)
 

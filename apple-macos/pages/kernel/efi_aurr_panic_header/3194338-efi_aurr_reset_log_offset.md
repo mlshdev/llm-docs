@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/efi_aurr_panic_header/3194338-efi_aurr_reset_log_offset](https://developer.apple.com/documentation/kernel/efi_aurr_panic_header/3194338-efi_aurr_reset_log_offset)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/efi_aurr_panic_header/3194338-efi_aurr_reset_log_offset
 
 # efi_aurr_reset_log_offset
 

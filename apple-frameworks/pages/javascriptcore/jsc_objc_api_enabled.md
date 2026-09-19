@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/javascriptcore/jsc_objc_api_enabled](https://developer.apple.com/documentation/javascriptcore/jsc_objc_api_enabled)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsc_objc_api_enabled
 
 # JSC_OBJC_API_ENABLED (Swift)
 

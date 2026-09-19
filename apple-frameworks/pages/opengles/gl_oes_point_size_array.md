@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_oes_point_size_array](https://developer.apple.com/documentation/opengles/gl_oes_point_size_array)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_oes_point_size_array
 
 # GL_OES_point_size_array (Swift)
 

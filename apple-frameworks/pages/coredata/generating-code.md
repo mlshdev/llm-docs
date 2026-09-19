@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coredata/generating-code](https://developer.apple.com/documentation/coredata/generating-code)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coredata/generating-code
 
 # Generating code
 
@@ -44,6 +45,7 @@ The properties file declares an extension to hold the `@NSManaged` properties th
 
 import Foundation
 import CoreData
+
 
 extension Store {
 

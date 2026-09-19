@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/dvddiscinfo/1564379-numberofopctableentries](https://developer.apple.com/documentation/kernel/dvddiscinfo/1564379-numberofopctableentries)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/dvddiscinfo/1564379-numberofopctableentries
 
 # numberOfOPCTableEntries
 

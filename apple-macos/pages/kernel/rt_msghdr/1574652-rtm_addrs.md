@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/rt_msghdr/1574652-rtm_addrs](https://developer.apple.com/documentation/kernel/rt_msghdr/1574652-rtm_addrs)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/rt_msghdr/1574652-rtm_addrs
 
 # rtm_addrs
 

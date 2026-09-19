@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/fat_header/1558629-nfat_arch](https://developer.apple.com/documentation/kernel/fat_header/1558629-nfat_arch)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/fat_header/1558629-nfat_arch
 
 # nfat_arch
 

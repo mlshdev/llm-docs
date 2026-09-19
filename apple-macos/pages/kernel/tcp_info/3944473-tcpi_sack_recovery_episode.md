@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/tcp_info/3944473-tcpi_sack_recovery_episode](https://developer.apple.com/documentation/kernel/tcp_info/3944473-tcpi_sack_recovery_episode)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/tcp_info/3944473-tcpi_sack_recovery_episode
 
 # tcpi_sack_recovery_episode
 

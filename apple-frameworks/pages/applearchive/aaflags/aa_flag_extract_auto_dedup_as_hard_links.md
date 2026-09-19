@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applearchive/aaflags/aa_flag_extract_auto_dedup_as_hard_links](https://developer.apple.com/documentation/applearchive/aaflags/aa_flag_extract_auto_dedup_as_hard_links)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applearchive/aaflags/aa_flag_extract_auto_dedup_as_hard_links
 
 # AA_FLAG_EXTRACT_AUTO_DEDUP_AS_HARD_LINKS
 

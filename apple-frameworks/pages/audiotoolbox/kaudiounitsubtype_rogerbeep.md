@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/kaudiounitsubtype_rogerbeep](https://developer.apple.com/documentation/audiotoolbox/kaudiounitsubtype_rogerbeep)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiounitsubtype_rogerbeep
 
 # kAudioUnitSubType_RogerBeep (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiviewcontroller/parent](https://developer.apple.com/documentation/uikit/uiviewcontroller/parent)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiviewcontroller/parent
 
 # parent (Swift)
 
@@ -31,6 +32,7 @@ Prior to iOS 5.0, if a view did not have a parent view controller and was being 
 - [splitViewController](splitviewcontroller.md): The nearest ancestor in the view controller hierarchy that is a split view controller.
 - [navigationController](navigationcontroller.md): The nearest ancestor in the view controller hierarchy that is a navigation controller.
 - [tabBarController](tabbarcontroller.md): The nearest ancestor in the view controller hierarchy that is a tab bar controller.
+- [arrangementViewController](arrangementviewcontroller.md): Beta. The nearest ancestor arrangement view controller.
 
 # parentViewController (Objective-C)
 
@@ -63,3 +65,4 @@ Prior to iOS 5.0, if a view did not have a parent view controller and was being 
 - [splitViewController](splitviewcontroller.md): The nearest ancestor in the view controller hierarchy that is a split view controller.
 - [navigationController](navigationcontroller.md): The nearest ancestor in the view controller hierarchy that is a navigation controller.
 - [tabBarController](tabbarcontroller.md): The nearest ancestor in the view controller hierarchy that is a tab bar controller.
+- [arrangementViewController](arrangementviewcontroller.md): Beta. The nearest ancestor arrangement view controller.

@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/understand-workflows/create-and-run-workflows.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/understand-workflows/create-and-run-workflows.md)
+> Pinned source for n8n main: [docs/build/understand-workflows/create-and-run-workflows.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/understand-workflows/create-and-run-workflows.md)
 
 # Create and run workflows
 
@@ -37,3 +37,12 @@ Published workflows run whenever its trigger conditions are met.
 [^1]: An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs and execute sequentially to achieve complex tasks.
 
 [^2]: The canvas is the main interface for building workflows in n8n's editor UI. You use the canvas to add and connect nodes to compose workflows.
+
+## Related resources
+
+- [Understand workflows](https://docs.n8n.io/build/understand-workflows)
+- [Save and publish workflows](https://docs.n8n.io/build/understand-workflows/save-and-publish-workflows)
+- [Create and edit credentials](https://docs.n8n.io/build/understand-workflows/create-and-edit-credentials)
+- [Use Gateway credits](https://docs.n8n.io/build/understand-workflows/use-gateway-credits)
+- [Workflow components](https://docs.n8n.io/build/understand-workflows/workflow-components)
+- [Understand executions](https://docs.n8n.io/build/understand-workflows/understand-executions)

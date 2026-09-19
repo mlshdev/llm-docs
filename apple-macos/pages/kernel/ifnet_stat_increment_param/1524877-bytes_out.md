@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ifnet_stat_increment_param/1524877-bytes_out](https://developer.apple.com/documentation/kernel/ifnet_stat_increment_param/1524877-bytes_out)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ifnet_stat_increment_param/1524877-bytes_out
 
 # bytes_out
 

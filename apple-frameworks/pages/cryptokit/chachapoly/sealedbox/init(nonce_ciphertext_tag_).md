@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cryptokit/chachapoly/sealedbox/init(nonce:ciphertext:tag:)](https://developer.apple.com/documentation/cryptokit/chachapoly/sealedbox/init(nonce:ciphertext:tag:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/cryptokit/chachapoly/sealedbox/init(nonce:ciphertext:tag:)
 
 # init(nonce:ciphertext:tag:)
 

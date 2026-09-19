@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/iousbdeviceinterface300/1559323-getconfigurationdescriptorptr](https://developer.apple.com/documentation/iokit/iousbdeviceinterface300/1559323-getconfigurationdescriptorptr)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/iousbdeviceinterface300/1559323-getconfigurationdescriptorptr
 
 # GetConfigurationDescriptorPtr
 

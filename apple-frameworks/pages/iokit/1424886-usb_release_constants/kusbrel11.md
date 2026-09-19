@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1424886-usb_release_constants/kusbrel11](https://developer.apple.com/documentation/iokit/1424886-usb_release_constants/kusbrel11)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1424886-usb_release_constants/kusbrel11
 
 # kUSBRel11
 

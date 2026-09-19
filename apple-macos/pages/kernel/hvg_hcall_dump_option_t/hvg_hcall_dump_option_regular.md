@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/hvg_hcall_dump_option_t/hvg_hcall_dump_option_regular](https://developer.apple.com/documentation/kernel/hvg_hcall_dump_option_t/hvg_hcall_dump_option_regular)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/hvg_hcall_dump_option_t/hvg_hcall_dump_option_regular
 
 # HVG_HCALL_DUMP_OPTION_REGULAR
 

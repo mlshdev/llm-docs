@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/imagecapturecore/imagecapture_ios_osx_sim](https://developer.apple.com/documentation/imagecapturecore/imagecapture_ios_osx_sim)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/imagecapturecore/imagecapture_ios_osx_sim
 
 # IMAGECAPTURE_IOS_OSX_SIM
 

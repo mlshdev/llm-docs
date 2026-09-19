@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/iobluetoothl2capchannel/register(forchannelclosenotification:selector:)](https://developer.apple.com/documentation/iobluetooth/iobluetoothl2capchannel/register(forchannelclosenotification:selector:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetooth/iobluetoothl2capchannel/register(forchannelclosenotification:selector:)
 
 # register(forChannelCloseNotification:selector:) (Swift)
 

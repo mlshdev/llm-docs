@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiuseractivityrestoring](https://developer.apple.com/documentation/uikit/uiuseractivityrestoring)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiuseractivityrestoring
 
 # UIUserActivityRestoring (Swift)
 
@@ -35,6 +36,7 @@ The protocol you adopt to restore an object’s state from a user activity.
 - [UIAlertController](uialertcontroller.md)
 - [UIAlertView](uialertview.md)
 - [UIApplication](uiapplication.md)
+- [UIArrangementViewController](uiarrangementviewcontroller.md)
 - [UIBackgroundExtensionView](uibackgroundextensionview.md)
 - [UIButton](uibutton.md)
 - [UICalendarView](uicalendarview.md)

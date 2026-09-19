@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/ar_object_tracking_configuration_set_maximum_instances_per_reference_object](https://developer.apple.com/documentation/arkit/ar_object_tracking_configuration_set_maximum_instances_per_reference_object)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/ar_object_tracking_configuration_set_maximum_instances_per_reference_object
 
 # ar_object_tracking_configuration_set_maximum_instances_per_reference_object
 

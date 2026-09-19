@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/advancedcommerceproduct/init(id:)](https://developer.apple.com/documentation/storekit/advancedcommerceproduct/init(id:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/advancedcommerceproduct/init(id:)
 
 # init(id:)
 
@@ -18,4 +19,4 @@ init(id: AdvancedCommerceProduct.ID) async throws
 
 ## Discussion
 
-This initializer throws [StoreKitError.unsupported](../storekiterror/unsupported.md) if you provide the product ID of an In-App Purchase that doesn’t have access to [Advanced Commerce API](https://developer.apple.com/in-app-purchase/advanced-commerce-api/).
+This initializer throws [StoreKitError.unsupported](../storekiterror/unsupported.md) if you provide the product ID of an Apple In-App Purchase that doesn’t have access to [Advanced Commerce API](https://developer.apple.com/in-app-purchase/advanced-commerce-api/).

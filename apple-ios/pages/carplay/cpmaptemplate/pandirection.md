@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/carplay/cpmaptemplate/pandirection](https://developer.apple.com/documentation/carplay/cpmaptemplate/pandirection)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplate/pandirection
 
 # CPMapTemplate.PanDirection (Swift)
 

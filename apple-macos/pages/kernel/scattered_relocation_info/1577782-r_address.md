@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/scattered_relocation_info/1577782-r_address](https://developer.apple.com/documentation/kernel/scattered_relocation_info/1577782-r_address)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/scattered_relocation_info/1577782-r_address
 
 # r_address
 

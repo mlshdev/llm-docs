@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsgesturerecognizer/delayssecondarymousebuttonevents](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/delayssecondarymousebuttonevents)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsgesturerecognizer/delayssecondarymousebuttonevents
 
 # delaysSecondaryMouseButtonEvents (Swift)
 
@@ -24,7 +25,7 @@ The default value of this property is [false](https://developer.apple.com/docume
 
 ## See Also
 
-### Delaying Events
+### Delaying events
 
 - [delaysPrimaryMouseButtonEvents](delaysprimarymousebuttonevents.md): A Boolean value that indicates whether primary mouse button events are delivered only after gesture recognition fails.
 - [delaysOtherMouseButtonEvents](delaysothermousebuttonevents.md): A Boolean value that indicates whether other mouse button events are delivered only after gesture recognition fails.
@@ -56,7 +57,7 @@ The default value of this property is [false](https://developer.apple.com/docume
 
 ## See Also
 
-### Delaying Events
+### Delaying events
 
 - [delaysPrimaryMouseButtonEvents](delaysprimarymousebuttonevents.md): A Boolean value that indicates whether primary mouse button events are delivered only after gesture recognition fails.
 - [delaysOtherMouseButtonEvents](delaysothermousebuttonevents.md): A Boolean value that indicates whether other mouse button events are delivered only after gesture recognition fails.

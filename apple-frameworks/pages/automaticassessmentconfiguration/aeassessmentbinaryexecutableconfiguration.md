@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/automaticassessmentconfiguration/aeassessmentbinaryexecutableconfiguration](https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentbinaryexecutableconfiguration)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentbinaryexecutableconfiguration
 
 # AEAssessmentBinaryExecutableConfiguration (Swift)
 
@@ -18,7 +19,7 @@ class AEAssessmentBinaryExecutableConfiguration
 
 ## Overview
 
-A non-bundled executable (such as a launchd daemon) is headless, so it supports only the subset of participant policies that apply to a process without UI: network access and whether the assessment requires it. The UI-oriented policies of [AEAssessmentParticipantConfiguration](aeassessmentparticipantconfiguration.md) (allowed menu items, graceful termination) do not apply.
+A non-bundled executable (such as a launchd daemon) is headless, so it supports only the subset of participant policies that apply to a process without UI: network access and whether the assessment requires it. The UI-oriented policies of [AEAssessmentParticipantConfiguration](aeassessmentparticipantconfiguration.md) do not apply.
 
 > **See Also**
 
@@ -73,7 +74,7 @@ The configuration applied to an [AEAssessmentBinaryExecutable](aeassessmentbinar
 
 ## Overview
 
-A non-bundled executable (such as a launchd daemon) is headless, so it supports only the subset of participant policies that apply to a process without UI: network access and whether the assessment requires it. The UI-oriented policies of [AEAssessmentParticipantConfiguration](aeassessmentparticipantconfiguration.md) (allowed menu items, graceful termination) do not apply.
+A non-bundled executable (such as a launchd daemon) is headless, so it supports only the subset of participant policies that apply to a process without UI: network access and whether the assessment requires it. The UI-oriented policies of [AEAssessmentParticipantConfiguration](aeassessmentparticipantconfiguration.md) do not apply.
 
 > **See Also**
 

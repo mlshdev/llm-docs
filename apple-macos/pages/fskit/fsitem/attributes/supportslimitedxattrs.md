@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fsitem/attributes/supportslimitedxattrs](https://developer.apple.com/documentation/fskit/fsitem/attributes/supportslimitedxattrs)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/fskit/fsitem/attributes/supportslimitedxattrs
 
 # supportsLimitedXAttrs (Swift)
 
@@ -26,7 +27,7 @@ var supportsLimitedXAttrs: Bool { get set }
 - [flags](flags.md): The item’s behavior flags.
 - [size](size.md): The item’s size.
 - [allocSize](allocsize.md): The item’s allocated size.
-- [inhibitKernelOffloadedIO](inhibitkerneloffloadedio.md): A Boolean value that indicates whether the file system overrides the per-volume settings for kernel offloaded I/O for a specific file.
+- [inhibitKernelOffloadedIO](inhibitkerneloffloadedio.md): A Boolean value that indicates whether the file system overrides the per-volume settings for kernel offloaded I/O for a specific file. FSKit reads this value the first time the module reports attributes for a given file; It then sets the file’s kernel-offloaded-I/O routing accordingly. The routing stays in effect for the item’s lifetime; later changes are ignored.
 
 # supportsLimitedXAttrs (Objective-C)
 
@@ -54,4 +55,4 @@ A Boolean value that indicates whether the item supports a limited set of extend
 - [flags](flags.md): The item’s behavior flags.
 - [size](size.md): The item’s size.
 - [allocSize](allocsize.md): The item’s allocated size.
-- [inhibitKernelOffloadedIO](inhibitkerneloffloadedio.md): A Boolean value that indicates whether the file system overrides the per-volume settings for kernel offloaded I/O for a specific file.
+- [inhibitKernelOffloadedIO](inhibitkerneloffloadedio.md): A Boolean value that indicates whether the file system overrides the per-volume settings for kernel offloaded I/O for a specific file. FSKit reads this value the first time the module reports attributes for a given file; It then sets the file’s kernel-offloaded-I/O routing accordingly. The routing stays in effect for the item’s lifetime; later changes are ignored.

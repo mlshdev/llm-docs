@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/scsicmd_inquiry_page80_header/1572838-peripheral_device_type](https://developer.apple.com/documentation/iokit/scsicmd_inquiry_page80_header/1572838-peripheral_device_type)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/scsicmd_inquiry_page80_header/1572838-peripheral_device_type
 
 # PERIPHERAL_DEVICE_TYPE
 

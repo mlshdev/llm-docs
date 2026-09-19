@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mlcompute/mlcpoolingdescriptor/init(type:kernelsizes:strides:dilationrates:paddingpolicy:)](https://developer.apple.com/documentation/mlcompute/mlcpoolingdescriptor/init(type:kernelsizes:strides:dilationrates:paddingpolicy:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mlcompute/mlcpoolingdescriptor/init(type:kernelsizes:strides:dilationrates:paddingpolicy:)
 
 # init(type:kernelSizes:strides:dilationRates:paddingPolicy:)
 

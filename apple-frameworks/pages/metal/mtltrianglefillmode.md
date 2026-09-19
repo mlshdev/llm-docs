@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtltrianglefillmode](https://developer.apple.com/documentation/metal/mtltrianglefillmode)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtltrianglefillmode
 
 # MTLTriangleFillMode (Swift)
 
@@ -49,7 +50,7 @@ enum MTLTriangleFillMode
 - [MTLIndexType](mtlindextype.md): The index type for an index buffer that references vertices of geometric primitives.
 - [MTLDepthClipMode](mtldepthclipmode.md): The mode that determines how to deal with fragments outside of the near or far planes.
 - [MTLVisibilityResultMode](mtlvisibilityresultmode.md): The mode that determines what, if anything, the GPU writes to the results buffer, after the GPU executes the render pass.
-- [MTLVisibilityResultType](mtlvisibilityresulttype.md): This enumeration controls if Metal accumulates visibility results between render encoders or resets them.
+- [MTLVisibilityResultType](mtlvisibilityresulttype.md): Actions for visibility results between render passes.
 
 # MTLTriangleFillMode (Objective-C)
 
@@ -85,4 +86,4 @@ enum MTLTriangleFillMode : NSUInteger;
 - [MTLIndexType](mtlindextype.md): The index type for an index buffer that references vertices of geometric primitives.
 - [MTLDepthClipMode](mtldepthclipmode.md): The mode that determines how to deal with fragments outside of the near or far planes.
 - [MTLVisibilityResultMode](mtlvisibilityresultmode.md): The mode that determines what, if anything, the GPU writes to the results buffer, after the GPU executes the render pass.
-- [MTLVisibilityResultType](mtlvisibilityresulttype.md): This enumeration controls if Metal accumulates visibility results between render encoders or resets them.
+- [MTLVisibilityResultType](mtlvisibilityresulttype.md): Actions for visibility results between render passes.

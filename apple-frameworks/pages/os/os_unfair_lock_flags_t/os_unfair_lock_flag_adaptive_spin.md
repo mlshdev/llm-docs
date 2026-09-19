@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/os/os_unfair_lock_flags_t/os_unfair_lock_flag_adaptive_spin](https://developer.apple.com/documentation/os/os_unfair_lock_flags_t/os_unfair_lock_flag_adaptive_spin)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/os/os_unfair_lock_flags_t/os_unfair_lock_flag_adaptive_spin
 
 # OS_UNFAIR_LOCK_FLAG_ADAPTIVE_SPIN
 

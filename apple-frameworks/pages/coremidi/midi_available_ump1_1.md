@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremidi/midi_available_ump1_1](https://developer.apple.com/documentation/coremidi/midi_available_ump1_1)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremidi/midi_available_ump1_1
 
 # MIDI_AVAILABLE_UMP1_1
 

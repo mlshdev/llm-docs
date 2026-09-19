@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/ar_device_anchor_tracking_state_t/ar_device_anchor_tracking_state_orientation_tracked](https://developer.apple.com/documentation/arkit/ar_device_anchor_tracking_state_t/ar_device_anchor_tracking_state_orientation_tracked)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/ar_device_anchor_tracking_state_t/ar_device_anchor_tracking_state_orientation_tracked
 
 # ar_device_anchor_tracking_state_orientation_tracked
 

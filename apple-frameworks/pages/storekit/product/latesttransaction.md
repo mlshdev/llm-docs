@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/product/latesttransaction](https://developer.apple.com/documentation/storekit/product/latesttransaction)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/product/latesttransaction
 
 # latestTransaction
 
@@ -32,6 +33,6 @@ guard case .verified(let transaction) = resultingTransaction else {
 // Update your app based on the details from the most recent transaction.
 ```
 
-By default, when the [SKIncludeConsumableInAppPurchaseHistory](../../bundleresources/information-property-list/skincludeconsumableinapppurchasehistory.md) property list key is `false`, this value excludes finished consumable in-app purchases unless they are refunded or revoked.
+By default, when the [SKIncludeConsumableInAppPurchaseHistory](../../bundleresources/information-property-list/skincludeconsumableinapppurchasehistory.md) property list key is `false`, this value excludes finished consumable Apple In-App Purchases unless they are refunded or revoked.
 
-If you set the [SKIncludeConsumableInAppPurchaseHistory](../../bundleresources/information-property-list/skincludeconsumableinapppurchasehistory.md) property list key to `true`, this value returns all transactions, including consumable in-app purchases that your app marked as finished ([finish()](../transaction/finish%28%29.md)).
+If you set the [SKIncludeConsumableInAppPurchaseHistory](../../bundleresources/information-property-list/skincludeconsumableinapppurchasehistory.md) property list key to `true`, this value returns all transactions, including consumable Apple In-App Purchases that your app marked as finished ([finish()](../transaction/finish%28%29.md)).

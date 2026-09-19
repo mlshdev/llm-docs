@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/kiostreambufferidmask](https://developer.apple.com/documentation/videodriverkit/kiostreambufferidmask)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/kiostreambufferidmask
 
 # kIOStreamBufferIDMask
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,6 +19,6 @@ kIOStreamBufferIDMask
 
 ### Accessing buffer ID
 
-- [getBufferID](iouservideobuffer/getbufferid.md)
-- [setBufferID](iouservideobuffer/setbufferid.md)
-- [IOStreamBufferID](iostreambufferid.md)
+- [getBufferID](iouservideobuffer/getbufferid.md): Beta.
+- [setBufferID](iouservideobuffer/setbufferid.md): Beta.
+- [IOStreamBufferID](iostreambufferid.md): Beta.

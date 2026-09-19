@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreaudiotypes/mpeg4objectid/aac_ltp](https://developer.apple.com/documentation/coreaudiotypes/mpeg4objectid/aac_ltp)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreaudiotypes/mpeg4objectid/aac_ltp
 
 # MPEG4ObjectID.AAC_LTP (Swift)
 

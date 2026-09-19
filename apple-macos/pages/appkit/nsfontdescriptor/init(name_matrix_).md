@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsfontdescriptor/init(name:matrix:)](https://developer.apple.com/documentation/appkit/nsfontdescriptor/init(name:matrix:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsfontdescriptor/init(name:matrix:)
 
 # init(name:matrix:) (Swift)
 

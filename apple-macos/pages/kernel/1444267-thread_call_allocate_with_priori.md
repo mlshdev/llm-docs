@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1444267-thread_call_allocate_with_priori](https://developer.apple.com/documentation/kernel/1444267-thread_call_allocate_with_priori)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1444267-thread_call_allocate_with_priori
 
 # thread_call_allocate_with_priority
 

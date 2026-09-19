@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/currencycode](https://developer.apple.com/documentation/storekit/transaction/currencycode)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/currencycode
 
 # currencyCode
 
@@ -29,7 +30,7 @@ The [currencyCode](currencycode.md) property contains an ISO 4217 alpha-3 string
 
 Don’t use [currencyCode](currencycode.md) to infer the storefront. Use the [storefront](storefront.md) value in the transaction instead.
 
-For more information on how you set prices, see [Set a price for an in-app purchase](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/set-a-price-for-an-in-app-purchase).
+For more information on how you set prices, see [Set a price for an Apple In-App Purchase](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/set-a-price-for-an-in-app-purchase).
 
 ## See Also
 

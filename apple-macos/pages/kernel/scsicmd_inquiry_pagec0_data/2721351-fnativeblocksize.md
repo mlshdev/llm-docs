@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/scsicmd_inquiry_pagec0_data/2721351-fnativeblocksize](https://developer.apple.com/documentation/kernel/scsicmd_inquiry_pagec0_data/2721351-fnativeblocksize)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/scsicmd_inquiry_pagec0_data/2721351-fnativeblocksize
 
 # fNativeBlockSize
 

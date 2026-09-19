@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/app-and-environment](https://developer.apple.com/documentation/uikit/app-and-environment)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/app-and-environment
 
 # App and environment (Swift)
 
@@ -36,6 +37,8 @@ Access device-specific information like battery state, proximity sensor data, an
 
 - [UIDevice](uidevice.md): A representation of the current device.
 - [UIStatusBarManager](uistatusbarmanager.md): An object that describes the configuration of the status bar.
+- [UIHinge](uihinge.md): Beta. An object encapsulating the state of a single hinge.
+- [UIHingeInteraction](uihingeinteraction.md): Beta. An interaction for observing the hinge state associated with the view’s hierarchy.
 
 ### Data observation
 
@@ -110,6 +113,8 @@ Access device-specific information like battery state, proximity sensor data, an
 
 - [UIDevice](uidevice.md): A representation of the current device.
 - [UIStatusBarManager](uistatusbarmanager.md): An object that describes the configuration of the status bar.
+- [UIHinge](uihinge.md): Beta. An object encapsulating the state of a single hinge.
+- [UIHingeInteraction](uihingeinteraction.md): Beta. An interaction for observing the hinge state associated with the view’s hierarchy.
 
 ### Data observation
 

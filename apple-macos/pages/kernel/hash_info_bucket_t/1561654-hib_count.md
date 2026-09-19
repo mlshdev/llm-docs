@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/hash_info_bucket_t/1561654-hib_count](https://developer.apple.com/documentation/kernel/hash_info_bucket_t/1561654-hib_count)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/hash_info_bucket_t/1561654-hib_count
 
 # hib_count
 

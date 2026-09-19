@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1643299-anonymous/kinquiry_ansi_version_scsi_spc_3_compliant](https://developer.apple.com/documentation/kernel/1643299-anonymous/kinquiry_ansi_version_scsi_spc_3_compliant)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1643299-anonymous/kinquiry_ansi_version_scsi_spc_3_compliant
 
 # kINQUIRY_ANSI_VERSION_SCSI_SPC_3_Compliant
 

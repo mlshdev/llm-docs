@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/longlbamodeparameterblockdescriptor/1555498-number_of_blocks](https://developer.apple.com/documentation/iokit/longlbamodeparameterblockdescriptor/1555498-number_of_blocks)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/longlbamodeparameterblockdescriptor/1555498-number_of_blocks
 
 # NUMBER_OF_BLOCKS
 

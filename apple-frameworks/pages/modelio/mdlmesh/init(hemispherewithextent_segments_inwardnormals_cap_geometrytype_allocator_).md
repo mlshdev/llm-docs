@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/modelio/mdlmesh/init(hemispherewithextent:segments:inwardnormals:cap:geometrytype:allocator:)](https://developer.apple.com/documentation/modelio/mdlmesh/init(hemispherewithextent:segments:inwardnormals:cap:geometrytype:allocator:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/modelio/mdlmesh/init(hemispherewithextent:segments:inwardnormals:cap:geometrytype:allocator:)
 
 # init(hemisphereWithExtent:segments:inwardNormals:cap:geometryType:allocator:) (Swift)
 

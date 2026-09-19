@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideocustompropertydatatype/string](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideocustompropertydatatype/string)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideocustompropertydatatype/string
 
 # String
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 The custom property data type is an `OSString` value.
 
@@ -20,5 +21,5 @@ String
 
 ### Data types
 
-- [Dictionary](dictionary.md): The custom property data type is an `OSDictionary` value.
-- [None](none.md): The custom property does not have any data.
+- [Dictionary](dictionary.md): Beta. The custom property data type is an `OSDictionary` value.
+- [None](none.md): Beta. The custom property does not have any data.

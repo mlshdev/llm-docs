@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsurlhandle/status-swift.enum/loadfailed](https://developer.apple.com/documentation/foundation/nsurlhandle/status-swift.enum/loadfailed)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsurlhandle/status-swift.enum/loadfailed
 
 # NSURLHandle.Status.loadFailed (Swift)
 

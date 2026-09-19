@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1587949-filemark_bit_field_definitions](https://developer.apple.com/documentation/iokit/1587949-filemark_bit_field_definitions)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1587949-filemark_bit_field_definitions
 
 # FILEMARK bit field definitions
 

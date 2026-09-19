@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/dispatch/dispatch_target_queue_default](https://developer.apple.com/documentation/dispatch/dispatch_target_queue_default)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/dispatch/dispatch_target_queue_default
 
 # DISPATCH_TARGET_QUEUE_DEFAULT
 

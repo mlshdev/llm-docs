@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsaccessibilitycustomrotor/rotortype/image](https://developer.apple.com/documentation/appkit/nsaccessibilitycustomrotor/rotortype/image)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsaccessibilitycustomrotor/rotortype/image
 
 # NSAccessibilityCustomRotor.RotorType.image (Swift)
 

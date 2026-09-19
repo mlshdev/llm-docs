@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/authenticationservices/asimportablecredential/driverslicense/init(fullname:birthdate:issuedate:expirydate:issuingauthority:territory:country:licensenumber:licenseclass:)](https://developer.apple.com/documentation/authenticationservices/asimportablecredential/driverslicense/init(fullname:birthdate:issuedate:expirydate:issuingauthority:territory:country:licensenumber:licenseclass:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/authenticationservices/asimportablecredential/driverslicense/init(fullname:birthdate:issuedate:expirydate:issuingauthority:territory:country:licensenumber:licenseclass:)
 
 # init(fullName:birthDate:issueDate:expiryDate:issuingAuthority:territory:country:licenseNumber:licenseClass:)
 

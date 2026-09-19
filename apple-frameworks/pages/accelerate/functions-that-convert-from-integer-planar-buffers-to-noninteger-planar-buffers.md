@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/functions-that-convert-from-integer-planar-buffers-to-noninteger-planar-buffers](https://developer.apple.com/documentation/accelerate/functions-that-convert-from-integer-planar-buffers-to-noninteger-planar-buffers)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/functions-that-convert-from-integer-planar-buffers-to-noninteger-planar-buffers
 
 # Functions that convert from integer planar buffers to noninteger planar buffers (Swift)
 

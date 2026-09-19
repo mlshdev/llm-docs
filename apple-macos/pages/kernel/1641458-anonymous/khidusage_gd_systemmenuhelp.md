@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1641458-anonymous/khidusage_gd_systemmenuhelp](https://developer.apple.com/documentation/kernel/1641458-anonymous/khidusage_gd_systemmenuhelp)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1641458-anonymous/khidusage_gd_systemmenuhelp
 
 # kHIDUsage_GD_SystemMenuHelp
 

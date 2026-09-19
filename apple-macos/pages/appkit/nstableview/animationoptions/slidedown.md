@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstableview/animationoptions/slidedown](https://developer.apple.com/documentation/appkit/nstableview/animationoptions/slidedown)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstableview/animationoptions/slidedown
 
 # slideDown (Swift)
 

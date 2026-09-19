@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/4360125-ifnet_get_address_list_with_coun](https://developer.apple.com/documentation/kernel/4360125-ifnet_get_address_list_with_coun)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/4360125-ifnet_get_address_list_with_coun
 
 # ifnet_get_address_list_with_count
 

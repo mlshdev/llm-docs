@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:restoreuserinterfaceforpictureinpicturestopwithcompletionhandler:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:restoreuserinterfaceforpictureinpicturestopwithcompletionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:restoreuserinterfaceforpictureinpicturestopwithcompletionhandler:)
 
 # playerViewController(\_:restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:) (Swift)
 
@@ -25,7 +26,7 @@ optional func playerViewControllerRestoreUserInterfaceForPictureInPictureStop(_ 
 
 ## Mentioned In
 
-- [Adopting Picture in Picture in a Standard Player](../adopting-picture-in-picture-in-a-standard-player.md)
+- [Adopting Picture in Picture in a standard player](../adopting-picture-in-picture-in-a-standard-player.md)
 
 <a id="Discussion"></a>
 
@@ -35,7 +36,7 @@ Implement this method to reestablish your playback user interface when PiP ends.
 
 ## See Also
 
-### Responding to Picture in Picture Life Cycle Events
+### Responding to Picture in Picture life cycle events
 
 - [playerViewControllerShouldAutomaticallyDismissAtPictureInPictureStart(\_:)](playerviewcontrollershouldautomaticallydismissatpictureinpicturestart%28__%29.md): Asks the delegate whether the player view controller automatically dismisses itself when Picture in Picture starts.
 - [playerViewControllerWillStartPictureInPicture(\_:)](playerviewcontrollerwillstartpictureinpicture%28__%29.md): Tells the delegate when Picture in Picture is about to start.
@@ -65,7 +66,7 @@ Tells the delegate when Picture in Picture is about to stop so you can restore y
 
 ## Mentioned In
 
-- [Adopting Picture in Picture in a Standard Player](../adopting-picture-in-picture-in-a-standard-player.md)
+- [Adopting Picture in Picture in a standard player](../adopting-picture-in-picture-in-a-standard-player.md)
 
 <a id="Discussion"></a>
 
@@ -75,7 +76,7 @@ Implement this method to reestablish your playback user interface when PiP ends.
 
 ## See Also
 
-### Responding to Picture in Picture Life Cycle Events
+### Responding to Picture in Picture life cycle events
 
 - [playerViewControllerShouldAutomaticallyDismissAtPictureInPictureStart:](playerviewcontrollershouldautomaticallydismissatpictureinpicturestart%28__%29.md): Asks the delegate whether the player view controller automatically dismisses itself when Picture in Picture starts.
 - [playerViewControllerWillStartPictureInPicture:](playerviewcontrollerwillstartpictureinpicture%28__%29.md): Tells the delegate when Picture in Picture is about to start.

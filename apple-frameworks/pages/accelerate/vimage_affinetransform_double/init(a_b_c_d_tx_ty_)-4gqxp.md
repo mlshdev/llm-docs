@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimage_affinetransform_double/init(a:b:c:d:tx:ty:)-4gqxp](https://developer.apple.com/documentation/accelerate/vimage_affinetransform_double/init(a:b:c:d:tx:ty:)-4gqxp)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vimage_affinetransform_double/init(a:b:c:d:tx:ty:)-4gqxp
 
 # init(a:b:c:d:tx:ty:)
 

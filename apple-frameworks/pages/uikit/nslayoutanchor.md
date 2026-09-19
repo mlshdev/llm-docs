@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/nslayoutanchor](https://developer.apple.com/documentation/uikit/nslayoutanchor)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/nslayoutanchor
 
 # NSLayoutAnchor (Swift)
 
@@ -43,6 +44,7 @@ NSLayoutConstraint(item: subview,
                    attribute: .trailingMargin,
                    multiplier: 1.0,
                    constant: 0.0).isActive = true
+
 
 // Creating the same constraints using Layout Anchors
 let margins = view.layoutMarginsGuide
@@ -199,6 +201,7 @@ NSLayoutConstraint(item: subview,
                    attribute: .trailingMargin,
                    multiplier: 1.0,
                    constant: 0.0).isActive = true
+
 
 // Creating the same constraints using Layout Anchors
 let margins = view.layoutMarginsGuide

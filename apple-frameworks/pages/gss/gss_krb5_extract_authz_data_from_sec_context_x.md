@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gss/gss_krb5_extract_authz_data_from_sec_context_x](https://developer.apple.com/documentation/gss/gss_krb5_extract_authz_data_from_sec_context_x)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/gss/gss_krb5_extract_authz_data_from_sec_context_x
 
 # GSS_KRB5_EXTRACT_AUTHZ_DATA_FROM_SEC_CONTEXT_X
 

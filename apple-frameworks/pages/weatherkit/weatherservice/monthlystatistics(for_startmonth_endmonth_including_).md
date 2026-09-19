@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/weatherkit/weatherservice/monthlystatistics(for:startmonth:endmonth:including:)](https://developer.apple.com/documentation/weatherkit/weatherservice/monthlystatistics(for:startmonth:endmonth:including:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/weatherkit/weatherservice/monthlystatistics(for:startmonth:endmonth:including:)
 
 # monthlyStatistics(for:startMonth:endMonth:including:)
 

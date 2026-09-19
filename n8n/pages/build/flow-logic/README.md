@@ -1,8 +1,19 @@
-> Pinned source for n8n main: [docs/build/flow-logic/README.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/flow-logic/README.md)
+> Pinned source for n8n main: [docs/build/flow-logic/README.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/flow-logic/README.md)
 
 # Flow logic <a id="flow-logic"></a>
 
 n8n allows you to represent complex logic in your workflows.
+
+## In this section <a id="in-this-section"></a>
+
+- [Split with conditionals](https://docs.n8n.io/build/flow-logic/split-with-conditionals): route items down different branches with the IF and Switch nodes.
+- [Merge data](https://docs.n8n.io/build/flow-logic/merge-data): combine multiple data streams back into one.
+- [Loop](https://docs.n8n.io/build/flow-logic/loop): repeat an action until a condition is met, or until all items are processed.
+- [Wait](https://docs.n8n.io/build/flow-logic/wait): pause a workflow's execution and resume it later.
+- [Understand execution order](https://docs.n8n.io/build/flow-logic/understand-execution-order): learn how n8n decides which branch runs first in a multi-branch workflow.
+- [Break workflows into smaller parts](https://docs.n8n.io/build/flow-logic/break-workflows-into-smaller-parts): call one workflow from another to build modular, microservice-like workflows.
+- [Convert to sub-workflows](https://docs.n8n.io/build/flow-logic/convert-to-sub-workflows): turn part of an existing workflow into a reusable sub-workflow.
+- [Handle errors gracefully](https://docs.n8n.io/build/flow-logic/handle-errors-gracefully): set up an error workflow to respond to execution failures.
 
 ## Related sections <a id="related-sections"></a>
 

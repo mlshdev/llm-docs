@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/oid_ansi_x9_62](https://developer.apple.com/documentation/security/oid_ansi_x9_62)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/oid_ansi_x9_62
 
 # OID_ANSI_X9_62
 

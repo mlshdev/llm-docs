@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1592264-anonymous/khidusage_pid_safetyswitch](https://developer.apple.com/documentation/iokit/1592264-anonymous/khidusage_pid_safetyswitch)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1592264-anonymous/khidusage_pid_safetyswitch
 
 # kHIDUsage_PID_SafetySwitch
 

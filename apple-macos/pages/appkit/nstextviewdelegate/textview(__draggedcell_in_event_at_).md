@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstextviewdelegate/textview(_:draggedcell:in:event:at:)](https://developer.apple.com/documentation/appkit/nstextviewdelegate/textview(_:draggedcell:in:event:at:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstextviewdelegate/textview(_:draggedcell:in:event:at:)
 
 # textView(\_:draggedCell:in:event:at:) (Swift)
 

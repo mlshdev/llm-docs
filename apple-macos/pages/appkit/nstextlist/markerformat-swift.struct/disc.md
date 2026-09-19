@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstextlist/markerformat-swift.struct/disc](https://developer.apple.com/documentation/appkit/nstextlist/markerformat-swift.struct/disc)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstextlist/markerformat-swift.struct/disc
 
 # disc (Swift)
 

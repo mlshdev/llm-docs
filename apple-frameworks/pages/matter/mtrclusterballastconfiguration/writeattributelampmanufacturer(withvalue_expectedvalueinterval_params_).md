@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrclusterballastconfiguration/writeattributelampmanufacturer(withvalue:expectedvalueinterval:params:)](https://developer.apple.com/documentation/matter/mtrclusterballastconfiguration/writeattributelampmanufacturer(withvalue:expectedvalueinterval:params:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrclusterballastconfiguration/writeattributelampmanufacturer(withvalue:expectedvalueinterval:params:)
 
 # writeAttributeLampManufacturer(withValue:expectedValueInterval:params:) (Swift)
 

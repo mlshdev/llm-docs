@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/supporting-collection-view-drag-and-drop-through-file-promises](https://developer.apple.com/documentation/appkit/supporting-collection-view-drag-and-drop-through-file-promises)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/supporting-collection-view-drag-and-drop-through-file-promises
 
 # Supporting Collection View Drag and Drop Through File Promises (Swift)
 

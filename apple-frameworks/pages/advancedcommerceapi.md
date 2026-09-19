@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/advancedcommerceapi](https://developer.apple.com/documentation/advancedcommerceapi)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/advancedcommerceapi
 
 # Advanced Commerce API
 
@@ -8,15 +9,15 @@
 **Kind:** Web Service  
 **Availability:** Advanced Commerce API 1.0+
 
-Support In-App Purchases through the App Store for exceptionally large catalogs of custom one-time purchases, subscriptions, and subscriptions with optional add-ons.
+Support Apple In-App Purchases through the App Store for exceptionally large catalogs of custom one-time purchases, subscriptions, and subscriptions with optional add-ons.
 
 <a id="Overview"></a>
 
 ## Overview
 
-Use this framework to offer an exceptionally large catalog of one-time purchases, subscriptions, and subscriptions with optional add-ons while using the App Store commerce system. Apps that use this API host and manage their own catalog of In-App Purchases, or SKUs. The App Store commerce system handles the end-to-end payment processing, global distribution, tax support, and customer service.
+Use this framework to offer an exceptionally large catalog of one-time purchases, subscriptions, and subscriptions with optional add-ons while using the App Store commerce system. Apps that use this API host and manage their own catalog of Apple In-App Purchases, or SKUs. The App Store commerce system handles the end-to-end payment processing, global distribution, tax support, and customer service.
 
-You can use the Advanced Commerce API and the StoreKit [In-App Purchase](storekit/in-app-purchase.md) API in the same app. Both APIs use the App Store commerce system, including the same signed JWS transactions and JWS renewal info. For products that you offer using the In-App Purchase API, you set up product identifiers in App Store Connect. For products that you offer using the Advanced Commerce API, you host and manage your own catalog of SKUs and add product details dynamically at runtime. For complete setup information, see [Setting up your project for Advanced Commerce API](advancedcommerceapi/setting-up-your-project-for-advanced-commerce.md).
+You can use the Advanced Commerce API and the StoreKit [Apple In-App Purchase](storekit/in-app-purchase.md) API in the same app. Both APIs use the App Store commerce system, including the same signed JWS transactions and JWS renewal info. For products that you offer using the Apple In-App Purchase API, you set up product identifiers in App Store Connect. For products that you offer using the Advanced Commerce API, you host and manage your own catalog of SKUs and add product details dynamically at runtime. For complete setup information, see [Setting up your project for Advanced Commerce API](advancedcommerceapi/setting-up-your-project-for-advanced-commerce.md).
 
 Advanced Commerce API features are available through requests you make using StoreKit in your app and endpoint requests from your server. To authorize these requests, you generate JSON Web Tokens (JWTs). The App Store Server Library provides a client that makes it easier to create JWTs to authorize calls. For more information about the library, see [Simplifying your implementation by using the App Store Server Library](appstoreserverapi/simplifying-your-implementation-by-using-the-app-store-server-library.md). For more information about authorizing calls, see  [Authorizing API requests from your server](advancedcommerceapi/authorizing-server-calls.md).
 
@@ -42,13 +43,13 @@ Your server must support the Transport Layer Security (TLS) protocol 1.2 or late
 ### Generic product IDs and SKUs
 
 - [Setting up generic product identifiers](advancedcommerceapi/setting-up-generic-product-identifiers.md): Configure the generic product IDs in App Store Connect that the Advanced Commerce API requires.
-- [Creating SKUs for your In-App Purchases](advancedcommerceapi/creating-your-purchases.md): Define and manage one-time charges, subscriptions, and bundled subscriptions within your app.
+- [Creating SKUs for your Apple In-App Purchases](advancedcommerceapi/creating-your-purchases.md): Define and manage one-time charges, subscriptions, and bundled subscriptions within your app.
 - [Creating SKUs for the Mini Apps Partner Program](advancedcommerceapi/creating-skus-for-the-mini-app-partner-program.md): Define display names and SKUs for one-time charges and subscriptions in the Mini Apps Partner Program.
 
 ### Tax codes and pricing
 
 - [Specifying prices for Advanced Commerce SKUs](advancedcommerceapi/prices.md): Provide prices for SKUs with the supported number of decimal places, in milliunits of currency.
-- [Choosing tax codes for your SKUs](advancedcommerceapi/taxcodes.md): Select a tax code for each SKU that represents a product your app offers as an in-app purchase.
+- [Choosing tax codes for your SKUs](advancedcommerceapi/taxcodes.md): Select a tax code for each SKU that represents a product your app offers as an Apple In-App Purchase.
 - [Handling subscription price changes](advancedcommerceapi/handling-subscription-price-changes.md): Initiate a price change and manage communications with your subscribers through the App Store.
 
 ### In-app API requests
@@ -114,8 +115,8 @@ Your server must support the Transport Layer Security (TLS) protocol 1.2 or late
 
 ### Migration from the server
 
-- [Migrate a Subscription to Advanced Commerce API](advancedcommerceapi/migrate-subscription-to-advanced-commerce-api.md): Migrate a subscription that a customer purchased through In-App Purchase to a subscription you manage using the Advanced Commerce API.
-- [SubscriptionMigrateRequest](advancedcommerceapi/subscriptionmigraterequest.md): The subscription details you provide to migrate a subscription from In-App Purchase to the Advanced Commerce API, such as descriptors, items, storefront, and more.
+- [Migrate a Subscription to Advanced Commerce API](advancedcommerceapi/migrate-subscription-to-advanced-commerce-api.md): Migrate a subscription that a customer purchased through Apple In-App Purchase to a subscription you manage using the Advanced Commerce API.
+- [SubscriptionMigrateRequest](advancedcommerceapi/subscriptionmigraterequest.md): The subscription details you provide to migrate a subscription from Apple In-App Purchase to the Advanced Commerce API, such as descriptors, items, storefront, and more.
 - [SubscriptionMigrateResponse](advancedcommerceapi/subscriptionmigrateresponse.md): A response that contains signed renewal and transaction information after a subscription successfully migrates to the Advanced Commerce API.
 - [SubscriptionMigrateItem](advancedcommerceapi/subscriptionmigrateitem.md): The SKU, description, and display name to use for a migrated subscription item.
 - [SubscriptionMigrateRenewalItem](advancedcommerceapi/subscriptionmigraterenewalitem.md): The item information that replaces a migrated subscription item when the subscription renews.

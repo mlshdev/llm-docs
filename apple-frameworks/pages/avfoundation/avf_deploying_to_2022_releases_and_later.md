@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avf_deploying_to_2022_releases_and_later](https://developer.apple.com/documentation/avfoundation/avf_deploying_to_2022_releases_and_later)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avf_deploying_to_2022_releases_and_later
 
 # AVF_DEPLOYING_TO_2022_RELEASES_AND_LATER (Swift)
 

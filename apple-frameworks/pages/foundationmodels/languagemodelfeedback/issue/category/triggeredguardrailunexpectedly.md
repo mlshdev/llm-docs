@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelfeedback/issue/category/triggeredguardrailunexpectedly](https://developer.apple.com/documentation/foundationmodels/languagemodelfeedback/issue/category/triggeredguardrailunexpectedly)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelfeedback/issue/category/triggeredguardrailunexpectedly
 
 # LanguageModelFeedback.Issue.Category.triggeredGuardrailUnexpectedly
 
@@ -6,7 +7,7 @@
 **Kind:** Case  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · visionOS 26.0+ · watchOS 27.0+
 
-The model throws a guardrail violation when it shouldn’t.
+An unexpected guardrail violation.
 
 ## Declaration
 
@@ -24,10 +25,10 @@ An unexpected guardrail issue might be where you ask for a cake recipe, and the 
 
 ### Getting the issue category
 
-- [LanguageModelFeedback.Issue.Category.didNotFollowInstructions](didnotfollowinstructions.md): The model did not follow instructions correctly.
-- [LanguageModelFeedback.Issue.Category.incorrect](incorrect.md): The model provided an incorrect response.
-- [LanguageModelFeedback.Issue.Category.stereotypeOrBias](stereotypeorbias.md): The model exhibited bias or perpetuated a stereotype.
-- [LanguageModelFeedback.Issue.Category.suggestiveOrSexual](suggestiveorsexual.md): The model produces suggestive or sexual material.
-- [LanguageModelFeedback.Issue.Category.tooVerbose](tooverbose.md): The response was too verbose.
-- [LanguageModelFeedback.Issue.Category.unhelpful](unhelpful.md): The response was unhelpful.
-- [LanguageModelFeedback.Issue.Category.vulgarOrOffensive](vulgaroroffensive.md): The model produces vulgar or offensive material.
+- [LanguageModelFeedback.Issue.Category.didNotFollowInstructions](didnotfollowinstructions.md): A response that doesn’t follow instructions correctly.
+- [LanguageModelFeedback.Issue.Category.incorrect](incorrect.md): An incorrect response.
+- [LanguageModelFeedback.Issue.Category.stereotypeOrBias](stereotypeorbias.md): A response that exhibits bias or perpetuates a stereotype.
+- [LanguageModelFeedback.Issue.Category.suggestiveOrSexual](suggestiveorsexual.md): A response with suggestive or sexual material.
+- [LanguageModelFeedback.Issue.Category.tooVerbose](tooverbose.md): An overly verbose response.
+- [LanguageModelFeedback.Issue.Category.unhelpful](unhelpful.md): An unhelpful response.
+- [LanguageModelFeedback.Issue.Category.vulgarOrOffensive](vulgaroroffensive.md): A response with vulgar or offensive material.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/iad/adclient_deprecated_macos_1014_113_obsoleted_180](https://developer.apple.com/documentation/iad/adclient_deprecated_macos_1014_113_obsoleted_180)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iad/adclient_deprecated_macos_1014_113_obsoleted_180
 
 # ADCLIENT_DEPRECATED_MACOS_1014_113_OBSOLETED_180
 

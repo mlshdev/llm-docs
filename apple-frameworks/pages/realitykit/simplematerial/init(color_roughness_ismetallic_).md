@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/simplematerial/init(color:roughness:ismetallic:)](https://developer.apple.com/documentation/realitykit/simplematerial/init(color:roughness:ismetallic:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/simplematerial/init(color:roughness:ismetallic:)
 
 # init(color:roughness:isMetallic:)
 

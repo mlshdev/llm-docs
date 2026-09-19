@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrdoorlockclusterclearyeardayscheduleparams/timedinvoketimeoutms](https://developer.apple.com/documentation/matter/mtrdoorlockclusterclearyeardayscheduleparams/timedinvoketimeoutms)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrdoorlockclusterclearyeardayscheduleparams/timedinvoketimeoutms
 
 # timedInvokeTimeoutMs (Swift)
 

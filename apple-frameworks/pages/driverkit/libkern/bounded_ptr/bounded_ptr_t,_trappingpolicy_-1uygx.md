@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/libkern/bounded_ptr/bounded_ptr_t,_trappingpolicy_-1uygx](https://developer.apple.com/documentation/driverkit/libkern/bounded_ptr/bounded_ptr_t,_trappingpolicy_-1uygx)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/libkern/bounded_ptr/bounded_ptr_t,_trappingpolicy_-1uygx
 
 # bounded_ptr\<T, TrappingPolicy\>
 

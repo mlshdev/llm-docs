@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clktextprovider/init(format:_:)](https://developer.apple.com/documentation/clockkit/clktextprovider/init(format:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clktextprovider/init(format:_:)
 
 # init(format:\_:)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 6.0+ (deprecated in 27.0)
+**Availability:** watchOS 6.0+ (deprecated in 27.2)
 
 Creates and returns a text provider built from the specified format string.
 

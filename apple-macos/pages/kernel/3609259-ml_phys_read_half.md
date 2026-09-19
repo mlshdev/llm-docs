@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3609259-ml_phys_read_half](https://developer.apple.com/documentation/kernel/3609259-ml_phys_read_half)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3609259-ml_phys_read_half
 
 # ml_phys_read_half
 

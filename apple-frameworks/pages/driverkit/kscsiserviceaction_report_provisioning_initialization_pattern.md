@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/kscsiserviceaction_report_provisioning_initialization_pattern](https://developer.apple.com/documentation/driverkit/kscsiserviceaction_report_provisioning_initialization_pattern)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/kscsiserviceaction_report_provisioning_initialization_pattern
 
 # kSCSIServiceAction_REPORT_PROVISIONING_INITIALIZATION_PATTERN
 

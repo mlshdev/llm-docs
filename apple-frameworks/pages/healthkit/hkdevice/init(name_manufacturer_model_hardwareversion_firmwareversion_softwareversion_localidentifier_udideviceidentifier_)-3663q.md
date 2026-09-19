@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkdevice/init(name:manufacturer:model:hardwareversion:firmwareversion:softwareversion:localidentifier:udideviceidentifier:)-3663q](https://developer.apple.com/documentation/healthkit/hkdevice/init(name:manufacturer:model:hardwareversion:firmwareversion:softwareversion:localidentifier:udideviceidentifier:)-3663q)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkdevice/init(name:manufacturer:model:hardwareversion:firmwareversion:softwareversion:localidentifier:udideviceidentifier:)-3663q
 
 # init(name:manufacturer:model:hardwareVersion:firmwareVersion:softwareVersion:localIdentifier:udiDeviceIdentifier:) (Swift)
 

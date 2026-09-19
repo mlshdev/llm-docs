@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_tp_no_default_authority](https://developer.apple.com/documentation/security/cssmerr_tp_no_default_authority)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_tp_no_default_authority
 
 # CSSMERR_TP_NO_DEFAULT_AUTHORITY (Swift)
 

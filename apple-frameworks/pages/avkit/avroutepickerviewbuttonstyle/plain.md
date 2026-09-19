@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avroutepickerviewbuttonstyle/plain](https://developer.apple.com/documentation/avkit/avroutepickerviewbuttonstyle/plain)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avroutepickerviewbuttonstyle/plain
 
 # AVRoutePickerViewButtonStyle.plain (Swift)
 
@@ -22,7 +23,7 @@ Use this style to set the button to match the system style, except without a blu
 
 ## See Also
 
-### Button Styles
+### Button styles
 
 - [AVRoutePickerViewButtonStyle.custom](custom.md): A custom button style.
 - [AVRoutePickerViewButtonStyle.system](system.md): A system-defined button style.
@@ -49,7 +50,7 @@ Use this style to set the button to match the system style, except without a blu
 
 ## See Also
 
-### Button Styles
+### Button styles
 
 - [AVRoutePickerViewButtonStyleCustom](custom.md): A custom button style.
 - [AVRoutePickerViewButtonStyleSystem](system.md): A system-defined button style.

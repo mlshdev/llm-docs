@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideodriver/gettransporttype](https://developer.apple.com/documentation/videodriverkit/iouservideodriver/gettransporttype)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideodriver/gettransporttype
 
 # GetTransportType
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the transport type of the driver.
 
@@ -26,5 +27,5 @@ The object’s work queue synchronizes access to the value.
 
 ### Working with transport types
 
-- [SetTransportType](settransporttype.md): Sets the transport type of the video driver.
-- [IOUserVideoTransportType](../videodriverkit/iouservideotransporttype.md): The transport type of a video stream.
+- [SetTransportType](settransporttype.md): Beta. Sets the transport type of the video driver.
+- [IOUserVideoTransportType](../videodriverkit/iouservideotransporttype.md): Beta. The transport type of a video stream.

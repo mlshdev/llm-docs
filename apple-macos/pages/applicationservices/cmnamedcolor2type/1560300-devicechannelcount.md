@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/cmnamedcolor2type/1560300-devicechannelcount](https://developer.apple.com/documentation/applicationservices/cmnamedcolor2type/1560300-devicechannelcount)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applicationservices/cmnamedcolor2type/1560300-devicechannelcount
 
 # deviceChannelCount
 

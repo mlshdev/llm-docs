@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_kr_le_use_policy](https://developer.apple.com/documentation/security/cssm_kr_le_use_policy)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_kr_le_use_policy
 
 # CSSM_KR_LE_USE_POLICY (Swift)
 

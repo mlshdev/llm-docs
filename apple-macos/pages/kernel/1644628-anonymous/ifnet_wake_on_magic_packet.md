@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1644628-anonymous/ifnet_wake_on_magic_packet](https://developer.apple.com/documentation/kernel/1644628-anonymous/ifnet_wake_on_magic_packet)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1644628-anonymous/ifnet_wake_on_magic_packet
 
 # IFNET_WAKE_ON_MAGIC_PACKET
 

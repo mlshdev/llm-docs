@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/physicsbodycomponent/init(shapes:mass:material:mode:)](https://developer.apple.com/documentation/realitykit/physicsbodycomponent/init(shapes:mass:material:mode:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/physicsbodycomponent/init(shapes:mass:material:mode:)
 
 # init(shapes:mass:material:mode:)
 

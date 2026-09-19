@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/sharedwithyou/swcollaborationview](https://developer.apple.com/documentation/sharedwithyou/swcollaborationview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swcollaborationview
 
 # SWCollaborationView (Swift)
 
@@ -61,6 +62,7 @@ The system presents an `SWCollaborationView` that displays participants and shar
 ### Instance Properties
 
 - [pendingAccessRequestsCount](swcollaborationview/pendingaccessrequestscount.md)
+- [showsParticipantCount](swcollaborationview/showsparticipantcount.md): Beta. Whether the collaboration button should show the participant count. Defaults to YES.
 
 ## Relationships
 
@@ -171,6 +173,7 @@ The system presents an `SWCollaborationView` that displays participants and shar
 ### Instance Properties
 
 - [pendingAccessRequestsCount](swcollaborationview/pendingaccessrequestscount.md)
+- [showsParticipantCount](swcollaborationview/showsparticipantcount.md): Beta. Whether the collaboration button should show the participant count. Defaults to YES.
 
 ## Relationships
 

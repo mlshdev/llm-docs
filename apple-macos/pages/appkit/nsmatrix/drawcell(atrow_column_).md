@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsmatrix/drawcell(atrow:column:)](https://developer.apple.com/documentation/appkit/nsmatrix/drawcell(atrow:column:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsmatrix/drawcell(atrow:column:)
 
 # drawCell(atRow:column:) (Swift)
 

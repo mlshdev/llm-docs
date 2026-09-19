@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_apple_dotmac_req_server_param](https://developer.apple.com/documentation/security/cssmerr_apple_dotmac_req_server_param)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_apple_dotmac_req_server_param
 
 # CSSMERR_APPLE_DOTMAC_REQ_SERVER_PARAM (Swift)
 

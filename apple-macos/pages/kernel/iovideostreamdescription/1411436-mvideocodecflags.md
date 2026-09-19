@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iovideostreamdescription/1411436-mvideocodecflags](https://developer.apple.com/documentation/kernel/iovideostreamdescription/1411436-mvideocodecflags)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iovideostreamdescription/1411436-mvideocodecflags
 
 # mVideoCodecFlags
 

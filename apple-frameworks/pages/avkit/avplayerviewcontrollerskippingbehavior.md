@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerskippingbehavior](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerskippingbehavior)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerskippingbehavior
 
 # AVPlayerViewControllerSkippingBehavior (Swift)
 
@@ -20,7 +21,7 @@ enum AVPlayerViewControllerSkippingBehavior
 
 - [init(rawValue:)](avplayerviewcontrollerskippingbehavior/init%28rawvalue_%29.md)
 
-### Skipping Behaviors
+### Skipping behaviors
 
 - [AVPlayerViewControllerSkippingBehavior.default](avplayerviewcontrollerskippingbehavior/default.md): The default skipping behavior, which is to skip forward or backward in 10-second intervals.
 - [AVPlayerViewControllerSkippingBehavior.skipItem](avplayerviewcontrollerskippingbehavior/skipitem.md): Skipping behavior that specifies skipping to the next or previous item in the player’s playlist.
@@ -60,7 +61,7 @@ enum AVPlayerViewControllerSkippingBehavior : NSInteger;
 
 ## Topics
 
-### Skipping Behaviors
+### Skipping behaviors
 
 - [AVPlayerViewControllerSkippingBehaviorDefault](avplayerviewcontrollerskippingbehavior/default.md): The default skipping behavior, which is to skip forward or backward in 10-second intervals.
 - [AVPlayerViewControllerSkippingBehaviorSkipItem](avplayerviewcontrollerskippingbehavior/skipitem.md): Skipping behavior that specifies skipping to the next or previous item in the player’s playlist.

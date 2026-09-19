@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/code-in-n8n/use-built-in-shortcuts.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/code-in-n8n/use-built-in-shortcuts.md)
+> Pinned source for n8n main: [docs/build/code-in-n8n/use-built-in-shortcuts.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/code-in-n8n/use-built-in-shortcuts.md)
 
 # Built-in methods and variables <a id="built-in-methods-and-variables"></a>
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/telephonymessagingkit/mmspartcontent/init(data:contenttype:contentid:disposition:filename:)](https://developer.apple.com/documentation/telephonymessagingkit/mmspartcontent/init(data:contenttype:contentid:disposition:filename:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/telephonymessagingkit/mmspartcontent/init(data:contenttype:contentid:disposition:filename:)
 
 # init(data:contentType:contentID:disposition:fileName:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideostartstopflags](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideostartstopflags)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideostartstopflags
 
 # IOUserVideoStartStopFlags
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Flags used to indicate how I/O is starting or stopping.
 
@@ -20,12 +21,12 @@ enum IOUserVideoStartStopFlags : uint64_t;
 
 ### Start/stop behaviors
 
-- [None](iouservideostartstopflags/none.md): A flag that indicates starting or stopping for normal I/O operation.
-- [Prewarm](iouservideostartstopflags/prewarm.md): A flag that indicates starting or stopping for prewarming.
+- [None](iouservideostartstopflags/none.md): Beta. A flag that indicates starting or stopping for normal I/O operation.
+- [Prewarm](iouservideostartstopflags/prewarm.md): Beta. A flag that indicates starting or stopping for prewarming.
 
 ## See Also
 
 ### Performing I/O
 
-- [StartIO](../iouservideoclockdevice/startio.md): Tells the clock device to start IO.
-- [StopIO](../iouservideoclockdevice/stopio.md): Tells the clock device to stop IO.
+- [StartIO](../iouservideoclockdevice/startio.md): Beta. Tells the clock device to start IO.
+- [StopIO](../iouservideoclockdevice/stopio.md): Beta. Tells the clock device to stop IO.

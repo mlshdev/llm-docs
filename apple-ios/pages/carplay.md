@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/carplay](https://developer.apple.com/documentation/carplay)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/carplay
 
 # CarPlay (Swift)
 
@@ -132,10 +133,10 @@ Templates that are available exclusively to apps with the communication entitlem
 - [CPListImageRowItemImageGridElement](carplay/cplistimagerowitemimagegridelement.md)
 - [CPListImageRowItemRowElement](carplay/cplistimagerowitemrowelement.md)
 - [CPListTemplateDetailsHeader](carplay/cplisttemplatedetailsheader.md): A header for list templates that displays rich media content with action buttons.
-- [CPMapPanel](carplay/cpmappanel.md)
-- [CPMapPanelButtonConfiguration](carplay/cpmappanelbuttonconfiguration.md)
-- [CPMapPanelItem](carplay/cpmappanelitem.md)
-- [CPMapPanelSection](carplay/cpmappanelsection.md)
+- [CPMapPanel](carplay/cpmappanel.md): An overlay for a custom map interface that shows navigation-related instructions or information over a portion of the map.
+- [CPMapPanelButtonConfiguration](carplay/cpmappanelbuttonconfiguration.md): A type that manages the action buttons and travel estimates in a map panel.
+- [CPMapPanelItem](carplay/cpmappanelitem.md): A type that manages the waypoint, route, trip, and other information you display in a map panel.
+- [CPMapPanelSection](carplay/cpmappanelsection.md): A single section of a map panel that you fill with a title and one or more items.
 - [CPMapTemplateWaypoint](carplay/cpmaptemplatewaypoint.md): CPMapTemplateWaypoint represents a waypoint with associated travel estimates
 - [CPMessageGridItemConfiguration](carplay/cpmessagegriditemconfiguration.md)
 - [CPMultiStopCardConfiguration](carplay/cpmultistopcardconfiguration.md)
@@ -146,9 +147,9 @@ Templates that are available exclusively to apps with the communication entitlem
 - [CPNowPlayingSportsEventStatus](carplay/cpnowplayingsportseventstatus.md): A representation of the status of a sporting event.
 - [CPNowPlayingSportsTeam](carplay/cpnowplayingsportsteam.md): A representation of a sports team for the now playing screen, in sports that have exactly two teams.
 - [CPNowPlayingSportsTeamLogo](carplay/cpnowplayingsportsteamlogo.md): A logo image or, if no image is available, an abbreviation or initialism for this team.
-- [CPPanel](carplay/cppanel.md)
-- [CPPanelButtonConfiguration](carplay/cppanelbuttonconfiguration.md)
-- [CPPanelItem](carplay/cppanelitem.md)
+- [CPPanel](carplay/cppanel.md): A type that provides the common behaviors for panels you display on top of your app’s content.
+- [CPPanelButtonConfiguration](carplay/cppanelbuttonconfiguration.md): A type that provides the common behaviors for a button layout in a panel.
+- [CPPanelItem](carplay/cppanelitem.md): A type that provides the common behaviors for items you display in a section of a panel.
 - [CPPlaybackConfiguration](carplay/cpplaybackconfiguration.md)
 - [CPRouteDetail](carplay/cproutedetail.md)
 - [CPRouteSegment](carplay/cproutesegment.md): CPRouteSegment describes information pertaining to a segment of a route.
@@ -312,10 +313,10 @@ Templates that are available exclusively to apps with the communication entitlem
 - [CPListImageRowItemImageGridElement](carplay/cplistimagerowitemimagegridelement.md)
 - [CPListImageRowItemRowElement](carplay/cplistimagerowitemrowelement.md)
 - [CPListTemplateDetailsHeader](carplay/cplisttemplatedetailsheader.md): A header for list templates that displays rich media content with action buttons.
-- [CPMapPanel](carplay/cpmappanel.md)
-- [CPMapPanelButtonConfiguration](carplay/cpmappanelbuttonconfiguration.md)
-- [CPMapPanelItem](carplay/cpmappanelitem.md)
-- [CPMapPanelSection](carplay/cpmappanelsection.md)
+- [CPMapPanel](carplay/cpmappanel.md): An overlay for a custom map interface that shows navigation-related instructions or information over a portion of the map.
+- [CPMapPanelButtonConfiguration](carplay/cpmappanelbuttonconfiguration.md): A type that manages the action buttons and travel estimates in a map panel.
+- [CPMapPanelItem](carplay/cpmappanelitem.md): A type that manages the waypoint, route, trip, and other information you display in a map panel.
+- [CPMapPanelSection](carplay/cpmappanelsection.md): A single section of a map panel that you fill with a title and one or more items.
 - [CPMapTemplateWaypoint](carplay/cpmaptemplatewaypoint.md): CPMapTemplateWaypoint represents a waypoint with associated travel estimates
 - [CPMessageGridItemConfiguration](carplay/cpmessagegriditemconfiguration.md)
 - [CPMultiStopCardConfiguration](carplay/cpmultistopcardconfiguration.md)
@@ -326,9 +327,9 @@ Templates that are available exclusively to apps with the communication entitlem
 - [CPNowPlayingSportsEventStatus](carplay/cpnowplayingsportseventstatus.md): A representation of the status of a sporting event.
 - [CPNowPlayingSportsTeam](carplay/cpnowplayingsportsteam.md): A representation of a sports team for the now playing screen, in sports that have exactly two teams.
 - [CPNowPlayingSportsTeamLogo](carplay/cpnowplayingsportsteamlogo.md): A logo image or, if no image is available, an abbreviation or initialism for this team.
-- [CPPanel](carplay/cppanel.md)
-- [CPPanelButtonConfiguration](carplay/cppanelbuttonconfiguration.md)
-- [CPPanelItem](carplay/cppanelitem.md)
+- [CPPanel](carplay/cppanel.md): A type that provides the common behaviors for panels you display on top of your app’s content.
+- [CPPanelButtonConfiguration](carplay/cppanelbuttonconfiguration.md): A type that provides the common behaviors for a button layout in a panel.
+- [CPPanelItem](carplay/cppanelitem.md): A type that provides the common behaviors for items you display in a section of a panel.
 - [CPPlaybackConfiguration](carplay/cpplaybackconfiguration.md)
 - [CPRouteDetail](carplay/cproutedetail.md)
 - [CPRouteSegment](carplay/cproutesegment.md): CPRouteSegment describes information pertaining to a segment of a route.
@@ -337,7 +338,7 @@ Templates that are available exclusively to apps with the communication entitlem
 
 ### Protocols
 
-- [CPMapPanelDelegate](carplay/cpmappanel/delegate-swift.protocol.md)
+- [CPMapPanelDelegate](carplay/cpmappanel/delegate-swift.protocol.md): The interface you use to respond to the appearance and disappearance of the panel.
 - [CPPlayableItem](carplay/cpplayableitem.md)
 
 ### Structures

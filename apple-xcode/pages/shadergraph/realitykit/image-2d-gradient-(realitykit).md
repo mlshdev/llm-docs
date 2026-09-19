@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/shadergraph/realitykit/image-2d-gradient-(realitykit)](https://developer.apple.com/documentation/shadergraph/realitykit/image-2d-gradient-(realitykit))
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/shadergraph/realitykit/image-2d-gradient-(realitykit)
 
 # Image 2D Gradient (RealityKit)
 

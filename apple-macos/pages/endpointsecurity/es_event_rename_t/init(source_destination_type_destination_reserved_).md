@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_event_rename_t/init(source:destination_type:destination:reserved:)](https://developer.apple.com/documentation/endpointsecurity/es_event_rename_t/init(source:destination_type:destination:reserved:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_event_rename_t/init(source:destination_type:destination:reserved:)
 
 # init(source:destination_type:destination:reserved:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/sharing-your-teams-signing-certificates](https://developer.apple.com/documentation/xcode/sharing-your-teams-signing-certificates)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/sharing-your-teams-signing-certificates
 
 # Synchronizing code signing identities with your developer account
 

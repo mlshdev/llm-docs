@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uimenu/init(title:subtitle:image:preferredimagevisibility:identifier:options:preferredelementsize:children:)](https://developer.apple.com/documentation/uikit/uimenu/init(title:subtitle:image:preferredimagevisibility:identifier:options:preferredelementsize:children:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uimenu/init(title:subtitle:image:preferredimagevisibility:identifier:options:preferredelementsize:children:)
 
 # init(title:subtitle:image:preferredImageVisibility:identifier:options:preferredElementSize:children:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iousbhostdevice/4520044-completeasyncdevicerequest_invok](https://developer.apple.com/documentation/kernel/iousbhostdevice/4520044-completeasyncdevicerequest_invok)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iousbhostdevice/4520044-completeasyncdevicerequest_invok
 
 # CompleteAsyncDeviceRequest_Invoke
 

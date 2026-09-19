@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1643309-anonymous/kinquiry_byte7_reladr_mask](https://developer.apple.com/documentation/kernel/1643309-anonymous/kinquiry_byte7_reladr_mask)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1643309-anonymous/kinquiry_byte7_reladr_mask
 
 # kINQUIRY_Byte7_RELADR_Mask
 

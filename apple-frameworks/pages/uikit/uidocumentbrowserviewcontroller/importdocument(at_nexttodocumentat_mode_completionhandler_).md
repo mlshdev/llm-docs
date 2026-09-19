@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uidocumentbrowserviewcontroller/importdocument(at:nexttodocumentat:mode:completionhandler:)](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller/importdocument(at:nexttodocumentat:mode:completionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller/importdocument(at:nexttodocumentat:mode:completionhandler:)
 
 # importDocument(at:nextToDocumentAt:mode:completionHandler:) (Swift)
 

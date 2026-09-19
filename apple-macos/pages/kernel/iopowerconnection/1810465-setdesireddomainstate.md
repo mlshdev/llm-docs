@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iopowerconnection/1810465-setdesireddomainstate](https://developer.apple.com/documentation/kernel/iopowerconnection/1810465-setdesireddomainstate)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iopowerconnection/1810465-setdesireddomainstate
 
 # setDesiredDomainState
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiviewcontroller/tabbarcontroller](https://developer.apple.com/documentation/uikit/uiviewcontroller/tabbarcontroller)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiviewcontroller/tabbarcontroller
 
 # tabBarController (Swift)
 
@@ -29,6 +30,7 @@ If the view controller or one of its ancestors is a child of a tab bar controlle
 - [parent](parent.md): The parent view controller of the recipient.
 - [splitViewController](splitviewcontroller.md): The nearest ancestor in the view controller hierarchy that is a split view controller.
 - [navigationController](navigationcontroller.md): The nearest ancestor in the view controller hierarchy that is a navigation controller.
+- [arrangementViewController](arrangementviewcontroller.md): Beta. The nearest ancestor arrangement view controller.
 
 # tabBarController (Objective-C)
 
@@ -59,3 +61,4 @@ If the view controller or one of its ancestors is a child of a tab bar controlle
 - [parentViewController](parent.md): The parent view controller of the recipient.
 - [splitViewController](splitviewcontroller.md): The nearest ancestor in the view controller hierarchy that is a split view controller.
 - [navigationController](navigationcontroller.md): The nearest ancestor in the view controller hierarchy that is a navigation controller.
+- [arrangementViewController](arrangementviewcontroller.md): Beta. The nearest ancestor arrangement view controller.

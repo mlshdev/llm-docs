@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplaybackspeed/localizednumericname](https://developer.apple.com/documentation/avkit/avplaybackspeed/localizednumericname)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplaybackspeed/localizednumericname
 
 # localizedNumericName (Swift)
 
@@ -22,7 +23,7 @@ Use this value to represent the speed in a user interface where limited space is
 
 ## See Also
 
-### Inspecting Speed Details
+### Inspecting speed details
 
 - [rate](rate.md): The playback rate to use when you select this speed.
 - [localizedName](localizedname.md): A localized name for a speed that’s suitable for display in a user interface.
@@ -49,7 +50,7 @@ Use this value to represent the speed in a user interface where limited space is
 
 ## See Also
 
-### Inspecting Speed Details
+### Inspecting speed details
 
 - [rate](rate.md): The playback rate to use when you select this speed.
 - [localizedName](localizedname.md): A localized name for a speed that’s suitable for display in a user interface.

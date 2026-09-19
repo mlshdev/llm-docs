@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturedepthdataoutputdelegate/depthdataoutput(_:diddrop:timestamp:connection:reason:)](https://developer.apple.com/documentation/avfoundation/avcapturedepthdataoutputdelegate/depthdataoutput(_:diddrop:timestamp:connection:reason:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturedepthdataoutputdelegate/depthdataoutput(_:diddrop:timestamp:connection:reason:)
 
 # depthDataOutput(\_:didDrop:timestamp:connection:reason:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/cmvideocardgammatable/1560665-channels](https://developer.apple.com/documentation/applicationservices/cmvideocardgammatable/1560665-channels)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applicationservices/cmvideocardgammatable/1560665-channels
 
 # channels
 

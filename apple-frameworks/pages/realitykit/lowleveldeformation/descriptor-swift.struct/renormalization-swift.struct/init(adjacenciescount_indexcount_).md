@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/lowleveldeformation/descriptor-swift.struct/renormalization-swift.struct/init(adjacenciescount:indexcount:)](https://developer.apple.com/documentation/realitykit/lowleveldeformation/descriptor-swift.struct/renormalization-swift.struct/init(adjacenciescount:indexcount:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/lowleveldeformation/descriptor-swift.struct/renormalization-swift.struct/init(adjacenciescount:indexcount:)
 
 # init(adjacenciesCount:indexCount:)
 

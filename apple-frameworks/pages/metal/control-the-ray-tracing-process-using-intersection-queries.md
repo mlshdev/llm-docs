@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/control-the-ray-tracing-process-using-intersection-queries](https://developer.apple.com/documentation/metal/control-the-ray-tracing-process-using-intersection-queries)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/control-the-ray-tracing-process-using-intersection-queries
 
 # Control the ray tracing process using intersection queries
 

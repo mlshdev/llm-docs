@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_btm_item_type_user_item](https://developer.apple.com/documentation/endpointsecurity/es_btm_item_type_user_item)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_btm_item_type_user_item
 
 # ES_BTM_ITEM_TYPE_USER_ITEM (Swift)
 

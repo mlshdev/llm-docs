@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1641343-anonymous/khidusage_tfon_linebusytone](https://developer.apple.com/documentation/kernel/1641343-anonymous/khidusage_tfon_linebusytone)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1641343-anonymous/khidusage_tfon_linebusytone
 
 # kHIDUsage_Tfon_LineBusyTone
 

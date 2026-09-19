@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/arimageanchor/referenceimage](https://developer.apple.com/documentation/arkit/arimageanchor/referenceimage)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/arimageanchor/referenceimage
 
 # referenceImage (Swift)
 

@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/inference/external-inference-providers.md](https://github.com/qdrant/landing_page/blob/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/content/documentation/inference/external-inference-providers.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/inference/external-inference-providers.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/inference/external-inference-providers.md)
 > Canonical documentation: https://qdrant.tech/documentation/inference/external-inference-providers/
 
 # External Embedding Model Providers
@@ -12,7 +12,7 @@ Qdrant Cloud can act as a proxy for the APIs of external embedding model provide
 
 This enables you to access any of the embedding models provided by these providers through the Qdrant API.
 
-![Inference with an external embedding model provider](https://raw.githubusercontent.com/qdrant/landing_page/4d8a8ceb08486decdbf0f0016772c7f120ea7d56/qdrant-landing/static/docs/inference-external-provider.png)
+![Inference with an external embedding model provider](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/docs/inference-external-provider.png)
 
 When using an external embedding model, ensure that your collection has been configured for vectors with the correct dimensionality. Refer to the model's documentation for details on the output dimensions.
 

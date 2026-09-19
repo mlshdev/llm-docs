@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/available_mac_os_x_version_10_4_and_later_but_deprecated_in_mac_os_x_version_10_4](https://developer.apple.com/documentation/appkit/available_mac_os_x_version_10_4_and_later_but_deprecated_in_mac_os_x_version_10_4)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/available_mac_os_x_version_10_4_and_later_but_deprecated_in_mac_os_x_version_10_4
 
 # AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER_BUT_DEPRECATED_IN_MAC_OS_X_VERSION_10_4
 

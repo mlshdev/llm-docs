@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/sbcmodepageformatdevice/1555559-ssec_hsec_rmb_surf](https://developer.apple.com/documentation/iokit/sbcmodepageformatdevice/1555559-ssec_hsec_rmb_surf)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/sbcmodepageformatdevice/1555559-ssec_hsec_rmb_surf
 
 # SSEC_HSEC_RMB_SURF
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ioaudioengineuserclient/1495603-performclientoutput](https://developer.apple.com/documentation/kernel/ioaudioengineuserclient/1495603-performclientoutput)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ioaudioengineuserclient/1495603-performclientoutput
 
 # performClientOutput
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/environmentresource/load(named:in:)](https://developer.apple.com/documentation/realitykit/environmentresource/load(named:in:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/environmentresource/load(named:in:)
 
 # load(named:in:)
 
 **Framework:** RealityKit  
 **Kind:** Type Method  
-**Availability:** iOS 13.0+ (deprecated in 27.0) · iPadOS 13.0+ (deprecated in 27.0) · Mac Catalyst 13.0+ · macOS 10.15+ (deprecated in 27.0) · tvOS 26.0+ (deprecated in 27.0) · visionOS  (deprecated in 27.0)
+**Availability:** iOS 13.0+ (deprecated in 27.2) · iPadOS 13.0+ (deprecated in 27.2) · Mac Catalyst 13.0+ · macOS 10.15+ (deprecated in 27.2) · tvOS 26.0+ (deprecated in 27.2) · visionOS  (deprecated in 27.2)
 
 Synchronously loads an environment resource from a bundle.
 

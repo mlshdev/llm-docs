@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corespotlight/spotlightsearchtool/searchreply/content-swift.enum/scoreditems(_:)](https://developer.apple.com/documentation/corespotlight/spotlightsearchtool/searchreply/content-swift.enum/scoreditems(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corespotlight/spotlightsearchtool/searchreply/content-swift.enum/scoreditems(_:)
 
 # SpotlightSearchTool.SearchReply.Content.scoredItems(\_:)
 

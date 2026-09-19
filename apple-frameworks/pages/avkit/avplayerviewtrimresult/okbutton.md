@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewtrimresult/okbutton](https://developer.apple.com/documentation/avkit/avplayerviewtrimresult/okbutton)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewtrimresult/okbutton
 
 # AVPlayerViewTrimResult.okButton (Swift)
 
@@ -16,7 +17,7 @@ case okButton
 
 ## See Also
 
-### Trim Results
+### Trim results
 
 - [AVPlayerViewTrimResult.cancelButton](cancelbutton.md): The user clicked the Cancel button.
 
@@ -36,6 +37,6 @@ AVPlayerViewTrimOKButton
 
 ## See Also
 
-### Trim Results
+### Trim results
 
 - [AVPlayerViewTrimCancelButton](cancelbutton.md): The user clicked the Cancel button.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/giouserservicepropertieskey](https://developer.apple.com/documentation/kernel/giouserservicepropertieskey)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/giouserservicepropertieskey
 
 # gIOUserServicePropertiesKey
 

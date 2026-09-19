@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsglyphgenerator/generateglyphs(for:desirednumberofcharacters:glyphindex:characterindex:)](https://developer.apple.com/documentation/appkit/nsglyphgenerator/generateglyphs(for:desirednumberofcharacters:glyphindex:characterindex:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsglyphgenerator/generateglyphs(for:desirednumberofcharacters:glyphindex:characterindex:)
 
 # generateGlyphs(for:desiredNumberOfCharacters:glyphIndex:characterIndex:) (Swift)
 

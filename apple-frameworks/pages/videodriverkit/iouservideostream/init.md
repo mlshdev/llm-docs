@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideostream/init](https://developer.apple.com/documentation/videodriverkit/iouservideostream/init)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideostream/init
 
 # init
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Initializes an video stream.
 
@@ -32,5 +33,5 @@ True on success.
 
 ### Creating a video stream
 
-- [Create](create.md)
-- [IOUserVideoDriver](../iouservideodriver.md): A video driver.
+- [Create](create.md): Beta.
+- [IOUserVideoDriver](../iouservideodriver.md): Beta. A video driver.

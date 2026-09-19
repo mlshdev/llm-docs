@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturedevice/isedgelightenabled](https://developer.apple.com/documentation/avfoundation/avcapturedevice/isedgelightenabled)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturedevice/isedgelightenabled
 
 # isEdgeLightEnabled (Swift)
 
@@ -18,7 +19,7 @@ class var isEdgeLightEnabled: Bool { get }
 
 ## Discussion
 
-This readonly property changes to reflect the Edge Light state in Control Center. It is key-value observable.
+This readonly property changes to reflect the Edge Light state in Control Center. It is key-value observable. On iOS, Edge Light only applies to video conferencing apps by default (apps that use “voip” as one of their UIBackgroundModes). Non video conferencing apps may opt in for Edge Light by adding the following key to their Info.plist: NSCameraEdgeLightEnabled
 
 # edgeLightEnabled (Objective-C)
 
@@ -38,4 +39,4 @@ A class property indicating whether the Edge Light feature is currently enabled 
 
 ## Discussion
 
-This readonly property changes to reflect the Edge Light state in Control Center. It is key-value observable.
+This readonly property changes to reflect the Edge Light state in Control Center. It is key-value observable. On iOS, Edge Light only applies to video conferencing apps by default (apps that use “voip” as one of their UIBackgroundModes). Non video conferencing apps may opt in for Edge Light by adding the following key to their Info.plist: NSCameraEdgeLightEnabled

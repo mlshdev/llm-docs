@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_renderbuffer_internal_format](https://developer.apple.com/documentation/opengles/gl_renderbuffer_internal_format)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_renderbuffer_internal_format
 
 # GL_RENDERBUFFER_INTERNAL_FORMAT (Swift)
 

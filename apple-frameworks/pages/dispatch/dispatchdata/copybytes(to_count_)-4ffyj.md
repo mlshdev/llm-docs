@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/dispatch/dispatchdata/copybytes(to:count:)-4ffyj](https://developer.apple.com/documentation/dispatch/dispatchdata/copybytes(to:count:)-4ffyj)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/dispatch/dispatchdata/copybytes(to:count:)-4ffyj
 
 # copyBytes(to:count:)
 

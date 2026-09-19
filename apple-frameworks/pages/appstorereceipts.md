@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appstorereceipts](https://developer.apple.com/documentation/appstorereceipts)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstorereceipts
 
 # App Store Receipts
 
@@ -26,7 +27,7 @@ In-app transactions that your app doesn’t mark as finished using [finishTransa
 
 The [responseBody.Latest_receipt_info](appstorereceipts/responsebody/latest_receipt_info-data.dictionary.md) object for auto-renewable subscriptions can grow over time because the renewal transactions stay in the receipt indefinitely. To optimize performance, the App Store may truncate receipts in the sandbox environment to remove old transactions.
 
-You can test validating receipts in the sandbox environment. For more information, see [Testing In-App Purchases with sandbox](storekit/testing-in-app-purchases-with-sandbox.md) and [Test in-app purchases](https://developer.apple.com/help/app-store-connect/test-in-app-purchases-main/test-in-app-purchases).
+You can test validating receipts in the sandbox environment. For more information, see [Testing Apple In-App Purchases with sandbox](storekit/testing-in-app-purchases-with-sandbox.md) and [Test in-app purchases](https://developer.apple.com/help/app-store-connect/test-in-app-purchases-main/test-in-app-purchases).
 
 You can validate receipts from the App Store using server-side receipt validation or on-device validation. For more information about receipt validation options, see [Choosing a receipt validation technique](storekit/choosing-a-receipt-validation-technique.md).
 

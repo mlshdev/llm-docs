@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/dvdphysicalformatinfo/1394162-minimumrate](https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394162-minimumrate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394162-minimumrate
 
 # minimumRate
 

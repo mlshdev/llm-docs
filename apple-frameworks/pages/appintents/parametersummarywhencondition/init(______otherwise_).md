@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/parametersummarywhencondition/init(_:_:_:otherwise:)](https://developer.apple.com/documentation/appintents/parametersummarywhencondition/init(_:_:_:otherwise:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/parametersummarywhencondition/init(_:_:_:otherwise:)
 
 # init(\_:\_:\_:otherwise:)
 

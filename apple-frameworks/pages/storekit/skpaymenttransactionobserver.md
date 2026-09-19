@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skpaymenttransactionobserver](https://developer.apple.com/documentation/storekit/skpaymenttransactionobserver)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skpaymenttransactionobserver
 
 # SKPaymentTransactionObserver (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Protocol  
 **Availability:** iOS 3.0+ (deprecated in 18.0) · iPadOS 3.0+ (deprecated in 18.0) · Mac Catalyst 13.1+ (deprecated in 18.0) · macOS 10.7+ (deprecated in 15.0) · tvOS 9.0+ (deprecated in 18.0) · visionOS 1.0+ (deprecated in 2.0) · watchOS 6.2+ (deprecated in 11.0)
 
-A set of methods that process transactions, unlock purchased functionality, and continue promoted In-App Purchases.
+A set of methods that process transactions, unlock purchased functionality, and continue promoted Apple In-App Purchases.
 
 > Use StoreKit 2 Transaction APIs.
 
@@ -18,8 +19,8 @@ protocol SKPaymentTransactionObserver : NSObjectProtocol
 
 ## Mentioned In
 
-- [Testing In-App Purchases in Xcode](testing-in-app-purchases-in-xcode.md)
-- [Promoting In-App Purchases](promoting-in-app-purchases.md)
+- [Testing Apple In-App Purchases in Xcode](testing-in-app-purchases-in-xcode.md)
+- [Promoting Apple In-App Purchases](promoting-in-app-purchases.md)
 - [Processing a transaction](processing-a-transaction.md)
 - [Setting up the transaction observer for the payment queue](setting-up-the-transaction-observer-for-the-payment-queue.md)
 - [Testing transaction observer code](testing-transaction-observer-code.md)
@@ -47,10 +48,10 @@ The system calls an observer when the queue updates or removes transactions. An 
 - [paymentQueue(\_:restoreCompletedTransactionsFailedWithError:)](skpaymenttransactionobserver/paymentqueue%28__restorecompletedtransactionsfailedwitherror_%29.md): Deprecated. Tells the observer that an error occurred while restoring transactions.
 - [paymentQueueRestoreCompletedTransactionsFinished(\_:)](skpaymenttransactionobserver/paymentqueuerestorecompletedtransactionsfinished%28__%29.md): Deprecated. Tells the observer that the payment queue has finished sending restored transactions.
 
-### Handling promoted in-app purchases
+### Handling promoted Apple In-App Purchases
 
-- [Promoting In-App Purchases](promoting-in-app-purchases.md): Show promoted In-App Purchases on your product page and handle purchases that customers initiate on the App Store.
-- [paymentQueue(\_:shouldAddStorePayment:for:)](skpaymenttransactionobserver/paymentqueue%28__shouldaddstorepayment_for_%29.md): Deprecated. Tells the observer when a user initiates an in-app purchase from the App Store.
+- [Promoting Apple In-App Purchases](promoting-in-app-purchases.md): Show promoted Apple In-App Purchases on your product page and handle purchases that customers initiate on the App Store.
+- [paymentQueue(\_:shouldAddStorePayment:for:)](skpaymenttransactionobserver/paymentqueue%28__shouldaddstorepayment_for_%29.md): Deprecated. Tells the observer when a user initiates an Apple In-App Purchase from the App Store.
 
 ### Revoking entitlements
 
@@ -75,7 +76,7 @@ The system calls an observer when the queue updates or removes transactions. An 
 ### Essentials
 
 - [Setting up the transaction observer for the payment queue](setting-up-the-transaction-observer-for-the-payment-queue.md): Enable your app to receive and handle transactions by adding an observer.
-- [Offering, completing, and restoring in-app purchases](offering-completing-and-restoring-in-app-purchases.md): Fetch, display, purchase, validate, and finish transactions in your app.
+- [Offering, completing, and restoring Apple In-App Purchases](offering-completing-and-restoring-in-app-purchases.md): Fetch, display, purchase, validate, and finish transactions in your app.
 - [SKPaymentQueue](skpaymentqueue.md): Deprecated. A queue of payment transactions for the App Store to process.
 - [SKPaymentQueueDelegate](skpaymentqueuedelegate.md): Deprecated. The protocol that provides information needed to complete transactions.
 - [SKRequest](skrequest.md): Deprecated. An abstract class that represents a request to the App Store.
@@ -86,7 +87,7 @@ The system calls an observer when the queue updates or removes transactions. An 
 **Kind:** Protocol  
 **Availability:** iOS 3.0+ (deprecated in 18.0) · iPadOS 3.0+ (deprecated in 18.0) · Mac Catalyst 13.1+ (deprecated in 18.0) · macOS 10.7+ (deprecated in 15.0) · tvOS 9.0+ (deprecated in 18.0) · visionOS 1.0+ (deprecated in 2.0) · watchOS 6.2+ (deprecated in 11.0)
 
-A set of methods that process transactions, unlock purchased functionality, and continue promoted In-App Purchases.
+A set of methods that process transactions, unlock purchased functionality, and continue promoted Apple In-App Purchases.
 
 > Use StoreKit 2 Transaction APIs.
 
@@ -98,8 +99,8 @@ A set of methods that process transactions, unlock purchased functionality, and 
 
 ## Mentioned In
 
-- [Testing In-App Purchases in Xcode](testing-in-app-purchases-in-xcode.md)
-- [Promoting In-App Purchases](promoting-in-app-purchases.md)
+- [Testing Apple In-App Purchases in Xcode](testing-in-app-purchases-in-xcode.md)
+- [Promoting Apple In-App Purchases](promoting-in-app-purchases.md)
 - [Processing a transaction](processing-a-transaction.md)
 - [Setting up the transaction observer for the payment queue](setting-up-the-transaction-observer-for-the-payment-queue.md)
 - [Testing transaction observer code](testing-transaction-observer-code.md)
@@ -127,10 +128,10 @@ The system calls an observer when the queue updates or removes transactions. An 
 - [paymentQueue:restoreCompletedTransactionsFailedWithError:](skpaymenttransactionobserver/paymentqueue%28__restorecompletedtransactionsfailedwitherror_%29.md): Deprecated. Tells the observer that an error occurred while restoring transactions.
 - [paymentQueueRestoreCompletedTransactionsFinished:](skpaymenttransactionobserver/paymentqueuerestorecompletedtransactionsfinished%28__%29.md): Deprecated. Tells the observer that the payment queue has finished sending restored transactions.
 
-### Handling promoted in-app purchases
+### Handling promoted Apple In-App Purchases
 
-- [Promoting In-App Purchases](promoting-in-app-purchases.md): Show promoted In-App Purchases on your product page and handle purchases that customers initiate on the App Store.
-- [paymentQueue:shouldAddStorePayment:forProduct:](skpaymenttransactionobserver/paymentqueue%28__shouldaddstorepayment_for_%29.md): Deprecated. Tells the observer when a user initiates an in-app purchase from the App Store.
+- [Promoting Apple In-App Purchases](promoting-in-app-purchases.md): Show promoted Apple In-App Purchases on your product page and handle purchases that customers initiate on the App Store.
+- [paymentQueue:shouldAddStorePayment:forProduct:](skpaymenttransactionobserver/paymentqueue%28__shouldaddstorepayment_for_%29.md): Deprecated. Tells the observer when a user initiates an Apple In-App Purchase from the App Store.
 
 ### Revoking entitlements
 
@@ -155,7 +156,7 @@ The system calls an observer when the queue updates or removes transactions. An 
 ### Essentials
 
 - [Setting up the transaction observer for the payment queue](setting-up-the-transaction-observer-for-the-payment-queue.md): Enable your app to receive and handle transactions by adding an observer.
-- [Offering, completing, and restoring in-app purchases](offering-completing-and-restoring-in-app-purchases.md): Fetch, display, purchase, validate, and finish transactions in your app.
+- [Offering, completing, and restoring Apple In-App Purchases](offering-completing-and-restoring-in-app-purchases.md): Fetch, display, purchase, validate, and finish transactions in your app.
 - [SKPaymentQueue](skpaymentqueue.md): Deprecated. A queue of payment transactions for the App Store to process.
 - [SKPaymentQueueDelegate](skpaymentqueuedelegate.md): Deprecated. The protocol that provides information needed to complete transactions.
 - [SKRequest](skrequest.md): Deprecated. An abstract class that represents a request to the App Store.

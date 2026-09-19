@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/getting-the-gpu-that-drives-a-views-display](https://developer.apple.com/documentation/metal/getting-the-gpu-that-drives-a-views-display)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/getting-the-gpu-that-drives-a-views-display
 
 # Getting the GPU that drives a view’s display (Swift)
 

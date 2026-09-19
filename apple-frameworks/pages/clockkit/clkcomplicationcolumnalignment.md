@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationcolumnalignment](https://developer.apple.com/documentation/clockkit/clkcomplicationcolumnalignment)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationcolumnalignment
 
 # CLKComplicationColumnAlignment (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Enumeration  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Constants indicating the alignment of text in columns.
 
@@ -50,7 +51,7 @@ enum CLKComplicationColumnAlignment
 
 **Framework:** ClockKit  
 **Kind:** Enumeration  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Constants indicating the alignment of text in columns.
 

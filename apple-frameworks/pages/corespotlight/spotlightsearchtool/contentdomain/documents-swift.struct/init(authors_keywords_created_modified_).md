@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corespotlight/spotlightsearchtool/contentdomain/documents-swift.struct/init(authors:keywords:created:modified:)](https://developer.apple.com/documentation/corespotlight/spotlightsearchtool/contentdomain/documents-swift.struct/init(authors:keywords:created:modified:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corespotlight/spotlightsearchtool/contentdomain/documents-swift.struct/init(authors:keywords:created:modified:)
 
 # init(authors:keywords:created:modified:)
 

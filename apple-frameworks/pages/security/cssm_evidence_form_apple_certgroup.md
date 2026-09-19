@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_evidence_form_apple_certgroup](https://developer.apple.com/documentation/security/cssm_evidence_form_apple_certgroup)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_evidence_form_apple_certgroup
 
 # CSSM_EVIDENCE_FORM_APPLE_CERTGROUP (Swift)
 

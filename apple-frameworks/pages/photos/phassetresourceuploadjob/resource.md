@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photos/phassetresourceuploadjob/resource](https://developer.apple.com/documentation/photos/phassetresourceuploadjob/resource)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photos/phassetresourceuploadjob/resource
 
 # resource (Swift)
 
 **Framework:** Photos  
 **Kind:** Instance Property  
-**Availability:** iOS 26.1+ (deprecated in 27.0) · iPadOS 26.1+ (deprecated in 27.0) · Mac Catalyst 26.1+ (deprecated in 27.0)
+**Availability:** iOS 26.1+ (deprecated in 27.2) · iPadOS 26.1+ (deprecated in 27.2) · Mac Catalyst 26.1+ (deprecated in 27.2)
 
 The asset resource this job promises to upload.
 
@@ -36,7 +37,7 @@ var resource: PHAssetResource { get }
 
 **Framework:** Photos  
 **Kind:** Instance Property  
-**Availability:** iOS 26.1+ (deprecated in 27.0) · iPadOS 26.1+ (deprecated in 27.0)
+**Availability:** iOS 26.1+ (deprecated in 27.2) · iPadOS 26.1+ (deprecated in 27.2)
 
 The asset resource this job promises to upload.
 

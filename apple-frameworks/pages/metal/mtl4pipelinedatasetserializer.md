@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4pipelinedatasetserializer](https://developer.apple.com/documentation/metal/mtl4pipelinedatasetserializer)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtl4pipelinedatasetserializer
 
 # MTL4PipelineDataSetSerializer (Swift)
 
@@ -22,7 +23,7 @@ protocol MTL4PipelineDataSetSerializer : NSObjectProtocol
 
 ## Overview
 
-Pipeline data serializer instances allow you to create binary archives and serialize pipeline scripts to use with the offline Metal binary generator (`metal-tt`) doc:compiling-binary-archives-from-a-custom-configuration-script.md.
+Pipeline data serializer instances allow you to create binary archives and serialize pipeline scripts to use with the offline Metal binary generator (`metal-tt`) [Compiling binary archives from a custom configuration script](compiling-binary-archives-from-a-custom-configuration-script.md).
 
 You capture and retain all relevant data for all pipelines a compiler instance creates by providing an instance of this object to its [MTL4CompilerDescriptor](mtl4compilerdescriptor.md).
 
@@ -76,7 +77,7 @@ A fast-addition container for collecting data during pipeline state creation.
 
 ## Overview
 
-Pipeline data serializer instances allow you to create binary archives and serialize pipeline scripts to use with the offline Metal binary generator (`metal-tt`) doc:compiling-binary-archives-from-a-custom-configuration-script.md.
+Pipeline data serializer instances allow you to create binary archives and serialize pipeline scripts to use with the offline Metal binary generator (`metal-tt`) [Compiling binary archives from a custom configuration script](compiling-binary-archives-from-a-custom-configuration-script.md).
 
 You capture and retain all relevant data for all pipelines a compiler instance creates by providing an instance of this object to its [MTL4CompilerDescriptor](mtl4compilerdescriptor.md).
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsstring/deferredlocalizedintentsstring(with:table:arguments:)](https://developer.apple.com/documentation/foundation/nsstring/deferredlocalizedintentsstring(with:table:arguments:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsstring/deferredlocalizedintentsstring(with:table:arguments:)
 
 # deferredLocalizedIntentsString(with:table:arguments:)
 

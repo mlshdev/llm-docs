@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/product/promotioninfo/visibility-swift.enum](https://developer.apple.com/documentation/storekit/product/promotioninfo/visibility-swift.enum)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/product/promotioninfo/visibility-swift.enum
 
 # Product.PromotionInfo.Visibility
 
@@ -22,17 +23,17 @@ Use the visibility states to set the [visibility](visibility-swift.property.md) 
 
 The visibility states have the following effects on the user’s device:
 
-- [Product.PromotionInfo.Visibility.visible](visibility-swift.enum/visible.md) makes the promoted in-app purchase visible in the App Store.
-- [Product.PromotionInfo.Visibility.hidden](visibility-swift.enum/hidden.md) hides the promoted in-app purchase in the App Store.
-- [Product.PromotionInfo.Visibility.appStoreConnectDefault](visibility-swift.enum/appstoreconnectdefault.md) let’s you control the visibility using settings in App Store Connect. For more information, see [Promote in-app purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/promote-in-app-purchases).
+- [Product.PromotionInfo.Visibility.visible](visibility-swift.enum/visible.md) makes the promoted Apple In-App Purchase visible in the App Store.
+- [Product.PromotionInfo.Visibility.hidden](visibility-swift.enum/hidden.md) hides the promoted Apple In-App Purchase in the App Store.
+- [Product.PromotionInfo.Visibility.appStoreConnectDefault](visibility-swift.enum/appstoreconnectdefault.md) let’s you control the visibility using settings in App Store Connect. For more information, see [Promote Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/promote-in-app-purchases).
 
 ## Topics
 
 ### Getting visibility states
 
-- [Product.PromotionInfo.Visibility.appStoreConnectDefault](visibility-swift.enum/appstoreconnectdefault.md): A visibility value for a promoted in-app purchase that uses the visibility setting from App Store Connect.
-- [Product.PromotionInfo.Visibility.hidden](visibility-swift.enum/hidden.md): A visibility value that hides a promoted in-app purchase on the App Store on a user’s device.
-- [Product.PromotionInfo.Visibility.visible](visibility-swift.enum/visible.md): A visibility value that makes a promoted in-app purchase visible on the App Store on a user’s device.
+- [Product.PromotionInfo.Visibility.appStoreConnectDefault](visibility-swift.enum/appstoreconnectdefault.md): A visibility value for a promoted Apple In-App Purchase that uses the visibility setting from App Store Connect.
+- [Product.PromotionInfo.Visibility.hidden](visibility-swift.enum/hidden.md): A visibility value that hides a promoted Apple In-App Purchase on the App Store on a user’s device.
+- [Product.PromotionInfo.Visibility.visible](visibility-swift.enum/visible.md): A visibility value that makes a promoted Apple In-App Purchase visible on the App Store on a user’s device.
 
 ## Relationships
 
@@ -48,5 +49,5 @@ The visibility states have the following effects on the user’s device:
 
 ### Managing promotion visibility
 
-- [visibility](visibility-swift.property.md): A value that indicates whether the promoted in-app purchase is visible or hidden on the user’s device.
-- [updateProductVisibility(\_:for:)](updateproductvisibility%28__for_%29.md): Updates a value that indicates whether a promoted in-app purchase appears in the App Store on the user’s device.
+- [visibility](visibility-swift.property.md): A value that indicates whether the promoted Apple In-App Purchase is visible or hidden on the user’s device.
+- [updateProductVisibility(\_:for:)](updateproductvisibility%28__for_%29.md): Updates a value that indicates whether a promoted Apple In-App Purchase appears in the App Store on the user’s device.

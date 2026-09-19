@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:skiptonextchannel:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:skiptonextchannel:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:skiptonextchannel:)
 
 # playerViewController(\_:skipToNextChannel:) (Swift)
 
@@ -35,7 +36,7 @@ To enable channel skipping, adopt this method and replace the current player ite
 
 ## See Also
 
-### Responding to Channel Changes
+### Responding to channel changes
 
 - [playerViewController(\_:skipToPreviousChannel:)](playerviewcontroller%28__skiptopreviouschannel_%29.md): Tells the delegate when the user wants to skip to the previous channel.
 - [nextChannelInterstitialViewController(for:)](nextchannelinterstitialviewcontroller%28for_%29.md): Asks the delegate for a view controller that describes the layout of the next channel’s interstitial view.
@@ -72,7 +73,7 @@ To enable channel skipping, adopt this method and replace the current player ite
 
 ## See Also
 
-### Responding to Channel Changes
+### Responding to channel changes
 
 - [playerViewController:skipToPreviousChannel:](playerviewcontroller%28__skiptopreviouschannel_%29.md): Tells the delegate when the user wants to skip to the previous channel.
 - [nextChannelInterstitialViewControllerForPlayerViewController:](nextchannelinterstitialviewcontroller%28for_%29.md): Asks the delegate for a view controller that describes the layout of the next channel’s interstitial view.

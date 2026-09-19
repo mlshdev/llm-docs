@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1576937-anonymous/kscsicmd_write_buffer](https://developer.apple.com/documentation/iokit/1576937-anonymous/kscsicmd_write_buffer)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1576937-anonymous/kscsicmd_write_buffer
 
 # kSCSICmd_WRITE_BUFFER
 

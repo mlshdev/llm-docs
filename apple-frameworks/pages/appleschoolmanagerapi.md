@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appleschoolmanagerapi](https://developer.apple.com/documentation/appleschoolmanagerapi)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appleschoolmanagerapi
 
 # Apple School Manager API
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple School Manager API  
 **Kind:** Web Service  
-**Availability:** Apple School Manager API 1.6+
+**Availability:** Apple School Manager API 1.7+
 
 Automate device management activities and view device information in Apple School Manager.
 
@@ -66,10 +67,16 @@ Automate device management activities and view device information in Apple Schoo
 - [OrgDeviceActivityType](appleschoolmanagerapi/orgdeviceactivitytype.md): Strings that represent organization device activities.
 - [AppleCareCoveragePaymentType](appleschoolmanagerapi/applecarecoveragepaymenttype.md): Strings that represent AppleCare coverage payment types.
 - [AppleCareCoverageStatus](appleschoolmanagerapi/applecarecoveragestatus.md): Strings that represent AppleCare coverage status.
+- [ActivationLockType](appleschoolmanagerapi/activationlocktype.md): Strings that represent the type of Activation Lock on a device.
 - [MdmMigrationStatus](appleschoolmanagerapi/mdmmigrationstatus.md): Strings that represent the state of a device’s device management service migration.
+
+### Endpoints
+
+- [Get the Activation Lock Status for a Device](appleschoolmanagerapi/get-the-activation-lock-status-information-for-an-orgdevice.md): Get the Activation Lock status of an organization device.
 
 ### Dictionaries
 
+- [ActivationLockStatus](appleschoolmanagerapi/activationlockstatus.md): The data structure that represents the Activation Lock status of an organization device.
 - [ActivityTypeMetadata](appleschoolmanagerapi/activitytypemetadata.md): Additional metadata for an organization device activity, used by device management service migration activity types.
 
 ## See Also

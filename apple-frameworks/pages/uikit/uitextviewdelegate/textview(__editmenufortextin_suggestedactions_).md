@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitextviewdelegate/textview(_:editmenufortextin:suggestedactions:)](https://developer.apple.com/documentation/uikit/uitextviewdelegate/textview(_:editmenufortextin:suggestedactions:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uitextviewdelegate/textview(_:editmenufortextin:suggestedactions:)
 
 # textView(\_:editMenuForTextIn:suggestedActions:) (Swift)
 
 **Framework:** UIKit  
 **Kind:** Instance Method  
-**Availability:** iOS 16.0+ (deprecated in 27.0) · iPadOS 16.0+ (deprecated in 27.0) · Mac Catalyst 16.0+ (deprecated in 27.0) · tvOS 16.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 16.0+ (deprecated in 27.0) · iPadOS 16.0+ (deprecated in 27.0) · Mac Catalyst 16.0+ (deprecated in 27.2) · tvOS 16.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Asks the delegate for the menu to display in the text view, based on the text range and actions the system provides.
 
@@ -53,7 +54,7 @@ func textView(_ textView: UITextView, editMenuForTextIn range: NSRange, suggeste
 
 **Framework:** UIKit  
 **Kind:** Instance Method  
-**Availability:** iOS 16.0+ (deprecated in 27.0) · iPadOS 16.0+ (deprecated in 27.0) · Mac Catalyst 16.0+ (deprecated in 27.0) · tvOS 16.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 16.0+ (deprecated in 27.0) · iPadOS 16.0+ (deprecated in 27.0) · Mac Catalyst 16.0+ (deprecated in 27.2) · tvOS 16.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Asks the delegate for the menu to display in the text view, based on the text range and actions the system provides.
 

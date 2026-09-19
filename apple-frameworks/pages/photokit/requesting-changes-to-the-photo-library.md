@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photokit/requesting-changes-to-the-photo-library](https://developer.apple.com/documentation/photokit/requesting-changes-to-the-photo-library)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photokit/requesting-changes-to-the-photo-library
 
 # Requesting Changes to the Photo Library (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3753717-anonymous/dot3chipsetamd7990](https://developer.apple.com/documentation/kernel/3753717-anonymous/dot3chipsetamd7990)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3753717-anonymous/dot3chipsetamd7990
 
 # dot3ChipSetAMD7990
 

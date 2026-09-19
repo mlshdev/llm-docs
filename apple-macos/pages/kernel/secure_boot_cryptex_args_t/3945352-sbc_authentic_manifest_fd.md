@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/secure_boot_cryptex_args_t/3945352-sbc_authentic_manifest_fd](https://developer.apple.com/documentation/kernel/secure_boot_cryptex_args_t/3945352-sbc_authentic_manifest_fd)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/secure_boot_cryptex_args_t/3945352-sbc_authentic_manifest_fd
 
 # sbc_authentic_manifest_fd
 

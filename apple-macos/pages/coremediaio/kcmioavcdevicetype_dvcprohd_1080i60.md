@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/coremediaio/kcmioavcdevicetype_dvcprohd_1080i60](https://developer.apple.com/documentation/coremediaio/kcmioavcdevicetype_dvcprohd_1080i60)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremediaio/kcmioavcdevicetype_dvcprohd_1080i60
 
 # kCMIOAVCDeviceType_DVCProHD_1080i60 (Swift)
 

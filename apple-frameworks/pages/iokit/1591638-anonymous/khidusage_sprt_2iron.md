@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1591638-anonymous/khidusage_sprt_2iron](https://developer.apple.com/documentation/iokit/1591638-anonymous/khidusage_sprt_2iron)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1591638-anonymous/khidusage_sprt_2iron
 
 # kHIDUsage_Sprt_2Iron
 

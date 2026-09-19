@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/coprocessor_type_t/kcoprocessorversion1](https://developer.apple.com/documentation/kernel/coprocessor_type_t/kcoprocessorversion1)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/coprocessor_type_t/kcoprocessorversion1
 
 # kCoprocessorVersion1
 

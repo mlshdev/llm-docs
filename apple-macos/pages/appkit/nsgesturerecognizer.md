@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsgesturerecognizer](https://developer.apple.com/documentation/appkit/nsgesturerecognizer)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsgesturerecognizer
 
 # NSGestureRecognizer (Swift)
 
@@ -174,7 +175,7 @@ For more information about using the delegate to control the behavior of your ge
 
 - [allowedTouchTypes](nsgesturerecognizer/allowedtouchtypes.md)
 - [isCancellableByScrollGesture](nsgesturerecognizer/iscancellablebyscrollgesture.md): Causes the receiver to be cancelled when its enclosing scroll view’s gesture recognizer begins.
-- [modifierFlags](nsgesturerecognizer/modifierflags.md)
+- [modifierFlags](nsgesturerecognizer/modifierflags.md): The keyboard modifier flags in effect while the receiver last processed an event.
 - [name](nsgesturerecognizer/name.md)
 
 ### Handling touch and mouse events
@@ -390,7 +391,7 @@ For more information about using the delegate to control the behavior of your ge
 
 - [allowedTouchTypes](nsgesturerecognizer/allowedtouchtypes.md)
 - [cancellableByScrollGesture](nsgesturerecognizer/iscancellablebyscrollgesture.md): Causes the receiver to be cancelled when its enclosing scroll view’s gesture recognizer begins.
-- [modifierFlags](nsgesturerecognizer/modifierflags.md)
+- [modifierFlags](nsgesturerecognizer/modifierflags.md): The keyboard modifier flags in effect while the receiver last processed an event.
 - [name](nsgesturerecognizer/name.md)
 
 ### Handling touch and mouse events

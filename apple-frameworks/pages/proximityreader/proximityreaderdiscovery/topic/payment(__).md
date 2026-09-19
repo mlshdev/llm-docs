@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/proximityreader/proximityreaderdiscovery/topic/payment(_:)](https://developer.apple.com/documentation/proximityreader/proximityreaderdiscovery/topic/payment(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/proximityreader/proximityreaderdiscovery/topic/payment(_:)
 
 # ProximityReaderDiscovery.Topic.payment(\_:)
 

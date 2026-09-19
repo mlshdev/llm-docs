@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/syscp_id_instructions_feat_1_reg/3609146-sign_zero_ext_support](https://developer.apple.com/documentation/kernel/syscp_id_instructions_feat_1_reg/3609146-sign_zero_ext_support)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/syscp_id_instructions_feat_1_reg/3609146-sign_zero_ext_support
 
 # sign_zero_ext_support
 

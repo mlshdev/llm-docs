@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/managing-your-app-s-life-cycle](https://developer.apple.com/documentation/uikit/managing-your-app-s-life-cycle)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/managing-your-app-s-life-cycle
 
 # Managing your app’s life cycle (Swift)
 

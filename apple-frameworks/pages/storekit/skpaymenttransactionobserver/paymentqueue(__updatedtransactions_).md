@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skpaymenttransactionobserver/paymentqueue(_:updatedtransactions:)](https://developer.apple.com/documentation/storekit/skpaymenttransactionobserver/paymentqueue(_:updatedtransactions:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skpaymenttransactionobserver/paymentqueue(_:updatedtransactions:)
 
 # paymentQueue(\_:updatedTransactions:) (Swift)
 
@@ -23,7 +24,7 @@ func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SK
 
 ## Mentioned In
 
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 - [Implementing offer codes in your app](../implementing-offer-codes-in-your-app.md)
 - [Processing a transaction](../processing-a-transaction.md)
 - [Testing a payment request](../testing-a-payment-request.md)
@@ -46,7 +47,7 @@ Once a transaction is processed, it should be removed from the payment queue by 
 
 ### Related Documentation
 
-- [In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267)
+- [Apple In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267)
 
 ### Handling transactions
 
@@ -75,7 +76,7 @@ Tells an observer that one or more transactions have been updated.
 
 ## Mentioned In
 
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 - [Implementing offer codes in your app](../implementing-offer-codes-in-your-app.md)
 - [Processing a transaction](../processing-a-transaction.md)
 - [Testing a payment request](../testing-a-payment-request.md)
@@ -98,7 +99,7 @@ Once a transaction is processed, it should be removed from the payment queue by 
 
 ### Related Documentation
 
-- [In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267)
+- [Apple In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267)
 
 ### Handling transactions
 

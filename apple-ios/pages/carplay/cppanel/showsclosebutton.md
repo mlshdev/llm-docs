@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/carplay/cppanel/showsclosebutton](https://developer.apple.com/documentation/carplay/cppanel/showsclosebutton)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/carplay/cppanel/showsclosebutton
 
 # showsCloseButton (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
-A Boolean value indicating whether the close button is allowed to appear.
+A Boolean value that indicates whether the panel displays a close button.
 
 ## Declaration
 
@@ -18,9 +19,7 @@ var showsCloseButton: Bool { get set }
 
 ## Discussion
 
-Set the value of this property to @c NO to hide the close button.
-
-Defaults to YES.
+When the value of this property is `true`, the panel displays a close button that the driver can use to dismiss the panel. When the value of this property is `false`, you need to dismiss the panel programmatically from your app. The default value of this property is `true`.
 
 # showsCloseButton (Objective-C)
 
@@ -28,7 +27,7 @@ Defaults to YES.
 **Kind:** Instance Property  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
-A Boolean value indicating whether the close button is allowed to appear.
+A Boolean value that indicates whether the panel displays a close button.
 
 ## Declaration
 
@@ -40,6 +39,4 @@ A Boolean value indicating whether the close button is allowed to appear.
 
 ## Discussion
 
-Set the value of this property to @c NO to hide the close button.
-
-Defaults to YES.
+When the value of this property is `true`, the panel displays a close button that the driver can use to dismiss the panel. When the value of this property is `false`, you need to dismiss the panel programmatically from your app. The default value of this property is `true`.

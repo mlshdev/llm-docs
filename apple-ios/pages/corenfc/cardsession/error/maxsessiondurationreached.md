@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/corenfc/cardsession/error/maxsessiondurationreached](https://developer.apple.com/documentation/corenfc/cardsession/error/maxsessiondurationreached)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corenfc/cardsession/error/maxsessiondurationreached
 
 # CardSession.Error.maxSessionDurationReached
 
 **Framework:** Core NFC  
 **Kind:** Case  
-**Availability:** iOS 17.4+ · iPadOS 17.4+
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+
 
 The session is no longer valid because it reached its maximum duration.
 

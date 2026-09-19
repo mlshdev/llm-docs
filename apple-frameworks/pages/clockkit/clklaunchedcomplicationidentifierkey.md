@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clklaunchedcomplicationidentifierkey](https://developer.apple.com/documentation/clockkit/clklaunchedcomplicationidentifierkey)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clklaunchedcomplicationidentifierkey
 
 # CLKLaunchedComplicationIdentifierKey (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Global Variable  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 A key that indicates the identifier of a complication the system launched.
 
@@ -40,7 +41,7 @@ let CLKLaunchedComplicationIdentifierKey: String
 
 **Framework:** ClockKit  
 **Kind:** Global Variable  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 A key that indicates the identifier of a complication the system launched.
 

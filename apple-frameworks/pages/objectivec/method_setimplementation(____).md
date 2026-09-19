@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/objectivec/method_setimplementation(_:_:)](https://developer.apple.com/documentation/objectivec/method_setimplementation(_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/objectivec/method_setimplementation(_:_:)
 
 # method_setImplementation(\_:\_:) (Swift)
 

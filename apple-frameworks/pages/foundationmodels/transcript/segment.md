@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/segment](https://developer.apple.com/documentation/foundationmodels/transcript/segment)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/segment
 
 # Transcript.Segment
 
@@ -11,7 +12,7 @@ The types of segments that may be included in a transcript entry.
 ## Declaration
 
 ```swift
-enum Segment
+@nonexhaustive enum Segment
 ```
 
 ## Topics

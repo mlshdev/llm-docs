@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skproductstorepromotionvisibility](https://developer.apple.com/documentation/storekit/skproductstorepromotionvisibility)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skproductstorepromotionvisibility
 
 # SKProductStorePromotionVisibility (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Enumeration  
 **Availability:** iOS 11.0+ (deprecated in 18.0) · iPadOS 11.0+ (deprecated in 18.0) · Mac Catalyst 14.0+ (deprecated in 18.0) · macOS 11.0+ (deprecated in 15.0) · tvOS 11.0+ (deprecated in 18.0)
 
-The visibility settings that determine if an in-app purchase is visible on a device.
+The visibility settings that determine if an Apple In-App Purchase is visible on a device.
 
 > Use Product.PromotionInfo.Visibility.
 
@@ -52,7 +53,7 @@ The visibility settings that determine if an in-app purchase is visible on a dev
 **Kind:** Enumeration  
 **Availability:** iOS 11.0+ (deprecated in 18.0) · iPadOS 11.0+ (deprecated in 18.0) · Mac Catalyst 14.0+ (deprecated in 18.0) · macOS 11.0+ (deprecated in 15.0) · tvOS 11.0+ (deprecated in 18.0)
 
-The visibility settings that determine if an in-app purchase is visible on a device.
+The visibility settings that determine if an Apple In-App Purchase is visible on a device.
 
 > Use Product.PromotionInfo.Visibility.
 

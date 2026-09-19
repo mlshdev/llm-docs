@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclustersmokecoalarm/readattributeexpirydate(completion:)](https://developer.apple.com/documentation/matter/mtrbaseclustersmokecoalarm/readattributeexpirydate(completion:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrbaseclustersmokecoalarm/readattributeexpirydate(completion:)
 
 # readAttributeExpiryDate(completion:) (Swift)
 

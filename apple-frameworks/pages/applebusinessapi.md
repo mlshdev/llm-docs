@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applebusinessapi](https://developer.apple.com/documentation/applebusinessapi)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applebusinessapi
 
 # Apple Business API
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Web Service  
-**Availability:** Apple Business API 2.4+
+**Availability:** Apple Business API 2.5+
 
 Automate device management activities, view device information, and manage users and user groups in Apple Business.
 
@@ -194,6 +195,7 @@ Automate device management activities, view device information, and manage users
 - [BlueprintStatus](applebusinessapi/blueprintstatus.md): The status of a Blueprint.
 - [ConfigurationType](applebusinessapi/configurationtype.md): The type of Configuration profile.
 - [ConfigurationPlatform](applebusinessapi/configurationplatform.md): The platform that a Configuration targets.
+- [ActivationLockType](applebusinessapi/activationlocktype.md): Strings that represent the type of Activation Lock on a device.
 - [AuditEventActorType](applebusinessapi/auditeventactortype.md): Strings that represent the type of entity that performed an action.
 - [AuditEventCategory](applebusinessapi/auditeventcategory.md): Strings that represent audit event categories.
 - [AuditEventOutcome](applebusinessapi/auditeventoutcome.md): Strings that represent the result of an action.
@@ -206,8 +208,13 @@ Automate device management activities, view device information, and manage users
 - [LostModeStatus](applebusinessapi/lostmodestatus.md): Strings that represent lost mode statuses.
 - [MdmMigrationStatus](applebusinessapi/mdmmigrationstatus.md): Strings that represent the state of a device’s device management service migration.
 
+### Endpoints
+
+- [Get the Activation Lock Status for a Device](applebusinessapi/get-the-activation-lock-status-information-for-an-orgdevice.md): Get the Activation Lock status of an organization device.
+
 ### Dictionaries
 
+- [ActivationLockStatus](applebusinessapi/activationlockstatus.md): The data structure that represents the Activation Lock status of an organization device.
 - [ActivityTypeMetadata](applebusinessapi/activitytypemetadata.md): Additional metadata for an organization device activity, used by device management service migration activity types.
 - [AuditEvent](applebusinessapi/auditevent.md): The data structure that represents an audit event resource.
 - [AuditEventAccountAdded](applebusinessapi/auditeventaccountadded.md): The data structure that represents the event data for an account added audit event.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/textureresource/compression/astcblocksize/block6x6](https://developer.apple.com/documentation/realitykit/textureresource/compression/astcblocksize/block6x6)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/textureresource/compression/astcblocksize/block6x6
 
 # TextureResource.Compression.ASTCBlockSize.block6x6
 

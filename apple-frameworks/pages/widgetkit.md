@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/widgetkit](https://developer.apple.com/documentation/widgetkit)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/widgetkit
 
 # WidgetKit (Swift)
 
@@ -93,6 +94,7 @@ Widgets, watch complications, Live Activities, and controls are small and requir
 - [Adding interactivity to widgets and Live Activities](widgetkit/adding-interactivity-to-widgets-and-live-activities.md): Include buttons or toggles in a widget or Live Activity to offer app functionality without launching the app.
 - [Animating data updates in widgets and Live Activities](widgetkit/animating-data-updates-in-widgets-and-live-activities.md): Use SwiftUI animations to indicate data updates in your widgets and Live Activities.
 - [Linking to specific app scenes from your widget or Live Activity](widgetkit/linking-to-specific-app-scenes-from-your-widget-or-live-activity.md): Add deep links to your widgets and Live Activities that enable people to open a specific scene in your app.
+- [widgetURL(\_:)](https://developer.apple.com/documentation/swiftui/view/widgeturl%28_:%29): Sets the URL to open in the containing app when the user clicks the widget.
 
 ### Accessibility
 

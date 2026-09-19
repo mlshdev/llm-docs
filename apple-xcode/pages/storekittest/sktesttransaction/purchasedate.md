@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/storekittest/sktesttransaction/purchasedate](https://developer.apple.com/documentation/storekittest/sktesttransaction/purchasedate)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekittest/sktesttransaction/purchasedate
 
 # purchaseDate (Swift)
 
@@ -18,7 +19,7 @@ var purchaseDate: Date { get }
 
 ## Discussion
 
-The purchase date applies to any type of in-app purchase.
+The purchase date applies to any type of Apple In-App Purchase.
 
 ## See Also
 
@@ -45,7 +46,7 @@ The date of purchase for the transaction.
 
 ## Discussion
 
-The purchase date applies to any type of in-app purchase.
+The purchase date applies to any type of Apple In-App Purchase.
 
 ## See Also
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationrequest](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationrequest)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationrequest
 
 # LanguageModelExecutorGenerationRequest
 
@@ -28,13 +29,13 @@ A generation request is the input payload that [respond(to:model:streamingInto:)
 
 ### Configuring a generation request
 
-- [id](languagemodelexecutorgenerationrequest/id.md): A request id for logging and tracing purposes
-- [metadata](languagemodelexecutorgenerationrequest/metadata.md): Metadata to attach to the request
-- [contextOptions](languagemodelexecutorgenerationrequest/contextoptions.md): Settings that configure how the model is prompted
-- [enabledToolDefinitions](languagemodelexecutorgenerationrequest/enabledtooldefinitions.md): The subset tool definitions that the model is allowed to call
-- [generationOptions](languagemodelexecutorgenerationrequest/generationoptions.md): Generation options that control sampling behavior
-- [schema](languagemodelexecutorgenerationrequest/schema.md): An optional schema dictating the required output format
-- [transcript](languagemodelexecutorgenerationrequest/transcript.md): A transcript to generate the next entry for
+- [id](languagemodelexecutorgenerationrequest/id.md): A request id for logging and tracing purposes.
+- [metadata](languagemodelexecutorgenerationrequest/metadata.md): Metadata to attach to the request.
+- [contextOptions](languagemodelexecutorgenerationrequest/contextoptions.md): Settings that configure how the model is prompted.
+- [enabledToolDefinitions](languagemodelexecutorgenerationrequest/enabledtooldefinitions.md): The subset of tool definitions that the model is allowed to call.
+- [generationOptions](languagemodelexecutorgenerationrequest/generationoptions.md): Generation options that control sampling behavior.
+- [schema](languagemodelexecutorgenerationrequest/schema.md): An optional schema dictating the required output format.
+- [transcript](languagemodelexecutorgenerationrequest/transcript.md): A transcript to generate the next entry for.
 
 ## Relationships
 

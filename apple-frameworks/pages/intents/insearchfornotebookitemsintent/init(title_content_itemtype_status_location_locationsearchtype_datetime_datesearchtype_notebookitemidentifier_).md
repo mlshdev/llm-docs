@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/insearchfornotebookitemsintent/init(title:content:itemtype:status:location:locationsearchtype:datetime:datesearchtype:notebookitemidentifier:)](https://developer.apple.com/documentation/intents/insearchfornotebookitemsintent/init(title:content:itemtype:status:location:locationsearchtype:datetime:datesearchtype:notebookitemidentifier:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/intents/insearchfornotebookitemsintent/init(title:content:itemtype:status:location:locationsearchtype:datetime:datesearchtype:notebookitemidentifier:)
 
 # init(title:content:itemType:status:location:locationSearchType:dateTime:dateSearchType:notebookItemIdentifier:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/scenes](https://developer.apple.com/documentation/uikit/scenes)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/scenes
 
 # Scenes (Swift)
 
@@ -46,11 +47,6 @@ Manage the configuration of new scenes from your [UIApplicationDelegate](uiappli
 - [UIWindowSceneDestructionRequestOptions](uiwindowscenedestructionrequestoptions.md): An object that contains information to use when removing a window scene from your app.
 - [UISceneDestructionRequestOptions](uiscenedestructionrequestoptions.md): An object you pass to UIKit to permanently remove a scene and its associated session from your app.
 - [UISceneClosureConfirmation](uisceneclosureconfirmation.md): A configuration specifying a confirmation dialog that will be shown before a user action will result in destruction of the scene session and the disconnection of the scene.
-
-### Scene accessories
-
-- [UISceneAccessory](uisceneaccessory.md): A type which can be used to register for a specific type of scene accessory presentation.
-- [UISceneAccessoryRegistration](uisceneaccessoryregistration.md): A type which represents the registration for a given scene accessory.
 
 ### Scene accessories
 
@@ -124,11 +120,6 @@ Manage the configuration of new scenes from your [UIApplicationDelegate](uiappli
 - [UIWindowSceneDestructionRequestOptions](uiwindowscenedestructionrequestoptions.md): An object that contains information to use when removing a window scene from your app.
 - [UISceneDestructionRequestOptions](uiscenedestructionrequestoptions.md): An object you pass to UIKit to permanently remove a scene and its associated session from your app.
 - [UISceneClosureConfirmation](uisceneclosureconfirmation.md): A configuration specifying a confirmation dialog that will be shown before a user action will result in destruction of the scene session and the disconnection of the scene.
-
-### Scene accessories
-
-- [UISceneAccessory](uisceneaccessory.md): A type which can be used to register for a specific type of scene accessory presentation.
-- [UISceneAccessoryRegistration](uisceneaccessoryregistration.md): A type which represents the registration for a given scene accessory.
 
 ### Scene accessories
 

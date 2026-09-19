@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corelocation/clbeaconregion/notifyentrystateondisplay](https://developer.apple.com/documentation/corelocation/clbeaconregion/notifyentrystateondisplay)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corelocation/clbeaconregion/notifyentrystateondisplay
 
 # notifyEntryStateOnDisplay (Swift)
 
 **Framework:** Core Location  
 **Kind:** Instance Property  
-**Availability:** iOS 7.0+ (deprecated in 27.0) · iPadOS 7.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.15+ (deprecated in 27.0)
+**Availability:** iOS 7.0+ (deprecated in 27.2) · iPadOS 7.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.15+ (deprecated in 27.2)
 
 A Boolean value that indicates whether Core Location sends beacon notifications when the device’s display is on.
 
@@ -26,7 +27,7 @@ The default value for this property is [false](https://developer.apple.com/docum
 
 **Framework:** Core Location  
 **Kind:** Instance Property  
-**Availability:** iOS 7.0+ (deprecated in 27.0) · iPadOS 7.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.15+ (deprecated in 27.0)
+**Availability:** iOS 7.0+ (deprecated in 27.2) · iPadOS 7.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.15+ (deprecated in 27.2)
 
 A Boolean value that indicates whether Core Location sends beacon notifications when the device’s display is on.
 

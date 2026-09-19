@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/group_source_req/1475787-gsr_group](https://developer.apple.com/documentation/kernel/group_source_req/1475787-gsr_group)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/group_source_req/1475787-gsr_group
 
 # gsr_group
 

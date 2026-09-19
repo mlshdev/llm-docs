@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/determining-service-entitlement-on-the-server](https://developer.apple.com/documentation/storekit/determining-service-entitlement-on-the-server)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/determining-service-entitlement-on-the-server
 
 # Determining service entitlement on the server
 
@@ -15,7 +16,7 @@ Identify a customer’s entitlement to your service, offers, and messaging by an
 
 > **Note**
 
->  This sample code project is associated with WWDC22 session [110404: Implement proactive in-app purchase restore](https://developer.apple.com/wwdc22/110404/).
+>  This sample code project is associated with WWDC22 session [110404: Implement proactive Apple In-App Purchase restore](https://developer.apple.com/wwdc22/110404/).
 >
 > It’s also associated with WWDC 2020 session [10671: Architecting for Subscriptions](https://developer.apple.com/wwdc20/10671/).
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoobject/setname](https://developer.apple.com/documentation/videodriverkit/iouservideoobject/setname)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoobject/setname
 
 # SetName
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Sets the name of the video object.
 
@@ -30,4 +31,4 @@ If the object can change the name dynamically, the object sends a notification t
 
 ### Working with object names
 
-- [GetName](getname.md): Gets the name of the video object.
+- [GetName](getname.md): Beta. Gets the name of the video object.

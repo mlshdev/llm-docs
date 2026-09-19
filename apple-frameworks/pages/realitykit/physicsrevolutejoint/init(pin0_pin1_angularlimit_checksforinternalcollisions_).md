@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/physicsrevolutejoint/init(pin0:pin1:angularlimit:checksforinternalcollisions:)](https://developer.apple.com/documentation/realitykit/physicsrevolutejoint/init(pin0:pin1:angularlimit:checksforinternalcollisions:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/physicsrevolutejoint/init(pin0:pin1:angularlimit:checksforinternalcollisions:)
 
 # init(pin0:pin1:angularLimit:checksForInternalCollisions:)
 

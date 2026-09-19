@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avpictureinpicturecontrollerdelegate/pictureinpicturecontroller(_:failedtostartpictureinpicturewitherror:)](https://developer.apple.com/documentation/avkit/avpictureinpicturecontrollerdelegate/pictureinpicturecontroller(_:failedtostartpictureinpicturewitherror:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avpictureinpicturecontrollerdelegate/pictureinpicturecontroller(_:failedtostartpictureinpicturewitherror:)
 
 # pictureInPictureController(\_:failedToStartPictureInPictureWithError:) (Swift)
 
@@ -21,7 +22,7 @@ optional func pictureInPictureController(_ pictureInPictureController: AVPicture
 
 ## See Also
 
-### Responding to Picture in Picture Lifecycle Events
+### Responding to Picture in Picture life cycle events
 
 - [pictureInPictureControllerWillStartPictureInPicture(\_:)](pictureinpicturecontrollerwillstartpictureinpicture%28__%29.md): Tells the delegate that Picture in Picture is about to start.
 - [pictureInPictureControllerDidStartPictureInPicture(\_:)](pictureinpicturecontrollerdidstartpictureinpicture%28__%29.md): Tells the delegate that Picture in Picture started.
@@ -49,7 +50,7 @@ Tells the delegate that Picture in Picture failed to start.
 
 ## See Also
 
-### Responding to Picture in Picture Lifecycle Events
+### Responding to Picture in Picture life cycle events
 
 - [pictureInPictureControllerWillStartPictureInPicture:](pictureinpicturecontrollerwillstartpictureinpicture%28__%29.md): Tells the delegate that Picture in Picture is about to start.
 - [pictureInPictureControllerDidStartPictureInPicture:](pictureinpicturecontrollerdidstartpictureinpicture%28__%29.md): Tells the delegate that Picture in Picture started.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coretext/kernindexarrayheader/init(glyphcount:kernvaluecount:leftclasscount:rightclasscount:flags:kernvalue:leftclass:rightclass:kernindex:)](https://developer.apple.com/documentation/coretext/kernindexarrayheader/init(glyphcount:kernvaluecount:leftclasscount:rightclasscount:flags:kernvalue:leftclass:rightclass:kernindex:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coretext/kernindexarrayheader/init(glyphcount:kernvaluecount:leftclasscount:rightclasscount:flags:kernvalue:leftclass:rightclass:kernindex:)
 
 # init(glyphCount:kernValueCount:leftClassCount:rightClassCount:flags:kernValue:leftClass:rightClass:kernIndex:)
 
