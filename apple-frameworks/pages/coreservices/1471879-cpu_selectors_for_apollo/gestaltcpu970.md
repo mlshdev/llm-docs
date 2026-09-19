@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1471879-cpu_selectors_for_apollo/gestaltcpu970](https://developer.apple.com/documentation/coreservices/1471879-cpu_selectors_for_apollo/gestaltcpu970)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/1471879-cpu_selectors_for_apollo/gestaltcpu970
 
 # gestaltCPU970
 

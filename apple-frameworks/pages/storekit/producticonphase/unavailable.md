@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/producticonphase/unavailable](https://developer.apple.com/documentation/storekit/producticonphase/unavailable)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/producticonphase/unavailable
 
 # ProductIconPhase.unavailable
 
@@ -18,7 +19,7 @@ case unavailable
 
 ## Discussion
 
-You set up promotional images for in-app purchases in App Store Connect.
+You set up promotional images for Apple In-App Purchases in App Store Connect.
 
 ## See Also
 

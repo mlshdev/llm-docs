@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/apps/build-app.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/flash/apps/build-app.mdx)
+> Pinned source for Runpod main: [flash/apps/build-app.mdx](https://github.com/runpod/docs/blob/56a86f70b4ea8b225c0e5e2231e42a4925931686/flash/apps/build-app.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/apps/build-app
 
 # Build a Flash app

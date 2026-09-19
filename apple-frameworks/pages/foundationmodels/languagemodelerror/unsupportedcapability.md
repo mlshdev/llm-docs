@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelerror/unsupportedcapability](https://developer.apple.com/documentation/foundationmodels/languagemodelerror/unsupportedcapability)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelerror/unsupportedcapability
 
 # LanguageModelError.UnsupportedCapability
 
@@ -18,13 +19,13 @@ struct UnsupportedCapability
 
 ### Creating an error instance
 
-- [init(capability:debugDescription:metadata:)](unsupportedcapability/init%28capability_debugdescription_metadata_%29.md)
+- [init(capability:debugDescription:metadata:)](unsupportedcapability/init%28capability_debugdescription_metadata_%29.md): Creates information describing a capability the model doesn’t support.
 
 ### Inspecting unsupported capability errors
 
-- [metadata](unsupportedcapability/metadata.md)
-- [capability](unsupportedcapability/capability.md)
-- [debugDescription](unsupportedcapability/debugdescription.md)
+- [metadata](unsupportedcapability/metadata.md): Additional information about the failure, keyed by name.
+- [capability](unsupportedcapability/capability.md): The capability that the model doesn’t support.
+- [debugDescription](unsupportedcapability/debugdescription.md): A debug description to help developers diagnose issues during development.
 
 ## Relationships
 

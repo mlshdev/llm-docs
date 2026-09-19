@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clktimeintervaltextprovider/init(start:end:)](https://developer.apple.com/documentation/clockkit/clktimeintervaltextprovider/init(start:end:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clktimeintervaltextprovider/init(start:end:)
 
 # init(start:end:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Creates and returns a text provider with the specified start and end dates.
 
@@ -43,7 +44,7 @@ The returned text provider uses the default calendar and time zone information f
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Creates and returns a text provider with the specified start and end dates.
 

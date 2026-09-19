@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avroutepickerviewbuttonstyle/system](https://developer.apple.com/documentation/avkit/avroutepickerviewbuttonstyle/system)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avroutepickerviewbuttonstyle/system
 
 # AVRoutePickerViewButtonStyle.system (Swift)
 
@@ -16,7 +17,7 @@ case system
 
 ## See Also
 
-### Button Styles
+### Button styles
 
 - [AVRoutePickerViewButtonStyle.custom](custom.md): A custom button style.
 - [AVRoutePickerViewButtonStyle.plain](plain.md): A plain button style.
@@ -37,7 +38,7 @@ AVRoutePickerViewButtonStyleSystem
 
 ## See Also
 
-### Button Styles
+### Button styles
 
 - [AVRoutePickerViewButtonStyleCustom](custom.md): A custom button style.
 - [AVRoutePickerViewButtonStylePlain](plain.md): A plain button style.

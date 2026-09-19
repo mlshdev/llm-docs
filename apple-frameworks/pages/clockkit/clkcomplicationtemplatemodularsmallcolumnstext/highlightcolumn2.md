@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplatemodularsmallcolumnstext/highlightcolumn2](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplatemodularsmallcolumnstext/highlightcolumn2)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplatemodularsmallcolumnstext/highlightcolumn2
 
 # highlightColumn2 (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 A Boolean value indicating which column should be drawn with a highlight.
 
@@ -36,7 +37,7 @@ When the value of this property is [true](https://developer.apple.com/documentat
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 A Boolean value indicating which column should be drawn with a highlight.
 

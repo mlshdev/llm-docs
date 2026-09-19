@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/rfcomm_channel_id_is_valid](https://developer.apple.com/documentation/iobluetooth/rfcomm_channel_id_is_valid)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetooth/rfcomm_channel_id_is_valid
 
 # RFCOMM_CHANNEL_ID_IS_VALID
 

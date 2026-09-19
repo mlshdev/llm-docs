@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/lockgroup_info_t/1547633-lock_spin_held_max](https://developer.apple.com/documentation/kernel/lockgroup_info_t/1547633-lock_spin_held_max)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/lockgroup_info_t/1547633-lock_spin_held_max
 
 # lock_spin_held_max
 

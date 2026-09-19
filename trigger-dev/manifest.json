@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
-  "generatorDigest": "c9e2ef5f2a17fa250af2ded1f7d74e31435cd2eab4290d8038fc797c9971d846",
+  "generatorDigest": "034397747f427292c319b4e82e9b1cb2e8adce6c31635ef7b3f7592eb076bb54",
   "project": "trigger-dev",
   "title": "Trigger.dev",
   "homepage": "https://trigger.dev/docs",
@@ -10,23 +10,17 @@
   "releaseId": 390655698,
   "releasePublishedAt": "2026-09-17T11:27:28Z",
   "sourceCommit": "2d03fee2e3ff368128302ed4c783ba4e32d1cb00",
-  "documentCount": 326,
+  "documentCount": 327,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 2869125,
-      "documentCount": 326,
-      "sha256": "ea2580fa97ccc3de0a28aabcec59e4fe84d1f9bcdcb5f2417eefd0d60971b26a"
+      "byteLength": 2876081,
+      "documentCount": 327,
+      "sha256": "3eb50eafafa5886f07f483836ea7320707ac9993197a32bd84e0302c111df0bb"
     }
   ],
-  "outputDigest": "5b3a931a037315e93c70bd7fa3edd76b87d46a242357b5caf45e0d576d26c6f8",
-  "quarantined": [
-    {
-      "sourcePath": "introduction.mdx",
-      "reason": "Unable to convert Trigger.dev page introduction.mdx: Unhandled MDX component <Visibility> in introduction.mdx"
-    }
-  ],
+  "outputDigest": "3be9f4d5cf1241942cb74ac0abc73dda57d98771b2087b7f23390590a447b4df",
   "notes": [
     "Pages follow the navigation declared in docs/docs.json at the immutable release tag; snippets are inlined into the pages that import them rather than published separately.",
     "API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.",

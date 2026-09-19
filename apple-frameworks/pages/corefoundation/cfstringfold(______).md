@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corefoundation/cfstringfold(_:_:_:)](https://developer.apple.com/documentation/corefoundation/cfstringfold(_:_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corefoundation/cfstringfold(_:_:_:)
 
 # CFStringFold(\_:\_:\_:) (Swift)
 
@@ -19,7 +20,7 @@ func CFStringFold(_ theString: CFMutableString!, _ theFlags: CFStringCompareFlag
 - `theString`: The string which is to be folded.  If this parameter is not a valid mutable CFString, the behavior is undefined.
 - `theFlags`: The equivalency flags which describes the character folding form. See “String Comparison Flags” in [CFString](cfstring.md) for possible values. Only those flags containing the word “insensitive” are recognized; other flags are ignored.
 
-  Folding with `kCFCompareCaseInsensitive` removes case distinctions in accordance with the mapping specified by [ftp://ftp.unicode.org/Public/UNIDATA/CaseFolding.txt](ftp://ftp.unicode.org/Public/UNIDATA/CaseFolding.txt).  Folding with `kCFCompareDiacriticInsensitive` removes distinctions of accents and other diacritics.  Folding with `kCFCompareWidthInsensitive` removes character width distinctions by mapping characters in the range `U+FF00-U+FFEF` to their ordinary equivalents.
+  Folding with `kCFCompareCaseInsensitive` removes case distinctions in accordance with the mapping specified by ftp://ftp.unicode.org/Public/UNIDATA/CaseFolding.txt.  Folding with `kCFCompareDiacriticInsensitive` removes distinctions of accents and other diacritics.  Folding with `kCFCompareWidthInsensitive` removes character width distinctions by mapping characters in the range `U+FF00-U+FFEF` to their ordinary equivalents.
 - `theLocale`: The locale to use for the operation. `NULL` specifies the canonical locale (the return value from [CFLocaleGetSystem()](cflocalegetsystem%28%29.md)).
 
   The locale argument affects the case mapping algorithm. For example, for the Turkish locale, case-insensitive compare matches “I” to “ı” (Unicode code point U+0131, Latin Small Dotless I), not the normal “i” character.
@@ -71,7 +72,7 @@ extern void CFStringFold(CFMutableStringRef theString, CFStringCompareFlags theF
 - `theString`: The string which is to be folded.  If this parameter is not a valid mutable CFString, the behavior is undefined.
 - `theFlags`: The equivalency flags which describes the character folding form. See “String Comparison Flags” in [CFStringRef](cfstring.md) for possible values. Only those flags containing the word “insensitive” are recognized; other flags are ignored.
 
-  Folding with `kCFCompareCaseInsensitive` removes case distinctions in accordance with the mapping specified by [ftp://ftp.unicode.org/Public/UNIDATA/CaseFolding.txt](ftp://ftp.unicode.org/Public/UNIDATA/CaseFolding.txt).  Folding with `kCFCompareDiacriticInsensitive` removes distinctions of accents and other diacritics.  Folding with `kCFCompareWidthInsensitive` removes character width distinctions by mapping characters in the range `U+FF00-U+FFEF` to their ordinary equivalents.
+  Folding with `kCFCompareCaseInsensitive` removes case distinctions in accordance with the mapping specified by ftp://ftp.unicode.org/Public/UNIDATA/CaseFolding.txt.  Folding with `kCFCompareDiacriticInsensitive` removes distinctions of accents and other diacritics.  Folding with `kCFCompareWidthInsensitive` removes character width distinctions by mapping characters in the range `U+FF00-U+FFEF` to their ordinary equivalents.
 - `theLocale`: The locale to use for the operation. `NULL` specifies the canonical locale (the return value from [CFLocaleGetSystem](cflocalegetsystem%28%29.md)).
 
   The locale argument affects the case mapping algorithm. For example, for the Turkish locale, case-insensitive compare matches “I” to “ı” (Unicode code point U+0131, Latin Small Dotless I), not the normal “i” character.

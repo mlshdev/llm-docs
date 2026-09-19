@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/cmmakeandmodel/1560549-manufacturer](https://developer.apple.com/documentation/applicationservices/cmmakeandmodel/1560549-manufacturer)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applicationservices/cmmakeandmodel/1560549-manufacturer
 
 # manufacturer
 

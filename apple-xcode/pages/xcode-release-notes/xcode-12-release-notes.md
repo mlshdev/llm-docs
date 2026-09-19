@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode-release-notes/xcode-12-release-notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12-release-notes)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode-release-notes/xcode-12-release-notes
 
 # Xcode 12 Release Notes
 
@@ -687,7 +688,7 @@ Xcode 12 includes SDKs for iOS 14, iPadOS 14, tvOS 14, watchOS 7, and macOS Cata
 
 - Xcode 12 supports testing in-app purchases directly in Simulator or on a connected device, using a new local [StoreKit](https://developer.apple.com/documentation/storekit) test environment.
 
-  Configure in-app purchase information locally for testing, before setting it up in App Store Connect and without a connection to App Store servers. For more information on getting started, see [Testing In-App Purchases in Xcode](https://developer.apple.com/documentation/storekit/testing-in-app-purchases-in-xcode) and [Setting up StoreKit Testing in Xcode](../xcode/setting-up-storekit-testing-in-xcode.md). The test environment supports early development, unit testing, and debugging in-app purchases, as described in [Testing at all stages of development with Xcode and the sandbox](https://developer.apple.com/documentation/storekit/testing-at-all-stages-of-development-with-xcode-and-the-sandbox).
+  Configure in-app purchase information locally for testing, before setting it up in App Store Connect and without a connection to App Store servers. For more information on getting started, see [Testing Apple In-App Purchases in Xcode](https://developer.apple.com/documentation/storekit/testing-in-app-purchases-in-xcode) and [Setting up StoreKit Testing in Xcode](../xcode/setting-up-storekit-testing-in-xcode.md). The test environment supports early development, unit testing, and debugging in-app purchases, as described in [Testing at all stages of development with Xcode and the sandbox](https://developer.apple.com/documentation/storekit/testing-at-all-stages-of-development-with-xcode-and-the-sandbox).
 
   Use the [StoreKit Test](../storekittest.md) framework to create and automate tests for handling in-app purchase transactions. [StoreKit Test](../storekittest.md) supports comprehensive testing of in-app purchase scenarios, including changes in subscription status, subscription offers, restore purchases, ask to buy, interrupted purchases, and more.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3816031-os_log_coprocessor_register_with](https://developer.apple.com/documentation/kernel/3816031-os_log_coprocessor_register_with)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3816031-os_log_coprocessor_register_with
 
 # os_log_coprocessor_register_with_type
 

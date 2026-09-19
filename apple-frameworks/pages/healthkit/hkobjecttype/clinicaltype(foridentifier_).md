@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkobjecttype/clinicaltype(foridentifier:)](https://developer.apple.com/documentation/healthkit/hkobjecttype/clinicaltype(foridentifier:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkobjecttype/clinicaltype(foridentifier:)
 
 # clinicalType(forIdentifier:) (Swift)
 
 **Framework:** HealthKit  
 **Kind:** Type Method  
-**Availability:** iOS 12.0+ (deprecated in 27.0) · iPadOS 12.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS · visionOS 1.0+ (deprecated in 27.0) · watchOS 5.0+ (deprecated in 27.0)
+**Availability:** iOS 12.0+ (deprecated in 27.2) · iPadOS 12.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS · visionOS 1.0+ (deprecated in 27.2) · watchOS 5.0+ (deprecated in 27.2)
 
 Returns the shared clinical type for the provided identifier.
 

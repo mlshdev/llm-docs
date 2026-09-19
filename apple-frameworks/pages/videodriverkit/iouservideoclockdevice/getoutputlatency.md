@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoclockdevice/getoutputlatency](https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/getoutputlatency)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/getoutputlatency
 
 # GetOutputLatency
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the output latency of the clock device.
 
@@ -26,6 +27,6 @@ The object’s work queue synchronizes access to the value.
 
 ### Working with timing and latency
 
-- [SetOutputLatency](setoutputlatency.md): Sets the output latency of the clock device.
-- [SetInputLatency](setinputlatency.md): Sets the input latency of the clock device.
-- [GetInputLatency](getinputlatency.md): Gets the input latency of the clock device.
+- [SetOutputLatency](setoutputlatency.md): Beta. Sets the output latency of the clock device.
+- [SetInputLatency](setinputlatency.md): Beta. Sets the input latency of the clock device.
+- [GetInputLatency](getinputlatency.md): Beta. Gets the input latency of the clock device.

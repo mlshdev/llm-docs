@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsview/adjustpageheightnew(_:top:bottom:limit:)](https://developer.apple.com/documentation/appkit/nsview/adjustpageheightnew(_:top:bottom:limit:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsview/adjustpageheightnew(_:top:bottom:limit:)
 
 # adjustPageHeightNew(\_:top:bottom:limit:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/bluetoothhciinquirywithrssiresult/init(deviceaddress:pagescanrepetitionmode:reserved:classofdevice:clockoffset:rssivalue:)](https://developer.apple.com/documentation/iobluetooth/bluetoothhciinquirywithrssiresult/init(deviceaddress:pagescanrepetitionmode:reserved:classofdevice:clockoffset:rssivalue:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetooth/bluetoothhciinquirywithrssiresult/init(deviceaddress:pagescanrepetitionmode:reserved:classofdevice:clockoffset:rssivalue:)
 
 # init(deviceAddress:pageScanRepetitionMode:reserved:classOfDevice:clockOffset:RSSIValue:)
 

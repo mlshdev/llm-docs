@@ -1,6 +1,7 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/walletpasses/creating-a-poster-generic-pass](https://developer.apple.com/documentation/walletpasses/creating-a-poster-generic-pass)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/walletpasses/creating-a-poster-generic-pass
 
-# Creating a poster generic pass
+# Creating a Poster Generic Pass
 
 **Interface language:** Data
 
@@ -15,9 +16,9 @@ Construct a digital pass with information that enables people to take action.
 
 In iOS and watchOS 27, you can present passes such as, membership, loyalty, coupon, rewards, gift card, and other pass types in a poster-style format designed to highlight prominent artwork, modern typography, and thoughtful customer notifications. This style also supports up to two Featured Action links, giving users quick access to helpful information right from the pass.
 
-The poster generic template builds on the same presentation style used for event ticket posters, but without the event-specific semantic requirements, giving you flexibility over the content you choose to surface. When you set the poster generic pass style, Wallet automatically displays relevant details such as business information, a barcode, terms and conditions, store locations, and other helpful information.
+The Poster Generic template builds on the same presentation style used for event ticket posters, but without the event-specific semantic requirements, giving you flexibility over the content you choose to surface. When you set the Poster Generic Pass style, Wallet automatically displays relevant details such as business information, a barcode, terms and conditions, store locations, and other helpful information.
 
-![An illustration of a poster generic pass for a museum with poster artwork. The poster shows the skull of a Tyrannosaurus rex surrounded by ferns, butterflies, and a nautilus. The pass also displays a QR code and information about the pass holder, including the member name, expiration, and type of pass.](https://developer.apple.com/images/com.apple.walletpasses/poster-generic-pass-natural-history-museum@2x.png)
+![An illustration of a Poster Generic Pass for a museum with poster artwork. The poster shows the skull of a Tyrannosaurus rex surrounded by ferns, butterflies, and a nautilus. The pass also displays a QR code and information about the pass holder, including the member name, expiration, and type of pass.](https://developer.apple.com/images/com.apple.walletpasses/poster-generic-pass-natural-history-museum@2x.png)
 
 <a id="Create-your-pass-type-identifier"></a>
 
@@ -37,13 +38,13 @@ PassKit uses the combination of pass type identifier and serial number to unique
 
 For more information on creating your pass type identifier, see [Create a Pass Type Identifier](building-a-pass.md#Create-a-Pass-Type-Identifier).
 
-<a id="Add-the-poster-generic-pass-style"></a>
+<a id="Add-the-Poster-Generic-Pass-style"></a>
 
-## Add the poster generic pass style
+## Add the Poster Generic Pass style
 
-The pass’s style determines the overall visual appearance of the pass and the template for placement of information on the pass. The value of the pass style key is a dictionary containing fields that hold the pass content. Specify the pass style by providing the corresponding key at the top level of the `pass.json` file; poster generic passes use the key `posterGeneric`. For more information on building your `pass.json` file, see [Building a Pass](building-a-pass.md).
+The pass’s style determines the overall visual appearance of the pass and the template for placement of information on the pass. The value of the pass style key is a dictionary containing fields that hold the pass content. Specify the pass style by providing the corresponding key at the top level of the `pass.json` file; Poster Generic Passes use the key `posterGeneric`. For more information on building your `pass.json` file, see [Building a Pass](building-a-pass.md).
 
-The following example shows a partial poster generic pass with top-level keys.
+The following example shows a partial Poster Generic Pass with top-level keys.
 
 ```json
 {
@@ -55,13 +56,13 @@ The following example shows a partial poster generic pass with top-level keys.
 }
 ```
 
-The pass style controls how Wallet lays out the pass fields and which images it shows on someone’s device. The following figures show the different layout options and the placement of fields for a poster generic pass and a generic pass. The poster generic pass layout has a *headerFields*, *primaryFields*, *footerFields*, *backFields*, and *additionalInfoFields* with a square QR code. The generic pass layout has a separate *secondary* and *auxiliary* section with a rectangular barcode.
+The pass style controls how Wallet lays out the pass fields and which images it shows on someone’s device. The following figures show the different layout options and the placement of fields for a Poster Generic Pass and a generic pass. The Poster Generic Pass layout has a *headerFields*, *primaryFields*, *footerFields*, *backFields*, and *additionalInfoFields* with a square QR code. The generic pass layout has a separate *secondary* and *auxiliary* section with a rectangular barcode.
 
-| Poster generic pass layout | Generic pass layout |
+| Poster Generic Pass layout | Generic pass layout |
 | --- | --- |
-| ![An illustration showing a poster generic pass layout option with primary fields and a QR code.](https://developer.apple.com/images/com.apple.walletpasses/pass-fields-layout-poster-generic@2x.png) | ![An illustration showing the generic pass layout option with separate secondary and auxiliary sections and a rectangular barcode](https://developer.apple.com/images/com.apple.walletpasses/pass-fields-layout-generic-pass@2x.png) |
+| ![An illustration showing a Poster Generic Pass layout option with primary fields and a QR code.](https://developer.apple.com/images/com.apple.walletpasses/pass-fields-layout-poster-generic@2x.png) | ![An illustration showing the generic pass layout option with separate secondary and auxiliary sections and a rectangular barcode](https://developer.apple.com/images/com.apple.walletpasses/pass-fields-layout-generic-pass@2x.png) |
 
-The pass style determines the maximum number of pass fields that can appear on the front of a pass. A poster generic pass can have a header field, up to four primary fields, two footer fields, back fields, and additional info field.
+The pass style determines the maximum number of pass fields that can appear on the front of a pass. A Poster Generic Pass can have a header field, up to four primary fields, two footer fields, back fields, and additional info field.
 
 A generic pass can have up to three header fields, a single primary field, a thumbnail field, and up to four secondary and auxiliary fields combined. The text length in each pass field determines how many fields appear on the front of the pass. If the text is too long, Wallet won’t display all of it.
 
@@ -198,7 +199,7 @@ For design guidance about generic passes, see Human Interface Guidelines \> Wall
 
 With iOS and watchOS 27 and later, you can include Featured Actions with your pass. These actions display as cards when someone views your pass in the Wallet app, and you can use them for quick calls to action for the viewer. Featured Actions make it easy for someone to find relevant information related to your pass quickly, such as directions to a business location, music related to a live performance, or links to book tickets.
 
-![An illustration of a poster generic pass for a museum. The pass shows an image of the skull of a Tyrannosaurus rex surrounded by ferns, butterflies, and a nautilus. The pass also displays two Featured Action options: View Membership Benefits and Go to Location.](https://developer.apple.com/images/com.apple.walletpasses/featured-actions-with-pass@2x.png)
+![An illustration of a Poster Generic Pass for a museum. The pass shows an image of the skull of a Tyrannosaurus rex surrounded by ferns, butterflies, and a nautilus. The pass also displays two Featured Action options: View Membership Benefits and Go to Location.](https://developer.apple.com/images/com.apple.walletpasses/featured-actions-with-pass@2x.png)
 
 Each Featured Action includes an icon, string, and action. Define your icon from available SF Symbols; be sure to pick one that accurately represents the action, and that viewers can understand at a glance. When choosing a symbol, prefer circular, filled icons.
 
@@ -206,7 +207,7 @@ Your string is a brief call to action, and your action label informs people what
 
 ![An image of a Featured Action icon with labels.](https://developer.apple.com/images/com.apple.walletpasses/featured-actions-anatomy@2x.png)
 
-For a list of available Featured Actions, see doc:defining-the-metadata-of-your-wallet-pass#Add-featured-actions
+For a list of available Featured Actions, see [Add Featured Actions](defining-the-metadata-of-your-wallet-pass.md#Add-Featured-Actions)
 
 <a id="Add-notifications"></a>
 

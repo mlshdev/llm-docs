@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/simd_make_ushort32(_:)-1y3a6](https://developer.apple.com/documentation/simd/simd_make_ushort32(_:)-1y3a6)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/simd/simd_make_ushort32(_:)-1y3a6
 
 # simd_make_ushort32(\_:) (Swift)
 

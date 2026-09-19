@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphiccornergaugetext/init(gaugeprovider:leadingtextprovider:trailingtextprovider:outertextprovider:)](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccornergaugetext/init(gaugeprovider:leadingtextprovider:trailingtextprovider:outertextprovider:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccornergaugetext/init(gaugeprovider:leadingtextprovider:trailingtextprovider:outertextprovider:)
 
 # init(gaugeProvider:leadingTextProvider:trailingTextProvider:outerTextProvider:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Creates a template that has a gauge with leading and trailing text, and an outer text element.
 
@@ -31,7 +32,7 @@ init(gaugeProvider: CLKGaugeProvider, leadingTextProvider: CLKTextProvider?, tra
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Creates a template that has a gauge with leading and trailing text, and an outer text element.
 

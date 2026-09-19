@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplaybackuserinterfaceplaybackcontrollable-9he54](https://developer.apple.com/documentation/avkit/avplaybackuserinterfaceplaybackcontrollable-9he54)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplaybackuserinterfaceplaybackcontrollable-9he54
 
 # AVPlaybackUserInterfacePlaybackControllable
 
@@ -40,7 +41,7 @@ Provides playback control and state management for media content.
 
 ## See Also
 
-### Playback
+### Playback control
 
 - [AVPlaybackUserInterfacePlaybackState](avplaybackuserinterfaceplaybackstate.md): Describes possible transport states of the playback source.
 - [AVPlaybackUserInterfaceSeekCapabilities](avplaybackuserinterfaceseekcapabilities.md): Describes navigation capabilities of the media source.

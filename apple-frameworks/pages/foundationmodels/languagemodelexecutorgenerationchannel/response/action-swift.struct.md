@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationchannel/response/action-swift.struct](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/response/action-swift.struct)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/response/action-swift.struct
 
 # LanguageModelExecutorGenerationChannel.Response.Action
 
@@ -24,15 +25,15 @@ struct Action
 
 ### Response action cases
 
-- [addAttachmentSegment(\_:)](action-swift.struct/addattachmentsegment%28__%29.md)
+- [addAttachmentSegment(\_:)](action-swift.struct/addattachmentsegment%28__%29.md): Creates an action that adds an attachment segment to the entry.
 
 ### Response action constants
 
-- [appendText(\_:segmentID:tokenCount:)](action-swift.struct/appendtext%28__segmentid_tokencount_%29.md)
-- [removeAttachmentSegment(id:)](action-swift.struct/removeattachmentsegment%28id_%29.md)
-- [replaceTextSegment(\_:segmentID:tokenCount:)](action-swift.struct/replacetextsegment%28__segmentid_tokencount_%29.md)
-- [updateMetadata(\_:)](action-swift.struct/updatemetadata%28__%29.md)
-- [updateUsage(input:output:metadata:)](action-swift.struct/updateusage%28input_output_metadata_%29.md)
+- [appendText(\_:segmentID:tokenCount:)](action-swift.struct/appendtext%28__segmentid_tokencount_%29.md): Creates an action that appends text to the entry’s current text segment.
+- [removeAttachmentSegment(id:)](action-swift.struct/removeattachmentsegment%28id_%29.md): Creates an action that removes an attachment segment from the entry.
+- [replaceTextSegment(\_:segmentID:tokenCount:)](action-swift.struct/replacetextsegment%28__segmentid_tokencount_%29.md): Creates an action that replaces the entry’s current text segment.
+- [updateMetadata(\_:)](action-swift.struct/updatemetadata%28__%29.md): Creates an action that replaces the entry’s metadata.
+- [updateUsage(input:output:metadata:)](action-swift.struct/updateusage%28input_output_metadata_%29.md): Creates an action that replaces the entry’s token-usage totals.
 
 ## Relationships
 

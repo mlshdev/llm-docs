@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremidi/midideviceaddentity(_:_:_:_:_:_:)](https://developer.apple.com/documentation/coremidi/midideviceaddentity(_:_:_:_:_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremidi/midideviceaddentity(_:_:_:_:_:_:)
 
 # MIDIDeviceAddEntity(\_:\_:\_:\_:\_:\_:) (Swift)
 
 **Framework:** Core MIDI  
 **Kind:** Function  
-**Availability:** iOS 4.2+ (deprecated in 27.0) · iPadOS 4.2+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 4.2+ (deprecated in 27.2) · iPadOS 4.2+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Specifies one of the entities that make up a device.
 
@@ -53,7 +54,7 @@ An OSStatus result code.
 
 **Framework:** Core MIDI  
 **Kind:** Function  
-**Availability:** iOS 4.2+ (deprecated in 27.0) · iPadOS 4.2+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 4.2+ (deprecated in 27.2) · iPadOS 4.2+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Specifies one of the entities that make up a device.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1473081-sound_manager_attribute_selector/gestalthassoundinputdevice](https://developer.apple.com/documentation/coreservices/1473081-sound_manager_attribute_selector/gestalthassoundinputdevice)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/1473081-sound_manager_attribute_selector/gestalthassoundinputdevice
 
 # gestaltHasSoundInputDevice
 

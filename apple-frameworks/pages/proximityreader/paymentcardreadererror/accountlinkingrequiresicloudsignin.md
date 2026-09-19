@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/proximityreader/paymentcardreadererror/accountlinkingrequiresicloudsignin](https://developer.apple.com/documentation/proximityreader/paymentcardreadererror/accountlinkingrequiresicloudsignin)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/proximityreader/paymentcardreadererror/accountlinkingrequiresicloudsignin
 
 # PaymentCardReaderError.accountLinkingRequiresiCloudSignIn
 
@@ -6,7 +7,7 @@
 **Kind:** Case  
 **Availability:** iOS 15.4+ · iPadOS 15.4+ · Mac Catalyst 17.0+
 
-An error that indicates the merchant must be signed into iCloud to accept the Terms and Conditions.
+An error that indicates the merchant must be signed into an Apple Account on the device to accept the Terms and Conditions.
 
 ## Declaration
 
@@ -14,11 +15,11 @@ An error that indicates the merchant must be signed into iCloud to accept the Te
 case accountLinkingRequiresiCloudSignIn
 ```
 
-<a id="discussion"></a>
+<a id="Discussion"></a>
 
 ## Discussion
 
-To accept the Terms and Conditions on device, the merchant must be signed into iCloud. Your app needs to provide guidance to the merchant to do so.
+To accept the Terms and Conditions on device, the merchant must be signed into an Apple Account on the device. Your app should provide guidance.
 
 ## See Also
 

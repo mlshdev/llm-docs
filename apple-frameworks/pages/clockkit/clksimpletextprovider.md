@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clksimpletextprovider](https://developer.apple.com/documentation/clockkit/clksimpletextprovider)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clksimpletextprovider
 
 # CLKSimpleTextProvider (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 A single line of text to display in your complication interface.
 
@@ -71,7 +72,7 @@ When creating a simple text provider, you can specify both a long version and a 
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 A single line of text to display in your complication interface.
 

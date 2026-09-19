@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsexception/callstackreturnaddresses](https://developer.apple.com/documentation/foundation/nsexception/callstackreturnaddresses)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsexception/callstackreturnaddresses
 
 # callStackReturnAddresses (Swift)
 

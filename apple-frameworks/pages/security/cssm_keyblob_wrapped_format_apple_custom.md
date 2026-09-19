@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_keyblob_wrapped_format_apple_custom](https://developer.apple.com/documentation/security/cssm_keyblob_wrapped_format_apple_custom)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_keyblob_wrapped_format_apple_custom
 
 # CSSM_KEYBLOB_WRAPPED_FORMAT_APPLE_CUSTOM (Swift)
 

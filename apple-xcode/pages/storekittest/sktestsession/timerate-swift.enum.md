@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/storekittest/sktestsession/timerate-swift.enum](https://developer.apple.com/documentation/storekittest/sktestsession/timerate-swift.enum)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekittest/sktestsession/timerate-swift.enum
 
 # SKTestSession.TimeRate (Swift)
 
@@ -24,7 +25,7 @@ The time rates that affect subscription renewals in the test environment match t
 - Only the test environment supports the fixed time rate options: [SKTestSession.TimeRate.oneRenewalEveryFifteenMinutes](timerate-swift.enum/onerenewaleveryfifteenminutes.md), [SKTestSession.TimeRate.oneRenewalEveryFiveMinutes](timerate-swift.enum/onerenewaleveryfiveminutes.md), [SKTestSession.TimeRate.oneRenewalEveryMinute](timerate-swift.enum/onerenewaleveryminute.md), [SKTestSession.TimeRate.oneRenewalEveryThirtySeconds](timerate-swift.enum/onerenewaleverythirtyseconds.md), [SKTestSession.TimeRate.oneRenewalEveryTenSeconds](timerate-swift.enum/onerenewaleverytenseconds.md), and [SKTestSession.TimeRate.oneRenewalEveryTwoSeconds](timerate-swift.enum/onerenewaleverytwoseconds.md).
 - Only the sandbox environment supports a monthly renewal in 3 minutes.
 
-For more information about time rates in the sandbox environment, see [Test in-app purchases](https://developer.apple.com/help/app-store-connect/test-in-app-purchases-main/test-in-app-purchases).
+For more information about time rates in the sandbox environment, see [Test Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/test-in-app-purchases-main/test-in-app-purchases).
 
 The time rates also affect the lengths of the billing retry period and the billing grace period in the testing environment. See the individual enumeration cases for the actual time values of the subscription renewal rates, billing retry periods, and billing grace periods.
 
@@ -106,7 +107,7 @@ The time rates that affect subscription renewals in the test environment match t
 - Only the test environment supports the fixed time rate options: [SKTestTimeRateOneRenewalEveryFifteenMinutes](timerate-swift.enum/onerenewaleveryfifteenminutes.md), [SKTestTimeRateOneRenewalEveryFiveMinutes](timerate-swift.enum/onerenewaleveryfiveminutes.md), [SKTestTimeRateOneRenewalEveryMinute](timerate-swift.enum/onerenewaleveryminute.md), [SKTestTimeRateOneRenewalEveryThirtySeconds](timerate-swift.enum/onerenewaleverythirtyseconds.md), [SKTestTimeRateOneRenewalEveryTenSeconds](timerate-swift.enum/onerenewaleverytenseconds.md), and [SKTestTimeRateOneRenewalEveryTwoSeconds](timerate-swift.enum/onerenewaleverytwoseconds.md).
 - Only the sandbox environment supports a monthly renewal in 3 minutes.
 
-For more information about time rates in the sandbox environment, see [Test in-app purchases](https://developer.apple.com/help/app-store-connect/test-in-app-purchases-main/test-in-app-purchases).
+For more information about time rates in the sandbox environment, see [Test Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/test-in-app-purchases-main/test-in-app-purchases).
 
 The time rates also affect the lengths of the billing retry period and the billing grace period in the testing environment. See the individual enumeration cases for the actual time values of the subscription renewal rates, billing retry periods, and billing grace periods.
 

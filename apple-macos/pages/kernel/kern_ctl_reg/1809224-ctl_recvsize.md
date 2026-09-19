@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/kern_ctl_reg/1809224-ctl_recvsize](https://developer.apple.com/documentation/kernel/kern_ctl_reg/1809224-ctl_recvsize)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/kern_ctl_reg/1809224-ctl_recvsize
 
 # ctl_recvsize
 

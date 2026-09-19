@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsgesturerecognizer/iscancellablebyscrollgesture](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/iscancellablebyscrollgesture)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsgesturerecognizer/iscancellablebyscrollgesture
 
 # isCancellableByScrollGesture (Swift)
 
@@ -25,7 +26,7 @@ Defaults to `false`.
 ### Getting additional recognizer information
 
 - [allowedTouchTypes](allowedtouchtypes.md)
-- [modifierFlags](modifierflags.md)
+- [modifierFlags](modifierflags.md): The keyboard modifier flags in effect while the receiver last processed an event.
 - [name](name.md)
 
 # cancellableByScrollGesture (Objective-C)
@@ -53,5 +54,5 @@ Defaults to `false`.
 ### Getting additional recognizer information
 
 - [allowedTouchTypes](allowedtouchtypes.md)
-- [modifierFlags](modifierflags.md)
+- [modifierFlags](modifierflags.md): The keyboard modifier flags in effect while the receiver last processed an event.
 - [name](name.md)

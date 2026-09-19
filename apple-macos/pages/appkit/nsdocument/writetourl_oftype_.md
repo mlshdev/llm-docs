@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsdocument/writetourl:oftype:](https://developer.apple.com/documentation/appkit/nsdocument/writetourl:oftype:)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsdocument/writetourl:oftype:
 
 # writeToURL:ofType:
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewdelegate/playerview(_:restoreuserinterfaceforfullscreenexitwithcompletionhandler:)](https://developer.apple.com/documentation/avkit/avplayerviewdelegate/playerview(_:restoreuserinterfaceforfullscreenexitwithcompletionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewdelegate/playerview(_:restoreuserinterfaceforfullscreenexitwithcompletionhandler:)
 
 # playerView(\_:restoreUserInterfaceForFullScreenExitWithCompletionHandler:) (Swift)
 
@@ -25,7 +26,7 @@ optional func playerViewRestoreUserInterfaceForFullScreenExit(_ playerView: AVPl
 
 ## See Also
 
-### Responding to Full Screen Events
+### Responding to full-screen events
 
 - [playerViewWillEnterFullScreen(\_:)](playerviewwillenterfullscreen%28__%29.md): Tells the delegate that the player view is about to enter full-screen mode.
 - [playerViewDidEnterFullScreen(\_:)](playerviewdidenterfullscreen%28__%29.md): Tells the delegate that the player view entered full-screen mode.
@@ -53,7 +54,7 @@ Tells the delegate to restore the app’s user interface when exiting full-scree
 
 ## See Also
 
-### Responding to Full Screen Events
+### Responding to full-screen events
 
 - [playerViewWillEnterFullScreen:](playerviewwillenterfullscreen%28__%29.md): Tells the delegate that the player view is about to enter full-screen mode.
 - [playerViewDidEnterFullScreen:](playerviewdidenterfullscreen%28__%29.md): Tells the delegate that the player view entered full-screen mode.

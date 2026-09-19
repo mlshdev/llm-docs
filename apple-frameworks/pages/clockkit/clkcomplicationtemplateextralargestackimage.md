@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplateextralargestackimage](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplateextralargestackimage)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplateextralargestackimage
 
 # CLKComplicationTemplateExtraLargeStackImage (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 3.0+ (deprecated in 27.0)
+**Availability:** watchOS 3.0+ (deprecated in 27.2)
 
 A template for displaying a single image with a short line of text below it.
 
@@ -76,7 +77,7 @@ Instead of providing multiple images with different resolutions, you can provide
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 3.0+ (deprecated in 27.0)
+**Availability:** watchOS 3.0+ (deprecated in 27.2)
 
 A template for displaying a single image with a short line of text below it.
 

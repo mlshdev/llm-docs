@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/ar_device_fit_status_t/ar_device_fit_status_eyes_above](https://developer.apple.com/documentation/arkit/ar_device_fit_status_t/ar_device_fit_status_eyes_above)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/ar_device_fit_status_t/ar_device_fit_status_eyes_above
 
 # ar_device_fit_status_eyes_above
 

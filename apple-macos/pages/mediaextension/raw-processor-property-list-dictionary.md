@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/mediaextension/raw-processor-property-list-dictionary](https://developer.apple.com/documentation/mediaextension/raw-processor-property-list-dictionary)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mediaextension/raw-processor-property-list-dictionary
 
 # RAW processor property list dictionary (Swift)
 

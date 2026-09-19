@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/browserkit/bebrowserdataexportmanager/exporttokenuserinfokey-1y5l1](https://developer.apple.com/documentation/browserkit/bebrowserdataexportmanager/exporttokenuserinfokey-1y5l1)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/browserkit/bebrowserdataexportmanager/exporttokenuserinfokey-1y5l1
 
 # exportTokenUserInfoKey
 

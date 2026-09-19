@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/icmp6errstat/3754045-icp6errs_dst_unreach_admin](https://developer.apple.com/documentation/kernel/icmp6errstat/3754045-icp6errs_dst_unreach_admin)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/icmp6errstat/3754045-icp6errs_dst_unreach_admin
 
 # icp6errs_dst_unreach_admin
 

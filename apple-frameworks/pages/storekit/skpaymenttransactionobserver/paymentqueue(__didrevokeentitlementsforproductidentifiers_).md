@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skpaymenttransactionobserver/paymentqueue(_:didrevokeentitlementsforproductidentifiers:)](https://developer.apple.com/documentation/storekit/skpaymenttransactionobserver/paymentqueue(_:didrevokeentitlementsforproductidentifiers:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skpaymenttransactionobserver/paymentqueue(_:didrevokeentitlementsforproductidentifiers:)
 
 # paymentQueue(\_:didRevokeEntitlementsForProductIdentifiers:) (Swift)
 
@@ -29,7 +30,7 @@ optional func paymentQueue(_ queue: SKPaymentQueue, didRevokeEntitlementsForProd
 
 ## Discussion
 
-The system calls this delegate method whenever App Store revokes in-app purchases for a family member based on changes in Family Sharing, or when the purchaser gets a refund for an in-app purchase. Implement this method in your payment queue observer to reestablish a user’s access to products. Revoked transactions have the `cancellation_date` populated in the receipt.
+The system calls this delegate method whenever App Store revokes Apple In-App Purchases for a family member based on changes in Family Sharing, or when the purchaser gets a refund for an Apple In-App Purchase. Implement this method in your payment queue observer to reestablish a user’s access to products. Revoked transactions have the `cancellation_date` populated in the receipt.
 
 For products with Family Sharing enabled, the following conditions may trigger this method in the family member’s app:
 
@@ -40,7 +41,7 @@ For products with Family Sharing enabled, the following conditions may trigger t
 - The family member leaves the group and no longer gets access to shared purchases.
 - The family organizer stops sharing payment in iCloud family settings. This change affects non-consumables.
 
-By leaving a family group, or disabling sharing in any of the ways listed above, family members are no longer entitled to family-shared purchases. The `productIdentifiers` parameter contains the revoked product IDs. Your app needs to check the receipt on the device, which the system automatically updates prior to calling this method, and provide the correct level of access for the in-app purchases.
+By leaving a family group, or disabling sharing in any of the ways listed above, family members are no longer entitled to family-shared purchases. The `productIdentifiers` parameter contains the revoked product IDs. Your app needs to check the receipt on the device, which the system automatically updates prior to calling this method, and provide the correct level of access for the Apple In-App Purchases.
 
 If you receive [App Store Server Notifications](../../appstoreservernotifications.md), your server receives a [notificationType](../../appstoreservernotifications/notificationtype.md) `REVOKE` for the family member when the conditions listed above occur.
 
@@ -88,7 +89,7 @@ Tells an observer that the customer is no longer entitled to one or more Family 
 
 ## Discussion
 
-The system calls this delegate method whenever App Store revokes in-app purchases for a family member based on changes in Family Sharing, or when the purchaser gets a refund for an in-app purchase. Implement this method in your payment queue observer to reestablish a user’s access to products. Revoked transactions have the `cancellation_date` populated in the receipt.
+The system calls this delegate method whenever App Store revokes Apple In-App Purchases for a family member based on changes in Family Sharing, or when the purchaser gets a refund for an Apple In-App Purchase. Implement this method in your payment queue observer to reestablish a user’s access to products. Revoked transactions have the `cancellation_date` populated in the receipt.
 
 For products with Family Sharing enabled, the following conditions may trigger this method in the family member’s app:
 
@@ -99,7 +100,7 @@ For products with Family Sharing enabled, the following conditions may trigger t
 - The family member leaves the group and no longer gets access to shared purchases.
 - The family organizer stops sharing payment in iCloud family settings. This change affects non-consumables.
 
-By leaving a family group, or disabling sharing in any of the ways listed above, family members are no longer entitled to family-shared purchases. The `productIdentifiers` parameter contains the revoked product IDs. Your app needs to check the receipt on the device, which the system automatically updates prior to calling this method, and provide the correct level of access for the in-app purchases.
+By leaving a family group, or disabling sharing in any of the ways listed above, family members are no longer entitled to family-shared purchases. The `productIdentifiers` parameter contains the revoked product IDs. Your app needs to check the receipt on the device, which the system automatically updates prior to calling this method, and provide the correct level of access for the Apple In-App Purchases.
 
 If you receive [App Store Server Notifications](../../appstoreservernotifications.md), your server receives a [notificationType](../../appstoreservernotifications/notificationtype.md) `REVOKE` for the family member when the conditions listed above occur.
 

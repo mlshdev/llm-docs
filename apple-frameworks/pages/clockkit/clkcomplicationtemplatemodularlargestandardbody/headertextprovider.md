@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplatemodularlargestandardbody/headertextprovider](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplatemodularlargestandardbody/headertextprovider)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplatemodularlargestandardbody/headertextprovider
 
 # headerTextProvider (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 The text to display in the header line.
 
@@ -34,7 +35,7 @@ The width of the header image determines how much space is available for display
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 The text to display in the header line.
 

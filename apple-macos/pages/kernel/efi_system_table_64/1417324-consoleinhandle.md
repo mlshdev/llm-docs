@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/efi_system_table_64/1417324-consoleinhandle](https://developer.apple.com/documentation/kernel/efi_system_table_64/1417324-consoleinhandle)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/efi_system_table_64/1417324-consoleinhandle
 
 # ConsoleInHandle
 

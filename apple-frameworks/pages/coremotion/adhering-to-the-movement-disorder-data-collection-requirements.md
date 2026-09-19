@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremotion/adhering-to-the-movement-disorder-data-collection-requirements](https://developer.apple.com/documentation/coremotion/adhering-to-the-movement-disorder-data-collection-requirements)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremotion/adhering-to-the-movement-disorder-data-collection-requirements
 
 # Adhering to the movement disorder data collection requirements
 

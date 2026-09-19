@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/one-line-setup.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/deploy/host-n8n/install-options/one-line-setup.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/one-line-setup.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/deploy/host-n8n/install-options/one-line-setup.md)
 
 # One-line setup <a id="one-line-setup"></a>
 
@@ -107,16 +107,22 @@ By default, n8n Assistant's web search runs through a bundled search tool with n
 | Upgrade to the latest version  | `curl -fsSL https://get.n8n.io \| sh -s -- --upgrade`             |
 | Remove n8n and delete its data | `docker compose -f ./n8n/compose.yml down -v` then `rm -rf ./n8n` |
 
+### What an upgrade changes
+
+The upgrade command moves both n8n and the bundled sandbox services to newer versions. It edits two lines in `.env`: `N8N_VERSION` and `N8N_SANDBOX_VERSION`. Your data, secrets, and other settings stay as they are.
+
+If you installed before the sandbox version moved into `.env`, your `compose.yml` still names fixed sandbox image tags. The first upgrade rewrites those image lines to use `N8N_SANDBOX_VERSION`, switches the sandbox runner address (`SANDBOX_RUNNER_HTTP_BASE_URL`) from `http://` to `https://`, and prints a note that says so. Nothing else in `compose.yml` changes, so any edits you made stay in place.
+
 ## Flags (for more control)
 
 Adding these to the end of the install command changes what it does:
 
-| Flag         | What it does                                                                                                                                                                                       |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--version`  | On its own, shows the script's version and the latest n8n version it would install. Followed by a version number (for example, `--version 2.31.4`), installs or upgrades to that specific version. |
-| `--no-start` | Sets up the configuration files without starting n8n yet.                                                                                                                                          |
-| `--upgrade`  | Upgrades an existing install to a newer n8n version. Only updates the version number. Your data, settings, and any customizations stay untouched.                                                  |
-| `--help`     | Shows all available options.                                                                                                                                                                       |
+| Flag         | What it does                                                                                                                                                                                                                                                                                                                                           |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--version`  | On its own, shows the script's version and the latest n8n version it would install. Followed by a version number (for example, `--version 2.31.4`), installs or upgrades to that specific version.                                                                                                                                                     |
+| `--no-start` | Sets up the configuration files without starting n8n yet.                                                                                                                                                                                                                                                                                              |
+| `--upgrade`  | Upgrades an existing install to a newer n8n version and the matching sandbox service version. Only updates the version lines in `.env` and, on older installs, the sandbox image lines and runner address in `compose.yml`. See [What an upgrade changes](#what-an-upgrade-changes). Your data, settings, and any other customizations stay untouched. |
+| `--help`     | Shows all available options.                                                                                                                                                                                                                                                                                                                           |
 
 ## Prefer not to run a script from the internet?
 

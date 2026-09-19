@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metrickit/mxsignpostintervaldata/cumulativehitchtimeratio](https://developer.apple.com/documentation/metrickit/mxsignpostintervaldata/cumulativehitchtimeratio)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metrickit/mxsignpostintervaldata/cumulativehitchtimeratio
 
 # cumulativeHitchTimeRatio (Swift)
 
 **Framework:** MetricKit  
 **Kind:** Instance Property  
-**Availability:** iOS 15.0+ (deprecated in 27.0) · iPadOS 15.0+ (deprecated in 27.0) · Mac Catalyst 15.0+ (deprecated in 27.0) · macOS 12.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 15.0+ (deprecated in 27.2) · iPadOS 15.0+ (deprecated in 27.2) · Mac Catalyst 15.0+ (deprecated in 27.0) · macOS 12.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 The ratio of the total time spent hitching to the total time spent animating during the logged intervals.
 
@@ -28,7 +29,7 @@ var cumulativeHitchTimeRatio: Measurement<Unit>? { get }
 
 **Framework:** MetricKit  
 **Kind:** Instance Property  
-**Availability:** iOS 15.0+ (deprecated in 27.0) · iPadOS 15.0+ (deprecated in 27.0) · Mac Catalyst 15.0+ (deprecated in 27.0) · macOS 12.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 15.0+ (deprecated in 27.2) · iPadOS 15.0+ (deprecated in 27.2) · Mac Catalyst 15.0+ (deprecated in 27.0) · macOS 12.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 The ratio of the total time spent hitching to the total time spent animating during the logged intervals.
 

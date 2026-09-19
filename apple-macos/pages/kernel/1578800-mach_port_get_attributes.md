@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1578800-mach_port_get_attributes](https://developer.apple.com/documentation/kernel/1578800-mach_port_get_attributes)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1578800-mach_port_get_attributes
 
 # mach_port_get_attributes
 

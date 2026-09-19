@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avinterfacetimelinesegment/timerange](https://developer.apple.com/documentation/avkit/avinterfacetimelinesegment/timerange)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avinterfacetimelinesegment/timerange
 
 # timeRange
 
@@ -14,10 +15,3 @@ The time range defining the segment’s position and duration within the overall
 ```objectivec
 @property (nonatomic, readonly) CMTimeRange timeRange;
 ```
-
-## See Also
-
-### Inspecting the segment
-
-- [identifier](identifier.md): Optional external identifier for tracking or analytics purposes. May correspond to advertisement IDs, chapter markers, or other external systems.
-- [requiresLinearPlayback](requireslinearplayback.md): Indicates whether this segment must be played sequentially without seeking or skipping. Typically used for advertisements or important announcements.

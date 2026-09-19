@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_event_type_t](https://developer.apple.com/documentation/endpointsecurity/es_event_type_t)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_event_type_t
 
 # es_event_type_t (Swift)
 
@@ -328,6 +329,15 @@ You also use this type when inspecting a received message. The [es_message_t](es
 - [ES_EVENT_TYPE_NOTIFY_TCC_MODIFY](es_event_type_notify_tcc_modify.md)
 - [ES_EVENT_TYPE_RESERVED_0](es_event_type_reserved_0.md)
 - [ES_EVENT_TYPE_RESERVED_1](es_event_type_reserved_1.md)
+- [ES_EVENT_TYPE_RESERVED_10](es_event_type_reserved_10.md)
+- [ES_EVENT_TYPE_RESERVED_11](es_event_type_reserved_11.md)
+- [ES_EVENT_TYPE_RESERVED_12](es_event_type_reserved_12.md)
+- [ES_EVENT_TYPE_RESERVED_13](es_event_type_reserved_13.md)
+- [ES_EVENT_TYPE_RESERVED_14](es_event_type_reserved_14.md)
+- [ES_EVENT_TYPE_RESERVED_15](es_event_type_reserved_15.md)
+- [ES_EVENT_TYPE_RESERVED_16](es_event_type_reserved_16.md)
+- [ES_EVENT_TYPE_RESERVED_17](es_event_type_reserved_17.md)
+- [ES_EVENT_TYPE_RESERVED_18](es_event_type_reserved_18.md)
 - [ES_EVENT_TYPE_RESERVED_2](es_event_type_reserved_2.md)
 - [ES_EVENT_TYPE_RESERVED_3](es_event_type_reserved_3.md)
 - [ES_EVENT_TYPE_RESERVED_4](es_event_type_reserved_4.md)
@@ -335,6 +345,7 @@ You also use this type when inspecting a received message. The [es_message_t](es
 - [ES_EVENT_TYPE_RESERVED_6](es_event_type_reserved_6.md)
 - [ES_EVENT_TYPE_RESERVED_7](es_event_type_reserved_7.md)
 - [ES_EVENT_TYPE_RESERVED_8](es_event_type_reserved_8.md)
+- [ES_EVENT_TYPE_RESERVED_9](es_event_type_reserved_9.md)
 
 ## See Also
 

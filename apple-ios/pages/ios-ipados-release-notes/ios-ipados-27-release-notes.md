@@ -1,6 +1,7 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/ios-ipados-release-notes/ios-ipados-27-release-notes](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27-release-notes)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27-release-notes
 
-# iOS & iPadOS 27 RC Release Notes
+# iOS & iPadOS 27 Release Notes
 
 **Kind:** Article
 
@@ -10,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The iOS & iPadOS 27 SDK provides support to develop apps for iPhone and iPad running iOS & iPadOS 27 RC. The SDK comes bundled with Xcode 27, available from the Mac App Store. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
+The iOS & iPadOS 27 SDK provides support to develop apps for iPhone and iPad running iOS & iPadOS 27. The SDK comes bundled with Xcode 27, available from the Mac App Store. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
 
 <a id="AirPlay"></a>
 
@@ -432,7 +433,7 @@ The iOS & iPadOS 27 SDK provides support to develop apps for iPhone and iPad run
 
 #### New Features
 
-- arm64e.x1 introduces additional hardware security and performance instructions, including CPA2 for stronger MIE protection. Devices with support for arm64e.x1 include iPhone models with A20 Pro or later chips, Mac computers with M6 or later chips, and Apple Watch models with S11 or later chips. You can access arm64e.x1 and CPA2 in Xcode through the enhanced security pane and a build setting. Learn more in the [Enhanced Security article](https://docs.devpubs.apple.com/drafts/f16-dspector-161940504-rapid-isa-adoption-documentation/documentation/xcode/enabling-enhanced-security-for-your-app). (152103975)
+- arm64e.x1 introduces additional hardware security and performance instructions, including CPA2 for stronger MIE protection. Devices with support for arm64e.x1 include iPhone models with A20 Pro or later chips, Mac computers with M6 or later chips, and Apple Watch models with S11 or later chips. You can access arm64e.x1 and CPA2 in Xcode through the enhanced security pane and a build setting. Learn more in the [Enhanced Security article](https://developer.apple.com/documentation/xcode/enabling-enhanced-security-for-your-app). (152103975)
 
 <a id="HealthKit"></a>
 
@@ -1376,3 +1377,9 @@ The iOS & iPadOS 27 SDK provides support to develop apps for iPhone and iPad run
 #### Resolved Issues
 
 - Fixed: The Simulator might display a black wallpaper and blank app icons temporarily during first boot. (179746601)
+
+## See Also
+
+### iOS & iPadOS 27
+
+- [iOS & iPadOS 27.2 Beta Release Notes](ios-ipados-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.

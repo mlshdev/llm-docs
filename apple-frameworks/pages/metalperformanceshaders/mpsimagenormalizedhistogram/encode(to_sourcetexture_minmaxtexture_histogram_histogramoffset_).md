@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsimagenormalizedhistogram/encode(to:sourcetexture:minmaxtexture:histogram:histogramoffset:)](https://developer.apple.com/documentation/metalperformanceshaders/mpsimagenormalizedhistogram/encode(to:sourcetexture:minmaxtexture:histogram:histogramoffset:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpsimagenormalizedhistogram/encode(to:sourcetexture:minmaxtexture:histogram:histogramoffset:)
 
 # encode(to:sourceTexture:minmaxTexture:histogram:histogramOffset:) (Swift)
 

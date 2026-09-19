@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcaptureviewcontrolsstyle/default](https://developer.apple.com/documentation/avkit/avcaptureviewcontrolsstyle/default)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcaptureviewcontrolsstyle/default
 
 # default (Swift)
 
@@ -22,7 +23,7 @@ The default controls style is [AVCaptureViewControlsStyle.inline](inline.md).
 
 ## See Also
 
-### Controls Styles
+### Controls styles
 
 - [AVCaptureViewControlsStyle.inline](inline.md): The view’s inline controls style.
 - [AVCaptureViewControlsStyle.floating](floating.md): The view’s floating controls style, which matches the user interface of QuickTime Player.
@@ -50,7 +51,7 @@ The default controls style is [AVCaptureViewControlsStyleInline](inline.md).
 
 ## See Also
 
-### Controls Styles
+### Controls styles
 
 - [AVCaptureViewControlsStyleInline](inline.md): The view’s inline controls style.
 - [AVCaptureViewControlsStyleFloating](floating.md): The view’s floating controls style, which matches the user interface of QuickTime Player.

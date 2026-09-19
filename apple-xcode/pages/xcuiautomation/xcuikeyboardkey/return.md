@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcuiautomation/xcuikeyboardkey/return](https://developer.apple.com/documentation/xcuiautomation/xcuikeyboardkey/return)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcuiautomation/xcuikeyboardkey/return
 
 # return (Swift)
 

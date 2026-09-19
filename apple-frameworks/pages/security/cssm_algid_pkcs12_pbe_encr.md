@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_algid_pkcs12_pbe_encr](https://developer.apple.com/documentation/security/cssm_algid_pkcs12_pbe_encr)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_algid_pkcs12_pbe_encr
 
 # CSSM_ALGID_PKCS12_PBE_ENCR (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/nvmeidentifynamespacestruct/3521248-ns_multipath_io_and_ns_sharing_c](https://developer.apple.com/documentation/iokit/nvmeidentifynamespacestruct/3521248-ns_multipath_io_and_ns_sharing_c)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/nvmeidentifynamespacestruct/3521248-ns_multipath_io_and_ns_sharing_c
 
 # NS_MULTIPATH_IO_AND_NS_SHARING_CAPS
 

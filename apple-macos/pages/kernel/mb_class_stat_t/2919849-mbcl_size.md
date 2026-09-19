@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/mb_class_stat_t/2919849-mbcl_size](https://developer.apple.com/documentation/kernel/mb_class_stat_t/2919849-mbcl_size)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/mb_class_stat_t/2919849-mbcl_size
 
 # mbcl_size
 

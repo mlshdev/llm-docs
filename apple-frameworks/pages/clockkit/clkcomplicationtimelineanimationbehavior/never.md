@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtimelineanimationbehavior/never](https://developer.apple.com/documentation/clockkit/clkcomplicationtimelineanimationbehavior/never)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtimelineanimationbehavior/never
 
 # CLKComplicationTimelineAnimationBehavior.never (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Case  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 No animations. This is the default behavior.
 
@@ -27,7 +28,7 @@ case never
 
 **Framework:** ClockKit  
 **Kind:** Enumeration Case  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 No animations. This is the default behavior.
 

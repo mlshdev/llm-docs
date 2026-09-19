@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/winsize/1541890-ws_ypixel](https://developer.apple.com/documentation/kernel/winsize/1541890-ws_ypixel)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/winsize/1541890-ws_ypixel
 
 # ws_ypixel
 

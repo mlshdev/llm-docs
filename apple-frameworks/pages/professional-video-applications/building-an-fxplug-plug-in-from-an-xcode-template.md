@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional-video-applications/building-an-fxplug-plug-in-from-an-xcode-template](https://developer.apple.com/documentation/professional-video-applications/building-an-fxplug-plug-in-from-an-xcode-template)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional-video-applications/building-an-fxplug-plug-in-from-an-xcode-template
 
 # Building an FxPlug plug-in from an Xcode template
 

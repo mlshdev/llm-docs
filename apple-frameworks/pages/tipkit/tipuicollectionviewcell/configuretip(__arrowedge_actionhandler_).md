@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tipkit/tipuicollectionviewcell/configuretip(_:arrowedge:actionhandler:)](https://developer.apple.com/documentation/tipkit/tipuicollectionviewcell/configuretip(_:arrowedge:actionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/tipkit/tipuicollectionviewcell/configuretip(_:arrowedge:actionhandler:)
 
 # configureTip(\_:arrowEdge:actionHandler:)
 

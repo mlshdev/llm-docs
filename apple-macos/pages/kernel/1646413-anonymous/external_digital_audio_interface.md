@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1646413-anonymous/external_digital_audio_interface](https://developer.apple.com/documentation/kernel/1646413-anonymous/external_digital_audio_interface)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1646413-anonymous/external_digital_audio_interface
 
 # EXTERNAL_DIGITAL_AUDIO_INTERFACE
 

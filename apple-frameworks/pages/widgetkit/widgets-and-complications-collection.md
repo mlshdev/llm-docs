@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/widgetkit/widgets-and-complications-collection](https://developer.apple.com/documentation/widgetkit/widgets-and-complications-collection)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/widgetkit/widgets-and-complications-collection
 
 # Widgets and watch complications (Swift)
 
@@ -30,6 +31,7 @@ Use WidgetKit to create widgets and watch complications that elevate a small amo
 - [Widget](https://developer.apple.com/documentation/swiftui/widget): The configuration and content of a widget to display on the Home screen or in Notification Center.
 - [WidgetFamily](widgetfamily.md): Values that define the widget’s size and shape.
 - [StaticConfiguration](staticconfiguration.md): An object describing the content of a widget that has no user-configurable options.
+- [widgetFamily](https://developer.apple.com/documentation/swiftui/environmentvalues/widgetfamily): The template of the widget — small, medium, or large.
 
 ### Configurable widgets
 
@@ -48,6 +50,12 @@ Use WidgetKit to create widgets and watch complications that elevate a small amo
 - [WidgetAccentedRenderingMode](widgetaccentedrenderingmode.md): Constants that indicate the rendering mode for an `Image` in when displayed in a widget in [accented](widgetrenderingmode/accented.md) mode.
 - [AccessoryWidgetBackground](accessorywidgetbackground.md): An adaptive background view that provides a standard appearance based on the the widget’s environment.
 - [WidgetLocation](widgetlocation.md): Values that indicate different widget locations.
+- [widgetAccentable(\_:)](https://developer.apple.com/documentation/swiftui/view/widgetaccentable%28_:%29): Adds the view and all of its subviews to the accented group.
+- [widgetAccentedRenderingMode(\_:)](https://developer.apple.com/documentation/swiftui/image/widgetaccentedrenderingmode%28_:%29): Specifies the how to render an `Image` when using the `WidgetKit/WidgetRenderingMode/accented` mode.
+- [widgetRenderingMode](https://developer.apple.com/documentation/swiftui/environmentvalues/widgetrenderingmode): The widget’s rendering mode, based on where the system is displaying it.
+- [widgetContentMargins](https://developer.apple.com/documentation/swiftui/environmentvalues/widgetcontentmargins): A property that identifies the content margins of a widget.
+- [widget](https://developer.apple.com/documentation/swiftui/containerbackgroundplacement/widget): The container background placement for a widget.
+- [showsWidgetContainerBackground](https://developer.apple.com/documentation/swiftui/environmentvalues/showswidgetcontainerbackground): An environment variable that indicates whether the background of a widget appears.
 
 ### Timeline updates
 
@@ -91,8 +99,13 @@ Use WidgetKit to create widgets and watch complications that elevate a small amo
 
 - [Creating accessory widgets and watch complications](creating-accessory-widgets-and-watch-complications.md): Support accessory widgets that appear on the Lock Screen and as complications on Apple Watch.
 - [AccessoryWidgetGroup](accessorywidgetgroup.md): A view type that has a label at the top and three content views masked with a circle or rounded square.
-- [AccessoryWidgetGroupStyle](accessorywidgetgroupstyle.md): The style for an [AccessoryWidgetGroup](accessorywidgetgroup.md) view.
+- [AccessoryWidgetGroupStyle](accessorywidgetgroupstyle.md): The style for an accessory widget group view.
 - [Migrating ClockKit complications to WidgetKit](converting-a-clockkit-app.md): Leverage WidgetKit’s API to create watchOS complications using SwiftUI.
+- [widgetCurvesContent(\_:)](https://developer.apple.com/documentation/swiftui/view/widgetcurvescontent%28_:%29): Displays the widget’s content along a curve if the context allows it.
+- [widgetLabel(\_:)](https://developer.apple.com/documentation/swiftui/view/widgetlabel%28_:%29): Returns a localized text label that displays additional content outside the accessory family widget’s main SwiftUI view.
+- [widgetLabel(label:)](https://developer.apple.com/documentation/swiftui/view/widgetlabel%28label:%29): Creates a label for displaying additional content outside an accessory family widget’s main SwiftUI view.
+- [showsWidgetLabel](https://developer.apple.com/documentation/swiftui/environmentvalues/showswidgetlabel): A Boolean value that indicates whether an accessory family widget can display an accessory label.
+- [accessoryWidgetGroupStyle(\_:)](https://developer.apple.com/documentation/swiftui/view/accessorywidgetgroupstyle%28_:%29): The view modifier that can be applied to `AccessoryWidgetGroup` to specify the shape the three content views will be masked with. The value of `style` is set to `.automatic`, which is `.circular` by default.
 
 ### Smart Stacks
 

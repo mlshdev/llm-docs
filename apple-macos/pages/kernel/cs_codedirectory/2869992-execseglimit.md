@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/cs_codedirectory/2869992-execseglimit](https://developer.apple.com/documentation/kernel/cs_codedirectory/2869992-execseglimit)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/cs_codedirectory/2869992-execseglimit
 
 # execSegLimit
 

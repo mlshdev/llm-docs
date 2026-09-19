@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcaptureviewdelegate](https://developer.apple.com/documentation/avkit/avcaptureviewdelegate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcaptureviewdelegate
 
 # AVCaptureViewDelegate (Swift)
 
@@ -16,7 +17,7 @@ protocol AVCaptureViewDelegate : NSObjectProtocol
 
 ## Topics
 
-### Starting a New Recording
+### Starting a new recording
 
 - [captureView(\_:startRecordingTo:)](avcaptureviewdelegate/captureview%28__startrecordingto_%29.md): Tells the delegate that the user has made a request to start a new recording.
 
@@ -28,9 +29,9 @@ protocol AVCaptureViewDelegate : NSObjectProtocol
 
 ## See Also
 
-### Configuring the Delegate
+### Capture views
 
-- [delegate](avcaptureview/delegate.md): The capture view’s delegate object.
+- [AVCaptureView](avcaptureview.md): A view that displays standard user interface controls for capturing media data.
 
 # AVCaptureViewDelegate (Objective-C)
 
@@ -48,7 +49,7 @@ The protocol that defines the methods you can implement to respond to capture vi
 
 ## Topics
 
-### Starting a New Recording
+### Starting a new recording
 
 - [captureView:startRecordingToFileOutput:](avcaptureviewdelegate/captureview%28__startrecordingto_%29.md): Tells the delegate that the user has made a request to start a new recording.
 
@@ -60,6 +61,6 @@ The protocol that defines the methods you can implement to respond to capture vi
 
 ## See Also
 
-### Configuring the Delegate
+### Capture views
 
-- [delegate](avcaptureview/delegate.md): The capture view’s delegate object.
+- [AVCaptureView](avcaptureview.md): A view that displays standard user interface controls for capturing media data.

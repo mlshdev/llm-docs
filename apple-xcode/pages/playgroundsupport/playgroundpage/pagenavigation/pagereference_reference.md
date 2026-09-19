@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/playgroundsupport/playgroundpage/pagenavigation/pagereference_reference](https://developer.apple.com/documentation/playgroundsupport/playgroundpage/pagenavigation/pagereference_reference)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/playgroundsupport/playgroundpage/pagenavigation/pagereference_reference
 
 # PlaygroundPage.PageNavigation.pageReference(reference:)
 

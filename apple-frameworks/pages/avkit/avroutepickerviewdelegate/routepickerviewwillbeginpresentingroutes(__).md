@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avroutepickerviewdelegate/routepickerviewwillbeginpresentingroutes(_:)](https://developer.apple.com/documentation/avkit/avroutepickerviewdelegate/routepickerviewwillbeginpresentingroutes(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avroutepickerviewdelegate/routepickerviewwillbeginpresentingroutes(_:)
 
 # routePickerViewWillBeginPresentingRoutes(\_:) (Swift)
 
@@ -20,7 +21,7 @@ optional func routePickerViewWillBeginPresentingRoutes(_ routePickerView: AVRout
 
 ## See Also
 
-### Presenting Routes
+### Presenting routes
 
 - [routePickerViewDidEndPresentingRoutes(\_:)](routepickerviewdidendpresentingroutes%28__%29.md): Tells the delegate when the route picker view finishes presenting routes to the user.
 
@@ -44,6 +45,6 @@ Tells the delegate that the route picker view is about to begin presenting route
 
 ## See Also
 
-### Presenting Routes
+### Presenting routes
 
 - [routePickerViewDidEndPresentingRoutes:](routepickerviewdidendpresentingroutes%28__%29.md): Tells the delegate when the route picker view finishes presenting routes to the user.

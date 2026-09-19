@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applearchive/aeaprofiles/aea_profile__hkdf_sha256_aesctr_hmac__scrypt__none](https://developer.apple.com/documentation/applearchive/aeaprofiles/aea_profile__hkdf_sha256_aesctr_hmac__scrypt__none)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applearchive/aeaprofiles/aea_profile__hkdf_sha256_aesctr_hmac__scrypt__none
 
 # AEA_PROFILE\__HKDF_SHA256_AESCTR_HMAC\__SCRYPT\__NONE
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/nehotspotconfigurationerror/invalidhs20domainname](https://developer.apple.com/documentation/networkextension/nehotspotconfigurationerror/invalidhs20domainname)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/networkextension/nehotspotconfigurationerror/invalidhs20domainname
 
 # NEHotspotConfigurationError.invalidHS20DomainName (Swift)
 

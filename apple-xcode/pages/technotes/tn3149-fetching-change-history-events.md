@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/technotes/tn3149-fetching-change-history-events](https://developer.apple.com/documentation/technotes/tn3149-fetching-change-history-events)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/technotes/tn3149-fetching-change-history-events
 
 # TN3149: Fetching Contacts change history events
 

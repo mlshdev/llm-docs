@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/simd_almost_equal_elements_relative-2gmox](https://developer.apple.com/documentation/simd/simd_almost_equal_elements_relative-2gmox)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/simd/simd_almost_equal_elements_relative-2gmox
 
 # simd_almost_equal_elements_relative
 

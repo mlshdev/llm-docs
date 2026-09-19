@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gamecontroller/gcdevicephysicalinput/inputstate(forspatialaccessoryanchortimestamp:)](https://developer.apple.com/documentation/gamecontroller/gcdevicephysicalinput/inputstate(forspatialaccessoryanchortimestamp:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/gamecontroller/gcdevicephysicalinput/inputstate(forspatialaccessoryanchortimestamp:)
 
 # inputState(forSpatialAccessoryAnchorTimestamp:) (Swift)
 

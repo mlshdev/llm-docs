@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uibutton/buttontype-swift.enum/infodark](https://developer.apple.com/documentation/uikit/uibutton/buttontype-swift.enum/infodark)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uibutton/buttontype-swift.enum/infodark
 
 # UIButton.ButtonType.infoDark (Swift)
 

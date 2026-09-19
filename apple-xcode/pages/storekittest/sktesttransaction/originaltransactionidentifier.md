@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/storekittest/sktesttransaction/originaltransactionidentifier](https://developer.apple.com/documentation/storekittest/sktesttransaction/originaltransactionidentifier)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekittest/sktesttransaction/originaltransactionidentifier
 
 # originalTransactionIdentifier (Swift)
 
@@ -18,7 +19,7 @@ var originalTransactionIdentifier: Int { get }
 
 ## Discussion
 
-For subscription renewals, or if you restore a purchase, the [originalTransactionIdentifier](originaltransactionidentifier.md) is the original transaction for that subscription or in-app purchase.
+For subscription renewals, or if you restore a purchase, the [originalTransactionIdentifier](originaltransactionidentifier.md) is the original transaction for that subscription or Apple In-App Purchase.
 
 ## See Also
 
@@ -45,7 +46,7 @@ The identifier of the original transaction.
 
 ## Discussion
 
-For subscription renewals, or if you restore a purchase, the [originalTransactionIdentifier](originaltransactionidentifier.md) is the original transaction for that subscription or in-app purchase.
+For subscription renewals, or if you restore a purchase, the [originalTransactionIdentifier](originaltransactionidentifier.md) is the original transaction for that subscription or Apple In-App Purchase.
 
 ## See Also
 

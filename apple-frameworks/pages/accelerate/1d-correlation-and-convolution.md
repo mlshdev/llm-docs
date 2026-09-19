@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/1d-correlation-and-convolution](https://developer.apple.com/documentation/accelerate/1d-correlation-and-convolution)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/1d-correlation-and-convolution
 
 # 1D correlation and convolution (Swift)
 

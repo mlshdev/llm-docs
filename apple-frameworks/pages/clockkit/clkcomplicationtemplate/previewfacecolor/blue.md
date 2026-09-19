@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplate/previewfacecolor/blue](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplate/previewfacecolor/blue)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplate/previewfacecolor/blue
 
 # blue
 
 **Framework:** ClockKit  
 **Kind:** Type Property  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 The preview displays a watch face with a blue tint color.
 

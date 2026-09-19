@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/nvmesmartdata/3521278-num_error_info_log_entries](https://developer.apple.com/documentation/iokit/nvmesmartdata/3521278-num_error_info_log_entries)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/nvmesmartdata/3521278-num_error_info_log_entries
 
 # NUM_ERROR_INFO_LOG_ENTRIES
 

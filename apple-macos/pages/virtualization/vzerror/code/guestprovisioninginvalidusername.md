@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/virtualization/vzerror/code/guestprovisioninginvalidusername](https://developer.apple.com/documentation/virtualization/vzerror/code/guestprovisioninginvalidusername)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/virtualization/vzerror/code/guestprovisioninginvalidusername
 
 # VZError.Code.guestProvisioningInvalidUsername (Swift)
 

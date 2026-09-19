@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/extending-and-customizing-agents](https://developer.apple.com/documentation/xcode/extending-and-customizing-agents)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/extending-and-customizing-agents
 
 # Extending and customizing agents
 
@@ -63,3 +64,4 @@ To add a plug-in, click the Add Plug-in button. In the sheet, choose an import o
 ### Agent configuration
 
 - [Giving external agents access to Xcode](giving-external-agents-access-to-xcode.md): Let agents access your project and Xcode capabilities using the Model Context Protocol.
+- [Updating your Xcode project configuration file format](updating-your-xcode-project-configuration-file-format.md): Beta. Configure your Xcode project to use the JSON project configuration file format that’s more human-readable and editable by coding intelligence agents.

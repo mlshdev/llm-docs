@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avaudiosessionactivationoptions](https://developer.apple.com/documentation/avfaudio/avaudiosessionactivationoptions)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosessionactivationoptions
 
 # AVAudioSessionActivationOptions (Swift)
 
@@ -16,9 +17,9 @@ struct AVAudioSessionActivationOptions
 
 ## Topics
 
-### Getting Standard Activation Options
+### Creating an Activation Option
 
-- [init(rawValue:)](avaudiosessionactivationoptions/init%28rawvalue_%29.md): Creates a new instance with the raw value you specify.
+- [init(rawValue:)](avaudiosessionactivationoptions/init%28rawvalue_%29.md): Creates an activation-options set from a raw bitmask.
 
 ## Relationships
 
@@ -35,7 +36,7 @@ struct AVAudioSessionActivationOptions
 
 ## See Also
 
-### Activating the audio configuration
+### Activating and deactivating the session
 
 - [setActive(\_:options:)](avaudiosession/setactive%28__options_%29.md): Activates or deactivates your app’s audio session using the specified options.
 - [activate(options:completionHandler:)](avaudiosession/activate%28options_completionhandler_%29.md): Activates an audio session asynchronously.
@@ -60,11 +61,11 @@ enum AVAudioSessionActivationOptions : NSUInteger;
 
 ### Getting Standard Activation Options
 
-- [AVAudioSessionActivationOptionNone](avaudiosessionactivationoptions/avaudiosessionactivationoptionnone.md): A value that indicates the system should activate the audio session with no options.
+- [AVAudioSessionActivationOptionNone](avaudiosessionactivationoptions/avaudiosessionactivationoptionnone.md)
 
 ## See Also
 
-### Activating the audio configuration
+### Activating and deactivating the session
 
 - [setActive:error:](avaudiosession/setactive_error_.md): Activates or deactivates your app’s audio session.
 - [setActive:withOptions:error:](avaudiosession/setactive%28__options_%29.md): Activates or deactivates your app’s audio session using the specified options.

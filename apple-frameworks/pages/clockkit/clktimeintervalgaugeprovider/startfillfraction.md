@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clktimeintervalgaugeprovider/startfillfraction](https://developer.apple.com/documentation/clockkit/clktimeintervalgaugeprovider/startfillfraction)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clktimeintervalgaugeprovider/startfillfraction
 
 # startFillFraction (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 The position of the leading edge of the time bar within the specified time interval.
 
@@ -28,7 +29,7 @@ var startFillFraction: Float { get }
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 The position of the leading edge of the time bar within the specified time interval.
 

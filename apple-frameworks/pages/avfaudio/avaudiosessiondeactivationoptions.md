@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avaudiosessiondeactivationoptions](https://developer.apple.com/documentation/avfaudio/avaudiosessiondeactivationoptions)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosessiondeactivationoptions
 
 # AVAudioSessionDeactivationOptions (Swift)
 
@@ -16,11 +17,11 @@ struct AVAudioSessionDeactivationOptions
 
 ## Topics
 
-### Initializers
+### Creating a Deactivation Option
 
-- [init(rawValue:)](avaudiosessiondeactivationoptions/init%28rawvalue_%29.md)
+- [init(rawValue:)](avaudiosessiondeactivationoptions/init%28rawvalue_%29.md): Creates a deactivation-options set from a raw bitmask.
 
-### Type Properties
+### Getting Standard Deactivation Options
 
 - [notifyOthersOnDeactivation](avaudiosessiondeactivationoptions/notifyothersondeactivation.md): Notify an interrupted app that the interruption has ended and it may resume playback.
 
@@ -39,7 +40,7 @@ struct AVAudioSessionDeactivationOptions
 
 ## See Also
 
-### Activating the audio configuration
+### Activating and deactivating the session
 
 - [setActive(\_:options:)](avaudiosession/setactive%28__options_%29.md): Activates or deactivates your app’s audio session using the specified options.
 - [activate(options:completionHandler:)](avaudiosession/activate%28options_completionhandler_%29.md): Activates an audio session asynchronously.
@@ -62,14 +63,14 @@ enum AVAudioSessionDeactivationOptions : NSUInteger;
 
 ## Topics
 
-### Enumeration Cases
+### Getting Standard Deactivation Options
 
 - [AVAudioSessionDeactivationOptionNone](avaudiosessiondeactivationoptions/avaudiosessiondeactivationoptionnone.md)
 - [AVAudioSessionDeactivationOptionNotifyOthersOnDeactivation](avaudiosessiondeactivationoptions/notifyothersondeactivation.md): Notify an interrupted app that the interruption has ended and it may resume playback.
 
 ## See Also
 
-### Activating the audio configuration
+### Activating and deactivating the session
 
 - [setActive:error:](avaudiosession/setactive_error_.md): Activates or deactivates your app’s audio session.
 - [setActive:withOptions:error:](avaudiosession/setactive%28__options_%29.md): Activates or deactivates your app’s audio session using the specified options.

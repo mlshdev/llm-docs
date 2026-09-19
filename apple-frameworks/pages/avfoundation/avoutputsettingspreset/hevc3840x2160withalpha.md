@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avoutputsettingspreset/hevc3840x2160withalpha](https://developer.apple.com/documentation/avfoundation/avoutputsettingspreset/hevc3840x2160withalpha)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avoutputsettingspreset/hevc3840x2160withalpha
 
 # hevc3840x2160WithAlpha (Swift)
 

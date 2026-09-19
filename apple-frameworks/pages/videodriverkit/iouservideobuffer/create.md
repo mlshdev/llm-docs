@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideobuffer/create](https://developer.apple.com/documentation/videodriverkit/iouservideobuffer/create)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideobuffer/create
 
 # Create
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Static Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,5 +19,5 @@ static OSSharedPtr<IOUserVideoBuffer> Create(IOUserVideoDriver *in_driver, IOUse
 
 ### Creating a video buffer
 
-- [init](init.md)
-- [IOUserVideoDriver](../iouservideodriver.md): A video driver.
+- [init](init.md): Beta.
+- [IOUserVideoDriver](../iouservideodriver.md): Beta. A video driver.

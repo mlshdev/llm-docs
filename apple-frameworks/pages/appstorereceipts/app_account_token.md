@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appstorereceipts/app_account_token](https://developer.apple.com/documentation/appstorereceipts/app_account_token)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstorereceipts/app_account_token
 
 # app_account_token
 
@@ -22,7 +23,7 @@ string app_account_token
 
 When a customer initiates an in-app purchase, you can optionally generate an [appAccountToken(\_:)](../storekit/product/purchaseoption/appaccounttoken%28__%29.md) and send it to the App Store. The App Store returns the same value in [appAccountToken](../storekit/transaction/appaccounttoken.md) in the transaction information after the customer completes the purchase.
 
-If you’re using the [Original API for In-App Purchase](../storekit/original-api-for-in-app-purchase.md) and provide a UUID in the [applicationUsername](../storekit/skmutablepayment/applicationusername.md) property, then the [app_account_token](app_account_token.md) field contains that value.
+If you’re using the [Original API for Apple In-App Purchase](../storekit/original-api-for-in-app-purchase.md) and provide a UUID in the [applicationUsername](../storekit/skmutablepayment/applicationusername.md) property, then the [app_account_token](app_account_token.md) field contains that value.
 
 ## See Also
 

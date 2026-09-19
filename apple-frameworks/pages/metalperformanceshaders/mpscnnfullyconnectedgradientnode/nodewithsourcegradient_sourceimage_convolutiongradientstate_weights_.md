@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpscnnfullyconnectedgradientnode/nodewithsourcegradient:sourceimage:convolutiongradientstate:weights:](https://developer.apple.com/documentation/metalperformanceshaders/mpscnnfullyconnectedgradientnode/nodewithsourcegradient:sourceimage:convolutiongradientstate:weights:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpscnnfullyconnectedgradientnode/nodewithsourcegradient:sourceimage:convolutiongradientstate:weights:
 
 # nodeWithSourceGradient:sourceImage:convolutionGradientState:weights:
 

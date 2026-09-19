@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/simd_quaternion(_:)-69ido](https://developer.apple.com/documentation/simd/simd_quaternion(_:)-69ido)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/simd/simd_quaternion(_:)-69ido
 
 # simd_quaternion(\_:) (Swift)
 

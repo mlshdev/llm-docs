@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideobooleancontrol/getcontrolvalue](https://developer.apple.com/documentation/videodriverkit/iouservideobooleancontrol/getcontrolvalue)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideobooleancontrol/getcontrolvalue
 
 # GetControlValue
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the current value of the control.
 
@@ -32,4 +33,4 @@ The object’s work queue synchronizes access to this value.
 
 ### Accessing the value
 
-- [SetControlValue](setcontrolvalue.md): Sets the current control value.
+- [SetControlValue](setcontrolvalue.md): Beta. Sets the current control value.

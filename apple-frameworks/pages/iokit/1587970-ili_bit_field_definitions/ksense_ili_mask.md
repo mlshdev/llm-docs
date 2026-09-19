@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1587970-ili_bit_field_definitions/ksense_ili_mask](https://developer.apple.com/documentation/iokit/1587970-ili_bit_field_definitions/ksense_ili_mask)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1587970-ili_bit_field_definitions/ksense_ili_mask
 
 # kSENSE_ILI_Mask
 

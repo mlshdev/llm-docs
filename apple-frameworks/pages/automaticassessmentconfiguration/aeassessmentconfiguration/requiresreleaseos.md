@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/automaticassessmentconfiguration/aeassessmentconfiguration/requiresreleaseos](https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentconfiguration/requiresreleaseos)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentconfiguration/requiresreleaseos
 
 # requiresReleaseOS (Swift)
 
@@ -18,13 +19,11 @@ var requiresReleaseOS: Bool { get set }
 
 ## Discussion
 
-When set to `true`, the assessment session will only start if the device is running a released build of the operating system, rather than a beta, seed, or other prerelease build. This requirement is disabled by default.
+When set to `true`, the assessment session will only start if the device is running a released build of the operating system, rather than a beta, seed, or other prerelease build. Defaults to `false`.
 
-> **Important**
+> **See Also**
 
-> This check is advisory, not a security guarantee. Use this property to steer proctored exams away from prerelease software whose behavior may not match a shipping release; it doesn’t provide a cryptographic attestation of the operating system build.
-
-For stronger runtime assurances, pair this property with [App Attest](https://developer.apple.com/documentation/DeviceCheck) on macOS.
+> [AEAssessmentConfiguration](../aeassessmentconfiguration.md) for the limits that apply to every enablement requirement.
 
 # requiresReleaseOS (Objective-C)
 
@@ -44,10 +43,8 @@ A Boolean value that indicates whether the device must be running a final custom
 
 ## Discussion
 
-When set to `true`, the assessment session will only start if the device is running a released build of the operating system, rather than a beta, seed, or other prerelease build. This requirement is disabled by default.
+When set to `true`, the assessment session will only start if the device is running a released build of the operating system, rather than a beta, seed, or other prerelease build. Defaults to `false`.
 
-> **Important**
+> **See Also**
 
-> This check is advisory, not a security guarantee. Use this property to steer proctored exams away from prerelease software whose behavior may not match a shipping release; it doesn’t provide a cryptographic attestation of the operating system build.
-
-For stronger runtime assurances, pair this property with [App Attest](https://developer.apple.com/documentation/DeviceCheck) on macOS.
+> [AEAssessmentConfiguration](../aeassessmentconfiguration.md) for the limits that apply to every enablement requirement.

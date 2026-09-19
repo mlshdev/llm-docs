@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clktimetextprovider](https://developer.apple.com/documentation/clockkit/clktimetextprovider)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clktimetextprovider
 
 # CLKTimeTextProvider (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 A formatted time value.
 
@@ -73,7 +74,7 @@ When formatting the time, the time text provider drops the morning/evening indic
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 A formatted time value.
 

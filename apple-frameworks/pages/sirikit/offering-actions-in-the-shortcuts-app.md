@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/sirikit/offering-actions-in-the-shortcuts-app](https://developer.apple.com/documentation/sirikit/offering-actions-in-the-shortcuts-app)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/sirikit/offering-actions-in-the-shortcuts-app
 
 # Offering Actions in the Shortcuts App (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideolevelcontrol/create](https://developer.apple.com/documentation/videodriverkit/iouservideolevelcontrol/create)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideolevelcontrol/create
 
 # Create
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Static Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 A static factory method that allocates and initializes a video level control.
 
@@ -42,8 +43,8 @@ If IOUserVideoLevelControl is subclassed to override behavior, don’t use this 
 
 ### Creating a level control
 
-- [init](init.md): Initializes an video level control.
-- [IOUserVideoDriver](../iouservideodriver.md): A video driver.
-- [IOUserVideoLevelControlRange](../iouservideolevelcontrolrange.md): A control that supports a range of floating-point values.
-- [IOUserVideoObjectPropertyElement](../videodriverkit/iouservideoobjectpropertyelement.md): An integer that identifies, along with the property selector and scope, a specific piece of information about a video object.
-- [IOUserVideoObjectPropertyScope](../videodriverkit/iouservideoobjectpropertyscope.md): A four character code which, along with the selector and element, identifies a specific piece of information about a video object.
+- [init](init.md): Beta. Initializes an video level control.
+- [IOUserVideoDriver](../iouservideodriver.md): Beta. A video driver.
+- [IOUserVideoLevelControlRange](../iouservideolevelcontrolrange.md): Beta. A control that supports a range of floating-point values.
+- [IOUserVideoObjectPropertyElement](../videodriverkit/iouservideoobjectpropertyelement.md): Beta. An integer that identifies, along with the property selector and scope, a specific piece of information about a video object.
+- [IOUserVideoObjectPropertyScope](../videodriverkit/iouservideoobjectpropertyscope.md): Beta. A four character code which, along with the selector and element, identifies a specific piece of information about a video object.

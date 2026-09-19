@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iostreambufferqueueentry/datalength](https://developer.apple.com/documentation/videodriverkit/iostreambufferqueueentry/datalength)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iostreambufferqueueentry/datalength
 
 # dataLength
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Property  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,7 +19,7 @@ uint32_t dataLength;
 
 ### Accessing buffer queue entry properties
 
-- [bufferID](bufferid.md)
-- [dataOffset](dataoffset.md)
-- [controlOffset](controloffset.md)
-- [controlLength](controllength.md)
+- [bufferID](bufferid.md): Beta.
+- [dataOffset](dataoffset.md): Beta.
+- [controlOffset](controloffset.md): Beta.
+- [controlLength](controllength.md): Beta.

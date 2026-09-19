@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation](https://developer.apple.com/documentation/avfoundation)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation
 
 # AVFoundation (Swift)
 
@@ -141,6 +142,9 @@ AVFoundation combines several major technology areas that together encompass a w
 - [AVCaptureAncillaryDataUserKeyRDD18InstanceUID](avfoundation/avcaptureancillarydatauserkey/rdd18instanceuid.md): An AVCaptureAncillaryDataEncoder key corresponding with the optional RDD18 user defined metadata Instance UID
 - [AVCaptureAncillaryDataUserKeyRDD18UDAMSetVersion](avfoundation/avcaptureancillarydatauserkey/rdd18udamsetversion.md): An AVCaptureAncillaryDataEncoder key corresponding with the optional RDD18 user defined metadata UDAM Set Version
 - [AVCaptureAncillaryDataUserKeyRDD18UserItems](avfoundation/avcaptureancillarydatauserkey/rdd18useritems.md): An AVCaptureAncillaryDataEncoder key corresponding with RDD18 user defined metadata
+- [AVCaptureDeviceTypeBuiltInInnerUltraWideCamera](avfoundation/avcapturedevice/devicetype-swift.struct/builtininnerultrawidecamera.md): Beta.
+- [AVCaptureDeviceTypeBuiltInOuterUltraWideCamera](avfoundation/avcapturedevice/devicetype-swift.struct/builtinouterultrawidecamera.md): Beta.
+- [AVMediaCharacteristicSignLanguageInterpretationForAccessibility](avfoundation/avmediacharacteristic/signlanguageinterpretationforaccessibility.md): A media characteristic that indicates that a track or media selection option provides a sign language interpretation of the spoken dialog and other significant aspects of the presentation.
 - [AVMetadataObjectTypeCinematicVideoMetadata](avfoundation/avmetadataobject/objecttype/cinematicvideometadata.md): A constant that identifies Cinematic video metadata for post-capture Cinematic video editing.
 - [AVMetadataObjectTypeFocusTrackedObject](avfoundation/avmetadataobject/objecttype/focustrackedobject.md): An identifier for an instance of [AVMetadataFocusTrackedObject](avfoundation/avmetadatafocustrackedobject.md).
 - [AVProVideoStorageBusyReasonAdjustingCapacity](avfoundation/avprovideostorage/busyreason/adjustingcapacity.md): Pro Video Storage is being created or resized.

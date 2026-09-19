@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iousbinterface/1809552-getendpointpropertiesv3](https://developer.apple.com/documentation/kernel/iousbinterface/1809552-getendpointpropertiesv3)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iousbinterface/1809552-getendpointpropertiesv3
 
 # GetEndpointPropertiesV3
 

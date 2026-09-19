@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1580541-cpuid_get_leaf7_feature_names](https://developer.apple.com/documentation/kernel/1580541-cpuid_get_leaf7_feature_names)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1580541-cpuid_get_leaf7_feature_names
 
 # cpuid_get_leaf7_feature_names
 

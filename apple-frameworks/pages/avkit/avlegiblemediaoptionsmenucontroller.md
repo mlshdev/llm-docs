@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avlegiblemediaoptionsmenucontroller](https://developer.apple.com/documentation/avkit/avlegiblemediaoptionsmenucontroller)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avlegiblemediaoptionsmenucontroller
 
 # AVLegibleMediaOptionsMenuController (Swift)
 
@@ -60,9 +61,10 @@ Supports both media track selection and caption appearance customization. When i
 
 ## See Also
 
-### Legible media options
+### Media and content selection
 
 - [AVLegibleMediaOptionsMenuState](avlegiblemediaoptionsmenustate.md)
+- [AVContentSelectionViewController](avcontentselectionviewcontroller.md): A view controller for providing additional UI to the multiview experience.
 
 # AVLegibleMediaOptionsMenuController (Objective-C)
 
@@ -115,6 +117,6 @@ Supports both media track selection and caption appearance customization. When i
 
 ## See Also
 
-### Legible media options
+### Media and content selection
 
 - [AVLegibleMediaOptionsMenuState](avlegiblemediaoptionsmenustate.md)

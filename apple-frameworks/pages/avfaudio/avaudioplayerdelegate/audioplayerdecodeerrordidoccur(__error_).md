@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avaudioplayerdelegate/audioplayerdecodeerrordidoccur(_:error:)](https://developer.apple.com/documentation/avfaudio/avaudioplayerdelegate/audioplayerdecodeerrordidoccur(_:error:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudioplayerdelegate/audioplayerdecodeerrordidoccur(_:error:)
 
 # audioPlayerDecodeErrorDidOccur(\_:error:) (Swift)
 

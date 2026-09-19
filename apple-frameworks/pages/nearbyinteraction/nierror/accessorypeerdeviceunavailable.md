@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/nearbyinteraction/nierror/accessorypeerdeviceunavailable](https://developer.apple.com/documentation/nearbyinteraction/nierror/accessorypeerdeviceunavailable)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/nierror/accessorypeerdeviceunavailable
 
 # accessoryPeerDeviceUnavailable
 

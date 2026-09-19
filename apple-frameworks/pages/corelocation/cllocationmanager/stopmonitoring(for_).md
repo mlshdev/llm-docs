@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corelocation/cllocationmanager/stopmonitoring(for:)](https://developer.apple.com/documentation/corelocation/cllocationmanager/stopmonitoring(for:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corelocation/cllocationmanager/stopmonitoring(for:)
 
 # stopMonitoring(for:) (Swift)
 
 **Framework:** Core Location  
 **Kind:** Instance Method  
-**Availability:** iOS 5.0+ (deprecated in 27.0) · iPadOS 5.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.8+ (deprecated in 27.0)
+**Availability:** iOS 5.0+ (deprecated in 27.2) · iPadOS 5.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.8+ (deprecated in 27.2)
 
 Stops monitoring the specified region.
 
@@ -46,7 +47,7 @@ If the specified region object is not currently being monitored, this method has
 
 **Framework:** Core Location  
 **Kind:** Instance Method  
-**Availability:** iOS 5.0+ (deprecated in 27.0) · iPadOS 5.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.8+ (deprecated in 27.0)
+**Availability:** iOS 5.0+ (deprecated in 27.2) · iPadOS 5.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.8+ (deprecated in 27.2)
 
 Stops monitoring the specified region.
 

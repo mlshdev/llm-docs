@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/kauth_identity_extlookup/1547417-el_info_pid](https://developer.apple.com/documentation/kernel/kauth_identity_extlookup/1547417-el_info_pid)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/kauth_identity_extlookup/1547417-el_info_pid
 
 # el_info_pid
 

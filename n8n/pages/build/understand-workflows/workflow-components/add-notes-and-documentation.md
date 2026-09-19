@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/understand-workflows/workflow-components/add-notes-and-documentation.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/understand-workflows/workflow-components/add-notes-and-documentation.md)
+> Pinned source for n8n main: [docs/build/understand-workflows/workflow-components/add-notes-and-documentation.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/understand-workflows/workflow-components/add-notes-and-documentation.md)
 
 # Add notes and documentation
 
@@ -6,7 +6,7 @@ Sticky notes let you annotate and comment on your workflows.
 
 n8n recommends using sticky notes on template workflows[^1] to help other users understand your workflow.
 
-![A basic workflow with a sticky note attached](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/example-sticky-note.png)
+![A basic workflow with a sticky note attached](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/example-sticky-note.png)
 
 ## Create a sticky note <a id="create-a-sticky-note"></a>
 
@@ -27,10 +27,10 @@ Sticky notes are a core node. To add a new sticky note:
 To change the sticky note color:
 
 1. Hover over the sticky note.
-2. Select **Change color** ![Change Sticky Note color icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/change-color.png).
+2. Select **Change color** ![Change Sticky Note color icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/change-color.png).
 3. Choose from seven preset colors, or click the rainbow gradient button to select a custom color.
 
-![Color selector showing preset colors and custom color button](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/color-picker-popover.png)
+![Color selector showing preset colors and custom color button](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/color-picker-popover.png)
 
 ### Custom colors <a id="custom-colors"></a>
 
@@ -106,3 +106,11 @@ To embed your own video, copy the above syntax, replacing `ZCuL2e4zC_4` with you
 See [Workflow components](https://docs.n8n.io/build/understand-workflows/workflow-components) for other elements you can add to a workflow.
 
 [^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.
+
+## Related resources
+
+- [Workflow components](https://docs.n8n.io/build/understand-workflows/workflow-components)
+- [Work with nodes](https://docs.n8n.io/build/understand-workflows/workflow-components/work-with-nodes)
+- [Connect nodes together](https://docs.n8n.io/build/understand-workflows/workflow-components/connect-nodes-together)
+- [Canvas Groups](https://docs.n8n.io/build/understand-workflows/workflow-components/canvas-groups)
+- [Find your workflow ID](https://docs.n8n.io/build/understand-workflows/workflow-components/find-your-workflow-id)

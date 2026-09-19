@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/sadb_key/1588129-sadb_key_bits](https://developer.apple.com/documentation/kernel/sadb_key/1588129-sadb_key_bits)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/sadb_key/1588129-sadb_key_bits
 
 # sadb_key_bits
 

@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/manage-workflows/view-change-history.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/manage-workflows/view-change-history.md)
+> Pinned source for n8n main: [docs/build/manage-workflows/view-change-history.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/manage-workflows/view-change-history.md)
 
 # View change history
 
@@ -38,7 +38,7 @@ Changes to workflow settings do not create a new version.
 To view a workflow's history:
 
 1. Open the workflow.
-2. Select **Workflow history** ![Workflow history icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/workflow-history.png). n8n opens a menu showing the saved workflow versions, and a canvas with a preview of the selected version.
+2. Select **Workflow history** ![Workflow history icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/workflow-history.png). n8n opens a menu showing the saved workflow versions, and a canvas with a preview of the selected version.
 
 ## Restore or copy previous versions <a id="restore-or-copy-previous-versions"></a>
 

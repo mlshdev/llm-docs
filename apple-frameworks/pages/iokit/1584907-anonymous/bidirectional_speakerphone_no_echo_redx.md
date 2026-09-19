@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1584907-anonymous/bidirectional_speakerphone_no_echo_redx](https://developer.apple.com/documentation/iokit/1584907-anonymous/bidirectional_speakerphone_no_echo_redx)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1584907-anonymous/bidirectional_speakerphone_no_echo_redx
 
 # BIDIRECTIONAL_SPEAKERPHONE_NO_ECHO_REDX
 

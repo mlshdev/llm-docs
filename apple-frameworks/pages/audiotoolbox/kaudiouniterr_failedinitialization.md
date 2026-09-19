@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/kaudiouniterr_failedinitialization](https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_failedinitialization)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_failedinitialization
 
 # kAudioUnitErr_FailedInitialization (Swift)
 

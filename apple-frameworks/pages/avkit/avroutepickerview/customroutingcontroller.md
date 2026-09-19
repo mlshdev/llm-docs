@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avroutepickerview/customroutingcontroller](https://developer.apple.com/documentation/avkit/avroutepickerview/customroutingcontroller)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avroutepickerview/customroutingcontroller
 
 # customRoutingController (Swift)
 

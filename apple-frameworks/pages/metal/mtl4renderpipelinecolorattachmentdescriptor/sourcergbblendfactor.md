@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/sourcergbblendfactor](https://developer.apple.com/documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/sourcergbblendfactor)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/sourcergbblendfactor
 
 # sourceRGBBlendFactor (Swift)
 
@@ -18,7 +19,7 @@ var sourceRGBBlendFactor: MTLBlendFactor { get set }
 
 ## Discussion
 
-This property defaults to `MTLBlendFactorOne`.
+This property defaults to [MTLBlendFactor.one](../mtlblendfactor/one.md).
 
 # sourceRGBBlendFactor (Objective-C)
 
@@ -38,4 +39,4 @@ Configures the source RGB blend factor.
 
 ## Discussion
 
-This property defaults to `MTLBlendFactorOne`.
+This property defaults to [MTLBlendFactorOne](../mtlblendfactor/one.md).

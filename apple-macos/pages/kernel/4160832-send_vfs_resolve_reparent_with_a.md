@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/4160832-send_vfs_resolve_reparent_with_a](https://developer.apple.com/documentation/kernel/4160832-send_vfs_resolve_reparent_with_a)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/4160832-send_vfs_resolve_reparent_with_a
 
 # send_vfs_resolve_reparent_with_audit_token
 

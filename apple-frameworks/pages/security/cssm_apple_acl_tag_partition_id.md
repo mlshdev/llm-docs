@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_apple_acl_tag_partition_id](https://developer.apple.com/documentation/security/cssm_apple_acl_tag_partition_id)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_apple_acl_tag_partition_id
 
 # CSSM_APPLE_ACL_TAG_PARTITION_ID (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/cgcolorspace/init(calibratedrgbwhitepoint:blackpoint:gamma:matrix:)](https://developer.apple.com/documentation/coregraphics/cgcolorspace/init(calibratedrgbwhitepoint:blackpoint:gamma:matrix:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coregraphics/cgcolorspace/init(calibratedrgbwhitepoint:blackpoint:gamma:matrix:)
 
 # init(calibratedRGBWhitePoint:blackPoint:gamma:matrix:) (Swift)
 

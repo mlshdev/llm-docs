@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/compressing-file-system-directories](https://developer.apple.com/documentation/accelerate/compressing-file-system-directories)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/compressing-file-system-directories
 
 # Compressing file system directories (Swift)
 

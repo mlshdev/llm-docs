@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/adopting-system-selection-ui-in-custom-text-views](https://developer.apple.com/documentation/uikit/adopting-system-selection-ui-in-custom-text-views)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/adopting-system-selection-ui-in-custom-text-views
 
 # Adopting system selection UI in custom text views (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/appintentstesting/dynamicpropertypath](https://developer.apple.com/documentation/appintentstesting/dynamicpropertypath)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintentstesting/dynamicpropertypath
 
 # DynamicPropertyPath
 
@@ -37,6 +38,7 @@ let coffee: AnyAppEntity = try result.value.as(CoffeeEntity)
 
 - [as(\_:)](dynamicpropertypath/as%28__%29-5po1a.md): Casts a property to the provided type.
 - [as(\_:)](dynamicpropertypath/as%28__%29-6n9rh.md): Casts the value to the given type.
+- [get(as:)](dynamicpropertypath/get%28as_%29.md): Beta. Resolves the value at this path, fetching it from the app if it was deferred.
 
 ### Subscripts
 

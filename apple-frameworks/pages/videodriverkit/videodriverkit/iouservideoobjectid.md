@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoobjectid](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoobjectid)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoobjectid
 
 # IOUserVideoObjectID
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Type Alias  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 A handle for a a specific video object.
 
@@ -20,6 +21,6 @@ typedef uint32_t IOUserVideoObjectID;
 
 ### Starting and stopping the driver
 
-- [StartDevice](../iouservideodriver/startdevice.md): Tells the driver to start IO on an video device.
-- [StopDevice](../iouservideodriver/stopdevice.md): Tells the driver to stop IO on an video device.
-- [IOUserVideoStartStopFlags](iouservideostartstopflags.md): Flags used to indicate how I/O is starting or stopping.
+- [StartDevice](../iouservideodriver/startdevice.md): Beta. Tells the driver to start IO on an video device.
+- [StopDevice](../iouservideodriver/stopdevice.md): Beta. Tells the driver to stop IO on an video device.
+- [IOUserVideoStartStopFlags](iouservideostartstopflags.md): Beta. Flags used to indicate how I/O is starting or stopping.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/processor_cpu_stat_data_t/3609579-irq_ex_cnt](https://developer.apple.com/documentation/kernel/processor_cpu_stat_data_t/3609579-irq_ex_cnt)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/processor_cpu_stat_data_t/3609579-irq_ex_cnt
 
 # irq_ex_cnt
 

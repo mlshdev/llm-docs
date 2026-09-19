@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ipsec_wake_pkt_event_data/3580378-wake_uuid](https://developer.apple.com/documentation/kernel/ipsec_wake_pkt_event_data/3580378-wake_uuid)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ipsec_wake_pkt_event_data/3580378-wake_uuid
 
 # wake_uuid
 

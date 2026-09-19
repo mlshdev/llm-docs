@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coretext/ctcharactercollection/kctadobejapan2charactercollection](https://developer.apple.com/documentation/coretext/ctcharactercollection/kctadobejapan2charactercollection)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coretext/ctcharactercollection/kctadobejapan2charactercollection
 
 # kCTAdobeJapan2CharacterCollection (Swift)
 

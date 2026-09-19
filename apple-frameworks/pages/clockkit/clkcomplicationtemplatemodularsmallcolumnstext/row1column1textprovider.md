@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplatemodularsmallcolumnstext/row1column1textprovider](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplatemodularsmallcolumnstext/row1column1textprovider)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplatemodularsmallcolumnstext/row1column1textprovider
 
 # row1Column1TextProvider (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 The text to display in the first column of the first row.
 
@@ -36,7 +37,7 @@ When the [highlightColumn2](highlightcolumn2.md) property is [false](https://dev
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 The text to display in the first column of the first row.
 

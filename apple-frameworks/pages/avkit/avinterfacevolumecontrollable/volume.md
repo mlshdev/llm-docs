@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avinterfacevolumecontrollable/volume](https://developer.apple.com/documentation/avkit/avinterfacevolumecontrollable/volume)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avinterfacevolumecontrollable/volume
 
 # volume
 
@@ -14,10 +15,3 @@ The audio output level as a normalized value between 0.0 (completely silent) and
 ```objectivec
 @property (nonatomic, readwrite) float volume;
 ```
-
-## See Also
-
-### Controlling volume
-
-- [muted](muted.md): Controls whether audio output is temporarily silenced. When YES, audio is muted regardless of the volume level setting. Must be key-value observable.
-- [hasAudio](hasaudio.md): Indicates whether the media contains audio tracks and can produce sound output. Returns NO for video-only content, silent content, or when audio tracks are unavailable. Must be key-value observable.

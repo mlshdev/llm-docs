@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/timer/init(firedate:interval:target:selector:userinfo:repeats:)](https://developer.apple.com/documentation/foundation/timer/init(firedate:interval:target:selector:userinfo:repeats:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/timer/init(firedate:interval:target:selector:userinfo:repeats:)
 
 # init(fireDate:interval:target:selector:userInfo:repeats:)
 

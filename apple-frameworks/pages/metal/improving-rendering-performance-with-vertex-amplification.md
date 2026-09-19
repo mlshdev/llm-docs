@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/improving-rendering-performance-with-vertex-amplification](https://developer.apple.com/documentation/metal/improving-rendering-performance-with-vertex-amplification)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/improving-rendering-performance-with-vertex-amplification
 
 # Improving rendering performance with vertex amplification (Swift)
 
@@ -279,6 +280,7 @@ struct VertexIn
     float3 position         [[attribute(PositionAttribute)]];
     ...
  };
+
 
 struct VertexOut
 {
@@ -632,6 +634,7 @@ struct VertexIn
     float3 position         [[attribute(PositionAttribute)]];
     ...
  };
+
 
 struct VertexOut
 {

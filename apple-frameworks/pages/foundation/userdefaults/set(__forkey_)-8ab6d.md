@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/userdefaults/set(_:forkey:)-8ab6d](https://developer.apple.com/documentation/foundation/userdefaults/set(_:forkey:)-8ab6d)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/userdefaults/set(_:forkey:)-8ab6d
 
 # set(\_:forKey:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/hovereffectcomponent/highlighthovereffectstyle/init(color:strength:opacityfunction:)](https://developer.apple.com/documentation/realitykit/hovereffectcomponent/highlighthovereffectstyle/init(color:strength:opacityfunction:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/hovereffectcomponent/highlighthovereffectstyle/init(color:strength:opacityfunction:)
 
 # init(color:strength:opacityFunction:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshadersgraph/mpsgraph/padtensor(_:with:leftpadding:rightpadding:constantvalue:name:)](https://developer.apple.com/documentation/metalperformanceshadersgraph/mpsgraph/padtensor(_:with:leftpadding:rightpadding:constantvalue:name:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshadersgraph/mpsgraph/padtensor(_:with:leftpadding:rightpadding:constantvalue:name:)
 
 # padTensor(\_:with:leftPadding:rightPadding:constantValue:name:) (Swift)
 

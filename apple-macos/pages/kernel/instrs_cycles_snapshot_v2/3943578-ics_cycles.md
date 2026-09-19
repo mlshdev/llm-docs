@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/instrs_cycles_snapshot_v2/3943578-ics_cycles](https://developer.apple.com/documentation/kernel/instrs_cycles_snapshot_v2/3943578-ics_cycles)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/instrs_cycles_snapshot_v2/3943578-ics_cycles
 
 # ics_cycles
 

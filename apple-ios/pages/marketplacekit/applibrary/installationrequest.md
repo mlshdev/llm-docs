@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/applibrary/installationrequest](https://developer.apple.com/documentation/marketplacekit/applibrary/installationrequest)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/marketplacekit/applibrary/installationrequest
 
 # AppLibrary.InstallationRequest
 
@@ -29,10 +30,9 @@ struct InstallationRequest
 
 ## See Also
 
-### Managing app installation
+### Installing apps as a marketplace
 
 - [AppLibrary.App](app.md): Information about an app that someone installs from a marketplace, including its ID and installation status.
 - [installingApps](installingapps.md): The set of apps that are pending installation completion.
 - [isLoading](isloading.md): A Boolean value that indicates whether the library is currently loading apps.
 - [requestAppInstallation(\_:)](requestappinstallation%28__%29.md): Requests the installation of the given app distribution package for the given account.
-- [requestAppInstallationFromBrowser(for:referrer:)](requestappinstallationfrombrowser%28for_referrer_%29.md): Forwards an app installation request from the developer’s webpage.

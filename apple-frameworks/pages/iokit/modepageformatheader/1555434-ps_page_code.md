@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/modepageformatheader/1555434-ps_page_code](https://developer.apple.com/documentation/iokit/modepageformatheader/1555434-ps_page_code)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/modepageformatheader/1555434-ps_page_code
 
 # PS_PAGE_CODE
 

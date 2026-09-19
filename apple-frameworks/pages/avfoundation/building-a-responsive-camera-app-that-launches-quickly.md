@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/building-a-responsive-camera-app-that-launches-quickly](https://developer.apple.com/documentation/avfoundation/building-a-responsive-camera-app-that-launches-quickly)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/building-a-responsive-camera-app-that-launches-quickly
 
 # Building a responsive camera app that launches quickly
 
@@ -152,6 +153,7 @@ The cover appears without animation, because the app doesn’t have time to anim
 - [Supporting Center Stage front camera in your iOS app](supporting-center-stage-front-camera-in-your-ios-app.md): Enable Center Stage for photos and videos on the iPhone front camera.
 - [AVMultiCamPiP: Capturing from Multiple Cameras](avmulticampip-capturing-from-multiple-cameras.md): Simultaneously record the output from the front and back cameras into a single movie file by using a multi-camera capture session.
 - [AVCamBarcode: detecting barcodes and faces](avcambarcode-detecting-barcodes-and-faces.md): Identify machine readable codes or faces by using the camera.
+- [Registering a camera capture accessory on iPhone Duo](registering-a-camera-capture-accessory-on-iphone-duo.md): Provide content to the person in front of the camera by pairing it with your capture interface.
 - [AVCaptureSession](avcapturesession.md): An object that configures capture behavior and coordinates the flow of data from input devices to capture outputs.
 - [AVCaptureMultiCamSession](avcapturemulticamsession.md): A capture session that supports simultaneous capture from multiple inputs of the same media type.
 - [AVCaptureInput](avcaptureinput.md): An abstract superclass for objects that provide input data to a capture session.

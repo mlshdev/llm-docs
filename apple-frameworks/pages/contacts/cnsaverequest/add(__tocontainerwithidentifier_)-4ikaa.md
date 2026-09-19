@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/contacts/cnsaverequest/add(_:tocontainerwithidentifier:)-4ikaa](https://developer.apple.com/documentation/contacts/cnsaverequest/add(_:tocontainerwithidentifier:)-4ikaa)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/contacts/cnsaverequest/add(_:tocontainerwithidentifier:)-4ikaa
 
 # add(\_:toContainerWithIdentifier:) (Swift)
 

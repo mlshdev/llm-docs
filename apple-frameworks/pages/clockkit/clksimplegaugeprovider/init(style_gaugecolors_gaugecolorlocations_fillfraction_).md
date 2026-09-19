@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clksimplegaugeprovider/init(style:gaugecolors:gaugecolorlocations:fillfraction:)](https://developer.apple.com/documentation/clockkit/clksimplegaugeprovider/init(style:gaugecolors:gaugecolorlocations:fillfraction:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clksimplegaugeprovider/init(style:gaugecolors:gaugecolorlocations:fillfraction:)
 
 # init(style:gaugeColors:gaugeColorLocations:fillFraction:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 Creates a multicolor gauge.
 
@@ -45,7 +46,7 @@ If you provide both colors and locations, then the `gaugeColors` and `gaugeColor
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 Creates a multicolor gauge.
 

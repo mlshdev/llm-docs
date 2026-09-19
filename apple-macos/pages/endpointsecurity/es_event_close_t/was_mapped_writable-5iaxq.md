@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_event_close_t/was_mapped_writable-5iaxq](https://developer.apple.com/documentation/endpointsecurity/es_event_close_t/was_mapped_writable-5iaxq)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_event_close_t/was_mapped_writable-5iaxq
 
 # was_mapped_writable
 

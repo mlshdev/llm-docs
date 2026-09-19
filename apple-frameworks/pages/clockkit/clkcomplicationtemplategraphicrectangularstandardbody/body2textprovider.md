@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphicrectangularstandardbody/body2textprovider](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphicrectangularstandardbody/body2textprovider)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphicrectangularstandardbody/body2textprovider
 
 # body2TextProvider (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 The secondary body text to display in the complication.
 
@@ -34,7 +35,7 @@ In watchOS 5 and earlier, the system always displays the text as white. In watch
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 The secondary body text to display in the complication.
 

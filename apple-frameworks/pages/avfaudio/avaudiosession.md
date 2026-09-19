@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avaudiosession](https://developer.apple.com/documentation/avfaudio/avaudiosession)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosession
 
 # AVAudioSession (Swift)
 
@@ -51,7 +52,7 @@ func configureAudioSession() {
 }
 ```
 
-The audio session uses this configuration when you activate the session using the [setActive:error:](avaudiosession/setactive_error_.md) or [setActive(\_:options:)](avaudiosession/setactive%28__options_%29.md) method.
+The audio session uses this configuration when you activate the session using the [setActive:error:](avaudiosession/setactive_error_.md), [setActive(\_:options:)](avaudiosession/setactive%28__options_%29.md), or [activate(options:completionHandler:)](avaudiosession/activate%28options_completionhandler_%29.md) method.
 
 > **Note**
 
@@ -81,7 +82,7 @@ The audio session uses this configuration when you activate the session using th
 - [isNowPlayingCandidate](avaudiosession/isnowplayingcandidate.md): A Boolean value that indicates whether the audio session is a candidate to be the Now Playing session.
 - [setIsNowPlayingCandidate(\_:)](avaudiosession/setisnowplayingcandidate%28__%29.md): Sets a Boolean value that indicates whether the audio session is a candidate to be the Now Playing session.
 
-### Activating the audio configuration
+### Activating and deactivating the session
 
 - [setActive(\_:options:)](avaudiosession/setactive%28__options_%29.md): Activates or deactivates your app’s audio session using the specified options.
 - [activate(options:completionHandler:)](avaudiosession/activate%28options_completionhandler_%29.md): Activates an audio session asynchronously.
@@ -96,10 +97,16 @@ The audio session uses this configuration when you activate the session using th
 - [resumptionRecommendationNotification](avaudiosession/resumptionrecommendationnotification.md): Notification sent when the system provides a resumption recommendation.
 - [deactivationContextKey](avaudiosession/deactivationcontextkey.md): Keys for [didBecomeInactiveNotification](avaudiosession/didbecomeinactivenotification.md) Value is an [AVAudioSession.DeactivationContext](avaudiosession/deactivationcontext.md) object describing the deactivation.
 - [resumptionContextKey](avaudiosession/resumptioncontextkey.md): Keys for [resumptionRecommendationNotification](avaudiosession/resumptionrecommendationnotification.md) Value is an [AVAudioSession.ResumptionContext](avaudiosession/resumptioncontext.md) describing the resumption recommendation.
+
+### Handling activation messages
+
 - [AVAudioSession.DidBecomeActiveMessage](avaudiosession/didbecomeactivemessage.md)
 - [AVAudioSession.DidBecomeInactiveMessage](avaudiosession/didbecomeinactivemessage.md)
 - [AVAudioSession.ResumptionRecommendationMessage](avaudiosession/resumptionrecommendationmessage.md)
 - [AVAudioSession.DeactivationResult](avaudiosession/deactivationresult.md): Type-safe representation of audio session deactivation results.
+
+### Getting activation context details
+
 - [AVAudioSession.DeactivationContext](avaudiosession/deactivationcontext.md): An object that describes why and how the audio session deactivated.
 - [AVAudioSession.DeactivationSource](avaudiosession/deactivationsource.md): The source of the audio session deactivation.
 - [AVAudioSession.InterruptionContext](avaudiosession/interruptioncontext.md): An object that provides context about an audio session interruption.
@@ -308,7 +315,7 @@ func configureAudioSession() {
 }
 ```
 
-The audio session uses this configuration when you activate the session using the [setActive:error:](avaudiosession/setactive_error_.md) or [setActive:withOptions:error:](avaudiosession/setactive%28__options_%29.md) method.
+The audio session uses this configuration when you activate the session using the [setActive:error:](avaudiosession/setactive_error_.md), [setActive:withOptions:error:](avaudiosession/setactive%28__options_%29.md), or [activateWithOptions:completionHandler:](avaudiosession/activate%28options_completionhandler_%29.md) method.
 
 > **Note**
 
@@ -339,7 +346,7 @@ The audio session uses this configuration when you activate the session using th
 - [isNowPlayingCandidate](avaudiosession/isnowplayingcandidate.md): A Boolean value that indicates whether the audio session is a candidate to be the Now Playing session.
 - [setIsNowPlayingCandidate:error:](avaudiosession/setisnowplayingcandidate%28__%29.md): Sets a Boolean value that indicates whether the audio session is a candidate to be the Now Playing session.
 
-### Activating the audio configuration
+### Activating and deactivating the session
 
 - [setActive:error:](avaudiosession/setactive_error_.md): Activates or deactivates your app’s audio session.
 - [setActive:withOptions:error:](avaudiosession/setactive%28__options_%29.md): Activates or deactivates your app’s audio session using the specified options.
@@ -355,6 +362,9 @@ The audio session uses this configuration when you activate the session using th
 - [AVAudioSessionResumptionRecommendationNotification](avaudiosession/resumptionrecommendationnotification.md): Notification sent when the system provides a resumption recommendation.
 - [AVAudioSessionDeactivationContextKey](avaudiosession/deactivationcontextkey.md): Keys for [AVAudioSessionDidBecomeInactiveNotification](avaudiosession/didbecomeinactivenotification.md) Value is an [AVAudioSessionDeactivationContext](avaudiosession/deactivationcontext.md) object describing the deactivation.
 - [AVAudioSessionResumptionContextKey](avaudiosession/resumptioncontextkey.md): Keys for [AVAudioSessionResumptionRecommendationNotification](avaudiosession/resumptionrecommendationnotification.md) Value is an [AVAudioSessionResumptionContext](avaudiosession/resumptioncontext.md) describing the resumption recommendation.
+
+### Getting activation context details
+
 - [AVAudioSessionDeactivationContext](avaudiosession/deactivationcontext.md): An object that describes why and how the audio session deactivated.
 - [AVAudioSessionDeactivationSource](avaudiosession/deactivationsource.md): The source of the audio session deactivation.
 - [AVAudioSessionInterruptionContext](avaudiosession/interruptioncontext.md): An object that provides context about an audio session interruption.

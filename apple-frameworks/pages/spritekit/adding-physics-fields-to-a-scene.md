@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spritekit/adding-physics-fields-to-a-scene](https://developer.apple.com/documentation/spritekit/adding-physics-fields-to-a-scene)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spritekit/adding-physics-fields-to-a-scene
 
 # Adding Physics Fields to a Scene (Swift)
 
@@ -22,11 +23,15 @@ The following code shows one of these fields, a linear gravity field. In this ex
 ```swift
 physicsWorld.gravity = CGVector(dx:0, dy: 0);
 
+
 let gravityVector = vector_float3(0,-1,0);
+
 
 let gravityNode = SKFieldNode.linearGravityField(withVector: gravityVector)
 
+
 gravityNode.strength = 9.8
+
 
 addChild(gravityNode)
 ```
@@ -36,11 +41,15 @@ addChild(gravityNode)
 ```objc
 self.physicsWorld.gravity = CGVectorMake(0,0);
 
+
 vector_float3 gravityVector = {0,-1,0};
+
 
 SKFieldNode *gravityNode = [SKFieldNode linearGravityFieldWithVector: gravityVector];
 
+
 gravityNode.strength = 9.8;
+
 
 [self addChild:gravityNode];
 ```
@@ -164,11 +173,15 @@ The following code shows one of these fields, a linear gravity field. In this ex
 ```swift
 physicsWorld.gravity = CGVector(dx:0, dy: 0);
 
+
 let gravityVector = vector_float3(0,-1,0);
+
 
 let gravityNode = SKFieldNode.linearGravityField(withVector: gravityVector)
 
+
 gravityNode.strength = 9.8
+
 
 addChild(gravityNode)
 ```
@@ -178,11 +191,15 @@ addChild(gravityNode)
 ```objc
 self.physicsWorld.gravity = CGVectorMake(0,0);
 
+
 vector_float3 gravityVector = {0,-1,0};
+
 
 SKFieldNode *gravityNode = [SKFieldNode linearGravityFieldWithVector: gravityVector];
 
+
 gravityNode.strength = 9.8;
+
 
 [self addChild:gravityNode];
 ```

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iostreambufferqueue/headindex](https://developer.apple.com/documentation/videodriverkit/iostreambufferqueue/headindex)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iostreambufferqueue/headindex
 
 # headIndex
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Property  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,7 +19,7 @@ volatile uint32_t headIndex;
 
 ### Accessing queue contents
 
-- [entryCount](entrycount.md)
-- [tailIndex](tailindex.md)
-- [queue](queue.md)
-- [IOStreamBufferQueueEntry](../iostreambufferqueueentry.md)
+- [entryCount](entrycount.md): Beta.
+- [tailIndex](tailindex.md): Beta.
+- [queue](queue.md): Beta.
+- [IOStreamBufferQueueEntry](../iostreambufferqueueentry.md): Beta.

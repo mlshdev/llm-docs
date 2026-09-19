@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/gpu_descriptor/1478486-gpu_max_domains](https://developer.apple.com/documentation/kernel/gpu_descriptor/1478486-gpu_max_domains)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/gpu_descriptor/1478486-gpu_max_domains
 
 # gpu_max_domains
 

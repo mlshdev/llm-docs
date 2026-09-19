@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsimage/writebytes(_:datalayout:bytesperrow:bytesperimage:region:featurechannelinfo:imageindex:)](https://developer.apple.com/documentation/metalperformanceshaders/mpsimage/writebytes(_:datalayout:bytesperrow:bytesperimage:region:featurechannelinfo:imageindex:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpsimage/writebytes(_:datalayout:bytesperrow:bytesperimage:region:featurechannelinfo:imageindex:)
 
 # writeBytes(\_:dataLayout:bytesPerRow:bytesPerImage:region:featureChannelInfo:imageIndex:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/3325691-iorpcmessagefrommach](https://developer.apple.com/documentation/iokit/3325691-iorpcmessagefrommach)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/3325691-iorpcmessagefrommach
 
 # IORPCMessageFromMach(\_:\_:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtltextureviewdescriptor/slicerange-6nq6v](https://developer.apple.com/documentation/metal/mtltextureviewdescriptor/slicerange-6nq6v)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtltextureviewdescriptor/slicerange-6nq6v
 
 # sliceRange
 

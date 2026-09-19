@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/carplay/cppanelitem/init(listitem:)](https://developer.apple.com/documentation/carplay/cppanelitem/init(listitem:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/carplay/cppanelitem/init(listitem:)
 
 # init(listItem:) (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Initializer  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
-Initializes a panel item wrapping a @c CPListItem.
+Initialize the item using a list item.
 
 ## Declaration
 
@@ -14,16 +15,36 @@ Initializes a panel item wrapping a @c CPListItem.
 init(listItem: CPListItem)
 ```
 
+## Parameters
+
+- `listItem`: The list item with the information to display. The [CPListItem](../cplistitem.md) type supports primary and secondary text and images.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A panel item configured with the specified list item.
+
 # initWithListItem: (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Instance Method  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
-Initializes a panel item wrapping a @c CPListItem.
+Initialize the item using a list item.
 
 ## Declaration
 
 ```objectivec
 - (instancetype) initWithListItem:(CPListItem *) listItem;
 ```
+
+## Parameters
+
+- `listItem`: The list item with the information to display. The [CPListItem](../cplistitem.md) type supports primary and secondary text and images.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A panel item configured with the specified list item.

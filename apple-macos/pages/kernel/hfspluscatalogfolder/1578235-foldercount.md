@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/hfspluscatalogfolder/1578235-foldercount](https://developer.apple.com/documentation/kernel/hfspluscatalogfolder/1578235-foldercount)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/hfspluscatalogfolder/1578235-foldercount
 
 # folderCount
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatialpreview/usdpreviewsession/changelistdelegate/onredorequest()](https://developer.apple.com/documentation/spatialpreview/usdpreviewsession/changelistdelegate/onredorequest())
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatialpreview/usdpreviewsession/changelistdelegate/onredorequest()
 
 # onRedoRequest()
 
@@ -13,3 +14,9 @@ An redo has been requested in the session
 ```swift
 @MainActor func onRedoRequest()
 ```
+
+## See Also
+
+### Handling undo and redo
+
+- [onUndoRequest()](onundorequest%28%29.md): An undo has been requested in the session

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/proximityreader/customerengagementsession/configuration-swift.struct/init(currency:region:privacypolicyurl:websiteurl:storename:devicename:passtypeidentifiers:)](https://developer.apple.com/documentation/proximityreader/customerengagementsession/configuration-swift.struct/init(currency:region:privacypolicyurl:websiteurl:storename:devicename:passtypeidentifiers:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/proximityreader/customerengagementsession/configuration-swift.struct/init(currency:region:privacypolicyurl:websiteurl:storename:devicename:passtypeidentifiers:)
 
 # init(currency:region:privacyPolicyURL:websiteURL:storeName:deviceName:passTypeIdentifiers:)
 

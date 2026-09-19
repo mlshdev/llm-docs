@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphicrectangularfullview](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphicrectangularfullview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphicrectangularfullview
 
 # CLKComplicationTemplateGraphicRectangularFullView
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 A template for displaying a SwiftUI view that fills the entire template.
 

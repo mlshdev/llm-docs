@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/roomplan/providing-custom-models-for-captured-rooms-and-structure-exports](https://developer.apple.com/documentation/roomplan/providing-custom-models-for-captured-rooms-and-structure-exports)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/roomplan/providing-custom-models-for-captured-rooms-and-structure-exports
 
 # Providing custom models for captured rooms and structure exports
 

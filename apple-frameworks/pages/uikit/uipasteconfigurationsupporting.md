@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uipasteconfigurationsupporting](https://developer.apple.com/documentation/uikit/uipasteconfigurationsupporting)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteconfigurationsupporting
 
 # UIPasteConfigurationSupporting (Swift)
 
@@ -45,6 +46,7 @@ The interface that determines whether a responder object supports paste configur
 - [UIAlertController](uialertcontroller.md)
 - [UIAlertView](uialertview.md)
 - [UIApplication](uiapplication.md)
+- [UIArrangementViewController](uiarrangementviewcontroller.md)
 - [UIBackgroundExtensionView](uibackgroundextensionview.md)
 - [UIButton](uibutton.md)
 - [UICalendarView](uicalendarview.md)

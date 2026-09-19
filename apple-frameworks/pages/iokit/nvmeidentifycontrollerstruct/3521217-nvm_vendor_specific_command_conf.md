@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/nvmeidentifycontrollerstruct/3521217-nvm_vendor_specific_command_conf](https://developer.apple.com/documentation/iokit/nvmeidentifycontrollerstruct/3521217-nvm_vendor_specific_command_conf)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/nvmeidentifycontrollerstruct/3521217-nvm_vendor_specific_command_conf
 
 # NVM_VENDOR_SPECIFIC_COMMAND_CONFIG
 

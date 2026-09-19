@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtldrawprimitivesindirectarguments/init(vertexcount:instancecount:vertexstart:baseinstance:)](https://developer.apple.com/documentation/metal/mtldrawprimitivesindirectarguments/init(vertexcount:instancecount:vertexstart:baseinstance:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtldrawprimitivesindirectarguments/init(vertexcount:instancecount:vertexstart:baseinstance:)
 
 # init(vertexCount:instanceCount:vertexStart:baseInstance:)
 

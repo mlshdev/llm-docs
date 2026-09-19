@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/adopting-the-system-player-interface-in-visionos](https://developer.apple.com/documentation/avkit/adopting-the-system-player-interface-in-visionos)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/adopting-the-system-player-interface-in-visionos
 
 # Adopting the system player interface in visionOS (Swift)
 
@@ -165,19 +166,15 @@ private func addTimeObserver() {
 
 ## See Also
 
-### visionOS playback
+### Standard player interfaces
 
-- [Playing immersive media with AVKit](playing-immersive-media-with-avkit.md): Adopt the system playback interface to provide an immersive video watching experience.
-- [Creating a multiview video playback experience in visionOS](creating-a-multiview-video-playback-experience-in-visionos.md): Build an interface that plays multiple videos simultaneously and handles transitions to different experience types gracefully.
-- [Trimming and exporting media in visionOS](trimming-and-exporting-media-in-visionos.md): Display standard controls in your app to edit the timeline of the currently playing media.
+- [Playing video content in a standard user interface](playing-video-content-in-a-standard-user-interface.md): Play media full screen, embedded inline, or in a floating Picture in Picture (PiP) window using a player view controller.
+- [Customizing the tvOS playback experience](customizing-the-tvos-playback-experience.md): Adopt the latest features of the redesigned tvOS player user interface to provide a more streamlined way to watch your content.
 - [AVPlayerViewController](avplayerviewcontroller.md): A view controller that displays content from a player and presents a native user interface to control playback.
 - [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md): A protocol that defines the methods to implement to respond to player view controller events.
-- [AVExperienceController](avexperiencecontroller.md): An object that controls video experiences.
-- [AVMultiviewManager](avmultiviewmanager.md): An object that manages viewing multiple videos at once.
-- [AVGroupExperienceCoordinator](avgroupexperiencecoordinator.md): An object that synchronizes viewing environment state across participants in a SharePlay session.
-- [AVViewport](avviewport.md): An object that provides configuration options for how the player displays content in different viewing contexts.
-- [AVPortalViewport](avportalviewport.md): An object that defines the visual parameters for content displayed within a portal frame.
-- [Third-party casting support](third-party-casting-support.md): Provide custom playback controls for third-party casting services and other media sources.
+- [AVPlayerView](avplayerview.md): A view that displays content from a player and presents a native user interface to control playback.
+- [AVPlayerViewDelegate](avplayerviewdelegate.md): A protocol that defines the methods to implement to participate in the player view’s full-screen presentation life cycle.
+- [VideoPlayer](videoplayer.md): A view that displays content from a player and a native user interface to control playback.
 
 # Adopting the system player interface in visionOS (Objective-C)
 
@@ -344,12 +341,10 @@ private func addTimeObserver() {
 
 ## See Also
 
-### visionOS playback
+### Standard player interfaces
 
-- [Playing immersive media with AVKit](playing-immersive-media-with-avkit.md): Adopt the system playback interface to provide an immersive video watching experience.
-- [Trimming and exporting media in visionOS](trimming-and-exporting-media-in-visionos.md): Display standard controls in your app to edit the timeline of the currently playing media.
+- [Customizing the tvOS playback experience](customizing-the-tvos-playback-experience.md): Adopt the latest features of the redesigned tvOS player user interface to provide a more streamlined way to watch your content.
 - [AVPlayerViewController](avplayerviewcontroller.md): A view controller that displays content from a player and presents a native user interface to control playback.
 - [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md): A protocol that defines the methods to implement to respond to player view controller events.
-- [AVViewport](avviewport.md): An object that provides configuration options for how the player displays content in different viewing contexts.
-- [AVPortalViewport](avportalviewport.md): An object that defines the visual parameters for content displayed within a portal frame.
-- [Third-party casting support](third-party-casting-support.md): Provide custom playback controls for third-party casting services and other media sources.
+- [AVPlayerView](avplayerview.md): A view that displays content from a player and presents a native user interface to control playback.
+- [AVPlayerViewDelegate](avplayerviewdelegate.md): A protocol that defines the methods to implement to participate in the player view’s full-screen presentation life cycle.

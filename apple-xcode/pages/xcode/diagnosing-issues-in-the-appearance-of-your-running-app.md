@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/diagnosing-issues-in-the-appearance-of-your-running-app](https://developer.apple.com/documentation/xcode/diagnosing-issues-in-the-appearance-of-your-running-app)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/diagnosing-issues-in-the-appearance-of-your-running-app
 
 # Diagnosing issues in the appearance of a running app
 

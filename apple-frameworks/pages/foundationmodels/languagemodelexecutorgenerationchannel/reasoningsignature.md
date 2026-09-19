@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationchannel/reasoningsignature](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/reasoningsignature)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/reasoningsignature
 
 # LanguageModelExecutorGenerationChannel.ReasoningSignature
 
@@ -24,8 +25,8 @@ The signature is an opaque, producer-supplied token; each `updateSignature` even
 
 ### Handling the reasoning signature
 
-- [signature](reasoningsignature/signature.md)
-- [tokenCount](reasoningsignature/tokencount.md)
+- [signature](reasoningsignature/signature.md): The opaque token that authenticates the reasoning entry.
+- [tokenCount](reasoningsignature/tokencount.md): The number of the tokens the signature carries.
 
 ## Relationships
 

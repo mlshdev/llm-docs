@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/reasoning/metadata](https://developer.apple.com/documentation/foundationmodels/transcript/reasoning/metadata)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/reasoning/metadata
 
 # metadata
 
@@ -18,6 +19,6 @@ var metadata: [String : GeneratedContent]
 
 ### Inspecting the reasoning
 
-- [description](description.md)
+- [description](description.md): A textual representation of the reasoning entry.
 - [segments](segments.md): Ordered reasoning segments.
 - [signature](signature.md): Opaque producer-supplied signature for this reasoning entry.

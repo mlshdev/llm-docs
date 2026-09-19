@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/charts/chartcontent/offset(x:ystart:yend:)](https://developer.apple.com/documentation/charts/chartcontent/offset(x:ystart:yend:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/charts/chartcontent/offset(x:ystart:yend:)
 
 # offset(x:yStart:yEnd:)
 

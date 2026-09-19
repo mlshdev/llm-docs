@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/placing-objects-and-handling-3d-interaction](https://developer.apple.com/documentation/arkit/placing-objects-and-handling-3d-interaction)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/placing-objects-and-handling-3d-interaction
 
 # Placing objects and handling 3D interaction (Swift)
 

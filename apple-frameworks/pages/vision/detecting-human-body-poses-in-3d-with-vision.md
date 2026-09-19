@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/vision/detecting-human-body-poses-in-3d-with-vision](https://developer.apple.com/documentation/vision/detecting-human-body-poses-in-3d-with-vision)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/vision/detecting-human-body-poses-in-3d-with-vision
 
 # Detecting human body poses in 3D with Vision (Swift)
 

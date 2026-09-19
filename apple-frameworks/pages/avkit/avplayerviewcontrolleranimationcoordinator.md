@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrolleranimationcoordinator](https://developer.apple.com/documentation/avkit/avplayerviewcontrolleranimationcoordinator)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrolleranimationcoordinator
 
 # AVPlayerViewControllerAnimationCoordinator (Swift)
 
@@ -16,7 +17,7 @@ protocol AVPlayerViewControllerAnimationCoordinator : NSObjectProtocol
 
 ## Topics
 
-### Coordinating Animations
+### Coordinating animations
 
 - [addCoordinatedAnimations(\_:completion:)](avplayerviewcontrolleranimationcoordinator/addcoordinatedanimations%28__completion_%29.md): Adds animations to perform alongside the playback controls’ visibility animation.
 
@@ -28,7 +29,7 @@ protocol AVPlayerViewControllerAnimationCoordinator : NSObjectProtocol
 
 ## See Also
 
-### Responding to Transport Bar Changes
+### Responding to transport bar changes
 
 - [playerViewController(\_:willTransitionToVisibilityOfTransportBar:with:)](avplayerviewcontrollerdelegate/playerviewcontroller%28__willtransitiontovisibilityoftransportbar_with_%29.md): Tells the delegate when the transport bar’s visibility is about to change.
 
@@ -48,7 +49,7 @@ A protocol that defines the methods to implement to synchronize animations with 
 
 ## Topics
 
-### Coordinating Animations
+### Coordinating animations
 
 - [addCoordinatedAnimations:completion:](avplayerviewcontrolleranimationcoordinator/addcoordinatedanimations%28__completion_%29.md): Adds animations to perform alongside the playback controls’ visibility animation.
 
@@ -60,6 +61,6 @@ A protocol that defines the methods to implement to synchronize animations with 
 
 ## See Also
 
-### Responding to Transport Bar Changes
+### Responding to transport bar changes
 
 - [playerViewController:willTransitionToVisibilityOfTransportBar:withAnimationCoordinator:](avplayerviewcontrollerdelegate/playerviewcontroller%28__willtransitiontovisibilityoftransportbar_with_%29.md): Tells the delegate when the transport bar’s visibility is about to change.

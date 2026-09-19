@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsgesturerecognizer/modifierflags](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/modifierflags)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsgesturerecognizer/modifierflags
 
 # modifierFlags (Swift)
 
@@ -6,11 +7,19 @@
 **Kind:** Instance Property  
 **Availability:** macOS 26.0+
 
+The keyboard modifier flags in effect while the receiver last processed an event.
+
 ## Declaration
 
 ```swift
 var modifierFlags: NSEvent.ModifierFlags { get }
 ```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this property from an action method or delegate callback to determine which modifier keys, such as Shift or Command, were held down as part of the gesture.
 
 ## See Also
 
@@ -26,11 +35,19 @@ var modifierFlags: NSEvent.ModifierFlags { get }
 **Kind:** Instance Property  
 **Availability:** macOS 26.0+
 
+The keyboard modifier flags in effect while the receiver last processed an event.
+
 ## Declaration
 
 ```objectivec
 @property (readonly) NSEventModifierFlags modifierFlags;
 ```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this property from an action method or delegate callback to determine which modifier keys, such as Shift or Command, were held down as part of the gesture.
 
 ## See Also
 

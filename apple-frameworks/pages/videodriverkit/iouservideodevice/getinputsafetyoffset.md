@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideodevice/getinputsafetyoffset](https://developer.apple.com/documentation/videodriverkit/iouservideodevice/getinputsafetyoffset)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideodevice/getinputsafetyoffset
 
 # GetInputSafetyOffset
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the input safety offset of the device.
 
@@ -32,6 +33,6 @@ A uint32_t whose value indicates the number for frames behind the current hardwa
 
 ### Working with safety offset behavior
 
-- [SetInputSafetyOffset](setinputsafetyoffset.md): Specifies the input safety offset of the device.
-- [SetOutputSafetyOffset](setoutputsafetyoffset.md): Specifies the output safety offset of the device.
-- [GetOutputSafetyOffset](getoutputsafetyoffset.md): Gets the output safety offset of the device.
+- [SetInputSafetyOffset](setinputsafetyoffset.md): Beta. Specifies the input safety offset of the device.
+- [SetOutputSafetyOffset](setoutputsafetyoffset.md): Beta. Specifies the output safety offset of the device.
+- [GetOutputSafetyOffset](getoutputsafetyoffset.md): Beta. Gets the output safety offset of the device.

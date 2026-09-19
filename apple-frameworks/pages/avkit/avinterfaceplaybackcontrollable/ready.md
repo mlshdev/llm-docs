@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avinterfaceplaybackcontrollable/ready](https://developer.apple.com/documentation/avkit/avinterfaceplaybackcontrollable/ready)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avinterfaceplaybackcontrollable/ready
 
 # ready
 
@@ -14,13 +15,3 @@ Indicates whether the media source is ready for playback operations. Returns YES
 ```objectivec
 @property (nonatomic, readonly, getter=isReady) BOOL ready;
 ```
-
-## See Also
-
-### Inspecting playback state
-
-- [playing](playing.md): Indicates whether the media is currently playing. Setting this property starts or pauses playback. Must be key-value observable.
-- [buffering](buffering.md): Indicates whether the media source is currently buffering content. Returns YES when the source is loading data and cannot immediately continue playback. Must be key-value observable.
-- [state](state.md): The current operational state of the interface source. Must be key-value observable.
-- [playbackError](playbackerror.md): Error information when the source encounters a playback failure. Nil when playback is functioning normally. Must be key-value observable.
-- [containsLiveStreamingContent](containslivestreamingcontent.md): Indicates whether the content contains live streaming content. Returns YES for live streams and NO for on-demand content. Must be key-value observable.

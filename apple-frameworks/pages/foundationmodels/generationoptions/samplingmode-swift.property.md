@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generationoptions/samplingmode-swift.property](https://developer.apple.com/documentation/foundationmodels/generationoptions/samplingmode-swift.property)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generationoptions/samplingmode-swift.property
 
 # samplingMode
 
@@ -23,7 +24,7 @@ When you execute a prompt on a model, the model produces a probability for every
 
 > **Note**
 
-> Leaving the `sampling` nil lets the system choose a a reasonable default on your behalf.
+> Leaving the `sampling` to `nil` lets the system choose a reasonable default on your behalf.
 
 ## See Also
 
@@ -33,5 +34,5 @@ When you execute a prompt on a model, the model produces a probability for every
 - [sampling](sampling.md): Deprecated. A sampling strategy for how the model picks tokens when generating a response.
 - [GenerationOptions.SamplingMode](samplingmode-swift.struct.md): A type that defines how values are sampled from a probability distribution.
 - [toolCallingMode](toolcallingmode-swift.property.md): The tool calling requirements.
-- [GenerationOptions.ToolCallingMode](toolcallingmode-swift.struct.md): A value you use to describe the model behavior when it comes to tool usage.
+- [GenerationOptions.ToolCallingMode](toolcallingmode-swift.struct.md): A value that describes how the model uses tools.
 - [maximumResponseTokens](maximumresponsetokens.md): The maximum number of tokens the model is allowed to produce in its response.

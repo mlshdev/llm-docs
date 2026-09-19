@@ -1,6 +1,7 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/error-constants](https://developer.apple.com/documentation/avkit/error-constants)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/error-constants
 
-# Error Constants (Swift)
+# Error constants (Swift)
 
 **Framework:** AVKit  
 **Kind:** API Collection
@@ -9,7 +10,7 @@ Error code constants for framework operations.
 
 ## Topics
 
-### Error Code Constants
+### Error codes
 
 Error code constants for framework operations.
 
@@ -21,12 +22,13 @@ Error code constants for framework operations.
 
 ## See Also
 
-### Inspecting an Error
+### Errors
 
-- [errorDomain](avkiterror-swift.struct/errordomain.md)
+- [AVKitErrorDomain](avkiterrordomain.md): The domain of errors the framework generates.
+- [AVKitError](avkiterror-swift.struct.md): A structure that represents a framework error.
 - [AVKitError.Code](avkiterror-swift.struct/code.md): Constants that identify framework error codes.
 
-# Error Constants (Objective-C)
+# Error constants (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** API Collection
@@ -35,6 +37,7 @@ Error code constants for framework operations.
 
 ## See Also
 
-### Inspecting an Error
+### Errors
 
+- [AVKitErrorDomain](avkiterrordomain.md): The domain of errors the framework generates.
 - [AVKitError](avkiterror-swift.struct/code.md): Constants that identify framework error codes.

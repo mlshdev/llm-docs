@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spritekit/searching-the-node-tree](https://developer.apple.com/documentation/spritekit/searching-the-node-tree)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spritekit/searching-the-node-tree
 
 # Searching the Node Tree (Swift)
 

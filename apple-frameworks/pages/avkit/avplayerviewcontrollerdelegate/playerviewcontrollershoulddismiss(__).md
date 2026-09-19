@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontrollershoulddismiss(_:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontrollershoulddismiss(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontrollershoulddismiss(_:)
 
 # playerViewControllerShouldDismiss(\_:) (Swift)
 
@@ -32,7 +33,7 @@ If allowed, the player view controller dismisses itself with animation. If youâ€
 
 ## See Also
 
-### Dismissing the Player View Controller
+### Dismissing the player view controller
 
 - [playerViewControllerWillBeginDismissalTransition(\_:)](playerviewcontrollerwillbegindismissaltransition%28__%29.md): Tells the delegate when the player view controller is about to start its dismissal transition.
 - [playerViewControllerDidEndDismissalTransition(\_:)](playerviewcontrollerdidenddismissaltransition%28__%29.md): Tells the delegate when the player view controller ends its dismissal transition.
@@ -69,7 +70,7 @@ If allowed, the player view controller dismisses itself with animation. If youâ€
 
 ## See Also
 
-### Dismissing the Player View Controller
+### Dismissing the player view controller
 
 - [playerViewControllerWillBeginDismissalTransition:](playerviewcontrollerwillbegindismissaltransition%28__%29.md): Tells the delegate when the player view controller is about to start its dismissal transition.
 - [playerViewControllerDidEndDismissalTransition:](playerviewcontrollerdidenddismissaltransition%28__%29.md): Tells the delegate when the player view controller ends its dismissal transition.

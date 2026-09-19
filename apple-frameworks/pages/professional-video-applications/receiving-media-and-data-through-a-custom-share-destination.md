@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional-video-applications/receiving-media-and-data-through-a-custom-share-destination](https://developer.apple.com/documentation/professional-video-applications/receiving-media-and-data-through-a-custom-share-destination)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional-video-applications/receiving-media-and-data-through-a-custom-share-destination
 
 # Receiving Media and Data Through a Custom Share Destination
 

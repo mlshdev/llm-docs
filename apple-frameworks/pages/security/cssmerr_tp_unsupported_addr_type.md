@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_tp_unsupported_addr_type](https://developer.apple.com/documentation/security/cssmerr_tp_unsupported_addr_type)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_tp_unsupported_addr_type
 
 # CSSMERR_TP_UNSUPPORTED_ADDR_TYPE (Swift)
 

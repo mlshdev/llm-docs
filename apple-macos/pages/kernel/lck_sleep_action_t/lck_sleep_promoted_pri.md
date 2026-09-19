@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/lck_sleep_action_t/lck_sleep_promoted_pri](https://developer.apple.com/documentation/kernel/lck_sleep_action_t/lck_sleep_promoted_pri)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/lck_sleep_action_t/lck_sleep_promoted_pri
 
 # LCK_SLEEP_PROMOTED_PRI
 

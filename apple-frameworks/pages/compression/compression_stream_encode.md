@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/compression/compression_stream_encode](https://developer.apple.com/documentation/compression/compression_stream_encode)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/compression/compression_stream_encode
 
 # COMPRESSION_STREAM_ENCODE (Swift)
 

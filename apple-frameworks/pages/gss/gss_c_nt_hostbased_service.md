@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gss/gss_c_nt_hostbased_service](https://developer.apple.com/documentation/gss/gss_c_nt_hostbased_service)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/gss/gss_c_nt_hostbased_service
 
 # GSS_C_NT_HOSTBASED_SERVICE
 

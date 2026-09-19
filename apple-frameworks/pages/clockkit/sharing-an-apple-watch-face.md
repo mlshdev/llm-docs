@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/sharing-an-apple-watch-face](https://developer.apple.com/documentation/clockkit/sharing-an-apple-watch-face)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/sharing-an-apple-watch-face
 
 # Sharing an Apple Watch face (Swift)
 

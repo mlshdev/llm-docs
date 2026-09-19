@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_cert_bundle_pgp_keyring](https://developer.apple.com/documentation/security/cssm_cert_bundle_pgp_keyring)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_cert_bundle_pgp_keyring
 
 # CSSM_CERT_BUNDLE_PGP_KEYRING (Swift)
 

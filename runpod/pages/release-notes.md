@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/release-notes.mdx)
+> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/56a86f70b4ea8b225c0e5e2231e42a4925931686/release-notes.mdx)
 > Canonical documentation: https://docs.runpod.io/release-notes
 
 # Product updates

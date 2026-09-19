@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/fetching-product-information-from-the-app-store](https://developer.apple.com/documentation/storekit/fetching-product-information-from-the-app-store)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/fetching-product-information-from-the-app-store
 
 # Fetching product information from the App Store
 

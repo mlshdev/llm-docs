@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/offer-swift.struct](https://developer.apple.com/documentation/storekit/transaction/offer-swift.struct)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/offer-swift.struct
 
 # Transaction.Offer
 
@@ -18,11 +19,11 @@ struct Offer
 
 ## Overview
 
-You set up offers for auto-renewable subscriptions and other In-App Purchase types in App Store Connect. If a customer redeems an offer, it appears in the [offer](offer-swift.property.md) property of the transaction. For auto-renewable subscriptions, if the offer applies to one or more renewal periods, it also appears in the [offer](../product/subscriptioninfo/renewalinfo/offer.md) property of [Product.SubscriptionInfo.RenewalInfo](../product/subscriptioninfo/renewalinfo.md).
+You set up offers for auto-renewable subscriptions and other Apple In-App Purchase types in App Store Connect. If a customer redeems an offer, it appears in the [offer](offer-swift.property.md) property of the transaction. For auto-renewable subscriptions, if the offer applies to one or more renewal periods, it also appears in the [offer](../product/subscriptioninfo/renewalinfo/offer.md) property of [Product.SubscriptionInfo.RenewalInfo](../product/subscriptioninfo/renewalinfo.md).
 
 For more information on configuring the various offers in App Store Connect, see:
 
-- [Create offer codes for In-App Purchases](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/create-offer-codes-for-in-app-purchases)
+- [Create offer codes for Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/create-offer-codes-for-in-app-purchases)
 - [Providing subscription offers](https://developer.apple.com/app-store/subscriptions/#providing-subscription-offers).
 - [Set up offer codes](https://developer.apple.com/help/app-store-connect/manage-subscriptions/set-up-offer-codes/)
 - [Set up introductory offers for auto-renewable subscriptions](https://developer.apple.com/help/app-store-connect/manage-subscriptions/set-up-introductory-offers-for-auto-renewable-subscriptions)

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatialpreview/working-with-content-from-your-mac-app-using-spatial-preview](https://developer.apple.com/documentation/spatialpreview/working-with-content-from-your-mac-app-using-spatial-preview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatialpreview/working-with-content-from-your-mac-app-using-spatial-preview
 
 # Working with content from your Mac app using Spatial Preview
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/1560346-public_type_signatures/cmsigdatetimetype](https://developer.apple.com/documentation/applicationservices/1560346-public_type_signatures/cmsigdatetimetype)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applicationservices/1560346-public_type_signatures/cmsigdatetimetype
 
 # cmSigDateTimeType
 

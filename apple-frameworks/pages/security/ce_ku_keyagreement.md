@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/ce_ku_keyagreement](https://developer.apple.com/documentation/security/ce_ku_keyagreement)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/ce_ku_keyagreement
 
 # CE_KU_KeyAgreement (Swift)
 

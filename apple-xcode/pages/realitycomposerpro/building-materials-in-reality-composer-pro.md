@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/realitycomposerpro/building-materials-in-reality-composer-pro](https://developer.apple.com/documentation/realitycomposerpro/building-materials-in-reality-composer-pro)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitycomposerpro/building-materials-in-reality-composer-pro
 
 # Building materials in Reality Composer Pro
 
@@ -307,3 +308,4 @@ You can replace images, colors, or values for any of the PBR attributes with ano
 
 - [Applying materials to an asset](applying-materials-to-an-asset.md): Assign and configure surface materials on 3D model assets in Reality Composer Pro.
 - [Designing materials with Shader Graph](designing-materials-with-shader-graph.md): Create realistic materials with Reality Composer Pro’s Shader Graph.
+- [Creating a procedural Shader Graph material](creating-a-procedural-shader-graph-material.md): Learn how to build an organic, pulsing, color-shifting material in the Reality Composer Pro 3 Shader Graph.

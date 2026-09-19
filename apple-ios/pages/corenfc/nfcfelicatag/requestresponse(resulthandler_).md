@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/corenfc/nfcfelicatag/requestresponse(resulthandler:)](https://developer.apple.com/documentation/corenfc/nfcfelicatag/requestresponse(resulthandler:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corenfc/nfcfelicatag/requestresponse(resulthandler:)
 
 # requestResponse(resultHandler:)
 
@@ -10,8 +11,4 @@
 
 ```swift
 @preconcurrency func requestResponse(resultHandler: @escaping @Sendable (Result<Int, any Error>) -> Void)
-```
-
-```swift
-func requestResponse(resultHandler: @escaping (Result<Int, any Error>) -> Void)
 ```

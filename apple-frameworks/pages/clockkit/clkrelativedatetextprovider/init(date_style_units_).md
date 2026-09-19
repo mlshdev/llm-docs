@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkrelativedatetextprovider/init(date:style:units:)](https://developer.apple.com/documentation/clockkit/clkrelativedatetextprovider/init(date:style:units:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkrelativedatetextprovider/init(date:style:units:)
 
 # init(date:style:units:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Creates a text provider that shows the difference between the current time and the specified date.
 
@@ -40,7 +41,7 @@ The text provider created by this method uses the default time zone information 
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Creates a text provider that shows the difference between the current time and the specified date.
 

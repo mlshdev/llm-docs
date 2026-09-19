@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corevideo/cvimagealphachannelmode/straightalpha](https://developer.apple.com/documentation/corevideo/cvimagealphachannelmode/straightalpha)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corevideo/cvimagealphachannelmode/straightalpha
 
 # CVImageAlphaChannelMode.straightAlpha
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skpaymentqueue/presentcoderedemptionsheet()](https://developer.apple.com/documentation/storekit/skpaymentqueue/presentcoderedemptionsheet())
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skpaymentqueue/presentcoderedemptionsheet()
 
 # presentCodeRedemptionSheet() (Swift)
 
@@ -19,7 +20,7 @@ func presentCodeRedemptionSheet()
 ## Mentioned In
 
 - [Implementing offer codes in your app](../implementing-offer-codes-in-your-app.md)
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 - [Supporting offer codes in your app](../supporting-offer-codes-in-your-app.md)
 - [Supporting subscription offer codes in your app](../supporting-subscription-offer-codes-in-your-app.md)
 
@@ -41,7 +42,7 @@ When your app calls [presentCodeRedemptionSheet()](presentcoderedemptionsheet%28
 
 For information on configuring and generating offer codes, see [Set up offer codes](https://help.apple.com/app-store-connect/#/dev6a098e4b1).
 
-This method applies to offer codes only; it doesn’t apply to promo codes for apps or in-app purchases. For more information on promo codes, see [Request and manage promo codes](https://help.apple.com/app-store-connect/#/dev50869de4a).
+This method applies to offer codes only; it doesn’t apply to promo codes for apps or Apple In-App Purchases. For more information on promo codes, see [Request and manage promo codes](https://help.apple.com/app-store-connect/#/dev50869de4a).
 
 This function doesn’t affect Mac apps built with Mac Catalyst.
 
@@ -64,7 +65,7 @@ Displays a sheet that enables customers to redeem offer codes that you configure
 ## Mentioned In
 
 - [Implementing offer codes in your app](../implementing-offer-codes-in-your-app.md)
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 - [Supporting offer codes in your app](../supporting-offer-codes-in-your-app.md)
 - [Supporting subscription offer codes in your app](../supporting-subscription-offer-codes-in-your-app.md)
 
@@ -86,6 +87,6 @@ When your app calls [presentCodeRedemptionSheet](presentcoderedemptionsheet%28%2
 
 For information on configuring and generating offer codes, see [Set up offer codes](https://help.apple.com/app-store-connect/#/dev6a098e4b1).
 
-This method applies to offer codes only; it doesn’t apply to promo codes for apps or in-app purchases. For more information on promo codes, see [Request and manage promo codes](https://help.apple.com/app-store-connect/#/dev50869de4a).
+This method applies to offer codes only; it doesn’t apply to promo codes for apps or Apple In-App Purchases. For more information on promo codes, see [Request and manage promo codes](https://help.apple.com/app-store-connect/#/dev50869de4a).
 
 This function doesn’t affect Mac apps built with Mac Catalyst.

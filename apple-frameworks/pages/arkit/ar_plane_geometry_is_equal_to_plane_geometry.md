@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/ar_plane_geometry_is_equal_to_plane_geometry](https://developer.apple.com/documentation/arkit/ar_plane_geometry_is_equal_to_plane_geometry)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/ar_plane_geometry_is_equal_to_plane_geometry
 
 # ar_plane_geometry_is_equal_to_plane_geometry
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/manipulating-models-with-realitykit](https://developer.apple.com/documentation/realitykit/manipulating-models-with-realitykit)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/manipulating-models-with-realitykit
 
 # Manipulating models with RealityKit
 

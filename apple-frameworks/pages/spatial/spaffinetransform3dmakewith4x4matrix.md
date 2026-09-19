@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/spaffinetransform3dmakewith4x4matrix](https://developer.apple.com/documentation/spatial/spaffinetransform3dmakewith4x4matrix)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatial/spaffinetransform3dmakewith4x4matrix
 
 # SPAffineTransform3DMakeWith4x4Matrix
 

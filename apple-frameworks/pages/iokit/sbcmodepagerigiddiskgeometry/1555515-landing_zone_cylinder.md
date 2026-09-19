@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/sbcmodepagerigiddiskgeometry/1555515-landing_zone_cylinder](https://developer.apple.com/documentation/iokit/sbcmodepagerigiddiskgeometry/1555515-landing_zone_cylinder)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/sbcmodepagerigiddiskgeometry/1555515-landing_zone_cylinder
 
 # LANDING_ZONE_CYLINDER
 

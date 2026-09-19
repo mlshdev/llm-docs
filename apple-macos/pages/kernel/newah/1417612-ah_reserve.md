@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/newah/1417612-ah_reserve](https://developer.apple.com/documentation/kernel/newah/1417612-ah_reserve)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/newah/1417612-ah_reserve
 
 # ah_reserve
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/adsupport/asidentifiermanager/advertisingidentifier](https://developer.apple.com/documentation/adsupport/asidentifiermanager/advertisingidentifier)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/adsupport/asidentifiermanager/advertisingidentifier
 
 # advertisingIdentifier (Swift)
 
@@ -34,7 +35,7 @@ The advertising identifier returns all zeros (`00000000-0000-0000-0000-000000000
 - If you’ve requested authorization using the [App Tracking Transparency](../../apptrackingtransparency.md) framework and the user declines, which results in an authorization status of [ATTrackingManager.AuthorizationStatus.denied](../../apptrackingtransparency/attrackingmanager/authorizationstatus/denied.md).
 - When a profile or configuration restricts access to the advertising identifier. For more information about restrictions, see [ATTrackingManager.AuthorizationStatus.restricted](../../apptrackingtransparency/attrackingmanager/authorizationstatus/restricted.md).
 
-As a best practice, don’t store the advertising identifier value; access [advertisingIdentifier](advertisingidentifier.md) instead. Users can change their authorization for tracking at any time in Settings \> Privacy \> Tracking. Check your app’s authorization using the App Tracking Transparency API [trackingAuthorizationStatus](../../apptrackingtransparency/attrackingmanager/trackingauthorizationstatus.md) to determine the user’s intent.
+As a best practice, don’t store the advertising identifier value; access [advertisingIdentifier](advertisingidentifier.md) instead. Users can change their authorization for tracking at any time in Settings \> Privacy \> Tracking. Check your app’s authorization using the App Tracking Transparency API doc://com.apple.documentation/documentation/apptrackingtransparency/attrackingmanager/3547038-trackingauthorizationstatus to determine the user’s intent.
 
 For more information about asking users for permission to track, see [User Privacy and Data Use](https://developer.apple.com/app-store/user-privacy-and-data-use/).
 
@@ -78,7 +79,7 @@ The advertising identifier returns all zeros (`00000000-0000-0000-0000-000000000
 - If you’ve requested authorization using the [App Tracking Transparency](../../apptrackingtransparency.md) framework and the user declines, which results in an authorization status of [ATTrackingManagerAuthorizationStatusDenied](../../apptrackingtransparency/attrackingmanager/authorizationstatus/denied.md).
 - When a profile or configuration restricts access to the advertising identifier. For more information about restrictions, see [ATTrackingManagerAuthorizationStatusRestricted](../../apptrackingtransparency/attrackingmanager/authorizationstatus/restricted.md).
 
-As a best practice, don’t store the advertising identifier value; access [advertisingIdentifier](advertisingidentifier.md) instead. Users can change their authorization for tracking at any time in Settings \> Privacy \> Tracking. Check your app’s authorization using the App Tracking Transparency API [trackingAuthorizationStatus](../../apptrackingtransparency/attrackingmanager/trackingauthorizationstatus.md) to determine the user’s intent.
+As a best practice, don’t store the advertising identifier value; access [advertisingIdentifier](advertisingidentifier.md) instead. Users can change their authorization for tracking at any time in Settings \> Privacy \> Tracking. Check your app’s authorization using the App Tracking Transparency API doc://com.apple.documentation/documentation/apptrackingtransparency/attrackingmanager/3547038-trackingauthorizationstatus to determine the user’s intent.
 
 For more information about asking users for permission to track, see [User Privacy and Data Use](https://developer.apple.com/app-store/user-privacy-and-data-use/).
 

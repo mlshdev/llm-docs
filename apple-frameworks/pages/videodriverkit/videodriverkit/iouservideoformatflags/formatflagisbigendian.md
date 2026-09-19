@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoformatflags/formatflagisbigendian](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoformatflags/formatflagisbigendian)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoformatflags/formatflagisbigendian
 
 # FormatFlagIsBigEndian
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Set for big endian, clear for little endian.
 
@@ -20,5 +21,5 @@ FormatFlagIsBigEndian
 
 ### Endianness flags
 
-- [LinearPCMFormatFlagIsBigEndian](linearpcmformatflagisbigendian.md): Synonym for `FormatFlagIsBigEndian`.
-- [FormatFlagsNativeEndian](formatflagsnativeendian.md)
+- [LinearPCMFormatFlagIsBigEndian](linearpcmformatflagisbigendian.md): Beta. Synonym for `FormatFlagIsBigEndian`.
+- [FormatFlagsNativeEndian](formatflagsnativeendian.md): Beta.

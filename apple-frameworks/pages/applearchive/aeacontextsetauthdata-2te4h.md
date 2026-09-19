@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applearchive/aeacontextsetauthdata-2te4h](https://developer.apple.com/documentation/applearchive/aeacontextsetauthdata-2te4h)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applearchive/aeacontextsetauthdata-2te4h
 
 # AEAContextSetAuthData
 

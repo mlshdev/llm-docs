@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/multipeerconnectivityservice/giveownership(of:topeer:)](https://developer.apple.com/documentation/realitykit/multipeerconnectivityservice/giveownership(of:topeer:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/multipeerconnectivityservice/giveownership(of:topeer:)
 
 # giveOwnership(of:toPeer:)
 

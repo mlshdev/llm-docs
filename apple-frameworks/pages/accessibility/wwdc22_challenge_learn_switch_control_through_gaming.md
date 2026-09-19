@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accessibility/wwdc22_challenge_learn_switch_control_through_gaming](https://developer.apple.com/documentation/accessibility/wwdc22_challenge_learn_switch_control_through_gaming)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accessibility/wwdc22_challenge_learn_switch_control_through_gaming
 
 # WWDC22 Challenge: Learn Switch Control through gaming
 

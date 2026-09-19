@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/nd_opt_dnssl/3754121-nd_opt_dnssl_type](https://developer.apple.com/documentation/kernel/nd_opt_dnssl/3754121-nd_opt_dnssl_type)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/nd_opt_dnssl/3754121-nd_opt_dnssl_type
 
 # nd_opt_dnssl_type
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/product/producttype/nonconsumable](https://developer.apple.com/documentation/storekit/product/producttype/nonconsumable)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/product/producttype/nonconsumable
 
 # nonConsumable
 
@@ -6,7 +7,7 @@
 **Kind:** Type Property  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
 
-A non-consumable in-app purchase.
+A non-consumable Apple In-App Purchase.
 
 ## Declaration
 
@@ -18,6 +19,6 @@ static let nonConsumable: Product.ProductType
 
 ### Getting the Product Type
 
-- [consumable](consumable.md): A consumable in-app purchase.
+- [consumable](consumable.md): A consumable Apple In-App Purchase.
 - [nonRenewable](nonrenewable.md): A non-renewing subscription.
 - [autoRenewable](autorenewable.md): An auto-renewable subscription.

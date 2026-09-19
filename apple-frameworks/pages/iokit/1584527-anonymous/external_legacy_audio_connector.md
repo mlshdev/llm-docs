@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1584527-anonymous/external_legacy_audio_connector](https://developer.apple.com/documentation/iokit/1584527-anonymous/external_legacy_audio_connector)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1584527-anonymous/external_legacy_audio_connector
 
 # EXTERNAL_LEGACY_AUDIO_CONNECTOR
 

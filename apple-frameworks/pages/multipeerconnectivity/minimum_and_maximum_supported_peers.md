@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/multipeerconnectivity/minimum_and_maximum_supported_peers](https://developer.apple.com/documentation/multipeerconnectivity/minimum_and_maximum_supported_peers)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/multipeerconnectivity/minimum_and_maximum_supported_peers
 
 # Minimum and Maximum Supported Peers (Swift)
 

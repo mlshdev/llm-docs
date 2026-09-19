@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/corehid/hidusage/barcodescannerusage/standard2of5iata](https://developer.apple.com/documentation/corehid/hidusage/barcodescannerusage/standard2of5iata)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corehid/hidusage/barcodescannerusage/standard2of5iata
 
 # HIDUsage.BarcodeScannerUsage.standard2Of5IATA
 

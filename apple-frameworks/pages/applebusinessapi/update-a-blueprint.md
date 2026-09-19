@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applebusinessapi/update-a-blueprint](https://developer.apple.com/documentation/applebusinessapi/update-a-blueprint)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/update-a-blueprint
 
 # Update a Blueprint
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Web Service Endpoint  
-**Availability:** Apple Business API 2.4+
+**Availability:** Apple Business API 2.5+
 
 Update an existing Blueprint in an organization.
 

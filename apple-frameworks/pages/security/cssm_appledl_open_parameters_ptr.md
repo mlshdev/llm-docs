@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_appledl_open_parameters_ptr](https://developer.apple.com/documentation/security/cssm_appledl_open_parameters_ptr)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_appledl_open_parameters_ptr
 
 # CSSM_APPLEDL_OPEN_PARAMETERS_PTR (Swift)
 

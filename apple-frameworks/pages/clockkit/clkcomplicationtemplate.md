@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplate](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplate
 
 # CLKComplicationTemplate (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 An abstract class that defines the base behavior for all templates.
 
@@ -130,7 +131,7 @@ You don’t create instances of this class directly. Instead, you create instanc
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 An abstract class that defines the base behavior for all templates.
 

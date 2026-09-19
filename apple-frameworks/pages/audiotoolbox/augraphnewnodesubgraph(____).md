@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/augraphnewnodesubgraph(_:_:)](https://developer.apple.com/documentation/audiotoolbox/augraphnewnodesubgraph(_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/augraphnewnodesubgraph(_:_:)
 
 # AUGraphNewNodeSubGraph(\_:\_:) (Swift)
 
 **Framework:** Audio Toolbox  
 **Kind:** Function  
-**Availability:** macOS 10.2+ (deprecated in 27.0)
+**Availability:** macOS 10.2+ (deprecated in 27.2)
 
 Creates a node object to represent a subgraph.
 
@@ -57,7 +58,7 @@ This function creates a node that represents a subgraph. The subgraph can be ret
 
 **Framework:** Audio Toolbox  
 **Kind:** Function  
-**Availability:** macOS 10.2+ (deprecated in 27.0)
+**Availability:** macOS 10.2+ (deprecated in 27.2)
 
 Creates a node object to represent a subgraph.
 

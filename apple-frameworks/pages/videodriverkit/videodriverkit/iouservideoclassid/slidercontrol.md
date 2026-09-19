@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoclassid/slidercontrol](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoclassid/slidercontrol)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoclassid/slidercontrol
 
 # SliderControl
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 The class identifier for the `IOUserVideoSliderControl` class.
 
@@ -20,7 +21,7 @@ SliderControl
 
 ### Identifying generic control types
 
-- [Control](control.md): The class identifier for the `IOUserVideoControl` class.
-- [BooleanControl](booleancontrol.md): The class identifier for the `IOUserVideoBooleanControl` class.
-- [LevelControl](levelcontrol.md): The class identifier for the `IOUserVideoLevelControl` class.
-- [SelectorControl](selectorcontrol.md): The class identifier for the `IOUserVideoSelectorControl` class.
+- [Control](control.md): Beta. The class identifier for the `IOUserVideoControl` class.
+- [BooleanControl](booleancontrol.md): Beta. The class identifier for the `IOUserVideoBooleanControl` class.
+- [LevelControl](levelcontrol.md): Beta. The class identifier for the `IOUserVideoLevelControl` class.
+- [SelectorControl](selectorcontrol.md): Beta. The class identifier for the `IOUserVideoSelectorControl` class.

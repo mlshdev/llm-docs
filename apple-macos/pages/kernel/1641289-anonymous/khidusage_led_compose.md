@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1641289-anonymous/khidusage_led_compose](https://developer.apple.com/documentation/kernel/1641289-anonymous/khidusage_led_compose)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1641289-anonymous/khidusage_led_compose
 
 # kHIDUsage_LED_Compose
 

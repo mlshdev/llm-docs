@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ioscsimultimediacommandsdevice/1576170-read_disc_structure](https://developer.apple.com/documentation/kernel/ioscsimultimediacommandsdevice/1576170-read_disc_structure)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ioscsimultimediacommandsdevice/1576170-read_disc_structure
 
 # READ_DISC_STRUCTURE
 

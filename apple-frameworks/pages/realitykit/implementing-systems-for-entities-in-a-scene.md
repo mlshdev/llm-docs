@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/implementing-systems-for-entities-in-a-scene](https://developer.apple.com/documentation/realitykit/implementing-systems-for-entities-in-a-scene)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/implementing-systems-for-entities-in-a-scene
 
 # Implementing systems for entities in a scene
 

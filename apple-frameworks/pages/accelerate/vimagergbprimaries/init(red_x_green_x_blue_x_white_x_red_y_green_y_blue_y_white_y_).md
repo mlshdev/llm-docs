@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimagergbprimaries/init(red_x:green_x:blue_x:white_x:red_y:green_y:blue_y:white_y:)](https://developer.apple.com/documentation/accelerate/vimagergbprimaries/init(red_x:green_x:blue_x:white_x:red_y:green_y:blue_y:white_y:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vimagergbprimaries/init(red_x:green_x:blue_x:white_x:red_y:green_y:blue_y:white_y:)
 
 # init(red_x:green_x:blue_x:white_x:red_y:green_y:blue_y:white_y:)
 

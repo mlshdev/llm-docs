@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/converting-a-gpus-counter-data-into-a-readable-format](https://developer.apple.com/documentation/metal/converting-a-gpus-counter-data-into-a-readable-format)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/converting-a-gpus-counter-data-into-a-readable-format
 
 # Converting a GPU’s counter data into a readable format (Swift)
 
@@ -133,6 +134,7 @@ func resolveSampleBuffer(_ sampleBuffer: MTLCounterSampleBuffer,
                          inRange:range
                destinationBuffer:counterDataBuffer
                destinationOffset:0];
+
 
     if (storageMode & MTLStorageModeManaged) {
         [blitEncoder synchronizeResource:counterDataBuffer];
@@ -425,6 +427,7 @@ func resolveSampleBuffer(_ sampleBuffer: MTLCounterSampleBuffer,
                          inRange:range
                destinationBuffer:counterDataBuffer
                destinationOffset:0];
+
 
     if (storageMode & MTLStorageModeManaged) {
         [blitEncoder synchronizeResource:counterDataBuffer];

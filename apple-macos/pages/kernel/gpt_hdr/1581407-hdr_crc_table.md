@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/gpt_hdr/1581407-hdr_crc_table](https://developer.apple.com/documentation/kernel/gpt_hdr/1581407-hdr_crc_table)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/gpt_hdr/1581407-hdr_crc_table
 
 # hdr_crc_table
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4commandbuffer/begincommandbuffer(allocator:)](https://developer.apple.com/documentation/metal/mtl4commandbuffer/begincommandbuffer(allocator:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtl4commandbuffer/begincommandbuffer(allocator:)
 
 # beginCommandBuffer(allocator:) (Swift)
 
@@ -28,7 +29,7 @@ func beginCommandBuffer(allocator: any MTL4CommandAllocator)
 
 Attaches the command buffer to the specified [MTL4CommandAllocator](../mtl4commandallocator.md) and declares that the application is ready to encode commands into the command buffer.
 
-Command allocators only service a single command buffer at a time. If you need to issue multiple calls to this method simultaneously, for example, in a multi-threaded command encoding scenario, create multiple instances of `MTLCommandAllocator` and use one for each call.
+Command allocators only service a single command buffer at a time. If you need to issue multiple calls to this method simultaneously, for example, in a multi-threaded command encoding scenario, create multiple instances of [MTL4CommandAllocator](../mtl4commandallocator.md) and use one for each call.
 
 You can safely reuse command allocators after ending the command buffer using it by calling [endCommandBuffer()](endcommandbuffer%28%29.md).
 
@@ -62,7 +63,7 @@ Prepares a command buffer for encoding.
 
 Attaches the command buffer to the specified [MTL4CommandAllocator](../mtl4commandallocator.md) and declares that the application is ready to encode commands into the command buffer.
 
-Command allocators only service a single command buffer at a time. If you need to issue multiple calls to this method simultaneously, for example, in a multi-threaded command encoding scenario, create multiple instances of `MTLCommandAllocator` and use one for each call.
+Command allocators only service a single command buffer at a time. If you need to issue multiple calls to this method simultaneously, for example, in a multi-threaded command encoding scenario, create multiple instances of [MTL4CommandAllocator](../mtl4commandallocator.md) and use one for each call.
 
 You can safely reuse command allocators after ending the command buffer using it by calling [endCommandBuffer](endcommandbuffer%28%29.md).
 

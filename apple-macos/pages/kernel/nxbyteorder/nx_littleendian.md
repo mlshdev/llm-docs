@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/nxbyteorder/nx_littleendian](https://developer.apple.com/documentation/kernel/nxbyteorder/nx_littleendian)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/nxbyteorder/nx_littleendian
 
 # NX_LittleEndian
 

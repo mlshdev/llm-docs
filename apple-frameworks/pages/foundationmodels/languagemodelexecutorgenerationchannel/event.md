@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationchannel/event](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/event)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/event
 
 # LanguageModelExecutorGenerationChannel.Event
 
@@ -27,6 +28,10 @@ Construct one with a leading-dot factory — [response(entryID:action:)](event/r
 - [response(entryID:action:)](event/response%28entryid_action_%29.md): A response event addressed to a transcript entry.
 - [toolCalls(entryID:action:)](event/toolcalls%28entryid_action_%29.md): A tool-calls event addressed to a transcript entry.
 - [reasoning(entryID:action:)](event/reasoning%28entryid_action_%29.md): A reasoning event addressed to a transcript entry.
+
+### Type Methods
+
+- [data(entryID:action:)](event/data%28entryid_action_%29.md): Beta. A data-entry event addressed to a transcript entry.
 
 ## Relationships
 

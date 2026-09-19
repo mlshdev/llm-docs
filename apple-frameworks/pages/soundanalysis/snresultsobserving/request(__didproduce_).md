@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/soundanalysis/snresultsobserving/request(_:didproduce:)](https://developer.apple.com/documentation/soundanalysis/snresultsobserving/request(_:didproduce:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/soundanalysis/snresultsobserving/request(_:didproduce:)
 
 # request(\_:didProduce:) (Swift)
 

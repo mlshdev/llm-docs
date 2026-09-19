@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applebusinessapi/userphonenumbertype](https://developer.apple.com/documentation/applebusinessapi/userphonenumbertype)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/userphonenumbertype
 
 # UserPhoneNumberType
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Type  
-**Availability:** Apple Business API 2.4+
+**Availability:** Apple Business API 2.5+
 
 Strings that represent phone number types.
 

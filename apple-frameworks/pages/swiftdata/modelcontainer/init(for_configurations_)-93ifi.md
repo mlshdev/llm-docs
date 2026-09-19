@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/swiftdata/modelcontainer/init(for:configurations:)-93ifi](https://developer.apple.com/documentation/swiftdata/modelcontainer/init(for:configurations:)-93ifi)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftdata/modelcontainer/init(for:configurations:)-93ifi
 
 # init(for:configurations:)
 

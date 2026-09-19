@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/apple-school-and-business-manager-api/apple-school-manager-and-apple-business-api-changelog](https://developer.apple.com/documentation/apple-school-and-business-manager-api/apple-school-manager-and-apple-business-api-changelog)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/apple-school-and-business-manager-api/apple-school-manager-and-apple-business-api-changelog
 
 # Apple School Manager and Apple Business APIs changelog
 
@@ -13,6 +14,21 @@ Learn about new features and updates in the Apple School Manager and Apple Busin
 ### Overview
 
 Use this changelog to learn about feature updates, deprecations, and removals for the Apple School Manager and Apple Business APIs.
+
+<a id="25-Apple-Business-2026915"></a>
+
+### 2.5 (Apple Business) - 2026/9/15
+
+<a id="17-Apple-School-Manager-2026915"></a>
+
+### 1.7 (Apple School Manager) - 2026/9/15
+
+New features for the Apple School Manager and Apple Business APIs
+
+Added support for retrieving a device’s Activation Lock status:
+
+- [Apple School Manager: Get the Activation Lock Status for a Device.](https://developer.apple.com/documentation/appleschoolmanagerapi/get-the-activation-lock-status-information-for-an-orgdevice)
+- [Apple Business: Get the Activation Lock Status for a Device.](https://developer.apple.com/documentation/applebusinessapi/get-the-activation-lock-status-information-for-an-orgdevice)
 
 <a id="24-Apple-Business-2026826"></a>
 

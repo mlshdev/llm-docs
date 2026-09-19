@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsuserinterfaceitemsearching/searchforitems(withsearch:resultlimit:matcheditemhandler:)](https://developer.apple.com/documentation/appkit/nsuserinterfaceitemsearching/searchforitems(withsearch:resultlimit:matcheditemhandler:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsuserinterfaceitemsearching/searchforitems(withsearch:resultlimit:matcheditemhandler:)
 
 # searchForItems(withSearch:resultLimit:matchedItemHandler:) (Swift)
 

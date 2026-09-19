@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/corenfc/nfcfelicatag/sendfelicacommand(commandpacket:resulthandler:)](https://developer.apple.com/documentation/corenfc/nfcfelicatag/sendfelicacommand(commandpacket:resulthandler:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corenfc/nfcfelicatag/sendfelicacommand(commandpacket:resulthandler:)
 
 # sendFeliCaCommand(commandPacket:resultHandler:)
 
@@ -10,8 +11,4 @@
 
 ```swift
 @preconcurrency func sendFeliCaCommand(commandPacket: Data, resultHandler: @escaping @Sendable (Result<Data, any Error>) -> Void)
-```
-
-```swift
-func sendFeliCaCommand(commandPacket: Data, resultHandler: @escaping (Result<Data, any Error>) -> Void)
 ```

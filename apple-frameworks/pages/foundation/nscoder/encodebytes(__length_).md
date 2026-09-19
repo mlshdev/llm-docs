@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nscoder/encodebytes(_:length:)](https://developer.apple.com/documentation/foundation/nscoder/encodebytes(_:length:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nscoder/encodebytes(_:length:)
 
 # encodeBytes(\_:length:) (Swift)
 

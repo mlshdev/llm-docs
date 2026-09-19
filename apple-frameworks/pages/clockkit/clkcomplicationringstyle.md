@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationringstyle](https://developer.apple.com/documentation/clockkit/clkcomplicationringstyle)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationringstyle
 
 # CLKComplicationRingStyle (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Enumeration  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Constants indicating the appearance of a progress ring.
 
@@ -48,7 +49,7 @@ enum CLKComplicationRingStyle
 
 **Framework:** ClockKit  
 **Kind:** Enumeration  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Constants indicating the appearance of a progress ring.
 

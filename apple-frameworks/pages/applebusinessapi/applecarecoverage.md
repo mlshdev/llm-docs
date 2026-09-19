@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applebusinessapi/applecarecoverage](https://developer.apple.com/documentation/applebusinessapi/applecarecoverage)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/applecarecoverage
 
 # AppleCareCoverage
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Object  
-**Availability:** Apple Business API 2.4+
+**Availability:** Apple Business API 2.5+
 
 The data structure that represents an AppleCare coverage resource that belongs to an organization device.
 

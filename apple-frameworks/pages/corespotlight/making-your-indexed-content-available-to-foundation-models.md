@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corespotlight/making-your-indexed-content-available-to-foundation-models](https://developer.apple.com/documentation/corespotlight/making-your-indexed-content-available-to-foundation-models)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corespotlight/making-your-indexed-content-available-to-foundation-models
 
 # Making your indexed content available to Foundation Models (Swift)
 

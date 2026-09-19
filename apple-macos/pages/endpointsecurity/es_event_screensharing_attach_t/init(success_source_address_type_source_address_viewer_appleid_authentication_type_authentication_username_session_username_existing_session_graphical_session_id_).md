@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_event_screensharing_attach_t/init(success:source_address_type:source_address:viewer_appleid:authentication_type:authentication_username:session_username:existing_session:graphical_session_id:)](https://developer.apple.com/documentation/endpointsecurity/es_event_screensharing_attach_t/init(success:source_address_type:source_address:viewer_appleid:authentication_type:authentication_username:session_username:existing_session:graphical_session_id:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_event_screensharing_attach_t/init(success:source_address_type:source_address:viewer_appleid:authentication_type:authentication_username:session_username:existing_session:graphical_session_id:)
 
 # init(success:source_address_type:source_address:viewer_appleid:authentication_type:authentication_username:session_username:existing_session:graphical_session_id:)
 

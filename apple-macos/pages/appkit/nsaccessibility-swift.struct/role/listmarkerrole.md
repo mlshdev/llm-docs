@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsaccessibility-swift.struct/role/listmarkerrole](https://developer.apple.com/documentation/appkit/nsaccessibility-swift.struct/role/listmarkerrole)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsaccessibility-swift.struct/role/listmarkerrole
 
 # listMarkerRole (Swift)
 

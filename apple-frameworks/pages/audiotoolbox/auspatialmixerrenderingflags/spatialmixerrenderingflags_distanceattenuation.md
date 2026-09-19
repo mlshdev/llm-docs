@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/auspatialmixerrenderingflags/spatialmixerrenderingflags_distanceattenuation](https://developer.apple.com/documentation/audiotoolbox/auspatialmixerrenderingflags/spatialmixerrenderingflags_distanceattenuation)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/auspatialmixerrenderingflags/spatialmixerrenderingflags_distanceattenuation
 
 # spatialMixerRenderingFlags_DistanceAttenuation (Swift)
 

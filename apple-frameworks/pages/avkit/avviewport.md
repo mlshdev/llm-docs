@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avviewport](https://developer.apple.com/documentation/avkit/avviewport)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avviewport
 
 # AVViewport (Swift)
 
@@ -50,19 +51,14 @@ playerViewController.viewport.portal = portalViewport
 
 ## See Also
 
-### visionOS playback
+### Immersive and multiview media
 
 - [Playing immersive media with AVKit](playing-immersive-media-with-avkit.md): Adopt the system playback interface to provide an immersive video watching experience.
 - [Creating a multiview video playback experience in visionOS](creating-a-multiview-video-playback-experience-in-visionos.md): Build an interface that plays multiple videos simultaneously and handles transitions to different experience types gracefully.
-- [Adopting the system player interface in visionOS](adopting-the-system-player-interface-in-visionos.md): Provide an optimized viewing experience for watching 3D video content.
-- [Trimming and exporting media in visionOS](trimming-and-exporting-media-in-visionos.md): Display standard controls in your app to edit the timeline of the currently playing media.
-- [AVPlayerViewController](avplayerviewcontroller.md): A view controller that displays content from a player and presents a native user interface to control playback.
-- [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md): A protocol that defines the methods to implement to respond to player view controller events.
 - [AVExperienceController](avexperiencecontroller.md): An object that controls video experiences.
 - [AVMultiviewManager](avmultiviewmanager.md): An object that manages viewing multiple videos at once.
 - [AVGroupExperienceCoordinator](avgroupexperiencecoordinator.md): An object that synchronizes viewing environment state across participants in a SharePlay session.
 - [AVPortalViewport](avportalviewport.md): An object that defines the visual parameters for content displayed within a portal frame.
-- [Third-party casting support](third-party-casting-support.md): Provide custom playback controls for third-party casting services and other media sources.
 
 # AVViewport (Objective-C)
 
@@ -105,12 +101,7 @@ playerViewController.viewport.portal = portalViewport
 
 ## See Also
 
-### visionOS playback
+### Immersive and multiview media
 
 - [Playing immersive media with AVKit](playing-immersive-media-with-avkit.md): Adopt the system playback interface to provide an immersive video watching experience.
-- [Adopting the system player interface in visionOS](adopting-the-system-player-interface-in-visionos.md): Provide an optimized viewing experience for watching 3D video content.
-- [Trimming and exporting media in visionOS](trimming-and-exporting-media-in-visionos.md): Display standard controls in your app to edit the timeline of the currently playing media.
-- [AVPlayerViewController](avplayerviewcontroller.md): A view controller that displays content from a player and presents a native user interface to control playback.
-- [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md): A protocol that defines the methods to implement to respond to player view controller events.
 - [AVPortalViewport](avportalviewport.md): An object that defines the visual parameters for content displayed within a portal frame.
-- [Third-party casting support](third-party-casting-support.md): Provide custom playback controls for third-party casting services and other media sources.

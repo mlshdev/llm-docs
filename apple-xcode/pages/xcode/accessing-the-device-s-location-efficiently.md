@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/accessing-the-device-s-location-efficiently](https://developer.apple.com/documentation/xcode/accessing-the-device-s-location-efficiently)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/accessing-the-device-s-location-efficiently
 
 # Accessing the device’s location efficiently
 

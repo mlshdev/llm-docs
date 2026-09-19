@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideochannellabel/xy_x](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/xy_x)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/xy_x
 
 # XY_X
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,4 +19,4 @@ XY_X
 
 ### X/Y recording channels
 
-- [XY_Y](xy_y.md)
+- [XY_Y](xy_y.md): Beta.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/adopting-the-system-text-cursor-in-custom-text-views](https://developer.apple.com/documentation/appkit/adopting-the-system-text-cursor-in-custom-text-views)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/adopting-the-system-text-cursor-in-custom-text-views
 
 # Adopting the system text cursor in custom text views (Swift)
 

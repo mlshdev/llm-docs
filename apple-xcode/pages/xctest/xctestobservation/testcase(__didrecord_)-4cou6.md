@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xctest/xctestobservation/testcase(_:didrecord:)-4cou6](https://developer.apple.com/documentation/xctest/xctestobservation/testcase(_:didrecord:)-4cou6)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xctest/xctestobservation/testcase(_:didrecord:)-4cou6
 
 # testCase(\_:didRecord:) (Swift)
 

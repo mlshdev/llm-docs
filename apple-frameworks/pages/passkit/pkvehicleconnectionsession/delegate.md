@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/passkit/pkvehicleconnectionsession/delegate](https://developer.apple.com/documentation/passkit/pkvehicleconnectionsession/delegate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/passkit/pkvehicleconnectionsession/delegate
 
 # delegate (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/sirikit/localizing-your-vocabulary-for-chinese-dialects](https://developer.apple.com/documentation/sirikit/localizing-your-vocabulary-for-chinese-dialects)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/sirikit/localizing-your-vocabulary-for-chinese-dialects
 
 # Localizing Your Vocabulary for Chinese Dialects
 

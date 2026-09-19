@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/productview](https://developer.apple.com/documentation/storekit/productview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/productview
 
 # ProductView
 
@@ -6,7 +7,7 @@
 **Kind:** Structure  
 **Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
 
-A view that merchandises an individual In-App Purchase product.
+A view that merchandises an individual Apple In-App Purchase product.
 
 ## Declaration
 
@@ -18,11 +19,11 @@ A view that merchandises an individual In-App Purchase product.
 
 ## Overview
 
-A `ProductView` shows information about an in-app purchase product, including its localized name, description, and price, and displays a purchase button.
+A `ProductView` shows information about an Apple In-App Purchase product, including its localized name, description, and price, and displays a purchase button.
 
 You create a product view by providing a product identifier to load from the App Store, or a [Product](product.md) value you previously loaded. If you provide a product identifier, the view loads the product’s information from the App Store automatically, and updates the view when the product is available.
 
-You can customize the view by providing a view to use as an icon, or image, for the in-app purchase product. If you provide a product identifier, you can optionally provide a placeholder icon for the system to use instead of the automatic placeholder icon. If you set up promoted images for your products in App Store Connect, you can choose to use those images as the icon.
+You can customize the view by providing a view to use as an icon, or image, for the Apple In-App Purchase product. If you provide a product identifier, you can optionally provide a placeholder icon for the system to use instead of the automatic placeholder icon. If you set up promoted images for your products in App Store Connect, you can choose to use those images as the icon.
 
 You can customize the product view’s appearance using the standard styles, including the [CompactProductViewStyle](compactproductviewstyle.md), [RegularProductViewStyle](regularproductviewstyle.md), and [LargeProductViewStyle](largeproductviewstyle.md) styles. Apply the style using the [productViewStyle(\_:)](https://developer.apple.com/documentation/swiftui/view/productviewstyle%28_:%29) view modifier.
 
@@ -65,9 +66,9 @@ You can also create your own custom styles by creating styles that conform to th
 
 ## See Also
 
-### Merchandising In-App Purchases, subscriptions, and offers
+### Merchandising Apple In-App Purchases, subscriptions, and offers
 
-- [StoreView](storeview.md): A view that merchandises a collection of In-App Purchase products.
+- [StoreView](storeview.md): A view that merchandises a collection of Apple In-App Purchase products.
 - [SubscriptionStoreView](subscriptionstoreview.md): A view that merchandises a collection of auto-renewable subscription options that belong to the same subscription group.
 - [SubscriptionOfferView](subscriptionofferview.md)
 - [Backyard Birds: Building an app with SwiftData and widgets](https://developer.apple.com/documentation/swiftui/backyard-birds-sample): Create an app with persistent data, interactive widgets, and an all new in-app purchase experience.

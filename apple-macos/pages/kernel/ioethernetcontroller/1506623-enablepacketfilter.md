@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ioethernetcontroller/1506623-enablepacketfilter](https://developer.apple.com/documentation/kernel/ioethernetcontroller/1506623-enablepacketfilter)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ioethernetcontroller/1506623-enablepacketfilter
 
 # enablePacketFilter
 

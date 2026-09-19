@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iodisplayconnect/4520006-recordgtracetoken](https://developer.apple.com/documentation/kernel/iodisplayconnect/4520006-recordgtracetoken)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iodisplayconnect/4520006-recordgtracetoken
 
 # recordGTraceToken
 

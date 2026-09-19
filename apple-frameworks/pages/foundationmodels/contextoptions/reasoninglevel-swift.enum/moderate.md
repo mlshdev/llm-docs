@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/contextoptions/reasoninglevel-swift.enum/moderate](https://developer.apple.com/documentation/foundationmodels/contextoptions/reasoninglevel-swift.enum/moderate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/contextoptions/reasoninglevel-swift.enum/moderate
 
 # ContextOptions.ReasoningLevel.moderate
 
@@ -24,4 +25,4 @@ case moderate
 
 - [ContextOptions.ReasoningLevel.deep](deep.md): A level that indicates deep reasoning that’s good for more analysis over a request.
 - [ContextOptions.ReasoningLevel.light](light.md): A level that indicates light reasoning that’s good for quick responses.
-- [ContextOptions.ReasoningLevel.custom(\_:)](custom%28__%29.md): A custom level that indicates a level not supported by the other cases.
+- [ContextOptions.ReasoningLevel.custom(\_:)](custom%28__%29.md): A custom level not represented by the other cases.

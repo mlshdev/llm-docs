@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/understand-workflows/understand-executions/understand-dirty-nodes.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/understand-workflows/understand-executions/understand-dirty-nodes.md)
+> Pinned source for n8n main: [docs/build/understand-workflows/understand-executions/understand-dirty-nodes.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/understand-workflows/understand-executions/understand-dirty-nodes.md)
 
 # Dirty nodes <a id="dirty-nodes"></a>
 
@@ -8,11 +8,11 @@ A **dirty node** is a node that executed successfully in the past, but whose out
 
 In the canvas of the workflow editor, you can identify dirty notes by their different-colored border and a yellow triangle in place of the previous green tick symbol. For example:
 
-![A node on the canvas with a yellow border and a yellow triangle icon instead of the usual green success tick](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/dirty-node-canvas.png)
+![A node on the canvas with a yellow border and a yellow triangle icon instead of the usual green success tick](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/dirty-node-canvas.png)
 
 In the node editor view, the output panel also displays a yellow triangle on the output panel. If you hover over the triangle, a tooltip appears with more information about why n8n considers the data stale:
 
-![Node editor's output panel showing a yellow triangle icon with a tooltip explaining why the data is stale](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/dirty-node-editor.png)
+![Node editor's output panel showing a yellow triangle icon with a tooltip explaining why the data is stale](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/dirty-node-editor.png)
 
 ## Why n8n marks nodes dirty <a id="why-n8n-marks-nodes-dirty"></a>
 
@@ -45,18 +45,28 @@ For sub-nodes, also labels any executed parent nodes (up to and including the ro
 
 - When deleting a connected node in a workflow:
 
-![Workflow canvas before you delete a connected node, with all nodes showing green success ticks](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/dirty-before.png)
+![Workflow canvas before you delete a connected node, with all nodes showing green success ticks](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/dirty-before.png)
 
 - The next node in the sequence becomes dirty:
 
-![Workflow canvas after you delete the node, with the next node in the sequence now marked dirty with a yellow border](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/dirty-after.png)
+![Workflow canvas after you delete the node, with the next node in the sequence now marked dirty with a yellow border](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/dirty-after.png)
 
 </div>
 
 When using loops (with the [Loop over Items](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches) node), when any node within the loop is dirty, the initial node of the loop is also considered dirty:
 
-![Loop Over Items node marked dirty because a node inside its loop is dirty](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/dirty-loop.png)
+![Loop Over Items node marked dirty because a node inside its loop is dirty](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/dirty-loop.png)
 
 ## Resolving dirty nodes <a id="resolving-dirty-nodes"></a>
 
 Executing a node again clears its dirty status. You can do this manually by triggering the whole workflow, or by running a [partial execution](https://docs.n8n.io/build/understand-workflows/understand-executions/types-of-executions#partial-executions) with **Execute step** on the individual node or any node which follows it.
+
+## Related resources
+
+- [Understand executions](https://docs.n8n.io/build/understand-workflows/understand-executions)
+- [Manual, partial, and production executions](https://docs.n8n.io/build/understand-workflows/understand-executions/types-of-executions)
+- [View all executions](https://docs.n8n.io/build/understand-workflows/understand-executions/view-all-executions)
+- [View executions for a single workflow](https://docs.n8n.io/build/understand-workflows/understand-executions/view-executions-for-a-single-workflow)
+- [Debug and re-run past executions](https://docs.n8n.io/build/understand-workflows/understand-executions/debug-executions)
+- [Customize executions data](https://docs.n8n.io/build/understand-workflows/understand-executions/customize-executions-data)
+- [Stream real-time responses](https://docs.n8n.io/build/understand-workflows/understand-executions/stream-real-time-responses)

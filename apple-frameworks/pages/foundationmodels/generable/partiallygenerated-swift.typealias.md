@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generable/partiallygenerated-swift.typealias](https://developer.apple.com/documentation/foundationmodels/generable/partiallygenerated-swift.typealias)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generable/partiallygenerated-swift.typealias
 
 # Generable.PartiallyGenerated
 
@@ -6,7 +7,7 @@
 **Kind:** Type Alias  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · visionOS 26.0+ · watchOS 27.0+
 
-A representation of partially generated content
+A representation of partially generated content, which defaults to the conforming type itself.
 
 ## Declaration
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclustertestcluster/subscribeattributebitmap64(withmininterval:maxinterval:params:subscriptionestablished:reporthandler:)](https://developer.apple.com/documentation/matter/mtrbaseclustertestcluster/subscribeattributebitmap64(withmininterval:maxinterval:params:subscriptionestablished:reporthandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrbaseclustertestcluster/subscribeattributebitmap64(withmininterval:maxinterval:params:subscriptionestablished:reporthandler:)
 
 # subscribeAttributeBitmap64(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsisolatin2stringencoding](https://developer.apple.com/documentation/foundation/nsisolatin2stringencoding)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsisolatin2stringencoding
 
 # NSISOLatin2StringEncoding (Swift)
 

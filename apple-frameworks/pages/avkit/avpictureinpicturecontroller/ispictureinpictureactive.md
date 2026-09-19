@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avpictureinpicturecontroller/ispictureinpictureactive](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/ispictureinpictureactive)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/ispictureinpictureactive
 
 # isPictureInPictureActive (Swift)
 
@@ -22,7 +23,7 @@ This property is key-value observable.
 
 ## See Also
 
-### Accessing Picture in Picture State
+### Accessing Picture in Picture state
 
 - [isPictureInPictureSupported()](ispictureinpicturesupported%28%29.md): Returns a Boolean value that indicates whether the current device supports Picture in Picture.
 - [isPictureInPicturePossible](ispictureinpicturepossible.md): A Boolean value that indicates whether Picture in Picture playback is currently possible.
@@ -50,7 +51,7 @@ This property is key-value observable.
 
 ## See Also
 
-### Accessing Picture in Picture State
+### Accessing Picture in Picture state
 
 - [isPictureInPictureSupported](ispictureinpicturesupported%28%29.md): Returns a Boolean value that indicates whether the current device supports Picture in Picture.
 - [pictureInPicturePossible](ispictureinpicturepossible.md): A Boolean value that indicates whether Picture in Picture playback is currently possible.

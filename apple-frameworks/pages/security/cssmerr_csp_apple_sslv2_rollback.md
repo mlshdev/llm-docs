@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_csp_apple_sslv2_rollback](https://developer.apple.com/documentation/security/cssmerr_csp_apple_sslv2_rollback)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_csp_apple_sslv2_rollback
 
 # CSSMERR_CSP_APPLE_SSLv2_ROLLBACK (Swift)
 

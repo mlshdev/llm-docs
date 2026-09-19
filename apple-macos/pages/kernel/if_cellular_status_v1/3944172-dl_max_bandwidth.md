@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/if_cellular_status_v1/3944172-dl_max_bandwidth](https://developer.apple.com/documentation/kernel/if_cellular_status_v1/3944172-dl_max_bandwidth)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/if_cellular_status_v1/3944172-dl_max_bandwidth
 
 # dl_max_bandwidth
 

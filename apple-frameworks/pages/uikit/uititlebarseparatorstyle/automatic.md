@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uititlebarseparatorstyle/automatic](https://developer.apple.com/documentation/uikit/uititlebarseparatorstyle/automatic)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uititlebarseparatorstyle/automatic
 
 # UITitlebarSeparatorStyle.automatic (Swift)
 

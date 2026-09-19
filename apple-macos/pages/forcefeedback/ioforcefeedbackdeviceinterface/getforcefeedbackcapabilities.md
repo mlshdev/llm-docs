@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/forcefeedback/ioforcefeedbackdeviceinterface/getforcefeedbackcapabilities](https://developer.apple.com/documentation/forcefeedback/ioforcefeedbackdeviceinterface/getforcefeedbackcapabilities)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/forcefeedback/ioforcefeedbackdeviceinterface/getforcefeedbackcapabilities
 
 # GetForceFeedbackCapabilities
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/apple_alg_oid_length](https://developer.apple.com/documentation/security/apple_alg_oid_length)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/apple_alg_oid_length
 
 # APPLE_ALG_OID_LENGTH (Swift)
 

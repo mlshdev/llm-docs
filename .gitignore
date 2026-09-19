@@ -6,6 +6,7 @@ _generated/
 .serena/
 .claude/
 .opencode/
+.playwright-mcp/
 opencode.json
 .vscode/
 .idea/
@@ -14,6 +15,7 @@ opencode.json
 # notes, not project artifacts.
 /CODEBASE_AUDIT.md
 /CONTINUATION_HANDOFF.md
+/HANDOFF.md
 /*session*.md
 /resume.txt
 /[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*.txt

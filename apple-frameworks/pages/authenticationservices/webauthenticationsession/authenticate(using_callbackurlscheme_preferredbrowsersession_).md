@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/authenticationservices/webauthenticationsession/authenticate(using:callbackurlscheme:preferredbrowsersession:)](https://developer.apple.com/documentation/authenticationservices/webauthenticationsession/authenticate(using:callbackurlscheme:preferredbrowsersession:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/authenticationservices/webauthenticationsession/authenticate(using:callbackurlscheme:preferredbrowsersession:)
 
 # authenticate(using:callbackURLScheme:preferredBrowserSession:)
 
 **Framework:** AuthenticationServices  
 **Kind:** Instance Method  
-**Availability:** iOS 16.4+ (deprecated in 27.0) · iPadOS 16.4+ (deprecated in 27.0) · Mac Catalyst 16.4+ (deprecated in 27.0) · macOS 13.3+ (deprecated in 27.0) · tvOS 16.4+ (deprecated in 27.0) · visionOS 1.0+ · watchOS 9.4+ (deprecated in 27.0)
+**Availability:** iOS 16.4+ (deprecated in 27.2) · iPadOS 16.4+ (deprecated in 27.2) · Mac Catalyst 16.4+ (deprecated in 27.2) · macOS 13.3+ (deprecated in 27.2) · tvOS 16.4+ (deprecated in 27.2) · visionOS 1.0+ · watchOS 9.4+ (deprecated in 27.2)
 
 Begins a web authentication session.
 

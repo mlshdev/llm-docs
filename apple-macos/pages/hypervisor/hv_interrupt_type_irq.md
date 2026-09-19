@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_interrupt_type_irq](https://developer.apple.com/documentation/hypervisor/hv_interrupt_type_irq)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_interrupt_type_irq
 
 # HV_INTERRUPT_TYPE_IRQ (Swift)
 

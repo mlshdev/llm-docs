@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnnslayerparametersmultiheadattention/init(query:key:value:add_zero_attn:key_attn_bias:value_attn_bias:output:dropout:seed:)](https://developer.apple.com/documentation/accelerate/bnnslayerparametersmultiheadattention/init(query:key:value:add_zero_attn:key_attn_bias:value_attn_bias:output:dropout:seed:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/bnnslayerparametersmultiheadattention/init(query:key:value:add_zero_attn:key_attn_bias:value_attn_bias:output:dropout:seed:)
 
 # init(query:key:value:add_zero_attn:key_attn_bias:value_attn_bias:output:dropout:seed:)
 

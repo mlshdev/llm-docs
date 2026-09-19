@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/externalpurchase/canpresent](https://developer.apple.com/documentation/storekit/externalpurchase/canpresent)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/externalpurchase/canpresent
 
 # canPresent
 
@@ -33,7 +34,7 @@ This property is `true` if all the following conditions are met:
 
 Otherwise, this property is `false`.
 
-When this property is `false`, check [canMakePayments](../appstore/canmakepayments.md) to determine whether your app can offer in-app purchases using the StoreKit [In-App Purchase](../in-app-purchase.md) APIs. For more information, see [canMakePayments](../appstore/canmakepayments.md).
+When this property is `false`, check [canMakePayments](../appstore/canmakepayments.md) to determine whether your app can offer in-app purchases using the StoreKit [Apple In-App Purchase](../in-app-purchase.md) APIs. For more information, see [canMakePayments](../appstore/canmakepayments.md).
 
 ## See Also
 

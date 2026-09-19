@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcontentproposal/contenttimefortransition](https://developer.apple.com/documentation/avkit/avcontentproposal/contenttimefortransition)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcontentproposal/contenttimefortransition
 
 # contentTimeForTransition (Swift)
 
@@ -22,7 +23,7 @@ The time value commonly marks the beginning of the end credits in a television s
 
 ## See Also
 
-### Configuring the Content Proposal
+### Configuring the content proposal
 
 - [title](title.md): The title of the proposed content.
 - [previewImage](previewimage.md): The preview image of the proposed item.
@@ -52,7 +53,7 @@ The time value commonly marks the beginning of the end credits in a television s
 
 ## See Also
 
-### Configuring the Content Proposal
+### Configuring the content proposal
 
 - [title](title.md): The title of the proposed content.
 - [previewImage](previewimage.md): The preview image of the proposed item.

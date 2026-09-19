@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fsvolume/kernelcachecoherencyaction](https://developer.apple.com/documentation/fskit/fsvolume/kernelcachecoherencyaction)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/fskit/fsvolume/kernelcachecoherencyaction
 
 # FSVolume.KernelCacheCoherencyAction (Swift)
 
@@ -19,8 +20,8 @@ enum KernelCacheCoherencyAction
 ### Coherency actions
 
 - [FSVolume.KernelCacheCoherencyAction.push](kernelcachecoherencyaction/push.md): An action to flush dirty data from cache to storage, preserving cache contents.
-- [FSVolume.KernelCacheCoherencyAction.pushInvalidate](kernelcachecoherencyaction/pushinvalidate.md): An action to flush dirty data to storage and invalidate (clear) the cache.
-- [FSVolume.KernelCacheCoherencyAction.invalidate](kernelcachecoherencyaction/invalidate.md): An action to invalidate (clear) the cache, discarding any dirty data without writing to storage.
+- [FSVolume.KernelCacheCoherencyAction.pushInvalidate](kernelcachecoherencyaction/pushinvalidate.md): An action to flush dirty data to storage and invalidate (clear) the cache. This also invalidates the item’s cached attributes, so the next request for attributes fetches them from your module.
+- [FSVolume.KernelCacheCoherencyAction.invalidate](kernelcachecoherencyaction/invalidate.md): An action to invalidate (clear) the cache, discarding any dirty data without writing to storage. This also invalidates the item’s cached attributes, so the next request for attributes fetches them from your module.
 - [FSVolume.KernelCacheCoherencyAction.update](kernelcachecoherencyaction/update.md): An action to update the coherency mode while keeping the cache valid, requiring no push or invalidation.
 - [FSVolume.KernelCacheCoherencyAction.revoke](kernelcachecoherencyaction/revoke.md): An action to invalidate all caches, revoke all access to the item, and trigger vnode reclamation.
 
@@ -67,8 +68,8 @@ enum FSKernelCacheCoherencyAction : NSInteger;
 ### Coherency actions
 
 - [FSKernelCacheCoherencyActionPush](kernelcachecoherencyaction/push.md): An action to flush dirty data from cache to storage, preserving cache contents.
-- [FSKernelCacheCoherencyActionPushInvalidate](kernelcachecoherencyaction/pushinvalidate.md): An action to flush dirty data to storage and invalidate (clear) the cache.
-- [FSKernelCacheCoherencyActionInvalidate](kernelcachecoherencyaction/invalidate.md): An action to invalidate (clear) the cache, discarding any dirty data without writing to storage.
+- [FSKernelCacheCoherencyActionPushInvalidate](kernelcachecoherencyaction/pushinvalidate.md): An action to flush dirty data to storage and invalidate (clear) the cache. This also invalidates the item’s cached attributes, so the next request for attributes fetches them from your module.
+- [FSKernelCacheCoherencyActionInvalidate](kernelcachecoherencyaction/invalidate.md): An action to invalidate (clear) the cache, discarding any dirty data without writing to storage. This also invalidates the item’s cached attributes, so the next request for attributes fetches them from your module.
 - [FSKernelCacheCoherencyActionUpdate](kernelcachecoherencyaction/update.md): An action to update the coherency mode while keeping the cache valid, requiring no push or invalidation.
 - [FSKernelCacheCoherencyActionRevoke](kernelcachecoherencyaction/revoke.md): An action to invalidate all caches, revoke all access to the item, and trigger vnode reclamation.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photos/phassetresourceuploadjob](https://developer.apple.com/documentation/photos/phassetresourceuploadjob)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photos/phassetresourceuploadjob
 
 # PHAssetResourceUploadJob (Swift)
 
@@ -22,7 +23,7 @@ Use within an application’s `com.apple.photos.background-upload` extension to 
 
 When the extension’s principal class receives a call to [process()](phbackgroundresourceuploadextension/process%28%29.md) background uploads, it can create new [PHAssetResourceUploadJob](phassetresourceuploadjob.md) objects using [PHAssetResourceUploadJobChangeRequest](phassetresourceuploadjobchangerequest.md).
 
-The maximum number of jobs that can be in flight is limited to the [jobLimit](phassetresourceuploadjob/joblimit.md). To make space for new jobs, you must call `PHAssetResourceUploadJobChangeRequest/fetchJobsWithAction:options:` and retry/acknowledge them with `PHAssetResourceUploadJobChangeRequest/acknowledge:` or [retry(destination:)](phassetresourceuploadjobchangerequest/retry%28destination_%29.md) respectively.
+The maximum number of jobs that can be in flight is limited to the [jobLimit](phassetresourceuploadjob/joblimit.md). To make space for new jobs, you must call [fetchJobs(action:options:)](phassetresourceuploadjob/fetchjobs%28action_options_%29.md) and retry/acknowledge them with [acknowledge()](phassetresourceuploadjobchangerequest/acknowledge%28%29.md) or [retry(destination:)](phassetresourceuploadjobchangerequest/retry%28destination_%29.md) respectively.
 
 ## Topics
 
@@ -66,7 +67,7 @@ The maximum number of jobs that can be in flight is limited to the [jobLimit](ph
 ### Background resource upload extensions
 
 - [Uploading asset resources in the background](../photokit/uploading-asset-resources-in-the-background.md): Enable reliable cloud backup for photo library assets with background processing.
-- [PHBackgroundResourceUploadExtension](phbackgroundresourceuploadextension.md): Deprecated.
+- [PHBackgroundResourceUploadExtension](phbackgroundresourceuploadextension.md): Deprecated. A protocol to interact with asset resource upload jobs during background processing.
 - [PHAssetResourceUploadJobChangeRequest](phassetresourceuploadjobchangerequest.md): Use within an application’s `com.apple.photos.background-upload` extension to create and change [PHAssetResourceUploadJob](phassetresourceuploadjob.md) records.
 
 # PHAssetResourceUploadJob (Objective-C)
@@ -91,7 +92,7 @@ Use within an application’s `com.apple.photos.background-upload` extension to 
 
 When the extension’s principal class receives a call to [process()](phbackgroundresourceuploadextension/process%28%29.md) background uploads, it can create new [PHAssetResourceUploadJob](phassetresourceuploadjob.md) objects using [PHAssetResourceUploadJobChangeRequest](phassetresourceuploadjobchangerequest.md).
 
-The maximum number of jobs that can be in flight is limited to the [jobLimit](phassetresourceuploadjob/joblimit.md). To make space for new jobs, you must call `PHAssetResourceUploadJobChangeRequest/fetchJobsWithAction:options:` and retry/acknowledge them with `PHAssetResourceUploadJobChangeRequest/acknowledge:` or [retryWithDestination:](phassetresourceuploadjobchangerequest/retry%28destination_%29.md) respectively.
+The maximum number of jobs that can be in flight is limited to the [jobLimit](phassetresourceuploadjob/joblimit.md). To make space for new jobs, you must call [fetchJobsWithAction:options:](phassetresourceuploadjob/fetchjobs%28action_options_%29.md) and retry/acknowledge them with [acknowledge](phassetresourceuploadjobchangerequest/acknowledge%28%29.md) or [retryWithDestination:](phassetresourceuploadjobchangerequest/retry%28destination_%29.md) respectively.
 
 ## Topics
 

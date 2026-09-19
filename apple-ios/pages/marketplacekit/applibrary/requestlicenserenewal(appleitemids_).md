@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/applibrary/requestlicenserenewal(appleitemids:)](https://developer.apple.com/documentation/marketplacekit/applibrary/requestlicenserenewal(appleitemids:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/marketplacekit/applibrary/requestlicenserenewal(appleitemids:)
 
 # requestLicenseRenewal(appleItemIDs:)
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 17.4+ · iPadOS 17.4+
 
-Instructs iOS to request an updated app license from your marketplace server for the given app identifier.
+Instructs the system to request an updated app license from your marketplace server for the given app identifier.
 
 ## Declaration
 

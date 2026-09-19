@@ -1,41 +1,41 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
-  "generatorDigest": "c9e2ef5f2a17fa250af2ded1f7d74e31435cd2eab4290d8038fc797c9971d846",
+  "generatorDigest": "034397747f427292c319b4e82e9b1cb2e8adce6c31635ef7b3f7592eb076bb54",
   "project": "apple-xcode",
   "title": "Apple Xcode and developer tools",
   "homepage": "https://developer.apple.com/documentation/xcode",
   "catalog": "xcode",
-  "tag": "snapshot-ef15f2517b3c",
-  "snapshotDigest": "ef15f2517b3cf1caffa4e230469793956bae2795781ded9695249cca474ecb70",
-  "contentDigest": "20d06e06127ece2f7d714ef2ec558df44009dbb37983eadee49466036bf397f9",
-  "capturedAt": "2026-09-12T21:04:59.670Z",
-  "documentCount": 3293,
+  "tag": "snapshot-d045c48ba442",
+  "snapshotDigest": "d045c48ba442d76db23b56957be941c7cd95580126c6f823a089d10201c74287",
+  "contentDigest": "03a8128db62b106d74bec4fd1eb7d9a8b1c1b58cfa6a53e4ff370efb063a4594",
+  "capturedAt": "2026-09-19T05:14:28.744Z",
+  "documentCount": 3298,
   "indexComplete": false,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 722,
+      "byteLength": 723,
       "documentCount": 0,
-      "sha256": "fb8cd1e27cbf2129943a6be63a8eb4f7830f6f35c29a7a518394ca4b94537dd5"
+      "sha256": "2324d638a62665ca6c6729b6070a1aa91ad6f1a37f33e11c7dcd45d0ec308935"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8381811,
-      "documentCount": 1995,
-      "sha256": "e81d97a4d22e6539020c72ae5c1dedc0d25abe371dabb9570d829870f5e6bc61"
+      "byteLength": 8378222,
+      "documentCount": 1963,
+      "sha256": "3482127b00eb7c26c1a2772a14781b450ea179824549666f51984bb62d495a85"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 4442335,
-      "documentCount": 1298,
-      "sha256": "bf9c7457e684e91dd2257c92d228f80b12f4d7cf6389c7d85563faf40a9ff694"
+      "byteLength": 4869974,
+      "documentCount": 1335,
+      "sha256": "bd76cefc41669ec221260a095d0538636653dab3f9d9e4e4b90e75a466e3eb80"
     }
   ],
-  "outputDigest": "60373bde4b6a3c22be805f58a0dca29c31814f1a3f4aa20a4ba999106064fa81",
+  "outputDigest": "a3336c9f7d8517b814a741a323de9b19027f4a3f297c70c0e42d7003d39c1251",
   "notes": [
     "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
-    "21 frameworks in this catalog, captured at 2026-09-12T21:04:59.670Z.",
+    "21 frameworks in this catalog, captured at 2026-09-19T05:14:28.744Z.",
     "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
     "Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.",
     "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."

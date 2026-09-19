@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideochannellabel/rearsurroundleft](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/rearsurroundleft)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/rearsurroundleft
 
 # RearSurroundLeft
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,10 +19,10 @@ RearSurroundLeft
 
 ### Surround channels
 
-- [CenterSurround](centersurround.md): WAVE: “Back Center” or plain “Rear Surround”
-- [CenterSurroundDirect](centersurrounddirect.md): back center, non diffuse
-- [LeftSurround](leftsurround.md)
-- [LeftSurroundDirect](leftsurrounddirect.md)
-- [RearSurroundRight](rearsurroundright.md)
-- [RightSurround](rightsurround.md)
-- [RightSurroundDirect](rightsurrounddirect.md)
+- [CenterSurround](centersurround.md): Beta. WAVE: “Back Center” or plain “Rear Surround”
+- [CenterSurroundDirect](centersurrounddirect.md): Beta. back center, non diffuse
+- [LeftSurround](leftsurround.md): Beta.
+- [LeftSurroundDirect](leftsurrounddirect.md): Beta.
+- [RearSurroundRight](rearsurroundright.md): Beta.
+- [RightSurround](rightsurround.md): Beta.
+- [RightSurroundDirect](rightsurrounddirect.md): Beta.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_cssm_attribute_not_in_context](https://developer.apple.com/documentation/security/cssmerr_cssm_attribute_not_in_context)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_cssm_attribute_not_in_context
 
 # CSSMERR_CSSM_ATTRIBUTE_NOT_IN_CONTEXT (Swift)
 

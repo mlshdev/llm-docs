@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/stackshot_flags_t/stackshot_include_driver_threads_in_kernel](https://developer.apple.com/documentation/kernel/stackshot_flags_t/stackshot_include_driver_threads_in_kernel)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/stackshot_flags_t/stackshot_include_driver_threads_in_kernel
 
 # STACKSHOT_INCLUDE_DRIVER_THREADS_IN_KERNEL
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/mach_msg_port_descriptor_t/pad2](https://developer.apple.com/documentation/driverkit/mach_msg_port_descriptor_t/pad2)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/mach_msg_port_descriptor_t/pad2
 
 # pad2
 

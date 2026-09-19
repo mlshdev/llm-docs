@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/network/withnetworkconnection(to:using:_:)-4wpc9](https://developer.apple.com/documentation/network/withnetworkconnection(to:using:_:)-4wpc9)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/network/withnetworkconnection(to:using:_:)-4wpc9
 
 # withNetworkConnection(to:using:\_:)
 

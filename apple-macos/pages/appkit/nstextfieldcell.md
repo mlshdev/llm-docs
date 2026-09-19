@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstextfieldcell](https://developer.apple.com/documentation/appkit/nstextfieldcell)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstextfieldcell
 
 # NSTextFieldCell (Swift)
 
@@ -93,6 +94,8 @@ When subclassing `NSTextFieldCell` you must implement the designated initializer
 - [NSCopying](https://developer.apple.com/documentation/foundation/nscopying)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSUserInterfaceItemIdentification](nsuserinterfaceitemidentification.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 

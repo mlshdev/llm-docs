@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avpictureinpicturecontroller/delegate](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/delegate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/delegate
 
 # delegate (Swift)
 
@@ -16,7 +17,7 @@ weak var delegate: (any AVPictureInPictureControllerDelegate)? { get set }
 
 ## See Also
 
-### Accessing the Delegate Object
+### Accessing the delegate object
 
 - [AVPictureInPictureControllerDelegate](../avpictureinpicturecontrollerdelegate.md): A protocol to adopt to respond to Picture in Picture events.
 
@@ -36,6 +37,6 @@ A delegate object for a Picture in Picture controller.
 
 ## See Also
 
-### Accessing the Delegate Object
+### Accessing the delegate object
 
 - [AVPictureInPictureControllerDelegate](../avpictureinpicturecontrollerdelegate.md): A protocol to adopt to respond to Picture in Picture events.

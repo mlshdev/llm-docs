@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clktimetextprovider/init(date:timezone:)](https://developer.apple.com/documentation/clockkit/clktimetextprovider/init(date:timezone:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clktimetextprovider/init(date:timezone:)
 
 # init(date:timeZone:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Creates and returns a text provider for displaying the specified time.
 
@@ -37,7 +38,7 @@ A text provider initialized with the specified date and time zone value.
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Creates and returns a text provider for displaying the specified time.
 

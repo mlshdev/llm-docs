@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nswindowdelegate/window(_:willresizeforversionbrowserwithmaxpreferredsize:maxallowedsize:)](https://developer.apple.com/documentation/appkit/nswindowdelegate/window(_:willresizeforversionbrowserwithmaxpreferredsize:maxallowedsize:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nswindowdelegate/window(_:willresizeforversionbrowserwithmaxpreferredsize:maxallowedsize:)
 
 # window(\_:willResizeForVersionBrowserWithMaxPreferredSize:maxAllowedSize:) (Swift)
 

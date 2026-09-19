@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/analyzing-cpu-usage-with-processor-trace](https://developer.apple.com/documentation/xcode/analyzing-cpu-usage-with-processor-trace)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/analyzing-cpu-usage-with-processor-trace
 
 # Analyzing CPU usage with the Processor Trace instrument
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avkiterror-swift.struct/code/contentdisallowedbypasscode](https://developer.apple.com/documentation/avkit/avkiterror-swift.struct/code/contentdisallowedbypasscode)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avkiterror-swift.struct/code/contentdisallowedbypasscode
 
 # AVKitError.Code.contentDisallowedByPasscode (Swift)
 
@@ -16,7 +17,7 @@ case contentDisallowedByPasscode
 
 ## See Also
 
-### Error Codes
+### Error codes
 
 - [AVKitError.Code.unknown](unknown.md): An unknown error.
 - [AVKitError.Code.contentRatingUnknown](contentratingunknown.md): The media content rating is missing or unrecognized.
@@ -39,7 +40,7 @@ AVKitErrorContentDisallowedByPasscode
 
 ## See Also
 
-### Error Codes
+### Error codes
 
 - [AVKitErrorUnknown](unknown.md): An unknown error.
 - [AVKitErrorContentRatingUnknown](contentratingunknown.md): The media content rating is missing or unrecognized.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnns/poolinglayer/init(type:input:output:bias:activation:kernelsize:stride:padding:filterparameters:)](https://developer.apple.com/documentation/accelerate/bnns/poolinglayer/init(type:input:output:bias:activation:kernelsize:stride:padding:filterparameters:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/bnns/poolinglayer/init(type:input:output:bias:activation:kernelsize:stride:padding:filterparameters:)
 
 # init(type:input:output:bias:activation:kernelSize:stride:padding:filterParameters:)
 

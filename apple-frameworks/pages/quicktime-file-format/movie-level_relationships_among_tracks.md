@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/movie-level_relationships_among_tracks](https://developer.apple.com/documentation/quicktime-file-format/movie-level_relationships_among_tracks)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/quicktime-file-format/movie-level_relationships_among_tracks
 
 # Movie-level relationships among tracks
 

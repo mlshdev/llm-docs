@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/disabling-the-pull-down-gesture-for-a-sheet](https://developer.apple.com/documentation/uikit/disabling-the-pull-down-gesture-for-a-sheet)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/disabling-the-pull-down-gesture-for-a-sheet
 
 # Disabling the pull-down gesture for a sheet (Swift)
 

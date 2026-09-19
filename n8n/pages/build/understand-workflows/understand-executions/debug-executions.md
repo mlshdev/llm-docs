@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/understand-workflows/understand-executions/debug-executions.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/understand-workflows/understand-executions/debug-executions.md)
+> Pinned source for n8n main: [docs/build/understand-workflows/understand-executions/debug-executions.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/understand-workflows/understand-executions/debug-executions.md)
 
 # Debug and re-run past executions <a id="debug-and-re-run-past-executions"></a>
 
@@ -26,3 +26,13 @@ To load data from a previous execution:
 > **Check which executions you save**
 >
 > The executions available on the **Executions** list depends on your [Workflow settings](https://docs.n8n.io/build/manage-workflows/configure-workflow-settings).
+
+## Related resources
+
+- [Understand executions](https://docs.n8n.io/build/understand-workflows/understand-executions)
+- [Manual, partial, and production executions](https://docs.n8n.io/build/understand-workflows/understand-executions/types-of-executions)
+- [View all executions](https://docs.n8n.io/build/understand-workflows/understand-executions/view-all-executions)
+- [View executions for a single workflow](https://docs.n8n.io/build/understand-workflows/understand-executions/view-executions-for-a-single-workflow)
+- [Customize executions data](https://docs.n8n.io/build/understand-workflows/understand-executions/customize-executions-data)
+- [Stream real-time responses](https://docs.n8n.io/build/understand-workflows/understand-executions/stream-real-time-responses)
+- [Dirty nodes](https://docs.n8n.io/build/understand-workflows/understand-executions/understand-dirty-nodes)

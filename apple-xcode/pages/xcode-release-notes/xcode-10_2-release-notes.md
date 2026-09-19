@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode-release-notes/xcode-10_2-release-notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10_2-release-notes)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode-release-notes/xcode-10_2-release-notes
 
 # Xcode 10.2 Release Notes
 

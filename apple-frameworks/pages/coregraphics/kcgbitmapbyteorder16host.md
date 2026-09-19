@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/kcgbitmapbyteorder16host](https://developer.apple.com/documentation/coregraphics/kcgbitmapbyteorder16host)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coregraphics/kcgbitmapbyteorder16host
 
 # kCGBitmapByteOrder16Host (Swift)
 
 **Framework:** Core Graphics  
 **Kind:** Global Variable  
-**Availability:** iOS  (deprecated in 27.0) · iPadOS  (deprecated in 27.0) · Mac Catalyst  (deprecated in 27.0) · macOS  (deprecated in 27.0) · tvOS  (deprecated in 27.0) · visionOS  (deprecated in 27.0) · watchOS  (deprecated in 27.0)
+**Availability:** iOS  (deprecated in 27.2) · iPadOS  (deprecated in 27.2) · Mac Catalyst  (deprecated in 27.2) · macOS  (deprecated in 27.2) · tvOS  (deprecated in 27.2) · visionOS  (deprecated in 27.2) · watchOS  (deprecated in 27.2)
 
 16-bit, host endian format.
 
@@ -38,7 +39,7 @@ var kCGBitmapByteOrder16Host: CGBitmapInfo { get }
 
 **Framework:** Core Graphics  
 **Kind:** Global Variable  
-**Availability:** iOS  (deprecated in 27.0) · iPadOS  (deprecated in 27.0) · Mac Catalyst  (deprecated in 27.0) · macOS  (deprecated in 27.0) · tvOS  (deprecated in 27.0) · visionOS  (deprecated in 27.0) · watchOS  (deprecated in 27.0)
+**Availability:** iOS  (deprecated in 27.2) · iPadOS  (deprecated in 27.2) · Mac Catalyst  (deprecated in 27.2) · macOS  (deprecated in 27.2) · tvOS  (deprecated in 27.2) · visionOS  (deprecated in 27.2) · watchOS  (deprecated in 27.2)
 
 16-bit, host endian format.
 

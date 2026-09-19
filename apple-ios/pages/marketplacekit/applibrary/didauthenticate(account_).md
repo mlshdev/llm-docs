@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/applibrary/didauthenticate(account:)](https://developer.apple.com/documentation/marketplacekit/applibrary/didauthenticate(account:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/marketplacekit/applibrary/didauthenticate(account:)
 
 # didAuthenticate(account:)
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 17.5+ · iPadOS 17.5+
 
-Instructs iOS to reinstall an app after a required reuthorization completes.
+Instructs the system to reinstall an app after a required reuthorization completes.
 
 ## Declaration
 

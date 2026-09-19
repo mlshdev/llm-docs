@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/reasoning](https://developer.apple.com/documentation/foundationmodels/transcript/reasoning)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/reasoning
 
 # Transcript.Reasoning
 
@@ -18,11 +19,11 @@ struct Reasoning
 
 ### Creating a reasoning instance
 
-- [init(id:metadata:segments:signature:)](reasoning/init%28id_metadata_segments_signature_%29.md)
+- [init(id:metadata:segments:signature:)](reasoning/init%28id_metadata_segments_signature_%29.md): Creates a reasoning entry that contains the segments you provide.
 
 ### Inspecting the reasoning
 
-- [description](reasoning/description.md)
+- [description](reasoning/description.md): A textual representation of the reasoning entry.
 - [metadata](reasoning/metadata.md): Metadata produced by the model while generating this reasoning entry.
 - [segments](reasoning/segments.md): Ordered reasoning segments.
 - [signature](reasoning/signature.md): Opaque producer-supplied signature for this reasoning entry.

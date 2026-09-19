@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/customizing-your-workspace-using-themes](https://developer.apple.com/documentation/xcode/customizing-your-workspace-using-themes)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/customizing-your-workspace-using-themes
 
 # Customizing your workspace using themes
 
@@ -77,3 +78,9 @@ In the Fonts pane, you can:
 ## Import themes from previous Xcode releases
 
 To add colors that you configured in earlier Xcode releases, click the Import button on the Themes popover and select the color theme file (with a `.xcolortheme` extension) from the `~/Library/Developer/Xcode/UserData/FontAndColorThemes` folder.
+
+## See Also
+
+### Customization
+
+- [Downloading and installing additional Xcode components](downloading-and-installing-additional-xcode-components.md): Add more simulated devices, optional features, and support for additional platforms.

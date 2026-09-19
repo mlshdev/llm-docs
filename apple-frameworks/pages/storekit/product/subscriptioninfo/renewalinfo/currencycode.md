@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/product/subscriptioninfo/renewalinfo/currencycode](https://developer.apple.com/documentation/storekit/product/subscriptioninfo/renewalinfo/currencycode)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/product/subscriptioninfo/renewalinfo/currencycode
 
 # currencyCode
 
@@ -29,7 +30,7 @@ Use [currencyCode](currencycode.md) to access the currency of the price on syste
 
 Don’t use [currencyCode](../../../transaction/currencycode.md) to infer the storefront. Use the [storefront](../../../transaction/storefront.md) value in the transaction instead.
 
-For more information on how you set prices, see [Set a price for an in-app purchase](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/set-a-price-for-an-in-app-purchase).
+For more information on how you set prices, see [Set a price for an Apple In-App Purchase](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/set-a-price-for-an-in-app-purchase).
 
 ## See Also
 

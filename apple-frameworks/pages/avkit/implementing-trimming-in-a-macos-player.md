@@ -1,6 +1,7 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/implementing-trimming-in-a-macos-player](https://developer.apple.com/documentation/avkit/implementing-trimming-in-a-macos-player)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/implementing-trimming-in-a-macos-player
 
-# Implementing Trimming in a macOS Player (Swift)
+# Implementing trimming in a macOS player (Swift)
 
 **Framework:** AVKit  
 **Kind:** Article
@@ -15,9 +16,9 @@ You use [AVPlayerView](avplayerview.md) to provide a playback experience like th
 
 ![Single image with multiple video frames selected and Trim button in an enabled state.](https://developer.apple.com/images/com.apple.avkit/media-2948756.png)
 
-<a id="Verify-that-Trimming-Is-Allowed"></a>
+<a id="Verify-that-trimming-is-allowed"></a>
 
-### Verify that Trimming Is Allowed
+## Verify that trimming is allowed
 
 Before attempting to put the player into trimming mode, verify that trimming is allowed by querying the player view’s [canBeginTrimming](avplayerview/canbegintrimming.md) property. This property returns `false` if you’re playing an asset delivered over HTTP Live Streaming or if the asset is content protected. If you’re presenting a menu item to initiate trimming, a good place to perform this check is in the [validateUserInterfaceItem(\_:)](https://developer.apple.com/documentation/appkit/nsdocument/validateuserinterfaceitem%28_:%29) method of [NSDocument](https://developer.apple.com/documentation/appkit/nsdocument), so that the menu item can automatically be disabled if trimming is disallowed.
 
@@ -30,9 +31,9 @@ override func validateUserInterfaceItem(_ item: NSValidatedUserInterfaceItem) ->
 }
 ```
 
-<a id="Enter-Trimming-Mode"></a>
+<a id="Enter-trimming-mode"></a>
 
-### Enter Trimming Mode
+## Enter trimming mode
 
 After you’ve determined that the media supports trimming, you call the [beginTrimming(completionHandler:)](avplayerview/begintrimming%28completionhandler_%29.md). This method takes a completion block that you use to determine whether the user completed the trim or canceled the operation.
 
@@ -48,9 +49,9 @@ After you’ve determined that the media supports trimming, you call the [beginT
 }
 ```
 
-<a id="Transcode-the-Trimmed-Asset"></a>
+<a id="Transcode-the-trimmed-asset"></a>
 
-### Transcode the Trimmed Asset
+## Transcode the trimmed asset
 
 Because [AVAsset](../avfoundation/avasset.md) is an immutable object, you may be wondering how its duration is changed when you click the Trim button. Trimming relies on a feature of [AVPlayerItem](../avfoundation/avplayeritem.md) to adjust the presented time range. `AVPlayerItem` provides the [reversePlaybackEndTime](../avfoundation/avplayeritem/reverseplaybackendtime.md) and [forwardPlaybackEndTime](../avfoundation/avplayeritem/forwardplaybackendtime.md) properties that set the in and out points for a media item. It doesn’t change the underlying asset, but essentially changes your effective view of it. To save the results of the user’s trim operation, you export a new copy of the asset, trimming it to the specified times. The simplest way to do this is to use [AVAssetExportSession](../avfoundation/avassetexportsession.md), which provides a simple and performant way for you to transcode the media of an asset. You create a new export session, passing it the asset to export along with a transcoding preset to use.
 
@@ -64,9 +65,9 @@ exportSession.outputURL = // Output URL
 
 This example uses a preset to export the media as a 720p, M4V file, but `AVAssetExportSession` supports a wide variety of export presets. To find out what export session presets are supported for the current asset, you can use the session’s [exportPresets(compatibleWith:)](../avfoundation/avassetexportsession/exportpresets%28compatiblewith_%29.md) class method, passing it the asset you want to export. This method returns an array of valid presets that you can use in your export.
 
-<a id="Select-the-Trimmed-Asset"></a>
+<a id="Select-the-trimmed-asset"></a>
 
-### Select the Trimmed Asset
+## Select the trimmed asset
 
 To export only the content the user trimmed, you use the current player item’s reverse and forward end-time values to define a [CMTimeRange](../coremedia/cmtimerange.md) to set on the export session.
 
@@ -78,9 +79,9 @@ let timeRange = CMTimeRangeFromTimeToTime(startTime, endTime)
 exportSession.timeRange = timeRange
 ```
 
-<a id="Export-the-Trimmed-Asset"></a>
+<a id="Export-the-trimmed-asset"></a>
 
-### Export the Trimmed Asset
+## Export the trimmed asset
 
 To perform the actual export operation, you call its [exportAsynchronously(completionHandler:)](../avfoundation/avassetexportsession/exportasynchronously%28completionhandler_%29.md) method. Check the status of the export session in the completion handler and handle completion and failure cases.
 
@@ -99,12 +100,12 @@ exportSession.exportAsynchronously {
 
 ## See Also
 
-### macOS playback and capture
+### Media trimming and export
 
-- [AVPlayerView](avplayerview.md): A view that displays content from a player and presents a native user interface to control playback.
-- [AVCaptureView](avcaptureview.md): A view that displays standard user interface controls for capturing media data.
+- [Trimming and exporting media in visionOS](trimming-and-exporting-media-in-visionos.md): Display standard controls in your app to edit the timeline of the currently playing media.
+- [AVPlayerViewTrimResult](avplayerviewtrimresult.md): Constants that specify an action a user takes when trimming media in a player view.
 
-# Implementing Trimming in a macOS Player (Objective-C)
+# Implementing trimming in a macOS player (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Article
@@ -119,9 +120,9 @@ You use [AVPlayerView](avplayerview.md) to provide a playback experience like th
 
 ![Single image with multiple video frames selected and Trim button in an enabled state.](https://developer.apple.com/images/com.apple.avkit/media-2948756.png)
 
-<a id="Verify-that-Trimming-Is-Allowed"></a>
+<a id="Verify-that-trimming-is-allowed"></a>
 
-### Verify that Trimming Is Allowed
+## Verify that trimming is allowed
 
 Before attempting to put the player into trimming mode, verify that trimming is allowed by querying the player view’s [canBeginTrimming](avplayerview/canbegintrimming.md) property. This property returns `false` if you’re playing an asset delivered over HTTP Live Streaming or if the asset is content protected. If you’re presenting a menu item to initiate trimming, a good place to perform this check is in the [validateUserInterfaceItem:](https://developer.apple.com/documentation/appkit/nsdocument/validateuserinterfaceitem%28_:%29) method of [NSDocument](https://developer.apple.com/documentation/appkit/nsdocument), so that the menu item can automatically be disabled if trimming is disallowed.
 
@@ -134,9 +135,9 @@ override func validateUserInterfaceItem(_ item: NSValidatedUserInterfaceItem) ->
 }
 ```
 
-<a id="Enter-Trimming-Mode"></a>
+<a id="Enter-trimming-mode"></a>
 
-### Enter Trimming Mode
+## Enter trimming mode
 
 After you’ve determined that the media supports trimming, you call the [beginTrimmingWithCompletionHandler:](avplayerview/begintrimming%28completionhandler_%29.md). This method takes a completion block that you use to determine whether the user completed the trim or canceled the operation.
 
@@ -152,9 +153,9 @@ After you’ve determined that the media supports trimming, you call the [beginT
 }
 ```
 
-<a id="Transcode-the-Trimmed-Asset"></a>
+<a id="Transcode-the-trimmed-asset"></a>
 
-### Transcode the Trimmed Asset
+## Transcode the trimmed asset
 
 Because [AVAsset](../avfoundation/avasset.md) is an immutable object, you may be wondering how its duration is changed when you click the Trim button. Trimming relies on a feature of [AVPlayerItem](../avfoundation/avplayeritem.md) to adjust the presented time range. `AVPlayerItem` provides the [reversePlaybackEndTime](../avfoundation/avplayeritem/reverseplaybackendtime.md) and [forwardPlaybackEndTime](../avfoundation/avplayeritem/forwardplaybackendtime.md) properties that set the in and out points for a media item. It doesn’t change the underlying asset, but essentially changes your effective view of it. To save the results of the user’s trim operation, you export a new copy of the asset, trimming it to the specified times. The simplest way to do this is to use [AVAssetExportSession](../avfoundation/avassetexportsession.md), which provides a simple and performant way for you to transcode the media of an asset. You create a new export session, passing it the asset to export along with a transcoding preset to use.
 
@@ -168,9 +169,9 @@ exportSession.outputURL = // Output URL
 
 This example uses a preset to export the media as a 720p, M4V file, but `AVAssetExportSession` supports a wide variety of export presets. To find out what export session presets are supported for the current asset, you can use the session’s [exportPresetsCompatibleWithAsset:](../avfoundation/avassetexportsession/exportpresets%28compatiblewith_%29.md) class method, passing it the asset you want to export. This method returns an array of valid presets that you can use in your export.
 
-<a id="Select-the-Trimmed-Asset"></a>
+<a id="Select-the-trimmed-asset"></a>
 
-### Select the Trimmed Asset
+## Select the trimmed asset
 
 To export only the content the user trimmed, you use the current player item’s reverse and forward end-time values to define a [CMTimeRange](../coremedia/cmtimerange.md) to set on the export session.
 
@@ -182,9 +183,9 @@ let timeRange = CMTimeRangeFromTimeToTime(startTime, endTime)
 exportSession.timeRange = timeRange
 ```
 
-<a id="Export-the-Trimmed-Asset"></a>
+<a id="Export-the-trimmed-asset"></a>
 
-### Export the Trimmed Asset
+## Export the trimmed asset
 
 To perform the actual export operation, you call its [exportAsynchronouslyWithCompletionHandler:](../avfoundation/avassetexportsession/exportasynchronously%28completionhandler_%29.md) method. Check the status of the export session in the completion handler and handle completion and failure cases.
 
@@ -203,7 +204,7 @@ exportSession.exportAsynchronously {
 
 ## See Also
 
-### macOS playback and capture
+### Media trimming and export
 
-- [AVPlayerView](avplayerview.md): A view that displays content from a player and presents a native user interface to control playback.
-- [AVCaptureView](avcaptureview.md): A view that displays standard user interface controls for capturing media data.
+- [Trimming and exporting media in visionOS](trimming-and-exporting-media-in-visionos.md): Display standard controls in your app to edit the timeline of the currently playing media.
+- [AVPlayerViewTrimResult](avplayerviewtrimresult.md): Constants that specify an action a user takes when trimming media in a player view.

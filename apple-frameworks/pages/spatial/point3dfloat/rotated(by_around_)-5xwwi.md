@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/point3dfloat/rotated(by:around:)-5xwwi](https://developer.apple.com/documentation/spatial/point3dfloat/rotated(by:around:)-5xwwi)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatial/point3dfloat/rotated(by:around:)-5xwwi
 
 # rotated(by:around:) (Swift)
 

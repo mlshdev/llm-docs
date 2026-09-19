@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/identitylookup/livecalleridlookupextensioncontext/usertiertoken](https://developer.apple.com/documentation/identitylookup/livecalleridlookupextensioncontext/usertiertoken)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/identitylookup/livecalleridlookupextensioncontext/usertiertoken
 
 # userTierToken
 
@@ -28,5 +29,5 @@ The system sends this token to the Privacy Pass token issuer, which can verify w
 
 ### Configuring the system
 
-- [serviceURL](serviceurl.md): The endpoint of the service to fetch identity and blocking information.
-- [tokenIssuerURL](tokenissuerurl.md): The URL of the Privacy Pass token issuer.
+- [serviceURL](serviceurl.md): Deprecated. The endpoint of the service to fetch identity and blocking information.
+- [tokenIssuerURL](tokenissuerurl.md): Deprecated. The URL of the Privacy Pass token issuer.

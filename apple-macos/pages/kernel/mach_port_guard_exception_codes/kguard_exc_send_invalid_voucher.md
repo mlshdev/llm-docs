@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/mach_port_guard_exception_codes/kguard_exc_send_invalid_voucher](https://developer.apple.com/documentation/kernel/mach_port_guard_exception_codes/kguard_exc_send_invalid_voucher)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/mach_port_guard_exception_codes/kguard_exc_send_invalid_voucher
 
 # kGUARD_EXC_SEND_INVALID_VOUCHER
 

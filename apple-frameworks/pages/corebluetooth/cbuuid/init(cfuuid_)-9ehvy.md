@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corebluetooth/cbuuid/init(cfuuid:)-9ehvy](https://developer.apple.com/documentation/corebluetooth/cbuuid/init(cfuuid:)-9ehvy)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corebluetooth/cbuuid/init(cfuuid:)-9ehvy
 
 # init(CFUUID:)
 

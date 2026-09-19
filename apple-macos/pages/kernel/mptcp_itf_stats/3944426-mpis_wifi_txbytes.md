@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/mptcp_itf_stats/3944426-mpis_wifi_txbytes](https://developer.apple.com/documentation/kernel/mptcp_itf_stats/3944426-mpis_wifi_txbytes)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/mptcp_itf_stats/3944426-mpis_wifi_txbytes
 
 # mpis_wifi_txbytes
 

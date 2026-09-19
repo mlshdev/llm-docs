@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/corenfc/nfciso15693tag/getsysteminfo(requestflags:resulthandler:)](https://developer.apple.com/documentation/corenfc/nfciso15693tag/getsysteminfo(requestflags:resulthandler:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corenfc/nfciso15693tag/getsysteminfo(requestflags:resulthandler:)
 
 # getSystemInfo(requestFlags:resultHandler:)
 
@@ -10,8 +11,4 @@
 
 ```swift
 @preconcurrency func getSystemInfo(requestFlags flags: NFCISO15693RequestFlag, resultHandler: @escaping @Sendable (Result<NFCISO15693SystemInfo, any Error>) -> Void)
-```
-
-```swift
-func getSystemInfo(requestFlags flags: NFCISO15693RequestFlag, resultHandler: @escaping (Result<NFCISO15693SystemInfo, any Error>) -> Void)
 ```

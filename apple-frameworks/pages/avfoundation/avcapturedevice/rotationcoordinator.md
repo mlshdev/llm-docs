@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturedevice/rotationcoordinator](https://developer.apple.com/documentation/avfoundation/avcapturedevice/rotationcoordinator)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturedevice/rotationcoordinator
 
 # AVCaptureDevice.RotationCoordinator (Swift)
 
@@ -30,15 +31,12 @@ Correctly rotate the photos and movies your app captures, and optionally, a live
 
 - [videoRotationAngleForHorizonLevelCapture](rotationcoordinator/videorotationangleforhorizonlevelcapture.md): An angle the coordinator provides your app to apply to photos or videos it captures with the device so that they’re level relative to gravity.
 - [videoRotationAngleForHorizonLevelPreview](rotationcoordinator/videorotationangleforhorizonlevelpreview.md): An angle the coordinator provides your app to apply to the preview layer so that it’s level relative to gravity.
+- [videoRotationAngleRelative(toDeviceOrientation:)](rotationcoordinator/videorotationanglerelative%28todeviceorientation_%29.md): An angle the coordinator provides your app to apply to photos or videos it takes with the capture device so that they’re upright relative to an orientation your app provides.
 
 ### Inspecting a coordinator’s configuration
 
 - [device](rotationcoordinator/device.md): The capture device the coordinator monitors to track its physical rotation.
 - [previewLayer](rotationcoordinator/previewlayer.md): The layer that displays a camera preview the coordinator calculates a video rotation angle for.
-
-### Instance Methods
-
-- [videoRotationAngleRelative(toDeviceOrientation:)](rotationcoordinator/videorotationanglerelative%28todeviceorientation_%29.md): Returns a video rotation angle in degrees from this camera relative to the provided orientation.
 
 ## Relationships
 
@@ -85,15 +83,12 @@ Correctly rotate the photos and movies your app captures, and optionally, a live
 
 - [videoRotationAngleForHorizonLevelCapture](rotationcoordinator/videorotationangleforhorizonlevelcapture.md): An angle the coordinator provides your app to apply to photos or videos it captures with the device so that they’re level relative to gravity.
 - [videoRotationAngleForHorizonLevelPreview](rotationcoordinator/videorotationangleforhorizonlevelpreview.md): An angle the coordinator provides your app to apply to the preview layer so that it’s level relative to gravity.
+- [videoRotationAngleRelativeToDeviceOrientation:](rotationcoordinator/videorotationanglerelative%28todeviceorientation_%29.md): An angle the coordinator provides your app to apply to photos or videos it takes with the capture device so that they’re upright relative to an orientation your app provides.
 
 ### Inspecting a coordinator’s configuration
 
 - [device](rotationcoordinator/device.md): The capture device the coordinator monitors to track its physical rotation.
 - [previewLayer](rotationcoordinator/previewlayer.md): The layer that displays a camera preview the coordinator calculates a video rotation angle for.
-
-### Instance Methods
-
-- [videoRotationAngleRelativeToDeviceOrientation:](rotationcoordinator/videorotationanglerelative%28todeviceorientation_%29.md): Returns a video rotation angle in degrees from this camera relative to the provided orientation.
 
 ## Relationships
 

@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/understand-workflows/create-and-edit-credentials.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/understand-workflows/create-and-edit-credentials.md)
+> Pinned source for n8n main: [docs/build/understand-workflows/create-and-edit-credentials.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/understand-workflows/create-and-edit-credentials.md)
 
 # Create and edit credentials
 
@@ -221,7 +221,7 @@ To load the template into your n8n instance:
 
 1. Download the workflow JSON file.
 2. Open a new workflow in your n8n instance.
-3. Copy in the JSON, or select **Workflow menu** ![Workflow menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/reusable-content/.gitbook/assets/three-dots-horizontal.png) > **Import from file...**.
+3. Copy in the JSON, or select **Workflow menu** ![Workflow menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/reusable-content/.gitbook/assets/three-dots-horizontal.png) > **Import from file...**.
 
 The example workflows use Sticky Notes to guide you:
 
@@ -233,3 +233,12 @@ The example workflows use Sticky Notes to guide you:
 [^1]: n8n projects allow you to separate workflows, variables, and credentials into separate groups for easier management. Projects make it easier for teams to collaborate by sharing and compartmentalizing related resources.
 
 [^2]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
+
+## Related resources
+
+- [Understand workflows](https://docs.n8n.io/build/understand-workflows)
+- [Create and run workflows](https://docs.n8n.io/build/understand-workflows/create-and-run-workflows)
+- [Save and publish workflows](https://docs.n8n.io/build/understand-workflows/save-and-publish-workflows)
+- [Use Gateway credits](https://docs.n8n.io/build/understand-workflows/use-gateway-credits)
+- [Workflow components](https://docs.n8n.io/build/understand-workflows/workflow-components)
+- [Understand executions](https://docs.n8n.io/build/understand-workflows/understand-executions)

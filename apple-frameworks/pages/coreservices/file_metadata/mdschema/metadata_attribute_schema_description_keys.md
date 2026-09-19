@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/file_metadata/mdschema/metadata_attribute_schema_description_keys](https://developer.apple.com/documentation/coreservices/file_metadata/mdschema/metadata_attribute_schema_description_keys)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/file_metadata/mdschema/metadata_attribute_schema_description_keys
 
 # Metadata Attribute Schema Description Keys
 

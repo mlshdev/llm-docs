@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiimagepickercontroller/videoexportpreset](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/videoexportpreset)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiimagepickercontroller/videoexportpreset
 
 # videoExportPreset (Swift)
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 11.0+ (deprecated in 27.0) · iPadOS 11.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 11.0+ (deprecated in 27.0) · iPadOS 11.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 The preset to use when preparing video for export to your app.
 
@@ -33,7 +34,7 @@ The value of this key is one of the export presets supported by the [AVAssetExpo
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 11.0+ (deprecated in 27.0) · iPadOS 11.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 11.0+ (deprecated in 27.0) · iPadOS 11.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 The preset to use when preparing video for export to your app.
 

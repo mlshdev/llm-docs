@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generatedcontent/jsonstring](https://developer.apple.com/documentation/foundationmodels/generatedcontent/jsonstring)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generatedcontent/jsonstring
 
 # jsonString
 
@@ -18,7 +19,7 @@ var jsonString: String { get }
 
 ## Discussion
 
-Use this type to retrieve a JSON representation, like:
+Use this property to retrieve a JSON representation, like:
 
 ```swift
 // Create an object with properties.

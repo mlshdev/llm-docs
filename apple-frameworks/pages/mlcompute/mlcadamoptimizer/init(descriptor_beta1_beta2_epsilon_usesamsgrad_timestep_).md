@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mlcompute/mlcadamoptimizer/init(descriptor:beta1:beta2:epsilon:usesamsgrad:timestep:)](https://developer.apple.com/documentation/mlcompute/mlcadamoptimizer/init(descriptor:beta1:beta2:epsilon:usesamsgrad:timestep:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mlcompute/mlcadamoptimizer/init(descriptor:beta1:beta2:epsilon:usesamsgrad:timestep:)
 
 # init(descriptor:beta1:beta2:epsilon:usesAMSGrad:timeStep:) (Swift)
 

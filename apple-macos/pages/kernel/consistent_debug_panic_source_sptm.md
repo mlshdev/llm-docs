@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/consistent_debug_panic_source_sptm](https://developer.apple.com/documentation/kernel/consistent_debug_panic_source_sptm)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/consistent_debug_panic_source_sptm
 
 # CONSISTENT_DEBUG_PANIC_SOURCE_SPTM
 

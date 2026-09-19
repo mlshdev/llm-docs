@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/cgpsconvertercallbacks/init(version:begindocument:enddocument:beginpage:endpage:noteprogress:notemessage:releaseinfo:)](https://developer.apple.com/documentation/coregraphics/cgpsconvertercallbacks/init(version:begindocument:enddocument:beginpage:endpage:noteprogress:notemessage:releaseinfo:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coregraphics/cgpsconvertercallbacks/init(version:begindocument:enddocument:beginpage:endpage:noteprogress:notemessage:releaseinfo:)
 
 # init(version:beginDocument:endDocument:beginPage:endPage:noteProgress:noteMessage:releaseInfo:)
 

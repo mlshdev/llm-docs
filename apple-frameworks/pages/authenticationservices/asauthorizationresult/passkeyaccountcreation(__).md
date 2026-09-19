@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/authenticationservices/asauthorizationresult/passkeyaccountcreation(_:)](https://developer.apple.com/documentation/authenticationservices/asauthorizationresult/passkeyaccountcreation(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/authenticationservices/asauthorizationresult/passkeyaccountcreation(_:)
 
 # ASAuthorizationResult.passkeyAccountCreation(\_:)
 

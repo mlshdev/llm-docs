@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/visionos/creating-fully-immersive-experiences](https://developer.apple.com/documentation/visionos/creating-fully-immersive-experiences)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/visionos/creating-fully-immersive-experiences
 
 # Creating fully immersive experiences in your app
 

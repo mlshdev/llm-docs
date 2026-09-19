@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/applying-vimage-operations-to-video-sample-buffers](https://developer.apple.com/documentation/accelerate/applying-vimage-operations-to-video-sample-buffers)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/applying-vimage-operations-to-video-sample-buffers
 
 # Applying vImage operations to video sample buffers (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appstorereceipts/validating-receipts-on-the-device](https://developer.apple.com/documentation/appstorereceipts/validating-receipts-on-the-device)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstorereceipts/validating-receipts-on-the-device
 
 # Validating receipts on the device
 
@@ -17,7 +18,7 @@ When users install apps from the App Store, the app contains a cryptographically
 
 > **Note**
 
->  The receipt isn’t necessary if you use [AppTransaction](../storekit/apptransaction.md) to validate the app download, or [Transaction](../storekit/transaction.md) to validate in-app purchases. Only use the receipt if your app uses the [Original API for In-App Purchase](../storekit/original-api-for-in-app-purchase.md), or needs the receipt to validate the app download because it can’t use [AppTransaction](../storekit/apptransaction.md).
+>  The receipt isn’t necessary if you use [AppTransaction](../storekit/apptransaction.md) to validate the app download, or [Transaction](../storekit/transaction.md) to validate in-app purchases. Only use the receipt if your app uses the [Original API for Apple In-App Purchase](../storekit/original-api-for-in-app-purchase.md), or needs the receipt to validate the app download because it can’t use [AppTransaction](../storekit/apptransaction.md).
 
 Validating the receipt locally requires you to develop or use code to read and decode the receipt as a PKCS #7 container, as defined by [RFC 2315](https://www.rfc-editor.org/rfc/rfc2315). The App Store encodes the payload of the container using Abstract Syntax Notation One (ASN.1), as defined by [ITU-T X.690](https://www.itu.int/rec/T-REC-X.690/). The payload contains a set of receipt attributes. Each receipt attribute contains a type, a version, and a value.
 

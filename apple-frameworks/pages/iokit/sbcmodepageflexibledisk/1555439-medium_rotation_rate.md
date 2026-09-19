@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/sbcmodepageflexibledisk/1555439-medium_rotation_rate](https://developer.apple.com/documentation/iokit/sbcmodepageflexibledisk/1555439-medium_rotation_rate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/sbcmodepageflexibledisk/1555439-medium_rotation_rate
 
 # MEDIUM_ROTATION_RATE
 

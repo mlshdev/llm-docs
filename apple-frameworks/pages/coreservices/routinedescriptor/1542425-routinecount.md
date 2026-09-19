@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/routinedescriptor/1542425-routinecount](https://developer.apple.com/documentation/coreservices/routinedescriptor/1542425-routinecount)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/routinedescriptor/1542425-routinecount
 
 # routineCount
 

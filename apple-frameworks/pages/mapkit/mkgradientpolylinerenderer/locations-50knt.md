@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mapkit/mkgradientpolylinerenderer/locations-50knt](https://developer.apple.com/documentation/mapkit/mkgradientpolylinerenderer/locations-50knt)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mapkit/mkgradientpolylinerenderer/locations-50knt
 
 # locations
 

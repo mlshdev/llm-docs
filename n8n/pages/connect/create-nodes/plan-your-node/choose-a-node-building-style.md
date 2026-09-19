@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/connect/create-nodes/plan-your-node/choose-a-node-building-style.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/connect/create-nodes/plan-your-node/choose-a-node-building-style.md)
+> Pinned source for n8n main: [docs/connect/create-nodes/plan-your-node/choose-a-node-building-style.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/connect/create-nodes/plan-your-node/choose-a-node-building-style.md)
 
 # Choose your node building approach <a id="choose-your-node-building-approach"></a>
 
@@ -23,6 +23,13 @@ The programmatic style is more verbose, and it puts your node's behavior in code
 - A node that needs feature-based versioning to branch its behavior in code, using `this.isNodeFeatureEnabled()`. Declarative nodes can still use light versioning, and can read feature flags with `@feature` in `displayOptions`. Refer to [Node versioning](https://docs.n8n.io/connect/create-nodes/build-your-node/reference/versioning) for more information on types of versioning.
 
 If your node isn't on this list, build it in the declarative style.
+
+> **Info**
+> **Trigger nodes must use the programmatic style**
+>
+> The declarative style doesn't support trigger nodes. Build every trigger node in the programmatic style, even when the action node for the same service is declarative.
+>
+> You can mix both styles in one node package. For example, a package submitted for [verification](https://docs.n8n.io/connect/create-nodes/build-your-node/reference/verification-guidelines) can contain a declarative-style action node and a programmatic-style trigger node for the same service.
 
 ## Data handling differences <a id="data-handling-differences"></a>
 

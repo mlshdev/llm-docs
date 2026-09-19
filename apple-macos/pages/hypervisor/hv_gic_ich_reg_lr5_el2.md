@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_gic_ich_reg_lr5_el2](https://developer.apple.com/documentation/hypervisor/hv_gic_ich_reg_lr5_el2)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_gic_ich_reg_lr5_el2
 
 # HV_GIC_ICH_REG_LR5_EL2 (Swift)
 

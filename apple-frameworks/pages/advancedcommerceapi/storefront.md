@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/advancedcommerceapi/storefront](https://developer.apple.com/documentation/advancedcommerceapi/storefront)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/advancedcommerceapi/storefront
 
 # storefront
 
@@ -40,6 +41,6 @@ To get storefront information in your app, use [Storefront](../storekit/storefro
 - [refundAmount](refundamount.md): A refund amount, in milliunits of the currency.
 - [refundReason](refundreason.md): A reason to request a refund.
 - [refundRiskingPreference](refundriskingpreference.md): A Boolean value that indicates whether the App Store asks you for consumption data to help inform the refund decision.
-- [SKU](sku.md): The product identifier of an in-app purchase product you manage in your own system.
+- [SKU](sku.md): The product identifier of an Apple In-App Purchase product you manage in your own system.
 - [taxCode](taxcode.md): A tax code that applies to a SKU.
 - [targetProductId](targetproductid.md): A generic product identifier that represents all Advanced Commerce API products to App Store Connect, which you use when you migrate a product.

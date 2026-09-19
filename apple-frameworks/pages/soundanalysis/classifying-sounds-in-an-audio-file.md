@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/soundanalysis/classifying-sounds-in-an-audio-file](https://developer.apple.com/documentation/soundanalysis/classifying-sounds-in-an-audio-file)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/soundanalysis/classifying-sounds-in-an-audio-file
 
 # Classifying Sounds in an Audio File (Swift)
 
@@ -76,6 +77,7 @@ class ResultsObserver: NSObject, SNResultsObserving {
         // Print the classification's name (label) with its confidence.
         print("\(classification.identifier): \(percentString) confidence.\n")
     }
+
 
     /// Notifies the observer when a request generates an error.
     func request(_ request: SNRequest, didFailWithError error: Error) {
@@ -240,6 +242,7 @@ class ResultsObserver: NSObject, SNResultsObserving {
         // Print the classification's name (label) with its confidence.
         print("\(classification.identifier): \(percentString) confidence.\n")
     }
+
 
     /// Notifies the observer when a request generates an error.
     func request(_ request: SNRequest, didFailWithError error: Error) {

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photos/phassetresourceuploadjobchangerequest](https://developer.apple.com/documentation/photos/phassetresourceuploadjobchangerequest)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photos/phassetresourceuploadjobchangerequest
 
 # PHAssetResourceUploadJobChangeRequest (Swift)
 
@@ -18,7 +19,7 @@ class PHAssetResourceUploadJobChangeRequest
 
 ## Overview
 
-When the extension’s principal class receives a call to `process` background uploads, it can create new [PHAssetResourceUploadJob](phassetresourceuploadjob.md)s through calls to perform changes on a PHPhotoLibrary using [PHAssetResourceUploadJobChangeRequest](phassetresourceuploadjobchangerequest.md) and any in-flight upload jobs can be handled by updating their state to mark them as acknowledged, or to be retried. The maximum number of jobs that can be in flight is limited to the `PHAssetResourceUploadJob.jobLimit`.
+When the extension’s principal class receives a call to `process` background uploads, it can create new [PHAssetResourceUploadJob](phassetresourceuploadjob.md)s through calls to perform changes on a PHPhotoLibrary using [PHAssetResourceUploadJobChangeRequest](phassetresourceuploadjobchangerequest.md) and any in-flight upload jobs can be handled by updating their state to mark them as acknowledged, or to be retried. The maximum number of jobs that can be in flight is limited to the [jobLimit](phassetresourceuploadjob/joblimit.md).
 
 [PHAssetResourceUploadJobChangeRequest](phassetresourceuploadjobchangerequest.md) can only be created or used within a photo library change block. For details on change blocks, see [PHPhotoLibrary](phphotolibrary.md).
 
@@ -71,7 +72,7 @@ When the extension’s principal class receives a call to `process` background u
 ### Background resource upload extensions
 
 - [Uploading asset resources in the background](../photokit/uploading-asset-resources-in-the-background.md): Enable reliable cloud backup for photo library assets with background processing.
-- [PHBackgroundResourceUploadExtension](phbackgroundresourceuploadextension.md): Deprecated.
+- [PHBackgroundResourceUploadExtension](phbackgroundresourceuploadextension.md): Deprecated. A protocol to interact with asset resource upload jobs during background processing.
 - [PHAssetResourceUploadJob](phassetresourceuploadjob.md): An object that represents a request to upload an asset resource.
 
 # PHAssetResourceUploadJobChangeRequest (Objective-C)
@@ -92,7 +93,7 @@ Use within an application’s `com.apple.photos.background-upload` extension to 
 
 ## Overview
 
-When the extension’s principal class receives a call to `process` background uploads, it can create new [PHAssetResourceUploadJob](phassetresourceuploadjob.md)s through calls to perform changes on a PHPhotoLibrary using [PHAssetResourceUploadJobChangeRequest](phassetresourceuploadjobchangerequest.md) and any in-flight upload jobs can be handled by updating their state to mark them as acknowledged, or to be retried. The maximum number of jobs that can be in flight is limited to the `PHAssetResourceUploadJob.jobLimit`.
+When the extension’s principal class receives a call to `process` background uploads, it can create new [PHAssetResourceUploadJob](phassetresourceuploadjob.md)s through calls to perform changes on a PHPhotoLibrary using [PHAssetResourceUploadJobChangeRequest](phassetresourceuploadjobchangerequest.md) and any in-flight upload jobs can be handled by updating their state to mark them as acknowledged, or to be retried. The maximum number of jobs that can be in flight is limited to the [jobLimit](phassetresourceuploadjob/joblimit.md).
 
 [PHAssetResourceUploadJobChangeRequest](phassetresourceuploadjobchangerequest.md) can only be created or used within a photo library change block. For details on change blocks, see [PHPhotoLibrary](phphotolibrary.md).
 

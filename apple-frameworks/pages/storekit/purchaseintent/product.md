@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/purchaseintent/product](https://developer.apple.com/documentation/storekit/purchaseintent/product)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/purchaseintent/product
 
 # product
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 14.4+
 
-The product information of the In-App Purchase the customer selects to purchase outside of the app.
+The product information of the Apple In-App Purchase the customer selects to purchase outside of the app.
 
 ## Declaration
 
@@ -16,7 +17,7 @@ let product: Product
 
 ## Mentioned In
 
-- [Supporting promoted In-App Purchases in your app](../supporting-promoted-in-app-purchases-in-your-app.md)
+- [Supporting promoted Apple In-App Purchases in your app](../supporting-promoted-in-app-purchases-in-your-app.md)
 - [Supporting win-back offers in your app](../supporting-win-back-offers-in-your-app.md)
 
 <a id="Discussion"></a>
@@ -29,4 +30,4 @@ To enable users to complete the purchase they start on the App Store, call [purc
 
 ### Identifying the product
 
-- [id](id.md): The product identifier of the In-App Purchase that the customer selects to purchase outside of the app.
+- [id](id.md): The product identifier of the Apple In-App Purchase that the customer selects to purchase outside of the app.

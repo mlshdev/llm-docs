@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fscreatelinkresult](https://developer.apple.com/documentation/fskit/fscreatelinkresult)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/fskit/fscreatelinkresult
 
 # FSCreateLinkResult (Swift)
 

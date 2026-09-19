@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/finding_an_original_media_track_from_a_hint_track](https://developer.apple.com/documentation/quicktime-file-format/finding_an_original_media_track_from_a_hint_track)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/quicktime-file-format/finding_an_original_media_track_from_a_hint_track
 
 # Finding an original media track from a hint track
 

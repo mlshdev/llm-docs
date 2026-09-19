@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/apple_ads/get-keyword-level-within-ad-group-reports](https://developer.apple.com/documentation/apple_ads/get-keyword-level-within-ad-group-reports)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/apple_ads/get-keyword-level-within-ad-group-reports
 
 # Get Keyword-Level within Ad Group Reports
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nspressgesturerecognizer/numberoftouchesrequired](https://developer.apple.com/documentation/appkit/nspressgesturerecognizer/numberoftouchesrequired)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nspressgesturerecognizer/numberoftouchesrequired
 
 # numberOfTouchesRequired (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/simd_any(_:)-69h3c](https://developer.apple.com/documentation/simd/simd_any(_:)-69h3c)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/simd/simd_any(_:)-69h3c
 
 # simd_any(\_:) (Swift)
 

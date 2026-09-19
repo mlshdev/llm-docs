@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional_video_applications/fxparameterretrievalapi_v7/imagesize(_:fromparameter:at:)](https://developer.apple.com/documentation/professional_video_applications/fxparameterretrievalapi_v7/imagesize(_:fromparameter:at:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/fxparameterretrievalapi_v7/imagesize(_:fromparameter:at:)
 
 # imageSize(\_:fromParameter:at:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/walletpasses/pass/barcodes-data.dictionary](https://developer.apple.com/documentation/walletpasses/pass/barcodes-data.dictionary)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/walletpasses/pass/barcodes-data.dictionary
 
 # Pass.Barcodes
 
@@ -29,7 +30,7 @@ object Pass.Barcodes
 ## Mentioned In
 
 - [Creating a coupon pass](../creating-a-coupon-pass.md)
-- [Creating a poster generic pass](../creating-a-poster-generic-pass.md)
+- [Creating a Poster Generic Pass](../creating-a-poster-generic-pass.md)
 - [Creating a store card pass](../creating-a-store-card-pass.md)
 - [Creating a poster event pass using semantic tags](../creating-an-event-pass-using-semantic-tags.md)
 

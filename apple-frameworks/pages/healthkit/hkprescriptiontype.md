@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkprescriptiontype](https://developer.apple.com/documentation/healthkit/hkprescriptiontype)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkprescriptiontype
 
 # HKPrescriptionType (Swift)
 
@@ -25,6 +26,7 @@ Use this data type to request permission to save vision prescriptions to the Hea
 ```swift
 // Create the prescription data type.
 let visionPrescriptionType = HKObjectType.visionPrescriptionType()
+
 
 // Request authorization to save vision prescription samples.
 store.requestAuthorization(toShare: [visionPrescriptionType],
@@ -97,6 +99,7 @@ Use this data type to request permission to save vision prescriptions to the Hea
 ```swift
 // Create the prescription data type.
 let visionPrescriptionType = HKObjectType.visionPrescriptionType()
+
 
 // Request authorization to save vision prescription samples.
 store.requestAuthorization(toShare: [visionPrescriptionType],

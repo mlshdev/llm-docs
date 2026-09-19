@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tvuikit/tvmonogramview/personnamecomponents](https://developer.apple.com/documentation/tvuikit/tvmonogramview/personnamecomponents)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/tvuikit/tvmonogramview/personnamecomponents
 
 # personNameComponents (Swift)
 
 **Framework:** TVUIKit  
 **Kind:** Instance Property  
-**Availability:** tvOS 12.0+ (deprecated in 27.0)
+**Availability:** tvOS 12.0+ (deprecated in 27.2)
 
 The names used to create a monogram image.
 
@@ -32,7 +33,7 @@ If no image is provided, the monogram object creates an image using the first in
 
 **Framework:** TVUIKit  
 **Kind:** Instance Property  
-**Availability:** tvOS 12.0+ (deprecated in 27.0)
+**Availability:** tvOS 12.0+ (deprecated in 27.2)
 
 The names used to create a monogram image.
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphiccornerstacktext](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccornerstacktext)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccornerstacktext
 
 # CLKComplicationTemplateGraphicCornerStackText (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 A template for displaying stacked text in the clock face’s corner.
 
@@ -66,7 +67,7 @@ The system always displays the outer text as white. The inner text can be multic
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 A template for displaying stacked text in the clock face’s corner.
 

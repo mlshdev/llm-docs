@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/message/messages-swift.type.property](https://developer.apple.com/documentation/storekit/message/messages-swift.type.property)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/message/messages-swift.type.property
 
 # messages
 
@@ -16,7 +17,7 @@ static var messages: Message.Messages { get }
 
 ## Mentioned In
 
-- [Testing failing subscription renewals and In-App Purchases](../testing-failing-subscription-renewals-and-in-app-purchases.md)
+- [Testing failing subscription renewals and Apple In-App Purchases](../testing-failing-subscription-renewals-and-in-app-purchases.md)
 - [Merchandising win-back offers in your app](../merchandising-win-back-offers-in-your-app.md)
 
 <a id="Discussion"></a>

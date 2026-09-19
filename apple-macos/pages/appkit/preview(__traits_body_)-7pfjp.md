@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/preview(_:traits:body:)-7pfjp](https://developer.apple.com/documentation/appkit/preview(_:traits:body:)-7pfjp)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/preview(_:traits:body:)-7pfjp
 
 # Preview(\_:traits:body:)
 

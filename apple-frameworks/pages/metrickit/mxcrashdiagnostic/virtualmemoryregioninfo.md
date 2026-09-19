@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metrickit/mxcrashdiagnostic/virtualmemoryregioninfo](https://developer.apple.com/documentation/metrickit/mxcrashdiagnostic/virtualmemoryregioninfo)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metrickit/mxcrashdiagnostic/virtualmemoryregioninfo
 
 # virtualMemoryRegionInfo (Swift)
 
 **Framework:** MetricKit  
 **Kind:** Instance Property  
-**Availability:** iOS 14.0+ (deprecated in 27.0) · iPadOS 14.0+ (deprecated in 27.0) · Mac Catalyst 14.0+ (deprecated in 27.0) · macOS 12.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 14.0+ (deprecated in 27.2) · iPadOS 14.0+ (deprecated in 27.2) · Mac Catalyst 14.0+ (deprecated in 27.0) · macOS 12.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Information about the region of memory an app accessed incorrectly, resulting in a bad-access crash.
 
@@ -30,7 +31,7 @@ var virtualMemoryRegionInfo: String? { get }
 
 **Framework:** MetricKit  
 **Kind:** Instance Property  
-**Availability:** iOS 14.0+ (deprecated in 27.0) · iPadOS 14.0+ (deprecated in 27.0) · Mac Catalyst 14.0+ (deprecated in 27.0) · macOS 12.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 14.0+ (deprecated in 27.2) · iPadOS 14.0+ (deprecated in 27.2) · Mac Catalyst 14.0+ (deprecated in 27.0) · macOS 12.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Information about the region of memory an app accessed incorrectly, resulting in a bad-access crash.
 

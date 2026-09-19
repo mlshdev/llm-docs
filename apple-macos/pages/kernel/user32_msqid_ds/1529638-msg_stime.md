@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/user32_msqid_ds/1529638-msg_stime](https://developer.apple.com/documentation/kernel/user32_msqid_ds/1529638-msg_stime)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/user32_msqid_ds/1529638-msg_stime
 
 # msg_stime
 

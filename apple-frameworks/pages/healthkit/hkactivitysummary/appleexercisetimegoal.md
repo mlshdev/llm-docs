@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkactivitysummary/appleexercisetimegoal](https://developer.apple.com/documentation/healthkit/hkactivitysummary/appleexercisetimegoal)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkactivitysummary/appleexercisetimegoal
 
 # appleExerciseTimeGoal (Swift)
 
 **Framework:** HealthKit  
 **Kind:** Instance Property  
-**Availability:** iOS 9.3+ (deprecated in 27.0) · iPadOS 9.3+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 13.0+ · visionOS 1.0+ (deprecated in 27.0) · watchOS 2.2+ (deprecated in 27.0)
+**Availability:** iOS 9.3+ (deprecated in 27.2) · iPadOS 9.3+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 13.0+ · visionOS 1.0+ (deprecated in 27.2) · watchOS 2.2+ (deprecated in 27.2)
 
 The user’s daily exercise goal.
 
@@ -46,7 +47,7 @@ The [HKQuantity](../hkquantity.md) object for this property must use time units.
 
 **Framework:** HealthKit  
 **Kind:** Instance Property  
-**Availability:** iOS 9.3+ (deprecated in 27.0) · iPadOS 9.3+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 13.0+ · visionOS 1.0+ (deprecated in 27.0) · watchOS 2.2+ (deprecated in 27.0)
+**Availability:** iOS 9.3+ (deprecated in 27.2) · iPadOS 9.3+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 13.0+ · visionOS 1.0+ (deprecated in 27.2) · watchOS 2.2+ (deprecated in 27.2)
 
 The user’s daily exercise goal.
 

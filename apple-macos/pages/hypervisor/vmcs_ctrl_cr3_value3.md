@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/vmcs_ctrl_cr3_value3](https://developer.apple.com/documentation/hypervisor/vmcs_ctrl_cr3_value3)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/vmcs_ctrl_cr3_value3
 
 # VMCS_CTRL_CR3_VALUE3 (Swift)
 

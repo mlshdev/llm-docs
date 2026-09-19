@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/capture-setup](https://developer.apple.com/documentation/avfoundation/capture-setup)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/capture-setup
 
 # Capture setup (Swift)
 
@@ -42,6 +43,7 @@ The main parts of the capture architecture are sessions, inputs, and outputs: Ca
 - [Supporting Center Stage front camera in your iOS app](supporting-center-stage-front-camera-in-your-ios-app.md): Enable Center Stage for photos and videos on the iPhone front camera.
 - [AVMultiCamPiP: Capturing from Multiple Cameras](avmulticampip-capturing-from-multiple-cameras.md): Simultaneously record the output from the front and back cameras into a single movie file by using a multi-camera capture session.
 - [AVCamBarcode: detecting barcodes and faces](avcambarcode-detecting-barcodes-and-faces.md): Identify machine readable codes or faces by using the camera.
+- [Registering a camera capture accessory on iPhone Duo](registering-a-camera-capture-accessory-on-iphone-duo.md): Provide content to the person in front of the camera by pairing it with your capture interface.
 - [AVCaptureSession](avcapturesession.md): An object that configures capture behavior and coordinates the flow of data from input devices to capture outputs.
 - [AVCaptureMultiCamSession](avcapturemulticamsession.md): A capture session that supports simultaneous capture from multiple inputs of the same media type.
 - [AVCaptureInput](avcaptureinput.md): An abstract superclass for objects that provide input data to a capture session.
@@ -52,6 +54,7 @@ The main parts of the capture architecture are sessions, inputs, and outputs: Ca
 
 - [Choosing a capture device](choosing-a-capture-device.md): Select the front or back camera, or use advanced features like the TrueDepth camera or dual camera.
 - [Adopting smart framing in your camera app](adopting-smart-framing-in-your-camera-app.md): Capture the optimal shot by providing automatic framing recommendations.
+- [Supporting device rotation in your camera app](supporting-device-rotation-in-your-camera-app.md): Keep your camera preview and captured photos and video upright by applying the angles a rotation coordinator reports.
 - [AVCaptureDevice](avcapturedevice.md): An object that represents a hardware or virtual capture device like a camera or microphone.
 - [AVCaptureDeviceInput](avcapturedeviceinput.md): An object that provides media input from a capture device to a capture session.
 - [AVContinuityDevice](avcontinuitydevice.md): A class that represents a physical iOS device that’s nearby and can provide access to its cameras and microphones.
@@ -154,6 +157,7 @@ The main parts of the capture architecture are sessions, inputs, and outputs: Ca
 - [Capturing Cinematic video](capturing-cinematic-video.md): Capture video with an adjustable depth of field and focus points.
 - [AVMultiCamPiP: Capturing from Multiple Cameras](avmulticampip-capturing-from-multiple-cameras.md): Simultaneously record the output from the front and back cameras into a single movie file by using a multi-camera capture session.
 - [AVCamBarcode: detecting barcodes and faces](avcambarcode-detecting-barcodes-and-faces.md): Identify machine readable codes or faces by using the camera.
+- [Registering a camera capture accessory on iPhone Duo](registering-a-camera-capture-accessory-on-iphone-duo.md): Provide content to the person in front of the camera by pairing it with your capture interface.
 - [AVCaptureSession](avcapturesession.md): An object that configures capture behavior and coordinates the flow of data from input devices to capture outputs.
 - [AVCaptureMultiCamSession](avcapturemulticamsession.md): A capture session that supports simultaneous capture from multiple inputs of the same media type.
 - [AVCaptureInput](avcaptureinput.md): An abstract superclass for objects that provide input data to a capture session.

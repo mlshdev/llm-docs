@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coredata/setting-up-a-core-data-stack-manually](https://developer.apple.com/documentation/coredata/setting-up-a-core-data-stack-manually)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coredata/setting-up-a-core-data-stack-manually
 
 # Setting up a Core Data stack manually
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mlcompute/mlclosslayer/categoricalcrossentropy(reductiontype:labelsmoothing:classcount:weight:)](https://developer.apple.com/documentation/mlcompute/mlclosslayer/categoricalcrossentropy(reductiontype:labelsmoothing:classcount:weight:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mlcompute/mlclosslayer/categoricalcrossentropy(reductiontype:labelsmoothing:classcount:weight:)
 
 # categoricalCrossEntropy(reductionType:labelSmoothing:classCount:weight:) (Swift)
 

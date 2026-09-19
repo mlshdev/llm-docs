@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/virtualization/vzmacauxiliarystorage/init(contentsof:)](https://developer.apple.com/documentation/virtualization/vzmacauxiliarystorage/init(contentsof:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/virtualization/vzmacauxiliarystorage/init(contentsof:)
 
 # init(contentsOf:) (Swift)
 
 **Framework:** Virtualization  
 **Kind:** Initializer  
-**Availability:** macOS 12.0+ (deprecated in 27.0)
+**Availability:** macOS 12.0+ (deprecated in 27.2)
 
 ## Declaration
 
@@ -16,7 +17,7 @@ init(contentsOf URL: URL)
 
 **Framework:** Virtualization  
 **Kind:** Instance Method  
-**Availability:** macOS 12.0+ (deprecated in 27.0)
+**Availability:** macOS 12.0+ (deprecated in 27.2)
 
 ## Declaration
 

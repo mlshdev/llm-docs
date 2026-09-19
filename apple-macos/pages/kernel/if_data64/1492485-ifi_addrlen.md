@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/if_data64/1492485-ifi_addrlen](https://developer.apple.com/documentation/kernel/if_data64/1492485-ifi_addrlen)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/if_data64/1492485-ifi_addrlen
 
 # ifi_addrlen
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uimutabletraits-13ja5](https://developer.apple.com/documentation/uikit/uimutabletraits-13ja5)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uimutabletraits-13ja5
 
 # UIMutableTraits
 
@@ -66,6 +67,7 @@ view.traitOverrides.theme = .monochrome
 
 ### Instance Properties
 
+- [navigationTitleAlignment](uimutabletraits-13ja5/navigationtitlealignment.md): Beta.
 - [systemPrefersReducedResourceUsage](uimutabletraits-13ja5/systemprefersreducedresourceusage.md)
 
 ### Subscripts

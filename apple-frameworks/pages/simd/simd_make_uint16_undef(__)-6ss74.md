@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/simd_make_uint16_undef(_:)-6ss74](https://developer.apple.com/documentation/simd/simd_make_uint16_undef(_:)-6ss74)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/simd/simd_make_uint16_undef(_:)-6ss74
 
 # simd_make_uint16_undef(\_:) (Swift)
 

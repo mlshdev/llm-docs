@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrclusterdescriptor/readattributeserverlist(with:)](https://developer.apple.com/documentation/matter/mtrclusterdescriptor/readattributeserverlist(with:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrclusterdescriptor/readattributeserverlist(with:)
 
 # readAttributeServerList(with:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/hiddriverkit/iohiddigitizertouchdata/rangechanged](https://developer.apple.com/documentation/hiddriverkit/iohiddigitizertouchdata/rangechanged)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hiddriverkit/iohiddigitizertouchdata/rangechanged
 
 # rangeChanged
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/oslog/oslogmessagecomponent/argumentnumbervalue](https://developer.apple.com/documentation/oslog/oslogmessagecomponent/argumentnumbervalue)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/oslog/oslogmessagecomponent/argumentnumbervalue
 
 # argumentNumberValue (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1576937-anonymous/kscsicmd_send_event](https://developer.apple.com/documentation/iokit/1576937-anonymous/kscsicmd_send_event)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1576937-anonymous/kscsicmd_send_event
 
 # kSCSICmd_SEND_EVENT
 

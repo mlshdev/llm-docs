@@ -1,17 +1,18 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/storekit-views](https://developer.apple.com/documentation/storekit/storekit-views)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/storekit-views
 
 # StoreKit views (Swift)
 
 **Framework:** StoreKit  
 **Kind:** API Collection
 
-Display a customizable In-App Purchase store using StoreKit views for SwiftUI.
+Display a customizable Apple In-App Purchase store using StoreKit views for SwiftUI.
 
 <a id="overview"></a>
 
 ## Overview
 
-The StoreKit views APIs provide UI to help you build a store for your In-App Purchases, and provide a way for customers to complete the purchase. The views support localization, so your customers see the product names, descriptions, and prices appropriate to their App Store storefront.
+The StoreKit views APIs provide UI to help you build a store for your Apple In-App Purchases, and provide a way for customers to complete the purchase. The views support localization, so your customers see the product names, descriptions, and prices appropriate to their App Store storefront.
 
 > **Related session from WWDC23**
 
@@ -19,16 +20,16 @@ The StoreKit views APIs provide UI to help you build a store for your In-App Pur
 
 StoreKit manages the layouts across all platforms, so the views look great on any device. You can use SwiftUI APIs to customize how the views integrate with your app.
 
-To use StoreKit views, configure your In-App Purchase metadata in App Store Connect, or in a StoreKit configuration file in Xcode if you’re testing your app. Next, create the views using [StoreView](storeview.md), [ProductView](productview.md), or [SubscriptionStoreView](subscriptionstoreview.md). Finally, customize the default views to match your app by using your own icons, backgrounds, and other styling. Use [Previews in Xcode](https://developer.apple.com/documentation/swiftui/previews-in-xcode) to see your progress as you iterate on your design.
+To use StoreKit views, configure your Apple In-App Purchase metadata in App Store Connect, or in a StoreKit configuration file in Xcode if you’re testing your app. Next, create the views using [StoreView](storeview.md), [ProductView](productview.md), or [SubscriptionStoreView](subscriptionstoreview.md). Finally, customize the default views to match your app by using your own icons, backgrounds, and other styling. Use [Previews in Xcode](https://developer.apple.com/documentation/swiftui/previews-in-xcode) to see your progress as you iterate on your design.
 
-For more information on configuring your In-App Purchase metadata, see [Manage In-App Purchases](https://help.apple.com/app-store-connect/#/devae49fb316). For more information on StoreKit configuration files in Xcode, see [Setting up StoreKit Testing in Xcode](https://developer.apple.com/documentation/xcode/setting-up-storekit-testing-in-xcode).
+For more information on configuring your Apple In-App Purchase metadata, see [Manage Apple In-App Purchases](https://help.apple.com/app-store-connect/#/devae49fb316). For more information on StoreKit configuration files in Xcode, see [Setting up StoreKit Testing in Xcode](https://developer.apple.com/documentation/xcode/setting-up-storekit-testing-in-xcode).
 
 ## Topics
 
-### Merchandising In-App Purchases, subscriptions, and offers
+### Merchandising Apple In-App Purchases, subscriptions, and offers
 
-- [ProductView](productview.md): A view that merchandises an individual In-App Purchase product.
-- [StoreView](storeview.md): A view that merchandises a collection of In-App Purchase products.
+- [ProductView](productview.md): A view that merchandises an individual Apple In-App Purchase product.
+- [StoreView](storeview.md): A view that merchandises a collection of Apple In-App Purchase products.
 - [SubscriptionStoreView](subscriptionstoreview.md): A view that merchandises a collection of auto-renewable subscription options that belong to the same subscription group.
 - [SubscriptionOfferView](subscriptionofferview.md)
 - [Backyard Birds: Building an app with SwiftData and widgets](https://developer.apple.com/documentation/swiftui/backyard-birds-sample): Create an app with persistent data, interactive widgets, and an all new in-app purchase experience.
@@ -37,8 +38,8 @@ For more information on configuring your In-App Purchase metadata, see [Manage I
 
 - [productViewStyle(\_:)](https://developer.apple.com/documentation/swiftui/view/productviewstyle%28_:%29): Sets the style for In-App Purchase product views within a view.
 - [productIconBorder()](https://developer.apple.com/documentation/swiftui/view/producticonborder%28%29): Adds a standard border to an in-app purchase product’s icon .
-- [ProductViewStyle](productviewstyle.md): A type that specifies the appearance and interaction of In-App Purchase products within the view hierarchy.
-- [ProductViewStyleConfiguration](productviewstyleconfiguration.md): The properties of an In-App Purchase product for use by custom product view styles.
+- [ProductViewStyle](productviewstyle.md): A type that specifies the appearance and interaction of Apple In-App Purchase products within the view hierarchy.
+- [ProductViewStyleConfiguration](productviewstyleconfiguration.md): The properties of an Apple In-App Purchase product for use by custom product view styles.
 
 ### Styling subscription store controls
 
@@ -145,13 +146,13 @@ For more information on configuring your In-App Purchase metadata, see [Manage I
 **Framework:** StoreKit  
 **Kind:** API Collection
 
-Display a customizable In-App Purchase store using StoreKit views for SwiftUI.
+Display a customizable Apple In-App Purchase store using StoreKit views for SwiftUI.
 
 <a id="overview"></a>
 
 ## Overview
 
-The StoreKit views APIs provide UI to help you build a store for your In-App Purchases, and provide a way for customers to complete the purchase. The views support localization, so your customers see the product names, descriptions, and prices appropriate to their App Store storefront.
+The StoreKit views APIs provide UI to help you build a store for your Apple In-App Purchases, and provide a way for customers to complete the purchase. The views support localization, so your customers see the product names, descriptions, and prices appropriate to their App Store storefront.
 
 > **Related session from WWDC23**
 
@@ -159,12 +160,12 @@ The StoreKit views APIs provide UI to help you build a store for your In-App Pur
 
 StoreKit manages the layouts across all platforms, so the views look great on any device. You can use SwiftUI APIs to customize how the views integrate with your app.
 
-To use StoreKit views, configure your In-App Purchase metadata in App Store Connect, or in a StoreKit configuration file in Xcode if you’re testing your app. Next, create the views using [StoreView](storeview.md), [ProductView](productview.md), or [SubscriptionStoreView](subscriptionstoreview.md). Finally, customize the default views to match your app by using your own icons, backgrounds, and other styling. Use [Previews in Xcode](https://developer.apple.com/documentation/swiftui/previews-in-xcode) to see your progress as you iterate on your design.
+To use StoreKit views, configure your Apple In-App Purchase metadata in App Store Connect, or in a StoreKit configuration file in Xcode if you’re testing your app. Next, create the views using [StoreView](storeview.md), [ProductView](productview.md), or [SubscriptionStoreView](subscriptionstoreview.md). Finally, customize the default views to match your app by using your own icons, backgrounds, and other styling. Use [Previews in Xcode](https://developer.apple.com/documentation/swiftui/previews-in-xcode) to see your progress as you iterate on your design.
 
-For more information on configuring your In-App Purchase metadata, see [Manage In-App Purchases](https://help.apple.com/app-store-connect/#/devae49fb316). For more information on StoreKit configuration files in Xcode, see [Setting up StoreKit Testing in Xcode](https://developer.apple.com/documentation/xcode/setting-up-storekit-testing-in-xcode).
+For more information on configuring your Apple In-App Purchase metadata, see [Manage Apple In-App Purchases](https://help.apple.com/app-store-connect/#/devae49fb316). For more information on StoreKit configuration files in Xcode, see [Setting up StoreKit Testing in Xcode](https://developer.apple.com/documentation/xcode/setting-up-storekit-testing-in-xcode).
 
 ## Topics
 
-### Merchandising In-App Purchases, subscriptions, and offers
+### Merchandising Apple In-App Purchases, subscriptions, and offers
 
 - [Backyard Birds: Building an app with SwiftData and widgets](https://developer.apple.com/documentation/swiftui/backyard-birds-sample): Create an app with persistent data, interactive widgets, and an all new in-app purchase experience.

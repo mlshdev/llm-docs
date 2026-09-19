@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/task_vm_info_data_t/3181882-ledger_tag_neural_nofootprint_co](https://developer.apple.com/documentation/kernel/task_vm_info_data_t/3181882-ledger_tag_neural_nofootprint_co)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/task_vm_info_data_t/3181882-ledger_tag_neural_nofootprint_co
 
 # ledger_tag_neural_nofootprint_compressed
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/playgroundsupport/playgroundpage/3029561-executionmode](https://developer.apple.com/documentation/playgroundsupport/playgroundpage/3029561-executionmode)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/playgroundsupport/playgroundpage/3029561-executionmode
 
 # executionMode
 

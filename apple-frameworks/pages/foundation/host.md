@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/host](https://developer.apple.com/documentation/foundation/host)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/host
 
 # Host (Swift)
 
 **Framework:** Foundation  
 **Kind:** Class  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 A representation of an individual host on the network.
 
@@ -74,7 +75,7 @@ An [Host](host.md) object contains all of the network addresses and names discov
 
 **Framework:** Foundation  
 **Kind:** Class  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 A representation of an individual host on the network.
 

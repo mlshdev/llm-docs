@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideodevicetransportstate/stopped](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideodevicetransportstate/stopped)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideodevicetransportstate/stopped
 
 # Stopped
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Device transport state is stopped.
 
@@ -26,5 +27,5 @@ The hardware necessary for I/O should be disabled.
 
 ### Transport states
 
-- [Prewarmed](prewarmed.md): Device transport state is prewarmed.
-- [Running](running.md): Device transport state is running.
+- [Prewarmed](prewarmed.md): Beta. Device transport state is prewarmed.
+- [Running](running.md): Beta. Device transport state is running.

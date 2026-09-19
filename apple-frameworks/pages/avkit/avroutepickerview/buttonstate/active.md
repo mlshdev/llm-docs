@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avroutepickerview/buttonstate/active](https://developer.apple.com/documentation/avkit/avroutepickerview/buttonstate/active)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avroutepickerview/buttonstate/active
 
 # AVRoutePickerView.ButtonState.active (Swift)
 
@@ -16,7 +17,7 @@ case active
 
 ## See Also
 
-### Button States
+### Button states
 
 - [AVRoutePickerView.ButtonState.normal](normal.md): The normal, or default, button state.
 - [AVRoutePickerView.ButtonState.normalHighlighted](normalhighlighted.md): The highlighted button state when a mouse-down event occurs inside the button.
@@ -38,7 +39,7 @@ AVRoutePickerViewButtonStateActive
 
 ## See Also
 
-### Button States
+### Button states
 
 - [AVRoutePickerViewButtonStateNormal](normal.md): The normal, or default, button state.
 - [AVRoutePickerViewButtonStateNormalHighlighted](normalhighlighted.md): The highlighted button state when a mouse-down event occurs inside the button.

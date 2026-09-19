@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsgraphicscontext/init(cgcontext:flipped:)-9cbad](https://developer.apple.com/documentation/appkit/nsgraphicscontext/init(cgcontext:flipped:)-9cbad)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsgraphicscontext/init(cgcontext:flipped:)-9cbad
 
 # init(cgContext:flipped:) (Swift)
 

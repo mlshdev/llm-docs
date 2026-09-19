@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/adjusting-saturation-and-applying-tone-mapping](https://developer.apple.com/documentation/accelerate/adjusting-saturation-and-applying-tone-mapping)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/adjusting-saturation-and-applying-tone-mapping
 
 # Adjusting saturation and applying tone mapping
 

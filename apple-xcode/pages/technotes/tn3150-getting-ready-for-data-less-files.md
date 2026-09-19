@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/technotes/tn3150-getting-ready-for-data-less-files](https://developer.apple.com/documentation/technotes/tn3150-getting-ready-for-data-less-files)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/technotes/tn3150-getting-ready-for-data-less-files
 
 # TN3150: Getting ready for dataless files
 

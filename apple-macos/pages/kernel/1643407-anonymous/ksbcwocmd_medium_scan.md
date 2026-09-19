@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1643407-anonymous/ksbcwocmd_medium_scan](https://developer.apple.com/documentation/kernel/1643407-anonymous/ksbcwocmd_medium_scan)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1643407-anonymous/ksbcwocmd_medium_scan
 
 # kSBCWOCmd_MEDIUM_SCAN
 

@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `fa4985146919262a6e9cdb946c50eec1ed81ffc9`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `56a86f70b4ea8b225c0e5e2231e42a4925931686`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -170,7 +170,7 @@
 - [Network volumes](pages/storage/network-volumes.md): Persistent, portable storage for your AI workloads. Review configuration, access methods, and usage guidance for managing storage on Runpod. (7924 bytes)
 - [High-performance storage](pages/storage/high-performance-storage.md): Premium storage tier for demanding AI workloads with up to 3x throughput and 4x IOPS. Review configuration and usage guidance for Runpod storage. (5239 bytes)
 - [S3-compatible API](pages/storage/s3-api.md): Use Runpod's S3-compatible API to access and manage your network volumes. Review configuration and usage guidance for Runpod storage. (26469 bytes)
-- [Global volumes](pages/storage/globalvolume.md): Learn how to create a global volume in Runpod and access your data from Pods across all data centers, with storage that persists across sessions. (6342 bytes)
+- [Global volumes](pages/storage/globalvolume.md): Learn how to create a global volume in Runpod and access your data from Pods across all data centers, with storage that persists across sessions. (7234 bytes)
 
 ## Public Endpoints
 

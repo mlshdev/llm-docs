@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiguidedaccessaccessibilityfeature/voiceover](https://developer.apple.com/documentation/uikit/uiguidedaccessaccessibilityfeature/voiceover)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiguidedaccessaccessibilityfeature/voiceover
 
 # voiceOver (Swift)
 

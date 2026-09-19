@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/mediadevice/mediaoutputdevice/init(id:displayname:capabilities:cangroupwithcurrentlyactivateddevices:devicetype:volumecontrol:canmute:requirednetworkendpoints:txtrecords:supportssimultaneoussessions:)](https://developer.apple.com/documentation/mediadevice/mediaoutputdevice/init(id:displayname:capabilities:cangroupwithcurrentlyactivateddevices:devicetype:volumecontrol:canmute:requirednetworkendpoints:txtrecords:supportssimultaneoussessions:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mediadevice/mediaoutputdevice/init(id:displayname:capabilities:cangroupwithcurrentlyactivateddevices:devicetype:volumecontrol:canmute:requirednetworkendpoints:txtrecords:supportssimultaneoussessions:)
 
 # init(id:displayName:capabilities:canGroupWithCurrentlyActivatedDevices:deviceType:volumeControl:canMute:requiredNetworkEndpoints:txtRecords:supportsSimultaneousSessions:)
 
@@ -31,7 +32,7 @@ init?(id: UUID, displayName: String, capabilities: MediaOutputDevice.Capabilitie
 
 ## Return Value
 
-A configured `MediaOutputDevice`, or `nil` if `networkEndpoints` is empty.
+A configured `MediaOutputDevice`, or `nil` if `networkEndpoints` is empty or `capabilities` is invalid.
 
 <a id="discussion"></a>
 

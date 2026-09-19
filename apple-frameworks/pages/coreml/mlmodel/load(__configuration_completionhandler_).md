@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreml/mlmodel/load(_:configuration:completionhandler:)](https://developer.apple.com/documentation/coreml/mlmodel/load(_:configuration:completionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreml/mlmodel/load(_:configuration:completionhandler:)
 
 # load(\_:configuration:completionHandler:) (Swift)
 

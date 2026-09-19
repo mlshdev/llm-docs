@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/sirikit/structuring-your-code-to-support-app-extensions](https://developer.apple.com/documentation/sirikit/structuring-your-code-to-support-app-extensions)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/sirikit/structuring-your-code-to-support-app-extensions
 
 # Structuring Your Code to Support App Extensions
 

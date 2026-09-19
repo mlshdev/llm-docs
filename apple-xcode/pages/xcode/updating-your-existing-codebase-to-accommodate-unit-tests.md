@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/updating-your-existing-codebase-to-accommodate-unit-tests](https://developer.apple.com/documentation/xcode/updating-your-existing-codebase-to-accommodate-unit-tests)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/updating-your-existing-codebase-to-accommodate-unit-tests
 
 # Updating your existing codebase to accommodate unit tests
 
@@ -86,6 +87,7 @@ In tests, write a different implementation of the `URLOpener` protocol that does
         }
     }
 
+
     @Test("throws unableToOpenAttachment when open fails")
     func throwsIfServiceCannotOpenAttachment() {
         service.isSuccessful = false
@@ -118,6 +120,7 @@ class AttachmentOpenerTests: XCTestCase {
         service.isSuccessful = true
         XCTAssertNoThrow(try attachmentOpener.openAttachment(file: location, with: service))
     }
+
 
     func testThrowIfServiceCannotOpenAttachment() {
         service.isSuccessful = false

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/vnode_fsparam/1562427-vnfs_filesize](https://developer.apple.com/documentation/kernel/vnode_fsparam/1562427-vnfs_filesize)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/vnode_fsparam/1562427-vnfs_filesize
 
 # vnfs_filesize
 

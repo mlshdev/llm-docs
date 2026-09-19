@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstextstoragedelegate/textstorage(_:willprocessediting:range:changeinlength:)](https://developer.apple.com/documentation/appkit/nstextstoragedelegate/textstorage(_:willprocessediting:range:changeinlength:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstextstoragedelegate/textstorage(_:willprocessediting:range:changeinlength:)
 
 # textStorage(\_:willProcessEditing:range:changeInLength:) (Swift)
 

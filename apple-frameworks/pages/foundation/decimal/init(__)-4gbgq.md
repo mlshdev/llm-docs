@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/decimal/init(_:)-4gbgq](https://developer.apple.com/documentation/foundation/decimal/init(_:)-4gbgq)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/decimal/init(_:)-4gbgq
 
 # init(\_:)
 

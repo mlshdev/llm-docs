@@ -1,0 +1,23 @@
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/intentparameter/init(description:default:size:inputconnectionbehavior:)-8dq9e
+
+# init(description:default:size:inputConnectionBehavior:)
+
+**Framework:** App Intents  
+**Kind:** Initializer  
+**Availability:** iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · visionOS 27.2+ beta · watchOS 27.2+ beta
+
+Creates an app intent parameter for an array with a specified size per widget family.
+
+## Declaration
+
+```swift
+convenience init(description: LocalizedStringResource? = nil, default defaultValue: Value.UnwrappedType? = nil, size: [IntentWidgetFamily : IntentCollectionSize], inputConnectionBehavior: InputConnectionBehavior = .default)
+```
+
+## Parameters
+
+- `description`: Additional details about this parameter.
+- `defaultValue`: The default value for this parameter. People can specify a different value.
+- `size`: The size of the array for a widget family. Use this to limit the amount of values.
+- `inputConnectionBehavior`: An enum that indicates how this parameter receives the output from a preceding app intent.

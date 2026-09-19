@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corelocation/requesting-authorization-to-use-location-services](https://developer.apple.com/documentation/corelocation/requesting-authorization-to-use-location-services)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corelocation/requesting-authorization-to-use-location-services
 
 # Requesting authorization to use location services (Swift)
 

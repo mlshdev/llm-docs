@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/audiofileresource/configuration-swift.struct/init(loadingstrategy:shouldloop:shouldrandomizestarttime:normalization:calibration:mixgroupname:)](https://developer.apple.com/documentation/realitykit/audiofileresource/configuration-swift.struct/init(loadingstrategy:shouldloop:shouldrandomizestarttime:normalization:calibration:mixgroupname:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/audiofileresource/configuration-swift.struct/init(loadingstrategy:shouldloop:shouldrandomizestarttime:normalization:calibration:mixgroupname:)
 
 # init(loadingStrategy:shouldLoop:shouldRandomizeStartTime:normalization:calibration:mixGroupName:)
 

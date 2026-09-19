@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clktimeintervalgaugeprovider/init(style:gaugecolors:gaugecolorlocations:start:startfillfraction:end:endfillfraction:)](https://developer.apple.com/documentation/clockkit/clktimeintervalgaugeprovider/init(style:gaugecolors:gaugecolorlocations:start:startfillfraction:end:endfillfraction:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clktimeintervalgaugeprovider/init(style:gaugecolors:gaugecolorlocations:start:startfillfraction:end:endfillfraction:)
 
 # init(style:gaugeColors:gaugeColorLocations:start:startFillFraction:end:endFillFraction:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 Creates a time interval gauge, letting you specify whether the gauge fills or empties as time passes.
 
@@ -55,7 +56,7 @@ If you provide both colors and locations, then the `gaugeColors` and `gaugeColor
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 Creates a time interval gauge, letting you specify whether the gauge fills or empties as time passes.
 

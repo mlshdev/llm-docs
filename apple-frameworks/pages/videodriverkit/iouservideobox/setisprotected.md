@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideobox/setisprotected](https://developer.apple.com/documentation/videodriverkit/iouservideobox/setisprotected)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideobox/setisprotected
 
 # SetIsProtected
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Sets the value indicating the box’s protection state.
 
@@ -30,4 +31,4 @@ The object sends a notification to the host to update the object state on succes
 
 ### Managing protection state
 
-- [IsProtected](isprotected.md): A Boolean value indicating if box is protected.
+- [IsProtected](isprotected.md): Beta. A Boolean value indicating if box is protected.

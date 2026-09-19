@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avpictureinpicturecontrollerdelegate](https://developer.apple.com/documentation/avkit/avpictureinpicturecontrollerdelegate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avpictureinpicturecontrollerdelegate
 
 # AVPictureInPictureControllerDelegate (Swift)
 
@@ -17,7 +18,7 @@ protocol AVPictureInPictureControllerDelegate : NSObjectProtocol
 ## Mentioned In
 
 - [Adopting Picture in Picture for video calls](adopting-picture-in-picture-for-video-calls.md)
-- [Adopting Picture in Picture in a Custom Player](adopting-picture-in-picture-in-a-custom-player.md)
+- [Adopting Picture in Picture in a custom player](adopting-picture-in-picture-in-a-custom-player.md)
 
 <a id="overview"></a>
 
@@ -27,11 +28,11 @@ Adopt this protocol in a custom object, and assign the object as the [delegate](
 
 ## Topics
 
-### Restoring the User Interface
+### Restoring the user interface
 
 - [pictureInPictureController(\_:restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:)](avpictureinpicturecontrollerdelegate/pictureinpicturecontroller%28__restoreuserinterfaceforpictureinpicturestopwithcompletionhandler_%29.md): Tells the delegate to restore the user interface before Picture in Picture stops.
 
-### Responding to Picture in Picture Lifecycle Events
+### Responding to Picture in Picture life cycle events
 
 - [pictureInPictureControllerWillStartPictureInPicture(\_:)](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerwillstartpictureinpicture%28__%29.md): Tells the delegate that Picture in Picture is about to start.
 - [pictureInPictureControllerDidStartPictureInPicture(\_:)](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerdidstartpictureinpicture%28__%29.md): Tells the delegate that Picture in Picture started.
@@ -47,9 +48,16 @@ Adopt this protocol in a custom object, and assign the object as the [delegate](
 
 ## See Also
 
-### Accessing the Delegate Object
+### Picture in Picture
 
-- [delegate](avpictureinpicturecontroller/delegate.md): A delegate object for a Picture in Picture controller.
+- [Adopting Picture in Picture in a standard player](adopting-picture-in-picture-in-a-standard-player.md): Add Picture in Picture (PiP) playback to your app using a player view controller.
+- [Adopting Picture in Picture in a custom player](adopting-picture-in-picture-in-a-custom-player.md): Add controls to your custom player user interface to invoke Picture in Picture (PiP) playback.
+- [Adopting Picture in Picture for video calls](adopting-picture-in-picture-for-video-calls.md): Add multitasking capability to your video-call apps by using Picture in Picture (PiP).
+- [Adopting Picture in Picture playback in tvOS](adopting-picture-in-picture-playback-in-tvos.md): Add advanced multitasking capabilities to your video apps by using Picture in Picture playback in tvOS.
+- [AVPictureInPictureController](avpictureinpicturecontroller.md): A controller that responds to user-initiated Picture in Picture playback of video in a floating, resizable window.
+- [AVPictureInPictureSampleBufferPlaybackDelegate](avpictureinpicturesamplebufferplaybackdelegate.md): A protocol for controlling playback from a sample buffer display layer in Picture in Picture.
+- [AVPictureInPictureVideoCallViewController](avpictureinpicturevideocallviewcontroller.md): A view controller that presents content from a video call in Picture in Picture.
+- [AVPlayerViewPictureInPictureDelegate](avplayerviewpictureinpicturedelegate.md): A protocol that defines the methods to implement to respond to Picture in Picture playback events.
 
 # AVPictureInPictureControllerDelegate (Objective-C)
 
@@ -68,7 +76,7 @@ A protocol to adopt to respond to Picture in Picture events.
 ## Mentioned In
 
 - [Adopting Picture in Picture for video calls](adopting-picture-in-picture-for-video-calls.md)
-- [Adopting Picture in Picture in a Custom Player](adopting-picture-in-picture-in-a-custom-player.md)
+- [Adopting Picture in Picture in a custom player](adopting-picture-in-picture-in-a-custom-player.md)
 
 <a id="overview"></a>
 
@@ -78,11 +86,11 @@ Adopt this protocol in a custom object, and assign the object as the [delegate](
 
 ## Topics
 
-### Restoring the User Interface
+### Restoring the user interface
 
 - [pictureInPictureController:restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:](avpictureinpicturecontrollerdelegate/pictureinpicturecontroller%28__restoreuserinterfaceforpictureinpicturestopwithcompletionhandler_%29.md): Tells the delegate to restore the user interface before Picture in Picture stops.
 
-### Responding to Picture in Picture Lifecycle Events
+### Responding to Picture in Picture life cycle events
 
 - [pictureInPictureControllerWillStartPictureInPicture:](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerwillstartpictureinpicture%28__%29.md): Tells the delegate that Picture in Picture is about to start.
 - [pictureInPictureControllerDidStartPictureInPicture:](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerdidstartpictureinpicture%28__%29.md): Tells the delegate that Picture in Picture started.
@@ -98,6 +106,13 @@ Adopt this protocol in a custom object, and assign the object as the [delegate](
 
 ## See Also
 
-### Accessing the Delegate Object
+### Picture in Picture
 
-- [delegate](avpictureinpicturecontroller/delegate.md): A delegate object for a Picture in Picture controller.
+- [Adopting Picture in Picture in a standard player](adopting-picture-in-picture-in-a-standard-player.md): Add Picture in Picture (PiP) playback to your app using a player view controller.
+- [Adopting Picture in Picture in a custom player](adopting-picture-in-picture-in-a-custom-player.md): Add controls to your custom player user interface to invoke Picture in Picture (PiP) playback.
+- [Adopting Picture in Picture for video calls](adopting-picture-in-picture-for-video-calls.md): Add multitasking capability to your video-call apps by using Picture in Picture (PiP).
+- [Adopting Picture in Picture playback in tvOS](adopting-picture-in-picture-playback-in-tvos.md): Add advanced multitasking capabilities to your video apps by using Picture in Picture playback in tvOS.
+- [AVPictureInPictureController](avpictureinpicturecontroller.md): A controller that responds to user-initiated Picture in Picture playback of video in a floating, resizable window.
+- [AVPictureInPictureSampleBufferPlaybackDelegate](avpictureinpicturesamplebufferplaybackdelegate.md): A protocol for controlling playback from a sample buffer display layer in Picture in Picture.
+- [AVPictureInPictureVideoCallViewController](avpictureinpicturevideocallviewcontroller.md): A view controller that presents content from a video call in Picture in Picture.
+- [AVPlayerViewPictureInPictureDelegate](avplayerviewpictureinpicturedelegate.md): A protocol that defines the methods to implement to respond to Picture in Picture playback events.

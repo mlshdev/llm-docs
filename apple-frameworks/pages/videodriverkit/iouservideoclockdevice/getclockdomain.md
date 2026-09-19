@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoclockdevice/getclockdomain](https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/getclockdomain)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/getclockdomain
 
 # GetClockDomain
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the clock domain value of the clock device.
 
@@ -26,4 +27,4 @@ The object’s work queue synchronizes access to the value.
 
 ### Working with the clock domain
 
-- [SetClockDomain](setclockdomain.md): Sets the clock domain value of the clock device.
+- [SetClockDomain](setclockdomain.md): Beta. Sets the clock domain value of the clock device.

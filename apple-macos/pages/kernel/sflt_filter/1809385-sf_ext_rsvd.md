@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/sflt_filter/1809385-sf_ext_rsvd](https://developer.apple.com/documentation/kernel/sflt_filter/1809385-sf_ext_rsvd)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/sflt_filter/1809385-sf_ext_rsvd
 
 # sf_ext_rsvd
 

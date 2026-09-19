@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1472660-scc_write_address_selector](https://developer.apple.com/documentation/coreservices/1472660-scc_write_address_selector)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/1472660-scc_write_address_selector
 
 # SCC Write Address Selector
 

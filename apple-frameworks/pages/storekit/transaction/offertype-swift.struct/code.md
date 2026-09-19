@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/offertype-swift.struct/code](https://developer.apple.com/documentation/storekit/transaction/offertype-swift.struct/code)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/offertype-swift.struct/code
 
 # code
 
@@ -23,7 +24,7 @@ static let code: Transaction.OfferType
 
 ## Discussion
 
-You create and define offer codes in App Store Connect. Offer codes are available for any In-App Purchase product type.
+You create and define offer codes in App Store Connect. Offer codes are available for any Apple In-App Purchase product type.
 
 For more information about offer codes, see [Set up offer codes](https://developer.apple.com/help/app-store-connect/manage-subscriptions/set-up-offer-codes).
 

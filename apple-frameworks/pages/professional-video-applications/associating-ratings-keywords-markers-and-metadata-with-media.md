@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional-video-applications/associating-ratings-keywords-markers-and-metadata-with-media](https://developer.apple.com/documentation/professional-video-applications/associating-ratings-keywords-markers-and-metadata-with-media)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional-video-applications/associating-ratings-keywords-markers-and-metadata-with-media
 
 # Associating Ratings, Keywords, Markers, and Metadata with Media
 
@@ -234,6 +235,7 @@ The following code shows an example `.plist` file with a custom metadata key def
         </array>
     </dict>
 </plist>
+
 
 ```
 

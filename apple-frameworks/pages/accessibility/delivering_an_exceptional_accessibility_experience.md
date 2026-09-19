@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accessibility/delivering_an_exceptional_accessibility_experience](https://developer.apple.com/documentation/accessibility/delivering_an_exceptional_accessibility_experience)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accessibility/delivering_an_exceptional_accessibility_experience
 
 # Delivering an exceptional accessibility experience (Swift)
 
@@ -33,7 +34,7 @@ To see the sample app in action, use Xcode to build and run the app on your iOS 
 
 To preview each pup available for adoption, the user swipes left and right across the collection view at the top of the screen. There is, however, a problem with this interaction when VoiceOver is on, the assistive technology doesn’t recognize visible elements, such as the favorite and gallery buttons, and it doesn’t know the details of the dog until the user reaches the end of the list. This behavior is far from being an exceptional accessibility experience.
 
-Navigating through the collection of dogs is central to the app. It’s the primary feature that users use, and as such, it should be easy for the user to perform. To provide a better accessibility experience, the sample defines the custom class [CarouselAccessibilityElement](x-source-tag://CarouselAccessibilityElement) with its [`accessibilityTraits`](../objectivec/nsobject-swift.class/accessibilitytraits.md) set to [`adjustable`](../uikit/uiaccessibilitytraits/adjustable.md).
+Navigating through the collection of dogs is central to the app. It’s the primary feature that users use, and as such, it should be easy for the user to perform. To provide a better accessibility experience, the sample defines the custom class CarouselAccessibilityElement with its [`accessibilityTraits`](../objectivec/nsobject-swift.class/accessibilitytraits.md) set to [`adjustable`](../uikit/uiaccessibilitytraits/adjustable.md).
 
 ```swift
 override var accessibilityTraits: UIAccessibilityTraits {
@@ -46,7 +47,7 @@ override var accessibilityTraits: UIAccessibilityTraits {
 }
 ```
 
-[View in Source](x-source-tag://accessibility_traits)
+View in Source
 
 The [`adjustable`](../uikit/uiaccessibilitytraits/adjustable.md) trait tells VoiceOver that the element behaves like a picker by responding to the [`accessibilityIncrement()`](../objectivec/nsobject-swift.class/accessibilityincrement%28%29.md) and [`accessibilityDecrement()`](../objectivec/nsobject-swift.class/accessibilitydecrement%28%29.md) callback methods.
 
@@ -62,9 +63,9 @@ override func accessibilityDecrement() {
 }
 ```
 
-[View in Source](x-source-tag://accessibility_increment_decrement)
+View in Source
 
-The sample then creates an instance of [`CarouselAccessibilityElement`](x-source-tag://CarouselAccessibilityElement), settings its frame to the collection view’s frame.
+The sample then creates an instance of `CarouselAccessibilityElement`, settings its frame to the collection view’s frame.
 
 ```swift
 let carouselAccessibilityElement: CarouselAccessibilityElement
@@ -81,14 +82,14 @@ if let theCarouselAccessibilityElement = self.carouselAccessibilityElement {
 }
 ```
 
-[View in Source](x-source-tag://using_carousel_accessibility_element)
+View in Source
 
 With VoiceOver on, the carousel accessibility element adds two new gestures on top of the collection view:
 
 - Swipe up to move forward through the collection.
 - Swipe down to move backward through the collection.
 
-The sample’s use of [`CarouselAccessibilityElement`](x-source-tag://CarouselAccessibilityElement) also makes it possible for the user to swipe to the favorite and gallery buttons for every dog in the list, rather than having the buttons reachable only at the end of the list. Although the gestures to swipe through the list of dogs is different when VoiceOver is on, this difference makes it easier for users needing assistance to preview each dog.
+The sample’s use of `CarouselAccessibilityElement` also makes it possible for the user to swipe to the favorite and gallery buttons for every dog in the list, rather than having the buttons reachable only at the end of the list. Although the gestures to swipe through the list of dogs is different when VoiceOver is on, this difference makes it easier for users needing assistance to preview each dog.
 
 <a id="Display-non-modal-modal-views"></a>
 
@@ -108,7 +109,7 @@ override var accessibilityViewIsModal: Bool {
 }
 ```
 
-[View in Source](x-source-tag://is_modal)
+View in Source
 
 <a id="Group-labels"></a>
 
@@ -116,7 +117,7 @@ override var accessibilityViewIsModal: Bool {
 
 When referring to separate elements belonging in the same context, it’s essential to convey a single set of information about the items. For example, the sample app displays a title label, such as *NAME*, and a value label, such as the dog’s name. These are two separate elements—*title* and *value*—but they are part of the same context.
 
-To place these two elements into the same accessibility context, use [`UIAccessibilityElement`](../uikit/uiaccessibilityelement.md) to encapsulate the information from each label. For example, the sample project’s [DogStatsView](x-source-tag://DogStatsView) groups each *title* and *value* label combination into accessibility elements. The project also sets the [`accessibilityLabel`](../uikit/uiaccessibilityelement/accessibilitylabel.md) with the text from the two [`UILabel`](../uikit/uilabel.md) objects, and sets [`accessibilityFrameInContainerSpace`](../uikit/uiaccessibilityelement/accessibilityframeincontainerspace.md) to a frame containing both labels. This allows VoiceOver to recognize each *title-value* label pairing as a single accessibility element. In turn, the user hears the title and value each time a *title-value* accessibility element has focus.
+To place these two elements into the same accessibility context, use [`UIAccessibilityElement`](../uikit/uiaccessibilityelement.md) to encapsulate the information from each label. For example, the sample project’s DogStatsView groups each *title* and *value* label combination into accessibility elements. The project also sets the [`accessibilityLabel`](../uikit/uiaccessibilityelement/accessibilitylabel.md) with the text from the two [`UILabel`](../uikit/uilabel.md) objects, and sets [`accessibilityFrameInContainerSpace`](../uikit/uiaccessibilityelement/accessibilityframeincontainerspace.md) to a frame containing both labels. This allows VoiceOver to recognize each *title-value* label pairing as a single accessibility element. In turn, the user hears the title and value each time a *title-value* accessibility element has focus.
 
 ```swift
 var elements = [UIAccessibilityElement]()
@@ -132,7 +133,7 @@ nameElement.accessibilityFrameInContainerSpace = nameTitleLabel.frame.union(name
 elements.append(nameElement)
 ```
 
-[View in Source](x-source-tag://grouping_elements)
+View in Source
 
 <a id="Add-custom-actions"></a>
 
@@ -155,7 +156,7 @@ shelterInfoView.accessibilityCustomActions = [
 ]
 ```
 
-[View in Source](x-source-tag://custom_actions)
+View in Source
 
 ## See Also
 
@@ -199,7 +200,7 @@ To see the sample app in action, use Xcode to build and run the app on your iOS 
 
 To preview each pup available for adoption, the user swipes left and right across the collection view at the top of the screen. There is, however, a problem with this interaction when VoiceOver is on, the assistive technology doesn’t recognize visible elements, such as the favorite and gallery buttons, and it doesn’t know the details of the dog until the user reaches the end of the list. This behavior is far from being an exceptional accessibility experience.
 
-Navigating through the collection of dogs is central to the app. It’s the primary feature that users use, and as such, it should be easy for the user to perform. To provide a better accessibility experience, the sample defines the custom class [CarouselAccessibilityElement](x-source-tag://CarouselAccessibilityElement) with its [`accessibilityTraits`](../objectivec/nsobject-swift.class/accessibilitytraits.md) set to [`adjustable`](../uikit/uiaccessibilitytraits/adjustable.md).
+Navigating through the collection of dogs is central to the app. It’s the primary feature that users use, and as such, it should be easy for the user to perform. To provide a better accessibility experience, the sample defines the custom class CarouselAccessibilityElement with its [`accessibilityTraits`](../objectivec/nsobject-swift.class/accessibilitytraits.md) set to [`adjustable`](../uikit/uiaccessibilitytraits/adjustable.md).
 
 ```swift
 override var accessibilityTraits: UIAccessibilityTraits {
@@ -212,7 +213,7 @@ override var accessibilityTraits: UIAccessibilityTraits {
 }
 ```
 
-[View in Source](x-source-tag://accessibility_traits)
+View in Source
 
 The [`adjustable`](../uikit/uiaccessibilitytraits/adjustable.md) trait tells VoiceOver that the element behaves like a picker by responding to the [`accessibilityIncrement()`](../objectivec/nsobject-swift.class/accessibilityincrement%28%29.md) and [`accessibilityDecrement()`](../objectivec/nsobject-swift.class/accessibilitydecrement%28%29.md) callback methods.
 
@@ -228,9 +229,9 @@ override func accessibilityDecrement() {
 }
 ```
 
-[View in Source](x-source-tag://accessibility_increment_decrement)
+View in Source
 
-The sample then creates an instance of [`CarouselAccessibilityElement`](x-source-tag://CarouselAccessibilityElement), settings its frame to the collection view’s frame.
+The sample then creates an instance of `CarouselAccessibilityElement`, settings its frame to the collection view’s frame.
 
 ```swift
 let carouselAccessibilityElement: CarouselAccessibilityElement
@@ -247,14 +248,14 @@ if let theCarouselAccessibilityElement = self.carouselAccessibilityElement {
 }
 ```
 
-[View in Source](x-source-tag://using_carousel_accessibility_element)
+View in Source
 
 With VoiceOver on, the carousel accessibility element adds two new gestures on top of the collection view:
 
 - Swipe up to move forward through the collection.
 - Swipe down to move backward through the collection.
 
-The sample’s use of [`CarouselAccessibilityElement`](x-source-tag://CarouselAccessibilityElement) also makes it possible for the user to swipe to the favorite and gallery buttons for every dog in the list, rather than having the buttons reachable only at the end of the list. Although the gestures to swipe through the list of dogs is different when VoiceOver is on, this difference makes it easier for users needing assistance to preview each dog.
+The sample’s use of `CarouselAccessibilityElement` also makes it possible for the user to swipe to the favorite and gallery buttons for every dog in the list, rather than having the buttons reachable only at the end of the list. Although the gestures to swipe through the list of dogs is different when VoiceOver is on, this difference makes it easier for users needing assistance to preview each dog.
 
 <a id="Display-non-modal-modal-views"></a>
 
@@ -274,7 +275,7 @@ override var accessibilityViewIsModal: Bool {
 }
 ```
 
-[View in Source](x-source-tag://is_modal)
+View in Source
 
 <a id="Group-labels"></a>
 
@@ -282,7 +283,7 @@ override var accessibilityViewIsModal: Bool {
 
 When referring to separate elements belonging in the same context, it’s essential to convey a single set of information about the items. For example, the sample app displays a title label, such as *NAME*, and a value label, such as the dog’s name. These are two separate elements—*title* and *value*—but they are part of the same context.
 
-To place these two elements into the same accessibility context, use [`UIAccessibilityElement`](../uikit/uiaccessibilityelement.md) to encapsulate the information from each label. For example, the sample project’s [DogStatsView](x-source-tag://DogStatsView) groups each *title* and *value* label combination into accessibility elements. The project also sets the [`accessibilityLabel`](../uikit/uiaccessibilityelement/accessibilitylabel.md) with the text from the two [`UILabel`](../uikit/uilabel.md) objects, and sets [`accessibilityFrameInContainerSpace`](../uikit/uiaccessibilityelement/accessibilityframeincontainerspace.md) to a frame containing both labels. This allows VoiceOver to recognize each *title-value* label pairing as a single accessibility element. In turn, the user hears the title and value each time a *title-value* accessibility element has focus.
+To place these two elements into the same accessibility context, use [`UIAccessibilityElement`](../uikit/uiaccessibilityelement.md) to encapsulate the information from each label. For example, the sample project’s DogStatsView groups each *title* and *value* label combination into accessibility elements. The project also sets the [`accessibilityLabel`](../uikit/uiaccessibilityelement/accessibilitylabel.md) with the text from the two [`UILabel`](../uikit/uilabel.md) objects, and sets [`accessibilityFrameInContainerSpace`](../uikit/uiaccessibilityelement/accessibilityframeincontainerspace.md) to a frame containing both labels. This allows VoiceOver to recognize each *title-value* label pairing as a single accessibility element. In turn, the user hears the title and value each time a *title-value* accessibility element has focus.
 
 ```swift
 var elements = [UIAccessibilityElement]()
@@ -298,7 +299,7 @@ nameElement.accessibilityFrameInContainerSpace = nameTitleLabel.frame.union(name
 elements.append(nameElement)
 ```
 
-[View in Source](x-source-tag://grouping_elements)
+View in Source
 
 <a id="Add-custom-actions"></a>
 
@@ -321,7 +322,7 @@ shelterInfoView.accessibilityCustomActions = [
 ]
 ```
 
-[View in Source](x-source-tag://custom_actions)
+View in Source
 
 ## See Also
 

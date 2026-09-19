@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/xinpcb64/3754386-inp_depend4](https://developer.apple.com/documentation/kernel/xinpcb64/3754386-inp_depend4)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/xinpcb64/3754386-inp_depend4
 
 # inp_depend4
 

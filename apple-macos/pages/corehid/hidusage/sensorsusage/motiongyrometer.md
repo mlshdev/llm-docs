@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/corehid/hidusage/sensorsusage/motiongyrometer](https://developer.apple.com/documentation/corehid/hidusage/sensorsusage/motiongyrometer)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corehid/hidusage/sensorsusage/motiongyrometer
 
 # HIDUsage.SensorsUsage.motionGyrometer
 

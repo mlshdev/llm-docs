@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkquantityseriessamplequerydescriptor](https://developer.apple.com/documentation/healthkit/hkquantityseriessamplequerydescriptor)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkquantityseriessamplequerydescriptor
 
 # HKQuantitySeriesSampleQueryDescriptor
 
@@ -32,6 +33,7 @@ let heartRate = HKQuantityType(.heartRate)
 let objectPredicate = HKQuery.predicateForObject(with: myHeartRateSample.uuid)
 let predicate = HKSamplePredicate.quantitySample(type: heartRate,
                                                  predicate: objectPredicate)
+
 
 // Create the source descriptor.
 let seriesDescriptor =

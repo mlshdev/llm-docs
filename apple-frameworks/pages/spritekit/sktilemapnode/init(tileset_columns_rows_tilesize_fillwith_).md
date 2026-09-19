@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spritekit/sktilemapnode/init(tileset:columns:rows:tilesize:fillwith:)](https://developer.apple.com/documentation/spritekit/sktilemapnode/init(tileset:columns:rows:tilesize:fillwith:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spritekit/sktilemapnode/init(tileset:columns:rows:tilesize:fillwith:)
 
 # init(tileSet:columns:rows:tileSize:fillWith:) (Swift)
 

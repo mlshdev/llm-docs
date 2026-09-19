@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideostream/getterminaltype](https://developer.apple.com/documentation/videodriverkit/iouservideostream/getterminaltype)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideostream/getterminaltype
 
 # GetTerminalType
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the terminal type of the stream.
 
@@ -26,5 +27,5 @@ The object’s work queue synchronizes access to the value.
 
 ### Working with stream terminals
 
-- [SetTerminalType](setterminaltype.md): Sets the terminal type of the stream.
-- [IOUserVideoStreamTerminalType](../videodriverkit/iouservideostreamterminaltype.md): The terminal type of video stream.
+- [SetTerminalType](setterminaltype.md): Beta. Sets the terminal type of the stream.
+- [IOUserVideoStreamTerminalType](../videodriverkit/iouservideostreamterminaltype.md): Beta. The terminal type of video stream.

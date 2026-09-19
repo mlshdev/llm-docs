@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/host/names](https://developer.apple.com/documentation/foundation/host/names)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/host/names
 
 # names (Swift)
 
 **Framework:** Foundation  
 **Kind:** Instance Property  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Returns all the hostnames of the receiver.
 
@@ -35,7 +36,7 @@ All the hostnames of the receiver.
 
 **Framework:** Foundation  
 **Kind:** Instance Property  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Returns all the hostnames of the receiver.
 

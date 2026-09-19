@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphiccircularstackimage/line1imageprovider](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircularstackimage/line1imageprovider)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircularstackimage/line1imageprovider
 
 # line1ImageProvider (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 6.0+ (deprecated in 27.0)
+**Availability:** watchOS 6.0+ (deprecated in 27.2)
 
 The image to display.
 
@@ -32,7 +33,7 @@ This image provider produces a full-color image, masked to a circle.
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 6.0+ (deprecated in 27.0)
+**Availability:** watchOS 6.0+ (deprecated in 27.2)
 
 The image to display.
 

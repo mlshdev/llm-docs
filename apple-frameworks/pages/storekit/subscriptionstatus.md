@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/subscriptionstatus](https://developer.apple.com/documentation/storekit/subscriptionstatus)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/subscriptionstatus
 
 # SubscriptionStatus
 
@@ -18,7 +19,7 @@ typealias SubscriptionStatus = Product.SubscriptionInfo.Status
 
 ### Product and subscription information
 
-- [Implementing a store in your app using the StoreKit API](implementing-a-store-in-your-app-using-the-storekit-api.md): Offer In-App Purchases and manage entitlements using signed transactions and status information.
+- [Implementing a store in your app using the StoreKit API](implementing-a-store-in-your-app-using-the-storekit-api.md): Offer Apple In-App Purchases and manage entitlements using signed transactions and status information.
 - [Supporting monthly subscriptions with a 12-month commitment](supporting-monthly-subscriptions-with-a-12-month-commitment.md): Configure, merchandise, and grant access to a monthly subscription with a 12-month commitment.
 - [Managing the life cycle of monthly subscriptions with a 12-month commitment](managing-lifecycle-of-monthly-subscriptions-with-a-12-month-commitment-.md): Handle renewals, cancellations, billing issues, refund requests, and price changes, and test subscriptions with a commitment plan.
 - [Product](product.md): Information about a product that you configure in App Store Connect.

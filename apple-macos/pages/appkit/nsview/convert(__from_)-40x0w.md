@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsview/convert(_:from:)-40x0w](https://developer.apple.com/documentation/appkit/nsview/convert(_:from:)-40x0w)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsview/convert(_:from:)-40x0w
 
 # convert(\_:from:) (Swift)
 

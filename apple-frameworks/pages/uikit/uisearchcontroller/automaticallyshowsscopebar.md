@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uisearchcontroller/automaticallyshowsscopebar](https://developer.apple.com/documentation/uikit/uisearchcontroller/automaticallyshowsscopebar)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uisearchcontroller/automaticallyshowsscopebar
 
 # automaticallyShowsScopeBar (Swift)
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 13.0+ (deprecated in 27.0) · iPadOS 13.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · tvOS 13.0+ · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 13.0+ (deprecated in 27.0) · iPadOS 13.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.2) · tvOS 13.0+ · visionOS 1.0+ (deprecated in 27.2)
 
 A Boolean indicating whether the search controller manages the visibility of the search bar’s scope bar.
 
@@ -44,7 +45,7 @@ By default, [UISearchController](../uisearchcontroller.md) shows the search bar�
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 13.0+ (deprecated in 27.0) · iPadOS 13.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · tvOS 13.0+ · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 13.0+ (deprecated in 27.0) · iPadOS 13.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.2) · tvOS 13.0+ · visionOS 1.0+ (deprecated in 27.2)
 
 A Boolean indicating whether the search controller manages the visibility of the search bar’s scope bar.
 

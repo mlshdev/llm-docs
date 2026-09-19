@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/ior_values_per_element](https://developer.apple.com/documentation/driverkit/ior_values_per_element)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/ior_values_per_element
 
 # IOR_VALUES_PER_ELEMENT
 

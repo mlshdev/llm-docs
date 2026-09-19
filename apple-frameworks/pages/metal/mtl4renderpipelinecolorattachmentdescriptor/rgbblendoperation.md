@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/rgbblendoperation](https://developer.apple.com/documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/rgbblendoperation)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/rgbblendoperation
 
 # rgbBlendOperation (Swift)
 
@@ -18,7 +19,7 @@ var rgbBlendOperation: MTLBlendOperation { get set }
 
 ## Discussion
 
-This property defaults to `MTLBlendOperationAdd`.
+This property defaults to [MTLBlendOperation.add](../mtlblendoperation/add.md).
 
 # rgbBlendOperation (Objective-C)
 
@@ -38,4 +39,4 @@ Configures the RGB blend operation.
 
 ## Discussion
 
-This property defaults to `MTLBlendOperationAdd`.
+This property defaults to [MTLBlendOperationAdd](../mtlblendoperation/add.md).

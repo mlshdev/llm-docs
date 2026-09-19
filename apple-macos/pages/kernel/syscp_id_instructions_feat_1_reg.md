@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/syscp_id_instructions_feat_1_reg](https://developer.apple.com/documentation/kernel/syscp_id_instructions_feat_1_reg)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/syscp_id_instructions_feat_1_reg
 
 # syscp_ID_instructions_feat_1_reg
 

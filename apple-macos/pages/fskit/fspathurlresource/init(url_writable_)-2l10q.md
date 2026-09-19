@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fspathurlresource/init(url:writable:)-2l10q](https://developer.apple.com/documentation/fskit/fspathurlresource/init(url:writable:)-2l10q)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/fskit/fspathurlresource/init(url:writable:)-2l10q
 
 # init(url:writable:) (Swift)
 

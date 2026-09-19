@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/gpt_ent/1581408-ent_lba_end](https://developer.apple.com/documentation/kernel/gpt_ent/1581408-ent_lba_end)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/gpt_ent/1581408-ent_lba_end
 
 # ent_lba_end
 

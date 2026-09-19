@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/advancedcommerceinfo-swift.struct/refund/reason-swift.struct/legal](https://developer.apple.com/documentation/storekit/transaction/advancedcommerceinfo-swift.struct/refund/reason-swift.struct/legal)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/advancedcommerceinfo-swift.struct/refund/reason-swift.struct/legal
 
 # legal
 
@@ -20,6 +21,6 @@ static let legal: Transaction.AdvancedCommerceInfo.Refund.Reason
 
 - [modifyItems](modifyitems.md)
 - [other](other.md): The customer requested a refund for other reasons.
-- [unfulfilled](unfulfilled.md): The customer had issues with receiving or using the in-app purchase.
-- [unintended](unintended.md): The customer didn’t intend to make the in-app purchase.
-- [unsatisfied](unsatisfied.md): The customer wasn’t satisfied with the in-app purchase.
+- [unfulfilled](unfulfilled.md): The customer had issues with receiving or using the Apple In-App Purchase.
+- [unintended](unintended.md): The customer didn’t intend to make the Apple In-App Purchase.
+- [unsatisfied](unsatisfied.md): The customer wasn’t satisfied with the Apple In-App Purchase.

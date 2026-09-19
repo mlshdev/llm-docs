@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photos/phassetcollection/transientassetcollection(with:title:)](https://developer.apple.com/documentation/photos/phassetcollection/transientassetcollection(with:title:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photos/phassetcollection/transientassetcollection(with:title:)
 
 # transientAssetCollection(with:title:) (Swift)
 

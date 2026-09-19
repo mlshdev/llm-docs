@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/mediaextension/merawprocessingfloatparameter/initwithname:key:description:initialvalue:maximum:minimum:cameravalue:](https://developer.apple.com/documentation/mediaextension/merawprocessingfloatparameter/initwithname:key:description:initialvalue:maximum:minimum:cameravalue:)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mediaextension/merawprocessingfloatparameter/initwithname:key:description:initialvalue:maximum:minimum:cameravalue:
 
 # initWithName:key:description:initialValue:maximum:minimum:cameraValue:
 

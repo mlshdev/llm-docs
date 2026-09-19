@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/vision/barcodesymbology/code39checksum](https://developer.apple.com/documentation/vision/barcodesymbology/code39checksum)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/vision/barcodesymbology/code39checksum
 
 # BarcodeSymbology.code39Checksum
 

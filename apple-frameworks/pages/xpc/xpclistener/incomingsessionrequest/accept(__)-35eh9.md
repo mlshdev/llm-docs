@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/xpc/xpclistener/incomingsessionrequest/accept(_:)-35eh9](https://developer.apple.com/documentation/xpc/xpclistener/incomingsessionrequest/accept(_:)-35eh9)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xpc/xpclistener/incomingsessionrequest/accept(_:)-35eh9
 
 # accept(\_:)
 

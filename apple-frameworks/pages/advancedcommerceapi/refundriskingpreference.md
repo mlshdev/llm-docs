@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/advancedcommerceapi/refundriskingpreference](https://developer.apple.com/documentation/advancedcommerceapi/refundriskingpreference)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/advancedcommerceapi/refundriskingpreference
 
 # refundRiskingPreference
 
@@ -41,7 +42,7 @@ The default value is `true`.
 - [retainBillingCycle](retainbillingcycle.md): A Boolean value that determines whether to keep the existing billing cycle with the change you request.
 - [refundAmount](refundamount.md): A refund amount, in milliunits of the currency.
 - [refundReason](refundreason.md): A reason to request a refund.
-- [SKU](sku.md): The product identifier of an in-app purchase product you manage in your own system.
+- [SKU](sku.md): The product identifier of an Apple In-App Purchase product you manage in your own system.
 - [storefront](storefront.md): A three-letter code that represents the country or region associated with the App Store storefront.
 - [taxCode](taxcode.md): A tax code that applies to a SKU.
 - [targetProductId](targetproductid.md): A generic product identifier that represents all Advanced Commerce API products to App Store Connect, which you use when you migrate a product.

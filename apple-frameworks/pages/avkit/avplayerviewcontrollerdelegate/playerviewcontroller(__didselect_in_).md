@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:didselect:in:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:didselect:in:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:didselect:in:)
 
 # playerViewController(\_:didSelect:in:) (Swift)
 
@@ -42,6 +43,6 @@ Tells the delegate when the user selects a media option from a media selection g
 
 ## See Also
 
-### Responding to Media Selection
+### Responding to media selection
 
 - [playerViewController:didSelectExternalSubtitleOptionLanguage:](playerviewcontroller_didselectexternalsubtitleoptionlanguage_.md): Tells the delegate when the user selects a specific subtitle option.

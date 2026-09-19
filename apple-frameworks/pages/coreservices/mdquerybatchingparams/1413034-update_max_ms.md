@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/mdquerybatchingparams/1413034-update_max_ms](https://developer.apple.com/documentation/coreservices/mdquerybatchingparams/1413034-update_max_ms)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/mdquerybatchingparams/1413034-update_max_ms
 
 # update_max_ms (Swift)
 

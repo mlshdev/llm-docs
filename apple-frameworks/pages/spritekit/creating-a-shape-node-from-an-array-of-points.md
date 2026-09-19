@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spritekit/creating-a-shape-node-from-an-array-of-points](https://developer.apple.com/documentation/spritekit/creating-a-shape-node-from-an-array-of-points)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spritekit/creating-a-shape-node-from-an-array-of-points
 
 # Creating a Shape Node from an Array of Points (Swift)
 

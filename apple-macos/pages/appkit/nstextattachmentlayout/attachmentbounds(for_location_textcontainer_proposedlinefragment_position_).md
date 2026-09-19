@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstextattachmentlayout/attachmentbounds(for:location:textcontainer:proposedlinefragment:position:)](https://developer.apple.com/documentation/appkit/nstextattachmentlayout/attachmentbounds(for:location:textcontainer:proposedlinefragment:position:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstextattachmentlayout/attachmentbounds(for:location:textcontainer:proposedlinefragment:position:)
 
 # attachmentBounds(for:location:textContainer:proposedLineFragment:position:) (Swift)
 

@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/set-up-task-runners.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/deploy/host-n8n/configure-n8n/set-up-task-runners.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/set-up-task-runners.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/deploy/host-n8n/configure-n8n/set-up-task-runners.md)
 
 # Set up task runners
 
@@ -17,7 +17,7 @@ This document describes how task runners work and how you can configure them.
 
 The task runner feature consists of these components: one or more task runners, a task broker, and a task requester.
 
-![Task runner overview](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/deploy/.gitbook/assets/task-runner-concept%20\(1\).png)
+![Task runner overview](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/deploy/.gitbook/assets/task-runner-concept%20\(1\).png)
 
 Task runners connect to the task broker using a websocket connection. A task requester submits a task request to the broker where an available task runner can pick it up for execution.
 
@@ -34,15 +34,17 @@ You can use task runners in two different modes: internal and external.
 In internal mode, the n8n instance launches the task runner as a child process, which is insecure by design. The n8n process monitors and manages the life cycle of the task runner. The task runner process shares the same `uid` and `gid` as n8n.
 
 > **Warning**
-> **Internal mode not recommended for production**
+> **Feature availability**
 >
-> Because the runner runs as the same user on the same host as n8n, code that escapes the runner's sandbox has the same access as n8n, including to stored credentials (see the warning at the top of this page). Use internal mode only on isolated instances that hold no sensitive data.
+> Internal mode is deprecated from n8n 3.0 and will be removed in a future version. n8n logs a deprecation warning at startup while it runs in internal mode, including when `N8N_RUNNERS_MODE` isn't set. Move to [external mode](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-task-runners#external-mode) for more secure isolation and scaling.
+>
+> Internal mode isn't recommended for production. Because the runner runs as the same user on the same host as n8n, code that escapes the runner's sandbox has the same access as n8n, including to stored credentials (see the warning at the top of this page). Use internal mode only on isolated instances that hold no sensitive data.
 
 ### External mode <a id="external-mode"></a>
 
 In external mode, a [launcher application](https://github.com/n8n-io/task-runner-launcher) launches task runners on demand and manages their lifecycle. Typically, this means that next to n8n you add a sidecar container running the [`n8nio/runners`](https://hub.docker.com/r/n8nio/runners) image containing the launcher, the JS task runner and the Python task runner. This sidecar container is independent from the n8n instance. The launcher exposes a health-check endpoint that it uses to monitor the task runner processes.
 
-![Task runner deployed as a side-car container](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/deploy/.gitbook/assets/task-runner-external-mode.png)
+![Task runner deployed as a side-car container](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/deploy/.gitbook/assets/task-runner-external-mode.png)
 
 When using [Queue mode](https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode), each worker needs to have its own sidecar container for task runners.
 

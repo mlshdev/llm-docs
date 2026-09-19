@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cloudkit/ck_share_blocked_identity_availability](https://developer.apple.com/documentation/cloudkit/ck_share_blocked_identity_availability)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/cloudkit/ck_share_blocked_identity_availability
 
 # CK_SHARE_BLOCKED_IDENTITY_AVAILABILITY
 

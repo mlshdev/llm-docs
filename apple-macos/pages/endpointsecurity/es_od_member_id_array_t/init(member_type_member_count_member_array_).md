@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_od_member_id_array_t/init(member_type:member_count:member_array:)](https://developer.apple.com/documentation/endpointsecurity/es_od_member_id_array_t/init(member_type:member_count:member_array:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_od_member_id_array_t/init(member_type:member_count:member_array:)
 
 # init(member_type:member_count:member_array:)
 

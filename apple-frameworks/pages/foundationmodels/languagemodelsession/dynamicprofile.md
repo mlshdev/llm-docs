@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelsession/dynamicprofile](https://developer.apple.com/documentation/foundationmodels/languagemodelsession/dynamicprofile)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelsession/dynamicprofile
 
 # LanguageModelSession.DynamicProfile
 
@@ -63,9 +64,9 @@ Profile {
 
 - [body](dynamicprofile/body-swift.property.md): The content of the dynamic profile.
 - [Body](dynamicprofile/body-swift.associatedtype.md): The type of dynamic profile that represent this profile.
-- [LanguageModelSession.DynamicProfile.DynamicProfile](dynamicprofile/dynamicprofile.md)
-- [LanguageModelSession.DynamicProfile.Profile](dynamicprofile/profile.md)
-- [LanguageModelSession.DynamicProfile.SessionProperty](dynamicprofile/sessionproperty.md)
+- [LanguageModelSession.DynamicProfile.DynamicProfile](dynamicprofile/dynamicprofile.md): The dynamic profile type that a dynamic profile’s body composes.
+- [LanguageModelSession.DynamicProfile.Profile](dynamicprofile/profile.md): The profile type that a dynamic profile activates.
+- [LanguageModelSession.DynamicProfile.SessionProperty](dynamicprofile/sessionproperty.md): A property wrapper that provides access to a session property from within a dynamic profile.
 
 ### Transforming the history
 
@@ -83,7 +84,7 @@ Profile {
 
 ### Applying tool modifiers
 
-- [toolCallingMode(\_:)](dynamicprofile/toolcallingmode%28__%29.md)
+- [toolCallingMode(\_:)](dynamicprofile/toolcallingmode%28__%29.md): Sets the tool-calling mode.
 
 ### Configuring the model
 
@@ -115,6 +116,6 @@ Profile {
 - [Composing dynamic sessions with instructions and profiles](../composing-dynamic-sessions-with-instructions-and-profiles.md): Adapt sessions dynamically at runtime by loading instructions and tools based on the state of your app.
 - [Origami: Crafting a dynamic tutorial for Apple Intelligence](../origami-crafting-a-dynamic-tutorial-for-apple-intelligence.md): Build interactive experiences with Foundation Models and Private Cloud Compute using multimodal prompts.
 - [DynamicInstructions](../dynamicinstructions.md): A type that represents dynamic instructions.
-- [DynamicInstructionsForEach](../dynamicinstructionsforeach.md)
+- [DynamicInstructionsForEach](../dynamicinstructionsforeach.md): Dynamic instructions that produce content for each element of a collection.
 - [LanguageModelSession.DynamicProfileModifier](dynamicprofilemodifier.md): A protocol for creating reusable wrappers around dynamic profile content.
 - [LanguageModelSession.Profile](profile.md): A profile that contains dynamic instructions.

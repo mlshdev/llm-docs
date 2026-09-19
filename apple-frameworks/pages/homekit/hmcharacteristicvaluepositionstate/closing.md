@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/homekit/hmcharacteristicvaluepositionstate/closing](https://developer.apple.com/documentation/homekit/hmcharacteristicvaluepositionstate/closing)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/homekit/hmcharacteristicvaluepositionstate/closing
 
 # HMCharacteristicValuePositionState.closing (Swift)
 

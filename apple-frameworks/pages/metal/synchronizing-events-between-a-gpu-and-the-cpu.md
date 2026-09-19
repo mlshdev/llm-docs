@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/synchronizing-events-between-a-gpu-and-the-cpu](https://developer.apple.com/documentation/metal/synchronizing-events-between-a-gpu-and-the-cpu)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/synchronizing-events-between-a-gpu-and-the-cpu
 
 # Synchronizing events between a GPU and the CPU (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iohideventservice/3869774-completesetled](https://developer.apple.com/documentation/kernel/iohideventservice/3869774-completesetled)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iohideventservice/3869774-completesetled
 
 # completeSetLED
 

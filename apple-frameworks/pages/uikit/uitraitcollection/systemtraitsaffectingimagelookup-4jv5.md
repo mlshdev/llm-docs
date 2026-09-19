@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitraitcollection/systemtraitsaffectingimagelookup-4jv5](https://developer.apple.com/documentation/uikit/uitraitcollection/systemtraitsaffectingimagelookup-4jv5)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uitraitcollection/systemtraitsaffectingimagelookup-4jv5
 
 # systemTraitsAffectingImageLookup
 
@@ -21,3 +22,4 @@ static var systemTraitsAffectingImageLookup: [UITrait] { get }
 ### Getting related traits
 
 - [systemTraitsAffectingColorAppearance](systemtraitsaffectingcolorappearance-64z7q.md)
+- [systemTraitsAffectingVerticalBarEdge](systemtraitsaffectingverticalbaredge-475st.md): Beta. The system traits that affect the value of `verticalBarEdge`.

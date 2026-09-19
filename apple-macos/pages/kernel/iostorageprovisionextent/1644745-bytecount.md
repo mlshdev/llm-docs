@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iostorageprovisionextent/1644745-bytecount](https://developer.apple.com/documentation/kernel/iostorageprovisionextent/1644745-bytecount)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iostorageprovisionextent/1644745-bytecount
 
 # byteCount
 

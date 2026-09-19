@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/exposurenotification/changing-configuration-values-using-the-server-to-server-api](https://developer.apple.com/documentation/exposurenotification/changing-configuration-values-using-the-server-to-server-api)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/exposurenotification/changing-configuration-values-using-the-server-to-server-api
 
 # Changing Configuration Values Using the Server‑to‑Server API (Swift)
 

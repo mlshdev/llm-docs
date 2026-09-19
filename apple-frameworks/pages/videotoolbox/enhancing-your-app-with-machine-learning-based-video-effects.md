@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videotoolbox/enhancing-your-app-with-machine-learning-based-video-effects](https://developer.apple.com/documentation/videotoolbox/enhancing-your-app-with-machine-learning-based-video-effects)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videotoolbox/enhancing-your-app-with-machine-learning-based-video-effects
 
 # Enhancing your app with machine learning-based video effects
 

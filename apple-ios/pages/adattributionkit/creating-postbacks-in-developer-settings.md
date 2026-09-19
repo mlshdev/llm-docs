@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/adattributionkit/creating-postbacks-in-developer-settings](https://developer.apple.com/documentation/adattributionkit/creating-postbacks-in-developer-settings)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/adattributionkit/creating-postbacks-in-developer-settings
 
 # Creating postbacks in developer settings
 

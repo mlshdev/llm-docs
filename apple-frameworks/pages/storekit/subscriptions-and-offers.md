@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/subscriptions-and-offers](https://developer.apple.com/documentation/storekit/subscriptions-and-offers)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/subscriptions-and-offers
 
 # Subscriptions and offers
 
@@ -14,7 +15,7 @@ Offer customers additional time-based content and services through purchases the
 ### Essentials
 
 - [Handling Subscriptions Billing](handling-subscriptions-billing.md): Build logic around the date and time constraints of subscription products, while planning for all scenarios where you control access to content.
-- [Enabling App Store Server Notifications](enabling-app-store-server-notifications.md): Configure your server and provide an HTTPS URL to receive notifications about in-app purchase events and unreported external purchase tokens.
+- [Enabling App Store Server Notifications](enabling-app-store-server-notifications.md): Configure your server and provide an HTTPS URL to receive notifications about Apple In-App Purchase events and unreported external purchase tokens.
 - [Offering a Subscription Across Multiple Apps](offering-a-subscription-across-multiple-apps.md): Support a single auto-renewable subscription across multiple apps.
 - [Reducing Involuntary Subscriber Churn](reducing-involuntary-subscriber-churn.md): Prevent unintentional loss of subscribers due to billing issues.
 

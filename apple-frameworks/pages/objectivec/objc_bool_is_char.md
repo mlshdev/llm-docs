@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/objectivec/objc_bool_is_char](https://developer.apple.com/documentation/objectivec/objc_bool_is_char)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/objectivec/objc_bool_is_char
 
 # OBJC_BOOL_IS_CHAR (Swift)
 

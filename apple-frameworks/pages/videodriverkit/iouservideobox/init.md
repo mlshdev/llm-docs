@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideobox/init](https://developer.apple.com/documentation/videodriverkit/iouservideobox/init)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideobox/init
 
 # init
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Initializes a video box.
 
@@ -37,5 +38,5 @@ Always pass in the IOUserVideoDriver and arguments. init() will always return fa
 
 ### Creating a video box
 
-- [Create](create.md): Static factory method to allocate and initialize an IOUserVideoBox.
-- [IOUserVideoDriver](../iouservideodriver.md): A video driver.
+- [Create](create.md): Beta. Static factory method to allocate and initialize an IOUserVideoBox.
+- [IOUserVideoDriver](../iouservideodriver.md): Beta. A video driver.

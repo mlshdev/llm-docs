@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoclassid/driver](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoclassid/driver)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoclassid/driver
 
 # Driver
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 The class identifier for the `IOUserVideoDriver` class.
 
@@ -20,9 +21,9 @@ Driver
 
 ### Identifying VideoDriverKit types
 
-- [Object](object.md): The class identifier for the `IOUserVideoObject` class.
-- [Box](box.md): The class identifier for the `IOUserVideoBox` class.
-- [Clock](clock.md): The class identifier for the `IOUserVideoClockDevice` class.
-- [Buffer](buffer.md): The class identifier for the `IOUserVideoBuffer` class.
-- [Device](device.md): The class identifier for the `IOUserVideoDevice` class.
-- [Stream](stream.md): The class identifier for the `IOUserVideoStream` class.
+- [Object](object.md): Beta. The class identifier for the `IOUserVideoObject` class.
+- [Box](box.md): Beta. The class identifier for the `IOUserVideoBox` class.
+- [Clock](clock.md): Beta. The class identifier for the `IOUserVideoClockDevice` class.
+- [Buffer](buffer.md): Beta. The class identifier for the `IOUserVideoBuffer` class.
+- [Device](device.md): Beta. The class identifier for the `IOUserVideoDevice` class.
+- [Stream](stream.md): Beta. The class identifier for the `IOUserVideoStream` class.

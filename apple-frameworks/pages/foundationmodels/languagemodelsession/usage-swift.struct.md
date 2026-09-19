@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelsession/usage-swift.struct](https://developer.apple.com/documentation/foundationmodels/languagemodelsession/usage-swift.struct)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelsession/usage-swift.struct
 
 # LanguageModelSession.Usage
 
@@ -26,7 +27,7 @@ struct Usage
 - [LanguageModelSession.Usage.Input](usage-swift.struct/input-swift.struct.md): Token counts for the transcript submitted to the model.
 - [output](usage-swift.struct/output-swift.property.md): The output token counts from the response.
 - [LanguageModelSession.Usage.Output](usage-swift.struct/output-swift.struct.md): Token counts for the output produced by the model.
-- [metadata](usage-swift.struct/metadata.md): Language models that provide other kinds of usage statistics may encode them in metadata.
+- [metadata](usage-swift.struct/metadata.md): Additional usage statistics that the language model encodes for the response.
 - [totalTokenCount](usage-swift.struct/totaltokencount.md): The total number of tokens involved in this generation, combining input and output counts.
 
 ## Relationships

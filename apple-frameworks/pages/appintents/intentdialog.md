@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/intentdialog](https://developer.apple.com/documentation/appintents/intentdialog)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/intentdialog
 
 # IntentDialog
 
@@ -18,6 +19,12 @@ struct IntentDialog
 
 - [Creating your first app intent](creating-your-first-app-intent.md)
 - [Displaying static and interactive snippets](displaying-static-and-interactive-snippets.md)
+
+<a id="overview"></a>
+
+## Overview
+
+When someone performs an action with Siri AI that invokes your app intent, the system might not display the `IntentDialog` you return as an intent result.
 
 ## Topics
 

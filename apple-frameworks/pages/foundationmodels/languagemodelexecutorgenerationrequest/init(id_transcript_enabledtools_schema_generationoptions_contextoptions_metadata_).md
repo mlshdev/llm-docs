@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationrequest/init(id:transcript:enabledtools:schema:generationoptions:contextoptions:metadata:)](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationrequest/init(id:transcript:enabledtools:schema:generationoptions:contextoptions:metadata:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationrequest/init(id:transcript:enabledtools:schema:generationoptions:contextoptions:metadata:)
 
 # init(id:transcript:enabledTools:schema:generationOptions:contextOptions:metadata:)
 
@@ -18,7 +19,7 @@ init(id: UUID, transcript: Transcript, enabledTools: [Transcript.ToolDefinition]
 
 - `id`: The request identifier.
 - `transcript`: The transcript to generate the next entry for.
-- `enabledTools`: The subset tool definitions that the model can call.
+- `enabledTools`: The subset of tool definitions that the model can call.
 - `schema`: The schema dictating the required output format.
 - `generationOptions`: The generation options to use.
 - `contextOptions`: The settings that configure how the model is prompted.

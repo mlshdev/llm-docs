@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/audioaccessorysettingstemporarypairing_configurationobject](https://developer.apple.com/documentation/devicemanagement/audioaccessorysettingstemporarypairing_configurationobject)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/devicemanagement/audioaccessorysettingstemporarypairing_configurationobject
 
 # AudioAccessorySettingsTemporaryPairing_ConfigurationObject
 

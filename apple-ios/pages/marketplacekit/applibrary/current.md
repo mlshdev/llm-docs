@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/applibrary/current](https://developer.apple.com/documentation/marketplacekit/applibrary/current)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/marketplacekit/applibrary/current
 
 # current
 
@@ -18,4 +19,4 @@ nonisolated static let current: AppLibrary
 
 ### Accessing app library and account authorization information
 
-- [didAuthenticate(account:)](didauthenticate%28account_%29.md): Instructs iOS to reinstall an app after a required reuthorization completes.
+- [didAuthenticate(account:)](didauthenticate%28account_%29.md): Instructs the system to reinstall an app after a required reuthorization completes.

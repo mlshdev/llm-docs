@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/kscsicmd_write_and_verify_12](https://developer.apple.com/documentation/driverkit/kscsicmd_write_and_verify_12)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/kscsicmd_write_and_verify_12
 
 # kSCSICmd_WRITE_AND_VERIFY_12
 

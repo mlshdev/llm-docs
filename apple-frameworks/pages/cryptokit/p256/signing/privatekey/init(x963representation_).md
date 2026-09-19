@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cryptokit/p256/signing/privatekey/init(x963representation:)](https://developer.apple.com/documentation/cryptokit/p256/signing/privatekey/init(x963representation:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/cryptokit/p256/signing/privatekey/init(x963representation:)
 
 # init(x963Representation:)
 

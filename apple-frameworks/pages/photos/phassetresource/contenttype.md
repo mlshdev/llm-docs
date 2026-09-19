@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photos/phassetresource/contenttype](https://developer.apple.com/documentation/photos/phassetresource/contenttype)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photos/phassetresource/contenttype
 
 # contentType (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
 
-The content type of the data associated with this asset resource (the data can be retrieved via `PHAssetResourceManager`)
+The content type of the data associated with this asset resource
 
 ## Declaration
 
@@ -14,6 +15,12 @@ The content type of the data associated with this asset resource (the data can b
 var contentType: UTType { get }
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+This resource’s data can be retrieved via [PHAssetResourceManager](../phassetresourcemanager.md)
+
 ## See Also
 
 ### Inspecting an Asset Resource
@@ -26,7 +33,7 @@ var contentType: UTType { get }
 - [filename](filename.md): The filename associated with this asset resource (if any)
 - [pixelHeight](pixelheight.md): The height of the resource, in pixels.
 - [pixelWidth](pixelwidth.md): The width of the resource, in pixels.
-- [dataSize](datasize-5lxva.md): The size of the resource in bytes if known, `nil` if unavailable (may not be available until resource download/processing is complete)
+- [dataSize](datasize-5lxva.md): The size of the resource in bytes
 
 # contentType (Objective-C)
 
@@ -34,13 +41,19 @@ var contentType: UTType { get }
 **Kind:** Instance Property  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
 
-The content type of the data associated with this asset resource (the data can be retrieved via `PHAssetResourceManager`)
+The content type of the data associated with this asset resource
 
 ## Declaration
 
 ```objectivec
 @property (nonatomic, copy, readonly) UTType * contentType;
 ```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This resource’s data can be retrieved via [PHAssetResourceManager](../phassetresourcemanager.md)
 
 ## See Also
 
@@ -54,4 +67,4 @@ The content type of the data associated with this asset resource (the data can b
 - [filename](filename.md): The filename associated with this asset resource (if any)
 - [pixelHeight](pixelheight.md): The height of the resource, in pixels.
 - [pixelWidth](pixelwidth.md): The width of the resource, in pixels.
-- [dataSize](https://developer.apple.com/documentation/photos/phassetresource/datasize-6cf5k): The size of the resource in bytes if known, `nil` if unavailable (may not be available until resource download/processing is complete)
+- [dataSize](https://developer.apple.com/documentation/photos/phassetresource/datasize-6cf5k): The size of the resource in bytes

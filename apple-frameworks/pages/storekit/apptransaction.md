@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/apptransaction](https://developer.apple.com/documentation/storekit/apptransaction)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/apptransaction
 
 # AppTransaction
 
@@ -26,7 +27,7 @@ struct AppTransaction
 
 > **Related sessions from WWDC22**
 
->  Session 10007:  [What’s new with in-app purchase](https://developer.apple.com/videos/play/wwdc2022/10007/)
+>  Session 10007:  [What’s new with Apple In-App Purchase](https://developer.apple.com/videos/play/wwdc2022/10007/)
 
 ## Topics
 

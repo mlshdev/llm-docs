@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/sec_identity_copy_ref(_:)](https://developer.apple.com/documentation/security/sec_identity_copy_ref(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/sec_identity_copy_ref(_:)
 
 # sec_identity_copy_ref(\_:) (Swift)
 

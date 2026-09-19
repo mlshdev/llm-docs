@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelfeedback/sentiment/positive](https://developer.apple.com/documentation/foundationmodels/languagemodelfeedback/sentiment/positive)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelfeedback/sentiment/positive
 
 # LanguageModelFeedback.Sentiment.positive
 
@@ -6,7 +7,7 @@
 **Kind:** Case  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · visionOS 26.0+ · watchOS 27.0+
 
-A positive sentiment
+A positive sentiment.
 
 ## Declaration
 
@@ -22,5 +23,5 @@ case positive
 
 ### Sentiment values
 
-- [LanguageModelFeedback.Sentiment.negative](negative.md): A negative sentiment
-- [LanguageModelFeedback.Sentiment.neutral](neutral.md): A neutral sentiment
+- [LanguageModelFeedback.Sentiment.negative](negative.md): A negative sentiment.
+- [LanguageModelFeedback.Sentiment.neutral](neutral.md): A neutral sentiment.

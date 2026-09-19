@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/walletpasses/pass/generic-data.dictionary](https://developer.apple.com/documentation/walletpasses/pass/generic-data.dictionary)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/walletpasses/pass/generic-data.dictionary
 
 # Pass.Generic
 
@@ -18,7 +19,7 @@ object Pass.Generic
 
 ## Mentioned In
 
-- [Creating a poster generic pass](../creating-a-poster-generic-pass.md)
+- [Creating a Poster Generic Pass](../creating-a-poster-generic-pass.md)
 
 <a id="Discussion"></a>
 
@@ -36,4 +37,4 @@ Use the generic pass type for passes that don’t fit into other pass categories
 
 ### Generic passes
 
-- [Creating a poster generic pass](../creating-a-poster-generic-pass.md): Construct a digital pass with information that enables people to take action.
+- [Creating a Poster Generic Pass](../creating-a-poster-generic-pass.md): Construct a digital pass with information that enables people to take action.

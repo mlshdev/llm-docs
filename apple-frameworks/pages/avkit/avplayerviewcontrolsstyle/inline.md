@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrolsstyle/inline](https://developer.apple.com/documentation/avkit/avplayerviewcontrolsstyle/inline)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrolsstyle/inline
 
 # AVPlayerViewControlsStyle.inline (Swift)
 
@@ -16,7 +17,7 @@ case inline
 
 ## See Also
 
-### Controls Styles
+### Controls styles
 
 - [AVPlayerViewControlsStyle.none](none.md): The view displays no playback controls.
 - [AVPlayerViewControlsStyle.floating](floating.md): The view displays playback controls in a floating window over the video content.
@@ -39,7 +40,7 @@ AVPlayerViewControlsStyleInline
 
 ## See Also
 
-### Controls Styles
+### Controls styles
 
 - [AVPlayerViewControlsStyleNone](none.md): The view displays no playback controls.
 - [AVPlayerViewControlsStyleFloating](floating.md): The view displays playback controls in a floating window over the video content.

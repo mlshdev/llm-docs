@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uikit_available_ios_only](https://developer.apple.com/documentation/uikit/uikit_available_ios_only)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uikit_available_ios_only
 
 # UIKIT_AVAILABLE_IOS_ONLY
 

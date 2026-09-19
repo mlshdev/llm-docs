@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photokit/bringing-photos-picker-to-your-swiftui-app](https://developer.apple.com/documentation/photokit/bringing-photos-picker-to-your-swiftui-app)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photokit/bringing-photos-picker-to-your-swiftui-app
 
 # Bringing Photos picker to your SwiftUI app
 

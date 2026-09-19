@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/subscriptionoptiongroup/init(_:isincluded:marketingcontent:)-8vmdm](https://developer.apple.com/documentation/storekit/subscriptionoptiongroup/init(_:isincluded:marketingcontent:)-8vmdm)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/subscriptionoptiongroup/init(_:isincluded:marketingcontent:)-8vmdm
 
 # init(\_:isIncluded:marketingContent:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corehaptics/chhapticpattern/init(events:parameters:)](https://developer.apple.com/documentation/corehaptics/chhapticpattern/init(events:parameters:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corehaptics/chhapticpattern/init(events:parameters:)
 
 # init(events:parameters:) (Swift)
 

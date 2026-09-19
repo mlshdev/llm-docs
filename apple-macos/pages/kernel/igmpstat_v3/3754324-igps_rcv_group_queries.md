@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/igmpstat_v3/3754324-igps_rcv_group_queries](https://developer.apple.com/documentation/kernel/igmpstat_v3/3754324-igps_rcv_group_queries)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/igmpstat_v3/3754324-igps_rcv_group_queries
 
 # igps_rcv_group_queries
 

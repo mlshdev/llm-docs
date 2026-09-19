@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_csp_query_size_unknown](https://developer.apple.com/documentation/security/cssmerr_csp_query_size_unknown)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_csp_query_size_unknown
 
 # CSSMERR_CSP_QUERY_SIZE_UNKNOWN (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xctest/set-up-and-tear-down-state-in-your-tests](https://developer.apple.com/documentation/xctest/set-up-and-tear-down-state-in-your-tests)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xctest/set-up-and-tear-down-state-in-your-tests
 
 # Set Up and Tear Down State in Your Tests (Swift)
 

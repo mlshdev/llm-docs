@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3081669-pe_panic_hook](https://developer.apple.com/documentation/kernel/3081669-pe_panic_hook)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3081669-pe_panic_hook
 
 # PE_panic_hook
 

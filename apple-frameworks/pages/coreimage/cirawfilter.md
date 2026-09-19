@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cirawfilter](https://developer.apple.com/documentation/coreimage/cirawfilter)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreimage/cirawfilter
 
 # CIRAWFilter (Swift)
 
@@ -99,6 +100,7 @@ You can also query this object to find out about the supported camera models, de
 
 ### Type Methods
 
+- [downloadAllResources(timeout:completionHandler:)](cirawfilter/downloadallresources%28timeout_completionhandler_%29.md): Beta.
 - [supportedCameraModels(with:)](cirawfilter/supportedcameramodels%28with_%29.md)
 
 ## Relationships
@@ -222,6 +224,7 @@ You can also query this object to find out about the supported camera models, de
 
 ### Type Methods
 
+- [downloadAllResourcesWithTimeout:completionHandler:](cirawfilter/downloadallresources%28timeout_completionhandler_%29.md): Beta.
 - [supportedCameraModelsWithVersion:](cirawfilter/supportedcameramodels%28with_%29.md)
 
 ## Relationships

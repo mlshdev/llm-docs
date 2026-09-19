@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1562361-vnode_update_identity](https://developer.apple.com/documentation/kernel/1562361-vnode_update_identity)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1562361-vnode_update_identity
 
 # vnode_update_identity
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelsession/dynamicprofilebuilder/buildeither(second:)](https://developer.apple.com/documentation/foundationmodels/languagemodelsession/dynamicprofilebuilder/buildeither(second:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelsession/dynamicprofilebuilder/buildeither(second:)
 
 # buildEither(second:)
 
@@ -20,4 +21,4 @@ Creates a builder with the second component.
 
 - [buildBlock(\_:)](buildblock%28__%29.md): Creates a builder with a block.
 - [buildEither(first:)](buildeither%28first_%29.md): Creates a builder with the first component.
-- [buildLimitedAvailability(\_:)](buildlimitedavailability%28__%29.md)
+- [buildLimitedAvailability(\_:)](buildlimitedavailability%28__%29.md): Creates a builder with a limited availability dynamic profile.

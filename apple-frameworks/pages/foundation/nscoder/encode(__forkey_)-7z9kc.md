@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nscoder/encode(_:forkey:)-7z9kc](https://developer.apple.com/documentation/foundation/nscoder/encode(_:forkey:)-7z9kc)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nscoder/encode(_:forkey:)-7z9kc
 
 # encode(\_:forKey:) (Swift)
 

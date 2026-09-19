@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkgaugeprovider](https://developer.apple.com/documentation/clockkit/clkgaugeprovider)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkgaugeprovider
 
 # CLKGaugeProvider (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 An abstract superclass that provides all the common behaviors for the gauge providers.
 
@@ -68,7 +69,7 @@ Don’t create instances of this class yourself. Instead, create instances of th
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 An abstract superclass that provides all the common behaviors for the gauge providers.
 

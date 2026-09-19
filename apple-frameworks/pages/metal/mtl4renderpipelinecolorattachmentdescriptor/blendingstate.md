@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/blendingstate](https://developer.apple.com/documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/blendingstate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/blendingstate
 
 # blendingState (Swift)
 
@@ -18,7 +19,7 @@ var blendingState: MTL4BlendState { get set }
 
 ## Discussion
 
-This property’s default value is `MTL4BlendStateDisabled`.
+This property’s default value is [MTL4BlendState.disabled](../mtl4blendstate/disabled.md).
 
 # blendingState (Objective-C)
 
@@ -38,4 +39,4 @@ Configure the blend state for color attachments the pipeline state uses.
 
 ## Discussion
 
-This property’s default value is `MTL4BlendStateDisabled`.
+This property’s default value is [MTL4BlendStateDisabled](../mtl4blendstate/disabled.md).

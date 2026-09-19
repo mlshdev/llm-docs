@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/avcgettargetplugconnectionoutparams/1441009-connectedplugnum](https://developer.apple.com/documentation/kernel/avcgettargetplugconnectionoutparams/1441009-connectedplugnum)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/avcgettargetplugconnectionoutparams/1441009-connectedplugnum
 
 # connectedPlugNum
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avkiterror-swift.struct/errordomain](https://developer.apple.com/documentation/avkit/avkiterror-swift.struct/errordomain)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avkiterror-swift.struct/errordomain
 
 # errorDomain
 
@@ -14,7 +15,7 @@ static var errorDomain: String { get }
 
 ## See Also
 
-### Inspecting an Error
+### Inspecting an error
 
 - [AVKitError.Code](code.md): Constants that identify framework error codes.
-- [Error Constants](../error-constants.md): Error code constants for framework operations.
+- [Error constants](../error-constants.md): Error code constants for framework operations.

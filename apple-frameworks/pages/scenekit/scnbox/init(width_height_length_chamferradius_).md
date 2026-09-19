@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scenekit/scnbox/init(width:height:length:chamferradius:)](https://developer.apple.com/documentation/scenekit/scnbox/init(width:height:length:chamferradius:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/scenekit/scnbox/init(width:height:length:chamferradius:)
 
 # init(width:height:length:chamferRadius:) (Swift)
 

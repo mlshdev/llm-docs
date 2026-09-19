@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_cl_crl_already_signed](https://developer.apple.com/documentation/security/cssmerr_cl_crl_already_signed)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_cl_crl_already_signed
 
 # CSSMERR_CL_CRL_ALREADY_SIGNED (Swift)
 

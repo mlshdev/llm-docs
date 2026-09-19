@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcaptureconnection/isvideorotationanglesupported(_:)](https://developer.apple.com/documentation/avfoundation/avcaptureconnection/isvideorotationanglesupported(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcaptureconnection/isvideorotationanglesupported(_:)
 
 # isVideoRotationAngleSupported(\_:) (Swift)
 
@@ -22,7 +23,7 @@ func isVideoRotationAngleSupported(_ videoRotationAngle: CGFloat) -> Bool
 
 ### Rotating a video
 
-- [videoRotationAngle](videorotationangle.md): A rotation angle the connection applies to a video flowing through it.
+- [videoRotationAngle](videorotationangle.md): A rotation angle the connection applies to the video flowing through it.
 
 # isVideoRotationAngleSupported: (Objective-C)
 
@@ -46,4 +47,4 @@ Returns a Boolean value that indicates whether the connection supports a rotatio
 
 ### Rotating a video
 
-- [videoRotationAngle](videorotationangle.md): A rotation angle the connection applies to a video flowing through it.
+- [videoRotationAngle](videorotationangle.md): A rotation angle the connection applies to the video flowing through it.

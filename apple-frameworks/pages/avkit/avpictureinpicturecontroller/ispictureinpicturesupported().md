@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avpictureinpicturecontroller/ispictureinpicturesupported()](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/ispictureinpicturesupported())
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/ispictureinpicturesupported()
 
 # isPictureInPictureSupported() (Swift)
 
@@ -23,7 +24,7 @@ class func isPictureInPictureSupported() -> Bool
 ## Mentioned In
 
 - [Adopting Picture in Picture for video calls](../adopting-picture-in-picture-for-video-calls.md)
-- [Adopting Picture in Picture in a Custom Player](../adopting-picture-in-picture-in-a-custom-player.md)
+- [Adopting Picture in Picture in a custom player](../adopting-picture-in-picture-in-a-custom-player.md)
 
 <a id="Discussion"></a>
 
@@ -33,7 +34,7 @@ If Picture in Picture isn’t supported on the current device, attempting to ini
 
 ## See Also
 
-### Accessing Picture in Picture State
+### Accessing Picture in Picture state
 
 - [isPictureInPicturePossible](ispictureinpicturepossible.md): A Boolean value that indicates whether Picture in Picture playback is currently possible.
 - [isPictureInPictureActive](ispictureinpictureactive.md): A Boolean value that indicates whether the Picture in Picture window is onscreen.
@@ -62,7 +63,7 @@ Returns a Boolean value that indicates whether the current device supports Pictu
 ## Mentioned In
 
 - [Adopting Picture in Picture for video calls](../adopting-picture-in-picture-for-video-calls.md)
-- [Adopting Picture in Picture in a Custom Player](../adopting-picture-in-picture-in-a-custom-player.md)
+- [Adopting Picture in Picture in a custom player](../adopting-picture-in-picture-in-a-custom-player.md)
 
 <a id="Discussion"></a>
 
@@ -72,7 +73,7 @@ If Picture in Picture isn’t supported on the current device, attempting to ini
 
 ## See Also
 
-### Accessing Picture in Picture State
+### Accessing Picture in Picture state
 
 - [pictureInPicturePossible](ispictureinpicturepossible.md): A Boolean value that indicates whether Picture in Picture playback is currently possible.
 - [pictureInPictureActive](ispictureinpictureactive.md): A Boolean value that indicates whether the Picture in Picture window is onscreen.

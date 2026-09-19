@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetoothui/iobluetoothpasskeydisplay](https://developer.apple.com/documentation/iobluetoothui/iobluetoothpasskeydisplay)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetoothui/iobluetoothpasskeydisplay
 
 # IOBluetoothPasskeyDisplay (Swift)
 
@@ -59,8 +60,6 @@ class IOBluetoothPasskeyDisplay
 - [NSTouchBarProvider](../appkit/nstouchbarprovider.md)
 - [NSUserActivityRestoring](../appkit/nsuseractivityrestoring.md)
 - [NSUserInterfaceItemIdentification](../appkit/nsuserinterfaceitemidentification.md)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 

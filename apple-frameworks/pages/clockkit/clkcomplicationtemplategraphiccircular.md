@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphiccircular](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircular)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircular
 
 # CLKComplicationTemplateGraphicCircular (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 An abstract superclass for all the circular graphic templates.
 
@@ -57,7 +58,7 @@ Don’t instantiate this class. Create one of its concrete subclasses instead.
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 An abstract superclass for all the circular graphic templates.
 

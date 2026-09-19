@@ -1,6 +1,7 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/adopting-picture-in-picture-in-a-custom-player](https://developer.apple.com/documentation/avkit/adopting-picture-in-picture-in-a-custom-player)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/adopting-picture-in-picture-in-a-custom-player
 
-# Adopting Picture in Picture in a Custom Player (Swift)
+# Adopting Picture in Picture in a custom player (Swift)
 
 **Framework:** AVKit  
 **Kind:** Article
@@ -13,15 +14,15 @@ Add controls to your custom player user interface to invoke Picture in Picture (
 
 Add PiP playback to your custom player by using the AVKit framework’s [AVPictureInPictureController](avpictureinpicturecontroller.md) class. This class lets you implement the same PiP behavior found in [AVPlayerViewController](avplayerviewcontroller.md) in your custom player.
 
-<a id="Configure-Audio-Session-and-Background-Modes"></a>
+<a id="Configure-audio-session-and-background-modes"></a>
 
-### Configure Audio Session and Background Modes
+## Configure audio session and background modes
 
 To participate with PiP in iOS and tvOS, customize your app’s audio playback capabilities by configuring its audio session and background modes. For more information, see [Configuring your app for media playback](../avfoundation/configuring-your-app-for-media-playback.md).
 
-<a id="Update-Your-Custom-Player-User-Interface"></a>
+<a id="Update-your-custom-player-user-interface"></a>
 
-### Update Your Custom Player User Interface
+## Update your custom player user interface
 
 Begin by adding a user interface (UI) to your custom player interface to enable users to begin PiP playback. Make this UI consistent with the system default UI that [AVPlayerViewController](avplayerviewcontroller.md) presents. Access the standard images for controlling PiP playback by using the [pictureInPictureButtonStartImage](avpictureinpicturecontroller/pictureinpicturebuttonstartimage.md) and [pictureInPictureButtonStopImage](avpictureinpicturecontroller/pictureinpicturebuttonstopimage.md) class properties of [AVPictureInPictureController](avpictureinpicturecontroller.md). These methods return system default images to present in your UI.
 
@@ -43,9 +44,9 @@ override func viewDidLoad() {
 
 Use key-value observing (KVO) on the controller’s [canStopPictureInPicture](avpictureinpicturecontroller/canstoppictureinpicture.md) property to display the appropriate affordances and provide the correct behavior in your playback UI. If `false`, display a start PiP affordance. If `true`, your app stops your custom playback UI and displays UI affordances to swap if you’re creating a tvOS app. For more information about KVO, see [Using Key-Value Observing in Swift](https://developer.apple.com/documentation/swift/using-key-value-observing-in-swift).
 
-<a id="Create-the-PiP-Controller"></a>
+<a id="Create-the-PiP-controller"></a>
 
-### Create the PiP Controller
+## Create the PiP controller
 
 Create an instance of [AVPictureInPictureController](avpictureinpicturecontroller.md) to control PiP playback in your app. Before attempting to create the controller instance, verify that the current hardware supports PiP playback by calling the [isPictureInPictureSupported()](avpictureinpicturecontroller/ispictureinpicturesupported%28%29.md) method.
 
@@ -82,9 +83,9 @@ For PiP functionality to work, maintain a strong reference to the controller obj
 
 To participate in PiP life-cycle events, your code should adopt the [AVPictureInPictureControllerDelegate](avpictureinpicturecontrollerdelegate.md) protocol and set itself as the controller’s delegate. Also, use KVO on the controller’s [isPictureInPicturePossible](avpictureinpicturecontroller/ispictureinpicturepossible.md) property to observe whether using PiP mode is possible in the current context, for example, when the system is displaying an active FaceTime window. By observing this property, you can determine when it’s appropriate to change the enabled state of your PiP button.
 
-<a id="Publish-the-Now-Playing-State"></a>
+<a id="Publish-the-Now-Playing-state"></a>
 
-### Publish the Now Playing State
+## Publish the Now Playing state
 
 On tvOS, [MPNowPlayingSession](../mediaplayer/mpnowplayingsession.md) ties your [AVPlayer](../avfoundation/avplayer.md) instances to a session. Your app can have many playing sessions, and in the case of PiP, your player must be tied to a session. You can have a Now Playing session for your PiP content and one for your full-screen content. When you update a session, the system ignores updates from the default [MPNowPlayingInfoCenter](../mediaplayer/mpnowplayinginfocenter.md), so migrate away from `MPNowPlayingInfoCenter.default()` and switch to [MPNowPlayingSession](../mediaplayer/mpnowplayingsession.md) across your whole app.
 
@@ -97,9 +98,9 @@ func publishNowPlayingMetadata() {
 }
 ```
 
-<a id="Handle-User-Initiated-Requests"></a>
+<a id="Handle-user-initiated-requests"></a>
 
-### Handle User-Initiated Requests
+## Handle user-initiated requests
 
 With the `AVPictureInPictureController` setup complete, add an `@IBAction` method to handle user-initiated requests to start or stop PiP playback.
 
@@ -117,9 +118,9 @@ With the `AVPictureInPictureController` setup complete, add an `@IBAction` metho
 
 >  Only begin PiP playback in response to user interaction and never programmatically. The App Store review team rejects apps that fail to follow this requirement.
 
-<a id="Restore-Control-to-Your-App"></a>
+<a id="Restore-control-to-your-app"></a>
 
-### Restore Control to Your App
+## Restore control to your app
 
 A user selects the stop PiP affordance in the PiP window to return control to your app. By default, this action terminates playback when control returns to the app. It’s your responsibility to properly restore your video playback interface.
 
@@ -133,9 +134,9 @@ func pictureInPictureController(_ pictureInPictureController: AVPictureInPicture
 }
 ```
 
-<a id="Dismiss-Playback-Controls"></a>
+<a id="Dismiss-playback-controls"></a>
 
-### Dismiss Playback Controls
+## Dismiss playback controls
 
 While PiP is active, dismiss playback controls in your main player, and present artwork in the PiP window to indicate that PiP mode is active. To implement this functionality, use the [pictureInPictureControllerWillStartPictureInPicture(\_:)](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerwillstartpictureinpicture%28__%29.md) and [pictureInPictureControllerDidStopPictureInPicture(\_:)](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerdidstoppictureinpicture%28__%29.md) delegate methods, and take the required actions.
 
@@ -155,13 +156,16 @@ func pictureInPictureControllerDidStopPictureInPicture(_ pictureInPictureControl
 
 ### Picture in Picture
 
-- [Adopting Picture in Picture Playback in tvOS](adopting-picture-in-picture-playback-in-tvos.md): Add advanced multitasking capabilities to your video apps by using Picture in Picture playback in tvOS.
-- [Adopting Picture in Picture in a Standard Player](adopting-picture-in-picture-in-a-standard-player.md): Add Picture in Picture (PiP) playback to your app using a player view controller.
+- [Adopting Picture in Picture in a standard player](adopting-picture-in-picture-in-a-standard-player.md): Add Picture in Picture (PiP) playback to your app using a player view controller.
 - [Adopting Picture in Picture for video calls](adopting-picture-in-picture-for-video-calls.md): Add multitasking capability to your video-call apps by using Picture in Picture (PiP).
-- [Accessing the camera while multitasking on iPad](accessing-the-camera-while-multitasking-on-ipad.md): Operate the camera in Split View, Slide Over, Picture in Picture, and Stage Manager modes.
+- [Adopting Picture in Picture playback in tvOS](adopting-picture-in-picture-playback-in-tvos.md): Add advanced multitasking capabilities to your video apps by using Picture in Picture playback in tvOS.
 - [AVPictureInPictureController](avpictureinpicturecontroller.md): A controller that responds to user-initiated Picture in Picture playback of video in a floating, resizable window.
+- [AVPictureInPictureControllerDelegate](avpictureinpicturecontrollerdelegate.md): A protocol to adopt to respond to Picture in Picture events.
+- [AVPictureInPictureSampleBufferPlaybackDelegate](avpictureinpicturesamplebufferplaybackdelegate.md): A protocol for controlling playback from a sample buffer display layer in Picture in Picture.
+- [AVPictureInPictureVideoCallViewController](avpictureinpicturevideocallviewcontroller.md): A view controller that presents content from a video call in Picture in Picture.
+- [AVPlayerViewPictureInPictureDelegate](avplayerviewpictureinpicturedelegate.md): A protocol that defines the methods to implement to respond to Picture in Picture playback events.
 
-# Adopting Picture in Picture in a Custom Player (Objective-C)
+# Adopting Picture in Picture in a custom player (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Article
@@ -174,15 +178,15 @@ Add controls to your custom player user interface to invoke Picture in Picture (
 
 Add PiP playback to your custom player by using the AVKit framework’s [AVPictureInPictureController](avpictureinpicturecontroller.md) class. This class lets you implement the same PiP behavior found in [AVPlayerViewController](avplayerviewcontroller.md) in your custom player.
 
-<a id="Configure-Audio-Session-and-Background-Modes"></a>
+<a id="Configure-audio-session-and-background-modes"></a>
 
-### Configure Audio Session and Background Modes
+## Configure audio session and background modes
 
 To participate with PiP in iOS and tvOS, customize your app’s audio playback capabilities by configuring its audio session and background modes. For more information, see [Configuring your app for media playback](../avfoundation/configuring-your-app-for-media-playback.md).
 
-<a id="Update-Your-Custom-Player-User-Interface"></a>
+<a id="Update-your-custom-player-user-interface"></a>
 
-### Update Your Custom Player User Interface
+## Update your custom player user interface
 
 Begin by adding a user interface (UI) to your custom player interface to enable users to begin PiP playback. Make this UI consistent with the system default UI that [AVPlayerViewController](avplayerviewcontroller.md) presents. Access the standard images for controlling PiP playback by using the [pictureInPictureButtonStartImage](avpictureinpicturecontroller/pictureinpicturebuttonstartimage.md) and [pictureInPictureButtonStopImage](avpictureinpicturecontroller/pictureinpicturebuttonstopimage.md) class properties of [AVPictureInPictureController](avpictureinpicturecontroller.md). These methods return system default images to present in your UI.
 
@@ -204,9 +208,9 @@ override func viewDidLoad() {
 
 Use key-value observing (KVO) on the controller’s [canStopPictureInPicture](avpictureinpicturecontroller/canstoppictureinpicture.md) property to display the appropriate affordances and provide the correct behavior in your playback UI. If `false`, display a start PiP affordance. If `true`, your app stops your custom playback UI and displays UI affordances to swap if you’re creating a tvOS app. For more information about KVO, see [Using Key-Value Observing in Swift](https://developer.apple.com/documentation/swift/using-key-value-observing-in-swift).
 
-<a id="Create-the-PiP-Controller"></a>
+<a id="Create-the-PiP-controller"></a>
 
-### Create the PiP Controller
+## Create the PiP controller
 
 Create an instance of [AVPictureInPictureController](avpictureinpicturecontroller.md) to control PiP playback in your app. Before attempting to create the controller instance, verify that the current hardware supports PiP playback by calling the [isPictureInPictureSupported](avpictureinpicturecontroller/ispictureinpicturesupported%28%29.md) method.
 
@@ -243,9 +247,9 @@ For PiP functionality to work, maintain a strong reference to the controller obj
 
 To participate in PiP life-cycle events, your code should adopt the [AVPictureInPictureControllerDelegate](avpictureinpicturecontrollerdelegate.md) protocol and set itself as the controller’s delegate. Also, use KVO on the controller’s [pictureInPicturePossible](avpictureinpicturecontroller/ispictureinpicturepossible.md) property to observe whether using PiP mode is possible in the current context, for example, when the system is displaying an active FaceTime window. By observing this property, you can determine when it’s appropriate to change the enabled state of your PiP button.
 
-<a id="Publish-the-Now-Playing-State"></a>
+<a id="Publish-the-Now-Playing-state"></a>
 
-### Publish the Now Playing State
+## Publish the Now Playing state
 
 On tvOS, [MPNowPlayingSession](../mediaplayer/mpnowplayingsession.md) ties your [AVPlayer](../avfoundation/avplayer.md) instances to a session. Your app can have many playing sessions, and in the case of PiP, your player must be tied to a session. You can have a Now Playing session for your PiP content and one for your full-screen content. When you update a session, the system ignores updates from the default [MPNowPlayingInfoCenter](../mediaplayer/mpnowplayinginfocenter.md), so migrate away from `MPNowPlayingInfoCenter.default()` and switch to [MPNowPlayingSession](../mediaplayer/mpnowplayingsession.md) across your whole app.
 
@@ -258,9 +262,9 @@ func publishNowPlayingMetadata() {
 }
 ```
 
-<a id="Handle-User-Initiated-Requests"></a>
+<a id="Handle-user-initiated-requests"></a>
 
-### Handle User-Initiated Requests
+## Handle user-initiated requests
 
 With the `AVPictureInPictureController` setup complete, add an `@IBAction` method to handle user-initiated requests to start or stop PiP playback.
 
@@ -278,9 +282,9 @@ With the `AVPictureInPictureController` setup complete, add an `@IBAction` metho
 
 >  Only begin PiP playback in response to user interaction and never programmatically. The App Store review team rejects apps that fail to follow this requirement.
 
-<a id="Restore-Control-to-Your-App"></a>
+<a id="Restore-control-to-your-app"></a>
 
-### Restore Control to Your App
+## Restore control to your app
 
 A user selects the stop PiP affordance in the PiP window to return control to your app. By default, this action terminates playback when control returns to the app. It’s your responsibility to properly restore your video playback interface.
 
@@ -294,9 +298,9 @@ func pictureInPictureController(_ pictureInPictureController: AVPictureInPicture
 }
 ```
 
-<a id="Dismiss-Playback-Controls"></a>
+<a id="Dismiss-playback-controls"></a>
 
-### Dismiss Playback Controls
+## Dismiss playback controls
 
 While PiP is active, dismiss playback controls in your main player, and present artwork in the PiP window to indicate that PiP mode is active. To implement this functionality, use the [pictureInPictureControllerWillStartPictureInPicture:](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerwillstartpictureinpicture%28__%29.md) and [pictureInPictureControllerDidStopPictureInPicture:](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerdidstoppictureinpicture%28__%29.md) delegate methods, and take the required actions.
 
@@ -316,8 +320,11 @@ func pictureInPictureControllerDidStopPictureInPicture(_ pictureInPictureControl
 
 ### Picture in Picture
 
-- [Adopting Picture in Picture Playback in tvOS](adopting-picture-in-picture-playback-in-tvos.md): Add advanced multitasking capabilities to your video apps by using Picture in Picture playback in tvOS.
-- [Adopting Picture in Picture in a Standard Player](adopting-picture-in-picture-in-a-standard-player.md): Add Picture in Picture (PiP) playback to your app using a player view controller.
+- [Adopting Picture in Picture in a standard player](adopting-picture-in-picture-in-a-standard-player.md): Add Picture in Picture (PiP) playback to your app using a player view controller.
 - [Adopting Picture in Picture for video calls](adopting-picture-in-picture-for-video-calls.md): Add multitasking capability to your video-call apps by using Picture in Picture (PiP).
-- [Accessing the camera while multitasking on iPad](accessing-the-camera-while-multitasking-on-ipad.md): Operate the camera in Split View, Slide Over, Picture in Picture, and Stage Manager modes.
+- [Adopting Picture in Picture playback in tvOS](adopting-picture-in-picture-playback-in-tvos.md): Add advanced multitasking capabilities to your video apps by using Picture in Picture playback in tvOS.
 - [AVPictureInPictureController](avpictureinpicturecontroller.md): A controller that responds to user-initiated Picture in Picture playback of video in a floating, resizable window.
+- [AVPictureInPictureControllerDelegate](avpictureinpicturecontrollerdelegate.md): A protocol to adopt to respond to Picture in Picture events.
+- [AVPictureInPictureSampleBufferPlaybackDelegate](avpictureinpicturesamplebufferplaybackdelegate.md): A protocol for controlling playback from a sample buffer display layer in Picture in Picture.
+- [AVPictureInPictureVideoCallViewController](avpictureinpicturevideocallviewcontroller.md): A view controller that presents content from a video call in Picture in Picture.
+- [AVPlayerViewPictureInPictureDelegate](avplayerviewpictureinpicturedelegate.md): A protocol that defines the methods to implement to respond to Picture in Picture playback events.

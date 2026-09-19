@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corespotlight/cssearchableitemattributeset/init(itemcontenttype:)](https://developer.apple.com/documentation/corespotlight/cssearchableitemattributeset/init(itemcontenttype:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corespotlight/cssearchableitemattributeset/init(itemcontenttype:)
 
 # init(itemContentType:) (Swift)
 
 **Framework:** Core Spotlight  
 **Kind:** Initializer  
-**Availability:** iOS 9.0+ (deprecated in 27.0) · iPadOS 9.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.11+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 9.0+ (deprecated in 27.2) · iPadOS 9.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.11+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Creates an attribute set for the specified content type.
 
@@ -30,7 +31,7 @@ An attribute set that represents an item of the specified content type.
 
 **Framework:** Core Spotlight  
 **Kind:** Instance Method  
-**Availability:** iOS 9.0+ (deprecated in 27.0) · iPadOS 9.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.11+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 9.0+ (deprecated in 27.2) · iPadOS 9.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.11+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Creates an attribute set for the specified content type.
 

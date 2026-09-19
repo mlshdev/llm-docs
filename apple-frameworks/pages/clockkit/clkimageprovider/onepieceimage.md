@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkimageprovider/onepieceimage](https://developer.apple.com/documentation/clockkit/clkimageprovider/onepieceimage)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkimageprovider/onepieceimage
 
 # onePieceImage (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 The template image to use as a one-piece image.
 
@@ -38,7 +39,7 @@ The image provider scales your image as needed to fit the target template. For i
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 The template image to use as a one-piece image.
 

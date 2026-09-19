@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avroutepickerview/buttonstate/normalhighlighted](https://developer.apple.com/documentation/avkit/avroutepickerview/buttonstate/normalhighlighted)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avroutepickerview/buttonstate/normalhighlighted
 
 # AVRoutePickerView.ButtonState.normalHighlighted (Swift)
 
@@ -16,7 +17,7 @@ case normalHighlighted
 
 ## See Also
 
-### Button States
+### Button states
 
 - [AVRoutePickerView.ButtonState.normal](normal.md): The normal, or default, button state.
 - [AVRoutePickerView.ButtonState.active](active.md): The button state when AirPlay is active.
@@ -38,7 +39,7 @@ AVRoutePickerViewButtonStateNormalHighlighted
 
 ## See Also
 
-### Button States
+### Button states
 
 - [AVRoutePickerViewButtonStateNormal](normal.md): The normal, or default, button state.
 - [AVRoutePickerViewButtonStateActive](active.md): The button state when AirPlay is active.

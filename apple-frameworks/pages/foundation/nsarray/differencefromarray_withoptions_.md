@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsarray/differencefromarray:withoptions:](https://developer.apple.com/documentation/foundation/nsarray/differencefromarray:withoptions:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsarray/differencefromarray:withoptions:
 
 # differenceFromArray:withOptions:
 
@@ -33,6 +34,7 @@ NSArray *modified = @[@"Red", @"Blue", @"Green"];
 NSOrderedCollectionDifference *diff = [original
                                        differenceFromArray:modified
                                        withOptions:NSOrderedCollectionDifferenceCalculationInferMoves];
+
 
 // diff.hasChanges == TRUE
 // diff.insertions.count == 1

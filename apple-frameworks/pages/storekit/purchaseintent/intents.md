@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/purchaseintent/intents](https://developer.apple.com/documentation/storekit/purchaseintent/intents)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/purchaseintent/intents
 
 # intents
 
@@ -17,7 +18,7 @@ static var intents: PurchaseIntent.PurchaseIntents { get }
 ## Mentioned In
 
 - [Supporting win-back offers in your app](../supporting-win-back-offers-in-your-app.md)
-- [Supporting promoted In-App Purchases in your app](../supporting-promoted-in-app-purchases-in-your-app.md)
+- [Supporting promoted Apple In-App Purchases in your app](../supporting-promoted-in-app-purchases-in-your-app.md)
 
 <a id="Discussion"></a>
 

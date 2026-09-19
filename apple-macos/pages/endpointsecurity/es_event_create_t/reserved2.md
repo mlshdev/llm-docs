@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_event_create_t/reserved2](https://developer.apple.com/documentation/endpointsecurity/es_event_create_t/reserved2)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_event_create_t/reserved2
 
 # reserved2 (Swift)
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clktextprovider/localizabletextprovider(withstringsfiletextkey:shorttextkey:)](https://developer.apple.com/documentation/clockkit/clktextprovider/localizabletextprovider(withstringsfiletextkey:shorttextkey:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clktextprovider/localizabletextprovider(withstringsfiletextkey:shorttextkey:)
 
 # localizableTextProvider(withStringsFileTextKey:shortTextKey:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 3.0+ (deprecated in 27.0)
+**Availability:** watchOS 3.0+ (deprecated in 27.2)
 
 Creates a localizable simple text provider using strings file keys for both the regular text and the shorter fallback text.
 
@@ -42,7 +43,7 @@ Use this method to create a text provider that returns localized strings with a 
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 3.0+ (deprecated in 27.0)
+**Availability:** watchOS 3.0+ (deprecated in 27.2)
 
 Creates a localizable simple text provider using strings file keys for both the regular text and the shorter fallback text.
 

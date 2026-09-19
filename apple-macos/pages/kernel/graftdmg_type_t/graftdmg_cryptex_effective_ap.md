@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/graftdmg_type_t/graftdmg_cryptex_effective_ap](https://developer.apple.com/documentation/kernel/graftdmg_type_t/graftdmg_cryptex_effective_ap)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/graftdmg_type_t/graftdmg_cryptex_effective_ap
 
 # GRAFTDMG_CRYPTEX_EFFECTIVE_AP
 

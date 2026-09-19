@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uicontentcontainer](https://developer.apple.com/documentation/uikit/uicontentcontainer)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uicontentcontainer
 
 # UIContentContainer (Swift)
 
@@ -48,6 +49,7 @@ When overriding the methods of this protocol, call `super` to let UIKit perform 
 
 - [UIActivityViewController](uiactivityviewcontroller.md)
 - [UIAlertController](uialertcontroller.md)
+- [UIArrangementViewController](uiarrangementviewcontroller.md)
 - [UICloudSharingController](uicloudsharingcontroller.md)
 - [UICollectionViewController](uicollectionviewcontroller.md)
 - [UIColorPickerViewController](uicolorpickerviewcontroller.md)

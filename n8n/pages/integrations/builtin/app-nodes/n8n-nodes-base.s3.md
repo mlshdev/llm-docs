@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.s3.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/integrations/builtin/app-nodes/n8n-nodes-base.s3.md)
+> Pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.s3.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/integrations/builtin/app-nodes/n8n-nodes-base.s3.md)
 
 # S3
 
@@ -56,4 +56,4 @@ On this page, you'll find a list of operations the S3 node supports and links to
 
 When uploading files to [Wasabi](https://wasabi.com/), you must set permissions for the files using the **ACL** dropdown and not the toggles.
 
-![File permissions when using the S3 node with Wasabi](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/integrations/.gitbook/assets/acl_dropdown.png)
+![File permissions when using the S3 node with Wasabi](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/integrations/.gitbook/assets/acl_dropdown.png)

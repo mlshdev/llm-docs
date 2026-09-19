@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iodisplaymodeinformation/1386044-maxdepthindex](https://developer.apple.com/documentation/kernel/iodisplaymodeinformation/1386044-maxdepthindex)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iodisplaymodeinformation/1386044-maxdepthindex
 
 # maxDepthIndex
 

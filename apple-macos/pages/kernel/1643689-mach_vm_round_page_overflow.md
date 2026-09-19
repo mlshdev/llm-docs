@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1643689-mach_vm_round_page_overflow](https://developer.apple.com/documentation/kernel/1643689-mach_vm_round_page_overflow)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1643689-mach_vm_round_page_overflow
 
 # mach_vm_round_page_overflow
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/sparseopaquesymbolicfactorization/init(status:rowcount:columncount:attributes:blocksize:type:factorization:workspacesize_float:workspacesize_double:factorsize_float:factorsize_double:)](https://developer.apple.com/documentation/accelerate/sparseopaquesymbolicfactorization/init(status:rowcount:columncount:attributes:blocksize:type:factorization:workspacesize_float:workspacesize_double:factorsize_float:factorsize_double:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/sparseopaquesymbolicfactorization/init(status:rowcount:columncount:attributes:blocksize:type:factorization:workspacesize_float:workspacesize_double:factorsize_float:factorsize_double:)
 
 # init(status:rowCount:columnCount:attributes:blockSize:type:factorization:workspaceSize_Float:workspaceSize_Double:factorSize_Float:factorSize_Double:)
 

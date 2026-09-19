@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcontinuitydevice](https://developer.apple.com/documentation/avfoundation/avcontinuitydevice)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcontinuitydevice
 
 # AVContinuityDevice (Swift)
 
@@ -59,6 +60,7 @@ Each continuity device instance represents another iOS device that’s nearby. Y
 
 - [Choosing a capture device](choosing-a-capture-device.md): Select the front or back camera, or use advanced features like the TrueDepth camera or dual camera.
 - [Adopting smart framing in your camera app](adopting-smart-framing-in-your-camera-app.md): Capture the optimal shot by providing automatic framing recommendations.
+- [Supporting device rotation in your camera app](supporting-device-rotation-in-your-camera-app.md): Keep your camera preview and captured photos and video upright by applying the angles a rotation coordinator reports.
 - [AVCaptureDevice](avcapturedevice.md): An object that represents a hardware or virtual capture device like a camera or microphone.
 - [AVCaptureDeviceInput](avcapturedeviceinput.md): An object that provides media input from a capture device to a capture session.
 - [AVExternalStorageDevice](avexternalstoragedevice.md): Represents a physical external storage device that stores media assets.

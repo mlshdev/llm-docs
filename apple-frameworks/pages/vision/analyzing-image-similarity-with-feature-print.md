@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/vision/analyzing-image-similarity-with-feature-print](https://developer.apple.com/documentation/vision/analyzing-image-similarity-with-feature-print)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/vision/analyzing-image-similarity-with-feature-print
 
 # Analyzing Image Similarity with Feature Print
 

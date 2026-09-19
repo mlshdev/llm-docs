@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/forcefeedback/ffcap_et_sine](https://developer.apple.com/documentation/forcefeedback/ffcap_et_sine)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/forcefeedback/ffcap_et_sine
 
 # FFCAP_ET_SINE (Swift)
 

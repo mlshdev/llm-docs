@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/cryptex_auth_type_t/cryptex_auth_mobile_asset](https://developer.apple.com/documentation/kernel/cryptex_auth_type_t/cryptex_auth_mobile_asset)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/cryptex_auth_type_t/cryptex_auth_mobile_asset
 
 # CRYPTEX_AUTH_MOBILE_ASSET
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mlcompute/mlctensor/quantized(to:scale:bias:axis:)](https://developer.apple.com/documentation/mlcompute/mlctensor/quantized(to:scale:bias:axis:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mlcompute/mlctensor/quantized(to:scale:bias:axis:)
 
 # quantized(to:scale:bias:axis:) (Swift)
 

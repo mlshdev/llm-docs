@@ -1,6 +1,7 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/advancedcommerceapi/creating-your-purchases](https://developer.apple.com/documentation/advancedcommerceapi/creating-your-purchases)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/advancedcommerceapi/creating-your-purchases
 
-# Creating SKUs for your In-App Purchases
+# Creating SKUs for your Apple In-App Purchases
 
 **Interface language:** Data
 
@@ -23,7 +24,7 @@ To ensure your purchases display properly and provide a quality experience, foll
 - Consider how you use special characters (for example, hyphens, periods, and underscores) and diacritics. You can use special characters, but avoid using them excessively or beginning strings with them.
 - Don’t use markup language, emoticons, diacritics, or control characters (for example, null, new lines, carriage returns, escape, or other invisible characters) that cause strings to exceed a single line.
 
-Review the Human Interface Guidelines for additional best practices for [writing](https://developer.apple.com/design/human-interface-guidelines/writing) and designing your [in-app purchases](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase). If you offer subscriptions, get additional best practices for [clearly describing subscriptions](https://developer.apple.com/app-store/subscriptions/#clear-description) in your paywalls and payment sheets.
+Review the Human Interface Guidelines for additional best practices for [writing](https://developer.apple.com/design/human-interface-guidelines/writing) and designing your [Apple In-App Purchases](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase). If you offer subscriptions, get additional best practices for [clearly describing subscriptions](https://developer.apple.com/app-store/subscriptions/#clear-description) in your paywalls and payment sheets.
 
 <a id="Create-one-time-charges"></a>
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/applying-core-image-filters-as-a-postprocess-effect](https://developer.apple.com/documentation/realitykit/applying-core-image-filters-as-a-postprocess-effect)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/applying-core-image-filters-as-a-postprocess-effect
 
 # Applying core image filters as a postprocess effect
 

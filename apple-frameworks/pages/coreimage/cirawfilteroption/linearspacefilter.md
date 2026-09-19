@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cirawfilteroption/linearspacefilter](https://developer.apple.com/documentation/coreimage/cirawfilteroption/linearspacefilter)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreimage/cirawfilteroption/linearspacefilter
 
 # linearSpaceFilter (Swift)
 
 **Framework:** Core Image  
 **Kind:** Type Property  
-**Availability:** iOS 10.0+ (deprecated in 27.0) · iPadOS 10.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.7+ (deprecated in 27.0) · tvOS 10.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 10.0+ (deprecated in 27.2) · iPadOS 10.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.7+ (deprecated in 27.2) · tvOS 10.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 A key for the filter to apply to the image while it is temporarily in a linear color space as part of  RAW image processing. The associated value must be a [CIFilter](../cifilter-swift.class.md) object.
 
@@ -40,7 +41,7 @@ static let linearSpaceFilter: CIRAWFilterOption
 
 **Framework:** Core Image  
 **Kind:** Global Variable  
-**Availability:** iOS 10.0+ (deprecated in 27.0) · iPadOS 10.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.7+ (deprecated in 27.0) · tvOS 10.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 10.0+ (deprecated in 27.2) · iPadOS 10.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.7+ (deprecated in 27.2) · tvOS 10.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 A key for the filter to apply to the image while it is temporarily in a linear color space as part of  RAW image processing. The associated value must be a [CIFilter](../cifilter-swift.class.md) object.
 

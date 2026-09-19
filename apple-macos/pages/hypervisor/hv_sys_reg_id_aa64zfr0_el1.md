@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_sys_reg_id_aa64zfr0_el1](https://developer.apple.com/documentation/hypervisor/hv_sys_reg_id_aa64zfr0_el1)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_sys_reg_id_aa64zfr0_el1
 
 # HV_SYS_REG_ID_AA64ZFR0_EL1 (Swift)
 

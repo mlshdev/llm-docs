@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsgrammaticalcase/accusative](https://developer.apple.com/documentation/foundation/nsgrammaticalcase/accusative)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsgrammaticalcase/accusative
 
 # NSGrammaticalCase.accusative (Swift)
 

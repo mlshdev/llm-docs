@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appleschoolmanagerapi/errorresponse](https://developer.apple.com/documentation/appleschoolmanagerapi/errorresponse)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appleschoolmanagerapi/errorresponse
 
 # ErrorResponse
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple School Manager API  
 **Kind:** Object  
-**Availability:** Apple School Manager API 1.6+
+**Availability:** Apple School Manager API 1.7+
 
 The error details that an API returns in the response body whenever the API request isn’t successful.
 

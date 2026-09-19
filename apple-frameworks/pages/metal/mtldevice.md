@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtldevice](https://developer.apple.com/documentation/metal/mtldevice)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtldevice
 
 # MTLDevice (Swift)
 
@@ -66,7 +67,7 @@ If your app uses more than one GPU (see [Multi-GPU systems](multi-gpu-systems.md
 
 ### Instance Methods
 
-- [functionHandle(function:)](mtldevice/functionhandle%28function_%29-4bw39.md)
+- [functionHandle(function:)](mtldevice/functionhandle%28function_%29-4bw39.md): Returns the handle for a function that you can add to a function table.
 - [functionHandle(function:)](mtldevice/functionhandle%28function_%29-w9ia.md): Get the function handle for the specified binary-linked function from the pipeline state.
 - [makeArchive(url:)](mtldevice/makearchive%28url_%29.md): Creates a new archive from data available at an `NSURL` address.
 - [makeArgumentTable(descriptor:)](mtldevice/makeargumenttable%28descriptor_%29.md): Creates a new argument table from an argument table descriptor.
@@ -171,7 +172,7 @@ If your app uses more than one GPU (see [Multi-GPU systems](multi-gpu-systems.md
 
 ### Instance Methods
 
-- [functionHandleWithFunction:](mtldevice/functionhandle%28function_%29-4bw39.md)
+- [functionHandleWithFunction:](mtldevice/functionhandle%28function_%29-4bw39.md): Returns the handle for a function that you can add to a function table.
 - [functionHandleWithBinaryFunction:](mtldevice/functionhandle%28function_%29-w9ia.md): Get the function handle for the specified binary-linked function from the pipeline state.
 - [newArchiveWithURL:error:](mtldevice/makearchive%28url_%29.md): Creates a new archive from data available at an `NSURL` address.
 - [newArgumentTableWithDescriptor:error:](mtldevice/makeargumenttable%28descriptor_%29.md): Creates a new argument table from an argument table descriptor.

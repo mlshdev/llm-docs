@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/adding-writing-tools-support-to-a-custom-uiview](https://developer.apple.com/documentation/uikit/adding-writing-tools-support-to-a-custom-uiview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/adding-writing-tools-support-to-a-custom-uiview
 
 # Adding Writing Tools support to a custom UIKit view (Swift)
 

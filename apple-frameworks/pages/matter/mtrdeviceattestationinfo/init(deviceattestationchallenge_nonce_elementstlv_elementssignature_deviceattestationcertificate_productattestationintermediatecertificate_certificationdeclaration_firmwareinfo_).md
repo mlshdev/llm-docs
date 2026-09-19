@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrdeviceattestationinfo/init(deviceattestationchallenge:nonce:elementstlv:elementssignature:deviceattestationcertificate:productattestationintermediatecertificate:certificationdeclaration:firmwareinfo:)](https://developer.apple.com/documentation/matter/mtrdeviceattestationinfo/init(deviceattestationchallenge:nonce:elementstlv:elementssignature:deviceattestationcertificate:productattestationintermediatecertificate:certificationdeclaration:firmwareinfo:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrdeviceattestationinfo/init(deviceattestationchallenge:nonce:elementstlv:elementssignature:deviceattestationcertificate:productattestationintermediatecertificate:certificationdeclaration:firmwareinfo:)
 
 # init(deviceAttestationChallenge:nonce:elementsTLV:elementsSignature:deviceAttestationCertificate:productAttestationIntermediateCertificate:certificationDeclaration:firmwareInfo:) (Swift)
 

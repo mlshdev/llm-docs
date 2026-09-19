@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/audio/material/init(name:absorption:scattering:)](https://developer.apple.com/documentation/realitykit/audio/material/init(name:absorption:scattering:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/audio/material/init(name:absorption:scattering:)
 
 # init(name:absorption:scattering:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/controlling-the-layout-behavior-of-a-realityview](https://developer.apple.com/documentation/realitykit/controlling-the-layout-behavior-of-a-realityview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/controlling-the-layout-behavior-of-a-realityview
 
 # Controlling the layout behavior of a reality view
 

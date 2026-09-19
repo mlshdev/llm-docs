@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerview/begintrimming(completionhandler:)](https://developer.apple.com/documentation/avkit/avplayerview/begintrimming(completionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerview/begintrimming(completionhandler:)
 
 # beginTrimming(completionHandler:) (Swift)
 
@@ -26,7 +27,7 @@ func beginTrimming() async -> AVPlayerViewTrimResult
 
 ## Mentioned In
 
-- [Implementing Trimming in a macOS Player](../implementing-trimming-in-a-macos-player.md)
+- [Implementing trimming in a macOS player](../implementing-trimming-in-a-macos-player.md)
 
 <a id="Discussion"></a>
 
@@ -77,7 +78,7 @@ Puts the player view into trimming mode.
 
 ## Mentioned In
 
-- [Implementing Trimming in a macOS Player](../implementing-trimming-in-a-macos-player.md)
+- [Implementing trimming in a macOS player](../implementing-trimming-in-a-macos-player.md)
 
 <a id="Discussion"></a>
 

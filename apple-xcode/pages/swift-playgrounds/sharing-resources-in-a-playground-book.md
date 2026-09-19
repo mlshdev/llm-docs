@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/swift-playgrounds/sharing-resources-in-a-playground-book](https://developer.apple.com/documentation/swift-playgrounds/sharing-resources-in-a-playground-book)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swift-playgrounds/sharing-resources-in-a-playground-book
 
 # Sharing Resources in a Playground Book
 

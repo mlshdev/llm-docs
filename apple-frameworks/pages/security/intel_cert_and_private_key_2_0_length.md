@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/intel_cert_and_private_key_2_0_length](https://developer.apple.com/documentation/security/intel_cert_and_private_key_2_0_length)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/intel_cert_and_private_key_2_0_length
 
 # INTEL_CERT_AND_PRIVATE_KEY_2_0_LENGTH (Swift)
 

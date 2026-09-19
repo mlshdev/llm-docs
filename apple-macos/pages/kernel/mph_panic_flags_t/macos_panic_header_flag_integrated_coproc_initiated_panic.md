@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/mph_panic_flags_t/macos_panic_header_flag_integrated_coproc_initiated_panic](https://developer.apple.com/documentation/kernel/mph_panic_flags_t/macos_panic_header_flag_integrated_coproc_initiated_panic)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/mph_panic_flags_t/macos_panic_header_flag_integrated_coproc_initiated_panic
 
 # MACOS_PANIC_HEADER_FLAG_INTEGRATED_COPROC_INITIATED_PANIC
 

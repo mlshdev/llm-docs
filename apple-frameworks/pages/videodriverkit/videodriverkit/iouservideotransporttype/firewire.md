@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideotransporttype/firewire](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideotransporttype/firewire)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideotransporttype/firewire
 
 # FireWire
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 The transport type identifier for video devices connected via FireWire.
 
@@ -20,12 +21,12 @@ FireWire
 
 ### Protocol-based transport types
 
-- [PCI](pci.md): The transport type identifier for video devices connected via the PCI bus.
-- [USB](usb.md): The transport type identifier for video devices connected via USB.
-- [Bluetooth](bluetooth.md): The transport type identifier for video devices connected via Bluetooth Low Energy.
-- [BluetoothLE](bluetoothle.md): The transport type identifier for video devices connected via Bluetooth.
-- [HDMI](hdmi.md): The transport type identifier for video devices connected via HDMI.
-- [DisplayPort](displayport.md): The transport type identifier for video devices connected via DisplayPort.
-- [AirPlay](airplay.md): The transport type identifier for video devices connected via AirPlay.
-- [AVB](avb.md): The transport type identifier for video devices connected via AVB.
-- [Thunderbolt](thunderbolt.md): The transport type identifier for video devices connected via Thunderbolt.
+- [PCI](pci.md): Beta. The transport type identifier for video devices connected via the PCI bus.
+- [USB](usb.md): Beta. The transport type identifier for video devices connected via USB.
+- [Bluetooth](bluetooth.md): Beta. The transport type identifier for video devices connected via Bluetooth Low Energy.
+- [BluetoothLE](bluetoothle.md): Beta. The transport type identifier for video devices connected via Bluetooth.
+- [HDMI](hdmi.md): Beta. The transport type identifier for video devices connected via HDMI.
+- [DisplayPort](displayport.md): Beta. The transport type identifier for video devices connected via DisplayPort.
+- [AirPlay](airplay.md): Beta. The transport type identifier for video devices connected via AirPlay.
+- [AVB](avb.md): Beta. The transport type identifier for video devices connected via AVB.
+- [Thunderbolt](thunderbolt.md): Beta. The transport type identifier for video devices connected via Thunderbolt.

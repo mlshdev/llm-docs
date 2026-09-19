@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional_video_applications/kfxparameterflag_expanded](https://developer.apple.com/documentation/professional_video_applications/kfxparameterflag_expanded)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxparameterflag_expanded
 
 # kFxParameterFlag_EXPANDED
 

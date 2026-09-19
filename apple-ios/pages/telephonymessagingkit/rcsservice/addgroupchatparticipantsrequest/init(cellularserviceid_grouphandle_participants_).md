@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/telephonymessagingkit/rcsservice/addgroupchatparticipantsrequest/init(cellularserviceid:grouphandle:participants:)](https://developer.apple.com/documentation/telephonymessagingkit/rcsservice/addgroupchatparticipantsrequest/init(cellularserviceid:grouphandle:participants:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/telephonymessagingkit/rcsservice/addgroupchatparticipantsrequest/init(cellularserviceid:grouphandle:participants:)
 
 # init(cellularServiceID:groupHandle:participants:)
 

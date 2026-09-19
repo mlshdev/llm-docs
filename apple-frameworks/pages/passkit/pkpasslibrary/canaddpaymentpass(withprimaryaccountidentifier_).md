@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/passkit/pkpasslibrary/canaddpaymentpass(withprimaryaccountidentifier:)](https://developer.apple.com/documentation/passkit/pkpasslibrary/canaddpaymentpass(withprimaryaccountidentifier:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/passkit/pkpasslibrary/canaddpaymentpass(withprimaryaccountidentifier:)
 
 # canAddPaymentPass(withPrimaryAccountIdentifier:) (Swift)
 
 **Framework:** PassKit (Apple Pay and Wallet)  
 **Kind:** Instance Method  
-**Availability:** iOS 9.0+ (deprecated in 27.0) · iPadOS 9.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.12+ · visionOS 1.0+ (deprecated in 27.0) · watchOS 2.0+ (deprecated in 27.0)
+**Availability:** iOS 9.0+ (deprecated in 27.2) · iPadOS 9.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.12+ · visionOS 1.0+ (deprecated in 27.2) · watchOS 2.0+ (deprecated in 27.2)
 
 A Boolean value that indicates whether the app can add a card to Apple Pay for the provided primary account identifier.
 
@@ -47,7 +48,7 @@ Adding payment passes requires a special entitlement from Apple. If the entitlem
 
 **Framework:** PassKit (Apple Pay and Wallet)  
 **Kind:** Instance Method  
-**Availability:** iOS 9.0+ (deprecated in 27.0) · iPadOS 9.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.12+ · visionOS 1.0+ (deprecated in 27.0) · watchOS 3.0+ (deprecated in 27.0)
+**Availability:** iOS 9.0+ (deprecated in 27.2) · iPadOS 9.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.12+ · visionOS 1.0+ (deprecated in 27.2) · watchOS 3.0+ (deprecated in 27.2)
 
 A Boolean value that indicates whether the app can add a card to Apple Pay for the provided primary account identifier.
 

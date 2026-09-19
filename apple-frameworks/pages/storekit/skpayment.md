@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skpayment](https://developer.apple.com/documentation/storekit/skpayment)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skpayment
 
 # SKPayment (Swift)
 
@@ -18,7 +19,7 @@ class SKPayment
 
 ## Mentioned In
 
-- [Promoting In-App Purchases](promoting-in-app-purchases.md)
+- [Promoting Apple In-App Purchases](promoting-in-app-purchases.md)
 - [Testing a payment request](testing-a-payment-request.md)
 
 <a id="overview"></a>
@@ -97,7 +98,7 @@ A request to the App Store to process payment for additional functionality that 
 
 ## Mentioned In
 
-- [Promoting In-App Purchases](promoting-in-app-purchases.md)
+- [Promoting Apple In-App Purchases](promoting-in-app-purchases.md)
 - [Testing a payment request](testing-a-payment-request.md)
 
 <a id="overview"></a>

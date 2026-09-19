@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/kbluetoothcompanyidentiferfree2move](https://developer.apple.com/documentation/iobluetooth/kbluetoothcompanyidentiferfree2move)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetooth/kbluetoothcompanyidentiferfree2move
 
 # kBluetoothCompanyIdentiferFree2Move (Swift)
 

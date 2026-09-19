@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphiccircularopengaugeimage/templatewithgaugeprovider:bottomimageprovider:centertextprovider:](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircularopengaugeimage/templatewithgaugeprovider:bottomimageprovider:centertextprovider:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircularopengaugeimage/templatewithgaugeprovider:bottomimageprovider:centertextprovider:
 
 # templateWithGaugeProvider:bottomImageProvider:centerTextProvider:
 
@@ -6,7 +7,7 @@
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Returns a new template that has an open circular gauge, a small image at the bottom, and a small amount of text in the center.
 

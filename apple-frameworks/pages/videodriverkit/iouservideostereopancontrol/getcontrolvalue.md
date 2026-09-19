@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideostereopancontrol/getcontrolvalue](https://developer.apple.com/documentation/videodriverkit/iouservideostereopancontrol/getcontrolvalue)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideostereopancontrol/getcontrolvalue
 
 # GetControlValue
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the current value of the control.
 
@@ -26,6 +27,6 @@ The object’s work queue synchronizes access to the value.
 
 ### Accessing the value
 
-- [SetControlValue](setcontrolvalue.md): Sets the current control value.
-- [SetPanningChannels](setpanningchannels.md): Sets the current stereo panning channels.
-- [GetPanningChannels](getpanningchannels.md): Gets the current stereo panning channels.
+- [SetControlValue](setcontrolvalue.md): Beta. Sets the current control value.
+- [SetPanningChannels](setpanningchannels.md): Beta. Sets the current stereo panning channels.
+- [GetPanningChannels](getpanningchannels.md): Beta. Gets the current stereo panning channels.

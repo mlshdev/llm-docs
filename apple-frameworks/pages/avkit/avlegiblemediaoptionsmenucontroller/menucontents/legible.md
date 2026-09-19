@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avlegiblemediaoptionsmenucontroller/menucontents/legible](https://developer.apple.com/documentation/avkit/avlegiblemediaoptionsmenucontroller/menucontents/legible)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avlegiblemediaoptionsmenucontroller/menucontents/legible
 
 # legible (Swift)
 
@@ -14,7 +15,7 @@ static var legible: AVLegibleMediaOptionsMenuController.MenuContents { get }
 
 ## See Also
 
-### Menu Content Options
+### Menu content options
 
 - [all](all.md)
 - [captionAppearance](captionappearance.md)
@@ -33,7 +34,7 @@ AVLegibleMediaOptionsMenuContentsLegible
 
 ## See Also
 
-### Menu Content Options
+### Menu content options
 
 - [AVLegibleMediaOptionsMenuContentsAll](all.md)
 - [AVLegibleMediaOptionsMenuContentsCaptionAppearance](captionappearance.md)

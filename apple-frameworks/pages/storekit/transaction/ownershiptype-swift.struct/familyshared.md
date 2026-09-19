@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/ownershiptype-swift.struct/familyshared](https://developer.apple.com/documentation/storekit/transaction/ownershiptype-swift.struct/familyshared)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/ownershiptype-swift.struct/familyshared
 
 # familyShared
 
@@ -22,7 +23,7 @@ static let familyShared: Transaction.OwnershipType
 
 ## Discussion
 
-For more information about Family Sharing, see [Turn on Family Sharing for in-app purchases](https://help.apple.com/app-store-connect/#/dev45b03fab9).
+For more information about Family Sharing, see [Turn on Family Sharing for Apple In-App Purchases](https://help.apple.com/app-store-connect/#/dev45b03fab9).
 
 ## See Also
 

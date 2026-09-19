@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/virtualization/vzmacauxiliarystorage/init(contentsofurl:)](https://developer.apple.com/documentation/virtualization/vzmacauxiliarystorage/init(contentsofurl:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/virtualization/vzmacauxiliarystorage/init(contentsofurl:)
 
 # init(contentsOfURL:)
 
 **Framework:** Virtualization  
 **Kind:** Initializer  
-**Availability:** macOS 12.0+ (deprecated in 27.0)
+**Availability:** macOS 12.0+ (deprecated in 27.2)
 
 Initializes an auxiliary storage object with data from the location at the URL you provide.
 

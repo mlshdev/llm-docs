@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/inflight/init(airline:flightnumber:boardingtime:flightduration:departureairportgate:arrivalairportgate:)](https://developer.apple.com/documentation/intents/inflight/init(airline:flightnumber:boardingtime:flightduration:departureairportgate:arrivalairportgate:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/intents/inflight/init(airline:flightnumber:boardingtime:flightduration:departureairportgate:arrivalairportgate:)
 
 # init(airline:flightNumber:boardingTime:flightDuration:departureAirportGate:arrivalAirportGate:) (Swift)
 

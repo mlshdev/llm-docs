@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nscursor/resizeright](https://developer.apple.com/documentation/appkit/nscursor/resizeright)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nscursor/resizeright
 
 # resizeRight (Swift)
 
 **Framework:** AppKit  
 **Kind:** Type Property  
-**Availability:** Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.0+ (deprecated in 27.0)
+**Availability:** Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.0+ (deprecated in 27.0)
 
 Returns the resize-right system cursor.
 
@@ -46,7 +47,7 @@ The resize-right cursor. This cursor is used when moving or resizing an object t
 
 **Framework:** AppKit  
 **Kind:** Type Property  
-**Availability:** Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.0+ (deprecated in 27.0)
+**Availability:** Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.0+ (deprecated in 27.0)
 
 Returns the resize-right system cursor.
 

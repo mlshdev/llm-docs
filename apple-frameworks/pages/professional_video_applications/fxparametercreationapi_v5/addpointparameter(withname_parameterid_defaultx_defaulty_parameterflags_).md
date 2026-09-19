@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional_video_applications/fxparametercreationapi_v5/addpointparameter(withname:parameterid:defaultx:defaulty:parameterflags:)](https://developer.apple.com/documentation/professional_video_applications/fxparametercreationapi_v5/addpointparameter(withname:parameterid:defaultx:defaulty:parameterflags:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/fxparametercreationapi_v5/addpointparameter(withname:parameterid:defaultx:defaulty:parameterflags:)
 
 # addPointParameter(withName:parameterID:defaultX:defaultY:parameterFlags:) (Swift)
 

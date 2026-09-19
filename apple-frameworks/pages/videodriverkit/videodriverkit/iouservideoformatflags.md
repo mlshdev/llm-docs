@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoformatflags](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoformatflags)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoformatflags
 
 # IOUserVideoFormatFlags
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Standard format flags for a basic description.
 
@@ -30,57 +31,57 @@ However, when an ASBD has the [FormatFlagIsNonInterleaved](iouservideoformatflag
 
 ### Numeric representation flags
 
-- [FormatFlagIsFloat](iouservideoformatflags/formatflagisfloat.md): Set for floating point, clear for integer.
-- [LinearPCMFormatFlagIsFloat](iouservideoformatflags/linearpcmformatflagisfloat.md): Synonym for `FormatFlagIsFloat`.
-- [FormatFlagIsSignedInteger](iouservideoformatflags/formatflagissignedinteger.md): Set for signed integer, clear for unsigned integer.
-- [LinearPCMFormatFlagIsSignedInteger](iouservideoformatflags/linearpcmformatflagissignedinteger.md): Synonym for `FormatFlagIsSignedInteger`.
+- [FormatFlagIsFloat](iouservideoformatflags/formatflagisfloat.md): Beta. Set for floating point, clear for integer.
+- [LinearPCMFormatFlagIsFloat](iouservideoformatflags/linearpcmformatflagisfloat.md): Beta. Synonym for `FormatFlagIsFloat`.
+- [FormatFlagIsSignedInteger](iouservideoformatflags/formatflagissignedinteger.md): Beta. Set for signed integer, clear for unsigned integer.
+- [LinearPCMFormatFlagIsSignedInteger](iouservideoformatflags/linearpcmformatflagissignedinteger.md): Beta. Synonym for `FormatFlagIsSignedInteger`.
 
 ### Bitwise layout flags
 
-- [FormatFlagIsAlignedHigh](iouservideoformatflags/formatflagisalignedhigh.md): Set if the sample bits are placed into the high bits of the channel, clear for low bit placement.
-- [LinearPCMFormatFlagIsAlignedHigh](iouservideoformatflags/linearpcmformatflagisalignedhigh.md): Synonym for `FormatFlagIsAlignedHigh`.
-- [FormatFlagIsPacked](iouservideoformatflags/formatflagispacked.md): Set if the sample bits occupy the entire available bits for the channel, clear if they are high or low aligned within the channel.
-- [LinearPCMFormatFlagIsPacked](iouservideoformatflags/linearpcmformatflagispacked.md): Synonym for `FormatFlagIsPacked`.
-- [FormatFlagsNativeFloatPacked](iouservideoformatflags/formatflagsnativefloatpacked.md)
+- [FormatFlagIsAlignedHigh](iouservideoformatflags/formatflagisalignedhigh.md): Beta. Set if the sample bits are placed into the high bits of the channel, clear for low bit placement.
+- [LinearPCMFormatFlagIsAlignedHigh](iouservideoformatflags/linearpcmformatflagisalignedhigh.md): Beta. Synonym for `FormatFlagIsAlignedHigh`.
+- [FormatFlagIsPacked](iouservideoformatflags/formatflagispacked.md): Beta. Set if the sample bits occupy the entire available bits for the channel, clear if they are high or low aligned within the channel.
+- [LinearPCMFormatFlagIsPacked](iouservideoformatflags/linearpcmformatflagispacked.md): Beta. Synonym for `FormatFlagIsPacked`.
+- [FormatFlagsNativeFloatPacked](iouservideoformatflags/formatflagsnativefloatpacked.md): Beta.
 
 ### Endianness flags
 
-- [FormatFlagIsBigEndian](iouservideoformatflags/formatflagisbigendian.md): Set for big endian, clear for little endian.
-- [LinearPCMFormatFlagIsBigEndian](iouservideoformatflags/linearpcmformatflagisbigendian.md): Synonym for `FormatFlagIsBigEndian`.
-- [FormatFlagsNativeEndian](iouservideoformatflags/formatflagsnativeendian.md)
+- [FormatFlagIsBigEndian](iouservideoformatflags/formatflagisbigendian.md): Beta. Set for big endian, clear for little endian.
+- [LinearPCMFormatFlagIsBigEndian](iouservideoformatflags/linearpcmformatflagisbigendian.md): Beta. Synonym for `FormatFlagIsBigEndian`.
+- [FormatFlagsNativeEndian](iouservideoformatflags/formatflagsnativeendian.md): Beta.
 
 ### Apple Lossless flags
 
-- [AppleLosslessFormatFlag_16BitSourceData](iouservideoformatflags/applelosslessformatflag_16bitsourcedata.md): This flag is set for Apple Lossless data that was sourced from 16 bit native endian signed integer data.
-- [AppleLosslessFormatFlag_20BitSourceData](iouservideoformatflags/applelosslessformatflag_20bitsourcedata.md): This flag is set for Apple Lossless data that was sourced from 20 bit native endian signed integer data aligned high in 24 bits.
-- [AppleLosslessFormatFlag_24BitSourceData](iouservideoformatflags/applelosslessformatflag_24bitsourcedata.md): This flag is set for Apple Lossless data that was sourced from 24 bit native endian signed integer data.
-- [AppleLosslessFormatFlag_32BitSourceData](iouservideoformatflags/applelosslessformatflag_32bitsourcedata.md): This flag is set for Apple Lossless data that was sourced from 32 bit native endian signed integer data.
+- [AppleLosslessFormatFlag_16BitSourceData](iouservideoformatflags/applelosslessformatflag_16bitsourcedata.md): Beta. This flag is set for Apple Lossless data that was sourced from 16 bit native endian signed integer data.
+- [AppleLosslessFormatFlag_20BitSourceData](iouservideoformatflags/applelosslessformatflag_20bitsourcedata.md): Beta. This flag is set for Apple Lossless data that was sourced from 20 bit native endian signed integer data aligned high in 24 bits.
+- [AppleLosslessFormatFlag_24BitSourceData](iouservideoformatflags/applelosslessformatflag_24bitsourcedata.md): Beta. This flag is set for Apple Lossless data that was sourced from 24 bit native endian signed integer data.
+- [AppleLosslessFormatFlag_32BitSourceData](iouservideoformatflags/applelosslessformatflag_32bitsourcedata.md): Beta. This flag is set for Apple Lossless data that was sourced from 32 bit native endian signed integer data.
 
 ### Channel layout flags
 
-- [FormatFlagIsNonInterleaved](iouservideoformatflags/formatflagisnoninterleaved.md): Set if the samples for each channel are located contiguously and the channels are layed out end to end, clear if the samples for each frame are layed out contiguously and the frames layed out end to end.
-- [LinearPCMFormatFlagIsNonInterleaved](iouservideoformatflags/linearpcmformatflagisnoninterleaved.md): Synonym for `FormatFlagIsNonInterleaved`.
+- [FormatFlagIsNonInterleaved](iouservideoformatflags/formatflagisnoninterleaved.md): Beta. Set if the samples for each channel are located contiguously and the channels are layed out end to end, clear if the samples for each frame are layed out contiguously and the frames layed out end to end.
+- [LinearPCMFormatFlagIsNonInterleaved](iouservideoformatflags/linearpcmformatflagisnoninterleaved.md): Beta. Synonym for `FormatFlagIsNonInterleaved`.
 
 ### Mixability flags
 
-- [FormatFlagIsNonMixable](iouservideoformatflags/formatflagisnonmixable.md): Set to indicate when a format is non-mixable.
-- [LinearPCMFormatFlagIsNonMixable](iouservideoformatflags/linearpcmformatflagisnonmixable.md): Synonym for `FormatFlagIsNonMixable`.
+- [FormatFlagIsNonMixable](iouservideoformatflags/formatflagisnonmixable.md): Beta. Set to indicate when a format is non-mixable.
+- [LinearPCMFormatFlagIsNonMixable](iouservideoformatflags/linearpcmformatflagisnonmixable.md): Beta. Synonym for `FormatFlagIsNonMixable`.
 
 ### Sample fraction flags
 
-- [LinearPCMFormatFlagsSampleFractionMask](iouservideoformatflags/linearpcmformatflagssamplefractionmask.md): The linear PCM flags contain a 6-bit bitfield indicating that an integer format is to be interpreted as fixed point.
-- [LinearPCMFormatFlagsSampleFractionShift](iouservideoformatflags/linearpcmformatflagssamplefractionshift.md): The linear PCM flags contain a 6-bit bitfield indicating that an integer format is to be interpreted as fixed point.
+- [LinearPCMFormatFlagsSampleFractionMask](iouservideoformatflags/linearpcmformatflagssamplefractionmask.md): Beta. The linear PCM flags contain a 6-bit bitfield indicating that an integer format is to be interpreted as fixed point.
+- [LinearPCMFormatFlagsSampleFractionShift](iouservideoformatflags/linearpcmformatflagssamplefractionshift.md): Beta. The linear PCM flags contain a 6-bit bitfield indicating that an integer format is to be interpreted as fixed point.
 
 ### Special purpose flags
 
-- [FormatFlagsAreAllClear](iouservideoformatflags/formatflagsareallclear.md): Set if all the flags would be clear.
-- [LinearPCMFormatFlagsAreAllClear](iouservideoformatflags/linearpcmformatflagsareallclear.md): Synonym for `FormatFlagsAreAllClear`.
+- [FormatFlagsAreAllClear](iouservideoformatflags/formatflagsareallclear.md): Beta. Set if all the flags would be clear.
+- [LinearPCMFormatFlagsAreAllClear](iouservideoformatflags/linearpcmformatflagsareallclear.md): Beta. Synonym for `FormatFlagsAreAllClear`.
 
 ## See Also
 
 ### Working with video streams
 
-- [IOUserVideoStreamBasicDescription](iouservideostreambasicdescription.md): A structure that encapsulates all the information for describing the basic format properties of a stream of audio data.
-- [IOUserVideoFormatID](iouservideoformatid.md): Identifiers used for formats of audio data.
-- [IOUserVideoStreamDirection](iouservideostreamdirection.md): The direction of a video stream.
-- [IOUserVideoStreamTerminalType](iouservideostreamterminaltype.md): The terminal type of video stream.
+- [IOUserVideoStreamBasicDescription](iouservideostreambasicdescription.md): Beta. A structure that encapsulates all the information for describing the basic format properties of a stream of audio data.
+- [IOUserVideoFormatID](iouservideoformatid.md): Beta. Identifiers used for formats of audio data.
+- [IOUserVideoStreamDirection](iouservideostreamdirection.md): Beta. The direction of a video stream.
+- [IOUserVideoStreamTerminalType](iouservideostreamterminaltype.md): Beta. The terminal type of video stream.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applenewsapi/post-articles-_articleid_](https://developer.apple.com/documentation/applenewsapi/post-articles-_articleid_)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applenewsapi/post-articles-_articleid_
 
 # Update an Article
 
@@ -296,6 +297,7 @@ Content-Disposition: form-data; name=metadata
 **Response**
 
 ```json
+
 
 HTTP/1.1 200 OK
 Date: Thu, 05 Mar 2015 02:53:54 GMT

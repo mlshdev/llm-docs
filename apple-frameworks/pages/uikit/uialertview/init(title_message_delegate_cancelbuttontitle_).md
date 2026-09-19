@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uialertview/init(title:message:delegate:cancelbuttontitle:)](https://developer.apple.com/documentation/uikit/uialertview/init(title:message:delegate:cancelbuttontitle:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uialertview/init(title:message:delegate:cancelbuttontitle:)
 
 # init(title:message:delegate:cancelButtonTitle:) (Swift)
 

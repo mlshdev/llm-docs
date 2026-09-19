@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nscursor/resizeleftright](https://developer.apple.com/documentation/appkit/nscursor/resizeleftright)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nscursor/resizeleftright
 
 # resizeLeftRight (Swift)
 
 **Framework:** AppKit  
 **Kind:** Type Property  
-**Availability:** Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.0+ (deprecated in 27.0)
+**Availability:** Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.0+ (deprecated in 27.0)
 
 Returns the resize-left-and-right system cursor.
 
@@ -46,7 +47,7 @@ The resize-left-and-right cursor. This cursor is used when moving or resizing an
 
 **Framework:** AppKit  
 **Kind:** Type Property  
-**Availability:** Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.0+ (deprecated in 27.0)
+**Availability:** Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.0+ (deprecated in 27.0)
 
 Returns the resize-left-and-right system cursor.
 

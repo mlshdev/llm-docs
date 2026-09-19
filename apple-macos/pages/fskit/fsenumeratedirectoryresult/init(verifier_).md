@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fsenumeratedirectoryresult/init(verifier:)](https://developer.apple.com/documentation/fskit/fsenumeratedirectoryresult/init(verifier:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/fskit/fsenumeratedirectoryresult/init(verifier:)
 
 # init(verifier:) (Swift)
 

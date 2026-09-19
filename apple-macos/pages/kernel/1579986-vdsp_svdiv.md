@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1579986-vdsp_svdiv](https://developer.apple.com/documentation/kernel/1579986-vdsp_svdiv)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1579986-vdsp_svdiv
 
 # vDSP_svdiv
 
@@ -55,6 +56,7 @@ let stride = vDSP_Stride(1)
 
 var a: Float = 2
 let b: [Float] = [1, 2, 4, 5]
+
 
 let n = vDSP_Length(b.count)
 

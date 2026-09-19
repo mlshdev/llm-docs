@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoformatflags/linearpcmformatflagssamplefractionshift](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoformatflags/linearpcmformatflagssamplefractionshift)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoformatflags/linearpcmformatflagssamplefractionshift
 
 # LinearPCMFormatFlagsSampleFractionShift
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 The linear PCM flags contain a 6-bit bitfield indicating that an integer format is to be interpreted as fixed point.
 
@@ -26,4 +27,4 @@ The value indicates the number of bits are used to represent the fractional port
 
 ### Sample fraction flags
 
-- [LinearPCMFormatFlagsSampleFractionMask](linearpcmformatflagssamplefractionmask.md): The linear PCM flags contain a 6-bit bitfield indicating that an integer format is to be interpreted as fixed point.
+- [LinearPCMFormatFlagsSampleFractionMask](linearpcmformatflagssamplefractionmask.md): Beta. The linear PCM flags contain a 6-bit bitfield indicating that an integer format is to be interpreted as fixed point.

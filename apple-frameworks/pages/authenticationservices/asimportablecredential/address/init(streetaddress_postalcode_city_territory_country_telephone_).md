@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/authenticationservices/asimportablecredential/address/init(streetaddress:postalcode:city:territory:country:telephone:)](https://developer.apple.com/documentation/authenticationservices/asimportablecredential/address/init(streetaddress:postalcode:city:territory:country:telephone:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/authenticationservices/asimportablecredential/address/init(streetaddress:postalcode:city:territory:country:telephone:)
 
 # init(streetAddress:postalCode:city:territory:country:telephone:)
 

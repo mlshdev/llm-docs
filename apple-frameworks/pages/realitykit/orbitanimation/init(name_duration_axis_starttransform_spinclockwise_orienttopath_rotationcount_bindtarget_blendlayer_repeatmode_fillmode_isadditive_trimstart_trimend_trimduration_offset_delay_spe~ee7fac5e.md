@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/orbitanimation/init(name:duration:axis:starttransform:spinclockwise:orienttopath:rotationcount:bindtarget:blendlayer:repeatmode:fillmode:isadditive:trimstart:trimend:trimduration:offset:delay:speed:)](https://developer.apple.com/documentation/realitykit/orbitanimation/init(name:duration:axis:starttransform:spinclockwise:orienttopath:rotationcount:bindtarget:blendlayer:repeatmode:fillmode:isadditive:trimstart:trimend:trimduration:offset:delay:speed:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/orbitanimation/init(name:duration:axis:starttransform:spinclockwise:orienttopath:rotationcount:bindtarget:blendlayer:repeatmode:fillmode:isadditive:trimstart:trimend:trimduration:offset:delay:speed:)
 
 # init(name:duration:axis:startTransform:spinClockwise:orientToPath:rotationCount:bindTarget:blendLayer:repeatMode:fillMode:isAdditive:trimStart:trimEnd:trimDuration:offset:delay:speed:)
 

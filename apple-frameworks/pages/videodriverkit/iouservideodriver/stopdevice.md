@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideodriver/stopdevice](https://developer.apple.com/documentation/videodriverkit/iouservideodriver/stopdevice)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideodriver/stopdevice
 
 # StopDevice
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Tells the driver to stop IO on an video device.
 
@@ -31,6 +32,6 @@ The default implementation always returns `kIOReturnSuccess`. Subclass and overr
 
 ### Starting and stopping the driver
 
-- [StartDevice](startdevice.md): Tells the driver to start IO on an video device.
-- [IOUserVideoObjectID](../videodriverkit/iouservideoobjectid.md): A handle for a a specific video object.
-- [IOUserVideoStartStopFlags](../videodriverkit/iouservideostartstopflags.md): Flags used to indicate how I/O is starting or stopping.
+- [StartDevice](startdevice.md): Beta. Tells the driver to start IO on an video device.
+- [IOUserVideoObjectID](../videodriverkit/iouservideoobjectid.md): Beta. A handle for a a specific video object.
+- [IOUserVideoStartStopFlags](../videodriverkit/iouservideostartstopflags.md): Beta. Flags used to indicate how I/O is starting or stopping.

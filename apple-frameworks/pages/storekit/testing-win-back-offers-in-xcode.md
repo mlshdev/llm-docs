@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/testing-win-back-offers-in-xcode](https://developer.apple.com/documentation/storekit/testing-win-back-offers-in-xcode)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/testing-win-back-offers-in-xcode
 
 # Testing win-back offers in Xcode
 
@@ -67,9 +68,9 @@ You can rerun the test without resetting any state values. Win-back offers that 
 
 ## See Also
 
-### In-App Purchase Testing
+### Apple In-App Purchase Testing
 
-- [Testing at all stages of development with Xcode and the sandbox](testing-at-all-stages-of-development-with-xcode-and-the-sandbox.md): Verify your implementation of In-App Purchases by testing your code throughout its development.
-- [Testing In-App Purchases with sandbox](testing-in-app-purchases-with-sandbox.md): Test your implementation of In-App Purchases using real product information and server-to-server transactions in the sandbox environment.
+- [Testing at all stages of development with Xcode and the sandbox](testing-at-all-stages-of-development-with-xcode-and-the-sandbox.md): Verify your implementation of Apple In-App Purchases by testing your code throughout its development.
+- [Testing Apple In-App Purchases with sandbox](testing-in-app-purchases-with-sandbox.md): Test your implementation of Apple In-App Purchases using real product information and server-to-server transactions in the sandbox environment.
 - [Testing refund requests](testing-refund-requests.md): Test your app’s implementation of refund requests, and your app’s and server’s handling of approved and declined refunds.
 - [Testing Ask to Buy in Xcode](testing-ask-to-buy-in-xcode.md): Validate your app’s handling of Ask To Buy in the testing environment.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelerror](https://developer.apple.com/documentation/foundationmodels/languagemodelerror)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelerror
 
 # LanguageModelError
 
@@ -11,7 +12,7 @@ A failure that may occur while generating a response when using any language mod
 ## Declaration
 
 ```swift
-enum LanguageModelError
+@nonexhaustive enum LanguageModelError
 ```
 
 ## Mentioned In
@@ -57,7 +58,7 @@ enum LanguageModelError
 
 ### Generation guide unsupported error
 
-- [LanguageModelError.unsupportedGenerationGuide(\_:)](languagemodelerror/unsupportedgenerationguide%28__%29.md): An unsupported generation guide was used
+- [LanguageModelError.unsupportedGenerationGuide(\_:)](languagemodelerror/unsupportedgenerationguide%28__%29.md): An unsupported generation guide was used.
 - [LanguageModelError.UnsupportedGenerationGuide](languagemodelerror/unsupportedgenerationguide.md): Information about an unsupported generation guide.
 
 ### Language unsupported error

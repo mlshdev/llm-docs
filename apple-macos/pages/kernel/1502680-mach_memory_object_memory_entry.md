@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1502680-mach_memory_object_memory_entry](https://developer.apple.com/documentation/kernel/1502680-mach_memory_object_memory_entry)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1502680-mach_memory_object_memory_entry
 
 # mach_memory_object_memory_entry
 

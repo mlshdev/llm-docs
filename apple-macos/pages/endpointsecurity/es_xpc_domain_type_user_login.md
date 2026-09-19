@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_xpc_domain_type_user_login](https://developer.apple.com/documentation/endpointsecurity/es_xpc_domain_type_user_login)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_xpc_domain_type_user_login
 
 # ES_XPC_DOMAIN_TYPE_USER_LOGIN (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_apple_crl_end_of_time](https://developer.apple.com/documentation/security/cssm_apple_crl_end_of_time)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_apple_crl_end_of_time
 
 # CSSM_APPLE_CRL_END_OF_TIME (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional-video-applications/document-type-definition](https://developer.apple.com/documentation/professional-video-applications/document-type-definition)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional-video-applications/document-type-definition
 
 # Document Type Definition
 
@@ -63,6 +64,7 @@ The following DTD applies to Final Cut Pro XML (FCPXML) Interchange Format 1.10.
 <!ATTLIST project id ID #IMPLIED>
 <!ATTLIST project modDate CDATA #IMPLIED>
 
+
 <!-- RESOURCE ELEMENTS -->
 <!-- A 'resource' is a project element potentially referenced by other project elements. -->
 <!-- To support such references, all resource instances require a local ID attribute. -->
@@ -95,6 +97,7 @@ The following DTD applies to Final Cut Pro XML (FCPXML) Interchange Format 1.10.
 <!--("Rec. 601 (NTSC)" | "Rec. 601 (PAL)" | "Rec. 709" | "Rec. 2020" | "Rec. 2020 PQ" | "Rec. 2020 HLG") -->
 <!ATTLIST format projection CDATA #IMPLIED><!-- ("none" | "equirectangular" | "fisheye" | "back-to-back fisheye" | "cubic") -->
 <!ATTLIST format stereoscopic CDATA #IMPLIED><!-- ("mono" | "side by side" | "over under") -->
+
 
 <!-- An 'asset' defines a reference to external source media (i.e., a local file). -->
 <!-- 'uid' is an FCP-assigned unique ID; if not specified, FCP creates a new default clip for the asset. -->
@@ -668,6 +671,7 @@ Here, the transition element overlaps the last 2 seconds of the previous video (
 <!ATTLIST timept interp (smooth2 | linear | smooth) "smooth2"> <!-- interpolation type for point.  smooth has been deprecated -->
 <!ATTLIST timept inTime %time; #IMPLIED><!-- transition in-time for point (used only with smooth interpolations) -->
 <!ATTLIST timept outTime %time; #IMPLIED><!-- transition out-time for point (used only with smooth interpolations) -->
+
 
 <!-- KEYWORDS, MARKERS, NOTES -->
 <!-- If 'completed' is specified, this marker becomes a to-do item. -->

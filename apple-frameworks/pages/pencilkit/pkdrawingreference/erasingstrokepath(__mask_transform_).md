@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/pencilkit/pkdrawingreference/erasingstrokepath(_:mask:transform:)](https://developer.apple.com/documentation/pencilkit/pkdrawingreference/erasingstrokepath(_:mask:transform:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkdrawingreference/erasingstrokepath(_:mask:transform:)
 
 # erasingStrokePath(\_:mask:transform:) (Swift)
 

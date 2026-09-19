@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/nefilter_data_provider_extern](https://developer.apple.com/documentation/networkextension/nefilter_data_provider_extern)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/networkextension/nefilter_data_provider_extern
 
 # NEFILTER_DATA_PROVIDER_EXTERN
 

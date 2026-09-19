@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xctest/xctestcase/addteardownblock(_:)-5zw6c](https://developer.apple.com/documentation/xctest/xctestcase/addteardownblock(_:)-5zw6c)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xctest/xctestcase/addteardownblock(_:)-5zw6c
 
 # addTeardownBlock(\_:)
 

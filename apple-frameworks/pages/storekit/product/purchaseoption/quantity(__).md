@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/product/purchaseoption/quantity(_:)](https://developer.apple.com/documentation/storekit/product/purchaseoption/quantity(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/product/purchaseoption/quantity(_:)
 
 # quantity(\_:)
 
@@ -30,7 +31,7 @@ An instance of [Product.PurchaseOption](../purchaseoption.md) to use in [purchas
 
 ## Discussion
 
-The quantity applies to consumable in-app purchases and non-renewing subscriptions.
+The quantity applies to consumable Apple In-App Purchases and non-renewing subscriptions.
 
 ## See Also
 

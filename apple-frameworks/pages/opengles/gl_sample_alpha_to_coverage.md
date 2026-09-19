@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_sample_alpha_to_coverage](https://developer.apple.com/documentation/opengles/gl_sample_alpha_to_coverage)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_sample_alpha_to_coverage
 
 # GL_SAMPLE_ALPHA_TO_COVERAGE (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_dl_db_record_x509_certificate](https://developer.apple.com/documentation/security/cssm_dl_db_record_x509_certificate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_dl_db_record_x509_certificate
 
 # CSSM_DL_DB_RECORD_X509_CERTIFICATE (Swift)
 

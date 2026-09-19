@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/createml/mlobjectdetector/train(trainingdata:annotationtype:parameters:sessionparameters:)](https://developer.apple.com/documentation/createml/mlobjectdetector/train(trainingdata:annotationtype:parameters:sessionparameters:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/createml/mlobjectdetector/train(trainingdata:annotationtype:parameters:sessionparameters:)
 
 # train(trainingData:annotationType:parameters:sessionParameters:)
 

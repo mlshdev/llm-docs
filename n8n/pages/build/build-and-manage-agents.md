@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/build-and-manage-agents.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/build-and-manage-agents.md)
+> Pinned source for n8n main: [docs/build/build-and-manage-agents.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/build-and-manage-agents.md)
 
 # Build and manage agents
 
@@ -39,6 +39,7 @@ Configure these parts of an agent in the Agent Builder:
 | **Model**          | The language model that reasons and generates responses. Choose a provider and model when you set up the agent.                                       |
 | **Instructions**   | The system prompt that describes the agent's role, tone, and constraints.                                                                             |
 | **Tools**          | Actions the agent can take: workflows, custom code, built-in n8n integrations, and [MCP servers](https://docs.n8n.io/build/integrate-ai/mcp-servers). |
+| **Web search**     | Lets the agent search the web for current information, using the model's native search tool or a fallback service.                                    |
 | **Skills**         | Reusable behavior bundles that package instructions with the tools needed for a specific task.                                                        |
 | **Channels**       | Places people can reach the agent, like Slack, Telegram, or Linear.                                                                                   |
 | **Schedules**      | Tasks the agent runs on a recurring basis once published.                                                                                             |
@@ -84,6 +85,13 @@ Keep instructions specific; if the agent doesn't behave as expected, refine the 
 In the **Tools** section, select **Add tool** and pick from built-in tools (n8n integrations like Slack or Google Sheets), workflows in the same project, custom tools defined by a JSON schema, or external tools using [MCP servers](https://docs.n8n.io/build/integrate-ai/mcp-servers).
 
 The agent decides which tool to use based on your instructions and the task, using the credentials you attach when you add the tool. For sensitive tools, you can require approval before the agent runs them. See [Approve tool calls](https://docs.n8n.io/build/build-and-manage-agents#approve-tool-calls).
+
+#### Enable web search
+
+In the **Capabilities** section enable **Web search** to let the agent look up current information such as prices, docs, and news without adding a tool yourself.
+
+- If the model you chose offers its own native web search tool, the agent uses it directly.
+- If it doesn't, choose [Brave Search](https://docs.n8n.io/integrations/builtin/credentials/bravesearch) or a self-hosted [SearXNG](https://docs.n8n.io/integrations/builtin/credentials/searxng) instance as the fallback, and add credentials for whichever one you pick.
 
 #### Bundle capabilities with skills
 

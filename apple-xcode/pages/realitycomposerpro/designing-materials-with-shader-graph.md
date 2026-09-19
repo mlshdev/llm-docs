@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/realitycomposerpro/designing-materials-with-shader-graph](https://developer.apple.com/documentation/realitycomposerpro/designing-materials-with-shader-graph)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitycomposerpro/designing-materials-with-shader-graph
 
 # Designing materials with Shader Graph
 
@@ -151,3 +152,4 @@ The following options apply to nodes used in Shader Graphs.
 
 - [Building materials in Reality Composer Pro](building-materials-in-reality-composer-pro.md): Apply surface properties to 3D entities to control how they look in your scene.
 - [Applying materials to an asset](applying-materials-to-an-asset.md): Assign and configure surface materials on 3D model assets in Reality Composer Pro.
+- [Creating a procedural Shader Graph material](creating-a-procedural-shader-graph-material.md): Learn how to build an organic, pulsing, color-shifting material in the Reality Composer Pro 3 Shader Graph.

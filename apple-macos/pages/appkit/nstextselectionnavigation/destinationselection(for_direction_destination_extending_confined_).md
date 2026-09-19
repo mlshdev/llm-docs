@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstextselectionnavigation/destinationselection(for:direction:destination:extending:confined:)](https://developer.apple.com/documentation/appkit/nstextselectionnavigation/destinationselection(for:direction:destination:extending:confined:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstextselectionnavigation/destinationselection(for:direction:destination:extending:confined:)
 
 # destinationSelection(for:direction:destination:extending:confined:) (Swift)
 

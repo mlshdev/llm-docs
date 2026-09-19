@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/vmx_reason_vmx_timer_expired](https://developer.apple.com/documentation/hypervisor/vmx_reason_vmx_timer_expired)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/vmx_reason_vmx_timer_expired
 
 # VMX_REASON_VMX_TIMER_EXPIRED (Swift)
 

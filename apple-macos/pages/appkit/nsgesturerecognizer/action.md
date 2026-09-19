@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsgesturerecognizer/action](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/action)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsgesturerecognizer/action
 
 # action (Swift)
 
@@ -40,7 +41,7 @@ For continuous gestures, it is recommended that you use an action method that ac
 
 ## See Also
 
-### Accessing the Target and Action
+### Accessing the target and action
 
 - [target](target.md): The object that implements the action method.
 
@@ -84,6 +85,6 @@ For continuous gestures, it is recommended that you use an action method that ac
 
 ## See Also
 
-### Accessing the Target and Action
+### Accessing the target and action
 
 - [target](target.md): The object that implements the action method.

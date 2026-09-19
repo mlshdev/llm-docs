@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/imageattachment/orientation](https://developer.apple.com/documentation/foundationmodels/transcript/imageattachment/orientation)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/imageattachment/orientation
 
 # orientation
 
@@ -19,5 +20,5 @@ var orientation: CGImagePropertyOrientation { get }
 ### Inspecting an image attachment
 
 - [cgImage](cgimage.md): The image as a Core Graphics image.
-- [ciImage](ciimage.md)
+- [ciImage](ciimage.md): The image as a Core Image image.
 - [url](url.md): The URL of the original image asset, if the attachment was created from a URL.

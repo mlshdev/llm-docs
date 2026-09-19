@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avlegiblemediaoptionsmenustate](https://developer.apple.com/documentation/avkit/avlegiblemediaoptionsmenustate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avlegiblemediaoptionsmenustate
 
 # AVLegibleMediaOptionsMenuState (Swift)
 
@@ -39,9 +40,10 @@ A struct describing the state of the legible options menu.
 
 ## See Also
 
-### Legible media options
+### Media and content selection
 
 - [AVLegibleMediaOptionsMenuController](avlegiblemediaoptionsmenucontroller.md)
+- [AVContentSelectionViewController](avcontentselectionviewcontroller.md): A view controller for providing additional UI to the multiview experience.
 
 # AVLegibleMediaOptionsMenuState (Objective-C)
 
@@ -70,6 +72,6 @@ A struct describing the state of the legible options menu.
 
 ## See Also
 
-### Legible media options
+### Media and content selection
 
 - [AVLegibleMediaOptionsMenuController](avlegiblemediaoptionsmenucontroller.md)

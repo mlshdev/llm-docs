@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iohikeyboard/1553593-getlastpageandusage](https://developer.apple.com/documentation/kernel/iohikeyboard/1553593-getlastpageandusage)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iohikeyboard/1553593-getlastpageandusage
 
 # getLastPageAndUsage
 

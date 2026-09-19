@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturedevice/devicetype-swift.struct](https://developer.apple.com/documentation/avfoundation/avcapturedevice/devicetype-swift.struct)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturedevice/devicetype-swift.struct
 
 # AVCaptureDevice.DeviceType (Swift)
 
@@ -55,6 +56,11 @@ Use the device type constants to retrieve devices using an [AVCaptureDevice.Disc
 ### Initializers
 
 - [init(rawValue:)](devicetype-swift.struct/init%28rawvalue_%29.md): Creates a capture device type with a string value.
+
+### Type Properties
+
+- [builtInInnerUltraWideCamera](devicetype-swift.struct/builtininnerultrawidecamera.md): Beta.
+- [builtInOuterUltraWideCamera](devicetype-swift.struct/builtinouterultrawidecamera.md): Beta.
 
 ## Relationships
 

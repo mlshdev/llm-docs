@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/core_printing/data_not_wanted_constants](https://developer.apple.com/documentation/applicationservices/core_printing/data_not_wanted_constants)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applicationservices/core_printing/data_not_wanted_constants
 
 # Data Not Wanted Constants
 

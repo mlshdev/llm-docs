@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1472984-miscellaneous_attribute_selector/gestaltsquaremenubar](https://developer.apple.com/documentation/coreservices/1472984-miscellaneous_attribute_selector/gestaltsquaremenubar)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/1472984-miscellaneous_attribute_selector/gestaltsquaremenubar
 
 # gestaltSquareMenuBar
 

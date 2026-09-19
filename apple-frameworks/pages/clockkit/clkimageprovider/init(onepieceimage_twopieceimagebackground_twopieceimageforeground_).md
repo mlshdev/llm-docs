@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkimageprovider/init(onepieceimage:twopieceimagebackground:twopieceimageforeground:)](https://developer.apple.com/documentation/clockkit/clkimageprovider/init(onepieceimage:twopieceimagebackground:twopieceimageforeground:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkimageprovider/init(onepieceimage:twopieceimagebackground:twopieceimageforeground:)
 
 # init(onePieceImage:twoPieceImageBackground:twoPieceImageForeground:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Creates and returns an image provider with both one-piece and two-piece images.
 
@@ -44,7 +45,7 @@ Use this method when you want to display a two-piece image in multicolor environ
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Creates and returns an image provider with both one-piece and two-piece images.
 

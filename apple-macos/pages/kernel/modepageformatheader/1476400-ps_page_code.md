@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/modepageformatheader/1476400-ps_page_code](https://developer.apple.com/documentation/kernel/modepageformatheader/1476400-ps_page_code)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/modepageformatheader/1476400-ps_page_code
 
 # PS_PAGE_CODE
 

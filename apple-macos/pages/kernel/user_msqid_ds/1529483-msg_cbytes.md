@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/user_msqid_ds/1529483-msg_cbytes](https://developer.apple.com/documentation/kernel/user_msqid_ds/1529483-msg_cbytes)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/user_msqid_ds/1529483-msg_cbytes
 
 # msg_cbytes
 

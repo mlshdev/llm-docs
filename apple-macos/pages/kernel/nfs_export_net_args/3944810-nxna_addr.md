@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/nfs_export_net_args/3944810-nxna_addr](https://developer.apple.com/documentation/kernel/nfs_export_net_args/3944810-nxna_addr)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/nfs_export_net_args/3944810-nxna_addr
 
 # nxna_addr
 

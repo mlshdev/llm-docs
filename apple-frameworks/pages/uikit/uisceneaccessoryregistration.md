@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uisceneaccessoryregistration](https://developer.apple.com/documentation/uikit/uisceneaccessoryregistration)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uisceneaccessoryregistration
 
 # UISceneAccessoryRegistration (Swift)
 
@@ -51,6 +52,7 @@ Instances of this type allow for observing availability of a given scene accesso
 
 ### Scene accessories
 
+- [Presenting content on a connected display](presenting-content-on-a-connected-display.md): Fill connected displays with additional content from your app.
 - [UISceneAccessory](uisceneaccessory.md): A type which can be used to register for a specific type of scene accessory presentation.
 
 # UISceneAccessoryRegistration (Objective-C)
@@ -94,4 +96,5 @@ Instances of this type allow for observing availability of a given scene accesso
 
 ### Scene accessories
 
+- [Presenting content on a connected display](presenting-content-on-a-connected-display.md): Fill connected displays with additional content from your app.
 - [UISceneAccessory](uisceneaccessory.md): A type which can be used to register for a specific type of scene accessory presentation.

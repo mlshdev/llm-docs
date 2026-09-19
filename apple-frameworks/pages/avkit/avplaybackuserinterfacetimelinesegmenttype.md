@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplaybackuserinterfacetimelinesegmenttype](https://developer.apple.com/documentation/avkit/avplaybackuserinterfacetimelinesegmenttype)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplaybackuserinterfacetimelinesegmenttype
 
 # AVPlaybackUserInterfaceTimelineSegmentType (Swift)
 
@@ -44,7 +45,7 @@ enum AVPlaybackUserInterfaceTimelineSegmentType
 
 ## See Also
 
-### Timeline
+### Timeline and segments
 
 - [AVPlaybackUserInterfaceTimeControllable](avplaybackuserinterfacetimecontrollable-50vcy.md): Provides time control and navigation capabilities for media content.
 - [AVPlaybackUserInterfacePlaybackPosition](avplaybackuserinterfaceplaybackposition.md): A snapshot comprising a playback position recorded at a known host time and the rate of position advancement.
@@ -79,7 +80,7 @@ enum AVPlaybackUserInterfaceTimelineSegmentType : NSInteger;
 
 ## See Also
 
-### Timeline
+### Timeline and segments
 
 - [AVPlaybackUserInterfaceTimeControllable](avplaybackuserinterfacetimecontrollable-62fq2.md): Provides time control and navigation capabilities for media content.
 - [AVPlaybackUserInterfacePlaybackPosition](avplaybackuserinterfaceplaybackposition.md): A snapshot comprising a playback position recorded at a known host time and the rate of position advancement.

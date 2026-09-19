@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnns/ternaryarithmeticlayer/init(inputa:inputadescriptortype:inputb:inputbdescriptortype:inputc:inputcdescriptortype:output:outputdescriptortype:function:activation:filterparameters:)](https://developer.apple.com/documentation/accelerate/bnns/ternaryarithmeticlayer/init(inputa:inputadescriptortype:inputb:inputbdescriptortype:inputc:inputcdescriptortype:output:outputdescriptortype:function:activation:filterparameters:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/bnns/ternaryarithmeticlayer/init(inputa:inputadescriptortype:inputb:inputbdescriptortype:inputc:inputcdescriptortype:output:outputdescriptortype:function:activation:filterparameters:)
 
 # init(inputA:inputADescriptorType:inputB:inputBDescriptorType:inputC:inputCDescriptorType:output:outputDescriptorType:function:activation:filterParameters:)
 

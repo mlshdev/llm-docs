@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnnsgraph/builder/tensor/matmul(transpose:other:transposeother:bias:)](https://developer.apple.com/documentation/accelerate/bnnsgraph/builder/tensor/matmul(transpose:other:transposeother:bias:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/bnnsgraph/builder/tensor/matmul(transpose:other:transposeother:bias:)
 
 # matmul(transpose:other:transposeOther:bias:)
 

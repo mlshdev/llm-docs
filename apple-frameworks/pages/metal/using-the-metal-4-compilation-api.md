@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/using-the-metal-4-compilation-api](https://developer.apple.com/documentation/metal/using-the-metal-4-compilation-api)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/using-the-metal-4-compilation-api
 
 # Using the Metal 4 compilation API (Swift)
 

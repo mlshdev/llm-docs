@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideobox/create](https://developer.apple.com/documentation/videodriverkit/iouservideobox/create)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideobox/create
 
 # Create
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Static Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Static factory method to allocate and initialize an IOUserVideoBox.
 
@@ -37,5 +38,5 @@ If IOUserVideoBox is subclassed to override behavior, don’t use this method to
 
 ### Creating a video box
 
-- [init](init.md): Initializes a video box.
-- [IOUserVideoDriver](../iouservideodriver.md): A video driver.
+- [init](init.md): Beta. Initializes a video box.
+- [IOUserVideoDriver](../iouservideodriver.md): Beta. A video driver.

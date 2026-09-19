@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skpaymentqueue/restorecompletedtransactions()](https://developer.apple.com/documentation/storekit/skpaymentqueue/restorecompletedtransactions())
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skpaymentqueue/restorecompletedtransactions()
 
 # restoreCompletedTransactions() (Swift)
 
@@ -20,7 +21,7 @@ func restoreCompletedTransactions()
 
 - [Choosing a receipt validation technique](../choosing-a-receipt-validation-technique.md)
 - [Restoring purchased products](../restoring-purchased-products.md)
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 - [Validating receipts with the App Store](../validating-receipts-with-the-app-store.md)
 
 <a id="Discussion"></a>
@@ -32,7 +33,7 @@ Use this method to restore finished transactions—that is, transactions for whi
 - To install purchases on additional devices
 - To restore purchases for an application that the user deleted and reinstalled
 
-When you create a new product to be sold in your store, you choose whether that product can be restored or not. See the [In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267) for more information.
+When you create a new product to be sold in your store, you choose whether that product can be restored or not. See the [Apple In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267) for more information.
 
 The payment queue delivers a new transaction for each previously completed transaction that can be restored. Each transaction includes a copy of the original transaction.
 
@@ -47,7 +48,7 @@ This method has no effect in the following situations:
 
 > **Important**
 
->  If you are using the [In-App Purchase](../in-app-purchase.md) API and managing transactions using the [Transaction](../transaction.md) API, use [currentEntitlements](../transaction/currententitlements.md) to determine which in-app purchases the customer is currently entitled to. The [restoreCompletedTransactions()](restorecompletedtransactions%28%29.md) function doesn’t affect transactions in the [Transaction](../transaction.md) API. In rare cases when a user suspects the app isn’t showing all the transactions, call [sync()](../appstore/sync%28%29.md) in response to an explicit user action, like tapping a button.
+>  If you are using the [Apple In-App Purchase](../in-app-purchase.md) API and managing transactions using the [Transaction](../transaction.md) API, use [currentEntitlements](../transaction/currententitlements.md) to determine which in-app purchases the customer is currently entitled to. The [restoreCompletedTransactions()](restorecompletedtransactions%28%29.md) function doesn’t affect transactions in the [Transaction](../transaction.md) API. In rare cases when a user suspects the app isn’t showing all the transactions, call [sync()](../appstore/sync%28%29.md) in response to an explicit user action, like tapping a button.
 
 ## See Also
 
@@ -75,7 +76,7 @@ Asks the payment queue to restore previously completed purchases.
 
 - [Choosing a receipt validation technique](../choosing-a-receipt-validation-technique.md)
 - [Restoring purchased products](../restoring-purchased-products.md)
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 - [Validating receipts with the App Store](../validating-receipts-with-the-app-store.md)
 
 <a id="Discussion"></a>
@@ -87,7 +88,7 @@ Use this method to restore finished transactions—that is, transactions for whi
 - To install purchases on additional devices
 - To restore purchases for an application that the user deleted and reinstalled
 
-When you create a new product to be sold in your store, you choose whether that product can be restored or not. See the [In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267) for more information.
+When you create a new product to be sold in your store, you choose whether that product can be restored or not. See the [Apple In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267) for more information.
 
 The payment queue delivers a new transaction for each previously completed transaction that can be restored. Each transaction includes a copy of the original transaction.
 
@@ -102,7 +103,7 @@ This method has no effect in the following situations:
 
 > **Important**
 
->  If you are using the [In-App Purchase](../in-app-purchase.md) API and managing transactions using the [Transaction](../transaction.md) API, use [currentEntitlements](../transaction/currententitlements.md) to determine which in-app purchases the customer is currently entitled to. The [restoreCompletedTransactions](restorecompletedtransactions%28%29.md) function doesn’t affect transactions in the [Transaction](../transaction.md) API. In rare cases when a user suspects the app isn’t showing all the transactions, call [sync()](../appstore/sync%28%29.md) in response to an explicit user action, like tapping a button.
+>  If you are using the [Apple In-App Purchase](../in-app-purchase.md) API and managing transactions using the [Transaction](../transaction.md) API, use [currentEntitlements](../transaction/currententitlements.md) to determine which in-app purchases the customer is currently entitled to. The [restoreCompletedTransactions](restorecompletedtransactions%28%29.md) function doesn’t affect transactions in the [Transaction](../transaction.md) API. In rare cases when a user suspects the app isn’t showing all the transactions, call [sync()](../appstore/sync%28%29.md) in response to an explicit user action, like tapping a button.
 
 ## See Also
 

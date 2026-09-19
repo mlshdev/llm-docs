@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/os/os_object_decl_sendable_class](https://developer.apple.com/documentation/os/os_object_decl_sendable_class)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/os/os_object_decl_sendable_class
 
 # OS_OBJECT_DECL_SENDABLE_CLASS
 

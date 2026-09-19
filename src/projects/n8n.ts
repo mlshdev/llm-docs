@@ -28,6 +28,7 @@ interface N8nContext {
   readonly files: ReadonlySet<string>;
   readonly project: GithubSourceProject;
   readonly lock: GithubLockedSource;
+  readonly spaceTablePath: string;
   readonly spaceFolders: ReadonlyMap<string, string>;
   readonly reusableBlocks: ReadonlyMap<string, string>;
 }
@@ -43,7 +44,10 @@ interface FileBlock {
 }
 
 const docsSite = "https://docs.n8n.io";
-const spaceTablePath = "docs/contribute/style-guide-for-n8n-docs.md";
+const spaceTablePaths = [
+  "docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md",
+  "docs/contribute/style-guide-for-n8n-docs.md",
+] as const;
 
 export async function buildN8n(
   project: GithubSourceProject,
@@ -57,6 +61,7 @@ export async function buildN8n(
     lock.sourceCommit,
     async (root, archiveFiles) => {
       const files = new Set(await listFiles(root));
+      const spaceTablePath = findSpaceTablePath(files);
       const spaceFolders = loadSpaceFolders(
         await readUtf8(root, spaceTablePath),
         files,
@@ -67,6 +72,7 @@ export async function buildN8n(
         files: archiveFiles,
         project,
         lock,
+        spaceTablePath,
         spaceFolders,
         reusableBlocks,
       };
@@ -119,6 +125,14 @@ export async function buildN8n(
     },
     includeN8nPath,
   );
+}
+
+export function findSpaceTablePath(files: ReadonlySet<string>): string {
+  const sourcePath = spaceTablePaths.find((candidate) => files.has(candidate));
+  if (!sourcePath) {
+    throw new Error("n8n space table source is missing");
+  }
+  return sourcePath;
 }
 
 function includeN8nPath(sourcePath: string): boolean {
@@ -664,7 +678,7 @@ function resolveN8nLink(
         : undefined;
     if (kind === "link" && markdownTarget) {
       if (!context.files.has(markdownTarget)) {
-        if (sourcePath === spaceTablePath) {
+        if (sourcePath === context.spaceTablePath) {
           return undefined;
         }
         // This pinned page predates the rename to `n8n-assistant.md`; the

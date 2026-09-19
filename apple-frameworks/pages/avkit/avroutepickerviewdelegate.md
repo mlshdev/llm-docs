@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avroutepickerviewdelegate](https://developer.apple.com/documentation/avkit/avroutepickerviewdelegate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avroutepickerviewdelegate
 
 # AVRoutePickerViewDelegate (Swift)
 
@@ -16,7 +17,7 @@ protocol AVRoutePickerViewDelegate : NSObjectProtocol
 
 ## Topics
 
-### Presenting Routes
+### Presenting routes
 
 - [routePickerViewWillBeginPresentingRoutes(\_:)](avroutepickerviewdelegate/routepickerviewwillbeginpresentingroutes%28__%29.md): Tells the delegate that the route picker view is about to begin presenting routes to the user.
 - [routePickerViewDidEndPresentingRoutes(\_:)](avroutepickerviewdelegate/routepickerviewdidendpresentingroutes%28__%29.md): Tells the delegate when the route picker view finishes presenting routes to the user.
@@ -29,9 +30,10 @@ protocol AVRoutePickerViewDelegate : NSObjectProtocol
 
 ## See Also
 
-### Configuring the delegate
+### Route selection
 
-- [delegate](avroutepickerview/delegate.md): The delegate object for the route picker.
+- [AVRoutePickerView](avroutepickerview.md): A view that presents a list of nearby media receivers.
+- [AVRoutePickerViewButtonStyle](avroutepickerviewbuttonstyle.md): Constants that define the button styles a route picker view supports.
 
 # AVRoutePickerViewDelegate (Objective-C)
 
@@ -49,7 +51,7 @@ A protocol that defines the methods to adopt to respond to route picker view pre
 
 ## Topics
 
-### Presenting Routes
+### Presenting routes
 
 - [routePickerViewWillBeginPresentingRoutes:](avroutepickerviewdelegate/routepickerviewwillbeginpresentingroutes%28__%29.md): Tells the delegate that the route picker view is about to begin presenting routes to the user.
 - [routePickerViewDidEndPresentingRoutes:](avroutepickerviewdelegate/routepickerviewdidendpresentingroutes%28__%29.md): Tells the delegate when the route picker view finishes presenting routes to the user.
@@ -62,6 +64,8 @@ A protocol that defines the methods to adopt to respond to route picker view pre
 
 ## See Also
 
-### Configuring the delegate
+### Route selection
 
-- [delegate](avroutepickerview/delegate.md): The delegate object for the route picker.
+- [AVRoutePickerView](avroutepickerview.md): A view that presents a list of nearby media receivers.
+- [AVRoutePickerViewButtonStyle](avroutepickerviewbuttonstyle.md): Constants that define the button styles a route picker view supports.
+- [AVAudioSessionRouteSelection](avaudiosessionrouteselection.md): Constants that indicate the audio route selection.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyscope/global](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyscope/global)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyscope/global
 
 # Global
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 The scope for properties that apply to the object as a whole.
 
@@ -26,6 +27,6 @@ All objects have a global scope, and for most objects, it is their only scope.
 
 ### Property scopes
 
-- [Input](input.md): The scope for properties that apply to the input side of an object.
-- [Output](output.md): The scope for properties that apply to the output side of an object.
-- [PlayThrough](playthrough.md): The scope for properties that apply to the play-through side of an object.
+- [Input](input.md): Beta. The scope for properties that apply to the input side of an object.
+- [Output](output.md): Beta. The scope for properties that apply to the output side of an object.
+- [PlayThrough](playthrough.md): Beta. The scope for properties that apply to the play-through side of an object.

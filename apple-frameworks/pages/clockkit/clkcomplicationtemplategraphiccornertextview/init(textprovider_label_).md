@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphiccornertextview/init(textprovider:label:)](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccornertextview/init(textprovider:label:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccornertextview/init(textprovider:label:)
 
 # init(textProvider:label:)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Creates a template with a line of text and a SwiftUI view.
 

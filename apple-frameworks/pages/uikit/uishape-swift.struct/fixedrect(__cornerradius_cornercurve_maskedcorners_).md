@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uishape-swift.struct/fixedrect(_:cornerradius:cornercurve:maskedcorners:)](https://developer.apple.com/documentation/uikit/uishape-swift.struct/fixedrect(_:cornerradius:cornercurve:maskedcorners:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uishape-swift.struct/fixedrect(_:cornerradius:cornercurve:maskedcorners:)
 
 # fixedRect(\_:cornerRadius:cornerCurve:maskedCorners:)
 

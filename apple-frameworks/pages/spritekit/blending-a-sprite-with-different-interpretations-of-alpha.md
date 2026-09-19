@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spritekit/blending-a-sprite-with-different-interpretations-of-alpha](https://developer.apple.com/documentation/spritekit/blending-a-sprite-with-different-interpretations-of-alpha)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spritekit/blending-a-sprite-with-different-interpretations-of-alpha
 
 # Blending a Sprite with Different Interpretations of Alpha (Swift)
 

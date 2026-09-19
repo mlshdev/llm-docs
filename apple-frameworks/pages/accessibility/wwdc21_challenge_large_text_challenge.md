@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accessibility/wwdc21_challenge_large_text_challenge](https://developer.apple.com/documentation/accessibility/wwdc21_challenge_large_text_challenge)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accessibility/wwdc21_challenge_large_text_challenge
 
 # WWDC21 Challenge: Large Text Challenge
 

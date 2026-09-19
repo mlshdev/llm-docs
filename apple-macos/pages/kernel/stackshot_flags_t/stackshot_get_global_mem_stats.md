@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/stackshot_flags_t/stackshot_get_global_mem_stats](https://developer.apple.com/documentation/kernel/stackshot_flags_t/stackshot_get_global_mem_stats)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/stackshot_flags_t/stackshot_get_global_mem_stats
 
 # STACKSHOT_GET_GLOBAL_MEM_STATS
 

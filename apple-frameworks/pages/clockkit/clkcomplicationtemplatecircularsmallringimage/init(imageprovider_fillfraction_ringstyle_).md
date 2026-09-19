@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplatecircularsmallringimage/init(imageprovider:fillfraction:ringstyle:)](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplatecircularsmallringimage/init(imageprovider:fillfraction:ringstyle:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplatecircularsmallringimage/init(imageprovider:fillfraction:ringstyle:)
 
 # init(imageProvider:fillFraction:ringStyle:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Creates a new template from the provided image, fill fraction, and ring style.
 
@@ -24,7 +25,7 @@ init(imageProvider: CLKImageProvider, fillFraction: Float, ringStyle: CLKComplic
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Creates a new template from the provided image, fill fraction, and ring style.
 

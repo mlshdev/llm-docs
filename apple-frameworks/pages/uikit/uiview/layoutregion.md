@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiview/layoutregion](https://developer.apple.com/documentation/uikit/uiview/layoutregion)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiview/layoutregion
 
 # UIView.LayoutRegion
 
@@ -16,6 +17,8 @@ struct LayoutRegion
 
 ### Type Methods
 
+- [bar(onEdge:extent:)](layoutregion/bar%28onedge_extent_%29-2tj1g.md): Beta.
+- [bar(onEdge:extent:)](layoutregion/bar%28onedge_extent_%29-8rmhq.md): Beta.
 - [margins(cornerAdaptation:)](layoutregion/margins%28corneradaptation_%29.md)
 - [readableContent(cornerAdaptation:)](layoutregion/readablecontent%28corneradaptation_%29.md)
 - [safeArea(cornerAdaptation:)](layoutregion/safearea%28corneradaptation_%29.md)
@@ -35,6 +38,8 @@ struct LayoutRegion
 
 ### Accessing insets and layout guides
 
+- [bar(onEdge:extent:)](layoutregion/bar%28onedge_extent_%29-2tj1g.md): Beta.
+- [bar(onEdge:extent:)](layoutregion/bar%28onedge_extent_%29-8rmhq.md): Beta.
 - [directionalEdgeInsets(for:)](directionaledgeinsets%28for_%29.md)
 - [edgeInsets(for:)](edgeinsets%28for_%29.md)
 - [layoutGuide(for:)](layoutguide%28for_%29.md)

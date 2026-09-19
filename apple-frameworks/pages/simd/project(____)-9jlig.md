@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/project(_:_:)-9jlig](https://developer.apple.com/documentation/simd/project(_:_:)-9jlig)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/simd/project(_:_:)-9jlig
 
 # project(\_:\_:)
 

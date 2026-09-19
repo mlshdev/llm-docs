@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ifmibdata_supplemental/4360105-ifmd_data_extended](https://developer.apple.com/documentation/kernel/ifmibdata_supplemental/4360105-ifmd_data_extended)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ifmibdata_supplemental/4360105-ifmd_data_extended
 
 # ifmd_data_extended
 

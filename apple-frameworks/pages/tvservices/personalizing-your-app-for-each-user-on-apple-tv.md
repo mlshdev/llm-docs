@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tvservices/personalizing-your-app-for-each-user-on-apple-tv](https://developer.apple.com/documentation/tvservices/personalizing-your-app-for-each-user-on-apple-tv)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/tvservices/personalizing-your-app-for-each-user-on-apple-tv
 
 # Personalizing Your App for Each User on Apple TV (Swift)
 

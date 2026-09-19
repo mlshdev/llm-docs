@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/scsi_capacity_data_long/block_length_in_bytes](https://developer.apple.com/documentation/driverkit/scsi_capacity_data_long/block_length_in_bytes)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/scsi_capacity_data_long/block_length_in_bytes
 
 # BLOCK_LENGTH_IN_BYTES
 

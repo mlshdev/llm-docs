@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/making-a-view-into-a-drag-source](https://developer.apple.com/documentation/uikit/making-a-view-into-a-drag-source)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/making-a-view-into-a-drag-source
 
 # Making a view into a drag source (Swift)
 

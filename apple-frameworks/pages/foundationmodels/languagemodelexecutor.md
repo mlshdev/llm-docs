@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutor](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutor)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutor
 
 # LanguageModelExecutor
 
@@ -69,6 +70,11 @@ Use [LanguageModelExecutorGenerationChannel](languagemodelexecutorgenerationchan
 
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+### Conforming Types
+
+- [PrivateCloudComputeLanguageModel.Executor](privatecloudcomputelanguagemodel/executor.md)
+- [SystemLanguageModel.Executor](systemlanguagemodel/executor.md)
 
 ## See Also
 

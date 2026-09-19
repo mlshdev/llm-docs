@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcuiautomation/xcuielementtypequeryprovider/collectionviews](https://developer.apple.com/documentation/xcuiautomation/xcuielementtypequeryprovider/collectionviews)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcuiautomation/xcuielementtypequeryprovider/collectionviews
 
 # collectionViews (Swift)
 

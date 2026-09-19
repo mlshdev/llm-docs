@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/cgimage/cropping(to:)](https://developer.apple.com/documentation/coregraphics/cgimage/cropping(to:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coregraphics/cgimage/cropping(to:)
 
 # cropping(to:) (Swift)
 
@@ -54,17 +55,20 @@ The resulting image retains a reference to the original image, which means you m
     let imageViewScale = max(inputImage.size.width / viewWidth,
                              inputImage.size.height / viewHeight)
 
+
     // Scale cropRect to handle images larger than shown-on-screen size
     let cropZone = CGRect(x:cropRect.origin.x * imageViewScale,
                           y:cropRect.origin.y * imageViewScale,
                           width:cropRect.size.width * imageViewScale,
                           height:cropRect.size.height * imageViewScale)
 
+
     // Perform cropping in Core Graphics
     guard let cutImageRef: CGImage = inputImage.cgImage?.cropping(to:cropZone)
     else {
         return nil
     }
+
 
     // Return image to UIImage
     let croppedImage: UIImage = UIImage(cgImage: cutImageRef)
@@ -166,17 +170,20 @@ The resulting image retains a reference to the original image, which means you m
     let imageViewScale = max(inputImage.size.width / viewWidth,
                              inputImage.size.height / viewHeight)
 
+
     // Scale cropRect to handle images larger than shown-on-screen size
     let cropZone = CGRect(x:cropRect.origin.x * imageViewScale,
                           y:cropRect.origin.y * imageViewScale,
                           width:cropRect.size.width * imageViewScale,
                           height:cropRect.size.height * imageViewScale)
 
+
     // Perform cropping in Core Graphics
     guard let cutImageRef: CGImage = inputImage.cgImage?.cropping(to:cropZone)
     else {
         return nil
     }
+
 
     // Return image to UIImage
     let croppedImage: UIImage = UIImage(cgImage: cutImageRef)

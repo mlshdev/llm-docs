@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/task_dyld_info_data_t/1553256-all_image_info_addr](https://developer.apple.com/documentation/kernel/task_dyld_info_data_t/1553256-all_image_info_addr)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/task_dyld_info_data_t/1553256-all_image_info_addr
 
 # all_image_info_addr
 

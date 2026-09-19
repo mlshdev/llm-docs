@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appleschoolmanagerapi/orgdeviceactivitycreaterequest/data-data.dictionary/relationships-data.dictionary/mdmserver-data.dictionary](https://developer.apple.com/documentation/appleschoolmanagerapi/orgdeviceactivitycreaterequest/data-data.dictionary/relationships-data.dictionary/mdmserver-data.dictionary)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appleschoolmanagerapi/orgdeviceactivitycreaterequest/data-data.dictionary/relationships-data.dictionary/mdmserver-data.dictionary
 
 # OrgDeviceActivityCreateRequest.Data.Relationships.MdmServer
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple School Manager API  
 **Kind:** Object  
-**Availability:** Apple School Manager API 1.6+
+**Availability:** Apple School Manager API 1.7+
 
 The data that describe the relationship between the resources.
 

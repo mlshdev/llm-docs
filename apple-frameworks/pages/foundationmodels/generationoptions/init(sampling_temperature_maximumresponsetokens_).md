@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generationoptions/init(sampling:temperature:maximumresponsetokens:)](https://developer.apple.com/documentation/foundationmodels/generationoptions/init(sampling:temperature:maximumresponsetokens:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generationoptions/init(sampling:temperature:maximumresponsetokens:)
 
 # init(sampling:temperature:maximumResponseTokens:)
 
@@ -24,5 +25,5 @@ init(sampling: GenerationOptions.SamplingMode?, temperature: Double? = nil, maxi
 
 ### Creating options
 
-- [init(samplingMode:temperature:maximumResponseTokens:)](init%28samplingmode_temperature_maximumresponsetokens_%29.md)
+- [init(samplingMode:temperature:maximumResponseTokens:)](init%28samplingmode_temperature_maximumresponsetokens_%29.md): Creates generation options that control token sampling behavior.
 - [init(samplingMode:temperature:maximumResponseTokens:toolCallingMode:)](init%28samplingmode_temperature_maximumresponsetokens_toolcallingmode_%29.md): Creates generation options that control token sampling behavior.

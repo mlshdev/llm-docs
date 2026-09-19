@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsuserinterfacecompression/compress(withprioritizedcompressionoptions:)](https://developer.apple.com/documentation/appkit/nsuserinterfacecompression/compress(withprioritizedcompressionoptions:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsuserinterfacecompression/compress(withprioritizedcompressionoptions:)
 
 # compress(withPrioritizedCompressionOptions:) (Swift)
 

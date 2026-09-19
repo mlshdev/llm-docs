@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cirawfilteroption/moireamount](https://developer.apple.com/documentation/coreimage/cirawfilteroption/moireamount)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreimage/cirawfilteroption/moireamount
 
 # moireAmount (Swift)
 
 **Framework:** Core Image  
 **Kind:** Type Property  
-**Availability:** iOS 11.0+ (deprecated in 27.0) · iPadOS 11.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.13+ (deprecated in 27.0) · tvOS 11.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 11.0+ (deprecated in 27.2) · iPadOS 11.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.13+ (deprecated in 27.2) · tvOS 11.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 The amount of moiré reduction to apply.
 
@@ -52,7 +53,7 @@ The range of valid moiré reduction is 0.0 to 1.0.
 
 **Framework:** Core Image  
 **Kind:** Global Variable  
-**Availability:** iOS 11.0+ (deprecated in 27.0) · iPadOS 11.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.13+ (deprecated in 27.0) · tvOS 11.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 11.0+ (deprecated in 27.2) · iPadOS 11.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.13+ (deprecated in 27.2) · tvOS 11.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 The amount of moiré reduction to apply.
 

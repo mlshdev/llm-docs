@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/purchaseintent/id](https://developer.apple.com/documentation/storekit/purchaseintent/id)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/purchaseintent/id
 
 # id
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 14.4+
 
-The product identifier of the In-App Purchase that the customer selects to purchase outside of the app.
+The product identifier of the Apple In-App Purchase that the customer selects to purchase outside of the app.
 
 ## Declaration
 
@@ -19,4 +20,4 @@ var id: Product.ID { get }
 
 ### Identifying the product
 
-- [product](product.md): The product information of the In-App Purchase the customer selects to purchase outside of the app.
+- [product](product.md): The product information of the Apple In-App Purchase the customer selects to purchase outside of the app.

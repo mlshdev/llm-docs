@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/hv_trap_type_t/hv_task_trap](https://developer.apple.com/documentation/kernel/hv_trap_type_t/hv_task_trap)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/hv_trap_type_t/hv_task_trap
 
 # HV_TASK_TRAP
 

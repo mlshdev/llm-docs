@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/inspecting-the-bound-resources-for-a-command](https://developer.apple.com/documentation/xcode/inspecting-the-bound-resources-for-a-command)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/inspecting-the-bound-resources-for-a-command
 
 # Inspecting the bound resources for a command
 

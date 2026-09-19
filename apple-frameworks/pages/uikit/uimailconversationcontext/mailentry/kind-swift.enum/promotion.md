@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uimailconversationcontext/mailentry/kind-swift.enum/promotion](https://developer.apple.com/documentation/uikit/uimailconversationcontext/mailentry/kind-swift.enum/promotion)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uimailconversationcontext/mailentry/kind-swift.enum/promotion
 
 # UIMailConversationContext.MailEntry.Kind.promotion (Swift)
 

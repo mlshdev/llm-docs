@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_pixel_unpack_buffer_binding](https://developer.apple.com/documentation/opengles/gl_pixel_unpack_buffer_binding)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_pixel_unpack_buffer_binding
 
 # GL_PIXEL_UNPACK_BUFFER_BINDING (Swift)
 

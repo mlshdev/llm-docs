@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplaybackuserinterfaceseekcapabilities](https://developer.apple.com/documentation/avkit/avplaybackuserinterfaceseekcapabilities)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplaybackuserinterfaceseekcapabilities
 
 # AVPlaybackUserInterfaceSeekCapabilities (Swift)
 
@@ -47,7 +48,7 @@ This option set defines timeline navigation operations. Different content types 
 
 ## See Also
 
-### Playback
+### Playback control
 
 - [AVPlaybackUserInterfacePlaybackControllable](avplaybackuserinterfaceplaybackcontrollable-9he54.md): Provides playback control and state management for media content.
 - [AVPlaybackUserInterfacePlaybackState](avplaybackuserinterfaceplaybackstate.md): Describes possible transport states of the playback source.
@@ -83,7 +84,7 @@ This option set defines timeline navigation operations. Different content types 
 
 ## See Also
 
-### Playback
+### Playback control
 
 - [AVPlaybackUserInterfacePlaybackControllable](avplaybackuserinterfaceplaybackcontrollable-81n66.md): Provides playback control and state management for media content.
 - [AVPlaybackUserInterfacePlaybackState](avplaybackuserinterfaceplaybackstate.md): Describes possible transport states of the playback source.

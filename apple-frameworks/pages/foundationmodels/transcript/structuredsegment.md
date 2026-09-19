@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/structuredsegment](https://developer.apple.com/documentation/foundationmodels/transcript/structuredsegment)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/structuredsegment
 
 # Transcript.StructuredSegment
 
@@ -19,7 +20,7 @@ struct StructuredSegment
 ### Creating a structured segment
 
 - [init(id:source:content:)](structuredsegment/init%28id_source_content_%29.md): Deprecated.
-- [init(id:schemaName:content:)](structuredsegment/init%28id_schemaname_content_%29.md)
+- [init(id:schemaName:content:)](structuredsegment/init%28id_schemaname_content_%29.md): Creates a structured segment that contains the generated content you provide.
 
 ### Inspecting a structured segment
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnnsfiltercreatelayerloss(_:_:)](https://developer.apple.com/documentation/accelerate/bnnsfiltercreatelayerloss(_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/bnnsfiltercreatelayerloss(_:_:)
 
 # BNNSFilterCreateLayerLoss(\_:\_:) (Swift)
 

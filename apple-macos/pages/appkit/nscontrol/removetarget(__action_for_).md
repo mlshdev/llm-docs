@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nscontrol/removetarget(_:action:for:)](https://developer.apple.com/documentation/appkit/nscontrol/removetarget(_:action:for:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nscontrol/removetarget(_:action:for:)
 
 # removeTarget(\_:action:for:) (Swift)
 

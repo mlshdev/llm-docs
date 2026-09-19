@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/if_nexusreq/3943772-ifnr_name](https://developer.apple.com/documentation/kernel/if_nexusreq/3943772-ifnr_name)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/if_nexusreq/3943772-ifnr_name
 
 # ifnr_name
 

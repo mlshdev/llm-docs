@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1644582-anonymous/krangesupportssignal_0714_0286_mask](https://developer.apple.com/documentation/kernel/1644582-anonymous/krangesupportssignal_0714_0286_mask)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1644582-anonymous/krangesupportssignal_0714_0286_mask
 
 # kRangeSupportsSignal_0714_0286_Mask
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/process/launchedprocess(launchpath:arguments:)](https://developer.apple.com/documentation/foundation/process/launchedprocess(launchpath:arguments:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/process/launchedprocess(launchpath:arguments:)
 
 # launchedProcess(launchPath:arguments:) (Swift)
 
 **Framework:** Foundation  
 **Kind:** Type Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Creates and launches a task with a specified executable and arguments.
 
@@ -51,7 +52,7 @@ The `NSTask` object converts both `path` and the strings in `arguments` to appro
 
 **Framework:** Foundation  
 **Kind:** Type Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Creates and launches a task with a specified executable and arguments.
 

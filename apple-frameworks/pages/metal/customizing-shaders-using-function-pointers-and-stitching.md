@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/customizing-shaders-using-function-pointers-and-stitching](https://developer.apple.com/documentation/metal/customizing-shaders-using-function-pointers-and-stitching)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/customizing-shaders-using-function-pointers-and-stitching
 
 # Customizing shaders using function pointers and stitching
 

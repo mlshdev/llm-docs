@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/localizedstringresource/init(_:defaultvalue:table:locale:bundle:comment:)-1apqa](https://developer.apple.com/documentation/foundation/localizedstringresource/init(_:defaultvalue:table:locale:bundle:comment:)-1apqa)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/localizedstringresource/init(_:defaultvalue:table:locale:bundle:comment:)-1apqa
 
 # init(\_:defaultValue:table:locale:bundle:comment:)
 

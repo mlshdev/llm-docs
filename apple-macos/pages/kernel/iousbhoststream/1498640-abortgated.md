@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iousbhoststream/1498640-abortgated](https://developer.apple.com/documentation/kernel/iousbhoststream/1498640-abortgated)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iousbhoststream/1498640-abortgated
 
 # abortGated
 

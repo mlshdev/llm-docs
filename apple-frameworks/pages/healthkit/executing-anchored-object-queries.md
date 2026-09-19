@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/executing-anchored-object-queries](https://developer.apple.com/documentation/healthkit/executing-anchored-object-queries)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/executing-anchored-object-queries
 
 # Executing Anchored Object Queries (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/shadergraph/connect(_:outputport:to:inputport:)](https://developer.apple.com/documentation/realitykit/shadergraph/connect(_:outputport:to:inputport:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/shadergraph/connect(_:outputport:to:inputport:)
 
 # connect(\_:outputPort:to:inputPort:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/accessorytransportextension/forwarding-notifications-to-your-accessory-using-the-internet-transport-type](https://developer.apple.com/documentation/accessorytransportextension/forwarding-notifications-to-your-accessory-using-the-internet-transport-type)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/forwarding-notifications-to-your-accessory-using-the-internet-transport-type
 
 # Forwarding notifications to your accessory using the internet transport type
 

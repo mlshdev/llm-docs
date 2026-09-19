@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/synchronizing-app-preferences-with-icloud](https://developer.apple.com/documentation/foundation/synchronizing-app-preferences-with-icloud)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/synchronizing-app-preferences-with-icloud
 
 # Synchronizing App Preferences with iCloud (Swift)
 

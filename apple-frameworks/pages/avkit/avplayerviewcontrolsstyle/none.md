@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrolsstyle/none](https://developer.apple.com/documentation/avkit/avplayerviewcontrolsstyle/none)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrolsstyle/none
 
 # AVPlayerViewControlsStyle.none (Swift)
 
@@ -16,7 +17,7 @@ case none
 
 ## See Also
 
-### Controls Styles
+### Controls styles
 
 - [AVPlayerViewControlsStyle.inline](inline.md): The view displays playback controls in a bar along the view’s bottom edge.
 - [AVPlayerViewControlsStyle.floating](floating.md): The view displays playback controls in a floating window over the video content.
@@ -39,7 +40,7 @@ AVPlayerViewControlsStyleNone
 
 ## See Also
 
-### Controls Styles
+### Controls styles
 
 - [AVPlayerViewControlsStyleInline](inline.md): The view displays playback controls in a bar along the view’s bottom edge.
 - [AVPlayerViewControlsStyleFloating](floating.md): The view displays playback controls in a floating window over the video content.

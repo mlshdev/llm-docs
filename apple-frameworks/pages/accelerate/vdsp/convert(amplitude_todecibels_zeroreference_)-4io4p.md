@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vdsp/convert(amplitude:todecibels:zeroreference:)-4io4p](https://developer.apple.com/documentation/accelerate/vdsp/convert(amplitude:todecibels:zeroreference:)-4io4p)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vdsp/convert(amplitude:todecibels:zeroreference:)-4io4p
 
 # convert(amplitude:toDecibels:zeroReference:)
 

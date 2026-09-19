@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsattributedstring](https://developer.apple.com/documentation/foundation/nsattributedstring)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsattributedstring
 
 # NSAttributedString (Swift)
 
@@ -168,6 +169,7 @@ The [NSAttributedString](nsattributedstring.md) class and its Core Foundation co
 ### Initializers
 
 - [init(coder:)](nsattributedstring/init%28coder_%29.md)
+- [init(pasteboardPropertyList:ofType:)](nsattributedstring/init%28pasteboardpropertylist_oftype_%29.md)
 
 ## Relationships
 

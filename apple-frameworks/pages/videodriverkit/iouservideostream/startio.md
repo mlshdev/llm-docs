@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideostream/startio](https://developer.apple.com/documentation/videodriverkit/iouservideostream/startio)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideostream/startio
 
 # StartIO
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Tells the stream to start IO.
 
@@ -30,6 +31,6 @@ The default implementation always returns `kIOReturnSuccess`. Subclass and overr
 
 ### Performing I/O
 
-- [StopIO](stopio.md): Tells the stream to stop IO.
-- [IOUserVideoStartStopFlags](../videodriverkit/iouservideostartstopflags.md): Flags used to indicate how I/O is starting or stopping.
-- [InputNotification](inputnotification.md)
+- [StopIO](stopio.md): Beta. Tells the stream to stop IO.
+- [IOUserVideoStartStopFlags](../videodriverkit/iouservideostartstopflags.md): Beta. Flags used to indicate how I/O is starting or stopping.
+- [InputNotification](inputnotification.md): Beta.

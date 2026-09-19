@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/vmcs_ro_guest_lin_addr](https://developer.apple.com/documentation/hypervisor/vmcs_ro_guest_lin_addr)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/vmcs_ro_guest_lin_addr
 
 # VMCS_RO_GUEST_LIN_ADDR (Swift)
 

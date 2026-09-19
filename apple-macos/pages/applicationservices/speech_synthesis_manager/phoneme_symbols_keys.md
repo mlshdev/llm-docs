@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/speech_synthesis_manager/phoneme_symbols_keys](https://developer.apple.com/documentation/applicationservices/speech_synthesis_manager/phoneme_symbols_keys)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applicationservices/speech_synthesis_manager/phoneme_symbols_keys
 
 # Phoneme Symbols Keys
 

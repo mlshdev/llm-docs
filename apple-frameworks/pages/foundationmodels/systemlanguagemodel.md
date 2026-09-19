@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/systemlanguagemodel](https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel
 
 # SystemLanguageModel
 
@@ -93,6 +94,10 @@ struct GenerativeView: View {
 ### Handling a language model error
 
 - [SystemLanguageModel.Error](systemlanguagemodel/error.md): An error specific to the on-device system language model.
+
+### Default Implementations
+
+- [LanguageModel Implementations](systemlanguagemodel/languagemodel-implementations.md)
 
 ## Relationships
 

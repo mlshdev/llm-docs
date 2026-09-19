@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/kcdata_invalid_iter](https://developer.apple.com/documentation/kernel/kcdata_invalid_iter)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/kcdata_invalid_iter
 
 # kcdata_invalid_iter
 

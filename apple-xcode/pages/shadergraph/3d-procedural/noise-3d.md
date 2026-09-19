@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/shadergraph/3d-procedural/noise-3d](https://developer.apple.com/documentation/shadergraph/3d-procedural/noise-3d)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/shadergraph/3d-procedural/noise-3d
 
 # Noise 3D
 

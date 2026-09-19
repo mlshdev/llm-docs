@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/externalpurchasecustomlink/token](https://developer.apple.com/documentation/storekit/externalpurchasecustomlink/token)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/externalpurchasecustomlink/token
 
 # ExternalPurchaseCustomLink.Token
 
@@ -18,7 +19,7 @@ struct Token
 
 ## Overview
 
-StoreKit returns an external purchase token of this type when you call the [token(for:)](token%28for_%29.md) function. For more information, see [Receiving and decoding external purchase tokens](../receiving-and-decoding-external-purchase-tokens.md).
+StoreKit returns an external purchase token of this type when you call the [token(for:)](token%28for_%29-6pixj.md) function. For more information, see [Receiving and decoding external purchase tokens](../receiving-and-decoding-external-purchase-tokens.md).
 
 ## Topics
 

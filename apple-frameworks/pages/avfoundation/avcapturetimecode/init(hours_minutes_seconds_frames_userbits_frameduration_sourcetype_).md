@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturetimecode/init(hours:minutes:seconds:frames:userbits:frameduration:sourcetype:)](https://developer.apple.com/documentation/avfoundation/avcapturetimecode/init(hours:minutes:seconds:frames:userbits:frameduration:sourcetype:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturetimecode/init(hours:minutes:seconds:frames:userbits:frameduration:sourcetype:)
 
 # init(hours:minutes:seconds:frames:userBits:frameDuration:sourceType:)
 

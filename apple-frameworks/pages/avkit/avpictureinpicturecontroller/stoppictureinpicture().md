@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avpictureinpicturecontroller/stoppictureinpicture()](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/stoppictureinpicture())
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/stoppictureinpicture()
 
 # stopPictureInPicture() (Swift)
 
@@ -22,7 +23,7 @@ Regardless of how Picture in Picture stops, the controller calls the delegate’
 
 ## See Also
 
-### Controlling Picture in Picture Playback
+### Controlling Picture in Picture playback
 
 - [canStopPictureInPicture](canstoppictureinpicture.md): A Boolean value that indicates whether Picture in Picture is active and is able to stop.
 - [canStartPictureInPictureAutomaticallyFromInline](canstartpictureinpictureautomaticallyfrominline.md): A Boolean value that indicates whether Picture in Picture starts automatically when the controller embeds its content inline and the app transitions to the background.
@@ -51,7 +52,7 @@ Regardless of how Picture in Picture stops, the controller calls the delegate’
 
 ## See Also
 
-### Controlling Picture in Picture Playback
+### Controlling Picture in Picture playback
 
 - [canStopPictureInPicture](canstoppictureinpicture.md): A Boolean value that indicates whether Picture in Picture is active and is able to stop.
 - [canStartPictureInPictureAutomaticallyFromInline](canstartpictureinpictureautomaticallyfrominline.md): A Boolean value that indicates whether Picture in Picture starts automatically when the controller embeds its content inline and the app transitions to the background.

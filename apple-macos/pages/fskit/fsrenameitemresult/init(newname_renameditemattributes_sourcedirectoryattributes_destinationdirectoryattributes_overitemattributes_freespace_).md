@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fsrenameitemresult/init(newname:renameditemattributes:sourcedirectoryattributes:destinationdirectoryattributes:overitemattributes:freespace:)](https://developer.apple.com/documentation/fskit/fsrenameitemresult/init(newname:renameditemattributes:sourcedirectoryattributes:destinationdirectoryattributes:overitemattributes:freespace:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/fskit/fsrenameitemresult/init(newname:renameditemattributes:sourcedirectoryattributes:destinationdirectoryattributes:overitemattributes:freespace:)
 
 # init(newName:renamedItemAttributes:sourceDirectoryAttributes:destinationDirectoryAttributes:overItemAttributes:freeSpace:) (Swift)
 

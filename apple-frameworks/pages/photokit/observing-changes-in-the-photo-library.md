@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photokit/observing-changes-in-the-photo-library](https://developer.apple.com/documentation/photokit/observing-changes-in-the-photo-library)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photokit/observing-changes-in-the-photo-library
 
 # Observing Changes in the Photo Library (Swift)
 

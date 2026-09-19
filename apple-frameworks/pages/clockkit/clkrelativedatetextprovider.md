@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkrelativedatetextprovider](https://developer.apple.com/documentation/clockkit/clkrelativedatetextprovider)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkrelativedatetextprovider
 
 # CLKRelativeDateTextProvider (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 A formatted string that conveys the difference in time between the current date and a date that you specify.
 
@@ -102,7 +103,7 @@ The format of the relative time value is dependent on the date style you choose 
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 A formatted string that conveys the difference in time between the current date and a date that you specify.
 

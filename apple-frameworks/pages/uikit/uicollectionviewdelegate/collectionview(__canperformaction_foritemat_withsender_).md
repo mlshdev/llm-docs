@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uicollectionviewdelegate/collectionview(_:canperformaction:foritemat:withsender:)](https://developer.apple.com/documentation/uikit/uicollectionviewdelegate/collectionview(_:canperformaction:foritemat:withsender:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uicollectionviewdelegate/collectionview(_:canperformaction:foritemat:withsender:)
 
 # collectionView(\_:canPerformAction:forItemAt:withSender:) (Swift)
 

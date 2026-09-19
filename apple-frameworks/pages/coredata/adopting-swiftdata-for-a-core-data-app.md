@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coredata/adopting-swiftdata-for-a-core-data-app](https://developer.apple.com/documentation/coredata/adopting-swiftdata-for-a-core-data-app)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coredata/adopting-swiftdata-for-a-core-data-app
 
 # Adopting SwiftData for a Core Data app (Swift)
 

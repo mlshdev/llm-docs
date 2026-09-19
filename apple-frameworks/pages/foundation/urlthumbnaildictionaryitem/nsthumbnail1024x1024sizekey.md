@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/urlthumbnaildictionaryitem/nsthumbnail1024x1024sizekey](https://developer.apple.com/documentation/foundation/urlthumbnaildictionaryitem/nsthumbnail1024x1024sizekey)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/urlthumbnaildictionaryitem/nsthumbnail1024x1024sizekey
 
 # NSThumbnail1024x1024SizeKey (Swift)
 

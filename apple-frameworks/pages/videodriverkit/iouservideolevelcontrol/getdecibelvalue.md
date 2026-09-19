@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideolevelcontrol/getdecibelvalue](https://developer.apple.com/documentation/videodriverkit/iouservideolevelcontrol/getdecibelvalue)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideolevelcontrol/getdecibelvalue
 
 # GetDecibelValue
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the decibel level value for the control.
 
@@ -26,6 +27,6 @@ The object’s work queue synchronizes access to the control value.
 
 ### Accessing the value
 
-- [SetScalarValue](setscalarvalue.md): Sets the current scalar level value.
-- [SetDecibelValue](setdecibelvalue.md): Sets the current decibel level value.
-- [GetScalarValue](getscalarvalue.md): Gets the scalar level value for the control.
+- [SetScalarValue](setscalarvalue.md): Beta. Sets the current scalar level value.
+- [SetDecibelValue](setdecibelvalue.md): Beta. Sets the current decibel level value.
+- [GetScalarValue](getscalarvalue.md): Beta. Gets the scalar level value for the control.

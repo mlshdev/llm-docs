@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional-video-applications/adding-onscreen-controls-to-plug-ins](https://developer.apple.com/documentation/professional-video-applications/adding-onscreen-controls-to-plug-ins)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional-video-applications/adding-onscreen-controls-to-plug-ins
 
 # Adding onscreen controls to plug-ins (Swift)
 
@@ -205,6 +206,7 @@ func mouseDragged(atPositionX mousePositionX: Double, positionY mousePositionY: 
 
     let delta = (x: objectPos.x - lastObjectPosition.x, y: objectPos.y - lastObjectPosition.y)
     lastObjectPosition = objectPos
+
 
     if activePart == 1 /* kFSPart_Rectangle */
     {
@@ -571,6 +573,7 @@ func mouseDragged(atPositionX mousePositionX: Double, positionY mousePositionY: 
 
     let delta = (x: objectPos.x - lastObjectPosition.x, y: objectPos.y - lastObjectPosition.y)
     lastObjectPosition = objectPos
+
 
     if activePart == 1 /* kFSPart_Rectangle */
     {

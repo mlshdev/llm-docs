@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/xpc/xpc_session_reply_handler_t-2hf7c](https://developer.apple.com/documentation/xpc/xpc_session_reply_handler_t-2hf7c)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_session_reply_handler_t-2hf7c
 
 # xpc_session_reply_handler_t
 

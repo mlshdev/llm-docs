@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videotoolbox/vtframerateconversionparameters/submissionmode-swift.enum/sequentialreferencesunchanged](https://developer.apple.com/documentation/videotoolbox/vtframerateconversionparameters/submissionmode-swift.enum/sequentialreferencesunchanged)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videotoolbox/vtframerateconversionparameters/submissionmode-swift.enum/sequentialreferencesunchanged
 
 # VTFrameRateConversionParameters.SubmissionMode.sequentialReferencesUnchanged (Swift)
 

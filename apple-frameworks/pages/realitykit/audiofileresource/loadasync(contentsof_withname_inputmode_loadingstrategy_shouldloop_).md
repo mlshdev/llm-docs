@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/audiofileresource/loadasync(contentsof:withname:inputmode:loadingstrategy:shouldloop:)](https://developer.apple.com/documentation/realitykit/audiofileresource/loadasync(contentsof:withname:inputmode:loadingstrategy:shouldloop:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/audiofileresource/loadasync(contentsof:withname:inputmode:loadingstrategy:shouldloop:)
 
 # loadAsync(contentsOf:withName:inputMode:loadingStrategy:shouldLoop:)
 

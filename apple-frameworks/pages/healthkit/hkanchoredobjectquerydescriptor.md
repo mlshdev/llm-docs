@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkanchoredobjectquerydescriptor](https://developer.apple.com/documentation/healthkit/hkanchoredobjectquerydescriptor)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkanchoredobjectquerydescriptor
 
 # HKAnchoredObjectQueryDescriptor
 
@@ -44,6 +45,7 @@ let stepType = HKQuantityType(.stepCount)
 // Start by reading all matching data.
 var anchor: HKQueryAnchor? = nil
 var results: HKAnchoredObjectQueryDescriptor<HKQuantitySample>.Result
+
 
 repeat {
     // Create a query descriptor that reads a batch

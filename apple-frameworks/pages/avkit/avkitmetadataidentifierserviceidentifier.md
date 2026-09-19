@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avkitmetadataidentifierserviceidentifier](https://developer.apple.com/documentation/avkit/avkitmetadataidentifierserviceidentifier)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avkitmetadataidentifierserviceidentifier
 
 # AVKitMetadataIdentifierServiceIdentifier (Swift)
 
@@ -16,7 +17,7 @@ let AVKitMetadataIdentifierServiceIdentifier: String
 
 ## See Also
 
-### Nondisplayed Metadata
+### Nondisplayed metadata
 
 - [AVKitMetadataIdentifierPlaybackProgress](avkitmetadataidentifierplaybackprogress.md): The playback progress published through the Now Playing Info Center.
 - [AVKitMetadataIdentifierExternalContentIdentifier](avkitmetadataidentifierexternalcontentidentifier.md): The identifier for external content published through the Now Playing Info Center.
@@ -38,7 +39,7 @@ extern NSString * const AVKitMetadataIdentifierServiceIdentifier;
 
 ## See Also
 
-### Nondisplayed Metadata
+### Nondisplayed metadata
 
 - [AVKitMetadataIdentifierPlaybackProgress](avkitmetadataidentifierplaybackprogress.md): The playback progress published through the Now Playing Info Center.
 - [AVKitMetadataIdentifierExternalContentIdentifier](avkitmetadataidentifierexternalcontentidentifier.md): The identifier for external content published through the Now Playing Info Center.

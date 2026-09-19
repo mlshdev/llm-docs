@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nscell/attribute/cellisinsetbutton](https://developer.apple.com/documentation/appkit/nscell/attribute/cellisinsetbutton)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nscell/attribute/cellisinsetbutton
 
 # NSCell.Attribute.cellIsInsetButton (Swift)
 

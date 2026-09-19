@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrserverattribute/init(readonlyattributewithid:initialvalue:requiredprivilege:)](https://developer.apple.com/documentation/matter/mtrserverattribute/init(readonlyattributewithid:initialvalue:requiredprivilege:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrserverattribute/init(readonlyattributewithid:initialvalue:requiredprivilege:)
 
 # init(readonlyAttributeWithID:initialValue:requiredPrivilege:) (Swift)
 

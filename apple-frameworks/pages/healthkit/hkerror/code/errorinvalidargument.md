@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkerror/code/errorinvalidargument](https://developer.apple.com/documentation/healthkit/hkerror/code/errorinvalidargument)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkerror/code/errorinvalidargument
 
 # HKError.Code.errorInvalidArgument (Swift)
 

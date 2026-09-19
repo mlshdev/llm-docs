@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/obexsession/obexsetpathresponse(_:optionalheaders:optionalheaderslength:eventselector:selectortarget:refcon:)](https://developer.apple.com/documentation/iobluetooth/obexsession/obexsetpathresponse(_:optionalheaders:optionalheaderslength:eventselector:selectortarget:refcon:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetooth/obexsession/obexsetpathresponse(_:optionalheaders:optionalheaderslength:eventselector:selectortarget:refcon:)
 
 # obexSetPathResponse(\_:optionalHeaders:optionalHeadersLength:eventSelector:selectorTarget:refCon:) (Swift)
 

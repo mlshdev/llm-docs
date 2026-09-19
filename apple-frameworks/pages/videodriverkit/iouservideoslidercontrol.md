@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoslidercontrol](https://developer.apple.com/documentation/videodriverkit/iouservideoslidercontrol)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoslidercontrol
 
 # IOUserVideoSliderControl
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Class  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 A control object that supports a 32-bit unsigned integer value slider.
 
@@ -20,33 +21,33 @@ class IOUserVideoSliderControl;
 
 ### Creating a slider control
 
-- [Create](iouservideoslidercontrol/create.md): A static factory method that allocates and initializes an slider control.
-- [init](iouservideoslidercontrol/init.md): Initializes a slider control.
-- [IOUserVideoDriver](iouservideodriver.md): A video driver.
-- [IOUserVideoObjectPropertyElement](videodriverkit/iouservideoobjectpropertyelement.md): An integer that identifies, along with the property selector and scope, a specific piece of information about a video object.
-- [IOUserVideoObjectPropertyScope](videodriverkit/iouservideoobjectpropertyscope.md): A four character code which, along with the selector and element, identifies a specific piece of information about a video object.
+- [Create](iouservideoslidercontrol/create.md): Beta. A static factory method that allocates and initializes an slider control.
+- [init](iouservideoslidercontrol/init.md): Beta. Initializes a slider control.
+- [IOUserVideoDriver](iouservideodriver.md): Beta. A video driver.
+- [IOUserVideoObjectPropertyElement](videodriverkit/iouservideoobjectpropertyelement.md): Beta. An integer that identifies, along with the property selector and scope, a specific piece of information about a video object.
+- [IOUserVideoObjectPropertyScope](videodriverkit/iouservideoobjectpropertyscope.md): Beta. A four character code which, along with the selector and element, identifies a specific piece of information about a video object.
 
 ### Freeing a slider control
 
-- [free](iouservideoslidercontrol/free.md): Frees the slider control.
+- [free](iouservideoslidercontrol/free.md): Beta. Frees the slider control.
 
 ### Getting information about the class
 
-- [GetClassID](iouservideoslidercontrol/getclassid.md): Gets the class identifier of the object.
-- [GetBaseClassID](iouservideoslidercontrol/getbaseclassid.md): Gets the class identifier of the base class object.
-- [IOUserVideoClassID](videodriverkit/iouservideoclassid.md): Video class identifiers of an video object.
+- [GetClassID](iouservideoslidercontrol/getclassid.md): Beta. Gets the class identifier of the object.
+- [GetBaseClassID](iouservideoslidercontrol/getbaseclassid.md): Beta. Gets the class identifier of the base class object.
+- [IOUserVideoClassID](videodriverkit/iouservideoclassid.md): Beta. Video class identifiers of an video object.
 
 ### Supporting value changes
 
-- [HandleChangeControlValue](iouservideoslidercontrol/handlechangecontrolvalue.md): The system calls this virtual method when the control’s value changes.
+- [HandleChangeControlValue](iouservideoslidercontrol/handlechangecontrolvalue.md): Beta. The system calls this virtual method when the control’s value changes.
 
 ### Accessing the value
 
-- [SetControlValue](iouservideoslidercontrol/setcontrolvalue.md): Sets the current control value.
-- [GetControlValue](iouservideoslidercontrol/getcontrolvalue.md): Gets the current value of the control.
-- [SetRange](iouservideoslidercontrol/setrange.md): Sets the current range of the slider control.
-- [GetRange](iouservideoslidercontrol/getrange.md): Gets the current range of the slider control.
-- [IOUserVideoSliderRange](iouservideosliderrange.md): The minimum and maximum range for the slider value.
+- [SetControlValue](iouservideoslidercontrol/setcontrolvalue.md): Beta. Sets the current control value.
+- [GetControlValue](iouservideoslidercontrol/getcontrolvalue.md): Beta. Gets the current value of the control.
+- [SetRange](iouservideoslidercontrol/setrange.md): Beta. Sets the current range of the slider control.
+- [GetRange](iouservideoslidercontrol/getrange.md): Beta. Gets the current range of the slider control.
+- [IOUserVideoSliderRange](iouservideosliderrange.md): Beta. The minimum and maximum range for the slider value.
 
 ## Relationships
 
@@ -58,9 +59,9 @@ class IOUserVideoSliderControl;
 
 ### Video controls
 
-- [IOUserVideoControl](iouservideocontrol.md): A base class for control objects.
-- [IOUserVideoBooleanControl](iouservideobooleancontrol.md): A control object that supports Boolean values.
-- [IOUserVideoStereoPanControl](iouservideostereopancontrol.md): A control object that supports panning between stereo channels.
-- [IOUserVideoDirectionControl](iouservideodirectioncontrol.md): A control object that supports Boolean values.
-- [IOUserVideoSelectorControl](iouservideoselectorcontrol.md): A control object that supports a 32-bit unsigned integer selector value.
-- [IOUserVideoLevelControl](iouservideolevelcontrol.md): A control object that supports a float value level.
+- [IOUserVideoControl](iouservideocontrol.md): Beta. A base class for control objects.
+- [IOUserVideoBooleanControl](iouservideobooleancontrol.md): Beta. A control object that supports Boolean values.
+- [IOUserVideoStereoPanControl](iouservideostereopancontrol.md): Beta. A control object that supports panning between stereo channels.
+- [IOUserVideoDirectionControl](iouservideodirectioncontrol.md): Beta. A control object that supports Boolean values.
+- [IOUserVideoSelectorControl](iouservideoselectorcontrol.md): Beta. A control object that supports a 32-bit unsigned integer selector value.
+- [IOUserVideoLevelControl](iouservideolevelcontrol.md): Beta. A control object that supports a float value level.

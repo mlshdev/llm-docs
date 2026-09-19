@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationchannel/usage/input-swift.struct](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/usage/input-swift.struct)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/usage/input-swift.struct
 
 # LanguageModelExecutorGenerationChannel.Usage.Input
 
@@ -18,7 +19,7 @@ struct Input
 
 ### Creating an input instance
 
-- [init(totalTokenCount:cachedTokenCount:)](input-swift.struct/init%28totaltokencount_cachedtokencount_%29.md)
+- [init(totalTokenCount:cachedTokenCount:)](input-swift.struct/init%28totaltokencount_cachedtokencount_%29.md): Creates input token counts for the transcript submitted to the model.
 
 ### Handling the input tokens
 

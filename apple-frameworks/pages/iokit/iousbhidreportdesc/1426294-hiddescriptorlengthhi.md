@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/iousbhidreportdesc/1426294-hiddescriptorlengthhi](https://developer.apple.com/documentation/iokit/iousbhidreportdesc/1426294-hiddescriptorlengthhi)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/iousbhidreportdesc/1426294-hiddescriptorlengthhi
 
 # hidDescriptorLengthHi
 

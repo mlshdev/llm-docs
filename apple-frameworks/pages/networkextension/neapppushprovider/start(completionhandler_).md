@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/neapppushprovider/start(completionhandler:)](https://developer.apple.com/documentation/networkextension/neapppushprovider/start(completionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/networkextension/neapppushprovider/start(completionhandler:)
 
 # start(completionHandler:) (Swift)
 
 **Framework:** Network Extension  
 **Kind:** Instance Method  
-**Availability:** iOS 14.0+ (deprecated in 27.0) · iPadOS 14.0+ (deprecated in 27.0) · Mac Catalyst 14.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 14.0+ (deprecated in 27.2) · iPadOS 14.0+ (deprecated in 27.2) · Mac Catalyst 14.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Indicates that the framework has started the provider, and provides a completion handler for subclasses to signal their readiness.
 
@@ -40,7 +41,7 @@ An [NEAppPushProvider](../neapppushprovider.md) subclass must override this meth
 
 **Framework:** Network Extension  
 **Kind:** Instance Method  
-**Availability:** iOS 14.0+ (deprecated in 27.0) · iPadOS 14.0+ (deprecated in 27.0) · Mac Catalyst 14.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 14.0+ (deprecated in 27.2) · iPadOS 14.0+ (deprecated in 27.2) · Mac Catalyst 14.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Indicates that the framework has started the provider, and provides a completion handler for subclasses to signal their readiness.
 

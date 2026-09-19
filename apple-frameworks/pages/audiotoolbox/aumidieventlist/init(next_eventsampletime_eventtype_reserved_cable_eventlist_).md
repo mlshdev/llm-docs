@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/aumidieventlist/init(next:eventsampletime:eventtype:reserved:cable:eventlist:)](https://developer.apple.com/documentation/audiotoolbox/aumidieventlist/init(next:eventsampletime:eventtype:reserved:cable:eventlist:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/aumidieventlist/init(next:eventsampletime:eventtype:reserved:cable:eventlist:)
 
 # init(next:eventSampleTime:eventType:reserved:cable:eventList:)
 

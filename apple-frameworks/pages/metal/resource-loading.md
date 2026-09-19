@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/resource-loading](https://developer.apple.com/documentation/metal/resource-loading)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/resource-loading
 
 # Resource loading (Swift)
 
@@ -106,6 +107,7 @@ id<MTLIOCommandBuffer> ioCommandBuffer = [ioCommandQueue commandBuffer];
                        size:bufferSize
                sourceHandle:bufferAssetHandle
          sourceHandleOffset:0];
+
 
 // Submit the command buffer to run.
 [ioCommandBuffer commit];
@@ -290,6 +292,7 @@ id<MTLIOCommandBuffer> ioCommandBuffer = [ioCommandQueue commandBuffer];
                        size:bufferSize
                sourceHandle:bufferAssetHandle
          sourceHandleOffset:0];
+
 
 // Submit the command buffer to run.
 [ioCommandBuffer commit];

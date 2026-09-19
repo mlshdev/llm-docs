@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplaybackuserinterfaceplaybackstate](https://developer.apple.com/documentation/avkit/avplaybackuserinterfaceplaybackstate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplaybackuserinterfaceplaybackstate
 
 # AVPlaybackUserInterfacePlaybackState (Swift)
 
@@ -39,7 +40,7 @@ enum AVPlaybackUserInterfacePlaybackState
 
 ## See Also
 
-### Playback
+### Playback control
 
 - [AVPlaybackUserInterfacePlaybackControllable](avplaybackuserinterfaceplaybackcontrollable-9he54.md): Provides playback control and state management for media content.
 - [AVPlaybackUserInterfaceSeekCapabilities](avplaybackuserinterfaceseekcapabilities.md): Describes navigation capabilities of the media source.
@@ -68,7 +69,7 @@ enum AVPlaybackUserInterfacePlaybackState : NSInteger;
 
 ## See Also
 
-### Playback
+### Playback control
 
 - [AVPlaybackUserInterfacePlaybackControllable](avplaybackuserinterfaceplaybackcontrollable-81n66.md): Provides playback control and state management for media content.
 - [AVPlaybackUserInterfaceSeekCapabilities](avplaybackuserinterfaceseekcapabilities.md): Describes navigation capabilities of the media source.

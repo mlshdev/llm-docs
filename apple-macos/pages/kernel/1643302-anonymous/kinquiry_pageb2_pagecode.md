@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1643302-anonymous/kinquiry_pageb2_pagecode](https://developer.apple.com/documentation/kernel/1643302-anonymous/kinquiry_pageb2_pagecode)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1643302-anonymous/kinquiry_pageb2_pagecode
 
 # kINQUIRY_PageB2_PageCode
 

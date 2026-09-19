@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterdoorlock/readattributeminrfidcodelength(withclusterstatecache:endpoint:queue:completion:)](https://developer.apple.com/documentation/matter/mtrbaseclusterdoorlock/readattributeminrfidcodelength(withclusterstatecache:endpoint:queue:completion:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrbaseclusterdoorlock/readattributeminrfidcodelength(withclusterstatecache:endpoint:queue:completion:)
 
 # readAttributeMinRFIDCodeLength(withClusterStateCache:endpoint:queue:completion:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appleschoolmanagerapi/mdmserverproductfamily](https://developer.apple.com/documentation/appleschoolmanagerapi/mdmserverproductfamily)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appleschoolmanagerapi/mdmserverproductfamily
 
 # MdmServerProductFamily
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple School Manager API  
 **Kind:** Type  
-**Availability:** Apple School Manager API 1.6+
+**Availability:** Apple School Manager API 1.7+
 
 Strings that represent a product family that can be assigned as a default to a device management service.
 

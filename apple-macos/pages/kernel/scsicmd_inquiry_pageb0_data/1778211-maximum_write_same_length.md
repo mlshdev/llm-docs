@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/scsicmd_inquiry_pageb0_data/1778211-maximum_write_same_length](https://developer.apple.com/documentation/kernel/scsicmd_inquiry_pageb0_data/1778211-maximum_write_same_length)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/scsicmd_inquiry_pageb0_data/1778211-maximum_write_same_length
 
 # MAXIMUM_WRITE_SAME_LENGTH
 

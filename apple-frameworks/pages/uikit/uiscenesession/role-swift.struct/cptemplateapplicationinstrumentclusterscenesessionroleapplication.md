@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiscenesession/role-swift.struct/cptemplateapplicationinstrumentclusterscenesessionroleapplication](https://developer.apple.com/documentation/uikit/uiscenesession/role-swift.struct/cptemplateapplicationinstrumentclusterscenesessionroleapplication)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiscenesession/role-swift.struct/cptemplateapplicationinstrumentclusterscenesessionroleapplication
 
 # CPTemplateApplicationInstrumentClusterSceneSessionRoleApplication
 
@@ -19,6 +20,8 @@ static let CPTemplateApplicationInstrumentClusterSceneSessionRoleApplication: UI
 ### Determining scene roles
 
 - [windowApplication](windowapplication.md): A scene that displays interactive windows on the device’s built-in display or an externally connected display.
+- [windowAssistiveAccessApplication](windowassistiveaccessapplication.md)
+- [windowCameraCaptureAccessory](windowcameracaptureaccessory.md): Beta. A session role for scenes that present content during camera capture.
 - [windowExternalDisplay](windowexternaldisplay.md): Deprecated. A scene that displays noninteractive windows on an externally connected display.
 - [windowExternalDisplayNonInteractive](windowexternaldisplaynoninteractive.md): A scene that displays noninteractive windows on an externally connected display.
 - [carTemplateApplication](cartemplateapplication.md): A scene that displays interactive content on a CarPlay-enabled vehicle screen.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlsamplerdescriptor/reductionmode](https://developer.apple.com/documentation/metal/mtlsamplerdescriptor/reductionmode)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtlsamplerdescriptor/reductionmode
 
 # reductionMode (Swift)
 
@@ -18,12 +19,12 @@ var reductionMode: MTLSamplerReductionMode { get set }
 
 ## Discussion
 
-The property’s default value is `MTLSamplerReductionModeWeightedAverage`. The sampler ignores this property if any of the following property values are equal to a specific value:
+The property’s default value is [MTLSamplerReductionMode.weightedAverage](../mtlsamplerreductionmode/weightedaverage.md). The sampler ignores this property if any of the following property values are equal to a specific value:
 
-- The sampler’s [mipFilter](mipfilter.md) property is equal to `MTLSamplerMipFilterNotMipmapped`.
-- The sampler’s [mipFilter](mipfilter.md) property is equal to `MTLSamplerMipFilterNearest`.
-- The sampler’s [minFilter](minfilter.md) property is equal to `MTLSamplerMinMagFilterNearest`.
-- The sampler’s [magFilter](magfilter.md) property is equal to `MTLSamplerMinMagFilterNearest`.
+- The sampler’s [mipFilter](mipfilter.md) property is equal to [MTLSamplerMipFilter.notMipmapped](../mtlsamplermipfilter/notmipmapped.md).
+- The sampler’s [mipFilter](mipfilter.md) property is equal to [MTLSamplerMipFilter.nearest](../mtlsamplermipfilter/nearest.md).
+- The sampler’s [minFilter](minfilter.md) property is equal to [MTLSamplerMinMagFilter.nearest](../mtlsamplerminmagfilter/nearest.md).
+- The sampler’s [magFilter](magfilter.md) property is equal to [MTLSamplerMinMagFilter.nearest](../mtlsamplerminmagfilter/nearest.md).
 
 # reductionMode (Objective-C)
 
@@ -43,9 +44,9 @@ Sets the reduction mode for filtering contributing samples.
 
 ## Discussion
 
-The property’s default value is `MTLSamplerReductionModeWeightedAverage`. The sampler ignores this property if any of the following property values are equal to a specific value:
+The property’s default value is [MTLSamplerReductionModeWeightedAverage](../mtlsamplerreductionmode/weightedaverage.md). The sampler ignores this property if any of the following property values are equal to a specific value:
 
-- The sampler’s [mipFilter](mipfilter.md) property is equal to `MTLSamplerMipFilterNotMipmapped`.
-- The sampler’s [mipFilter](mipfilter.md) property is equal to `MTLSamplerMipFilterNearest`.
-- The sampler’s [minFilter](minfilter.md) property is equal to `MTLSamplerMinMagFilterNearest`.
-- The sampler’s [magFilter](magfilter.md) property is equal to `MTLSamplerMinMagFilterNearest`.
+- The sampler’s [mipFilter](mipfilter.md) property is equal to [MTLSamplerMipFilterNotMipmapped](../mtlsamplermipfilter/notmipmapped.md).
+- The sampler’s [mipFilter](mipfilter.md) property is equal to [MTLSamplerMipFilterNearest](../mtlsamplermipfilter/nearest.md).
+- The sampler’s [minFilter](minfilter.md) property is equal to [MTLSamplerMinMagFilterNearest](../mtlsamplerminmagfilter/nearest.md).
+- The sampler’s [magFilter](magfilter.md) property is equal to [MTLSamplerMinMagFilterNearest](../mtlsamplerminmagfilter/nearest.md).

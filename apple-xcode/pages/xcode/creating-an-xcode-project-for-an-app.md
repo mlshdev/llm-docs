@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/creating-an-xcode-project-for-an-app](https://developer.apple.com/documentation/xcode/creating-an-xcode-project-for-an-app)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/creating-an-xcode-project-for-an-app
 
 # Creating an Xcode project for an app
 

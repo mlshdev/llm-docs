@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ioscsireducedblockcommandsdevice/1473222-start_stop_unit](https://developer.apple.com/documentation/kernel/ioscsireducedblockcommandsdevice/1473222-start_stop_unit)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ioscsireducedblockcommandsdevice/1473222-start_stop_unit
 
 # START_STOP_UNIT
 

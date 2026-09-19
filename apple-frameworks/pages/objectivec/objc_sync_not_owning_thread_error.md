@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/objectivec/objc_sync_not_owning_thread_error](https://developer.apple.com/documentation/objectivec/objc_sync_not_owning_thread_error)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/objectivec/objc_sync_not_owning_thread_error
 
 # OBJC_SYNC_NOT_OWNING_THREAD_ERROR (Swift)
 

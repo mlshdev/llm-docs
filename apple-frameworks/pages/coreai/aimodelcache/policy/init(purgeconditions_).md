@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreai/aimodelcache/policy/init(purgeconditions:)](https://developer.apple.com/documentation/coreai/aimodelcache/policy/init(purgeconditions:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreai/aimodelcache/policy/init(purgeconditions:)
 
 # init(purgeConditions:)
 
@@ -24,4 +25,4 @@ init(purgeConditions: AIModelCache.Policy.PurgeConditions)
 
 > **Note**
 
-> On tvOS this policy will be made purgeable for storagePressure.
+> On tvOS any policy will be implicitly purgeable for storagePressure.

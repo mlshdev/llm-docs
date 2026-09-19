@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uidraginteractiondelegate/draginteraction(_:sessiondidmove:)](https://developer.apple.com/documentation/uikit/uidraginteractiondelegate/draginteraction(_:sessiondidmove:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uidraginteractiondelegate/draginteraction(_:sessiondidmove:)
 
 # dragInteraction(\_:sessionDidMove:) (Swift)
 

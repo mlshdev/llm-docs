@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/implementing-promotional-offers-in-your-app](https://developer.apple.com/documentation/storekit/implementing-promotional-offers-in-your-app)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/implementing-promotional-offers-in-your-app
 
 # Implementing promotional offers in your app (Swift)
 
@@ -19,7 +20,7 @@ For business guidance on using promotional offers, see [Auto-renewable Subscript
 
 > **Note**
 
->  If your goal is to attract new users, you can use introductory offers and promote the in-app purchase on the App Store. Users are eligible to receive only one introductory offer, but redeeming an introductory offer doesn’t affect their eligibility for a promotional offer. For more information on introductory offers, see [Implementing introductory offers in your app](implementing-introductory-offers-in-your-app.md).
+>  If your goal is to attract new users, you can use introductory offers and promote the Apple In-App Purchase on the App Store. Users are eligible to receive only one introductory offer, but redeeming an introductory offer doesn’t affect their eligibility for a promotional offer. For more information on introductory offers, see [Implementing introductory offers in your app](implementing-introductory-offers-in-your-app.md).
 
 <a id="Prepare-Your-Offer"></a>
 
@@ -195,7 +196,7 @@ For business guidance on using promotional offers, see [Auto-renewable Subscript
 
 > **Note**
 
->  If your goal is to attract new users, you can use introductory offers and promote the in-app purchase on the App Store. Users are eligible to receive only one introductory offer, but redeeming an introductory offer doesn’t affect their eligibility for a promotional offer. For more information on introductory offers, see [Implementing introductory offers in your app](implementing-introductory-offers-in-your-app.md).
+>  If your goal is to attract new users, you can use introductory offers and promote the Apple In-App Purchase on the App Store. Users are eligible to receive only one introductory offer, but redeeming an introductory offer doesn’t affect their eligibility for a promotional offer. For more information on introductory offers, see [Implementing introductory offers in your app](implementing-introductory-offers-in-your-app.md).
 
 <a id="Prepare-Your-Offer"></a>
 

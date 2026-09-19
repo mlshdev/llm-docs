@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsfontdescriptor/symbolictraits-swift.struct/classslabserifs](https://developer.apple.com/documentation/appkit/nsfontdescriptor/symbolictraits-swift.struct/classslabserifs)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsfontdescriptor/symbolictraits-swift.struct/classslabserifs
 
 # classSlabSerifs (Swift)
 

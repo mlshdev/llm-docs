@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/performing-fourier-transforms-on-multiple-signals](https://developer.apple.com/documentation/accelerate/performing-fourier-transforms-on-multiple-signals)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/performing-fourier-transforms-on-multiple-signals
 
 # Performing Fourier Transforms on Multiple Signals
 
@@ -27,6 +28,7 @@ The examples in this article use the following function to create an array with 
 static func makeCompositeSineWave(from frequencyAmplitudePairs: [(f: Float,
                                                                   a: Float)],
                                   count: Int) -> [Float] {
+
 
     return [Float](unsafeUninitializedCapacity: count) {
         buffer, initializedCount in

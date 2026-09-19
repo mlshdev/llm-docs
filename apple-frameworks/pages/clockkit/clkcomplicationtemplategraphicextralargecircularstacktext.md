@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphicextralargecircularstacktext](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphicextralargecircularstacktext)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphicextralargecircularstacktext
 
 # CLKComplicationTemplateGraphicExtraLargeCircularStackText (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 A template for displaying two rows of text in an extra-large, circular complication.
 
@@ -64,7 +65,7 @@ This template belongs to the [CLKComplicationFamily.graphicExtraLarge](clkcompli
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 A template for displaying two rows of text in an extra-large, circular complication.
 

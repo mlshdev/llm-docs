@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmoid_dotmac_cert_req_archive_fetch](https://developer.apple.com/documentation/security/cssmoid_dotmac_cert_req_archive_fetch)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmoid_dotmac_cert_req_archive_fetch
 
 # CSSMOID_DOTMAC_CERT_REQ_ARCHIVE_FETCH
 

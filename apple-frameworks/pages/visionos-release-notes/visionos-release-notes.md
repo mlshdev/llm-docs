@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/visionos-release-notes/visionos-release-notes](https://developer.apple.com/documentation/visionos-release-notes/visionos-release-notes)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/visionos-release-notes/visionos-release-notes
 
 # visionOS Release Notes
 
@@ -264,7 +265,7 @@ The visionOS SDK provides support for developing apps for Apple Vision Pro devic
 
 #### Notes
 
-- Feedback Assistant app does not appear on Home View for visionOS. To file feedback, click on this link from your visionOS device: [applefeedback://new](applefeedback://new).   (119262359)
+- Feedback Assistant app does not appear on Home View for visionOS. To file feedback, click on this link from your visionOS device: applefeedback://new.   (119262359)
 
 <a id="Game-Center"></a>
 

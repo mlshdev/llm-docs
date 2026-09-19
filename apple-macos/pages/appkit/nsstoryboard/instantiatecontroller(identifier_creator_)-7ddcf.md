@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsstoryboard/instantiatecontroller(identifier:creator:)-7ddcf](https://developer.apple.com/documentation/appkit/nsstoryboard/instantiatecontroller(identifier:creator:)-7ddcf)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsstoryboard/instantiatecontroller(identifier:creator:)-7ddcf
 
 # instantiateController(identifier:creator:)
 

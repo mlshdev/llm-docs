@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/xpc/iphone_simulator_host_min_version_required](https://developer.apple.com/documentation/xpc/iphone_simulator_host_min_version_required)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xpc/iphone_simulator_host_min_version_required
 
 # IPHONE_SIMULATOR_HOST_MIN_VERSION_REQUIRED (Swift)
 

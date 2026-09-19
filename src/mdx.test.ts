@@ -24,6 +24,14 @@ export const description = 'API description'
     expect(converted.body).toContain("[Open](https://example.com)");
   });
 
+  test("keeps audience-specific visibility content", () => {
+    const converted = convertMdx(
+      '<Visibility for="agents">Agent guidance.</Visibility>',
+      "agents.mdx",
+    );
+    expect(converted.body.trim()).toBe("Agent guidance.");
+  });
+
   test("rejects unknown components", () => {
     expect(() => convertMdx("<Unknown />", "unknown.mdx")).toThrow(
       "Unhandled MDX component",

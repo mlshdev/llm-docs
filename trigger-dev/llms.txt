@@ -8,10 +8,10 @@
 - API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.
 - Static MDX cards, tabs, accordions, steps, callouts, and parameter fields are normalized to Markdown without executing JavaScript.
 - Published page links resolve to https://trigger.dev/docs; source assets point at the immutable release commit.
-- Quarantined sources (1): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
 
 ## Getting started
 
+- [Trigger.dev docs](pages/introduction.md): Build and run durable AI agents and workflows in TypeScript. Long-running tasks with retries, queues, observability, and elastic scaling. Open source and self-hostable. (6515 bytes)
 - [Quick start: add Trigger.dev to your project](pages/quick-start.md): Set up Trigger.dev in your existing project in under 3 minutes. Install the SDK, create your first background task, and trigger it from your code. (6285 bytes)
 - [Manual setup](pages/manual-setup.md): How to manually setup Trigger.dev in your project. (13973 bytes)
 - [Video walkthrough](pages/video-walkthrough.md): Go from zero to a working task in your Next.js app in 10 minutes. (1246 bytes)

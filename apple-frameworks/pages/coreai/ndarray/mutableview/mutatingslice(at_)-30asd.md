@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreai/ndarray/mutableview/mutatingslice(at:)-30asd](https://developer.apple.com/documentation/coreai/ndarray/mutableview/mutatingslice(at:)-30asd)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreai/ndarray/mutableview/mutatingslice(at:)-30asd
 
 # mutatingSlice(at:)
 

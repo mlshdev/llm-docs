@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/walletpasses](https://developer.apple.com/documentation/walletpasses)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/walletpasses
 
 # Wallet Passes
 
@@ -39,7 +40,7 @@ You can further tailor passes for a personalized experience and make live update
 ### Essentials
 
 - [Creating a pass with Pass Designer](walletpasses/creating-a-pass-with-pass-designer.md): Construct and customize a variety of pass styles with this easy-to-use tool.
-- [Creating a poster generic pass](walletpasses/creating-a-poster-generic-pass.md): Construct a digital pass with information that enables people to take action.
+- [Creating a Poster Generic Pass](walletpasses/creating-a-poster-generic-pass.md): Construct a digital pass with information that enables people to take action.
 - [Creating the Source for a Pass](walletpasses/creating-the-source-for-a-pass.md): Create the directory structure and add source files and images to define a pass.
 - [Building a Pass](walletpasses/building-a-pass.md): Build a distributable pass.
 - [Defining the metadata of your Wallet Pass](walletpasses/defining-the-metadata-of-your-wallet-pass.md): Provide customizable information for your Wallet Pass.
@@ -70,7 +71,7 @@ You can further tailor passes for a personalized experience and make live update
 
 ### Generic passes
 
-- [Creating a poster generic pass](walletpasses/creating-a-poster-generic-pass.md): Construct a digital pass with information that enables people to take action.
+- [Creating a Poster Generic Pass](walletpasses/creating-a-poster-generic-pass.md): Construct a digital pass with information that enables people to take action.
 - [Pass.Generic](walletpasses/pass/generic-data.dictionary.md): An object that represents the groups of fields that display the information for a generic pass.
 
 ### Store card passes

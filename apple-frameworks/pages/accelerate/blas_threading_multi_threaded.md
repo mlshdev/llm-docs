@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/blas_threading_multi_threaded](https://developer.apple.com/documentation/accelerate/blas_threading_multi_threaded)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/blas_threading_multi_threaded
 
 # BLAS_THREADING_MULTI_THREADED (Swift)
 

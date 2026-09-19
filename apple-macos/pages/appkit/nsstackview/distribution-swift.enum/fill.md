@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsstackview/distribution-swift.enum/fill](https://developer.apple.com/documentation/appkit/nsstackview/distribution-swift.enum/fill)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsstackview/distribution-swift.enum/fill
 
 # NSStackView.Distribution.fill (Swift)
 

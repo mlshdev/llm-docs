@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/systemlanguagemodel/availability-swift.enum](https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel/availability-swift.enum)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel/availability-swift.enum
 
 # SystemLanguageModel.Availability
 
@@ -26,9 +27,9 @@ The availability status for a specific system language model.
 
 ### Checking for availability
 
-- [SystemLanguageModel.Availability.available](availability-swift.enum/available.md): The system is ready for making requests.
-- [SystemLanguageModel.Availability.unavailable(\_:)](availability-swift.enum/unavailable%28__%29.md): Indicates that the system is not ready for requests.
-- [SystemLanguageModel.Availability.UnavailableReason](availability-swift.enum/unavailablereason.md): The unavailable reason.
+- [SystemLanguageModel.Availability.available](availability-swift.enum/available.md): The system is ready to make requests.
+- [SystemLanguageModel.Availability.unavailable(\_:)](availability-swift.enum/unavailable%28__%29.md): The system isn’t ready for requests.
+- [SystemLanguageModel.Availability.UnavailableReason](availability-swift.enum/unavailablereason.md): The reason the system language model is unavailable.
 
 ## Relationships
 

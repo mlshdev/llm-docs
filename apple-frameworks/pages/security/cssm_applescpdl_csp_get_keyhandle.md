@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_applescpdl_csp_get_keyhandle](https://developer.apple.com/documentation/security/cssm_applescpdl_csp_get_keyhandle)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_applescpdl_csp_get_keyhandle
 
 # CSSM_APPLESCPDL_CSP_GET_KEYHANDLE (Swift)
 

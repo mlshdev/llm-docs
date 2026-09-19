@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/protecting-keys-with-the-secure-enclave](https://developer.apple.com/documentation/security/protecting-keys-with-the-secure-enclave)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/protecting-keys-with-the-secure-enclave
 
 # Protecting keys with the Secure Enclave (Swift)
 

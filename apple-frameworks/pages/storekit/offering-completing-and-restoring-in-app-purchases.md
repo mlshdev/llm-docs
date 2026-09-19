@@ -1,6 +1,7 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/offering-completing-and-restoring-in-app-purchases](https://developer.apple.com/documentation/storekit/offering-completing-and-restoring-in-app-purchases)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/offering-completing-and-restoring-in-app-purchases
 
-# Offering, completing, and restoring in-app purchases (Swift)
+# Offering, completing, and restoring Apple In-App Purchases (Swift)
 
 **Framework:** StoreKit  
 **Kind:** Sample Code  
@@ -12,7 +13,7 @@ Fetch, display, purchase, validate, and finish transactions in your app.
 
 ## Overview
 
-Use the In-App Purchase API to give people the ability to purchase virtual goods within your app or directly from the App Store using the StoreKit framework. This sample code project demonstrates how to retrieve, display, and restore in-app purchases. First, you set up your app to register and use a single-transaction queue observer at launch. The transaction queue observer manages all payment transactions and handles all transaction states. Confirm that it’s a shared instance of a custom class that conforms to the [SKPaymentTransactionObserver](skpaymenttransactionobserver.md) protocol. Then, remove the transaction observer when the system is about to terminate the app. See [`Setting Up the Transaction Observer and Payment Queue`](setting-up-the-transaction-observer-for-the-payment-queue.md) for more information.
+Use the Apple In-App Purchase API to give people the ability to purchase virtual goods within your app or directly from the App Store using the StoreKit framework. This sample code project demonstrates how to retrieve, display, and restore Apple In-App Purchases. First, you set up your app to register and use a single-transaction queue observer at launch. The transaction queue observer manages all payment transactions and handles all transaction states. Confirm that it’s a shared instance of a custom class that conforms to the [SKPaymentTransactionObserver](skpaymenttransactionobserver.md) protocol. Then, remove the transaction observer when the system is about to terminate the app. See [`Setting Up the Transaction Observer and Payment Queue`](setting-up-the-transaction-observer-for-the-payment-queue.md) for more information.
 
 This sample code project, which builds the InAppPurchases app, supports the iOS, iPadOS, macOS, and tvOS platforms. After launching, the app queries the App Store about product identifiers in the `Products.plist` file. The app updates its UI with the App Store’s response, which may include available products for sale, unrecognized product identifiers, or both. The app also displays all available purchased and restored payment transactions.
 
@@ -22,11 +23,11 @@ This sample code project, which builds the InAppPurchases app, supports the iOS,
 
 Before you can run and test this sample code project, you need to:
 
-1. Start with a completed app that supports in-app purchases and has some configured in-app purchases in App Store Connect. For more information, see [Overview for configuring in-app purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/overview-for-configuring-in-app-purchases).
+1. Start with a completed app that supports Apple In-App Purchases and has some configured Apple In-App Purchases in App Store Connect. For more information, see [Overview for configuring Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/overview-for-configuring-in-app-purchases).
 2. Create [a Sandbox Apple Account](https://developer.apple.com/help/app-store-connect/test-in-app-purchases/create-a-sandbox-apple-account/) in App Store Connect.
-3. Open the sample code project in Xcode, select the target that you want to build, click Signing & Capabilities, and change its bundle identifier to one that supports in-app purchases.
+3. Open the sample code project in Xcode, select the target that you want to build, click Signing & Capabilities, and change its bundle identifier to one that supports Apple In-App Purchases.
 4. Choose the appropriate team from the Team pop-up menu to let Xcode automatically manage your provisioning profile. See [Assign a project to a team](https://help.apple.com/xcode/mac/current/#/dev23aab79b4) for details.
-5. Open the `ProductIds.plist` file in the sample and update its content with your existing in-app purchases product IDs.
+5. Open the `ProductIds.plist` file in the sample and update its content with your existing Apple In-App Purchases product IDs.
 6. For iOS and tvOS devices, build and run the `InAppPurchases` and `InAppPurchasestvOS` targets, respectively, which the sample uses to build the app. If you have any code-signing issues, see [If a code signing error occurs](https://help.apple.com/xcode/mac/current/#/dev01865b392).
 7. For macOS, before building the `InAppPurchasesmacOS` target, sign out of the Mac App Store. Build the target, then launch the resulting app from the Finder the first time to obtain a receipt. See [`Sign in to the App Store with your Sandbox Apple Account`](testing-in-app-purchases-with-sandbox.md) for details.
 8. Upon launching, the app queries the App Store about the product identifiers in `ProductIds.plist`. When successful, it displays a list of products available for sale in the App Store. Tap any product in that list to purchase it. When you receive a prompt to authenticate the purchase, use your test user account. If the product request fails, see [invalidProductIdentifiers](skproductsresponse/invalidproductidentifiers.md) for reasons the App Store may return invalid product identifiers.
@@ -169,11 +170,11 @@ SKPaymentQueue.default().finishTransaction(transaction)
 
 - [Setting up the transaction observer for the payment queue](setting-up-the-transaction-observer-for-the-payment-queue.md): Enable your app to receive and handle transactions by adding an observer.
 - [SKPaymentQueue](skpaymentqueue.md): Deprecated. A queue of payment transactions for the App Store to process.
-- [SKPaymentTransactionObserver](skpaymenttransactionobserver.md): Deprecated. A set of methods that process transactions, unlock purchased functionality, and continue promoted In-App Purchases.
+- [SKPaymentTransactionObserver](skpaymenttransactionobserver.md): Deprecated. A set of methods that process transactions, unlock purchased functionality, and continue promoted Apple In-App Purchases.
 - [SKPaymentQueueDelegate](skpaymentqueuedelegate.md): Deprecated. The protocol that provides information needed to complete transactions.
 - [SKRequest](skrequest.md): Deprecated. An abstract class that represents a request to the App Store.
 
-# Offering, completing, and restoring in-app purchases (Objective-C)
+# Offering, completing, and restoring Apple In-App Purchases (Objective-C)
 
 **Framework:** StoreKit  
 **Kind:** Sample Code  
@@ -185,7 +186,7 @@ Fetch, display, purchase, validate, and finish transactions in your app.
 
 ## Overview
 
-Use the In-App Purchase API to give people the ability to purchase virtual goods within your app or directly from the App Store using the StoreKit framework. This sample code project demonstrates how to retrieve, display, and restore in-app purchases. First, you set up your app to register and use a single-transaction queue observer at launch. The transaction queue observer manages all payment transactions and handles all transaction states. Confirm that it’s a shared instance of a custom class that conforms to the [SKPaymentTransactionObserver](skpaymenttransactionobserver.md) protocol. Then, remove the transaction observer when the system is about to terminate the app. See [`Setting Up the Transaction Observer and Payment Queue`](setting-up-the-transaction-observer-for-the-payment-queue.md) for more information.
+Use the Apple In-App Purchase API to give people the ability to purchase virtual goods within your app or directly from the App Store using the StoreKit framework. This sample code project demonstrates how to retrieve, display, and restore Apple In-App Purchases. First, you set up your app to register and use a single-transaction queue observer at launch. The transaction queue observer manages all payment transactions and handles all transaction states. Confirm that it’s a shared instance of a custom class that conforms to the [SKPaymentTransactionObserver](skpaymenttransactionobserver.md) protocol. Then, remove the transaction observer when the system is about to terminate the app. See [`Setting Up the Transaction Observer and Payment Queue`](setting-up-the-transaction-observer-for-the-payment-queue.md) for more information.
 
 This sample code project, which builds the InAppPurchases app, supports the iOS, iPadOS, macOS, and tvOS platforms. After launching, the app queries the App Store about product identifiers in the `Products.plist` file. The app updates its UI with the App Store’s response, which may include available products for sale, unrecognized product identifiers, or both. The app also displays all available purchased and restored payment transactions.
 
@@ -195,11 +196,11 @@ This sample code project, which builds the InAppPurchases app, supports the iOS,
 
 Before you can run and test this sample code project, you need to:
 
-1. Start with a completed app that supports in-app purchases and has some configured in-app purchases in App Store Connect. For more information, see [Overview for configuring in-app purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/overview-for-configuring-in-app-purchases).
+1. Start with a completed app that supports Apple In-App Purchases and has some configured Apple In-App Purchases in App Store Connect. For more information, see [Overview for configuring Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/overview-for-configuring-in-app-purchases).
 2. Create [a Sandbox Apple Account](https://developer.apple.com/help/app-store-connect/test-in-app-purchases/create-a-sandbox-apple-account/) in App Store Connect.
-3. Open the sample code project in Xcode, select the target that you want to build, click Signing & Capabilities, and change its bundle identifier to one that supports in-app purchases.
+3. Open the sample code project in Xcode, select the target that you want to build, click Signing & Capabilities, and change its bundle identifier to one that supports Apple In-App Purchases.
 4. Choose the appropriate team from the Team pop-up menu to let Xcode automatically manage your provisioning profile. See [Assign a project to a team](https://help.apple.com/xcode/mac/current/#/dev23aab79b4) for details.
-5. Open the `ProductIds.plist` file in the sample and update its content with your existing in-app purchases product IDs.
+5. Open the `ProductIds.plist` file in the sample and update its content with your existing Apple In-App Purchases product IDs.
 6. For iOS and tvOS devices, build and run the `InAppPurchases` and `InAppPurchasestvOS` targets, respectively, which the sample uses to build the app. If you have any code-signing issues, see [If a code signing error occurs](https://help.apple.com/xcode/mac/current/#/dev01865b392).
 7. For macOS, before building the `InAppPurchasesmacOS` target, sign out of the Mac App Store. Build the target, then launch the resulting app from the Finder the first time to obtain a receipt. See [`Sign in to the App Store with your Sandbox Apple Account`](testing-in-app-purchases-with-sandbox.md) for details.
 8. Upon launching, the app queries the App Store about the product identifiers in `ProductIds.plist`. When successful, it displays a list of products available for sale in the App Store. Tap any product in that list to purchase it. When you receive a prompt to authenticate the purchase, use your test user account. If the product request fails, see [invalidProductIdentifiers](skproductsresponse/invalidproductidentifiers.md) for reasons the App Store may return invalid product identifiers.
@@ -342,6 +343,6 @@ SKPaymentQueue.default().finishTransaction(transaction)
 
 - [Setting up the transaction observer for the payment queue](setting-up-the-transaction-observer-for-the-payment-queue.md): Enable your app to receive and handle transactions by adding an observer.
 - [SKPaymentQueue](skpaymentqueue.md): Deprecated. A queue of payment transactions for the App Store to process.
-- [SKPaymentTransactionObserver](skpaymenttransactionobserver.md): Deprecated. A set of methods that process transactions, unlock purchased functionality, and continue promoted In-App Purchases.
+- [SKPaymentTransactionObserver](skpaymenttransactionobserver.md): Deprecated. A set of methods that process transactions, unlock purchased functionality, and continue promoted Apple In-App Purchases.
 - [SKPaymentQueueDelegate](skpaymentqueuedelegate.md): Deprecated. The protocol that provides information needed to complete transactions.
 - [SKRequest](skrequest.md): Deprecated. An abstract class that represents a request to the App Store.

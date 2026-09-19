@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iostreambufferqueue/entrycount](https://developer.apple.com/documentation/videodriverkit/iostreambufferqueue/entrycount)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iostreambufferqueue/entrycount
 
 # entryCount
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Property  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,7 +19,7 @@ uint32_t entryCount;
 
 ### Accessing queue contents
 
-- [headIndex](headindex.md)
-- [tailIndex](tailindex.md)
-- [queue](queue.md)
-- [IOStreamBufferQueueEntry](../iostreambufferqueueentry.md)
+- [headIndex](headindex.md): Beta.
+- [tailIndex](tailindex.md): Beta.
+- [queue](queue.md): Beta.
+- [IOStreamBufferQueueEntry](../iostreambufferqueueentry.md): Beta.

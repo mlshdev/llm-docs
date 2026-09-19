@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tvservices/tvtopshelfaction/init(url:)-6nuwx](https://developer.apple.com/documentation/tvservices/tvtopshelfaction/init(url:)-6nuwx)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/tvservices/tvtopshelfaction/init(url:)-6nuwx
 
 # init(URL:)
 

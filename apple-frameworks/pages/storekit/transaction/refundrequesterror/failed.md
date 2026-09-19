@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/refundrequesterror/failed](https://developer.apple.com/documentation/storekit/transaction/refundrequesterror/failed)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/refundrequesterror/failed
 
 # Transaction.RefundRequestError.failed
 
@@ -24,4 +25,4 @@ A refund request submission can fail for many reasons, such as having an invalid
 
 ### Error Enumeration
 
-- [Transaction.RefundRequestError.duplicateRequest](duplicaterequest.md): The App Store has already received a refund request for this in-app purchase.
+- [Transaction.RefundRequestError.duplicateRequest](duplicaterequest.md): The App Store has already received a refund request for this Apple In-App Purchase.

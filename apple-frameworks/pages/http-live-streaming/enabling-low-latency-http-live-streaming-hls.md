@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/http-live-streaming/enabling-low-latency-http-live-streaming-hls](https://developer.apple.com/documentation/http-live-streaming/enabling-low-latency-http-live-streaming-hls)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/http-live-streaming/enabling-low-latency-http-live-streaming-hls
 
 # Enabling Low-Latency HTTP Live Streaming (HLS)
 

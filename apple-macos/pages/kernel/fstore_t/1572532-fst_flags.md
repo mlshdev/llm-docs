@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/fstore_t/1572532-fst_flags](https://developer.apple.com/documentation/kernel/fstore_t/1572532-fst_flags)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/fstore_t/1572532-fst_flags
 
 # fst_flags
 

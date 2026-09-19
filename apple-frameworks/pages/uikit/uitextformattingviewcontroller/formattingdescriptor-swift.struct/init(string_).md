@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitextformattingviewcontroller/formattingdescriptor-swift.struct/init(string:)](https://developer.apple.com/documentation/uikit/uitextformattingviewcontroller/formattingdescriptor-swift.struct/init(string:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uitextformattingviewcontroller/formattingdescriptor-swift.struct/init(string:)
 
 # init(string:)
 

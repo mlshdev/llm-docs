@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/implementing_drivers_system_extensions_and_kexts](https://developer.apple.com/documentation/kernel/implementing_drivers_system_extensions_and_kexts)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/implementing_drivers_system_extensions_and_kexts
 
 # Implementing drivers, system extensions, and kexts
 

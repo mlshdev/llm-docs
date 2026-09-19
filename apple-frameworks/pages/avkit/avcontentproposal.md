@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcontentproposal](https://developer.apple.com/documentation/avkit/avcontentproposal)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcontentproposal
 
 # AVContentProposal (Swift)
 
@@ -16,7 +17,7 @@ class AVContentProposal
 
 ## Mentioned In
 
-- [Presenting Content Proposals in tvOS](presenting-content-proposals-in-tvos.md)
+- [Presenting content proposals in tvOS](presenting-content-proposals-in-tvos.md)
 
 <a id="overview"></a>
 
@@ -34,11 +35,11 @@ currentPlayerItem.nextContentProposal = proposal
 
 ## Topics
 
-### Creating a Content Proposal
+### Creating a content proposal
 
 - [init(contentTimeForTransition:title:previewImage:)](avcontentproposal/init%28contenttimefortransition_title_previewimage_%29.md): Creates a new content proposal with the specified transition time, title, and preview image.
 
-### Configuring the Content Proposal
+### Configuring the content proposal
 
 - [contentTimeForTransition](avcontentproposal/contenttimefortransition.md): The time within the timeline of the current player item when the content proposal presentation should begin.
 - [title](avcontentproposal/title.md): The title of the proposed content.
@@ -65,12 +66,12 @@ currentPlayerItem.nextContentProposal = proposal
 
 ## See Also
 
-### Configuring the Proposal
+### Content proposals and parental controls
 
-- [contentProposal](avcontentproposalviewcontroller/contentproposal.md): A prosal of content to play.
-- [dateOfAutomaticAcceptance](avcontentproposalviewcontroller/dateofautomaticacceptance.md): The date that the system automatically accepts a proposal if the user doesn’t intervene.
-- [playerLayoutGuide](avcontentproposalviewcontroller/playerlayoutguide.md): A layout guide that tracks the size and location of the player view.
-- [preferredPlayerViewFrame](avcontentproposalviewcontroller/preferredplayerviewframe.md): The preferred presentation frame of the player view while the content proposal is active.
+- [Presenting content proposals in tvOS](presenting-content-proposals-in-tvos.md): Display a preview of an upcoming media item at the conclusion of the currently playing media item.
+- [Working with overlays and parental controls in tvOS](working-with-overlays-and-parental-controls-in-tvos.md): Add interactive overlays, parental controls, and livestream channel flipping using a player view controller.
+- [AVContentProposalAction](avcontentproposalaction.md): Constant that indicate the action a user takes when dismissing a content proposal.
+- [AVContentProposalViewController](avcontentproposalviewcontroller.md): A view controller that proposes content to watch next.
 
 # AVContentProposal (Objective-C)
 
@@ -88,7 +89,7 @@ An object that describes the content to propose playing after the current item f
 
 ## Mentioned In
 
-- [Presenting Content Proposals in tvOS](presenting-content-proposals-in-tvos.md)
+- [Presenting content proposals in tvOS](presenting-content-proposals-in-tvos.md)
 
 <a id="overview"></a>
 
@@ -106,11 +107,11 @@ currentPlayerItem.nextContentProposal = proposal
 
 ## Topics
 
-### Creating a Content Proposal
+### Creating a content proposal
 
 - [initWithContentTimeForTransition:title:previewImage:](avcontentproposal/init%28contenttimefortransition_title_previewimage_%29.md): Creates a new content proposal with the specified transition time, title, and preview image.
 
-### Configuring the Content Proposal
+### Configuring the content proposal
 
 - [contentTimeForTransition](avcontentproposal/contenttimefortransition.md): The time within the timeline of the current player item when the content proposal presentation should begin.
 - [title](avcontentproposal/title.md): The title of the proposed content.
@@ -131,9 +132,9 @@ currentPlayerItem.nextContentProposal = proposal
 
 ## See Also
 
-### Configuring the Proposal
+### Content proposals and parental controls
 
-- [contentProposal](avcontentproposalviewcontroller/contentproposal.md): A prosal of content to play.
-- [dateOfAutomaticAcceptance](avcontentproposalviewcontroller/dateofautomaticacceptance.md): The date that the system automatically accepts a proposal if the user doesn’t intervene.
-- [playerLayoutGuide](avcontentproposalviewcontroller/playerlayoutguide.md): A layout guide that tracks the size and location of the player view.
-- [preferredPlayerViewFrame](avcontentproposalviewcontroller/preferredplayerviewframe.md): The preferred presentation frame of the player view while the content proposal is active.
+- [Presenting content proposals in tvOS](presenting-content-proposals-in-tvos.md): Display a preview of an upcoming media item at the conclusion of the currently playing media item.
+- [Working with overlays and parental controls in tvOS](working-with-overlays-and-parental-controls-in-tvos.md): Add interactive overlays, parental controls, and livestream channel flipping using a player view controller.
+- [AVContentProposalAction](avcontentproposalaction.md): Constant that indicate the action a user takes when dismissing a content proposal.
+- [AVContentProposalViewController](avcontentproposalviewcontroller.md): A view controller that proposes content to watch next.

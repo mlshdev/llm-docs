@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkquery/predicateforworkoutactivities(operatortype:duration:)](https://developer.apple.com/documentation/healthkit/hkquery/predicateforworkoutactivities(operatortype:duration:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkquery/predicateforworkoutactivities(operatortype:duration:)
 
 # predicateForWorkoutActivities(operatorType:duration:) (Swift)
 
@@ -35,6 +36,7 @@ The following sample creates a predicate for matching workout activities with a 
 
 ```swift
 let longWorkoutActivityPredicate = HKQuery.predicateForWorkoutActivities(operatorType: .greaterThanOrEqualTo, duration: 60.0 * 30.0)
+
 
 // Wrap the activity predicate inside a workout predicate.
 let workoutPredicate = HKQuery.predicateForWorkouts(activityPredicate: longWorkoutActivityPredicate)
@@ -91,6 +93,7 @@ The following sample creates a predicate for matching workout activities with a 
 
 ```swift
 let longWorkoutActivityPredicate = HKQuery.predicateForWorkoutActivities(operatorType: .greaterThanOrEqualTo, duration: 60.0 * 30.0)
+
 
 // Wrap the activity predicate inside a workout predicate.
 let workoutPredicate = HKQuery.predicateForWorkouts(activityPredicate: longWorkoutActivityPredicate)

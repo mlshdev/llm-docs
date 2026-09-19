@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/ikrig/constraint/parent(named:on:positionweight:orientationweight:)](https://developer.apple.com/documentation/realitykit/ikrig/constraint/parent(named:on:positionweight:orientationweight:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/ikrig/constraint/parent(named:on:positionweight:orientationweight:)
 
 # parent(named:on:positionWeight:orientationWeight:)
 

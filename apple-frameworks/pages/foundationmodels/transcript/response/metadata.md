@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/response/metadata](https://developer.apple.com/documentation/foundationmodels/transcript/response/metadata)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/response/metadata
 
 # metadata
 
@@ -19,5 +20,5 @@ var metadata: [String : GeneratedContent] { get }
 
 ### Inspecting a response
 
-- [segments](segments.md): Ordered prompt segments.
-- [assetIDs](assetids.md): Version aware identifiers for all assets used to generate this response.
+- [segments](segments.md): Ordered response segments.
+- [assetIDs](assetids.md): Version-aware identifiers for all assets used to generate this response.

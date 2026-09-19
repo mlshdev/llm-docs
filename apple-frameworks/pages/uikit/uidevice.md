@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uidevice](https://developer.apple.com/documentation/uikit/uidevice)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uidevice
 
 # UIDevice (Swift)
 
@@ -117,6 +118,8 @@ All [UIDevice](uidevice.md) notifications are posted by the singleton device ins
 ### Device environment
 
 - [UIStatusBarManager](uistatusbarmanager.md): An object that describes the configuration of the status bar.
+- [UIHinge](uihinge.md): Beta. An object encapsulating the state of a single hinge.
+- [UIHingeInteraction](uihingeinteraction.md): Beta. An interaction for observing the hinge state associated with the view’s hierarchy.
 
 # UIDevice (Objective-C)
 
@@ -218,3 +221,5 @@ All [UIDevice](uidevice.md) notifications are posted by the singleton device ins
 ### Device environment
 
 - [UIStatusBarManager](uistatusbarmanager.md): An object that describes the configuration of the status bar.
+- [UIHinge](uihinge.md): Beta. An object encapsulating the state of a single hinge.
+- [UIHingeInteraction](uihingeinteraction.md): Beta. An interaction for observing the hinge state associated with the view’s hierarchy.

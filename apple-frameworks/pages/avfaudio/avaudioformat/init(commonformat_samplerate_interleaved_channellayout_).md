@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avaudioformat/init(commonformat:samplerate:interleaved:channellayout:)](https://developer.apple.com/documentation/avfaudio/avaudioformat/init(commonformat:samplerate:interleaved:channellayout:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudioformat/init(commonformat:samplerate:interleaved:channellayout:)
 
 # init(commonFormat:sampleRate:interleaved:channelLayout:) (Swift)
 

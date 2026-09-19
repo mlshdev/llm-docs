@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/coremediaio/kcmiosamplebufferattachmentkey_hdv2_vaux](https://developer.apple.com/documentation/coremediaio/kcmiosamplebufferattachmentkey_hdv2_vaux)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremediaio/kcmiosamplebufferattachmentkey_hdv2_vaux
 
 # kCMIOSampleBufferAttachmentKey_HDV2_VAUX
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/materialparameters/value/simd4float(_:)](https://developer.apple.com/documentation/realitykit/materialparameters/value/simd4float(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/materialparameters/value/simd4float(_:)
 
 # MaterialParameters.Value.simd4Float(\_:)
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphiccircularopengaugesimpletext](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircularopengaugesimpletext)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircularopengaugesimpletext
 
 # CLKComplicationTemplateGraphicCircularOpenGaugeSimpleText (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 A template for displaying text inside an open gauge, with a single piece of text for the gauge.
 
@@ -67,7 +68,7 @@ This template belongs to the [CLKComplicationFamily.graphicCircular](clkcomplica
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 A template for displaying text inside an open gauge, with a single piece of text for the gauge.
 

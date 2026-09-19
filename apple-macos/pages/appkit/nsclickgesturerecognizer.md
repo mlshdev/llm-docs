@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsclickgesturerecognizer](https://developer.apple.com/documentation/appkit/nsclickgesturerecognizer)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsclickgesturerecognizer
 
 # NSClickGestureRecognizer (Swift)
 
@@ -24,7 +25,7 @@ The gesture recognizer automatically sets the values of the [delaysPrimaryMouseB
 
 ## Topics
 
-### Configuring the Gesture
+### Configuring the gesture
 
 - [buttonMask](nsclickgesturerecognizer/buttonmask.md): A bit mask of the button (or buttons) required to recognize this click.
 - [numberOfClicksRequired](nsclickgesturerecognizer/numberofclicksrequired.md): The number of clicks required to match.
@@ -81,7 +82,7 @@ The gesture recognizer automatically sets the values of the [delaysPrimaryMouseB
 
 ## Topics
 
-### Configuring the Gesture
+### Configuring the gesture
 
 - [buttonMask](nsclickgesturerecognizer/buttonmask.md): A bit mask of the button (or buttons) required to recognize this click.
 - [numberOfClicksRequired](nsclickgesturerecognizer/numberofclicksrequired.md): The number of clicks required to match.

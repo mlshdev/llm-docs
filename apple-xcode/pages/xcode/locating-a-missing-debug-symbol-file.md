@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/locating-a-missing-debug-symbol-file](https://developer.apple.com/documentation/xcode/locating-a-missing-debug-symbol-file)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/locating-a-missing-debug-symbol-file
 
 # Locating a missing debug symbol file
 

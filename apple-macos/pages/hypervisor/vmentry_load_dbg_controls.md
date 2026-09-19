@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/vmentry_load_dbg_controls](https://developer.apple.com/documentation/hypervisor/vmentry_load_dbg_controls)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/vmentry_load_dbg_controls
 
 # VMENTRY_LOAD_DBG_CONTROLS (Swift)
 

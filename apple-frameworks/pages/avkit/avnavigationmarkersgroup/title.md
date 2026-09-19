@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avnavigationmarkersgroup/title](https://developer.apple.com/documentation/avkit/avnavigationmarkersgroup/title)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avnavigationmarkersgroup/title
 
 # title (Swift)
 
@@ -22,7 +23,7 @@ You set a marker group’s title with the [AVNavigationMarkersGroup](../avnaviga
 
 ## See Also
 
-### Inspecting Navigation Metadata
+### Inspecting navigation metadata
 
 - [timedNavigationMarkers](timednavigationmarkers.md): The array of timed navigation markers for which the group provides navigation.
 - [dateRangeNavigationMarkers](daterangenavigationmarkers.md): The array of date range navigation markers for which the group provides navigation.
@@ -49,7 +50,7 @@ You set a marker group’s title with the [AVNavigationMarkersGroup](../avnaviga
 
 ## See Also
 
-### Inspecting Navigation Metadata
+### Inspecting navigation metadata
 
 - [timedNavigationMarkers](timednavigationmarkers.md): The array of timed navigation markers for which the group provides navigation.
 - [dateRangeNavigationMarkers](daterangenavigationmarkers.md): The array of date range navigation markers for which the group provides navigation.

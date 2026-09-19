@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/auparametertree/creategroup(fromtemplate:identifier:name:addressoffset:)](https://developer.apple.com/documentation/audiotoolbox/auparametertree/creategroup(fromtemplate:identifier:name:addressoffset:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/auparametertree/creategroup(fromtemplate:identifier:name:addressoffset:)
 
 # createGroup(fromTemplate:identifier:name:addressOffset:) (Swift)
 

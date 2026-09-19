@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/samplecode](https://developer.apple.com/documentation/samplecode)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/samplecode
 
 # Sample Code Library
 
@@ -39,8 +40,7 @@ Explore samples that highlight new APIs featured at this year’s conference.
 - [Enhancing your app with machine learning-based video effects](videotoolbox/enhancing-your-app-with-machine-learning-based-video-effects.md): Add powerful effects to your videos using the VideoToolbox VTFrameProcessor API.
 - [Enriching your text in text views](uikit/enriching-your-text-in-text-views.md): Support line numbering, section collapsing, inline attachment caching, exclusion paths, text attachments, and text lists in a text view.
 - [Exploring object tracking with ARKit](visionos/exploring_object_tracking_with_arkit.md): Find and track real-world objects in visionOS using reference objects you train with Create ML.
-- [Gaussian splats on visionOS](visionos/gaussian-splats-on-visionos.md): Use the new Gaussian splat APIs available in RealityKit in visionOS 27.
-- [Implementing a store in your app using the StoreKit API](storekit/implementing-a-store-in-your-app-using-the-storekit-api.md): Offer In-App Purchases and manage entitlements using signed transactions and status information.
+- [Implementing a store in your app using the StoreKit API](storekit/implementing-a-store-in-your-app-using-the-storekit-api.md): Offer Apple In-App Purchases and manage entitlements using signed transactions and status information.
 - [Implementing age assurance and permissions](declaredagerange/implementing-age-assurance-and-permissions.md): Create a significant change flow to inform people about important updates in your app and request age-related permissions.
 - [Implementing saliency-based image cropping in iOS and watchOS](vision/implementing-saliency-based-image-cropping-in-ios-and-watchos.md): Crop regions most likely drawing people’s attention from an image in your iOS or watchOS app.
 - [Integrating MusicKit into your app](musickit/integrating-musickit-into-your-app.md): Enhance your workouts with Apple Music playback.
@@ -383,6 +383,7 @@ Explore samples that highlight new APIs featured at this year’s conference.
 - [Detecting human actions in a live video feed](createml/detecting-human-actions-in-a-live-video-feed.md): Identify body movements by sending a person’s pose data from a series of video frames to an action-classification model.
 - [Detecting human body poses in an image](coreml/detecting-human-body-poses-in-an-image.md): Locate people and the stance of their bodies by analyzing an image with a PoseNet model.
 - [Enhancing your app with machine learning-based video effects](videotoolbox/enhancing-your-app-with-machine-learning-based-video-effects.md): Add powerful effects to your videos using the VideoToolbox VTFrameProcessor API.
+- [Evaluating a Core AI model](evaluations/evaluating-a-core-ai-model.md): Bundle a model with your app and measure how well the model classifies sentiment compared to the default on-device model.
 - [Finding answers to questions in a text document](coreml/finding-answers-to-questions-in-a-text-document.md): Locate relevant passages in a document by asking the Bidirectional Encoder Representations from Transformers (BERT) model a question.
 - [Generate dynamic game content with guided generation and tools](foundationmodels/generate-dynamic-game-content-with-guided-generation-and-tools.md): Make gameplay more lively with AI generated dialog and encounters personalized to the player.
 - [Integrating a Core ML Model into Your App](coreml/integrating-a-core-ml-model-into-your-app.md): Add a simple model to an app, pass input data to the model, and process the model’s predictions.
@@ -508,7 +509,7 @@ Explore samples that highlight new APIs featured at this year’s conference.
 
 - [Determining service entitlement on the server](storekit/determining-service-entitlement-on-the-server.md): Identify a customer’s entitlement to your service, offers, and messaging by analyzing a validated receipt and the state of their subscription.
 - [Generating a Promotional Offer Signature on the Server](storekit/generating-a-promotional-offer-signature-on-the-server.md): Generate a signature using your private key and lightweight cryptography libraries.
-- [Offering, completing, and restoring in-app purchases](storekit/offering-completing-and-restoring-in-app-purchases.md): Fetch, display, purchase, validate, and finish transactions in your app.
+- [Offering, completing, and restoring Apple In-App Purchases](storekit/offering-completing-and-restoring-in-app-purchases.md): Fetch, display, purchase, validate, and finish transactions in your app.
 - [Offering media for sale in your app](storekit/offering-media-for-sale-in-your-app.md): Allow users to purchase media in the App Store from within your app.
 - [Requesting App Store reviews](storekit/requesting-app-store-reviews.md): Implement best practices for prompting users to review your app in the App Store.
 - [Testing and validating ad impression signatures and postbacks for SKAdNetwork](https://developer.apple.com/documentation/storekittest/testing-and-validating-ad-impression-signatures-and-postbacks-for-skadnetwork): Validate your ad impressions and test your postbacks by creating unit tests using the StoreKit Test framework.
@@ -582,7 +583,7 @@ Explore samples that highlight new APIs featured at this year’s conference.
 - [Filtering traffic by URL](networkextension/filtering-traffic-by-url.md): Perform fast and robust filtering of full URLs by managing URL filtering configurations.
 - [Handling Keyboard Events from a Human Interface Device](hiddriverkit/handling-keyboard-events-from-a-human-interface-device.md): Process keyboard-related data from a human interface device and dispatch events to the system.
 - [Handling Stylus Input from a Human Interface Device](hiddriverkit/handling-stylus-input-from-a-human-interface-device.md): Process stylus-related input from a human interface device and dispatch events to the system.
-- [Implementing a store in your app using the StoreKit API](storekit/implementing-a-store-in-your-app-using-the-storekit-api.md): Offer In-App Purchases and manage entitlements using signed transactions and status information.
+- [Implementing a store in your app using the StoreKit API](storekit/implementing-a-store-in-your-app-using-the-storekit-api.md): Offer Apple In-App Purchases and manage entitlements using signed transactions and status information.
 - [Implementing netcat with Network Framework](network/implementing-netcat-with-network-framework.md): Build a simple `netcat` tool that establishes network connections and transfers data.
 - [Monitoring System Events with Endpoint Security](https://developer.apple.com/documentation/endpointsecurity/monitoring-system-events-with-endpoint-security): Receive notifications and authorization requests for sensitive operations by creating an Endpoint Security client for your app.
 - [Performing Common Cryptographic Operations](cryptokit/performing-common-cryptographic-operations.md): Use CryptoKit to carry out operations like hashing, key generation, and encryption.
@@ -598,7 +599,7 @@ Explore samples that highlight new APIs featured at this year’s conference.
 
 ### TV
 
-- [Adopting Picture in Picture Playback in tvOS](avkit/adopting-picture-in-picture-playback-in-tvos.md): Add advanced multitasking capabilities to your video apps by using Picture in Picture playback in tvOS.
+- [Adopting Picture in Picture playback in tvOS](avkit/adopting-picture-in-picture-playback-in-tvos.md): Add advanced multitasking capabilities to your video apps by using Picture in Picture playback in tvOS.
 - [Binding JSON data to TVML documents](tvmljs/binding_json_data_to_tvml_documents.md): Create full-fledged TVML documents by using data binding and queries on simplified TVML files.
 - [Building a Full Screen Top Shelf Extension](tvservices/building-a-full-screen-top-shelf-extension.md): Highlight content from your Apple TV application by building a full screen Top Shelf extension.
 - [Creating a Client-Server TVML App](tvmljs/creating_a_client-server_tvml_app.md): Display and navigate between TVML documents on Apple TV by retrieving and parsing information from a remote server.
@@ -612,7 +613,7 @@ Explore samples that highlight new APIs featured at this year’s conference.
 - [Responding to User Interaction](tvmljs/responding_to_user_interaction.md): Update onscreen information by adding event listeners to your Apple TV app.
 - [Supporting Continuity Camera in your tvOS app](avkit/supporting-continuity-camera-in-your-tvos-app.md): Capture high-quality photos, video, and audio in your Apple TV app by connecting an iPhone or iPad as a continuity device.
 - [Supporting Multiple Users in Your tvOS App](tvservices/supporting-multiple-users-in-your-tvos-app.md): Store separate data for each user with the new Runs as Current User capability.
-- [Working with Overlays and Parental Controls in tvOS](avkit/working-with-overlays-and-parental-controls-in-tvos.md): Add interactive overlays, parental controls, and livestream channel flipping using a player view controller.
+- [Working with overlays and parental controls in tvOS](avkit/working-with-overlays-and-parental-controls-in-tvos.md): Add interactive overlays, parental controls, and livestream channel flipping using a player view controller.
 
 ### UIKit
 
@@ -707,6 +708,7 @@ Explore samples that highlight new APIs featured at this year’s conference.
 - [Creating 2D shapes with SwiftUI](visionos/creating-2d-shapes-in-visionos-with-swiftui.md): Draw two-dimensional shapes in your visionOS app with SwiftUI shapes or with your custom shapes.
 - [Creating 3D entities with RealityKit](visionos/creating-3d-entities-with-realitykit.md): Display a horizontal row of three-dimensional shapes in your visionOS app, using predefined mesh and white material.
 - [Creating 3D models as movable windows](visionos/creating-a-volumetric-window-in-visionos.md): Display 3D content with a volumetric window that people can move.
+- [Creating animation graphs with Reality Composer Pro and RealityKit](visionos/creating-animation-graphs-with-reality-composer-pro-and-realitykit.md): Animate RealityKit entities using blend spaces and state machines with the Animation Graph feature.
 - [Creating a 3D painting space](visionos/creating-a-painting-space-in-visionos.md): Implement a painting canvas entity, and update its mesh to represent a stroke.
 - [Creating a foveated streaming client on visionOS](foveatedstreaming/creating-a-foveated-streaming-client-on-visionos.md): Build a visionOS app that streams high-fidelity immersive content from a computer or the cloud using the Foveated Streaming framework.
 - [Creating an immersive space in visionOS](visionos/creating-immersive-spaces-in-visionos-with-swiftui.md): Enhance your visionOS app by adding an immersive space using RealityKit.

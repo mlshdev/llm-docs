@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generationschema/schemaerror](https://developer.apple.com/documentation/foundationmodels/generationschema/schemaerror)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generationschema/schemaerror
 
 # GenerationSchema.SchemaError
 
@@ -11,7 +12,7 @@ An error that occurs when there is a problem creating a generation schema.
 ## Declaration
 
 ```swift
-enum SchemaError
+@nonexhaustive enum SchemaError
 ```
 
 ## Topics
@@ -19,9 +20,9 @@ enum SchemaError
 ### Getting schema errors
 
 - [GenerationSchema.SchemaError.duplicateProperty(schema:property:context:)](schemaerror/duplicateproperty%28schema_property_context_%29.md): An error that represents an attempt to construct a dynamic schema with properties that have conflicting names.
-- [GenerationSchema.SchemaError.duplicateType(schema:type:context:)](schemaerror/duplicatetype%28schema_type_context_%29.md): An error that represents an attempt to construct a schema from dynamic schemas, and two or more of the subschemas have the same type name.
+- [GenerationSchema.SchemaError.duplicateType(schema:type:context:)](schemaerror/duplicatetype%28schema_type_context_%29.md): An error that represents an attempt to construct a schema from dynamic schemas in which two or more of the subschemas have the same type name.
 - [GenerationSchema.SchemaError.emptyTypeChoices(schema:context:)](schemaerror/emptytypechoices%28schema_context_%29.md): An error that represents an attempt to construct an anyOf schema with an empty array of type choices.
-- [GenerationSchema.SchemaError.undefinedReferences(schema:references:context:)](schemaerror/undefinedreferences%28schema_references_context_%29.md): An error that represents an attempt to construct a schema from dynamic schemas, and one of those schemas references an undefined schema.
+- [GenerationSchema.SchemaError.undefinedReferences(schema:references:context:)](schemaerror/undefinedreferences%28schema_references_context_%29.md): An error that represents an attempt to construct a schema from dynamic schemas in which one of those schemas references an undefined schema.
 - [GenerationSchema.SchemaError.Context](schemaerror/context.md): The context in which the error occurred.
 
 ### Getting the error description

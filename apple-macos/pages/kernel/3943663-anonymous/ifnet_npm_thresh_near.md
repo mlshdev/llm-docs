@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3943663-anonymous/ifnet_npm_thresh_near](https://developer.apple.com/documentation/kernel/3943663-anonymous/ifnet_npm_thresh_near)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3943663-anonymous/ifnet_npm_thresh_near
 
 # IFNET_NPM_THRESH_NEAR
 

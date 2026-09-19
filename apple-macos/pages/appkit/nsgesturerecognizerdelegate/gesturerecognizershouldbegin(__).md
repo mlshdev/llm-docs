@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsgesturerecognizerdelegate/gesturerecognizershouldbegin(_:)](https://developer.apple.com/documentation/appkit/nsgesturerecognizerdelegate/gesturerecognizershouldbegin(_:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsgesturerecognizerdelegate/gesturerecognizershouldbegin(_:)
 
 # gestureRecognizerShouldBegin(\_:) (Swift)
 
@@ -34,7 +35,7 @@ For information about gesture states and transitions, see [State Transitions](..
 
 ## See Also
 
-### Regulating Gesture Recognition
+### Regulating gesture recognition
 
 - [gestureRecognizer(\_:shouldAttemptToRecognizeWith:)](gesturerecognizer%28__shouldattempttorecognizewith_%29.md): Asks the delegate if a gesture recognizer should attempt to recognize gestures for a particular event.
 
@@ -72,6 +73,6 @@ For information about gesture states and transitions, see [State Transitions](..
 
 ## See Also
 
-### Regulating Gesture Recognition
+### Regulating gesture recognition
 
 - [gestureRecognizer:shouldAttemptToRecognizeWithEvent:](gesturerecognizer%28__shouldattempttorecognizewith_%29.md): Asks the delegate if a gesture recognizer should attempt to recognize gestures for a particular event.

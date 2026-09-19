@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/av_rendered_caption_image_h](https://developer.apple.com/documentation/avfoundation/av_rendered_caption_image_h)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/av_rendered_caption_image_h
 
 # AV_RENDERED_CAPTION_IMAGE_H
 

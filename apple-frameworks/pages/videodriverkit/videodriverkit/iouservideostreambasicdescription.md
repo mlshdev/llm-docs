@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideostreambasicdescription](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideostreambasicdescription)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideostreambasicdescription
 
 # IOUserVideoStreamBasicDescription
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Structure  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 A structure that encapsulates all the information for describing the basic format properties of a stream of audio data.
 
@@ -28,42 +29,42 @@ In audio data a frame is one sample across all channels. In non-interleaved audi
 
 ### Accessing the frame rate
 
-- [mFrameRate](iouservideostreambasicdescription/mframerate.md)
+- [mFrameRate](iouservideostreambasicdescription/mframerate.md): Beta.
 
 ### Identifying the codec
 
-- [mVideoCodecType](iouservideostreambasicdescription/mvideocodectype.md)
-- [IOUserVideoFormatID](iouservideoformatid.md): Identifiers used for formats of audio data.
-- [mVideoCodecFlags](iouservideostreambasicdescription/mvideocodecflags.md)
-- [IOUserVideoFormatFlags](iouservideoformatflags.md): Standard format flags for a basic description.
+- [mVideoCodecType](iouservideostreambasicdescription/mvideocodectype.md): Beta.
+- [IOUserVideoFormatID](iouservideoformatid.md): Beta. Identifiers used for formats of audio data.
+- [mVideoCodecFlags](iouservideostreambasicdescription/mvideocodecflags.md): Beta.
+- [IOUserVideoFormatFlags](iouservideoformatflags.md): Beta. Standard format flags for a basic description.
 
 ### Accessing spatial properties
 
-- [mWidth](iouservideostreambasicdescription/mwidth.md)
-- [mHeight](iouservideostreambasicdescription/mheight.md)
+- [mWidth](iouservideostreambasicdescription/mwidth.md): Beta.
+- [mHeight](iouservideostreambasicdescription/mheight.md): Beta.
 
 ### Accessing timing properties
 
-- [mFrameTimeScale](iouservideostreambasicdescription/mframetimescale.md)
-- [mFrameTimeValue](iouservideostreambasicdescription/mframetimevalue.md)
+- [mFrameTimeScale](iouservideostreambasicdescription/mframetimescale.md): Beta.
+- [mFrameTimeValue](iouservideostreambasicdescription/mframetimevalue.md): Beta.
 
 ### Accessing reserved properties
 
 Don’t use these properties, which VideoDriverKit reserves for its own use.
 
-- [mReserved1](iouservideostreambasicdescription/mreserved1.md)
-- [mReserved2](iouservideostreambasicdescription/mreserved2.md)
+- [mReserved1](iouservideostreambasicdescription/mreserved1.md): Beta.
+- [mReserved2](iouservideostreambasicdescription/mreserved2.md): Beta.
 
 ## See Also
 
 ### Working with stream formats
 
-- [SetCurrentStreamFormat](../iouservideostream/setcurrentstreamformat.md): Sets the current stream format.
-- [GetCurrentStreamFormat](../iouservideostream/getcurrentstreamformat.md): Gets the current basic description of the stream.
-- [SetAvailableStreamFormats](../iouservideostream/setavailablestreamformats.md): Sets the available descriptions for the stream.
-- [GetAvailableStreamFormats](../iouservideostream/getavailablestreamformats.md): Gets the available basic descriptions for the stream.
-- [GetNumberAvailableStreamFormats](../iouservideostream/getnumberavailablestreamformats.md): Gets the number of available description for the stream.
-- [GetStreamDirection](../iouservideostream/getstreamdirection.md): Gets the direction of the stream.
-- [IOUserVideoStreamDirection](iouservideostreamdirection.md): The direction of a video stream.
-- [SetStreamIsActive](../iouservideostream/setstreamisactive.md): Sets whether that the stream is active and doing IO.
-- [GetStreamIsActive](../iouservideostream/getstreamisactive.md): Gets the stream activity state.
+- [SetCurrentStreamFormat](../iouservideostream/setcurrentstreamformat.md): Beta. Sets the current stream format.
+- [GetCurrentStreamFormat](../iouservideostream/getcurrentstreamformat.md): Beta. Gets the current basic description of the stream.
+- [SetAvailableStreamFormats](../iouservideostream/setavailablestreamformats.md): Beta. Sets the available descriptions for the stream.
+- [GetAvailableStreamFormats](../iouservideostream/getavailablestreamformats.md): Beta. Gets the available basic descriptions for the stream.
+- [GetNumberAvailableStreamFormats](../iouservideostream/getnumberavailablestreamformats.md): Beta. Gets the number of available description for the stream.
+- [GetStreamDirection](../iouservideostream/getstreamdirection.md): Beta. Gets the direction of the stream.
+- [IOUserVideoStreamDirection](iouservideostreamdirection.md): Beta. The direction of a video stream.
+- [SetStreamIsActive](../iouservideostream/setstreamisactive.md): Beta. Sets whether that the stream is active and doing IO.
+- [GetStreamIsActive](../iouservideostream/getstreamisactive.md): Beta. Gets the stream activity state.

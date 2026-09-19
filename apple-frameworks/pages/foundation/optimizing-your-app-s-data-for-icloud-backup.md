@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/optimizing-your-app-s-data-for-icloud-backup](https://developer.apple.com/documentation/foundation/optimizing-your-app-s-data-for-icloud-backup)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/optimizing-your-app-s-data-for-icloud-backup
 
 # Optimizing Your App’s Data for iCloud Backup (Swift)
 

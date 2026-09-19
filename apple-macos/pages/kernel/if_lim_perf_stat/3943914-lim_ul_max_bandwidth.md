@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/if_lim_perf_stat/3943914-lim_ul_max_bandwidth](https://developer.apple.com/documentation/kernel/if_lim_perf_stat/3943914-lim_ul_max_bandwidth)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/if_lim_perf_stat/3943914-lim_ul_max_bandwidth
 
 # lim_ul_max_bandwidth
 

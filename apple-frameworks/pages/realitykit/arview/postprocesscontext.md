@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/arview/postprocesscontext](https://developer.apple.com/documentation/realitykit/arview/postprocesscontext)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/arview/postprocesscontext
 
 # ARView.PostProcessContext
 
@@ -60,6 +61,7 @@ If your app turns postprocessing on and off frequently, another option for disab
          handlePostProcessing(context: ARView.PostProcessContext)
          return
      }
+
 
      // If postprocess effects are disabled, copy sourceColorTexture
      // directly to targetColorTexture.

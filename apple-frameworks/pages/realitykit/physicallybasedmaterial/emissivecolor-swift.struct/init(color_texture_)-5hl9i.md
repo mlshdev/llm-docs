@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/physicallybasedmaterial/emissivecolor-swift.struct/init(color:texture:)-5hl9i](https://developer.apple.com/documentation/realitykit/physicallybasedmaterial/emissivecolor-swift.struct/init(color:texture:)-5hl9i)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/physicallybasedmaterial/emissivecolor-swift.struct/init(color:texture:)-5hl9i
 
 # init(color:texture:)
 

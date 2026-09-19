@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/sadb_ident/1588134-sadb_ident_len](https://developer.apple.com/documentation/kernel/sadb_ident/1588134-sadb_ident_len)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/sadb_ident/1588134-sadb_ident_len
 
 # sadb_ident_len
 

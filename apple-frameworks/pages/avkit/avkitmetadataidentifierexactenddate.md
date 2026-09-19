@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avkitmetadataidentifierexactenddate](https://developer.apple.com/documentation/avkit/avkitmetadataidentifierexactenddate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avkitmetadataidentifierexactenddate
 
 # AVKitMetadataIdentifierExactEndDate (Swift)
 
@@ -16,7 +17,7 @@ let AVKitMetadataIdentifierExactEndDate: String
 
 ## See Also
 
-### Displayed Metadata
+### Displayed metadata
 
 - [AVKitMetadataIdentifierExactStartDate](avkitmetadataidentifierexactstartdate.md): The exact start date for a live event stream.
 - [AVKitMetadataIdentifierApproximateStartDate](avkitmetadataidentifierapproximatestartdate.md): The approximate start date for a live event stream.
@@ -38,7 +39,7 @@ extern NSString * const AVKitMetadataIdentifierExactEndDate;
 
 ## See Also
 
-### Displayed Metadata
+### Displayed metadata
 
 - [AVKitMetadataIdentifierExactStartDate](avkitmetadataidentifierexactstartdate.md): The exact start date for a live event stream.
 - [AVKitMetadataIdentifierApproximateStartDate](avkitmetadataidentifierapproximatestartdate.md): The approximate start date for a live event stream.

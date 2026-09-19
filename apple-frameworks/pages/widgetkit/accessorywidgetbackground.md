@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/widgetkit/accessorywidgetbackground](https://developer.apple.com/documentation/widgetkit/accessorywidgetbackground)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/widgetkit/accessorywidgetbackground
 
 # AccessoryWidgetBackground
 
@@ -65,3 +66,9 @@ The system only displays this view inside a [WidgetFamily.accessoryCircular](wid
 - [WidgetRenderingMode](widgetrenderingmode.md): Constants that indicate the rendering mode for a widget.
 - [WidgetAccentedRenderingMode](widgetaccentedrenderingmode.md): Constants that indicate the rendering mode for an `Image` in when displayed in a widget in [accented](widgetrenderingmode/accented.md) mode.
 - [WidgetLocation](widgetlocation.md): Values that indicate different widget locations.
+- [widgetAccentable(\_:)](https://developer.apple.com/documentation/swiftui/view/widgetaccentable%28_:%29): Adds the view and all of its subviews to the accented group.
+- [widgetAccentedRenderingMode(\_:)](https://developer.apple.com/documentation/swiftui/image/widgetaccentedrenderingmode%28_:%29): Specifies the how to render an `Image` when using the `WidgetKit/WidgetRenderingMode/accented` mode.
+- [widgetRenderingMode](https://developer.apple.com/documentation/swiftui/environmentvalues/widgetrenderingmode): The widget’s rendering mode, based on where the system is displaying it.
+- [widgetContentMargins](https://developer.apple.com/documentation/swiftui/environmentvalues/widgetcontentmargins): A property that identifies the content margins of a widget.
+- [widget](https://developer.apple.com/documentation/swiftui/containerbackgroundplacement/widget): The container background placement for a widget.
+- [showsWidgetContainerBackground](https://developer.apple.com/documentation/swiftui/environmentvalues/showswidgetcontainerbackground): An environment variable that indicates whether the background of a widget appears.

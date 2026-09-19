@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avinterfacemetadata/initwithaudioonly:presentationsize:title:subtitle:albumartworkrepresentations:](https://developer.apple.com/documentation/avkit/avinterfacemetadata/initwithaudioonly:presentationsize:title:subtitle:albumartworkrepresentations:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avinterfacemetadata/initwithaudioonly:presentationsize:title:subtitle:albumartworkrepresentations:
 
 # initWithAudioOnly:presentationSize:title:subtitle:albumArtworkRepresentations:
 
@@ -22,9 +23,3 @@ Initializes a new metadata object with the specified properties.
 - `title`: Primary title or name of the media content.
 - `subtitle`: Secondary descriptive text such as artist name or episode description.
 - `albumArtworkRepresentations`: Array of available album artwork representations in various formats and sizes.
-
-## See Also
-
-### Creating metadata
-
-- [initWithTemplate:](initwithtemplate_.md): Initializes a new metadata object by copying values from a metadata template.

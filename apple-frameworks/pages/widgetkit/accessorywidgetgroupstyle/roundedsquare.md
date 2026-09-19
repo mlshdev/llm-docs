@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/widgetkit/accessorywidgetgroupstyle/roundedsquare](https://developer.apple.com/documentation/widgetkit/accessorywidgetgroupstyle/roundedsquare)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/widgetkit/accessorywidgetgroupstyle/roundedsquare
 
 # roundedSquare
 
@@ -13,3 +14,10 @@ Masks each content view with a rounded square.
 ```swift
 static let roundedSquare: AccessoryWidgetGroupStyle
 ```
+
+## See Also
+
+### Getting styles
+
+- [automatic](automatic.md): The default style that is set to circular.
+- [circular](circular.md): Masks each content view with a circle.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/dk_dvd_report_key_t/1911664-blockcount](https://developer.apple.com/documentation/iokit/dk_dvd_report_key_t/1911664-blockcount)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/dk_dvd_report_key_t/1911664-blockcount
 
 # blockCount
 

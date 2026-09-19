@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3943647-task_map_kcdata_object_64](https://developer.apple.com/documentation/kernel/3943647-task_map_kcdata_object_64)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3943647-task_map_kcdata_object_64
 
 # task_map_kcdata_object_64
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/adsupport](https://developer.apple.com/documentation/adsupport)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/adsupport
 
 # AdSupport (Swift)
 
@@ -18,7 +19,7 @@ Use the AdSupport framework to obtain an advertising identifier. The [advertisin
 
 ### Get an Advertising Identifier
 
-Before requesting the advertising identifier for the first time, your app must make a one-time call to [requestTrackingAuthorization(completionHandler:)](apptrackingtransparency/attrackingmanager/requesttrackingauthorization%28completionhandler_%29.md). That method presents the app-tracking authorization request to the user. The user chooses whether to allow tracking, but can change your app’s authorization at any time in Settings \> Privacy \> Tracking. You can determine the user’s intent by checking your app’s authorization status with [trackingAuthorizationStatus](apptrackingtransparency/attrackingmanager/trackingauthorizationstatus.md).
+Before requesting the advertising identifier for the first time, your app must make a one-time call to doc://com.apple.documentation/documentation/apptrackingtransparency/attrackingmanager/3547037-requesttrackingauthorizationwith. That method presents the app-tracking authorization request to the user. The user chooses whether to allow tracking, but can change your app’s authorization at any time in Settings \> Privacy \> Tracking. You can determine the user’s intent by checking your app’s authorization status with doc://com.apple.documentation/documentation/apptrackingtransparency/attrackingmanager/3547038-trackingauthorizationstatus.
 
 To get the advertising identifier, follow these steps:
 
@@ -63,7 +64,7 @@ Use the AdSupport framework to obtain an advertising identifier. The [advertisin
 
 ### Get an Advertising Identifier
 
-Before requesting the advertising identifier for the first time, your app must make a one-time call to [requestTrackingAuthorizationWithCompletionHandler:](apptrackingtransparency/attrackingmanager/requesttrackingauthorization%28completionhandler_%29.md). That method presents the app-tracking authorization request to the user. The user chooses whether to allow tracking, but can change your app’s authorization at any time in Settings \> Privacy \> Tracking. You can determine the user’s intent by checking your app’s authorization status with [trackingAuthorizationStatus](apptrackingtransparency/attrackingmanager/trackingauthorizationstatus.md).
+Before requesting the advertising identifier for the first time, your app must make a one-time call to doc://com.apple.documentation/documentation/apptrackingtransparency/attrackingmanager/3547037-requesttrackingauthorizationwith. That method presents the app-tracking authorization request to the user. The user chooses whether to allow tracking, but can change your app’s authorization at any time in Settings \> Privacy \> Tracking. You can determine the user’s intent by checking your app’s authorization status with doc://com.apple.documentation/documentation/apptrackingtransparency/attrackingmanager/3547038-trackingauthorizationstatus.
 
 To get the advertising identifier, follow these steps:
 

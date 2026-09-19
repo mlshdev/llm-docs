@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/swiftdata/adopting-inheritance-in-swiftdata](https://developer.apple.com/documentation/swiftdata/adopting-inheritance-in-swiftdata)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftdata/adopting-inheritance-in-swiftdata
 
 # Adopting inheritance in SwiftData
 
@@ -200,6 +201,7 @@ enum TripKind: String, CaseIterable {
     case business = "Business"
 }
 
+
 struct TripListView: View {
         @Environment(\.modelContext) private var modelContext
         /// All trips, in ascending order, by start date.
@@ -245,6 +247,7 @@ enum TripKind: String, CaseIterable {
     case personal = "Personal"
     case business = "Business"
 }
+
 
 struct TripListView: View {
     @Environment(\.modelContext) private var modelContext

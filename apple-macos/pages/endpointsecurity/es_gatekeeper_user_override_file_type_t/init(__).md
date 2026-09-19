@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_gatekeeper_user_override_file_type_t/init(_:)](https://developer.apple.com/documentation/endpointsecurity/es_gatekeeper_user_override_file_type_t/init(_:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_gatekeeper_user_override_file_type_t/init(_:)
 
 # init(\_:)
 

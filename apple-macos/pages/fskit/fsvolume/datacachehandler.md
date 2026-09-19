@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fsvolume/datacachehandler](https://developer.apple.com/documentation/fskit/fsvolume/datacachehandler)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/fskit/fsvolume/datacachehandler
 
 # FSVolume.DataCacheHandler (Swift)
 
@@ -19,6 +20,10 @@ protocol DataCacheHandler : NSObjectProtocol
 ## Overview
 
 A volume that conforms to this protocol enables kernel data caching for improved I/O performance. This protocol allows filesystem modules to negotiate cache modes with the kernel and manage cache coherency.
+
+> **Note**
+
+> This protocol handles the complete open and close lifecycle for items. When a volume conforms to `FSVolumeDataCacheHandler`, FSKit routes every open and close operation through this protocol’s [open(\_:modes:cacheMode:context:replyHandler:)](datacachehandler/open%28__modes_cachemode_context_replyhandler_%29.md) and [close(\_:context:replyHandler:)](datacachehandler/close%28__context_replyhandler_%29.md) methods. A volume that adopts this protocol doesn’t need to also conform to [FSVolume.OpenCloseHandler](openclosehandler.md).
 
 When a file opens, the module receives the requested [FSVolume.DataCacheMode](datacachemode.md) and returns a [FSVolume.KernelCacheCoherencyType](kernelcachecoherencytype.md) indicating the kind of caching behavior it can support. The kernel then caches data according to the granted coherency type. The module can dynamically upgrade or downgrade cache modes as conditions change.
 
@@ -115,6 +120,10 @@ Methods and properties implemented by volumes that coordinate kernel-level data 
 ## Overview
 
 A volume that conforms to this protocol enables kernel data caching for improved I/O performance. This protocol allows filesystem modules to negotiate cache modes with the kernel and manage cache coherency.
+
+> **Note**
+
+> This protocol handles the complete open and close lifecycle for items. When a volume conforms to `FSVolumeDataCacheHandler`, FSKit routes every open and close operation through this protocol’s [openItem:modes:cacheMode:context:replyHandler:](datacachehandler/open%28__modes_cachemode_context_replyhandler_%29.md) and [closeItem:context:replyHandler:](datacachehandler/close%28__context_replyhandler_%29.md) methods. A volume that adopts this protocol doesn’t need to also conform to [FSVolumeOpenCloseHandler](openclosehandler.md).
 
 When a file opens, the module receives the requested [FSDataCacheMode](datacachemode.md) and returns a [FSKernelCacheCoherencyType](kernelcachecoherencytype.md) indicating the kind of caching behavior it can support. The kernel then caches data according to the granted coherency type. The module can dynamically upgrade or downgrade cache modes as conditions change.
 

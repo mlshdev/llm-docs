@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_tp_cert_revoked](https://developer.apple.com/documentation/security/cssmerr_tp_cert_revoked)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_tp_cert_revoked
 
 # CSSMERR_TP_CERT_REVOKED (Swift)
 

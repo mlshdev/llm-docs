@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/os/generating-log-messages-from-your-code](https://developer.apple.com/documentation/os/generating-log-messages-from-your-code)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/os/generating-log-messages-from-your-code
 
 # Generating Log Messages from Your Code
 

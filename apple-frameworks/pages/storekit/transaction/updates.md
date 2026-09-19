@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/updates](https://developer.apple.com/documentation/storekit/transaction/updates)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/updates
 
 # updates
 
@@ -21,7 +22,7 @@ static var updates: Transaction.Transactions { get }
 - [Supporting subscription offer codes in your app](../supporting-subscription-offer-codes-in-your-app.md)
 - [Testing win-back offers in the sandbox environment](../testing-win-back-offers-in-the-sandbox-environment.md)
 - [Testing purchases made outside your app](../testing-purchases-made-outside-your-app.md)
-- [Getting started with In-App Purchase using StoreKit views](../getting-started-with-in-app-purchases-using-storekit-views.md)
+- [Getting started with Apple In-App Purchase using StoreKit views](../getting-started-with-in-app-purchases-using-storekit-views.md)
 - [Merchandising win-back offers in your app](../merchandising-win-back-offers-in-your-app.md)
 - [Supporting monthly subscriptions with a 12-month commitment](../supporting-monthly-subscriptions-with-a-12-month-commitment.md)
 
@@ -31,7 +32,7 @@ static var updates: Transaction.Transactions { get }
 
 Use [updates](updates.md) to receive new transactions while the app is running. This sequence receives transactions that occur outside of the app, such as Ask to Buy transactions, offer code redemptions, and purchases that customers make in the App Store. It also emits transactions that customers complete in your app on another device.
 
-Note that after a successful in-app purchase on the same device, StoreKit returns the transaction through [Product.PurchaseResult.success(\_:)](../product/purchaseresult/success%28__%29.md).
+Note that after a successful Apple In-App Purchase on the same device, StoreKit returns the transaction through [Product.PurchaseResult.success(\_:)](../product/purchaseresult/success%28__%29.md).
 
 > **Important**
 
@@ -102,4 +103,4 @@ The [updates](updates.md) listener receives unfinished transactions just once at
 
 - [Transaction](../transaction.md): Information that represents the customer’s purchase of a product in your app.
 - [all](all.md): A sequence that emits all the customer’s transactions for your app.
-- [currentEntitlements](currententitlements.md): A sequence of the latest transactions that entitle a customer to In-App Purchases and subscriptions.
+- [currentEntitlements](currententitlements.md): A sequence of the latest transactions that entitle a customer to Apple In-App Purchases and subscriptions.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmoid_x9_62_c_twocurve](https://developer.apple.com/documentation/security/cssmoid_x9_62_c_twocurve)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmoid_x9_62_c_twocurve
 
 # CSSMOID_X9_62_C_TwoCurve
 

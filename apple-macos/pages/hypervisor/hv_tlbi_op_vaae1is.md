@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_tlbi_op_vaae1is](https://developer.apple.com/documentation/hypervisor/hv_tlbi_op_vaae1is)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_tlbi_op_vaae1is
 
 # HV_TLBI_OP_VAAE1IS (Swift)
 

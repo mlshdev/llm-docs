@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoclockdevice/create](https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/create)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/create
 
 # Create
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Static Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 A static factory method that allocates and initializes a video clock device.
 
@@ -39,5 +40,5 @@ If IOUserVideoClockDevice is subclassed to override behavior, don’t use this m
 
 ### Creating a clock device
 
-- [init](init.md): Initializes a video clock device.
-- [IOUserVideoDriver](../iouservideodriver.md): A video driver.
+- [init](init.md): Beta. Initializes a video clock device.
+- [IOUserVideoDriver](../iouservideodriver.md): Beta. A video driver.

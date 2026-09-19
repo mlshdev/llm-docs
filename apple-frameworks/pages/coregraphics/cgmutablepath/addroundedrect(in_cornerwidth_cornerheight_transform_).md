@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/cgmutablepath/addroundedrect(in:cornerwidth:cornerheight:transform:)](https://developer.apple.com/documentation/coregraphics/cgmutablepath/addroundedrect(in:cornerwidth:cornerheight:transform:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coregraphics/cgmutablepath/addroundedrect(in:cornerwidth:cornerheight:transform:)
 
 # addRoundedRect(in:cornerWidth:cornerHeight:transform:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spritekit/skaction/resize(towidth:height:duration:)](https://developer.apple.com/documentation/spritekit/skaction/resize(towidth:height:duration:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spritekit/skaction/resize(towidth:height:duration:)
 
 # resize(toWidth:height:duration:) (Swift)
 

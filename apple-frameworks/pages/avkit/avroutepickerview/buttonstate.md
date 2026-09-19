@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avroutepickerview/buttonstate](https://developer.apple.com/documentation/avkit/avroutepickerview/buttonstate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avroutepickerview/buttonstate
 
 # AVRoutePickerView.ButtonState (Swift)
 
@@ -20,7 +21,7 @@ enum ButtonState
 
 - [init(rawValue:)](buttonstate/init%28rawvalue_%29.md)
 
-### Button States
+### Button states
 
 - [AVRoutePickerView.ButtonState.normal](buttonstate/normal.md): The normal, or default, button state.
 - [AVRoutePickerView.ButtonState.normalHighlighted](buttonstate/normalhighlighted.md): The highlighted button state when a mouse-down event occurs inside the button.
@@ -66,7 +67,7 @@ enum AVRoutePickerViewButtonState : NSInteger;
 
 ## Topics
 
-### Button States
+### Button states
 
 - [AVRoutePickerViewButtonStateNormal](buttonstate/normal.md): The normal, or default, button state.
 - [AVRoutePickerViewButtonStateNormalHighlighted](buttonstate/normalhighlighted.md): The highlighted button state when a mouse-down event occurs inside the button.

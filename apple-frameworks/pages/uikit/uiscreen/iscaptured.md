@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiscreen/iscaptured](https://developer.apple.com/documentation/uikit/uiscreen/iscaptured)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiscreen/iscaptured
 
 # isCaptured (Swift)
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 11.0+ (deprecated in 27.0) · iPadOS 11.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · tvOS 11.0+ (deprecated in 27.0)
+**Availability:** iOS 11.0+ (deprecated in 27.0) · iPadOS 11.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.2) · tvOS 11.0+ (deprecated in 27.2)
 
 A Boolean value that indicates whether the system is actively cloning the screen to another destination.
 
@@ -44,7 +45,7 @@ UIKit sends the [capturedDidChangeNotification](captureddidchangenotification.md
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 11.0+ (deprecated in 27.0) · iPadOS 11.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · tvOS 11.0+ (deprecated in 27.0)
+**Availability:** iOS 11.0+ (deprecated in 27.0) · iPadOS 11.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.2) · tvOS 11.0+ (deprecated in 27.2)
 
 A Boolean value that indicates whether the system is actively cloning the screen to another destination.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1576889-anonymous/ksgccmd_get_data_buffer_status](https://developer.apple.com/documentation/iokit/1576889-anonymous/ksgccmd_get_data_buffer_status)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1576889-anonymous/ksgccmd_get_data_buffer_status
 
 # kSGCCmd_GET_DATA_BUFFER_STATUS
 

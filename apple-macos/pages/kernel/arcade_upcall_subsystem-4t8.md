@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/arcade_upcall_subsystem-4t8](https://developer.apple.com/documentation/kernel/arcade_upcall_subsystem-4t8)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/arcade_upcall_subsystem-4t8
 
 # arcade_upcall_subsystem
 

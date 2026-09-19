@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uicoordinatespace/convert(_:from:)-3w27q](https://developer.apple.com/documentation/uikit/uicoordinatespace/convert(_:from:)-3w27q)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uicoordinatespace/convert(_:from:)-3w27q
 
 # convert(\_:from:) (Swift)
 

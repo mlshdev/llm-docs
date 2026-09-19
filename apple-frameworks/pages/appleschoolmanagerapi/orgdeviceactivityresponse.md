@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appleschoolmanagerapi/orgdeviceactivityresponse](https://developer.apple.com/documentation/appleschoolmanagerapi/orgdeviceactivityresponse)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appleschoolmanagerapi/orgdeviceactivityresponse
 
 # OrgDeviceActivityResponse
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple School Manager API  
 **Kind:** Object  
-**Availability:** Apple School Manager API 1.6+
+**Availability:** Apple School Manager API 1.7+
 
 A response that contains a single organization device activity resource.
 

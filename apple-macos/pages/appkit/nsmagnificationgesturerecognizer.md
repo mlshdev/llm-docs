@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsmagnificationgesturerecognizer](https://developer.apple.com/documentation/appkit/nsmagnificationgesturerecognizer)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsmagnificationgesturerecognizer
 
 # NSMagnificationGestureRecognizer (Swift)
 
@@ -24,7 +25,7 @@ This gesture recognizer automatically sets the value of the [delaysMagnification
 
 ## Topics
 
-### Finding the Magnification Factor
+### Finding the magnification factor
 
 - [magnification](nsmagnificationgesturerecognizer/magnification.md): The amount of magnification to apply.
 
@@ -43,8 +44,6 @@ This gesture recognizer automatically sets the value of the [delaysMagnification
 - [Hashable](https://developer.apple.com/documentation/swift/hashable)
 - [NSCoding](https://developer.apple.com/documentation/foundation/nscoding)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 
@@ -79,7 +78,7 @@ This gesture recognizer automatically sets the value of the [delaysMagnification
 
 ## Topics
 
-### Finding the Magnification Factor
+### Finding the magnification factor
 
 - [magnification](nsmagnificationgesturerecognizer/magnification.md): The amount of magnification to apply.
 

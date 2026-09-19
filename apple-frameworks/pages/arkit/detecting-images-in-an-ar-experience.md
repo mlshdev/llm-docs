@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/detecting-images-in-an-ar-experience](https://developer.apple.com/documentation/arkit/detecting-images-in-an-ar-experience)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/detecting-images-in-an-ar-experience
 
 # Detecting Images in an AR Experience
 

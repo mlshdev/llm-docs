@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/kernel_triage_info_v1/3753615-triage_string2](https://developer.apple.com/documentation/kernel/kernel_triage_info_v1/3753615-triage_string2)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/kernel_triage_info_v1/3753615-triage_string2
 
 # triage_string2
 

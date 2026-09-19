@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsgesturerecognizer/isenabled](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/isenabled)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsgesturerecognizer/isenabled
 
 # isEnabled (Swift)
 
@@ -24,7 +25,7 @@ The default value of this property is [true](https://developer.apple.com/documen
 
 ## See Also
 
-### Accessing the Recognizer’s State
+### Accessing the recognizer’s state
 
 - [state](state-swift.property.md): The current state of the gesture recognizer.
 - [view](view.md): The view to which the gesture recognizer is attached.
@@ -53,7 +54,7 @@ The default value of this property is [true](https://developer.apple.com/documen
 
 ## See Also
 
-### Accessing the Recognizer’s State
+### Accessing the recognizer’s state
 
 - [state](state-swift.property.md): The current state of the gesture recognizer.
 - [view](view.md): The view to which the gesture recognizer is attached.

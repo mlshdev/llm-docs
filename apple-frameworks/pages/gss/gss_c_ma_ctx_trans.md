@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gss/gss_c_ma_ctx_trans](https://developer.apple.com/documentation/gss/gss_c_ma_ctx_trans)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/gss/gss_c_ma_ctx_trans
 
 # GSS_C_MA_CTX_TRANS
 

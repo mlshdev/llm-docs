@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ledger_limit_args/1563233-lla_refill_period](https://developer.apple.com/documentation/kernel/ledger_limit_args/1563233-lla_refill_period)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ledger_limit_args/1563233-lla_refill_period
 
 # lla_refill_period
 

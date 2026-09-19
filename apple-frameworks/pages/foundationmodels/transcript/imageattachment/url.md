@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/imageattachment/url](https://developer.apple.com/documentation/foundationmodels/transcript/imageattachment/url)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/imageattachment/url
 
 # url
 
@@ -19,5 +20,5 @@ var url: URL? { get }
 ### Inspecting an image attachment
 
 - [cgImage](cgimage.md): The image as a Core Graphics image.
-- [ciImage](ciimage.md)
+- [ciImage](ciimage.md): The image as a Core Image image.
 - [orientation](orientation.md): The display orientation of the image.

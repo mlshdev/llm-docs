@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/understand-workflows/understand-executions/types-of-executions.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/understand-workflows/understand-executions/types-of-executions.md)
+> Pinned source for n8n main: [docs/build/understand-workflows/understand-executions/types-of-executions.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/understand-workflows/understand-executions/types-of-executions.md)
 
 # Manual, partial, and production executions <a id="manual-partial-and-production-executions"></a>
 
@@ -52,3 +52,13 @@ The execution flow for production executions doesn't display in the Editor tab o
 [^1]: The canvas is the main interface for building workflows in n8n's editor UI. You use the canvas to add and connect nodes to compose workflows.
 
 [^2]: A trigger node is a special node responsible for executing the workflow in response to certain conditions. All production workflows need at least one trigger to determine when the workflow should run.
+
+## Related resources
+
+- [Understand executions](https://docs.n8n.io/build/understand-workflows/understand-executions)
+- [View all executions](https://docs.n8n.io/build/understand-workflows/understand-executions/view-all-executions)
+- [View executions for a single workflow](https://docs.n8n.io/build/understand-workflows/understand-executions/view-executions-for-a-single-workflow)
+- [Debug and re-run past executions](https://docs.n8n.io/build/understand-workflows/understand-executions/debug-executions)
+- [Customize executions data](https://docs.n8n.io/build/understand-workflows/understand-executions/customize-executions-data)
+- [Stream real-time responses](https://docs.n8n.io/build/understand-workflows/understand-executions/stream-real-time-responses)
+- [Dirty nodes](https://docs.n8n.io/build/understand-workflows/understand-executions/understand-dirty-nodes)

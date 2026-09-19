@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/id](https://developer.apple.com/documentation/storekit/transaction/id)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/id
 
 # id
 
@@ -18,7 +19,7 @@ let id: UInt64
 
 ## Discussion
 
-Every transaction such as an in-app purchase, restore, or subscription renewal has a unique transaction identifier.
+Every transaction such as an Apple In-App Purchase, restore, or subscription renewal has a unique transaction identifier.
 
 ## See Also
 

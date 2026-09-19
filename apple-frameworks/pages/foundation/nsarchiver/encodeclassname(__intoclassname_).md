@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsarchiver/encodeclassname(_:intoclassname:)](https://developer.apple.com/documentation/foundation/nsarchiver/encodeclassname(_:intoclassname:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsarchiver/encodeclassname(_:intoclassname:)
 
 # encodeClassName(\_:intoClassName:) (Swift)
 

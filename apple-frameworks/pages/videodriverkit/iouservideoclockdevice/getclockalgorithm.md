@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoclockdevice/getclockalgorithm](https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/getclockalgorithm)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/getclockalgorithm
 
 # GetClockAlgorithm
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the clock algorithm of the clock device.
 
@@ -26,7 +27,7 @@ The object’s work queue synchronizes access to the value.
 
 ### Working with clock device behavior
 
-- [SetClockAlgorithm](setclockalgorithm.md): Sets the algorithm for the video clock device.
-- [IOUserVideoClockAlgorithm](../videodriverkit/iouservideoclockalgorithm.md): Clock smoothing algorithm selectors.
-- [SetClockIsStable](setclockisstable.md): Sets the clock stability of the clock device.
-- [GetClockIsStable](getclockisstable.md): Gets a Boolean value for clock stability of the clock device.
+- [SetClockAlgorithm](setclockalgorithm.md): Beta. Sets the algorithm for the video clock device.
+- [IOUserVideoClockAlgorithm](../videodriverkit/iouservideoclockalgorithm.md): Beta. Clock smoothing algorithm selectors.
+- [SetClockIsStable](setclockisstable.md): Beta. Sets the clock stability of the clock device.
+- [GetClockIsStable](getclockisstable.md): Beta. Gets a Boolean value for clock stability of the clock device.

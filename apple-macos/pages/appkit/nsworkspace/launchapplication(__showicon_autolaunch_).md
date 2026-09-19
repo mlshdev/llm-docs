@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsworkspace/launchapplication(_:showicon:autolaunch:)](https://developer.apple.com/documentation/appkit/nsworkspace/launchapplication(_:showicon:autolaunch:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsworkspace/launchapplication(_:showicon:autolaunch:)
 
 # launchApplication(\_:showIcon:autolaunch:) (Swift)
 

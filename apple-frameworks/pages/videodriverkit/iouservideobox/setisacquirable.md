@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideobox/setisacquirable](https://developer.apple.com/documentation/videodriverkit/iouservideobox/setisacquirable)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideobox/setisacquirable
 
 # SetIsAcquirable
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Sets the value for the box’s acquirability.
 
@@ -30,9 +31,9 @@ The object sends a notification to the host to update the object state on succes
 
 ### Managing acquirability
 
-- [HandleChangeAcquireBox](handlechangeacquirebox.md): Called when host is attempting to the change the box acquisition
-- [SetIsAcquired](setisacquired.md): Sets the value indicating the box’s acquisition state.
-- [IsAcquired](isacquired.md): A Boolean value indicating if box is acquired.
-- [IsAcquirable](isacquirable.md): A Boolean value indicating if box can be acquired.
-- [SetAcquisitionFailure](setacquisitionfailure.md): Sets the error for the box’s acquisition failure.
-- [GetAcquisitionFailure](getacquisitionfailure.md): Gets the acquisition failure of the video box.
+- [HandleChangeAcquireBox](handlechangeacquirebox.md): Beta. Called when host is attempting to the change the box acquisition
+- [SetIsAcquired](setisacquired.md): Beta. Sets the value indicating the box’s acquisition state.
+- [IsAcquired](isacquired.md): Beta. A Boolean value indicating if box is acquired.
+- [IsAcquirable](isacquirable.md): Beta. A Boolean value indicating if box can be acquired.
+- [SetAcquisitionFailure](setacquisitionfailure.md): Beta. Sets the error for the box’s acquisition failure.
+- [GetAcquisitionFailure](getacquisitionfailure.md): Beta. Gets the acquisition failure of the video box.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/advancedcommerceapi/setting-up-generic-product-identifiers](https://developer.apple.com/documentation/advancedcommerceapi/setting-up-generic-product-identifiers)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/advancedcommerceapi/setting-up-generic-product-identifiers
 
 # Setting up generic product identifiers
 
@@ -22,7 +23,7 @@ You may need to create up to four generic product IDs, based on the product type
 - One-time purchases for the Mini Apps Partner Program
 - Subscriptions for the Mini Apps Partner Program
 
-Generic product IDs aren’t the same as the SKUs for products you offer in your app. Generic product IDs only contain placeholder information for prices, localizations, and subscription periods and don’t contain tax information. You provide price, localization, and tax information for each SKU when you call the Advanced Commerce APIs. For more information about SKUs, see [Creating SKUs for your In-App Purchases](creating-your-purchases.md).
+Generic product IDs aren’t the same as the SKUs for products you offer in your app. Generic product IDs only contain placeholder information for prices, localizations, and subscription periods and don’t contain tax information. You provide price, localization, and tax information for each SKU when you call the Advanced Commerce APIs. For more information about SKUs, see [Creating SKUs for your Apple In-App Purchases](creating-your-purchases.md).
 
 > **Important**
 
@@ -37,8 +38,8 @@ You need one of these roles: Account Holder, Admin, App Manager, Developer, or M
 To offer one-time purchases using Advanced Commerce API, create a generic product ID in App Store Connect, as follows:
 
 1. Sign in to [App Store Connect](https://appstoreconnect.apple.com) and select your app.
-2. In the sidebar under Monetization, select In-App Purchases and click the add button (+). The Create an In-App Purchase dialog appears.
-3. Create the in-app purchase by entering the following:
+2. In the sidebar under Monetization, select Apple In-App Purchases and click the add button (+). The Create an Apple In-App Purchase dialog appears.
+3. Create the Apple In-App Purchase by entering the following:
 
    - **Type**: Consumable
    - **Reference Name**: Enabled for Advanced Commerce
@@ -47,7 +48,7 @@ To offer one-time purchases using Advanced Commerce API, create a generic produc
 
 On the details page, configure the following settings:
 
-1. **Availability**: Select the App Store countries or regions that your app supports. For more information, see [Set availability for In-App Purchases](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/set-availability-for-in-app-purchases).
+1. **Availability**: Select the App Store countries or regions that your app supports. For more information, see [Set availability for Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/set-availability-for-in-app-purchases).
 2. **Pricing**: Choose your base country or region and select the lowest available price.
 3. **Add Localization**:
 
@@ -59,7 +60,7 @@ On the details page, configure the following settings:
 
 ### Create a generic product ID for one-time purchases for the Mini Apps Partner Program
 
-To offer one-time purchases within the Mini Apps Partner Program, create a generic product ID following the instructions for one-time purchases as described above, and enter the following values in the respective topics within the Create an In-App Purchase dialog:
+To offer one-time purchases within the Mini Apps Partner Program, create a generic product ID following the instructions for one-time purchases as described above, and enter the following values in the respective topics within the Create an Apple In-App Purchase dialog:
 
 - **Reference Name**: Enabled for Mini Apps Partner Program
 - **Product ID**: {your app bundle identifier}.aca.mini.consumable
@@ -118,5 +119,5 @@ To offer subscriptions within the Mini Apps Partner Program, follow the same pro
 
 ### Generic product IDs and SKUs
 
-- [Creating SKUs for your In-App Purchases](creating-your-purchases.md): Define and manage one-time charges, subscriptions, and bundled subscriptions within your app.
+- [Creating SKUs for your Apple In-App Purchases](creating-your-purchases.md): Define and manage one-time charges, subscriptions, and bundled subscriptions within your app.
 - [Creating SKUs for the Mini Apps Partner Program](creating-skus-for-the-mini-app-partner-program.md): Define display names and SKUs for one-time charges and subscriptions in the Mini Apps Partner Program.

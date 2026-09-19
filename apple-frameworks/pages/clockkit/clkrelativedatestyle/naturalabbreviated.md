@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkrelativedatestyle/naturalabbreviated](https://developer.apple.com/documentation/clockkit/clkrelativedatestyle/naturalabbreviated)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkrelativedatestyle/naturalabbreviated
 
 # CLKRelativeDateStyle.naturalAbbreviated (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Case  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 An abbreviated, natural date style.
 
@@ -34,7 +35,7 @@ The smallest possible abbreviation of the natural date style. For example, ten h
 
 **Framework:** ClockKit  
 **Kind:** Enumeration Case  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 An abbreviated, natural date style.
 

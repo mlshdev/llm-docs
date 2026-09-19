@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/out-of-place-functions-for-2d-real-fft](https://developer.apple.com/documentation/accelerate/out-of-place-functions-for-2d-real-fft)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/out-of-place-functions-for-2d-real-fft
 
 # Out-of-Place Functions for 2D Real FFT (Swift)
 
@@ -62,6 +63,7 @@ for (k0 = 1; k0 < N0/2; ++k0)
     C->realp[k1*IC1 + k0*IC0] = Re(H[k1][k0]);
     C->imagp[k1*IC1 + k0*IC0] = Im(H[k1][k0]);
 }
+
 
 ```
 
@@ -189,6 +191,7 @@ for (k0 = 1; k0 < N0/2; ++k0)
     C->realp[k1*IC1 + k0*IC0] = Re(H[k1][k0]);
     C->imagp[k1*IC1 + k0*IC0] = Im(H[k1][k0]);
 }
+
 
 ```
 

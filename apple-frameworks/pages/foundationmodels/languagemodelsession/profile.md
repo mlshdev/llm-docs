@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelsession/profile](https://developer.apple.com/documentation/foundationmodels/languagemodelsession/profile)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelsession/profile
 
 # LanguageModelSession.Profile
 
@@ -22,7 +23,7 @@ struct Profile
 
 ## Overview
 
-A profile binds [DynamicInstructions](../dynamicinstructions.md) to a set of session-level configuration values. The [DynamicInstructions](../dynamicinstructions.md) describes the content and tools and a [LanguageModelSession.DynamicProfile](dynamicprofile.md) orchestrates transitions betwen session configurations.
+A profile binds [DynamicInstructions](../dynamicinstructions.md) to a set of session-level configuration values. The [DynamicInstructions](../dynamicinstructions.md) describes the content and tools and a [LanguageModelSession.DynamicProfile](dynamicprofile.md) orchestrates transitions between session configurations.
 
 ```swift
 Profile {
@@ -64,6 +65,6 @@ Profile {
 - [Composing dynamic sessions with instructions and profiles](../composing-dynamic-sessions-with-instructions-and-profiles.md): Adapt sessions dynamically at runtime by loading instructions and tools based on the state of your app.
 - [Origami: Crafting a dynamic tutorial for Apple Intelligence](../origami-crafting-a-dynamic-tutorial-for-apple-intelligence.md): Build interactive experiences with Foundation Models and Private Cloud Compute using multimodal prompts.
 - [DynamicInstructions](../dynamicinstructions.md): A type that represents dynamic instructions.
-- [DynamicInstructionsForEach](../dynamicinstructionsforeach.md)
+- [DynamicInstructionsForEach](../dynamicinstructionsforeach.md): Dynamic instructions that produce content for each element of a collection.
 - [LanguageModelSession.DynamicProfile](dynamicprofile.md): A dynamic profile that contains one or more profiles.
 - [LanguageModelSession.DynamicProfileModifier](dynamicprofilemodifier.md): A protocol for creating reusable wrappers around dynamic profile content.

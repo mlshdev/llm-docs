@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtimelineentry](https://developer.apple.com/documentation/clockkit/clkcomplicationtimelineentry)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtimelineentry
 
 # CLKComplicationTimelineEntry (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 A container for the complication template object to display and the time to display it.
 
@@ -67,7 +68,7 @@ You can assign a group identifier to timeline entries to control the behavior of
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 A container for the complication template object to display and the time to display it.
 

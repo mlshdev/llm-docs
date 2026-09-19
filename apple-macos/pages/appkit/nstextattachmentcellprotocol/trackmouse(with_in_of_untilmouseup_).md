@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstextattachmentcellprotocol/trackmouse(with:in:of:untilmouseup:)](https://developer.apple.com/documentation/appkit/nstextattachmentcellprotocol/trackmouse(with:in:of:untilmouseup:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstextattachmentcellprotocol/trackmouse(with:in:of:untilmouseup:)
 
 # trackMouse(with:in:of:untilMouseUp:) (Swift)
 

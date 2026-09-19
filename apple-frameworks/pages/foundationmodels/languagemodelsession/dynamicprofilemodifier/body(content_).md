@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelsession/dynamicprofilemodifier/body(content:)](https://developer.apple.com/documentation/foundationmodels/languagemodelsession/dynamicprofilemodifier/body(content:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelsession/dynamicprofilemodifier/body(content:)
 
 # body(content:)
 
@@ -18,7 +19,7 @@ The content of the dynamic profile modifier.
 
 ### Implementing a profile modifier
 
-- [LanguageModelSession.DynamicProfileModifier.Content](content.md)
+- [LanguageModelSession.DynamicProfileModifier.Content](content.md): The type of dynamic profile content that this modifier wraps.
 - [Body](body.md): The type of dynamic profile modifier that represents this modifier.
-- [LanguageModelSession.DynamicProfileModifier.SessionProperty](sessionproperty.md)
-- [LanguageModelSession.DynamicProfileModifier.DynamicProfile](dynamicprofile.md)
+- [LanguageModelSession.DynamicProfileModifier.SessionProperty](sessionproperty.md): A property wrapper that provides access to a session property from within a dynamic profile modifier.
+- [LanguageModelSession.DynamicProfileModifier.DynamicProfile](dynamicprofile.md): The dynamic profile type that a modifier’s body returns.

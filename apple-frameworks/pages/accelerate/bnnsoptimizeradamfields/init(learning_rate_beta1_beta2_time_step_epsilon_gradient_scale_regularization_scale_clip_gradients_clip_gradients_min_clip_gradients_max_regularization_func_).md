@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnnsoptimizeradamfields/init(learning_rate:beta1:beta2:time_step:epsilon:gradient_scale:regularization_scale:clip_gradients:clip_gradients_min:clip_gradients_max:regularization_func:)](https://developer.apple.com/documentation/accelerate/bnnsoptimizeradamfields/init(learning_rate:beta1:beta2:time_step:epsilon:gradient_scale:regularization_scale:clip_gradients:clip_gradients_min:clip_gradients_max:regularization_func:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/bnnsoptimizeradamfields/init(learning_rate:beta1:beta2:time_step:epsilon:gradient_scale:regularization_scale:clip_gradients:clip_gradients_min:clip_gradients_max:regularization_func:)
 
 # init(learning_rate:beta1:beta2:time_step:epsilon:gradient_scale:regularization_scale:clip_gradients:clip_gradients_min:clip_gradients_max:regularization_func:)
 

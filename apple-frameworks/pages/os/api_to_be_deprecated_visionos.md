@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/os/api_to_be_deprecated_visionos](https://developer.apple.com/documentation/os/api_to_be_deprecated_visionos)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/os/api_to_be_deprecated_visionos
 
 # API_TO_BE_DEPRECATED_VISIONOS
 

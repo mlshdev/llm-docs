@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/charts/rectanglemark/init(xstart:xend:y:height:)-4x46i](https://developer.apple.com/documentation/charts/rectanglemark/init(xstart:xend:y:height:)-4x46i)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/charts/rectanglemark/init(xstart:xend:y:height:)-4x46i
 
 # init(xStart:xEnd:y:height:)
 

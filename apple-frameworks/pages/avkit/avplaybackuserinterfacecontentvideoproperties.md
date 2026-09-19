@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplaybackuserinterfacecontentvideoproperties](https://developer.apple.com/documentation/avkit/avplaybackuserinterfacecontentvideoproperties)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplaybackuserinterfacecontentvideoproperties
 
 # AVPlaybackUserInterfaceContentVideoProperties
 
@@ -39,7 +40,7 @@ Properties specific to video content.
 
 ## See Also
 
-### Metadata
+### Content metadata
 
 - [AVPlaybackUserInterfaceMetadataProviding](avplaybackuserinterfacemetadataproviding-1w04z.md): Provides metadata information about media content including title, artwork, and content type.
 - [AVPlaybackUserInterfaceContentMetadata](avplaybackuserinterfacecontentmetadata-c.class.md): Provides metadata information about media content including title, artwork, and content type.

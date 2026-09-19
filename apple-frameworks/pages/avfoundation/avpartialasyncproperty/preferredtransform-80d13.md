@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avpartialasyncproperty/preferredtransform-80d13](https://developer.apple.com/documentation/avfoundation/avpartialasyncproperty/preferredtransform-80d13)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avpartialasyncproperty/preferredtransform-80d13
 
 # preferredTransform
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1575509-lck_spin_sleep](https://developer.apple.com/documentation/kernel/1575509-lck_spin_sleep)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1575509-lck_spin_sleep
 
 # lck_spin_sleep
 

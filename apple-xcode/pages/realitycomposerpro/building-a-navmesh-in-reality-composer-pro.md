@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/realitycomposerpro/building-a-navmesh-in-reality-composer-pro](https://developer.apple.com/documentation/realitycomposerpro/building-a-navmesh-in-reality-composer-pro)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitycomposerpro/building-a-navmesh-in-reality-composer-pro
 
 # Building a navmesh in Reality Composer Pro
 

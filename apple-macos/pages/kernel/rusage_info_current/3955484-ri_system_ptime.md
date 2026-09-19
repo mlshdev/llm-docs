@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/rusage_info_current/3955484-ri_system_ptime](https://developer.apple.com/documentation/kernel/rusage_info_current/3955484-ri_system_ptime)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/rusage_info_current/3955484-ri_system_ptime
 
 # ri_system_ptime
 

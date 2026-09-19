@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/sbcmodepageflexibledisk/1476352-starting_cylinder_write_precompe](https://developer.apple.com/documentation/kernel/sbcmodepageflexibledisk/1476352-starting_cylinder_write_precompe)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/sbcmodepageflexibledisk/1476352-starting_cylinder_write_precompe
 
 # STARTING_CYLINDER_WRITE_PRECOMPENSATION
 

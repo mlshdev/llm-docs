@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/kauvoiceioproperty_muteoutput](https://developer.apple.com/documentation/audiotoolbox/kauvoiceioproperty_muteoutput)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kauvoiceioproperty_muteoutput
 
 # kAUVoiceIOProperty_MuteOutput (Swift)
 

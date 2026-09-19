@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/pixelformat](https://developer.apple.com/documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/pixelformat)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/pixelformat
 
 # pixelFormat (Swift)
 
@@ -18,7 +19,7 @@ var pixelFormat: MTLPixelFormat { get set }
 
 ## Discussion
 
-This property defaults to `MTLPixelFormatInvalid`.
+This property defaults to [MTLPixelFormat.invalid](../mtlpixelformat/invalid.md).
 
 # pixelFormat (Objective-C)
 
@@ -38,4 +39,4 @@ Configures the pixel format.
 
 ## Discussion
 
-This property defaults to `MTLPixelFormatInvalid`.
+This property defaults to [MTLPixelFormatInvalid](../mtlpixelformat/invalid.md).

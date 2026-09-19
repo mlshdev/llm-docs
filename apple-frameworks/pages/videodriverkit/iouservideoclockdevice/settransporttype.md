@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoclockdevice/settransporttype](https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/settransporttype)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/settransporttype
 
 # SetTransportType
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Sets the transport type of the clock device.
 
@@ -30,5 +31,5 @@ Drivers can change the transport type of the clock device dynamically. The objec
 
 ### Working with transport type
 
-- [GetTransportType](gettransporttype.md): Gets the transport type of the IOUserVideoClockDevice.
-- [IOUserVideoTransportType](../videodriverkit/iouservideotransporttype.md): The transport type of a video stream.
+- [GetTransportType](gettransporttype.md): Beta. Gets the transport type of the IOUserVideoClockDevice.
+- [IOUserVideoTransportType](../videodriverkit/iouservideotransporttype.md): Beta. The transport type of a video stream.

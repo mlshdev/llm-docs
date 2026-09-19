@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avdisplaydynamicrange](https://developer.apple.com/documentation/avkit/avdisplaydynamicrange)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avdisplaydynamicrange
 
 # AVDisplayDynamicRange (Swift)
 
@@ -20,7 +21,7 @@ enum AVDisplayDynamicRange
 
 - [init(rawValue:)](avdisplaydynamicrange/init%28rawvalue_%29.md)
 
-### Dynamic Ranges
+### Dynamic ranges
 
 - [AVDisplayDynamicRange.automatic](avdisplaydynamicrange/automatic.md): Defines an automatic dynamic range. Indicates that the dynamic range will be set automatically.
 - [AVDisplayDynamicRange.standard](avdisplaydynamicrange/standard.md): Defines a standard dynamic range. Restricts the video content dynamic range to the standard range regardless of the actual range of the video content.
@@ -40,9 +41,9 @@ enum AVDisplayDynamicRange
 
 ## See Also
 
-### High dynamic range
+### Display management
 
-- [preferredDisplayDynamicRange](avplayerview/preferreddisplaydynamicrange.md): Describes how High Dynamic Range (HDR) video content renders.
+- [AVDisplayManager](avdisplaymanager.md): A tvOS management object that controls whether a TV switches modes to match the video’s native mode.
 
 # AVDisplayDynamicRange (Objective-C)
 
@@ -60,7 +61,7 @@ enum AVDisplayDynamicRange : NSInteger;
 
 ## Topics
 
-### Dynamic Ranges
+### Dynamic ranges
 
 - [AVDisplayDynamicRangeAutomatic](avdisplaydynamicrange/automatic.md): Defines an automatic dynamic range. Indicates that the dynamic range will be set automatically.
 - [AVDisplayDynamicRangeStandard](avdisplaydynamicrange/standard.md): Defines a standard dynamic range. Restricts the video content dynamic range to the standard range regardless of the actual range of the video content.
@@ -69,6 +70,6 @@ enum AVDisplayDynamicRange : NSInteger;
 
 ## See Also
 
-### High dynamic range
+### Display management
 
-- [preferredDisplayDynamicRange](avplayerview/preferreddisplaydynamicrange.md): Describes how High Dynamic Range (HDR) video content renders.
+- [AVDisplayManager](avdisplaymanager.md): A tvOS management object that controls whether a TV switches modes to match the video’s native mode.

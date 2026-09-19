@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/testing-resubscribing-from-the-subscriptions-page](https://developer.apple.com/documentation/storekit/testing-resubscribing-from-the-subscriptions-page)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/testing-resubscribing-from-the-subscriptions-page
 
 # Testing resubscribing from the subscriptions page (Swift)
 
@@ -36,7 +37,7 @@ To test resubscribing from the Subscriptions page:
 7. Open your app.
 8. In Xcode, verify that your [SKPaymentTransactionObserver](skpaymenttransactionobserver.md) gets a callback on [paymentQueue(\_:updatedTransactions:)](skpaymenttransactionobserver/paymentqueue%28__updatedtransactions_%29.md) with a transaction in the [SKPaymentTransactionState.purchased](skpaymenttransactionstate/purchased.md) state.
 9. Check that your app retrieves and verifies the app receipt. Verify that the successful transaction is in the receipt.
-10. Check that your app makes the in-app purchase available and updates the subscriber’s status.
+10. Check that your app makes the Apple In-App Purchase available and updates the subscriber’s status.
 11. In Xcode, check that your app calls [finishTransaction(\_:)](skpaymentqueue/finishtransaction%28__%29.md). For more information, see [Finishing a transaction](finishing-a-transaction.md).
 
 <a id="Conclude-testing"></a>
@@ -88,7 +89,7 @@ To test resubscribing from the Subscriptions page:
 7. Open your app.
 8. In Xcode, verify that your [SKPaymentTransactionObserver](skpaymenttransactionobserver.md) gets a callback on [paymentQueue:updatedTransactions:](skpaymenttransactionobserver/paymentqueue%28__updatedtransactions_%29.md) with a transaction in the [SKPaymentTransactionStatePurchased](skpaymenttransactionstate/purchased.md) state.
 9. Check that your app retrieves and verifies the app receipt. Verify that the successful transaction is in the receipt.
-10. Check that your app makes the in-app purchase available and updates the subscriber’s status.
+10. Check that your app makes the Apple In-App Purchase available and updates the subscriber’s status.
 11. In Xcode, check that your app calls [finishTransaction:](skpaymentqueue/finishtransaction%28__%29.md). For more information, see [Finishing a transaction](finishing-a-transaction.md).
 
 <a id="Conclude-testing"></a>

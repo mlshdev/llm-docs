@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1576703-anonymous/ksmccmd_position_to_element](https://developer.apple.com/documentation/iokit/1576703-anonymous/ksmccmd_position_to_element)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1576703-anonymous/ksmccmd_position_to_element
 
 # kSMCCmd_POSITION_TO_ELEMENT
 

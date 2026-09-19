@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avroutepickerview](https://developer.apple.com/documentation/avkit/avroutepickerview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avroutepickerview
 
 # AVRoutePickerView (Swift)
 
@@ -141,6 +142,13 @@ struct DevicePickerView: UIViewRepresentable {
 - [UITraitEnvironment](../uikit/uitraitenvironment.md)
 - [UIUserActivityRestoring](../uikit/uiuseractivityrestoring.md)
 
+## See Also
+
+### Route selection
+
+- [AVRoutePickerViewDelegate](avroutepickerviewdelegate.md): A protocol that defines the methods to adopt to respond to route picker view presentation events.
+- [AVRoutePickerViewButtonStyle](avroutepickerviewbuttonstyle.md): Constants that define the button styles a route picker view supports.
+
 # AVRoutePickerView (Objective-C)
 
 **Framework:** AVKit  
@@ -248,6 +256,8 @@ struct DevicePickerView: UIViewRepresentable {
 
 ## See Also
 
-### Playback route selection
+### Route selection
 
+- [AVRoutePickerViewDelegate](avroutepickerviewdelegate.md): A protocol that defines the methods to adopt to respond to route picker view presentation events.
+- [AVRoutePickerViewButtonStyle](avroutepickerviewbuttonstyle.md): Constants that define the button styles a route picker view supports.
 - [AVAudioSessionRouteSelection](avaudiosessionrouteselection.md): Constants that indicate the audio route selection.

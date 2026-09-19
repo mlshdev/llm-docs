@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/enabling-app-store-server-notifications](https://developer.apple.com/documentation/storekit/enabling-app-store-server-notifications)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/enabling-app-store-server-notifications
 
 # Enabling App Store Server Notifications
 
@@ -7,13 +8,13 @@
 **Framework:** StoreKit  
 **Kind:** Article
 
-Configure your server and provide an HTTPS URL to receive notifications about in-app purchase events and unreported external purchase tokens.
+Configure your server and provide an HTTPS URL to receive notifications about Apple In-App Purchase events and unreported external purchase tokens.
 
 <a id="overview"></a>
 
 ## Overview
 
-[App Store Server Notifications](../appstoreservernotifications.md) is a server-to-server service that sends real-time notifications for in-app purchase events, and notifications for unreported external purchase tokens. To enable notifications, set up an HTTPS URL on your server, and configure settings in App Store Connect.
+[App Store Server Notifications](../appstoreservernotifications.md) is a server-to-server service that sends real-time notifications for Apple In-App Purchase events, and notifications for unreported external purchase tokens. To enable notifications, set up an HTTPS URL on your server, and configure settings in App Store Connect.
 
 For information about parsing and interpreting notifications, see [Receiving App Store Server Notifications](../appstoreservernotifications/receiving-app-store-server-notifications.md).
 

@@ -1,6 +1,8 @@
-> Pinned source for n8n main: [docs/build/flow-logic/understand-execution-order.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/flow-logic/understand-execution-order.md)
+> Pinned source for n8n main: [docs/build/flow-logic/understand-execution-order.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/flow-logic/understand-execution-order.md)
 
 # Execution order in multi-branch workflows <a id="execution-order-in-multi-branch-workflows"></a>
+
+Execution order is part of your workflow's [flow logic](https://docs.n8n.io/build/flow-logic), and matters most in workflows that [split into multiple branches](https://docs.n8n.io/build/flow-logic/split-with-conditionals).
 
 n8n's node execution order depends on the version of n8n you're using:
 
@@ -10,3 +12,14 @@ n8n's node execution order depends on the version of n8n you're using:
 You can change the execution order in your [workflow settings](https://docs.n8n.io/build/manage-workflows/configure-workflow-settings).
 
 [^1]: The canvas is the main interface for building workflows in n8n's editor UI. You use the canvas to add and connect nodes to compose workflows.
+
+## Related resources
+
+- [Flow logic](https://docs.n8n.io/build/flow-logic)
+- [Split with conditionals](https://docs.n8n.io/build/flow-logic/split-with-conditionals)
+- [Merge data](https://docs.n8n.io/build/flow-logic/merge-data)
+- [Loop](https://docs.n8n.io/build/flow-logic/loop)
+- [Wait](https://docs.n8n.io/build/flow-logic/wait)
+- [Break workflows into smaller parts](https://docs.n8n.io/build/flow-logic/break-workflows-into-smaller-parts)
+- [Convert to sub-workflows](https://docs.n8n.io/build/flow-logic/convert-to-sub-workflows)
+- [Handle errors gracefully](https://docs.n8n.io/build/flow-logic/handle-errors-gracefully)

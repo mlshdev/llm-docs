@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_wordid_rsa_pkcs1_sha1](https://developer.apple.com/documentation/security/cssm_wordid_rsa_pkcs1_sha1)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_wordid_rsa_pkcs1_sha1
 
 # CSSM_WORDID_RSA_PKCS1_SHA1 (Swift)
 

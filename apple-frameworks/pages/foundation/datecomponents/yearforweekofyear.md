@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/datecomponents/yearforweekofyear](https://developer.apple.com/documentation/foundation/datecomponents/yearforweekofyear)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/datecomponents/yearforweekofyear
 
 # yearForWeekOfYear
 
@@ -39,6 +40,7 @@ formatter.calendar = gregorianCalendar
 print ("\(formatter.string(from: gregorianDate))") // "Friday, January 1, 2016"
 formatter.calendar = iso8601Calendar
 print ("\(formatter.string(from: iso8601Date))") // "Friday, January 8, 2016"
+
 
 ```
 

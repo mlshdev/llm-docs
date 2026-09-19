@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/os_log_type_t/os_log_type_default](https://developer.apple.com/documentation/kernel/os_log_type_t/os_log_type_default)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/os_log_type_t/os_log_type_default
 
 # OS_LOG_TYPE_DEFAULT
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/packaging-mac-software-for-distribution](https://developer.apple.com/documentation/xcode/packaging-mac-software-for-distribution)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/packaging-mac-software-for-distribution
 
 # Packaging Mac software for distribution
 
@@ -95,7 +96,7 @@ Make the following substitutions to this command:
 - **`<PathToApp>`**: The path to your app.
 - **`<PathToPackage>`**: The path where `productbuild` creates the Installer package.
 
-If you have a more complex product, you’ll need a more complex Installer package.  For more details on how to work with Installer packages, see the [productbuild](x-man-page://1/productbuild), [productsign](x-man-page://1/productsign), [pkgbuild](x-man-page://1/pkgbuild), and [pkgutil](x-man-page://1/pkgutil) man (manual) pages.
+If you have a more complex product, you’ll need a more complex Installer package.  For more details on how to work with Installer packages, see the productbuild, productsign, pkgbuild, and pkgutil man (manual) pages.
 
 <a id="Build-a-disk-image-file"></a>
 

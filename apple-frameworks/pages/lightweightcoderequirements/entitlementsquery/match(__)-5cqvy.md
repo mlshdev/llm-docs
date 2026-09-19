@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/lightweightcoderequirements/entitlementsquery/match(_:)-5cqvy](https://developer.apple.com/documentation/lightweightcoderequirements/entitlementsquery/match(_:)-5cqvy)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/lightweightcoderequirements/entitlementsquery/match(_:)-5cqvy
 
 # match(\_:)
 

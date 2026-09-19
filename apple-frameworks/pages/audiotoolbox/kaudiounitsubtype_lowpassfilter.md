@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/kaudiounitsubtype_lowpassfilter](https://developer.apple.com/documentation/audiotoolbox/kaudiounitsubtype_lowpassfilter)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiounitsubtype_lowpassfilter
 
 # kAudioUnitSubType_LowPassFilter (Swift)
 

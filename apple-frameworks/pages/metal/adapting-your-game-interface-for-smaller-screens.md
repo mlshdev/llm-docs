@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/adapting-your-game-interface-for-smaller-screens](https://developer.apple.com/documentation/metal/adapting-your-game-interface-for-smaller-screens)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/adapting-your-game-interface-for-smaller-screens
 
 # Adapting your game interface for smaller screens
 

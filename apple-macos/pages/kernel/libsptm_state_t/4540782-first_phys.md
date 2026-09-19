@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/libsptm_state_t/4540782-first_phys](https://developer.apple.com/documentation/kernel/libsptm_state_t/4540782-first_phys)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/libsptm_state_t/4540782-first_phys
 
 # first_phys
 

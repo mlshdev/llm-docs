@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/analytics-reports/app-store-discovery-and-engagement](https://developer.apple.com/documentation/analytics-reports/app-store-discovery-and-engagement)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/analytics-reports/app-store-discovery-and-engagement
 
 # App Store Discovery and Engagement
 

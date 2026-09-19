@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/handling-refund-notifications](https://developer.apple.com/documentation/storekit/handling-refund-notifications)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/handling-refund-notifications
 
 # Handling refund notifications
 
@@ -13,7 +14,7 @@ Respond to notifications about customer refunds for consumable, non-consumable, 
 
 ## Overview
 
-The App Store server sends near real-time notifications when customers receive refunds for in-app purchases. If you offer content across multiple platforms, for example gems or coins for games, and you update player account balances on your server, receiving refund notifications is important. Respond to refund notifications by interpreting and handling the refund information, and informing customers in the app of any actions you take as a result of the refund.
+The App Store server sends near real-time notifications when customers receive refunds for Apple In-App Purchases. If you offer content across multiple platforms, for example gems or coins for games, and you update player account balances on your server, receiving refund notifications is important. Respond to refund notifications by interpreting and handling the refund information, and informing customers in the app of any actions you take as a result of the refund.
 
 To enable notifications, see [Enabling App Store Server Notifications](enabling-app-store-server-notifications.md) and [App Store Server Notifications](../appstoreservernotifications.md).
 

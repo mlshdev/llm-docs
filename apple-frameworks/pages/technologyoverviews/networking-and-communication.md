@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/technologyoverviews/networking-and-communication](https://developer.apple.com/documentation/technologyoverviews/networking-and-communication)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/technologyoverviews/networking-and-communication
 
 # Networking and communication
 

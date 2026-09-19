@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fsvolume/readwritehandler](https://developer.apple.com/documentation/fskit/fsvolume/readwritehandler)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/fskit/fsvolume/readwritehandler
 
 # FSVolume.ReadWriteHandler (Swift)
 
@@ -18,7 +19,7 @@ protocol ReadWriteHandler : NSObjectProtocol
 
 ## Overview
 
-Most volumes conform to either this protocol or [FSVolume.KernelOffloadedIOHandler](kerneloffloadediohandler.md). You can conform to both if you need to provide kernel-offloaded I/O only for certain files. In that case, files with the [inhibitKernelOffloadedIO](../fsitem/attribute/inhibitkerneloffloadedio.md) attribute set use this protocol, and those without it use [FSVolume.KernelOffloadedIOHandler](kerneloffloadediohandler.md). A volume that doesn’t conform to either protocol can’t support any I/O operation.
+Most volumes conform to either this protocol or [FSVolume.KernelOffloadedIOHandler](kerneloffloadediohandler.md). You can conform to both if you need to provide kernel-offloaded I/O only for certain files. In that case, files with the [inhibitKernelOffloadedIO](../fsitem/attribute/inhibitkerneloffloadedio.md) attribute set use this protocol, and those without it use [FSVolume.KernelOffloadedIOHandler](kerneloffloadediohandler.md). Set that attribute on an item when you create it; The kernel sets each file’s routing when it first instantiates the item. This choice is immutable for the item’s lifetime. A volume that doesn’t conform to either protocol can’t support any I/O operation.
 
 > **Important**
 
@@ -72,7 +73,7 @@ Methods implemented for read and write operations that deliver data to and from 
 
 ## Overview
 
-Most volumes conform to either this protocol or [FSVolumeKernelOffloadedIOHandler](kerneloffloadediohandler.md). You can conform to both if you need to provide kernel-offloaded I/O only for certain files. In that case, files with the [FSItemAttributeInhibitKernelOffloadedIO](../fsitem/attribute/inhibitkerneloffloadedio.md) attribute set use this protocol, and those without it use [FSVolumeKernelOffloadedIOHandler](kerneloffloadediohandler.md). A volume that doesn’t conform to either protocol can’t support any I/O operation.
+Most volumes conform to either this protocol or [FSVolumeKernelOffloadedIOHandler](kerneloffloadediohandler.md). You can conform to both if you need to provide kernel-offloaded I/O only for certain files. In that case, files with the [FSItemAttributeInhibitKernelOffloadedIO](../fsitem/attribute/inhibitkerneloffloadedio.md) attribute set use this protocol, and those without it use [FSVolumeKernelOffloadedIOHandler](kerneloffloadediohandler.md). Set that attribute on an item when you create it; The kernel sets each file’s routing when it first instantiates the item. This choice is immutable for the item’s lifetime. A volume that doesn’t conform to either protocol can’t support any I/O operation.
 
 > **Important**
 

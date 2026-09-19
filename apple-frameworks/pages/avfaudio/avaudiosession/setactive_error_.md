@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avaudiosession/setactive:error:](https://developer.apple.com/documentation/avfaudio/avaudiosession/setactive:error:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosession/setactive:error:
 
 # setActive:error:
 
@@ -43,7 +44,7 @@ When your app deactivates a session, the return value is [falseExpression](../..
 
 ## See Also
 
-### Activating the audio configuration
+### Activating and deactivating the session
 
 - [setActive:withOptions:error:](setactive%28__options_%29.md): Activates or deactivates your app’s audio session using the specified options.
 - [activateWithOptions:completionHandler:](activate%28options_completionhandler_%29.md): Activates an audio session asynchronously.

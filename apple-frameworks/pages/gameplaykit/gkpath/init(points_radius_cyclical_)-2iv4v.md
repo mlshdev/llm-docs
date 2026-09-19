@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gameplaykit/gkpath/init(points:radius:cyclical:)-2iv4v](https://developer.apple.com/documentation/gameplaykit/gkpath/init(points:radius:cyclical:)-2iv4v)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/gameplaykit/gkpath/init(points:radius:cyclical:)-2iv4v
 
 # init(points:radius:cyclical:)
 

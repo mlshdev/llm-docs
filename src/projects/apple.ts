@@ -12,6 +12,7 @@ import {
   renderJsonUrl,
 } from "../docc.ts";
 import type { DoccIndexEntry } from "../docc.ts";
+import { isPublishableUrl } from "../markdown.ts";
 import { DocumentCollector } from "../quarantine.ts";
 import { isSnapshotLockedSource } from "../types.ts";
 import type {
@@ -152,9 +153,10 @@ export async function buildApple(
     );
     for (const { documentationPath, document } of fetched) {
       if (document === undefined) {
-        throw new Error(
-          `Apple index lists ${documentationPath}, but its render endpoint returned 404 or 410`,
-        );
+        const reason = `Apple index lists ${documentationPath}, but its render endpoint returned 404 or 410`;
+        documents.quarantine(documentationPath, reason);
+        bodyDigests.push(`${documentationPath}\tmissing`);
+        continue;
       }
       bodyDigests.push(`${documentationPath}\t${document.bodyDigest}`);
       await documents.collect(documentationPath, () =>
@@ -1252,7 +1254,7 @@ class PageRenderer {
       return undefined;
     }
     if (/^[a-z][a-z0-9+.-]*:/i.test(url)) {
-      return url;
+      return isPublishableUrl(url, "link") ? url : undefined;
     }
     if (!url.startsWith("/documentation/")) {
       return `${canonicalUrlFor(url)}`;
@@ -1485,10 +1487,11 @@ class PageRenderer {
     const url = variants
       .map((variant) => asRecord(variant))
       .find((variant) => typeof variant?.url === "string")?.url;
-    if (typeof url !== "string") {
+    const asset = typeof url === "string" ? absoluteAssetUrl(url) : undefined;
+    if (!asset || !isPublishableUrl(asset, "image")) {
       return alt ? `[Image unavailable: ${escapeInline(alt)}]` : "";
     }
-    return `![${escapeInline(alt)}](${encodeLinkTarget(absoluteAssetUrl(url))})`;
+    return `![${escapeInline(alt)}](${encodeLinkTarget(asset)})`;
   }
 
   #inline(value: unknown): string {
@@ -1539,7 +1542,7 @@ class PageRenderer {
         const destination =
           typeof node.destination === "string" ? node.destination : "";
         const title = typeof node.title === "string" ? node.title : destination;
-        return destination
+        return destination && isPublishableUrl(destination, "link")
           ? `[${escapeInline(title)}](${encodeLinkTarget(destination)})`
           : escapeInline(title);
       }

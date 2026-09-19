@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/customizing-render-pass-setup](https://developer.apple.com/documentation/metal/customizing-render-pass-setup)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/customizing-render-pass-setup
 
 # Customizing render pass setup (Swift)
 

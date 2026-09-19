@@ -555,6 +555,10 @@ function rewriteJsx(
   if (name === "Guides" || name === "Resources") {
     return name === "Guides" ? netbirdGuides() : netbirdResources();
   }
+  // This corpus serves every documented audience, including `for="agents"`.
+  if (name === "Visibility") {
+    return children;
+  }
   if (name === "details") {
     return children;
   }

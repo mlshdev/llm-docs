@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_csp_operational_statistics-swift.struct/init(userauthenticated:deviceflags:tokenmaxsessioncount:tokenopenedsessioncount:tokenmaxrwsessioncount:tokenopenedrwsessioncount:tokentotalpublicmem:tokenfreepublicmem:tokentotalprivatemem:tokenfreeprivatemem:)](https://developer.apple.com/documentation/security/cssm_csp_operational_statistics-swift.struct/init(userauthenticated:deviceflags:tokenmaxsessioncount:tokenopenedsessioncount:tokenmaxrwsessioncount:tokenopenedrwsessioncount:tokentotalpublicmem:tokenfreepublicmem:tokentotalprivatemem:tokenfreeprivatemem:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_csp_operational_statistics-swift.struct/init(userauthenticated:deviceflags:tokenmaxsessioncount:tokenopenedsessioncount:tokenmaxrwsessioncount:tokenopenedrwsessioncount:tokentotalpublicmem:tokenfreepublicmem:tokentotalprivatemem:tokenfreeprivatemem:)
 
 # init(UserAuthenticated:DeviceFlags:TokenMaxSessionCount:TokenOpenedSessionCount:TokenMaxRWSessionCount:TokenOpenedRWSessionCount:TokenTotalPublicMem:TokenFreePublicMem:TokenTotalPrivateMem:TokenFreePrivateMem:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/kev_dl_node_presence/3943823-link_quality_metric](https://developer.apple.com/documentation/kernel/kev_dl_node_presence/3943823-link_quality_metric)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/kev_dl_node_presence/3943823-link_quality_metric
 
 # link_quality_metric
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/nvmeidentifynamespacestruct/3521242-metadata_caps](https://developer.apple.com/documentation/iokit/nvmeidentifynamespacestruct/3521242-metadata_caps)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/nvmeidentifynamespacestruct/3521242-metadata_caps
 
 # METADATA_CAPS
 

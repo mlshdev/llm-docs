@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsgesturerecognizerdelegate/gesturerecognizer(_:shouldattempttorecognizewith:)](https://developer.apple.com/documentation/appkit/nsgesturerecognizerdelegate/gesturerecognizer(_:shouldattempttorecognizewith:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsgesturerecognizerdelegate/gesturerecognizer(_:shouldattempttorecognizewith:)
 
 # gestureRecognizer(\_:shouldAttemptToRecognizeWith:) (Swift)
 
@@ -33,7 +34,7 @@ This method is called when a target view recognizes a new gesture event stream. 
 
 ## See Also
 
-### Regulating Gesture Recognition
+### Regulating gesture recognition
 
 - [gestureRecognizerShouldBegin(\_:)](gesturerecognizershouldbegin%28__%29.md): Asks the delegate if a gesture recognizer should transition out of the Possible (`NSGestureRecognizerStatePossible`) state.
 
@@ -70,6 +71,6 @@ This method is called when a target view recognizes a new gesture event stream. 
 
 ## See Also
 
-### Regulating Gesture Recognition
+### Regulating gesture recognition
 
 - [gestureRecognizerShouldBegin:](gesturerecognizershouldbegin%28__%29.md): Asks the delegate if a gesture recognizer should transition out of the Possible (`NSGestureRecognizerStatePossible`) state.

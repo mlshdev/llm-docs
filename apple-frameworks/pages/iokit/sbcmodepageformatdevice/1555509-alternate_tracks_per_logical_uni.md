@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/sbcmodepageformatdevice/1555509-alternate_tracks_per_logical_uni](https://developer.apple.com/documentation/iokit/sbcmodepageformatdevice/1555509-alternate_tracks_per_logical_uni)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/sbcmodepageformatdevice/1555509-alternate_tracks_per_logical_uni
 
 # ALTERNATE_TRACKS_PER_LOGICAL_UNIT
 

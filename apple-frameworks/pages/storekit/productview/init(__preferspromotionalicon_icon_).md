@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/productview/init(_:preferspromotionalicon:icon:)](https://developer.apple.com/documentation/storekit/productview/init(_:preferspromotionalicon:icon:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/productview/init(_:preferspromotionalicon:icon:)
 
 # init(\_:prefersPromotionalIcon:icon:)
 
@@ -18,7 +19,7 @@ nonisolated init(_ product: Product, prefersPromotionalIcon: Bool = false, @View
 
 - `product`: The product to merchandise.
 - `prefersPromotionalIcon`: A Boolean value that indicates whether to use the promotional image from the App Store, if it’s available. If this value is `true` and a promotional image for the product is available, the view displays it instead of the view you provide in the `icon` parameter.
-- `icon`: A closure that returns the image to use for decorating the in-app purchase product.
+- `icon`: A closure that returns the image to use for decorating the Apple In-App Purchase product.
 
 <a id="Discussion"></a>
 

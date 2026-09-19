@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_apple_unlock_type_wrapped_private](https://developer.apple.com/documentation/security/cssm_apple_unlock_type_wrapped_private)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_apple_unlock_type_wrapped_private
 
 # CSSM_APPLE_UNLOCK_TYPE_WRAPPED_PRIVATE (Swift)
 

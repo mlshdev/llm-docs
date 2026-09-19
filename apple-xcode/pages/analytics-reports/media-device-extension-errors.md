@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/analytics-reports/media-device-extension-errors](https://developer.apple.com/documentation/analytics-reports/media-device-extension-errors)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/analytics-reports/media-device-extension-errors
 
 # Media Device Extension Errors
 

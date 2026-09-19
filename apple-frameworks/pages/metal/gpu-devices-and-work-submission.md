@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/gpu-devices-and-work-submission](https://developer.apple.com/documentation/metal/gpu-devices-and-work-submission)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/gpu-devices-and-work-submission
 
 # GPU devices and work submission (Swift)
 

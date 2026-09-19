@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uinsintegertraitdefinition](https://developer.apple.com/documentation/uikit/uinsintegertraitdefinition)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uinsintegertraitdefinition
 
 # UINSIntegerTraitDefinition
 
@@ -38,6 +39,7 @@
 - [UITraitLayoutDirection](uitraitlayoutdirection-c.class.md)
 - [UITraitLegibilityWeight](uitraitlegibilityweight-c.class.md)
 - [UITraitListEnvironment](uitraitlistenvironment-c.class.md)
+- [UITraitNavigationTitleAlignment](uitraitnavigationtitlealignment-c.class.md)
 - [UITraitSceneCaptureState](uitraitscenecapturestate-c.class.md)
 - [UITraitSplitViewControllerLayoutEnvironment](uitraitsplitviewcontrollerlayoutenvironment-c.class.md)
 - [UITraitSystemPrefersReducedResourceUsage](uitraitsystemprefersreducedresourceusage-c.class.md)

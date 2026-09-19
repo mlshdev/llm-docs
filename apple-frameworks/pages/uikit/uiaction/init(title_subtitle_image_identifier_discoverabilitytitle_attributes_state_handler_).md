@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiaction/init(title:subtitle:image:identifier:discoverabilitytitle:attributes:state:handler:)](https://developer.apple.com/documentation/uikit/uiaction/init(title:subtitle:image:identifier:discoverabilitytitle:attributes:state:handler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiaction/init(title:subtitle:image:identifier:discoverabilitytitle:attributes:state:handler:)
 
 # init(title:subtitle:image:identifier:discoverabilityTitle:attributes:state:handler:)
 

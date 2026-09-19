@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshadersgraph/mpsgraph/normalizationgradient(withincominggradienttensor:sourcetensor:mean:variancetensor:gammatensor:gammagradienttensor:betagradienttensor:reductionaxes:epsilon:name:)](https://developer.apple.com/documentation/metalperformanceshadersgraph/mpsgraph/normalizationgradient(withincominggradienttensor:sourcetensor:mean:variancetensor:gammatensor:gammagradienttensor:betagradienttensor:reductionaxes:epsilon:name:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshadersgraph/mpsgraph/normalizationgradient(withincominggradienttensor:sourcetensor:mean:variancetensor:gammatensor:gammagradienttensor:betagradienttensor:reductionaxes:epsilon:name:)
 
 # normalizationGradient(withIncomingGradientTensor:sourceTensor:mean:varianceTensor:gammaTensor:gammaGradientTensor:betaGradientTensor:reductionAxes:epsilon:name:) (Swift)
 

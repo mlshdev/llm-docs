@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyelementmain](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyelementmain)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyelementmain
 
 # IOUserVideoObjectPropertyElementMain
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Global Variable  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 The value for properties that apply to the main element or to the entire scope.
 
@@ -26,6 +27,6 @@ This value is used with [IOUserVideoObjectPropertyElement](iouservideoobjectprop
 
 ### Working with object properties
 
-- [IOUserVideoObjectPropertyElement](iouservideoobjectpropertyelement.md): An integer that identifies, along with the property selector and scope, a specific piece of information about a video object.
-- [IOUserVideoObjectPropertyScope](iouservideoobjectpropertyscope.md): A four character code which, along with the selector and element, identifies a specific piece of information about a video object.
-- [IOUserVideoObjectPropertySelector](iouservideoobjectpropertyselector.md): A four character code which, along with the scope and element, specifies a specific piece of information about a video object.
+- [IOUserVideoObjectPropertyElement](iouservideoobjectpropertyelement.md): Beta. An integer that identifies, along with the property selector and scope, a specific piece of information about a video object.
+- [IOUserVideoObjectPropertyScope](iouservideoobjectpropertyscope.md): Beta. A four character code which, along with the selector and element, identifies a specific piece of information about a video object.
+- [IOUserVideoObjectPropertySelector](iouservideoobjectpropertyselector.md): Beta. A four character code which, along with the scope and element, specifies a specific piece of information about a video object.

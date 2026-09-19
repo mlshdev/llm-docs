@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_compressed_rgba_astc_8x5_khr](https://developer.apple.com/documentation/opengles/gl_compressed_rgba_astc_8x5_khr)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_compressed_rgba_astc_8x5_khr
 
 # GL_COMPRESSED_RGBA_ASTC_8x5_KHR (Swift)
 

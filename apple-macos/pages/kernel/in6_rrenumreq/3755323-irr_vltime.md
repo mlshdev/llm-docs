@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/in6_rrenumreq/3755323-irr_vltime](https://developer.apple.com/documentation/kernel/in6_rrenumreq/3755323-irr_vltime)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/in6_rrenumreq/3755323-irr_vltime
 
 # irr_vltime
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/backtrace_control/3786098-btc_user_copy_context](https://developer.apple.com/documentation/kernel/backtrace_control/3786098-btc_user_copy_context)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/backtrace_control/3786098-btc_user_copy_context
 
 # btc_user_copy_context
 

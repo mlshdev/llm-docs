@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/advancedcommerceapi/displayname](https://developer.apple.com/documentation/advancedcommerceapi/displayname)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/advancedcommerceapi/displayname
 
 # displayName
 
@@ -18,7 +19,7 @@ string displayName
 
 ## Mentioned In
 
-- [Creating SKUs for your In-App Purchases](creating-your-purchases.md)
+- [Creating SKUs for your Apple In-App Purchases](creating-your-purchases.md)
 
 <a id="discussion"></a>
 
@@ -28,7 +29,7 @@ You provide a display name for every SKU you offer in your app. For subscription
 
 You can provide localized display names, based on the customer’s storefront. For more information on storefronts, see [Storefront](../storekit/storefront.md).
 
-For more information and best practices on providing names and other data the system displays to customers, see [Creating SKUs for your In-App Purchases](creating-your-purchases.md).
+For more information and best practices on providing names and other data the system displays to customers, see [Creating SKUs for your Apple In-App Purchases](creating-your-purchases.md).
 
 ## See Also
 
@@ -45,7 +46,7 @@ For more information and best practices on providing names and other data the sy
 - [refundAmount](refundamount.md): A refund amount, in milliunits of the currency.
 - [refundReason](refundreason.md): A reason to request a refund.
 - [refundRiskingPreference](refundriskingpreference.md): A Boolean value that indicates whether the App Store asks you for consumption data to help inform the refund decision.
-- [SKU](sku.md): The product identifier of an in-app purchase product you manage in your own system.
+- [SKU](sku.md): The product identifier of an Apple In-App Purchase product you manage in your own system.
 - [storefront](storefront.md): A three-letter code that represents the country or region associated with the App Store storefront.
 - [taxCode](taxcode.md): A tax code that applies to a SKU.
 - [targetProductId](targetproductid.md): A generic product identifier that represents all Advanced Commerce API products to App Store Connect, which you use when you migrate a product.

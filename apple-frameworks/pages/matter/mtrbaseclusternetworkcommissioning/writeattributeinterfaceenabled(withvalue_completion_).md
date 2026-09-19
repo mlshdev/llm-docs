@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusternetworkcommissioning/writeattributeinterfaceenabled(withvalue:completion:)](https://developer.apple.com/documentation/matter/mtrbaseclusternetworkcommissioning/writeattributeinterfaceenabled(withvalue:completion:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrbaseclusternetworkcommissioning/writeattributeinterfaceenabled(withvalue:completion:)
 
 # writeAttributeInterfaceEnabled(withValue:completion:) (Swift)
 

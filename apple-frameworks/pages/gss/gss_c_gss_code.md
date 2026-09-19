@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gss/gss_c_gss_code](https://developer.apple.com/documentation/gss/gss_c_gss_code)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/gss/gss_c_gss_code
 
 # GSS_C_GSS_CODE (Swift)
 

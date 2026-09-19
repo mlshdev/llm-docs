@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_csp_key_header_inconsistent](https://developer.apple.com/documentation/security/cssmerr_csp_key_header_inconsistent)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_csp_key_header_inconsistent
 
 # CSSMERR_CSP_KEY_HEADER_INCONSISTENT (Swift)
 

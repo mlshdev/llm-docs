@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/io_stats_snapshot/1551870-ss_non_paging_size](https://developer.apple.com/documentation/kernel/io_stats_snapshot/1551870-ss_non_paging_size)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/io_stats_snapshot/1551870-ss_non_paging_size
 
 # ss_non_paging_size
 

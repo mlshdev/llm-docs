@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiimagepickercontroller/sourcetype-swift.enum/savedphotosalbum](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/sourcetype-swift.enum/savedphotosalbum)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiimagepickercontroller/sourcetype-swift.enum/savedphotosalbum
 
 # UIImagePickerController.SourceType.savedPhotosAlbum (Swift)
 
 **Framework:** UIKit  
 **Kind:** Case  
-**Availability:** iOS 2.0+ (deprecated in 27.0) · iPadOS 2.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 2.0+ (deprecated in 27.0) · iPadOS 2.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Specifies the device’s Camera Roll album as the source for the image picker controller.
 
@@ -33,7 +34,7 @@ If the device does not have a camera, specifies the Saved Photos album as the so
 
 **Framework:** UIKit  
 **Kind:** Enumeration Case  
-**Availability:** iOS 2.0+ (deprecated in 27.0) · iPadOS 2.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 2.0+ (deprecated in 27.0) · iPadOS 2.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Specifies the device’s Camera Roll album as the source for the image picker controller.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avpictureinpicturecontroller/contentsource-swift.class/samplebufferdisplaylayer](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/contentsource-swift.class/samplebufferdisplaylayer)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/contentsource-swift.class/samplebufferdisplaylayer
 
 # sampleBufferDisplayLayer (Swift)
 
@@ -22,7 +23,7 @@ This value is `nil` if the content source doesn’t represent a sample buffer di
 
 ## See Also
 
-### Accessing the Presentation Layer
+### Accessing the presentation layer
 
 - [playerLayer](playerlayer.md): The presenting player layer.
 
@@ -48,6 +49,6 @@ This value is `nil` if the content source doesn’t represent a sample buffer di
 
 ## See Also
 
-### Accessing the Presentation Layer
+### Accessing the presentation layer
 
 - [playerLayer](playerlayer.md): The presenting player layer.

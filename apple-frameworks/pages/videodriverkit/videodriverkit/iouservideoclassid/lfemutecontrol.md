@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoclassid/lfemutecontrol](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoclassid/lfemutecontrol)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoclassid/lfemutecontrol
 
 # LFEMuteControl
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 A Boolean control where true means that mute is enabled, making that LFE element inaudible.
 
@@ -26,7 +27,7 @@ This control is for LFE channels that result from bass management. Note that LFE
 
 ### Identifying volume control types
 
-- [VolumeControl](volumecontrol.md): The class identifier for the `IOUserVideoVolumeControl` class.
-- [MuteControl](mutecontrol.md): The class identifier for the `IOUserVideoMuteControl` class.
-- [LFEVolumeControl](lfevolumecontrol.md): A subclass of the `IOUserVideoLevelControl` class for an LFE channel that results from bass management.
-- [LineLevelControl](linelevelcontrol.md): A video selector control that identifies the nominal line level for the element.
+- [VolumeControl](volumecontrol.md): Beta. The class identifier for the `IOUserVideoVolumeControl` class.
+- [MuteControl](mutecontrol.md): Beta. The class identifier for the `IOUserVideoMuteControl` class.
+- [LFEVolumeControl](lfevolumecontrol.md): Beta. A subclass of the `IOUserVideoLevelControl` class for an LFE channel that results from bass management.
+- [LineLevelControl](linelevelcontrol.md): Beta. A video selector control that identifies the nominal line level for the element.

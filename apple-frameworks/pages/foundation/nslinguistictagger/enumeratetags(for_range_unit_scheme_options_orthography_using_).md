@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nslinguistictagger/enumeratetags(for:range:unit:scheme:options:orthography:using:)](https://developer.apple.com/documentation/foundation/nslinguistictagger/enumeratetags(for:range:unit:scheme:options:orthography:using:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nslinguistictagger/enumeratetags(for:range:unit:scheme:options:orthography:using:)
 
 # enumerateTags(for:range:unit:scheme:options:orthography:using:) (Swift)
 
 **Framework:** Foundation  
 **Kind:** Type Method  
-**Availability:** iOS 11.0+ (deprecated in 27.0) · iPadOS 11.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.13+ (deprecated in 27.0) · tvOS 11.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0) · watchOS 4.0+ (deprecated in 27.0)
+**Availability:** iOS 11.0+ (deprecated in 27.2) · iPadOS 11.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.13+ (deprecated in 27.2) · tvOS 11.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2) · watchOS 4.0+ (deprecated in 27.2)
 
 Enumerates over a given string and calls the specified block for each tag.
 
@@ -58,7 +59,7 @@ This is a convenience method for initializing a linguistic tagger, setting the [
 
 **Framework:** Foundation  
 **Kind:** Type Method  
-**Availability:** iOS 11.0+ (deprecated in 27.0) · iPadOS 11.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.13+ (deprecated in 27.0) · tvOS 11.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0) · watchOS 4.0+ (deprecated in 27.0)
+**Availability:** iOS 11.0+ (deprecated in 27.2) · iPadOS 11.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.13+ (deprecated in 27.2) · tvOS 11.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2) · watchOS 4.0+ (deprecated in 27.2)
 
 Enumerates over a given string and calls the specified block for each tag.
 

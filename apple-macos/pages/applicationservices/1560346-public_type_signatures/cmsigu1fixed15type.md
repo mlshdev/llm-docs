@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/1560346-public_type_signatures/cmsigu1fixed15type](https://developer.apple.com/documentation/applicationservices/1560346-public_type_signatures/cmsigu1fixed15type)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applicationservices/1560346-public_type_signatures/cmsigu1fixed15type
 
 # cmSigU1Fixed15Type
 

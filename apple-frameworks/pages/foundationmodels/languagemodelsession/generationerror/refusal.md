@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelsession/generationerror/refusal](https://developer.apple.com/documentation/foundationmodels/languagemodelsession/generationerror/refusal)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelsession/generationerror/refusal
 
 # LanguageModelSession.GenerationError.Refusal
 
@@ -36,7 +37,7 @@ do {
 
 ### Creating a generation error refusal
 
-- [init(transcriptEntries:)](refusal/init%28transcriptentries_%29.md)
+- [init(transcriptEntries:)](refusal/init%28transcriptentries_%29.md): Creates a refusal for the transcript entries the model declined to respond to.
 
 ### Getting the explanation
 

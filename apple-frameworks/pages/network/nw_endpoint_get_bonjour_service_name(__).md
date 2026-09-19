@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/network/nw_endpoint_get_bonjour_service_name(_:)](https://developer.apple.com/documentation/network/nw_endpoint_get_bonjour_service_name(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/network/nw_endpoint_get_bonjour_service_name(_:)
 
 # nw_endpoint_get_bonjour_service_name(\_:) (Swift)
 

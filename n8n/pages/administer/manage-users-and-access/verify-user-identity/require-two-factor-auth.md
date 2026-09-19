@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/require-two-factor-auth.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/administer/manage-users-and-access/verify-user-identity/require-two-factor-auth.md)
+> Pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/require-two-factor-auth.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/administer/manage-users-and-access/verify-user-identity/require-two-factor-auth.md)
 
 # Two-factor authentication (2FA) <a id="two-factor-authentication-2fa"></a>
 

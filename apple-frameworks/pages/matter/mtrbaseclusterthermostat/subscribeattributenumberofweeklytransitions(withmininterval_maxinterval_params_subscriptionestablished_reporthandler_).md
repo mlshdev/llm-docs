@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterthermostat/subscribeattributenumberofweeklytransitions(withmininterval:maxinterval:params:subscriptionestablished:reporthandler:)](https://developer.apple.com/documentation/matter/mtrbaseclusterthermostat/subscribeattributenumberofweeklytransitions(withmininterval:maxinterval:params:subscriptionestablished:reporthandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrbaseclusterthermostat/subscribeattributenumberofweeklytransitions(withmininterval:maxinterval:params:subscriptionestablished:reporthandler:)
 
 # subscribeAttributeNumberOfWeeklyTransitions(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:) (Swift)
 

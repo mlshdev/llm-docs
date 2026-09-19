@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/kscsicmd_read_defect_data_10](https://developer.apple.com/documentation/driverkit/kscsicmd_read_defect_data_10)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/kscsicmd_read_defect_data_10
 
 # kSCSICmd_READ_DEFECT_DATA_10
 

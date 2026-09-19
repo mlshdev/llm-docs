@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/vision/detecting-objects-in-still-images](https://developer.apple.com/documentation/vision/detecting-objects-in-still-images)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/vision/detecting-objects-in-still-images
 
 # Detecting Objects in Still Images (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrolsstyle/default](https://developer.apple.com/documentation/avkit/avplayerviewcontrolsstyle/default)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrolsstyle/default
 
 # default (Swift)
 
@@ -22,7 +23,7 @@ The default controls style is [AVPlayerViewControlsStyle.inline](inline.md).
 
 ## See Also
 
-### Controls Styles
+### Controls styles
 
 - [AVPlayerViewControlsStyle.none](none.md): The view displays no playback controls.
 - [AVPlayerViewControlsStyle.inline](inline.md): The view displays playback controls in a bar along the view’s bottom edge.
@@ -51,7 +52,7 @@ The default controls style is [AVPlayerViewControlsStyleInline](inline.md).
 
 ## See Also
 
-### Controls Styles
+### Controls styles
 
 - [AVPlayerViewControlsStyleNone](none.md): The view displays no playback controls.
 - [AVPlayerViewControlsStyleInline](inline.md): The view displays playback controls in a bar along the view’s bottom edge.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/computegraphcomponent/simulationstate](https://developer.apple.com/documentation/realitykit/computegraphcomponent/simulationstate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/computegraphcomponent/simulationstate
 
 # ComputeGraphComponent.SimulationState
 
@@ -20,7 +21,7 @@ enum SimulationState
 
 - [ComputeGraphComponent.SimulationState.paused](simulationstate/paused.md): The simulation is frozen; no steps are evaluated.
 - [ComputeGraphComponent.SimulationState.playing](simulationstate/playing.md): The simulation advances each frame at its configured rate.
-- [ComputeGraphComponent.SimulationState.stepping](simulationstate/stepping.md): The simulation evaluates exactly one step on the next frame, then returns to [ComputeGraphComponent.SimulationState.paused](simulationstate/paused.md).
+- [ComputeGraphComponent.SimulationState.stepping](simulationstate/stepping.md): The simulation advances a single frame, then returns to [ComputeGraphComponent.SimulationState.paused](simulationstate/paused.md).
 
 ## Relationships
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ioscsiblockcommandsdevice/1792136-report_provisioning_initializati](https://developer.apple.com/documentation/kernel/ioscsiblockcommandsdevice/1792136-report_provisioning_initializati)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ioscsiblockcommandsdevice/1792136-report_provisioning_initializati
 
 # REPORT_PROVISIONING_INITIALIZATION_PATTERN
 

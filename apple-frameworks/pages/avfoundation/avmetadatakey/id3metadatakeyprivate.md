@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avmetadatakey/id3metadatakeyprivate](https://developer.apple.com/documentation/avfoundation/avmetadatakey/id3metadatakeyprivate)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmetadatakey/id3metadatakeyprivate
 
 # id3MetadataKeyPrivate (Swift)
 

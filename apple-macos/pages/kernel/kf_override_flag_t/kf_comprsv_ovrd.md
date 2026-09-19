@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/kf_override_flag_t/kf_comprsv_ovrd](https://developer.apple.com/documentation/kernel/kf_override_flag_t/kf_comprsv_ovrd)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/kf_override_flag_t/kf_comprsv_ovrd
 
 # KF_COMPRSV_OVRD
 

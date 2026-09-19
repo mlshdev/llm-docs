@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/telephonymessagingkit/rcsservice/business/menu/content/submenu(_:)](https://developer.apple.com/documentation/telephonymessagingkit/rcsservice/business/menu/content/submenu(_:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/telephonymessagingkit/rcsservice/business/menu/content/submenu(_:)
 
 # RCSService.Business.Menu.Content.submenu(\_:)
 

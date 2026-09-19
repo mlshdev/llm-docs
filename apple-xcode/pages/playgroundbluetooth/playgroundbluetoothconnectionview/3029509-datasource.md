@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/playgroundbluetooth/playgroundbluetoothconnectionview/3029509-datasource](https://developer.apple.com/documentation/playgroundbluetooth/playgroundbluetoothconnectionview/3029509-datasource)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/playgroundbluetooth/playgroundbluetoothconnectionview/3029509-datasource
 
 # dataSource
 

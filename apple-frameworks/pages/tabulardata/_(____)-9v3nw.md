@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tabulardata/_(_:_:)-9v3nw](https://developer.apple.com/documentation/tabulardata/_(_:_:)-9v3nw)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/tabulardata/_(_:_:)-9v3nw
 
 # /(\_:\_:)
 

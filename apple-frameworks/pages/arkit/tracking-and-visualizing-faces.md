@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/tracking-and-visualizing-faces](https://developer.apple.com/documentation/arkit/tracking-and-visualizing-faces)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/tracking-and-visualizing-faces
 
 # Tracking and visualizing faces (Swift)
 

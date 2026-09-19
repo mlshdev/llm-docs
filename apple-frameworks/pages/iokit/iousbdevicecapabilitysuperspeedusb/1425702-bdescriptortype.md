@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/iousbdevicecapabilitysuperspeedusb/1425702-bdescriptortype](https://developer.apple.com/documentation/iokit/iousbdevicecapabilitysuperspeedusb/1425702-bdescriptortype)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/iousbdevicecapabilitysuperspeedusb/1425702-bdescriptortype
 
 # bDescriptorType
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationdatasource/widgetmigrator](https://developer.apple.com/documentation/clockkit/clkcomplicationdatasource/widgetmigrator)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationdatasource/widgetmigrator
 
 # widgetMigrator (Swift)
 
@@ -45,15 +46,18 @@ func widgetConfiguration(from complicationDescriptor: CLKComplicationDescriptor)
             kind: "Caffeine_Complications",
             extensionBundleIdentifier: "com.example.apple-samplecode.Coffee-Tracker.watchkitapp.watchkitextension.CoffeeTracker-Complications")
 
+
     case cupTotalIdentifier:
         return CLKComplicationStaticWidgetMigrationConfiguration(
             kind: "CupTotal_Complications",
             extensionBundleIdentifier: "com.example.apple-samplecode.Coffee-Tracker.watchkitapp.watchkitextension.CoffeeTracker-Complications")
 
+
     case cupAndCaffeineIdentifier:
         return CLKComplicationStaticWidgetMigrationConfiguration(
             kind: "CupAndCaffeine_Complications",
             extensionBundleIdentifier: "com.example.apple-samplecode.Coffee-Tracker.watchkitapp.watchkitextension.CoffeeTracker-Complications")
+
 
     default:
         return nil
@@ -116,15 +120,18 @@ func widgetConfiguration(from complicationDescriptor: CLKComplicationDescriptor)
             kind: "Caffeine_Complications",
             extensionBundleIdentifier: "com.example.apple-samplecode.Coffee-Tracker.watchkitapp.watchkitextension.CoffeeTracker-Complications")
 
+
     case cupTotalIdentifier:
         return CLKComplicationStaticWidgetMigrationConfiguration(
             kind: "CupTotal_Complications",
             extensionBundleIdentifier: "com.example.apple-samplecode.Coffee-Tracker.watchkitapp.watchkitextension.CoffeeTracker-Complications")
 
+
     case cupAndCaffeineIdentifier:
         return CLKComplicationStaticWidgetMigrationConfiguration(
             kind: "CupAndCaffeine_Complications",
             extensionBundleIdentifier: "com.example.apple-samplecode.Coffee-Tracker.watchkitapp.watchkitextension.CoffeeTracker-Complications")
+
 
     default:
         return nil

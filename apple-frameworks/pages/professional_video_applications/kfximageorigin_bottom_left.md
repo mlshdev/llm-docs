@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional_video_applications/kfximageorigin_bottom_left](https://developer.apple.com/documentation/professional_video_applications/kfximageorigin_bottom_left)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfximageorigin_bottom_left
 
 # kFxImageOrigin_BOTTOM_LEFT (Swift)
 

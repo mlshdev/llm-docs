@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/colorsync/get_cs_avail_but_depr_macro](https://developer.apple.com/documentation/colorsync/get_cs_avail_but_depr_macro)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/colorsync/get_cs_avail_but_depr_macro
 
 # GET_CS_AVAIL_BUT_DEPR_MACRO
 

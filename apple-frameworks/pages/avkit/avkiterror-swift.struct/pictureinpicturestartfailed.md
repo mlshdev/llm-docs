@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avkiterror-swift.struct/pictureinpicturestartfailed](https://developer.apple.com/documentation/avkit/avkiterror-swift.struct/pictureinpicturestartfailed)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avkiterror-swift.struct/pictureinpicturestartfailed
 
 # pictureInPictureStartFailed
 
@@ -16,7 +17,7 @@ static var pictureInPictureStartFailed: AVKitError.Code { get }
 
 ## See Also
 
-### Error Code Constants
+### Error codes
 
 - [unknown](unknown.md): An unknown error.
 - [contentRatingUnknown](contentratingunknown.md): The media content rating is missing or unrecognized.

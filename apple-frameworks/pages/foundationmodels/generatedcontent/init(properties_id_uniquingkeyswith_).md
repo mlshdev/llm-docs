@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generatedcontent/init(properties:id:uniquingkeyswith:)](https://developer.apple.com/documentation/foundationmodels/generatedcontent/init(properties:id:uniquingkeyswith:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generatedcontent/init(properties:id:uniquingkeyswith:)
 
 # init(properties:id:uniquingKeysWith:)
 
@@ -48,4 +49,4 @@ The following example shows how to choose the first and last values for any dupl
 - [init(properties:id:)](init%28properties_id_%29.md): Creates generated content representing a structure with the properties you specify.
 - [init(json:)](init%28json_%29.md): Creates equivalent content from a JSON string.
 - [init(kind:id:)](init%28kind_id_%29.md): Creates content with the specified kind and generation identifier.
-- [GeneratedContent.ParsingError](parsingerror.md): A failure that occurs when a string cannot be parsed into GeneratedContent.
+- [GeneratedContent.ParsingError](parsingerror.md): A failure that occurs when a string cannot be parsed into generated content.

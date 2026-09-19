@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/nslayoutxaxisanchor/constraint(equaltosystemspacingafter:multiplier:)](https://developer.apple.com/documentation/uikit/nslayoutxaxisanchor/constraint(equaltosystemspacingafter:multiplier:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/nslayoutxaxisanchor/constraint(equaltosystemspacingafter:multiplier:)
 
 # constraint(equalToSystemSpacingAfter:multiplier:) (Swift)
 

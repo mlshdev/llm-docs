@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avinterfacealbumartwork](https://developer.apple.com/documentation/avkit/avinterfacealbumartwork)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avinterfacealbumartwork
 
 # AVInterfaceAlbumArtwork
 
@@ -23,15 +24,15 @@ Use a concrete subclass such as @c AVInterfaceURLAlbumArtwork to create artwork 
 
 ## Topics
 
-### Creating album artwork
+### Instance Properties
 
-- [initWithURL:contentType:size:](avinterfacealbumartwork/initwithurl_contenttype_size_.md): Initializes a new album artwork object with the specified image resource information.
-
-### Inspecting the artwork
-
-- [url](avinterfacealbumartwork/url.md): URL pointing to the album artwork image resource.
 - [contentType](avinterfacealbumartwork/contenttype.md): The uniform type identifier for the artwork image data.
 - [size](avinterfacealbumartwork/size.md): The pixel dimensions of the artwork image.
+- [url](avinterfacealbumartwork/url.md): URL pointing to the album artwork image resource.
+
+### Instance Methods
+
+- [initWithURL:contentType:size:](avinterfacealbumartwork/initwithurl_contenttype_size_.md): Initializes a new album artwork object with the specified image resource information.
 
 ### Type Methods
 

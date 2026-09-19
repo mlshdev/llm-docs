@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uishape-swift.struct/inset(by:)-7v5nk](https://developer.apple.com/documentation/uikit/uishape-swift.struct/inset(by:)-7v5nk)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uishape-swift.struct/inset(by:)-7v5nk
 
 # inset(by:)
 

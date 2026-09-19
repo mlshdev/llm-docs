@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/kscsicmd_ata_pass_through](https://developer.apple.com/documentation/driverkit/kscsicmd_ata_pass_through)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/kscsicmd_ata_pass_through
 
 # kSCSICmd_ATA_PASS_THROUGH
 

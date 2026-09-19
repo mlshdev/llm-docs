@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkfullcolorimageprovider/tintedimageprovider](https://developer.apple.com/documentation/clockkit/clkfullcolorimageprovider/tintedimageprovider)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkfullcolorimageprovider/tintedimageprovider
 
 # tintedImageProvider (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 6.0+ (deprecated in 27.0)
+**Availability:** watchOS 6.0+ (deprecated in 27.2)
 
 An image provider that produces alternative images for tinted graphic complications.
 
@@ -36,7 +37,7 @@ Tinted graphic complications interpret the tinted image provider as follows:
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 6.0+ (deprecated in 27.0)
+**Availability:** watchOS 6.0+ (deprecated in 27.2)
 
 An image provider that produces alternative images for tinted graphic complications.
 

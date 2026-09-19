@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationchannel/metadata](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/metadata)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel/metadata
 
 # LanguageModelExecutorGenerationChannel.Metadata
 
@@ -24,7 +25,7 @@ Each event replaces the prior metadata wholesale; keys absent from `values` are 
 
 ### Handling the metadata values
 
-- [values](metadata/values.md)
+- [values](metadata/values.md): The metadata key-value pairs for the entry.
 
 ## Relationships
 

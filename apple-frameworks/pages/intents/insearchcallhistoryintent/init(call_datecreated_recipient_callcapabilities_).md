@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/insearchcallhistoryintent/init(call:datecreated:recipient:callcapabilities:)](https://developer.apple.com/documentation/intents/insearchcallhistoryintent/init(call:datecreated:recipient:callcapabilities:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/intents/insearchcallhistoryintent/init(call:datecreated:recipient:callcapabilities:)
 
 # init(call:dateCreated:recipient:callCapabilities:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_memory_funcs-swift.struct/init(malloc_func:free_func:realloc_func:calloc_func:allocref:)](https://developer.apple.com/documentation/security/cssm_memory_funcs-swift.struct/init(malloc_func:free_func:realloc_func:calloc_func:allocref:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_memory_funcs-swift.struct/init(malloc_func:free_func:realloc_func:calloc_func:allocref:)
 
 # init(malloc_func:free_func:realloc_func:calloc_func:AllocRef:)
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationdatasource/getprivacybehavior(for:withhandler:)](https://developer.apple.com/documentation/clockkit/clkcomplicationdatasource/getprivacybehavior(for:withhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationdatasource/getprivacybehavior(for:withhandler:)
 
 # getPrivacyBehavior(for:withHandler:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Returns the privacy behavior for the specified complication.
 
@@ -65,7 +66,7 @@ If you don’t implement this method, ClockKit uses the value [CLKComplicationPr
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Returns the privacy behavior for the specified complication.
 

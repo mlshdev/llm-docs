@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/network/nwconnectiongroup/message/init(identifier:expiration:priority:isfinal:antecedent:metadata:)](https://developer.apple.com/documentation/network/nwconnectiongroup/message/init(identifier:expiration:priority:isfinal:antecedent:metadata:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/network/nwconnectiongroup/message/init(identifier:expiration:priority:isfinal:antecedent:metadata:)
 
 # init(identifier:expiration:priority:isFinal:antecedent:metadata:)
 

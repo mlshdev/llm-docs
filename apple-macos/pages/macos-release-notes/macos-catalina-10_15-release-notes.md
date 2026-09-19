@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/macos-release-notes/macos-catalina-10_15-release-notes](https://developer.apple.com/documentation/macos-release-notes/macos-catalina-10_15-release-notes)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/macos-release-notes/macos-catalina-10_15-release-notes
 
 # macOS Catalina 10.15 Release Notes
 

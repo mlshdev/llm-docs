@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iofirewiresbp2orb/1813149-setcommandbuffersasranges](https://developer.apple.com/documentation/kernel/iofirewiresbp2orb/1813149-setcommandbuffersasranges)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iofirewiresbp2orb/1813149-setcommandbuffersasranges
 
 # setCommandBuffersAsRanges(IOVirtualRange \*, UInt32, IODirection, task_t, UInt32, UInt32)
 

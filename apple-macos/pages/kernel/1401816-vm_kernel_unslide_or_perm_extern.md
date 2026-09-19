@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1401816-vm_kernel_unslide_or_perm_extern](https://developer.apple.com/documentation/kernel/1401816-vm_kernel_unslide_or_perm_extern)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1401816-vm_kernel_unslide_or_perm_extern
 
 # vm_kernel_unslide_or_perm_external
 

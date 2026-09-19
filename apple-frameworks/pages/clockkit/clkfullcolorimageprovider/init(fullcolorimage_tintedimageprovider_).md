@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkfullcolorimageprovider/init(fullcolorimage:tintedimageprovider:)](https://developer.apple.com/documentation/clockkit/clkfullcolorimageprovider/init(fullcolorimage:tintedimageprovider:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkfullcolorimageprovider/init(fullcolorimage:tintedimageprovider:)
 
 # init(fullColorImage:tintedImageProvider:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 6.0+ (deprecated in 27.0)
+**Availability:** watchOS 6.0+ (deprecated in 27.2)
 
 Creates an image provider that produces full-color and tinted images.
 
@@ -41,7 +42,7 @@ For information about the image sizes and masks used by the different complicati
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 6.0+ (deprecated in 27.0)
+**Availability:** watchOS 6.0+ (deprecated in 27.2)
 
 Creates an image provider that produces full-color and tinted images.
 

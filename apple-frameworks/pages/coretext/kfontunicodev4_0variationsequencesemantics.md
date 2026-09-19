@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coretext/kfontunicodev4_0variationsequencesemantics](https://developer.apple.com/documentation/coretext/kfontunicodev4_0variationsequencesemantics)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coretext/kfontunicodev4_0variationsequencesemantics
 
 # kFontUnicodeV4_0VariationSequenceSemantics (Swift)
 

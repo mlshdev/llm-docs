@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiimagepickercontroller/sourcetype-swift.enum/photolibrary](https://developer.apple.com/documentation/uikit/uiimagepickercontroller/sourcetype-swift.enum/photolibrary)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiimagepickercontroller/sourcetype-swift.enum/photolibrary
 
 # UIImagePickerController.SourceType.photoLibrary (Swift)
 
 **Framework:** UIKit  
 **Kind:** Case  
-**Availability:** iOS 2.0+ (deprecated in 27.0) · iPadOS 2.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 2.0+ (deprecated in 27.0) · iPadOS 2.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Specifies the device’s photo library as the source for the image picker controller.
 
@@ -27,7 +28,7 @@ case photoLibrary
 
 **Framework:** UIKit  
 **Kind:** Enumeration Case  
-**Availability:** iOS 2.0+ (deprecated in 27.0) · iPadOS 2.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 2.0+ (deprecated in 27.0) · iPadOS 2.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Specifies the device’s photo library as the source for the image picker controller.
 

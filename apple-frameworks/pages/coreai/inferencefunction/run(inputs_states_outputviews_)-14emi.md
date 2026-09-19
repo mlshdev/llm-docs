@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreai/inferencefunction/run(inputs:states:outputviews:)-14emi](https://developer.apple.com/documentation/coreai/inferencefunction/run(inputs:states:outputviews:)-14emi)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreai/inferencefunction/run(inputs:states:outputviews:)-14emi
 
 # run(inputs:states:outputViews:)
 

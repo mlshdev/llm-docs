@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/ioi2cinterface_h_user-space](https://developer.apple.com/documentation/iokit/ioi2cinterface_h_user-space)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/ioi2cinterface_h_user-space
 
 # IOI2CInterface.h User-Space
 

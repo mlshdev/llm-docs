@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_padding_vendor_defined](https://developer.apple.com/documentation/security/cssm_padding_vendor_defined)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_padding_vendor_defined
 
 # CSSM_PADDING_VENDOR_DEFINED (Swift)
 

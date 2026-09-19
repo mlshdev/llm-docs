@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/computegraph/computenodegraph/node/setinput(_:_:)-2ittk](https://developer.apple.com/documentation/computegraph/computenodegraph/node/setinput(_:_:)-2ittk)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/computegraph/computenodegraph/node/setinput(_:_:)-2ittk
 
 # setInput(\_:\_:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/ar_camera_frame_is_equal_to_camera_frame](https://developer.apple.com/documentation/arkit/ar_camera_frame_is_equal_to_camera_frame)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/ar_camera_frame_is_equal_to_camera_frame
 
 # ar_camera_frame_is_equal_to_camera_frame
 

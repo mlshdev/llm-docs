@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mapkit/mkmapcamera/altitude](https://developer.apple.com/documentation/mapkit/mkmapcamera/altitude)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mapkit/mkmapcamera/altitude
 
 # altitude (Swift)
 
 **Framework:** MapKit  
 **Kind:** Instance Property  
-**Availability:** iOS 7.0+ (deprecated in 27.0) · iPadOS 7.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.9+ (deprecated in 27.0) · tvOS 9.2+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 7.0+ (deprecated in 27.2) · iPadOS 7.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.9+ (deprecated in 27.2) · tvOS 9.2+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 The altitude above the ground, in meters.
 
@@ -37,7 +38,7 @@ Changing this property may also change the maximum pitch for the map. If the cur
 
 **Framework:** MapKit  
 **Kind:** Instance Property  
-**Availability:** iOS 7.0+ (deprecated in 27.0) · iPadOS 7.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.9+ (deprecated in 27.0) · tvOS 9.2+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 7.0+ (deprecated in 27.2) · iPadOS 7.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.9+ (deprecated in 27.2) · tvOS 9.2+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 The altitude above the ground, in meters.
 

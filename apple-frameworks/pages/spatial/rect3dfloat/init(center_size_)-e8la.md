@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/rect3dfloat/init(center:size:)-e8la](https://developer.apple.com/documentation/spatial/rect3dfloat/init(center:size:)-e8la)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatial/rect3dfloat/init(center:size:)-e8la
 
 # init(center:size:) (Swift)
 

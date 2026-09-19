@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/creating-a-multi-platform-binary-framework-bundle](https://developer.apple.com/documentation/xcode/creating-a-multi-platform-binary-framework-bundle)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/creating-a-multi-platform-binary-framework-bundle
 
 # Creating a multiplatform binary framework bundle
 
@@ -106,7 +107,7 @@ Signing your XCFramework using your code signing identity informs developers who
 % codesign --timestamp -s <identity> xcframeworks/MyLibrary.xcframework
 ```
 
-To sign a framework for distribution as a member of the Apple Developer Program, your code signing identity should be an Apple Distribution or Apple Development identity. To sign a framework for distribution as a member of an Enterprise Program, use an iOS Distribution or iOS App Development identity. You don’t need to supply the full name of your code signing identity after the `-s` option. Use a string that uniquely identifies the code signing identity in the keychain you use to sign the XCFramework. For more information on the `codesign` tool, see the [codesign](x-man-page://1/codesign) man (manual) page.
+To sign a framework for distribution as a member of the Apple Developer Program, your code signing identity should be an Apple Distribution or Apple Development identity. To sign a framework for distribution as a member of an Enterprise Program, use an iOS Distribution or iOS App Development identity. You don’t need to supply the full name of your code signing identity after the `-s` option. Use a string that uniquely identifies the code signing identity in the keychain you use to sign the XCFramework. For more information on the `codesign` tool, see the codesign man (manual) page.
 
 > **Important**
 

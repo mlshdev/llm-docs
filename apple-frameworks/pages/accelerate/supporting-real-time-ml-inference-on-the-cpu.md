@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/supporting-real-time-ml-inference-on-the-cpu](https://developer.apple.com/documentation/accelerate/supporting-real-time-ml-inference-on-the-cpu)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/supporting-real-time-ml-inference-on-the-cpu
 
 # Supporting real-time ML inference on the CPU (Swift)
 

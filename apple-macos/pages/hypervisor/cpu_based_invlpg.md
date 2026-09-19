@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/cpu_based_invlpg](https://developer.apple.com/documentation/hypervisor/cpu_based_invlpg)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/cpu_based_invlpg
 
 # CPU_BASED_INVLPG (Swift)
 

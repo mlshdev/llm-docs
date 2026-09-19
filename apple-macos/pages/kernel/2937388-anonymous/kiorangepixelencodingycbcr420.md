@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/2937388-anonymous/kiorangepixelencodingycbcr420](https://developer.apple.com/documentation/kernel/2937388-anonymous/kiorangepixelencodingycbcr420)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/2937388-anonymous/kiorangepixelencodingycbcr420
 
 # kIORangePixelEncodingYCbCr420
 

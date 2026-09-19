@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/os/os_lockdown_mode_enabled](https://developer.apple.com/documentation/os/os_lockdown_mode_enabled)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/os/os_lockdown_mode_enabled
 
 # os_lockdown_mode_enabled
 
@@ -25,5 +26,7 @@ True if Lockdown Mode is enabled; false if Lockdown Mode is disabled or not supp
 ## Discussion
 
 Returns a cached value indicating whether Lockdown Mode is currently enabled on the system.
+
+On platforms that support Lockdown Mode, the calling process must have the com.apple.developer.lockdown-mode.state entitlement. Without it, this function aborts the process.
 
 This function will abort the process if an unexpected error occurs while querying the Lockdown Mode state.

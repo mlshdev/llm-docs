@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/network/nw_establishment_report_get_used_proxy(_:)](https://developer.apple.com/documentation/network/nw_establishment_report_get_used_proxy(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/network/nw_establishment_report_get_used_proxy(_:)
 
 # nw_establishment_report_get_used_proxy(\_:) (Swift)
 

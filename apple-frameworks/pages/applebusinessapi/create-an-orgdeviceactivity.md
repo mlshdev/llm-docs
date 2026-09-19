@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applebusinessapi/create-an-orgdeviceactivity](https://developer.apple.com/documentation/applebusinessapi/create-an-orgdeviceactivity)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/create-an-orgdeviceactivity
 
 # Assign or Unassign Devices to a Device Management Service or Release Devices
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Web Service Endpoint  
-**Availability:** Apple Business API 2.4+
+**Availability:** Apple Business API 2.5+
 
 Assign or unassign devices to a device management service, manage a device management service migration for devices, or release devices from an organization.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiview/addkeyframe(withrelativestarttime:relativeduration:animations:)](https://developer.apple.com/documentation/uikit/uiview/addkeyframe(withrelativestarttime:relativeduration:animations:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiview/addkeyframe(withrelativestarttime:relativeduration:animations:)
 
 # addKeyframe(withRelativeStartTime:relativeDuration:animations:) (Swift)
 
@@ -11,7 +12,7 @@ Specifies the timing and animation values for a single frame of a keyframe anima
 ## Declaration
 
 ```swift
-class func addKeyframe(withRelativeStartTime frameStartTime: Double, relativeDuration frameDuration: Double, animations: @escaping () -> Void)
+class func addKeyframe(withRelativeStartTime frameStartTime: Double, relativeDuration frameDuration: Double, animations: () -> Void)
 ```
 
 ## Parameters

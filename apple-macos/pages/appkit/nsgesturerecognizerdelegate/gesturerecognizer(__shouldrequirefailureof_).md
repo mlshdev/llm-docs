@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsgesturerecognizerdelegate/gesturerecognizer(_:shouldrequirefailureof:)](https://developer.apple.com/documentation/appkit/nsgesturerecognizerdelegate/gesturerecognizer(_:shouldrequirefailureof:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsgesturerecognizerdelegate/gesturerecognizer(_:shouldrequirefailureof:)
 
 # gestureRecognizer(\_:shouldRequireFailureOf:) (Swift)
 
@@ -35,7 +36,7 @@ Returning [true](https://developer.apple.com/documentation/swift/true) is guaran
 
 ## See Also
 
-### Setting Up Failure Requirements
+### Setting up failure requirements
 
 - [gestureRecognizer(\_:shouldBeRequiredToFailBy:)](gesturerecognizer%28__shouldberequiredtofailby_%29.md): Asks the delegate if the current gesture recognizer must fail before another gesture recognizer is allowed to recognize its gesture.
 
@@ -74,6 +75,6 @@ Returning [true](https://developer.apple.com/documentation/swift/true) is guaran
 
 ## See Also
 
-### Setting Up Failure Requirements
+### Setting up failure requirements
 
 - [gestureRecognizer:shouldBeRequiredToFailByGestureRecognizer:](gesturerecognizer%28__shouldberequiredtofailby_%29.md): Asks the delegate if the current gesture recognizer must fail before another gesture recognizer is allowed to recognize its gesture.

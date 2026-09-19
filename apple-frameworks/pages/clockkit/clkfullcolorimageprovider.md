@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkfullcolorimageprovider](https://developer.apple.com/documentation/clockkit/clkfullcolorimageprovider)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkfullcolorimageprovider
 
 # CLKFullColorImageProvider (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 A full-color image displayed by a complication.
 
@@ -77,7 +78,7 @@ For information about the image sizes and masks, see [Apple Watch Human Interfac
 
 **Framework:** ClockKit  
 **Kind:** Class  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 A full-color image displayed by a complication.
 

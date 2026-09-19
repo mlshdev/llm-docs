@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/appclip/interacting-with-app-clip-codes-in-ar](https://developer.apple.com/documentation/appclip/interacting-with-app-clip-codes-in-ar)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appclip/interacting-with-app-clip-codes-in-ar
 
 # Interacting with App Clip Codes in AR (Swift)
 
@@ -46,7 +47,7 @@ The App Clip Codes in Seed Shop display on a package of seeds. Add this [image o
 
 ### Ensure Device Support and Run a Session
 
-In [viewDidLoad](x-source-tag://ViewDidLoad), the sample app calls [supportsAppClipCodeTracking](https://developer.apple.com/documentation/arkit/arworldtrackingconfiguration/supportsappclipcodetracking) to check if the device contains the Apple Neural Engine (ANE), which App Clip Code tracking requires.
+In viewDidLoad, the sample app calls [supportsAppClipCodeTracking](https://developer.apple.com/documentation/arkit/arworldtrackingconfiguration/supportsappclipcodetracking) to check if the device contains the Apple Neural Engine (ANE), which App Clip Code tracking requires.
 
 ```swift
 guard ARWorldTrackingConfiguration.supportsAppClipCodeTracking else {
@@ -352,7 +353,7 @@ The App Clip Codes in Seed Shop display on a package of seeds. Add this [image o
 
 ### Ensure Device Support and Run a Session
 
-In [viewDidLoad](x-source-tag://ViewDidLoad), the sample app calls [supportsAppClipCodeTracking](https://developer.apple.com/documentation/arkit/arworldtrackingconfiguration/supportsappclipcodetracking) to check if the device contains the Apple Neural Engine (ANE), which App Clip Code tracking requires.
+In viewDidLoad, the sample app calls [supportsAppClipCodeTracking](https://developer.apple.com/documentation/arkit/arworldtrackingconfiguration/supportsappclipcodetracking) to check if the device contains the Apple Neural Engine (ANE), which App Clip Code tracking requires.
 
 ```swift
 guard ARWorldTrackingConfiguration.supportsAppClipCodeTracking else {

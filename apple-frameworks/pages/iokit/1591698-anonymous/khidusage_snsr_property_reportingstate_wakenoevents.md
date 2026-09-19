@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1591698-anonymous/khidusage_snsr_property_reportingstate_wakenoevents](https://developer.apple.com/documentation/iokit/1591698-anonymous/khidusage_snsr_property_reportingstate_wakenoevents)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1591698-anonymous/khidusage_snsr_property_reportingstate_wakenoevents
 
 # kHIDUsage_Snsr_Property_ReportingState_WakeNoEvents
 

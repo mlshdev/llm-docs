@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/mds_cdsaattr_template_field_names](https://developer.apple.com/documentation/security/mds_cdsaattr_template_field_names)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/mds_cdsaattr_template_field_names
 
 # MDS_CDSAATTR_TEMPLATE_FIELD_NAMES (Swift)
 

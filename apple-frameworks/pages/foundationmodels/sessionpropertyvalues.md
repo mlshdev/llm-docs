@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/sessionpropertyvalues](https://developer.apple.com/documentation/foundationmodels/sessionpropertyvalues)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/sessionpropertyvalues
 
 # SessionPropertyValues
 
@@ -55,7 +56,7 @@ Use [SessionPropertyEntry()](sessionpropertyentry%28%29.md) to create custom ses
 
 ### Accessing the subscript
 
-- [subscript(\_:)](sessionpropertyvalues/subscript%28__%29.md)
+- [subscript(\_:)](sessionpropertyvalues/subscript%28__%29.md): Accesses the value stored for the given session property key.
 
 ## Relationships
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/safariservices/sfaddtohomescreenactivityitem/getwebappmanifest(completionhandler:)](https://developer.apple.com/documentation/safariservices/sfaddtohomescreenactivityitem/getwebappmanifest(completionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/safariservices/sfaddtohomescreenactivityitem/getwebappmanifest(completionhandler:)
 
 # getWebAppManifest(completionHandler:) (Swift)
 
 **Framework:** Safari Services  
 **Kind:** Instance Method  
-**Availability:** iOS 17.5+ (deprecated in 27.0) · iPadOS 17.5+ (deprecated in 27.0) · Mac Catalyst 17.5+ (deprecated in 27.0) · visionOS 1.2+ (deprecated in 27.0)
+**Availability:** iOS 17.5+ (deprecated in 27.2) · iPadOS 17.5+ (deprecated in 27.2) · Mac Catalyst 17.5+ (deprecated in 27.2) · visionOS 1.2+ (deprecated in 27.2)
 
 Provides the web app’s manifest to the system, if the bookmark represents a web app.
 
@@ -41,7 +42,7 @@ The system only calls this method in browser apps that include an alternative br
 
 **Framework:** Safari Services  
 **Kind:** Instance Method  
-**Availability:** iOS 17.5+ (deprecated in 27.0) · iPadOS 17.5+ (deprecated in 27.0) · Mac Catalyst 17.5+ (deprecated in 27.0) · visionOS 1.2+ (deprecated in 27.0)
+**Availability:** iOS 17.5+ (deprecated in 27.2) · iPadOS 17.5+ (deprecated in 27.2) · Mac Catalyst 17.5+ (deprecated in 27.2) · visionOS 1.2+ (deprecated in 27.2)
 
 Provides the web app’s manifest to the system, if the bookmark represents a web app.
 

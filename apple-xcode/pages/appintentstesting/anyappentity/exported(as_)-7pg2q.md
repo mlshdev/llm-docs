@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/appintentstesting/anyappentity/exported(as:)-7pg2q](https://developer.apple.com/documentation/appintentstesting/anyappentity/exported(as:)-7pg2q)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintentstesting/anyappentity/exported(as:)-7pg2q
 
 # exported(as:)
 

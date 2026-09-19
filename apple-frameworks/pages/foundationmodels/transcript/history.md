@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/history](https://developer.apple.com/documentation/foundationmodels/transcript/history)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/history
 
 # history
 
@@ -32,4 +33,4 @@ When writing, the new value replaces all entries except the leading instructions
 
 ### Accessing the transcript history
 
-- [Transcript.HistoryView](historyview.md): A mutable view into the conversational entries of a [Transcript](../transcript.md).
+- [Transcript.HistoryView](historyview.md): A mutable view into the conversational entries of a transcript.

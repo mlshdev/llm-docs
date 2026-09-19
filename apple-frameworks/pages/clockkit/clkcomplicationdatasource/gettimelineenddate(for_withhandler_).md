@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationdatasource/gettimelineenddate(for:withhandler:)](https://developer.apple.com/documentation/clockkit/clkcomplicationdatasource/gettimelineenddate(for:withhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationdatasource/gettimelineenddate(for:withhandler:)
 
 # getTimelineEndDate(for:withHandler:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Retrieves the last date for the data that your app can supply.
 
@@ -68,7 +69,7 @@ If you don’t implement this method, ClockKit doesn’t attempt to retrieve tim
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 Retrieves the last date for the data that your app can supply.
 

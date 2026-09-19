@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/iobluetoothsmsmode/text](https://developer.apple.com/documentation/iobluetooth/iobluetoothsmsmode/text)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetooth/iobluetoothsmsmode/text
 
 # IOBluetoothSMSMode.text (Swift)
 

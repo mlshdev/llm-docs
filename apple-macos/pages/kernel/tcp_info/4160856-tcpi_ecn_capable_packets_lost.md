@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/tcp_info/4160856-tcpi_ecn_capable_packets_lost](https://developer.apple.com/documentation/kernel/tcp_info/4160856-tcpi_ecn_capable_packets_lost)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/tcp_info/4160856-tcpi_ecn_capable_packets_lost
 
 # tcpi_ecn_capable_packets_lost
 

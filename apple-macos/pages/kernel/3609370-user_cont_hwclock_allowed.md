@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3609370-user_cont_hwclock_allowed](https://developer.apple.com/documentation/kernel/3609370-user_cont_hwclock_allowed)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3609370-user_cont_hwclock_allowed
 
 # user_cont_hwclock_allowed
 

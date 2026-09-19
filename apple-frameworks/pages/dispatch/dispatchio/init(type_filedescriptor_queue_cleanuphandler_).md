@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/dispatch/dispatchio/init(type:filedescriptor:queue:cleanuphandler:)](https://developer.apple.com/documentation/dispatch/dispatchio/init(type:filedescriptor:queue:cleanuphandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/dispatch/dispatchio/init(type:filedescriptor:queue:cleanuphandler:)
 
 # init(type:fileDescriptor:queue:cleanupHandler:)
 

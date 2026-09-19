@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/dk_set_tier_t/1552663-extentscount](https://developer.apple.com/documentation/kernel/dk_set_tier_t/1552663-extentscount)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/dk_set_tier_t/1552663-extentscount
 
 # extentsCount
 

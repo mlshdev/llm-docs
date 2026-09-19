@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mediaaccessibility/responding-to-changes-in-the-flashing-lights-setting](https://developer.apple.com/documentation/mediaaccessibility/responding-to-changes-in-the-flashing-lights-setting)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mediaaccessibility/responding-to-changes-in-the-flashing-lights-setting
 
 # Responding to changes in the flashing lights setting
 
@@ -46,7 +47,7 @@ ForEach(videoFlashingTimes, id: \.self) { timeRange in
 }
 ```
 
-[View in Source](x-source-tag://FlashingTimelineView)
+View in Source
 
 When the video playback reaches one of those segments, the system automatically dims the video to reduce the flashing effects.
 
@@ -71,7 +72,7 @@ NotificationCenter.default.addObserver(self,
     object: nil)
 ```
 
-[View in Source](x-source-tag://RegisterForNotification)
+View in Source
 
 When the app receives the [kMADimFlashingLightsChangedNotification](kmadimflashinglightschangednotification.md) notification, it sets the variable `dimFlashingLightsStatus` to the current value of the system setting, which the system reports through [MADimFlashingLightsEnabled()](madimflashinglightsenabled%28%29.md).
 
@@ -84,7 +85,7 @@ func dimFlashingLightsChanged(_ notification: Notification) {
 }
 ```
 
-[View in Source](x-source-tag://SettingChanged)
+View in Source
 
 <a id="Draw-the-custom-media-timeline-if-the-setting-is-on"></a>
 
@@ -118,7 +119,7 @@ if playerManager.dimFlashingLightsStatus {
 }
 ```
 
-[View in Source](x-source-tag://CreateUI)
+View in Source
 
 If you turn the setting off, the sample app’s UI updates to remove the custom media timeline.
 

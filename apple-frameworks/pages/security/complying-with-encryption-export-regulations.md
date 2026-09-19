@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/complying-with-encryption-export-regulations](https://developer.apple.com/documentation/security/complying-with-encryption-export-regulations)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/complying-with-encryption-export-regulations
 
 # Complying with Encryption Export Regulations (Swift)
 

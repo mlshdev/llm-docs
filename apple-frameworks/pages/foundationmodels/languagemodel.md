@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodel](https://developer.apple.com/documentation/foundationmodels/languagemodel)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodel
 
 # LanguageModel
 
@@ -44,6 +45,11 @@ let response = try await session.respond(to: "Tell me a joke!")
 
 - [executorConfiguration](languagemodel/executorconfiguration.md): A configuration for an executor capable of running this model.
 - [Executor](languagemodel/executor.md)
+
+### Instance Methods
+
+- [supportsDataAttachmentType(\_:)](languagemodel/supportsdataattachmenttype%28__%29.md): Beta.
+- [supportsDataEntryType(\_:)](languagemodel/supportsdataentrytype%28__%29.md): Beta.
 
 ## Relationships
 

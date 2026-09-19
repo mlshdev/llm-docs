@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/increasing-app-usage-with-suggestions-based-on-user-activities](https://developer.apple.com/documentation/foundation/increasing-app-usage-with-suggestions-based-on-user-activities)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/increasing-app-usage-with-suggestions-based-on-user-activities
 
 # Increasing App Usage with Suggestions Based on User Activities
 

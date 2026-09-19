@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/writemask](https://developer.apple.com/documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/writemask)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/mtl4renderpipelinecolorattachmentdescriptor/writemask
 
 # writeMask (Swift)
 
@@ -18,7 +19,7 @@ var writeMask: MTLColorWriteMask { get set }
 
 ## Discussion
 
-This property defaults to `MTLColorWriteMaskAll`.
+This property defaults to [all](../mtlcolorwritemask/all.md).
 
 # writeMask (Objective-C)
 
@@ -38,4 +39,4 @@ Configures the color write mask.
 
 ## Discussion
 
-This property defaults to `MTLColorWriteMaskAll`.
+This property defaults to [MTLColorWriteMaskAll](../mtlcolorwritemask/all.md).

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/dynamicinstructions/body-swift.property](https://developer.apple.com/documentation/foundationmodels/dynamicinstructions/body-swift.property)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/dynamicinstructions/body-swift.property
 
 # body
 
@@ -19,5 +20,5 @@ The content of the dynamic instructions.
 ### Implementing dynamic instructions
 
 - [Body](body-swift.associatedtype.md): The type of dynamic instructions that represent these instructions.
-- [DynamicInstructions.ForEach](foreach.md)
-- [DynamicInstructions.SessionProperty](sessionproperty.md)
+- [DynamicInstructions.ForEach](foreach.md): A shorthand for producing content for each element of a collection.
+- [DynamicInstructions.SessionProperty](sessionproperty.md): A property wrapper that provides access to a session property within dynamic instructions.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/virtualization/vzmultipledirectoryshare/init(directories:)](https://developer.apple.com/documentation/virtualization/vzmultipledirectoryshare/init(directories:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/virtualization/vzmultipledirectoryshare/init(directories:)
 
 # init(directories:) (Swift)
 

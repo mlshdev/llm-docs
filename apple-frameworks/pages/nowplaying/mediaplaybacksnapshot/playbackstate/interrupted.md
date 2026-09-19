@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/nowplaying/mediaplaybacksnapshot/playbackstate/interrupted](https://developer.apple.com/documentation/nowplaying/mediaplaybacksnapshot/playbackstate/interrupted)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/nowplaying/mediaplaybacksnapshot/playbackstate/interrupted
 
 # MediaPlaybackSnapshot.PlaybackState.interrupted
 

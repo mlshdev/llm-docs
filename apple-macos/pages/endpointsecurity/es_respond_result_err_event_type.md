@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_respond_result_err_event_type](https://developer.apple.com/documentation/endpointsecurity/es_respond_result_err_event_type)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_respond_result_err_event_type
 
 # ES_RESPOND_RESULT_ERR_EVENT_TYPE (Swift)
 

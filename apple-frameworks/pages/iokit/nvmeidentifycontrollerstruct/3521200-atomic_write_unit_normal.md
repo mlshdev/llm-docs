@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/nvmeidentifycontrollerstruct/3521200-atomic_write_unit_normal](https://developer.apple.com/documentation/iokit/nvmeidentifycontrollerstruct/3521200-atomic_write_unit_normal)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/nvmeidentifycontrollerstruct/3521200-atomic_write_unit_normal
 
 # ATOMIC_WRITE_UNIT_NORMAL
 

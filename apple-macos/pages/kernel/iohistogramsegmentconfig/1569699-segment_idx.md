@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iohistogramsegmentconfig/1569699-segment_idx](https://developer.apple.com/documentation/kernel/iohistogramsegmentconfig/1569699-segment_idx)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iohistogramsegmentconfig/1569699-segment_idx
 
 # segment_idx
 

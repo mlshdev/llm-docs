@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcontentproposal/automaticacceptanceinterval](https://developer.apple.com/documentation/avkit/avcontentproposal/automaticacceptanceinterval)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcontentproposal/automaticacceptanceinterval
 
 # automaticAcceptanceInterval (Swift)
 
@@ -22,7 +23,7 @@ The content proposal displays a countdown timer to reflect this value. Set this 
 
 ## See Also
 
-### Configuring the Content Proposal
+### Configuring the content proposal
 
 - [contentTimeForTransition](contenttimefortransition.md): The time within the timeline of the current player item when the content proposal presentation should begin.
 - [title](title.md): The title of the proposed content.
@@ -52,7 +53,7 @@ The content proposal displays a countdown timer to reflect this value. Set this 
 
 ## See Also
 
-### Configuring the Content Proposal
+### Configuring the content proposal
 
 - [contentTimeForTransition](contenttimefortransition.md): The time within the timeline of the current player item when the content proposal presentation should begin.
 - [title](title.md): The title of the proposed content.

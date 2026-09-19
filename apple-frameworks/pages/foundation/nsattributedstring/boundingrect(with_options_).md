@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsattributedstring/boundingrect(with:options:)](https://developer.apple.com/documentation/foundation/nsattributedstring/boundingrect(with:options:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsattributedstring/boundingrect(with:options:)
 
 # boundingRect(with:options:) (Swift)
 
 **Framework:** Foundation  
 **Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Calculates and returns a bounding rectangle for the attributed string using the options specified within the specified rectangle in the current graphics context.
 
@@ -44,7 +45,7 @@ The origin of the rectangle returned from this method is the first glyph origin.
 
 **Framework:** Foundation  
 **Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Calculates and returns a bounding rectangle for the attributed string using the options specified within the specified rectangle in the current graphics context.
 

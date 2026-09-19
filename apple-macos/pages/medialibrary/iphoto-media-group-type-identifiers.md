@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/medialibrary/iphoto-media-group-type-identifiers](https://developer.apple.com/documentation/medialibrary/iphoto-media-group-type-identifiers)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/medialibrary/iphoto-media-group-type-identifiers
 
 # iPhoto Media Group Type Identifiers
 

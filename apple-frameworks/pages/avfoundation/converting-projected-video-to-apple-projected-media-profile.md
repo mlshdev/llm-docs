@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/converting-projected-video-to-apple-projected-media-profile](https://developer.apple.com/documentation/avfoundation/converting-projected-video-to-apple-projected-media-profile)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/converting-projected-video-to-apple-projected-media-profile
 
 # Converting projected video to Apple Projected Media Profile
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/ray3dfloat/applying(_:)-6phxw](https://developer.apple.com/documentation/spatial/ray3dfloat/applying(_:)-6phxw)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatial/ray3dfloat/applying(_:)-6phxw
 
 # applying(\_:)
 

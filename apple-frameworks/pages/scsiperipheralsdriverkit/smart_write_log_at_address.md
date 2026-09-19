@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scsiperipheralsdriverkit/smart_write_log_at_address](https://developer.apple.com/documentation/scsiperipheralsdriverkit/smart_write_log_at_address)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/scsiperipheralsdriverkit/smart_write_log_at_address
 
 # SMART_Write_Log_At_Address
 

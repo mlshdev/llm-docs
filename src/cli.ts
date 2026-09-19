@@ -18,6 +18,7 @@ import {
   generatedPaths,
   computeDocumentationDigest,
   orderedLock,
+  refreshManifestGeneratorDigest,
   snapshotMatchesPin,
   stageProjectReplacement,
   verifyOutputs,
@@ -85,6 +86,7 @@ async function buildAll(): Promise<void> {
       console.log(
         `Keeping captured ${project.id} ${lock.projects[project.id].tag}`,
       );
+      await refreshManifestGeneratorDigest(project.id);
       continue;
     }
     const pin = lock.projects[project.id];
@@ -224,9 +226,11 @@ async function update(): Promise<void> {
       const previous = current as CompleteSourcesLock;
       await writeRootIndexes(config.projects, previous);
       await writeUtf8Atomic(lockPath, JSON.stringify(previous, null, 2));
+      await rm(updateTransactionPath, { force: true });
       await verifyOutputs(config.projects, previous);
+    } else {
+      await rm(updateTransactionPath, { force: true });
     }
-    await rm(updateTransactionPath, { force: true });
     throw error;
   }
   if (changed.length === 0 && retained.length === 0) {
@@ -297,9 +301,11 @@ async function recoverUpdateTransaction(): Promise<void> {
       lockPath,
       JSON.stringify(transaction.previousLock, null, 2),
     );
+    await rm(updateTransactionPath, { force: true });
     await verifyOutputs(config.projects, transaction.previousLock);
+  } else {
+    await rm(updateTransactionPath, { force: true });
   }
-  await rm(updateTransactionPath, { force: true });
 }
 
 function parseUpdateTransaction(value: unknown): UpdateTransaction {

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3755363-pe_init_socd_client](https://developer.apple.com/documentation/kernel/3755363-pe_init_socd_client)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3755363-pe_init_socd_client
 
 # PE_init_socd_client
 

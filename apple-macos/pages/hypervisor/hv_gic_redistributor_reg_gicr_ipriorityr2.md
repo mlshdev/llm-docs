@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_gic_redistributor_reg_gicr_ipriorityr2](https://developer.apple.com/documentation/hypervisor/hv_gic_redistributor_reg_gicr_ipriorityr2)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_gic_redistributor_reg_gicr_ipriorityr2
 
 # HV_GIC_REDISTRIBUTOR_REG_GICR_IPRIORITYR2 (Swift)
 

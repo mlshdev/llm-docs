@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skpaymentqueue](https://developer.apple.com/documentation/storekit/skpaymentqueue)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skpaymentqueue
 
 # SKPaymentQueue (Swift)
 
@@ -36,7 +37,7 @@ The exact mechanism you use to process a processed transaction depends on the de
 - If the product includes downloadable content provided by the App Store, your app retrieves the [SKDownload](skdownload.md) objects from the transaction and ask the payment queue to download them. You provide the actual content files to be served by the App Store to App Store Connect when you create the product information.
 - If the product represents downloadable content provided by your own server, your app might open a network connection to your server and download the content from there.
 
-For more information on designing the payment processing portion of your app, see [In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267).
+For more information on designing the payment processing portion of your app, see [Apple In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267).
 
 ## Topics
 
@@ -107,8 +108,8 @@ For more information on designing the payment processing portion of your app, se
 ### Essentials
 
 - [Setting up the transaction observer for the payment queue](setting-up-the-transaction-observer-for-the-payment-queue.md): Enable your app to receive and handle transactions by adding an observer.
-- [Offering, completing, and restoring in-app purchases](offering-completing-and-restoring-in-app-purchases.md): Fetch, display, purchase, validate, and finish transactions in your app.
-- [SKPaymentTransactionObserver](skpaymenttransactionobserver.md): Deprecated. A set of methods that process transactions, unlock purchased functionality, and continue promoted In-App Purchases.
+- [Offering, completing, and restoring Apple In-App Purchases](offering-completing-and-restoring-in-app-purchases.md): Fetch, display, purchase, validate, and finish transactions in your app.
+- [SKPaymentTransactionObserver](skpaymenttransactionobserver.md): Deprecated. A set of methods that process transactions, unlock purchased functionality, and continue promoted Apple In-App Purchases.
 - [SKPaymentQueueDelegate](skpaymentqueuedelegate.md): Deprecated. The protocol that provides information needed to complete transactions.
 - [SKRequest](skrequest.md): Deprecated. An abstract class that represents a request to the App Store.
 
@@ -148,7 +149,7 @@ The exact mechanism you use to process a processed transaction depends on the de
 - If the product includes downloadable content provided by the App Store, your app retrieves the [SKDownload](skdownload.md) objects from the transaction and ask the payment queue to download them. You provide the actual content files to be served by the App Store to App Store Connect when you create the product information.
 - If the product represents downloadable content provided by your own server, your app might open a network connection to your server and download the content from there.
 
-For more information on designing the payment processing portion of your app, see [In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267).
+For more information on designing the payment processing portion of your app, see [Apple In-App Purchase Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267).
 
 ## Topics
 
@@ -208,7 +209,7 @@ For more information on designing the payment processing portion of your app, se
 ### Essentials
 
 - [Setting up the transaction observer for the payment queue](setting-up-the-transaction-observer-for-the-payment-queue.md): Enable your app to receive and handle transactions by adding an observer.
-- [Offering, completing, and restoring in-app purchases](offering-completing-and-restoring-in-app-purchases.md): Fetch, display, purchase, validate, and finish transactions in your app.
-- [SKPaymentTransactionObserver](skpaymenttransactionobserver.md): Deprecated. A set of methods that process transactions, unlock purchased functionality, and continue promoted In-App Purchases.
+- [Offering, completing, and restoring Apple In-App Purchases](offering-completing-and-restoring-in-app-purchases.md): Fetch, display, purchase, validate, and finish transactions in your app.
+- [SKPaymentTransactionObserver](skpaymenttransactionobserver.md): Deprecated. A set of methods that process transactions, unlock purchased functionality, and continue promoted Apple In-App Purchases.
 - [SKPaymentQueueDelegate](skpaymentqueuedelegate.md): Deprecated. The protocol that provides information needed to complete transactions.
 - [SKRequest](skrequest.md): Deprecated. An abstract class that represents a request to the App Store.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/applibrary/requestappinstallationfrombrowser(for:referrer:)](https://developer.apple.com/documentation/marketplacekit/applibrary/requestappinstallationfrombrowser(for:referrer:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/marketplacekit/applibrary/requestappinstallationfrombrowser(for:referrer:)
 
 # requestAppInstallationFromBrowser(for:referrer:)
 
@@ -30,13 +31,3 @@ nonisolated final func requestAppInstallationFromBrowser(for url: URL, referrer:
 Web browsers that render with [BrowserEngineKit](https://developer.apple.com/documentation/browserenginekit) rather than [WebKit](https://developer.apple.com/documentation/webkit) call this method to forward the installation of an app from the developer’s webpage. Your browser listens for [MarketplaceKitURIScheme](../marketplacekiturischeme.md) invocations to field such requests.
 
 For more information, see [Enabling alternative distribution app installation in a browser](../enabling-alternative-distribution-app-installation-in-a-browser.md).
-
-## See Also
-
-### Managing app installation
-
-- [AppLibrary.App](app.md): Information about an app that someone installs from a marketplace, including its ID and installation status.
-- [AppLibrary.InstallationRequest](installationrequest.md): A request to install an app distribution package for a given account.
-- [installingApps](installingapps.md): The set of apps that are pending installation completion.
-- [isLoading](isloading.md): A Boolean value that indicates whether the library is currently loading apps.
-- [requestAppInstallation(\_:)](requestappinstallation%28__%29.md): Requests the installation of the given app distribution package for the given account.

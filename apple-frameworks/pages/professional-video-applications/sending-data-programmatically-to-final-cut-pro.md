@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional-video-applications/sending-data-programmatically-to-final-cut-pro](https://developer.apple.com/documentation/professional-video-applications/sending-data-programmatically-to-final-cut-pro)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional-video-applications/sending-data-programmatically-to-final-cut-pro
 
 # Sending Data Programmatically to Final Cut Pro
 

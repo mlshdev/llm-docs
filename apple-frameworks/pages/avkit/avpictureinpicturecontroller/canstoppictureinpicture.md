@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avpictureinpicturecontroller/canstoppictureinpicture](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/canstoppictureinpicture)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/canstoppictureinpicture
 
 # canStopPictureInPicture (Swift)
 
@@ -16,7 +17,7 @@ var canStopPictureInPicture: Bool { get }
 
 ## Mentioned In
 
-- [Adopting Picture in Picture in a Custom Player](../adopting-picture-in-picture-in-a-custom-player.md)
+- [Adopting Picture in Picture in a custom player](../adopting-picture-in-picture-in-a-custom-player.md)
 
 <a id="Discussion"></a>
 
@@ -28,7 +29,7 @@ Thie value is key-value observable.
 
 ## See Also
 
-### Controlling Picture in Picture Playback
+### Controlling Picture in Picture playback
 
 - [canStartPictureInPictureAutomaticallyFromInline](canstartpictureinpictureautomaticallyfrominline.md): A Boolean value that indicates whether Picture in Picture starts automatically when the controller embeds its content inline and the app transitions to the background.
 - [startPictureInPicture()](startpictureinpicture%28%29.md): Starts Picture in Picture, if possible.
@@ -51,7 +52,7 @@ A Boolean value that indicates whether Picture in Picture is active and is able 
 
 ## Mentioned In
 
-- [Adopting Picture in Picture in a Custom Player](../adopting-picture-in-picture-in-a-custom-player.md)
+- [Adopting Picture in Picture in a custom player](../adopting-picture-in-picture-in-a-custom-player.md)
 
 <a id="Discussion"></a>
 
@@ -63,7 +64,7 @@ Thie value is key-value observable.
 
 ## See Also
 
-### Controlling Picture in Picture Playback
+### Controlling Picture in Picture playback
 
 - [canStartPictureInPictureAutomaticallyFromInline](canstartpictureinpictureautomaticallyfrominline.md): A Boolean value that indicates whether Picture in Picture starts automatically when the controller embeds its content inline and the app transitions to the background.
 - [startPictureInPicture](startpictureinpicture%28%29.md): Starts Picture in Picture, if possible.

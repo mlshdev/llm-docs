@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/analytics-reports/browser-choice-screen-selection](https://developer.apple.com/documentation/analytics-reports/browser-choice-screen-selection)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/analytics-reports/browser-choice-screen-selection
 
 # Browser Choice Screen Selection
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/intel_x509v3_cert_private_extensions](https://developer.apple.com/documentation/security/intel_x509v3_cert_private_extensions)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/intel_x509v3_cert_private_extensions
 
 # INTEL_X509V3_CERT_PRIVATE_EXTENSIONS
 

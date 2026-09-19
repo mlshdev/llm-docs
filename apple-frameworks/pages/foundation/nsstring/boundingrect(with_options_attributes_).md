@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsstring/boundingrect(with:options:attributes:)](https://developer.apple.com/documentation/foundation/nsstring/boundingrect(with:options:attributes:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/nsstring/boundingrect(with:options:attributes:)
 
 # boundingRect(with:options:attributes:) (Swift)
 
 **Framework:** Foundation  
 **Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Calculates and returns the bounding rect for the receiver drawn using the given options and display characteristics, within the specified rectangle in the current graphics context.
 
@@ -56,7 +57,7 @@ This method works in single-line, baseline rendering configuration by default. I
 
 **Framework:** Foundation  
 **Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Calculates and returns the bounding rect for the receiver drawn using the given options and display characteristics, within the specified rectangle in the current graphics context.
 

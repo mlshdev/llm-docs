@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/rtstat/1574584-rts_newgateway](https://developer.apple.com/documentation/kernel/rtstat/1574584-rts_newgateway)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/rtstat/1574584-rts_newgateway
 
 # rts_newgateway
 

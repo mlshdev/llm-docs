@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/offering-a-subscription-across-multiple-apps](https://developer.apple.com/documentation/storekit/offering-a-subscription-across-multiple-apps)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/offering-a-subscription-across-multiple-apps
 
 # Offering a Subscription Across Multiple Apps
 
@@ -21,7 +22,7 @@ To offer this functionality, your server must grant access to the subscription c
 
 ### Create the Subscription for Each App
 
-To get started, use App Store Connect to create a separate and equivalent [auto-renewable subscription](https://help.apple.com/app-store-connect/#/dev06f89ce98) for each app that offers the multi-app subscription so that users can subscribe from any app. For design guidance, see [Human Interface Guidelines \> In-App Purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase/overview/introduction/).
+To get started, use App Store Connect to create a separate and equivalent [auto-renewable subscription](https://help.apple.com/app-store-connect/#/dev06f89ce98) for each app that offers the multi-app subscription so that users can subscribe from any app. For design guidance, see [Human Interface Guidelines \> Apple In-App Purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase/overview/introduction/).
 
 > **Tip**
 
@@ -72,5 +73,5 @@ After determining that the user should have access, you can enable access in eac
 ### Essentials
 
 - [Handling Subscriptions Billing](handling-subscriptions-billing.md): Build logic around the date and time constraints of subscription products, while planning for all scenarios where you control access to content.
-- [Enabling App Store Server Notifications](enabling-app-store-server-notifications.md): Configure your server and provide an HTTPS URL to receive notifications about in-app purchase events and unreported external purchase tokens.
+- [Enabling App Store Server Notifications](enabling-app-store-server-notifications.md): Configure your server and provide an HTTPS URL to receive notifications about Apple In-App Purchase events and unreported external purchase tokens.
 - [Reducing Involuntary Subscriber Churn](reducing-involuntary-subscriber-churn.md): Prevent unintentional loss of subscribers due to billing issues.

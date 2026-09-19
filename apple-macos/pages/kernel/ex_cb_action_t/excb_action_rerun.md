@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ex_cb_action_t/excb_action_rerun](https://developer.apple.com/documentation/kernel/ex_cb_action_t/excb_action_rerun)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ex_cb_action_t/excb_action_rerun
 
 # EXCB_ACTION_RERUN
 

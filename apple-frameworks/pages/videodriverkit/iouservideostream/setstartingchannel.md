@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideostream/setstartingchannel](https://developer.apple.com/documentation/videodriverkit/iouservideostream/setstartingchannel)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideostream/setstartingchannel
 
 # SetStartingChannel
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Sets the starting channel of the stream.
 
@@ -30,4 +31,4 @@ Starting channel can be changed dynamically. The object sends a notification to 
 
 ### Working with channels
 
-- [GetStartingChannel](getstartingchannel.md): Gets the starting channel of the stream.
+- [GetStartingChannel](getstartingchannel.md): Beta. Gets the starting channel of the stream.

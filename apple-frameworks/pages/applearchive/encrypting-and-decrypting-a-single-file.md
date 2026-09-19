@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applearchive/encrypting-and-decrypting-a-single-file](https://developer.apple.com/documentation/applearchive/encrypting-and-decrypting-a-single-file)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applearchive/encrypting-and-decrypting-a-single-file
 
 # Encrypting and Decrypting a Single File (Swift)
 

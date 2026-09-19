@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_max_fragment_input_components](https://developer.apple.com/documentation/opengles/gl_max_fragment_input_components)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_max_fragment_input_components
 
 # GL_MAX_FRAGMENT_INPUT_COMPONENTS (Swift)
 

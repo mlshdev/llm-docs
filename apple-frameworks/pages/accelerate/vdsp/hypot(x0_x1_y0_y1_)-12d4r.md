@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vdsp/hypot(x0:x1:y0:y1:)-12d4r](https://developer.apple.com/documentation/accelerate/vdsp/hypot(x0:x1:y0:y1:)-12d4r)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vdsp/hypot(x0:x1:y0:y1:)-12d4r
 
 # hypot(x0:x1:y0:y1:)
 

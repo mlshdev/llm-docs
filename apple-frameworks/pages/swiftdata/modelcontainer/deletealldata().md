@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/swiftdata/modelcontainer/deletealldata()](https://developer.apple.com/documentation/swiftdata/modelcontainer/deletealldata())
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftdata/modelcontainer/deletealldata()
 
 # deleteAllData()
 
 **Framework:** SwiftData  
 **Kind:** Instance Method  
-**Availability:** iOS 17.0+ (deprecated in 27.0) · iPadOS 17.0+ (deprecated in 27.0) · Mac Catalyst 17.0+ (deprecated in 27.0) · macOS 14.0+ (deprecated in 27.0) · tvOS 17.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0) · watchOS 10.0+ (deprecated in 27.0) · Swift 5.9+
+**Availability:** iOS 17.0+ (deprecated in 27.2) · iPadOS 17.0+ (deprecated in 27.2) · Mac Catalyst 17.0+ (deprecated in 27.2) · macOS 14.0+ (deprecated in 27.2) · tvOS 17.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2) · watchOS 10.0+ (deprecated in 27.2) · Swift 5.9+
 
 Removes all persisted model data from the app’s persistent storage.
 

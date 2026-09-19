@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_algid_concatbaseandkey](https://developer.apple.com/documentation/security/cssm_algid_concatbaseandkey)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_algid_concatbaseandkey
 
 # CSSM_ALGID_ConcatBaseAndKey (Swift)
 

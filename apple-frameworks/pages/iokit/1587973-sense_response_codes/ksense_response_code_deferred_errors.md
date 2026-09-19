@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1587973-sense_response_codes/ksense_response_code_deferred_errors](https://developer.apple.com/documentation/iokit/1587973-sense_response_codes/ksense_response_code_deferred_errors)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1587973-sense_response_codes/ksense_response_code_deferred_errors
 
 # kSENSE_RESPONSE_CODE_Deferred_Errors
 

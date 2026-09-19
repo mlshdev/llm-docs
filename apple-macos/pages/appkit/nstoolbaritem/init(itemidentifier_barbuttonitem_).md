@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstoolbaritem/init(itemidentifier:barbuttonitem:)](https://developer.apple.com/documentation/appkit/nstoolbaritem/init(itemidentifier:barbuttonitem:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstoolbaritem/init(itemidentifier:barbuttonitem:)
 
 # init(itemIdentifier:barButtonItem:) (Swift)
 

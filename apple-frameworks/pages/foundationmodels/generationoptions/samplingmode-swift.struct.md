@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generationoptions/samplingmode-swift.struct](https://developer.apple.com/documentation/foundationmodels/generationoptions/samplingmode-swift.struct)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generationoptions/samplingmode-swift.struct
 
 # GenerationOptions.SamplingMode
 
@@ -30,8 +31,8 @@ A model builds its response to a prompt in a loop. At each iteration in the loop
 
 ### Getting the kind of sampling
 
-- [kind](samplingmode-swift.struct/kind-swift.property.md)
-- [GenerationOptions.SamplingMode.Kind](samplingmode-swift.struct/kind-swift.enum.md)
+- [kind](samplingmode-swift.struct/kind-swift.property.md): The strategy this sampling mode uses to choose the next token.
+- [GenerationOptions.SamplingMode.Kind](samplingmode-swift.struct/kind-swift.enum.md): A representation of the different strategies for choosing the next token.
 
 ## Relationships
 
@@ -49,5 +50,5 @@ A model builds its response to a prompt in a loop. At each iteration in the loop
 - [sampling](sampling.md): Deprecated. A sampling strategy for how the model picks tokens when generating a response.
 - [samplingMode](samplingmode-swift.property.md): A sampling strategy for how the model picks tokens when generating a response.
 - [toolCallingMode](toolcallingmode-swift.property.md): The tool calling requirements.
-- [GenerationOptions.ToolCallingMode](toolcallingmode-swift.struct.md): A value you use to describe the model behavior when it comes to tool usage.
+- [GenerationOptions.ToolCallingMode](toolcallingmode-swift.struct.md): A value that describes how the model uses tools.
 - [maximumResponseTokens](maximumresponsetokens.md): The maximum number of tokens the model is allowed to produce in its response.

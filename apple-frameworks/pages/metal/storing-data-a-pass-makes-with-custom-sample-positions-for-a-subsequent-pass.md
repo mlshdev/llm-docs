@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/storing-data-a-pass-makes-with-custom-sample-positions-for-a-subsequent-pass](https://developer.apple.com/documentation/metal/storing-data-a-pass-makes-with-custom-sample-positions-for-a-subsequent-pass)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/storing-data-a-pass-makes-with-custom-sample-positions-for-a-subsequent-pass
 
 # Storing data a pass makes with custom sample positions for a subsequent pass (Swift)
 

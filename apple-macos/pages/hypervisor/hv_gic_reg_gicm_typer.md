@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_gic_reg_gicm_typer](https://developer.apple.com/documentation/hypervisor/hv_gic_reg_gicm_typer)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_gic_reg_gicm_typer
 
 # HV_GIC_REG_GICM_TYPER (Swift)
 

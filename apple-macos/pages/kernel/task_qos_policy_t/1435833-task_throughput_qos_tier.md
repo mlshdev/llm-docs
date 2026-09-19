@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/task_qos_policy_t/1435833-task_throughput_qos_tier](https://developer.apple.com/documentation/kernel/task_qos_policy_t/1435833-task_throughput_qos_tier)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/task_qos_policy_t/1435833-task_throughput_qos_tier
 
 # task_throughput_qos_tier
 

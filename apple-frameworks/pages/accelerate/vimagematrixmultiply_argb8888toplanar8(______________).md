@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimagematrixmultiply_argb8888toplanar8(_:_:_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimagematrixmultiply_argb8888toplanar8(_:_:_:_:_:_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vimagematrixmultiply_argb8888toplanar8(_:_:_:_:_:_:_:)
 
 # vImageMatrixMultiply_ARGB8888ToPlanar8(\_:\_:\_:\_:\_:\_:\_:) (Swift)
 

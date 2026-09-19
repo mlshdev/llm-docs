@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/entityproperty/init(title:)-6l4hm](https://developer.apple.com/documentation/appintents/entityproperty/init(title:)-6l4hm)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/entityproperty/init(title:)-6l4hm
 
 # init(title:)
 

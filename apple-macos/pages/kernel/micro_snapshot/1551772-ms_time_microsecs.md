@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/micro_snapshot/1551772-ms_time_microsecs](https://developer.apple.com/documentation/kernel/micro_snapshot/1551772-ms_time_microsecs)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/micro_snapshot/1551772-ms_time_microsecs
 
 # ms_time_microsecs
 

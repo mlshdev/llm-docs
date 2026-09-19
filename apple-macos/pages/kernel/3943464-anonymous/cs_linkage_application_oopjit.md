@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3943464-anonymous/cs_linkage_application_oopjit](https://developer.apple.com/documentation/kernel/3943464-anonymous/cs_linkage_application_oopjit)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3943464-anonymous/cs_linkage_application_oopjit
 
 # CS_LINKAGE_APPLICATION_OOPJIT
 

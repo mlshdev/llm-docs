@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iofirewiresbp2login/1813578-getmaxpayloadsize](https://developer.apple.com/documentation/kernel/iofirewiresbp2login/1813578-getmaxpayloadsize)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iofirewiresbp2login/1813578-getmaxpayloadsize
 
 # getMaxPayloadSize
 

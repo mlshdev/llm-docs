@@ -1,8 +1,8 @@
-> Pinned source for n8n main: [docs/build/flow-logic/handle-errors-gracefully.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/flow-logic/handle-errors-gracefully.md)
+> Pinned source for n8n main: [docs/build/flow-logic/handle-errors-gracefully.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/flow-logic/handle-errors-gracefully.md)
 
 # Error handling <a id="error-handling"></a>
 
-When designing your flow logic, it's a good practice to consider potential errors, and set up methods to handle them gracefully. With an error workflow, you can control how n8n responds to a workflow execution failure.
+When designing your [flow logic](https://docs.n8n.io/build/flow-logic), it's a good practice to consider potential errors, and set up methods to handle them gracefully. With an error workflow, you can control how n8n responds to a workflow execution failure.
 
 > **Info**
 > **Investigating errors**
@@ -22,7 +22,7 @@ You can use the same error workflow for multiple workflows.
 2. Give the workflow a name, for example `Error Handler`.
 3. Select **Save**.
 4. In the workflow where you want to use this error workflow:
-   1. Select **Options** ![Options menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/reusable-content/.gitbook/assets/three-dot-options-menu.png) > **Settings**.
+   1. Select **Options** ![Options menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/reusable-content/.gitbook/assets/three-dot-options-menu.png) > **Settings**.
    2. In **Error workflow**, select the workflow you just created. For example, if you used the name Error Handler, select **Error handler**.
    3. Select **Save**.
       Now, when this workflow errors, the related error workflow runs.
@@ -92,3 +92,14 @@ If the error is caused by the trigger node of the main workflow, rather than a l
 When you create and set an error workflow, n8n runs it when an execution fails. Usually, this is due to things like errors in node settings, or the workflow running out of memory.
 
 You can add the [Stop And Error](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror) node to your workflow to force executions to fail under your chosen circumstances, and trigger the error workflow.
+
+## Related resources
+
+- [Flow logic](https://docs.n8n.io/build/flow-logic)
+- [Split with conditionals](https://docs.n8n.io/build/flow-logic/split-with-conditionals)
+- [Merge data](https://docs.n8n.io/build/flow-logic/merge-data)
+- [Loop](https://docs.n8n.io/build/flow-logic/loop)
+- [Wait](https://docs.n8n.io/build/flow-logic/wait)
+- [Understand execution order](https://docs.n8n.io/build/flow-logic/understand-execution-order)
+- [Break workflows into smaller parts](https://docs.n8n.io/build/flow-logic/break-workflows-into-smaller-parts)
+- [Convert to sub-workflows](https://docs.n8n.io/build/flow-logic/convert-to-sub-workflows)

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cigaussianblur/radius](https://developer.apple.com/documentation/coreimage/cigaussianblur/radius)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreimage/cigaussianblur/radius
 
 # radius (Swift)
 

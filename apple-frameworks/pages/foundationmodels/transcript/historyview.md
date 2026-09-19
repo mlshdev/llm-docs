@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/historyview](https://developer.apple.com/documentation/foundationmodels/transcript/historyview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/historyview
 
 # Transcript.HistoryView
 
@@ -6,13 +7,34 @@
 **Kind:** Structure  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
 
-A mutable view into the conversational entries of a [Transcript](../transcript.md).
+A mutable view into the conversational entries of a transcript.
 
 ## Declaration
 
 ```swift
 struct HistoryView
 ```
+
+## Topics
+
+### Instance Methods
+
+- [append(\_:)](historyview/append%28__%29.md): Adds an entry to the end of the history view.
+- [append(contentsOf:)](historyview/append%28contentsof_%29.md): Adds the entries of a sequence to the end of the history view.
+
+### Subscripts
+
+- [subscript(\_:)](historyview/subscript%28__%29.md): Accesses the subsequence of entries within the specified bounds.
+
+### Type Aliases
+
+- [Transcript.HistoryView.Element](historyview/element.md): The type of entry the view contains.
+- [Transcript.HistoryView.SubSequence](historyview/subsequence.md): The type that represents a contiguous subrange of the view’s entries.
+
+### Default Implementations
+
+- [ExpressibleByArrayLiteral Implementations](historyview/expressiblebyarrayliteral-implementations.md)
+- [MutableCollection Implementations](historyview/mutablecollection-implementations.md)
 
 ## Relationships
 

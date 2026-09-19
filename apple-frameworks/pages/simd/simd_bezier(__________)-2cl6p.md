@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/simd_bezier(_:_:_:_:_:)-2cl6p](https://developer.apple.com/documentation/simd/simd_bezier(_:_:_:_:_:)-2cl6p)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/simd/simd_bezier(_:_:_:_:_:)-2cl6p
 
 # simd_bezier(\_:\_:\_:\_:\_:) (Swift)
 

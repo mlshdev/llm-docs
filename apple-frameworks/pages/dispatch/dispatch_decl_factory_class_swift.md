@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/dispatch/dispatch_decl_factory_class_swift](https://developer.apple.com/documentation/dispatch/dispatch_decl_factory_class_swift)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/dispatch/dispatch_decl_factory_class_swift
 
 # DISPATCH_DECL_FACTORY_CLASS_SWIFT
 

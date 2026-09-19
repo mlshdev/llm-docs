@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideochannellabel/topbackright](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/topbackright)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/topbackright
 
 # TopBackRight
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 ## Declaration
 
@@ -18,6 +19,6 @@ TopBackRight
 
 ### Back channels
 
-- [TopBackCenter](topbackcenter.md)
-- [TopCenterSurround](topcentersurround.md)
-- [TopBackLeft](topbackleft.md)
+- [TopBackCenter](topbackcenter.md): Beta.
+- [TopCenterSurround](topcentersurround.md): Beta.
+- [TopBackLeft](topbackleft.md): Beta.

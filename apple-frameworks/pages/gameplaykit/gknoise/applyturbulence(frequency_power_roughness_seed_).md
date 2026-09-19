@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gameplaykit/gknoise/applyturbulence(frequency:power:roughness:seed:)](https://developer.apple.com/documentation/gameplaykit/gknoise/applyturbulence(frequency:power:roughness:seed:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/gameplaykit/gknoise/applyturbulence(frequency:power:roughness:seed:)
 
 # applyTurbulence(frequency:power:roughness:seed:) (Swift)
 

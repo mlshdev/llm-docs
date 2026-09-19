@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/product/subscriptioninfo/status-swift.struct/renewalinfo](https://developer.apple.com/documentation/storekit/product/subscriptioninfo/status-swift.struct/renewalinfo)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/product/subscriptioninfo/status-swift.struct/renewalinfo
 
 # renewalInfo
 
@@ -18,7 +19,7 @@ let renewalInfo: VerificationResult<Product.SubscriptionInfo.RenewalInfo>
 
 - [Managing the life cycle of monthly subscriptions with a 12-month commitment](../../../managing-lifecycle-of-monthly-subscriptions-with-a-12-month-commitment-.md)
 - [Managing Price Increases for Auto-Renewable Subscriptions](../../../managing-price-increases-for-auto-renewable-subscriptions.md)
-- [Testing In-App Purchases in Xcode](../../../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../../../testing-in-app-purchases-in-xcode.md)
 
 ## See Also
 

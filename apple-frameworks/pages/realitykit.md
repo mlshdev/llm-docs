@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit](https://developer.apple.com/documentation/realitykit)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit
 
 # RealityKit
 
@@ -107,6 +108,10 @@ Use RealityKit’s rich functionality to create compelling augmented reality (AR
 - [Construct an immersive environment for visionOS](realitykit/construct-an-immersive-environment-for-visionos.md): Build efficient custom worlds for your app.
 - [Passing Metal command objects around your application](realitykit/passing-metal-command-objects-around-your-application.md): Build a system that creates and passes Metal command objects to entities dispatching Metal compute shaders.
 - [Low-level rendering](realitykit/low-level-rendering.md): Drive the renderer directly to build custom drawing pipelines, meshes, buffers, and textures when higher-level rendering does not give you the control you need.
+
+### Articles
+
+- [Gaussian Splat Rendering Guidelines](realitykit/gaussian-splat-rendering-guidelines.md): Improving performance and watching thermal state when rendering Gaussian splats
 
 ### Classes
 

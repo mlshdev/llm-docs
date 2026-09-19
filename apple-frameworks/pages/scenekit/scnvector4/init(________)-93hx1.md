@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scenekit/scnvector4/init(_:_:_:_:)-93hx1](https://developer.apple.com/documentation/scenekit/scnvector4/init(_:_:_:_:)-93hx1)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/scenekit/scnvector4/init(_:_:_:_:)-93hx1
 
 # init(\_:\_:\_:\_:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corefoundation/cfstringencodings/big5_e](https://developer.apple.com/documentation/corefoundation/cfstringencodings/big5_e)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corefoundation/cfstringencodings/big5_e
 
 # CFStringEncodings.big5_E (Swift)
 

@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clksimplegaugeprovider/init(style:gaugecolor:fillfraction:)](https://developer.apple.com/documentation/clockkit/clksimplegaugeprovider/init(style:gaugecolor:fillfraction:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clksimplegaugeprovider/init(style:gaugecolor:fillfraction:)
 
 # init(style:gaugeColor:fillFraction:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 Creates a solid-color gauge.
 
@@ -38,7 +39,7 @@ A newly instantiated solid-color gauge.
 
 **Framework:** ClockKit  
 **Kind:** Type Method  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 Creates a solid-color gauge.
 

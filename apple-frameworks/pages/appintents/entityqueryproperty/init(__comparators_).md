@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/entityqueryproperty/init(_:comparators:)](https://developer.apple.com/documentation/appintents/entityqueryproperty/init(_:comparators:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/entityqueryproperty/init(_:comparators:)
 
 # init(\_:comparators:)
 

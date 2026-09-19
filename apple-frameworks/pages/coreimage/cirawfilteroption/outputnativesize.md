@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cirawfilteroption/outputnativesize](https://developer.apple.com/documentation/coreimage/cirawfilteroption/outputnativesize)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreimage/cirawfilteroption/outputnativesize
 
 # outputNativeSize (Swift)
 
 **Framework:** Core Image  
 **Kind:** Type Property  
-**Availability:** iOS 10.0+ (deprecated in 27.0) · iPadOS 10.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.5+ (deprecated in 27.0) · tvOS 10.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 10.0+ (deprecated in 27.2) · iPadOS 10.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.5+ (deprecated in 27.2) · tvOS 10.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 A key for the full native size of the original, non-transformed RAW image. The associated value is a [CIVector](../civector.md) object whose X and Y values are the image’s width and height. This key is read-only.
 
@@ -40,7 +41,7 @@ static let outputNativeSize: CIRAWFilterOption
 
 **Framework:** Core Image  
 **Kind:** Global Variable  
-**Availability:** iOS 10.0+ (deprecated in 27.0) · iPadOS 10.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.5+ (deprecated in 27.0) · tvOS 10.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 10.0+ (deprecated in 27.2) · iPadOS 10.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.5+ (deprecated in 27.2) · tvOS 10.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 A key for the full native size of the original, non-transformed RAW image. The associated value is a [CIVector](../civector.md) object whose X and Y values are the image’s width and height. This key is read-only.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avvideotransferfunction_itu_r_2100_hlg](https://developer.apple.com/documentation/avfoundation/avvideotransferfunction_itu_r_2100_hlg)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avvideotransferfunction_itu_r_2100_hlg
 
 # AVVideoTransferFunction_ITU_R_2100_HLG (Swift)
 

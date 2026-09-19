@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ioscsimultimediacommandsdevice/1576242-report_key_v2](https://developer.apple.com/documentation/kernel/ioscsimultimediacommandsdevice/1576242-report_key_v2)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ioscsimultimediacommandsdevice/1576242-report_key_v2
 
 # REPORT_KEY_V2
 

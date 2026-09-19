@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import {
+  findSpaceTablePath,
   loadSpaceFolders,
   normalizeGitBookHtml,
   normalizeLeadingTabs,
@@ -8,6 +9,26 @@ import {
 } from "./n8n.ts";
 
 describe("n8n navigation", () => {
+  test("finds both current and persisted-lock space tables", () => {
+    expect(
+      findSpaceTablePath(
+        new Set([
+          "docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md",
+        ]),
+      ),
+    ).toBe(
+      "docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md",
+    );
+    expect(
+      findSpaceTablePath(
+        new Set(["docs/contribute/style-guide-for-n8n-docs.md"]),
+      ),
+    ).toBe("docs/contribute/style-guide-for-n8n-docs.md");
+    expect(() => findSpaceTablePath(new Set())).toThrow(
+      "n8n space table source is missing",
+    );
+  });
+
   test("loads published GitBook spaces in table order", () => {
     const files = new Set([
       "docs/get-started/SUMMARY.md",

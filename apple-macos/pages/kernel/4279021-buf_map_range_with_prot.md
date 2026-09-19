@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/4279021-buf_map_range_with_prot](https://developer.apple.com/documentation/kernel/4279021-buf_map_range_with_prot)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/4279021-buf_map_range_with_prot
 
 # buf_map_range_with_prot
 

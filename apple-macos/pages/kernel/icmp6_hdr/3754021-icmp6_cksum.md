@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/icmp6_hdr/3754021-icmp6_cksum](https://developer.apple.com/documentation/kernel/icmp6_hdr/3754021-icmp6_cksum)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/icmp6_hdr/3754021-icmp6_cksum
 
 # icmp6_cksum
 

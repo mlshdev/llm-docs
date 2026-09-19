@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/carplay/cppanelitem/init(gridbuttons:)](https://developer.apple.com/documentation/carplay/cppanelitem/init(gridbuttons:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/carplay/cppanelitem/init(gridbuttons:)
 
 # init(gridButtons:) (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Initializer  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
-Initializes a panel item wrapping an array of @c CPGridButton objects.
+Initialize the item using one or more grid buttons.
 
 ## Declaration
 
@@ -14,16 +15,36 @@ Initializes a panel item wrapping an array of @c CPGridButton objects.
 init(gridButtons: [CPGridButton])
 ```
 
+## Parameters
+
+- `gridButtons`: The grid buttons to display in the item. Specify the buttons in the order you want them to appear. Include no more than four grid buttons in the array.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A panel item configured with the specified grid buttons.
+
 # initWithGridButtons: (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Instance Method  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
-Initializes a panel item wrapping an array of @c CPGridButton objects.
+Initialize the item using one or more grid buttons.
 
 ## Declaration
 
 ```objectivec
 - (instancetype) initWithGridButtons:(NSArray<CPGridButton *> *) gridButtons;
 ```
+
+## Parameters
+
+- `gridButtons`: The grid buttons to display in the item. Specify the buttons in the order you want them to appear. Include no more than four grid buttons in the array.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A panel item configured with the specified grid buttons.

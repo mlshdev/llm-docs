@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutorgenerationchannel](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelexecutorgenerationchannel
 
 # LanguageModelExecutorGenerationChannel
 
@@ -77,6 +78,14 @@ func respond(
 - [LanguageModelExecutorGenerationChannel.Response](languagemodelexecutorgenerationchannel/response.md): A model-generated response event: text, segment replacements, citations, advisories, custom segments, metadata, or usage.
 - [LanguageModelExecutorGenerationChannel.ToolCalls](languagemodelexecutorgenerationchannel/toolcalls.md): A tool-call lifecycle event, including per-call argument streaming, reasoning, metadata, usage, or retraction.
 - [LanguageModelExecutorGenerationChannel.Usage](languagemodelexecutorgenerationchannel/usage.md): Snapshot of an entry’s token totals.
+
+### Structures
+
+- [LanguageModelExecutorGenerationChannel.DataEntry](languagemodelexecutorgenerationchannel/dataentry.md): Beta. A top-level data-entry event addressed to a transcript entry.
+
+### Default Implementations
+
+- [AsyncSequence Implementations](languagemodelexecutorgenerationchannel/asyncsequence-implementations.md)
 
 ## Relationships
 

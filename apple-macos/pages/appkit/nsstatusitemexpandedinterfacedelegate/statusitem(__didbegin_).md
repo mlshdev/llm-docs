@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsstatusitemexpandedinterfacedelegate/statusitem(_:didbegin:)](https://developer.apple.com/documentation/appkit/nsstatusitemexpandedinterfacedelegate/statusitem(_:didbegin:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsstatusitemexpandedinterfacedelegate/statusitem(_:didbegin:)
 
 # statusItem(\_:didBegin:) (Swift)
 

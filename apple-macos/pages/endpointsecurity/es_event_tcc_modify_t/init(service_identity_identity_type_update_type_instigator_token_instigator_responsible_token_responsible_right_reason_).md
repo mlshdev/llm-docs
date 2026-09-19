@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_event_tcc_modify_t/init(service:identity:identity_type:update_type:instigator_token:instigator:responsible_token:responsible:right:reason:)](https://developer.apple.com/documentation/endpointsecurity/es_event_tcc_modify_t/init(service:identity:identity_type:update_type:instigator_token:instigator:responsible_token:responsible:right:reason:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_event_tcc_modify_t/init(service:identity:identity_type:update_type:instigator_token:instigator:responsible_token:responsible:right:reason:)
 
 # init(service:identity:identity_type:update_type:instigator_token:instigator:responsible_token:responsible:right:reason:)
 

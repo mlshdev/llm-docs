@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/io_stats_snapshot/1551845-ss_io_priority_count](https://developer.apple.com/documentation/kernel/io_stats_snapshot/1551845-ss_io_priority_count)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/io_stats_snapshot/1551845-ss_io_priority_count
 
 # ss_io_priority_count
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3325821-anonymous/kinquiry_pagec0_features_hassep_lun](https://developer.apple.com/documentation/kernel/3325821-anonymous/kinquiry_pagec0_features_hassep_lun)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3325821-anonymous/kinquiry_pagec0_features_hassep_lun
 
 # kINQUIRY_PageC0_Features_HasSEP_LUN
 

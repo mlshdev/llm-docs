@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skstorefront](https://developer.apple.com/documentation/storekit/skstorefront)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skstorefront
 
 # SKStorefront (Swift)
 
@@ -119,7 +120,7 @@ func paymentQueue(_ queue: SKPaymentQueue,
 
 ### Change the App Store Country or Region in the Sandbox Environment
 
-When you change the App Store Country or Region in App Store Connect for a Sandbox Apple Account, it changes the storefront in your app. Change the region to test in-app purchases for different regions in your app. For more information about changing the App Store Country or Region in App Store Connect, see [Test in-app purchases](https://help.apple.com/app-store-connect/#/dev7e89e149d).
+When you change the App Store Country or Region in App Store Connect for a Sandbox Apple Account, it changes the storefront in your app. Change the region to test Apple In-App Purchases for different regions in your app. For more information about changing the App Store Country or Region in App Store Connect, see [Test Apple In-App Purchases](https://help.apple.com/app-store-connect/#/dev7e89e149d).
 
 > **Important**
 
@@ -268,7 +269,7 @@ func paymentQueue(_ queue: SKPaymentQueue,
 
 ### Change the App Store Country or Region in the Sandbox Environment
 
-When you change the App Store Country or Region in App Store Connect for a Sandbox Apple Account, it changes the storefront in your app. Change the region to test in-app purchases for different regions in your app. For more information about changing the App Store Country or Region in App Store Connect, see [Test in-app purchases](https://help.apple.com/app-store-connect/#/dev7e89e149d).
+When you change the App Store Country or Region in App Store Connect for a Sandbox Apple Account, it changes the storefront in your app. Change the region to test Apple In-App Purchases for different regions in your app. For more information about changing the App Store Country or Region in App Store Connect, see [Test Apple In-App Purchases](https://help.apple.com/app-store-connect/#/dev7e89e149d).
 
 > **Important**
 

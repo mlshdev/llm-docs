@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avaudiosessionrouteselection](https://developer.apple.com/documentation/avkit/avaudiosessionrouteselection)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avaudiosessionrouteselection
 
 # AVAudioSessionRouteSelection
 
@@ -26,6 +27,8 @@ enum AVAudioSessionRouteSelection : NSInteger;
 
 ## See Also
 
-### Playback route selection
+### Route selection
 
 - [AVRoutePickerView](avroutepickerview.md): A view that presents a list of nearby media receivers.
+- [AVRoutePickerViewDelegate](avroutepickerviewdelegate.md): A protocol that defines the methods to adopt to respond to route picker view presentation events.
+- [AVRoutePickerViewButtonStyle](avroutepickerviewbuttonstyle.md): Constants that define the button styles a route picker view supports.

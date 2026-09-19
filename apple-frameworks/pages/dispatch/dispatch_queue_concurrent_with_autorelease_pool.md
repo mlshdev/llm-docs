@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/dispatch/dispatch_queue_concurrent_with_autorelease_pool](https://developer.apple.com/documentation/dispatch/dispatch_queue_concurrent_with_autorelease_pool)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/dispatch/dispatch_queue_concurrent_with_autorelease_pool
 
 # DISPATCH_QUEUE_CONCURRENT_WITH_AUTORELEASE_POOL
 

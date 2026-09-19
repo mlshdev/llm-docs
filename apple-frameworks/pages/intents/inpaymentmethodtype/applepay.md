@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/inpaymentmethodtype/applepay](https://developer.apple.com/documentation/intents/inpaymentmethodtype/applepay)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/intents/inpaymentmethodtype/applepay
 
 # INPaymentMethodType.applePay (Swift)
 

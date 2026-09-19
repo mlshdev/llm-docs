@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationdatasource/getlocalizablesampletemplate(for:withhandler:)](https://developer.apple.com/documentation/clockkit/clkcomplicationdatasource/getlocalizablesampletemplate(for:withhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationdatasource/getlocalizablesampletemplate(for:withhandler:)
 
 # getLocalizableSampleTemplate(for:withHandler:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 3.0+ (deprecated in 27.0)
+**Availability:** watchOS 3.0+ (deprecated in 27.2)
 
 Gets a localizable template that shows sample data for the specified complication.
 
@@ -70,7 +71,7 @@ If you pass `nil` to the handler, the system generates a default placeholder tem
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 3.0+ (deprecated in 27.0)
+**Availability:** watchOS 3.0+ (deprecated in 27.2)
 
 Gets a localizable template that shows sample data for the specified complication.
 

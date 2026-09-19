@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/memory_object_behave_info_data_t/1562622-advisory_pageout](https://developer.apple.com/documentation/kernel/memory_object_behave_info_data_t/1562622-advisory_pageout)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/memory_object_behave_info_data_t/1562622-advisory_pageout
 
 # advisory_pageout
 

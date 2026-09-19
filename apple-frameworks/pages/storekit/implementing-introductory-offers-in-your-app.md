@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/implementing-introductory-offers-in-your-app](https://developer.apple.com/documentation/storekit/implementing-introductory-offers-in-your-app)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/implementing-introductory-offers-in-your-app
 
 # Implementing introductory offers in your app (Swift)
 
@@ -54,7 +55,7 @@ The [SKProductDiscount.PaymentMode.freeTrial](skproductdiscount/paymentmode-swif
 To determine if a user is eligible for an introductory offer, check their receipt:
 
 1. Validate the receipt as described in [Validating receipts with the App Store](validating-receipts-with-the-app-store.md).
-2. In the receipt, check the values of the [is_trial_period](../appstorereceipts/is_trial_period.md) and the [is_in_intro_offer_period](../appstorereceipts/is_in_intro_offer_period.md) for all in-app purchase transactions. If either of these fields are `true` for a given subscription, the user is not eligible for an introductory offer on that subscription product or any other products within the same subscription group. Use `subscription_group_identifier` in the [responseBody.Pending_renewal_info](../appstorereceipts/responsebody/pending_renewal_info-data.dictionary.md) array to determine the subscription group to which the subscription belongs.
+2. In the receipt, check the values of the [is_trial_period](../appstorereceipts/is_trial_period.md) and the [is_in_intro_offer_period](../appstorereceipts/is_in_intro_offer_period.md) for all Apple In-App Purchase transactions. If either of these fields are `true` for a given subscription, the user is not eligible for an introductory offer on that subscription product or any other products within the same subscription group. Use `subscription_group_identifier` in the [responseBody.Pending_renewal_info](../appstorereceipts/responsebody/pending_renewal_info-data.dictionary.md) array to determine the subscription group to which the subscription belongs.
 
 Typically, you check the user’s eligibility from your server. Determine eligibility early—for example, on the first launch of the app, if possible.
 
@@ -76,7 +77,7 @@ Once you determine the user is eligible for an introductory offer, query the App
 1. Retrieve localized information from the App Store about a specified list of subscription products using the [SKProductsRequest](skproductsrequest.md) class. Products that have an available discount defined in App Store Connect always include an [introductoryPrice](skproduct/introductoryprice.md) object.
 2. Use the properties in the [introductoryPrice](skproduct/introductoryprice.md) object to display the discounted price for the subscription. Based on the type of the introductory offer (represented by [SKProductDiscount.PaymentMode](skproductdiscount/paymentmode-swift.enum.md)), display a UI that describes the offer accordingly.
 
-For design guidance, see [Human Interface Guidelines \> In-App Purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase/overview/).
+For design guidance, see [Human Interface Guidelines \> Apple In-App Purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase/overview/).
 
 ## See Also
 
@@ -143,7 +144,7 @@ The [SKProductDiscountPaymentModeFreeTrial](skproductdiscount/paymentmode-swift.
 To determine if a user is eligible for an introductory offer, check their receipt:
 
 1. Validate the receipt as described in [Validating receipts with the App Store](validating-receipts-with-the-app-store.md).
-2. In the receipt, check the values of the [is_trial_period](../appstorereceipts/is_trial_period.md) and the [is_in_intro_offer_period](../appstorereceipts/is_in_intro_offer_period.md) for all in-app purchase transactions. If either of these fields are `true` for a given subscription, the user is not eligible for an introductory offer on that subscription product or any other products within the same subscription group. Use `subscription_group_identifier` in the [responseBody.Pending_renewal_info](../appstorereceipts/responsebody/pending_renewal_info-data.dictionary.md) array to determine the subscription group to which the subscription belongs.
+2. In the receipt, check the values of the [is_trial_period](../appstorereceipts/is_trial_period.md) and the [is_in_intro_offer_period](../appstorereceipts/is_in_intro_offer_period.md) for all Apple In-App Purchase transactions. If either of these fields are `true` for a given subscription, the user is not eligible for an introductory offer on that subscription product or any other products within the same subscription group. Use `subscription_group_identifier` in the [responseBody.Pending_renewal_info](../appstorereceipts/responsebody/pending_renewal_info-data.dictionary.md) array to determine the subscription group to which the subscription belongs.
 
 Typically, you check the user’s eligibility from your server. Determine eligibility early—for example, on the first launch of the app, if possible.
 
@@ -165,7 +166,7 @@ Once you determine the user is eligible for an introductory offer, query the App
 1. Retrieve localized information from the App Store about a specified list of subscription products using the [SKProductsRequest](skproductsrequest.md) class. Products that have an available discount defined in App Store Connect always include an [introductoryPrice](skproduct/introductoryprice.md) object.
 2. Use the properties in the [introductoryPrice](skproduct/introductoryprice.md) object to display the discounted price for the subscription. Based on the type of the introductory offer (represented by [SKProductDiscountPaymentMode](skproductdiscount/paymentmode-swift.enum.md)), display a UI that describes the offer accordingly.
 
-For design guidance, see [Human Interface Guidelines \> In-App Purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase/overview/).
+For design guidance, see [Human Interface Guidelines \> Apple In-App Purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase/overview/).
 
 ## See Also
 

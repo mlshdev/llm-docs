@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/testing-a-payment-request](https://developer.apple.com/documentation/storekit/testing-a-payment-request)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/testing-a-payment-request
 
 # Testing a payment request (Swift)
 
@@ -22,7 +23,7 @@ Though you can finish the transaction immediately without providing the content 
 - [Testing purchases made outside your app](testing-purchases-made-outside-your-app.md): Verify that your app receives and handles transactions that occur outside your app, such as subscription purchases, renewals, and offer and promo code redemptions.
 - [Testing win-back offers in the sandbox environment](testing-win-back-offers-in-the-sandbox-environment.md): Verify that your app receives and handles win-back offer transactions, including those made outside your app.
 - [Testing an interrupted purchase](testing-an-interrupted-purchase.md): Verify that your app handles an interrupted purchase by inspecting and invoking payment transactions.
-- [Testing failing subscription renewals and In-App Purchases](testing-failing-subscription-renewals-and-in-app-purchases.md): Verify that your app handles failed subscription renewals that are in the billing retry or billing grace period states, as well as failed In-App Purchases.
+- [Testing failing subscription renewals and Apple In-App Purchases](testing-failing-subscription-renewals-and-in-app-purchases.md): Verify that your app handles failed subscription renewals that are in the billing retry or billing grace period states, as well as failed Apple In-App Purchases.
 
 # Testing a payment request (Objective-C)
 
@@ -46,4 +47,4 @@ Though you can finish the transaction immediately without providing the content 
 - [Testing purchases made outside your app](testing-purchases-made-outside-your-app.md): Verify that your app receives and handles transactions that occur outside your app, such as subscription purchases, renewals, and offer and promo code redemptions.
 - [Testing win-back offers in the sandbox environment](testing-win-back-offers-in-the-sandbox-environment.md): Verify that your app receives and handles win-back offer transactions, including those made outside your app.
 - [Testing an interrupted purchase](testing-an-interrupted-purchase.md): Verify that your app handles an interrupted purchase by inspecting and invoking payment transactions.
-- [Testing failing subscription renewals and In-App Purchases](testing-failing-subscription-renewals-and-in-app-purchases.md): Verify that your app handles failed subscription renewals that are in the billing retry or billing grace period states, as well as failed In-App Purchases.
+- [Testing failing subscription renewals and Apple In-App Purchases](testing-failing-subscription-renewals-and-in-app-purchases.md): Verify that your app handles failed subscription renewals that are in the billing retry or billing grace period states, as well as failed Apple In-App Purchases.

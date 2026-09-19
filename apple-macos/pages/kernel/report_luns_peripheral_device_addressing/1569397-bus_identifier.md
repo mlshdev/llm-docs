@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/report_luns_peripheral_device_addressing/1569397-bus_identifier](https://developer.apple.com/documentation/kernel/report_luns_peripheral_device_addressing/1569397-bus_identifier)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/report_luns_peripheral_device_addressing/1569397-bus_identifier
 
 # BUS_IDENTIFIER
 

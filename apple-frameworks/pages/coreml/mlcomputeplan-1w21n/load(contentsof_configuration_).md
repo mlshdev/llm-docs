@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreml/mlcomputeplan-1w21n/load(contentsof:configuration:)](https://developer.apple.com/documentation/coreml/mlcomputeplan-1w21n/load(contentsof:configuration:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreml/mlcomputeplan-1w21n/load(contentsof:configuration:)
 
 # load(contentsOf:configuration:)
 

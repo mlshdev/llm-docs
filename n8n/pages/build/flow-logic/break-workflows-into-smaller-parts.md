@@ -1,8 +1,8 @@
-> Pinned source for n8n main: [docs/build/flow-logic/break-workflows-into-smaller-parts.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/flow-logic/break-workflows-into-smaller-parts.md)
+> Pinned source for n8n main: [docs/build/flow-logic/break-workflows-into-smaller-parts.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/flow-logic/break-workflows-into-smaller-parts.md)
 
 # Sub-workflows <a id="sub-workflows"></a>
 
-You can call one workflow from another workflow. This allows you to build modular, microservice-like workflows. It can also help if your workflow grows large enough to encounter [memory issues](https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/fix-memory-issues). Creating sub-workflows uses the [Execute Workflow](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow) and [Execute Sub-workflow Trigger](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) nodes.
+You can call one workflow from another workflow. This allows you to build modular, microservice-like workflows, as part of your workflow's [flow logic](https://docs.n8n.io/build/flow-logic). It can also help if your workflow grows large enough to encounter [memory issues](https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/fix-memory-issues). Creating sub-workflows uses the [Execute Workflow](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow) and [Execute Sub-workflow Trigger](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) nodes.
 
 Sub-wokflow executions don't count towards your plan's monthly execution or active workflow limits.
 
@@ -22,7 +22,7 @@ This section walks through setting up both the parent workflow and sub-workflow.
    > You can also extract selected nodes directly using [Sub-workflow conversion](https://docs.n8n.io/build/flow-logic/convert-to-sub-workflows) in the context menu.
 
 2. **Optional**: configure which workflows can call the sub-workflow:
-   1. Select the **Options** ![Options menu](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/reusable-content/.gitbook/assets/three-dot-options-menu.png) menu > **Settings**. n8n opens the **Workflow settings** modal.
+   1. Select the **Options** ![Options menu](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/reusable-content/.gitbook/assets/three-dot-options-menu.png) menu > **Settings**. n8n opens the **Workflow settings** modal.
    2. Change the **This workflow can be called by** setting.	Refer to [Workflow settings](https://docs.n8n.io/build/manage-workflows/configure-workflow-settings) for more information on configuring your workflows.
 
 3. Add the **Execute Sub-workflow** trigger node (if you are searching under trigger nodes, this is also titled **When Executed by Another Workflow**).
@@ -88,3 +88,14 @@ As an example, imagine you have an Execute Sub-workflow node in **Workflow A**. 
 ## Sub-workflow conversion <a id="sub-workflow-conversion"></a>
 
 See [sub-workflow conversion](https://docs.n8n.io/build/flow-logic/convert-to-sub-workflows) for how to divide your existing workflows into sub-workflows.
+
+## Related resources
+
+- [Flow logic](https://docs.n8n.io/build/flow-logic)
+- [Split with conditionals](https://docs.n8n.io/build/flow-logic/split-with-conditionals)
+- [Merge data](https://docs.n8n.io/build/flow-logic/merge-data)
+- [Loop](https://docs.n8n.io/build/flow-logic/loop)
+- [Wait](https://docs.n8n.io/build/flow-logic/wait)
+- [Understand execution order](https://docs.n8n.io/build/flow-logic/understand-execution-order)
+- [Convert to sub-workflows](https://docs.n8n.io/build/flow-logic/convert-to-sub-workflows)
+- [Handle errors gracefully](https://docs.n8n.io/build/flow-logic/handle-errors-gracefully)

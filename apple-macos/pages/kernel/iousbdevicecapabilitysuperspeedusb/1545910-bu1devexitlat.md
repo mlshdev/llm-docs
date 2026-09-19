@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iousbdevicecapabilitysuperspeedusb/1545910-bu1devexitlat](https://developer.apple.com/documentation/kernel/iousbdevicecapabilitysuperspeedusb/1545910-bu1devexitlat)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iousbdevicecapabilitysuperspeedusb/1545910-bu1devexitlat
 
 # bU1DevExitLat
 

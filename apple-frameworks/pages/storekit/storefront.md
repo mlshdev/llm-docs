@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/storefront](https://developer.apple.com/documentation/storekit/storefront)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/storefront
 
 # Storefront
 
@@ -16,7 +17,7 @@ struct Storefront
 
 ## Mentioned In
 
-- [Testing In-App Purchases with sandbox](testing-in-app-purchases-with-sandbox.md)
+- [Testing Apple In-App Purchases with sandbox](testing-in-app-purchases-with-sandbox.md)
 
 <a id="overview"></a>
 
@@ -34,7 +35,7 @@ You need to maintain your own list of product identifiers and the storefronts wh
 
 ### Change the App Store country or region in the sandbox environment
 
-When you change the App Store Country or Region in App Store Connect for a Sandbox Apple Account, it changes the storefront in your app. Change the region to test In-App Purchases for different regions in your app. For more information about changing the App Store Country or Region in App Store Connect, see [Test in-app purchases](https://developer.apple.com/help/app-store-connect/test-in-app-purchases/manage-sandbox-apple-account-settings/).
+When you change the App Store Country or Region in App Store Connect for a Sandbox Apple Account, it changes the storefront in your app. Change the region to test Apple In-App Purchases for different regions in your app. For more information about changing the App Store Country or Region in App Store Connect, see [Test Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/test-in-app-purchases/manage-sandbox-apple-account-settings/).
 
 > **Important**
 

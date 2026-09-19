@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uicellaccessory-swift.struct/customviewconfiguration/init(customview:placement:ishidden:reservedlayoutwidth:tintcolor:maintainsfixedsize:)](https://developer.apple.com/documentation/uikit/uicellaccessory-swift.struct/customviewconfiguration/init(customview:placement:ishidden:reservedlayoutwidth:tintcolor:maintainsfixedsize:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uicellaccessory-swift.struct/customviewconfiguration/init(customview:placement:ishidden:reservedlayoutwidth:tintcolor:maintainsfixedsize:)
 
 # init(customView:placement:isHidden:reservedLayoutWidth:tintColor:maintainsFixedSize:)
 

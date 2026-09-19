@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/filewrapper/addfile(withpath:)](https://developer.apple.com/documentation/foundation/filewrapper/addfile(withpath:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/filewrapper/addfile(withpath:)
 
 # addFile(withPath:) (Swift)
 

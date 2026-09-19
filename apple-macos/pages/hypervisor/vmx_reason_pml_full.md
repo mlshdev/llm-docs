@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/vmx_reason_pml_full](https://developer.apple.com/documentation/hypervisor/vmx_reason_pml_full)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/vmx_reason_pml_full
 
 # VMX_REASON_PML_FULL (Swift)
 

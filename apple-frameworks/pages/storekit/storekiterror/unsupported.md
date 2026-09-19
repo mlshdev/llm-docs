@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/storekiterror/unsupported](https://developer.apple.com/documentation/storekit/storekiterror/unsupported)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/storekiterror/unsupported
 
 # StoreKitError.unsupported
 
@@ -18,7 +19,7 @@ case unsupported
 
 ## Discussion
 
-The system surfaces this error when the type that originates the request doesn’t support the operation. For example, initializing an [AdvancedCommerceProduct](../advancedcommerceproduct.md) using the product ID of an in-app purchase that isn’t registered as a generic SKU in App Store Connect.
+The system surfaces this error when the type that originates the request doesn’t support the operation. For example, initializing an [AdvancedCommerceProduct](../advancedcommerceproduct.md) using the product ID of an Apple In-App Purchase that isn’t registered as a generic SKU in App Store Connect.
 
 ## See Also
 

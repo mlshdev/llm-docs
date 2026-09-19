@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/vdsettings/1487474-csvertmax](https://developer.apple.com/documentation/kernel/vdsettings/1487474-csvertmax)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/vdsettings/1487474-csvertmax
 
 # csVertMax
 

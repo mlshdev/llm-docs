@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/hvf/partrenderer/instruction/addcubic(cp1:cp2:on:)](https://developer.apple.com/documentation/hvf/partrenderer/instruction/addcubic(cp1:cp2:on:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hvf/partrenderer/instruction/addcubic(cp1:cp2:on:)
 
 # PartRenderer.Instruction.addCubic(cp1:cp2:on:)
 

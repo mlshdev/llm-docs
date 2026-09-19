@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mediaplayer/user-defined-property-keys](https://developer.apple.com/documentation/mediaplayer/user-defined-property-keys)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mediaplayer/user-defined-property-keys
 
 # User-defined property keys (Swift)
 

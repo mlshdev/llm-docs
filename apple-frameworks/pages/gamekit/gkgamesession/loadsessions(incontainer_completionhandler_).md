@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gamekit/gkgamesession/loadsessions(incontainer:completionhandler:)](https://developer.apple.com/documentation/gamekit/gkgamesession/loadsessions(incontainer:completionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/gamekit/gkgamesession/loadsessions(incontainer:completionhandler:)
 
 # loadSessions(inContainer:completionHandler:) (Swift)
 

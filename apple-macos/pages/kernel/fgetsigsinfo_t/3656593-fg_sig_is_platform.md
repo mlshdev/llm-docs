@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/fgetsigsinfo_t/3656593-fg_sig_is_platform](https://developer.apple.com/documentation/kernel/fgetsigsinfo_t/3656593-fg_sig_is_platform)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/fgetsigsinfo_t/3656593-fg_sig_is_platform
 
 # fg_sig_is_platform
 

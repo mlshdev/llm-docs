@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nscollectionview/item(at:)-80xze](https://developer.apple.com/documentation/appkit/nscollectionview/item(at:)-80xze)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nscollectionview/item(at:)-80xze
 
 # item(at:) (Swift)
 

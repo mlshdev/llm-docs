@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/inputmethodkit/imkcandidates/init(server:paneltype:styletype:)](https://developer.apple.com/documentation/inputmethodkit/imkcandidates/init(server:paneltype:styletype:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/inputmethodkit/imkcandidates/init(server:paneltype:styletype:)
 
 # init(server:panelType:styleType:) (Swift)
 

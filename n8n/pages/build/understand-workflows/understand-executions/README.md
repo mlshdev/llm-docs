@@ -1,8 +1,18 @@
-> Pinned source for n8n main: [docs/build/understand-workflows/understand-executions/README.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/understand-workflows/understand-executions/README.md)
+> Pinned source for n8n main: [docs/build/understand-workflows/understand-executions/README.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/understand-workflows/understand-executions/README.md)
 
 # Executions <a id="executions"></a>
 
 An execution is a single run of a workflow.
+
+## In this section
+
+- [Manual, partial, and production executions](https://docs.n8n.io/build/understand-workflows/understand-executions/types-of-executions): how manual, partial, and production executions differ.
+- [View all executions](https://docs.n8n.io/build/understand-workflows/understand-executions/view-all-executions): view and filter all executions across all your workflows.
+- [View executions for a single workflow](https://docs.n8n.io/build/understand-workflows/understand-executions/view-executions-for-a-single-workflow): view and filter executions for the workflow currently open on the canvas.
+- [Debug and re-run past executions](https://docs.n8n.io/build/understand-workflows/understand-executions/debug-executions): copy data from a previous execution into your current workflow to debug it.
+- [Customize executions data](https://docs.n8n.io/build/understand-workflows/understand-executions/customize-executions-data): add custom data to your workflow executions using the Code node.
+- [Stream real-time responses](https://docs.n8n.io/build/understand-workflows/understand-executions/stream-real-time-responses): send data back to users as an AI Agent node generates it.
+- [Dirty nodes](https://docs.n8n.io/build/understand-workflows/understand-executions/understand-dirty-nodes): what dirty nodes are and how they affect workflow execution.
 
 ## Execution modes <a id="execution-modes"></a>
 
@@ -45,3 +55,12 @@ n8n supports [adding custom data to executions](https://docs.n8n.io/build/unders
 ## Execution data redaction <a id="execution-data-redaction"></a>
 
 You can redact execution data to protect sensitive information. Redaction hides the input and output data of workflow executions while preserving execution metadata like status, timing, and node names. Refer to [Execution data redaction](https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/redact-execution-data) for details.
+
+## Related resources
+
+- [Understand workflows](https://docs.n8n.io/build/understand-workflows)
+- [Create and run workflows](https://docs.n8n.io/build/understand-workflows/create-and-run-workflows)
+- [Save and publish workflows](https://docs.n8n.io/build/understand-workflows/save-and-publish-workflows)
+- [Create and edit credentials](https://docs.n8n.io/build/understand-workflows/create-and-edit-credentials)
+- [Use Gateway credits](https://docs.n8n.io/build/understand-workflows/use-gateway-credits)
+- [Workflow components](https://docs.n8n.io/build/understand-workflows/workflow-components)

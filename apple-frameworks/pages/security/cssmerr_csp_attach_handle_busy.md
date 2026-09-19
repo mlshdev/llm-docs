@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_csp_attach_handle_busy](https://developer.apple.com/documentation/security/cssmerr_csp_attach_handle_busy)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_csp_attach_handle_busy
 
 # CSSMERR_CSP_ATTACH_HANDLE_BUSY (Swift)
 

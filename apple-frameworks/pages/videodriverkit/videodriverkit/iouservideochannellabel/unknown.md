@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideochannellabel/unknown](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/unknown)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideochannellabel/unknown
 
 # Unknown
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Enumeration Case  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 unknown or unspecified other use
 
@@ -20,5 +21,5 @@ Unknown
 
 ### Special values
 
-- [Unused](unused.md): channel is present, but has no intended use or destination
-- [UseCoordinates](usecoordinates.md): channel is described by the mCoordinates fields.
+- [Unused](unused.md): Beta. channel is present, but has no intended use or destination
+- [UseCoordinates](usecoordinates.md): Beta. channel is described by the mCoordinates fields.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metrickit/monitoring-app-performance-with-metrickit](https://developer.apple.com/documentation/metrickit/monitoring-app-performance-with-metrickit)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metrickit/monitoring-app-performance-with-metrickit
 
 # Monitoring app performance with MetricKit (Swift)
 
@@ -120,7 +121,7 @@ Include an `@unknown default` case in each switch statement to handle any additi
 
 > **Note**
 
-> To generate reports during development without waiting for the daily delivery schedule, choose Debug \> Simulate MetricKit Payloads in Xcode. Simulated reports contain sample data, not actual data from your app, for all domains registered with that [MetricManager](metricmanager.md) instance. Use simulated reports to understand the structure of MetricKit reports and to test your in-app implementation for report handling.
+> To generate reports during development without waiting for the daily delivery schedule, import MetricKit and run your app from Xcode, then choose Debug \> MetricKit \> Simulate MetricKit Payloads. Simulated reports contain sample data, not actual data from your app, for all domains registered with that [MetricManager](metricmanager.md) instance, and only appear if your app is observing [metricReports](metricmanager/metricreports.md) as shown above. Use simulated reports to understand the structure of MetricKit reports and to test your in-app implementation for report handling.
 
 To process each report in multiple independent workflows, dispatch concurrent work within a single iteration using `async let`:
 
@@ -341,7 +342,7 @@ Include an `@unknown default` case in each switch statement to handle any additi
 
 > **Note**
 
-> To generate reports during development without waiting for the daily delivery schedule, choose Debug \> Simulate MetricKit Payloads in Xcode. Simulated reports contain sample data, not actual data from your app, for all domains registered with that [MetricManager](metricmanager.md) instance. Use simulated reports to understand the structure of MetricKit reports and to test your in-app implementation for report handling.
+> To generate reports during development without waiting for the daily delivery schedule, import MetricKit and run your app from Xcode, then choose Debug \> MetricKit \> Simulate MetricKit Payloads. Simulated reports contain sample data, not actual data from your app, for all domains registered with that [MetricManager](metricmanager.md) instance, and only appear if your app is observing [metricReports](metricmanager/metricreports.md) as shown above. Use simulated reports to understand the structure of MetricKit reports and to test your in-app implementation for report handling.
 
 To process each report in multiple independent workflows, dispatch concurrent work within a single iteration using `async let`:
 

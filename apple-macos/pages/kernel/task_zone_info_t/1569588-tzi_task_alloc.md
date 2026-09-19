@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/task_zone_info_t/1569588-tzi_task_alloc](https://developer.apple.com/documentation/kernel/task_zone_info_t/1569588-tzi_task_alloc)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/task_zone_info_t/1569588-tzi_task_alloc
 
 # tzi_task_alloc
 

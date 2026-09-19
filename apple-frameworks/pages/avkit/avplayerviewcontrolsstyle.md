@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrolsstyle](https://developer.apple.com/documentation/avkit/avplayerviewcontrolsstyle)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrolsstyle
 
 # AVPlayerViewControlsStyle (Swift)
 
@@ -20,7 +21,7 @@ enum AVPlayerViewControlsStyle
 
 - [init(rawValue:)](avplayerviewcontrolsstyle/init%28rawvalue_%29.md)
 
-### Controls Styles
+### Controls styles
 
 - [AVPlayerViewControlsStyle.none](avplayerviewcontrolsstyle/none.md): The view displays no playback controls.
 - [AVPlayerViewControlsStyle.inline](avplayerviewcontrolsstyle/inline.md): The view displays playback controls in a bar along the view’s bottom edge.
@@ -68,7 +69,7 @@ enum AVPlayerViewControlsStyle : NSInteger;
 
 ## Topics
 
-### Controls Styles
+### Controls styles
 
 - [AVPlayerViewControlsStyleNone](avplayerviewcontrolsstyle/none.md): The view displays no playback controls.
 - [AVPlayerViewControlsStyleInline](avplayerviewcontrolsstyle/inline.md): The view displays playback controls in a bar along the view’s bottom edge.

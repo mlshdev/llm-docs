@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_authorization_result_t/init(right_name:rule_class:granted:)](https://developer.apple.com/documentation/endpointsecurity/es_authorization_result_t/init(right_name:rule_class:granted:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_authorization_result_t/init(right_name:rule_class:granted:)
 
 # init(right_name:rule_class:granted:)
 

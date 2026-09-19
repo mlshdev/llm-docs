@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corevideo/kcvimagebuffertransferfunction_smpte_240m_1995](https://developer.apple.com/documentation/corevideo/kcvimagebuffertransferfunction_smpte_240m_1995)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corevideo/kcvimagebuffertransferfunction_smpte_240m_1995
 
 # kCVImageBufferTransferFunction_SMPTE_240M_1995 (Swift)
 

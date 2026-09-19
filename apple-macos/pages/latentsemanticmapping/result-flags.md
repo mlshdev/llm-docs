@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/latentsemanticmapping/result-flags](https://developer.apple.com/documentation/latentsemanticmapping/result-flags)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/latentsemanticmapping/result-flags
 
 # Result Flags (Swift)
 

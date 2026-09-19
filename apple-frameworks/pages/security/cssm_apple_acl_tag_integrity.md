@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_apple_acl_tag_integrity](https://developer.apple.com/documentation/security/cssm_apple_acl_tag_integrity)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_apple_acl_tag_integrity
 
 # CSSM_APPLE_ACL_TAG_INTEGRITY (Swift)
 

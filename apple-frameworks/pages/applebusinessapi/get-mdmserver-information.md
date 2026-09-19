@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applebusinessapi/get-mdmserver-information](https://developer.apple.com/documentation/applebusinessapi/get-mdmserver-information)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/get-mdmserver-information
 
 # Get Device Management Service Information
 
@@ -6,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Web Service Endpoint  
-**Availability:** Apple Business API 2.4+
+**Availability:** Apple Business API 2.5+
 
 Get the information for a specific device management service.
 

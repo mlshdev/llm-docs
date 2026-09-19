@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/corenfc/nfciso15693tag/fastreadmultipleblocks(requestflags:blockrange:resulthandler:)](https://developer.apple.com/documentation/corenfc/nfciso15693tag/fastreadmultipleblocks(requestflags:blockrange:resulthandler:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corenfc/nfciso15693tag/fastreadmultipleblocks(requestflags:blockrange:resulthandler:)
 
 # fastReadMultipleBlocks(requestFlags:blockRange:resultHandler:)
 
@@ -10,8 +11,4 @@
 
 ```swift
 @preconcurrency func fastReadMultipleBlocks(requestFlags flags: NFCISO15693RequestFlag, blockRange: NSRange, resultHandler: @escaping @Sendable (Result<[Data], any Error>) -> Void)
-```
-
-```swift
-func fastReadMultipleBlocks(requestFlags flags: NFCISO15693RequestFlag, blockRange: NSRange, resultHandler: @escaping (Result<[Data], any Error>) -> Void)
 ```

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/hiddriverkit/handling-stylus-input-from-a-human-interface-device](https://developer.apple.com/documentation/hiddriverkit/handling-stylus-input-from-a-human-interface-device)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hiddriverkit/handling-stylus-input-from-a-human-interface-device
 
 # Handling Stylus Input from a Human Interface Device
 

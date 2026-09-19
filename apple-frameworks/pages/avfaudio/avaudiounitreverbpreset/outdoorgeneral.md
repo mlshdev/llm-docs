@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avaudiounitreverbpreset/outdoorgeneral](https://developer.apple.com/documentation/avfaudio/avaudiounitreverbpreset/outdoorgeneral)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiounitreverbpreset/outdoorgeneral
 
 # AVAudioUnitReverbPreset.outdoorGeneral (Swift)
 

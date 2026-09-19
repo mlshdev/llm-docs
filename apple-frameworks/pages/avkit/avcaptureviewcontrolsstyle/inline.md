@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcaptureviewcontrolsstyle/inline](https://developer.apple.com/documentation/avkit/avcaptureviewcontrolsstyle/inline)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcaptureviewcontrolsstyle/inline
 
 # AVCaptureViewControlsStyle.inline (Swift)
 
@@ -16,7 +17,7 @@ case inline
 
 ## See Also
 
-### Controls Styles
+### Controls styles
 
 - [AVCaptureViewControlsStyle.floating](floating.md): The view’s floating controls style, which matches the user interface of QuickTime Player.
 - [AVCaptureViewControlsStyle.inlineDeviceSelection](inlinedeviceselection.md): The view’s inline device selection style.
@@ -38,7 +39,7 @@ AVCaptureViewControlsStyleInline
 
 ## See Also
 
-### Controls Styles
+### Controls styles
 
 - [AVCaptureViewControlsStyleFloating](floating.md): The view’s floating controls style, which matches the user interface of QuickTime Player.
 - [AVCaptureViewControlsStyleInlineDeviceSelection](inlinedeviceselection.md): The view’s inline device selection style.

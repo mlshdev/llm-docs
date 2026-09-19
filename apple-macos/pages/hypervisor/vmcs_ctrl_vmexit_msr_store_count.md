@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/vmcs_ctrl_vmexit_msr_store_count](https://developer.apple.com/documentation/hypervisor/vmcs_ctrl_vmexit_msr_store_count)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/vmcs_ctrl_vmexit_msr_store_count
 
 # VMCS_CTRL_VMEXIT_MSR_STORE_COUNT (Swift)
 

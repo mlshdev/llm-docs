@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/view-layout](https://developer.apple.com/documentation/uikit/view-layout)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/view-layout
 
 # View layout (Swift)
 
@@ -42,6 +43,11 @@ When you design your app’s interface, you position views and other interface e
 
 - [UILayoutGuide](uilayoutguide.md): A rectangular area that can interact with Auto Layout.
 - [NSLayoutDimension](nslayoutdimension.md): A factory class for creating size-based layout constraint objects using a fluent API.
+
+### Reserved regions
+
+- [UIView.ReservedRegion](uiview/reservedregion.md): Beta. A region within a view’s coordinate space that another entity occupies.
+- [reservedRegions(kind:options:)](uiview/reservedregions%28kind_options_%29.md): Beta. Returns the reserved regions of a given kind and options.
 
 ### Anchors
 

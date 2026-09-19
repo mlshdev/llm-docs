@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/os_ar_room_tracking_configuration](https://developer.apple.com/documentation/arkit/os_ar_room_tracking_configuration)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/arkit/os_ar_room_tracking_configuration
 
 # OS_ar_room_tracking_configuration (Swift)
 

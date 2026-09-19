@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkworkout/init(activitytype:startdate:enddate:workoutevents:totalenergyburned:totaldistance:totalflightsclimbed:device:metadata:)](https://developer.apple.com/documentation/healthkit/hkworkout/init(activitytype:startdate:enddate:workoutevents:totalenergyburned:totaldistance:totalflightsclimbed:device:metadata:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkworkout/init(activitytype:startdate:enddate:workoutevents:totalenergyburned:totaldistance:totalflightsclimbed:device:metadata:)
 
 # init(activityType:startDate:endDate:workoutEvents:totalEnergyBurned:totalDistance:totalFlightsClimbed:device:metadata:)
 

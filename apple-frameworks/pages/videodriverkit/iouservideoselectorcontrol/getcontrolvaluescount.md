@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoselectorcontrol/getcontrolvaluescount](https://developer.apple.com/documentation/videodriverkit/iouservideoselectorcontrol/getcontrolvaluescount)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoselectorcontrol/getcontrolvaluescount
 
 # GetControlValuesCount
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Gets the number of available selector control values.
 
@@ -26,10 +27,10 @@ The object’s work queue synchronizes access to the selector control value coun
 
 ### Accessing the value
 
-- [SetCurrentSelectedValues](setcurrentselectedvalues.md): Sets the current control value.
-- [GetCurrentSelectedValues](getcurrentselectedvalues.md): Gets the current selected values of the control.
-- [IOUserVideoSelectorValue](../iouservideoselectorvalue.md): Selector value for controls.
-- [AddControlValueDescriptions](addcontrolvaluedescriptions.md): Adds control value descriptions to the selector control.
-- [RemoveControlValueDescriptions](removecontrolvaluedescriptions.md): Removes selector control values from the selector control.
-- [GetControlValueDescriptions](getcontrolvaluedescriptions.md): Gets the selector values for the control.
-- [IOUserVideoSelectorValueDescription](../iouservideoselectorvaluedescription.md): A selector control’s value and name.
+- [SetCurrentSelectedValues](setcurrentselectedvalues.md): Beta. Sets the current control value.
+- [GetCurrentSelectedValues](getcurrentselectedvalues.md): Beta. Gets the current selected values of the control.
+- [IOUserVideoSelectorValue](../iouservideoselectorvalue.md): Beta. Selector value for controls.
+- [AddControlValueDescriptions](addcontrolvaluedescriptions.md): Beta. Adds control value descriptions to the selector control.
+- [RemoveControlValueDescriptions](removecontrolvaluedescriptions.md): Beta. Removes selector control values from the selector control.
+- [GetControlValueDescriptions](getcontrolvaluedescriptions.md): Beta. Gets the selector values for the control.
+- [IOUserVideoSelectorValueDescription](../iouservideoselectorvaluedescription.md): Beta. A selector control’s value and name.

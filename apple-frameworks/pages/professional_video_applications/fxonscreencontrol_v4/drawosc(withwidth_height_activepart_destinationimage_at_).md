@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional_video_applications/fxonscreencontrol_v4/drawosc(withwidth:height:activepart:destinationimage:at:)](https://developer.apple.com/documentation/professional_video_applications/fxonscreencontrol_v4/drawosc(withwidth:height:activepart:destinationimage:at:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/fxonscreencontrol_v4/drawosc(withwidth:height:activepart:destinationimage:at:)
 
 # drawOSC(withWidth:height:activePart:destinationImage:at:) (Swift)
 

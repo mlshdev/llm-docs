@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/network/nwprotocolwebsocket/closecode/defined/goingaway](https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/goingaway)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/goingaway
 
 # NWProtocolWebSocket.CloseCode.Defined.goingAway
 

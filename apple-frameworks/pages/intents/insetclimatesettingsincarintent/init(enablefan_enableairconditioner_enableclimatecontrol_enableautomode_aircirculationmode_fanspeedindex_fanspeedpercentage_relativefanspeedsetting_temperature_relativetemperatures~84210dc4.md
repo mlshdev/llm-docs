@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/insetclimatesettingsincarintent/init(enablefan:enableairconditioner:enableclimatecontrol:enableautomode:aircirculationmode:fanspeedindex:fanspeedpercentage:relativefanspeedsetting:temperature:relativetemperaturesetting:climatezone:carname:)](https://developer.apple.com/documentation/intents/insetclimatesettingsincarintent/init(enablefan:enableairconditioner:enableclimatecontrol:enableautomode:aircirculationmode:fanspeedindex:fanspeedpercentage:relativefanspeedsetting:temperature:relativetemperaturesetting:climatezone:carname:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/intents/insetclimatesettingsincarintent/init(enablefan:enableairconditioner:enableclimatecontrol:enableautomode:aircirculationmode:fanspeedindex:fanspeedpercentage:relativefanspeedsetting:temperature:relativetemperaturesetting:climatezone:carname:)
 
 # init(enableFan:enableAirConditioner:enableClimateControl:enableAutoMode:airCirculationMode:fanSpeedIndex:fanSpeedPercentage:relativeFanSpeedSetting:temperature:relativeTemperatureSetting:climateZone:carName:)
 

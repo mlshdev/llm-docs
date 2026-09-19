@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/corenfc/nfcfelicatag/requestservicev2(nodecodelist:resulthandler:)](https://developer.apple.com/documentation/corenfc/nfcfelicatag/requestservicev2(nodecodelist:resulthandler:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corenfc/nfcfelicatag/requestservicev2(nodecodelist:resulthandler:)
 
 # requestServiceV2(nodeCodeList:resultHandler:)
 
@@ -10,8 +11,4 @@
 
 ```swift
 @preconcurrency func requestServiceV2(nodeCodeList: [Data], resultHandler: @escaping @Sendable (Result<NFCFeliCaRequsetServiceV2Response, any Error>) -> Void)
-```
-
-```swift
-func requestServiceV2(nodeCodeList: [Data], resultHandler: @escaping (Result<NFCFeliCaRequsetServiceV2Response, any Error>) -> Void)
 ```

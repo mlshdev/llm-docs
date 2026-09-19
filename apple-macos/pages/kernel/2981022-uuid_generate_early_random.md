@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/2981022-uuid_generate_early_random](https://developer.apple.com/documentation/kernel/2981022-uuid_generate_early_random)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/2981022-uuid_generate_early_random
 
 # uuid_generate_early_random
 

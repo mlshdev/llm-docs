@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreai/inferencefunction/mutableviews/insert(_:for:)-1b2yx](https://developer.apple.com/documentation/coreai/inferencefunction/mutableviews/insert(_:for:)-1b2yx)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreai/inferencefunction/mutableviews/insert(_:for:)-1b2yx
 
 # insert(\_:for:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/widgetkit/swiftui-views](https://developer.apple.com/documentation/widgetkit/swiftui-views)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/widgetkit/swiftui-views
 
 # SwiftUI views for widgets (Swift)
 
@@ -116,7 +117,7 @@ Widgets can use many, but not all, SwiftUI views to present content. Use the vie
 
 - [GeometryProxy](https://developer.apple.com/documentation/swiftui/geometryproxy): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
 - [GeometryReader](https://developer.apple.com/documentation/swiftui/geometryreader): A container view that defines its content as a function of its own size and coordinate space.
-- [ProjectionTransform](https://developer.apple.com/documentation/swiftui/projectiontransform)
+- [ProjectionTransform](https://developer.apple.com/documentation/swiftui/projectiontransform): A 3x3 matrix that transforms points in a plane.
 
 ### Substituting views
 

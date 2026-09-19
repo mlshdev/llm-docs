@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/paravirtualizedgraphics/pg_support_display_port_count](https://developer.apple.com/documentation/paravirtualizedgraphics/pg_support_display_port_count)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/paravirtualizedgraphics/pg_support_display_port_count
 
 # PG_SUPPORT_DISPLAY_PORT_COUNT (Swift)
 

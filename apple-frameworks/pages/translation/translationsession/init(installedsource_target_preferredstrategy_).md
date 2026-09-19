@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/translation/translationsession/init(installedsource:target:preferredstrategy:)](https://developer.apple.com/documentation/translation/translationsession/init(installedsource:target:preferredstrategy:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/translation/translationsession/init(installedsource:target:preferredstrategy:)
 
 # init(installedSource:target:preferredStrategy:)
 
@@ -22,11 +23,11 @@ convenience init(installedSource source: Locale.Language, target: Locale.Languag
 
 ## Discussion
 
-If one or both languages aren’t installed on the device, attempting to translate will throw errors. To get the person’s permission to download languages that aren’t already installed, translate using a [TranslationSession](../translationsession.md) provided by [translationTask(\_:action:)](https://developer.apple.com/documentation/swiftui/view/translationtask%28_:action:%29) or [translationTask(source:target:action:)](https://developer.apple.com/documentation/swiftui/view/translationtask%28source:target:action:%29) .
+If one or both languages aren’t installed on the device, attempting to translate will throw errors. To get the person’s permission to download languages that aren’t already installed, translate using a [TranslationSession](../translationsession.md) provided by [translationTask(\_:action:)](https://developer.apple.com/documentation/swiftui/view/translationtask%28_:action:%29) or [translationTask(source:target:action:)](https://developer.apple.com/documentation/swiftui/view/translationtask%28source:target:action:%29).
 
 > **Note**
 
-> If you created `TranslationSession` using [init(installedSource:target:)](init%28installedsource_target_%29.md), you don’t need a `.translationTask()`; however, you will need a [sourceLanguage](sourcelanguage.md) .
+> If you created a `TranslationSession` using [init(installedSource:target:)](init%28installedsource_target_%29.md), you don’t need a `.translationTask()`; however, you will need a [sourceLanguage](sourcelanguage.md).
 
 ## See Also
 

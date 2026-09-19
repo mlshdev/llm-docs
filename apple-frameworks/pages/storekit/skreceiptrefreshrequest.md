@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skreceiptrefreshrequest](https://developer.apple.com/documentation/storekit/skreceiptrefreshrequest)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skreceiptrefreshrequest
 
 # SKReceiptRefreshRequest (Swift)
 
@@ -28,7 +29,7 @@ class SKReceiptRefreshRequest
 
 > **Note**
 
->  The receipt isn’t necessary if you use [AppTransaction](apptransaction.md) to validate the app download, or [Transaction](transaction.md) to validate in-app purchases. Only use the receipt if your app uses the [Original API for In-App Purchase](original-api-for-in-app-purchase.md), or needs the receipt to validate the app download because it can’t use [AppTransaction](apptransaction.md).
+>  The receipt isn’t necessary if you use [AppTransaction](apptransaction.md) to validate the app download, or [Transaction](transaction.md) to validate in-app purchases. Only use the receipt if your app uses the [Original API for Apple In-App Purchase](original-api-for-in-app-purchase.md), or needs the receipt to validate the app download because it can’t use [AppTransaction](apptransaction.md).
 
 Use this API to request a new app receipt from the App Store if the receipt is invalid or missing from its expected location, [appStoreReceiptURL](../foundation/bundle/appstorereceipturl.md). To request the receipt using the [SKReceiptRefreshRequest](skreceiptrefreshrequest.md) object, you initialize it, attach a [delegate](skrequest/delegate.md), and then call the request’s [start()](skrequest/start%28%29.md) method.
 
@@ -49,7 +50,7 @@ In the sandbox environment, you can initialize a receipt with any combination of
 There are times when using [SKReceiptRefreshRequest](skreceiptrefreshrequest.md) isn’t necessary, so avoid doing so, such as in the following scenarios:
 
 - If the receipt is valid, but may be missing transactions, use [restoreCompletedTransactions()](skpaymentqueue/restorecompletedtransactions%28%29.md) instead. For example, the receipt may be missing a transaction if a person purchases a new subscription on another device.
-- In the sandbox environment, before the tester completes their first in-app purchase. Receipts are initially absent in the sandbox environment for iOS and iPadOS apps. For more information, see [appStoreReceiptURL](../foundation/bundle/appstorereceipturl.md).
+- In the sandbox environment, before the tester completes their first Apple In-App Purchase. Receipts are initially absent in the sandbox environment for iOS and iPadOS apps. For more information, see [appStoreReceiptURL](../foundation/bundle/appstorereceipturl.md).
 
 ## Topics
 
@@ -117,7 +118,7 @@ A request to the App Store to get the app receipt, which represents the customer
 
 > **Note**
 
->  The receipt isn’t necessary if you use [AppTransaction](apptransaction.md) to validate the app download, or [Transaction](transaction.md) to validate in-app purchases. Only use the receipt if your app uses the [Original API for In-App Purchase](original-api-for-in-app-purchase.md), or needs the receipt to validate the app download because it can’t use [AppTransaction](apptransaction.md).
+>  The receipt isn’t necessary if you use [AppTransaction](apptransaction.md) to validate the app download, or [Transaction](transaction.md) to validate in-app purchases. Only use the receipt if your app uses the [Original API for Apple In-App Purchase](original-api-for-in-app-purchase.md), or needs the receipt to validate the app download because it can’t use [AppTransaction](apptransaction.md).
 
 Use this API to request a new app receipt from the App Store if the receipt is invalid or missing from its expected location, [appStoreReceiptURL](../foundation/bundle/appstorereceipturl.md). To request the receipt using the [SKReceiptRefreshRequest](skreceiptrefreshrequest.md) object, you initialize it, attach a [delegate](skrequest/delegate.md), and then call the request’s [start](skrequest/start%28%29.md) method.
 
@@ -138,7 +139,7 @@ In the sandbox environment, you can initialize a receipt with any combination of
 There are times when using [SKReceiptRefreshRequest](skreceiptrefreshrequest.md) isn’t necessary, so avoid doing so, such as in the following scenarios:
 
 - If the receipt is valid, but may be missing transactions, use [restoreCompletedTransactions](skpaymentqueue/restorecompletedtransactions%28%29.md) instead. For example, the receipt may be missing a transaction if a person purchases a new subscription on another device.
-- In the sandbox environment, before the tester completes their first in-app purchase. Receipts are initially absent in the sandbox environment for iOS and iPadOS apps. For more information, see [appStoreReceiptURL](../foundation/bundle/appstorereceipturl.md).
+- In the sandbox environment, before the tester completes their first Apple In-App Purchase. Receipts are initially absent in the sandbox environment for iOS and iPadOS apps. For more information, see [appStoreReceiptURL](../foundation/bundle/appstorereceipturl.md).
 
 ## Topics
 

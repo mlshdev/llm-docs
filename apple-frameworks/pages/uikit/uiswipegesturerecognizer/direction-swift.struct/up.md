@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiswipegesturerecognizer/direction-swift.struct/up](https://developer.apple.com/documentation/uikit/uiswipegesturerecognizer/direction-swift.struct/up)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiswipegesturerecognizer/direction-swift.struct/up
 
 # up (Swift)
 

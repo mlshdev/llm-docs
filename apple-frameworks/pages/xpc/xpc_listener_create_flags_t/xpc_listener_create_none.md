@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/xpc/xpc_listener_create_flags_t/xpc_listener_create_none](https://developer.apple.com/documentation/xpc/xpc_listener_create_flags_t/xpc_listener_create_none)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_listener_create_flags_t/xpc_listener_create_none
 
 # XPC_LISTENER_CREATE_NONE
 

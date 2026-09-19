@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/kmod_info_t/1580119-info_version](https://developer.apple.com/documentation/kernel/kmod_info_t/1580119-info_version)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/kmod_info_t/1580119-info_version
 
 # info_version
 

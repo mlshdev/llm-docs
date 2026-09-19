@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/scsiserviceresponse/kscsiserviceresponse_service_delivery_or_target_failure](https://developer.apple.com/documentation/kernel/scsiserviceresponse/kscsiserviceresponse_service_delivery_or_target_failure)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/scsiserviceresponse/kscsiserviceresponse_service_delivery_or_target_failure
 
 # kSCSIServiceResponse_SERVICE_DELIVERY_OR_TARGET_FAILURE
 

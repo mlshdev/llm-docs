@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/diffuseproberesource/init(positions:coefficients:tetrahedronindices:)](https://developer.apple.com/documentation/realitykit/diffuseproberesource/init(positions:coefficients:tetrahedronindices:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/diffuseproberesource/init(positions:coefficients:tetrahedronindices:)
 
 # init(positions:coefficients:tetrahedronIndices:)
 

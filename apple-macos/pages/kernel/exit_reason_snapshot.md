@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/exit_reason_snapshot](https://developer.apple.com/documentation/kernel/exit_reason_snapshot)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/exit_reason_snapshot
 
 # exit_reason_snapshot
 

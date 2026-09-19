@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional-video-applications/building-an-fxplug-plug-in-manually](https://developer.apple.com/documentation/professional-video-applications/building-an-fxplug-plug-in-manually)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/professional-video-applications/building-an-fxplug-plug-in-manually
 
 # Building an FxPlug plug-in manually (Swift)
 
@@ -323,6 +324,7 @@ func destinationImageRect(_ destinationImageRect: UnsafeMutablePointer<FxRect>, 
            pluginState:(nullable NSData*)pluginState
                 atTime:(CMTime)renderTime
                  error:(NSError**)outError;
+
 
 - (BOOL)destinationImageRect:(FxRect*)destinationImageRect
                 sourceImages:(NSArray<FxImageTile*>*)sourceImages
@@ -683,6 +685,7 @@ func destinationImageRect(_ destinationImageRect: UnsafeMutablePointer<FxRect>, 
            pluginState:(nullable NSData*)pluginState
                 atTime:(CMTime)renderTime
                  error:(NSError**)outError;
+
 
 - (BOOL)destinationImageRect:(FxRect*)destinationImageRect
                 sourceImages:(NSArray<FxImageTile*>*)sourceImages

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreml/using-core-ml-for-semantic-image-segmentation](https://developer.apple.com/documentation/coreml/using-core-ml-for-semantic-image-segmentation)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreml/using-core-ml-for-semantic-image-segmentation
 
 # Using Core ML for semantic image segmentation
 

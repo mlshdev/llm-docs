@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/walletpasses/building-a-pass](https://developer.apple.com/documentation/walletpasses/building-a-pass)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/walletpasses/building-a-pass
 
 # Building a Pass
 
@@ -127,7 +128,7 @@ If your pass doesn’t build correctly, check whether the following are all true
 ### Essentials
 
 - [Creating a pass with Pass Designer](creating-a-pass-with-pass-designer.md): Construct and customize a variety of pass styles with this easy-to-use tool.
-- [Creating a poster generic pass](creating-a-poster-generic-pass.md): Construct a digital pass with information that enables people to take action.
+- [Creating a Poster Generic Pass](creating-a-poster-generic-pass.md): Construct a digital pass with information that enables people to take action.
 - [Creating the Source for a Pass](creating-the-source-for-a-pass.md): Create the directory structure and add source files and images to define a pass.
 - [Defining the metadata of your Wallet Pass](defining-the-metadata-of-your-wallet-pass.md): Provide customizable information for your Wallet Pass.
 - [Distributing and updating a pass](distributing-and-updating-a-pass.md): Distribute a pass to your users or update an existing pass.

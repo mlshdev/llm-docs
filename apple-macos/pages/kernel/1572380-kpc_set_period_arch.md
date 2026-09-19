@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1572380-kpc_set_period_arch](https://developer.apple.com/documentation/kernel/1572380-kpc_set_period_arch)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1572380-kpc_set_period_arch
 
 # kpc_set_period_arch
 

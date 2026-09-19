@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyselector](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyselector)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyselector
 
 # IOUserVideoObjectPropertySelector
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Type Alias  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 A four character code which, along with the scope and element, specifies a specific piece of information about a video object.
 
@@ -26,5 +27,5 @@ The property selector specifies the general classification of the property such 
 
 ### Communicating with the host
 
-- [PropertiesChanged](../iouservideodriver/propertieschanged.md): This method informs the host when the state of an driver’s object changes.
-- [IOUserVideoObjectID](iouservideoobjectid.md): A handle for a a specific video object.
+- [PropertiesChanged](../iouservideodriver/propertieschanged.md): Beta. This method informs the host when the state of an driver’s object changes.
+- [IOUserVideoObjectID](iouservideoobjectid.md): Beta. A handle for a a specific video object.

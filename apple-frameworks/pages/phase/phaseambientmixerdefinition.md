@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/phase/phaseambientmixerdefinition](https://developer.apple.com/documentation/phase/phaseambientmixerdefinition)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/phase/phaseambientmixerdefinition
 
 # PHASEAmbientMixerDefinition (Swift)
 
@@ -71,12 +72,14 @@ Ambient mixers require the app to specify a listener, for which you define an or
 let mixerParams = PHASEMixerParameters()
 mixerParams.addAmbientMixerParameters(ambientMixer.uid, listener: listener)
 
+
 // Create a sound event object.    
 var ambientSoundEvent: PHASESoundEvent!
 do { ambientSoundEvent = try PHASESoundEvent(engine: engine,
         registeredSoundEventNodeAssetUID: ambientSoundEventAsset.uid,
         mixerParameters: mixerParams)
 } catch { fatalError("Failed to create a sound event.") }
+
 
 // Play the ambient sound.
 do { try ambientSoundEvent.start() } 
@@ -212,12 +215,14 @@ Ambient mixers require the app to specify a listener, for which you define an or
 let mixerParams = PHASEMixerParameters()
 mixerParams.addAmbientMixerParameters(ambientMixer.uid, listener: listener)
 
+
 // Create a sound event object.    
 var ambientSoundEvent: PHASESoundEvent!
 do { ambientSoundEvent = try PHASESoundEvent(engine: engine,
         registeredSoundEventNodeAssetUID: ambientSoundEventAsset.uid,
         mixerParameters: mixerParams)
 } catch { fatalError("Failed to create a sound event.") }
+
 
 // Play the ambient sound.
 do { try ambientSoundEvent.start() } 

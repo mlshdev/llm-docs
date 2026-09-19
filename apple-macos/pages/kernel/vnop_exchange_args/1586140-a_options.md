@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/vnop_exchange_args/1586140-a_options](https://developer.apple.com/documentation/kernel/vnop_exchange_args/1586140-a_options)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/vnop_exchange_args/1586140-a_options
 
 # a_options
 

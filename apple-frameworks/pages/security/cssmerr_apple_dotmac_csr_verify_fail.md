@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_apple_dotmac_csr_verify_fail](https://developer.apple.com/documentation/security/cssmerr_apple_dotmac_csr_verify_fail)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_apple_dotmac_csr_verify_fail
 
 # CSSMERR_APPLE_DOTMAC_CSR_VERIFY_FAIL (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelerror/unsupportedgenerationguide](https://developer.apple.com/documentation/foundationmodels/languagemodelerror/unsupportedgenerationguide)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelerror/unsupportedgenerationguide
 
 # LanguageModelError.UnsupportedGenerationGuide
 
@@ -18,13 +19,13 @@ struct UnsupportedGenerationGuide
 
 ### Creating an error instance
 
-- [init(schemaName:debugDescription:metadata:)](unsupportedgenerationguide/init%28schemaname_debugdescription_metadata_%29.md)
+- [init(schemaName:debugDescription:metadata:)](unsupportedgenerationguide/init%28schemaname_debugdescription_metadata_%29.md): Creates information describing a generation guide the model doesn’t support.
 
 ### Inspecting unsupported generation guide errors
 
-- [metadata](unsupportedgenerationguide/metadata.md)
-- [schemaName](unsupportedgenerationguide/schemaname.md)
-- [debugDescription](unsupportedgenerationguide/debugdescription.md)
+- [metadata](unsupportedgenerationguide/metadata.md): Additional information about the failure, keyed by name.
+- [schemaName](unsupportedgenerationguide/schemaname.md): The name of the schema whose generation guide isn’t supported, if any.
+- [debugDescription](unsupportedgenerationguide/debugdescription.md): A debug description to help developers diagnose issues during development.
 
 ## Relationships
 
@@ -37,4 +38,4 @@ struct UnsupportedGenerationGuide
 
 ### Generation guide unsupported error
 
-- [LanguageModelError.unsupportedGenerationGuide(\_:)](unsupportedgenerationguide%28__%29.md): An unsupported generation guide was used
+- [LanguageModelError.unsupportedGenerationGuide(\_:)](unsupportedgenerationguide%28__%29.md): An unsupported generation guide was used.

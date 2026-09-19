@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/spsize3dfloatunapplyscaledpose](https://developer.apple.com/documentation/spatial/spsize3dfloatunapplyscaledpose)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatial/spsize3dfloatunapplyscaledpose
 
 # SPSize3DFloatUnapplyScaledPose
 

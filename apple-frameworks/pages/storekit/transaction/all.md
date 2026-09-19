@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/all](https://developer.apple.com/documentation/storekit/transaction/all)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/all
 
 # all
 
@@ -25,7 +26,7 @@ static var all: Transaction.Transactions { get }
 
 This sequence returns the customer’s transaction history current to the moment you access it. The sequence emits a finite number of transactions. If the App Store processes additional transactions for the customer while you’re accessing this sequence, they appear in the transaction listener [updates](updates.md).
 
-The transaction history includes the following in-app purchases:
+The transaction history includes the following Apple In-App Purchases:
 
 - Unfinished consumables
 - Finished consumables that are refunded or revoked
@@ -43,4 +44,4 @@ To get all possible transactions, including all finished consumables, set the [S
 
 - [Transaction](../transaction.md): Information that represents the customer’s purchase of a product in your app.
 - [updates](updates.md): The asynchronous sequence that emits a transaction when the system creates or updates transactions that occur outside the app or on other devices.
-- [currentEntitlements](currententitlements.md): A sequence of the latest transactions that entitle a customer to In-App Purchases and subscriptions.
+- [currentEntitlements](currententitlements.md): A sequence of the latest transactions that entitle a customer to Apple In-App Purchases and subscriptions.

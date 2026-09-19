@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_sudo_plugin_type_audit](https://developer.apple.com/documentation/endpointsecurity/es_sudo_plugin_type_audit)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_sudo_plugin_type_audit
 
 # ES_SUDO_PLUGIN_TYPE_AUDIT (Swift)
 

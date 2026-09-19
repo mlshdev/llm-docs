@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videotoolbox/vtmotionblurparameters/init(sourceframe:nextframe:previousframe:nextopticalflow:previousopticalflow:motionblurstrength:submissionmode:destinationframe:)](https://developer.apple.com/documentation/videotoolbox/vtmotionblurparameters/init(sourceframe:nextframe:previousframe:nextopticalflow:previousopticalflow:motionblurstrength:submissionmode:destinationframe:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videotoolbox/vtmotionblurparameters/init(sourceframe:nextframe:previousframe:nextopticalflow:previousopticalflow:motionblurstrength:submissionmode:destinationframe:)
 
 # init(sourceFrame:nextFrame:previousFrame:nextOpticalFlow:previousOpticalFlow:motionBlurStrength:submissionMode:destinationFrame:) (Swift)
 

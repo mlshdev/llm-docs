@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpscnnlocalcontrastnormalizationgradientnode/init(sourcegradient:sourceimage:gradientstate:kernelwidth:kernelheight:)](https://developer.apple.com/documentation/metalperformanceshaders/mpscnnlocalcontrastnormalizationgradientnode/init(sourcegradient:sourceimage:gradientstate:kernelwidth:kernelheight:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpscnnlocalcontrastnormalizationgradientnode/init(sourcegradient:sourceimage:gradientstate:kernelwidth:kernelheight:)
 
 # init(sourceGradient:sourceImage:gradientState:kernelWidth:kernelHeight:) (Swift)
 

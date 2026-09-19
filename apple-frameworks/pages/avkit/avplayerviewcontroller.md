@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontroller](https://developer.apple.com/documentation/avkit/avplayerviewcontroller)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontroller
 
 # AVPlayerViewController (Swift)
 
@@ -17,11 +18,11 @@ A view controller that displays content from a player and presents a native user
 ## Mentioned In
 
 - [Adopting the system player interface in visionOS](adopting-the-system-player-interface-in-visionos.md)
-- [Customizing the tvOS Playback Experience](customizing-the-tvos-playback-experience.md)
-- [Adopting Picture in Picture in a Custom Player](adopting-picture-in-picture-in-a-custom-player.md)
+- [Customizing the tvOS playback experience](customizing-the-tvos-playback-experience.md)
+- [Adopting Picture in Picture in a custom player](adopting-picture-in-picture-in-a-custom-player.md)
 - [Trimming and exporting media in visionOS](trimming-and-exporting-media-in-visionos.md)
-- [Working with Interstitial Content](working-with-interstitial-content.md)
-- [Adopting Picture in Picture in a Standard Player](adopting-picture-in-picture-in-a-standard-player.md)
+- [Working with interstitial content](working-with-interstitial-content.md)
+- [Adopting Picture in Picture in a standard player](adopting-picture-in-picture-in-a-standard-player.md)
 
 <a id="overview"></a>
 
@@ -213,15 +214,15 @@ Use the [AVContentProposal](avcontentproposal.md) class to describe the proposed
 
 ## See Also
 
-### iOS playback and capture
+### Standard player interfaces
 
 - [Playing video content in a standard user interface](playing-video-content-in-a-standard-user-interface.md): Play media full screen, embedded inline, or in a floating Picture in Picture (PiP) window using a player view controller.
+- [Customizing the tvOS playback experience](customizing-the-tvos-playback-experience.md): Adopt the latest features of the redesigned tvOS player user interface to provide a more streamlined way to watch your content.
+- [Adopting the system player interface in visionOS](adopting-the-system-player-interface-in-visionos.md): Provide an optimized viewing experience for watching 3D video content.
 - [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md): A protocol that defines the methods to implement to respond to player view controller events.
-- [AVCaptureEventInteraction](avcaptureeventinteraction.md): An object that registers handlers to respond to capture events from system hardware buttons.
-- [AVCaptureEvent](avcaptureevent.md): An object that describes a user interaction with a system hardware button.
-- [AVCaptureEventSound](avcaptureeventsound.md): A sound object for a capture event.
-- [AVInputPickerInteraction](avinputpickerinteraction.md): Use `AVInputPickerInteraction` to present an input picker.
-- [Third-party casting support](third-party-casting-support.md): Provide custom playback controls for third-party casting services and other media sources.
+- [AVPlayerView](avplayerview.md): A view that displays content from a player and presents a native user interface to control playback.
+- [AVPlayerViewDelegate](avplayerviewdelegate.md): A protocol that defines the methods to implement to participate in the player view’s full-screen presentation life cycle.
+- [VideoPlayer](videoplayer.md): A view that displays content from a player and a native user interface to control playback.
 
 # AVPlayerViewController (Objective-C)
 
@@ -240,11 +241,11 @@ A view controller that displays content from a player and presents a native user
 ## Mentioned In
 
 - [Adopting the system player interface in visionOS](adopting-the-system-player-interface-in-visionos.md)
-- [Customizing the tvOS Playback Experience](customizing-the-tvos-playback-experience.md)
-- [Adopting Picture in Picture in a Custom Player](adopting-picture-in-picture-in-a-custom-player.md)
+- [Customizing the tvOS playback experience](customizing-the-tvos-playback-experience.md)
+- [Adopting Picture in Picture in a custom player](adopting-picture-in-picture-in-a-custom-player.md)
 - [Trimming and exporting media in visionOS](trimming-and-exporting-media-in-visionos.md)
-- [Working with Interstitial Content](working-with-interstitial-content.md)
-- [Adopting Picture in Picture in a Standard Player](adopting-picture-in-picture-in-a-standard-player.md)
+- [Working with interstitial content](working-with-interstitial-content.md)
+- [Adopting Picture in Picture in a standard player](adopting-picture-in-picture-in-a-standard-player.md)
 
 <a id="overview"></a>
 
@@ -411,11 +412,10 @@ Use the [AVContentProposal](avcontentproposal.md) class to describe the proposed
 
 ## See Also
 
-### iOS playback and capture
+### Standard player interfaces
 
+- [Customizing the tvOS playback experience](customizing-the-tvos-playback-experience.md): Adopt the latest features of the redesigned tvOS player user interface to provide a more streamlined way to watch your content.
+- [Adopting the system player interface in visionOS](adopting-the-system-player-interface-in-visionos.md): Provide an optimized viewing experience for watching 3D video content.
 - [AVPlayerViewControllerDelegate](avplayerviewcontrollerdelegate.md): A protocol that defines the methods to implement to respond to player view controller events.
-- [AVCaptureEventInteraction](avcaptureeventinteraction.md): An object that registers handlers to respond to capture events from system hardware buttons.
-- [AVCaptureEvent](avcaptureevent.md): An object that describes a user interaction with a system hardware button.
-- [AVCaptureEventSound](avcaptureeventsound.md): A sound object for a capture event.
-- [AVInputPickerInteraction](avinputpickerinteraction.md): Use `AVInputPickerInteraction` to present an input picker.
-- [Third-party casting support](third-party-casting-support.md): Provide custom playback controls for third-party casting services and other media sources.
+- [AVPlayerView](avplayerview.md): A view that displays content from a player and presents a native user interface to control playback.
+- [AVPlayerViewDelegate](avplayerviewdelegate.md): A protocol that defines the methods to implement to participate in the player view’s full-screen presentation life cycle.

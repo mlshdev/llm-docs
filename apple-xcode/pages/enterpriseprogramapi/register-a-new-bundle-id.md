@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/enterpriseprogramapi/register-a-new-bundle-id](https://developer.apple.com/documentation/enterpriseprogramapi/register-a-new-bundle-id)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/enterpriseprogramapi/register-a-new-bundle-id
 
 # Register a New Bundle ID
 

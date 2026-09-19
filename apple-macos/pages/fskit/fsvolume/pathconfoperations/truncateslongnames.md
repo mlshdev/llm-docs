@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fsvolume/pathconfoperations/truncateslongnames](https://developer.apple.com/documentation/fskit/fsvolume/pathconfoperations/truncateslongnames)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/fskit/fsvolume/pathconfoperations/truncateslongnames
 
 # truncatesLongNames (Swift)
 

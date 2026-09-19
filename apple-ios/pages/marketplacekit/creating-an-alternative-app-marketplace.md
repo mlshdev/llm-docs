@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/creating-an-alternative-app-marketplace](https://developer.apple.com/documentation/marketplacekit/creating-an-alternative-app-marketplace)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/marketplacekit/creating-an-alternative-app-marketplace
 
 # Creating an alternative app marketplace
 
@@ -31,7 +32,7 @@ For an alternative app marketplace:
 - Add a code-signing configuration that the system requires to launch your app on devices. Marketplace apps require the [com.apple.developer.marketplace.app-installation](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.marketplace.app-installation) entitlement, which is a *managed entitlement*. To provision managed entitlements, see [Provisioning with managed capabilities](https://developer.apple.com/help/account/reference/provisioning-with-managed-capabilities/).
 - Build with Xcode 15.3 or later, to accommodate [MarketplaceKit](../marketplacekit.md) framework availability. MarketplaceKit lets people install apps from an alternative marketplace on supported devices.
 - Help provide an age-rating appropriate browsing experience by checking the maximum allowed age rating for the device. Honor any exceptions that a parent or guardian makes for specific apps. See [Providing age-rating appropriate content](providing-age-rating-appropriate-content.md).
-- Use APIs that vary from App Store apps. Specifically, use [AdAttributionKit](../adattributionkit.md) for ads, and [Background Assets](https://developer.apple.com/documentation/backgroundassets) to download large files. Use a custom e-commerce solution. API that rely on Apple’s App Store, such as [In-App Purchase](https://developer.apple.com/documentation/storekit/in-app-purchase) and [On Demand Resources](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/), don’t support alternative app marketplaces.
+- Use APIs that vary from App Store apps. Specifically, use [AdAttributionKit](../adattributionkit.md) for ads, and [Background Assets](https://developer.apple.com/documentation/backgroundassets) to download large files. Use a custom e-commerce solution. API that rely on Apple’s App Store, such as [Apple In-App Purchase](https://developer.apple.com/documentation/storekit/in-app-purchase) and [On Demand Resources](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/), don’t support alternative app marketplaces.
 
 <a id="Add-the-required-target-property"></a>
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/visionos-release-notes](https://developer.apple.com/documentation/visionos-release-notes)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/visionos-release-notes
 
 # visionOS Release Notes
 
@@ -20,7 +21,8 @@ For issues not mentioned in release notes, file bugs through [Feedback Assistant
 
 ### visionOS 27
 
-- [visionOS 27 RC Release Notes](visionos-release-notes/visionos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [visionOS 27.2 Beta Release Notes](visionos-release-notes/visionos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [visionOS 27 Release Notes](visionos-release-notes/visionos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### visionOS 26
 

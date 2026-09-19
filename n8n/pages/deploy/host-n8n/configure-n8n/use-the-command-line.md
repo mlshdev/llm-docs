@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/use-the-command-line.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/deploy/host-n8n/configure-n8n/use-the-command-line.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/use-the-command-line.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/deploy/host-n8n/configure-n8n/use-the-command-line.md)
 
 # Use the command line
 
@@ -153,6 +153,11 @@ n8n export:entities --outputDir=./outputs --includeExecutionHistoryDataTables=tr
 ## Export workflows and credentials <a id="export-workflows-and-credentials"></a>
 
 You can export your workflows and credentials from n8n using the CLI.
+
+> **Info**
+> **Planning a full backup**
+>
+> The `--backup` flag exports workflows and credentials only. For what a complete backup of a self-hosted instance includes, and how to restore it, see [Back up and restore](https://docs.n8n.io/deploy/host-n8n/keep-n8n-running/backup-and-restore).
 
 Command flags:
 

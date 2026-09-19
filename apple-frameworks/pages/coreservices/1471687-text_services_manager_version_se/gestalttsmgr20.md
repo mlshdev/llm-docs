@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1471687-text_services_manager_version_se/gestalttsmgr20](https://developer.apple.com/documentation/coreservices/1471687-text_services_manager_version_se/gestalttsmgr20)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/1471687-text_services_manager_version_se/gestalttsmgr20
 
 # gestaltTSMgr20
 

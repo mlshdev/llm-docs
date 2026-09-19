@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/symbols/symboleffectoptions/repeating-swift.property](https://developer.apple.com/documentation/symbols/symboleffectoptions/repeating-swift.property)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/symbols/symboleffectoptions/repeating-swift.property
 
 # repeating
 
 **Framework:** Symbols  
 **Kind:** Instance Property  
-**Availability:** iOS 17.0+ (deprecated in 27.0) · iPadOS 17.0+ (deprecated in 27.0) · Mac Catalyst 17.0+ (deprecated in 27.0) · macOS 14.0+ (deprecated in 27.0) · tvOS 17.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0) · watchOS 10.0+ (deprecated in 27.0)
+**Availability:** iOS 17.0+ (deprecated in 27.2) · iPadOS 17.0+ (deprecated in 27.2) · Mac Catalyst 17.0+ (deprecated in 27.2) · macOS 14.0+ (deprecated in 27.2) · tvOS 17.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2) · watchOS 10.0+ (deprecated in 27.2)
 
 A set of effect options that prefers to repeat indefinitely.
 

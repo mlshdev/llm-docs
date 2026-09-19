@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/gl_float_mat4x3](https://developer.apple.com/documentation/opengles/gl_float_mat4x3)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/gl_float_mat4x3
 
 # GL_FLOAT_MAT4x3 (Swift)
 

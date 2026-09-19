@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appstoreservernotifications](https://developer.apple.com/documentation/appstoreservernotifications)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreservernotifications
 
 # App Store Server Notifications
 
@@ -77,6 +78,6 @@ The App Store server sends the `TEST` notification in the version 2 notification
 
 ### Related Documentation
 
-- [In-App Purchase](storekit/in-app-purchase.md): Offer content and services in your app across Apple platforms using a Swift-based interface.
+- [Apple In-App Purchase](storekit/in-app-purchase.md): Offer content and services in your app across Apple platforms using a Swift-based interface.
 - [App Store Server API](appstoreserverapi.md): Manage your customers’ App Store transactions from your server.
 - [App Store Receipts](appstorereceipts.md): Deprecated. Validate app and In-App Purchase receipts with the App Store.

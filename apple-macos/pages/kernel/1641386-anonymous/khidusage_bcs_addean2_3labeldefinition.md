@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1641386-anonymous/khidusage_bcs_addean2_3labeldefinition](https://developer.apple.com/documentation/kernel/1641386-anonymous/khidusage_bcs_addean2_3labeldefinition)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1641386-anonymous/khidusage_bcs_addean2_3labeldefinition
 
 # kHIDUsage_BCS_AddEAN2_3LabelDefinition
 

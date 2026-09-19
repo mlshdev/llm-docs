@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uisearchbardelegate/searchbar(_:shouldchangetextin:replacementtext:)](https://developer.apple.com/documentation/uikit/uisearchbardelegate/searchbar(_:shouldchangetextin:replacementtext:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uisearchbardelegate/searchbar(_:shouldchangetextin:replacementtext:)
 
 # searchBar(\_:shouldChangeTextIn:replacementText:) (Swift)
 
 **Framework:** UIKit  
 **Kind:** Instance Method  
-**Availability:** iOS 3.0+ (deprecated in 27.0) · iPadOS 3.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · tvOS  (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 3.0+ (deprecated in 27.0) · iPadOS 3.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.2) · tvOS  (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Ask the delegate if text in a specified range should be replaced with given text.
 
@@ -40,7 +41,7 @@ optional func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRa
 
 **Framework:** UIKit  
 **Kind:** Instance Method  
-**Availability:** iOS 3.0+ (deprecated in 27.0) · iPadOS 3.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · tvOS  (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+**Availability:** iOS 3.0+ (deprecated in 27.0) · iPadOS 3.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.2) · tvOS  (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2)
 
 Ask the delegate if text in a specified range should be replaced with given text.
 

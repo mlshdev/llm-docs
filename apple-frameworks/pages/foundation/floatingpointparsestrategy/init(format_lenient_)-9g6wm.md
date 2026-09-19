@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/floatingpointparsestrategy/init(format:lenient:)-9g6wm](https://developer.apple.com/documentation/foundation/floatingpointparsestrategy/init(format:lenient:)-9g6wm)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/floatingpointparsestrategy/init(format:lenient:)-9g6wm
 
 # init(format:lenient:)
 

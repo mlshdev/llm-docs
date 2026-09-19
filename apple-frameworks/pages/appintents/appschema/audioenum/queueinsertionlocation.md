@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/appschema/audioenum/queueinsertionlocation](https://developer.apple.com/documentation/appintents/appschema/audioenum/queueinsertionlocation)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/appschema/audioenum/queueinsertionlocation
 
 # queueInsertionLocation
 
@@ -29,8 +30,8 @@ enum QueueInsertionLocation: String {
     case tail
 
     static let caseDisplayRepresentations: [Self: DisplayRepresentation] = [
-        .next: "Next",
-        .tail: "Tail"
+        .next: "Play Next",
+        .tail: "Play Last"
     ]
 }
 ```

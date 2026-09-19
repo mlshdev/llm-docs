@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/playgroundsupport/playgroundliveviewsafeareacontainer/3029546-liveviewsafeareaguide](https://developer.apple.com/documentation/playgroundsupport/playgroundliveviewsafeareacontainer/3029546-liveviewsafeareaguide)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/playgroundsupport/playgroundliveviewsafeareacontainer/3029546-liveviewsafeareaguide
 
 # liveViewSafeAreaGuide
 

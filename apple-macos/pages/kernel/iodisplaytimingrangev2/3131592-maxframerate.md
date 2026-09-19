@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iodisplaytimingrangev2/3131592-maxframerate](https://developer.apple.com/documentation/kernel/iodisplaytimingrangev2/3131592-maxframerate)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iodisplaytimingrangev2/3131592-maxframerate
 
 # maxFrameRate
 

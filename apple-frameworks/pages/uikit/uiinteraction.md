@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiinteraction](https://developer.apple.com/documentation/uikit/uiinteraction)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiinteraction
 
 # UIInteraction (Swift)
 
@@ -45,6 +46,7 @@ The protocol that an interaction implements to access the view that owns it.
 - [UIEditMenuInteraction](uieditmenuinteraction.md)
 - [UIFeedbackGenerator](uifeedbackgenerator.md)
 - [UIFindInteraction](uifindinteraction.md)
+- [UIHingeInteraction](uihingeinteraction.md)
 - [UIImpactFeedbackGenerator](uiimpactfeedbackgenerator.md)
 - [UIIndirectScribbleInteraction](uiindirectscribbleinteraction-1nfjm.md)
 - [UILargeContentViewerInteraction](uilargecontentviewerinteraction.md)
@@ -115,6 +117,7 @@ The protocol that an interaction implements to access the view that owns it.
 - [UIEditMenuInteraction](uieditmenuinteraction.md)
 - [UIFeedbackGenerator](uifeedbackgenerator.md)
 - [UIFindInteraction](uifindinteraction.md)
+- [UIHingeInteraction](uihingeinteraction.md)
 - [UIIndirectScribbleInteraction](uiindirectscribbleinteraction-2dap8.md)
 - [UILargeContentViewerInteraction](uilargecontentviewerinteraction.md)
 - [UILookToScrollInteraction](uilooktoscrollinteraction.md)

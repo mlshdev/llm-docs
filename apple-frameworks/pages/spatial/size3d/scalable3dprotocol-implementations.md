@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/size3d/scalable3dprotocol-implementations](https://developer.apple.com/documentation/spatial/size3d/scalable3dprotocol-implementations)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatial/size3d/scalable3dprotocol-implementations
 
 # Scalable3DProtocol Implementations
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsnngraph/encodebatch(to:sourceimages:sourcestates:intermediateimages:destinationstates:)](https://developer.apple.com/documentation/metalperformanceshaders/mpsnngraph/encodebatch(to:sourceimages:sourcestates:intermediateimages:destinationstates:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpsnngraph/encodebatch(to:sourceimages:sourcestates:intermediateimages:destinationstates:)
 
 # encodeBatch(to:sourceImages:sourceStates:intermediateImages:destinationStates:) (Swift)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/mediaextension/mefileinfo](https://developer.apple.com/documentation/mediaextension/mefileinfo)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mediaextension/mefileinfo
 
 # MEFileInfo (Swift)
 
@@ -49,6 +50,7 @@ class MEFileInfo
 
 ### Format readers
 
+- [Supporting custom media formats and decoders](supporting-custom-media-formats-and-decoders.md): Extend the media formats the system can open by providing a format reader and a video decoder.
 - [MEFormatReader](meformatreader.md): A protocol that defines the requirements for a format reader, which represents a single media asset.
 - [MEFormatReaderExtension](meformatreaderextension.md): A protocol that defines a factory to create a new format reader with a byte source.
 - [MEFormatReaderInstantiationOptions](meformatreaderinstantiationoptions.md): An object that contains options to pass to a format reader extension.
@@ -96,6 +98,7 @@ An object that contains file properties from the media asset.
 
 ### Format readers
 
+- [Supporting custom media formats and decoders](supporting-custom-media-formats-and-decoders.md): Extend the media formats the system can open by providing a format reader and a video decoder.
 - [MEFormatReader](meformatreader.md): A protocol that defines the requirements for a format reader, which represents a single media asset.
 - [MEFormatReaderExtension](meformatreaderextension.md): A protocol that defines a factory to create a new format reader with a byte source.
 - [MEFormatReaderInstantiationOptions](meformatreaderinstantiationoptions.md): An object that contains options to pass to a format reader extension.

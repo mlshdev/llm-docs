@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/enabling-developer-mode-on-a-device](https://developer.apple.com/documentation/xcode/enabling-developer-mode-on-a-device)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/enabling-developer-mode-on-a-device
 
 # Enabling Developer Mode on a device
 
@@ -12,7 +13,7 @@ Grant or deny permission for locally installed apps to run in iOS, iPadOS, watch
 
 Enable Developer Mode on a device to run your app on the device through Xcode. Developer Mode protects people from inadvertently installing potentially harmful software, and reduces attack vectors exposed by developer-only functionality.
 
-The feature doesn’t affect ordinary installation techniques, such as buying apps from the App Store or participating in a TestFlight team. Instead, Developer Mode focuses on scenarios like building and running an app from Xcode, or installing an `.ipa` file with [Apple Configurator](https://support.apple.com/apple-configurator). In these cases, the device explicitly asks the person using it to confirm that they’re a developer, and aware of the risks of installing development-signed software.
+The feature doesn’t affect ordinary installation techniques, such as buying apps from the App Store or participating in a TestFlight team. Instead, Developer Mode focuses on scenarios like building and running an app from Xcode, or installing an `.ipa` file with [Apple Configurator](https://apps.apple.com/app/id1037126344). In these cases, the device explicitly asks the person using it to confirm that they’re a developer, and aware of the risks of installing development-signed software.
 
 When you start pairing a device, Device Hub displays a message when you need to turn on Developer Mode or when Developer Mode is turned off on a previously paired device. For more information, see [Managing your simulated and physical devices in Device Hub](managing-your-simulated-and-physical-devices-in-device-hub.md).
 

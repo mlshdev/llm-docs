@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrclustermediaplayback/deactivatetexttrack(withexpectedvalues:expectedvalueinterval:completion:)](https://developer.apple.com/documentation/matter/mtrclustermediaplayback/deactivatetexttrack(withexpectedvalues:expectedvalueinterval:completion:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrclustermediaplayback/deactivatetexttrack(withexpectedvalues:expectedvalueinterval:completion:)
 
 # deactivateTextTrack(withExpectedValues:expectedValueInterval:completion:) (Swift)
 

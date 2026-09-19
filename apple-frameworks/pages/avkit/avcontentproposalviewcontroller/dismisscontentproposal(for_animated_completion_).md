@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcontentproposalviewcontroller/dismisscontentproposal(for:animated:completion:)](https://developer.apple.com/documentation/avkit/avcontentproposalviewcontroller/dismisscontentproposal(for:animated:completion:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcontentproposalviewcontroller/dismisscontentproposal(for:animated:completion:)
 
 # dismissContentProposal(for:animated:completion:) (Swift)
 
@@ -26,7 +27,7 @@ func dismissContentProposal(for action: AVContentProposalAction, animated: Bool)
 
 ## Mentioned In
 
-- [Presenting Content Proposals in tvOS](../presenting-content-proposals-in-tvos.md)
+- [Presenting content proposals in tvOS](../presenting-content-proposals-in-tvos.md)
 
 <a id="Discussion"></a>
 
@@ -36,7 +37,7 @@ Call this method to indicate the user action when leaving this proposal.
 
 ## See Also
 
-### Dismissing the Proposal
+### Dismissing the proposal
 
 - [AVContentProposalAction](../avcontentproposalaction.md): Constant that indicate the action a user takes when dismissing a content proposal.
 
@@ -62,7 +63,7 @@ Dismisses the current content proposal.
 
 ## Mentioned In
 
-- [Presenting Content Proposals in tvOS](../presenting-content-proposals-in-tvos.md)
+- [Presenting content proposals in tvOS](../presenting-content-proposals-in-tvos.md)
 
 <a id="Discussion"></a>
 
@@ -72,6 +73,6 @@ Call this method to indicate the user action when leaving this proposal.
 
 ## See Also
 
-### Dismissing the Proposal
+### Dismissing the proposal
 
 - [AVContentProposalAction](../avcontentproposalaction.md): Constant that indicate the action a user takes when dismissing a content proposal.

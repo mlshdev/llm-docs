@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/sadb_alg/1588351-sadb_alg_maxbits](https://developer.apple.com/documentation/kernel/sadb_alg/1588351-sadb_alg_maxbits)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/sadb_alg/1588351-sadb_alg_maxbits
 
 # sadb_alg_maxbits
 

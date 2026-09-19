@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/midinotemessage/init(channel:note:velocity:releasevelocity:duration:)](https://developer.apple.com/documentation/audiotoolbox/midinotemessage/init(channel:note:velocity:releasevelocity:duration:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/midinotemessage/init(channel:note:velocity:releasevelocity:duration:)
 
 # init(channel:note:velocity:releaseVelocity:duration:)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/fsignatures_t/3610237-fs_cdhash](https://developer.apple.com/documentation/kernel/fsignatures_t/3610237-fs_cdhash)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/fsignatures_t/3610237-fs_cdhash
 
 # fs_cdhash
 

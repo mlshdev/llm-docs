@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/kscsicmd_move_medium_attached](https://developer.apple.com/documentation/driverkit/kscsicmd_move_medium_attached)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/kscsicmd_move_medium_attached
 
 # kSCSICmd_MOVE_MEDIUM_ATTACHED
 

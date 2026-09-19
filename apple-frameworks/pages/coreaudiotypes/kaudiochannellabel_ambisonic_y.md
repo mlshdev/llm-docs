@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreaudiotypes/kaudiochannellabel_ambisonic_y](https://developer.apple.com/documentation/coreaudiotypes/kaudiochannellabel_ambisonic_y)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreaudiotypes/kaudiochannellabel_ambisonic_y
 
 # kAudioChannelLabel_Ambisonic_Y (Swift)
 

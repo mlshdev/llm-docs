@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/spcmodepagepowercondition/1476523-idle_condition_timer](https://developer.apple.com/documentation/kernel/spcmodepagepowercondition/1476523-idle_condition_timer)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/spcmodepagepowercondition/1476523-idle_condition_timer
 
 # IDLE_CONDITION_TIMER
 

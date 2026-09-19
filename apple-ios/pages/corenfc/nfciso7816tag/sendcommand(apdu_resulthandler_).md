@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/corenfc/nfciso7816tag/sendcommand(apdu:resulthandler:)](https://developer.apple.com/documentation/corenfc/nfciso7816tag/sendcommand(apdu:resulthandler:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corenfc/nfciso7816tag/sendcommand(apdu:resulthandler:)
 
 # sendCommand(apdu:resultHandler:)
 
@@ -12,10 +13,6 @@ Sends an application protocol data unit (APDU) to the tag and receives a respons
 
 ```swift
 @preconcurrency func sendCommand(apdu: NFCISO7816APDU, resultHandler: @escaping @Sendable (Result<NFCISO7816ResponseAPDU, any Error>) -> Void)
-```
-
-```swift
-func sendCommand(apdu: NFCISO7816APDU, resultHandler: @escaping (Result<NFCISO7816ResponseAPDU, any Error>) -> Void)
 ```
 
 ## Parameters

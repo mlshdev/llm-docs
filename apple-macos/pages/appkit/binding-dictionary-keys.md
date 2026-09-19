@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/binding-dictionary-keys](https://developer.apple.com/documentation/appkit/binding-dictionary-keys)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/binding-dictionary-keys
 
 # Binding dictionary keys (Swift)
 

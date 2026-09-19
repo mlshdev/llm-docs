@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreaudiotypes/kaudiochannellabel_ms_mid](https://developer.apple.com/documentation/coreaudiotypes/kaudiochannellabel_ms_mid)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreaudiotypes/kaudiochannellabel_ms_mid
 
 # kAudioChannelLabel_MS_Mid (Swift)
 

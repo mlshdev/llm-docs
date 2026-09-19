@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/tls_dhe_dss_with_aes_256_cbc_sha256](https://developer.apple.com/documentation/security/tls_dhe_dss_with_aes_256_cbc_sha256)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/tls_dhe_dss_with_aes_256_cbc_sha256
 
 # TLS_DHE_DSS_WITH_AES_256_CBC_SHA256 (Swift)
 

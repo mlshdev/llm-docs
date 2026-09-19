@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1538155-task_purgable_info](https://developer.apple.com/documentation/kernel/1538155-task_purgable_info)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1538155-task_purgable_info
 
 # task_purgable_info
 

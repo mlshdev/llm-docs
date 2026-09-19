@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/network/creating-an-identity-for-local-network-tls](https://developer.apple.com/documentation/network/creating-an-identity-for-local-network-tls)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/network/creating-an-identity-for-local-network-tls
 
 # Creating an Identity for Local Network TLS (Swift)
 

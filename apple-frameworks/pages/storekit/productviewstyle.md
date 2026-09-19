@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/productviewstyle](https://developer.apple.com/documentation/storekit/productviewstyle)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/productviewstyle
 
 # ProductViewStyle
 
@@ -6,7 +7,7 @@
 **Kind:** Protocol  
 **Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
 
-A type that specifies the appearance and interaction of In-App Purchase products within the view hierarchy.
+A type that specifies the appearance and interaction of Apple In-App Purchase products within the view hierarchy.
 
 ## Declaration
 
@@ -18,7 +19,7 @@ A type that specifies the appearance and interaction of In-App Purchase products
 
 ## Overview
 
-To configure the in-app purchase product style for a view hierarchy, use the [productViewStyle(\_:)](https://developer.apple.com/documentation/swiftui/view/productviewstyle%28_:%29) modifier.
+To configure the Apple In-App Purchase product style for a view hierarchy, use the [productViewStyle(\_:)](https://developer.apple.com/documentation/swiftui/view/productviewstyle%28_:%29) modifier.
 
 To create a custom style, declare a type that conforms to the `ProductViewStyle` protocol. Implement the [makeBody(configuration:)](productviewstyle/makebody%28configuration_%29.md) method to return a view that composes the elements of the configuration that the system provides to your method. The following code example shows how to create a custom product view style:
 
@@ -48,7 +49,7 @@ ProductView(id: "com.example.product")
 
 - [automatic](productviewstyle/automatic.md): Conforms when `Self` is `AutomaticProductViewStyle`.
 - [compact](productviewstyle/compact.md): Conforms when `Self` is `CompactProductViewStyle`. An product view style suitable for layouts where less space is available, or for displaying more items in a small amount of space.
-- [large](productviewstyle/large.md): Conforms when `Self` is `LargeProductViewStyle`. A product view style suitable for layouts where the in-app purchase content is prominent.
+- [large](productviewstyle/large.md): Conforms when `Self` is `LargeProductViewStyle`. A product view style suitable for layouts where the Apple In-App Purchase content is prominent.
 - [regular](productviewstyle/regular.md): Conforms when `Self` is `RegularProductViewStyle`. A product view style that uses a standard, platform-appropriate layout.
 
 ### Creating custom product views
@@ -62,7 +63,7 @@ ProductView(id: "com.example.product")
 - [AutomaticProductViewStyle](automaticproductviewstyle.md)
 - [CompactProductViewStyle](compactproductviewstyle.md): A style for a product view that’s suitable for layouts with less available space, or for displaying more items in a small amount of space.
 - [RegularProductViewStyle](regularproductviewstyle.md): A style for a product view that uses a standard, platform-appropriate layout.
-- [LargeProductViewStyle](largeproductviewstyle.md): A style for a product view that’s suitable for layouts where the in-app purchase content is prominent.
+- [LargeProductViewStyle](largeproductviewstyle.md): A style for a product view that’s suitable for layouts where the Apple In-App Purchase content is prominent.
 
 ## Relationships
 
@@ -79,4 +80,4 @@ ProductView(id: "com.example.product")
 
 - [productViewStyle(\_:)](https://developer.apple.com/documentation/swiftui/view/productviewstyle%28_:%29): Sets the style for In-App Purchase product views within a view.
 - [productIconBorder()](https://developer.apple.com/documentation/swiftui/view/producticonborder%28%29): Adds a standard border to an in-app purchase product’s icon .
-- [ProductViewStyleConfiguration](productviewstyleconfiguration.md): The properties of an In-App Purchase product for use by custom product view styles.
+- [ProductViewStyleConfiguration](productviewstyleconfiguration.md): The properties of an Apple In-App Purchase product for use by custom product view styles.

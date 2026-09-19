@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelfeedback](https://developer.apple.com/documentation/foundationmodels/languagemodelfeedback)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/languagemodelfeedback
 
 # LanguageModelFeedback
 
@@ -51,5 +52,5 @@ let feedbackData = session.logFeedbackAttachment(
 ### Generating feedback
 
 - [logFeedbackAttachment(sentiment:issues:desiredOutput:)](languagemodelsession/logfeedbackattachment%28sentiment_issues_desiredoutput_%29.md): Logs and serializes a feedback attachment that can be submitted to Apple.
-- [logFeedbackAttachment(sentiment:issues:desiredResponseContent:)](languagemodelsession/logfeedbackattachment%28sentiment_issues_desiredresponsecontent_%29.md)
-- [logFeedbackAttachment(sentiment:issues:desiredResponseText:)](languagemodelsession/logfeedbackattachment%28sentiment_issues_desiredresponsetext_%29.md)
+- [logFeedbackAttachment(sentiment:issues:desiredResponseContent:)](languagemodelsession/logfeedbackattachment%28sentiment_issues_desiredresponsecontent_%29.md): Logs and serializes a feedback attachment that includes the content you expected.
+- [logFeedbackAttachment(sentiment:issues:desiredResponseText:)](languagemodelsession/logfeedbackattachment%28sentiment_issues_desiredresponsetext_%29.md): Logs and serializes a feedback attachment that includes the response text you expected.

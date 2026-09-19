@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideobox/removedevice](https://developer.apple.com/documentation/videodriverkit/iouservideobox/removedevice)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideobox/removedevice
 
 # RemoveDevice
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Removes a video device from the video box.
 
@@ -36,8 +37,8 @@ The device’s reference count will be decremented if it was successfully remove
 
 ### Managing box contents
 
-- [AddDevice](adddevice.md): Adds a video device to the video box.
-- [IOUserVideoDevice](../iouservideodevice.md): A video device.
-- [AddClockDevice](addclockdevice.md): Adds a clock device video box.
-- [RemoveClockDevice](removeclockdevice.md): Removes aa clock device from the video box.
-- [IOUserVideoClockDevice](../iouservideoclockdevice.md): A clock device.
+- [AddDevice](adddevice.md): Beta. Adds a video device to the video box.
+- [IOUserVideoDevice](../iouservideodevice.md): Beta. A video device.
+- [AddClockDevice](addclockdevice.md): Beta. Adds a clock device video box.
+- [RemoveClockDevice](removeclockdevice.md): Beta. Removes aa clock device from the video box.
+- [IOUserVideoClockDevice](../iouservideoclockdevice.md): Beta. A clock device.

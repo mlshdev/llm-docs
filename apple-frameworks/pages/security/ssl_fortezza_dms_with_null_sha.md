@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/ssl_fortezza_dms_with_null_sha](https://developer.apple.com/documentation/security/ssl_fortezza_dms_with_null_sha)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/ssl_fortezza_dms_with_null_sha
 
 # SSL_FORTEZZA_DMS_WITH_NULL_SHA (Swift)
 

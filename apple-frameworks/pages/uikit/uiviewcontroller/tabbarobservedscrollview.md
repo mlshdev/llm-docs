@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiviewcontroller/tabbarobservedscrollview](https://developer.apple.com/documentation/uikit/uiviewcontroller/tabbarobservedscrollview)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiviewcontroller/tabbarobservedscrollview
 
 # tabBarObservedScrollView (Swift)
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** tvOS 13.0+ (deprecated in 27.0)
+**Availability:** tvOS 13.0+ (deprecated in 27.2)
 
 The full-screen scroll view to synchronize with a scrolling tab bar.
 
@@ -33,7 +34,7 @@ Typically, the position of the tab bar remains fixed while content scrolls under
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** tvOS 13.0+ (deprecated in 27.0)
+**Availability:** tvOS 13.0+ (deprecated in 27.2)
 
 The full-screen scroll view to synchronize with a scrolling tab bar.
 

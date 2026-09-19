@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/authenticationservices/asauthorizationproviderextensionsupportedgranttypes/saml2_0](https://developer.apple.com/documentation/authenticationservices/asauthorizationproviderextensionsupportedgranttypes/saml2_0)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/authenticationservices/asauthorizationproviderextensionsupportedgranttypes/saml2_0
 
 # saml2_0 (Swift)
 

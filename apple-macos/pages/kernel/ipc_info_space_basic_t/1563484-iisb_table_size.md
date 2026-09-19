@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ipc_info_space_basic_t/1563484-iisb_table_size](https://developer.apple.com/documentation/kernel/ipc_info_space_basic_t/1563484-iisb_table_size)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/ipc_info_space_basic_t/1563484-iisb_table_size
 
 # iisb_table_size
 

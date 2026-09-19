@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/automaticassessmentconfiguration/aeassessmentconfiguration/requiressingleuser](https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentconfiguration/requiressingleuser)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentconfiguration/requiressingleuser
 
 # requiresSingleUser (Swift)
 
@@ -18,7 +19,7 @@ var requiresSingleUser: Bool { get set }
 
 ## Discussion
 
-When set to `true`, the assessment session will only start if there is exactly one user account logged in on the device. This requirement is disabled by default.
+When set to `true`, the assessment session will only start if there is exactly one user account logged in on the device. Defaults to `false`.
 
 # requiresSingleUser (Objective-C)
 
@@ -38,4 +39,4 @@ A Boolean value that indicates whether only a single user account must be logged
 
 ## Discussion
 
-When set to `true`, the assessment session will only start if there is exactly one user account logged in on the device. This requirement is disabled by default.
+When set to `true`, the assessment session will only start if there is exactly one user account logged in on the device. Defaults to `false`.

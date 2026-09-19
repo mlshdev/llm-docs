@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applenewsapi/post-channels-_channelid_-articles](https://developer.apple.com/documentation/applenewsapi/post-channels-_channelid_-articles)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applenewsapi/post-channels-_channelid_-articles
 
 # Create an Article
 
@@ -287,6 +288,7 @@ Transfer-Encoding: chunked
 
 ```
 
+
 POST /channels/63a75491-2c4d-3530-af91-819be8c3ace0/articles HTTP/1.1
 Host: news-api.apple.com
 Accept: application/json
@@ -377,6 +379,7 @@ Content-Disposition: form-data; filename=gradient.png; name=a_gradient
 **Response**
 
 ```json
+
 
 HTTP/1.1 201 OK
 Date: Thu, 05 Mar 2015 02:53:54 GMT

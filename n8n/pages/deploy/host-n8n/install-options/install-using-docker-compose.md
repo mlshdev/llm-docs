@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-using-docker-compose.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/deploy/host-n8n/install-options/install-using-docker-compose.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-using-docker-compose.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/deploy/host-n8n/install-options/install-using-docker-compose.md)
 
 # Install using Docker Compose
 
@@ -24,9 +24,19 @@ mkdir n8n && cd n8n
 
 ## Step 2: Create `.env`
 
-This file holds the secrets the sandbox services use to talk to each other. Create a file named `.env` with your own values in place of the placeholders and keep this file out of version control.
+This file holds the versions to run and the secrets the sandbox services use to talk to each other. Create a file named `.env` with your own values in place of the placeholders and keep this file out of version control.
 
 ```
+# n8n version - get the version number of the latest stable release from https://github.com/n8n-io/n8n/releases
+N8N_VERSION=change-me-version-number
+
+# Sandbox service version - the API, runner, and sandbox images share one release.
+# Get the number of the latest stable "service" release (not a staging prerelease) from https://github.com/n8n-io/n8n-sandbox-service/releases
+N8N_SANDBOX_VERSION=change-me-sandbox-version-number
+
+# n8n task runner authentication. Use a random secret you generate.
+N8N_RUNNERS_AUTH_TOKEN=change-me-runner-auth-token
+
 # Sandbox service secrets — pick your own values
 SANDBOX_API_KEYS=change-me-api-key
 SANDBOX_API_RUNNER_REGISTRATION_TOKEN=change-me-registration-token

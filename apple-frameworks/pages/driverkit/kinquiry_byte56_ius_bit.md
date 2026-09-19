@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/kinquiry_byte56_ius_bit](https://developer.apple.com/documentation/driverkit/kinquiry_byte56_ius_bit)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/kinquiry_byte56_ius_bit
 
 # kINQUIRY_Byte56_IUS_Bit
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/mediaextension](https://developer.apple.com/documentation/mediaextension)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mediaextension
 
 # MediaExtension (Swift)
 
@@ -18,6 +19,7 @@ MediaExtension format readers encapsulate media assets that the system doesn’t
 
 ### Format readers
 
+- [Supporting custom media formats and decoders](mediaextension/supporting-custom-media-formats-and-decoders.md): Extend the media formats the system can open by providing a format reader and a video decoder.
 - [MEFormatReader](mediaextension/meformatreader.md): A protocol that defines the requirements for a format reader, which represents a single media asset.
 - [MEFormatReaderExtension](mediaextension/meformatreaderextension.md): A protocol that defines a factory to create a new format reader with a byte source.
 - [MEFormatReaderInstantiationOptions](mediaextension/meformatreaderinstantiationoptions.md): An object that contains options to pass to a format reader extension.
@@ -44,6 +46,7 @@ MediaExtension format readers encapsulate media assets that the system doesn’t
 
 ### Video decoders
 
+- [Supporting custom media formats and decoders](mediaextension/supporting-custom-media-formats-and-decoders.md): Extend the media formats the system can open by providing a format reader and a video decoder.
 - [MEVideoDecoder](mediaextension/mevideodecoder.md): A protocol that defines the requirements for a video decoder.
 - [MEVideoDecoderExtension](mediaextension/mevideodecoderextension.md): A protocol that defines a factory to create new video decoders for a codec type that the extension implements.
 - [MEDecodeFrameOptions](mediaextension/medecodeframeoptions.md): An object that guides the video decoder operation on a per-frame basis.
@@ -94,6 +97,7 @@ MediaExtension format readers encapsulate media assets that the system doesn’t
 
 ### Format readers
 
+- [Supporting custom media formats and decoders](mediaextension/supporting-custom-media-formats-and-decoders.md): Extend the media formats the system can open by providing a format reader and a video decoder.
 - [MEFormatReader](mediaextension/meformatreader.md): A protocol that defines the requirements for a format reader, which represents a single media asset.
 - [MEFormatReaderExtension](mediaextension/meformatreaderextension.md): A protocol that defines a factory to create a new format reader with a byte source.
 - [MEFormatReaderInstantiationOptions](mediaextension/meformatreaderinstantiationoptions.md): An object that contains options to pass to a format reader extension.
@@ -120,6 +124,7 @@ MediaExtension format readers encapsulate media assets that the system doesn’t
 
 ### Video decoders
 
+- [Supporting custom media formats and decoders](mediaextension/supporting-custom-media-formats-and-decoders.md): Extend the media formats the system can open by providing a format reader and a video decoder.
 - [MEVideoDecoder](mediaextension/mevideodecoder.md): A protocol that defines the requirements for a video decoder.
 - [MEVideoDecoderExtension](mediaextension/mevideodecoderextension.md): A protocol that defines a factory to create new video decoders for a codec type that the extension implements.
 - [MEDecodeFrameOptions](mediaextension/medecodeframeoptions.md): An object that guides the video decoder operation on a per-frame basis.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpscustomkernelsourceinfo/init(kernelorigin:kernelphase:kernelsize:offset:stride:dilationrate:featurechanneloffset:featurechannels:imagearrayoffset:imagearraysize:)](https://developer.apple.com/documentation/metalperformanceshaders/mpscustomkernelsourceinfo/init(kernelorigin:kernelphase:kernelsize:offset:stride:dilationrate:featurechanneloffset:featurechannels:imagearrayoffset:imagearraysize:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpscustomkernelsourceinfo/init(kernelorigin:kernelphase:kernelsize:offset:stride:dilationrate:featurechanneloffset:featurechannels:imagearrayoffset:imagearraysize:)
 
 # init(kernelOrigin:kernelPhase:kernelSize:offset:stride:dilationRate:featureChannelOffset:featureChannels:imageArrayOffset:imageArraySize:)
 

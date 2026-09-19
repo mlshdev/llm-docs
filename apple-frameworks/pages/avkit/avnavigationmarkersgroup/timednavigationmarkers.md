@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avnavigationmarkersgroup/timednavigationmarkers](https://developer.apple.com/documentation/avkit/avnavigationmarkersgroup/timednavigationmarkers)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avnavigationmarkersgroup/timednavigationmarkers
 
 # timedNavigationMarkers (Swift)
 
@@ -22,7 +23,7 @@ Returns the array of [AVTimedMetadataGroup](../../avfoundation/avtimedmetadatagr
 
 ## See Also
 
-### Inspecting Navigation Metadata
+### Inspecting navigation metadata
 
 - [title](title.md): The title of the marker group.
 - [dateRangeNavigationMarkers](daterangenavigationmarkers.md): The array of date range navigation markers for which the group provides navigation.
@@ -49,7 +50,7 @@ Returns the array of [AVTimedMetadataGroup](../../avfoundation/avtimedmetadatagr
 
 ## See Also
 
-### Inspecting Navigation Metadata
+### Inspecting navigation metadata
 
 - [title](title.md): The title of the marker group.
 - [dateRangeNavigationMarkers](daterangenavigationmarkers.md): The array of date range navigation markers for which the group provides navigation.

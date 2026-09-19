@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstabview/tabtype/notabslineborder](https://developer.apple.com/documentation/appkit/nstabview/tabtype/notabslineborder)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstabview/tabtype/notabslineborder
 
 # NSTabView.TabType.noTabsLineBorder (Swift)
 

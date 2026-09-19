@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/kcmmetadataidentifier_itut_t35metadatasmpte2094_50](https://developer.apple.com/documentation/coremedia/kcmmetadataidentifier_itut_t35metadatasmpte2094_50)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coremedia/kcmmetadataidentifier_itut_t35metadatasmpte2094_50
 
 # kCMMetadataIdentifier_ITUT_T35MetadataSMPTE2094_50 (Swift)
 

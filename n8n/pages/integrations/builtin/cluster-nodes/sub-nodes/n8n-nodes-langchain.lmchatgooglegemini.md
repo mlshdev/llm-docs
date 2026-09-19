@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md)
+> Pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md)
 
 # Google Gemini Chat Model node <a id="google-gemini-chat-model-node"></a>
 
@@ -45,7 +45,7 @@ The Google Gemini Chat Model node uses Google's SDK, which doesn't support proxy
 
 If you need to proxy your connection, as a work around, you can set up a dedicated reverse proxy for Gemini requests and change the **Host** parameter in your [Google Gemini credentials](https://docs.n8n.io/integrations/builtin/credentials/googleai) to point to your proxy address:
 
-![Google Gemini credentials proxy configuration](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/integrations/.gitbook/assets/google-gemini-proxy-config.png)
+![Google Gemini credentials proxy configuration](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/integrations/.gitbook/assets/google-gemini-proxy-config.png)
 
 ## Templates and examples <a id="templates-and-examples"></a>
 

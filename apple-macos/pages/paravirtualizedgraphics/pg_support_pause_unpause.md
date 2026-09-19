@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/paravirtualizedgraphics/pg_support_pause_unpause](https://developer.apple.com/documentation/paravirtualizedgraphics/pg_support_pause_unpause)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/paravirtualizedgraphics/pg_support_pause_unpause
 
 # PG_SUPPORT_PAUSE_UNPAUSE (Swift)
 

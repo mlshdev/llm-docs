@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metrickit/track-performance-by-app-state-using-metrickit](https://developer.apple.com/documentation/metrickit/track-performance-by-app-state-using-metrickit)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metrickit/track-performance-by-app-state-using-metrickit
 
 # Track performance by app state using MetricKit
 
@@ -20,7 +21,7 @@ The app is an expense report manager that lets you create reports, scan receipts
 
 > **Note**
 
-> MetricKit delivers reports on a system-determined schedule. To generate reports during development, choose Debug \> Simulate MetricKit Payloads in Xcode.
+> MetricKit delivers reports on a system-determined schedule. To generate reports during development, import MetricKit, subscribe to reports in code, and run your app from Xcode, then choose Debug \> MetricKit \> Simulate MetricKit Payloads.
 
 <a id="Configure-the-sample-code-project"></a>
 

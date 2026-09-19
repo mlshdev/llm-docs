@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/widgetkit/preparing-widgets-for-additional-contexts-and-appearances](https://developer.apple.com/documentation/widgetkit/preparing-widgets-for-additional-contexts-and-appearances)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/widgetkit/preparing-widgets-for-additional-contexts-and-appearances
 
 # Preparing widgets for additional platforms, contexts, and appearances (Swift)
 
@@ -102,6 +103,7 @@ When people place an iPhone widget on a Mac desktop, the system renders it using
 - [Widget](https://developer.apple.com/documentation/swiftui/widget): The configuration and content of a widget to display on the Home screen or in Notification Center.
 - [WidgetFamily](widgetfamily.md): Values that define the widget’s size and shape.
 - [StaticConfiguration](staticconfiguration.md): An object describing the content of a widget that has no user-configurable options.
+- [widgetFamily](https://developer.apple.com/documentation/swiftui/environmentvalues/widgetfamily): The template of the widget — small, medium, or large.
 
 # Preparing widgets for additional platforms, contexts, and appearances (Objective-C)
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/product/producttype/autorenewable](https://developer.apple.com/documentation/storekit/product/producttype/autorenewable)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/product/producttype/autorenewable
 
 # autoRenewable
 
@@ -18,6 +19,6 @@ static let autoRenewable: Product.ProductType
 
 ### Getting the Product Type
 
-- [consumable](consumable.md): A consumable in-app purchase.
-- [nonConsumable](nonconsumable.md): A non-consumable in-app purchase.
+- [consumable](consumable.md): A consumable Apple In-App Purchase.
+- [nonConsumable](nonconsumable.md): A non-consumable Apple In-App Purchase.
 - [nonRenewable](nonrenewable.md): A non-renewing subscription.

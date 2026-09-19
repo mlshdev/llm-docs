@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/swiftdata/schema/propertymetadata/init(name:keypath:defaultvalue:metadata:)](https://developer.apple.com/documentation/swiftdata/schema/propertymetadata/init(name:keypath:defaultvalue:metadata:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/swiftdata/schema/propertymetadata/init(name:keypath:defaultvalue:metadata:)
 
 # init(name:keypath:defaultValue:metadata:)
 

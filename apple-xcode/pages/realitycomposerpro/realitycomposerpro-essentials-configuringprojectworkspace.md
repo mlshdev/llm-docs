@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/realitycomposerpro/realitycomposerpro-essentials-configuringprojectworkspace](https://developer.apple.com/documentation/realitycomposerpro/realitycomposerpro-essentials-configuringprojectworkspace)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitycomposerpro/realitycomposerpro-essentials-configuringprojectworkspace
 
 # Configuring the project workspace
 
@@ -69,6 +70,8 @@ Drag any tab onto a layout dock to dock it to a new location in a workspace.
 ### Essentials
 
 - [Linking an Xcode project](realitycomposerpro-essentials-linkingxcodeproject.md): Iterate on a scene and run it as an app without leaving the editor.
+- [Migrating older projects to Reality Composer Pro 3](realitycomposerpro-essentials-migrating-older-projects-to-reality-composer-pro-3.md): Bring existing Reality Composer Pro 2 projects into the Reality Composer Pro 3 workspace.
+- [Updating migrated assets to Reality Composer Pro 3](realitycomposerpro-essentials-updating-migrated-assets-to-reality-composer-pro-3.md): Fix common problems that appear after migrating a project from Reality Composer Pro 2 to Reality Composer Pro 3.
 - [Navigating the Reality Composer Pro workspace](realitycomposerpro-essentials-workspaceoverview.md): Explore the panes and toolbars that make up the Reality Composer Pro editing environment.
 - [Adding entities and assets to a scene](realitycomposerpro-essentials-addingentitiestoscene.md): Import assets to design Reality Composer Pro scenes for your app.
 - [Working with the Graph Editor](realitycomposerpro-essentials-grapheditoroverview.md): Use Reality Composer Pro’s node-based editor to build materials, animations, audio effects, and scripts without writing code.

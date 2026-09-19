@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/host/address](https://developer.apple.com/documentation/foundation/host/address)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/host/address
 
 # address (Swift)
 
 **Framework:** Foundation  
 **Kind:** Instance Property  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Returns one of the network addresses of the receiver.
 
@@ -35,7 +36,7 @@ One of the network address for the receiver. For example, `"192.42.172.1"` or `"
 
 **Framework:** Foundation  
 **Kind:** Instance Property  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Returns one of the network addresses of the receiver.
 

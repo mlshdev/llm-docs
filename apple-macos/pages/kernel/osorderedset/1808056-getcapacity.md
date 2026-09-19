@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/osorderedset/1808056-getcapacity](https://developer.apple.com/documentation/kernel/osorderedset/1808056-getcapacity)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/osorderedset/1808056-getcapacity
 
 # getCapacity
 

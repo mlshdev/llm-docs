@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphiccircularstackimage/init(line1imageprovider:line2textprovider:)](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircularstackimage/init(line1imageprovider:line2textprovider:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircularstackimage/init(line1imageprovider:line2textprovider:)
 
 # init(line1ImageProvider:line2TextProvider:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Creates a template that has an image and a small amount of text.
 
@@ -23,7 +24,7 @@ init(line1ImageProvider: CLKFullColorImageProvider, line2TextProvider: CLKTextPr
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Creates a template that has an image and a small amount of text.
 

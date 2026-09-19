@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/usernotifications/scheduling-a-notification-locally-from-your-app](https://developer.apple.com/documentation/usernotifications/scheduling-a-notification-locally-from-your-app)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/usernotifications/scheduling-a-notification-locally-from-your-app
 
 # Scheduling a notification locally from your app (Swift)
 

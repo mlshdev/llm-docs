@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/3674539-anonymous/khidusage_haptics_waveformvendorid](https://developer.apple.com/documentation/iokit/3674539-anonymous/khidusage_haptics_waveformvendorid)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/3674539-anonymous/khidusage_haptics_waveformvendorid
 
 # kHIDUsage_Haptics_WaveformVendorID
 

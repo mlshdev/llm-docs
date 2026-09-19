@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/localauthenticationembeddedui/laauthenticationview/init(context:controlsize:)](https://developer.apple.com/documentation/localauthenticationembeddedui/laauthenticationview/init(context:controlsize:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/localauthenticationembeddedui/laauthenticationview/init(context:controlsize:)
 
 # init(context:controlSize:) (Swift)
 

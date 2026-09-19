@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerview/canbegintrimming](https://developer.apple.com/documentation/avkit/avplayerview/canbegintrimming)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerview/canbegintrimming
 
 # canBeginTrimming (Swift)
 
@@ -16,7 +17,7 @@ var canBeginTrimming: Bool { get }
 
 ## Mentioned In
 
-- [Implementing Trimming in a macOS Player](../implementing-trimming-in-a-macos-player.md)
+- [Implementing trimming in a macOS player](../implementing-trimming-in-a-macos-player.md)
 
 <a id="Discussion"></a>
 
@@ -58,7 +59,7 @@ A Boolean value that indicates whether the player view can begin trimming.
 
 ## Mentioned In
 
-- [Implementing Trimming in a macOS Player](../implementing-trimming-in-a-macos-player.md)
+- [Implementing trimming in a macOS player](../implementing-trimming-in-a-macos-player.md)
 
 <a id="Discussion"></a>
 

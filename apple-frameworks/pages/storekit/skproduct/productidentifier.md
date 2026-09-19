@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skproduct/productidentifier](https://developer.apple.com/documentation/storekit/skproduct/productidentifier)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skproduct/productidentifier
 
 # productIdentifier (Swift)
 
@@ -20,7 +21,7 @@ var productIdentifier: String { get }
 
 - [Generating a signature for promotional offers](../generating-a-signature-for-promotional-offers.md)
 - [Implementing promotional offers in your app](../implementing-promotional-offers-in-your-app.md)
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
 
 # productIdentifier (Objective-C)
 
@@ -42,4 +43,4 @@ The string that identifies the product to the Apple App Store.
 
 - [Generating a signature for promotional offers](../generating-a-signature-for-promotional-offers.md)
 - [Implementing promotional offers in your app](../implementing-promotional-offers-in-your-app.md)
-- [Testing In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)
+- [Testing Apple In-App Purchases in Xcode](../testing-in-app-purchases-in-xcode.md)

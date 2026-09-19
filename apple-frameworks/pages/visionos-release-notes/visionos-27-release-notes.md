@@ -1,6 +1,7 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/visionos-release-notes/visionos-27-release-notes](https://developer.apple.com/documentation/visionos-release-notes/visionos-27-release-notes)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/visionos-release-notes/visionos-27-release-notes
 
-# visionOS 27 RC Release Notes
+# visionOS 27 Release Notes
 
 **Kind:** Article
 
@@ -10,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The visionOS 27 SDK provides support to develop apps for Apple Vision Pro devices running visionOS 27 RC. The SDK comes bundled with Xcode 27, available from the Mac App Store. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
+The visionOS 27 SDK provides support to develop apps for Apple Vision Pro devices running visionOS 27. The SDK comes bundled with Xcode 27, available from the Mac App Store. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
 
 <a id="App-Intents"></a>
 
@@ -815,3 +816,9 @@ The visionOS 27 SDK provides support to develop apps for Apple Vision Pro device
 #### Resolved Issues
 
 - Fixed: When you use the Debug View Hierarchy tool (View Debugger) to inspect an app that presents RealityKit content with SwiftUI RealityView, the RealityKit scene appears empty: the RealityView’s entities are missing from the captured hierarchy and the RealityKit debugger shows no content. This affects apps running on visionOS, the iOS Simulator, and macOS. Debugging of non-RealityKit content (UIKit, AppKit, and 2D SwiftUI views) is unaffected. The content is still present in your app and renders correctly at runtime; only its visibility to the View Debugger is affected, due to a change in how RealityKit exposes RealityView-hosted entities to the debugging APIs the View Debugger relies on. (177083261)
+
+## See Also
+
+### visionOS 27
+
+- [visionOS 27.2 Beta Release Notes](visionos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.

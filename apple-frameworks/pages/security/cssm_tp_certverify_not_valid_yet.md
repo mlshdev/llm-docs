@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_tp_certverify_not_valid_yet](https://developer.apple.com/documentation/security/cssm_tp_certverify_not_valid_yet)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssm_tp_certverify_not_valid_yet
 
 # CSSM_TP_CERTVERIFY_NOT_VALID_YET (Swift)
 

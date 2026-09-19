@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/opengles/glprogramuniformmatrix2x4fvext(_:_:_:_:_:)](https://developer.apple.com/documentation/opengles/glprogramuniformmatrix2x4fvext(_:_:_:_:_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/opengles/glprogramuniformmatrix2x4fvext(_:_:_:_:_:)
 
 # glProgramUniformMatrix2x4fvEXT(\_:\_:\_:\_:\_:) (Swift)
 

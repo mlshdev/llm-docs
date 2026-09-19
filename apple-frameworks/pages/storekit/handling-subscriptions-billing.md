@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/handling-subscriptions-billing](https://developer.apple.com/documentation/storekit/handling-subscriptions-billing)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/handling-subscriptions-billing
 
 # Handling Subscriptions Billing (Swift)
 
@@ -13,7 +14,7 @@ Build logic around the date and time constraints of subscription products, while
 
 Apps that offer subscriptions have some unique behaviors and considerations. Because subscriptions involve an element of time, your app must be able to determine whether the subscription is currently active and determine the subscription states for past dates. Your app must also react to new, renewed, and lapsed subscriptions, and properly handle expired auto-renewable subscriptions that may be in a billing retry state.
 
-To validate changes in and identify the status of a subscription, you can use the different values in the receipt, which provides details on app and in-app purchases. For information about server-side receipt validation, see [Validating receipts with the App Store](validating-receipts-with-the-app-store.md).
+To validate changes in and identify the status of a subscription, you can use the different values in the receipt, which provides details on app and Apple In-App Purchases. For information about server-side receipt validation, see [Validating receipts with the App Store](validating-receipts-with-the-app-store.md).
 
 > **Note**
 
@@ -131,7 +132,7 @@ Opening this URL launches iTunes or iTunes Store and displays the Manage Subscri
 
 ### Essentials
 
-- [Enabling App Store Server Notifications](enabling-app-store-server-notifications.md): Configure your server and provide an HTTPS URL to receive notifications about in-app purchase events and unreported external purchase tokens.
+- [Enabling App Store Server Notifications](enabling-app-store-server-notifications.md): Configure your server and provide an HTTPS URL to receive notifications about Apple In-App Purchase events and unreported external purchase tokens.
 - [Offering a Subscription Across Multiple Apps](offering-a-subscription-across-multiple-apps.md): Support a single auto-renewable subscription across multiple apps.
 - [Reducing Involuntary Subscriber Churn](reducing-involuntary-subscriber-churn.md): Prevent unintentional loss of subscribers due to billing issues.
 
@@ -148,7 +149,7 @@ Build logic around the date and time constraints of subscription products, while
 
 Apps that offer subscriptions have some unique behaviors and considerations. Because subscriptions involve an element of time, your app must be able to determine whether the subscription is currently active and determine the subscription states for past dates. Your app must also react to new, renewed, and lapsed subscriptions, and properly handle expired auto-renewable subscriptions that may be in a billing retry state.
 
-To validate changes in and identify the status of a subscription, you can use the different values in the receipt, which provides details on app and in-app purchases. For information about server-side receipt validation, see [Validating receipts with the App Store](validating-receipts-with-the-app-store.md).
+To validate changes in and identify the status of a subscription, you can use the different values in the receipt, which provides details on app and Apple In-App Purchases. For information about server-side receipt validation, see [Validating receipts with the App Store](validating-receipts-with-the-app-store.md).
 
 > **Note**
 
@@ -266,6 +267,6 @@ Opening this URL launches iTunes or iTunes Store and displays the Manage Subscri
 
 ### Essentials
 
-- [Enabling App Store Server Notifications](enabling-app-store-server-notifications.md): Configure your server and provide an HTTPS URL to receive notifications about in-app purchase events and unreported external purchase tokens.
+- [Enabling App Store Server Notifications](enabling-app-store-server-notifications.md): Configure your server and provide an HTTPS URL to receive notifications about Apple In-App Purchase events and unreported external purchase tokens.
 - [Offering a Subscription Across Multiple Apps](offering-a-subscription-across-multiple-apps.md): Support a single auto-renewable subscription across multiple apps.
 - [Reducing Involuntary Subscriber Churn](reducing-involuntary-subscriber-churn.md): Prevent unintentional loss of subscribers due to billing issues.

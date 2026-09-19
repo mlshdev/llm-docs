@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1641608-anonymous/khidusage_snsr_property_powerstate_d0_fullpower](https://developer.apple.com/documentation/kernel/1641608-anonymous/khidusage_snsr_property_powerstate_d0_fullpower)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1641608-anonymous/khidusage_snsr_property_powerstate_d0_fullpower
 
 # kHIDUsage_Snsr_Property_PowerState_D0_FullPower
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skproductstorepromotioncontroller/fetchstorepromotionorder(completionhandler:)](https://developer.apple.com/documentation/storekit/skproductstorepromotioncontroller/fetchstorepromotionorder(completionhandler:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skproductstorepromotioncontroller/fetchstorepromotionorder(completionhandler:)
 
 # fetchStorePromotionOrder(completionHandler:) (Swift)
 
@@ -22,7 +23,7 @@ func promotionOrder() async throws -> [SKProduct]
 
 ## Mentioned In
 
-- [Promoting In-App Purchases](../promoting-in-app-purchases.md)
+- [Promoting Apple In-App Purchases](../promoting-in-app-purchases.md)
 
 <a id="Discussion"></a>
 
@@ -56,7 +57,7 @@ Reads the product order override that determines the promoted product order on t
 
 ## Mentioned In
 
-- [Promoting In-App Purchases](../promoting-in-app-purchases.md)
+- [Promoting Apple In-App Purchases](../promoting-in-app-purchases.md)
 
 <a id="Discussion"></a>
 

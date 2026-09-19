@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/technotes/tn3162-understanding-cloudkit-throttles](https://developer.apple.com/documentation/technotes/tn3162-understanding-cloudkit-throttles)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/technotes/tn3162-understanding-cloudkit-throttles
 
 # TN3162: Understanding CloudKit throttles
 

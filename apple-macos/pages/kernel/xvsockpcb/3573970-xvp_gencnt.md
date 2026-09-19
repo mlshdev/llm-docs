@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/xvsockpcb/3573970-xvp_gencnt](https://developer.apple.com/documentation/kernel/xvsockpcb/3573970-xvp_gencnt)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/xvsockpcb/3573970-xvp_gencnt
 
 # xvp_gencnt
 

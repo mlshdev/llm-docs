@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplaybackspeed](https://developer.apple.com/documentation/avkit/avplaybackspeed)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplaybackspeed
 
 # AVPlaybackSpeed (Swift)
 
@@ -16,15 +17,15 @@ class AVPlaybackSpeed
 
 ## Topics
 
-### Retrieving Default Speeds
+### Retrieving default speeds
 
 - [systemDefaultSpeeds](avplaybackspeed/systemdefaultspeeds.md): A list of playback speeds the system uses by default.
 
-### Creating a Playback Speed
+### Creating a playback speed
 
 - [init(rate:localizedName:)](avplaybackspeed/init%28rate_localizedname_%29.md): Creates a playback speed with a rate and localized name.
 
-### Inspecting Speed Details
+### Inspecting speed details
 
 - [rate](avplaybackspeed/rate.md): The playback rate to use when you select this speed.
 - [localizedName](avplaybackspeed/localizedname.md): A localized name for a speed that’s suitable for display in a user interface.
@@ -69,15 +70,15 @@ An object that represents a user-selectable playback speed in a playback user in
 
 ## Topics
 
-### Retrieving Default Speeds
+### Retrieving default speeds
 
 - [systemDefaultSpeeds](avplaybackspeed/systemdefaultspeeds.md): A list of playback speeds the system uses by default.
 
-### Creating a Playback Speed
+### Creating a playback speed
 
 - [initWithRate:localizedName:](avplaybackspeed/init%28rate_localizedname_%29.md): Creates a playback speed with a rate and localized name.
 
-### Inspecting Speed Details
+### Inspecting speed details
 
 - [rate](avplaybackspeed/rate.md): The playback rate to use when you select this speed.
 - [localizedName](avplaybackspeed/localizedname.md): A localized name for a speed that’s suitable for display in a user interface.

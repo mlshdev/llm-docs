@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerskippingbehavior/skipitem](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerskippingbehavior/skipitem)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerskippingbehavior/skipitem
 
 # AVPlayerViewControllerSkippingBehavior.skipItem (Swift)
 
@@ -16,7 +17,7 @@ case skipItem
 
 ## See Also
 
-### Skipping Behaviors
+### Skipping behaviors
 
 - [AVPlayerViewControllerSkippingBehavior.default](default.md): The default skipping behavior, which is to skip forward or backward in 10-second intervals.
 
@@ -36,6 +37,6 @@ AVPlayerViewControllerSkippingBehaviorSkipItem
 
 ## See Also
 
-### Skipping Behaviors
+### Skipping behaviors
 
 - [AVPlayerViewControllerSkippingBehaviorDefault](default.md): The default skipping behavior, which is to skip forward or backward in 10-second intervals.

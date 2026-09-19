@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coretext/kerxindexarrayheader/init(flags:rowcount:columncount:rowindextableoffset:columnindextableoffset:kerningarrayoffset:kerningvectoroffset:)](https://developer.apple.com/documentation/coretext/kerxindexarrayheader/init(flags:rowcount:columncount:rowindextableoffset:columnindextableoffset:kerningarrayoffset:kerningvectoroffset:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coretext/kerxindexarrayheader/init(flags:rowcount:columncount:rowindextableoffset:columnindextableoffset:kerningarrayoffset:kerningvectoroffset:)
 
 # init(flags:rowCount:columnCount:rowIndexTableOffset:columnIndexTableOffset:kerningArrayOffset:kerningVectorOffset:)
 

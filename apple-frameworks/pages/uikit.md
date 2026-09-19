@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit](https://developer.apple.com/documentation/uikit)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit
 
 # UIKit (Swift)
 
@@ -112,6 +113,7 @@ Avoid using deprecated classes and protocols in your apps.
 ### Structures
 
 - [UIConfigurationTextAttributesTransformer](uikit/uiconfigurationtextattributestransformer-swift.struct.md): Defines a text transformation that can affect the visual appearance of a string.
+- [UITraitNavigationTitleAlignment](uikit/uitraitnavigationtitlealignment-swift.struct.md): Beta.
 - [UITraitSystemPrefersReducedResourceUsage](uikit/uitraitsystemprefersreducedresourceusage-swift.struct.md)
 
 ### Macros
@@ -231,6 +233,7 @@ Avoid using deprecated classes and protocols in your apps.
 ### Classes
 
 - [UIBarMinimization](uikit/uibarminimization-c.class.md): A configuration that controls how a navigation bar minimizes in response to scrolling.
+- [UITraitNavigationTitleAlignment](uikit/uitraitnavigationtitlealignment-c.class.md): Beta. A trait that reports the alignment the navigation bar resolved for its title.
 - [UITraitSystemPrefersReducedResourceUsage](uikit/uitraitsystemprefersreducedresourceusage-c.class.md)
 
 ### Variables
@@ -247,6 +250,7 @@ Avoid using deprecated classes and protocols in your apps.
 
 - [UIGlassEffectStyle](uikit/uiglasseffect/style.md)
 - [UIMenuElementImageVisibility](uikit/uimenuelement/imagevisibility.md): Visibility options for a menu element’s image.
+- [UINavigationItemTitleAlignment](uikit/uinavigationitem/titlealignment-swift.enum.md): Beta.
 - [UISheetPresentationControllerPlacement](uikit/uisheetpresentationcontroller/placement.md)
 - [UITabBarControllerSidebarPlacement](uikit/uitabbarcontroller/sidebar-swift.class/placement.md)
 - [UITextGrammarCheckingType](uikit/uitextgrammarcheckingtype.md)

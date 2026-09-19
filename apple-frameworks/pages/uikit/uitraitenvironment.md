@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitraitenvironment](https://developer.apple.com/documentation/uikit/uitraitenvironment)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uitraitenvironment
 
 # UITraitEnvironment (Swift)
 
@@ -54,6 +55,7 @@ For more information about how traits propagate through the system, see [Unleash
 - [UIActivityViewController](uiactivityviewcontroller.md)
 - [UIAlertController](uialertcontroller.md)
 - [UIAlertView](uialertview.md)
+- [UIArrangementViewController](uiarrangementviewcontroller.md)
 - [UIBackgroundExtensionView](uibackgroundextensionview.md)
 - [UIButton](uibutton.md)
 - [UICalendarView](uicalendarview.md)

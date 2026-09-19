@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/community-nodes/troubleshooting.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/integrations/community-nodes/troubleshooting.md)
+> Pinned source for n8n main: [docs/integrations/community-nodes/troubleshooting.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/integrations/community-nodes/troubleshooting.md)
 
 # Troubleshooting and errors <a id="troubleshooting-and-errors"></a>
 

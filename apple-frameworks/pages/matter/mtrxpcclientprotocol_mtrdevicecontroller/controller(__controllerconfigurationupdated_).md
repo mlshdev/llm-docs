@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrxpcclientprotocol_mtrdevicecontroller/controller(_:controllerconfigurationupdated:)](https://developer.apple.com/documentation/matter/mtrxpcclientprotocol_mtrdevicecontroller/controller(_:controllerconfigurationupdated:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/matter/mtrxpcclientprotocol_mtrdevicecontroller/controller(_:controllerconfigurationupdated:)
 
 # controller(\_:controllerConfigurationUpdated:) (Swift)
 

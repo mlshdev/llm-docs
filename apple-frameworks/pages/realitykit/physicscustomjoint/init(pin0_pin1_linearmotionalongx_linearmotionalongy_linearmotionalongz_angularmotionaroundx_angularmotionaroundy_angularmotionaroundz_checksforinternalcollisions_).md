@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/physicscustomjoint/init(pin0:pin1:linearmotionalongx:linearmotionalongy:linearmotionalongz:angularmotionaroundx:angularmotionaroundy:angularmotionaroundz:checksforinternalcollisions:)](https://developer.apple.com/documentation/realitykit/physicscustomjoint/init(pin0:pin1:linearmotionalongx:linearmotionalongy:linearmotionalongz:angularmotionaroundx:angularmotionaroundy:angularmotionaroundz:checksforinternalcollisions:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/realitykit/physicscustomjoint/init(pin0:pin1:linearmotionalongx:linearmotionalongy:linearmotionalongz:angularmotionaroundx:angularmotionaroundy:angularmotionaroundz:checksforinternalcollisions:)
 
 # init(pin0:pin1:linearMotionAlongX:linearMotionAlongY:linearMotionAlongZ:angularMotionAroundX:angularMotionAroundY:angularMotionAroundZ:checksForInternalCollisions:)
 

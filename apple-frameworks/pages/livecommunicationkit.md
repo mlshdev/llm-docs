@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/livecommunicationkit](https://developer.apple.com/documentation/livecommunicationkit)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/livecommunicationkit
 
 # LiveCommunicationKit
 
@@ -63,3 +64,8 @@ With a person’s permission, an installed health research app that uses [Sensor
 - [SetTranslatingAction](livecommunicationkit/settranslatingaction.md): An action that starts or stops translation.
 - [StartConversationAction](livecommunicationkit/startconversationaction.md): An action that starts an outgoing conversation and causes the devices of a remote participant to ring.
 - [UnmergeConversationAction](livecommunicationkit/unmergeconversationaction.md): An action that separates two previosuly merged conversations.
+
+### Conversation assistance
+
+- [LiveAssistanceExtension](livecommunicationkit/liveassistanceextension.md): The protocol you extend to provide live assistance services.
+- [LiveAssistance](livecommunicationkit/liveassistance.md): A namespace to collect APIs for use by container apps that provide live assistance services.

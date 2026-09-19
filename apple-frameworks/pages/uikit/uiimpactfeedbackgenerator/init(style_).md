@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiimpactfeedbackgenerator/init(style:)](https://developer.apple.com/documentation/uikit/uiimpactfeedbackgenerator/init(style:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiimpactfeedbackgenerator/init(style:)
 
 # init(style:) (Swift)
 
 **Framework:** UIKit  
 **Kind:** Initializer  
-**Availability:** iOS 10.0+ (deprecated in 27.0) · iPadOS 10.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0)
+**Availability:** iOS 10.0+ (deprecated in 27.0) · iPadOS 10.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.2)
 
 Creates an impact feedback generator with the specified style.
 
@@ -36,7 +37,7 @@ For more information on using feedback generators, see `Using feedback generator
 
 **Framework:** UIKit  
 **Kind:** Instance Method  
-**Availability:** iOS 10.0+ (deprecated in 27.0) · iPadOS 10.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0)
+**Availability:** iOS 10.0+ (deprecated in 27.0) · iPadOS 10.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.2)
 
 Creates an impact feedback generator with the specified style.
 

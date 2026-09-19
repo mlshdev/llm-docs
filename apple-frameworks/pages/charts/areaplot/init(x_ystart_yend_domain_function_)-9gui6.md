@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/charts/areaplot/init(x:ystart:yend:domain:function:)-9gui6](https://developer.apple.com/documentation/charts/areaplot/init(x:ystart:yend:domain:function:)-9gui6)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/charts/areaplot/init(x:ystart:yend:domain:function:)-9gui6
 
 # init(x:yStart:yEnd:domain:function:)
 

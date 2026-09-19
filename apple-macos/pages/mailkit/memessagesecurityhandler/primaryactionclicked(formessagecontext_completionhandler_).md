@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/mailkit/memessagesecurityhandler/primaryactionclicked(formessagecontext:completionhandler:)](https://developer.apple.com/documentation/mailkit/memessagesecurityhandler/primaryactionclicked(formessagecontext:completionhandler:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mailkit/memessagesecurityhandler/primaryactionclicked(formessagecontext:completionhandler:)
 
 # primaryActionClicked(forMessageContext:completionHandler:) (Swift)
 

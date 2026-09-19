@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/mediaextension/video-decoder-property-list-dictionary](https://developer.apple.com/documentation/mediaextension/video-decoder-property-list-dictionary)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mediaextension/video-decoder-property-list-dictionary
 
 # Video decoder property list dictionary
 
@@ -39,6 +40,7 @@ A MediaExtension video decoder needs to include an `EXAppExtensionAttributes` di
 
 ### Video decoders
 
+- [Supporting custom media formats and decoders](supporting-custom-media-formats-and-decoders.md): Extend the media formats the system can open by providing a format reader and a video decoder.
 - [MEVideoDecoder](mevideodecoder.md): A protocol that defines the requirements for a video decoder.
 - [MEVideoDecoderExtension](mevideodecoderextension.md): A protocol that defines a factory to create new video decoders for a codec type that the extension implements.
 - [MEDecodeFrameOptions](medecodeframeoptions.md): An object that guides the video decoder operation on a per-frame basis.

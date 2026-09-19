@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkfullcolorimageprovider/accessibilitylabel](https://developer.apple.com/documentation/clockkit/clkfullcolorimageprovider/accessibilitylabel)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkfullcolorimageprovider/accessibilitylabel
 
 # accessibilityLabel (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 A succinct label that identifies the purpose of the image.
 
@@ -26,7 +27,7 @@ An accessibility label should be a very short localized string that identifies t
 
 **Framework:** ClockKit  
 **Kind:** Instance Property  
-**Availability:** watchOS 5.0+ (deprecated in 27.0)
+**Availability:** watchOS 5.0+ (deprecated in 27.2)
 
 A succinct label that identifies the purpose of the image.
 

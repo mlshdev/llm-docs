@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/pdfkit/adding-widgets-to-a-pdf-document](https://developer.apple.com/documentation/pdfkit/adding-widgets-to-a-pdf-document)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/pdfkit/adding-widgets-to-a-pdf-document
 
 # Adding Widgets to a PDF Document (Swift)
 

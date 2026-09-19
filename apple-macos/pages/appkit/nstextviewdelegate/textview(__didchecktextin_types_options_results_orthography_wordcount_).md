@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstextviewdelegate/textview(_:didchecktextin:types:options:results:orthography:wordcount:)](https://developer.apple.com/documentation/appkit/nstextviewdelegate/textview(_:didchecktextin:types:options:results:orthography:wordcount:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstextviewdelegate/textview(_:didchecktextin:types:options:results:orthography:wordcount:)
 
 # textView(\_:didCheckTextIn:types:options:results:orthography:wordCount:) (Swift)
 

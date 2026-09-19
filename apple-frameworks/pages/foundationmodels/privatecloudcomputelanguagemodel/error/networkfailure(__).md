@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/privatecloudcomputelanguagemodel/error/networkfailure(_:)](https://developer.apple.com/documentation/foundationmodels/privatecloudcomputelanguagemodel/error/networkfailure(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/privatecloudcomputelanguagemodel/error/networkfailure(_:)
 
 # PrivateCloudComputeLanguageModel.Error.networkFailure(\_:)
 
@@ -18,4 +19,4 @@ case networkFailure(PrivateCloudComputeLanguageModel.Error.NetworkFailure)
 
 ### Network failure error
 
-- [PrivateCloudComputeLanguageModel.Error.NetworkFailure](networkfailure.md)
+- [PrivateCloudComputeLanguageModel.Error.NetworkFailure](networkfailure.md): Information about a network problem that prevented a request from completing.

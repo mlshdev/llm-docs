@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/sec_protocol_options_set_peer_authentication_optional](https://developer.apple.com/documentation/security/sec_protocol_options_set_peer_authentication_optional)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/sec_protocol_options_set_peer_authentication_optional
 
 # sec_protocol_options_set_peer_authentication_optional
 

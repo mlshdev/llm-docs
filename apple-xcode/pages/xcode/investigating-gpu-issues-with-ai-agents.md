@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/investigating-gpu-issues-with-ai-agents](https://developer.apple.com/documentation/xcode/investigating-gpu-issues-with-ai-agents)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/investigating-gpu-issues-with-ai-agents
 
 # Investigating GPU issues with AI agents
 

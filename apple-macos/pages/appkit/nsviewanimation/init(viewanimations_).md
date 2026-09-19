@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsviewanimation/init(viewanimations:)](https://developer.apple.com/documentation/appkit/nsviewanimation/init(viewanimations:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsviewanimation/init(viewanimations:)
 
 # init(viewAnimations:) (Swift)
 

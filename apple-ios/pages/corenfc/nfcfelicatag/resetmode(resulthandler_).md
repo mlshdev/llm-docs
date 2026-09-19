@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/corenfc/nfcfelicatag/resetmode(resulthandler:)](https://developer.apple.com/documentation/corenfc/nfcfelicatag/resetmode(resulthandler:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corenfc/nfcfelicatag/resetmode(resulthandler:)
 
 # resetMode(resultHandler:)
 
@@ -10,8 +11,4 @@
 
 ```swift
 @preconcurrency func resetMode(resultHandler: @escaping @Sendable (Result<NFCFeliCaStatusFlag, any Error>) -> Void)
-```
-
-```swift
-func resetMode(resultHandler: @escaping (Result<NFCFeliCaStatusFlag, any Error>) -> Void)
 ```

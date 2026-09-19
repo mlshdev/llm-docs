@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/spatial_refined_for_swift](https://developer.apple.com/documentation/spatial/spatial_refined_for_swift)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatial/spatial_refined_for_swift
 
 # SPATIAL_REFINED_FOR_SWIFT
 

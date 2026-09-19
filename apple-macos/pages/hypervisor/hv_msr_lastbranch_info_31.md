@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_msr_lastbranch_info_31](https://developer.apple.com/documentation/hypervisor/hv_msr_lastbranch_info_31)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_msr_lastbranch_info_31
 
 # HV_MSR_LASTBRANCH_INFO_31 (Swift)
 

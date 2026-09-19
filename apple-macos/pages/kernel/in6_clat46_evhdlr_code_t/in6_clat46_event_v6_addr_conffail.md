@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/in6_clat46_evhdlr_code_t/in6_clat46_event_v6_addr_conffail](https://developer.apple.com/documentation/kernel/in6_clat46_evhdlr_code_t/in6_clat46_event_v6_addr_conffail)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/in6_clat46_evhdlr_code_t/in6_clat46_event_v6_addr_conffail
 
 # IN6_CLAT46_EVENT_V6_ADDR_CONFFAIL
 

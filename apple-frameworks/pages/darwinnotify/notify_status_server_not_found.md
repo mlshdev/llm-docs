@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/darwinnotify/notify_status_server_not_found](https://developer.apple.com/documentation/darwinnotify/notify_status_server_not_found)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/darwinnotify/notify_status_server_not_found
 
 # NOTIFY_STATUS_SERVER_NOT_FOUND (Swift)
 

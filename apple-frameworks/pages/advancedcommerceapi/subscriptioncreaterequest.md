@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/advancedcommerceapi/subscriptioncreaterequest](https://developer.apple.com/documentation/advancedcommerceapi/subscriptioncreaterequest)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/advancedcommerceapi/subscriptioncreaterequest
 
 # SubscriptionCreateRequest
 
@@ -31,7 +32,7 @@ object SubscriptionCreateRequest
 
 ## Mentioned In
 
-- [Creating SKUs for your In-App Purchases](creating-your-purchases.md)
+- [Creating SKUs for your Apple In-App Purchases](creating-your-purchases.md)
 - [Creating SKUs for the Mini Apps Partner Program](creating-skus-for-the-mini-app-partner-program.md)
 
 <a id="Example-subscription-with-a-single-item"></a>

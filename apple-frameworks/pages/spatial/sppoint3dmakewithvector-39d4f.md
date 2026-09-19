@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/sppoint3dmakewithvector-39d4f](https://developer.apple.com/documentation/spatial/sppoint3dmakewithvector-39d4f)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/spatial/sppoint3dmakewithvector-39d4f
 
 # SPPoint3DMakeWithVector
 

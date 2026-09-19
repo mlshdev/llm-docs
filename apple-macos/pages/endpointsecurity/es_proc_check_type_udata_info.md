@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_proc_check_type_udata_info](https://developer.apple.com/documentation/endpointsecurity/es_proc_check_type_udata_info)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_proc_check_type_udata_info
 
 # ES_PROC_CHECK_TYPE_UDATA_INFO (Swift)
 

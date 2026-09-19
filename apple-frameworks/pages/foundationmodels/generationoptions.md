@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/generationoptions](https://developer.apple.com/documentation/foundationmodels/generationoptions)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/generationoptions
 
 # GenerationOptions
 
@@ -32,7 +33,7 @@ All input to the model contributes tokens to the context window of the [Language
 
 ### Creating options
 
-- [init(samplingMode:temperature:maximumResponseTokens:)](generationoptions/init%28samplingmode_temperature_maximumresponsetokens_%29.md)
+- [init(samplingMode:temperature:maximumResponseTokens:)](generationoptions/init%28samplingmode_temperature_maximumresponsetokens_%29.md): Creates generation options that control token sampling behavior.
 - [init(samplingMode:temperature:maximumResponseTokens:toolCallingMode:)](generationoptions/init%28samplingmode_temperature_maximumresponsetokens_toolcallingmode_%29.md): Creates generation options that control token sampling behavior.
 - [init(sampling:temperature:maximumResponseTokens:)](generationoptions/init%28sampling_temperature_maximumresponsetokens_%29.md): Deprecated. Creates generation options that control token sampling behavior.
 
@@ -43,7 +44,7 @@ All input to the model contributes tokens to the context window of the [Language
 - [samplingMode](generationoptions/samplingmode-swift.property.md): A sampling strategy for how the model picks tokens when generating a response.
 - [GenerationOptions.SamplingMode](generationoptions/samplingmode-swift.struct.md): A type that defines how values are sampled from a probability distribution.
 - [toolCallingMode](generationoptions/toolcallingmode-swift.property.md): The tool calling requirements.
-- [GenerationOptions.ToolCallingMode](generationoptions/toolcallingmode-swift.struct.md): A value you use to describe the model behavior when it comes to tool usage.
+- [GenerationOptions.ToolCallingMode](generationoptions/toolcallingmode-swift.struct.md): A value that describes how the model uses tools.
 - [maximumResponseTokens](generationoptions/maximumresponsetokens.md): The maximum number of tokens the model is allowed to produce in its response.
 
 ## Relationships

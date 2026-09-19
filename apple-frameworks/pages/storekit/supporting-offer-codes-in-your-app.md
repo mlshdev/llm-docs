@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/supporting-offer-codes-in-your-app](https://developer.apple.com/documentation/storekit/supporting-offer-codes-in-your-app)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/supporting-offer-codes-in-your-app
 
 # Supporting offer codes in your app (Swift)
 
@@ -11,7 +12,7 @@ Enable customers to redeem offer codes through the App Store or within your app.
 
 ## Overview
 
-To help you acquire, retain, and win back customers, you can use offer codes. Offer codes are alphanumeric codes that provide In-App Purchases at a discount or for free, for a specific duration. Offer codes are available for all in-app purchase types:  consumables, non-consumables, non-renewing subscriptions, and auto-renewable subscriptions. You can merchandise offer codes within your app or outside of it through your marketing channels.
+To help you acquire, retain, and win back customers, you can use offer codes. Offer codes are alphanumeric codes that provide Apple In-App Purchases at a discount or for free, for a specific duration. Offer codes are available for all Apple In-App Purchase types:  consumables, non-consumables, non-renewing subscriptions, and auto-renewable subscriptions. You can merchandise offer codes within your app or outside of it through your marketing channels.
 
 Create and configure offer codes in App Store Connect, and distribute them to your customers. Customers can redeem offer codes throught a redemption URL, or by entering the code directly in the App Store, or within your app if it implements one of the following APIs:
 
@@ -29,7 +30,7 @@ Offer codes for auto-renewable subscriptions are available starting in iOS 14.2,
 
 Configure offers and manage your offer codes in App Store Connect. There are three types of offer codes: one-time use codes, custom codes, and sandbox codes for testing. The offer code redemption APIs support all offer codes types. You can have up to 10 active offers at a time, with a limit of 1,000,000 codes per app, per quarter. To distribute offer codes to your customers, download them from App Store Connect.
 
-For more information on creating and distributing offer codes, and to learn which type of offer code may work for your campaign, see [Set up offer codes](https://developer.apple.com/help/app-store-connect/manage-subscriptions/set-up-offer-codes) and [Create offer codes for in-app purchases](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/create-offer-codes-for-in-app-purchases).
+For more information on creating and distributing offer codes, and to learn which type of offer code may work for your campaign, see [Set up offer codes](https://developer.apple.com/help/app-store-connect/manage-subscriptions/set-up-offer-codes) and [Create offer codes for Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/create-offer-codes-for-in-app-purchases).
 
 <a id="Redeem-offer-codes-in-your-app"></a>
 
@@ -47,7 +48,7 @@ When a customer redeems an offer code, StoreKit delivers the resulting transacti
 
 If your app can’t process the redemption immediately, StoreKit emits the transaction in [updates](transaction/updates.md) on the next app launch. To avoid missing any transactions, set up a [Task](https://developer.apple.com/documentation/swift/task) to listen for [updates](transaction/updates.md) as soon as your app launches. See [updates](transaction/updates.md) for a code example.
 
-Including the redemption sheet in your app is recommended, but optional. For more guidance on supporting offer code redemption within your app, see Human Interface Guidelines \> [In-app purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase).
+Including the redemption sheet in your app is recommended, but optional. For more guidance on supporting offer code redemption within your app, see Human Interface Guidelines \> [Apple In-App Purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase).
 
 <a id="Support-offer-codes-redeemed-outside-of-your-app"></a>
 
@@ -77,7 +78,7 @@ On your server, use the following server-side APIs to locate offer code informat
 
 ### Provide service to new and existing customers
 
-When you acquire new customers with an offer code, they already have an In-App Purchase when they open your app for the first time. In addition to enabling that In-App Purchase, you may need to update your backend system’s records. Your app follows these steps:
+When you acquire new customers with an offer code, they already have an Apple In-App Purchase when they open your app for the first time. In addition to enabling that Apple In-App Purchase, you may need to update your backend system’s records. Your app follows these steps:
 
 1. When the app launches, check [currentEntitlements](transaction/currententitlements.md) and [unfinished](transaction/unfinished.md) on [Transaction](transaction.md) to get the current entitlements and any new consumable transactions, respectively. StoreKit automatically validates the transactions, and returns verified results in [VerificationResult.verified(\_:)](verificationresult/verified%28__%29.md). To perform your own validation, use the [jwsRepresentation](verificationresult/jwsrepresentation-21vgo.md) property.
 2. To determine whether a transaction includes an offer code redemption, check the [offer](transaction/offer-swift.property.md) property of [Transaction](transaction.md) and [type](transaction/offer-swift.struct/type.md) property of `offer`.
@@ -90,7 +91,7 @@ When an existing customer redeems an offer code within your app, the transaction
 
 ### Test offer codes in the sandbox environment
 
-You can test your app’s handling of offer codes in the sandbox environment for all In-App Purchase product types: consumable, non-consumable, non-renewing subscription, and auto-renewable subscription. First, create offer codes for the sandbox environment in App Store Connect. For more information on creating these codes, see [Create off codes for in-app purchases](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/create-offer-codes-for-in-app-purchases). Each quarter, you can create up to 10,000 codes for testing.
+You can test your app’s handling of offer codes in the sandbox environment for all Apple In-App Purchase product types: consumable, non-consumable, non-renewing subscription, and auto-renewable subscription. First, create offer codes for the sandbox environment in App Store Connect. For more information on creating these codes, see [Create off codes for Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/create-offer-codes-for-in-app-purchases). Each quarter, you can create up to 10,000 codes for testing.
 
 To redeem an offer code in the sandbox environment, follow these steps:
 
@@ -109,17 +110,17 @@ The sandbox environment operates with these conditions:
 
 On your server, [App Store Server Notifications](../appstoreservernotifications.md) notifies you of offer code redemptions in the sandbox environment if you enable a notifications endpoint for the sandbox environment. For more information, see [Enabling App Store Server Notifications](enabling-app-store-server-notifications.md).
 
-For more information on sandbox testing, see [Testing In-App Purchases with sandbox](testing-in-app-purchases-with-sandbox.md).
+For more information on sandbox testing, see [Testing Apple In-App Purchases with sandbox](testing-in-app-purchases-with-sandbox.md).
 
 <a id="Test-offer-codes-in-Xcode"></a>
 
 ### Test offer codes in Xcode
 
-You can test your app’s handling of offer code redemptions in Xcode for all In-App Purchase product types: consumable, non-consumable, non-renewing subscription, and auto-renewable subscription.
+You can test your app’s handling of offer code redemptions in Xcode for all Apple In-App Purchase product types: consumable, non-consumable, non-renewing subscription, and auto-renewable subscription.
 
 Before you can begin testing in Xcode, complete the steps in [Setting up StoreKit Testing in Xcode](https://developer.apple.com/documentation/xcode/setting-up-storekit-testing-in-xcode), including creating a StoreKit configuration file and enabling StoreKit testing in Xcode.
 
-Start by opening the StoreKit configuration editor in Xcode and including at least one In-App Purchase product. Then follow these steps to configure an offer code:
+Start by opening the StoreKit configuration editor in Xcode and including at least one Apple In-App Purchase product. Then follow these steps to configure an offer code:
 
 1. In the left pane, select the product under the appropriate product type heading.
 2. Under the Offer Codes heading in the editor, configure an offer code for the product.
@@ -174,7 +175,7 @@ Enable customers to redeem offer codes through the App Store or within your app.
 
 ## Overview
 
-To help you acquire, retain, and win back customers, you can use offer codes. Offer codes are alphanumeric codes that provide In-App Purchases at a discount or for free, for a specific duration. Offer codes are available for all in-app purchase types:  consumables, non-consumables, non-renewing subscriptions, and auto-renewable subscriptions. You can merchandise offer codes within your app or outside of it through your marketing channels.
+To help you acquire, retain, and win back customers, you can use offer codes. Offer codes are alphanumeric codes that provide Apple In-App Purchases at a discount or for free, for a specific duration. Offer codes are available for all Apple In-App Purchase types:  consumables, non-consumables, non-renewing subscriptions, and auto-renewable subscriptions. You can merchandise offer codes within your app or outside of it through your marketing channels.
 
 Create and configure offer codes in App Store Connect, and distribute them to your customers. Customers can redeem offer codes throught a redemption URL, or by entering the code directly in the App Store, or within your app if it implements one of the following APIs:
 
@@ -192,7 +193,7 @@ Offer codes for auto-renewable subscriptions are available starting in iOS 14.2,
 
 Configure offers and manage your offer codes in App Store Connect. There are three types of offer codes: one-time use codes, custom codes, and sandbox codes for testing. The offer code redemption APIs support all offer codes types. You can have up to 10 active offers at a time, with a limit of 1,000,000 codes per app, per quarter. To distribute offer codes to your customers, download them from App Store Connect.
 
-For more information on creating and distributing offer codes, and to learn which type of offer code may work for your campaign, see [Set up offer codes](https://developer.apple.com/help/app-store-connect/manage-subscriptions/set-up-offer-codes) and [Create offer codes for in-app purchases](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/create-offer-codes-for-in-app-purchases).
+For more information on creating and distributing offer codes, and to learn which type of offer code may work for your campaign, see [Set up offer codes](https://developer.apple.com/help/app-store-connect/manage-subscriptions/set-up-offer-codes) and [Create offer codes for Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/create-offer-codes-for-in-app-purchases).
 
 <a id="Redeem-offer-codes-in-your-app"></a>
 
@@ -210,7 +211,7 @@ When a customer redeems an offer code, StoreKit delivers the resulting transacti
 
 If your app can’t process the redemption immediately, StoreKit emits the transaction in [updates](transaction/updates.md) on the next app launch. To avoid missing any transactions, set up a [Task](https://developer.apple.com/documentation/swift/task) to listen for [updates](transaction/updates.md) as soon as your app launches. See [updates](transaction/updates.md) for a code example.
 
-Including the redemption sheet in your app is recommended, but optional. For more guidance on supporting offer code redemption within your app, see Human Interface Guidelines \> [In-app purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase).
+Including the redemption sheet in your app is recommended, but optional. For more guidance on supporting offer code redemption within your app, see Human Interface Guidelines \> [Apple In-App Purchase](https://developer.apple.com/design/human-interface-guidelines/in-app-purchase).
 
 <a id="Support-offer-codes-redeemed-outside-of-your-app"></a>
 
@@ -240,7 +241,7 @@ On your server, use the following server-side APIs to locate offer code informat
 
 ### Provide service to new and existing customers
 
-When you acquire new customers with an offer code, they already have an In-App Purchase when they open your app for the first time. In addition to enabling that In-App Purchase, you may need to update your backend system’s records. Your app follows these steps:
+When you acquire new customers with an offer code, they already have an Apple In-App Purchase when they open your app for the first time. In addition to enabling that Apple In-App Purchase, you may need to update your backend system’s records. Your app follows these steps:
 
 1. When the app launches, check [currentEntitlements](transaction/currententitlements.md) and [unfinished](transaction/unfinished.md) on [Transaction](transaction.md) to get the current entitlements and any new consumable transactions, respectively. StoreKit automatically validates the transactions, and returns verified results in [VerificationResult.verified(\_:)](verificationresult/verified%28__%29.md). To perform your own validation, use the [jwsRepresentation](verificationresult/jwsrepresentation-21vgo.md) property.
 2. To determine whether a transaction includes an offer code redemption, check the [offer](transaction/offer-swift.property.md) property of [Transaction](transaction.md) and [type](transaction/offer-swift.struct/type.md) property of `offer`.
@@ -253,7 +254,7 @@ When an existing customer redeems an offer code within your app, the transaction
 
 ### Test offer codes in the sandbox environment
 
-You can test your app’s handling of offer codes in the sandbox environment for all In-App Purchase product types: consumable, non-consumable, non-renewing subscription, and auto-renewable subscription. First, create offer codes for the sandbox environment in App Store Connect. For more information on creating these codes, see [Create off codes for in-app purchases](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/create-offer-codes-for-in-app-purchases). Each quarter, you can create up to 10,000 codes for testing.
+You can test your app’s handling of offer codes in the sandbox environment for all Apple In-App Purchase product types: consumable, non-consumable, non-renewing subscription, and auto-renewable subscription. First, create offer codes for the sandbox environment in App Store Connect. For more information on creating these codes, see [Create off codes for Apple In-App Purchases](https://developer.apple.com/help/app-store-connect/manage-in-app-purchases/create-offer-codes-for-in-app-purchases). Each quarter, you can create up to 10,000 codes for testing.
 
 To redeem an offer code in the sandbox environment, follow these steps:
 
@@ -272,17 +273,17 @@ The sandbox environment operates with these conditions:
 
 On your server, [App Store Server Notifications](../appstoreservernotifications.md) notifies you of offer code redemptions in the sandbox environment if you enable a notifications endpoint for the sandbox environment. For more information, see [Enabling App Store Server Notifications](enabling-app-store-server-notifications.md).
 
-For more information on sandbox testing, see [Testing In-App Purchases with sandbox](testing-in-app-purchases-with-sandbox.md).
+For more information on sandbox testing, see [Testing Apple In-App Purchases with sandbox](testing-in-app-purchases-with-sandbox.md).
 
 <a id="Test-offer-codes-in-Xcode"></a>
 
 ### Test offer codes in Xcode
 
-You can test your app’s handling of offer code redemptions in Xcode for all In-App Purchase product types: consumable, non-consumable, non-renewing subscription, and auto-renewable subscription.
+You can test your app’s handling of offer code redemptions in Xcode for all Apple In-App Purchase product types: consumable, non-consumable, non-renewing subscription, and auto-renewable subscription.
 
 Before you can begin testing in Xcode, complete the steps in [Setting up StoreKit Testing in Xcode](https://developer.apple.com/documentation/xcode/setting-up-storekit-testing-in-xcode), including creating a StoreKit configuration file and enabling StoreKit testing in Xcode.
 
-Start by opening the StoreKit configuration editor in Xcode and including at least one In-App Purchase product. Then follow these steps to configure an offer code:
+Start by opening the StoreKit configuration editor in Xcode and including at least one Apple In-App Purchase product. Then follow these steps to configure an offer code:
 
 1. In the left pane, select the product under the appropriate product type heading.
 2. Under the Offer Codes heading in the editor, configure an offer code for the product.

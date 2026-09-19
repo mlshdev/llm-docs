@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsdocument/runmodalpagelayout(with:delegate:didrun:contextinfo:)](https://developer.apple.com/documentation/appkit/nsdocument/runmodalpagelayout(with:delegate:didrun:contextinfo:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsdocument/runmodalpagelayout(with:delegate:didrun:contextinfo:)
 
 # runModalPageLayout(with:delegate:didRun:contextInfo:) (Swift)
 

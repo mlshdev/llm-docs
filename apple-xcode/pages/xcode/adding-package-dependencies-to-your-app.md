@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/adding-package-dependencies-to-your-app](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app
 
 # Adding package dependencies to your app
 
@@ -129,6 +130,7 @@ To remove a package dependency from your Xcode project:
 
 ### Project configuration
 
+- [Updating your Xcode project configuration file format](updating-your-xcode-project-configuration-file-format.md): Beta. Configure your Xcode project to use the JSON project configuration file format that’s more human-readable and editable by coding intelligence agents.
 - [Managing your app’s information property list values](https://developer.apple.com/documentation/bundleresources/managing-your-app-s-information-property-list): Customize the information property list values for your app using Xcode.
 - [Creating a Mac version of your iPad app](https://developer.apple.com/documentation/uikit/creating-a-mac-version-of-your-ipad-app): Bring your iPad app to macOS with Mac Catalyst.
 - [Setting up a watchOS project](https://developer.apple.com/documentation/watchos-apps/setting-up-a-watchos-project): Create a new watchOS project or add a watch target to an existing iOS project.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/objectivec/nsobject-swift.class/compositionpickerview(_:didselect:)](https://developer.apple.com/documentation/objectivec/nsobject-swift.class/compositionpickerview(_:didselect:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/objectivec/nsobject-swift.class/compositionpickerview(_:didselect:)
 
 # compositionPickerView(\_:didSelect:) (Swift)
 

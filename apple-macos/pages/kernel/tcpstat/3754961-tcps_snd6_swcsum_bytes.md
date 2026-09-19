@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/tcpstat/3754961-tcps_snd6_swcsum_bytes](https://developer.apple.com/documentation/kernel/tcpstat/3754961-tcps_snd6_swcsum_bytes)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/tcpstat/3754961-tcps_snd6_swcsum_bytes
 
 # tcps_snd6_swcsum_bytes
 

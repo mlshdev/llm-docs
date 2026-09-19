@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/atsflatdatatextlayoutheader/1463120-flattenedtextlayouts](https://developer.apple.com/documentation/applicationservices/atsflatdatatextlayoutheader/1463120-flattenedtextlayouts)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applicationservices/atsflatdatatextlayoutheader/1463120-flattenedtextlayouts
 
 # flattenedTextLayouts (Swift)
 

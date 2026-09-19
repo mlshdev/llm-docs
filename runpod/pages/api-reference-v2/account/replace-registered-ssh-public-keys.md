@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/account/replace-registered-ssh-public-keys.mdx](https://github.com/runpod/docs/blob/fa4985146919262a6e9cdb946c50eec1ed81ffc9/api-reference-v2/account/replace-registered-ssh-public-keys.mdx)
+> Pinned source for Runpod main: [api-reference-v2/account/replace-registered-ssh-public-keys.mdx](https://github.com/runpod/docs/blob/56a86f70b4ea8b225c0e5e2231e42a4925931686/api-reference-v2/account/replace-registered-ssh-public-keys.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/account/replace-registered-ssh-public-keys
 
 # Replace Registered Ssh Public Keys

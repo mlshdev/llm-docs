@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/connect/create-nodes/build-your-node/tutorial-build-a-programmatic-style-node.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/connect/create-nodes/build-your-node/tutorial-build-a-programmatic-style-node.md)
+> Pinned source for n8n main: [docs/connect/create-nodes/build-your-node/tutorial-build-a-programmatic-style-node.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/connect/create-nodes/build-your-node/tutorial-build-a-programmatic-style-node.md)
 
 # Build a programmatic-style node <a id="build-a-programmatic-style-node"></a>
 
@@ -71,7 +71,7 @@ n8n recommends using an SVG for your node icon, but you can also use PNG. If usi
 > **Info**
 > **Don't reference Font Awesome**
 >
-> If you want to use a Font Awesome icon in your node, download and embed the image.
+> If you want to use a Font Awesome icon in your node, download and embed the image. Don't set `defaults.color`: it only tints Font Awesome icons, and n8n 3.0 removes it.
 
 ### Step 3: Define the node in the base file <a id="step-3-define-the-node-in-the-base-file"></a>
 
@@ -483,75 +483,36 @@ You need to update the `package.json` to include your own information, such as y
 
 ## Test your node <a id="test-your-node"></a>
 
-You can test your node as you build it by running it in a local n8n instance.
+You can test your node as you build it by running it in a local n8n instance with the [`n8n-node` tool](https://docs.n8n.io/connect/create-nodes/build-your-node/using-the-n8n-node-tool). `n8n-node` includes n8n, so you don't need a global n8n installation.
 
-1. Install n8n using npm:
-
-```shell
-npm install n8n -g
-```
-
-2. When you are ready to test your node, publish it locally:
-
-```shell
-# In your node directory
-npm run build
-npm link
-```
-
-3. Install the node into your local n8n instance:
+1. In your project's root directory, run the `dev` command:
    ```shell
-   # In the nodes directory within your n8n installation
-   # node-package-name is the name from the package.json
-   npm link <node-package-name>
+   npm run dev
    ```
+   This runs `n8n-node dev`, which builds your node, links it into the n8n custom nodes directory, starts a local n8n instance with your node loaded, and rebuilds your node when you change a file.
 
 > **Info**
-> **Check your directory**
+> **Custom nodes directory**
 >
-> Make sure you run `npm link <node-name>` in the nodes directory within your n8n installation.
+> `n8n-node dev` uses its own n8n user folder, `.n8n-node-cli`, so it doesn't touch an existing n8n installation. The default location depends on your operating system:
 >
-> The default location depends on your operating system:
+> - For Windows: `C:\Users\<username>\.n8n-node-cli\.n8n\custom`
+> - For Linux: `/home/<username>/.n8n-node-cli/.n8n/custom`
+> - For macOS: `/Users/<username>/.n8n-node-cli/.n8n/custom`
 >
-> - For Windows: `C:\Users\<username>\.n8n\custom`
-> - For Linux: `/home/<username>/.n8n/custom`
-> - For MacOS: `/Users/<username>/.n8n/custom`
+> To test against an n8n instance you run yourself, pass `--external-n8n` and set `--custom-user-folder <path>` to that instance's user folder (the parent of its `.n8n` directory). Set `N8N_DEV_RELOAD=true` on that instance so it picks up your changes.
 >
-> If your n8n installation set a different name using `N8N_CUSTOM_EXTENSIONS`, use that custom directory instead.
->
-> Note: The `.n8n` folder is a hidden folder so it may not appear in your file browser.
+> Note: `.n8n-node-cli` and `.n8n` are hidden folders, so your file browser may not show them.
 
-4. Start n8n:
-
-```
-n8n start
-```
-
-5. Open n8n in your browser. You should see your nodes when you search for them in the nodes panel.
+2. Open `http://localhost:5678` in your browser and sign in to your n8n instance.
+3. Open a workflow and search for your node in the nodes panel.
 
 > **Info**
 > **Node names**
 >
 > Make sure you search using the node name, not the package name. For example, if your npm package name is `n8n-nodes-weather-nodes`, and the package contains nodes named `rain`, `sun`, `snow`, you should search for `rain`, not `weather-nodes`.
 
-### Troubleshooting <a id="troubleshooting"></a>
-
-If there's no `custom` directory in your `.n8n` local installation, you have to create the `custom` directory manually and run `npm init`.
-
-The `.n8n` directory location depends on your operating system:
-
-- For Windows: `C:\Users\<username>\.n8n\custom`
-- For Linux: `/home/<username>/.n8n/custom`
-- For MacOS: `/Users/<username>/.n8n/custom`
-
-Note: The `.n8n` folder is a hidden folder so it may not appear in your file browser.
-
-```shell
-# Navigate to your .n8n directory and run:
-mkdir custom
-cd custom
-npm init
-```
+Add the node to your workflow and test it as you develop. To stop n8n, press `ctrl` + `c`.
 
 ## Next steps <a id="next-steps"></a>
 

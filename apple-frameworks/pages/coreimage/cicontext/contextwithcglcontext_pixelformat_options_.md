@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cicontext/contextwithcglcontext:pixelformat:options:](https://developer.apple.com/documentation/coreimage/cicontext/contextwithcglcontext:pixelformat:options:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreimage/cicontext/contextwithcglcontext:pixelformat:options:
 
 # contextWithCGLContext:pixelFormat:options:
 

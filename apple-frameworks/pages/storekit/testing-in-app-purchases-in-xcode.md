@@ -1,17 +1,18 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/testing-in-app-purchases-in-xcode](https://developer.apple.com/documentation/storekit/testing-in-app-purchases-in-xcode)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/testing-in-app-purchases-in-xcode
 
-# Testing In-App Purchases in Xcode (Swift)
+# Testing Apple In-App Purchases in Xcode (Swift)
 
 **Framework:** StoreKit  
 **Kind:** Article
 
-Use locally configured product data to test and debug your In-App Purchases implementation.
+Use locally configured product data to test and debug your Apple In-App Purchases implementation.
 
 <a id="overview"></a>
 
 ## Overview
 
-Testing your StoreKit implementation in Xcode ensures that your app behaves correctly when your customers perform various tasks associated with subscriptions and In-App Purchase transactions. Be sure to test a variety of in-app purchase scenarios, such as receipt validation, promotional offers, interrupted purchases, introductory offers, subscription renewals, and purchase restoration.
+Testing your StoreKit implementation in Xcode ensures that your app behaves correctly when your customers perform various tasks associated with subscriptions and Apple In-App Purchase transactions. Be sure to test a variety of Apple In-App Purchase scenarios, such as receipt validation, promotional offers, interrupted purchases, introductory offers, subscription renewals, and purchase restoration.
 
 <a id="Perform-basic-setup"></a>
 
@@ -25,7 +26,7 @@ Select the relevant test scenarios to build a test plan for your app. Each test 
 
 ### Validate a receipt in the test environment
 
-Validating receipts is an integral part of handling and testing in-app purchases. As you test in-app purchases, StoreKit in Xcode generates receipts that are valid only in the test environment. Your app can validate the receipts locally using a certificate that Xcode provides.
+Validating receipts is an integral part of handling and testing Apple In-App Purchases. As you test Apple In-App Purchases, StoreKit in Xcode generates receipts that are valid only in the test environment. Your app can validate the receipts locally using a certificate that Xcode provides.
 
 > **Important**
 
@@ -83,10 +84,10 @@ To test the same promotional offer purchase again, delete the transaction. In Xc
 
 ### Test an interrupted purchase
 
-An interrupted purchase is a transaction that requires the user to perform some action outside your app before the transaction can complete successfully. For example, the user may need to update a payment method or approve new terms and conditions. In Xcode, you can simulate a purchase interruption and its resolution to test how your code handles this scenario end-to-end. You can test this scenario for all in-app purchase product types.
+An interrupted purchase is a transaction that requires the user to perform some action outside your app before the transaction can complete successfully. For example, the user may need to update a payment method or approve new terms and conditions. In Xcode, you can simulate a purchase interruption and its resolution to test how your code handles this scenario end-to-end. You can test this scenario for all Apple In-App Purchase product types.
 
 1. In the Xcode Project navigator, select the StoreKit configuration file. Choose Editor \> Enable Interrupted Purchases. Run the app in the simulator or on a device.
-2. In the app, buy an in-app purchase.
+2. In the app, buy an Apple In-App Purchase.
 3. Observe that the system displays the payment sheet in the app.
 4. In your code, verify that your [SKPaymentTransactionObserver](skpaymenttransactionobserver.md) gets a callback on [paymentQueue(\_:updatedTransactions:)](skpaymenttransactionobserver/paymentqueue%28__updatedtransactions_%29.md) with a transaction in the [SKPaymentTransactionState.purchasing](skpaymenttransactionstate/purchasing.md) state.
 5. In the app, tap Confirm on the payment sheet.
@@ -100,7 +101,7 @@ An interrupted purchase is a transaction that requires the user to perform some 
 
 To perform the test again for non-consumable products and subscriptions, delete the transaction to run the test again. To delete the transaction, choose Debug \> StoreKit \> Manage Transactions. Select the transaction and click Delete.
 
-For consumable in-app purchases, you can test again without additional setup. To reset the test environment to its default behavior, select the StoreKit configuration file in Xcode, then choose Editor \> Disable Interrupted Purchases.
+For consumable Apple In-App Purchases, you can test again without additional setup. To reset the test environment to its default behavior, select the StoreKit configuration file in Xcode, then choose Editor \> Disable Interrupted Purchases.
 
 <a id="Test-an-introductory-offer"></a>
 
@@ -126,7 +127,7 @@ To retry the same test scenario, delete the transaction that contains the introd
 
 All apps need to provide a way for customers to restore purchases, such as by providing a Restore Purchases button. Test how your app handles this request when the customer has no existing purchases. For more information, see [Restoring purchased products](restoring-purchased-products.md).
 
-Include at least one non-consumable product, auto-renewable subscription, or non-renewable subscription in the StoreKit configuration file. To simulate a user account with no in-app purchases, delete all the transactions before starting the test. In Xcode, choose Debug \> StoreKit \> Manage Transactions, select all the transactions, and click Delete.
+Include at least one non-consumable product, auto-renewable subscription, or non-renewable subscription in the StoreKit configuration file. To simulate a user account with no Apple In-App Purchases, delete all the transactions before starting the test. In Xcode, choose Debug \> StoreKit \> Manage Transactions, select all the transactions, and click Delete.
 
 1. In the app, select the option your app provides to restore purchases.
 2. In your code, verify that it calls [restoreCompletedTransactions()](skpaymentqueue/restorecompletedtransactions%28%29.md) or [restoreCompletedTransactions(withApplicationUsername:)](skpaymentqueue/restorecompletedtransactions%28withapplicationusername_%29.md).
@@ -195,7 +196,7 @@ Additional setup steps for this scenario are:
 - Choose Editor \> Enable Billing Grace Period. This step simulates enabling the billing grace period for your app in App Store Connect. To test billing retry without a billing grace period, leave this setting disabled.
 - Choose Editor \> Enable Billing Retry on Renewal. This step causes all subscription renewals to go into a billing retry state.
 - Select your StoreKit configuration file in the Project navigator.
-- Create an auto-renewable subscription in-app purchase in your StoreKit configuration file.
+- Create an auto-renewable subscription Apple In-App Purchase in your StoreKit configuration file.
 - Purchase the auto-renewable subscription in your app.
 - Adjust the time rate of subscription renewals in the testing environment by choosing Editor \> Subscription Renewal Rate, and select an option. For more information about the time rates available in the testing environment, see [timeRate](https://developer.apple.com/documentation/storekittest/sktestsession/timerate-swift.property).
 
@@ -258,24 +259,24 @@ For information about testing price increase consent in an automated test suite,
 
 ## See Also
 
-### Testing In-App Purchases
+### Testing Apple In-App Purchases
 
-- [Testing at all stages of development with Xcode and the sandbox](testing-at-all-stages-of-development-with-xcode-and-the-sandbox.md): Verify your implementation of In-App Purchases by testing your code throughout its development.
+- [Testing at all stages of development with Xcode and the sandbox](testing-at-all-stages-of-development-with-xcode-and-the-sandbox.md): Verify your implementation of Apple In-App Purchases by testing your code throughout its development.
 - [Setting up StoreKit Testing in Xcode](https://developer.apple.com/documentation/xcode/setting-up-storekit-testing-in-xcode): Prepare your test environment to test in-app purchases with data you configure locally.
-- [Testing In-App Purchases with sandbox](testing-in-app-purchases-with-sandbox.md): Test your implementation of In-App Purchases using real product information and server-to-server transactions in the sandbox environment.
+- [Testing Apple In-App Purchases with sandbox](testing-in-app-purchases-with-sandbox.md): Test your implementation of Apple In-App Purchases using real product information and server-to-server transactions in the sandbox environment.
 
-# Testing In-App Purchases in Xcode (Objective-C)
+# Testing Apple In-App Purchases in Xcode (Objective-C)
 
 **Framework:** StoreKit  
 **Kind:** Article
 
-Use locally configured product data to test and debug your In-App Purchases implementation.
+Use locally configured product data to test and debug your Apple In-App Purchases implementation.
 
 <a id="overview"></a>
 
 ## Overview
 
-Testing your StoreKit implementation in Xcode ensures that your app behaves correctly when your customers perform various tasks associated with subscriptions and In-App Purchase transactions. Be sure to test a variety of in-app purchase scenarios, such as receipt validation, promotional offers, interrupted purchases, introductory offers, subscription renewals, and purchase restoration.
+Testing your StoreKit implementation in Xcode ensures that your app behaves correctly when your customers perform various tasks associated with subscriptions and Apple In-App Purchase transactions. Be sure to test a variety of Apple In-App Purchase scenarios, such as receipt validation, promotional offers, interrupted purchases, introductory offers, subscription renewals, and purchase restoration.
 
 <a id="Perform-basic-setup"></a>
 
@@ -289,7 +290,7 @@ Select the relevant test scenarios to build a test plan for your app. Each test 
 
 ### Validate a receipt in the test environment
 
-Validating receipts is an integral part of handling and testing in-app purchases. As you test in-app purchases, StoreKit in Xcode generates receipts that are valid only in the test environment. Your app can validate the receipts locally using a certificate that Xcode provides.
+Validating receipts is an integral part of handling and testing Apple In-App Purchases. As you test Apple In-App Purchases, StoreKit in Xcode generates receipts that are valid only in the test environment. Your app can validate the receipts locally using a certificate that Xcode provides.
 
 > **Important**
 
@@ -347,10 +348,10 @@ To test the same promotional offer purchase again, delete the transaction. In Xc
 
 ### Test an interrupted purchase
 
-An interrupted purchase is a transaction that requires the user to perform some action outside your app before the transaction can complete successfully. For example, the user may need to update a payment method or approve new terms and conditions. In Xcode, you can simulate a purchase interruption and its resolution to test how your code handles this scenario end-to-end. You can test this scenario for all in-app purchase product types.
+An interrupted purchase is a transaction that requires the user to perform some action outside your app before the transaction can complete successfully. For example, the user may need to update a payment method or approve new terms and conditions. In Xcode, you can simulate a purchase interruption and its resolution to test how your code handles this scenario end-to-end. You can test this scenario for all Apple In-App Purchase product types.
 
 1. In the Xcode Project navigator, select the StoreKit configuration file. Choose Editor \> Enable Interrupted Purchases. Run the app in the simulator or on a device.
-2. In the app, buy an in-app purchase.
+2. In the app, buy an Apple In-App Purchase.
 3. Observe that the system displays the payment sheet in the app.
 4. In your code, verify that your [SKPaymentTransactionObserver](skpaymenttransactionobserver.md) gets a callback on [paymentQueue:updatedTransactions:](skpaymenttransactionobserver/paymentqueue%28__updatedtransactions_%29.md) with a transaction in the [SKPaymentTransactionStatePurchasing](skpaymenttransactionstate/purchasing.md) state.
 5. In the app, tap Confirm on the payment sheet.
@@ -364,7 +365,7 @@ An interrupted purchase is a transaction that requires the user to perform some 
 
 To perform the test again for non-consumable products and subscriptions, delete the transaction to run the test again. To delete the transaction, choose Debug \> StoreKit \> Manage Transactions. Select the transaction and click Delete.
 
-For consumable in-app purchases, you can test again without additional setup. To reset the test environment to its default behavior, select the StoreKit configuration file in Xcode, then choose Editor \> Disable Interrupted Purchases.
+For consumable Apple In-App Purchases, you can test again without additional setup. To reset the test environment to its default behavior, select the StoreKit configuration file in Xcode, then choose Editor \> Disable Interrupted Purchases.
 
 <a id="Test-an-introductory-offer"></a>
 
@@ -390,7 +391,7 @@ To retry the same test scenario, delete the transaction that contains the introd
 
 All apps need to provide a way for customers to restore purchases, such as by providing a Restore Purchases button. Test how your app handles this request when the customer has no existing purchases. For more information, see [Restoring purchased products](restoring-purchased-products.md).
 
-Include at least one non-consumable product, auto-renewable subscription, or non-renewable subscription in the StoreKit configuration file. To simulate a user account with no in-app purchases, delete all the transactions before starting the test. In Xcode, choose Debug \> StoreKit \> Manage Transactions, select all the transactions, and click Delete.
+Include at least one non-consumable product, auto-renewable subscription, or non-renewable subscription in the StoreKit configuration file. To simulate a user account with no Apple In-App Purchases, delete all the transactions before starting the test. In Xcode, choose Debug \> StoreKit \> Manage Transactions, select all the transactions, and click Delete.
 
 1. In the app, select the option your app provides to restore purchases.
 2. In your code, verify that it calls [restoreCompletedTransactions](skpaymentqueue/restorecompletedtransactions%28%29.md) or [restoreCompletedTransactionsWithApplicationUsername:](skpaymentqueue/restorecompletedtransactions%28withapplicationusername_%29.md).
@@ -459,7 +460,7 @@ Additional setup steps for this scenario are:
 - Choose Editor \> Enable Billing Grace Period. This step simulates enabling the billing grace period for your app in App Store Connect. To test billing retry without a billing grace period, leave this setting disabled.
 - Choose Editor \> Enable Billing Retry on Renewal. This step causes all subscription renewals to go into a billing retry state.
 - Select your StoreKit configuration file in the Project navigator.
-- Create an auto-renewable subscription in-app purchase in your StoreKit configuration file.
+- Create an auto-renewable subscription Apple In-App Purchase in your StoreKit configuration file.
 - Purchase the auto-renewable subscription in your app.
 - Adjust the time rate of subscription renewals in the testing environment by choosing Editor \> Subscription Renewal Rate, and select an option. For more information about the time rates available in the testing environment, see [timeRate](https://developer.apple.com/documentation/storekittest/sktestsession/timerate-swift.property).
 
@@ -522,7 +523,7 @@ For information about testing price increase consent in an automated test suite,
 
 ## See Also
 
-### Testing In-App Purchases
+### Testing Apple In-App Purchases
 
-- [Testing at all stages of development with Xcode and the sandbox](testing-at-all-stages-of-development-with-xcode-and-the-sandbox.md): Verify your implementation of In-App Purchases by testing your code throughout its development.
-- [Testing In-App Purchases with sandbox](testing-in-app-purchases-with-sandbox.md): Test your implementation of In-App Purchases using real product information and server-to-server transactions in the sandbox environment.
+- [Testing at all stages of development with Xcode and the sandbox](testing-at-all-stages-of-development-with-xcode-and-the-sandbox.md): Verify your implementation of Apple In-App Purchases by testing your code throughout its development.
+- [Testing Apple In-App Purchases with sandbox](testing-in-app-purchases-with-sandbox.md): Test your implementation of Apple In-App Purchases using real product information and server-to-server transactions in the sandbox environment.

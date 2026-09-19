@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiviewcontroller/canperformunwindsegueaction(_:from:withsender:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/canperformunwindsegueaction(_:from:withsender:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiviewcontroller/canperformunwindsegueaction(_:from:withsender:)
 
 # canPerformUnwindSegueAction(\_:from:withSender:) (Swift)
 

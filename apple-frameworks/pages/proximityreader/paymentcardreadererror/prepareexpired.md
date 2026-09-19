@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/proximityreader/paymentcardreadererror/prepareexpired](https://developer.apple.com/documentation/proximityreader/paymentcardreadererror/prepareexpired)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/proximityreader/paymentcardreadererror/prepareexpired
 
 # PaymentCardReaderError.prepareExpired
 
@@ -29,7 +30,7 @@ This error occurs when too much time elapses after calling the [prepare(using:)]
 - [PaymentCardReaderError.accountLinkingCancelled](accountlinkingcancelled.md): An error that indicates the user cancelled the linking or relinking operation.
 - [PaymentCardReaderError.accountLinkingCheckFailed](accountlinkingcheckfailed.md): An error that indicates the system couldn’t check the account status of the merchant.
 - [PaymentCardReaderError.accountLinkingFailed](accountlinkingfailed.md): An error that indicates the system couldn’t link or relink the merchant using the provided Apple Account.
-- [PaymentCardReaderError.accountLinkingRequiresiCloudSignIn](accountlinkingrequiresicloudsignin.md): An error that indicates the merchant must be signed into iCloud to accept the Terms and Conditions.
+- [PaymentCardReaderError.accountLinkingRequiresiCloudSignIn](accountlinkingrequiresicloudsignin.md): An error that indicates the merchant must be signed into an Apple Account on the device to accept the Terms and Conditions.
 - [PaymentCardReaderError.accountNotLinked](accountnotlinked.md): An error that indicates the merchant must accept the Terms and Conditions with a valid Apple Account.
 - [PaymentCardReaderError.backgroundRequestNotAllowed](backgroundrequestnotallowed.md): An error that results from requests to the reader while the host app is in the background state.
 - [PaymentCardReaderError.deviceBanned(\_:)](devicebanned%28__%29.md): An error that indicates the device is banned until the specified date.

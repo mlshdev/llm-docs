@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/spatializing-sound-from-a-uiscene](https://developer.apple.com/documentation/audiotoolbox/spatializing-sound-from-a-uiscene)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/spatializing-sound-from-a-uiscene
 
 # Anchoring sound to a window or volume
 

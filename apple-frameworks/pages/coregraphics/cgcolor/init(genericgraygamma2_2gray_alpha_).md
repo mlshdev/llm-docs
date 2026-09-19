@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/cgcolor/init(genericgraygamma2_2gray:alpha:)](https://developer.apple.com/documentation/coregraphics/cgcolor/init(genericgraygamma2_2gray:alpha:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coregraphics/cgcolor/init(genericgraygamma2_2gray:alpha:)
 
 # init(genericGrayGamma2_2Gray:alpha:) (Swift)
 

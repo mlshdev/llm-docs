@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xctest/adding-attachments-to-tests-activities-and-issues](https://developer.apple.com/documentation/xctest/adding-attachments-to-tests-activities-and-issues)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xctest/adding-attachments-to-tests-activities-and-issues
 
 # Adding Attachments to Tests, Activities, and Issues (Swift)
 

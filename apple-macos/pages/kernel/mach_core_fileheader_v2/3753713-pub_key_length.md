@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/mach_core_fileheader_v2/3753713-pub_key_length](https://developer.apple.com/documentation/kernel/mach_core_fileheader_v2/3753713-pub_key_length)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/mach_core_fileheader_v2/3753713-pub_key_length
 
 # pub_key_length
 

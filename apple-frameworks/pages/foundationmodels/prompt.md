@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/prompt](https://developer.apple.com/documentation/foundationmodels/prompt)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/prompt
 
 # Prompt
 
@@ -49,7 +50,7 @@ Prompting the same session eventually leads to exceeding the context window size
 
 ### Creating a prompt
 
-- [init(\_:)](prompt/init%28__%29.md)
+- [init(\_:)](prompt/init%28__%29.md): Creates a prompt from the content of a builder closure.
 - [PromptBuilder](promptbuilder.md): A type that represents a prompt builder.
 - [PromptRepresentable](promptrepresentable.md): A type whose value can represent a prompt.
 

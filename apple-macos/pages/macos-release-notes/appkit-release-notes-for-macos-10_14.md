@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/macos-release-notes/appkit-release-notes-for-macos-10_14](https://developer.apple.com/documentation/macos-release-notes/appkit-release-notes-for-macos-10_14)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/macos-release-notes/appkit-release-notes-for-macos-10_14
 
 # AppKit Release Notes for macOS 10.14
 

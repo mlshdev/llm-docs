@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tipkit/tip/invalidate(reason:)](https://developer.apple.com/documentation/tipkit/tip/invalidate(reason:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/tipkit/tip/invalidate(reason:)
 
 # invalidate(reason:)
 
@@ -16,7 +17,7 @@ func invalidate(reason: Self.InvalidationReason)
 
 ## Parameters
 
-- `reason`: The reason for the tip’s invalidation. The tip’s `invalidationReason` returns this value after invalidation.
+- `reason`: The reason for the tip’s invalidation. After invalidation the tip’s [status](status-swift.property.md) becomes `invalidated`, carrying this value.
 
 ## See Also
 

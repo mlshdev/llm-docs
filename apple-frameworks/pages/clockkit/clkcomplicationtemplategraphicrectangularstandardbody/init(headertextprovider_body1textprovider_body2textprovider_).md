@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplategraphicrectangularstandardbody/init(headertextprovider:body1textprovider:body2textprovider:)](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphicrectangularstandardbody/init(headertextprovider:body1textprovider:body2textprovider:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphicrectangularstandardbody/init(headertextprovider:body1textprovider:body2textprovider:)
 
 # init(headerTextProvider:body1TextProvider:body2TextProvider:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Creates a new template that has a row of header text and two rows of body text.
 
@@ -32,7 +33,7 @@ init(headerTextProvider: CLKTextProvider, body1TextProvider: CLKTextProvider, bo
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Creates a new template that has a row of header text and two rows of body text.
 

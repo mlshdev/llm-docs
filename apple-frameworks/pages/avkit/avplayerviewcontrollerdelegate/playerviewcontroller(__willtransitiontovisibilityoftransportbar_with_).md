@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:willtransitiontovisibilityoftransportbar:with:)](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:willtransitiontovisibilityoftransportbar:with:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate/playerviewcontroller(_:willtransitiontovisibilityoftransportbar:with:)
 
 # playerViewController(\_:willTransitionToVisibilityOfTransportBar:with:) (Swift)
 
@@ -22,7 +23,7 @@ optional func playerViewController(_ playerViewController: AVPlayerViewControlle
 
 ## See Also
 
-### Responding to Transport Bar Changes
+### Responding to transport bar changes
 
 - [AVPlayerViewControllerAnimationCoordinator](../avplayerviewcontrolleranimationcoordinator.md): A protocol that defines the methods to implement to synchronize animations with playback controls’ visibility animation.
 
@@ -48,6 +49,6 @@ Tells the delegate when the transport bar’s visibility is about to change.
 
 ## See Also
 
-### Responding to Transport Bar Changes
+### Responding to transport bar changes
 
 - [AVPlayerViewControllerAnimationCoordinator](../avplayerviewcontrolleranimationcoordinator.md): A protocol that defines the methods to implement to synchronize animations with playback controls’ visibility animation.

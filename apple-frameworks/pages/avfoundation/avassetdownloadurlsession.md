@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avassetdownloadurlsession](https://developer.apple.com/documentation/avfoundation/avassetdownloadurlsession)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avassetdownloadurlsession
 
 # AVAssetDownloadURLSession (Swift)
 
@@ -22,7 +23,7 @@ Create an [AVAssetDownloadURLSession](avassetdownloadurlsession.md) by calling [
 
 > **Important**
 
-> The standard `URLSession` initializers and task-creation methods are unavailable on this class. Use [init(configuration:assetDownloadDelegate:delegateQueue:)](avassetdownloadurlsession/init%28configuration_assetdownloaddelegate_delegatequeue_%29.md) to create a session and [makeAssetDownloadTask(downloadConfiguration:)](avassetdownloadurlsession/makeassetdownloadtask%28downloadconfiguration_%29.md) to create download tasks.
+> The standard doc://com.apple.documentation/documentation/foundation/nsurlsession initializers and task-creation methods are unavailable on this class. Use [init(configuration:assetDownloadDelegate:delegateQueue:)](avassetdownloadurlsession/init%28configuration_assetdownloaddelegate_delegatequeue_%29.md) to create a session and [makeAssetDownloadTask(downloadConfiguration:)](avassetdownloadurlsession/makeassetdownloadtask%28downloadconfiguration_%29.md) to create download tasks.
 
 Background sessions persist across app launches. The system manages downloads out-of-process so they continue while your app is in a suspended state. If the system terminates your app while downloads are in progress, it relaunches the app and calls [application(\_:handleEventsForBackgroundURLSession:completionHandler:)](../uikit/uiapplicationdelegate/application%28__handleeventsforbackgroundurlsession_completionhandler_%29.md) with the session identifier. Recreate the [AVAssetDownloadURLSession](avassetdownloadurlsession.md) using the same background configuration identifier to reconnect to the running session and receive pending delegate callbacks. Call the provided completion handler after all callbacks finish. If a person force-quits your app, the system cancels all active downloads and doesn’t relaunch the app.
 
@@ -101,7 +102,7 @@ Create an [AVAssetDownloadURLSession](avassetdownloadurlsession.md) by calling [
 
 > **Important**
 
-> The standard `URLSession` initializers and task-creation methods are unavailable on this class. Use [sessionWithConfiguration:assetDownloadDelegate:delegateQueue:](avassetdownloadurlsession/init%28configuration_assetdownloaddelegate_delegatequeue_%29.md) to create a session and [assetDownloadTaskWithConfiguration:](avassetdownloadurlsession/makeassetdownloadtask%28downloadconfiguration_%29.md) to create download tasks.
+> The standard doc://com.apple.documentation/documentation/foundation/nsurlsession initializers and task-creation methods are unavailable on this class. Use [sessionWithConfiguration:assetDownloadDelegate:delegateQueue:](avassetdownloadurlsession/init%28configuration_assetdownloaddelegate_delegatequeue_%29.md) to create a session and [assetDownloadTaskWithConfiguration:](avassetdownloadurlsession/makeassetdownloadtask%28downloadconfiguration_%29.md) to create download tasks.
 
 Background sessions persist across app launches. The system manages downloads out-of-process so they continue while your app is in a suspended state. If the system terminates your app while downloads are in progress, it relaunches the app and calls [application:handleEventsForBackgroundURLSession:completionHandler:](../uikit/uiapplicationdelegate/application%28__handleeventsforbackgroundurlsession_completionhandler_%29.md) with the session identifier. Recreate the [AVAssetDownloadURLSession](avassetdownloadurlsession.md) using the same background configuration identifier to reconnect to the running session and receive pending delegate callbacks. Call the provided completion handler after all callbacks finish. If a person force-quits your app, the system cancels all active downloads and doesn’t relaunch the app.
 

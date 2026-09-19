@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applenewsapi/post-sections-_sectionid_-promotedarticles](https://developer.apple.com/documentation/applenewsapi/post-sections-_sectionid_-promotedarticles)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applenewsapi/post-sections-_sectionid_-promotedarticles
 
 # Promote Articles in a Section
 

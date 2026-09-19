@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcaptureviewcontrolsstyle](https://developer.apple.com/documentation/avkit/avcaptureviewcontrolsstyle)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcaptureviewcontrolsstyle
 
 # AVCaptureViewControlsStyle (Swift)
 
@@ -20,7 +21,7 @@ enum AVCaptureViewControlsStyle
 
 - [init(rawValue:)](avcaptureviewcontrolsstyle/init%28rawvalue_%29.md)
 
-### Controls Styles
+### Controls styles
 
 - [AVCaptureViewControlsStyle.inline](avcaptureviewcontrolsstyle/inline.md): The view’s inline controls style.
 - [AVCaptureViewControlsStyle.floating](avcaptureviewcontrolsstyle/floating.md): The view’s floating controls style, which matches the user interface of QuickTime Player.
@@ -40,7 +41,7 @@ enum AVCaptureViewControlsStyle
 
 ## See Also
 
-### Customizing the View
+### Customizing the view
 
 - [controlsStyle](avcaptureview/controlsstyle.md): The style of the capture controls presented by the view.
 - [videoGravity](avcaptureview/videogravity.md): A string value that defines how the capture view displays video within its bounds.
@@ -61,7 +62,7 @@ enum AVCaptureViewControlsStyle : NSInteger;
 
 ## Topics
 
-### Controls Styles
+### Controls styles
 
 - [AVCaptureViewControlsStyleInline](avcaptureviewcontrolsstyle/inline.md): The view’s inline controls style.
 - [AVCaptureViewControlsStyleFloating](avcaptureviewcontrolsstyle/floating.md): The view’s floating controls style, which matches the user interface of QuickTime Player.
@@ -70,7 +71,7 @@ enum AVCaptureViewControlsStyle : NSInteger;
 
 ## See Also
 
-### Customizing the View
+### Customizing the view
 
 - [controlsStyle](avcaptureview/controlsstyle.md): The style of the capture controls presented by the view.
 - [videoGravity](avcaptureview/videogravity.md): A string value that defines how the capture view displays video within its bounds.

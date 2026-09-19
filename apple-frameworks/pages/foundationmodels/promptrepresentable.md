@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/promptrepresentable](https://developer.apple.com/documentation/foundationmodels/promptrepresentable)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/promptrepresentable
 
 # PromptRepresentable
 
@@ -73,5 +74,5 @@ let response = try await LanguageModelSession().respond {
 
 ### Creating a prompt
 
-- [init(\_:)](prompt/init%28__%29.md)
+- [init(\_:)](prompt/init%28__%29.md): Creates a prompt from the content of a builder closure.
 - [PromptBuilder](promptbuilder.md): A type that represents a prompt builder.

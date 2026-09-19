@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/developertoolssupport/previewcamerabuilder/buildpartialblock(first:)](https://developer.apple.com/documentation/developertoolssupport/previewcamerabuilder/buildpartialblock(first:))
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/developertoolssupport/previewcamerabuilder/buildpartialblock(first:)
 
 # buildPartialBlock(first:)
 

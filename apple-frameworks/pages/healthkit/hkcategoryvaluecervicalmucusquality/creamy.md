@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkcategoryvaluecervicalmucusquality/creamy](https://developer.apple.com/documentation/healthkit/hkcategoryvaluecervicalmucusquality/creamy)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/healthkit/hkcategoryvaluecervicalmucusquality/creamy
 
 # HKCategoryValueCervicalMucusQuality.creamy (Swift)
 

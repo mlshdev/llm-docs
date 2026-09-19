@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/sub_iokit_block_storage](https://developer.apple.com/documentation/driverkit/sub_iokit_block_storage)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/sub_iokit_block_storage
 
 # sub_iokit_block_storage
 

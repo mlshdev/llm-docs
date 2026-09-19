@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/insearchforbillsintent/init(billpayee:paymentdaterange:billtype:status:duedaterange:)](https://developer.apple.com/documentation/intents/insearchforbillsintent/init(billpayee:paymentdaterange:billtype:status:duedaterange:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/intents/insearchforbillsintent/init(billpayee:paymentdaterange:billtype:status:duedaterange:)
 
 # init(billPayee:paymentDateRange:billType:status:dueDateRange:) (Swift)
 

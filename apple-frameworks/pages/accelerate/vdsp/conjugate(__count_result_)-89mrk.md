@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vdsp/conjugate(_:count:result:)-89mrk](https://developer.apple.com/documentation/accelerate/vdsp/conjugate(_:count:result:)-89mrk)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vdsp/conjugate(_:count:result:)-89mrk
 
 # conjugate(\_:count:result:)
 

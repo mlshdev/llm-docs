@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationtemplatemodularsmallstacktext/init(line1textprovider:line2textprovider:)](https://developer.apple.com/documentation/clockkit/clkcomplicationtemplatemodularsmallstacktext/init(line1textprovider:line2textprovider:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationtemplatemodularsmallstacktext/init(line1textprovider:line2textprovider:)
 
 # init(line1TextProvider:line2TextProvider:) (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Initializer  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Creates a new template that has two lines of text.
 
@@ -23,7 +24,7 @@ init(line1TextProvider: CLKTextProvider, line2TextProvider: CLKTextProvider)
 
 **Framework:** ClockKit  
 **Kind:** Instance Method  
-**Availability:** watchOS 7.0+ (deprecated in 27.0)
+**Availability:** watchOS 7.0+ (deprecated in 27.2)
 
 Creates a new template that has two lines of text.
 

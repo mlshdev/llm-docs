@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photos/phassetresource/assetresource(foruploadjob:)](https://developer.apple.com/documentation/photos/phassetresource/assetresource(foruploadjob:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/photos/phassetresource/assetresource(foruploadjob:)
 
 # assetResource(forUploadJob:) (Swift)
 
@@ -14,6 +15,10 @@ Returns the asset resource associated with the given upload job.
 class func assetResource(forUploadJob job: PHAssetResourceUploadJob) -> PHAssetResource?
 ```
 
+## Parameters
+
+- `job`: The upload job whose associated asset resource is returned
+
 <a id="return-value"></a>
 
 ## Return Value
@@ -23,12 +28,6 @@ The asset resource associated with the upload job, or nil if the resource cannot
 ## Mentioned In
 
 - [Uploading asset resources in the background](../../photokit/uploading-asset-resources-in-the-background.md)
-
-<a id="discussion"></a>
-
-## Discussion
-
-- job: the upload job whose associated asset resource is returned
 
 ## See Also
 
@@ -51,6 +50,10 @@ Returns the asset resource associated with the given upload job.
 + (PHAssetResource *) assetResourceForUploadJob:(PHAssetResourceUploadJob *) job;
 ```
 
+## Parameters
+
+- `job`: The upload job whose associated asset resource is returned
+
 <a id="return-value"></a>
 
 ## Return Value
@@ -60,12 +63,6 @@ The asset resource associated with the upload job, or nil if the resource cannot
 ## Mentioned In
 
 - [Uploading asset resources in the background](../../photokit/uploading-asset-resources-in-the-background.md)
-
-<a id="discussion"></a>
-
-## Discussion
-
-- job: the upload job whose associated asset resource is returned
 
 ## See Also
 

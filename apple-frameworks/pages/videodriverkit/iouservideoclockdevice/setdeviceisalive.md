@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoclockdevice/setdeviceisalive](https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/setdeviceisalive)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/setdeviceisalive
 
 # SetDeviceIsAlive
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Sets a Boolean value to indicate the device is alive.
 
@@ -30,7 +31,7 @@ A true  value means the device is ready and available and false means the device
 
 ### Working with clock device state
 
-- [GetDeviceIsRunning](getdeviceisrunning.md): Gets bool value indicating if device is running.
-- [GetDeviceIsAlive](getdeviceisalive.md): Gets a Boolean value indicating if the device is alive.
-- [SetIsHidden](setishidden.md): Sets a Boolean value indicating if the device is hidden.
-- [GetIsHidden](getishidden.md): Gets a Boolean value indicating if the device is hidden.
+- [GetDeviceIsRunning](getdeviceisrunning.md): Beta. Gets bool value indicating if device is running.
+- [GetDeviceIsAlive](getdeviceisalive.md): Beta. Gets a Boolean value indicating if the device is alive.
+- [SetIsHidden](setishidden.md): Beta. Sets a Boolean value indicating if the device is hidden.
+- [GetIsHidden](getishidden.md): Beta. Gets a Boolean value indicating if the device is hidden.

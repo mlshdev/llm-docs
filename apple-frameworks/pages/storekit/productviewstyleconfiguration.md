@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/productviewstyleconfiguration](https://developer.apple.com/documentation/storekit/productviewstyleconfiguration)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/productviewstyleconfiguration
 
 # ProductViewStyleConfiguration
 
@@ -6,7 +7,7 @@
 **Kind:** Structure  
 **Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
 
-The properties of an In-App Purchase product for use by custom product view styles.
+The properties of an Apple In-App Purchase product for use by custom product view styles.
 
 ## Declaration
 
@@ -24,14 +25,14 @@ Use the `ProductViewStyleConfiguration` to create a custom [ProductViewStyle](pr
 
 ### Getting a product’s information
 
-- [product](productviewstyleconfiguration/product.md): The in-app purchase product to merchandise.
+- [product](productviewstyleconfiguration/product.md): The Apple In-App Purchase product to merchandise.
 - [state](productviewstyleconfiguration/state.md): The product task state that indicates the product’s loading phase.
-- [hasCurrentEntitlement](productviewstyleconfiguration/hascurrententitlement.md): A Boolean value that indicates whether an in-app purchase transaction exists for the product.
+- [hasCurrentEntitlement](productviewstyleconfiguration/hascurrententitlement.md): A Boolean value that indicates whether an Apple In-App Purchase transaction exists for the product.
 
 ### Getting a product view’s icon
 
 - [icon](productviewstyleconfiguration/icon-swift.property.md): A decorative view for merchandising the product.
-- [ProductViewStyleConfiguration.Icon](productviewstyleconfiguration/icon-swift.struct.md): A type-erased icon of an in-app purchase product.
+- [ProductViewStyleConfiguration.Icon](productviewstyleconfiguration/icon-swift.struct.md): A type-erased icon of an Apple In-App Purchase product.
 
 ### Getting a product’s description visibility
 
@@ -47,4 +48,4 @@ Use the `ProductViewStyleConfiguration` to create a custom [ProductViewStyle](pr
 
 - [productViewStyle(\_:)](https://developer.apple.com/documentation/swiftui/view/productviewstyle%28_:%29): Sets the style for In-App Purchase product views within a view.
 - [productIconBorder()](https://developer.apple.com/documentation/swiftui/view/producticonborder%28%29): Adds a standard border to an in-app purchase product’s icon .
-- [ProductViewStyle](productviewstyle.md): A type that specifies the appearance and interaction of In-App Purchase products within the view hierarchy.
+- [ProductViewStyle](productviewstyle.md): A type that specifies the appearance and interaction of Apple In-App Purchase products within the view hierarchy.

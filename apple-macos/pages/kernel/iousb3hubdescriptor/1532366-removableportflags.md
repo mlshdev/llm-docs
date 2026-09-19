@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iousb3hubdescriptor/1532366-removableportflags](https://developer.apple.com/documentation/kernel/iousb3hubdescriptor/1532366-removableportflags)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iousb3hubdescriptor/1532366-removableportflags
 
 # removablePortFlags
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1641386-anonymous/khidusage_bcs_misc1dcontrolreport](https://developer.apple.com/documentation/kernel/1641386-anonymous/khidusage_bcs_misc1dcontrolreport)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1641386-anonymous/khidusage_bcs_misc1dcontrolreport
 
 # kHIDUsage_BCS_Misc1DControlReport
 

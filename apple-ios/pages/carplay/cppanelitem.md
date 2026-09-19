@@ -1,10 +1,13 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/carplay/cppanelitem](https://developer.apple.com/documentation/carplay/cppanelitem)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/carplay/cppanelitem
 
 # CPPanelItem (Swift)
 
 **Framework:** CarPlay  
 **Kind:** Class  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
+
+A type that provides the common behaviors for items you display in a section of a panel.
 
 ## Declaration
 
@@ -16,21 +19,21 @@ class CPPanelItem
 
 ## Overview
 
-Subclasses represent items specific to a particular template context (e.g., @c CPMapPanelItem for map templates).
+The `CPPanelItem` type defines the default behaviors for content you display in a panel. You don’t create this type directly or use it to configure the contents of your panel. Instead, instantiate one of the defined subclasses based on the type of panel you’re configuring. For example, create [CPMapPanelItem](cpmappanelitem.md) objects when configuring the content for a [CPMapPanel](cpmappanel.md) type.
 
 ## Topics
 
 ### Initializers
 
 - [init(coder:)](cppanelitem/init%28coder_%29.md)
-- [init(gridButtons:)](cppanelitem/init%28gridbuttons_%29.md): Initializes a panel item wrapping an array of @c CPGridButton objects.
-- [init(listItem:)](cppanelitem/init%28listitem_%29.md): Initializes a panel item wrapping a @c CPListItem.
+- [init(gridButtons:)](cppanelitem/init%28gridbuttons_%29.md): Initialize the item using one or more grid buttons.
+- [init(listItem:)](cppanelitem/init%28listitem_%29.md): Initialize the item using a list item.
 
 ### Instance Properties
 
-- [isEnabled](cppanelitem/isenabled.md): Whether the item is interactable. Defaults to @c YES.
-- [showsBottomSeparator](cppanelitem/showsbottomseparator.md): When @c NO, the bottom separator line below this item is not drawn. Defaults to @c YES.
-- [userInfo](cppanelitem/userinfo.md): Any custom user info related to this item.
+- [isEnabled](cppanelitem/isenabled.md): A Boolean value that indicates whether the item supports interactions.
+- [showsBottomSeparator](cppanelitem/showsbottomseparator.md): A Boolean value that indicates whether a separator line appears at the bottom edge of the item.
+- [userInfo](cppanelitem/userinfo.md): Custom information you want to store with the item.
 
 ## Relationships
 
@@ -59,6 +62,8 @@ Subclasses represent items specific to a particular template context (e.g., @c C
 **Kind:** Class  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
+A type that provides the common behaviors for items you display in a section of a panel.
+
 ## Declaration
 
 ```objectivec
@@ -69,20 +74,20 @@ Subclasses represent items specific to a particular template context (e.g., @c C
 
 ## Overview
 
-Subclasses represent items specific to a particular template context (e.g., @c CPMapPanelItem for map templates).
+The `CPPanelItem` type defines the default behaviors for content you display in a panel. You don’t create this type directly or use it to configure the contents of your panel. Instead, instantiate one of the defined subclasses based on the type of panel you’re configuring. For example, create [CPMapPanelItem](cpmappanelitem.md) objects when configuring the content for a [CPMapPanel](cpmappanel.md) type.
 
 ## Topics
 
 ### Instance Properties
 
-- [enabled](cppanelitem/isenabled.md): Whether the item is interactable. Defaults to @c YES.
-- [showsBottomSeparator](cppanelitem/showsbottomseparator.md): When @c NO, the bottom separator line below this item is not drawn. Defaults to @c YES.
-- [userInfo](cppanelitem/userinfo.md): Any custom user info related to this item.
+- [enabled](cppanelitem/isenabled.md): A Boolean value that indicates whether the item supports interactions.
+- [showsBottomSeparator](cppanelitem/showsbottomseparator.md): A Boolean value that indicates whether a separator line appears at the bottom edge of the item.
+- [userInfo](cppanelitem/userinfo.md): Custom information you want to store with the item.
 
 ### Instance Methods
 
-- [initWithGridButtons:](cppanelitem/init%28gridbuttons_%29.md): Initializes a panel item wrapping an array of @c CPGridButton objects.
-- [initWithListItem:](cppanelitem/init%28listitem_%29.md): Initializes a panel item wrapping a @c CPListItem.
+- [initWithGridButtons:](cppanelitem/init%28gridbuttons_%29.md): Initialize the item using one or more grid buttons.
+- [initWithListItem:](cppanelitem/init%28listitem_%29.md): Initialize the item using a list item.
 
 ## Relationships
 

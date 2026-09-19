@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/rendering-a-scene-with-deferred-lighting-in-c++](https://developer.apple.com/documentation/metal/rendering-a-scene-with-deferred-lighting-in-c++)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/rendering-a-scene-with-deferred-lighting-in-c++
 
 # Rendering a scene with deferred lighting in C++
 
@@ -423,6 +424,7 @@ for (auto& meshBuffer : m_skyMesh.vertexBuffers())
                                     meshBuffer.offset(),
                                     meshBuffer.argumentIndex());
 }
+
 
 for (auto& submesh : m_skyMesh.submeshes())
 {

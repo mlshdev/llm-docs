@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/cgimagepixelformatinfo/mask](https://developer.apple.com/documentation/coregraphics/cgimagepixelformatinfo/mask)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coregraphics/cgimagepixelformatinfo/mask
 
 # CGImagePixelFormatInfo.mask (Swift)
 
 **Framework:** Core Graphics  
 **Kind:** Case  
-**Availability:** iOS 12.0+ (deprecated in 27.0) · iPadOS 12.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.14+ (deprecated in 27.0) · tvOS 12.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0) · watchOS 5.0+ (deprecated in 27.0)
+**Availability:** iOS 12.0+ (deprecated in 27.2) · iPadOS 12.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.14+ (deprecated in 27.2) · tvOS 12.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2) · watchOS 5.0+ (deprecated in 27.2)
 
 ## Declaration
 
@@ -26,7 +27,7 @@ case mask
 
 **Framework:** Core Graphics  
 **Kind:** Enumeration Case  
-**Availability:** iOS 12.0+ (deprecated in 27.0) · iPadOS 12.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.14+ (deprecated in 27.0) · tvOS 12.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0) · watchOS 5.0+ (deprecated in 27.0)
+**Availability:** iOS 12.0+ (deprecated in 27.2) · iPadOS 12.0+ (deprecated in 27.2) · Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.14+ (deprecated in 27.2) · tvOS 12.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2) · watchOS 5.0+ (deprecated in 27.2)
 
 ## Declaration
 

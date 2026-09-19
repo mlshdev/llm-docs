@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/evaluations/toolcallevaluator/init(allpass:percentagepass:argumentmatchmodel:)](https://developer.apple.com/documentation/evaluations/toolcallevaluator/init(allpass:percentagepass:argumentmatchmodel:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/evaluations/toolcallevaluator/init(allpass:percentagepass:argumentmatchmodel:)
 
 # init(allPass:percentagePass:argumentMatchModel:)
 

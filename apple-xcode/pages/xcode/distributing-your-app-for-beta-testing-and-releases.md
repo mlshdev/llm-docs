@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/distributing-your-app-for-beta-testing-and-releases](https://developer.apple.com/documentation/xcode/distributing-your-app-for-beta-testing-and-releases)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/distributing-your-app-for-beta-testing-and-releases
 
 # Distributing your app for beta testing and releases
 

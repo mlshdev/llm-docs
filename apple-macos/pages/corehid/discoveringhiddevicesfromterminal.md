@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/corehid/discoveringhiddevicesfromterminal](https://developer.apple.com/documentation/corehid/discoveringhiddevicesfromterminal)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corehid/discoveringhiddevicesfromterminal
 
 # Discovering HID devices from Terminal
 

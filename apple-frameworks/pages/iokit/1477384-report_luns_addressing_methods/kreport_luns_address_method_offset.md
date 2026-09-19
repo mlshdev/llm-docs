@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1477384-report_luns_addressing_methods/kreport_luns_address_method_offset](https://developer.apple.com/documentation/iokit/1477384-report_luns_addressing_methods/kreport_luns_address_method_offset)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/1477384-report_luns_addressing_methods/kreport_luns_address_method_offset
 
 # kREPORT_LUNS_ADDRESS_METHOD_OFFSET
 

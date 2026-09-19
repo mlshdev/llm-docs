@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewpictureinpicturedelegate/playerviewwillstoppicture(inpicture:)](https://developer.apple.com/documentation/avkit/avplayerviewpictureinpicturedelegate/playerviewwillstoppicture(inpicture:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewpictureinpicturedelegate/playerviewwillstoppicture(inpicture:)
 
 # playerViewWillStopPicture(inPicture:) (Swift)
 
@@ -20,7 +21,7 @@ optional func playerViewWillStopPicture(inPicture playerView: AVPlayerView)
 
 ## See Also
 
-### Responding to Picture in Picture Playback Events
+### Responding to Picture in Picture playback events
 
 - [playerViewWillStartPicture(inPicture:)](playerviewwillstartpicture%28inpicture_%29.md): Tells the delegate that Picture in Picture playback is about to start.
 - [playerViewDidStartPicture(inPicture:)](playerviewdidstartpicture%28inpicture_%29.md): Tells the delegate that Picture in Picture playback started.
@@ -49,7 +50,7 @@ Tells the delegate that Picture in Picture playback is about to stop.
 
 ## See Also
 
-### Responding to Picture in Picture Playback Events
+### Responding to Picture in Picture playback events
 
 - [playerViewWillStartPictureInPicture:](playerviewwillstartpicture%28inpicture_%29.md): Tells the delegate that Picture in Picture playback is about to start.
 - [playerViewDidStartPictureInPicture:](playerviewdidstartpicture%28inpicture_%29.md): Tells the delegate that Picture in Picture playback started.

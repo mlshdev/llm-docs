@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/3181561-address_space_type-enum](https://developer.apple.com/documentation/hypervisor/3181561-address_space_type-enum)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/3181561-address_space_type-enum
 
 # Address Space Types
 

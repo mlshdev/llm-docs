@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideoclockdevice/addcontrol](https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/addcontrol)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideoclockdevice/addcontrol
 
 # AddControl
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Adds a video control to the video clock device.
 
@@ -36,5 +37,5 @@ The control’s reference count will be incremented if it was successfully added
 
 ### Managing video controls
 
-- [RemoveControl](removecontrol.md): Removes a user video control from the video clock device.
-- [IOUserVideoControl](../iouservideocontrol.md): A base class for control objects.
+- [RemoveControl](removecontrol.md): Beta. Removes a user video control from the video clock device.
+- [IOUserVideoControl](../iouservideocontrol.md): Beta. A base class for control objects.

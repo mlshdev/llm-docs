@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3088823-mach_msg_destroy_from_kernel_pro](https://developer.apple.com/documentation/kernel/3088823-mach_msg_destroy_from_kernel_pro)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3088823-mach_msg_destroy_from_kernel_pro
 
 # mach_msg_destroy_from_kernel_proper
 

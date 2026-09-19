@@ -1,6 +1,7 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode-release-notes/xcode-27-release-notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-27-release-notes)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode-release-notes/xcode-27-release-notes
 
-# Xcode 27 RC Release Notes
+# Xcode 27 Release Notes
 
 **Kind:** Article
 
@@ -10,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-Xcode 27 RC includes Swift 6.4 and SDKs for iOS 27, iPadOS 27, tvOS 27, watchOS 27, macOS 27, and visionOS 27. Xcode 27 RC supports on-device debugging in iOS 17 and later, tvOS 17 and later, watchOS 10 and later, and visionOS. Xcode 27 RC requires a Mac running macOS Tahoe 26.6 or later.
+Xcode 27 includes Swift 6.4 and SDKs for iOS 27, iPadOS 27, tvOS 27, watchOS 27, macOS 27, and visionOS 27. Xcode 27 supports on-device debugging in iOS 17 and later, tvOS 17 and later, watchOS 10 and later, and visionOS. Xcode 27 requires a Mac running macOS Tahoe 26.6 or later.
 
 See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more about compatible platforms and deployment targets.
 
@@ -450,6 +451,14 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 #### New Features
 
 - `arm64e.x1` or the Hardware-Checked Pointer Arithmetic slice contains the Check for Overflow of Pointer Arithmetic entitlement by checking for overflow into memory tags, providing additional protection on top of Memory Integrity Enforcement. (152104701)
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- Apps with Hardware-Checked Pointer Arithmetic Slice feature enabled cannot be uploaded to the App Store on macOS Tahoe 26.6 with Xcode automatic signing enabled. (187057599)
+
+  **Workaround:** Distribute with macOS 27 and Xcode 27 or use manual signing.
 
 <a id="Foundation"></a>
 
@@ -1039,3 +1048,10 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 #### Resolved Issues
 
 - Fixed: `wifiAware` and `wifiAware(_:)` extensions on NWParameters are unavailable for configuring Wi-Fi Aware properties. (178019157)
+
+## See Also
+
+### Xcode 27
+
+- [Xcode 27.2 Beta Release Notes](xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.1 Beta Release Notes](xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.

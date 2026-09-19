@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/tcpstat/3754954-tcps_sc_retransmitted](https://developer.apple.com/documentation/kernel/tcpstat/3754954-tcps_sc_retransmitted)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/tcpstat/3754954-tcps_sc_retransmitted
 
 # tcps_sc_retransmitted
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/fstore_t/1572523-fst_posmode](https://developer.apple.com/documentation/kernel/fstore_t/1572523-fst_posmode)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/fstore_t/1572523-fst_posmode
 
 # fst_posmode
 

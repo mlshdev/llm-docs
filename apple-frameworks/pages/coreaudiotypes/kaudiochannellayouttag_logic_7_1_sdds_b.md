@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreaudiotypes/kaudiochannellayouttag_logic_7_1_sdds_b](https://developer.apple.com/documentation/coreaudiotypes/kaudiochannellayouttag_logic_7_1_sdds_b)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreaudiotypes/kaudiochannellayouttag_logic_7_1_sdds_b
 
 # kAudioChannelLayoutTag_Logic_7_1_SDDS_B (Swift)
 

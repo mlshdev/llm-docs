@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/vmcs_ro_exit_reason](https://developer.apple.com/documentation/hypervisor/vmcs_ro_exit_reason)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/vmcs_ro_exit_reason
 
 # VMCS_RO_EXIT_REASON (Swift)
 

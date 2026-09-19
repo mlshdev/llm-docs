@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applenews/getting-ready-to-publish-and-manage-your-articles](https://developer.apple.com/documentation/applenews/getting-ready-to-publish-and-manage-your-articles)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/applenews/getting-ready-to-publish-and-manage-your-articles
 
 # Getting Ready to Publish and Manage Your Articles
 

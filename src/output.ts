@@ -16,6 +16,7 @@ import { currentGeneratorDigest } from "./generator.ts";
 import {
   documentLinks,
   githubBlobUrl,
+  isPublishableUrl,
   markdownLinks,
   normalizeSpacing,
   withoutFencedCode,
@@ -141,14 +142,8 @@ export function validateDocumentLinks(
         `${projectId} ${document.sourcePath} has a root-relative ${link.kind}: ${url}`,
       );
     }
-    const scheme = url.match(/^([a-z][a-z0-9+.-]*):/i)?.[1]?.toLowerCase();
-    if (scheme) {
-      const allowed =
-        scheme === "http" ||
-        scheme === "https" ||
-        (link.kind === "link" && (scheme === "mailto" || scheme === "tel")) ||
-        (link.kind === "image" && scheme === "data");
-      if (!allowed) {
+    if (/^[a-z][a-z0-9+.-]*:/i.test(url)) {
+      if (!isPublishableUrl(url, link.kind)) {
         throw new Error(
           `${projectId} ${document.sourcePath} has an unsupported ${link.kind} scheme: ${url}`,
         );
@@ -268,6 +263,23 @@ export async function snapshotMatchesPin(
     manifest.contentDigest === expected.contentDigest &&
     manifest.documentationDigest === documentationDigestOf(expected) &&
     manifest.capturedAt === expected.capturedAt
+  );
+}
+
+export async function refreshManifestGeneratorDigest(
+  projectId: ProjectId,
+): Promise<void> {
+  const manifestPath = path.join(rootDirectory, projectId, "manifest.json");
+  const manifest = parseProjectManifest(
+    JSON.parse(await readFile(manifestPath, "utf8")),
+  );
+  const generatorDigest = await currentGeneratorDigest();
+  if (manifest.generatorDigest === generatorDigest) {
+    return;
+  }
+  await writeUtf8Atomic(
+    manifestPath,
+    serializeProjectManifest({ ...manifest, generatorDigest }),
   );
 }
 

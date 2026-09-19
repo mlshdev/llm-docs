@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avassetimagegenerator/images/element/success(requestedtime:image:actualtime:)](https://developer.apple.com/documentation/avfoundation/avassetimagegenerator/images/element/success(requestedtime:image:actualtime:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avassetimagegenerator/images/element/success(requestedtime:image:actualtime:)
 
 # AVAssetImageGenerator.Images.Element.success(requestedTime:image:actualTime:)
 

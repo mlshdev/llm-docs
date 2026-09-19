@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avinterfacemetadataproviding](https://developer.apple.com/documentation/avkit/avinterfacemetadataproviding)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avinterfacemetadataproviding
 
 # AVInterfaceMetadataProviding
 
@@ -17,7 +18,7 @@ Provides metadata information about media content including title, artwork, and 
 
 ## Topics
 
-### Providing metadata
+### Instance Properties
 
 - [metadata](avinterfacemetadataproviding/metadata.md): The metadata object containing information about the media content. Must be key-value observable.
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/sparse_check_consistent_ds_vec_out_place](https://developer.apple.com/documentation/accelerate/sparse_check_consistent_ds_vec_out_place)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/sparse_check_consistent_ds_vec_out_place
 
 # SPARSE_CHECK_CONSISTENT_DS_VEC_OUT_PLACE
 

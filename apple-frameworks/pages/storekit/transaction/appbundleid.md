@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/appbundleid](https://developer.apple.com/documentation/storekit/transaction/appbundleid)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/appbundleid
 
 # appBundleID
 
@@ -18,6 +19,6 @@ let appBundleID: String
 
 ### Identifying the app and product
 
-- [productID](productid.md): The product identifier of the in-app purchase.
-- [productType](producttype.md): The type of the in-app purchase.
+- [productID](productid.md): The product identifier of the Apple In-App Purchase.
+- [productType](producttype.md): The type of the Apple In-App Purchase.
 - [subscriptionGroupID](subscriptiongroupid.md): The identifier of the subscription group that the subscription belongs to.

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avcontentproposalviewcontroller/contentproposal](https://developer.apple.com/documentation/avkit/avcontentproposalviewcontroller/contentproposal)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avcontentproposalviewcontroller/contentproposal
 
 # contentProposal (Swift)
 
@@ -22,7 +23,7 @@ The associated player view controller sets this property value.
 
 ## See Also
 
-### Configuring the Proposal
+### Configuring the proposal
 
 - [AVContentProposal](../avcontentproposal.md): An object that describes the content to propose playing after the current item finishes.
 - [dateOfAutomaticAcceptance](dateofautomaticacceptance.md): The date that the system automatically accepts a proposal if the user doesn’t intervene.
@@ -51,7 +52,7 @@ The associated player view controller sets this property value.
 
 ## See Also
 
-### Configuring the Proposal
+### Configuring the proposal
 
 - [AVContentProposal](../avcontentproposal.md): An object that describes the content to propose playing after the current item finishes.
 - [dateOfAutomaticAcceptance](dateofautomaticacceptance.md): The date that the system automatically accepts a proposal if the user doesn’t intervene.

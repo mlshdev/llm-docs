@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/assert_boot_args_size_is_4096](https://developer.apple.com/documentation/kernel/assert_boot_args_size_is_4096)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/assert_boot_args_size_is_4096
 
 # assert_boot_args_size_is_4096
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/task_trace_memory_info_data_t/1553348-mailbox_array_size](https://developer.apple.com/documentation/kernel/task_trace_memory_info_data_t/1553348-mailbox_array_size)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/task_trace_memory_info_data_t/1553348-mailbox_array_size
 
 # mailbox_array_size
 

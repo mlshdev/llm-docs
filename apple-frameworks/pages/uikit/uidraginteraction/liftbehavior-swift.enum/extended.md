@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uidraginteraction/liftbehavior-swift.enum/extended](https://developer.apple.com/documentation/uikit/uidraginteraction/liftbehavior-swift.enum/extended)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uidraginteraction/liftbehavior-swift.enum/extended
 
 # UIDragInteraction.LiftBehavior.extended (Swift)
 

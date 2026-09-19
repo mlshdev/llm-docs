@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iotimestampintervalconstantfiltered/3553390-setendarg2](https://developer.apple.com/documentation/kernel/iotimestampintervalconstantfiltered/3553390-setendarg2)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/iotimestampintervalconstantfiltered/3553390-setendarg2
 
 # setEndArg2
 

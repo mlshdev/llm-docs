@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/writing-reusable-gpu-functions-with-generic-pointers](https://developer.apple.com/documentation/metal/writing-reusable-gpu-functions-with-generic-pointers)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metal/writing-reusable-gpu-functions-with-generic-pointers
 
 # Writing reusable GPU functions with generic pointers
 

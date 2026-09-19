@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstoolbar/sizemode-swift.enum/regular](https://developer.apple.com/documentation/appkit/nstoolbar/sizemode-swift.enum/regular)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nstoolbar/sizemode-swift.enum/regular
 
 # NSToolbar.SizeMode.regular (Swift)
 
 **Framework:** AppKit  
 **Kind:** Case  
-**Availability:** Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.0+ (deprecated in 27.0)
+**Availability:** Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.0+ (deprecated in 27.0)
 
 The toolbar uses regular-sized controls and 32 by 32 pixel icons.
 
@@ -27,7 +28,7 @@ case regular
 
 **Framework:** AppKit  
 **Kind:** Enumeration Case  
-**Availability:** Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.0+ (deprecated in 27.0)
+**Availability:** Mac Catalyst 13.1+ (deprecated in 27.2) · macOS 10.0+ (deprecated in 27.0)
 
 The toolbar uses regular-sized controls and 32 by 32 pixel icons.
 

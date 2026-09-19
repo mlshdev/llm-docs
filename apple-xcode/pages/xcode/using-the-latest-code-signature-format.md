@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/using-the-latest-code-signature-format](https://developer.apple.com/documentation/xcode/using-the-latest-code-signature-format)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/using-the-latest-code-signature-format
 
 # Using the latest code signature format
 
@@ -22,7 +23,7 @@ This change to DER embeddded entitlements  won’t affect most apps. For apps th
 
 For apps that you distribute other ways, such as Ad Hoc or through the [Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise), Xcode and the `codesign` utility have created signatures that use the new format for several years. If you signed your app on a Mac running macOS 10.14 through macOS 11, the app already has the new signature format, but your signature may not include the required DER entitlements. macOS 11 and later will sign app bundles with the new signature format that include the DER entitlements by default.
 
-To check whether an app called `MyApp.app` has the new signature, you can use the [codesign](x-man-page://1/codesign) utility:
+To check whether an app called `MyApp.app` has the new signature, you can use the codesign utility:
 
 ```other
 % codesign -dv /path/to/MyApp.app
@@ -73,7 +74,7 @@ If you’re unable to use macOS 11 or later to re-sign your app, you can re-sign
 % codesign -s "Your Codesign Identity" -f --preserve-metadata --generate-entitlement-der /path/to/MyApp.app
 ```
 
-For more information on using the codesign utility, see its [man page](x-man-page://1/codesign) via Terminal.
+For more information on using the codesign utility, see its man page via Terminal.
 
 > **Important**
 

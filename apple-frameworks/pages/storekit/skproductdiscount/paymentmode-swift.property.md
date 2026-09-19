@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skproductdiscount/paymentmode-swift.property](https://developer.apple.com/documentation/storekit/skproductdiscount/paymentmode-swift.property)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/skproductdiscount/paymentmode-swift.property
 
 # paymentMode (Swift)
 
@@ -26,7 +27,7 @@ The payment mode indicates how the product discount [price](price.md) is charged
 - Once in advance, for [SKProductDiscount.PaymentMode.payUpFront](paymentmode-swift.enum/payupfront.md) mode
 - No initial charge, for [SKProductDiscount.PaymentMode.freeTrial](paymentmode-swift.enum/freetrial.md) mode.
 
-Use the payment mode to display an accurate description of the product discount in your UI. For design guidance, see [Human Interface Guidelines \> In-App Purchase](https://developer.apple.com/ios/human-interface-guidelines/technologies/in-app-purchase/).
+Use the payment mode to display an accurate description of the product discount in your UI. For design guidance, see [Human Interface Guidelines \> Apple In-App Purchase](https://developer.apple.com/ios/human-interface-guidelines/technologies/in-app-purchase/).
 
 ## See Also
 
@@ -62,7 +63,7 @@ The payment mode indicates how the product discount [price](price.md) is charged
 - Once in advance, for [SKProductDiscountPaymentModePayUpFront](paymentmode-swift.enum/payupfront.md) mode
 - No initial charge, for [SKProductDiscountPaymentModeFreeTrial](paymentmode-swift.enum/freetrial.md) mode.
 
-Use the payment mode to display an accurate description of the product discount in your UI. For design guidance, see [Human Interface Guidelines \> In-App Purchase](https://developer.apple.com/ios/human-interface-guidelines/technologies/in-app-purchase/).
+Use the payment mode to display an accurate description of the product discount in your UI. For design guidance, see [Human Interface Guidelines \> Apple In-App Purchase](https://developer.apple.com/ios/human-interface-guidelines/technologies/in-app-purchase/).
 
 ## See Also
 

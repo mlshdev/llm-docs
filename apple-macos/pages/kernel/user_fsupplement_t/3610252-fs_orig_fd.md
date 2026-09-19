@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/user_fsupplement_t/3610252-fs_orig_fd](https://developer.apple.com/documentation/kernel/user_fsupplement_t/3610252-fs_orig_fd)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/user_fsupplement_t/3610252-fs_orig_fd
 
 # fs_orig_fd
 

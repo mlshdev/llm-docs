@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/if_qstatsreq/3943792-ifqr_grp_idx](https://developer.apple.com/documentation/kernel/if_qstatsreq/3943792-ifqr_grp_idx)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/if_qstatsreq/3943792-ifqr_grp_idx
 
 # ifqr_grp_idx
 

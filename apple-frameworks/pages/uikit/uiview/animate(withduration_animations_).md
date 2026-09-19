@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiview/animate(withduration:animations:)](https://developer.apple.com/documentation/uikit/uiview/animate(withduration:animations:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uiview/animate(withduration:animations:)
 
 # animate(withDuration:animations:) (Swift)
 
@@ -11,7 +12,7 @@ Animate changes to one or more views using the specified duration.
 ## Declaration
 
 ```swift
-class func animate(withDuration duration: TimeInterval, animations: @escaping () -> Void)
+class func animate(withDuration duration: TimeInterval, animations: () -> Void)
 ```
 
 ## Parameters

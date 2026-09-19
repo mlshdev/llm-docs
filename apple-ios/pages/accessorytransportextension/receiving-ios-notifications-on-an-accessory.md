@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/accessorytransportextension/receiving-ios-notifications-on-an-accessory](https://developer.apple.com/documentation/accessorytransportextension/receiving-ios-notifications-on-an-accessory)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/receiving-ios-notifications-on-an-accessory
 
 # Receiving iOS notifications on an accessory
 
@@ -361,6 +362,8 @@ The system encrypts notification data using keys exchanged through your [Accesso
 Call the completion handler with `.success` if the message transmits successfully, `.failure(.transportFailed)` if the transport fails but may recover, or `.failure(.transportUnavailable)` if the transport is unavailable. The system retries failed messages or attempts delivery on a different transport.
 
 Add the [com.apple.developer.accessory-transport-extension](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.accessory-transport-extension) entitlement to your extension’s code signature to use the [AccessoryTransportAppExtension](accessorytransportappextension.md) protocol.
+
+To configure your extension to resume an interrupted Bluetooth session in the background, which allows your extension to skip accessory scanning on relaunch, see [AccessoryTransportAppExtension](accessorytransportappextension.md).
 
 <a id="Decrypt-notification-data-on-your-accessory"></a>
 

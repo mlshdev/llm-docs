@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corevideo/kcvpixelformattype_onecomponent32float](https://developer.apple.com/documentation/corevideo/kcvpixelformattype_onecomponent32float)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/corevideo/kcvpixelformattype_onecomponent32float
 
 # kCVPixelFormatType_OneComponent32Float (Swift)
 

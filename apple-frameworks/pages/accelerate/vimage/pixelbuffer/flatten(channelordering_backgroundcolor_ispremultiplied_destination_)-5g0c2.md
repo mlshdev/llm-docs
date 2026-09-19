@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimage/pixelbuffer/flatten(channelordering:backgroundcolor:ispremultiplied:destination:)-5g0c2](https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/flatten(channelordering:backgroundcolor:ispremultiplied:destination:)-5g0c2)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/flatten(channelordering:backgroundcolor:ispremultiplied:destination:)-5g0c2
 
 # flatten(channelOrdering:backgroundColor:isPremultiplied:destination:)
 

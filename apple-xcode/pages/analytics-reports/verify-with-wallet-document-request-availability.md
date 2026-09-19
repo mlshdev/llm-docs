@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/analytics-reports/verify-with-wallet-document-request-availability](https://developer.apple.com/documentation/analytics-reports/verify-with-wallet-document-request-availability)
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/analytics-reports/verify-with-wallet-document-request-availability
 
 # Verify With Wallet Document Request Availability
 

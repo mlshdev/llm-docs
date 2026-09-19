@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/task_delta_snapshot_v2/1644417-tds_faults](https://developer.apple.com/documentation/kernel/task_delta_snapshot_v2/1644417-tds_faults)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/task_delta_snapshot_v2/1644417-tds_faults
 
 # tds_faults
 

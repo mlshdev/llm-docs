@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/set_header_id_is_1_byte_quantity](https://developer.apple.com/documentation/iobluetooth/set_header_id_is_1_byte_quantity)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iobluetooth/set_header_id_is_1_byte_quantity
 
 # SET_HEADER_ID_IS_1_BYTE_QUANTITY
 

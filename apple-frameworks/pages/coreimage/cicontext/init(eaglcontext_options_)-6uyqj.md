@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cicontext/init(eaglcontext:options:)-6uyqj](https://developer.apple.com/documentation/coreimage/cicontext/init(eaglcontext:options:)-6uyqj)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreimage/cicontext/init(eaglcontext:options:)-6uyqj
 
 # init(eaglContext:options:) (Swift)
 

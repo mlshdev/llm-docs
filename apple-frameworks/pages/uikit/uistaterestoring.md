@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uistaterestoring](https://developer.apple.com/documentation/uikit/uistaterestoring)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uistaterestoring
 
 # UIStateRestoring (Swift)
 
@@ -53,6 +54,7 @@ When adopting this protocol in your custom objects, you must also remember to re
 
 - [UIActivityViewController](uiactivityviewcontroller.md)
 - [UIAlertController](uialertcontroller.md)
+- [UIArrangementViewController](uiarrangementviewcontroller.md)
 - [UICloudSharingController](uicloudsharingcontroller.md)
 - [UICollectionViewController](uicollectionviewcontroller.md)
 - [UIColorPickerViewController](uicolorpickerviewcontroller.md)

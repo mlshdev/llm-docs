@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/externalpurchaseserverapi/reportwithouttransactions](https://developer.apple.com/documentation/externalpurchaseserverapi/reportwithouttransactions)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/externalpurchaseserverapi/reportwithouttransactions
 
 # Reporting unrecognized and transactionless tokens
 
@@ -62,7 +63,7 @@ Compare the `externalPurchaseId` to the tokens in your system. If your system do
 
 ### Report duplicate tokens
 
-If your app uses the [ExternalPurchaseCustomLink](../storekit/externalpurchasecustomlink.md) API, it calls the [token(for:)](../storekit/externalpurchasecustomlink/token%28for_%29.md) method to get tokens. If there’s an active token period, the system returns the token that corresponds to that active period. The returned token can be an original token, or it can be a refreshed token. A *refreshed* token has the same creation and expiration dates as the original token, but a different `externalPurchaseId`. You can report transactions using any one of the customer’s tokens that represent the same active token period, and report the remaining of the tokens from the same period as duplicate tokens.
+If your app uses the [ExternalPurchaseCustomLink](../storekit/externalpurchasecustomlink.md) API, it calls the doc://com.apple.documentation/documentation/storekit/externalpurchasecustomlink/token(for:) method to get tokens. If there’s an active token period, the system returns the token that corresponds to that active period. The returned token can be an original token, or it can be a refreshed token. A *refreshed* token has the same creation and expiration dates as the original token, but a different `externalPurchaseId`. You can report transactions using any one of the customer’s tokens that represent the same active token period, and report the remaining of the tokens from the same period as duplicate tokens.
 
 For example, you can choose to report transactions using the first active SERVICES token you receive, and report all subsequent SERVICES tokens with the same creation and expiration dates as a duplicate.
 

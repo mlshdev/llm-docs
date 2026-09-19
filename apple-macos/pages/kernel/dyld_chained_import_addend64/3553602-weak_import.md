@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/dyld_chained_import_addend64/3553602-weak_import](https://developer.apple.com/documentation/kernel/dyld_chained_import_addend64/3553602-weak_import)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/dyld_chained_import_addend64/3553602-weak_import
 
 # weak_import
 

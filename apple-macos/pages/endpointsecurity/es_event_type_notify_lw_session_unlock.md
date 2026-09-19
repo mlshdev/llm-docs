@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_event_type_notify_lw_session_unlock](https://developer.apple.com/documentation/endpointsecurity/es_event_type_notify_lw_session_unlock)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_event_type_notify_lw_session_unlock
 
 # ES_EVENT_TYPE_NOTIFY_LW_SESSION_UNLOCK (Swift)
 

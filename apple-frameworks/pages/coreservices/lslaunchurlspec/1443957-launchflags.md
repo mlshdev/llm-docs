@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/lslaunchurlspec/1443957-launchflags](https://developer.apple.com/documentation/coreservices/lslaunchurlspec/1443957-launchflags)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/lslaunchurlspec/1443957-launchflags
 
 # launchFlags (Swift)
 

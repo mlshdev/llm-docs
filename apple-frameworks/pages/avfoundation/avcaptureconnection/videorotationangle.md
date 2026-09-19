@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcaptureconnection/videorotationangle](https://developer.apple.com/documentation/avfoundation/avcaptureconnection/videorotationangle)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcaptureconnection/videorotationangle
 
 # videoRotationAngle (Swift)
 
@@ -6,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+
 
-A rotation angle the connection applies to a video flowing through it.
+A rotation angle the connection applies to the video flowing through it.
 
 ## Declaration
 
@@ -18,21 +19,19 @@ var videoRotationAngle: CGFloat { get set }
 
 ## Discussion
 
-Your app can set a video rotation angle that it gets from an [AVCaptureDevice.RotationCoordinator](../avcapturedevice/rotationcoordinator.md) instance’s [videoRotationAngleForHorizonLevelCapture](../avcapturedevice/rotationcoordinator/videorotationangleforhorizonlevelcapture.md) or [videoRotationAngleForHorizonLevelPreview](../avcapturedevice/rotationcoordinator/videorotationangleforhorizonlevelpreview.md) property. The rotation angle only applies to video or depth connections, similar to [isVideoMirrored](isvideomirrored.md), and can be any angle that [isVideoRotationAngleSupported(\_:)](isvideorotationanglesupported%28__%29.md) returns [true](https://developer.apple.com/documentation/swift/true) for.
+Set this property to an angle that an [AVCaptureDevice.RotationCoordinator](../avcapturedevice/rotationcoordinator.md) instance provides to keep video level relative to gravity. Only `0`, `90`, `180`, and `270` are valid angles. Setting any other value raises an `NSInvalidArgumentException`, so confirm that a connection supports an angle with [isVideoRotationAngleSupported(\_:)](isvideorotationanglesupported%28__%29.md). The property applies only to video and depth connections.
 
-Not all capture connections rotate each frame. For example, a video connection to an [AVCaptureMovieFileOutput](../avcapturemoviefileoutput.md) or [AVCapturePhotoOutput](../avcapturephotooutput.md) instance applies a rotation with a QuickTime track matrix or with Exif tags, respectively.
+Setting an angle doesn’t always rotate pixels. A connection to an [AVCaptureMovieFileOutput](../avcapturemoviefileoutput.md) instance records the rotation in a QuickTime track matrix, and a connection to an [AVCapturePhotoOutput](../avcapturephotooutput.md) instance records it in Exif tags. Connections to [AVCaptureVideoDataOutput](../avcapturevideodataoutput.md) and [AVCaptureDepthDataOutput](../avcapturedepthdataoutput.md) instances deliver physically rotated buffers instead, which costs work on every frame. Setting an angle on those connections also reconfigures the capture render pipeline, so set it before calling [startRunning()](../avcapturesession/startrunning%28%29.md).
 
-Capture connections to [AVCaptureVideoDataOutput](../avcapturevideodataoutput.md) and [AVCaptureDepthDataOutput](../avcapturedepthdataoutput.md) instances rotate video frames they provide to their [captureOutput(\_:didOutput:from:)](../avcapturevideodataoutputsamplebufferdelegate/captureoutput%28__didoutput_from_%29.md) and [depthDataOutput(\_:didOutput:timestamp:connection:)](../avcapturedepthdataoutputdelegate/depthdataoutput%28__didoutput_timestamp_connection_%29.md) delegate methods, respectively. Each [AVCaptureVideoDataOutput](../avcapturevideodataoutput.md) instance uses hardware acceleration to rotate every frame.
+If your app rotates buffers itself, set `videoRotationAngle` to `0` to keep the connection from rotating them again. If your app applies a coordinator’s angles with its own math, account for the property’s current value. Account for it on every device rather than only the devices where the default differs, which keeps the same code correct as hardware changes.
 
-> **Tip**
+A connection doesn’t rotate ProRes RAW buffers. When your app captures ProRes RAW, set this property to `0` and apply a coordinator’s angles to those buffers yourself.
 
->  Avoid potential performance issues by only rotating video with a capture connection when necessary.
-
-You can rotate the video of a movie file you record with an [AVAssetWriter](../avassetwriter.md) instance by applying the rotation to an [AVAssetWriterInput](../avassetwriterinput.md) instance’s [transform](../avassetwriterinput/transform.md) property. This approach avoids the performance costs that come with rotating each video frame.
+To rotate a movie that your app writes with an [AVAssetWriter](../avassetwriter.md) instance, set [transform](../avassetwriterinput/transform.md) rather than rotating through the connection, which avoids paying for a rotation on every frame.
 
 > **Note**
 
->  Your app needs to convert the [videoRotationAngleForHorizonLevelCapture](../avcapturedevice/rotationcoordinator/videorotationangleforhorizonlevelcapture.md) or [videoRotationAngleForHorizonLevelPreview](../avcapturedevice/rotationcoordinator/videorotationangleforhorizonlevelpreview.md) value from degrees to radians for transform properties.
+>  Transform properties take radians, so convert a coordinator’s angle before you apply it.
 
 ## See Also
 
@@ -46,7 +45,7 @@ You can rotate the video of a movie file you record with an [AVAssetWriter](../
 **Kind:** Instance Property  
 **Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+
 
-A rotation angle the connection applies to a video flowing through it.
+A rotation angle the connection applies to the video flowing through it.
 
 ## Declaration
 
@@ -58,21 +57,19 @@ A rotation angle the connection applies to a video flowing through it.
 
 ## Discussion
 
-Your app can set a video rotation angle that it gets from an [AVCaptureDeviceRotationCoordinator](../avcapturedevice/rotationcoordinator.md) instance’s [videoRotationAngleForHorizonLevelCapture](../avcapturedevice/rotationcoordinator/videorotationangleforhorizonlevelcapture.md) or [videoRotationAngleForHorizonLevelPreview](../avcapturedevice/rotationcoordinator/videorotationangleforhorizonlevelpreview.md) property. The rotation angle only applies to video or depth connections, similar to [videoMirrored](isvideomirrored.md), and can be any angle that [isVideoRotationAngleSupported:](isvideorotationanglesupported%28__%29.md) returns [true](https://developer.apple.com/documentation/swift/true) for.
+Set this property to an angle that an [AVCaptureDeviceRotationCoordinator](../avcapturedevice/rotationcoordinator.md) instance provides to keep video level relative to gravity. Only `0`, `90`, `180`, and `270` are valid angles. Setting any other value raises an `NSInvalidArgumentException`, so confirm that a connection supports an angle with [isVideoRotationAngleSupported:](isvideorotationanglesupported%28__%29.md). The property applies only to video and depth connections.
 
-Not all capture connections rotate each frame. For example, a video connection to an [AVCaptureMovieFileOutput](../avcapturemoviefileoutput.md) or [AVCapturePhotoOutput](../avcapturephotooutput.md) instance applies a rotation with a QuickTime track matrix or with Exif tags, respectively.
+Setting an angle doesn’t always rotate pixels. A connection to an [AVCaptureMovieFileOutput](../avcapturemoviefileoutput.md) instance records the rotation in a QuickTime track matrix, and a connection to an [AVCapturePhotoOutput](../avcapturephotooutput.md) instance records it in Exif tags. Connections to [AVCaptureVideoDataOutput](../avcapturevideodataoutput.md) and [AVCaptureDepthDataOutput](../avcapturedepthdataoutput.md) instances deliver physically rotated buffers instead, which costs work on every frame. Setting an angle on those connections also reconfigures the capture render pipeline, so set it before calling [startRunning](../avcapturesession/startrunning%28%29.md).
 
-Capture connections to [AVCaptureVideoDataOutput](../avcapturevideodataoutput.md) and [AVCaptureDepthDataOutput](../avcapturedepthdataoutput.md) instances rotate video frames they provide to their [captureOutput:didOutputSampleBuffer:fromConnection:](../avcapturevideodataoutputsamplebufferdelegate/captureoutput%28__didoutput_from_%29.md) and [depthDataOutput:didOutputDepthData:timestamp:connection:](../avcapturedepthdataoutputdelegate/depthdataoutput%28__didoutput_timestamp_connection_%29.md) delegate methods, respectively. Each [AVCaptureVideoDataOutput](../avcapturevideodataoutput.md) instance uses hardware acceleration to rotate every frame.
+If your app rotates buffers itself, set `videoRotationAngle` to `0` to keep the connection from rotating them again. If your app applies a coordinator’s angles with its own math, account for the property’s current value. Account for it on every device rather than only the devices where the default differs, which keeps the same code correct as hardware changes.
 
-> **Tip**
+A connection doesn’t rotate ProRes RAW buffers. When your app captures ProRes RAW, set this property to `0` and apply a coordinator’s angles to those buffers yourself.
 
->  Avoid potential performance issues by only rotating video with a capture connection when necessary.
-
-You can rotate the video of a movie file you record with an [AVAssetWriter](../avassetwriter.md) instance by applying the rotation to an [AVAssetWriterInput](../avassetwriterinput.md) instance’s [transform](../avassetwriterinput/transform.md) property. This approach avoids the performance costs that come with rotating each video frame.
+To rotate a movie that your app writes with an [AVAssetWriter](../avassetwriter.md) instance, set [transform](../avassetwriterinput/transform.md) rather than rotating through the connection, which avoids paying for a rotation on every frame.
 
 > **Note**
 
->  Your app needs to convert the [videoRotationAngleForHorizonLevelCapture](../avcapturedevice/rotationcoordinator/videorotationangleforhorizonlevelcapture.md) or [videoRotationAngleForHorizonLevelPreview](../avcapturedevice/rotationcoordinator/videorotationangleforhorizonlevelpreview.md) value from degrees to radians for transform properties.
+>  Transform properties take radians, so convert a coordinator’s angle before you apply it.
 
 ## See Also
 

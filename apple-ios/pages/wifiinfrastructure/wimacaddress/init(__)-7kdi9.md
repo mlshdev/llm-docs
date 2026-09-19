@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/wifiinfrastructure/wimacaddress/init(_:)-7kdi9](https://developer.apple.com/documentation/wifiinfrastructure/wimacaddress/init(_:)-7kdi9)
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/wifiinfrastructure/wimacaddress/init(_:)-7kdi9
 
 # init(\_:)
 

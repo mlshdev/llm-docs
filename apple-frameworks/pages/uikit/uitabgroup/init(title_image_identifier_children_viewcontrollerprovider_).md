@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitabgroup/init(title:image:identifier:children:viewcontrollerprovider:)](https://developer.apple.com/documentation/uikit/uitabgroup/init(title:image:identifier:children:viewcontrollerprovider:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uitabgroup/init(title:image:identifier:children:viewcontrollerprovider:)
 
 # init(title:image:identifier:children:viewControllerProvider:) (Swift)
 

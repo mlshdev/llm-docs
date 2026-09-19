@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1643418-anonymous/kspccmd_extended_copy](https://developer.apple.com/documentation/kernel/1643418-anonymous/kspccmd_extended_copy)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1643418-anonymous/kspccmd_extended_copy
 
 # kSPCCmd_EXTENDED_COPY
 

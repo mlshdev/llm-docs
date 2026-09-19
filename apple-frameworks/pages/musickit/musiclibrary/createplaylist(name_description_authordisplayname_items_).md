@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/musickit/musiclibrary/createplaylist(name:description:authordisplayname:items:)](https://developer.apple.com/documentation/musickit/musiclibrary/createplaylist(name:description:authordisplayname:items:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/musickit/musiclibrary/createplaylist(name:description:authordisplayname:items:)
 
 # createPlaylist(name:description:authorDisplayName:items:)
 

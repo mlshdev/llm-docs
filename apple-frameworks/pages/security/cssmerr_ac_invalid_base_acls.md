@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_ac_invalid_base_acls](https://developer.apple.com/documentation/security/cssmerr_ac_invalid_base_acls)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/security/cssmerr_ac_invalid_base_acls
 
 # CSSMERR_AC_INVALID_BASE_ACLS (Swift)
 

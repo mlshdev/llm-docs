@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/largeproductviewstyle](https://developer.apple.com/documentation/storekit/largeproductviewstyle)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/largeproductviewstyle
 
 # LargeProductViewStyle
 
@@ -6,7 +7,7 @@
 **Kind:** Structure  
 **Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · visionOS 1.0+
 
-A style for a product view that’s suitable for layouts where the in-app purchase content is prominent.
+A style for a product view that’s suitable for layouts where the Apple In-App Purchase content is prominent.
 
 ## Declaration
 
@@ -18,7 +19,7 @@ A style for a product view that’s suitable for layouts where the in-app purcha
 
 ### Getting the large product view style
 
-- [large](productviewstyle/large.md): Conforms when `Self` is `LargeProductViewStyle`. A product view style suitable for layouts where the in-app purchase content is prominent.
+- [large](productviewstyle/large.md): Conforms when `Self` is `LargeProductViewStyle`. A product view style suitable for layouts where the Apple In-App Purchase content is prominent.
 
 ### Creating the style
 

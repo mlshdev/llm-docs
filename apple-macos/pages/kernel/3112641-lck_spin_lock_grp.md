@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3112641-lck_spin_lock_grp](https://developer.apple.com/documentation/kernel/3112641-lck_spin_lock_grp)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/3112641-lck_spin_lock_grp
 
 # lck_spin_lock_grp
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uicontrol/removetarget(_:action:for:)](https://developer.apple.com/documentation/uikit/uicontrol/removetarget(_:action:for:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/uicontrol/removetarget(_:action:for:)
 
 # removeTarget(\_:action:for:) (Swift)
 

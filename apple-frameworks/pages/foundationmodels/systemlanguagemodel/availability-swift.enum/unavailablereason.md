@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/systemlanguagemodel/availability-swift.enum/unavailablereason](https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel/availability-swift.enum/unavailablereason)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel/availability-swift.enum/unavailablereason
 
 # SystemLanguageModel.Availability.UnavailableReason
 
@@ -6,7 +7,7 @@
 **Kind:** Enumeration  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · visionOS 26.0+
 
-The unavailable reason.
+The reason the system language model is unavailable.
 
 ## Declaration
 
@@ -35,5 +36,5 @@ enum UnavailableReason
 
 ### Checking for availability
 
-- [SystemLanguageModel.Availability.available](available.md): The system is ready for making requests.
-- [SystemLanguageModel.Availability.unavailable(\_:)](unavailable%28__%29.md): Indicates that the system is not ready for requests.
+- [SystemLanguageModel.Availability.available](available.md): The system is ready to make requests.
+- [SystemLanguageModel.Availability.unavailable(\_:)](unavailable%28__%29.md): The system isn’t ready for requests.

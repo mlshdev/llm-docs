@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideodevice/removestream](https://developer.apple.com/documentation/videodriverkit/iouservideodevice/removestream)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideodevice/removestream
 
 # RemoveStream
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Method  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 Removes a video stream from the device.
 
@@ -36,5 +37,5 @@ The stream’s reference count will be decremented if it was successfully remove
 
 ### Working with video streams
 
-- [AddStream](addstream.md): Adds an video stream to the device.
-- [IOUserVideoStream](../iouservideostream.md): A video stream.
+- [AddStream](addstream.md): Beta. Adds an video stream to the device.
+- [IOUserVideoStream](../iouservideostream.md): Beta. A video stream.

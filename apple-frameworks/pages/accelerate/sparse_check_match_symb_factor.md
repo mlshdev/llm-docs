@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/sparse_check_match_symb_factor](https://developer.apple.com/documentation/accelerate/sparse_check_match_symb_factor)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/sparse_check_match_symb_factor
 
 # SPARSE_CHECK_MATCH_SYMB_FACTOR
 

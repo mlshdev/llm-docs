@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/catch_exc_subsystem-t6n](https://developer.apple.com/documentation/kernel/catch_exc_subsystem-t6n)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/catch_exc_subsystem-t6n
 
 # catch_exc_subsystem
 

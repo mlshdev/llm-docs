@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideolevelcontrol](https://developer.apple.com/documentation/videodriverkit/iouservideolevelcontrol)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/iouservideolevelcontrol
 
 # IOUserVideoLevelControl
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Class  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 A control object that supports a float value level.
 
@@ -26,34 +27,34 @@ Getting/Setting control values can be done with scalar or decibel level values.
 
 ### Creating a level control
 
-- [Create](iouservideolevelcontrol/create.md): A static factory method that allocates and initializes a video level control.
-- [init](iouservideolevelcontrol/init.md): Initializes an video level control.
-- [IOUserVideoDriver](iouservideodriver.md): A video driver.
-- [IOUserVideoLevelControlRange](iouservideolevelcontrolrange.md): A control that supports a range of floating-point values.
-- [IOUserVideoObjectPropertyElement](videodriverkit/iouservideoobjectpropertyelement.md): An integer that identifies, along with the property selector and scope, a specific piece of information about a video object.
-- [IOUserVideoObjectPropertyScope](videodriverkit/iouservideoobjectpropertyscope.md): A four character code which, along with the selector and element, identifies a specific piece of information about a video object.
+- [Create](iouservideolevelcontrol/create.md): Beta. A static factory method that allocates and initializes a video level control.
+- [init](iouservideolevelcontrol/init.md): Beta. Initializes an video level control.
+- [IOUserVideoDriver](iouservideodriver.md): Beta. A video driver.
+- [IOUserVideoLevelControlRange](iouservideolevelcontrolrange.md): Beta. A control that supports a range of floating-point values.
+- [IOUserVideoObjectPropertyElement](videodriverkit/iouservideoobjectpropertyelement.md): Beta. An integer that identifies, along with the property selector and scope, a specific piece of information about a video object.
+- [IOUserVideoObjectPropertyScope](videodriverkit/iouservideoobjectpropertyscope.md): Beta. A four character code which, along with the selector and element, identifies a specific piece of information about a video object.
 
 ### Freeing a level control
 
-- [free](iouservideolevelcontrol/free.md): Frees the video level control.
+- [free](iouservideolevelcontrol/free.md): Beta. Frees the video level control.
 
 ### Getting information about the class
 
-- [GetClassID](iouservideolevelcontrol/getclassid.md): Gets the class identifier of the object.
-- [GetBaseClassID](iouservideolevelcontrol/getbaseclassid.md): Gets the class identifier of the base class object.
-- [IOUserVideoClassID](videodriverkit/iouservideoclassid.md): Video class identifiers of an video object.
+- [GetClassID](iouservideolevelcontrol/getclassid.md): Beta. Gets the class identifier of the object.
+- [GetBaseClassID](iouservideolevelcontrol/getbaseclassid.md): Beta. Gets the class identifier of the base class object.
+- [IOUserVideoClassID](videodriverkit/iouservideoclassid.md): Beta. Video class identifiers of an video object.
 
 ### Supporting value changes
 
-- [HandleChangeDecibelValue](iouservideolevelcontrol/handlechangedecibelvalue.md): The system calls this virtual method when the control’s value changes.
-- [HandleChangeScalarValue](iouservideolevelcontrol/handlechangescalarvalue.md): The system calls this virtual method when the control’s value changes.
+- [HandleChangeDecibelValue](iouservideolevelcontrol/handlechangedecibelvalue.md): Beta. The system calls this virtual method when the control’s value changes.
+- [HandleChangeScalarValue](iouservideolevelcontrol/handlechangescalarvalue.md): Beta. The system calls this virtual method when the control’s value changes.
 
 ### Accessing the value
 
-- [SetScalarValue](iouservideolevelcontrol/setscalarvalue.md): Sets the current scalar level value.
-- [SetDecibelValue](iouservideolevelcontrol/setdecibelvalue.md): Sets the current decibel level value.
-- [GetScalarValue](iouservideolevelcontrol/getscalarvalue.md): Gets the scalar level value for the control.
-- [GetDecibelValue](iouservideolevelcontrol/getdecibelvalue.md): Gets the decibel level value for the control.
+- [SetScalarValue](iouservideolevelcontrol/setscalarvalue.md): Beta. Sets the current scalar level value.
+- [SetDecibelValue](iouservideolevelcontrol/setdecibelvalue.md): Beta. Sets the current decibel level value.
+- [GetScalarValue](iouservideolevelcontrol/getscalarvalue.md): Beta. Gets the scalar level value for the control.
+- [GetDecibelValue](iouservideolevelcontrol/getdecibelvalue.md): Beta. Gets the decibel level value for the control.
 
 ## Relationships
 
@@ -65,9 +66,9 @@ Getting/Setting control values can be done with scalar or decibel level values.
 
 ### Video controls
 
-- [IOUserVideoControl](iouservideocontrol.md): A base class for control objects.
-- [IOUserVideoBooleanControl](iouservideobooleancontrol.md): A control object that supports Boolean values.
-- [IOUserVideoStereoPanControl](iouservideostereopancontrol.md): A control object that supports panning between stereo channels.
-- [IOUserVideoSliderControl](iouservideoslidercontrol.md): A control object that supports a 32-bit unsigned integer value slider.
-- [IOUserVideoDirectionControl](iouservideodirectioncontrol.md): A control object that supports Boolean values.
-- [IOUserVideoSelectorControl](iouservideoselectorcontrol.md): A control object that supports a 32-bit unsigned integer selector value.
+- [IOUserVideoControl](iouservideocontrol.md): Beta. A base class for control objects.
+- [IOUserVideoBooleanControl](iouservideobooleancontrol.md): Beta. A control object that supports Boolean values.
+- [IOUserVideoStereoPanControl](iouservideostereopancontrol.md): Beta. A control object that supports panning between stereo channels.
+- [IOUserVideoSliderControl](iouservideoslidercontrol.md): Beta. A control object that supports a 32-bit unsigned integer value slider.
+- [IOUserVideoDirectionControl](iouservideodirectioncontrol.md): Beta. A control object that supports Boolean values.
+- [IOUserVideoSelectorControl](iouservideoselectorcontrol.md): Beta. A control object that supports a 32-bit unsigned integer selector value.

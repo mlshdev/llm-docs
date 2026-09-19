@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/apptrackingtransparency/apptrackingtransparencyversionstring](https://developer.apple.com/documentation/apptrackingtransparency/apptrackingtransparencyversionstring)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/apptrackingtransparency/apptrackingtransparencyversionstring
 
 # AppTrackingTransparencyVersionString
 
@@ -6,10 +7,16 @@
 
 **Framework:** App Tracking Transparency  
 **Kind:** Global Variable  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
 
 ## Declaration
 
 ```objectivec
 extern const unsigned char AppTrackingTransparencyVersionString[];
 ```
+
+## See Also
+
+### Version information
+
+- [AppTrackingTransparencyVersionNumber](apptrackingtransparencyversionnumber.md)

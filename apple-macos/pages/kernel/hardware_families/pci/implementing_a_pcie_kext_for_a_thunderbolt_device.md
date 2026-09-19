@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/hardware_families/pci/implementing_a_pcie_kext_for_a_thunderbolt_device](https://developer.apple.com/documentation/kernel/hardware_families/pci/implementing_a_pcie_kext_for_a_thunderbolt_device)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/hardware_families/pci/implementing_a_pcie_kext_for_a_thunderbolt_device
 
 # Implementing a PCIe Kext for a Thunderbolt Device
 
@@ -174,6 +175,7 @@ public:
     virtual IOReturn performAudioEngineStart();
     virtual IOReturn performAudioEngineStop();
 }
+
 
 /* Implementation file */
 IOReturn MyAudioEngine::performAudioEngineStart()

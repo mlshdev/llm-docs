@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clkcomplicationringstyle/closed](https://developer.apple.com/documentation/clockkit/clkcomplicationringstyle/closed)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/clockkit/clkcomplicationringstyle/closed
 
 # CLKComplicationRingStyle.closed (Swift)
 
 **Framework:** ClockKit  
 **Kind:** Case  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 A ring in which the values increase clockwise, starting at 12 o’clock, to create a closed circle.
 
@@ -32,7 +33,7 @@ Use this style when you want to convey a value that’s a percentage of a whole.
 
 **Framework:** ClockKit  
 **Kind:** Enumeration Case  
-**Availability:** watchOS 2.0+ (deprecated in 27.0)
+**Availability:** watchOS 2.0+ (deprecated in 27.2)
 
 A ring in which the values increase clockwise, starting at 12 o’clock, to create a closed circle.
 

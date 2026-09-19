@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/stackshot_flags_t/stackshot_do_compress](https://developer.apple.com/documentation/kernel/stackshot_flags_t/stackshot_do_compress)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/stackshot_flags_t/stackshot_do_compress
 
 # STACKSHOT_DO_COMPRESS
 

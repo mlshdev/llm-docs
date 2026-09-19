@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_gic_int_performance_monitor](https://developer.apple.com/documentation/hypervisor/hv_gic_int_performance_monitor)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/hv_gic_int_performance_monitor
 
 # HV_GIC_INT_PERFORMANCE_MONITOR (Swift)
 

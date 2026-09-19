@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/scsicmd_report_luns_header/1477382-lun_list_length](https://developer.apple.com/documentation/iokit/scsicmd_report_luns_header/1477382-lun_list_length)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/iokit/scsicmd_report_luns_header/1477382-lun_list_length
 
 # LUN_LIST_LENGTH
 

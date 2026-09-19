@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/textsegment](https://developer.apple.com/documentation/foundationmodels/transcript/textsegment)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/transcript/textsegment
 
 # Transcript.TextSegment
 
@@ -18,11 +19,11 @@ struct TextSegment
 
 ### Creating a text segment
 
-- [init(id:content:)](textsegment/init%28id_content_%29.md)
+- [init(id:content:)](textsegment/init%28id_content_%29.md): Creates a text segment that contains the text you provide.
 
 ### Inspecting a text segment
 
-- [content](textsegment/content.md)
+- [content](textsegment/content.md): The text of the segment.
 
 ## Relationships
 

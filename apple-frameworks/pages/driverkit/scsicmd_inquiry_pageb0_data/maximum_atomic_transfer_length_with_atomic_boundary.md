@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/scsicmd_inquiry_pageb0_data/maximum_atomic_transfer_length_with_atomic_boundary](https://developer.apple.com/documentation/driverkit/scsicmd_inquiry_pageb0_data/maximum_atomic_transfer_length_with_atomic_boundary)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/driverkit/scsicmd_inquiry_pageb0_data/maximum_atomic_transfer_length_with_atomic_boundary
 
 # MAXIMUM_ATOMIC_TRANSFER_LENGTH_WITH_ATOMIC_BOUNDARY
 

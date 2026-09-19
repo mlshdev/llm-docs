@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/latest(for:)](https://developer.apple.com/documentation/storekit/transaction/latest(for:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/storekit/transaction/latest(for:)
 
 # latest(for:)
 
@@ -6,7 +7,7 @@
 **Kind:** Type Method  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
 
-Gets the customer’s most recent transaction for an In-App Purchase.
+Gets the customer’s most recent transaction for an Apple In-App Purchase.
 
 ## Declaration
 
@@ -28,7 +29,7 @@ A [VerificationResult](../verificationresult.md) with a single [Transaction](../
 
 ## Discussion
 
-Call this method for any type of In-App Purchase. The following code example illustrates requesting the most recent transaction to determine whether the customer purchased the product indicated by the string `productIdentifier`:
+Call this method for any type of Apple In-App Purchase. The following code example illustrates requesting the most recent transaction to determine whether the customer purchased the product indicated by the string `productIdentifier`:
 
 ```swift
 guard let verificationResult = await Transaction.latest(for: productIdentifier) else {    
@@ -48,9 +49,9 @@ case .unverified(let transaction, let verificationError):
 }
 ```
 
-By default, when the [SKIncludeConsumableInAppPurchaseHistory](../../bundleresources/information-property-list/skincludeconsumableinapppurchasehistory.md) property list key is `false`, this method excludes finished consumable in-app purchases unless they are refunded or revoked.
+By default, when the [SKIncludeConsumableInAppPurchaseHistory](../../bundleresources/information-property-list/skincludeconsumableinapppurchasehistory.md) property list key is `false`, this method excludes finished consumable Apple In-App Purchases unless they are refunded or revoked.
 
-If you set the [SKIncludeConsumableInAppPurchaseHistory](../../bundleresources/information-property-list/skincludeconsumableinapppurchasehistory.md) property list key to `true`, this method returns all transactions, including consumable In-App Purchases that your app marked as finished ([finish()](finish%28%29.md)).
+If you set the [SKIncludeConsumableInAppPurchaseHistory](../../bundleresources/information-property-list/skincludeconsumableinapppurchasehistory.md) property list key to `true`, this method returns all transactions, including consumable Apple In-App Purchases that your app marked as finished ([finish()](finish%28%29.md)).
 
 ## See Also
 

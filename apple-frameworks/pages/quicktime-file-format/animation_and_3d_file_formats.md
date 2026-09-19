@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/animation_and_3d_file_formats](https://developer.apple.com/documentation/quicktime-file-format/animation_and_3d_file_formats)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/quicktime-file-format/animation_and_3d_file_formats
 
 # Animation and 3D file formats
 

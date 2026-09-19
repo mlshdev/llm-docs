@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mapkit/marker/init(_:monogram:coordinate:)-2ojcy](https://developer.apple.com/documentation/mapkit/marker/init(_:monogram:coordinate:)-2ojcy)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/mapkit/marker/init(_:monogram:coordinate:)-2ojcy
 
 # init(\_:monogram:coordinate:)
 

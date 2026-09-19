@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scenekit/scnskinner/init(basegeometry:bones:boneinversebindtransforms:boneweights:boneindices:)](https://developer.apple.com/documentation/scenekit/scnskinner/init(basegeometry:bones:boneinversebindtransforms:boneweights:boneindices:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/scenekit/scnskinner/init(basegeometry:bones:boneinversebindtransforms:boneweights:boneindices:)
 
 # init(baseGeometry:bones:boneInverseBindTransforms:boneWeights:boneIndices:) (Swift)
 

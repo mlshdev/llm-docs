@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1646421-anonymous/bidirectional_echo_suppressing_speakerphone](https://developer.apple.com/documentation/kernel/1646421-anonymous/bidirectional_echo_suppressing_speakerphone)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/1646421-anonymous/bidirectional_echo_suppressing_speakerphone
 
 # BIDIRECTIONAL_ECHO_SUPPRESSING_SPEAKERPHONE
 

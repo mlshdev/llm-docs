@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/instartcallintent/init(callrecordfilter:callrecordtocallback:audioroute:destinationtype:contacts:callcapability:)](https://developer.apple.com/documentation/intents/instartcallintent/init(callrecordfilter:callrecordtocallback:audioroute:destinationtype:contacts:callcapability:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/intents/instartcallintent/init(callrecordfilter:callrecordtocallback:audioroute:destinationtype:contacts:callcapability:)
 
 # init(callRecordFilter:callRecordToCallBack:audioRoute:destinationType:contacts:callCapability:) (Swift)
 

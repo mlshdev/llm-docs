@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/walletpasses/creating-an-event-pass-using-semantic-tags](https://developer.apple.com/documentation/walletpasses/creating-an-event-pass-using-semantic-tags)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/walletpasses/creating-an-event-pass-using-semantic-tags
 
 # Creating a poster event pass using semantic tags
 

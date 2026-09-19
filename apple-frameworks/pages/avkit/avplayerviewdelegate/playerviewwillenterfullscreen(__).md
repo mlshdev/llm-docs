@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewdelegate/playerviewwillenterfullscreen(_:)](https://developer.apple.com/documentation/avkit/avplayerviewdelegate/playerviewwillenterfullscreen(_:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewdelegate/playerviewwillenterfullscreen(_:)
 
 # playerViewWillEnterFullScreen(\_:) (Swift)
 
@@ -20,7 +21,7 @@ optional func playerViewWillEnterFullScreen(_ playerView: AVPlayerView)
 
 ## See Also
 
-### Responding to Full Screen Events
+### Responding to full-screen events
 
 - [playerViewDidEnterFullScreen(\_:)](playerviewdidenterfullscreen%28__%29.md): Tells the delegate that the player view entered full-screen mode.
 - [playerViewWillExitFullScreen(\_:)](playerviewwillexitfullscreen%28__%29.md): Tells the delegate that the player view is about to exit full-screen mode.
@@ -47,7 +48,7 @@ Tells the delegate that the player view is about to enter full-screen mode.
 
 ## See Also
 
-### Responding to Full Screen Events
+### Responding to full-screen events
 
 - [playerViewDidEnterFullScreen:](playerviewdidenterfullscreen%28__%29.md): Tells the delegate that the player view entered full-screen mode.
 - [playerViewWillExitFullScreen:](playerviewwillexitfullscreen%28__%29.md): Tells the delegate that the player view is about to exit full-screen mode.

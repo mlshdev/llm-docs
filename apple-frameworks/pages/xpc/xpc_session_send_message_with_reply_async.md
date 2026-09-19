@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/xpc/xpc_session_send_message_with_reply_async](https://developer.apple.com/documentation/xpc/xpc_session_send_message_with_reply_async)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_session_send_message_with_reply_async
 
 # xpc_session_send_message_with_reply_async
 

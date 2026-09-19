@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/mach_core_fileheader/1564153-log_offset](https://developer.apple.com/documentation/kernel/mach_core_fileheader/1564153-log_offset)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/mach_core_fileheader/1564153-log_offset
 
 # log_offset
 

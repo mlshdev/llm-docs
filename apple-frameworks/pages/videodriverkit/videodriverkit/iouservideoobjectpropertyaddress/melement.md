@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyaddress/melement](https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyaddress/melement)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/videodriverkit/videodriverkit/iouservideoobjectpropertyaddress/melement
 
 # mElement
 
@@ -6,7 +7,7 @@
 
 **Framework:** VideoDriverKit  
 **Kind:** Instance Property  
-**Availability:** DriverKit 27.0+
+**Availability:** DriverKit 27.0+ beta
 
 The element for the property.
 
@@ -20,5 +21,5 @@ IOUserVideoObjectPropertyElement mElement;
 
 ### Address members
 
-- [mSelector](mselector.md): The selector for the property.
-- [mScope](mscope.md): The scope for the property.
+- [mSelector](mselector.md): Beta. The selector for the property.
+- [mScope](mscope.md): Beta. The scope for the property.

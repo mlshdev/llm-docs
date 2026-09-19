@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsaccessibilityprotocol/accessibilitylayoutpoint(forscreenpoint:)](https://developer.apple.com/documentation/appkit/nsaccessibilityprotocol/accessibilitylayoutpoint(forscreenpoint:))
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nsaccessibilityprotocol/accessibilitylayoutpoint(forscreenpoint:)
 
 # accessibilityLayoutPoint(forScreenPoint:) (Swift)
 

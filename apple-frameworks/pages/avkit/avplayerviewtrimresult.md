@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplayerviewtrimresult](https://developer.apple.com/documentation/avkit/avplayerviewtrimresult)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avplayerviewtrimresult
 
 # AVPlayerViewTrimResult (Swift)
 
@@ -20,7 +21,7 @@ enum AVPlayerViewTrimResult
 
 - [init(rawValue:)](avplayerviewtrimresult/init%28rawvalue_%29.md)
 
-### Trim Results
+### Trim results
 
 - [AVPlayerViewTrimResult.okButton](avplayerviewtrimresult/okbutton.md): The user clicked the Trim button.
 - [AVPlayerViewTrimResult.cancelButton](avplayerviewtrimresult/cancelbutton.md): The user clicked the Cancel button.
@@ -38,10 +39,10 @@ enum AVPlayerViewTrimResult
 
 ## See Also
 
-### Trimming media
+### Media trimming and export
 
-- [canBeginTrimming](avplayerview/canbegintrimming.md): A Boolean value that indicates whether the player view can begin trimming.
-- [beginTrimming(completionHandler:)](avplayerview/begintrimming%28completionhandler_%29.md): Puts the player view into trimming mode.
+- [Implementing trimming in a macOS player](implementing-trimming-in-a-macos-player.md): Provide a QuickTime media-trimming experience in your macOS app.
+- [Trimming and exporting media in visionOS](trimming-and-exporting-media-in-visionos.md): Display standard controls in your app to edit the timeline of the currently playing media.
 
 # AVPlayerViewTrimResult (Objective-C)
 
@@ -59,14 +60,14 @@ enum AVPlayerViewTrimResult : NSInteger;
 
 ## Topics
 
-### Trim Results
+### Trim results
 
 - [AVPlayerViewTrimOKButton](avplayerviewtrimresult/okbutton.md): The user clicked the Trim button.
 - [AVPlayerViewTrimCancelButton](avplayerviewtrimresult/cancelbutton.md): The user clicked the Cancel button.
 
 ## See Also
 
-### Trimming media
+### Media trimming and export
 
-- [canBeginTrimming](avplayerview/canbegintrimming.md): A Boolean value that indicates whether the player view can begin trimming.
-- [beginTrimmingWithCompletionHandler:](avplayerview/begintrimming%28completionhandler_%29.md): Puts the player view into trimming mode.
+- [Implementing trimming in a macOS player](implementing-trimming-in-a-macos-player.md): Provide a QuickTime media-trimming experience in your macOS app.
+- [Trimming and exporting media in visionOS](trimming-and-exporting-media-in-visionos.md): Display standard controls in your app to edit the timeline of the currently playing media.

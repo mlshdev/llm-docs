@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpscnnbinarykernel/temporaryresultstate(commandbuffer:primaryimage:secondaryimage:sourcestates:destinationimage:)](https://developer.apple.com/documentation/metalperformanceshaders/mpscnnbinarykernel/temporaryresultstate(commandbuffer:primaryimage:secondaryimage:sourcestates:destinationimage:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpscnnbinarykernel/temporaryresultstate(commandbuffer:primaryimage:secondaryimage:sourcestates:destinationimage:)
 
 # temporaryResultState(commandBuffer:primaryImage:secondaryImage:sourceStates:destinationImage:) (Swift)
 

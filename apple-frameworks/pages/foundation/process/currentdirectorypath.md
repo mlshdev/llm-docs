@@ -1,10 +1,11 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/process/currentdirectorypath](https://developer.apple.com/documentation/foundation/process/currentdirectorypath)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundation/process/currentdirectorypath
 
 # currentDirectoryPath (Swift)
 
 **Framework:** Foundation  
 **Kind:** Instance Property  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Sets the current directory for the receiver.
 
@@ -38,7 +39,7 @@ If this method isn’t used, the current directory is inherited from the process
 
 **Framework:** Foundation  
 **Kind:** Instance Property  
-**Availability:** macOS 10.0+ (deprecated in 27.0)
+**Availability:** macOS 10.0+ (deprecated in 27.2)
 
 Sets the current directory for the receiver.
 

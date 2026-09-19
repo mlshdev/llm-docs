@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nspangesturerecognizer](https://developer.apple.com/documentation/appkit/nspangesturerecognizer)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appkit/nspangesturerecognizer
 
 # NSPanGestureRecognizer (Swift)
 
@@ -60,6 +61,8 @@ In this gesture recognizer, the [location(in:)](nsgesturerecognizer/location%28i
 - [Hashable](https://developer.apple.com/documentation/swift/hashable)
 - [NSCoding](https://developer.apple.com/documentation/foundation/nscoding)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsrayintersector/encodeintersection(commandbuffer:intersectiontype:raybuffer:raybufferoffset:rayindexbuffer:rayindexbufferoffset:intersectionbuffer:intersectionbufferoffset:rayindexcount:accelerationstructure:)](https://developer.apple.com/documentation/metalperformanceshaders/mpsrayintersector/encodeintersection(commandbuffer:intersectiontype:raybuffer:raybufferoffset:rayindexbuffer:rayindexbufferoffset:intersectionbuffer:intersectionbufferoffset:rayindexcount:accelerationstructure:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpsrayintersector/encodeintersection(commandbuffer:intersectiontype:raybuffer:raybufferoffset:rayindexbuffer:rayindexbufferoffset:intersectionbuffer:intersectionbufferoffset:rayindexcount:accelerationstructure:)
 
 # encodeIntersection(commandBuffer:intersectionType:rayBuffer:rayBufferOffset:rayIndexBuffer:rayIndexBufferOffset:intersectionBuffer:intersectionBufferOffset:rayIndexCount:accelerationStructure:) (Swift)
 

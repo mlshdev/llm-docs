@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/external-hooks.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/external-hooks.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/external-hooks.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/external-hooks.md)
 
 # External hooks environment variables <a id="external-hooks-environment-variables"></a>
 

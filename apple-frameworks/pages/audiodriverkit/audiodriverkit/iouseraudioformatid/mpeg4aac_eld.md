@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiodriverkit/audiodriverkit/iouseraudioformatid/mpeg4aac_eld](https://developer.apple.com/documentation/audiodriverkit/audiodriverkit/iouseraudioformatid/mpeg4aac_eld)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/audiodriverkit/iouseraudioformatid/mpeg4aac_eld
 
 # MPEG4AAC_ELD
 

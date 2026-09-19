@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/vmx_ept_vpid_support_ad](https://developer.apple.com/documentation/hypervisor/vmx_ept_vpid_support_ad)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/hypervisor/vmx_ept_vpid_support_ad
 
 # VMX_EPT_VPID_SUPPORT_AD (Swift)
 

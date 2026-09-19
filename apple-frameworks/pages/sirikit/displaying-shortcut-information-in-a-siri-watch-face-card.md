@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/sirikit/displaying-shortcut-information-in-a-siri-watch-face-card](https://developer.apple.com/documentation/sirikit/displaying-shortcut-information-in-a-siri-watch-face-card)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/sirikit/displaying-shortcut-information-in-a-siri-watch-face-card
 
 # Displaying Shortcut Information in a Siri Watch Face Card
 

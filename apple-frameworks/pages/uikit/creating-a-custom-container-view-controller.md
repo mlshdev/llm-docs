@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/creating-a-custom-container-view-controller](https://developer.apple.com/documentation/uikit/creating-a-custom-container-view-controller)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/uikit/creating-a-custom-container-view-controller
 
 # Creating a custom container view controller (Swift)
 
@@ -112,6 +113,7 @@ For more information, see the descriptions in [UIViewController](uiviewcontrolle
 - [UISearchTab](uisearchtab.md): A tab subclass that represents the system’s search tab.
 - [UITabGroup](uitabgroup.md): An object that manages a collection of tab objects.
 - [UIPageViewController](uipageviewcontroller.md): A container view controller that manages navigation between pages of content, where a subview controller manages each page.
+- [UIArrangementViewController](uiarrangementviewcontroller.md): Beta. A view controller that presents its container view controllers through an arrangement.
 
 # Creating a custom container view controller (Objective-C)
 
@@ -225,3 +227,4 @@ For more information, see the descriptions in [UIViewController](uiviewcontrolle
 - [UISearchTab](uisearchtab.md): A tab subclass that represents the system’s search tab.
 - [UITabGroup](uitabgroup.md): An object that manages a collection of tab objects.
 - [UIPageViewController](uipageviewcontroller.md): A container view controller that manages navigation between pages of content, where a subview controller manages each page.
+- [UIArrangementViewController](uiarrangementviewcontroller.md): Beta. A view controller that presents its container view controllers through an arrangement.

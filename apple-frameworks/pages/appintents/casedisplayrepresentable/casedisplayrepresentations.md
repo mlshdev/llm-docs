@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/casedisplayrepresentable/casedisplayrepresentations](https://developer.apple.com/documentation/appintents/casedisplayrepresentable/casedisplayrepresentations)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appintents/casedisplayrepresentable/casedisplayrepresentations
 
 # caseDisplayRepresentations
 
@@ -19,3 +20,4 @@ static var caseDisplayRepresentations: [Self : DisplayRepresentation] { get }
 ### CaseDisplayRepresentable Implementations
 
 - [caseDisplayRepresentations](casedisplayrepresentations-7hzcy.md): Inherits case display representations from the associated union value type.
+- [caseDisplayRepresentations](casedisplayrepresentations-ael8.md): Beta. A dictionary that maps each value to the visual elements that represent it.

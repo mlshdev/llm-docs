@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/tool/call(arguments:)](https://developer.apple.com/documentation/foundationmodels/tool/call(arguments:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/foundationmodels/tool/call(arguments:)
 
 # call(arguments:)
 
@@ -23,7 +24,7 @@ Performs the tool’s action when a language model wants to use this tool.
 
 ## Discussion
 
-If errors are throw in the body of this method, the framework wraps them in a [LanguageModelSession.ToolCallError](../languagemodelsession/toolcallerror.md) and rethrows them at the call site of [respond(to:options:)](https://developer.apple.com/documentation/foundationmodels/languagemodelsession/respond%28to:options:%29-6a2gb).
+If errors are thrown in the body of this method, the framework wraps them in a [LanguageModelSession.ToolCallError](../languagemodelsession/toolcallerror.md) and rethrows them at the call site of [respond(to:options:)](https://developer.apple.com/documentation/foundationmodels/languagemodelsession/respond%28to:options:%29-6a2gb).
 
 > **Note**
 

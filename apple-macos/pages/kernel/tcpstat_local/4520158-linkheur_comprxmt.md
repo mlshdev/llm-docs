@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/tcpstat_local/4520158-linkheur_comprxmt](https://developer.apple.com/documentation/kernel/tcpstat_local/4520158-linkheur_comprxmt)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/tcpstat_local/4520158-linkheur_comprxmt
 
 # linkheur_comprxmt
 

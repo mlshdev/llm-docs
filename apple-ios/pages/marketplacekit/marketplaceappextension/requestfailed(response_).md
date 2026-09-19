@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/marketplaceappextension/requestfailed(response:)](https://developer.apple.com/documentation/marketplacekit/marketplaceappextension/requestfailed(response:))
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/marketplacekit/marketplaceappextension/requestfailed(response:)
 
 # requestFailed(response:)
 
@@ -27,6 +28,6 @@ func requestFailed(response: HTTPURLResponse) async -> Bool
 
 ## Discussion
 
-iOS invokes your implementation of this callback when it receives anything but an OK status from your marketplace endpoints. Your implementation performs the necessary action according to the given status code. Your server might be down or it might return a code that indicates that the person needs to reauthenticate, if for example, their access token expires.
+The system invokes your implementation of this callback when it receives anything but an OK status from your marketplace endpoints. Your implementation performs the necessary action according to the given status code. Your server might be down, or it might return a code that indicates that the person needs to reauthenticate if, for example, their access token expired.
 
 For more information, see [Installing apps from an alternative marketplace](../installing-apps-from-an-alternative-marketplace.md).

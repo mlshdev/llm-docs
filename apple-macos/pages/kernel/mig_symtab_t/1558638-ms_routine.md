@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/mig_symtab_t/1558638-ms_routine](https://developer.apple.com/documentation/kernel/mig_symtab_t/1558638-ms_routine)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/mig_symtab_t/1558638-ms_routine
 
 # ms_routine
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avlegiblemediaoptionsmenucontroller/menucontents](https://developer.apple.com/documentation/avkit/avlegiblemediaoptionsmenucontroller/menucontents)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avlegiblemediaoptionsmenucontroller/menucontents
 
 # AVLegibleMediaOptionsMenuController.MenuContents (Swift)
 
@@ -38,7 +39,7 @@ struct MenuContents
 
 - [init(rawValue:)](menucontents/init%28rawvalue_%29.md)
 
-### Menu Content Options
+### Menu content options
 
 - [all](menucontents/all.md)
 - [captionAppearance](menucontents/captionappearance.md)
@@ -100,7 +101,7 @@ enum AVLegibleMediaOptionsMenuContents : NSInteger;
 
 ## Topics
 
-### Menu Content Options
+### Menu content options
 
 - [AVLegibleMediaOptionsMenuContentsAll](menucontents/all.md)
 - [AVLegibleMediaOptionsMenuContentsCaptionAppearance](menucontents/captionappearance.md)

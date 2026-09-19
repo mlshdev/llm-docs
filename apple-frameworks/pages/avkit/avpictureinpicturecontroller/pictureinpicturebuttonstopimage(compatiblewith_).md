@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avpictureinpicturecontroller/pictureinpicturebuttonstopimage(compatiblewith:)](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/pictureinpicturebuttonstopimage(compatiblewith:))
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/pictureinpicturebuttonstopimage(compatiblewith:)
 
 # pictureInPictureButtonStopImage(compatibleWith:) (Swift)
 
@@ -26,7 +27,7 @@ A system-default template image.
 
 ## See Also
 
-### Retrieving Picture in Picture Template Images
+### Retrieving Picture in Picture template images
 
 - [pictureInPictureButtonStartImage](pictureinpicturebuttonstartimage.md): A system-default template image for the button that starts Picture in Picture in your app.
 - [pictureInPictureButtonStopImage](pictureinpicturebuttonstopimage.md): A system-default template image for the button that stops Picture in Picture in your app.
@@ -58,7 +59,7 @@ A system-default template image.
 
 ## See Also
 
-### Retrieving Picture in Picture Template Images
+### Retrieving Picture in Picture template images
 
 - [pictureInPictureButtonStartImage](pictureinpicturebuttonstartimage.md): A system-default template image for the button that starts Picture in Picture in your app.
 - [pictureInPictureButtonStopImage](pictureinpicturebuttonstopimage.md): A system-default template image for the button that stops Picture in Picture in your app.

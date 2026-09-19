@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/quadrature_integrate_options/qag_points_per_interval](https://developer.apple.com/documentation/accelerate/quadrature_integrate_options/qag_points_per_interval)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/accelerate/quadrature_integrate_options/qag_points_per_interval
 
 # qag_points_per_interval (Swift)
 

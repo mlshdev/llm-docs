@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1471225-settings_manager_attribute_selec](https://developer.apple.com/documentation/coreservices/1471225-settings_manager_attribute_selec)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/coreservices/1471225-settings_manager_attribute_selec
 
 # Settings Manager Attribute Selectors
 

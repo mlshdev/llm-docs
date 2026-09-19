@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/nd_opt_prefix_info/3754140-nd_opt_pi_flags_reserved](https://developer.apple.com/documentation/kernel/nd_opt_prefix_info/3754140-nd_opt_pi_flags_reserved)
+> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/kernel/nd_opt_prefix_info/3754140-nd_opt_pi_flags_reserved
 
 # nd_opt_pi_flags_reserved
 
