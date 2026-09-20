@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/bfac54a03b9c1046d8956b9674bb21167e230eb9/doc/ffmpeg-formats.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/5d3cb3dc17245fd9c16f0cb69d8d1076c3410656/doc/ffmpeg-formats.texi)
 
 # Description
 

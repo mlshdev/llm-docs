@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/admin/buildhosts.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/buildhosts.rst)
+> Pinned source for SearXNG master: [docs/admin/buildhosts.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/buildhosts.rst)
 
 <a id="buildhosts"></a>
 
@@ -40,7 +40,7 @@ Build-time include: `$DOCS_BUILD/includes/searxng.rst`
 - XeTeX\_
 - dvisvgm\_
 
-Most of the sphinx requirements are installed from [setup.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/setup.py) and the
+Most of the sphinx requirements are installed from [setup.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/setup.py) and the
 docs can be build from scratch with `make docs.html`.  For better math and
 image processing additional packages are needed.  The XeTeX\_ needed not only for
 PDF creation, it's also needed for [math](https://docs.searxng.org/dev/reST.html#math) when HTML output is build.
@@ -48,7 +48,7 @@ PDF creation, it's also needed for [math](https://docs.searxng.org/dev/reST.html
 To be able to do sphinx:math-support without CDNs, the math are rendered
 as images (`sphinx.ext.imgmath` extension).
 
-Here is the extract from the [docs/conf.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/conf.py) file, setting math renderer
+Here is the extract from the [docs/conf.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/conf.py) file, setting math renderer
 to `imgmath`:
 
 Build-time include: `../conf.py`

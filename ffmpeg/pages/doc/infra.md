@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/infra.txt](https://github.com/FFmpeg/FFmpeg/blob/bfac54a03b9c1046d8956b9674bb21167e230eb9/doc/infra.txt)
+> Pinned source for FFmpeg master: [doc/infra.txt](https://github.com/FFmpeg/FFmpeg/blob/5d3cb3dc17245fd9c16f0cb69d8d1076c3410656/doc/infra.txt)
 
 # FFmpeg Infrastructure:
 
@@ -21,11 +21,11 @@ Servers:
 ```
 
 
-Main Server:
-------------
-Our Main server is hosted at telepoint.bg
+Main Servers:
+-------------
+Our main servers are hosted at telepoint.bg
 for more details see: https://www.ffmpeg.org/#thanks_sponsor_0001
-Nothing runs on our main server directly, instead several VMs run on it.
+Nothing runs on them directly, instead several VMs run on them.
 
 Main server security:
 ---------------------
@@ -38,9 +38,9 @@ that can open the service elevator and only the hall where the destination rack 
 locked, once access is granted to someone they will get a key for the rack for the duration of
 their visit. There are security cameras everywhere and personnel in the access center 24/7. As for
 software security, our BIOS and IPMI are protected by password and encrypted connection, and
-the machines can be accessed only by root administrators with their SSH keys. They're using
-a Ubuntu LTS release and get regular security updates as they are released. We also get
-notified by email for various security related events (e.g. failed sudo).
+the machines can be accessed only by root administrators with their SSH keys. They get
+regular security updates as they are released. We also get notified by email for various
+security related events (e.g. failed sudo).
 
 Side note - Telepoint provides the rack and physical infrastructure, their sibling company called
             Telehouse which is an ISP provides the connectivity, they are directly connected with
@@ -77,7 +77,18 @@ coverage:
 coverage.ffmpeg.org     Fate code coverage
 
 
-The main and fate server as well as VMs currently run ubuntu
+Ampere Server:
+--------------
+Donated by Ampere in June 2026, see https://www.ffmpeg.org/#ampere2026
+AmpereOne (Mt. Mitchell) 2U system with 192 Arm cores, 512 GB of RAM, 24 NVMe bays and 2x25G networking
+Hosted in germany
+Contains a Netint Quadra VPU card, shared by two VMs: a Forgejo runner and a VM developers can get SSH access to
+Runs Forgejo CI jobs (native aarch64 with all dependencies, qemu based riscv, mips and ppc)
+Runs Fairy reviews and bug investigations.
+
+For access to the Ampere server for FFmpeg work, send mail to root at ffmpeg.org
+
+The fate server currently runs ubuntu
 
 
 

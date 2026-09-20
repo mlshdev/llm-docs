@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/user/about.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/user/about.rst)
+> Pinned source for SearXNG master: [docs/user/about.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/user/about.rst)
 
 <a id="about-searxng"></a>
 

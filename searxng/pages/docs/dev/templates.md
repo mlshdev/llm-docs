@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/templates.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/templates.rst)
+> Pinned source for SearXNG master: [docs/dev/templates.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/templates.rst)
 
 <a id="simple-theme-templates"></a>
 
@@ -7,7 +7,7 @@
 The simple template is complex, it consists of many different elements and also
 uses macros and include statements.  The following is a rough overview that we
 would like to give the developer at hand, details must still be taken from the
-[sources](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/).
+[sources](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/).
 
 A [result item](https://docs.searxng.org/dev/result_types/index.html#result-types) can be of different media types.  The media
 type of a result is defined by the `result_type.Result.template`.  To
@@ -25,7 +25,7 @@ in the result item must be set to the desired type.
 Execpt `image.html` and some others this macro is used in nearly all result
 types in the [main result list](https://docs.searxng.org/dev/templates.html#main-result-list).
 
-Fields used in the template [macro result\_header](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/macros.html):
+Fields used in the template [macro result\_header](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/macros.html):
 
 **url :  `str`**
 
@@ -46,7 +46,7 @@ URL of a image or thumbnail that is displayed in the result item.
 Execpt `image.html` and some others this macro is used in nearly all result
 types in the [main result list](https://docs.searxng.org/dev/templates.html#main-result-list).
 
-Fields used in the template [macro result\_sub\_header](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/macros.html):
+Fields used in the template [macro result\_sub\_header](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/macros.html):
 
 **publishedDate : `datetime.datetime`**
 
@@ -72,7 +72,7 @@ Miscellaneous metadata.
 
 ## `engine_data_form`
 
-The `engine_data_form` macro is used in [results,html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/results.html) in a HTML `<form/>` element.  The
+The `engine_data_form` macro is used in [results,html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/results.html) in a HTML `<form/>` element.  The
 intention of this macro is to pass data of a engine from one `response` to the `searx.search.SearchQuery`
 of the next `request`.
 
@@ -99,7 +99,7 @@ def request(query, params):
 # Main Result List
 
 The **media types** of the **main result type** are the template files in
-the [result\_templates](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates).
+the [result\_templates](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates).
 
 <a id="template-default"></a>
 
@@ -110,7 +110,7 @@ Displays result fields from:
 - [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
 - [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
 
-Additional fields used in the [default.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/default.html):
+Additional fields used in the [default.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/default.html):
 
 **content :  `str`**
 
@@ -124,28 +124,6 @@ URL of an embedded `<iframe>` / the frame is collapsible.
 
 URL of an embedded `<audio controls>`.
 
-<a id="template-videos"></a>
-
-## `videos.html`
-
-Displays result fields from:
-
-- [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
-- [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
-
-Additional fields used in the [videos.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/videos.html):
-
-**iframe\_src : `str`**
-
-URL of an embedded `<iframe>` / the frame is collapsible.
-
-The videos are displayed as small thumbnails in the main results list, there
-is an additional button to collaps/open the embeded video.
-
-**content :  `str`**
-
-Description of the code fragment.
-
 <a id="template-torrent"></a>
 
 ## `torrent.html`
@@ -157,7 +135,7 @@ Displays result fields from:
 - [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
 - [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
 
-Additional fields used in the [torrent.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/torrent.html):
+Additional fields used in the [torrent.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/torrent.html):
 
 **magnetlink:**
 
@@ -195,7 +173,7 @@ Displays result fields from:
 - [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
 - [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
 
-Additional fields used in the [map.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/map.html):
+Additional fields used in the [map.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/map.html):
 
 **content :  `str`**
 
@@ -314,7 +292,7 @@ Displays result fields from:
 
 - [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header)
 
-Additional fields used in the [paper.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/paper.html):
+Additional fields used in the [paper.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/paper.html):
 
 **content :  `str`**
 
@@ -389,7 +367,7 @@ Displays result fields from:
 
 - [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header)
 
-Additional fields used in the [packages.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/packages.html):
+Additional fields used in the [packages.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/packages.html):
 
 **package\_name : `str`**
 
@@ -444,7 +422,7 @@ Displays result fields from:
 - [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
 - [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
 
-Additional fields used in the [products.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/products.html):
+Additional fields used in the [products.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/products.html):
 
 **content :  `str`**
 

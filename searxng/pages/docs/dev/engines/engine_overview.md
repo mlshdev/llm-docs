@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/engines/engine_overview.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/engine_overview.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/engine_overview.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/engine_overview.rst)
 
 <a id="engines-dev"></a>
 
@@ -16,7 +16,7 @@ better results.
 
 Because there is no general search API which could be used for every search
 engine, an adapter has to be built between SearXNG and the external search
-engines.  Adapters are stored under the folder [searx/engines](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines).
+engines.  Adapters are stored under the folder [searx/engines](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines).
 
 <a id="general-engine-configuration"></a>
 
