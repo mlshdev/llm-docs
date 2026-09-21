@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/hubspot.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/integrations/builtin/credentials/hubspot.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/hubspot.md](https://github.com/n8n-io/n8n-docs/blob/c43a0ee7369b37df0ae8d4176b79365055c77a5b/docs/integrations/builtin/credentials/hubspot.md)
 
 # HubSpot credentials <a id="hubspot-credentials"></a>
 
@@ -37,11 +37,11 @@ To generate a service key:
 
 1. In your HubSpot account, go to **Development** > **Keys** > **Service Keys**. (You can also find **Service Keys** under **Settings** > **Account Management** > **Integrations** > **Service Keys**.)
 
-![The Service Keys page in HubSpot's Development menu](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/integrations/.gitbook/assets/service_keys_main.png)
+![The Service Keys page in HubSpot's Development menu](https://raw.githubusercontent.com/n8n-io/n8n-docs/c43a0ee7369b37df0ae8d4176b79365055c77a5b/docs/integrations/.gitbook/assets/service_keys_main.png)
 
 2. Select **Create service key**.
 
-![The Create Service Key form with name and scopes fields](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/integrations/.gitbook/assets/service_keys_create.png)
+![The Create Service Key form with name and scopes fields](https://raw.githubusercontent.com/n8n-io/n8n-docs/c43a0ee7369b37df0ae8d4176b79365055c77a5b/docs/integrations/.gitbook/assets/service_keys_create.png)
 
 3. Enter a descriptive **Name** for your key.
 4. Select **Add new scope** and choose the permissions your integration needs. Refer to [Required scopes for HubSpot node](#required-scopes-for-hubspot-node) for a list of recommended scopes.

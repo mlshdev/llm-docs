@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/build/frontend-extension-tutorial.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/extensions/extensions-sdk/build/frontend-extension-tutorial.md)
+> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/build/frontend-extension-tutorial.md](https://github.com/docker/docs/blob/71fa06427156ab4e87b88cdc9983d2efea8b7519/content/manuals/extensions/extensions-sdk/build/frontend-extension-tutorial.md)
 
 To start creating your extension, you first need a directory with files which range from the extension’s source code to the required extension-specific files. This page provides information on how to set up an extension with a more advanced frontend.
 
@@ -178,7 +178,7 @@ provide you with type definitions for the extension APIs and auto-completion in 
 npm install @docker/extension-api-client-types --save-dev
 ```
 
-![Auto completion in an IDE](https://raw.githubusercontent.com/docker/docs/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/extensions/extensions-sdk/build/images/types-autocomplete.png)
+![Auto completion in an IDE](https://raw.githubusercontent.com/docker/docs/71fa06427156ab4e87b88cdc9983d2efea8b7519/content/manuals/extensions/extensions-sdk/build/images/types-autocomplete.png)
 
 For example, you can use the `docker.cli.exec` function to get the list of all the containers via the `docker ps --all`
 command and display the result in a table.
@@ -264,7 +264,7 @@ export function App() {
 
 ```
 
-![Screenshot of the container list.](https://raw.githubusercontent.com/docker/docs/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/extensions/extensions-sdk/build/images/react-extension.png)
+![Screenshot of the container list.](https://raw.githubusercontent.com/docker/docs/71fa06427156ab4e87b88cdc9983d2efea8b7519/content/manuals/extensions/extensions-sdk/build/images/react-extension.png)
 
 **Vue**
 

@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/durable-scheduler.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/deploy/host-n8n/configure-n8n/durable-scheduler.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/durable-scheduler.md](https://github.com/n8n-io/n8n-docs/blob/c43a0ee7369b37df0ae8d4176b79365055c77a5b/docs/deploy/host-n8n/configure-n8n/durable-scheduler.md)
 
 # Durable scheduler
 
@@ -132,6 +132,8 @@ export N8N_METRICS_INCLUDE_SCHEDULER_METRICS=true
 
 Only main instances emit scheduler metrics. To set up the endpoint itself, see [Enable Prometheus metrics](https://docs.n8n.io/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-prometheus-metrics). To chart the metrics, see [Visualize metrics with Grafana](https://docs.n8n.io/deploy/host-n8n/keep-n8n-running/visualize-metrics-with-grafana); n8n publishes a [ready-made durable scheduler dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-scheduler) with a suggested action for each panel.
 
+n8n's own maintenance tasks have their own metric set, behind `N8N_METRICS_INCLUDE_SYSTEM_TASK_METRICS`. It covers them whether they run on the durable scheduler or on an in-memory timer. See [System tasks](https://docs.n8n.io/deploy/host-n8n/configure-n8n/system-tasks).
+
 Two words in the metric names need translating. A *task* is a run the scheduler recorded in the database. An *occurrence* is a run it computed from a schedule, which becomes a task once materialization records it. Most series carry a `task_type` label, either `workflow:schedule-trigger` or `workflow:poll-trigger`, so you can tell Schedule Trigger nodes and poll triggers apart.
 
 ### Queue health
@@ -200,3 +202,5 @@ Only main instances emit them. They come from the poll engine itself, not the sc
 The two cursor metrics track the dedicated cursor table. A node starts reporting them with its first poll after you turn on [durable poll cursors](#durable-poll-cursors). It keeps reporting them after you turn the setting off, because its cursor stays in the table.
 
 All names above assume the default `n8n_` metrics prefix. If you set `N8N_METRICS_PREFIX`, substitute your own.
+
+See [Configure n8n](https://docs.n8n.io/deploy/host-n8n/configure-n8n) for other configuration topics.

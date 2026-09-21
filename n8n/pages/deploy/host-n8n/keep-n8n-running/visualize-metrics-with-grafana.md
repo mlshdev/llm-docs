@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/deploy/host-n8n/keep-n8n-running/visualize-metrics-with-grafana.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/deploy/host-n8n/keep-n8n-running/visualize-metrics-with-grafana.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/keep-n8n-running/visualize-metrics-with-grafana.md](https://github.com/n8n-io/n8n-docs/blob/c43a0ee7369b37df0ae8d4176b79365055c77a5b/docs/deploy/host-n8n/keep-n8n-running/visualize-metrics-with-grafana.md)
 
 # Grafana <a id="grafana"></a>
 
@@ -150,6 +150,10 @@ n8n exposes queue-depth, scheduling-lag, dispatch, retry, and dead-letter metric
 ## Poll trigger observability
 
 n8n exposes poll-duration, poll-error, overlap, and cursor-commit metrics for [poll triggers](https://docs.n8n.io/deploy/host-n8n/configure-n8n/durable-scheduler#poll-triggers). Enable them with `N8N_METRICS_INCLUDE_POLL_TRIGGER_METRICS`, then see [Poll trigger metrics](https://docs.n8n.io/deploy/host-n8n/configure-n8n/durable-scheduler#poll-trigger-metrics) for what each metric means. n8n publishes a [ready-to-use dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-poll-triggers) for them.
+
+## System task observability
+
+n8n exposes run-duration, last-success, in-flight, skip, and timer-lag metrics for its own [system tasks](https://docs.n8n.io/deploy/host-n8n/configure-n8n/system-tasks), the maintenance jobs that prune and compact your data. Enable them with `N8N_METRICS_INCLUDE_SYSTEM_TASK_METRICS`, then see [System task observability](https://docs.n8n.io/deploy/host-n8n/configure-n8n/system-tasks#observability) for what each metric means. n8n publishes a [ready-to-use dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-system-tasks) for them.
 
 ## Workflow name lookup <a id="workflow-name-lookup"></a>
 

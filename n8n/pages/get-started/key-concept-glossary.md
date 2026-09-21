@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/get-started/key-concept-glossary.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/get-started/key-concept-glossary.md)
+> Pinned source for n8n main: [docs/get-started/key-concept-glossary.md](https://github.com/n8n-io/n8n-docs/blob/c43a0ee7369b37df0ae8d4176b79365055c77a5b/docs/get-started/key-concept-glossary.md)
 
 # n8n Glossary
 

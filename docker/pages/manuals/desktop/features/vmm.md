@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/features/vmm.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/desktop/features/vmm.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/vmm.md](https://github.com/docker/docs/blob/71fa06427156ab4e87b88cdc9983d2efea8b7519/content/manuals/desktop/features/vmm.md)
 
 # Virtual Machine Manager
 
@@ -11,7 +11,9 @@ Docker Desktop supports multiple Virtual Machine Managers (VMMs) to power the Li
 - Availability: Beta
 - Requires: Docker Desktop 4.86 or later
 
-Docker VMM is a container-optimized hypervisor. From Docker Desktop 4.86, Docker VMM uses Docker's own hypervisor, replacing `libkrun` used in version 4.35 - 4.85 for Mac users. Built specifically for container workloads, Docker VMM:
+Docker VMM is a container-optimized virtual machine manager. Starting with
+Docker Desktop 4.86, it uses Docker's own VMM implementation instead of
+`libkrun`, which was used in versions 4.35 through 4.85 on Mac. Built specifically for container workloads, Docker VMM:
 
 - Returns idle memory to the host when containers aren't active, so Docker Desktop doesn't hold RAM it's not using
 - Improves file I/O between container and host, reducing latency in the edit-compile-test loop
@@ -32,7 +34,7 @@ Docker VMM requires a minimum of 4 GB of memory allocated to the Docker Linux VM
 If you previously had Docker VMM selected, which engine runs depends on your version:
 
 - Docker Desktop 4.35 and earlier is backed by `libkrun`
-- Docker Desktop 4.86 and later is backed by Docker's own hypervisor
+- Docker Desktop 4.86 and later uses Docker's own VMM implementation
 
 If you're upgrading from version 4.35 onwards, your setting is preserved and Docker Desktop switches to the new Docker VMM automatically on restart.
 

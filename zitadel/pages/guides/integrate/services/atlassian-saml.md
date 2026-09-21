@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/services/atlassian-saml.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/integrate/services/atlassian-saml.mdx)
+> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/integrate/services/atlassian-saml.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/integrate/services/atlassian-saml.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/services/atlassian-saml
 
 This guide shows how to enable login with ZITADEL on Atlassian.
@@ -26,10 +26,10 @@ The following instructions give you a quick overview of the most important steps
 
 Login to Atlassian's security center and select Identity providers.
 Select the option to Set up SAML single sign-on.
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/atlassian/atlassian-01.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/atlassian/atlassian-01.png)
 
 For Identity Provider select "Other provider" and enter a Directory Name.
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/atlassian/atlassian-02.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/atlassian/atlassian-02.png)
 
 Follow the wizard.
 Fill in the following information:
@@ -38,7 +38,7 @@ Fill in the following information:
 - `Identity provider SSO URL`: {your\_instance\_domain}/saml/v2/SSO
 - `Public x509 certificate`: You need to download and paste the value of the certificate from {your\_instance\_domain}/saml/v2/certificate
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/atlassian/atlassian-03.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/atlassian/atlassian-03.png)
 
 Create a new .xml file with the following minimal SAML metadata contents:
 
@@ -56,32 +56,32 @@ Set or replace the variables with the values from the next screen as follows:
 - `${ENTITYID}`: Copy the value from "Service provider entity URL"
 - `${ACSURL}`: Copy the value from "Service provider assertion consumer service URL"
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/atlassian/atlassian-04.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/atlassian/atlassian-04.png)
 
 ## **ZITADEL**: Create the application
 
 In your existing project:
 
 Press the "+"-button to add an application
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/project.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/project.png)
 
 Fill in a name for the application and chose the SAML type, then click "Continue".
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/application_saml.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/application_saml.png)
 
 Either fill in the URL where ZITADEL can read the metadata from, or upload the metadata XML directly, then click "Continue".
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
 
 Check your application, if everything is correct, press "Create".
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/application_saml_create.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/application_saml_create.png)
 
 ## **Atlassian**: Setup authentication policies
 
 Under Authentication policies, select "Edit" on the directory that you have created.
 Then check the box "Enforce single sign-on" and confirm by clicking "Update".
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/atlassian/atlassian-05.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/atlassian/atlassian-05.png)
 
 Add members to your policy.
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/atlassian/atlassian-06.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/atlassian/atlassian-06.png)
 
 ## Verify settings
 

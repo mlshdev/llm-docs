@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `56a86f70b4ea8b225c0e5e2231e42a4925931686`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `4962c60abcb8d9bf359d92ccc07644abd5d8e610`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -202,6 +202,15 @@
 - [Troubleshoot payment card declines](pages/accounts-billing/manage-payment-cards.md): Resolve declined payment cards and prevent service interruptions on Runpod. Review account, billing, and management details for Runpod. (4017 bytes)
 - [Sales tax on Runpod purchases](pages/accounts-billing/sales-tax.md): Understand how sales tax applies to Runpod purchases, what determines your rate, and how it appears on your receipts. (2082 bytes)
 - [Adding your tax ID](pages/accounts-billing/add-tax-id.md): Add a tax ID to your Runpod account to update how tax is applied to your purchases. (1776 bytes)
+
+## Organizations (Beta)
+
+- [Organizations](pages/organizations/orgs-overview.md): Manage enterprise GPU workloads with centralized resource ownership, post-paid billing, and role-based access control. (3566 bytes)
+- [Access](pages/organizations/orgs-access.md): Control who joins your organization with email invitations. Learn how to invite, accept, and remove members. (1768 bytes)
+- [Roles](pages/organizations/org-roles.md): Control what organization members can do with four built-in roles. Learn which actions each role can perform. (2631 bytes)
+- [Groups](pages/organizations/orgs-groups.md): Organize organization members into groups to control resource visibility and structure teams within your organization. (1781 bytes)
+- [Resource tagging](pages/organizations/orgs-resource-tagging.md): Attach key-value tags to organization resources to track spend, filter usage, and attribute costs across teams, projects, and cost centers. (1931 bytes)
+- [Billing](pages/organizations/orgs-billing.md): Understand how organization billing works, including post-paid invoicing, Billing Explorer access, and cost centers for spend attribution. (1190 bytes)
 
 ## Integrations
 

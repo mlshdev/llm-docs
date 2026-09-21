@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/service-accounts/authenticate-service-accounts.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/integrate/service-accounts/authenticate-service-accounts.mdx)
+> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/integrate/service-accounts/authenticate-service-accounts.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/integrate/service-accounts/authenticate-service-accounts.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/service-accounts/authenticate-service-accounts
 
 > **Terminology update**
@@ -24,6 +24,7 @@ Unlike users, service accounts don't rely on traditional login methods (e.g., us
 ### Segregated authorization
 
 Manage authorization for service accounts separately from human users, providing an extra layer of control.
+For service accounts with instance-level permissions (login client, break-glass owner), use a [dedicated organization for instance administrators](https://zitadel.com/docs/guides/manage/console/administrator-hardening). Organization permissions and login settings for application organizations must not overlap with instance administrators.
 
 ### API and backend access
 

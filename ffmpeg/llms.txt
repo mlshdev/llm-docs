@@ -1,6 +1,6 @@
 # FFmpeg master
 
-> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `5d3cb3dc17245fd9c16f0cb69d8d1076c3410656`.
+> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `cdc79d694988afd9e2a028ddf500b1df3176c611`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for FFmpeg master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -10,7 +10,7 @@
 
 ## Manuals
 
-- [Synopsis](pages/doc/ffmpeg.md): ffmpeg \[global\options] {\[input\file\options] -i inputurl} ... {\[output\file\options] outputurl} ... (148583 bytes)
+- [Synopsis](pages/doc/ffmpeg.md): ffmpeg \[global\options] {\[input\file\options] -i inputurl} ... {\[output\file\options] outputurl} ... (148182 bytes)
 - [Synopsis](pages/doc/ffplay.md): ffplay \[options] \[inputurl] (22644 bytes)
 - [Synopsis](pages/doc/ffprobe.md): ffprobe \[options] inputurl (33978 bytes)
 - [Description](pages/doc/ffmpeg-utils.md): This document describes some generic features and utilities provided by the libavutil library. (22298 bytes)

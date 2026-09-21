@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.17.3: [apps/docs/content/concepts/features/audit-trail.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/concepts/features/audit-trail.mdx)
+> Pinned source for ZITADEL v4.18.0: [apps/docs/content/concepts/features/audit-trail.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/concepts/features/audit-trail.mdx)
 > Canonical documentation: https://zitadel.com/docs/concepts/features/audit-trail
 
 ZITADEL provides you with a built-in audit trail to track all changes and events over an unlimited period of time.
@@ -6,7 +6,7 @@ Most other solutions replace a historical record and track changes in a separate
 ZITADEL only ever appends data in an [Eventstore](https://zitadel.com/docs/concepts/eventstore/overview), keeping all historical record.
 The audit trail itself is identical to the state, since ZITADEL calculates the state from all the past changes.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/concepts/audit-trail/audit-log-events.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/concepts/audit-trail/audit-log-events.png)
 
 This form of audit log has several benefits over storing classic audit logs.
 You can view past data in-context of the whole system at a single point in time.
@@ -28,14 +28,14 @@ You can check the last changes of most objects in the [Console](https://zitadel.
 In the following screenshot you can see an example of last changes on a [user](https://zitadel.com/docs/guides/manage/console/users-overview).
 The same view is available on several other objects such as organization or project.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/myprofile.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/console/myprofile.png)
 
 ### Event View
 
 Administrators can see all events across an instance and filter them directly in [Console](https://zitadel.com/docs/guides/manage/console/console-overview).
 Go to your default settings and then click on the Tab **Events** to open the Event Viewer or browse to $CUSTOM\_DOMAIN/ui/console/events
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/concepts/audit-trail/event-viewer.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/concepts/audit-trail/event-viewer.png)
 
 ### Event API
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/engine/docker_image_inspect.yaml](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/data/cli/engine/docker_image_inspect.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_image_inspect.yaml](https://github.com/docker/docs/blob/71fa06427156ab4e87b88cdc9983d2efea8b7519/data/cli/engine/docker_image_inspect.yaml)
 
 # docker image inspect
 

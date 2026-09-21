@@ -8,20 +8,20 @@
   "repository": "n8n-io/n8n-docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-18T11:52:41Z",
-  "documentationDigest": "08140149fd3239afddd54bce6a54b320d86041a55f056e89b42bf95e6c024262",
-  "sourceCommit": "d6f969044f09a928e5d1459a080f6289b68d7be5",
-  "documentCount": 1324,
+  "sourceCommittedAt": "2026-09-21T16:03:13Z",
+  "documentationDigest": "76476316122882b99a3aec367017aed2c9cb3548148ef953abf9b995fb792d9b",
+  "sourceCommit": "c43a0ee7369b37df0ae8d4176b79365055c77a5b",
+  "documentCount": 1325,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 7211697,
-      "documentCount": 1324,
-      "sha256": "2a5a67e643682688a1319eb9d1c782f25594b3829f67aeb90cee445cde2ab2ed"
+      "byteLength": 7227696,
+      "documentCount": 1325,
+      "sha256": "5aa552ac3fd20617d35ef7c79aa0ad00e14b008c16d10f62fc861472d62e38eb"
     }
   ],
-  "outputDigest": "62eae7fcb38962aaf4fa0dfa6ae65c2c9de90dfac1ac2463c13455b7d55b4ed3",
+  "outputDigest": "a366ad192db31eac060f23f5a1338cbd47409f97a5fe4127268af115505ab7ab",
   "notes": [
     "n8n tracks the latest main-branch commit because n8n-docs does not publish releases or tags.",
     "Pages follow each GitBook space's SUMMARY.md navigation; unpublished pages, utility spaces, and reusable fragments are omitted as standalone documents.",

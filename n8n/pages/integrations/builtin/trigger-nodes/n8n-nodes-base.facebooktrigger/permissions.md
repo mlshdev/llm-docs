@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/permissions.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/permissions.md)
+> Pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/permissions.md](https://github.com/n8n-io/n8n-docs/blob/c43a0ee7369b37df0ae8d4176b79365055c77a5b/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/permissions.md)
 
 # Facebook Trigger Permissions object <a id="facebook-trigger-permissions-object"></a>
 

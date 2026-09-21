@@ -8,38 +8,48 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-18T14:19:00Z",
-  "documentationDigest": "f47c272dbeecd102fe148462e7706bda8f2631e0bfc09092226d409dc8f6715c",
-  "sourceCommit": "7d6c8bf81ab88fc6f5c4893b6259864d29de574c",
-  "documentCount": 1628,
+  "sourceCommittedAt": "2026-09-21T16:34:52Z",
+  "documentationDigest": "c14f89f1b04a90a8fe46b8f14ae03253b774dac7b2e675c40c90993ac55fd53f",
+  "sourceCommit": "71fa06427156ab4e87b88cdc9983d2efea8b7519",
+  "documentCount": 1626,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
       "byteLength": 687,
       "documentCount": 0,
-      "sha256": "4c3b2e12cf07c6853622224bb12429ad46d1f8cf34dd754ce9a1d04c12b798da"
+      "sha256": "c9d2a83015ac3c838cff74c4a79688c76a3fb823e337261ebc524de0cb3eaa7a"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8372092,
-      "documentCount": 784,
-      "sha256": "40db9811a326e350c4062b9a4d365a34195c98a56ab6c30b598e757ccb92a524"
+      "byteLength": 8384923,
+      "documentCount": 783,
+      "sha256": "2318d46a64bf3c12179d2ae1b7ce62ae36c61ad1ed57d02bcfd97e8637840ca2"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 8317677,
-      "documentCount": 198,
-      "sha256": "62e4a5b9344c0959c86f00f53a2f6478b93373c71d3d4ecd2b72b2c49b475f63"
+      "byteLength": 8293806,
+      "documentCount": 197,
+      "sha256": "0b1b8d8937ea31b28cde522f9a365b0459bbd0ab910750a59aa4fe79b6ae49b3"
     },
     {
       "name": "llms-full.003.txt",
       "byteLength": 6518620,
       "documentCount": 646,
-      "sha256": "fc8353216d1306e3b44acd09d44a0dd3e6d6bafa9e5fb1babe2ddd017d9a6302"
+      "sha256": "c4116e1afdad634d40ab1ec585a6aa37825db5a709137ad6f053ac6b918dc186"
     }
   ],
-  "outputDigest": "bdf540f7b73ad3324031ef4f2f506c5287ba145f487d0d2e4503fb88c99c6ace",
+  "outputDigest": "8589974d2c2109e37f12a1883a47688c915b04946ccc6710bcd138fda67df9e4",
+  "quarantined": [
+    {
+      "sourcePath": "content/manuals/ai/sandboxes/architecture.md",
+      "reason": "Unsupported Docker shortcode interactive-diagram in content/manuals/ai/sandboxes/architecture.md"
+    },
+    {
+      "sourcePath": "content/manuals/ai/sandboxes/security/_index.md",
+      "reason": "Unsupported Docker shortcode interactive-diagram in content/manuals/ai/sandboxes/security/_index.md"
+    }
+  ],
   "notes": [
     "Docker tracks the latest main-branch commit because docker/docs does not publish current releases.",
     "Hugo content and vendored Markdown mounts are normalized without executing Hugo; includes and documentation shortcodes are expanded into plain Markdown.",

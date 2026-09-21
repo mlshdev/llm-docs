@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `7d6c8bf81ab88fc6f5c4893b6259864d29de574c`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `71fa06427156ab4e87b88cdc9983d2efea8b7519`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -8,6 +8,7 @@
 - Hugo content and vendored Markdown mounts are normalized without executing Hugo; includes and documentation shortcodes are expanded into plain Markdown.
 - Docker and sbx CLI references, OpenAPI endpoints, glossary entries, and sample indexes are generated from data pinned in the same source archive.
 - Non-rendered stubs, redirects, assets, and include-only fragments are omitted.
+- Quarantined sources (2): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
 
 ## Get Started
 
@@ -327,7 +328,6 @@
 - [Kiro](pages/manuals/ai/sandboxes/agents/kiro.md): This guide covers authentication, configuration, and usage of Kiro in a sandboxed environment. (2947 bytes)
 - [OpenCode](pages/manuals/ai/sandboxes/agents/opencode.md): This guide covers authentication, configuration, and usage of OpenCode in a sandboxed environment. (3562 bytes)
 - [Shell](pages/manuals/ai/sandboxes/agents/shell.md): sbx run shell drops you into a Bash login shell inside a sandbox with no pre-installed agent binary. It's useful for installing and configuring agents manually, testing custom implementations, or inspecting a running en… (1787 bytes)
-- [Architecture](pages/manuals/ai/sandboxes/architecture.md): This page explains how Docker Sandboxes work under the hood. For the security properties of the architecture, see Sandbox isolation. (7496 bytes)
 - [Manage credentials](pages/manuals/ai/sandboxes/configuration/credentials.md): Most agents need an API key for their model provider. An HTTP/HTTPS proxy on your host intercepts outbound requests from the sandbox, looks up the matching credential on the host, and overwrites the auth header before f… (30236 bytes)
 - [Sandbox environment files](pages/manuals/ai/sandboxes/configuration/environment-files.md): A sandbox environment file captures the setup for a project in a sbxenv.yaml file. Share the file with project contributors so they use the same agent, tools, resources, and credentials without reproducing CLI flags and… (30497 bytes)
 - [Enable NVIDIA GPU passthrough](pages/manuals/ai/sandboxes/configuration/gpu-passthrough.md): Docker Sandboxes supports GPU passthrough, which allows running workloads against a physical NVIDIA GPU. (5053 bytes)
@@ -372,7 +372,6 @@
 - [MCP gateway](pages/manuals/ai/sandboxes/mcp-gateway.md): Docker Sandboxes includes an MCP gateway for connecting agents to Model Context Protocol servers. The gateway gives the agent inside the sandbox one MCP endpoint, while sbx manages the registered servers, OAuth credenti… (20305 bytes)
 - [Docker Sandboxes release notes](pages/manuals/ai/sandboxes/release-notes.md): This page lists changes in recent stable releases of Docker Sandboxes. For the full release history, including pre-releases and downloads, see the Docker Sandboxes releases on GitHub. (24737 bytes)
 - [Default security posture](pages/manuals/ai/sandboxes/security/defaults.md): A sandbox created with sbx run claude and no additional flags has the following security posture. (3813 bytes)
-- [Security model](pages/manuals/ai/sandboxes/security/index.md): Docker Sandboxes run AI agents in microVMs so they can execute code, install packages, and use tools without accessing host resources beyond those you share. Multiple isolation layers protect your host system. (7852 bytes)
 - [Isolation layers](pages/manuals/ai/sandboxes/security/isolation.md): AI coding agents need to execute code, install packages, and run tools on your behalf. Docker Sandboxes run each agent in its own microVM. Five isolation layers protect your host: hypervisor, network, Docker Engine, wor… (12680 bytes)
 - [Troubleshooting](pages/manuals/ai/sandboxes/troubleshooting.md): Before digging into a specific issue, run sbx diagnose to check for common problems with your installation, such as a missing CLI binary, daemon reachability problems, a CLI/daemon version mismatch, missing storage dire… (19611 bytes)
 - [Usage](pages/manuals/ai/sandboxes/usage.md): Use this page as a command-oriented guide to day-to-day sbx operations. For scenario-based recommendations, see Workflow patterns. (14087 bytes)
@@ -543,14 +542,14 @@
 - [Explore networking how-tos on Docker Desktop](pages/manuals/desktop/features/networking/networking-how-tos.md): This page explains how to configure and use networking features, connect containers to host services, work behind proxies or VPNs, and troubleshoot common issues. (7836 bytes)
 - [Synchronized file shares](pages/manuals/desktop/features/synchronized-file-sharing.md): Synchronized file sharing requirements (6198 bytes)
 - [Using USB/IP with Docker Desktop](pages/manuals/desktop/features/usbip.md): USB/IP support requirements (3679 bytes)
-- [Virtual Machine Manager](pages/manuals/desktop/features/vmm.md): Docker Desktop supports multiple Virtual Machine Managers (VMMs) to power the Linux VM that runs containers. The options available depend on your platform. (3829 bytes)
+- [Virtual Machine Manager](pages/manuals/desktop/features/vmm.md): Docker Desktop supports multiple Virtual Machine Managers (VMMs) to power the Linux VM that runs containers. The options available depend on your platform. (3862 bytes)
 - [Wasm workloads](pages/manuals/desktop/features/wasm.md): Wasm workloads requirements (8053 bytes)
 - [WSL 2 best practices for Docker Desktop on Windows](pages/manuals/desktop/features/wsl/best-practices.md): This page covers recommendations when running Docker Desktop on Windows using WSL 2, including version requirements and file system performance. (2294 bytes)
 - [Custom kernels on WSL](pages/manuals/desktop/features/wsl/custom-kernels.md): Docker Desktop depends on several kernel features built into the default WSL 2 Linux kernel distributed by Microsoft. (1079 bytes)
 - [Docker Desktop WSL 2 backend on Windows](pages/manuals/desktop/features/wsl/index.md): Windows Subsystem for Linux (WSL) 2 is a full Linux kernel built by Microsoft that lets Linux distributions run without managing virtual machines. With Docker Desktop running on WSL 2, users can leverage Linux workspace… (6110 bytes)
 - [Develop with Docker Desktop using WSL 2 on Windows](pages/manuals/desktop/features/wsl/use-wsl.md): The following section describes how to start developing your applications using Docker and WSL 2. (1379 bytes)
 - [Docker Desktop](pages/manuals/desktop/index.md): Docker Desktop is a one-click-install application for your Mac, Linux, or Windows environment that lets you build, share, and run containerized applications and microservices. (3171 bytes)
-- [Docker Desktop release notes](pages/manuals/desktop/release-notes.md): This page contains information about the new features, improvements, known issues, and bug fixes in Docker Desktop releases. (341111 bytes)
+- [Docker Desktop release notes](pages/manuals/desktop/release-notes.md): This page contains information about the new features, improvements, known issues, and bug fixes in Docker Desktop releases. (346508 bytes)
 - [How to back up and restore your Docker Desktop data](pages/manuals/desktop/settings-and-maintenance/backup-and-restore.md): Use this procedure to back up and restore your images and container data. This is useful if you want to reset your VM disk or to move your Docker environment to a new computer, or recover from a failed Docker Desktop up… (4685 bytes)
 - [Change your Docker Desktop settings](pages/manuals/desktop/settings-and-maintenance/settings.md): Customize Docker Desktop behavior and optimize performance and resource usage with Docker Desktop's settings. (51873 bytes)
 - [Allowlist for Docker Desktop](pages/manuals/desktop/setup/allow-list.md): Allow list requirements (2156 bytes)

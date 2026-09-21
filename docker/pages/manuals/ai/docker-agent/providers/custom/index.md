@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/custom/index.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/_vendor/github.com/docker/docker-agent/docs/providers/custom/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/custom/index.md](https://github.com/docker/docs/blob/71fa06427156ab4e87b88cdc9983d2efea8b7519/_vendor/github.com/docker/docker-agent/docs/providers/custom/index.md)
 
 *Define reusable provider configurations with shared defaults for any provider type — OpenAI, Anthropic, Google, Bedrock, and more.*
 

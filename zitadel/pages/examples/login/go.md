@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.17.3: [apps/docs/content/examples/login/go.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/examples/login/go.mdx)
+> Pinned source for ZITADEL v4.18.0: [apps/docs/content/examples/login/go.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/examples/login/go.mdx)
 > Canonical documentation: https://zitadel.com/docs/examples/login/go
 
 This integration guide demonstrates the recommended way to incorporate ZITADEL into your Go web application.
@@ -19,11 +19,11 @@ Before we begin developing our application, we need to perform a few setup steps
 You'll need to provide some information about your app. We recommend creating a new app to start from scratch. Navigate to your Project, then add a new application at the top of the page.
 Select the **Web** application type and continue.
 
-![Create app in management console](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/app-create.png)
+![Create app in management console](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/go/app-create.png)
 
 We recommend that you use [Proof Key for Code Exchange (PKCE)](https://zitadel.com/docs/apis/openidoauth/grant-types#proof-key-for-code-exchange) for all applications.
 
-![Create app in management console - set auth method](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/app-create-auth.png)
+![Create app in management console - set auth method](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/go/app-create-auth.png)
 
 ### Redirect URIs
 
@@ -32,7 +32,7 @@ The Post-logout redirect send the users back to a route on your application afte
 
 > If you are following along with the [example](https://github.com/zitadel/zitadel-go), set the dev mode to `true`, the Redirect URIs to `http://localhost:8089/auth/callback` and Post-logout redirect URI to <http://localhost:8089/>>.
 
-![Create app in management console - set redirectURI](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/app-create-redirect.png)
+![Create app in management console - set redirectURI](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/go/app-create-redirect.png)
 
 Continue and create the application.
 
@@ -40,7 +40,7 @@ Continue and create the application.
 
 After successful creation of the app, a pop-up will appear displaying the app's client ID. Copy the client ID, as you will need it to configure your Go application.
 
-![Create app in management console - copy client\_id](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/app-create-clientid.png)
+![Create app in management console - copy client\_id](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/go/app-create-clientid.png)
 
 ## Go setup
 
@@ -136,11 +136,11 @@ go run main.go --domain my-domain.zitadel.cloud --key XKv2Lqd7YAq13NUZVUWZEWZeru
 
 If you then visit on <http://localhost:8089> you should get the following screen:
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/app-home.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/go/app-home.png)
 
 By clicking on `Login` you will be redirected to your ZITADEL instance. After login with your existing user you will be presented the profile page:
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/app-profile.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/go/app-profile.png)
 
 ## Completion
 

@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/manage/cloud/support.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/manage/cloud/support.mdx)
+> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/manage/cloud/support.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/manage/cloud/support.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/cloud/support
 
 > **Note**
@@ -9,9 +9,9 @@
 
 We always recommend first having a look at our [documentation](https://zitadel.com/docs), [discord chat](https://zitadel.com/chat) and [GitHub repository](https://github.com/zitadel/zitadel). You can also ask our AI assistant for help before contacting Support.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/manuals/portal/customer_portal_general_support.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/manuals/portal/customer_portal_general_support.png)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/manuals/portal/customer_portal_general_support_inkeep.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/manuals/portal/customer_portal_general_support_inkeep.png)
 
 ## Support Request
 
@@ -26,9 +26,9 @@ Create a new support request with the following information:
 - Affected Instance (Only for cloud instances)
 - Database Version (Only for self-hosted instances)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/manuals/portal/customer_portal_support.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/manuals/portal/customer_portal_support.png)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/manuals/portal/customer_portal_support_2.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/manuals/portal/customer_portal_support_2.png)
 
 After submitting the form, you will receive a confirmation email, and our team will be in touch with you shortly.
 

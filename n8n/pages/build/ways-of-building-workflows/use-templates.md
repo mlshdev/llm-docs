@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/ways-of-building-workflows/use-templates.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/ways-of-building-workflows/use-templates.md)
+> Pinned source for n8n main: [docs/build/ways-of-building-workflows/use-templates.md](https://github.com/n8n-io/n8n-docs/blob/c43a0ee7369b37df0ae8d4176b79365055c77a5b/docs/build/ways-of-building-workflows/use-templates.md)
 
 # Workflow templates <a id="workflow-templates"></a>
 
@@ -12,7 +12,7 @@ Templates provide:
 
 ## Access templates <a id="access-templates"></a>
 
-Select ![View templates icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/build/.gitbook/assets/templates.png) **Templates** to view the templates library.
+Select ![View templates icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/c43a0ee7369b37df0ae8d4176b79365055c77a5b/docs/build/.gitbook/assets/templates.png) **Templates** to view the templates library.
 
 If you use n8n's template library, this takes you to browse [Workflows on the n8n website](https://n8n.io/workflows/). If you use a custom library provided by your organization, you'll be able to search and browse the templates within the app.
 

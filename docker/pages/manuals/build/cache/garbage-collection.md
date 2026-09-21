@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/cache/garbage-collection.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/build/cache/garbage-collection.md)
+> Pinned source for Docker main: [content/manuals/build/cache/garbage-collection.md](https://github.com/docker/docs/blob/71fa06427156ab4e87b88cdc9983d2efea8b7519/content/manuals/build/cache/garbage-collection.md)
 
 While [`docker builder prune`](https://docs.docker.com/reference/cli/docker/builder/prune/)
 or [`docker buildx prune`](https://docs.docker.com/reference/cli/docker/buildx/prune/)
