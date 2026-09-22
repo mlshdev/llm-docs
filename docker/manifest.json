@@ -11,14 +11,14 @@
   "sourceCommittedAt": "2026-09-22T16:43:14Z",
   "documentationDigest": "0db1386b9b4cc4613a7282d21ef4e5b2416295b6c41ef6d68306cc78dce781f8",
   "sourceCommit": "c69ce0fd3851270bba5473502268ff7661887b2a",
-  "documentCount": 1626,
+  "documentCount": 1624,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
       "byteLength": 687,
       "documentCount": 0,
-      "sha256": "b30a15a56f23df67c60962bcaf8f36e28a1ee6aabc4b745bb83037a731fb93bb"
+      "sha256": "f4aeb154451d803b70b3547b2872c113043fce0d309476f52f082d9a6db6d73d"
     },
     {
       "name": "llms-full.001.txt",
@@ -34,12 +34,12 @@
     },
     {
       "name": "llms-full.003.txt",
-      "byteLength": 6518620,
-      "documentCount": 646,
-      "sha256": "8e1c1e535b59010c2ca67e7f96d729917e0690756fc03798e3edffd4241fb52a"
+      "byteLength": 6514140,
+      "documentCount": 644,
+      "sha256": "d80645b37e5962895c5e4a7c3ace56611d408e47fc4d4d6e5dda333a79b83817"
     }
   ],
-  "outputDigest": "93477e6198ef7a4c5b863c035f3fad3a3ea2d068d25a67443f6a33f0e6a30042",
+  "outputDigest": "a4a04593480d0e6fba78cc4de6ac9548d2c632f9172ca73ddbe02c7d560dd0bd",
   "quarantined": [
     {
       "sourcePath": "content/manuals/ai/sandboxes/architecture.md",
@@ -48,6 +48,14 @@
     {
       "sourcePath": "content/manuals/ai/sandboxes/security/_index.md",
       "reason": "Unsupported Docker shortcode interactive-diagram in content/manuals/ai/sandboxes/security/_index.md"
+    },
+    {
+      "sourcePath": "data/cli/engine/docker_inspect.yaml",
+      "reason": "Unresolved Docker template expression in data/cli/engine/docker_inspect.yaml"
+    },
+    {
+      "sourcePath": "data/cli/engine/docker_plugin_set.yaml",
+      "reason": "Unresolved Docker template expression in data/cli/engine/docker_plugin_set.yaml"
     }
   ],
   "notes": [

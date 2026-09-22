@@ -8,7 +8,7 @@
 - Hugo content and vendored Markdown mounts are normalized without executing Hugo; includes and documentation shortcodes are expanded into plain Markdown.
 - Docker and sbx CLI references, OpenAPI endpoints, glossary entries, and sample indexes are generated from data pinned in the same source archive.
 - Non-rendered stubs, redirects, assets, and include-only fragments are omitted.
-- Quarantined sources (2): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
+- Quarantined sources (4): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
 
 ## Get Started
 
