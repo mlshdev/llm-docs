@@ -19,6 +19,7 @@ Removes all stopped containers.
 
 ## Examples
 
+````console
 ### Prune containers
 
 ```console
@@ -30,7 +31,7 @@ Deleted Containers:
 f98f9c2aa1eaf727e4ec9c0283bc7d4aa4762fbdba7f26191f26c97f64090360
 
 Total reclaimed space: 212 B
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -113,4 +114,7 @@ $ docker ps -a --format 'table {{.ID}}\t{{.Image}}\t{{.Command}}\t{{.CreatedAt}}
 
 CONTAINER ID        IMAGE               COMMAND             CREATED AT                      STATUS
 53a9bc23a516        busybox             "sh"                2017-01-04 13:11:59 -0800 PST   Exited (0) 9 minutes ago
+```
+
+```
 ```

@@ -52,11 +52,12 @@ guide for introduction to writing bake files.
 
 ## Examples
 
+````console
 ### Allow extra privileged entitlement (--allow) {#allow}
 
 ```text
 --allow=ENTITLEMENT[=VALUE]
-```
+````
 
 Entitlements are designed to provide controlled access to privileged
 operations. By default, Buildx and BuildKit operates with restricted
@@ -530,4 +531,7 @@ file definition uses the
 target "default" {
   ssh = [{ id = "default", paths = ["${homedir()}/.ssh/id_ed25519", "${homedir()}/.ssh/id_rsa"] }]
 }
+```
+
+```
 ```

@@ -38,6 +38,7 @@ and the container will continue running after receiving the signal.
 
 ## Examples
 
+````console
 ### Send a KILL signal to a container
 
 The following example sends the default `SIGKILL` signal to the container named
@@ -45,7 +46,7 @@ The following example sends the default `SIGKILL` signal to the container named
 
 ```console
 $ docker kill my_container
-```
+````
 
 ### Send a custom signal to a container (--signal) {#signal}
 
@@ -67,3 +68,6 @@ $ docker kill --signal=1 my_container
 
 Refer to the [`signal(7)`](https://man7.org/linux/man-pages/man7/signal.7.html)
 man-page for a list of standard Linux signals.
+
+```
+```

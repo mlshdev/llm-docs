@@ -43,6 +43,7 @@ Docker contexts also get the default builder instance.
 
 ## Examples
 
+````console
 ### Append a new node to an existing builder (--append) {#append}
 
 The `--append` flag changes the action of the command to append a new node to an
@@ -55,7 +56,7 @@ eager_beaver
 
 $ docker buildx create --name eager_beaver --append mycontext2
 eager_beaver
-```
+````
 
 ### Specify a configuration file for the BuildKit daemon (--buildkitd-config) {#buildkitd-config}
 
@@ -264,3 +265,6 @@ $ docker buildx create --platform linux/arm64,linux/arm/v7
 
 The `--use` flag automatically switches the current builder to the newly created
 one. Equivalent to running `docker buildx use $(docker buildx create ...)`.
+
+```
+```

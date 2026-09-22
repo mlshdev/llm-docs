@@ -24,6 +24,7 @@ import type {
   GithubSourceProject,
   ProjectBuild,
 } from "../types.ts";
+import { compareCodePoints } from "../compare.ts";
 
 const rootDocuments = [
   "README.rst",
@@ -268,8 +269,4 @@ function sectionFor(sourcePath: string): string {
     src: "Source reference",
   };
   return section ? (names[section] ?? "Documentation") : "Project";
-}
-
-function compareCodePoints(left: string, right: string): number {
-  return left < right ? -1 : left > right ? 1 : 0;
 }

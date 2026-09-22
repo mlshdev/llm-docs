@@ -61,6 +61,7 @@ The `docker buildx build` command starts a build using BuildKit.
 
 ## Examples
 
+````console
 ### Add entries to container hosts file (--add-host) {#add-host}
 
 You can add other hosts into a build container's `/etc/hosts` file by using one
@@ -69,7 +70,7 @@ or more `--add-host` flags. This example adds static addresses for hosts named
 
 ```console
 $ docker buildx build --add-host my_hostname=8.8.8.8 --add-host my_hostname_v6=2001:4860:4860::8888 .
-```
+````
 
 If you need your build to connect to services running on the host, you can use
 the special `host-gateway` value for `--add-host`. In the following example,
@@ -1203,3 +1204,6 @@ only apply to individual build steps. They don't affect the build cache key.
 > In most cases, it is recommended to let the builder automatically determine
 > the appropriate configurations. Manual adjustments should only be considered
 > when specific performance tuning is required for complex build scenarios.
+
+```
+```

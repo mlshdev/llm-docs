@@ -27,6 +27,7 @@ the `--all` flag.
 
 ## Examples
 
+````console
 ### Remove a specific build
 
 ```console
@@ -35,7 +36,7 @@ docker buildx history rm qu2gsuo8ejqrwdfii23xkkckt
 
 # Or using a relative offset
 docker buildx history rm ^1
-```
+````
 
 ### Remove multiple builds
 
@@ -51,4 +52,7 @@ docker buildx history rm ^1 ^2
 
 ```console
 docker buildx history rm --all
+```
+
+```
 ```

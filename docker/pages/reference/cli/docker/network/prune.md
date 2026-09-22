@@ -20,6 +20,7 @@ by any containers.
 
 ## Examples
 
+````console
 ```console
 $ docker network prune
 
@@ -28,7 +29,7 @@ Are you sure you want to continue? [y/N] y
 Deleted Networks:
 n1
 n2
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -94,4 +95,7 @@ NETWORK ID          NAME                DRIVER              SCOPE
 ab53663ed3c7        foo-1-min-ago       bridge              local
 97b91972bc3b        host                host                local
 f949d337b1f5        none                null                local
+```
+
+```
 ```

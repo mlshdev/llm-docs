@@ -28,6 +28,7 @@ For more information about selecting and configuring logging drivers, refer to
 
 ## Examples
 
+````console
 ### Stream log output  (-f, --follow) {#follow}
 
 The `docker logs --follow` command will continue streaming the new output from
@@ -37,6 +38,7 @@ the container's `STDOUT` and `STDERR`.
 
 Passing a negative number or a non-integer to `--tail` is invalid and the
 value is set to `all` in that case.
+
 
 ### Retrieve logs with timestamps (-t, --timestamps) {#timestamps}
 
@@ -60,11 +62,12 @@ format you may also use RFC3339Nano, `2006-01-02T15:04:05`,
 `2006-01-02T15:04:05.999999999`, `2006-01-02T07:00`, and `2006-01-02`. The local
 timezone on the client will be used if you do not provide either a `Z` or a
 `+-00:00` timezone offset at the end of the timestamp. When providing Unix
-timestamps enter seconds\[.nanoseconds], where seconds is the number of seconds
+timestamps enter seconds[.nanoseconds], where seconds is the number of seconds
 that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap
 seconds (aka Unix epoch or Unix time), and the optional .nanoseconds field is a
 fraction of a second no more than nine digits long. You can combine the
 `--since` option with either or both of the `--follow` or `--tail` options.
+
 
 ### Retrieve logs until a specific point in time (--until) {#until}
 
@@ -78,4 +81,7 @@ $ docker logs -f --until=2s test
 Tue 14 Nov 2017 16:40:00 CET
 Tue 14 Nov 2017 16:40:01 CET
 Tue 14 Nov 2017 16:40:02 CET
+````
+
+```
 ```

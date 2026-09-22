@@ -18,6 +18,7 @@ Sign an image
 
 ## Examples
 
+````console
 ### Sign a tag as a repository admin
 
 Given an image:
@@ -31,7 +32,7 @@ v1                  c24134c079c35e698060beabe110bb83ab285d0d978de7d92fed2c8c8357
 Administrative keys for example/trust-demo:
 Repository Key: 36d4c3601102fa7c5712a343c03b94469e5835fb27c191b529c06fd19c14a942
 Root Key:       246d360f7c53a9021ee7d4259e3c5692f3f1f7ad4737b1ea8c7b8da741ad980b
-```
+````
 
 Sign a new tag with `docker trust sign`:
 
@@ -123,4 +124,7 @@ bob                 5600f5ab76a2
 Administrative keys for example/trust-demo:
 Repository Key: ecc457614c9fc399da523a5f4e24fe306a0a6ee1cc79a10e4555b3c6ab02f71e
 Root Key:       3cb2228f6561e58f46dbc4cda4fcaff9d5ef22e865a94636f82450d1d2234949
+```
+
+```
 ```

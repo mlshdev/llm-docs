@@ -31,6 +31,7 @@ not specified, Docker generates a random name.
 
 ## Examples
 
+````console
 Create a volume and then configure the container to use it:
 
 ```console
@@ -39,7 +40,7 @@ $ docker volume create hello
 hello
 
 $ docker run -d -v hello:/world busybox ls /world
-```
+````
 
 The mount is created inside the container's `/world` directory. Docker doesn't
 support relative paths for mount points inside the container.
@@ -110,4 +111,7 @@ $ docker volume create --driver local \
     --opt o=addr=192.168.1.1,rw \
     --opt device=:/path/to/dir \
     foo
+```
+
+```
 ```

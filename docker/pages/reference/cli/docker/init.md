@@ -53,6 +53,7 @@ After `docker init` has completed, you may need to modify the created files and 
 
 ## Examples
 
+````console
 ### Example of running `docker init`
 
 The following example shows the initial menu after running `docker init`. See the additional examples to view the options for each language or framework.
@@ -81,7 +82,7 @@ Let's get started!
   Other - general purpose starting point for containerizing your application
   Don't see something you need? Let us know!
   Quit
-```
+````
 
 ### Example of selecting Go
 
@@ -288,4 +289,7 @@ Take a moment to review them and tailor them to your application.
 When you're ready, start your application by running: docker compose up --build
 
 Consult README.Docker.md for more information about using the generated files.
+```
+
+```
 ```

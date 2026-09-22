@@ -29,13 +29,14 @@ Desktop or shared across environments.
 
 ## Examples
 
+````console
 ### Export all build records to a file (--all) {#all}
 
 Use the `--all` flag and redirect the output:
 
 ```console
 docker buildx history export --all > all-builds.dockerbuild
-```
+````
 
 Or use the `--output` flag:
 
@@ -92,4 +93,7 @@ Or use shell redirection:
 ```console
 docker buildx history export ^1 > mybuild.dockerbuild
 docker buildx history export ^2 > backend-build.dockerbuild
+```
+
+```
 ```

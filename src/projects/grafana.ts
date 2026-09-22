@@ -20,13 +20,14 @@ import type {
   GithubSourceProject,
   ProjectBuild,
 } from "../types.ts";
+import { compareCodePoints } from "../compare.ts";
 
 const docsRoot = "docs/sources";
 const sharedRoot = `${docsRoot}/shared`;
 const site = "https://grafana.com";
 const label = "Grafana";
 
-interface Page {
+export interface Page {
   readonly sourcePath: string;
   readonly attributes: Record<string, unknown>;
   readonly body: string;
@@ -37,7 +38,7 @@ interface DocumentationTree {
   readonly children: ReadonlyMap<string, readonly Page[]>;
 }
 
-interface RenderContext {
+export interface RenderContext {
   readonly pages: ReadonlyMap<string, Page>;
   readonly tree: DocumentationTree;
   readonly version: string;
@@ -306,6 +307,19 @@ function pageUrl(page: Page, version: string): string {
   return `${site}/docs/grafana/${version}${route(page.sourcePath)}`;
 }
 
+// Relative destinations can contain characters the URL constructor rejects
+// (stray `%`, raw `<`); produce a quarantineable error naming the source
+// instead of a bare TypeError.
+function resolveRelativeUrl(pathname: string, base: string): string {
+  try {
+    return new URL(pathname, base).toString();
+  } catch {
+    throw new Error(
+      `Unresolvable relative ${label} URL ${JSON.stringify(pathname)} against ${base}`,
+    );
+  }
+}
+
 function outputPath(sourcePath: string): string {
   return `pages/${sourcePath
     .slice(`${docsRoot}/`.length)
@@ -453,9 +467,26 @@ function parseArguments(
   return { named, positional };
 }
 
-function renderRegion(source: string, context: RenderContext): string {
+export function renderRegion(source: string, context: RenderContext): string {
   const shortcodes = scanShortcodes(source, context.page.sourcePath);
-  return renderNodes(source, shortcodes, 0, shortcodes.length, 0, context).text;
+  const region = renderNodes(
+    source,
+    shortcodes,
+    0,
+    shortcodes.length,
+    0,
+    context,
+  );
+  // A closing shortcode with no matching opener would otherwise end the region
+  // early and silently drop everything after it; that is conversion drift and
+  // must quarantine the page instead.
+  if (region.next < shortcodes.length) {
+    const stray = shortcodes[region.next];
+    throw new Error(
+      `Unmatched closing ${label} shortcode ${stray?.name} in ${context.page.sourcePath}`,
+    );
+  }
+  return region.text;
 }
 
 interface RenderedRegion {
@@ -962,7 +993,7 @@ function referenceDestination(
   }
   return destination.startsWith("/")
     ? `${site}${destination}`
-    : new URL(destination, pageUrl(page, context.version)).toString();
+    : resolveRelativeUrl(destination, pageUrl(page, context.version));
 }
 
 function resolveReference(target: string, context: RenderContext): string {
@@ -1076,9 +1107,5 @@ function resolveGrafanaLink(
     return `${sourceUrl}${suffix}`;
   }
   // Directory-style links address sibling routes rather than repository files.
-  return `${new URL(pathname, pageUrl(page, version)).toString()}${suffix}`;
-}
-
-function compareCodePoints(left: string, right: string): number {
-  return left < right ? -1 : left > right ? 1 : 0;
+  return `${resolveRelativeUrl(pathname, pageUrl(page, version))}${suffix}`;
 }

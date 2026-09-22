@@ -56335,32 +56335,33 @@ list of root Certificate Authorities.
 
 ## Examples
 
+````console
 ### Specify daemon host (-H, --host) {#host}
 
 You can use the `-H`, `--host` flag to specify a socket to use when you invoke
 a `docker` command. You can use the following protocols:
 
 | Scheme                                 | Description               | Example                          |
-| -------------------------------------- | ------------------------- | -------------------------------- |
+|----------------------------------------|---------------------------|----------------------------------|
 | `unix://[<path>]`                      | Unix socket               | `unix:///var/run/docker.sock`    |
 | `tcp://[<IP or host>[:port]]`          | TCP connection            | `tcp://174.17.0.1:2376`          |
 | `ssh://[username@]<IP or host>[:port]` | SSH connection            | `ssh://user@192.168.64.5`        |
 | `npipe://[<name>]`                     | Named pipe (Windows only) | `npipe:////./pipe/docker_engine` |
 
 If you don't specify the `-H` flag, and you're not using a custom
-[context](https://docs.docker.com/engine/context/working-with-contexts/),
+[context](/engine/context/working-with-contexts),
 commands use the following default sockets:
 
 - `unix:///var/run/docker.sock` on macOS and Linux
 - `npipe:////./pipe/docker_engine` on Windows
 
 To achieve a similar effect without having to specify the `-H` flag for every
-command, you could also [create a context](https://docs.docker.com/reference/cli/docker/context/create/),
+command, you could also [create a context](/reference/cli/docker/context/create/),
 or alternatively, use the
 [`DOCKER_HOST` environment variable](#environment-variables).
 
 For more information about the `-H` flag, see
-[Daemon socket option](https://docs.docker.com/reference/cli/dockerd/#daemon-socket-option).
+[Daemon socket option](/reference/cli/dockerd/#daemon-socket-option).
 
 #### Using TCP sockets
 
@@ -56369,7 +56370,7 @@ daemon with IP address `174.17.0.1`, listening on port `2376`:
 
 ```console
 $ docker -H tcp://174.17.0.1:2376 ps
-```
+````
 
 > \[!NOTE]
 > By convention, the Docker daemon uses port `2376` for secure TLS connections,
@@ -56389,6 +56390,9 @@ component to the end of the SSH address.
 
 ```console
 $ docker -H ssh://user@192.168.64.5/var/run/docker.sock ps
+```
+
+```
 ```
 
 
@@ -56542,6 +56546,7 @@ Extended build capabilities with BuildKit
 
 ## Examples
 
+```console
 ### Override the configured builder instance (--builder) {#builder}
 
 You can also use the `BUILDX_BUILDER` environment variable.
@@ -56553,6 +56558,7 @@ policy verifies signed tags for images managed by Docker, including BuildKit
 builder images and Dockerfile frontends. Untagged digest references and images
 outside the managed repositories are allowed unchanged. Tagged references
 that also contain a digest still have their release identity verified.
+```
 
 
 # Document: docker buildx bake
@@ -56614,11 +56620,12 @@ guide for introduction to writing bake files.
 
 ## Examples
 
+````console
 ### Allow extra privileged entitlement (--allow) {#allow}
 
 ```text
 --allow=ENTITLEMENT[=VALUE]
-```
+````
 
 Entitlements are designed to provide controlled access to privileged
 operations. By default, Buildx and BuildKit operates with restricted
@@ -57094,6 +57101,9 @@ target "default" {
 }
 ```
 
+```
+```
+
 
 # Document: docker buildx build
 
@@ -57163,6 +57173,7 @@ The `docker buildx build` command starts a build using BuildKit.
 
 ## Examples
 
+````console
 ### Add entries to container hosts file (--add-host) {#add-host}
 
 You can add other hosts into a build container's `/etc/hosts` file by using one
@@ -57171,7 +57182,7 @@ or more `--add-host` flags. This example adds static addresses for hosts named
 
 ```console
 $ docker buildx build --add-host my_hostname=8.8.8.8 --add-host my_hostname_v6=2001:4860:4860::8888 .
-```
+````
 
 If you need your build to connect to services running on the host, you can use
 the special `host-gateway` value for `--add-host`. In the following example,
@@ -58306,6 +58317,9 @@ only apply to individual build steps. They don't affect the build cache key.
 > the appropriate configurations. Manual adjustments should only be considered
 > when specific performance tuning is required for complex build scenarios.
 
+```
+```
+
 
 # Document: docker buildx create
 
@@ -58357,6 +58371,7 @@ Docker contexts also get the default builder instance.
 
 ## Examples
 
+````console
 ### Append a new node to an existing builder (--append) {#append}
 
 The `--append` flag changes the action of the command to append a new node to an
@@ -58369,7 +58384,7 @@ eager_beaver
 
 $ docker buildx create --name eager_beaver --append mycontext2
 eager_beaver
-```
+````
 
 ### Specify a configuration file for the BuildKit daemon (--buildkitd-config) {#buildkitd-config}
 
@@ -58579,6 +58594,9 @@ $ docker buildx create --platform linux/arm64,linux/arm/v7
 The `--use` flag automatically switches the current builder to the newly created
 one. Equivalent to running `docker buildx use $(docker buildx create ...)`.
 
+```
+```
+
 
 # Document: docker buildx dap
 
@@ -58680,16 +58698,17 @@ Arguments are the same as the `build`
 
 ## Examples
 
+````console
 ### Launch request arguments {#launch-config}
 
 The following [launch request arguments](https://microsoft.github.io/debug-adapter-protocol/specification#Requests_Launch) are supported. These are sent as a JSON body as part of the launch request.
 
-| Name          | Type      | Default      | Description                                                                 |
-| :------------ | :-------- | :----------- | :-------------------------------------------------------------------------- |
-| `dockerfile`  | `string`  | `Dockerfile` | Name of the Dockerfile                                                      |
-| `contextPath` | `string`  | `.`          | Set the context path for the build (normally the first positional argument) |
-| `target`      | `string`  |              | Set the target build stage to build                                         |
-| `stopOnEntry` | `boolean` | `false`      | Stop on the first instruction                                               |
+| Name                | Type          | Default      | Description                                                                  |
+|:--------------------|:--------------|:-------------|:-----------------------------------------------------------------------------|
+| `dockerfile`        | `string`      | `Dockerfile` | Name of the Dockerfile                                                       |
+| `contextPath`       | `string`      | `.`          | Set the context path for the build (normally the first positional argument)  |
+| `target`            | `string`      |              | Set the target build stage to build                                          |
+| `stopOnEntry`       | `boolean`     | `false`      | Stop on the first instruction                                                |
 
 ### Additional Arguments {#additional-args}
 
@@ -58705,9 +58724,12 @@ For example, a launch configuration in Visual Studio Code with the following:
     "args": ["--build-arg", "FOO=AAA"]
     "builder": ["mybuilder"]
 }
-```
+````
 
 This should cause the debug adapter to be invoked as `docker buildx --builder mybuilder dap build --build-arg FOO=AAA`.
+
+```
+```
 
 
 # Document: docker buildx debug
@@ -58853,6 +58875,7 @@ BuildKit API.
 
 ## Examples
 
+````console
 Example go program that uses the dial-stdio command wire up a buildkit client.
 This is, for example, use only and may not be suitable for production use.
 
@@ -58876,6 +58899,9 @@ client.New(ctx, "", client.WithContextDialer(func(context.Context, string) (net.
 
     return c2
 }))
+````
+
+```
 ```
 
 
@@ -58914,6 +58940,7 @@ Disk usage
 
 ## Examples
 
+````console
 ### Show disk usage
 
 The `docker buildx du` command shows the disk usage for the currently selected
@@ -58937,7 +58964,7 @@ Shared:        115.5MB
 Private:       10.25GB
 Reclaimable:   10.36GB
 Total:         10.36GB
-```
+````
 
 If `RECLAIMABLE` is false, the `docker buildx du prune` command won't delete
 the record, even if you use `--all`. That's because the record is actively in
@@ -59134,6 +59161,9 @@ Reclaimable:    2.627GB
 Total:          2.627GB
 ```
 
+```
+```
+
 
 # Document: docker buildx history
 
@@ -59207,13 +59237,14 @@ Desktop or shared across environments.
 
 ## Examples
 
+````console
 ### Export all build records to a file (--all) {#all}
 
 Use the `--all` flag and redirect the output:
 
 ```console
 docker buildx history export --all > all-builds.dockerbuild
-```
+````
 
 Or use the `--output` flag:
 
@@ -59272,6 +59303,9 @@ docker buildx history export ^1 > mybuild.dockerbuild
 docker buildx history export ^2 > backend-build.dockerbuild
 ```
 
+```
+```
+
 
 # Document: docker buildx history import
 
@@ -59307,11 +59341,12 @@ pipelines.
 
 ## Examples
 
+````console
 ### Import a `.dockerbuild` archive from standard input
 
 ```console
 docker buildx history import < mybuild.dockerbuild
-```
+````
 
 ### Import a build archive from a file (--file) {#file}
 
@@ -59329,6 +59364,9 @@ If you've imported multiple builds, you can open one manually:
 
 ```console
 docker buildx history open ci-build
+```
+
+```
 ```
 
 
@@ -59370,6 +59408,7 @@ provenance, SBOMs, or other detailed information.
 
 ## Examples
 
+````console
 ### Inspect the most recent build
 
 ```console
@@ -59398,7 +59437,7 @@ pkg:docker/tonistiigi/xx@1.6.1?platform=linux%2Famd64           sha256:923441d7c
 Attachments:
 DIGEST                                                                  PLATFORM        TYPE
 sha256:217329d2af959d4f02e3a96dcbe62bf100cab1feb8006a047ddfe51a5397f7e3                 https://slsa.dev/provenance/v0.2
-```
+````
 
 ### Inspect a specific build
 
@@ -59509,6 +59548,9 @@ $ docker buildx history inspect --format "{{.Name}}: {{.VCSRepository}} ({{.VCSR
 buildx (binaries): https://github.com/crazy-max/buildx.git (f15eaa1ee324ffbbab29605600d27a84cab86361)
 ```
 
+```
+```
+
 
 # Document: docker buildx history inspect attachment
 
@@ -59545,6 +59587,7 @@ platform-specific.
 
 ## Examples
 
+````console
 ### Inspect an attachment by platform (--platform) {#platform}
 
 ```console
@@ -59565,7 +59608,7 @@ $ docker buildx history inspect attachment --platform linux/amd64
     }
   ]
 }
-```
+````
 
 ### Inspect an attachment by type (--type) {#type}
 
@@ -59716,6 +59759,9 @@ docker buildx history inspect attachment ^0 sha256:abcdef123456...
 Use `--type sbom` or `--type provenance` to filter attachments by type. To
 inspect a specific attachment by digest, omit the `--type` flag.
 
+```
+```
+
 
 # Document: docker buildx history logs
 
@@ -59757,6 +59803,7 @@ You can also specify an earlier build using an offset. For example:
 
 ## Examples
 
+````console
 ### Print logs for the most recent build
 
 ```console
@@ -59768,7 +59815,7 @@ $ docker buildx history logs
 #2 transferring context: 2B done
 #2 DONE 0.0s
 ...
-```
+````
 
 By default, this shows logs for the most recent build on the current builder.
 
@@ -59791,6 +59838,9 @@ $ docker buildx history logs ^1 --progress rawjson
 {"id":"buildx_step_1","status":"START","timestamp":"2024-05-01T12:34:56.789Z","detail":"[internal] load build definition from Dockerfile"}
 {"id":"buildx_step_1","status":"COMPLETE","timestamp":"2024-05-01T12:34:57.001Z","duration":212000000}
 ...
+```
+
+```
 ```
 
 
@@ -59833,6 +59883,7 @@ results using flags.
 
 ## Examples
 
+````console
 ### List all build records for the current builder
 
 ```console
@@ -59841,7 +59892,7 @@ BUILD ID                    NAME           STATUS     CREATED AT        DURATION
 qu2gsuo8ejqrwdfii23xkkckt   .dev/2850      Completed  3 days ago        1.4s
 qsiifiuf1ad9pa9qvppc0z1l3   .dev/2850      Completed  3 days ago        1.3s
 g9808bwrjrlkbhdamxklx660b   .dev/3120      Completed  5 days ago        2.1s
-```
+````
 
 ### List failed builds (--filter) {#filter}
 
@@ -59907,6 +59958,9 @@ $ docker buildx history ls --format '{{.Name}} - {{.Duration}}'
 .dev/3120 - 2.1s
 ```
 
+```
+```
+
 
 # Document: docker buildx history open
 
@@ -59935,11 +59989,12 @@ Docker Desktop to be installed and running on the host machine.
 
 ## Examples
 
+````console
 ### Open the most recent build in Docker Desktop
 
 ```console
 docker buildx history open
-```
+````
 
 By default, this opens the most recent build on the current builder.
 
@@ -59951,6 +60006,9 @@ docker buildx history open qu2gsuo8ejqrwdfii23xkkckt
 
 # Or using a relative offset
 docker buildx history open ^1
+```
+
+```
 ```
 
 
@@ -59988,6 +60046,7 @@ the `--all` flag.
 
 ## Examples
 
+````console
 ### Remove a specific build
 
 ```console
@@ -59996,7 +60055,7 @@ docker buildx history rm qu2gsuo8ejqrwdfii23xkkckt
 
 # Or using a relative offset
 docker buildx history rm ^1
-```
+````
 
 ### Remove multiple builds
 
@@ -60012,6 +60071,9 @@ docker buildx history rm ^1 ^2
 
 ```console
 docker buildx history rm --all
+```
+
+```
 ```
 
 
@@ -60051,6 +60113,7 @@ This helps analyze build performance, step timing, and internal execution flows.
 
 ## Examples
 
+````console
 ### Open the OpenTelemetry trace for the most recent build
 
 This command starts a temporary Jaeger UI server and opens your default browser
@@ -60058,7 +60121,7 @@ to view the trace.
 
 ```console
 docker buildx history trace
-```
+````
 
 ### Open the trace for a specific build
 
@@ -60095,6 +60158,9 @@ docker buildx history trace --compare=^1
 When you use a single reference with `--compare`, it compares that build
 against the most recent one.
 
+```
+```
+
 
 # Document: docker buildx imagetools
 
@@ -60129,9 +60195,11 @@ to check multi-platform configuration and attestations.
 
 ## Examples
 
+```console
 ### Override the configured builder instance (--builder) {#builder}
 
-Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).
+Same as [`buildx --builder`](/reference/cli/docker/buildx/#builder).
+```
 
 
 # Document: docker buildx imagetools create
@@ -60182,6 +60250,7 @@ format in the output.
 
 ## Examples
 
+````console
 ### Add annotations to an image (--annotation) {#annotation}
 
 The `--annotation` flag lets you add annotations the image index, manifest,
@@ -60195,7 +60264,7 @@ $ docker buildx imagetools create \
   --annotation "index:org.opencontainers.image.authors=dvdksn" \
   --tag foo/bar:latest \
   foo/bar:alpha foo/bar:beta foo/bar:gamma
-```
+````
 
 > \[!NOTE]
 > The `imagetools create` command supports adding annotations to the image
@@ -60278,6 +60347,9 @@ $ docker buildx imagetools create --dry-run alpine@sha256:5c40b3c27b9f13c873fefb
 $ docker buildx imagetools create -t tonistiigi/myapp -f image1 -f image2
 ```
 
+```
+```
+
 
 # Document: docker buildx imagetools inspect
 
@@ -60348,25 +60420,26 @@ Manifests:
 
 ## Examples
 
+````console
 ### Override the configured builder instance (--builder) {#builder}
 
-Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).
+Same as [`buildx --builder`](/reference/cli/docker/buildx/#builder).
 
 ### Format the output (--format) {#format}
 
 Format the output using the given Go template. Defaults to `{{.Manifest}}` if
 unset. Following fields are available:
 
-- `.Name`: provides the reference of the image
-- `.Manifest`: provides the manifest or manifest list
-- `.Image`: provides the image config
+* `.Name`: provides the reference of the image
+* `.Manifest`: provides the manifest or manifest list
+* `.Image`: provides the image config
 
 #### `.Name`
 
 ```console
 $ docker buildx imagetools inspect alpine --format "{{.Name}}"
 Name: docker.io/library/alpine:latest
-```
+````
 
 #### `.Manifest`
 
@@ -60988,6 +61061,9 @@ $ docker buildx imagetools inspect --raw moby/buildkit:master | jq
 }
 ```
 
+```
+```
+
 
 # Document: docker buildx inspect
 
@@ -61022,6 +61098,7 @@ Shows information about the current or specified builder.
 
 ## Examples
 
+````console
 ### Ensure that the builder is running before inspecting (--bootstrap) {#bootstrap}
 
 Use the `--bootstrap` option to ensure that the builder is running before
@@ -61033,7 +61110,7 @@ displayed in `buildx ls`).
 
 ### Override the configured builder instance (--builder) {#builder}
 
-Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).
+Same as [`buildx --builder`](/reference/cli/docker/buildx/#builder).
 
 ### Get information about a builder instance
 
@@ -61042,7 +61119,7 @@ name of the builder to inspect to get information about that builder.
 The following example shows information about a builder instance named
 `elated_tesla`:
 
-> \[!NOTE]
+> [!NOTE]
 > The asterisk (`*`) next to node build platform(s) indicate they have been
 > manually set during `buildx create`. Otherwise the platforms were
 > automatically detected.
@@ -61083,12 +61160,15 @@ GC Policy rule#2:
 GC Policy rule#3:
  All:        true
  Keep Bytes: 24.21GiB
-```
+````
 
 `debug` flag can also be used to get more information about the builder:
 
 ```console
 $ docker --debug buildx inspect elated_tesla
+```
+
+```
 ```
 
 
@@ -61139,6 +61219,7 @@ the target platform marked with a `*` in the `PLATFORMS` column.
 
 ## Examples
 
+````console
 ### Format the output (--format) {#format}
 
 The formatting options (`--format`) pretty-prints builder instances output
@@ -61147,7 +61228,7 @@ using a Go template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder       | Description                                 |
-| ----------------- | ------------------------------------------- |
+|-------------------|---------------------------------------------|
 | `.Name`           | Builder or node name                        |
 | `.DriverEndpoint` | Driver (for builder) or Endpoint (for node) |
 | `.LastActivity`   | Builder last activity                       |
@@ -61171,7 +61252,7 @@ elated_tesla0: unix:///var/run/docker.sock
 elated_tesla1: ssh://ubuntu@1.2.3.4
 default: docker
 default: default
-```
+````
 
 The `Builder` placeholder can be used to access the builder object and its
 fields. For example, the following template outputs the builder's and
@@ -61184,6 +61265,9 @@ elated_tesla:
   elated_tesla1: ssh://ubuntu@1.2.3.4
 default: docker
   default: default
+```
+
+```
 ```
 
 
@@ -61320,6 +61404,7 @@ Clears the build cache of the selected builder.
 
 ## Examples
 
+````console
 ### Include internal/frontend images (--all) {#all}
 
 The `--all` flag to allow clearing internal helper images and frontend images
@@ -61335,7 +61420,6 @@ operators `=` for equality, `!=` for not equal and `~=` for a regular
 expression.
 
 Valid filter keys are:
-
 - `until` flag to keep records that have been used in the last duration time.
   Value is a duration string, e.g. `24h` or `2h30m`, with allowable units of
   `(h)ours`, `(m)inutes` and `(s)econds`.
@@ -61367,7 +61451,7 @@ docker buildx prune --filter "description~=golang"
 docker buildx prune --filter "parents=dpetmoi6n0yqanxjqrbnofz9n;kgoj0q6g57i35gdyrv546alz7"
 docker buildx prune --filter "type=source.local"
 docker buildx prune --filter "type!=exec.cachemount"
-```
+````
 
 > \[!NOTE]
 > Multiple `--filter` flags are ANDed together.
@@ -61405,6 +61489,9 @@ e.g. `128mb`, `2gb`, etc. Units are case-insensitive.
 ### Override the configured builder instance (--builder) {#builder}
 
 Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).
+
+```
+```
 
 
 # Document: docker buildx rm
@@ -61444,6 +61531,7 @@ default builder.
 
 ## Examples
 
+````console
 ### Remove all inactive builders (--all-inactive) {#all-inactive}
 
 Remove builders that are not in running state.
@@ -61451,7 +61539,7 @@ Remove builders that are not in running state.
 ```console
 $ docker buildx rm --all-inactive
 WARNING! This will remove all builders that are not in running state. Are you sure you want to continue? [y/N] y
-```
+````
 
 ### Override the configured builder instance (--builder) {#builder}
 
@@ -61477,6 +61565,9 @@ and [`kubernetes`](https://docs.docker.com/build/drivers/kubernetes/) drivers.
 
 Keep BuildKit state, so it can be reused by a new builder with the same name.
 Currently, only supported by the [`docker-container` driver](https://docs.docker.com/build/drivers/docker-container/).
+
+```
+```
 
 
 # Document: docker buildx stop
@@ -61506,9 +61597,11 @@ restart the builder. The implementation of stop depends on the driver.
 
 ## Examples
 
+```console
 ### Override the configured builder instance (--builder) {#builder}
 
-Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).
+Same as [`buildx --builder`](/reference/cli/docker/buildx/#builder).
+```
 
 
 # Document: docker buildx use
@@ -61546,9 +61639,11 @@ switch to the default builder of that context.
 
 ## Examples
 
+```console
 ### Override the configured builder instance (--builder) {#builder}
 
-Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).
+Same as [`buildx --builder`](/reference/cli/docker/buildx/#builder).
+```
 
 
 # Document: docker buildx version
@@ -61858,12 +61953,11 @@ Define and run multi-container applications with Docker
 
 ## Examples
 
+````console
 ### Use `-f` to specify the name and path of one or more Compose files
-
-Use the `-f` flag to specify the location of a Compose [configuration file](https://docs.docker.com/reference/compose-file/).
+Use the `-f` flag to specify the location of a Compose [configuration file](/reference/compose-file/).
 
 #### Specifying multiple Compose files
-
 You can supply multiple `-f` configuration files. When you supply multiple files, Compose combines them into a single
 configuration. Compose builds the configuration in the order you supply the files. Subsequent files override and add
 to their predecessors.
@@ -61872,7 +61966,7 @@ For example, consider this command line:
 
 ```console
 $ docker compose -f compose.yaml -f compose.admin.yaml run backup_db
-```
+````
 
 The `compose.yaml` file might specify a `webapp` service.
 
@@ -62063,6 +62157,9 @@ From the example above, you can see that the first step is to pull the image def
 Next, the containers are created. The `db` service is started, and the `backend` and `proxy` wait until the `db` service is healthy before starting.
 
 Dry Run mode works with almost all commands. You cannot use Dry Run mode with a command that doesn't change the state of a Compose stack such as `ps`, `ls`, `logs` for example.
+
+```
+```
 
 
 # Document: docker compose alpha dry-run
@@ -63014,6 +63111,7 @@ example-bar-1   alpine    "/entrypoint.…"   bar        4 seconds ago   exited 
 
 ## Examples
 
+````console
 ### Format the output (--format) {#format}
 
 By default, the `docker compose ps` command uses a table ("pretty") format to
@@ -63026,7 +63124,7 @@ and `json`, which outputs information about the containers as JSON Lines
 $ docker compose ps --format json
 {"ID":"1553b0236cf4d2715845f053a4ee97042c4f9a2ef655731ee34f1f7940eaa41a","Name":"example-bar-1","Command":"/docker-entrypoint.sh nginx -g 'daemon off;'","Project":"example","Service":"bar","State":"exited","Health":"","ExitCode":0,"Publishers":null}
 {"ID":"f02a4efaabb67416e1ff127d51c4b5578634a0ad5743bd65225ff7d1909a3fa0","Name":"example-foo-1","Command":"/docker-entrypoint.sh nginx -g 'daemon off;'","Project":"example","Service":"foo","State":"running","Health":"","ExitCode":0,"Publishers":[{"URL":"0.0.0.0","TargetPort":80,"PublishedPort":8080,"Protocol":"tcp"}]}
-```
+````
 
 The JSON output allows you to use the information in other tools for further
 processing, for example, using the [`jq` utility](https://stedolan.github.io/jq/)
@@ -63094,6 +63192,9 @@ example-foo-1   alpine    "/entrypoint.…"   foo        4 seconds ago   Up 2 se
 
 The `docker compose ps` command currently only supports the `--filter status=<status>`
 option, but additional filter options may be added in the future.
+
+```
+```
 
 
 # Document: docker compose publish
@@ -63165,6 +63266,7 @@ Pulls an image associated with a service defined in a `compose.yaml` file, but d
 
 ## Examples
 
+````console
 Consider the following `compose.yaml`:
 
 ```yaml
@@ -63180,7 +63282,7 @@ services:
       - "3000:3000"
     depends_on:
       - db
-```
+````
 
 If you run `docker compose pull ServiceName` in the same directory as the `compose.yaml` file that defines the service,
 Docker pulls the associated image. For example, to call the postgres image configured as the db service in our example,
@@ -63207,6 +63309,9 @@ $ docker compose pull db
 ```
 
 `docker compose pull` tries to pull image for services with a build section. If pull fails, it lets you know this service image must be built. You can skip this by setting `--ignore-buildable` flag.
+
+```
+```
 
 
 # Document: docker compose push
@@ -63599,11 +63704,15 @@ Displays the running processes
 
 ## Examples
 
+````console
 ```console
 $ docker compose top
 example_foo_1
 UID    PID      PPID     C    STIME   TTY   TIME       CMD
 root   142353   142331   2    15:33   ?     00:00:00   ping localhost -c 5
+````
+
+```
 ```
 
 
@@ -63903,6 +64012,7 @@ For detailed information about using configs, refer to [store configuration data
 
 ## Examples
 
+````console
 ### Create a config
 
 ```console
@@ -63914,7 +64024,7 @@ $ docker config ls
 
 ID                          NAME                CREATED             UPDATED
 onakdyv307se2tl7nl20anokv   my_config           6 seconds ago       6 seconds ago
-```
+````
 
 ### Create a config with a file
 
@@ -63963,6 +64073,9 @@ $ docker config inspect my_config
 ]
 ```
 
+```
+```
+
 
 # Document: docker config inspect
 
@@ -64004,6 +64117,7 @@ For detailed information about using configs, refer to [store configuration data
 
 ## Examples
 
+````console
 ### Inspect a config by name or ID
 
 You can inspect a config, either by its *name*, or *ID*
@@ -64015,7 +64129,7 @@ $ docker config ls
 
 ID                          NAME                CREATED             UPDATED
 eo7jnzguqgtpdah3cm5srfb97   my_config           3 minutes ago       3 minutes ago
-```
+````
 
 ```console
 $ docker config inspect config.json
@@ -64056,6 +64170,9 @@ $ docker config inspect --format='{{.CreatedAt}}' eo7jnzguqgtpdah3cm5srfb97
 2017-03-24 08:15:09.735271783 +0000 UTC
 ```
 
+```
+```
+
 
 # Document: docker config ls
 
@@ -64094,6 +64211,7 @@ For detailed information about using configs, refer to [store configuration data
 
 ## Examples
 
+````console
 ```console
 $ docker config ls
 
@@ -64101,7 +64219,7 @@ ID                          NAME                        CREATED             UPDA
 6697bflskwj1998km1gnnjr38   q5s5570vtvnimefos1fyeo2u2   6 weeks ago         6 weeks ago
 9u9hk4br2ej0wgngkga6rp4hq   my_config                   5 weeks ago         5 weeks ago
 mem02h8n73mybpgqjf0kfi1n0   test_config                 3 seconds ago       3 seconds ago
-```
+````
 
 ### Filtering (-f, --filter) {#filter}
 
@@ -64206,6 +64324,9 @@ b6fa739cedf5        config-2                  3 hours ago
 78a85c484f71        config-3                  10 days ago
 ```
 
+```
+```
+
 
 # Document: docker config rm
 
@@ -64236,15 +64357,20 @@ For detailed information about using configs, refer to [store configuration data
 
 ## Examples
 
+````console
 This example removes a config:
 
 ```console
 $ docker config rm my_config
 sapth4csdo5b6wz2p5uimh5xg
-```
+````
 
 > \[!WARNING]
 > This command doesn't ask for confirmation before removing a config.
+> { .warning }
+
+```
+```
 
 
 # Document: docker container
@@ -64355,6 +64481,7 @@ command to get access to the logs.
 
 ## Examples
 
+````console
 ### Attach to and detach from a running container
 
 The following example starts an Alpine container running `top` in detached mode,
@@ -64370,7 +64497,7 @@ CPU:   0% usr   0% sys   0% nic  99% idle   0% io   0% irq   0% sirq
 Load average: 0.15 0.06 0.01 1/567 6
   PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
     1     0 root     R     1700   0%   3   0% top -b
-```
+````
 
 As the container was started without the `-i`, and `-t` options, signals are
 forwarded to the attached process, which means that the default `CTRL-p CTRL-q`
@@ -64462,6 +64589,9 @@ These `a`, `ctrl-a`, `X`, or `ctrl-\\` values are all examples of valid key
 sequences. To configure a different configuration default key sequence for all
 containers, see [**Configuration file** section](https://docs.docker.com/reference/cli/docker/#configuration-files).
 
+```
+```
+
 
 # Document: docker container commit
 
@@ -64506,6 +64636,7 @@ created. Supported `Dockerfile` instructions:
 
 ## Examples
 
+````console
 ### Commit a container
 
 ```console
@@ -64523,7 +64654,7 @@ $ docker images
 
 REPOSITORY                        TAG                 ID                  CREATED             SIZE
 svendowideit/testimage            version3            f5283438590d        16 seconds ago      335.7 MB
-```
+````
 
 ### Commit a container with new configurations (--change) {#change}
 
@@ -64570,6 +64701,9 @@ CONTAINER ID        IMAGE               COMMAND                 CREATED         
 89373736e2e7        testimage:version4  "apachectl -DFOREGROU"  3 seconds ago       Up 2 seconds        80/tcp             distracted_fermat
 c3f279d17e0a        ubuntu:24.04        /bin/bash               7 days ago          Up 25 hours                            desperate_dubinsky
 197387f1b436        ubuntu:24.04        /bin/bash               7 days ago          Up 25 hours                            focused_hamilton
+```
+
+```
 ```
 
 
@@ -64667,11 +64801,12 @@ you must be explicit with a relative or absolute path, for example:
 
 ## Examples
 
+````console
 Copy a local file into container
 
 ```console
 $ docker cp ./some_file CONTAINER:/work
-```
+````
 
 Copy files from container to local path
 
@@ -64705,6 +64840,9 @@ Using `-` as the `SRC_PATH` streams the contents of `STDIN` as a tar archive.
 The command extracts the content of the tar to the `DEST_PATH` in container's
 filesystem. In this case, `DEST_PATH` must specify a directory. Using `-` as
 the `DEST_PATH` streams the contents of the resource as a tar archive to `STDOUT`.
+
+```
+```
 
 
 # Document: docker container create
@@ -64848,6 +64986,7 @@ for details on the available flags and options.
 
 ## Examples
 
+````console
 ### Create and start a container
 
 The following example creates an interactive container with a pseudo-TTY attached,
@@ -64860,7 +64999,7 @@ $ docker container create -i -t --name mycontainer alpine
 $ docker container start --attach -i mycontainer
 / # echo hello world
 hello world
-```
+````
 
 The above is the equivalent of a `docker run`:
 
@@ -64910,6 +65049,9 @@ drwx--S---  2 1000 staff  460 Dec  5 00:51 .ssh
 drwxr-xr-x 32 1000 staff 1140 Dec  5 04:01 docker
 ```
 
+```
+```
+
 
 # Document: docker container diff
 
@@ -64942,6 +65084,7 @@ You can use the full or shortened container ID or the container name set using
 
 ## Examples
 
+````console
 Inspect the changes to an `nginx` container:
 
 ```console
@@ -64966,6 +65109,9 @@ A /var/lib/nginx/tmp/uwsgi
 C /var/log/nginx
 A /var/log/nginx/access.log
 A /var/log/nginx/error.log
+````
+
+```
 ```
 
 
@@ -65015,13 +65161,14 @@ The command must be an executable. A chained or a quoted command doesn't work.
 
 ## Examples
 
+````console
 ### Run `docker exec` on a running container
 
 First, start a container.
 
 ```console
 $ docker run --name mycontainer -d -i -t alpine /bin/sh
-```
+````
 
 This creates and starts a container named `mycontainer` from an `alpine` image
 with an `sh` shell as its main process. The `-d` option (shorthand for `--detach`)
@@ -65113,6 +65260,9 @@ $ echo $?
 1
 ```
 
+```
+```
+
 
 # Document: docker container export
 
@@ -65147,14 +65297,18 @@ in the user guide for examples on exporting data in a volume.
 
 ## Examples
 
+````console
 The following commands produce the same result.
 
 ```console
 $ docker export red_panda > latest.tar
-```
+````
 
 ```console
 $ docker export --output="latest.tar" red_panda
+```
+
+```
 ```
 
 
@@ -65228,6 +65382,7 @@ and the container will continue running after receiving the signal.
 
 ## Examples
 
+````console
 ### Send a KILL signal to a container
 
 The following example sends the default `SIGKILL` signal to the container named
@@ -65235,7 +65390,7 @@ The following example sends the default `SIGKILL` signal to the container named
 
 ```console
 $ docker kill my_container
-```
+````
 
 ### Send a custom signal to a container (--signal) {#signal}
 
@@ -65257,6 +65412,9 @@ $ docker kill --signal=1 my_container
 
 Refer to the [`signal(7)`](https://man7.org/linux/man-pages/man7/signal.7.html)
 man-page for a list of standard Linux signals.
+
+```
+```
 
 
 # Document: docker container logs
@@ -65294,6 +65452,7 @@ For more information about selecting and configuring logging drivers, refer to
 
 ## Examples
 
+````console
 ### Stream log output  (-f, --follow) {#follow}
 
 The `docker logs --follow` command will continue streaming the new output from
@@ -65303,6 +65462,7 @@ the container's `STDOUT` and `STDERR`.
 
 Passing a negative number or a non-integer to `--tail` is invalid and the
 value is set to `all` in that case.
+
 
 ### Retrieve logs with timestamps (-t, --timestamps) {#timestamps}
 
@@ -65326,11 +65486,12 @@ format you may also use RFC3339Nano, `2006-01-02T15:04:05`,
 `2006-01-02T15:04:05.999999999`, `2006-01-02T07:00`, and `2006-01-02`. The local
 timezone on the client will be used if you do not provide either a `Z` or a
 `+-00:00` timezone offset at the end of the timestamp. When providing Unix
-timestamps enter seconds\[.nanoseconds], where seconds is the number of seconds
+timestamps enter seconds[.nanoseconds], where seconds is the number of seconds
 that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap
 seconds (aka Unix epoch or Unix time), and the optional .nanoseconds field is a
 fraction of a second no more than nine digits long. You can combine the
 `--since` option with either or both of the `--follow` or `--tail` options.
+
 
 ### Retrieve logs until a specific point in time (--until) {#until}
 
@@ -65344,6 +65505,9 @@ $ docker logs -f --until=2s test
 Tue 14 Nov 2017 16:40:00 CET
 Tue 14 Nov 2017 16:40:01 CET
 Tue 14 Nov 2017 16:40:02 CET
+````
+
+```
 ```
 
 
@@ -65381,6 +65545,7 @@ List containers
 
 ## Examples
 
+````console
 ### Do not truncate output (--no-trunc) {#no-trunc}
 
 Running `docker ps --no-trunc` showing 2 linked containers.
@@ -65391,7 +65556,7 @@ $ docker ps --no-trunc
 CONTAINER ID                                                     IMAGE                        COMMAND                CREATED              STATUS              PORTS               NAMES
 ca5534a51dd04bbcebe9b23ba05f389466cf0c190f1f8f182d7eea92a9671d00 ubuntu:24.04                 bash                   17 seconds ago       Up 16 seconds       3300-3310/tcp       webapp
 9ca9747b233100676a48cc7806131586213fa5dab86dd1972d6a8732e3a84a4d crosbymichael/redis:latest   /redis-server --dir    33 minutes ago       Up 33 minutes       6379/tcp            redis,webapp/db
-```
+````
 
 ### Show both running and stopped containers (-a, --all) {#all}
 
@@ -65803,6 +65968,9 @@ $ docker ps --format json
 {"Command":"\"/docker-entrypoint.…\"","CreatedAt":"2021-03-10 00:15:05 +0100 CET","ID":"a762a2b37a1d","Image":"nginx","Labels":"maintainer=NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e","LocalVolumes":"0","Mounts":"","Names":"boring_keldysh","Networks":"bridge","Ports":"80/tcp","RunningFor":"4 seconds ago","Size":"0B","State":"running","Status":"Up 3 seconds"}
 ```
 
+```
+```
+
 
 # Document: docker container pause
 
@@ -65834,8 +66002,12 @@ for further details.
 
 ## Examples
 
+````console
 ```console
 $ docker pause my_container
+````
+
+```
 ```
 
 
@@ -65860,6 +66032,7 @@ List port mappings or a specific mapping for the container
 
 ## Examples
 
+````console
 ### Show all mapped ports
 
 You can find out all the ports mapped by not specifying a `PRIVATE_PORT`, or
@@ -65887,6 +66060,9 @@ $ docker port test 7890/udp
 $ docker port test 7890
 
 0.0.0.0:4321
+````
+
+```
 ```
 
 
@@ -65916,6 +66092,7 @@ Removes all stopped containers.
 
 ## Examples
 
+````console
 ### Prune containers
 
 ```console
@@ -65927,7 +66104,7 @@ Deleted Containers:
 f98f9c2aa1eaf727e4ec9c0283bc7d4aa4762fbdba7f26191f26c97f64090360
 
 Total reclaimed space: 212 B
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -66012,6 +66189,9 @@ CONTAINER ID        IMAGE               COMMAND             CREATED AT          
 53a9bc23a516        busybox             "sh"                2017-01-04 13:11:59 -0800 PST   Exited (0) 9 minutes ago
 ```
 
+```
+```
+
 
 # Document: docker container rename
 
@@ -66034,8 +66214,12 @@ The `docker rename` command renames a container.
 
 ## Examples
 
+````console
 ```console
 $ docker rename my_container my_new_container
+````
+
+```
 ```
 
 
@@ -66067,9 +66251,10 @@ Restart one or more containers
 
 ## Examples
 
+````console
 ```console
 $ docker restart my_container
-```
+````
 
 ### Stop container with signal (-s, --signal) {#signal}
 
@@ -66101,6 +66286,9 @@ option when creating the container. If no default is configured for the containe
 the Daemon determines the default, and is 10 seconds for Linux containers, and
 30 seconds for Windows containers.
 
+```
+```
+
 
 # Document: docker container rm
 
@@ -66131,6 +66319,7 @@ Remove one or more containers
 
 ## Examples
 
+````console
 ### Remove a container
 
 This removes the container referenced under the link `/redis`.
@@ -66139,7 +66328,7 @@ This removes the container referenced under the link `/redis`.
 $ docker rm /redis
 
 /redis
-```
+````
 
 ### Remove a link specified with `--link` on the default bridge network (--link) {#link}
 
@@ -66219,6 +66408,9 @@ $ docker rm -v hello
 In this example, the volume for `/foo` remains intact, but the volume for
 `/bar` is removed. The same behavior holds for volumes inherited with
 `--volumes-from`.
+
+```
+```
 
 
 # Document: docker container run
@@ -66352,11 +66544,12 @@ Use `docker ps -a` to view a list of all containers, including those that are st
 
 ## Examples
 
+````console
 ### Assign name (--name) {#name}
 
 The `--name` flag lets you specify a custom identifier for a container. The
 following example runs a container named `test` using the `nginx:alpine` image
-in [detached mode](#detached-mode--d---detach-detach).
+in [detached mode](#detach).
 
 ```console
 $ docker run --name test -d nginx:alpine
@@ -66364,7 +66557,7 @@ $ docker run --name test -d nginx:alpine
 $ docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS                  PORTS     NAMES
 4bed76d3ad42   nginx:alpine   "/docker-entrypoint.…"   1 second ago   Up Less than a second   80/tcp    test
-```
+````
 
 You can reference the container by name with other commands. For example, the
 following commands stop and remove a container named `test`:
@@ -66587,6 +66780,7 @@ Docker.
 >
 > For more information, see
 > [Runtime privilege and Linux capabilities](https://docs.docker.com/engine/containers/run/#runtime-privilege-and-linux-capabilities)
+> { .warning }
 
 The following example doesn't work, because by default, Docker drops most
 potentially dangerous kernel capabilities, including `CAP_SYS_ADMIN ` (which is
@@ -67859,6 +68053,9 @@ Network Namespace:
 - Sysctls beginning with `net.*`
 - If you use the `--network=host` option using these sysctls are not allowed.
 
+```
+```
+
 
 # Document: docker container start
 
@@ -67891,8 +68088,12 @@ Start one or more stopped containers
 
 ## Examples
 
+````console
 ```console
 $ docker start my_container
+````
+
+```
 ```
 
 
@@ -67950,6 +68151,7 @@ the `/containers/(id)/stats` API endpoint.
 
 ## Examples
 
+````console
 Running `docker stats` on all running containers against a Linux daemon.
 
 ```console
@@ -67960,7 +68162,7 @@ b95a83497c91        awesome_brattain                        0.28%               
 67b2525d8ad1        foobar                                  0.00%               1.727MiB / 1.952GiB   0.09%               2.48kB / 0B         4.11MB / 0B         2
 e5c383697914        test-1951.1.kay7x1lh1twk9c0oig50sd5tr   0.00%               196KiB / 1.952GiB     0.01%               71.2kB / 0B         770kB / 0B          1
 4bda148efbc0        random.1.vnc8on831idyr42slu578u3cr      0.00%               1.672MiB / 1.952GiB   0.08%               110kB / 0B          578kB / 0B          2
-```
+````
 
 If you don't [specify a format string using `--format`](#format-the-output---format-format), the
 following columns are shown.
@@ -68090,6 +68292,9 @@ On Windows:
 "table {{.ID}}\t{{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.NetIO}}\t{{.BlockIO}}"
 ```
 
+```
+```
+
 
 # Document: docker container stop
 
@@ -68122,9 +68327,10 @@ instruction in the container's Dockerfile, or the `--stop-signal` option to
 
 ## Examples
 
+````console
 ```console
 $ docker stop my_container
-```
+````
 
 ### Stop container with signal (-s, --signal) {#signal}
 
@@ -68155,6 +68361,9 @@ The default timeout can be specified using the [`--stop-timeout`](https://docs.d
 option when creating the container. If no default is configured for the container,
 the Daemon determines the default, and is 10 seconds for Linux containers, and
 30 seconds for Windows containers.
+
+```
+```
 
 
 # Document: docker container top
@@ -68203,9 +68412,13 @@ for further details.
 
 ## Examples
 
+````console
 ```console
 $ docker unpause my_container
 my_container
+````
+
+```
 ```
 
 
@@ -68257,6 +68470,7 @@ provide space-separated list of container names or IDs.
 
 ## Examples
 
+````console
 The following sections illustrate ways to use this command.
 
 ### Update a container's cpu-shares (--cpu-shares) {#cpu-shares}
@@ -68267,7 +68481,7 @@ use the ID returned from the `docker run` command.  Then, do the following:
 
 ```console
 $ docker update --cpu-shares 512 abebf7571666
-```
+````
 
 ### Update a container with cpu-shares and memory (-m, --memory) {#memory}
 
@@ -68293,6 +68507,9 @@ Note that if the container is started with `--rm` flag, you cannot update the re
 policy for it. The `AutoRemove` and `RestartPolicy` are mutually exclusive for the
 container.
 
+```
+```
+
 
 # Document: docker container wait
 
@@ -68315,11 +68532,12 @@ Block until one or more containers stop, then print their exit codes
 
 ## Examples
 
+````console
 Start a container in the background.
 
 ```console
 $ docker run -dit --name=my_container ubuntu bash
-```
+````
 
 Run `docker wait`, which should block until the container exits.
 
@@ -68341,6 +68559,9 @@ This is the same `docker wait` command from above, but it now exits, returning
 $ docker wait my_container
 
 0
+```
+
+```
 ```
 
 
@@ -68402,6 +68623,7 @@ connects to.
 
 ## Examples
 
+````console
 ### Create a context with a Docker endpoint (--docker) {#docker}
 
 Use the `--docker` flag to create a context with a custom endpoint. The
@@ -68412,7 +68634,7 @@ of `/var/run/docker.sock`:
 $ docker context create \
     --docker host=unix:///var/run/docker.sock \
     my-context
-```
+````
 
 ### Create a context based on an existing context (--from) {#from}
 
@@ -68452,6 +68674,9 @@ Docker endpoints configurations, as well as the description can be modified with
 `docker context update`.
 
 Refer to the [`docker context update` reference](https://docs.docker.com/reference/cli/docker/context/update/) for details.
+
+```
+```
 
 
 # Document: docker context export
@@ -68523,6 +68748,7 @@ Inspects one or more contexts.
 
 ## Examples
 
+````console
 ### Inspect a context by name
 
 ```console
@@ -68548,6 +68774,9 @@ $ docker context inspect "local+aks"
     }
   }
 ]
+````
+
+```
 ```
 
 
@@ -68579,6 +68808,7 @@ List contexts
 
 ## Examples
 
+````console
 Use `docker context ls` to print all contexts. The currently active context is
 indicated with an `*`:
 
@@ -68589,6 +68819,9 @@ NAME                DESCRIPTION                               DOCKER ENDPOINT   
 default *           Current DOCKER_HOST based configuration   unix:///var/run/docker.sock          swarm
 production                                                    tcp:///prod.corp.example.com:2376
 staging                                                       tcp:///stage.corp.example.com:2376
+````
+
+```
 ```
 
 
@@ -68638,14 +68871,15 @@ variable or `--context` global option.
 
 ## Examples
 
+````console
 ### Print the current context
 
-The following example prints the currently used [`docker context`](https://docs.docker.com/reference/cli/docker/context/):
+The following example prints the currently used [`docker context`](/reference/cli/docker/context/):
 
 ```console
 $ docker context show'
 default
-```
+````
 
 As an example, this output can be used to dynamically change your shell prompt
 to indicate your active context. The example below illustrates how this output
@@ -68679,6 +68913,9 @@ Current context is now "default"
 context: default>
 ```
 
+```
+```
+
 
 # Document: docker context update
 
@@ -68707,6 +68944,7 @@ See [context create](https://docs.docker.com/reference/cli/docker/context/create
 
 ## Examples
 
+````console
 ### Update an existing context
 
 ```console
@@ -68714,6 +68952,9 @@ $ docker context update \
     --description "some description" \
     --docker "host=tcp://myserver:2376,ca=~/ca-file,cert=~/cert-file,key=~/key-file" \
     my-context
+````
+
+```
 ```
 
 
@@ -68743,6 +68984,7 @@ environment variable instead.
 
 ## Examples
 
+````console
 ### Set the default (sticky) context
 
 This updates the CLI configuration and applies to new terminal sessions:
@@ -68753,7 +68995,7 @@ my-context
 
 $ docker context show
 my-context
-```
+````
 
 ### Use a context for a single command
 
@@ -68784,6 +69026,9 @@ $ unset DOCKER_CONTEXT
 ```bash
 $ docker context use default
 default
+```
+
+```
 ```
 
 
@@ -68840,6 +69085,7 @@ Custom builtin tools:
 
 ## Examples
 
+````console
 ### Debugging containers that have no shell (slim containers)
 
 The `hello-world` image is very simple and only contains the `/hello` binary.
@@ -68850,7 +69096,7 @@ Run a container from the `hello-world` image:
 
 ```console
 $ docker run --name my-app hello-world
-```
+````
 
 The container exits immediately. To get a debug shell inside, run:
 
@@ -69082,6 +69328,9 @@ shell into the `my-container` container.
 
 ```console
 $ docker debug --host=unix:///some/path/docker.sock my-container
+```
+
+```
 ```
 
 
@@ -70566,6 +70815,7 @@ of the build context. Reusing the previous example, the path `COPY
 
 ## Examples
 
+````console
 ### Specify isolation technology for container (--isolation) {#isolation}
 
 This option is useful in situations where you are running Docker containers on
@@ -70573,8 +70823,9 @@ Windows. The `--isolation=<value>` option sets a container's isolation
 technology. On Linux, the only supported is the `default` option which uses
 Linux namespaces. On Microsoft Windows, you can specify these values:
 
+
 | Value     | Description                                                                                                                                                                    |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `default` | Use the value specified by the Docker daemon's `--exec-opt` . If the `daemon` does not specify an isolation technology, Microsoft Windows uses `process` as its default value. |
 | `process` | Namespace isolation only.                                                                                                                                                      |
 | `hyperv`  | Hyper-V hypervisor partition-based isolation.                                                                                                                                  |
@@ -70589,7 +70840,7 @@ the `credentialspec` option. The `credentialspec` must be in the format
 
 #### Overview
 
-> \[!NOTE]
+> [!NOTE]
 > The `--squash` option is an experimental feature, and should not be considered
 > stable.
 
@@ -70608,7 +70859,7 @@ images (saving space).
 
 For most use cases, multi-stage builds are a better alternative, as they give more
 fine-grained control over your build, and can take advantage of future
-optimizations in the builder. Refer to the [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
+optimizations in the builder. Refer to the [Multi-stage builds](/build/building/multi-stage/)
 section for more information.
 
 #### Known limitations
@@ -70660,7 +70911,7 @@ Server: Docker Engine - Community
   OS/Arch:          linux/arm64
   Experimental:     true
  [...]
-```
+````
 
 #### Build an image with the `--squash` flag
 
@@ -70702,6 +70953,9 @@ IMAGE               CREATED             CREATED BY                              
 Test the image, check for `/remove_me` being gone, make sure `hello\nworld` is
 in `/hello`, make sure the `HELLO` environment variable's value is `world`.
 
+```
+```
+
 
 # Document: docker image history
 
@@ -70734,6 +70988,7 @@ Show the history of an image
 
 ## Examples
 
+````console
 To see how the `docker:latest` image was built:
 
 ```console
@@ -70746,7 +71001,7 @@ be51b77efb42        8 days ago          /bin/sh -c apt-get update && apt-get ins
 4b137612be55        6 weeks ago         /bin/sh -c #(nop) ADD jessie.tar.xz in /        121 MB
 750d58736b4b        6 weeks ago         /bin/sh -c #(nop) MAINTAINER Tianon Gravi <ad   0 B
 511136ea3c5a        9 months ago                                                        0 B                 Imported from -
-```
+````
 
 To see how the `docker:apache` image was added to a container's base image:
 
@@ -70839,6 +71094,9 @@ $ docker image history --platform=linux/s390x alpine
 Error response from daemon: image with reference alpine:latest was found but does not match the specified platform: wanted linux/s390x
 ```
 
+```
+```
+
 
 # Document: docker image import
 
@@ -70875,13 +71133,14 @@ the host. To import from a remote location, specify a `URI` that begins with the
 
 ## Examples
 
+````console
 ### Import from a remote location
 
 This creates a new untagged image.
 
 ```console
 $ docker import https://example.com/exampleimage.tgz
-```
+````
 
 ### Import from a local file
 
@@ -71007,6 +71266,9 @@ $ docker image inspect --format '{{.Os}}/{{.Architecture}}' imported:latest
 linux/amd64
 ```
 
+```
+```
+
 
 # Document: docker image inspect
 
@@ -71063,11 +71325,12 @@ bzip2, xz or zstd) from a file or STDIN. It restores both images and tags.
 
 ## Examples
 
+````console
 ```console
 $ docker image ls
 
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-```
+````
 
 ### Load images from STDIN
 
@@ -71126,6 +71389,9 @@ $ docker image load -i image.tar --platform=linux/ppc64le
 requested platform (linux/ppc64le) not found: image might be filtered out
 ```
 
+```
+```
+
 
 # Document: docker image ls
 
@@ -71177,6 +71443,7 @@ uses up the `SIZE` listed only once.
 
 ## Examples
 
+````console
 ### List the most recently created images
 
 ```console
@@ -71192,7 +71459,7 @@ postgres                  9                   746b819f315e        4 days ago    
 postgres                  9.3                 746b819f315e        4 days ago          213.4 MB
 postgres                  9.3.5               746b819f315e        4 days ago          213.4 MB
 postgres                  latest              746b819f315e        4 days ago          213.4 MB
-```
+````
 
 ### List images by name and tag
 
@@ -71480,6 +71747,9 @@ $ docker images --format json
 {"Containers":"N/A","CreatedAt":"2021-02-17 22:19:54 +0100 CET","CreatedSince":"2 weeks ago","Digest":"\u003cnone\u003e","ID":"28f6e2705743","Repository":"alpine","SharedSize":"N/A","Size":"5.61MB","Tag":"latest","UniqueSize":"N/A"}
 ```
 
+```
+```
+
 
 # Document: docker image prune
 
@@ -71508,6 +71778,7 @@ Remove all dangling images. If `-a` is specified, also remove all images not ref
 
 ## Examples
 
+````console
 Example output:
 
 ```console
@@ -71541,7 +71812,7 @@ deleted: sha256:47cf20d8c26c46fff71be614d9f54997edacfe8d46d51769706e5aba94b16f2b
 deleted: sha256:2c675ee9ed53425e31a13e3390bf3f539bf8637000e4bcfbb85ee03ef4d910a1
 
 Total reclaimed space: 16.43 MB
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -71693,6 +71964,9 @@ $ docker image prune --filter="label!=maintainer=john"
 > In addition, `docker image ls` doesn't support negative filtering, so it
 > difficult to predict what images will actually be removed.
 
+```
+```
+
 
 # Document: docker image pull
 
@@ -71744,6 +72018,7 @@ this via the `--max-concurrent-downloads` daemon option. See the
 
 ## Examples
 
+````console
 ### Pull an image from Docker Hub
 
 To download a particular image, or set of images (i.e., a repository), use
@@ -71760,7 +72035,7 @@ e756f3fdd6a3: Pull complete
 Digest: sha256:3f1d6c17773a45c97bd8f158d665c9709d7b29ed7917ac934086ad96f92e4510
 Status: Downloaded newer image for debian:latest
 docker.io/library/debian:latest
-```
+````
 
 Docker images can consist of multiple layers. In the example above, the image
 consists of a single layer; `e756f3fdd6a3`.
@@ -71935,6 +72210,9 @@ The Engine terminates a pull operation when the connection between the daemon
 and the client (initiating the pull) is cut or lost for any reason or the
 command is manually terminated.
 
+```
+```
+
 
 # Document: docker image push
 
@@ -71985,15 +72263,16 @@ this via the `--max-concurrent-uploads` daemon option. See the
 
 ## Examples
 
+````console
 ### Push a new image to a registry
 
 First save the new image by finding the container ID (using [`docker container
-ls`](https://docs.docker.com/reference/cli/docker/container/ls/)) and then committing it to a new image name. Note that
+ls`](/reference/cli/docker/container/ls/)) and then committing it to a new image name. Note that
 only `a-z0-9-_.` are allowed when naming images:
 
 ```console
 $ docker container commit c16378f943fe rhel-httpd:latest
-```
+````
 
 Now, push the image to the registry using the image ID. In this example the
 registry is on host named `registry-host` and listening on port `5000`. To do
@@ -72059,6 +72338,9 @@ v1.0: digest: sha256:edafc0a0fb057813850d1ba44014914ca02d671ae247107ca70c94db686
 v1.0.1: digest: sha256:edafc0a0fb057813850d1ba44014914ca02d671ae247107ca70c94db686e7de6 size: 4527
 ```
 
+```
+```
+
 
 # Document: docker image rm
 
@@ -72096,6 +72378,7 @@ use the [`docker image ls`](https://docs.docker.com/reference/cli/docker/image/l
 
 ## Examples
 
+````console
 You can remove an image using its short or long ID, its tag, or its digest. If
 an image has one or more tags referencing it, you must remove all of them before
 the image is removed. Digest references are removed automatically when an image
@@ -72132,7 +72415,7 @@ $ docker rmi test:latest
 
 Untagged: test:latest
 Deleted: fd484f19954f4920da7ff372b5067f5b7ddb2fd3830cecd17b96ea9e286ba5b8
-```
+````
 
 If you use the `-f` flag and specify the image's short or long ID, then this
 command untags and removes all images that match the specified ID.
@@ -72242,6 +72525,9 @@ alpine:latest           a8560b36e8b8       12.8MB         3.99MB
 └─ linux/s390x          fe0dcdd1f783           0B             0B
 ```
 
+```
+```
+
 
 # Document: docker image save
 
@@ -72273,6 +72559,7 @@ each argument provided.
 
 ## Examples
 
+````console
 ### Create a backup that can then be used with `docker load`.
 
 ```console
@@ -72291,7 +72578,7 @@ $ ls -sh busybox.tar
 $ docker save -o fedora-all.tar fedora
 
 $ docker save -o fedora-latest.tar fedora:latest
-```
+````
 
 ### Save an image to a tar.gz file using gzip
 
@@ -72356,6 +72643,9 @@ alpine:latest           beefdbd8a1da       10.6MB         3.37MB
 
 $ docker image save --platform=linux/s390x -o alpine-s390x.tar alpine:latest
 Error response from daemon: no suitable export target found for platform linux/s390x
+```
+
+```
 ```
 
 
@@ -72423,6 +72713,7 @@ as the canonical definition of the format.
 
 ## Examples
 
+````console
 ### Tag an image referenced by ID
 
 To tag a local image with ID `0e5574283393` as `fedora/httpd` with the tag
@@ -72430,7 +72721,7 @@ To tag a local image with ID `0e5574283393` as `fedora/httpd` with the tag
 
 ```console
 $ docker tag 0e5574283393 fedora/httpd:version1.0
-```
+````
 
 ### Tag an image referenced by Name
 
@@ -72459,6 +72750,9 @@ must include the registry hostname and port (if needed).
 
 ```console
 $ docker tag 0e5574283393 myregistryhost:5000/fedora/httpd:version1.0
+```
+
+```
 ```
 
 
@@ -72522,6 +72816,7 @@ After `docker init` has completed, you may need to modify the created files and 
 
 ## Examples
 
+````console
 ### Example of running `docker init`
 
 The following example shows the initial menu after running `docker init`. See the additional examples to view the options for each language or framework.
@@ -72550,7 +72845,7 @@ Let's get started!
   Other - general purpose starting point for containerizing your application
   Don't see something you need? Let us know!
   Quit
-```
+````
 
 ### Example of selecting Go
 
@@ -72759,145 +73054,7 @@ When you're ready, start your application by running: docker compose up --build
 Consult README.Docker.md for more information about using the generated files.
 ```
 
-
-# Document: docker inspect
-
-Source path: data/cli/engine/docker_inspect.yaml
-Pinned source: https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/data/cli/engine/docker_inspect.yaml
-Canonical documentation: https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/data/cli/engine/docker_inspect.yaml
-Description: Return low-level information on Docker objects
-
-# docker inspect
-
-Return low-level information on Docker objects
-
-**Usage:** `docker inspect [OPTIONS] NAME|ID [NAME|ID...]`
-
-## Description
-
-Docker inspect provides detailed information on constructs controlled by Docker.
-
-By default, `docker inspect` will render results in a JSON array.
-
-## Options
-
-| Option           | Default | Description                                                                                                                                                                                                                             |
-| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `-f`, `--format` |         | Format output using a custom template: 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
-| `-s`, `--size`   |         | Display total file sizes if the type is container                                                                                                                                                                                       |
-| `--type`         |         | Only inspect objects of the given type                                                                                                                                                                                                  |
-
-## Examples
-
-### Format the output (--format) {#format}
-
-If a format is specified, the given template will be executed for each result.
-
-Go's [text/template](https://pkg.go.dev/text/template) package describes
-all the details of the format.
-
-### Specify target type (--type) {#type}
-
-`--type config|container|image|node|network|secret|service|volume|task|plugin`
-
-The `docker inspect` command matches any type of object by either ID or name. In
-some cases multiple type of objects (for example, a container and a volume)
-exist with the same name, making the result ambiguous.
-
-To restrict `docker inspect` to a specific type of object, use the `--type`
-option.
-
-The following example inspects a volume named `myvolume`.
-
-```console
-$ docker inspect --type=volume myvolume
 ```
-
-### Inspect the size of a container (-s, --size) {#size}
-
-The `--size`, or short-form `-s`, option adds two additional fields to the
-`docker inspect` output. This option only works for containers. The container
-doesn't have to be running, it also works for stopped containers.
-
-```console
-$ docker inspect --size mycontainer
-```
-
-The output includes the full output of a regular `docker inspect` command, with
-the following additional fields:
-
-- `SizeRootFs`: the total size of all the files in the container, in bytes.
-- `SizeRw`: the size of the files that have been created or changed in the
-  container, compared to it's image, in bytes.
-
-```console
-$ docker run --name database -d redis
-3b2cbf074c99db4a0cad35966a9e24d7bc277f5565c17233386589029b7db273
-$ docker inspect --size database -f '{{ .SizeRootFs }}'
-123125760
-$ docker inspect --size database -f '{{ .SizeRw }}'
-8192
-$ docker exec database fallocate -l 1000 /newfile
-$ docker inspect --size database -f '{{ .SizeRw }}'
-12288
-```
-
-### Get an instance's IP address
-
-For the most part, you can pick out any field from the JSON in a fairly
-straightforward manner.
-
-```console
-$ docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $INSTANCE_ID
-```
-
-### Get an instance's MAC address
-
-```console
-$ docker inspect --format='{{range .NetworkSettings.Networks}}{{.MacAddress}}{{end}}' $INSTANCE_ID
-```
-
-### Get an instance's log path
-
-```console
-$ docker inspect --format='{{.LogPath}}' $INSTANCE_ID
-```
-
-### Get an instance's image name
-
-```console
-$ docker inspect --format='{{.Config.Image}}' $INSTANCE_ID
-```
-
-### List all port bindings
-
-You can loop over arrays and maps in the results to produce simple text output:
-
-```console
-$ docker inspect --format='{{range $p, $conf := .NetworkSettings.Ports}} {{$p}} -> {{with $conf}}{{(index . 0).HostPort}}{{else}}none{{end}} {{end}}' $INSTANCE_ID
-```
-
-### Find a specific port mapping
-
-The `.Field` syntax doesn't work when the field name begins with a number, but
-the template language's `index` function does. The `.NetworkSettings.Ports`
-section contains a map of the internal port mappings to a list of external
-address/port objects. To grab just the numeric public port, you use `index` to
-find the specific port map, and then `index` 0 contains the first object inside
-of that. Then, specify the `HostPort` field to get the public address.
-
-```console
-$ docker inspect --format='{{(index (index .NetworkSettings.Ports "8787/tcp") 0).HostPort}}' $INSTANCE_ID
-```
-
-### Get a subsection in JSON format
-
-If you request a field which is itself a structure containing other fields, by
-default you get a Go-style dump of the inner values. Docker adds a template
-function, `json`, which can be applied to get results in JSON format.
-
-```console
-$ docker inspect --format='{{json .Config}}' $INSTANCE_ID
 ```
 
 
@@ -72944,7 +73101,7 @@ password. Docker Hub also supports a web-based sign-in flow, which signs you in
 to your Docker account without entering your password. For Docker Hub, the
 `docker login` command uses a device code flow by default, unless the
 `--username` flag is specified. The device code flow is a secure way to sign
-in. See [Authenticate to Docker Hub using device code](#authenticate-to-docker-hub-with-web-based-login).
+in. See Authenticate to Docker Hub using device code.
 
 ### Credential stores
 
@@ -73077,6 +73234,7 @@ registry domain, and values specify the suffix of the program to use
 
 ## Examples
 
+````console
 ### Authenticate to Docker Hub with web-based login
 
 By default, the `docker login` command authenticates to Docker Hub, using a
@@ -73094,7 +73252,7 @@ Your one-time device confirmation code is: LNFR-PGCJ
 Press ENTER to open your browser or submit your device code here: https://login.docker.com/activate
 
 Waiting for authentication in the browser…
-```
+````
 
 After entering the code in your browser, you are authenticated to Docker Hub
 using the account you're currently signed in with on the Docker Hub website or
@@ -73158,6 +73316,9 @@ password from `STDIN`.
 $ cat ~/my_password.txt | docker login --username foo --password -
 ```
 
+```
+```
+
 
 # Document: docker logout
 
@@ -73179,8 +73340,12 @@ If no server is specified, the default is defined by the daemon.
 
 ## Examples
 
+````console
 ```console
 $ docker logout localhost:8080
+````
+
+```
 ```
 
 
@@ -73299,6 +73464,7 @@ default requirements.
 
 ## Examples
 
+````console
 ### Inspect an image's manifest object
 
 ```console
@@ -73319,7 +73485,7 @@ $ docker manifest inspect hello-world
                 }
         ]
 }
-```
+````
 
 ### Inspect an image's manifest and get the os/arch info
 
@@ -73470,6 +73636,9 @@ $ docker manifest push --insecure myprivateregistry.mycompany.com/repo/image:tag
 > skip the `--insecure` flag if you are performing a `docker manifest inspect`
 > on a locally-stored manifest list. Be sure to keep in mind that locally-stored
 > manifest lists are never used by the engine on a `docker pull`.
+
+```
+```
 
 
 # Document: docker manifest annotate
@@ -73754,13 +73923,13 @@ List all configured catalogs including Docker's official catalog and any locally
 
 ## Examples
 
+```console
 # List all catalogs
+  docker mcp catalog ls
 
-docker mcp catalog ls
-
-# List catalogs in JSON format
-
-docker mcp catalog ls --format=json
+  # List catalogs in JSON format
+  docker mcp catalog ls --format=json
+```
 
 
 # Document: docker mcp catalog pull
@@ -73839,9 +74008,10 @@ The Docker official catalog cannot be removed.
 
 ## Examples
 
+```console
 # Remove a catalog
-
-docker mcp catalog rm old-servers
+  docker mcp catalog rm old-servers
+```
 
 
 # Document: docker mcp catalog server
@@ -73892,21 +74062,19 @@ Add MCP servers to a catalog using various URI schemes.
 
 ## Examples
 
+```console
 # Add servers from another catalog
+  docker mcp catalog server add mcp/my-catalog:latest --server catalog://mcp/docker-mcp-catalog:latest/github
 
-docker mcp catalog server add mcp/my-catalog:latest --server catalog://mcp/docker-mcp-catalog:latest/github
+  # Add servers with OCI references
+  docker mcp catalog server add mcp/my-catalog:latest --server docker://my-server:latest
 
-# Add servers with OCI references
+  # Add servers with MCP Registry references
+  docker mcp catalog server add mcp/my-catalog:latest --server https://registry.modelcontextprotocol.io/v0/servers/71de5a2a-6cfb-4250-a196-f93080ecc860
 
-docker mcp catalog server add mcp/my-catalog:latest --server docker://my-server:latest
-
-# Add servers with MCP Registry references
-
-docker mcp catalog server add mcp/my-catalog:latest --server <https://registry.modelcontextprotocol.io/v0/servers/71de5a2a-6cfb-4250-a196-f93080ecc860>
-
-# Mix server references
-
-docker mcp catalog server add mcp/my-catalog:latest --server catalog://mcp/docker-mcp-catalog:latest/github --server docker://my-server:latest
+  # Mix server references
+  docker mcp catalog server add mcp/my-catalog:latest --server catalog://mcp/docker-mcp-catalog:latest/github --server docker://my-server:latest
+```
 
 
 # Document: docker mcp catalog server inspect
@@ -73964,21 +74132,19 @@ Filters use key=value format (e.g., name=github).
 
 ## Examples
 
+```console
 # List all servers in a catalog
+  docker mcp catalog server ls mcp/docker-mcp-catalog:latest
 
-docker mcp catalog server ls mcp/docker-mcp-catalog:latest
+  # Filter servers by name
+  docker mcp catalog server ls mcp/docker-mcp-catalog:latest --filter name=github
 
-# Filter servers by name
+  # Combine multiple filters (using short flag)
+  docker mcp catalog server ls mcp/docker-mcp-catalog:latest -f name=slack -f name=github
 
-docker mcp catalog server ls mcp/docker-mcp-catalog:latest --filter name=github
-
-# Combine multiple filters (using short flag)
-
-docker mcp catalog server ls mcp/docker-mcp-catalog:latest -f name=slack -f name=github
-
-# Output in JSON format
-
-docker mcp catalog server ls mcp/docker-mcp-catalog:latest --format json
+  # Output in JSON format
+  docker mcp catalog server ls mcp/docker-mcp-catalog:latest --format json
+```
 
 
 # Document: docker mcp catalog server remove
@@ -74008,13 +74174,13 @@ Remove MCP servers from a catalog by server name.
 
 ## Examples
 
+```console
 # Remove servers by name
+  docker mcp catalog server remove mcp/my-catalog:latest --name github --name slack
 
-docker mcp catalog server remove mcp/my-catalog:latest --name github --name slack
-
-# Remove a single server
-
-docker mcp catalog server remove mcp/my-catalog:latest --name github
+  # Remove a single server
+  docker mcp catalog server remove mcp/my-catalog:latest --name github
+```
 
 
 # Document: docker mcp catalog show
@@ -74064,17 +74230,16 @@ This creates a copy of the source catalog with a new reference, similar to Docke
 
 ## Examples
 
+```console
 # Tag a catalog with a new version
+  docker mcp catalog tag mcp/my-catalog:v1 mcp/my-catalog:v2
 
-docker mcp catalog tag mcp/my-catalog:v1 mcp/my-catalog:v2
+  # Create a tagged copy with a different name
+  docker mcp catalog tag mcp/team-catalog:latest mcp/prod-catalog:v1.0
 
-# Create a tagged copy with a different name
-
-docker mcp catalog tag mcp/team-catalog:latest mcp/prod-catalog:v1.0
-
-# Tag without explicit version (uses latest)
-
-docker mcp catalog tag mcp/my-catalog mcp/my-catalog:backup
+  # Tag without explicit version (uses latest)
+  docker mcp catalog tag mcp/my-catalog mcp/my-catalog:backup
+```
 
 
 # Document: docker mcp client
@@ -74451,21 +74616,19 @@ Profiles are decoupled from catalogs. Servers can be:
 
 ## Examples
 
+```console
 # Create a profile with servers from a catalog
+  docker mcp profile create --name dev-tools --server catalog://mcp/docker-mcp-catalog/github+obsidian
 
-docker mcp profile create --name dev-tools --server catalog://mcp/docker-mcp-catalog/github+obsidian
+  # Create a profile with multiple servers (OCI references)
+  docker mcp profile create --name my-profile --server docker://my-server:latest --server docker://my-other-server:latest
 
-# Create a profile with multiple servers (OCI references)
+  # Create a profile with MCP Registry references
+  docker mcp profile create --name my-profile --server http://registry.modelcontextprotocol.io/v0/servers/71de5a2a-6cfb-4250-a196-f93080ecc860
 
-docker mcp profile create --name my-profile --server docker://my-server:latest --server docker://my-other-server:latest
-
-# Create a profile with MCP Registry references
-
-docker mcp profile create --name my-profile --server <http://registry.modelcontextprotocol.io/v0/servers/71de5a2a-6cfb-4250-a196-f93080ecc860>
-
-# Connect to clients upon creation
-
-docker mcp profile create --name dev-tools --connect cursor
+  # Connect to clients upon creation
+  docker mcp profile create --name dev-tools --connect cursor
+```
 
 
 # Document: docker mcp profile export
@@ -74633,21 +74796,19 @@ Add MCP servers to a profile.
 
 ## Examples
 
+```console
 # Add servers from a catalog
+  docker mcp profile server add dev-tools --server catalog://mcp/docker-mcp-catalog/github+obsidian
 
-docker mcp profile server add dev-tools --server catalog://mcp/docker-mcp-catalog/github+obsidian
+  # Add servers with OCI references
+  docker mcp profile server add my-profile --server docker://my-server:latest
 
-# Add servers with OCI references
+  # Add servers with MCP Registry references
+  docker mcp profile server add my-profile --server http://registry.modelcontextprotocol.io/v0/servers/71de5a2a-6cfb-4250-a196-f93080ecc860
 
-docker mcp profile server add my-profile --server docker://my-server:latest
-
-# Add servers with MCP Registry references
-
-docker mcp profile server add my-profile --server <http://registry.modelcontextprotocol.io/v0/servers/71de5a2a-6cfb-4250-a196-f93080ecc860>
-
-# Mix server references
-
-docker mcp profile server add dev-tools --server catalog://mcp/docker-mcp-catalog/github+obsidian --server docker://my-server:latest
+  # Mix server references
+  docker mcp profile server add dev-tools --server catalog://mcp/docker-mcp-catalog/github+obsidian --server docker://my-server:latest
+```
 
 
 # Document: docker mcp profile server ls
@@ -74681,25 +74842,22 @@ Filters use key=value format (e.g., name=github, profile=my-dev-env).
 
 ## Examples
 
+```console
 # List all servers across all profiles
+  docker mcp profile server ls
 
-docker mcp profile server ls
+  # Filter servers by name
+  docker mcp profile server ls --filter name=github
 
-# Filter servers by name
+  # Show servers from a specific profile
+  docker mcp profile server ls --filter profile=my-dev-env
 
-docker mcp profile server ls --filter name=github
+  # Combine multiple filters (using short flag)
+  docker mcp profile server ls -f name=slack -f profile=my-dev-env
 
-# Show servers from a specific profile
-
-docker mcp profile server ls --filter profile=my-dev-env
-
-# Combine multiple filters (using short flag)
-
-docker mcp profile server ls -f name=slack -f profile=my-dev-env
-
-# Output in JSON format
-
-docker mcp profile server ls --format json
+  # Output in JSON format
+  docker mcp profile server ls --format json
+```
 
 
 # Document: docker mcp profile server remove
@@ -74729,13 +74887,13 @@ Remove MCP servers from a profile by server name.
 
 ## Examples
 
+```console
 # Remove servers by name
+  docker mcp profile server remove dev-tools --name github --name slack
 
-docker mcp profile server remove dev-tools --name github --name slack
-
-# Remove a single server
-
-docker mcp profile server remove dev-tools --name github
+  # Remove a single server
+  docker mcp profile server remove dev-tools --name github
+```
 
 
 # Document: docker mcp profile show
@@ -74800,29 +74958,25 @@ To view enabled tools, use: docker mcp profile show <profile-id>
 
 ## Examples
 
+```console
 # Enable specific tools for a server
+  docker mcp profile tools my-profile --enable github.create_issue --enable github.list_repos
 
-docker mcp profile tools my-profile --enable github.create\_issue --enable github.list\_repos
+  # Disable specific tools for a server
+  docker mcp profile tools my-profile --disable github.create_issue --disable github.search_code
 
-# Disable specific tools for a server
+  # Enable and disable in one command
+  docker mcp profile tools my-profile --enable github.create_issue --disable github.search_code
 
-docker mcp profile tools my-profile --disable github.create\_issue --disable github.search\_code
+  # Enable all tools for a server
+  docker mcp profile tools my-profile --enable-all github
 
-# Enable and disable in one command
+  # Disable all tools for a server
+  docker mcp profile tools my-profile --disable-all github
 
-docker mcp profile tools my-profile --enable github.create\_issue --disable github.search\_code
-
-# Enable all tools for a server
-
-docker mcp profile tools my-profile --enable-all github
-
-# Disable all tools for a server
-
-docker mcp profile tools my-profile --disable-all github
-
-# View all enabled tools in the profile
-
-docker mcp profile show my-profile
+  # View all enabled tools in the profile
+  docker mcp profile show my-profile
+```
 
 
 # Document: docker mcp secret
@@ -74848,10 +75002,12 @@ Manage secrets in the local OS Keychain
 
 ## Examples
 
+```console
 ### Pass the secret via STDIN
 
 > echo my-secret-password > pwd.txt
-> cat pwd.txt | docker mcp secret set POSTGRES\_PASSWORD
+> cat pwd.txt | docker mcp secret set POSTGRES_PASSWORD
+```
 
 
 # Document: docker mcp secret ls
@@ -74921,11 +75077,15 @@ Set a secret in the local OS Keychain
 
 ## Examples
 
+````console
 ### Pass the secret via STDIN
 
 ```console
 echo my-secret-password > pwd.txt
 cat pwd.txt | docker mcp secret set postgres_password
+````
+
+```
 ```
 
 
@@ -75452,6 +75612,7 @@ automatically (for example, `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`).
 
 ## Examples
 
+````console
 ### Route requests to Docker Model Runner
 
 ```yaml
@@ -75460,7 +75621,7 @@ model_list:
     params:
       model: docker_model_runner/ai/smollm2
       api_base: http://localhost:12434/engines/llama.cpp/v1
-```
+````
 
 ```console
 $ docker model gateway --config config.yaml
@@ -75541,6 +75702,9 @@ $ docker model gateway --config config.yaml --host 127.0.0.1 --port 9000
 
 ```console
 $ docker model gateway --config config.yaml --verbose
+```
+
+```
 ```
 
 
@@ -75804,11 +75968,12 @@ Pull a model to your local environment. Downloaded models also appear in the Doc
 
 ## Examples
 
+````console
 ### Pulling a model from Docker Hub
 
 ```console
 docker model pull ai/smollm2
-```
+````
 
 ### Pulling from HuggingFace
 
@@ -75821,6 +75986,9 @@ To specify the quantization, provide it as a tag, for example:
 
 ```console
 docker model pull hf.co/bartowski/Llama-3.2-1B-Instruct-GGUF
+```
+
+```
 ```
 
 
@@ -76014,11 +76182,12 @@ You can also use chat mode in the Docker Desktop Dashboard when you select the m
 
 ## Examples
 
+````console
 ### One-time prompt
 
 ```console
 docker model run ai/smollm2 "Hi"
-```
+````
 
 Output:
 
@@ -76047,6 +76216,9 @@ docker model run --detach ai/smollm2
 ```
 
 This loads the model into memory without interaction, ensuring maximum performance for subsequent requests.
+
+```
+```
 
 
 # Document: docker model search
@@ -76389,11 +76561,12 @@ the same network.
 
 ## Examples
 
+````console
 ### Connect a running container to a network
 
 ```console
 $ docker network connect multi-host-network container1
-```
+````
 
 ### Connect a container to a network when it starts
 
@@ -76479,6 +76652,9 @@ network but launched from different Engines can also communicate in this way.
 You can connect a container to one or more networks. The networks need not be
 the same type. For example, you can connect a single container bridge and overlay
 networks.
+
+```
+```
 
 
 # Document: docker network create
@@ -76570,6 +76746,7 @@ for more information about different endpoint modes.
 
 ## Examples
 
+````console
 ### Connect containers
 
 When you start a container, use the `--network` flag to connect it to a network.
@@ -76577,7 +76754,7 @@ This example adds the `busybox` container to the `mynet` network:
 
 ```console
 $ docker run -itd --network=mynet busybox
-```
+````
 
 If you want to add a container to a network after the container is already
 running, use the `docker network connect` subcommand.
@@ -76738,6 +76915,9 @@ node2$ docker network create --config-only --subnet 192.168.200.0/24 --gateway 1
 node1$ docker network create -d macvlan --scope swarm --config-from mv-config --attachable swarm-network
 ```
 
+```
+```
+
 
 # Document: docker network disconnect
 
@@ -76765,8 +76945,12 @@ disconnect it from the network.
 
 ## Examples
 
+````console
 ```console
 $ docker network disconnect multi-host-network container1
+````
+
+```
 ```
 
 
@@ -76827,6 +77011,7 @@ networks that span across multiple hosts in a cluster.
 
 ## Examples
 
+````console
 ### List all networks
 
 ```console
@@ -76836,7 +77021,7 @@ NETWORK ID          NAME                DRIVER          SCOPE
 9f904ee27bf5        none                null            local
 cf03ee007fb4        host                host            local
 78b03ee04fc4        multi-host          overlay         swarm
-```
+````
 
 ### List networks without truncating the ID column (--no-trun) {#no-trunc}
 
@@ -77039,6 +77224,9 @@ $ docker network ls --format json
 {"CreatedAt":"2021-03-09 21:41:29.752212603 +0000 UTC","Driver":"null","ID":"9d096c122066","IPv6":"false","Internal":"false","Labels":"","Name":"none","Scope":"local"}
 ```
 
+```
+```
+
 
 # Document: docker network prune
 
@@ -77067,6 +77255,7 @@ by any containers.
 
 ## Examples
 
+````console
 ```console
 $ docker network prune
 
@@ -77075,7 +77264,7 @@ Are you sure you want to continue? [y/N] y
 Deleted Networks:
 n1
 n2
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -77143,6 +77332,9 @@ ab53663ed3c7        foo-1-min-ago       bridge              local
 f949d337b1f5        none                null                local
 ```
 
+```
+```
+
 
 # Document: docker network rm
 
@@ -77172,13 +77364,14 @@ you must first disconnect any containers connected to it.
 
 ## Examples
 
+````console
 ### Remove a network
 
 To remove the network named 'my-network':
 
 ```console
 $ docker network rm my-network
-```
+````
 
 ### Remove multiple networks
 
@@ -77194,6 +77387,9 @@ When you specify multiple networks, the command attempts to delete each in turn.
 If the deletion of one network fails, the command continues to the next on the
 list and tries to delete that. The command reports success or failure for each
 deletion.
+
+```
+```
 
 
 # Document: docker node
@@ -77248,8 +77444,12 @@ Demotes an existing manager so that it is no longer a manager.
 
 ## Examples
 
+````console
 ```console
 $ docker node demote <node name>
+````
+
+```
 ```
 
 
@@ -77289,11 +77489,12 @@ details of the format.
 
 ## Examples
 
+````console
 ### Inspect a node
 
 ```console
 $ docker node inspect swarm-manager
-```
+````
 
 ```json
 [
@@ -77417,6 +77618,9 @@ zONcJ/+WA21OXtb+vcijpUOXtNjyHfcox0N8wsLDqQ==
  Issuer Subject:    MBMxETAPBgNVBAMTCHN3YXJtLWNh
 ```
 
+```
+```
+
 
 # Document: docker node ls
 
@@ -77455,6 +77659,7 @@ for more information about available filter options.
 
 ## Examples
 
+````console
 ```console
 $ docker node ls
 
@@ -77462,7 +77667,7 @@ ID                           HOSTNAME        STATUS  AVAILABILITY  MANAGER STATU
 1bcef6utixb0l0ca7gxuivsj0    swarm-worker2   Ready   Active
 38ciaotwjuritcdtn9npbnkuz    swarm-worker1   Ready   Active
 e216jshn25ckzbvmwlnh5jr3g *  swarm-manager1  Ready   Active        Leader
-```
+````
 
 > \[!NOTE]
 > In the above example output, there is a hidden column of `.Self` that indicates
@@ -77627,6 +77832,9 @@ $ docker node ls --format json
 {"Availability":"Active","EngineVersion":"23.0.3","Hostname":"docker-desktop","ID":"k8f4w7qtzpj5sqzclcqafw35g","ManagerStatus":"Leader","Self":true,"Status":"Ready","TLSStatus":"Ready"}
 ```
 
+```
+```
+
 
 # Document: docker node promote
 
@@ -77653,8 +77861,12 @@ Promotes a node to manager. This command can only be executed on a manager node.
 
 ## Examples
 
+````console
 ```console
 $ docker node promote <node name>
+````
+
+```
 ```
 
 
@@ -77695,6 +77907,7 @@ information about available filter options.
 
 ## Examples
 
+````console
 ```console
 $ docker node ps swarm-manager1
 
@@ -77704,7 +77917,7 @@ redis.6.b465edgho06e318egmgjbqo4o   redis:7.4.1  swarm-manager1  Running        
 redis.7.bg8c07zzg87di2mufeq51a2qp   redis:7.4.1  swarm-manager1  Running        Running 5 seconds
 redis.9.dkkual96p4bb3s6b10r7coxxt   redis:7.4.1  swarm-manager1  Running        Running 5 seconds
 redis.10.0tgctg8h8cech4w0k0gwrmr23  redis:7.4.1  swarm-manager1  Running        Running 5 seconds
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -77798,6 +78011,9 @@ top.2: busybox
 top.3: busybox
 ```
 
+```
+```
+
 
 # Document: docker node rm
 
@@ -77832,13 +78048,14 @@ Removes the specified nodes from a swarm.
 
 ## Examples
 
+````console
 ### Remove a stopped node from the swarm
 
 ```console
 $ docker node rm swarm-node-02
 
 Node swarm-node-02 removed from swarm
-```
+````
 
 ### Attempt to remove a running node from a swarm
 
@@ -77867,6 +78084,9 @@ Node swarm-node-03 removed from swarm
 
 A manager node must be demoted to a worker node (using `docker node demote`)
 before you can remove it from the swarm.
+
+```
+```
 
 
 # Document: docker node update
@@ -77903,14 +78123,15 @@ Update metadata about a node, such as its availability, labels, or roles.
 
 ## Examples
 
+````console
 ### Add label metadata to a node (--label-add) {#label-add}
 
 Add metadata to a swarm node using node labels. You can specify a node label as
 a key with an empty value:
 
-```bash
+``` bash
 $ docker node update --label-add foo worker1
-```
+````
 
 To add multiple labels to a node, pass the `--label-add` flag for each label:
 
@@ -77935,6 +78156,9 @@ entity within the swarm. Do not confuse them with the docker daemon labels for
 
 For more information about labels, refer to [apply custom
 metadata](https://docs.docker.com/engine/userguide/labels-custom-metadata/).
+
+```
+```
 
 
 # Document: docker offload
@@ -78321,13 +78545,14 @@ Have a feature request or hit a bug? File an issue at [github.com/docker/secrets
 
 ## Examples
 
+````console
 ### Using keychain secrets in containers
 
 Create a secret:
 
 ```console
 $ docker pass set GH_TOKEN=123456789
-```
+````
 
 Create a secret from STDIN:
 
@@ -78381,6 +78606,9 @@ services:
     image: postgres:17
     environment:
       - POSTGRES_PASSWORD=se://myapp/postgres/password
+```
+
+```
 ```
 
 
@@ -78453,17 +78681,21 @@ Use the subcommands to inspect which plugins are registered and their current st
 
 ## Examples
 
+````console
 List all registered plugins and their status:
 
 ```sh
 docker pass plugins ls
-```
+````
 
 Enable or disable a configurable plugin:
 
 ```sh
 docker pass plugins enable 1password-cli
 docker pass plugins disable 1password-cli
+```
+
+```
 ```
 
 
@@ -78505,16 +78737,20 @@ Matching for the title-based forms follows 1Password's normalization rules and i
 
 ## Examples
 
+````console
 Install the service account token and enable the plugin:
 
 ```sh
 echo "$OP_SERVICE_ACCOUNT_TOKEN" | docker pass plugins 1password setup
-```
+````
 
 Remove the token and disable the plugin:
 
 ```sh
 docker pass plugins 1password purge
+```
+
+```
 ```
 
 
@@ -78642,11 +78878,12 @@ Removes one or more named secrets from the local OS keychain. Use `--all` to rem
 
 ## Examples
 
+````console
 ### Remove a specific secret:
 
 ```console
 $ docker pass rm GH_TOKEN
-```
+````
 
 ### Remove multiple secrets:
 
@@ -78658,6 +78895,9 @@ $ docker pass rm GH_TOKEN NPM_TOKEN
 
 ```console
 $ docker pass rm --all
+```
+
+```
 ```
 
 
@@ -78697,11 +78937,12 @@ started and exits non-zero.
 
 ## Examples
 
+````console
 ### Run a command with one secret in its environment:
 
 ```console
 $ SE_TOKEN=se://gh-token docker pass run -- gh repo list
-```
+````
 
 ### Multiple references:
 
@@ -78719,6 +78960,9 @@ $ docker pass run --env-file .env -- ./my-binary
 
 ```console
 $ docker pass run --env-file .env --env-file .env.local -- ./my-binary
+```
+
+```
 ```
 
 
@@ -78758,11 +79002,12 @@ a delete-then-add sequence.
 
 ## Examples
 
+````console
 ### Set a secret:
 
 ```console
 $ docker pass set POSTGRES_PASSWORD=my-secret-password
-```
+````
 
 ### Or pass the secret via STDIN:
 
@@ -78787,6 +79032,9 @@ $ echo '{"secret":"my-secret-password","metadata":{"owner":"alice"}}' | docker p
 
 ```console
 $ docker pass set POSTGRES_PASSWORD=new-secret-password --force
+```
+
+```
 ```
 
 
@@ -78847,6 +79095,7 @@ filesystem as well as the [config.json](https://docs.docker.com/engine/extend/co
 
 ## Examples
 
+````console
 The following example shows how to create a sample `plugin`.
 
 ```console
@@ -78864,9 +79113,12 @@ $ docker plugin ls
 
 ID              NAME            DESCRIPTION                  ENABLED
 672d8144ec02    plugin:latest   A sample plugin for Docker   false
-```
+````
 
 The plugin can subsequently be enabled for local use or pushed to the public registry.
+
+```
+```
 
 
 # Document: docker plugin disable
@@ -78896,6 +79148,7 @@ a plugin that has references (e.g., volumes, networks) cannot be disabled.
 
 ## Examples
 
+````console
 The following example shows that the `sample-volume-plugin` plugin is installed
 and enabled:
 
@@ -78904,7 +79157,7 @@ $ docker plugin ls
 
 ID            NAME                                    DESCRIPTION                ENABLED
 69553ca1d123  tiborvass/sample-volume-plugin:latest   A test plugin for Docker   true
-```
+````
 
 To disable the plugin, use the following command:
 
@@ -78917,6 +79170,9 @@ $ docker plugin ls
 
 ID            NAME                                    DESCRIPTION                ENABLED
 69553ca1d123  tiborvass/sample-volume-plugin:latest   A test plugin for Docker   false
+```
+
+```
 ```
 
 
@@ -78946,6 +79202,7 @@ see [`docker plugin install`](https://docs.docker.com/reference/cli/docker/plugi
 
 ## Examples
 
+````console
 The following example shows that the `sample-volume-plugin` plugin is installed,
 but disabled:
 
@@ -78954,7 +79211,7 @@ $ docker plugin ls
 
 ID            NAME                                    DESCRIPTION                ENABLED
 69553ca1d123  tiborvass/sample-volume-plugin:latest   A test plugin for Docker   false
-```
+````
 
 To enable the plugin, use the following command:
 
@@ -78967,6 +79224,9 @@ $ docker plugin ls
 
 ID            NAME                                    DESCRIPTION                ENABLED
 69553ca1d123  tiborvass/sample-volume-plugin:latest   A test plugin for Docker   true
+```
+
+```
 ```
 
 
@@ -78996,13 +79256,14 @@ in a JSON array.
 
 ## Examples
 
+````console
 ### Inspect a plugin
 
 The following example inspects the `tiborvass/sample-volume-plugin` plugin:
 
 ```console
 $ docker plugin inspect tiborvass/sample-volume-plugin:latest
-```
+````
 
 Output is in JSON format (output below is formatted for readability):
 
@@ -79122,6 +79383,9 @@ $ docker plugin inspect -f '{{.Id}}' tiborvass/sample-volume-plugin:latest
 8c74c978c434745c3ade82f1bc0acf38d04990eaf494fa507c16d9f1daa99c21
 ```
 
+```
+```
+
 
 # Document: docker plugin install
 
@@ -79153,7 +79417,8 @@ plugins is 2.3.0.
 
 ## Examples
 
-The following example installs `vieus/sshfs` plugin and [sets](https://docs.docker.com/reference/cli/docker/plugin/set/) its
+````console
+The following example installs `vieus/sshfs` plugin and [sets](/reference/cli/docker/plugin/set/) its
 `DEBUG` environment variable to `1`. To install, `pull` the plugin from Docker
 Hub and prompt the user to accept the list of privileges that the plugin needs,
 set the plugin's parameters and enable the plugin.
@@ -79167,7 +79432,7 @@ Plugin "vieux/sshfs" is requesting the following privileges:
  - capabilities: [CAP_SYS_ADMIN]
 Do you grant the above permissions? [y/N] y
 vieux/sshfs
-```
+````
 
 After the plugin is installed, it appears in the list of plugins:
 
@@ -79176,6 +79441,9 @@ $ docker plugin ls
 
 ID             NAME                  DESCRIPTION                ENABLED
 69553ca1d123   vieux/sshfs:latest    sshFS plugin for Docker    true
+```
+
+```
 ```
 
 
@@ -79212,12 +79480,13 @@ Refer to the [filtering](#filtering---filter-filter) section for more informatio
 
 ## Examples
 
+````console
 ```console
 $ docker plugin ls
 
 ID            NAME                                    DESCRIPTION                ENABLED
 69553ca1d123  tiborvass/sample-volume-plugin:latest   A test plugin for Docker   true
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -79284,6 +79553,9 @@ $ docker plugin ls --format json
 {"Description":"sshFS plugin for Docker","Enabled":false,"ID":"856d89febb1c","Name":"vieux/sshfs:latest","PluginReference":"docker.io/vieux/sshfs:latest"}
 ```
 
+```
+```
+
 
 # Document: docker plugin push
 
@@ -79308,6 +79580,7 @@ Registry credentials are managed by [docker login](https://docs.docker.com/refer
 
 ## Examples
 
+````console
 The following example shows how to push a sample `user/plugin`.
 
 ```console
@@ -79317,6 +79590,9 @@ ID             NAME                    DESCRIPTION                  ENABLED
 69553ca1d456   user/plugin:latest      A sample plugin for Docker   false
 
 $ docker plugin push user/plugin
+````
+
+```
 ```
 
 
@@ -79350,6 +79626,7 @@ functioning of running containers using the plugin.
 
 ## Examples
 
+````console
 The following example disables and removes the `sample-volume-plugin:latest`
 plugin:
 
@@ -79361,104 +79638,9 @@ tiborvass/sample-volume-plugin
 $ docker plugin rm tiborvass/sample-volume-plugin:latest
 
 tiborvass/sample-volume-plugin
+````
+
 ```
-
-
-# Document: docker plugin set
-
-Source path: data/cli/engine/docker_plugin_set.yaml
-Pinned source: https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/data/cli/engine/docker_plugin_set.yaml
-Canonical documentation: https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/data/cli/engine/docker_plugin_set.yaml
-Description: Change settings for a plugin
-
-# docker plugin set
-
-Change settings for a plugin
-
-**Usage:** `docker plugin set PLUGIN KEY=VALUE [KEY=VALUE...]`
-
-## Description
-
-Change settings for a plugin. The plugin must be disabled.
-
-The settings currently supported are:
-
-- env variables
-- source of mounts
-- path of devices
-- args
-
-## Examples
-
-### Change an environment variable
-
-The following example change the env variable `DEBUG` on the
-`sample-volume-plugin` plugin.
-
-```console
-$ docker plugin inspect -f {{.Settings.Env}} tiborvass/sample-volume-plugin
-[DEBUG=0]
-
-$ docker plugin set tiborvass/sample-volume-plugin DEBUG=1
-
-$ docker plugin inspect -f {{.Settings.Env}} tiborvass/sample-volume-plugin
-[DEBUG=1]
-```
-
-### Change the source of a mount
-
-The following example change the source of the `mymount` mount on
-the `myplugin` plugin.
-
-```console
-$ docker plugin inspect -f '{{with $mount := index .Settings.Mounts 0}}{{$mount.Source}}{{end}}' myplugin
-/foo
-
-$ docker plugins set myplugin mymount.source=/bar
-
-$ docker plugin inspect -f '{{with $mount := index .Settings.Mounts 0}}{{$mount.Source}}{{end}}' myplugin
-/bar
-```
-
-> \[!NOTE]
-> Since only `source` is settable in `mymount`,
-> `docker plugins set mymount=/bar myplugin` would work too.
-
-### Change a device path
-
-The following example change the path of the `mydevice` device on
-the `myplugin` plugin.
-
-```console
-$ docker plugin inspect -f '{{with $device := index .Settings.Devices 0}}{{$device.Path}}{{end}}' myplugin
-
-/dev/foo
-
-$ docker plugins set myplugin mydevice.path=/dev/bar
-
-$ docker plugin inspect -f '{{with $device := index .Settings.Devices 0}}{{$device.Path}}{{end}}' myplugin
-
-/dev/bar
-```
-
-> \[!NOTE]
-> Since only `path` is settable in `mydevice`,
-> `docker plugins set mydevice=/dev/bar myplugin` would work too.
-
-### Change the source of the arguments
-
-The following example change the value of the args on the `myplugin` plugin.
-
-```console
-$ docker plugin inspect -f '{{.Settings.Args}}' myplugin
-
-["foo", "bar"]
-
-$ docker plugins set myplugin myargs="foo bar baz"
-
-$ docker plugin inspect -f '{{.Settings.Args}}' myplugin
-
-["foo", "bar", "baz"]
 ```
 
 
@@ -79491,6 +79673,7 @@ The plugin must be disabled before running the upgrade.
 
 ## Examples
 
+````console
 The following example installs `vieus/sshfs` plugin, uses it to create and use
 a volume, then upgrades the plugin.
 
@@ -79540,6 +79723,9 @@ viuex/sshfs:next    sshvolume
 $ docker run -it -v sshvolume:/data alpine sh -c "ls /data"
 
 hello
+````
+
+```
 ```
 
 
@@ -79758,6 +79944,7 @@ You can use the `docker scout cache prune` command to delete cache data at any t
 
 ## Examples
 
+````console
 ### List temporary and cache files
 
 ```console
@@ -79789,6 +79976,9 @@ Docker Scout cached SBOMs are located at:
   sha256:174c41d4fbc7f63e1f2bb7d2f7837318050406f2f27e5073a84a84f18b48b883 │ 115 kB
 
 Total: 4 MB
+````
+
+```
 ```
 
 
@@ -79821,13 +80011,14 @@ To delete temporary data and clear the SBOM cache, use the `--sboms` flag.
 
 ## Examples
 
+````console
 ### Delete temporary data
 
 ```console
 $ docker scout cache prune
 ? Are you sure to delete all temporary data? Yes
     ✓ temporary data deleted
-```
+````
 
 ### Delete temporary and cache data
 
@@ -79836,6 +80027,9 @@ $ docker scout cache prune --sboms
 ? Are you sure to delete all temporary data and all cached SBOMs? Yes
     ✓ temporary data deleted
     ✓ cached SBOMs deleted
+```
+
+```
 ```
 
 
@@ -79928,11 +80122,12 @@ or if you want to control from where the image will be resolved, you must prefix
 
 ## Examples
 
+````console
 ### Compare the most recently built image to the latest tag
 
 ```console
 $ docker scout compare --to namespace/repo:latest
-```
+````
 
 ### Compare local build to the same tag from the registry
 
@@ -79964,6 +80159,9 @@ $ docker scout compare --only-package-type maven --only-severity critical --to n
 docker scout compare --to namespace/repo:latest namespace/repo:v1.2.3-pre
 ```
 
+```
+```
+
 
 # Document: docker scout config
 
@@ -79988,12 +80186,13 @@ Available configuration key:
 
 ## Examples
 
+````console
 ### List existing configuration
 
 ```console
 $ docker scout config
 organization=my-org-namespace
-```
+````
 
 ### Print configuration value
 
@@ -80007,6 +80206,9 @@ my-org-namespace
 ```console
 $ docker scout config organization my-org-namespace
     ✓ Successfully set organization to my-org-namespace
+```
+
+```
 ```
 
 
@@ -80090,6 +80292,7 @@ or if you want to control from where the image will be resolved, you must prefix
 
 ## Examples
 
+````console
 ### Display vulnerabilities grouped by package
 
 ```console
@@ -80098,7 +80301,7 @@ Analyzing image alpine
 ✓ Image stored for indexing
 ✓ Indexed 18 packages
 ✓ No vulnerable package detected
-```
+````
 
 ### Display vulnerabilities from a `docker save` tarball
 
@@ -80313,13 +80516,14 @@ $ docker scout compare --to-env production
 
 ## Examples
 
+````console
 ### List existing environments
 
 ```console
 $ docker scout environment
 prod
 staging
-```
+````
 
 ### List images of an environment
 
@@ -80335,6 +80539,9 @@ namespace/other-repo:tag@sha256:0001d6ce124855b0a158569c584162097fe0ca8d72519067
 $ docker scout environment staging namespace/repo:stage-latest --platform linux/amd64
 ✓ Pulled
 ✓ Successfully recorded namespace/repo:stage-latest in environment staging
+```
+
+```
 ```
 
 
@@ -80498,11 +80705,12 @@ The policy evaluation results may take a few minutes to become available.
 
 ## Examples
 
+````console
 ### Evaluate policies against an image and display the results
 
 ```console
 $ docker scout policy dockerscoutpolicy/customers-api-service:0.0.1
-```
+````
 
 ### Evaluate policies against an image for a specific organization
 
@@ -80520,6 +80728,9 @@ $ docker scout policy dockerscoutpolicy/customers-api-service:0.0.1 --platform l
 
 ```console
 $ docker scout policy dockerscoutpolicy/customers-api-service --to-env production
+```
+
+```
 ```
 
 
@@ -80554,14 +80765,16 @@ When no --policy-file or --policy-dir is given, the built-in default policy set 
 
 ## Examples
 
+```console
 Publish the built-in default policies:
-$ docker scout policy publish registry.example.com/policies:latest\[0m
+  $ docker scout policy publish registry.example.com/policies:latest[0m
 
-Publish a directory of local policies:
-$ docker scout policy publish --policy-dir ./rego registry.example.com/policies:latest\[0m
+  Publish a directory of local policies:
+  $ docker scout policy publish --policy-dir ./rego registry.example.com/policies:latest[0m
 
-Publish specific policy files:
-$ docker scout policy publish --policy-file fixable.rego --policy-file licenses.rego registry.example.com/policies:latest\[0m
+  Publish specific policy files:
+  $ docker scout policy publish --policy-file fixable.rego --policy-file licenses.rego registry.example.com/policies:latest[0m
+```
 
 
 # Document: docker scout push
@@ -80596,10 +80809,14 @@ The `docker scout push` command lets you push an image or analysis result to Doc
 
 ## Examples
 
+````console
 ### Push an image to Docker Scout
 
 ```console
 $ docker scout push --org my-org registry.example.com/repo:tag
+````
+
+```
 ```
 
 
@@ -80674,6 +80891,7 @@ or if you want to control from where the image will be resolved, you must prefix
 
 ## Examples
 
+````console
 ### Quick overview of an image
 
 ```console
@@ -80688,7 +80906,7 @@ $ docker scout quickview golang:1.19.4
                                                      │    -5     -1     -3     -6     -6
   Updated base image  buildpack-deps:sid-scm         │    0C     0H     1M    29L
                                                      │    -5     -1     -2    -19     -6
-```
+````
 
 ### Quick overview of the most recently built image
 
@@ -80710,6 +80928,9 @@ $  syft -o spdx-json alpine:3.16.1 | docker scout quickview sbom://
 
   Target   │ <stdin>        │    1C     2H     8M     0L
     digest │  274a317d88b5  │
+```
+
+```
 ```
 
 
@@ -80772,11 +80993,12 @@ or if you want to control from where the image will be resolved, you must prefix
 
 ## Examples
 
+````console
 ### Display base image update recommendations
 
 ```console
 $ docker scout recommendations golang:1.19.4
-```
+````
 
 ### Display base image refresh only recommendations
 
@@ -80788,6 +81010,9 @@ $ docker scout recommendations --only-refresh golang:1.19.4
 
 ```console
 $ docker scout recommendations --only-update golang:1.19.4
+```
+
+```
 ```
 
 
@@ -80842,11 +81067,12 @@ The docker scout repo disable command disables Docker Scout on repositories.
 
 ## Examples
 
+````console
 ### Disable a specific repository
 
 ```console
 $ docker scout repo disable my/repository
-```
+````
 
 ### Disable all repositories of the organization
 
@@ -80864,6 +81090,9 @@ $ docker scout repo disable --filter namespace/backend
 
 ```console
 $ docker scout repo disable my/repository --registry 123456.dkr.ecr.us-east-1.amazonaws.com
+```
+
+```
 ```
 
 
@@ -80896,11 +81125,12 @@ The docker scout repo enable command enables Docker Scout on repositories.
 
 ## Examples
 
+````console
 ### Enable a specific repository
 
 ```console
 $ docker scout repo enable my/repository
-```
+````
 
 ### Enable all repositories of the organization
 
@@ -80918,6 +81148,9 @@ $ docker scout repo enable --filter namespace/backend
 
 ```console
 $ docker scout repo enable my/repository --registry 123456.dkr.ecr.us-east-1.amazonaws.com
+```
+
+```
 ```
 
 
@@ -81010,11 +81243,12 @@ or if you want to control from where the image will be resolved, you must prefix
 
 ## Examples
 
+````console
 ### Display the list of packages
 
 ```console
 $ docker scout sbom --format list alpine
-```
+````
 
 ### Only display packages of a specific type
 
@@ -81038,6 +81272,9 @@ $ docker scout sbom
 
 ```console
 $ docker scout sbom --output alpine.sbom alpine
+```
+
+```
 ```
 
 
@@ -81076,13 +81313,14 @@ Once recorded, streams can be referred to by their name, eg. in the `docker scou
 
 ## Examples
 
+````console
 ### List existing streams
 
 ```console
 $ %[1]s %[2]s
 prod-cluster-123
 stage-cluster-234
-```
+````
 
 ### List images of a stream
 
@@ -81098,6 +81336,9 @@ namespace/other-repo:tag@sha256:0001d6ce124855b0a158569c584162097fe0ca8d72519067
 $ %[1]s %[2]s stage-cluster-234 namespace/repo:stage-latest --platform linux/amd64
 ✓ Pulled
 ✓ Successfully recorded namespace/repo:stage-latest in stream stage-cluster-234
+```
+
+```
 ```
 
 
@@ -81120,6 +81361,7 @@ Show Docker Scout version information
 
 ## Examples
 
+````console
 ```console
 $ docker scout version
 
@@ -81143,6 +81385,9 @@ $ docker scout version
 
 version: v1.0.9 (go1.21.3 - darwin/arm64)
 git commit: 8bf95bf60d084af341f70e8263342f71b0a3cd16
+````
+
+```
 ```
 
 
@@ -81238,11 +81483,12 @@ The docker scout watch command watches repositories in a registry and pushes ima
 
 ## Examples
 
+````console
 ### Watch for new images from two repositories and push them
 
 ```console
 $ docker scout watch --org my-org --repository registry-1.example.com/repo-1 --repository registry-2.example.com/repo-2
-```
+````
 
 ### Only push images with a specific tag
 
@@ -81331,6 +81577,9 @@ The following example shows how to integrate an OCI registry that implements the
 $ docker scout watch --registry 'type=oci,registry=registry.example.com,include=*/scout-artifact-registry/*'
 ```
 
+```
+```
+
 
 # Document: docker search
 
@@ -81360,6 +81609,7 @@ Search [Docker Hub](https://hub.docker.com) for images
 
 ## Examples
 
+````console
 ### Search images by name
 
 This example displays images with a name containing 'busybox':
@@ -81393,7 +81643,7 @@ simplexsys/busybox-cli-powered   Docker busybox images, with a few often us...  
 fhisamoto/busybox-java           Busybox java                                    0
 scottabernethy/busybox                                                           0
 marclop/busybox-solr
-```
+````
 
 ### Display non-truncated description (--no-trunc) {#no-trunc}
 
@@ -81501,6 +81751,9 @@ million12/nginx-php
 webdevops/php-nginx
 ```
 
+```
+```
+
 
 # Document: docker secret
 
@@ -81562,6 +81815,7 @@ For detailed information about using secrets, refer to [manage sensitive data wi
 
 ## Examples
 
+````console
 ### Create a secret
 
 ```console
@@ -81573,7 +81827,7 @@ $ docker secret ls
 
 ID                          NAME                CREATED             UPDATED
 onakdyv307se2tl7nl20anokv   my_secret           6 seconds ago       6 seconds ago
-```
+````
 
 ### Create a secret with a file
 
@@ -81621,6 +81875,9 @@ $ docker secret inspect my_secret
 ]
 ```
 
+```
+```
+
 
 # Document: docker secret inspect
 
@@ -81662,6 +81919,7 @@ For detailed information about using secrets, refer to [manage sensitive data wi
 
 ## Examples
 
+````console
 ### Inspect a secret by name or ID
 
 You can inspect a secret, either by its name or ID.
@@ -81673,7 +81931,7 @@ $ docker secret ls
 
 ID                          NAME                CREATED             UPDATED
 eo7jnzguqgtpdah3cm5srfb97   my_secret           3 minutes ago       3 minutes ago
-```
+````
 
 ```console
 $ docker secret inspect secret.json
@@ -81711,6 +81969,9 @@ secret.
 $ docker secret inspect --format='{{.CreatedAt}}' eo7jnzguqgtpdah3cm5srfb97
 
 2017-03-24 08:15:09.735271783 +0000 UTC
+```
+
+```
 ```
 
 
@@ -81751,6 +82012,7 @@ For detailed information about using secrets, refer to [manage sensitive data wi
 
 ## Examples
 
+````console
 ```console
 $ docker secret ls
 
@@ -81758,7 +82020,7 @@ ID                          NAME                        CREATED             UPDA
 6697bflskwj1998km1gnnjr38   q5s5570vtvnimefos1fyeo2u2   6 weeks ago         6 weeks ago
 9u9hk4br2ej0wgngkga6rp4hq   my_secret                   5 weeks ago         5 weeks ago
 mem02h8n73mybpgqjf0kfi1n0   test_secret                 3 seconds ago       3 seconds ago
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -81870,6 +82132,9 @@ $ docker secret ls --format json
 {"CreatedAt":"28 seconds ago","Driver":"","ID":"4y7hvwrt1u8e9uxh5ygqj7mzc","Labels":"","Name":"mysecret","UpdatedAt":"28 seconds ago"}
 ```
 
+```
+```
+
 
 # Document: docker secret rm
 
@@ -81900,16 +82165,21 @@ For detailed information about using secrets, refer to [manage sensitive data wi
 
 ## Examples
 
+````console
 This example removes a secret:
 
 ```console
 $ docker secret rm secret.json
 sapth4csdo5b6wz2p5uimh5xg
-```
+````
 
 > \[!WARNING]
 > Unlike `docker rm`, this command does not ask for confirmation before removing
 > a secret.
+> { .warning }
+
+```
+```
 
 
 # Document: docker service
@@ -82053,6 +82323,7 @@ Creates a service as described by the specified parameters.
 
 ## Examples
 
+````console
 ### Create a service
 
 ```console
@@ -82069,7 +82340,7 @@ $ docker service ls
 ID            NAME    MODE        REPLICAS  IMAGE
 dmu1ept4cxcf  redis   replicated  1/1       redis:7.4.1
 a8q9dasaafud  redis2  global      1/1       redis:7.4.1
-```
+````
 
 #### Create a service using an image on a private registry (--with-registry-auth) {#with-registry-auth}
 
@@ -83158,6 +83429,9 @@ will have a Task from that job started on them. The Global Job does not as a
 whole have a "done" state, except insofar as every Node meeting the job's
 constraints has a Completed task.
 
+```
+```
+
 
 # Document: docker service inspect
 
@@ -83197,6 +83471,7 @@ describes all the details of the format.
 
 ## Examples
 
+````console
 ### Inspect a service by name or ID
 
 You can inspect a service, either by its *name*, or *ID*
@@ -83207,7 +83482,7 @@ For example, given the following service;
 $ docker service ls
 ID            NAME   MODE        REPLICAS  IMAGE
 dmu1ept4cxcf  redis  replicated  3/3       redis:7.4.1
-```
+````
 
 Both `docker service inspect redis`, and `docker service inspect dmu1ept4cxcf`
 produce the same result:
@@ -83318,6 +83593,9 @@ of the "redis" service.
 $ docker service inspect --format='{{.Spec.Mode.Replicated.Replicas}}' redis
 
 10
+```
+
+```
 ```
 
 
@@ -83434,6 +83712,7 @@ This command lists services that are running in the swarm.
 
 ## Examples
 
+````console
 On a manager node:
 
 ```console
@@ -83444,7 +83723,7 @@ c8wgl7q4ndfd  frontend  replicated      5/5                  nginx:alpine
 dmu1ept4cxcf  redis     replicated      3/3                  redis:7.4.1
 iwe3278osahj  mongo     global          7/7                  mongo:3.3
 hh08h9uu8uwr  job       replicated-job  1/1 (3/5 completed)  nginx:latest
-```
+````
 
 The `REPLICAS` column shows both the actual and desired number of tasks for
 the service. If the service is in `replicated-job` or `global-job`, it will
@@ -83562,6 +83841,9 @@ $ docker service ls --format json
 {"ID":"ssniordqolsi","Image":"hello-world:latest","Mode":"replicated","Name":"hello","Ports":"","Replicas":"0/1"}
 ```
 
+```
+```
+
 
 # Document: docker service ps
 
@@ -83598,6 +83880,7 @@ Lists the tasks that are running as part of the specified services.
 
 ## Examples
 
+````console
 ### List the tasks that are part of a service
 
 The following command shows all the tasks that are part of the `redis` service:
@@ -83616,7 +83899,7 @@ bk658fpbex0d   redis.2   redis:7.4.0  worker2   Running        Running 9 seconds
 9tfpyixiy2i7   redis.8   redis:7.4.0  worker1   Running        Running 9 seconds
 3w1wu13yupln   redis.9   redis:7.4.0  manager1  Running        Running 8 seconds
 8eaxrb2fqpbn   redis.10  redis:7.4.0  manager1  Running        Running 8 seconds
-```
+````
 
 In addition to running tasks, the output also shows the task history. For
 example, after updating the service to use the `redis:7.4.1` image, the output
@@ -83746,6 +84029,9 @@ top.2: busybox
 top.3: busybox
 ```
 
+```
+```
+
 
 # Document: docker service rm
 
@@ -83774,6 +84060,7 @@ Removes the specified services from the swarm.
 
 ## Examples
 
+````console
 Remove the `redis` service:
 
 ```console
@@ -83784,11 +84071,14 @@ redis
 $ docker service ls
 
 ID  NAME  MODE  REPLICAS  IMAGE
-```
+````
 
 > \[!WARNING]
 > Unlike `docker rm`, this command does not ask for confirmation before removing
 > a running service.
+
+```
+```
 
 
 # Document: docker service rollback
@@ -83823,6 +84113,7 @@ Roll back a specified service to its previous version from the swarm.
 
 ## Examples
 
+````console
 ### Roll back to the previous version of a service
 
 Use the `docker service rollback` command to roll back to the previous version
@@ -83838,7 +84129,7 @@ Create a service with a single replica:
 
 ```console
 $ docker service create --name my-service -p 8080:80 nginx:alpine
-```
+````
 
 Confirm that the service is running with a single replica:
 
@@ -83870,6 +84161,9 @@ $ docker service ls
 
 ID                  NAME                MODE                REPLICAS            IMAGE               PORTS
 xbw728mf6q0d        my-service          replicated          1/1                 nginx:alpine        *:8080->80/tcp
+```
+
+```
 ```
 
 
@@ -83908,6 +84202,7 @@ service while keeping the service active in the swarm you can set the scale to 0
 
 ## Examples
 
+````console
 ### Scale a single service
 
 The following command scales the "frontend" service to 50 tasks.
@@ -83916,7 +84211,7 @@ The following command scales the "frontend" service to 50 tasks.
 $ docker service scale frontend=50
 
 frontend scaled to 50
-```
+````
 
 The following command tries to scale a global service to 10 tasks and returns an error.
 
@@ -83965,6 +84260,9 @@ $ docker service ls
 ID            NAME      MODE        REPLICAS  IMAGE
 3pr5mlvu3fh9  frontend  replicated  5/5       nginx:alpine
 74nzcxxjv6fq  backend   replicated  3/3       redis:7.4.1
+```
+
+```
 ```
 
 
@@ -84100,11 +84398,12 @@ rolling restart without any changes to the service parameters.
 
 ## Examples
 
+````console
 ### Update a service
 
 ```console
 $ docker service update --limit-cpu 2 redis
-```
+````
 
 ### Perform a rolling restart with no parameter changes {#update-parallelism}
 
@@ -84293,6 +84592,9 @@ update or rollback settings are valid with job modes.
 To run a job again with the same parameters that it was run previously, it can
 be force updated with the `--force` flag.
 
+```
+```
+
 
 # Document: docker stack
 
@@ -84347,11 +84649,12 @@ Outputs the final Compose file, after doing the merges and interpolations of the
 
 ## Examples
 
+````console
 The following command outputs the result of the merge and interpolation of two Compose files.
 
 ```console
 $ docker stack config --compose-file docker-compose.yml --compose-file docker-compose.prod.yml
-```
+````
 
 The Compose file can also be provided as standard input with `--compose-file -`:
 
@@ -84379,6 +84682,9 @@ That is why, when piping the output back to `stack deploy` one should always pre
 
 ```console
 $ docker stack config --compose-file web.yml --compose-file web.prod.yml --skip-interpolation | docker stack deploy --compose-file -
+```
+
+```
 ```
 
 
@@ -84420,6 +84726,7 @@ Create and update a stack from a `compose` file on the swarm.
 
 ## Examples
 
+````console
 ### Compose file (--compose-file) {#compose-file}
 
 The `deploy` command supports Compose file version `3.0` and above.
@@ -84437,7 +84744,7 @@ Creating service vossibility_elasticsearch
 Creating service vossibility_kibana
 Creating service vossibility_ghollector
 Creating service vossibility_lookupd
-```
+````
 
 The Compose file can also be provided as standard input with `--compose-file -`:
 
@@ -84489,6 +84796,9 @@ ID            NAME                               MODE        REPLICAS  IMAGE
 axqh55ipl40h  vossibility_vossibility-collector  replicated  1/1       icecrime/vossibility-collector@sha256:f03f2977203ba6253988c18d04061c5ec7aab46bca9dfd89a9a1fa4500989fba
 ```
 
+```
+```
+
 
 # Document: docker stack ls
 
@@ -84523,6 +84833,7 @@ Lists the stacks.
 
 ## Examples
 
+````console
 The following command shows all stacks and some additional information:
 
 ```console
@@ -84531,7 +84842,7 @@ $ docker stack ls
 ID                 SERVICES            ORCHESTRATOR
 myapp              2                   Kubernetes
 vossibility-stack  6                   Swarm
-```
+````
 
 ### Format the output (--format) {#format}
 
@@ -84564,6 +84875,9 @@ To list all stacks in JSON format, use the `json` directive:
 ```console
 $ docker stack ls --format json
 {"Name":"myapp","Namespace":"","Orchestrator":"Swarm","Services":"3"}
+```
+
+```
 ```
 
 
@@ -84602,6 +84916,7 @@ Lists the tasks that are running as part of the specified stack.
 
 ## Examples
 
+````console
 ### List the tasks that are part of a stack
 
 The following command shows all the tasks that are part of the `voting` stack:
@@ -84618,7 +84933,7 @@ w48spazhbmxc        voting_redis.1        redis:alpine                          
 6jj1m02freg1        voting_visualizer.1   dockersamples/visualizer:stable                node1  Running        Running 2 minutes ago
 kqgdmededccb        voting_vote.2         dockersamples/examplevotingapp_vote:before     node2  Running        Running 2 minutes ago
 t72q3z038jeh        voting_redis.2        redis:alpine                                   node3  Running        Running 3 minutes ago
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -84805,6 +85120,9 @@ $ docker inspect $(docker stack ps -q voting)
 <...>
 ```
 
+```
+```
+
 
 # Document: docker stack rm
 
@@ -84839,6 +85157,7 @@ Remove the stack from the swarm.
 
 ## Examples
 
+````console
 ### Remove a stack
 
 This will remove the stack with the name `myapp`. Services, networks, and secrets
@@ -84852,7 +85171,7 @@ Removing service myapp_web
 Removing service myapp_lb
 Removing network myapp_default
 Removing network myapp_frontend
-```
+````
 
 ### Remove multiple stacks
 
@@ -84875,6 +85194,9 @@ Removing service vossibility_ghollector
 Removing service vossibility_lookupd
 Removing network vossibility_default
 Removing network vossibility_vossibility
+```
+
+```
 ```
 
 
@@ -84911,6 +85233,7 @@ Lists the services that are running as part of the specified stack.
 
 ## Examples
 
+````console
 The following command shows all services in the `myapp` stack:
 
 ```console
@@ -84919,7 +85242,7 @@ $ docker stack services myapp
 ID            NAME            REPLICAS  IMAGE                                                                          COMMAND
 7be5ei6sqeye  myapp_web       1/1       nginx@sha256:23f809e7fd5952e7d5be065b4d3643fbbceccd349d537b62a123ef2201bc886f
 dn7m7nhhfb9y  myapp_db        1/1       mysql@sha256:a9a5b559f8821fe73d58c3606c812d1c044868d42c63817fa5125fd9d8b7b539
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -84985,6 +85308,9 @@ $ docker stack services ls --format json
 {"ID":"0axqbl293vwm","Image":"localstack/localstack:latest","Mode":"replicated","Name":"myapp_localstack","Ports":"*:4566-\u003e4566/tcp, *:8080-\u003e8080/tcp","Replicas":"0/1"}
 {"ID":"384xvtzigz3p","Image":"redis:6.0.9-alpine3.12","Mode":"replicated","Name":"myapp_redis","Ports":"*:6379-\u003e6379/tcp","Replicas":"1/1"}
 {"ID":"hyujct8cnjkk","Image":"postgres:13.2-alpine","Mode":"replicated","Name":"myapp_repos-db","Ports":"*:5432-\u003e5432/tcp","Replicas":"0/1"}
+```
+
+```
 ```
 
 
@@ -85054,6 +85380,7 @@ View or rotate the current swarm CA certificate.
 
 ## Examples
 
+````console
 Run the `docker swarm ca` command without any options to view the current root CA certificate
 in PEM format.
 
@@ -85070,7 +85397,7 @@ Af8EBTADAQH/MB0GA1UdDgQWBBSfUy5bjUnBAx/B0GkOBKp91XvxzjAKBggqhkjO
 PQQDAgNJADBGAiEAnbvh0puOS5R/qvy1PMHY1iksYKh2acsGLtL/jAIvO4ACIQCi
 lIwQqLkJ48SQqCjG1DBTSBsHmMSRT+6mE2My+Z3GKA==
 -----END CERTIFICATE-----
-```
+````
 
 Pass the `--rotate` flag (and optionally a `--ca-cert`, along with a `--ca-key` or
 `--external-ca` parameter flag), in order to rotate the current swarm root CA.
@@ -85135,6 +85462,9 @@ see if any nodes are down or otherwise unable to rotate TLS certificates.
 Initiate the root CA rotation, but do not wait for the completion of or display the
 progress of the rotation.
 
+```
+```
+
 
 # Document: docker swarm init
 
@@ -85176,6 +85506,7 @@ in the newly created single-node swarm.
 
 ## Examples
 
+````console
 ```console
 $ docker swarm init --advertise-addr 192.168.99.121
 
@@ -85186,7 +85517,7 @@ To add a worker to this swarm, run the following command:
     docker swarm join --token SWMTKN-1-aabbccdd00112233aabbccdd00112233aabbccdd00112233aa-aabbccdd00112233... 172.17.0.2:2377
 
 To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
-```
+````
 
 The `docker swarm init` command generates two random tokens: a worker token and
 a manager token. When you join a new node to the swarm, the node joins as a
@@ -85331,6 +85662,9 @@ This flag is useful in certain situations. For example, a cluster may want to
 have dedicated manager nodes that don't serve as worker nodes. You can do this
 by passing `--availability=drain` to `docker swarm init`.
 
+```
+```
+
 
 # Document: docker swarm join-token
 
@@ -85368,6 +85702,7 @@ swarm.
 
 ## Examples
 
+````console
 You can view or rotate the join tokens using `swarm join-token`.
 
 As a convenience, you can pass `worker` or `manager` as an argument to
@@ -85390,7 +85725,7 @@ To add a manager to this swarm, run the following command:
     docker swarm join \
     --token SWMTKN-1-aabbccdd00112233aabbccdd00112233aabbccdd00112233aa-aabbccdd00112233... \
     172.17.0.2:2377
-```
+````
 
 Use the `--rotate` flag to generate a new join token for the specified role:
 
@@ -85439,6 +85774,9 @@ because the join token is only used for authorizing new nodes joining the swarm.
 
 Only print the token. Do not print a complete command for joining.
 
+```
+```
+
 
 # Document: docker swarm join
 
@@ -85471,6 +85809,7 @@ pass a worker token, the node joins as a worker.
 
 ## Examples
 
+````console
 ### Join a node to swarm as a manager
 
 The example below demonstrates joining a manager node using a manager token.
@@ -85483,7 +85822,7 @@ $ docker node ls
 ID                           HOSTNAME  STATUS  AVAILABILITY  MANAGER STATUS
 dkp8vy1dq1kxleu9g4u78tlag *  manager2  Ready   Active        Reachable
 dvfxp4zseq4s0rih1selh0d20    manager1  Ready   Active        Leader
-```
+````
 
 A cluster should only have 3-7 managers at most, because a majority of managers must be available
 for the cluster to function. Nodes that aren't meant to participate in this management quorum
@@ -85557,6 +85896,9 @@ This flag is useful in certain situations. For example, a cluster may want to ha
 dedicated manager nodes that are not served as worker nodes. This could be achieved
 by passing `--availability=drain` to `docker swarm join`.
 
+```
+```
+
 
 # Document: docker swarm leave
 
@@ -85590,6 +85932,7 @@ no longer be used after the manager leaves, such as in a single-node swarm.
 
 ## Examples
 
+````console
 Consider the following swarm, as seen from the manager:
 
 ```console
@@ -85599,7 +85942,7 @@ ID                           HOSTNAME  STATUS  AVAILABILITY  MANAGER STATUS
 7ln70fl22uw2dvjn2ft53m3q5    worker2   Ready   Active
 dkp8vy1dq1kxleu9g4u78tlag    worker1   Ready   Active
 dvfxp4zseq4s0rih1selh0d20 *  manager1  Ready   Active        Leader
-```
+````
 
 To remove `worker2`, issue the following command from `worker2` itself:
 
@@ -85613,6 +85956,9 @@ The node will still appear in the node list, and marked as `down`. It no longer
 affects swarm operation, but a long list of `down` nodes can clutter the node
 list. To remove an inactive node from the list, use the [`node rm`](https://docs.docker.com/reference/cli/docker/node/rm/)
 command.
+
+```
+```
 
 
 # Document: docker swarm unlock-key
@@ -85652,6 +85998,7 @@ run the `docker swarm unlock-key` command without any arguments:
 
 ## Examples
 
+````console
 ```console
 $ docker swarm unlock-key
 
@@ -85662,7 +86009,7 @@ command and provide the following key:
 
 Remember to store this key in a password manager, since without it you
 will not be able to restart the manager.
-```
+````
 
 Use the `--rotate` flag to rotate the unlock key to a new, randomly-generated
 key:
@@ -85698,6 +86045,9 @@ key. The old unlock key will no longer be accepted.
 
 Only print the unlock key, without instructions.
 
+```
+```
+
 
 # Document: docker swarm unlock
 
@@ -85727,9 +86077,13 @@ enabled, and is also available from the `docker swarm unlock-key` command.
 
 ## Examples
 
+````console
 ```console
 $ docker swarm unlock
 Enter unlock key:
+````
+
+```
 ```
 
 
@@ -85770,8 +86124,12 @@ Updates a swarm with new parameter values.
 
 ## Examples
 
+````console
 ```console
 $ docker swarm update --cert-expiry 720h
+````
+
+```
 ```
 
 
@@ -85827,6 +86185,7 @@ amount of disk space used by the Docker daemon.
 
 ## Examples
 
+````console
 By default the command displays a summary of the data used:
 
 ```console
@@ -85836,7 +86195,7 @@ TYPE                TOTAL               ACTIVE              SIZE                
 Images              5                   2                   16.43 MB            11.63 MB (70%)
 Containers          2                   0                   212 B               212 B (100%)
 Local Volumes       2                   1                   36 B                0 B (0%)
-```
+````
 
 Use the `-v, --verbose` flag to get more detailed information:
 
@@ -85871,6 +86230,9 @@ my-named-vol                                                       0            
 
 > \[!NOTE]
 > Network information isn't shown, because it doesn't consume disk space.
+
+```
+```
 
 
 # Document: docker system events
@@ -86079,6 +86441,7 @@ For information about JSON Lines, see <https://jsonlines.org/>.
 
 ## Examples
 
+````console
 ### Basic example
 
 You'll need two shells for this example.
@@ -86087,7 +86450,7 @@ You'll need two shells for this example.
 
 ```console
 $ docker events
-```
+````
 
 **Shell 2: Start and Stop containers:**
 
@@ -86291,6 +86654,9 @@ $ docker events --format json
 {"status":"resize","id":"196016a57679bf42424484918746a9474cd905dd993c4d0f4..
 ```
 
+```
+```
+
 
 # Document: docker system info
 
@@ -86335,6 +86701,7 @@ available on the volume where `/var/lib/docker` is mounted.
 
 ## Examples
 
+````console
 ### Show output
 
 The example below shows the output for a daemon running on Ubuntu Linux,
@@ -86401,7 +86768,7 @@ Server:
   127.0.0.0/8
  Live Restore Enabled: false
  Product License: Community Engine
-```
+````
 
 ### Format the output (--format) {#format}
 
@@ -86467,6 +86834,9 @@ Server:
  Live Restore Enabled: false
 ```
 
+```
+```
+
 
 # Document: docker system prune
 
@@ -86503,6 +86873,7 @@ cache without removing containers, networks, or images.
 
 ## Examples
 
+````console
 ```console
 $ docker system prune
 
@@ -86527,7 +86898,7 @@ deleted: sha256:1815c82652c03bfd8644afda26fb184f2ed891d921b20a0703b46768f9755c57
 deleted: sha256:45761469c965421a92a69cc50e92c01e0cfa94fe026cdd1233445ea00e96289a
 
 Total reclaimed space: 1.84kB
-```
+````
 
 By default, volumes aren't removed to prevent important data from being
 deleted if there is currently no container using the volume. Use the `--volumes`
@@ -86614,6 +86985,9 @@ which removes containers, images, networks, and volumes with the specified label
 format is the `label!=...` (`label!=<key>` or `label!=<key>=<value>`), which removes
 containers, images, networks, and volumes without the specified labels.
 
+```
+```
+
 
 # Document: docker trust
 
@@ -86668,6 +87042,7 @@ new tags.
 
 ## Examples
 
+````console
 ### Get low-level details about signatures for a single image tag
 
 Use the `docker trust inspect` to get trust information about an image. The
@@ -86675,7 +87050,7 @@ following example prints trust information for the `alpine:latest` image:
 
 ```console
 $ docker trust inspect alpine:latest
-```
+````
 
 The output is in JSON format, for example:
 
@@ -87132,6 +87507,9 @@ Repository Key: 27df2c8187e7543345c2e0bf3a1262e0bc63a72754e9a7395eac3f747ec23a44
 Root Key:       40b66ccc8b176be8c7d365a17f3e046d1c3494e053dd57cfeacfe2e19c4f8e8f
 ```
 
+```
+```
+
 
 # Document: docker trust key
 
@@ -87182,6 +87560,7 @@ and loads the private key into the local Docker trust keystore.
 
 ## Examples
 
+````console
 ### Generate a key-pair
 
 ```console
@@ -87193,7 +87572,7 @@ Repeat passphrase for new alice key with ID 17acf3c:
 Successfully generated and loaded private key. Corresponding public key available: alice.pub
 $ ls
 alice.pub
-```
+````
 
 The private signing key is encrypted by the passphrase and loaded into the Docker trust keystore.
 All passphrase requests to sign with the key will be referred to by the provided `NAME`.
@@ -87212,6 +87591,9 @@ Repeat passphrase for new alice key with ID 17acf3c:
 Successfully generated and loaded private key. Corresponding public key available: alice.pub
 $ ls /foo
 alice.pub
+```
+
+```
 ```
 
 
@@ -87242,6 +87624,7 @@ To add a signer to a repository use `docker trust signer add`.
 
 ## Examples
 
+````console
 ### Load a single private key
 
 For a private key `alice.pem` with permissions `-rw-------`
@@ -87253,7 +87636,7 @@ Loading key from "alice.pem"...
 Enter passphrase for new signer key with ID f8097df:
 Repeat passphrase for new signer key with ID f8097df:
 Successfully imported key from alice.pem
-```
+````
 
 To specify a name use the `--name` flag:
 
@@ -87264,6 +87647,9 @@ Loading key from "alice.pem"...
 Enter passphrase for new alice-key key with ID f8097df:
 Repeat passphrase for new alice-key key with ID f8097df:
 Successfully imported key from alice.pem
+```
+
+```
 ```
 
 
@@ -87292,9 +87678,11 @@ Remove trust for an image
 
 ## Examples
 
+````console
 ### Revoke signatures from a signed tag
 
 Here's an example of a repository with two signed tags:
+
 
 ```console
 $ docker trust inspect --pretty example/trust-demo
@@ -87311,7 +87699,7 @@ bob                 5600f5ab76a2
 Administrative keys for example/trust-demo:
 Repository Key: ecc457614c9fc399da523a5f4e24fe306a0a6ee1cc79a10e4555b3c6ab02f71e
 Root Key:       3cb2228f6561e58f46dbc4cda4fcaff9d5ef22e865a94636f82450d1d2234949
-```
+````
 
 When `alice`, one of the signers, runs `docker trust revoke`:
 
@@ -87388,6 +87776,9 @@ Repository Key: ecc457614c9fc399da523a5f4e24fe306a0a6ee1cc79a10e4555b3c6ab02f71e
 Root Key:       3cb2228f6561e58f46dbc4cda4fcaff9d5ef22e865a94636f82450d1d2234949
 ```
 
+```
+```
+
 
 # Document: docker trust sign
 
@@ -87414,6 +87805,7 @@ Sign an image
 
 ## Examples
 
+````console
 ### Sign a tag as a repository admin
 
 Given an image:
@@ -87427,7 +87819,7 @@ v1                  c24134c079c35e698060beabe110bb83ab285d0d978de7d92fed2c8c8357
 Administrative keys for example/trust-demo:
 Repository Key: 36d4c3601102fa7c5712a343c03b94469e5835fb27c191b529c06fd19c14a942
 Root Key:       246d360f7c53a9021ee7d4259e3c5692f3f1f7ad4737b1ea8c7b8da741ad980b
-```
+````
 
 Sign a new tag with `docker trust sign`:
 
@@ -87521,6 +87913,9 @@ Repository Key: ecc457614c9fc399da523a5f4e24fe306a0a6ee1cc79a10e4555b3c6ab02f71e
 Root Key:       3cb2228f6561e58f46dbc4cda4fcaff9d5ef22e865a94636f82450d1d2234949
 ```
 
+```
+```
+
 
 # Document: docker trust signer
 
@@ -87570,6 +87965,7 @@ Add a signer
 
 ## Examples
 
+````console
 ### Add a signer to a repository
 
 To add a new signer, `alice`, to this repository:
@@ -87588,7 +87984,7 @@ bob                 5600f5ab76a2
 Administrative keys for example/trust-demo:
 Repository Key: 642692c14c9fc399da523a5f4e24fe306a0a6ee1cc79a10e4555b3c6ab02f71e
 Root Key:       3cb2228f6561e58f46dbc4cda4fcaff9d5ef22e865a94636f82450d1d2234949
-```
+````
 
 Add `alice` with `docker trust signer add`:
 
@@ -87618,6 +88014,9 @@ Repository Key: 642692c14c9fc399da523a5f4e24fe306a0a6ee1cc79a10e4555b3c6ab02f71e
 Root Key:       3cb2228f6561e58f46dbc4cda4fcaff9d5ef22e865a94636f82450d1d2234949
 ```
 
+```
+```
+
 
 # Document: docker trust signer remove
 
@@ -87644,6 +88043,7 @@ Remove a signer
 
 ## Examples
 
+````console
 ### Remove a signer from a repository
 
 To remove an existing signer, `alice`, from this repository:
@@ -87663,7 +88063,7 @@ bob                 5600f5ab76a2
 Administrative keys for example/trust-demo:
 Repository Key: ecc457614c9fc399da523a5f4e24fe306a0a6ee1cc79a10e4555b3c6ab02f71e
 Root Key:       3cb2228f6561e58f46dbc4cda4fcaff9d5ef22e865a94636f82450d1d2234949
-```
+````
 
 Remove `alice` with `docker trust signer remove`:
 
@@ -87796,6 +88196,9 @@ Successfully removed alice from example/authorized
 Error removing signer from: example/unauthorized
 ```
 
+```
+```
+
 
 # Document: docker version
 
@@ -87813,7 +88216,7 @@ Show the Docker version information
 ## Description
 
 The version command prints the current version number for all independently
-versioned Docker components. Use the [`--format`](#format-the-output---format-format) option to customize
+versioned Docker components. Use the `--format` option to customize
 the output.
 
 The version command (`docker version`) outputs the version numbers of Docker
@@ -87952,11 +88355,12 @@ $ docker version --format '{{.Client.APIVersion}}'
 
 ## Examples
 
+````console
 ### Format the output (--format) {#format}
 
 The formatting option (`--format`) pretty-prints the output using a Go template,
 which allows you to customize the output format, or to obtain specific information
-from the output. Refer to the [format command and log output](https://docs.docker.com/config/formatting/)
+from the output. Refer to the [format command and log output](/config/formatting/)
 page for details of the format.
 
 ### Get the server version
@@ -87965,7 +88369,7 @@ page for details of the format.
 $ docker version --format '{{.Server.Version}}'
 
 28.5.1
-```
+````
 
 ### Get the client API version
 
@@ -87987,6 +88391,9 @@ above for more information.
 $ docker version --format '{{json .}}'
 
 {"Client":"Version":"28.5.1","ApiVersion":"1.51", ...}
+```
+
+```
 ```
 
 
@@ -88056,6 +88463,7 @@ not specified, Docker generates a random name.
 
 ## Examples
 
+````console
 Create a volume and then configure the container to use it:
 
 ```console
@@ -88064,7 +88472,7 @@ $ docker volume create hello
 hello
 
 $ docker run -d -v hello:/world busybox ls /world
-```
+````
 
 The mount is created inside the container's `/world` directory. Docker doesn't
 support relative paths for mount points inside the container.
@@ -88137,6 +88545,9 @@ $ docker volume create --driver local \
     foo
 ```
 
+```
+```
+
 
 # Document: docker volume inspect
 
@@ -88167,11 +88578,12 @@ details of the format.
 
 ## Examples
 
+````console
 ```console
 $ docker volume create myvolume
 
 myvolume
-```
+````
 
 Use the `docker volume inspect` comment to inspect the configuration of the volume:
 
@@ -88204,6 +88616,9 @@ to print the `Mountpoint` property:
 $ docker volume inspect --format '{{ .Mountpoint }}' myvolume
 
 /var/lib/docker/volumes/myvolume/_data
+```
+
+```
 ```
 
 
@@ -88239,6 +88654,7 @@ information about available filter options.
 
 ## Examples
 
+````console
 ### Create a volume
 
 ```console
@@ -88255,7 +88671,7 @@ $ docker volume ls
 DRIVER              VOLUME NAME
 local               rosemary
 local               tyler
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -88395,6 +88811,9 @@ $ docker volume ls --format json
 {"Driver":"local","Labels":"","Links":"N/A","Mountpoint":"/var/lib/docker/volumes/docker-cli-dev-cache/_data","Name":"docker-cli-dev-cache","Scope":"local","Size":"N/A"}
 ```
 
+```
+```
+
 
 # Document: docker volume prune
 
@@ -88424,6 +88843,7 @@ referenced by any containers. By default, it only removes anonymous volumes.
 
 ## Examples
 
+````console
 ```console
 $ docker volume prune
 
@@ -88433,7 +88853,7 @@ Deleted Volumes:
 07c7bdf3e34ab76d921894c2b834f073721fccfbbcba792aa7648e3a7a664c2e
 
 Total reclaimed space: 36 B
-```
+````
 
 ### Filtering (--all, -a) {#all}
 
@@ -88465,6 +88885,9 @@ which removes volumes with the specified labels. The other
 format is the `label!=...` (`label!=<key>` or `label!=<key>=<value>`), which removes
 volumes without the specified labels.
 
+```
+```
+
 
 # Document: docker volume rm
 
@@ -88493,10 +88916,14 @@ Remove one or more volumes. You can't remove a volume that's in use by a contain
 
 ## Examples
 
+````console
 ```console
 $ docker volume rm hello
 
 hello
+````
+
+```
 ```
 
 

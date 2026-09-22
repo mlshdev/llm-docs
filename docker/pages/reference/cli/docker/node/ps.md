@@ -30,6 +30,7 @@ information about available filter options.
 
 ## Examples
 
+````console
 ```console
 $ docker node ps swarm-manager1
 
@@ -39,7 +40,7 @@ redis.6.b465edgho06e318egmgjbqo4o   redis:7.4.1  swarm-manager1  Running        
 redis.7.bg8c07zzg87di2mufeq51a2qp   redis:7.4.1  swarm-manager1  Running        Running 5 seconds
 redis.9.dkkual96p4bb3s6b10r7coxxt   redis:7.4.1  swarm-manager1  Running        Running 5 seconds
 redis.10.0tgctg8h8cech4w0k0gwrmr23  redis:7.4.1  swarm-manager1  Running        Running 5 seconds
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -131,4 +132,7 @@ $ docker node ps --format "{{.Name}}: {{.Image}}"
 top.1: busybox
 top.2: busybox
 top.3: busybox
+```
+
+```
 ```

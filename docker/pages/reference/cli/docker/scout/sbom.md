@@ -52,11 +52,12 @@ or if you want to control from where the image will be resolved, you must prefix
 
 ## Examples
 
+````console
 ### Display the list of packages
 
 ```console
 $ docker scout sbom --format list alpine
-```
+````
 
 ### Only display packages of a specific type
 
@@ -80,4 +81,7 @@ $ docker scout sbom
 
 ```console
 $ docker scout sbom --output alpine.sbom alpine
+```
+
+```
 ```

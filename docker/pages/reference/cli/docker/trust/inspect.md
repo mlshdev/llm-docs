@@ -20,6 +20,7 @@ new tags.
 
 ## Examples
 
+````console
 ### Get low-level details about signatures for a single image tag
 
 Use the `docker trust inspect` to get trust information about an image. The
@@ -27,7 +28,7 @@ following example prints trust information for the `alpine:latest` image:
 
 ```console
 $ docker trust inspect alpine:latest
-```
+````
 
 The output is in JSON format, for example:
 
@@ -482,4 +483,7 @@ carol               b6f9f8e1aab0
 Administrative keys for my-image:
 Repository Key: 27df2c8187e7543345c2e0bf3a1262e0bc63a72754e9a7395eac3f747ec23a44
 Root Key:       40b66ccc8b176be8c7d365a17f3e046d1c3494e053dd57cfeacfe2e19c4f8e8f
+```
+
+```
 ```

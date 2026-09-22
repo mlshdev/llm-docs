@@ -31,14 +31,18 @@ Matching for the title-based forms follows 1Password's normalization rules and i
 
 ## Examples
 
+````console
 Install the service account token and enable the plugin:
 
 ```sh
 echo "$OP_SERVICE_ACCOUNT_TOKEN" | docker pass plugins 1password setup
-```
+````
 
 Remove the token and disable the plugin:
 
 ```sh
 docker pass plugins 1password purge
+```
+
+```
 ```

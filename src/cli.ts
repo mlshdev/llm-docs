@@ -258,7 +258,7 @@ async function update(scope: ProjectScope): Promise<void> {
     projects,
     resolved.failures,
     [...retained].sort((left, right) =>
-      left.project < right.project ? -1 : 1,
+      left.project < right.project ? -1 : left.project > right.project ? 1 : 0,
     ),
     resolved.metrics,
   );
@@ -410,7 +410,16 @@ function changedProjects(
   }
   return projectIds.filter(
     (id) =>
-      JSON.stringify(current.projects[id]) !==
-      JSON.stringify(next.projects[id]),
+      pinFingerprint(current.projects[id]) !==
+      pinFingerprint(next.projects[id]),
   );
+}
+
+// Canonical string form of a pin, independent of property insertion order, so a
+// pin rebuilt in memory compares equal to the same pin parsed back from disk.
+function pinFingerprint(pin: LockedSource | undefined): string {
+  if (!pin) {
+    return "absent";
+  }
+  return JSON.stringify(pin, Object.keys(pin).sort());
 }

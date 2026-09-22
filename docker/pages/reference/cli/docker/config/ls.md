@@ -30,6 +30,7 @@ For detailed information about using configs, refer to [store configuration data
 
 ## Examples
 
+````console
 ```console
 $ docker config ls
 
@@ -37,7 +38,7 @@ ID                          NAME                        CREATED             UPDA
 6697bflskwj1998km1gnnjr38   q5s5570vtvnimefos1fyeo2u2   6 weeks ago         6 weeks ago
 9u9hk4br2ej0wgngkga6rp4hq   my_config                   5 weeks ago         5 weeks ago
 mem02h8n73mybpgqjf0kfi1n0   test_config                 3 seconds ago       3 seconds ago
-```
+````
 
 ### Filtering (-f, --filter) {#filter}
 
@@ -140,4 +141,7 @@ ID                  NAME                      CREATED
 77af4d6b9913        config-1                  5 minutes ago
 b6fa739cedf5        config-2                  3 hours ago
 78a85c484f71        config-3                  10 days ago
+```
+
+```
 ```

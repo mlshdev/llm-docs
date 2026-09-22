@@ -73,6 +73,7 @@ or if you want to control from where the image will be resolved, you must prefix
 
 ## Examples
 
+````console
 ### Display vulnerabilities grouped by package
 
 ```console
@@ -81,7 +82,7 @@ Analyzing image alpine
 ✓ Image stored for indexing
 ✓ Indexed 18 packages
 ✓ No vulnerable package detected
-```
+````
 
 ### Display vulnerabilities from a `docker save` tarball
 

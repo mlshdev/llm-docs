@@ -43,6 +43,7 @@ this via the `--max-concurrent-downloads` daemon option. See the
 
 ## Examples
 
+````console
 ### Pull an image from Docker Hub
 
 To download a particular image, or set of images (i.e., a repository), use
@@ -59,7 +60,7 @@ e756f3fdd6a3: Pull complete
 Digest: sha256:3f1d6c17773a45c97bd8f158d665c9709d7b29ed7917ac934086ad96f92e4510
 Status: Downloaded newer image for debian:latest
 docker.io/library/debian:latest
-```
+````
 
 Docker images can consist of multiple layers. In the example above, the image
 consists of a single layer; `e756f3fdd6a3`.
@@ -233,3 +234,6 @@ a3ed95caeb02: Pulling fs layer
 The Engine terminates a pull operation when the connection between the daemon
 and the client (initiating the pull) is cut or lost for any reason or the
 command is manually terminated.
+
+```
+```

@@ -456,7 +456,7 @@ function renderBlocks(lines: readonly string[], sourcePath: string): string {
       continue;
     }
 
-    const table = readSimpleTable(lines, index);
+    const table = readSimpleTable(lines, index, sourcePath);
     if (table) {
       output.push(...table.rendered);
       index = table.next - 1;
@@ -722,6 +722,7 @@ function readDefinition(
 function readSimpleTable(
   lines: readonly string[],
   index: number,
+  sourcePath: string,
 ): { readonly rendered: readonly string[]; readonly next: number } | undefined {
   const separator = lines[index] ?? "";
   if (!/^\s*=+(?:\s+=+)+\s*$/.test(separator)) {
@@ -773,11 +774,13 @@ function readSimpleTable(
   }
   const renderedRows = rows.map(
     (row) =>
-      `| ${row.map((cell) => renderInline(cell, "README.rst").replace(/\|/g, "\\|")).join(" | ")} |`,
+      `| ${row.map((cell) => renderInline(cell, sourcePath).replace(/\|/g, "\\|")).join(" | ")} |`,
   );
   return {
     rendered: [
-      renderedRows[0] ?? "",
+      // An RST simple table may carry several header rows before the divider;
+      // every one of them belongs above the Markdown separator line.
+      ...renderedRows.slice(0, divider),
       `| ${columns.map(() => "---").join(" | ")} |`,
       ...renderedRows.slice(divider),
     ],
@@ -809,8 +812,11 @@ function trimBlankLines(lines: readonly string[]): readonly string[] {
 }
 
 function dedent(lines: readonly string[]): readonly string[] {
+  // No indented line at all means nothing to remove; Math.min() over an empty
+  // list would otherwise dedent to Infinity and strip every character.
   const nonBlank = lines.filter((line) => line.trim());
-  const width = Math.min(...nonBlank.map(indentation));
+  const width =
+    nonBlank.length > 0 ? Math.min(...nonBlank.map(indentation)) : 0;
   return lines.map((line) => stripIndent(line, width));
 }
 

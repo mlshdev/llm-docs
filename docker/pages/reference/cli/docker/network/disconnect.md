@@ -19,6 +19,10 @@ disconnect it from the network.
 
 ## Examples
 
+````console
 ```console
 $ docker network disconnect multi-host-network container1
+````
+
+```
 ```

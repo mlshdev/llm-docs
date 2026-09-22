@@ -30,6 +30,7 @@ For detailed information about using secrets, refer to [manage sensitive data wi
 
 ## Examples
 
+````console
 ```console
 $ docker secret ls
 
@@ -37,7 +38,7 @@ ID                          NAME                        CREATED             UPDA
 6697bflskwj1998km1gnnjr38   q5s5570vtvnimefos1fyeo2u2   6 weeks ago         6 weeks ago
 9u9hk4br2ej0wgngkga6rp4hq   my_secret                   5 weeks ago         5 weeks ago
 mem02h8n73mybpgqjf0kfi1n0   test_secret                 3 seconds ago       3 seconds ago
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -147,4 +148,7 @@ To list all secrets in JSON format, use the `json` directive:
 ```console
 $ docker secret ls --format json
 {"CreatedAt":"28 seconds ago","Driver":"","ID":"4y7hvwrt1u8e9uxh5ygqj7mzc","Labels":"","Name":"mysecret","UpdatedAt":"28 seconds ago"}
+```
+
+```
 ```

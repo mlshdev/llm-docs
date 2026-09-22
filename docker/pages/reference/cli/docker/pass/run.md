@@ -29,11 +29,12 @@ started and exits non-zero.
 
 ## Examples
 
+````console
 ### Run a command with one secret in its environment:
 
 ```console
 $ SE_TOKEN=se://gh-token docker pass run -- gh repo list
-```
+````
 
 ### Multiple references:
 
@@ -51,4 +52,7 @@ $ docker pass run --env-file .env -- ./my-binary
 
 ```console
 $ docker pass run --env-file .env --env-file .env.local -- ./my-binary
+```
+
+```
 ```

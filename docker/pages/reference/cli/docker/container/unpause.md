@@ -19,7 +19,11 @@ for further details.
 
 ## Examples
 
+````console
 ```console
 $ docker unpause my_container
 my_container
+````
+
+```
 ```

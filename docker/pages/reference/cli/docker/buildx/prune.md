@@ -32,6 +32,7 @@ Clears the build cache of the selected builder.
 
 ## Examples
 
+````console
 ### Include internal/frontend images (--all) {#all}
 
 The `--all` flag to allow clearing internal helper images and frontend images
@@ -47,7 +48,6 @@ operators `=` for equality, `!=` for not equal and `~=` for a regular
 expression.
 
 Valid filter keys are:
-
 - `until` flag to keep records that have been used in the last duration time.
   Value is a duration string, e.g. `24h` or `2h30m`, with allowable units of
   `(h)ours`, `(m)inutes` and `(s)econds`.
@@ -79,7 +79,7 @@ docker buildx prune --filter "description~=golang"
 docker buildx prune --filter "parents=dpetmoi6n0yqanxjqrbnofz9n;kgoj0q6g57i35gdyrv546alz7"
 docker buildx prune --filter "type=source.local"
 docker buildx prune --filter "type!=exec.cachemount"
-```
+````
 
 > \[!NOTE]
 > Multiple `--filter` flags are ANDed together.
@@ -117,3 +117,6 @@ e.g. `128mb`, `2gb`, etc. Units are case-insensitive.
 ### Override the configured builder instance (--builder) {#builder}
 
 Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).
+
+```
+```

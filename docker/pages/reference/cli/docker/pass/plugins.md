@@ -26,15 +26,19 @@ Use the subcommands to inspect which plugins are registered and their current st
 
 ## Examples
 
+````console
 List all registered plugins and their status:
 
 ```sh
 docker pass plugins ls
-```
+````
 
 Enable or disable a configurable plugin:
 
 ```sh
 docker pass plugins enable 1password-cli
 docker pass plugins disable 1password-cli
+```
+
+```
 ```

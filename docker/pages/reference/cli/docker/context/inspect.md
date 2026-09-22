@@ -18,6 +18,7 @@ Inspects one or more contexts.
 
 ## Examples
 
+````console
 ### Inspect a context by name
 
 ```console
@@ -43,4 +44,7 @@ $ docker context inspect "local+aks"
     }
   }
 ]
+````
+
+```
 ```

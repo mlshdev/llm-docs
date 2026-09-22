@@ -22,11 +22,12 @@ details of the format.
 
 ## Examples
 
+````console
 ```console
 $ docker volume create myvolume
 
 myvolume
-```
+````
 
 Use the `docker volume inspect` comment to inspect the configuration of the volume:
 
@@ -59,4 +60,7 @@ to print the `Mountpoint` property:
 $ docker volume inspect --format '{{ .Mountpoint }}' myvolume
 
 /var/lib/docker/volumes/myvolume/_data
+```
+
+```
 ```

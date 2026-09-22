@@ -169,8 +169,14 @@ function isLockedSource(value: unknown): value is LockedSource {
       value.taggedAt === undefined &&
       value.docsCommit === undefined &&
       value.releaseId === undefined &&
-      value.releasePublishedAt === undefined
+      value.releasePublishedAt === undefined &&
+      value.documentationDigest === undefined &&
+      value.observedCommit === undefined
     );
+  }
+  // Snapshot-only fields are forbidden on every commit-backed pin kind.
+  if (value.capturedAt !== undefined) {
+    return false;
   }
   if (value.contentDigest !== undefined || !isCommitSha(value.sourceCommit)) {
     return false;
@@ -238,10 +244,12 @@ function isHttpUrl(value: unknown): value is string {
   }
 }
 
-function isGithubRepository(value: unknown): value is string {
+export function isGithubRepository(value: unknown): value is string {
   return (
     typeof value === "string" &&
-    /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(value) &&
+    // The leading character must be alphanumeric so the value can never be
+    // mistaken for a command-line option when passed to `gh repo clone`.
+    /^[A-Za-z0-9][A-Za-z0-9_.-]*\/[A-Za-z0-9][A-Za-z0-9_.-]*$/.test(value) &&
     !value.endsWith(".git")
   );
 }

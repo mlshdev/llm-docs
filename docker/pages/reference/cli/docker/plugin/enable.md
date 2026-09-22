@@ -19,6 +19,7 @@ see [`docker plugin install`](https://docs.docker.com/reference/cli/docker/plugi
 
 ## Examples
 
+````console
 The following example shows that the `sample-volume-plugin` plugin is installed,
 but disabled:
 
@@ -27,7 +28,7 @@ $ docker plugin ls
 
 ID            NAME                                    DESCRIPTION                ENABLED
 69553ca1d123  tiborvass/sample-volume-plugin:latest   A test plugin for Docker   false
-```
+````
 
 To enable the plugin, use the following command:
 
@@ -40,4 +41,7 @@ $ docker plugin ls
 
 ID            NAME                                    DESCRIPTION                ENABLED
 69553ca1d123  tiborvass/sample-volume-plugin:latest   A test plugin for Docker   true
+```
+
+```
 ```

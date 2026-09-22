@@ -23,7 +23,8 @@ plugins is 2.3.0.
 
 ## Examples
 
-The following example installs `vieus/sshfs` plugin and [sets](https://docs.docker.com/reference/cli/docker/plugin/set/) its
+````console
+The following example installs `vieus/sshfs` plugin and [sets](/reference/cli/docker/plugin/set/) its
 `DEBUG` environment variable to `1`. To install, `pull` the plugin from Docker
 Hub and prompt the user to accept the list of privileges that the plugin needs,
 set the plugin's parameters and enable the plugin.
@@ -37,7 +38,7 @@ Plugin "vieux/sshfs" is requesting the following privileges:
  - capabilities: [CAP_SYS_ADMIN]
 Do you grant the above permissions? [y/N] y
 vieux/sshfs
-```
+````
 
 After the plugin is installed, it appears in the list of plugins:
 
@@ -46,4 +47,7 @@ $ docker plugin ls
 
 ID             NAME                  DESCRIPTION                ENABLED
 69553ca1d123   vieux/sshfs:latest    sshFS plugin for Docker    true
+```
+
+```
 ```

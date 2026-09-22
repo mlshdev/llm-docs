@@ -42,15 +42,16 @@ this via the `--max-concurrent-uploads` daemon option. See the
 
 ## Examples
 
+````console
 ### Push a new image to a registry
 
 First save the new image by finding the container ID (using [`docker container
-ls`](https://docs.docker.com/reference/cli/docker/container/ls/)) and then committing it to a new image name. Note that
+ls`](/reference/cli/docker/container/ls/)) and then committing it to a new image name. Note that
 only `a-z0-9-_.` are allowed when naming images:
 
 ```console
 $ docker container commit c16378f943fe rhel-httpd:latest
-```
+````
 
 Now, push the image to the registry using the image ID. In this example the
 registry is on host named `registry-host` and listening on port `5000`. To do
@@ -114,4 +115,7 @@ v1: digest: sha256:edafc0a0fb057813850d1ba44014914ca02d671ae247107ca70c94db686e7
 v1.0: digest: sha256:edafc0a0fb057813850d1ba44014914ca02d671ae247107ca70c94db686e7de6 size: 4527
 195be5f8be1d: Layer already exists
 v1.0.1: digest: sha256:edafc0a0fb057813850d1ba44014914ca02d671ae247107ca70c94db686e7de6 size: 4527
+```
+
+```
 ```

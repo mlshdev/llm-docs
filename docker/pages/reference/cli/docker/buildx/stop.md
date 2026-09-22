@@ -20,6 +20,8 @@ restart the builder. The implementation of stop depends on the driver.
 
 ## Examples
 
+```console
 ### Override the configured builder instance (--builder) {#builder}
 
-Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).
+Same as [`buildx --builder`](/reference/cli/docker/buildx/#builder).
+```

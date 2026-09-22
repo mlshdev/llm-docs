@@ -20,11 +20,12 @@ Docker Desktop to be installed and running on the host machine.
 
 ## Examples
 
+````console
 ### Open the most recent build in Docker Desktop
 
 ```console
 docker buildx history open
-```
+````
 
 By default, this opens the most recent build on the current builder.
 
@@ -36,4 +37,7 @@ docker buildx history open qu2gsuo8ejqrwdfii23xkkckt
 
 # Or using a relative offset
 docker buildx history open ^1
+```
+
+```
 ```

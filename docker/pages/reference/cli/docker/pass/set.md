@@ -29,11 +29,12 @@ a delete-then-add sequence.
 
 ## Examples
 
+````console
 ### Set a secret:
 
 ```console
 $ docker pass set POSTGRES_PASSWORD=my-secret-password
-```
+````
 
 ### Or pass the secret via STDIN:
 
@@ -58,4 +59,7 @@ $ echo '{"secret":"my-secret-password","metadata":{"owner":"alice"}}' | docker p
 
 ```console
 $ docker pass set POSTGRES_PASSWORD=new-secret-password --force
+```
+
+```
 ```

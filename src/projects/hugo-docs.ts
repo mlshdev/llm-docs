@@ -16,6 +16,7 @@ import type {
   GithubSourceProject,
   ProjectBuild,
 } from "../types.ts";
+import { compareCodePoints } from "../compare.ts";
 
 // The VictoriaMetrics projects publish their documentation from a Hugo `docs/`
 // tree that declares navigation through `menu.docs` and shares fragments
@@ -645,8 +646,4 @@ function resolveHugoLink(
       ? githubRawUrl(repository, ref, resolved)
       : githubBlobUrl(repository, ref, resolved);
   return `${sourceUrl}${suffix}`;
-}
-
-function compareCodePoints(left: string, right: string): number {
-  return left < right ? -1 : left > right ? 1 : 0;
 }

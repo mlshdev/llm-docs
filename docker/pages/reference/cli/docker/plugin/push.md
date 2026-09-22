@@ -16,6 +16,7 @@ Registry credentials are managed by [docker login](https://docs.docker.com/refer
 
 ## Examples
 
+````console
 The following example shows how to push a sample `user/plugin`.
 
 ```console
@@ -25,4 +26,7 @@ ID             NAME                    DESCRIPTION                  ENABLED
 69553ca1d456   user/plugin:latest      A sample plugin for Docker   false
 
 $ docker plugin push user/plugin
+````
+
+```
 ```

@@ -26,11 +26,12 @@ You can also use chat mode in the Docker Desktop Dashboard when you select the m
 
 ## Examples
 
+````console
 ### One-time prompt
 
 ```console
 docker model run ai/smollm2 "Hi"
-```
+````
 
 Output:
 
@@ -59,3 +60,6 @@ docker model run --detach ai/smollm2
 ```
 
 This loads the model into memory without interaction, ensuring maximum performance for subsequent requests.
+
+```
+```

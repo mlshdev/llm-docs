@@ -18,18 +18,16 @@ Add MCP servers to a profile.
 
 ## Examples
 
+```console
 # Add servers from a catalog
+  docker mcp profile server add dev-tools --server catalog://mcp/docker-mcp-catalog/github+obsidian
 
-docker mcp profile server add dev-tools --server catalog://mcp/docker-mcp-catalog/github+obsidian
+  # Add servers with OCI references
+  docker mcp profile server add my-profile --server docker://my-server:latest
 
-# Add servers with OCI references
+  # Add servers with MCP Registry references
+  docker mcp profile server add my-profile --server http://registry.modelcontextprotocol.io/v0/servers/71de5a2a-6cfb-4250-a196-f93080ecc860
 
-docker mcp profile server add my-profile --server docker://my-server:latest
-
-# Add servers with MCP Registry references
-
-docker mcp profile server add my-profile --server <http://registry.modelcontextprotocol.io/v0/servers/71de5a2a-6cfb-4250-a196-f93080ecc860>
-
-# Mix server references
-
-docker mcp profile server add dev-tools --server catalog://mcp/docker-mcp-catalog/github+obsidian --server docker://my-server:latest
+  # Mix server references
+  docker mcp profile server add dev-tools --server catalog://mcp/docker-mcp-catalog/github+obsidian --server docker://my-server:latest
+```

@@ -23,11 +23,12 @@ bzip2, xz or zstd) from a file or STDIN. It restores both images and tags.
 
 ## Examples
 
+````console
 ```console
 $ docker image ls
 
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-```
+````
 
 ### Load images from STDIN
 
@@ -84,4 +85,7 @@ archive, but the given platform is not present in the archive;
 ```console
 $ docker image load -i image.tar --platform=linux/ppc64le
 requested platform (linux/ppc64le) not found: image might be filtered out
+```
+
+```
 ```

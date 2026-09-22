@@ -27,6 +27,7 @@ For detailed information about using configs, refer to [store configuration data
 
 ## Examples
 
+````console
 ### Create a config
 
 ```console
@@ -38,7 +39,7 @@ $ docker config ls
 
 ID                          NAME                CREATED             UPDATED
 onakdyv307se2tl7nl20anokv   my_config           6 seconds ago       6 seconds ago
-```
+````
 
 ### Create a config with a file
 
@@ -85,4 +86,7 @@ $ docker config inspect my_config
         }
     }
 ]
+```
+
+```
 ```

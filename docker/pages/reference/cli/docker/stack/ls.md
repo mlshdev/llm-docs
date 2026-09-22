@@ -26,6 +26,7 @@ Lists the stacks.
 
 ## Examples
 
+````console
 The following command shows all stacks and some additional information:
 
 ```console
@@ -34,7 +35,7 @@ $ docker stack ls
 ID                 SERVICES            ORCHESTRATOR
 myapp              2                   Kubernetes
 vossibility-stack  6                   Swarm
-```
+````
 
 ### Format the output (--format) {#format}
 
@@ -67,4 +68,7 @@ To list all stacks in JSON format, use the `json` directive:
 ```console
 $ docker stack ls --format json
 {"Name":"myapp","Namespace":"","Orchestrator":"Swarm","Services":"3"}
+```
+
+```
 ```

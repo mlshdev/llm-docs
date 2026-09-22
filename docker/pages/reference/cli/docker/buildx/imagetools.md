@@ -26,6 +26,8 @@ to check multi-platform configuration and attestations.
 
 ## Examples
 
+```console
 ### Override the configured builder instance (--builder) {#builder}
 
-Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).
+Same as [`buildx --builder`](/reference/cli/docker/buildx/#builder).
+```

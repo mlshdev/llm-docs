@@ -66,12 +66,11 @@ Define and run multi-container applications with Docker
 
 ## Examples
 
+````console
 ### Use `-f` to specify the name and path of one or more Compose files
-
-Use the `-f` flag to specify the location of a Compose [configuration file](https://docs.docker.com/reference/compose-file/).
+Use the `-f` flag to specify the location of a Compose [configuration file](/reference/compose-file/).
 
 #### Specifying multiple Compose files
-
 You can supply multiple `-f` configuration files. When you supply multiple files, Compose combines them into a single
 configuration. Compose builds the configuration in the order you supply the files. Subsequent files override and add
 to their predecessors.
@@ -80,7 +79,7 @@ For example, consider this command line:
 
 ```console
 $ docker compose -f compose.yaml -f compose.admin.yaml run backup_db
-```
+````
 
 The `compose.yaml` file might specify a `webapp` service.
 
@@ -271,3 +270,6 @@ From the example above, you can see that the first step is to pull the image def
 Next, the containers are created. The `db` service is started, and the `backend` and `proxy` wait until the `db` service is healthy before starting.
 
 Dry Run mode works with almost all commands. You cannot use Dry Run mode with a command that doesn't change the state of a Compose stack such as `ps`, `ls`, `logs` for example.
+
+```
+```

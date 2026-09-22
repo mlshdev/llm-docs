@@ -20,6 +20,7 @@ Removes the specified services from the swarm.
 
 ## Examples
 
+````console
 Remove the `redis` service:
 
 ```console
@@ -30,8 +31,11 @@ redis
 $ docker service ls
 
 ID  NAME  MODE  REPLICAS  IMAGE
-```
+````
 
 > \[!WARNING]
 > Unlike `docker rm`, this command does not ask for confirmation before removing
 > a running service.
+
+```
+```

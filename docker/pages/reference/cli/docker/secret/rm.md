@@ -22,13 +22,18 @@ For detailed information about using secrets, refer to [manage sensitive data wi
 
 ## Examples
 
+````console
 This example removes a secret:
 
 ```console
 $ docker secret rm secret.json
 sapth4csdo5b6wz2p5uimh5xg
-```
+````
 
 > \[!WARNING]
 > Unlike `docker rm`, this command does not ask for confirmation before removing
 > a secret.
+> { .warning }
+
+```
+```

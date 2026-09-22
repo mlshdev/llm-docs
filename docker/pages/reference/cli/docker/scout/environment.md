@@ -34,13 +34,14 @@ $ docker scout compare --to-env production
 
 ## Examples
 
+````console
 ### List existing environments
 
 ```console
 $ docker scout environment
 prod
 staging
-```
+````
 
 ### List images of an environment
 
@@ -56,4 +57,7 @@ namespace/other-repo:tag@sha256:0001d6ce124855b0a158569c584162097fe0ca8d72519067
 $ docker scout environment staging namespace/repo:stage-latest --platform linux/amd64
 ✓ Pulled
 ✓ Successfully recorded namespace/repo:stage-latest in environment staging
+```
+
+```
 ```

@@ -14,6 +14,7 @@ import type {
   GithubSourceProject,
   ProjectBuild,
 } from "../types.ts";
+import { compareCodePoints } from "../compare.ts";
 
 type SymbolKind = "class" | "function" | "method" | "attribute";
 
@@ -654,8 +655,7 @@ export function renderRstInline(value: string, context: RstContext): string {
       return target
         ? `[${label}](${documentationUrl(context.homepage, target.sourcePath, target.anchor)})`
         : label;
-    })
-    .replace(/\*\*([^*]+)\*\*/g, "**$1**");
+    });
 }
 
 const renderInline = renderRstInline;
@@ -1449,8 +1449,4 @@ function titleCase(value: string): string {
     (_match, prefix, letter) =>
       `${prefix ? " " : ""}${String(letter).toUpperCase()}`,
   );
-}
-
-function compareCodePoints(left: string, right: string): number {
-  return left < right ? -1 : left > right ? 1 : 0;
 }

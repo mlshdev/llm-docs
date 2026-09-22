@@ -13,6 +13,7 @@ The Docker official catalog cannot be removed.
 
 ## Examples
 
+```console
 # Remove a catalog
-
-docker mcp catalog rm old-servers
+  docker mcp catalog rm old-servers
+```

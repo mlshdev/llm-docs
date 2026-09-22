@@ -52,11 +52,12 @@ or if you want to control from where the image will be resolved, you must prefix
 
 ## Examples
 
+````console
 ### Display base image update recommendations
 
 ```console
 $ docker scout recommendations golang:1.19.4
-```
+````
 
 ### Display base image refresh only recommendations
 
@@ -68,4 +69,7 @@ $ docker scout recommendations --only-refresh golang:1.19.4
 
 ```console
 $ docker scout recommendations --only-update golang:1.19.4
+```
+
+```
 ```

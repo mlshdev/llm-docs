@@ -29,26 +29,22 @@ To view enabled tools, use: docker mcp profile show <profile-id>
 
 ## Examples
 
+```console
 # Enable specific tools for a server
+  docker mcp profile tools my-profile --enable github.create_issue --enable github.list_repos
 
-docker mcp profile tools my-profile --enable github.create\_issue --enable github.list\_repos
+  # Disable specific tools for a server
+  docker mcp profile tools my-profile --disable github.create_issue --disable github.search_code
 
-# Disable specific tools for a server
+  # Enable and disable in one command
+  docker mcp profile tools my-profile --enable github.create_issue --disable github.search_code
 
-docker mcp profile tools my-profile --disable github.create\_issue --disable github.search\_code
+  # Enable all tools for a server
+  docker mcp profile tools my-profile --enable-all github
 
-# Enable and disable in one command
+  # Disable all tools for a server
+  docker mcp profile tools my-profile --disable-all github
 
-docker mcp profile tools my-profile --enable github.create\_issue --disable github.search\_code
-
-# Enable all tools for a server
-
-docker mcp profile tools my-profile --enable-all github
-
-# Disable all tools for a server
-
-docker mcp profile tools my-profile --disable-all github
-
-# View all enabled tools in the profile
-
-docker mcp profile show my-profile
+  # View all enabled tools in the profile
+  docker mcp profile show my-profile
+```

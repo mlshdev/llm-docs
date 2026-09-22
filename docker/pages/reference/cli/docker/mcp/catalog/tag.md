@@ -13,14 +13,13 @@ This creates a copy of the source catalog with a new reference, similar to Docke
 
 ## Examples
 
+```console
 # Tag a catalog with a new version
+  docker mcp catalog tag mcp/my-catalog:v1 mcp/my-catalog:v2
 
-docker mcp catalog tag mcp/my-catalog:v1 mcp/my-catalog:v2
+  # Create a tagged copy with a different name
+  docker mcp catalog tag mcp/team-catalog:latest mcp/prod-catalog:v1.0
 
-# Create a tagged copy with a different name
-
-docker mcp catalog tag mcp/team-catalog:latest mcp/prod-catalog:v1.0
-
-# Tag without explicit version (uses latest)
-
-docker mcp catalog tag mcp/my-catalog mcp/my-catalog:backup
+  # Tag without explicit version (uses latest)
+  docker mcp catalog tag mcp/my-catalog mcp/my-catalog:backup
+```

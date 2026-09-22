@@ -20,6 +20,7 @@ Remove all dangling images. If `-a` is specified, also remove all images not ref
 
 ## Examples
 
+````console
 Example output:
 
 ```console
@@ -53,7 +54,7 @@ deleted: sha256:47cf20d8c26c46fff71be614d9f54997edacfe8d46d51769706e5aba94b16f2b
 deleted: sha256:2c675ee9ed53425e31a13e3390bf3f539bf8637000e4bcfbb85ee03ef4d910a1
 
 Total reclaimed space: 16.43 MB
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -204,3 +205,6 @@ $ docker image prune --filter="label!=maintainer=john"
 > anything, but you are not shown a list of what will potentially be removed.
 > In addition, `docker image ls` doesn't support negative filtering, so it
 > difficult to predict what images will actually be removed.
+
+```
+```

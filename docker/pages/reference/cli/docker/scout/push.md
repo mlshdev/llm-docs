@@ -25,8 +25,12 @@ The `docker scout push` command lets you push an image or analysis result to Doc
 
 ## Examples
 
+````console
 ### Push an image to Docker Scout
 
 ```console
 $ docker scout push --org my-org registry.example.com/repo:tag
+````
+
+```
 ```

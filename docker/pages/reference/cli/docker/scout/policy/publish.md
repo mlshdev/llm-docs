@@ -24,11 +24,13 @@ When no --policy-file or --policy-dir is given, the built-in default policy set 
 
 ## Examples
 
+```console
 Publish the built-in default policies:
-$ docker scout policy publish registry.example.com/policies:latest\[0m
+  $ docker scout policy publish registry.example.com/policies:latest[0m
 
-Publish a directory of local policies:
-$ docker scout policy publish --policy-dir ./rego registry.example.com/policies:latest\[0m
+  Publish a directory of local policies:
+  $ docker scout policy publish --policy-dir ./rego registry.example.com/policies:latest[0m
 
-Publish specific policy files:
-$ docker scout policy publish --policy-file fixable.rego --policy-file licenses.rego registry.example.com/policies:latest\[0m
+  Publish specific policy files:
+  $ docker scout policy publish --policy-file fixable.rego --policy-file licenses.rego registry.example.com/policies:latest[0m
+```

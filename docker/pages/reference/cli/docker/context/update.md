@@ -20,6 +20,7 @@ See [context create](https://docs.docker.com/reference/cli/docker/context/create
 
 ## Examples
 
+````console
 ### Update an existing context
 
 ```console
@@ -27,4 +28,7 @@ $ docker context update \
     --description "some description" \
     --docker "host=tcp://myserver:2376,ca=~/ca-file,cert=~/cert-file,key=~/key-file" \
     my-context
+````
+
+```
 ```

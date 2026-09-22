@@ -15,6 +15,8 @@ import path from "node:path";
 import { pipeline } from "node:stream/promises";
 import { createGunzip } from "node:zlib";
 import { extract } from "tar-stream";
+import { isGithubRepository } from "./config.ts";
+import { compareCodePoints } from "./compare.ts";
 import { downloadArchive } from "./github.ts";
 
 const maximumExtractedBytes = 500 * 1024 * 1024;
@@ -22,6 +24,10 @@ const maximumFileBytes = 25 * 1024 * 1024;
 const maximumFiles = 50_000;
 const maximumArchiveEntries = 100_000;
 const maximumDeclaredBytes = 2 * 1024 * 1024 * 1024;
+
+// Generous default: a blobless clone of a large repository is slow but not
+// hung. `DOCS_PROCESS_TIMEOUT_MS` shortens it for local runs.
+const processTimeout = 15 * 60 * 1000;
 
 export async function withRepositoryArchive<T>(
   repository: string,
@@ -57,7 +63,7 @@ export async function withSparseGithubCheckout<T>(
     repositoryFiles: ReadonlySet<string>,
   ) => Promise<T>,
 ): Promise<T> {
-  if (!/^[^/\s]+\/[^/\s]+$/.test(repository) || !/^[0-9a-f]{40}$/.test(ref)) {
+  if (!isGithubRepository(repository) || !/^[0-9a-f]{40}$/.test(ref)) {
     throw new Error(
       `Sparse GitHub checkouts must be addressed by owner/name and immutable commit SHA: ${repository}@${ref}`,
     );
@@ -117,7 +123,22 @@ export async function withSparseGithubCheckout<T>(
         ref,
       ]);
       await runProcess(["git", "-C", source, "checkout", "--detach", ref]);
-      await rename(source, checkout);
+      try {
+        await rename(source, checkout);
+      } catch (error) {
+        // A concurrent run may have committed the same checkout between this
+        // run's existence check and its rename. That checkout is validated by
+        // its recorded HEAD below, so adopting it is safe.
+        const code = (error as NodeJS.ErrnoException | undefined)?.code;
+        if (
+          code !== "ENOTEMPTY" &&
+          code !== "EEXIST" &&
+          code !== "ENOTDIR" &&
+          code !== "EISDIR"
+        ) {
+          throw error;
+        }
+      }
     } finally {
       await rm(staging, { recursive: true, force: true });
     }
@@ -126,7 +147,15 @@ export async function withSparseGithubCheckout<T>(
     await runProcess(["git", "-C", checkout, "rev-parse", "HEAD"])
   ).trim();
   if (head !== ref) {
-    await rm(checkout, { recursive: true, force: true });
+    // Move the mismatched checkout aside before removing it, so a concurrent
+    // reader never loses the directory it is currently walking.
+    const quarantinePath = `${checkout}.invalid.${process.pid}.${randomUUID()}`;
+    try {
+      await rename(checkout, quarantinePath);
+      await rm(quarantinePath, { recursive: true, force: true });
+    } catch {
+      // Another process already quarantined or removed it.
+    }
     throw new Error(
       `Sparse GitHub checkout resolved ${repository}@${ref} to ${head}`,
     );
@@ -142,6 +171,8 @@ async function runProcess(arguments_: readonly string[]): Promise<string> {
   const child = Bun.spawn([...arguments_], {
     stdout: "pipe",
     stderr: "pipe",
+    // A hung clone or fetch must not stall the scheduled pipeline forever.
+    timeout: processTimeoutMs(),
   });
   const [exitCode, stdout, stderr] = await Promise.all([
     child.exited,
@@ -156,11 +187,18 @@ async function runProcess(arguments_: readonly string[]): Promise<string> {
   return stdout;
 }
 
+function processTimeoutMs(): number {
+  const override = Number(process.env.DOCS_PROCESS_TIMEOUT_MS);
+  return Number.isSafeInteger(override) && override > 0
+    ? override
+    : processTimeout;
+}
+
 async function repositoryArchive(
   repository: string,
   ref: string,
 ): Promise<string> {
-  if (!/^[^/\s]+\/[^/\s]+$/.test(repository) || !/^[0-9a-f]{40}$/.test(ref)) {
+  if (!isGithubRepository(repository) || !/^[0-9a-f]{40}$/.test(ref)) {
     throw new Error(
       `Repository archives must be addressed by owner/name and immutable commit SHA: ${repository}@${ref}`,
     );
@@ -187,9 +225,7 @@ export async function listFiles(directory: string): Promise<string[]> {
   const result: string[] = [];
   async function walk(current: string): Promise<void> {
     const entries = await readdir(current, { withFileTypes: true });
-    entries.sort((left, right) =>
-      left.name < right.name ? -1 : left.name > right.name ? 1 : 0,
-    );
+    entries.sort((left, right) => compareCodePoints(left.name, right.name));
     for (const entry of entries) {
       const absolute = path.join(current, entry.name);
       if (entry.isSymbolicLink()) {
@@ -298,10 +334,25 @@ export async function commitDirectoryReplacements(
     }
     await finalize();
   } catch (error) {
+    const rollbackFailures: string[] = [];
     for (const entry of committed.reverse()) {
       const backup = `${entry.destination}.backup`;
-      await rm(entry.destination, { recursive: true, force: true });
-      if (entry.retainedPrevious) await rename(backup, entry.destination);
+      // Every rollback step runs even after an earlier one fails, so the
+      // original error stays primary and the failures stay visible.
+      try {
+        await rm(entry.destination, { recursive: true, force: true });
+        if (entry.retainedPrevious) await rename(backup, entry.destination);
+      } catch (rollbackError) {
+        rollbackFailures.push(
+          `${entry.destination}: ${asError(rollbackError).message}`,
+        );
+      }
+    }
+    if (rollbackFailures.length > 0) {
+      throw new Error(
+        `${asError(error).message}; rollback also failed (${rollbackFailures.join("; ")})`,
+        { cause: error },
+      );
     }
     throw error;
   } finally {

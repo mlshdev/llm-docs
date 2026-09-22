@@ -2,7 +2,6 @@ import { describe, expect, test } from "bun:test";
 import {
   cleanMarkdown,
   convertRst,
-  documentLinks,
   isPublishableUrl,
   markdownLinks,
   parseFrontmatter,
@@ -105,7 +104,7 @@ still code
 
   test("extracts HTML links outside fenced examples", () => {
     expect(
-      documentLinks(
+      markdownLinks(
         '<figure><img src="asset.png"></figure>\n<a href="guide.md">Guide</a>\n`<a href="/literal">Found</a>`\n```html\n<img src="example.png">\n```',
       ),
     ).toEqual([

@@ -24,6 +24,7 @@ You can use the full or shortened container ID or the container name set using
 
 ## Examples
 
+````console
 Inspect the changes to an `nginx` container:
 
 ```console
@@ -48,4 +49,7 @@ A /var/lib/nginx/tmp/uwsgi
 C /var/log/nginx
 A /var/log/nginx/access.log
 A /var/log/nginx/error.log
+````
+
+```
 ```

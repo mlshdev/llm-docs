@@ -20,10 +20,10 @@ Remove MCP servers from a profile by server name.
 
 ## Examples
 
+```console
 # Remove servers by name
+  docker mcp profile server remove dev-tools --name github --name slack
 
-docker mcp profile server remove dev-tools --name github --name slack
-
-# Remove a single server
-
-docker mcp profile server remove dev-tools --name github
+  # Remove a single server
+  docker mcp profile server remove dev-tools --name github
+```

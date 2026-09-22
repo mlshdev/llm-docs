@@ -39,13 +39,14 @@ The command must be an executable. A chained or a quoted command doesn't work.
 
 ## Examples
 
+````console
 ### Run `docker exec` on a running container
 
 First, start a container.
 
 ```console
 $ docker run --name mycontainer -d -i -t alpine /bin/sh
-```
+````
 
 This creates and starts a container named `mycontainer` from an `alpine` image
 with an `sh` shell as its main process. The `-d` option (shorthand for `--detach`)
@@ -135,4 +136,7 @@ Error response from daemon: Container mycontainer is paused, unpause the contain
 
 $ echo $?
 1
+```
+
+```
 ```

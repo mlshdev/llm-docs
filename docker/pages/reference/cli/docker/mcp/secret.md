@@ -16,7 +16,9 @@ Manage secrets in the local OS Keychain
 
 ## Examples
 
+```console
 ### Pass the secret via STDIN
 
 > echo my-secret-password > pwd.txt
-> cat pwd.txt | docker mcp secret set POSTGRES\_PASSWORD
+> cat pwd.txt | docker mcp secret set POSTGRES_PASSWORD
+```

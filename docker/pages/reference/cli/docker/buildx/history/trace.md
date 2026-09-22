@@ -29,6 +29,7 @@ This helps analyze build performance, step timing, and internal execution flows.
 
 ## Examples
 
+````console
 ### Open the OpenTelemetry trace for the most recent build
 
 This command starts a temporary Jaeger UI server and opens your default browser
@@ -36,7 +37,7 @@ to view the trace.
 
 ```console
 docker buildx history trace
-```
+````
 
 ### Open the trace for a specific build
 
@@ -72,3 +73,6 @@ docker buildx history trace --compare=^1
 
 When you use a single reference with `--compare`, it compares that build
 against the most recent one.
+
+```
+```

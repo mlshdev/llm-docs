@@ -26,6 +26,7 @@ Lists the services that are running as part of the specified stack.
 
 ## Examples
 
+````console
 The following command shows all services in the `myapp` stack:
 
 ```console
@@ -34,7 +35,7 @@ $ docker stack services myapp
 ID            NAME            REPLICAS  IMAGE                                                                          COMMAND
 7be5ei6sqeye  myapp_web       1/1       nginx@sha256:23f809e7fd5952e7d5be065b4d3643fbbceccd349d537b62a123ef2201bc886f
 dn7m7nhhfb9y  myapp_db        1/1       mysql@sha256:a9a5b559f8821fe73d58c3606c812d1c044868d42c63817fa5125fd9d8b7b539
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -100,4 +101,7 @@ $ docker stack services ls --format json
 {"ID":"0axqbl293vwm","Image":"localstack/localstack:latest","Mode":"replicated","Name":"myapp_localstack","Ports":"*:4566-\u003e4566/tcp, *:8080-\u003e8080/tcp","Replicas":"0/1"}
 {"ID":"384xvtzigz3p","Image":"redis:6.0.9-alpine3.12","Mode":"replicated","Name":"myapp_redis","Ports":"*:6379-\u003e6379/tcp","Replicas":"1/1"}
 {"ID":"hyujct8cnjkk","Image":"postgres:13.2-alpine","Mode":"replicated","Name":"myapp_repos-db","Ports":"*:5432-\u003e5432/tcp","Replicas":"0/1"}
+```
+
+```
 ```

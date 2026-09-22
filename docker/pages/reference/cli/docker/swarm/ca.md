@@ -30,6 +30,7 @@ View or rotate the current swarm CA certificate.
 
 ## Examples
 
+````console
 Run the `docker swarm ca` command without any options to view the current root CA certificate
 in PEM format.
 
@@ -46,7 +47,7 @@ Af8EBTADAQH/MB0GA1UdDgQWBBSfUy5bjUnBAx/B0GkOBKp91XvxzjAKBggqhkjO
 PQQDAgNJADBGAiEAnbvh0puOS5R/qvy1PMHY1iksYKh2acsGLtL/jAIvO4ACIQCi
 lIwQqLkJ48SQqCjG1DBTSBsHmMSRT+6mE2My+Z3GKA==
 -----END CERTIFICATE-----
-```
+````
 
 Pass the `--rotate` flag (and optionally a `--ca-cert`, along with a `--ca-key` or
 `--external-ca` parameter flag), in order to rotate the current swarm root CA.
@@ -110,3 +111,6 @@ see if any nodes are down or otherwise unable to rotate TLS certificates.
 
 Initiate the root CA rotation, but do not wait for the completion of or display the
 progress of the rotation.
+
+```
+```

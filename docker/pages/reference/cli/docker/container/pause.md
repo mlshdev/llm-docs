@@ -23,6 +23,10 @@ for further details.
 
 ## Examples
 
+````console
 ```console
 $ docker pause my_container
+````
+
+```
 ```

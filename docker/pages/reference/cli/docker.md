@@ -421,32 +421,33 @@ list of root Certificate Authorities.
 
 ## Examples
 
+````console
 ### Specify daemon host (-H, --host) {#host}
 
 You can use the `-H`, `--host` flag to specify a socket to use when you invoke
 a `docker` command. You can use the following protocols:
 
 | Scheme                                 | Description               | Example                          |
-| -------------------------------------- | ------------------------- | -------------------------------- |
+|----------------------------------------|---------------------------|----------------------------------|
 | `unix://[<path>]`                      | Unix socket               | `unix:///var/run/docker.sock`    |
 | `tcp://[<IP or host>[:port]]`          | TCP connection            | `tcp://174.17.0.1:2376`          |
 | `ssh://[username@]<IP or host>[:port]` | SSH connection            | `ssh://user@192.168.64.5`        |
 | `npipe://[<name>]`                     | Named pipe (Windows only) | `npipe:////./pipe/docker_engine` |
 
 If you don't specify the `-H` flag, and you're not using a custom
-[context](https://docs.docker.com/engine/context/working-with-contexts/),
+[context](/engine/context/working-with-contexts),
 commands use the following default sockets:
 
 - `unix:///var/run/docker.sock` on macOS and Linux
 - `npipe:////./pipe/docker_engine` on Windows
 
 To achieve a similar effect without having to specify the `-H` flag for every
-command, you could also [create a context](https://docs.docker.com/reference/cli/docker/context/create/),
+command, you could also [create a context](/reference/cli/docker/context/create/),
 or alternatively, use the
 [`DOCKER_HOST` environment variable](#environment-variables).
 
 For more information about the `-H` flag, see
-[Daemon socket option](https://docs.docker.com/reference/cli/dockerd/#daemon-socket-option).
+[Daemon socket option](/reference/cli/dockerd/#daemon-socket-option).
 
 #### Using TCP sockets
 
@@ -455,7 +456,7 @@ daemon with IP address `174.17.0.1`, listening on port `2376`:
 
 ```console
 $ docker -H tcp://174.17.0.1:2376 ps
-```
+````
 
 > \[!NOTE]
 > By convention, the Docker daemon uses port `2376` for secure TLS connections,
@@ -475,4 +476,7 @@ component to the end of the SSH address.
 
 ```console
 $ docker -H ssh://user@192.168.64.5/var/run/docker.sock ps
+```
+
+```
 ```

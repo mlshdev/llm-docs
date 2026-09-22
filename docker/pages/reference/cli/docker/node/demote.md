@@ -17,6 +17,10 @@ Demotes an existing manager so that it is no longer a manager.
 
 ## Examples
 
+````console
 ```console
 $ docker node demote <node name>
+````
+
+```
 ```

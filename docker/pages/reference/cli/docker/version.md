@@ -9,7 +9,7 @@ Show the Docker version information
 ## Description
 
 The version command prints the current version number for all independently
-versioned Docker components. Use the [`--format`](#format-the-output---format-format) option to customize
+versioned Docker components. Use the `--format` option to customize
 the output.
 
 The version command (`docker version`) outputs the version numbers of Docker
@@ -148,11 +148,12 @@ $ docker version --format '{{.Client.APIVersion}}'
 
 ## Examples
 
+````console
 ### Format the output (--format) {#format}
 
 The formatting option (`--format`) pretty-prints the output using a Go template,
 which allows you to customize the output format, or to obtain specific information
-from the output. Refer to the [format command and log output](https://docs.docker.com/config/formatting/)
+from the output. Refer to the [format command and log output](/config/formatting/)
 page for details of the format.
 
 ### Get the server version
@@ -161,7 +162,7 @@ page for details of the format.
 $ docker version --format '{{.Server.Version}}'
 
 28.5.1
-```
+````
 
 ### Get the client API version
 
@@ -183,4 +184,7 @@ above for more information.
 $ docker version --format '{{json .}}'
 
 {"Client":"Version":"28.5.1","ApiVersion":"1.51", ...}
+```
+
+```
 ```

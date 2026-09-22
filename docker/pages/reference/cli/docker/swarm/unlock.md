@@ -21,7 +21,11 @@ enabled, and is also available from the `docker swarm unlock-key` command.
 
 ## Examples
 
+````console
 ```console
 $ docker swarm unlock
 Enter unlock key:
+````
+
+```
 ```

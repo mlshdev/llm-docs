@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { rootDirectory } from "./config.ts";
 import { listFiles } from "./files.ts";
+import { compareCodePoints } from "./compare.ts";
 
 let digestPromise: Promise<string> | undefined;
 
@@ -23,6 +24,9 @@ async function computeGeneratorDigest(): Promise<string> {
     "package.json",
     "bun.lock",
     "tsconfig.json",
+    // Source configuration shapes the manifests too: branch pins, project
+    // metadata, and tag-selection modes change what a build publishes.
+    "config/sources.json",
   ].sort(compareCodePoints);
   const digest = createHash("sha256");
   for (const relativePath of files) {
@@ -32,8 +36,4 @@ async function computeGeneratorDigest(): Promise<string> {
     digest.update("\n");
   }
   return digest.digest("hex");
-}
-
-function compareCodePoints(left: string, right: string): number {
-  return left < right ? -1 : left > right ? 1 : 0;
 }

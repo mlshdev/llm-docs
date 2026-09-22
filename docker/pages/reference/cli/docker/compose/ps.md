@@ -46,6 +46,7 @@ example-bar-1   alpine    "/entrypoint.…"   bar        4 seconds ago   exited 
 
 ## Examples
 
+````console
 ### Format the output (--format) {#format}
 
 By default, the `docker compose ps` command uses a table ("pretty") format to
@@ -58,7 +59,7 @@ and `json`, which outputs information about the containers as JSON Lines
 $ docker compose ps --format json
 {"ID":"1553b0236cf4d2715845f053a4ee97042c4f9a2ef655731ee34f1f7940eaa41a","Name":"example-bar-1","Command":"/docker-entrypoint.sh nginx -g 'daemon off;'","Project":"example","Service":"bar","State":"exited","Health":"","ExitCode":0,"Publishers":null}
 {"ID":"f02a4efaabb67416e1ff127d51c4b5578634a0ad5743bd65225ff7d1909a3fa0","Name":"example-foo-1","Command":"/docker-entrypoint.sh nginx -g 'daemon off;'","Project":"example","Service":"foo","State":"running","Health":"","ExitCode":0,"Publishers":[{"URL":"0.0.0.0","TargetPort":80,"PublishedPort":8080,"Protocol":"tcp"}]}
-```
+````
 
 The JSON output allows you to use the information in other tools for further
 processing, for example, using the [`jq` utility](https://stedolan.github.io/jq/)
@@ -126,3 +127,6 @@ example-foo-1   alpine    "/entrypoint.…"   foo        4 seconds ago   Up 2 se
 
 The `docker compose ps` command currently only supports the `--filter status=<status>`
 option, but additional filter options may be added in the future.
+
+```
+```

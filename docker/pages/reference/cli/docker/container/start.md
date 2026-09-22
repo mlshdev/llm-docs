@@ -24,6 +24,10 @@ Start one or more stopped containers
 
 ## Examples
 
+````console
 ```console
 $ docker start my_container
+````
+
+```
 ```

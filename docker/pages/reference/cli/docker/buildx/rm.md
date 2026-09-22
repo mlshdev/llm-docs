@@ -30,6 +30,7 @@ default builder.
 
 ## Examples
 
+````console
 ### Remove all inactive builders (--all-inactive) {#all-inactive}
 
 Remove builders that are not in running state.
@@ -37,7 +38,7 @@ Remove builders that are not in running state.
 ```console
 $ docker buildx rm --all-inactive
 WARNING! This will remove all builders that are not in running state. Are you sure you want to continue? [y/N] y
-```
+````
 
 ### Override the configured builder instance (--builder) {#builder}
 
@@ -63,3 +64,6 @@ and [`kubernetes`](https://docs.docker.com/build/drivers/kubernetes/) drivers.
 
 Keep BuildKit state, so it can be reused by a new builder with the same name.
 Currently, only supported by the [`docker-container` driver](https://docs.docker.com/build/drivers/docker-container/).
+
+```
+```

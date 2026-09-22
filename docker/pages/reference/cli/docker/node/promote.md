@@ -18,6 +18,10 @@ Promotes a node to manager. This command can only be executed on a manager node.
 
 ## Examples
 
+````console
 ```console
 $ docker node promote <node name>
+````
+
+```
 ```

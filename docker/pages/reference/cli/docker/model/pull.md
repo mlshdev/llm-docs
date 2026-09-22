@@ -12,11 +12,12 @@ Pull a model to your local environment. Downloaded models also appear in the Doc
 
 ## Examples
 
+````console
 ### Pulling a model from Docker Hub
 
 ```console
 docker model pull ai/smollm2
-```
+````
 
 ### Pulling from HuggingFace
 
@@ -29,4 +30,7 @@ To specify the quantization, provide it as a tag, for example:
 
 ```console
 docker model pull hf.co/bartowski/Llama-3.2-1B-Instruct-GGUF
+```
+
+```
 ```

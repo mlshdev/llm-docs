@@ -20,6 +20,7 @@ import type {
   GithubSourceProject,
   ProjectBuild,
 } from "../types.ts";
+import { compareCodePoints } from "../compare.ts";
 
 const repositoryRoot = "qdrant-landing";
 const contentRoot = `${repositoryRoot}/content/documentation`;
@@ -458,7 +459,13 @@ function resolveLink(
           );
     return `${sourceUrl}${suffix}`;
   }
-  return new URL(url, canonicalUrl(page)).href;
+  try {
+    return new URL(url, canonicalUrl(page)).href;
+  } catch {
+    throw new Error(
+      `Unresolvable relative qdrant URL ${JSON.stringify(url)} against ${canonicalUrl(page)}`,
+    );
+  }
 }
 
 function assetPath(
@@ -528,10 +535,6 @@ function descriptionOf(
     if (typeof value === "string" && value.trim()) return value.trim();
   }
   return undefined;
-}
-
-function compareCodePoints(left: string, right: string): number {
-  return left < right ? -1 : left > right ? 1 : 0;
 }
 
 const upstreamNotice = `Qdrant documentation snapshot

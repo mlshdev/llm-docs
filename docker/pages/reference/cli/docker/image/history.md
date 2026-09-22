@@ -24,6 +24,7 @@ Show the history of an image
 
 ## Examples
 
+````console
 To see how the `docker:latest` image was built:
 
 ```console
@@ -36,7 +37,7 @@ be51b77efb42        8 days ago          /bin/sh -c apt-get update && apt-get ins
 4b137612be55        6 weeks ago         /bin/sh -c #(nop) ADD jessie.tar.xz in /        121 MB
 750d58736b4b        6 weeks ago         /bin/sh -c #(nop) MAINTAINER Tianon Gravi <ad   0 B
 511136ea3c5a        9 months ago                                                        0 B                 Imported from -
-```
+````
 
 To see how the `docker:apache` image was added to a container's base image:
 
@@ -127,4 +128,7 @@ alpine:latest           beefdbd8a1da       10.6MB         3.37MB
 
 $ docker image history --platform=linux/s390x alpine
 Error response from daemon: image with reference alpine:latest was found but does not match the specified platform: wanted linux/s390x
+```
+
+```
 ```

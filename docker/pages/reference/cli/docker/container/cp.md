@@ -87,11 +87,12 @@ you must be explicit with a relative or absolute path, for example:
 
 ## Examples
 
+````console
 Copy a local file into container
 
 ```console
 $ docker cp ./some_file CONTAINER:/work
-```
+````
 
 Copy files from container to local path
 
@@ -125,3 +126,6 @@ Using `-` as the `SRC_PATH` streams the contents of `STDIN` as a tar archive.
 The command extracts the content of the tar to the `DEST_PATH` in container's
 filesystem. In this case, `DEST_PATH` must specify a directory. Using `-` as
 the `DEST_PATH` streams the contents of the resource as a tar archive to `STDOUT`.
+
+```
+```

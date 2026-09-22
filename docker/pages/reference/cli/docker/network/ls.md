@@ -24,6 +24,7 @@ networks that span across multiple hosts in a cluster.
 
 ## Examples
 
+````console
 ### List all networks
 
 ```console
@@ -33,7 +34,7 @@ NETWORK ID          NAME                DRIVER          SCOPE
 9f904ee27bf5        none                null            local
 cf03ee007fb4        host                host            local
 78b03ee04fc4        multi-host          overlay         swarm
-```
+````
 
 ### List networks without truncating the ID column (--no-trun) {#no-trunc}
 
@@ -234,4 +235,7 @@ $ docker network ls --format json
 {"CreatedAt":"2021-03-09 21:41:29.798999529 +0000 UTC","Driver":"bridge","ID":"f33ba176dd8e","IPv6":"false","Internal":"false","Labels":"","Name":"bridge","Scope":"local"}
 {"CreatedAt":"2021-03-09 21:41:29.772806592 +0000 UTC","Driver":"host","ID":"caf47bb3ac70","IPv6":"false","Internal":"false","Labels":"","Name":"host","Scope":"local"}
 {"CreatedAt":"2021-03-09 21:41:29.752212603 +0000 UTC","Driver":"null","ID":"9d096c122066","IPv6":"false","Internal":"false","Labels":"","Name":"none","Scope":"local"}
+```
+
+```
 ```

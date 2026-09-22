@@ -27,6 +27,7 @@ List containers
 
 ## Examples
 
+````console
 ### Do not truncate output (--no-trunc) {#no-trunc}
 
 Running `docker ps --no-trunc` showing 2 linked containers.
@@ -37,7 +38,7 @@ $ docker ps --no-trunc
 CONTAINER ID                                                     IMAGE                        COMMAND                CREATED              STATUS              PORTS               NAMES
 ca5534a51dd04bbcebe9b23ba05f389466cf0c190f1f8f182d7eea92a9671d00 ubuntu:24.04                 bash                   17 seconds ago       Up 16 seconds       3300-3310/tcp       webapp
 9ca9747b233100676a48cc7806131586213fa5dab86dd1972d6a8732e3a84a4d crosbymichael/redis:latest   /redis-server --dir    33 minutes ago       Up 33 minutes       6379/tcp            redis,webapp/db
-```
+````
 
 ### Show both running and stopped containers (-a, --all) {#all}
 
@@ -447,4 +448,7 @@ To list all running containers in JSON format, use the `json` directive:
 ```console
 $ docker ps --format json
 {"Command":"\"/docker-entrypoint.…\"","CreatedAt":"2021-03-10 00:15:05 +0100 CET","ID":"a762a2b37a1d","Image":"nginx","Labels":"maintainer=NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e","LocalVolumes":"0","Mounts":"","Names":"boring_keldysh","Networks":"bridge","Ports":"80/tcp","RunningFor":"4 seconds ago","Size":"0B","State":"running","Status":"Up 3 seconds"}
+```
+
+```
 ```

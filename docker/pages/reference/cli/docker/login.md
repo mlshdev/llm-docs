@@ -36,7 +36,7 @@ password. Docker Hub also supports a web-based sign-in flow, which signs you in
 to your Docker account without entering your password. For Docker Hub, the
 `docker login` command uses a device code flow by default, unless the
 `--username` flag is specified. The device code flow is a secure way to sign
-in. See [Authenticate to Docker Hub using device code](#authenticate-to-docker-hub-with-web-based-login).
+in. See Authenticate to Docker Hub using device code.
 
 ### Credential stores
 
@@ -169,6 +169,7 @@ registry domain, and values specify the suffix of the program to use
 
 ## Examples
 
+````console
 ### Authenticate to Docker Hub with web-based login
 
 By default, the `docker login` command authenticates to Docker Hub, using a
@@ -186,7 +187,7 @@ Your one-time device confirmation code is: LNFR-PGCJ
 Press ENTER to open your browser or submit your device code here: https://login.docker.com/activate
 
 Waiting for authentication in the browser…
-```
+````
 
 After entering the code in your browser, you are authenticated to Docker Hub
 using the account you're currently signed in with on the Docker Hub website or
@@ -248,4 +249,7 @@ password from `STDIN`.
 
 ```console
 $ cat ~/my_password.txt | docker login --username foo --password -
+```
+
+```
 ```

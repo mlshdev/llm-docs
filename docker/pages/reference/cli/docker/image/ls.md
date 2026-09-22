@@ -43,6 +43,7 @@ uses up the `SIZE` listed only once.
 
 ## Examples
 
+````console
 ### List the most recently created images
 
 ```console
@@ -58,7 +59,7 @@ postgres                  9                   746b819f315e        4 days ago    
 postgres                  9.3                 746b819f315e        4 days ago          213.4 MB
 postgres                  9.3.5               746b819f315e        4 days ago          213.4 MB
 postgres                  latest              746b819f315e        4 days ago          213.4 MB
-```
+````
 
 ### List images by name and tag
 
@@ -344,4 +345,7 @@ To list all images in JSON format, use the `json` directive:
 $ docker images --format json
 {"Containers":"N/A","CreatedAt":"2021-03-04 03:24:42 +0100 CET","CreatedSince":"5 days ago","Digest":"\u003cnone\u003e","ID":"4dd97cefde62","Repository":"ubuntu","SharedSize":"N/A","Size":"72.9MB","Tag":"latest","UniqueSize":"N/A"}
 {"Containers":"N/A","CreatedAt":"2021-02-17 22:19:54 +0100 CET","CreatedSince":"2 weeks ago","Digest":"\u003cnone\u003e","ID":"28f6e2705743","Repository":"alpine","SharedSize":"N/A","Size":"5.61MB","Tag":"latest","UniqueSize":"N/A"}
+```
+
+```
 ```

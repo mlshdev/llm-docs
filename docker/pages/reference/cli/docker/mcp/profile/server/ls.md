@@ -24,22 +24,19 @@ Filters use key=value format (e.g., name=github, profile=my-dev-env).
 
 ## Examples
 
+```console
 # List all servers across all profiles
+  docker mcp profile server ls
 
-docker mcp profile server ls
+  # Filter servers by name
+  docker mcp profile server ls --filter name=github
 
-# Filter servers by name
+  # Show servers from a specific profile
+  docker mcp profile server ls --filter profile=my-dev-env
 
-docker mcp profile server ls --filter name=github
+  # Combine multiple filters (using short flag)
+  docker mcp profile server ls -f name=slack -f profile=my-dev-env
 
-# Show servers from a specific profile
-
-docker mcp profile server ls --filter profile=my-dev-env
-
-# Combine multiple filters (using short flag)
-
-docker mcp profile server ls -f name=slack -f profile=my-dev-env
-
-# Output in JSON format
-
-docker mcp profile server ls --format json
+  # Output in JSON format
+  docker mcp profile server ls --format json
+```

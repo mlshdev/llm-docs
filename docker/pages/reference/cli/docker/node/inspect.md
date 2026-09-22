@@ -29,11 +29,12 @@ details of the format.
 
 ## Examples
 
+````console
 ### Inspect a node
 
 ```console
 $ docker node inspect swarm-manager
-```
+````
 
 ```json
 [
@@ -155,4 +156,7 @@ zONcJ/+WA21OXtb+vcijpUOXtNjyHfcox0N8wsLDqQ==
 
  Issuer Public Key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAExuICYRP4dnK97fm6OucvaQ4sERCEUNnkyHEC5iz3qfv3qwWV/FPELWUz/aACHwMjfimbcmYeBnF4E8pRREkcpQ==
  Issuer Subject:    MBMxETAPBgNVBAMTCHN3YXJtLWNh
+```
+
+```
 ```

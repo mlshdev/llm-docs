@@ -30,6 +30,10 @@ Updates a swarm with new parameter values.
 
 ## Examples
 
+````console
 ```console
 $ docker swarm update --cert-expiry 720h
+````
+
+```
 ```

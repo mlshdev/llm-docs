@@ -26,13 +26,14 @@ Removes the specified nodes from a swarm.
 
 ## Examples
 
+````console
 ### Remove a stopped node from the swarm
 
 ```console
 $ docker node rm swarm-node-02
 
 Node swarm-node-02 removed from swarm
-```
+````
 
 ### Attempt to remove a running node from a swarm
 
@@ -61,3 +62,6 @@ Node swarm-node-03 removed from swarm
 
 A manager node must be demoted to a worker node (using `docker node demote`)
 before you can remove it from the swarm.
+
+```
+```

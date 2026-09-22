@@ -1,5 +1,10 @@
 import path from "node:path";
-import { exists, readUtf8, withRepositoryArchive } from "../files.ts";
+import {
+  exists,
+  readUtf8,
+  resolveWithin,
+  withRepositoryArchive,
+} from "../files.ts";
 import { normalizeSpacing } from "../markdown.ts";
 import { DocumentCollector } from "../quarantine.ts";
 import { collectEntities, parseDocbook } from "./docbook.ts";
@@ -130,6 +135,9 @@ async function createSource(root: string): Promise<DocbookSource> {
       return content;
     },
     async exists(relativePath: string): Promise<boolean> {
+      // Containment matters as much here as in read(): a docbook SYSTEM
+      // entity pointing outside the checkout must not be probeable.
+      resolveWithin(root, relativePath);
       return (
         generated.has(relativePath) || exists(path.join(root, relativePath))
       );
@@ -202,15 +210,21 @@ function collectPages(book: DocbookElement): readonly Page[] {
     }
     if (pageElements.has(element.name)) {
       const id = element.attributes.id;
-      if (id) {
-        pages.push({
-          id,
-          element,
-          content: own,
-          title: sectionTitle(element),
-          section,
-        });
+      if (!id) {
+        // A page section without an id cannot be addressed by the cross
+        // reference index; skipping it silently would publish a book with
+        // missing sections, so the page is quarantined instead.
+        throw new Error(
+          `PostgreSQL ${element.name} section without id: ${sectionTitle(element) || element.name}`,
+        );
       }
+      pages.push({
+        id,
+        element,
+        content: own,
+        title: sectionTitle(element),
+        section,
+      });
     }
     const childSection = pageElements.has(element.name)
       ? sectionTitle(element) || section

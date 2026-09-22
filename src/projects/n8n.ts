@@ -16,6 +16,7 @@ import type {
   GithubSourceProject,
   ProjectBuild,
 } from "../types.ts";
+import { compareCodePoints } from "../compare.ts";
 
 interface N8nPage {
   readonly label: string;
@@ -861,8 +862,4 @@ function decodeWorkflow(value: string, sourcePath: string): string {
   } catch {
     throw new Error(`Invalid embedded n8n workflow in ${sourcePath}`);
   }
-}
-
-function compareCodePoints(left: string, right: string): number {
-  return left < right ? -1 : left > right ? 1 : 0;
 }

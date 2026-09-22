@@ -22,6 +22,7 @@ The plugin must be disabled before running the upgrade.
 
 ## Examples
 
+````console
 The following example installs `vieus/sshfs` plugin, uses it to create and use
 a volume, then upgrades the plugin.
 
@@ -71,4 +72,7 @@ viuex/sshfs:next    sshvolume
 $ docker run -it -v sshvolume:/data alpine sh -c "ls /data"
 
 hello
+````
+
+```
 ```

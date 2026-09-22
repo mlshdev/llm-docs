@@ -31,6 +31,7 @@ Create and update a stack from a `compose` file on the swarm.
 
 ## Examples
 
+````console
 ### Compose file (--compose-file) {#compose-file}
 
 The `deploy` command supports Compose file version `3.0` and above.
@@ -48,7 +49,7 @@ Creating service vossibility_elasticsearch
 Creating service vossibility_kibana
 Creating service vossibility_ghollector
 Creating service vossibility_lookupd
-```
+````
 
 The Compose file can also be provided as standard input with `--compose-file -`:
 
@@ -98,4 +99,7 @@ ID            NAME                               MODE        REPLICAS  IMAGE
 7563uuzr9eys  vossibility_kibana                 replicated  1/1       kibana@sha256:6995a2d25709a62694a937b8a529ff36da92ebee74bafd7bf00e6caf6db2eb03
 9gc5m4met4he  vossibility_logstash               replicated  1/1       logstash@sha256:2dc8bddd1bb4a5a34e8ebaf73749f6413c101b2edef6617f2f7713926d2141fe
 axqh55ipl40h  vossibility_vossibility-collector  replicated  1/1       icecrime/vossibility-collector@sha256:f03f2977203ba6253988c18d04061c5ec7aab46bca9dfd89a9a1fa4500989fba
+```
+
+```
 ```

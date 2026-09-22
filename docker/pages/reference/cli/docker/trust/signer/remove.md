@@ -18,6 +18,7 @@ Remove a signer
 
 ## Examples
 
+````console
 ### Remove a signer from a repository
 
 To remove an existing signer, `alice`, from this repository:
@@ -37,7 +38,7 @@ bob                 5600f5ab76a2
 Administrative keys for example/trust-demo:
 Repository Key: ecc457614c9fc399da523a5f4e24fe306a0a6ee1cc79a10e4555b3c6ab02f71e
 Root Key:       3cb2228f6561e58f46dbc4cda4fcaff9d5ef22e865a94636f82450d1d2234949
-```
+````
 
 Remove `alice` with `docker trust signer remove`:
 
@@ -168,4 +169,7 @@ Enter passphrase for repository key with ID c6772a0:
 Successfully removed alice from example/authorized
 
 Error removing signer from: example/unauthorized
+```
+
+```
 ```

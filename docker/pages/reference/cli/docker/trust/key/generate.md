@@ -19,6 +19,7 @@ and loads the private key into the local Docker trust keystore.
 
 ## Examples
 
+````console
 ### Generate a key-pair
 
 ```console
@@ -30,7 +31,7 @@ Repeat passphrase for new alice key with ID 17acf3c:
 Successfully generated and loaded private key. Corresponding public key available: alice.pub
 $ ls
 alice.pub
-```
+````
 
 The private signing key is encrypted by the passphrase and loaded into the Docker trust keystore.
 All passphrase requests to sign with the key will be referred to by the provided `NAME`.
@@ -49,4 +50,7 @@ Repeat passphrase for new alice key with ID 17acf3c:
 Successfully generated and loaded private key. Corresponding public key available: alice.pub
 $ ls /foo
 alice.pub
+```
+
+```
 ```

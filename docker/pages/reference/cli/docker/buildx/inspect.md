@@ -26,6 +26,7 @@ Shows information about the current or specified builder.
 
 ## Examples
 
+````console
 ### Ensure that the builder is running before inspecting (--bootstrap) {#bootstrap}
 
 Use the `--bootstrap` option to ensure that the builder is running before
@@ -37,7 +38,7 @@ displayed in `buildx ls`).
 
 ### Override the configured builder instance (--builder) {#builder}
 
-Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).
+Same as [`buildx --builder`](/reference/cli/docker/buildx/#builder).
 
 ### Get information about a builder instance
 
@@ -46,7 +47,7 @@ name of the builder to inspect to get information about that builder.
 The following example shows information about a builder instance named
 `elated_tesla`:
 
-> \[!NOTE]
+> [!NOTE]
 > The asterisk (`*`) next to node build platform(s) indicate they have been
 > manually set during `buildx create`. Otherwise the platforms were
 > automatically detected.
@@ -87,10 +88,13 @@ GC Policy rule#2:
 GC Policy rule#3:
  All:        true
  Keep Bytes: 24.21GiB
-```
+````
 
 `debug` flag can also be used to get more information about the builder:
 
 ```console
 $ docker --debug buildx inspect elated_tesla
+```
+
+```
 ```

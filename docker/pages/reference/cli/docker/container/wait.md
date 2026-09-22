@@ -14,11 +14,12 @@ Block until one or more containers stop, then print their exit codes
 
 ## Examples
 
+````console
 Start a container in the background.
 
 ```console
 $ docker run -dit --name=my_container ubuntu bash
-```
+````
 
 Run `docker wait`, which should block until the container exits.
 
@@ -40,4 +41,7 @@ This is the same `docker wait` command from above, but it now exits, returning
 $ docker wait my_container
 
 0
+```
+
+```
 ```

@@ -134,6 +134,7 @@ for details on the available flags and options.
 
 ## Examples
 
+````console
 ### Create and start a container
 
 The following example creates an interactive container with a pseudo-TTY attached,
@@ -146,7 +147,7 @@ $ docker container create -i -t --name mycontainer alpine
 $ docker container start --attach -i mycontainer
 / # echo hello world
 hello world
-```
+````
 
 The above is the equivalent of a `docker run`:
 
@@ -194,4 +195,7 @@ drwxr-sr-x  3 1000 staff   60 Dec  1 03:28 .local
 -rw-r--r--  1 1000 staff  920 Nov 28 11:51 .profile
 drwx--S---  2 1000 staff  460 Dec  5 00:51 .ssh
 drwxr-xr-x 32 1000 staff 1140 Dec  5 04:01 docker
+```
+
+```
 ```

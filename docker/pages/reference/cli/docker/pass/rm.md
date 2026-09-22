@@ -18,11 +18,12 @@ Removes one or more named secrets from the local OS keychain. Use `--all` to rem
 
 ## Examples
 
+````console
 ### Remove a specific secret:
 
 ```console
 $ docker pass rm GH_TOKEN
-```
+````
 
 ### Remove multiple secrets:
 
@@ -34,4 +35,7 @@ $ docker pass rm GH_TOKEN NPM_TOKEN
 
 ```console
 $ docker pass rm --all
+```
+
+```
 ```

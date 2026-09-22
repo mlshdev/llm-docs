@@ -28,6 +28,7 @@ service while keeping the service active in the swarm you can set the scale to 0
 
 ## Examples
 
+````console
 ### Scale a single service
 
 The following command scales the "frontend" service to 50 tasks.
@@ -36,7 +37,7 @@ The following command scales the "frontend" service to 50 tasks.
 $ docker service scale frontend=50
 
 frontend scaled to 50
-```
+````
 
 The following command tries to scale a global service to 10 tasks and returns an error.
 
@@ -85,4 +86,7 @@ $ docker service ls
 ID            NAME      MODE        REPLICAS  IMAGE
 3pr5mlvu3fh9  frontend  replicated  5/5       nginx:alpine
 74nzcxxjv6fq  backend   replicated  3/3       redis:7.4.1
+```
+
+```
 ```

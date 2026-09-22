@@ -5,6 +5,7 @@ import { pipeline } from "node:stream/promises";
 import { setTimeout as sleep } from "node:timers/promises";
 import type { ReadableStream as NodeReadableStream } from "node:stream/web";
 import { mapWithConcurrency } from "./concurrency.ts";
+import { resolveNetbirdPin } from "./projects/netbird.ts";
 import { resolveDoccSnapshot } from "./projects/apple.ts";
 import { describeError } from "./quarantine.ts";
 import { recordRequestAttempt, withRequestMetrics } from "./request-metrics.ts";
@@ -14,6 +15,7 @@ import type {
   ReleaseLockedSource,
   GithubCommit,
   GithubRelease,
+  GithubProjectId,
   GithubSourceProject,
   LockedSource,
   SourceProject,
@@ -271,39 +273,19 @@ async function resolveSource(
     }
     return [project.id, previous] as const;
   }
-  if (project.id !== "netbird") {
-    return [project.id, toLockedSource(release, sourceCommit.sha)] as const;
+  const pin = toLockedSource(release, sourceCommit.sha);
+  const extension = pinExtensions[project.id];
+  if (!extension) {
+    return [project.id, pin] as const;
   }
-  if (!project.docsRepository) {
-    throw new Error("NetBird requires docsRepository configuration");
-  }
-  const docsCommit = await findCommitByMessage(
-    project.docsRepository,
-    `Update API pages with ${release.tag_name}`,
-  );
-  if (!docsCommit) {
-    const previous = current.netbird;
-    if (previous) {
-      console.warn(
-        `NetBird ${release.tag_name} has no matching docs commit yet; retaining ${previous.tag}`,
-      );
-      return [project.id, previous] as const;
-    }
-    throw new Error(
-      `No NetBird docs commit matches release ${release.tag_name}`,
-    );
-  }
-  const docsCommitDetails = await getCommit(
-    project.docsRepository,
-    docsCommit.sha,
-  );
-  validateNetbirdDocsCommit(docsCommitDetails);
   return [
     project.id,
-    {
-      ...toLockedSource(release, sourceCommit.sha),
-      docsCommit: docsCommitDetails.sha,
-    },
+    await extension({
+      project,
+      release,
+      sourceCommit: sourceCommit.sha,
+      previous: current[project.id],
+    }),
   ] as const;
 }
 
@@ -431,17 +413,22 @@ function isBranchLockedSource(
   return source?.branch !== undefined;
 }
 
-function validateNetbirdDocsCommit(commit: GithubCommit): void {
-  if (
-    !commit.files?.some((file) =>
-      file.filename.startsWith("src/pages/ipa/resources/"),
-    )
-  ) {
-    throw new Error(
-      `NetBird docs commit ${commit.sha} does not change generated API resource pages`,
-    );
-  }
+// Some projects publish documentation through a protocol beyond the standard
+// release/tag/branch selection. Their adapters own that protocol instead of
+// the shared resolver growing per-project branches.
+interface PinExtensionContext {
+  readonly project: GithubSourceProject;
+  readonly release: GithubRelease;
+  readonly sourceCommit: string;
+  readonly previous: LockedSource | undefined;
 }
+
+const pinExtensions: Readonly<Partial<Record<GithubProjectId, PinExtension>>> =
+  {
+    netbird: resolveNetbirdPin,
+  };
+
+type PinExtension = (context: PinExtensionContext) => Promise<LockedSource>;
 
 export function compareVersions(left: string, right: string): number {
   const leftVersion = semanticVersion(left);
@@ -489,7 +476,7 @@ async function fetchArchive(
   destination: string,
 ): Promise<void> {
   const token = process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN;
-  const response = await fetch(
+  const response = await fetchWithSafeAuth(
     `https://codeload.github.com/${repository
       .split("/")
       .map(encodeURIComponent)
@@ -499,7 +486,6 @@ async function fetchArchive(
         "User-Agent": "mlshdev-llm-docs",
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
-      redirect: "follow",
       signal: AbortSignal.timeout(githubArchiveTimeoutMs),
     },
   );
@@ -558,7 +544,7 @@ async function getLatestStableRelease(
   return release;
 }
 
-async function getCommit(
+export async function getCommit(
   repository: string,
   ref: string,
 ): Promise<GithubCommit> {
@@ -567,7 +553,7 @@ async function getCommit(
   );
 }
 
-async function findCommitByMessage(
+export async function findCommitByMessage(
   repository: string,
   message: string,
 ): Promise<GithubCommit | undefined> {
@@ -588,7 +574,7 @@ async function findCommitByMessage(
   return undefined;
 }
 
-function toLockedSource(
+export function toLockedSource(
   release: GithubRelease,
   sourceCommit: string,
 ): ReleaseLockedSource {
@@ -604,33 +590,84 @@ function toLockedSource(
 }
 
 async function githubJson<T>(pathname: string): Promise<T> {
-  const response = await githubFetch(pathname);
-  return (await response.json()) as T;
+  // The parse stays inside the retry scope: GitHub's CDN occasionally serves
+  // truncated bodies, which should retry like any other transport fault.
+  return withRetry(`GitHub API ${pathname}`, async () => {
+    const response = await githubFetch(pathname);
+    try {
+      return (await response.json()) as T;
+    } catch (error) {
+      await response.body?.cancel();
+      throw new RetryableRequestError(
+        `GitHub API ${pathname} returned an unparsable body: ${describeError(error)}`,
+        undefined,
+      );
+    }
+  });
+}
+
+// A fetch that follows redirects without replaying credentials: the
+// Authorization header is dropped as soon as the redirect leaves the origin.
+async function fetchWithSafeAuth(
+  url: string,
+  init: RequestInit,
+): Promise<Response> {
+  let current = url;
+  for (let redirect = 0; redirect < 10; redirect += 1) {
+    const response = await fetch(current, {
+      ...init,
+      redirect: "manual",
+    });
+    if (response.status < 300 || response.status > 399) {
+      return response;
+    }
+    const location = response.headers.get("location");
+    await response.body?.cancel();
+    if (!location) {
+      throw new UnretryableRequestError(
+        `Request to ${url} redirected without a location header`,
+      );
+    }
+    const next = new URL(location, current);
+    if (next.origin !== new URL(current).origin) {
+      init = {
+        ...init,
+        headers: withoutAuthorization(init.headers ?? {}),
+      };
+    }
+    current = next.toString();
+  }
+  throw new UnretryableRequestError(
+    `Request to ${url} redirected too many times`,
+  );
+}
+
+function withoutAuthorization(headers: HeadersInit): HeadersInit {
+  const next = new Headers(headers);
+  next.delete("Authorization");
+  return next;
 }
 
 async function githubFetch(pathname: string): Promise<Response> {
-  return withRetry(`GitHub API ${pathname}`, async () => {
-    const token = process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN;
-    const response = await fetch(`${githubApi}${pathname}`, {
-      headers: {
-        Accept: "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28",
-        "User-Agent": "mlshdev-llm-docs",
-        ...(token ? { Authorization: `Bearer ${token}` } : {}),
-      },
-      redirect: "follow",
-      signal: AbortSignal.timeout(githubApiTimeoutMs),
-    });
-    if (response.ok) {
-      return response;
-    }
-    const message = `GitHub API ${pathname} failed: ${response.status} ${response.statusText}`;
-    const retryable = isRetryableResponse(response);
-    const delay = retryDelayFor(response);
-    await response.body?.cancel();
-    if (!retryable) {
-      throw new UnretryableRequestError(message);
-    }
-    throw new RetryableRequestError(message, delay);
+  const token = process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN;
+  const response = await fetchWithSafeAuth(`${githubApi}${pathname}`, {
+    headers: {
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+      "User-Agent": "mlshdev-llm-docs",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    signal: AbortSignal.timeout(githubApiTimeoutMs),
   });
+  if (response.ok) {
+    return response;
+  }
+  const message = `GitHub API ${pathname} failed: ${response.status} ${response.statusText}`;
+  const retryable = isRetryableResponse(response);
+  const delay = retryDelayFor(response);
+  await response.body?.cancel();
+  if (!retryable) {
+    throw new UnretryableRequestError(message);
+  }
+  throw new RetryableRequestError(message, delay);
 }

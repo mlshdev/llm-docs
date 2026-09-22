@@ -13,14 +13,15 @@ variable or `--context` global option.
 
 ## Examples
 
+````console
 ### Print the current context
 
-The following example prints the currently used [`docker context`](https://docs.docker.com/reference/cli/docker/context/):
+The following example prints the currently used [`docker context`](/reference/cli/docker/context/):
 
 ```console
 $ docker context show'
 default
-```
+````
 
 As an example, this output can be used to dynamically change your shell prompt
 to indicate your active context. The example below illustrates how this output
@@ -52,4 +53,7 @@ context: my-context> docker context use default
 default
 Current context is now "default"
 context: default>
+```
+
+```
 ```

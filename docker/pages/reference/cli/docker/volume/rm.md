@@ -20,8 +20,12 @@ Remove one or more volumes. You can't remove a volume that's in use by a contain
 
 ## Examples
 
+````console
 ```console
 $ docker volume rm hello
 
 hello
+````
+
+```
 ```

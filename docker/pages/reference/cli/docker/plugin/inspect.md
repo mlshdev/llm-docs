@@ -19,13 +19,14 @@ in a JSON array.
 
 ## Examples
 
+````console
 ### Inspect a plugin
 
 The following example inspects the `tiborvass/sample-volume-plugin` plugin:
 
 ```console
 $ docker plugin inspect tiborvass/sample-volume-plugin:latest
-```
+````
 
 Output is in JSON format (output below is formatted for readability):
 
@@ -143,4 +144,7 @@ Output is in JSON format (output below is formatted for readability):
 $ docker plugin inspect -f '{{.Id}}' tiborvass/sample-volume-plugin:latest
 
 8c74c978c434745c3ade82f1bc0acf38d04990eaf494fa507c16d9f1daa99c21
+```
+
+```
 ```

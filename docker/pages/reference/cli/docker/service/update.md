@@ -125,11 +125,12 @@ rolling restart without any changes to the service parameters.
 
 ## Examples
 
+````console
 ### Update a service
 
 ```console
 $ docker service update --limit-cpu 2 redis
-```
+````
 
 ### Perform a rolling restart with no parameter changes {#update-parallelism}
 
@@ -317,3 +318,6 @@ update or rollback settings are valid with job modes.
 
 To run a job again with the same parameters that it was run previously, it can
 be force updated with the `--force` flag.
+
+```
+```

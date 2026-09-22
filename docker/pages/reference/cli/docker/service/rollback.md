@@ -25,6 +25,7 @@ Roll back a specified service to its previous version from the swarm.
 
 ## Examples
 
+````console
 ### Roll back to the previous version of a service
 
 Use the `docker service rollback` command to roll back to the previous version
@@ -40,7 +41,7 @@ Create a service with a single replica:
 
 ```console
 $ docker service create --name my-service -p 8080:80 nginx:alpine
-```
+````
 
 Confirm that the service is running with a single replica:
 
@@ -72,4 +73,7 @@ $ docker service ls
 
 ID                  NAME                MODE                REPLICAS            IMAGE               PORTS
 xbw728mf6q0d        my-service          replicated          1/1                 nginx:alpine        *:8080->80/tcp
+```
+
+```
 ```

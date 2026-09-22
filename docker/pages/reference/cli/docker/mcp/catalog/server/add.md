@@ -18,18 +18,16 @@ Add MCP servers to a catalog using various URI schemes.
 
 ## Examples
 
+```console
 # Add servers from another catalog
+  docker mcp catalog server add mcp/my-catalog:latest --server catalog://mcp/docker-mcp-catalog:latest/github
 
-docker mcp catalog server add mcp/my-catalog:latest --server catalog://mcp/docker-mcp-catalog:latest/github
+  # Add servers with OCI references
+  docker mcp catalog server add mcp/my-catalog:latest --server docker://my-server:latest
 
-# Add servers with OCI references
+  # Add servers with MCP Registry references
+  docker mcp catalog server add mcp/my-catalog:latest --server https://registry.modelcontextprotocol.io/v0/servers/71de5a2a-6cfb-4250-a196-f93080ecc860
 
-docker mcp catalog server add mcp/my-catalog:latest --server docker://my-server:latest
-
-# Add servers with MCP Registry references
-
-docker mcp catalog server add mcp/my-catalog:latest --server <https://registry.modelcontextprotocol.io/v0/servers/71de5a2a-6cfb-4250-a196-f93080ecc860>
-
-# Mix server references
-
-docker mcp catalog server add mcp/my-catalog:latest --server catalog://mcp/docker-mcp-catalog:latest/github --server docker://my-server:latest
+  # Mix server references
+  docker mcp catalog server add mcp/my-catalog:latest --server catalog://mcp/docker-mcp-catalog:latest/github --server docker://my-server:latest
+```

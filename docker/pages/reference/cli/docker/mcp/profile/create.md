@@ -28,18 +28,16 @@ Profiles are decoupled from catalogs. Servers can be:
 
 ## Examples
 
+```console
 # Create a profile with servers from a catalog
+  docker mcp profile create --name dev-tools --server catalog://mcp/docker-mcp-catalog/github+obsidian
 
-docker mcp profile create --name dev-tools --server catalog://mcp/docker-mcp-catalog/github+obsidian
+  # Create a profile with multiple servers (OCI references)
+  docker mcp profile create --name my-profile --server docker://my-server:latest --server docker://my-other-server:latest
 
-# Create a profile with multiple servers (OCI references)
+  # Create a profile with MCP Registry references
+  docker mcp profile create --name my-profile --server http://registry.modelcontextprotocol.io/v0/servers/71de5a2a-6cfb-4250-a196-f93080ecc860
 
-docker mcp profile create --name my-profile --server docker://my-server:latest --server docker://my-other-server:latest
-
-# Create a profile with MCP Registry references
-
-docker mcp profile create --name my-profile --server <http://registry.modelcontextprotocol.io/v0/servers/71de5a2a-6cfb-4250-a196-f93080ecc860>
-
-# Connect to clients upon creation
-
-docker mcp profile create --name dev-tools --connect cursor
+  # Connect to clients upon creation
+  docker mcp profile create --name dev-tools --connect cursor
+```

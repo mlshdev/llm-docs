@@ -27,11 +27,12 @@ pipelines.
 
 ## Examples
 
+````console
 ### Import a `.dockerbuild` archive from standard input
 
 ```console
 docker buildx history import < mybuild.dockerbuild
-```
+````
 
 ### Import a build archive from a file (--file) {#file}
 
@@ -49,4 +50,7 @@ If you've imported multiple builds, you can open one manually:
 
 ```console
 docker buildx history open ci-build
+```
+
+```
 ```

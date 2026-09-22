@@ -33,6 +33,7 @@ You can also specify an earlier build using an offset. For example:
 
 ## Examples
 
+````console
 ### Print logs for the most recent build
 
 ```console
@@ -44,7 +45,7 @@ $ docker buildx history logs
 #2 transferring context: 2B done
 #2 DONE 0.0s
 ...
-```
+````
 
 By default, this shows logs for the most recent build on the current builder.
 
@@ -67,4 +68,7 @@ $ docker buildx history logs ^1 --progress rawjson
 {"id":"buildx_step_1","status":"START","timestamp":"2024-05-01T12:34:56.789Z","detail":"[internal] load build definition from Dockerfile"}
 {"id":"buildx_step_1","status":"COMPLETE","timestamp":"2024-05-01T12:34:57.001Z","duration":212000000}
 ...
+```
+
+```
 ```

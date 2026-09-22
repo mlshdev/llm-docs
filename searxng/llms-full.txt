@@ -3645,7 +3645,7 @@ INFO    searx.valkeydb                 : connected to Valkey
 ```
 
 
-# Document: update pip's boilerplate ..
+# Document: Searxng
 
 Source path: docs/build-templates/searxng.rst
 Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/build-templates/searxng.rst

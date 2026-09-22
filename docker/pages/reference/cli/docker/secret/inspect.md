@@ -33,6 +33,7 @@ For detailed information about using secrets, refer to [manage sensitive data wi
 
 ## Examples
 
+````console
 ### Inspect a secret by name or ID
 
 You can inspect a secret, either by its name or ID.
@@ -44,7 +45,7 @@ $ docker secret ls
 
 ID                          NAME                CREATED             UPDATED
 eo7jnzguqgtpdah3cm5srfb97   my_secret           3 minutes ago       3 minutes ago
-```
+````
 
 ```console
 $ docker secret inspect secret.json
@@ -82,4 +83,7 @@ secret.
 $ docker secret inspect --format='{{.CreatedAt}}' eo7jnzguqgtpdah3cm5srfb97
 
 2017-03-24 08:15:09.735271783 +0000 UTC
+```
+
+```
 ```

@@ -33,6 +33,7 @@ For detailed information about using configs, refer to [store configuration data
 
 ## Examples
 
+````console
 ### Inspect a config by name or ID
 
 You can inspect a config, either by its *name*, or *ID*
@@ -44,7 +45,7 @@ $ docker config ls
 
 ID                          NAME                CREATED             UPDATED
 eo7jnzguqgtpdah3cm5srfb97   my_config           3 minutes ago       3 minutes ago
-```
+````
 
 ```console
 $ docker config inspect config.json
@@ -83,4 +84,7 @@ config.
 $ docker config inspect --format='{{.CreatedAt}}' eo7jnzguqgtpdah3cm5srfb97
 
 2017-03-24 08:15:09.735271783 +0000 UTC
+```
+
+```
 ```

@@ -22,11 +22,12 @@ The docker scout repo disable command disables Docker Scout on repositories.
 
 ## Examples
 
+````console
 ### Disable a specific repository
 
 ```console
 $ docker scout repo disable my/repository
-```
+````
 
 ### Disable all repositories of the organization
 
@@ -44,4 +45,7 @@ $ docker scout repo disable --filter namespace/backend
 
 ```console
 $ docker scout repo disable my/repository --registry 123456.dkr.ecr.us-east-1.amazonaws.com
+```
+
+```
 ```

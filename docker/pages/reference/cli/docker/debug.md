@@ -46,6 +46,7 @@ Custom builtin tools:
 
 ## Examples
 
+````console
 ### Debugging containers that have no shell (slim containers)
 
 The `hello-world` image is very simple and only contains the `/hello` binary.
@@ -56,7 +57,7 @@ Run a container from the `hello-world` image:
 
 ```console
 $ docker run --name my-app hello-world
-```
+````
 
 The container exits immediately. To get a debug shell inside, run:
 
@@ -288,4 +289,7 @@ shell into the `my-container` container.
 
 ```console
 $ docker debug --host=unix:///some/path/docker.sock my-container
+```
+
+```
 ```

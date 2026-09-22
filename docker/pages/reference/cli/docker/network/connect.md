@@ -26,11 +26,12 @@ the same network.
 
 ## Examples
 
+````console
 ### Connect a running container to a network
 
 ```console
 $ docker network connect multi-host-network container1
-```
+````
 
 ### Connect a container to a network when it starts
 
@@ -116,3 +117,6 @@ network but launched from different Engines can also communicate in this way.
 You can connect a container to one or more networks. The networks need not be
 the same type. For example, you can connect a single container bridge and overlay
 networks.
+
+```
+```

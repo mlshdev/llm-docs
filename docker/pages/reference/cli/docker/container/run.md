@@ -124,11 +124,12 @@ Use `docker ps -a` to view a list of all containers, including those that are st
 
 ## Examples
 
+````console
 ### Assign name (--name) {#name}
 
 The `--name` flag lets you specify a custom identifier for a container. The
 following example runs a container named `test` using the `nginx:alpine` image
-in [detached mode](#detached-mode--d---detach-detach).
+in [detached mode](#detach).
 
 ```console
 $ docker run --name test -d nginx:alpine
@@ -136,7 +137,7 @@ $ docker run --name test -d nginx:alpine
 $ docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS                  PORTS     NAMES
 4bed76d3ad42   nginx:alpine   "/docker-entrypoint.…"   1 second ago   Up Less than a second   80/tcp    test
-```
+````
 
 You can reference the container by name with other commands. For example, the
 following commands stop and remove a container named `test`:
@@ -359,6 +360,7 @@ Docker.
 >
 > For more information, see
 > [Runtime privilege and Linux capabilities](https://docs.docker.com/engine/containers/run/#runtime-privilege-and-linux-capabilities)
+> { .warning }
 
 The following example doesn't work, because by default, Docker drops most
 potentially dangerous kernel capabilities, including `CAP_SYS_ADMIN ` (which is
@@ -1630,3 +1632,6 @@ Network Namespace:
 
 - Sysctls beginning with `net.*`
 - If you use the `--network=host` option using these sysctls are not allowed.
+
+```
+```

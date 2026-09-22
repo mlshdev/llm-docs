@@ -23,6 +23,7 @@ each argument provided.
 
 ## Examples
 
+````console
 ### Create a backup that can then be used with `docker load`.
 
 ```console
@@ -41,7 +42,7 @@ $ ls -sh busybox.tar
 $ docker save -o fedora-all.tar fedora
 
 $ docker save -o fedora-latest.tar fedora:latest
-```
+````
 
 ### Save an image to a tar.gz file using gzip
 
@@ -106,4 +107,7 @@ alpine:latest           beefdbd8a1da       10.6MB         3.37MB
 
 $ docker image save --platform=linux/s390x -o alpine-s390x.tar alpine:latest
 Error response from daemon: no suitable export target found for platform linux/s390x
+```
+
+```
 ```

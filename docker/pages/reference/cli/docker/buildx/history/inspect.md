@@ -31,6 +31,7 @@ provenance, SBOMs, or other detailed information.
 
 ## Examples
 
+````console
 ### Inspect the most recent build
 
 ```console
@@ -59,7 +60,7 @@ pkg:docker/tonistiigi/xx@1.6.1?platform=linux%2Famd64           sha256:923441d7c
 Attachments:
 DIGEST                                                                  PLATFORM        TYPE
 sha256:217329d2af959d4f02e3a96dcbe62bf100cab1feb8006a047ddfe51a5397f7e3                 https://slsa.dev/provenance/v0.2
-```
+````
 
 ### Inspect a specific build
 
@@ -168,4 +169,7 @@ $ docker buildx history inspect --format json
 ```console
 $ docker buildx history inspect --format "{{.Name}}: {{.VCSRepository}} ({{.VCSRevision}})"
 buildx (binaries): https://github.com/crazy-max/buildx.git (f15eaa1ee324ffbbab29605600d27a84cab86361)
+```
+
+```
 ```

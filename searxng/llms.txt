@@ -52,7 +52,7 @@
 
 ## Documentation
 
-- [update pip's boilerplate ..](pages/docs/build-templates/searxng.md): Ubuntu / debian (3017 bytes)
+- [Searxng](pages/docs/build-templates/searxng.md): Ubuntu / debian (3017 bytes)
 - [Acknowledgements](pages/docs/index.md): # Welcome to SearXNG (2540 bytes)
 - [Why use a private instance?](pages/docs/own-instance.md): ...is a common question among SearXNG users. Before answering this question, see what options a SearXNG user has. (3465 bytes)
 

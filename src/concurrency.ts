@@ -14,7 +14,9 @@ export async function mapWithConcurrency<T, R>(
         cursor += 1;
         const item = items[index];
         if (item === undefined) {
-          continue;
+          throw new Error(
+            `mapWithConcurrency input contains no item at index ${index}`,
+          );
         }
         try {
           results[index] = await worker(item, index);

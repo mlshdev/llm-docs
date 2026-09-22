@@ -28,6 +28,7 @@ This command lists services that are running in the swarm.
 
 ## Examples
 
+````console
 On a manager node:
 
 ```console
@@ -38,7 +39,7 @@ c8wgl7q4ndfd  frontend  replicated      5/5                  nginx:alpine
 dmu1ept4cxcf  redis     replicated      3/3                  redis:7.4.1
 iwe3278osahj  mongo     global          7/7                  mongo:3.3
 hh08h9uu8uwr  job       replicated-job  1/1 (3/5 completed)  nginx:latest
-```
+````
 
 The `REPLICAS` column shows both the actual and desired number of tasks for
 the service. If the service is in `replicated-job` or `global-job`, it will
@@ -154,4 +155,7 @@ To list all services in JSON format, use the `json` directive:
 ```console
 $ docker service ls --format json
 {"ID":"ssniordqolsi","Image":"hello-world:latest","Mode":"replicated","Name":"hello","Ports":"","Replicas":"0/1"}
+```
+
+```
 ```

@@ -210,7 +210,11 @@ function summarizeQuarantine(
     reasons.set(key, (reasons.get(key) ?? 0) + 1);
   }
   return [...reasons]
-    .sort((left, right) => right[1] - left[1] || (left[0] < right[0] ? -1 : 1))
+    .sort(
+      (left, right) =>
+        right[1] - left[1] ||
+        (left[0] < right[0] ? -1 : left[0] > right[0] ? 1 : 0),
+    )
     .slice(0, 3)
     .map(([reason, count]) => `${reason} (${count})`)
     .join("; ");
@@ -222,22 +226,38 @@ function reasonKind(reason: string): string {
   return reason.split(/\s+in\s+|:/)[0]?.trim() ?? reason;
 }
 
-// Code samples legitimately contain what looks like unconverted markup: the
-// PostgreSQL manual shows C address-of expressions (`&intval;`) and SGML
-// fragments, so its fences are excluded from the scan like Docker's and n8n's.
+// Projects whose code samples legitimately contain what looks like unconverted
+// markup: the PostgreSQL manual shows C address-of expressions (`&intval;`) and
+// SGML fragments, so their fences are excluded from the scan.
+const fenceExemptSyntax: readonly ProjectId[] = [
+  "docker",
+  "n8n",
+  "postgres-18",
+  "searxng",
+];
+
+// Source files that document the raw markup format itself, so an unresolved-
+// syntax match there is expected content rather than conversion drift.
+const exemptedSources: readonly {
+  readonly project: ProjectId;
+  readonly sourcePath: string;
+}[] = [{ project: "searxng", sourcePath: "docs/dev/reST.rst" }];
+
 function rejectionReason(
   projectId: ProjectId,
   document: Document,
 ): string | undefined {
-  const source =
-    projectId === "searxng" && document.sourcePath === "docs/dev/reST.rst"
-      ? ""
-      : projectId === "docker" ||
-          projectId === "n8n" ||
-          projectId === "postgres-18" ||
-          projectId === "searxng"
-        ? withoutFencedCode(document.body)
-        : document.body;
+  if (
+    exemptedSources.some(
+      (entry) =>
+        entry.project === projectId && entry.sourcePath === document.sourcePath,
+    )
+  ) {
+    return undefined;
+  }
+  const source = fenceExemptSyntax.includes(projectId)
+    ? withoutFencedCode(document.body)
+    : document.body;
   const match = unresolvedSyntax[projectId].exec(source);
   return match
     ? `Unresolved ${projectId} source syntax ${JSON.stringify(match[0].trim().slice(0, 60))}`

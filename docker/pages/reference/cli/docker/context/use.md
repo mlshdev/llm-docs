@@ -19,6 +19,7 @@ environment variable instead.
 
 ## Examples
 
+````console
 ### Set the default (sticky) context
 
 This updates the CLI configuration and applies to new terminal sessions:
@@ -29,7 +30,7 @@ my-context
 
 $ docker context show
 my-context
-```
+````
 
 ### Use a context for a single command
 
@@ -60,4 +61,7 @@ $ unset DOCKER_CONTEXT
 ```bash
 $ docker context use default
 default
+```
+
+```
 ```

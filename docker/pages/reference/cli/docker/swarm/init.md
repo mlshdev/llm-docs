@@ -33,6 +33,7 @@ in the newly created single-node swarm.
 
 ## Examples
 
+````console
 ```console
 $ docker swarm init --advertise-addr 192.168.99.121
 
@@ -43,7 +44,7 @@ To add a worker to this swarm, run the following command:
     docker swarm join --token SWMTKN-1-aabbccdd00112233aabbccdd00112233aabbccdd00112233aa-aabbccdd00112233... 172.17.0.2:2377
 
 To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
-```
+````
 
 The `docker swarm init` command generates two random tokens: a worker token and
 a manager token. When you join a new node to the swarm, the node joins as a
@@ -187,3 +188,6 @@ the node joins a master. Possible availability values are `active`, `pause`, or
 This flag is useful in certain situations. For example, a cluster may want to
 have dedicated manager nodes that don't serve as worker nodes. You can do this
 by passing `--availability=drain` to `docker swarm init`.
+
+```
+```

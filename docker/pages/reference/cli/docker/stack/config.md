@@ -19,11 +19,12 @@ Outputs the final Compose file, after doing the merges and interpolations of the
 
 ## Examples
 
+````console
 The following command outputs the result of the merge and interpolation of two Compose files.
 
 ```console
 $ docker stack config --compose-file docker-compose.yml --compose-file docker-compose.prod.yml
-```
+````
 
 The Compose file can also be provided as standard input with `--compose-file -`:
 
@@ -51,4 +52,7 @@ That is why, when piping the output back to `stack deploy` one should always pre
 
 ```console
 $ docker stack config --compose-file web.yml --compose-file web.prod.yml --skip-interpolation | docker stack deploy --compose-file -
+```
+
+```
 ```

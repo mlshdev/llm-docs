@@ -22,13 +22,14 @@ To delete temporary data and clear the SBOM cache, use the `--sboms` flag.
 
 ## Examples
 
+````console
 ### Delete temporary data
 
 ```console
 $ docker scout cache prune
 ? Are you sure to delete all temporary data? Yes
     ✓ temporary data deleted
-```
+````
 
 ### Delete temporary and cache data
 
@@ -37,4 +38,7 @@ $ docker scout cache prune --sboms
 ? Are you sure to delete all temporary data and all cached SBOMs? Yes
     ✓ temporary data deleted
     ✓ cached SBOMs deleted
+```
+
+```
 ```

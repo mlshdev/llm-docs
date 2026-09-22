@@ -44,3 +44,7 @@ build-report.json
 # DOCC_CACHE_DIR are pointed inside the checkout instead of the system
 # temporary directory.
 /.cache/
+
+# Vim/emacs swap files
+*.swp
+.*.swp

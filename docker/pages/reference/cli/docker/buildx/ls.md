@@ -40,6 +40,7 @@ the target platform marked with a `*` in the `PLATFORMS` column.
 
 ## Examples
 
+````console
 ### Format the output (--format) {#format}
 
 The formatting options (`--format`) pretty-prints builder instances output
@@ -48,7 +49,7 @@ using a Go template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder       | Description                                 |
-| ----------------- | ------------------------------------------- |
+|-------------------|---------------------------------------------|
 | `.Name`           | Builder or node name                        |
 | `.DriverEndpoint` | Driver (for builder) or Endpoint (for node) |
 | `.LastActivity`   | Builder last activity                       |
@@ -72,7 +73,7 @@ elated_tesla0: unix:///var/run/docker.sock
 elated_tesla1: ssh://ubuntu@1.2.3.4
 default: docker
 default: default
-```
+````
 
 The `Builder` placeholder can be used to access the builder object and its
 fields. For example, the following template outputs the builder's and
@@ -85,4 +86,7 @@ elated_tesla:
   elated_tesla1: ssh://ubuntu@1.2.3.4
 default: docker
   default: default
+```
+
+```
 ```

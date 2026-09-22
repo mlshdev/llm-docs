@@ -20,10 +20,10 @@ Remove MCP servers from a catalog by server name.
 
 ## Examples
 
+```console
 # Remove servers by name
+  docker mcp catalog server remove mcp/my-catalog:latest --name github --name slack
 
-docker mcp catalog server remove mcp/my-catalog:latest --name github --name slack
-
-# Remove a single server
-
-docker mcp catalog server remove mcp/my-catalog:latest --name github
+  # Remove a single server
+  docker mcp catalog server remove mcp/my-catalog:latest --name github
+```

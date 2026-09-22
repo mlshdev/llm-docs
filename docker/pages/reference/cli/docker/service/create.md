@@ -98,6 +98,7 @@ Creates a service as described by the specified parameters.
 
 ## Examples
 
+````console
 ### Create a service
 
 ```console
@@ -114,7 +115,7 @@ $ docker service ls
 ID            NAME    MODE        REPLICAS  IMAGE
 dmu1ept4cxcf  redis   replicated  1/1       redis:7.4.1
 a8q9dasaafud  redis2  global      1/1       redis:7.4.1
-```
+````
 
 #### Create a service using an image on a private registry (--with-registry-auth) {#with-registry-auth}
 
@@ -1202,3 +1203,6 @@ Note that after a Global job is created, any new Nodes added to the cluster
 will have a Task from that job started on them. The Global Job does not as a
 whole have a "done" state, except insofar as every Node meeting the job's
 constraints has a Completed task.
+
+```
+```

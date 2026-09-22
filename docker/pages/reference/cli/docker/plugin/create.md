@@ -19,6 +19,7 @@ filesystem as well as the [config.json](https://docs.docker.com/engine/extend/co
 
 ## Examples
 
+````console
 The following example shows how to create a sample `plugin`.
 
 ```console
@@ -36,6 +37,9 @@ $ docker plugin ls
 
 ID              NAME            DESCRIPTION                  ENABLED
 672d8144ec02    plugin:latest   A sample plugin for Docker   false
-```
+````
 
 The plugin can subsequently be enabled for local use or pushed to the public registry.
+
+```
+```

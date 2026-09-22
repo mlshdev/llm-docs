@@ -66,16 +66,17 @@ Arguments are the same as the `build`
 
 ## Examples
 
+````console
 ### Launch request arguments {#launch-config}
 
 The following [launch request arguments](https://microsoft.github.io/debug-adapter-protocol/specification#Requests_Launch) are supported. These are sent as a JSON body as part of the launch request.
 
-| Name          | Type      | Default      | Description                                                                 |
-| :------------ | :-------- | :----------- | :-------------------------------------------------------------------------- |
-| `dockerfile`  | `string`  | `Dockerfile` | Name of the Dockerfile                                                      |
-| `contextPath` | `string`  | `.`          | Set the context path for the build (normally the first positional argument) |
-| `target`      | `string`  |              | Set the target build stage to build                                         |
-| `stopOnEntry` | `boolean` | `false`      | Stop on the first instruction                                               |
+| Name                | Type          | Default      | Description                                                                  |
+|:--------------------|:--------------|:-------------|:-----------------------------------------------------------------------------|
+| `dockerfile`        | `string`      | `Dockerfile` | Name of the Dockerfile                                                       |
+| `contextPath`       | `string`      | `.`          | Set the context path for the build (normally the first positional argument)  |
+| `target`            | `string`      |              | Set the target build stage to build                                          |
+| `stopOnEntry`       | `boolean`     | `false`      | Stop on the first instruction                                                |
 
 ### Additional Arguments {#additional-args}
 
@@ -91,6 +92,9 @@ For example, a launch configuration in Visual Studio Code with the following:
     "args": ["--build-arg", "FOO=AAA"]
     "builder": ["mybuilder"]
 }
-```
+````
 
 This should cause the debug adapter to be invoked as `docker buildx --builder mybuilder dap build --build-arg FOO=AAA`.
+
+```
+```

@@ -20,6 +20,7 @@ a plugin that has references (e.g., volumes, networks) cannot be disabled.
 
 ## Examples
 
+````console
 The following example shows that the `sample-volume-plugin` plugin is installed
 and enabled:
 
@@ -28,7 +29,7 @@ $ docker plugin ls
 
 ID            NAME                                    DESCRIPTION                ENABLED
 69553ca1d123  tiborvass/sample-volume-plugin:latest   A test plugin for Docker   true
-```
+````
 
 To disable the plugin, use the following command:
 
@@ -41,4 +42,7 @@ $ docker plugin ls
 
 ID            NAME                                    DESCRIPTION                ENABLED
 69553ca1d123  tiborvass/sample-volume-plugin:latest   A test plugin for Docker   false
+```
+
+```
 ```

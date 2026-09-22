@@ -24,9 +24,10 @@ instruction in the container's Dockerfile, or the `--stop-signal` option to
 
 ## Examples
 
+````console
 ```console
 $ docker stop my_container
-```
+````
 
 ### Stop container with signal (-s, --signal) {#signal}
 
@@ -57,3 +58,6 @@ The default timeout can be specified using the [`--stop-timeout`](https://docs.d
 option when creating the container. If no default is configured for the container,
 the Daemon determines the default, and is 10 seconds for Linux containers, and
 30 seconds for Windows containers.
+
+```
+```

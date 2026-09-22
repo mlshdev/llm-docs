@@ -39,6 +39,7 @@ Extended build capabilities with BuildKit
 
 ## Examples
 
+```console
 ### Override the configured builder instance (--builder) {#builder}
 
 You can also use the `BUILDX_BUILDER` environment variable.
@@ -50,3 +51,4 @@ policy verifies signed tags for images managed by Docker, including BuildKit
 builder images and Dockerfile frontends. Untagged digest references and images
 outside the managed repositories are allowed unchanged. Tagged references
 that also contain a digest still have their release identity verified.
+```

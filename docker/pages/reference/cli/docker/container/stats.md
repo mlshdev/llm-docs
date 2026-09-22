@@ -47,6 +47,7 @@ the `/containers/(id)/stats` API endpoint.
 
 ## Examples
 
+````console
 Running `docker stats` on all running containers against a Linux daemon.
 
 ```console
@@ -57,7 +58,7 @@ b95a83497c91        awesome_brattain                        0.28%               
 67b2525d8ad1        foobar                                  0.00%               1.727MiB / 1.952GiB   0.09%               2.48kB / 0B         4.11MB / 0B         2
 e5c383697914        test-1951.1.kay7x1lh1twk9c0oig50sd5tr   0.00%               196KiB / 1.952GiB     0.01%               71.2kB / 0B         770kB / 0B          1
 4bda148efbc0        random.1.vnc8on831idyr42slu578u3cr      0.00%               1.672MiB / 1.952GiB   0.08%               110kB / 0B          578kB / 0B          2
-```
+````
 
 If you don't [specify a format string using `--format`](#format-the-output---format-format), the
 following columns are shown.
@@ -185,4 +186,7 @@ On Windows:
 
 ```
 "table {{.ID}}\t{{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.NetIO}}\t{{.BlockIO}}"
+```
+
+```
 ```

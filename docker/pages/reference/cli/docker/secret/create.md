@@ -28,6 +28,7 @@ For detailed information about using secrets, refer to [manage sensitive data wi
 
 ## Examples
 
+````console
 ### Create a secret
 
 ```console
@@ -39,7 +40,7 @@ $ docker secret ls
 
 ID                          NAME                CREATED             UPDATED
 onakdyv307se2tl7nl20anokv   my_secret           6 seconds ago       6 seconds ago
-```
+````
 
 ### Create a secret with a file
 
@@ -85,4 +86,7 @@ $ docker secret inspect my_secret
         }
     }
 ]
+```
+
+```
 ```

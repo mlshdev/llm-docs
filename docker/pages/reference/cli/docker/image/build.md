@@ -116,6 +116,7 @@ of the build context. Reusing the previous example, the path `COPY
 
 ## Examples
 
+````console
 ### Specify isolation technology for container (--isolation) {#isolation}
 
 This option is useful in situations where you are running Docker containers on
@@ -123,8 +124,9 @@ Windows. The `--isolation=<value>` option sets a container's isolation
 technology. On Linux, the only supported is the `default` option which uses
 Linux namespaces. On Microsoft Windows, you can specify these values:
 
+
 | Value     | Description                                                                                                                                                                    |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `default` | Use the value specified by the Docker daemon's `--exec-opt` . If the `daemon` does not specify an isolation technology, Microsoft Windows uses `process` as its default value. |
 | `process` | Namespace isolation only.                                                                                                                                                      |
 | `hyperv`  | Hyper-V hypervisor partition-based isolation.                                                                                                                                  |
@@ -139,7 +141,7 @@ the `credentialspec` option. The `credentialspec` must be in the format
 
 #### Overview
 
-> \[!NOTE]
+> [!NOTE]
 > The `--squash` option is an experimental feature, and should not be considered
 > stable.
 
@@ -158,7 +160,7 @@ images (saving space).
 
 For most use cases, multi-stage builds are a better alternative, as they give more
 fine-grained control over your build, and can take advantage of future
-optimizations in the builder. Refer to the [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
+optimizations in the builder. Refer to the [Multi-stage builds](/build/building/multi-stage/)
 section for more information.
 
 #### Known limitations
@@ -210,7 +212,7 @@ Server: Docker Engine - Community
   OS/Arch:          linux/arm64
   Experimental:     true
  [...]
-```
+````
 
 #### Build an image with the `--squash` flag
 
@@ -251,3 +253,6 @@ IMAGE               CREATED             CREATED BY                              
 
 Test the image, check for `/remove_me` being gone, make sure `hello\nworld` is
 in `/hello`, make sure the `HELLO` environment variable's value is `world`.
+
+```
+```

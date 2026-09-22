@@ -21,6 +21,7 @@ List contexts
 
 ## Examples
 
+````console
 Use `docker context ls` to print all contexts. The currently active context is
 indicated with an `*`:
 
@@ -31,4 +32,7 @@ NAME                DESCRIPTION                               DOCKER ENDPOINT   
 default *           Current DOCKER_HOST based configuration   unix:///var/run/docker.sock          swarm
 production                                                    tcp:///prod.corp.example.com:2376
 staging                                                       tcp:///stage.corp.example.com:2376
+````
+
+```
 ```

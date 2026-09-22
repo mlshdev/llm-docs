@@ -22,6 +22,7 @@ Remove one or more containers
 
 ## Examples
 
+````console
 ### Remove a container
 
 This removes the container referenced under the link `/redis`.
@@ -30,7 +31,7 @@ This removes the container referenced under the link `/redis`.
 $ docker rm /redis
 
 /redis
-```
+````
 
 ### Remove a link specified with `--link` on the default bridge network (--link) {#link}
 
@@ -110,3 +111,6 @@ $ docker rm -v hello
 In this example, the volume for `/foo` remains intact, but the volume for
 `/bar` is removed. The same behavior holds for volumes inherited with
 `--volumes-from`.
+
+```
+```

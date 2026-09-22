@@ -64,6 +64,7 @@ or if you want to control from where the image will be resolved, you must prefix
 
 ## Examples
 
+````console
 ### Quick overview of an image
 
 ```console
@@ -78,7 +79,7 @@ $ docker scout quickview golang:1.19.4
                                                      │    -5     -1     -3     -6     -6
   Updated base image  buildpack-deps:sid-scm         │    0C     0H     1M    29L
                                                      │    -5     -1     -2    -19     -6
-```
+````
 
 ### Quick overview of the most recently built image
 
@@ -100,4 +101,7 @@ $  syft -o spdx-json alpine:3.16.1 | docker scout quickview sbom://
 
   Target   │ <stdin>        │    1C     2H     8M     0L
     digest │  274a317d88b5  │
+```
+
+```
 ```

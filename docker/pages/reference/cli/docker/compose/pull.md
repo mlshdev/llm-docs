@@ -28,6 +28,7 @@ Pulls an image associated with a service defined in a `compose.yaml` file, but d
 
 ## Examples
 
+````console
 Consider the following `compose.yaml`:
 
 ```yaml
@@ -43,7 +44,7 @@ services:
       - "3000:3000"
     depends_on:
       - db
-```
+````
 
 If you run `docker compose pull ServiceName` in the same directory as the `compose.yaml` file that defines the service,
 Docker pulls the associated image. For example, to call the postgres image configured as the db service in our example,
@@ -70,3 +71,6 @@ $ docker compose pull db
 ```
 
 `docker compose pull` tries to pull image for services with a build section. If pull fails, it lets you know this service image must be built. You can skip this by setting `--ignore-buildable` flag.
+
+```
+```

@@ -28,6 +28,7 @@ Disk usage
 
 ## Examples
 
+````console
 ### Show disk usage
 
 The `docker buildx du` command shows the disk usage for the currently selected
@@ -51,7 +52,7 @@ Shared:        115.5MB
 Private:       10.25GB
 Reclaimable:   10.36GB
 Total:         10.36GB
-```
+````
 
 If `RECLAIMABLE` is false, the `docker buildx du prune` command won't delete
 the record, even if you use `--all`. That's because the record is actively in
@@ -246,4 +247,7 @@ fkt31oiv793nd26h42llsjcw7*        true           11.87MB       2 days ago
 uj802yxtvkcjysnjb4kgwvn2v         true           11.68MB       45 hours ago
 Reclaimable:    2.627GB
 Total:          2.627GB
+```
+
+```
 ```

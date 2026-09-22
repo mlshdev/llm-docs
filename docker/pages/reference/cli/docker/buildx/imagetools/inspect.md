@@ -62,25 +62,26 @@ Manifests:
 
 ## Examples
 
+````console
 ### Override the configured builder instance (--builder) {#builder}
 
-Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).
+Same as [`buildx --builder`](/reference/cli/docker/buildx/#builder).
 
 ### Format the output (--format) {#format}
 
 Format the output using the given Go template. Defaults to `{{.Manifest}}` if
 unset. Following fields are available:
 
-- `.Name`: provides the reference of the image
-- `.Manifest`: provides the manifest or manifest list
-- `.Image`: provides the image config
+* `.Name`: provides the reference of the image
+* `.Manifest`: provides the manifest or manifest list
+* `.Image`: provides the image config
 
 #### `.Name`
 
 ```console
 $ docker buildx imagetools inspect alpine --format "{{.Name}}"
 Name: docker.io/library/alpine:latest
-```
+````
 
 #### `.Manifest`
 
@@ -700,4 +701,7 @@ $ docker buildx imagetools inspect --raw moby/buildkit:master | jq
     }
   ]
 }
+```
+
+```
 ```

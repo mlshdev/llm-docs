@@ -37,11 +37,12 @@ The policy evaluation results may take a few minutes to become available.
 
 ## Examples
 
+````console
 ### Evaluate policies against an image and display the results
 
 ```console
 $ docker scout policy dockerscoutpolicy/customers-api-service:0.0.1
-```
+````
 
 ### Evaluate policies against an image for a specific organization
 
@@ -59,4 +60,7 @@ $ docker scout policy dockerscoutpolicy/customers-api-service:0.0.1 --platform l
 
 ```console
 $ docker scout policy dockerscoutpolicy/customers-api-service --to-env production
+```
+
+```
 ```

@@ -16,12 +16,13 @@ Available configuration key:
 
 ## Examples
 
+````console
 ### List existing configuration
 
 ```console
 $ docker scout config
 organization=my-org-namespace
-```
+````
 
 ### Print configuration value
 
@@ -35,4 +36,7 @@ my-org-namespace
 ```console
 $ docker scout config organization my-org-namespace
     ✓ Successfully set organization to my-org-namespace
+```
+
+```
 ```

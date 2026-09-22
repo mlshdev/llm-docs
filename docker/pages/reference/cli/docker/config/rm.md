@@ -22,12 +22,17 @@ For detailed information about using configs, refer to [store configuration data
 
 ## Examples
 
+````console
 This example removes a config:
 
 ```console
 $ docker config rm my_config
 sapth4csdo5b6wz2p5uimh5xg
-```
+````
 
 > \[!WARNING]
 > This command doesn't ask for confirmation before removing a config.
+> { .warning }
+
+```
+```

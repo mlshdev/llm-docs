@@ -14,6 +14,7 @@ List port mappings or a specific mapping for the container
 
 ## Examples
 
+````console
 ### Show all mapped ports
 
 You can find out all the ports mapped by not specifying a `PRIVATE_PORT`, or
@@ -41,4 +42,7 @@ $ docker port test 7890/udp
 $ docker port test 7890
 
 0.0.0.0:4321
+````
+
+```
 ```

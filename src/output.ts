@@ -1,9 +1,9 @@
 import { createHash } from "node:crypto";
 import { createReadStream } from "node:fs";
-import { link, mkdir, readFile, stat } from "node:fs/promises";
+import { mkdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import type { FileSink } from "bun";
-import { isRecord, rootDirectory } from "./config.ts";
+import { rootDirectory } from "./config.ts";
 import {
   exists,
   listFiles,
@@ -14,7 +14,6 @@ import {
 } from "./files.ts";
 import { currentGeneratorDigest } from "./generator.ts";
 import {
-  documentLinks,
   githubBlobUrl,
   isPublishableUrl,
   markdownLinks,
@@ -42,6 +41,7 @@ import type {
   ProjectId,
   SourceProject,
 } from "./types.ts";
+import { compareCodePoints } from "./compare.ts";
 
 // GitHub rejects any file above 100 MiB, and a corpus that cannot be pushed is
 // not published at all. Corpora past this size are written as numbered volumes
@@ -132,7 +132,7 @@ export function validateDocumentLinks(
   document: Document,
   outputPaths: ReadonlySet<string>,
 ): void {
-  for (const link of documentLinks(document.body)) {
+  for (const link of markdownLinks(document.body)) {
     const url = link.url.trim();
     if (!url || url.startsWith("#") || url.startsWith("?")) {
       continue;
@@ -162,7 +162,14 @@ export function validateDocumentLinks(
     const resolved = path.posix.normalize(
       path.posix.join(path.posix.dirname(document.outputPath), decoded),
     );
-    if (link.kind === "image" || !outputPaths.has(resolved)) {
+    if (link.kind === "image") {
+      // Relative images are never part of the corpus; upstream assets are
+      // rewritten to absolute pinned URLs by the adapters.
+      throw new Error(
+        `${projectId} ${document.sourcePath} has a relative ${link.kind}, which is not published: ${url}`,
+      );
+    }
+    if (!outputPaths.has(resolved)) {
       throw new Error(
         `${projectId} ${document.sourcePath} has a missing local ${link.kind}: ${url}`,
       );
@@ -368,9 +375,10 @@ export async function verifyOutputs(
       .filter((link) => link.kind === "link" && link.url.startsWith("pages/"))
       .map((link) => link.url.replace(/[?#].*$/, ""));
     const indexPages = new Set(indexPageLinks);
+    const publishedPages = new Set(pagePaths);
     if (
       indexPages.size !== indexPageLinks.length ||
-      indexPageLinks.some((page) => !pagePaths.includes(page)) ||
+      indexPageLinks.some((page) => !publishedPages.has(page)) ||
       (manifest.indexComplete &&
         (indexPages.size !== pagePaths.length ||
           pagePaths.some((page) => !indexPages.has(page))))
@@ -721,37 +729,44 @@ async function writeProjectCorpus(
   }
   const volumes: CorpusVolumeManifest[] = [];
   let volume: OpenCorpusVolume | undefined;
-  for (const document of build.documents) {
-    const entry = renderCorpusDocument(build.project, build.lock, document);
-    const firstVolumeHeader = volumeHeader(header, volumes.length + 1);
-    if (
-      Buffer.byteLength(entry) + Buffer.byteLength(firstVolumeHeader) >
-      maximumCorpusVolumeBytes
-    ) {
-      throw new Error(
-        `${build.project.id} document exceeds the ${maximumCorpusVolumeBytes}-byte corpus volume limit`,
-      );
-    }
-    if (
-      volume &&
-      volume.documentCount > 0 &&
-      volume.byteLength + 1 + Buffer.byteLength(entry) >
+  try {
+    for (const document of build.documents) {
+      const entry = renderCorpusDocument(build.project, build.lock, document);
+      const firstVolumeHeader = volumeHeader(header, volumes.length + 1);
+      if (
+        Buffer.byteLength(entry) + Buffer.byteLength(firstVolumeHeader) >
         maximumCorpusVolumeBytes
-    ) {
+      ) {
+        throw new Error(
+          `${build.project.id} document exceeds the ${maximumCorpusVolumeBytes}-byte corpus volume limit`,
+        );
+      }
+      if (
+        volume &&
+        volume.documentCount > 0 &&
+        volume.byteLength + 1 + Buffer.byteLength(entry) >
+          maximumCorpusVolumeBytes
+      ) {
+        volumes.push(await closeVolume(volume));
+        volume = undefined;
+      }
+      volume ??= await openVolume(volumes.length + 1);
+      if (volume.documentCount > 0) {
+        await volume.sink.write("\n");
+        volume.byteLength += 1;
+      }
+      await volume.sink.write(entry);
+      volume.byteLength += Buffer.byteLength(entry);
+      volume.documentCount += 1;
+    }
+    if (volume) {
       volumes.push(await closeVolume(volume));
-      volume = undefined;
     }
-    volume ??= await openVolume(volumes.length + 1);
-    if (volume.documentCount > 0) {
-      await volume.sink.write("\n");
-      volume.byteLength += 1;
-    }
-    await volume.sink.write(entry);
-    volume.byteLength += Buffer.byteLength(entry);
-    volume.documentCount += 1;
-  }
-  if (volume) {
-    volumes.push(await closeVolume(volume));
+  } catch (error) {
+    // A mid-write failure must not leak the open file descriptors for the rest
+    // of the process; the staging directory removal handles the partial files.
+    await endSinkQuietly(volume?.sink);
+    throw error;
   }
   await writeUtf8(
     path.join(destination, "llms-full.txt"),
@@ -817,6 +832,16 @@ interface OpenCorpusVolume {
   documentCount: number;
 }
 
+// FileSink.end() resolves to a flushed byte count synchronously or as a
+// promise; either way a failing close on an error path must not mask the
+// original failure.
+async function endSinkQuietly(sink: FileSink | undefined): Promise<void> {
+  const result = sink?.end();
+  if (result instanceof Promise) {
+    await result.catch(() => {});
+  }
+}
+
 function volumeHeader(header: string, index: number): string {
   return `${header.trimEnd()}\nVolume ${index}\n\n`;
 }
@@ -835,8 +860,13 @@ async function writeFreshChunks(
 ): Promise<void> {
   await mkdir(path.dirname(filePath), { recursive: true });
   const sink = Bun.file(filePath).writer();
-  for (const chunk of chunks) {
-    await sink.write(chunk);
+  try {
+    for (const chunk of chunks) {
+      await sink.write(chunk);
+    }
+  } catch (error) {
+    await endSinkQuietly(sink);
+    throw error;
   }
   await sink.end();
 }
@@ -919,293 +949,6 @@ export function computeDocumentationDigest(build: ProjectBuild): string {
 
 function documentationDigestOf(source: LockedSource): string | undefined {
   return isBranchLockedSource(source) ? source.documentationDigest : undefined;
-}
-
-export async function upgradeProjectManifest(
-  projectId: ProjectId,
-): Promise<ProjectManifest> {
-  const directory = path.join(rootDirectory, projectId);
-  const manifestPath = path.join(directory, "manifest.json");
-  const legacy = JSON.parse(await readFile(manifestPath, "utf8")) as unknown;
-  if (!isRecord(legacy)) {
-    throw new Error(`${projectId}/manifest.json is not an object`);
-  }
-  const legacyVolumes = legacy.corpusVolumes;
-  const volumeNames =
-    Array.isArray(legacyVolumes) &&
-    legacyVolumes.length > 0 &&
-    legacyVolumes.every((entry) => typeof entry === "string")
-      ? (legacyVolumes as string[])
-      : Array.isArray(legacyVolumes) &&
-          legacyVolumes.length > 0 &&
-          legacyVolumes.every(
-            (entry) => isRecord(entry) && typeof entry.name === "string",
-          )
-        ? legacyVolumes.map((entry) => (entry as { name: string }).name)
-        : ["llms-full.txt"];
-  const corpusVolumes = await Promise.all(
-    volumeNames.map((name) =>
-      corpusVolumeManifest(path.join(directory, name), name),
-    ),
-  );
-  const pages = (await listFiles(path.join(directory, "pages")))
-    .filter((file) => file.endsWith(".md"))
-    .map((file) => `pages/${file}`);
-  const index = await readFile(path.join(directory, "llms.txt"), "utf8");
-  const indexedPages = new Set(
-    markdownLinks(index)
-      .filter((link) => link.kind === "link" && link.url.startsWith("pages/"))
-      .map((link) => link.url.replace(/[?#].*$/, "")),
-  );
-  const upgraded = parseProjectManifest({
-    ...legacy,
-    schemaVersion: manifestSchemaVersion,
-    generatorVersion,
-    generatorDigest: await currentGeneratorDigest(),
-    notes: upgradedManifestNotes(legacy),
-    indexComplete:
-      indexedPages.size === pages.length &&
-      pages.every((page) => indexedPages.has(page)),
-    corpusVolumes,
-    outputDigest: await computeOutputDigest(directory, volumeNames),
-  });
-  if (upgraded.project !== projectId) {
-    throw new Error(
-      `${projectId}/manifest.json identifies project ${upgraded.project}`,
-    );
-  }
-  await writeUtf8Atomic(manifestPath, serializeProjectManifest(upgraded));
-  return upgraded;
-}
-
-// Re-shard an already verified snapshot without asking an upstream that may no
-// longer serve the captured bytes. Every non-corpus file is hard-linked into a
-// staged sibling directory, so the existing project remains intact until the
-// replacement corpus and manifest are complete and the directory swap commits.
-export async function repackageProjectCorpus(
-  projectId: ProjectId,
-): Promise<ProjectManifest> {
-  const directory = path.join(rootDirectory, projectId);
-  const legacy = JSON.parse(
-    await readFile(path.join(directory, "manifest.json"), "utf8"),
-  ) as unknown;
-  if (!isRecord(legacy)) {
-    throw new Error(`${projectId}/manifest.json is not an object`);
-  }
-  const oldVolumeNames = legacyVolumeNames(legacy);
-  const requiresRepack = await Promise.all(
-    oldVolumeNames.map(
-      async (name) =>
-        (await stat(path.join(directory, name))).size >
-        maximumCorpusVolumeBytes,
-    ),
-  );
-  if (!requiresRepack.some(Boolean)) return upgradeProjectManifest(projectId);
-
-  await replaceDirectoryAtomically(directory, async (staging) => {
-    const files = await listFiles(directory);
-    for (const relativePath of files) {
-      if (
-        relativePath === "manifest.json" ||
-        /^llms-full(?:\.\d{3})?\.txt$/.test(relativePath)
-      ) {
-        continue;
-      }
-      const destination = path.join(staging, relativePath);
-      await mkdir(path.dirname(destination), { recursive: true });
-      await link(path.join(directory, relativePath), destination);
-    }
-    const corpusVolumes = await repackageExistingCorpus(
-      directory,
-      staging,
-      oldVolumeNames,
-      Number(legacy.documentCount),
-    );
-    const volumeNames = corpusVolumes.map((volume) => volume.name);
-    const manifest = parseProjectManifest({
-      ...legacy,
-      schemaVersion: manifestSchemaVersion,
-      generatorVersion,
-      generatorDigest: await currentGeneratorDigest(),
-      notes: upgradedManifestNotes(legacy),
-      corpusVolumes,
-      outputDigest: await computeOutputDigest(staging, volumeNames),
-    });
-    if (manifest.project !== projectId) {
-      throw new Error(
-        `${projectId}/manifest.json identifies project ${manifest.project}`,
-      );
-    }
-    await writeUtf8(
-      path.join(staging, "manifest.json"),
-      serializeProjectManifest(manifest),
-    );
-  });
-  return parseProjectManifest(
-    JSON.parse(await readFile(path.join(directory, "manifest.json"), "utf8")),
-  );
-}
-
-function legacyVolumeNames(
-  legacy: Readonly<Record<string, unknown>>,
-): readonly string[] {
-  const volumes = legacy.corpusVolumes;
-  if (
-    Array.isArray(volumes) &&
-    volumes.length > 0 &&
-    volumes.every((entry) => typeof entry === "string")
-  ) {
-    return volumes as string[];
-  }
-  if (
-    Array.isArray(volumes) &&
-    volumes.length > 0 &&
-    volumes.every((entry) => isRecord(entry) && typeof entry.name === "string")
-  ) {
-    return volumes.map((entry) => (entry as { name: string }).name);
-  }
-  return ["llms-full.txt"];
-}
-
-async function repackageExistingCorpus(
-  source: string,
-  destination: string,
-  oldVolumeNames: readonly string[],
-  expectedDocuments: number,
-): Promise<readonly CorpusVolumeManifest[]> {
-  const dataNames =
-    oldVolumeNames.length === 1 ? oldVolumeNames : oldVolumeNames.slice(1);
-  const first = await readFile(path.join(source, dataNames[0]!), "utf8");
-  const firstBoundary = first.search(/^# Document: /m);
-  if (firstBoundary < 0) throw new Error("Existing corpus has no documents");
-  const header = first
-    .slice(0, firstBoundary)
-    .trimEnd()
-    .replace(/\nVolume \d+$/, "");
-  const volumes: CorpusVolumeManifest[] = [];
-  let volume: OpenCorpusVolume | undefined;
-  let documentCount = 0;
-
-  for (const name of dataNames) {
-    const body = await readFile(path.join(source, name), "utf8");
-    const boundaries = [...body.matchAll(/^# Document: /gm)].map(
-      (match) => match.index ?? 0,
-    );
-    for (let index = 0; index < boundaries.length; index += 1) {
-      const entry = body
-        .slice(boundaries[index], boundaries[index + 1] ?? body.length)
-        .trimEnd();
-      const entryBytes = Buffer.byteLength(entry);
-      const nextHeader = volumeHeader(header, volumes.length + 1);
-      if (
-        entryBytes + Buffer.byteLength(nextHeader) >
-        maximumCorpusVolumeBytes
-      ) {
-        throw new Error(
-          `Existing corpus document exceeds the ${maximumCorpusVolumeBytes}-byte volume limit`,
-        );
-      }
-      if (
-        volume &&
-        volume.documentCount > 0 &&
-        volume.byteLength + 1 + entryBytes > maximumCorpusVolumeBytes
-      ) {
-        volumes.push(await closeRepackedVolume(volume));
-        volume = undefined;
-      }
-      volume ??= await openRepackedVolume(
-        destination,
-        header,
-        volumes.length + 1,
-      );
-      if (volume.documentCount > 0) {
-        await volume.sink.write("\n");
-        volume.byteLength += 1;
-      }
-      await volume.sink.write(entry);
-      volume.byteLength += entryBytes;
-      volume.documentCount += 1;
-      documentCount += 1;
-    }
-  }
-  if (volume) volumes.push(await closeRepackedVolume(volume));
-  if (documentCount !== expectedDocuments) {
-    throw new Error(
-      `Existing corpus contains ${documentCount} documents, expected ${expectedDocuments}`,
-    );
-  }
-  await writeUtf8(
-    path.join(destination, "llms-full.txt"),
-    [
-      header,
-      `This corpus is published as ${volumes.length} retrieval-sized volumes. Read the volumes in order for the complete corpus.`,
-      "",
-      ...volumes.map(
-        (item, index) =>
-          `- [Volume ${index + 1}](${item.name}): ${item.documentCount} documents, ${item.byteLength} bytes, SHA-256 \`${item.sha256}\`.`,
-      ),
-      "",
-    ].join("\n"),
-  );
-  return [
-    await corpusVolumeManifest(
-      path.join(destination, "llms-full.txt"),
-      "llms-full.txt",
-    ),
-    ...volumes,
-  ];
-}
-
-async function openRepackedVolume(
-  destination: string,
-  header: string,
-  index: number,
-): Promise<OpenCorpusVolume> {
-  const name = `llms-full.${String(index).padStart(3, "0")}.txt`;
-  const filePath = path.join(destination, name);
-  const sink = Bun.file(filePath).writer();
-  const prefix = volumeHeader(header, index);
-  await sink.write(prefix);
-  return {
-    name,
-    filePath,
-    sink,
-    byteLength: Buffer.byteLength(prefix),
-    documentCount: 0,
-  };
-}
-
-async function closeRepackedVolume(
-  volume: OpenCorpusVolume,
-): Promise<CorpusVolumeManifest> {
-  await volume.sink.end();
-  const manifest = await corpusVolumeManifest(volume.filePath, volume.name);
-  if (
-    manifest.byteLength !== volume.byteLength ||
-    manifest.documentCount !== volume.documentCount
-  ) {
-    throw new Error(
-      `Repacked corpus volume ${volume.name} did not flush completely`,
-    );
-  }
-  return manifest;
-}
-
-function upgradedManifestNotes(
-  legacy: Readonly<Record<string, unknown>>,
-): readonly string[] {
-  const notes = Array.isArray(legacy.notes)
-    ? legacy.notes.filter((note): note is string => typeof note === "string")
-    : [];
-  if (typeof legacy.catalog !== "string") return notes;
-  const limitation =
-    "Weekly reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive weekly check.";
-  if (notes.includes(limitation)) return notes;
-  const copyrightIndex = notes.findIndex((note) =>
-    note.startsWith("Documentation content remains Apple Inc."),
-  );
-  const insertion = copyrightIndex < 0 ? notes.length : copyrightIndex;
-  return [...notes.slice(0, insertion), limitation, ...notes.slice(insertion)];
 }
 
 async function sha256File(filePath: string): Promise<string> {
@@ -1295,10 +1038,6 @@ async function corpusVolumesOf(
     ),
   );
   return manifest.corpusVolumes.map((volume) => volume.name);
-}
-
-function compareCodePoints(left: string, right: string): number {
-  return left < right ? -1 : left > right ? 1 : 0;
 }
 
 function compareVolumeNames(left: string, right: string): number {

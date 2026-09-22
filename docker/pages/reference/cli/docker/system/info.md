@@ -36,6 +36,7 @@ available on the volume where `/var/lib/docker` is mounted.
 
 ## Examples
 
+````console
 ### Show output
 
 The example below shows the output for a daemon running on Ubuntu Linux,
@@ -102,7 +103,7 @@ Server:
   127.0.0.0/8
  Live Restore Enabled: false
  Product License: Community Engine
-```
+````
 
 ### Format the output (--format) {#format}
 
@@ -166,4 +167,7 @@ Server:
    http://192.168.1.2/
    http://registry-mirror.example.com:5000/
  Live Restore Enabled: false
+```
+
+```
 ```

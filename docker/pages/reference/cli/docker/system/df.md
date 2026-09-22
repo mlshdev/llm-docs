@@ -20,6 +20,7 @@ amount of disk space used by the Docker daemon.
 
 ## Examples
 
+````console
 By default the command displays a summary of the data used:
 
 ```console
@@ -29,7 +30,7 @@ TYPE                TOTAL               ACTIVE              SIZE                
 Images              5                   2                   16.43 MB            11.63 MB (70%)
 Containers          2                   0                   212 B               212 B (100%)
 Local Volumes       2                   1                   36 B                0 B (0%)
-```
+````
 
 Use the `-v, --verbose` flag to get more detailed information:
 
@@ -64,3 +65,6 @@ my-named-vol                                                       0            
 
 > \[!NOTE]
 > Network information isn't shown, because it doesn't consume disk space.
+
+```
+```

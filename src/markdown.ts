@@ -259,7 +259,8 @@ export function documentTitle(
   if (typeof attributes.title === "string" && attributes.title.trim()) {
     return attributes.title.trim();
   }
-  const heading = source.match(/^#\s+(.+)$/m);
+  // A `#` line inside a fenced code block is content, not a document heading.
+  const heading = withoutFencedCode(source).match(/^#\s+(.+)$/m);
   if (heading?.[1]) {
     return plainText(heading[1]);
   }
@@ -398,10 +399,6 @@ function collectMarkdownAstLinks(
   for (const child of node.children ?? []) {
     collectMarkdownAstLinks(child, links);
   }
-}
-
-export function documentLinks(source: string): readonly MarkdownLink[] {
-  return markdownLinks(source);
 }
 
 function collectFragments(root: MarkdownNode): ReadonlyMap<string, string> {

@@ -339,7 +339,9 @@ export async function readCacheFile(file: string): Promise<string | undefined> {
   try {
     const details = await stat(file);
     const ttl = cacheTtlSeconds();
-    if (ttl > 0 && Date.now() - details.mtimeMs > ttl * 1000) {
+    // TTL 0 disables caching entirely: otherwise a cached "missing page"
+    // entry would never expire and keep hiding a page Apple later publishes.
+    if (ttl === 0 || Date.now() - details.mtimeMs > ttl * 1000) {
       return undefined;
     }
     const body = await readFile(file, "utf8");

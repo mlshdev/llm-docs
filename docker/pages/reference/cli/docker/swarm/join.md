@@ -24,6 +24,7 @@ pass a worker token, the node joins as a worker.
 
 ## Examples
 
+````console
 ### Join a node to swarm as a manager
 
 The example below demonstrates joining a manager node using a manager token.
@@ -36,7 +37,7 @@ $ docker node ls
 ID                           HOSTNAME  STATUS  AVAILABILITY  MANAGER STATUS
 dkp8vy1dq1kxleu9g4u78tlag *  manager2  Ready   Active        Reachable
 dvfxp4zseq4s0rih1selh0d20    manager1  Ready   Active        Leader
-```
+````
 
 A cluster should only have 3-7 managers at most, because a majority of managers must be available
 for the cluster to function. Nodes that aren't meant to participate in this management quorum
@@ -109,3 +110,6 @@ Possible availability values are `active`, `pause`, or `drain`.
 This flag is useful in certain situations. For example, a cluster may want to have
 dedicated manager nodes that are not served as worker nodes. This could be achieved
 by passing `--availability=drain` to `docker swarm join`.
+
+```
+```

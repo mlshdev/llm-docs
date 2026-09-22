@@ -25,6 +25,7 @@ information about available filter options.
 
 ## Examples
 
+````console
 ### Create a volume
 
 ```console
@@ -41,7 +42,7 @@ $ docker volume ls
 DRIVER              VOLUME NAME
 local               rosemary
 local               tyler
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -179,4 +180,7 @@ To list all volumes in JSON format, use the `json` directive:
 ```console
 $ docker volume ls --format json
 {"Driver":"local","Labels":"","Links":"N/A","Mountpoint":"/var/lib/docker/volumes/docker-cli-dev-cache/_data","Name":"docker-cli-dev-cache","Scope":"local","Size":"N/A"}
+```
+
+```
 ```

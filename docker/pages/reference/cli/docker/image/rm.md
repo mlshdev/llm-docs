@@ -29,6 +29,7 @@ use the [`docker image ls`](https://docs.docker.com/reference/cli/docker/image/l
 
 ## Examples
 
+````console
 You can remove an image using its short or long ID, its tag, or its digest. If
 an image has one or more tags referencing it, you must remove all of them before
 the image is removed. Digest references are removed automatically when an image
@@ -65,7 +66,7 @@ $ docker rmi test:latest
 
 Untagged: test:latest
 Deleted: fd484f19954f4920da7ff372b5067f5b7ddb2fd3830cecd17b96ea9e286ba5b8
-```
+````
 
 If you use the `-f` flag and specify the image's short or long ID, then this
 command untags and removes all images that match the specified ID.
@@ -173,4 +174,7 @@ alpine:latest           a8560b36e8b8       12.8MB         3.99MB
 ├─ linux/ppc64le        9ed53fd3b831           0B             0B
 ├─ linux/riscv64        1de5eb4a9a67           0B             0B
 └─ linux/s390x          fe0dcdd1f783           0B             0B
+```
+
+```
 ```

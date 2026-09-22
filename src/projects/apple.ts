@@ -88,7 +88,14 @@ export interface DoccCatalog {
 let catalogPromise: Promise<DoccCatalog> | undefined;
 
 export function loadDoccCatalog(): Promise<DoccCatalog> {
-  catalogPromise ??= discoverCatalog();
+  // Cache only successes: a transient failure while discovering the catalog
+  // must not poison every Apple catalog for the rest of the run.
+  if (!catalogPromise) {
+    catalogPromise = discoverCatalog().catch((error: unknown) => {
+      catalogPromise = undefined;
+      throw error;
+    });
+  }
   return catalogPromise;
 }
 

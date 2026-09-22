@@ -31,6 +31,7 @@ describes all the details of the format.
 
 ## Examples
 
+````console
 ### Inspect a service by name or ID
 
 You can inspect a service, either by its *name*, or *ID*
@@ -41,7 +42,7 @@ For example, given the following service;
 $ docker service ls
 ID            NAME   MODE        REPLICAS  IMAGE
 dmu1ept4cxcf  redis  replicated  3/3       redis:7.4.1
-```
+````
 
 Both `docker service inspect redis`, and `docker service inspect dmu1ept4cxcf`
 produce the same result:
@@ -152,4 +153,7 @@ of the "redis" service.
 $ docker service inspect --format='{{.Spec.Mode.Replicated.Replicas}}' redis
 
 10
+```
+
+```
 ```

@@ -26,12 +26,13 @@ Refer to the [filtering](#filtering---filter-filter) section for more informatio
 
 ## Examples
 
+````console
 ```console
 $ docker plugin ls
 
 ID            NAME                                    DESCRIPTION                ENABLED
 69553ca1d123  tiborvass/sample-volume-plugin:latest   A test plugin for Docker   true
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -96,4 +97,7 @@ To list all plugins in JSON format, use the `json` directive:
 ```console
 $ docker plugin ls --format json
 {"Description":"sshFS plugin for Docker","Enabled":false,"ID":"856d89febb1c","Name":"vieux/sshfs:latest","PluginReference":"docker.io/vieux/sshfs:latest"}
+```
+
+```
 ```

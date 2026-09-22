@@ -19,15 +19,16 @@ import type {
   GithubSourceProject,
   ProjectBuild,
 } from "../types.ts";
+import { compareCodePoints } from "../compare.ts";
 
-interface DockerPage {
+export interface DockerPage {
   readonly sourcePath: string;
   readonly virtualPath: string;
   readonly attributes: Record<string, unknown>;
   readonly body: string;
 }
 
-interface DockerContext {
+export interface DockerContext {
   readonly root: string;
   readonly files: ReadonlySet<string>;
   readonly page: DockerPage;
@@ -427,9 +428,6 @@ async function expandDockerMarkdown(
       return blockquote(heading, body);
     });
   }
-  result = replaceSelfClosing(result, "param", (args) =>
-    renderParam(parseArguments(args), context),
-  );
   result = replaceSelfClosing(result, "grid", (args) =>
     renderGrid(parseArguments(args), context),
   );
@@ -531,7 +529,7 @@ export function renderSandboxAuthentication(): string {
   ].join("\n");
 }
 
-function expandInlineDefinitions(
+export function expandInlineDefinitions(
   source: string,
   context: DockerContext,
 ): string {
@@ -540,13 +538,17 @@ function expandInlineDefinitions(
     throw new Error("Docker latest_engine_api_version is not configured");
   }
   const parts = latest.split(".").map(Number);
-  const previous =
-    parts.length === 2 && parts.every(Number.isFinite)
-      ? `${parts[0]}.${(parts[1] ?? 0) - 1}`
-      : undefined;
-  if (!previous) {
+  if (parts.length !== 2 || !parts.every(Number.isFinite)) {
     throw new Error(`Invalid Docker Engine API version ${latest}`);
   }
+  // Docker Engine API versions are major.minor with a nonzero minor; a `.0`
+  // minor has no valid predecessor to interpolate into pages.
+  if (parts[1] === 0) {
+    throw new Error(
+      `Docker Engine API version ${latest} has no previous minor to reference`,
+    );
+  }
+  const previous = `${parts[0]!}.${parts[1]! - 1}`;
   let result = replaceNamedInline(source, "apiVersionPrevious", previous);
   result = unwrapNamedInline(result, "create_panel");
   result = replaceNamedInline(
@@ -680,7 +682,12 @@ function renderSummary(
 }
 
 function renderSectionLinks(context: DockerContext): string {
-  const directory = context.page.virtualPath.replace(/\/?_index\.md$/, "");
+  // Bundle pages may be named `_index.md` or `index.md`; either way their
+  // directory, not the file's own directory, holds the child pages.
+  const directory = context.page.virtualPath.replace(
+    /\/?(?:_index|index)\.md$/,
+    "",
+  );
   const children = [...context.pages.values()]
     .filter(
       (page) =>
@@ -921,9 +928,7 @@ function renderCliPage(page: CliPage): string {
       "",
       "## Examples",
       "",
-      data.example
-        ? `\`\`\`console\n${examples.trim()}\n\`\`\``
-        : examples.trim(),
+      `\`\`\`console\n${examples.trim()}\n\`\`\``,
     );
   }
   return cleanMarkdown(dropDockerBlockAttributes(lines.join("\n")));
@@ -1281,8 +1286,4 @@ function withoutFencedCode(source: string): string {
 
 function escapeRegex(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
-
-function compareCodePoints(left: string, right: string): number {
-  return left < right ? -1 : left > right ? 1 : 0;
 }

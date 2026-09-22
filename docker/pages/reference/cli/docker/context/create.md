@@ -21,6 +21,7 @@ connects to.
 
 ## Examples
 
+````console
 ### Create a context with a Docker endpoint (--docker) {#docker}
 
 Use the `--docker` flag to create a context with a custom endpoint. The
@@ -31,7 +32,7 @@ of `/var/run/docker.sock`:
 $ docker context create \
     --docker host=unix:///var/run/docker.sock \
     my-context
-```
+````
 
 ### Create a context based on an existing context (--from) {#from}
 
@@ -71,3 +72,6 @@ Docker endpoints configurations, as well as the description can be modified with
 `docker context update`.
 
 Refer to the [`docker context update` reference](https://docs.docker.com/reference/cli/docker/context/update/) for details.
+
+```
+```

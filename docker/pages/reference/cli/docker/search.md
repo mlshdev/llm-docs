@@ -21,6 +21,7 @@ Search [Docker Hub](https://hub.docker.com) for images
 
 ## Examples
 
+````console
 ### Search images by name
 
 This example displays images with a name containing 'busybox':
@@ -54,7 +55,7 @@ simplexsys/busybox-cli-powered   Docker busybox images, with a few often us...  
 fhisamoto/busybox-java           Busybox java                                    0
 scottabernethy/busybox                                                           0
 marclop/busybox-solr
-```
+````
 
 ### Display non-truncated description (--no-trunc) {#no-trunc}
 
@@ -160,4 +161,7 @@ richarvey/nginx-php-fpm
 jrcs/letsencrypt-nginx-proxy-companion
 million12/nginx-php
 webdevops/php-nginx
+```
+
+```
 ```

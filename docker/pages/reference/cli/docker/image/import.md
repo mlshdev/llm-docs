@@ -28,13 +28,14 @@ the host. To import from a remote location, specify a `URI` that begins with the
 
 ## Examples
 
+````console
 ### Import from a remote location
 
 This creates a new untagged image.
 
 ```console
 $ docker import https://example.com/exampleimage.tgz
-```
+````
 
 ### Import from a local file
 
@@ -158,4 +159,7 @@ configuration;
 ```console
 $ docker image inspect --format '{{.Os}}/{{.Architecture}}' imported:latest
 linux/amd64
+```
+
+```
 ```

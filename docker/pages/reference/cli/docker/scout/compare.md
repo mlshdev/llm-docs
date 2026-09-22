@@ -82,11 +82,12 @@ or if you want to control from where the image will be resolved, you must prefix
 
 ## Examples
 
+````console
 ### Compare the most recently built image to the latest tag
 
 ```console
 $ docker scout compare --to namespace/repo:latest
-```
+````
 
 ### Compare local build to the same tag from the registry
 
@@ -116,4 +117,7 @@ $ docker scout compare --only-package-type maven --only-severity critical --to n
 
 ```console
 docker scout compare --to namespace/repo:latest namespace/repo:v1.2.3-pre
+```
+
+```
 ```

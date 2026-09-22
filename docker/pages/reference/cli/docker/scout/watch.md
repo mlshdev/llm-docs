@@ -27,11 +27,12 @@ The docker scout watch command watches repositories in a registry and pushes ima
 
 ## Examples
 
+````console
 ### Watch for new images from two repositories and push them
 
 ```console
 $ docker scout watch --org my-org --repository registry-1.example.com/repo-1 --repository registry-2.example.com/repo-2
-```
+````
 
 ### Only push images with a specific tag
 
@@ -118,4 +119,7 @@ The following example shows how to integrate an OCI registry that implements the
 
 ```console
 $ docker scout watch --registry 'type=oci,registry=registry.example.com,include=*/scout-artifact-registry/*'
+```
+
+```
 ```

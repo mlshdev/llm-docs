@@ -55,6 +55,7 @@ automatically (for example, `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`).
 
 ## Examples
 
+````console
 ### Route requests to Docker Model Runner
 
 ```yaml
@@ -63,7 +64,7 @@ model_list:
     params:
       model: docker_model_runner/ai/smollm2
       api_base: http://localhost:12434/engines/llama.cpp/v1
-```
+````
 
 ```console
 $ docker model gateway --config config.yaml
@@ -144,4 +145,7 @@ $ docker model gateway --config config.yaml --host 127.0.0.1 --port 9000
 
 ```console
 $ docker model gateway --config config.yaml --verbose
+```
+
+```
 ```

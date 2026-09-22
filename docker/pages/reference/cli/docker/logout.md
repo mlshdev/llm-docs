@@ -13,6 +13,10 @@ If no server is specified, the default is defined by the daemon.
 
 ## Examples
 
+````console
 ```console
 $ docker logout localhost:8080
+````
+
+```
 ```

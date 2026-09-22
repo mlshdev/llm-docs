@@ -55,6 +55,7 @@ command to get access to the logs.
 
 ## Examples
 
+````console
 ### Attach to and detach from a running container
 
 The following example starts an Alpine container running `top` in detached mode,
@@ -70,7 +71,7 @@ CPU:   0% usr   0% sys   0% nic  99% idle   0% io   0% irq   0% sirq
 Load average: 0.15 0.06 0.01 1/567 6
   PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
     1     0 root     R     1700   0%   3   0% top -b
-```
+````
 
 As the container was started without the `-i`, and `-t` options, signals are
 forwarded to the attached process, which means that the default `CTRL-p CTRL-q`
@@ -161,3 +162,6 @@ the following:
 These `a`, `ctrl-a`, `X`, or `ctrl-\\` values are all examples of valid key
 sequences. To configure a different configuration default key sequence for all
 containers, see [**Configuration file** section](https://docs.docker.com/reference/cli/docker/#configuration-files).
+
+```
+```

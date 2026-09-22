@@ -24,18 +24,16 @@ Filters use key=value format (e.g., name=github).
 
 ## Examples
 
+```console
 # List all servers in a catalog
+  docker mcp catalog server ls mcp/docker-mcp-catalog:latest
 
-docker mcp catalog server ls mcp/docker-mcp-catalog:latest
+  # Filter servers by name
+  docker mcp catalog server ls mcp/docker-mcp-catalog:latest --filter name=github
 
-# Filter servers by name
+  # Combine multiple filters (using short flag)
+  docker mcp catalog server ls mcp/docker-mcp-catalog:latest -f name=slack -f name=github
 
-docker mcp catalog server ls mcp/docker-mcp-catalog:latest --filter name=github
-
-# Combine multiple filters (using short flag)
-
-docker mcp catalog server ls mcp/docker-mcp-catalog:latest -f name=slack -f name=github
-
-# Output in JSON format
-
-docker mcp catalog server ls mcp/docker-mcp-catalog:latest --format json
+  # Output in JSON format
+  docker mcp catalog server ls mcp/docker-mcp-catalog:latest --format json
+```

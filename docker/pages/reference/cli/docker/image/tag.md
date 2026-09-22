@@ -57,6 +57,7 @@ as the canonical definition of the format.
 
 ## Examples
 
+````console
 ### Tag an image referenced by ID
 
 To tag a local image with ID `0e5574283393` as `fedora/httpd` with the tag
@@ -64,7 +65,7 @@ To tag a local image with ID `0e5574283393` as `fedora/httpd` with the tag
 
 ```console
 $ docker tag 0e5574283393 fedora/httpd:version1.0
-```
+````
 
 ### Tag an image referenced by Name
 
@@ -93,4 +94,7 @@ must include the registry hostname and port (if needed).
 
 ```console
 $ docker tag 0e5574283393 myregistryhost:5000/fedora/httpd:version1.0
+```
+
+```
 ```

@@ -199,6 +199,7 @@ For information about JSON Lines, see <https://jsonlines.org/>.
 
 ## Examples
 
+````console
 ### Basic example
 
 You'll need two shells for this example.
@@ -207,7 +208,7 @@ You'll need two shells for this example.
 
 ```console
 $ docker events
-```
+````
 
 **Shell 2: Start and Stop containers:**
 
@@ -409,4 +410,7 @@ $ docker events --format json
 {"Type":"network","Action":"connect","Actor":{"ID":"1b50a5bf755f6021dfa78e..
 {"status":"start","id":"196016a57679bf42424484918746a9474cd905dd993c4d0f42..
 {"status":"resize","id":"196016a57679bf42424484918746a9474cd905dd993c4d0f4..
+```
+
+```
 ```

@@ -257,13 +257,14 @@ Have a feature request or hit a bug? File an issue at [github.com/docker/secrets
 
 ## Examples
 
+````console
 ### Using keychain secrets in containers
 
 Create a secret:
 
 ```console
 $ docker pass set GH_TOKEN=123456789
-```
+````
 
 Create a secret from STDIN:
 
@@ -317,4 +318,7 @@ services:
     image: postgres:17
     environment:
       - POSTGRES_PASSWORD=se://myapp/postgres/password
+```
+
+```
 ```

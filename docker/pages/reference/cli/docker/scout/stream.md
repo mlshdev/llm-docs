@@ -28,13 +28,14 @@ Once recorded, streams can be referred to by their name, eg. in the `docker scou
 
 ## Examples
 
+````console
 ### List existing streams
 
 ```console
 $ %[1]s %[2]s
 prod-cluster-123
 stage-cluster-234
-```
+````
 
 ### List images of a stream
 
@@ -50,4 +51,7 @@ namespace/other-repo:tag@sha256:0001d6ce124855b0a158569c584162097fe0ca8d72519067
 $ %[1]s %[2]s stage-cluster-234 namespace/repo:stage-latest --platform linux/amd64
 ✓ Pulled
 ✓ Successfully recorded namespace/repo:stage-latest in stream stage-cluster-234
+```
+
+```
 ```

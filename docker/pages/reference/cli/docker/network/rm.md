@@ -21,13 +21,14 @@ you must first disconnect any containers connected to it.
 
 ## Examples
 
+````console
 ### Remove a network
 
 To remove the network named 'my-network':
 
 ```console
 $ docker network rm my-network
-```
+````
 
 ### Remove multiple networks
 
@@ -43,3 +44,6 @@ When you specify multiple networks, the command attempts to delete each in turn.
 If the deletion of one network fails, the command continues to the next on the
 list and tries to delete that. The command reports success or failure for each
 deletion.
+
+```
+```

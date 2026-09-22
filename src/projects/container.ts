@@ -13,6 +13,7 @@ import type {
   GithubSourceProject,
   ProjectBuild,
 } from "../types.ts";
+import { compareCodePoints } from "../compare.ts";
 
 const topLevelDocumentation = new Set(["README.md", "BUILDING.md"]);
 
@@ -149,8 +150,4 @@ function resolveLink(
       ? githubRawUrl(repository, ref, targetPath)
       : githubBlobUrl(repository, ref, targetPath);
   return `${target}${suffix}`;
-}
-
-function compareCodePoints(left: string, right: string): number {
-  return left < right ? -1 : left > right ? 1 : 0;
 }

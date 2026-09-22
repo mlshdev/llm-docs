@@ -28,6 +28,7 @@ platform-specific.
 
 ## Examples
 
+````console
 ### Inspect an attachment by platform (--platform) {#platform}
 
 ```console
@@ -48,7 +49,7 @@ $ docker buildx history inspect attachment --platform linux/amd64
     }
   ]
 }
-```
+````
 
 ### Inspect an attachment by type (--type) {#type}
 
@@ -198,3 +199,6 @@ docker buildx history inspect attachment ^0 sha256:abcdef123456...
 
 Use `--type sbom` or `--type provenance` to filter attachments by type. To
 inspect a specific attachment by digest, omit the `--type` flag.
+
+```
+```

@@ -26,6 +26,7 @@ Remove the stack from the swarm.
 
 ## Examples
 
+````console
 ### Remove a stack
 
 This will remove the stack with the name `myapp`. Services, networks, and secrets
@@ -39,7 +40,7 @@ Removing service myapp_web
 Removing service myapp_lb
 Removing network myapp_default
 Removing network myapp_frontend
-```
+````
 
 ### Remove multiple stacks
 
@@ -62,4 +63,7 @@ Removing service vossibility_ghollector
 Removing service vossibility_lookupd
 Removing network vossibility_default
 Removing network vossibility_vossibility
+```
+
+```
 ```

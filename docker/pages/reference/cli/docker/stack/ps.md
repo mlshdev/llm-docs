@@ -28,6 +28,7 @@ Lists the tasks that are running as part of the specified stack.
 
 ## Examples
 
+````console
 ### List the tasks that are part of a stack
 
 The following command shows all the tasks that are part of the `voting` stack:
@@ -44,7 +45,7 @@ w48spazhbmxc        voting_redis.1        redis:alpine                          
 6jj1m02freg1        voting_visualizer.1   dockersamples/visualizer:stable                node1  Running        Running 2 minutes ago
 kqgdmededccb        voting_vote.2         dockersamples/examplevotingapp_vote:before     node2  Running        Running 2 minutes ago
 t72q3z038jeh        voting_redis.2        redis:alpine                                   node3  Running        Running 3 minutes ago
-```
+````
 
 ### Filtering (--filter) {#filter}
 
@@ -229,4 +230,7 @@ $ docker inspect $(docker stack ps -q voting)
         "ID": "xim5bcqtgk1b1gk0krq1",
         "Version": {
 <...>
+```
+
+```
 ```

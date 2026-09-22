@@ -29,6 +29,7 @@ BuildKit API.
 
 ## Examples
 
+````console
 Example go program that uses the dial-stdio command wire up a buildkit client.
 This is, for example, use only and may not be suitable for production use.
 
@@ -52,4 +53,7 @@ client.New(ctx, "", client.WithContextDialer(func(context.Context, string) (net.
 
     return c2
 }))
+````
+
+```
 ```

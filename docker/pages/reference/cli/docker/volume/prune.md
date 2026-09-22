@@ -21,6 +21,7 @@ referenced by any containers. By default, it only removes anonymous volumes.
 
 ## Examples
 
+````console
 ```console
 $ docker volume prune
 
@@ -30,7 +31,7 @@ Deleted Volumes:
 07c7bdf3e34ab76d921894c2b834f073721fccfbbcba792aa7648e3a7a664c2e
 
 Total reclaimed space: 36 B
-```
+````
 
 ### Filtering (--all, -a) {#all}
 
@@ -61,3 +62,6 @@ The `label` filter accepts two formats. One is the `label=...` (`label=<key>` or
 which removes volumes with the specified labels. The other
 format is the `label!=...` (`label!=<key>` or `label!=<key>=<value>`), which removes
 volumes without the specified labels.
+
+```
+```

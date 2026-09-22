@@ -12,6 +12,7 @@ Show Docker Scout version information
 
 ## Examples
 
+````console
 ```console
 $ docker scout version
 
@@ -35,4 +36,7 @@ $ docker scout version
 
 version: v1.0.9 (go1.21.3 - darwin/arm64)
 git commit: 8bf95bf60d084af341f70e8263342f71b0a3cd16
+````
+
+```
 ```

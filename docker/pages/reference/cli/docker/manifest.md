@@ -108,6 +108,7 @@ default requirements.
 
 ## Examples
 
+````console
 ### Inspect an image's manifest object
 
 ```console
@@ -128,7 +129,7 @@ $ docker manifest inspect hello-world
                 }
         ]
 }
-```
+````
 
 ### Inspect an image's manifest and get the os/arch info
 
@@ -279,3 +280,6 @@ $ docker manifest push --insecure myprivateregistry.mycompany.com/repo/image:tag
 > skip the `--insecure` flag if you are performing a `docker manifest inspect`
 > on a locally-stored manifest list. Be sure to keep in mind that locally-stored
 > manifest lists are never used by the engine on a `docker pull`.
+
+```
+```

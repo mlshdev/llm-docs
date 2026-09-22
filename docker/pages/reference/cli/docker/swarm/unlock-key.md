@@ -30,6 +30,7 @@ run the `docker swarm unlock-key` command without any arguments:
 
 ## Examples
 
+````console
 ```console
 $ docker swarm unlock-key
 
@@ -40,7 +41,7 @@ command and provide the following key:
 
 Remember to store this key in a password manager, since without it you
 will not be able to restart the manager.
-```
+````
 
 Use the `--rotate` flag to rotate the unlock key to a new, randomly-generated
 key:
@@ -75,3 +76,6 @@ key. The old unlock key will no longer be accepted.
 ### `--quiet` {#quiet}
 
 Only print the unlock key, without instructions.
+
+```
+```

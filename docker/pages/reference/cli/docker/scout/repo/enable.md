@@ -22,11 +22,12 @@ The docker scout repo enable command enables Docker Scout on repositories.
 
 ## Examples
 
+````console
 ### Enable a specific repository
 
 ```console
 $ docker scout repo enable my/repository
-```
+````
 
 ### Enable all repositories of the organization
 
@@ -44,4 +45,7 @@ $ docker scout repo enable --filter namespace/backend
 
 ```console
 $ docker scout repo enable my/repository --registry 123456.dkr.ecr.us-east-1.amazonaws.com
+```
+
+```
 ```

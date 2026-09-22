@@ -1,5 +1,6 @@
 import path from "node:path";
 import { listFiles, readUtf8, withRepositoryArchive } from "../files.ts";
+import { findCommitByMessage, getCommit, toLockedSource } from "../github.ts";
 import {
   cleanMarkdown,
   documentTitle,
@@ -12,9 +13,61 @@ import { convertMdx } from "../mdx.ts";
 import { DocumentCollector } from "../quarantine.ts";
 import type {
   GithubLockedSource,
+  GithubRelease,
   GithubSourceProject,
+  LockedSource,
   ProjectBuild,
 } from "../types.ts";
+
+// NetBird only publishes its generated API reference once a matching "Update
+// API pages" commit lands in the documentation repository, so the product tag
+// alone is not enough to pin. Until that commit exists, the previous pin is
+// retained so the published corpus stays internally consistent.
+export async function resolveNetbirdPin({
+  project,
+  release,
+  sourceCommit,
+  previous,
+}: {
+  readonly project: GithubSourceProject;
+  readonly release: GithubRelease;
+  readonly sourceCommit: string;
+  readonly previous: LockedSource | undefined;
+}): Promise<LockedSource> {
+  const docsRepository = project.docsRepository;
+  if (!docsRepository) {
+    throw new Error("NetBird requires docsRepository configuration");
+  }
+  const docsCommit = await findCommitByMessage(
+    docsRepository,
+    `Update API pages with ${release.tag_name}`,
+  );
+  if (!docsCommit) {
+    if (previous) {
+      console.warn(
+        `NetBird ${release.tag_name} has no matching docs commit yet; retaining ${previous.tag}`,
+      );
+      return previous;
+    }
+    throw new Error(
+      `No NetBird docs commit matches release ${release.tag_name}`,
+    );
+  }
+  const docsCommitDetails = await getCommit(docsRepository, docsCommit.sha);
+  if (
+    !docsCommitDetails.files?.some((file) =>
+      file.filename.startsWith("src/pages/ipa/resources/"),
+    )
+  ) {
+    throw new Error(
+      `NetBird docs commit ${docsCommitDetails.sha} does not change generated API resource pages`,
+    );
+  }
+  return {
+    ...toLockedSource(release, sourceCommit),
+    docsCommit: docsCommitDetails.sha,
+  };
+}
 
 export async function buildNetbird(
   project: GithubSourceProject,

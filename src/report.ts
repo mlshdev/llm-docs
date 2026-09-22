@@ -111,7 +111,7 @@ async function publishSummary(report: PipelineReport): Promise<void> {
 }
 
 export function renderSummary(report: PipelineReport): string[] {
-  if (report.healthy && report.quarantine.length === 0) {
+  if (report.healthy) {
     return [
       "## Documentation pipeline",
       "",
@@ -184,7 +184,26 @@ function safeText(value: string): string {
 }
 
 export async function loadPipelineReport(): Promise<PipelineReport> {
-  return JSON.parse(await readFile(reportPath, "utf8")) as PipelineReport;
+  const value: unknown = JSON.parse(await readFile(reportPath, "utf8"));
+  if (
+    !(
+      typeof value === "object" &&
+      value !== null &&
+      (value as { schemaVersion?: unknown }).schemaVersion === 2 &&
+      typeof (value as { healthy?: unknown }).healthy === "boolean" &&
+      Array.isArray(
+        (value as { unresolvedSources?: unknown }).unresolvedSources,
+      ) &&
+      Array.isArray(
+        (value as { retainedProjects?: unknown }).retainedProjects,
+      ) &&
+      Array.isArray((value as { quarantine?: unknown }).quarantine) &&
+      Array.isArray((value as { sourceResolution?: unknown }).sourceResolution)
+    )
+  ) {
+    throw new Error(`${reportPath} is not a schema-2 pipeline health report`);
+  }
+  return value as PipelineReport;
 }
 
 // The tracking issue is rewritten only when the underlying problem set changes,

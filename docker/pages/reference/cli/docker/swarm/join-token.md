@@ -29,6 +29,7 @@ swarm.
 
 ## Examples
 
+````console
 You can view or rotate the join tokens using `swarm join-token`.
 
 As a convenience, you can pass `worker` or `manager` as an argument to
@@ -51,7 +52,7 @@ To add a manager to this swarm, run the following command:
     docker swarm join \
     --token SWMTKN-1-aabbccdd00112233aabbccdd00112233aabbccdd00112233aa-aabbccdd00112233... \
     172.17.0.2:2377
-```
+````
 
 Use the `--rotate` flag to generate a new join token for the specified role:
 
@@ -99,3 +100,6 @@ because the join token is only used for authorizing new nodes joining the swarm.
 ### `--quiet` {#quiet}
 
 Only print the token. Do not print a complete command for joining.
+
+```
+```

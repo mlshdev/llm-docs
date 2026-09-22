@@ -28,6 +28,7 @@ cache without removing containers, networks, or images.
 
 ## Examples
 
+````console
 ```console
 $ docker system prune
 
@@ -52,7 +53,7 @@ deleted: sha256:1815c82652c03bfd8644afda26fb184f2ed891d921b20a0703b46768f9755c57
 deleted: sha256:45761469c965421a92a69cc50e92c01e0cfa94fe026cdd1233445ea00e96289a
 
 Total reclaimed space: 1.84kB
-```
+````
 
 By default, volumes aren't removed to prevent important data from being
 deleted if there is currently no container using the volume. Use the `--volumes`
@@ -138,3 +139,6 @@ The `label` filter accepts two formats. One is the `label=...` (`label=<key>` or
 which removes containers, images, networks, and volumes with the specified labels. The other
 format is the `label!=...` (`label!=<key>` or `label!=<key>=<value>`), which removes
 containers, images, networks, and volumes without the specified labels.
+
+```
+```

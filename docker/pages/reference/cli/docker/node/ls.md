@@ -30,6 +30,7 @@ for more information about available filter options.
 
 ## Examples
 
+````console
 ```console
 $ docker node ls
 
@@ -37,7 +38,7 @@ ID                           HOSTNAME        STATUS  AVAILABILITY  MANAGER STATU
 1bcef6utixb0l0ca7gxuivsj0    swarm-worker2   Ready   Active
 38ciaotwjuritcdtn9npbnkuz    swarm-worker1   Ready   Active
 e216jshn25ckzbvmwlnh5jr3g *  swarm-manager1  Ready   Active        Leader
-```
+````
 
 > \[!NOTE]
 > In the above example output, there is a hidden column of `.Self` that indicates
@@ -200,4 +201,7 @@ To list all nodes in JSON format, use the `json` directive:
 ```console
 $ docker node ls --format json
 {"Availability":"Active","EngineVersion":"23.0.3","Hostname":"docker-desktop","ID":"k8f4w7qtzpj5sqzclcqafw35g","ManagerStatus":"Leader","Self":true,"Status":"Ready","TLSStatus":"Ready"}
+```
+
+```
 ```

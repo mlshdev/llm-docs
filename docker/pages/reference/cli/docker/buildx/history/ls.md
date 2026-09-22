@@ -32,6 +32,7 @@ results using flags.
 
 ## Examples
 
+````console
 ### List all build records for the current builder
 
 ```console
@@ -40,7 +41,7 @@ BUILD ID                    NAME           STATUS     CREATED AT        DURATION
 qu2gsuo8ejqrwdfii23xkkckt   .dev/2850      Completed  3 days ago        1.4s
 qsiifiuf1ad9pa9qvppc0z1l3   .dev/2850      Completed  3 days ago        1.3s
 g9808bwrjrlkbhdamxklx660b   .dev/3120      Completed  5 days ago        2.1s
-```
+````
 
 ### List failed builds (--filter) {#filter}
 
@@ -104,4 +105,7 @@ $ docker buildx history ls --format '{{.Name}} - {{.Duration}}'
 .dev/2850 - 1.4s
 .dev/2850 - 1.3s
 .dev/3120 - 2.1s
+```
+
+```
 ```

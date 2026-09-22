@@ -36,6 +36,7 @@ created. Supported `Dockerfile` instructions:
 
 ## Examples
 
+````console
 ### Commit a container
 
 ```console
@@ -53,7 +54,7 @@ $ docker images
 
 REPOSITORY                        TAG                 ID                  CREATED             SIZE
 svendowideit/testimage            version3            f5283438590d        16 seconds ago      335.7 MB
-```
+````
 
 ### Commit a container with new configurations (--change) {#change}
 
@@ -100,4 +101,7 @@ CONTAINER ID        IMAGE               COMMAND                 CREATED         
 89373736e2e7        testimage:version4  "apachectl -DFOREGROU"  3 seconds ago       Up 2 seconds        80/tcp             distracted_fermat
 c3f279d17e0a        ubuntu:24.04        /bin/bash               7 days ago          Up 25 hours                            desperate_dubinsky
 197387f1b436        ubuntu:24.04        /bin/bash               7 days ago          Up 25 hours                            focused_hamilton
+```
+
+```
 ```

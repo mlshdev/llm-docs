@@ -28,6 +28,7 @@ Lists the tasks that are running as part of the specified services.
 
 ## Examples
 
+````console
 ### List the tasks that are part of a service
 
 The following command shows all the tasks that are part of the `redis` service:
@@ -46,7 +47,7 @@ bk658fpbex0d   redis.2   redis:7.4.0  worker2   Running        Running 9 seconds
 9tfpyixiy2i7   redis.8   redis:7.4.0  worker1   Running        Running 9 seconds
 3w1wu13yupln   redis.9   redis:7.4.0  manager1  Running        Running 8 seconds
 8eaxrb2fqpbn   redis.10  redis:7.4.0  manager1  Running        Running 8 seconds
-```
+````
 
 In addition to running tasks, the output also shows the task history. For
 example, after updating the service to use the `redis:7.4.1` image, the output
@@ -174,4 +175,7 @@ $ docker service ps --format "{{.Name}}: {{.Image}}" top
 top.1: busybox
 top.2: busybox
 top.3: busybox
+```
+
+```
 ```

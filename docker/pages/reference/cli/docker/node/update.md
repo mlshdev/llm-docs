@@ -27,14 +27,15 @@ Update metadata about a node, such as its availability, labels, or roles.
 
 ## Examples
 
+````console
 ### Add label metadata to a node (--label-add) {#label-add}
 
 Add metadata to a swarm node using node labels. You can specify a node label as
 a key with an empty value:
 
-```bash
+``` bash
 $ docker node update --label-add foo worker1
-```
+````
 
 To add multiple labels to a node, pass the `--label-add` flag for each label:
 
@@ -59,3 +60,6 @@ entity within the swarm. Do not confuse them with the docker daemon labels for
 
 For more information about labels, refer to [apply custom
 metadata](https://docs.docker.com/engine/userguide/labels-custom-metadata/).
+
+```
+```
