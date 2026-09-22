@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/using-relevance-feedback.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/tutorials-search-engineering/using-relevance-feedback.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/using-relevance-feedback.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/tutorials-search-engineering/using-relevance-feedback.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-search-engineering/using-relevance-feedback/
 
 # Relevance Feedback in Qdrant
@@ -21,7 +21,7 @@ In this tutorial, you'll see how to:
 The Relevance Feedback Query uses a small amount of model-generated feedback on the search results to guide the retriever through the entire vector space on the next retrieval iteration, nudging search toward more relevant results.
 A detailed description of how it works can be found in the article [Relevance Feedback in Qdrant](https://qdrant.tech/articles/relevance-feedback/).
 
-![Overview of Relevance Feedback](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/blog/qdrant-1.17.x/relevance-feedback-overview.png)
+![Overview of Relevance Feedback](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/blog/qdrant-1.17.x/relevance-feedback-overview.png)
 
 ### Strategy
 
@@ -64,7 +64,7 @@ We'll use one of the datasets available in the Qdrant Cluster UI.
 2. Out of 3 datasets there, pick the first one, "Qdrant Web Documentation". It consists of small text chunks from [our documentation website](https://qdrant.tech/documentation/).
 3. Press the `Import` button and type in a collection name -- `documentation`.
 
-![Qdrant Cluster UI Datasets](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/tutorials/using-relevance-feedback/dataset.png)
+![Qdrant Cluster UI Datasets](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/using-relevance-feedback/dataset.png)
 
 After a couple of seconds you should see a green status pop up *"Snapshot successfully imported"* and a collection named `documentation` in the list of all collections.
 
@@ -92,7 +92,7 @@ retriever = QdrantRetriever("sentence-transformers/all-minilm-l6-v2")
 
 Check what a point in this collection looks like.
 
-![Point in the documentation collection](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/tutorials/using-relevance-feedback/point.png)
+![Point in the documentation collection](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/using-relevance-feedback/point.png)
 
 Our documentation collection has only one vector per point -- `Default vector`. However, in Qdrant, one can have several [named vectors](https://qdrant.tech/documentation/manage-data/vectors/#named-vectors) per point.
 

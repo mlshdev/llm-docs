@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/configure/configure.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/self-hosting/manage/configure/configure.mdx)
+> Pinned source for ZITADEL v4.18.0: [apps/docs/content/self-hosting/manage/configure/configure.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/self-hosting/manage/configure/configure.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/manage/configure/configure
 
 This guide assumes you are familiar with [running ZITADEL using the least amount of configuration possible](https://zitadel.com/docs/self-hosting/deploy/overview).
@@ -19,6 +19,19 @@ Also, you can use the environment variables listed in the defaults.yaml.
 ```yaml
 Instrumentation:
   ServiceName: "zitadel" # ZITADEL_INSTRUMENTATION_SERVICENAME
+  # Resource detectors describe the platform ZITADEL runs on. Their attributes
+  # are attached to every exported trace, metric and log, and telemetry backends
+  # use them to tell instances apart instead of merging them into one series.
+  # Detection is off by default: each detector probes its platform on startup and
+  # the attributes it finds identify the account and host to whichever backend
+  # you export to. Enable one or more of:
+  #   "google": Detects Cloud Run, GKE, GCE, App Engine and Cloud Functions by
+  #             querying the Google Cloud metadata server. Required when
+  #             exporting to Google Cloud: without it every instance reports as
+  #             the same empty generic_node and the series overlap.
+  # Leave the list empty to disable detection. An empty or unknown entry is a
+  # config error and fails startup.
+  Detectors: [] # ZITADEL_INSTRUMENTATION_DETECTORS (comma separated list)
   Trace:
     Fraction: 1.0 # ZITADEL_INSTRUMENTATION_TRACE_FRACTION
     # Trust incoming trace context from remote services for distributed tracing.
@@ -2652,6 +2665,12 @@ AddEventCreatedAt:
 
 FillFields:
   BatchSize: 1000 # ZITADEL_EVENTSTORE_FILLFIELDS_BULKLIMIT
+
+BackfillUniqueConstraintOwners:
+  # After a rolling update on this same version, set true and re-run setup to
+  # backfill leftover empty owners and enable owner-only unique-constraint delete.
+  # Default false: owner-delete waits until the next release runs 79 again.
+  ForceFinalize: false # ZITADEL_BACKFILLUNIQUECONSTRAINTOWNERS_FORCEFINALIZE
 ```
 
 ### Pre-existing Database and User

@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/manage-data/points.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/manage-data/points.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/manage-data/points.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/manage-data/points.md)
 > Canonical documentation: https://qdrant.tech/documentation/manage-data/points/
 
 # Points
@@ -965,7 +965,7 @@ client.Upsert(context.Background(), &qdrant.UpsertPoints{
 
 `insert_only` mode is especially useful when [migrating from one embedding model to another](https://qdrant.tech/documentation/tutorials-operations/embedding-model-migration/), where conflicts between regular updates and background re-embedding tasks need to be resolved.
 
-![Embedding model migration in blue-green deployment](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/docs/embedding-model-migration.png)
+![Embedding model migration in blue-green deployment](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/embedding-model-migration.png)
 
 *Embedding model migration in blue-green deployment*
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/ai/sandboxes/troubleshooting.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/troubleshooting.md)
 
 # Troubleshooting
 
@@ -192,6 +192,20 @@ client inside the sandbox (such as a process in a Docker container) isn't
 configured to use the forward proxy. See
 [Monitoring network activity](https://docs.docker.com/ai/sandboxes/governance/monitor-and-enforce/monitoring/)
 for details.
+
+## MCP server streams stall
+
+If a remote MCP server's HTTP/2 handling stalls long-lived streams, register
+it with `--disable-http2` to use HTTP/1.1:
+
+```console
+$ sbx mcp add acme --url https://mcp.acme.com/mcp --disable-http2
+```
+
+Replace the example URL with your MCP endpoint. The setting applies to later
+connections to this server. The flag requires `--url` and can't be used with
+`--command` or `--local`. For registration options, see
+[Register an MCP server](https://docs.docker.com/ai/sandboxes/mcp-gateway/#register-an-mcp-server).
 
 ## API calls fail with a certificate error
 

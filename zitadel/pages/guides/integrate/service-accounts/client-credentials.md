@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/service-accounts/client-credentials.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/integrate/service-accounts/client-credentials.mdx)
+> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/integrate/service-accounts/client-credentials.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/integrate/service-accounts/client-credentials.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/service-accounts/client-credentials
 
 This guide demonstrates how developers can leverage Client Credential authentication to secure communication between [service accounts](https://zitadel.com/docs/guides/manage/console/users-overview#service-accounts) and client applications within ZITADEL.
@@ -21,7 +21,7 @@ In ZITADEL, the Client Credentials Flow can be used for this [non-interactive au
 > Make sure to copy in particular the ClientSecret. You won't be able to retrieve it again.
 > If you lose it, you will have to generate a new one.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/console_serviceaccounts_secret.gif)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/console_serviceaccounts_secret.gif)
 
 ### 2. Authenticating a service account and request a token
 
@@ -66,7 +66,7 @@ Per default a service account will get an opaque access token.
 If you want to get a JSON Web Token (JWT) as an access token for your user, you can change the token type in the general settings of your service account.
 To learn more about opaque and JWT tokens read our [Opaque Tokens in ZITADEL: Enhancing Application Security](https://zitadel.com/docs/concepts/knowledge/opaque-tokens) Guide
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/console_service_account_tokentype.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/console_service_account_tokentype.png)
 
 ### 3. Include the access token in the authorization header
 

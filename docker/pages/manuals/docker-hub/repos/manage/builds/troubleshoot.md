@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/troubleshoot.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/docker-hub/repos/manage/builds/troubleshoot.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/troubleshoot.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/docker-hub/repos/manage/builds/troubleshoot.md)
 
 # Troubleshoot your autobuilds
 
@@ -52,7 +52,7 @@ system access to the repositories.
 > also do this for an individual account to limit Docker Hub's access to your
 > source repositories.
 
-1. Generate a SSH keypair that you use for builds only, and add the public key to your source code provider account.
+1. Generate an SSH keypair that you use for builds only, and add the public key to your source code provider account.
 
    This step is optional, but allows you to revoke the build-only keypair without removing other access.
 

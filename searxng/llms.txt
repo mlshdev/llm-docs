@@ -1,6 +1,6 @@
 # SearXNG master
 
-> Documentation generated from the latest `master` branch commit of [searxng/searxng](https://github.com/searxng/searxng) and pinned to immutable source commit `c0042add30116a315ebacfcb84781bb3e1e4e77e`.
+> Documentation generated from the latest `master` branch commit of [searxng/searxng](https://github.com/searxng/searxng) and pinned to immutable source commit `2e624bed40eb97b46faa98094a0b74d3ececd93d`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for SearXNG master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -164,14 +164,15 @@
 - [File Results](pages/docs/dev/result_types/main/file.md): Static Python API reference (automodule). (124 bytes)
 - [Image Results](pages/docs/dev/result_types/main/image.md): Static Python API reference (automodule). (127 bytes)
 - [Key-Value Results](pages/docs/dev/result_types/main/keyvalue.md): Static Python API reference (automodule). (137 bytes)
-- [Main Results](pages/docs/dev/result_types/main/mainresult.md): Ordinary url-results are equal if their values for Result.template, Result.parsedurl (without scheme) and MainResult.imgsrc are equal. (2149 bytes)
+- [Main Results](pages/docs/dev/result_types/main/mainresult.md): Ordinary url-results are equal if their values for Result.template, Result.parsedurl (without scheme) and MainResult.imgsrc are equal. (2302 bytes)
 - [Paper Results](pages/docs/dev/result_types/main/paper.md): Static Python API reference (automodule). (127 bytes)
-- [Main Search Results](pages/docs/dev/result_types/main_result.md): In the area main results the results that a search engine has found for the search term are displayed. (1436 bytes)
+- [Video Results](pages/docs/dev/result_types/main/video.md): Static Python API reference (automodule). (127 bytes)
+- [Main Search Results](pages/docs/dev/result_types/main_result.md): In the area main results the results that a search engine has found for the search term are displayed. (1412 bytes)
 - [Suggestion Results](pages/docs/dev/result_types/suggestion.md): The area suggestions results shows the user alternative search terms. (1058 bytes)
 - [Search API](pages/docs/dev/search_api.md): SearXNG supports querying via a simple HTTP API. Two endpoints, / and /search, are supported for both GET and POST methods. The GET method expects parameters as URL query parameters, while the POST method expects parame… (3192 bytes)
 - [Tooling box searxngextra](pages/docs/dev/searxng_extra/index.md): In the folder searxng\extra/ we maintain some tools useful for CI and developers. (291 bytes)
-- [searxngextra/update/](pages/docs/dev/searxng_extra/update.md): [\[source\]](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxngextra/update/init.py) (3033 bytes)
-- [Simple Theme Templates](pages/docs/dev/templates.md): The simple template is complex, it consists of many different elements and also uses macros and include statements. The following is a rough overview that we would like to give the developer at hand, details must still… (12633 bytes)
+- [searxngextra/update/](pages/docs/dev/searxng_extra/update.md): [\[source\]](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxngextra/update/init.py) (3033 bytes)
+- [Simple Theme Templates](pages/docs/dev/templates.md): The simple template is complex, it consists of many different elements and also uses macros and include statements. The following is a rough overview that we would like to give the developer at hand, details must still… (11903 bytes)
 - [Translation](pages/docs/dev/translation.md): Translation takes place on translate.codeberg.org\. (3352 bytes)
 
 ## Source reference

@@ -1,6 +1,6 @@
 # FFmpeg master
 
-> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `bfac54a03b9c1046d8956b9674bb21167e230eb9`.
+> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `cdc79d694988afd9e2a028ddf500b1df3176c611`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for FFmpeg master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -10,7 +10,7 @@
 
 ## Manuals
 
-- [Synopsis](pages/doc/ffmpeg.md): ffmpeg \[global\options] {\[input\file\options] -i inputurl} ... {\[output\file\options] outputurl} ... (148583 bytes)
+- [Synopsis](pages/doc/ffmpeg.md): ffmpeg \[global\options] {\[input\file\options] -i inputurl} ... {\[output\file\options] outputurl} ... (148182 bytes)
 - [Synopsis](pages/doc/ffplay.md): ffplay \[options] \[inputurl] (22644 bytes)
 - [Synopsis](pages/doc/ffprobe.md): ffprobe \[options] inputurl (33978 bytes)
 - [Description](pages/doc/ffmpeg-utils.md): This document describes some generic features and utilities provided by the libavutil library. (22298 bytes)
@@ -38,7 +38,7 @@
 - [Note to Github users](pages/CONTRIBUTING.md): Patches should be submitted to Forgejo or the ffmpeg-devel mailing list using git format-patch or git send-email. Github pull requests should be avoided because they are not part of our review process and will be ignore… (429 bytes)
 - [Build System.Txt](pages/doc/build_system.md): FFmpeg currently uses a custom build system, this text attempts to document some of its obscure features and options. (1788 bytes)
 - [Filter design](pages/doc/filter_design.md): This document explains guidelines that should be observed (or ignored with good reason) when writing filters for libavfilter. (10689 bytes)
-- [FFmpeg Infrastructure:](pages/doc/infra.md): Trademark: (5252 bytes)
+- [FFmpeg Infrastructure:](pages/doc/infra.md): Trademark: (5744 bytes)
 - [FFmpeg's bug/feature request tracker manual](pages/doc/issue_tracker.md): FFmpeg uses Trac for tracking issues, new issues and changes to existing issues can be done through a web interface. (5844 bytes)
 - [FFmpeg multithreading methods](pages/doc/multithreading.md): FFmpeg provides two methods for multithreading codecs. (2611 bytes)
 - [optimization Tips (for libavcodec):](pages/doc/optimization.md): If you plan to do non-x86 architecture specific optimizations (SIMD normally), then take a look in the x86/ directory, as most important functions are already optimized for x86. (10347 bytes)

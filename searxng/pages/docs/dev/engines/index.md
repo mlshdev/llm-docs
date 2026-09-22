@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/engines/index.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/index.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/index.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/index.rst)
 
 <a id="engine-implementations"></a>
 
@@ -41,7 +41,7 @@ determines which [search processor](https://docs.searxng.org/src/searx.search.pr
 the engine.
 
 In this section a list of the engines that are documented is given, a complete
-list of the engines can be found in the source under: [searx/engines](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines).
+list of the engines can be found in the source under: [searx/engines](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines).
 
 <a id="online-engines"></a>
 

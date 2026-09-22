@@ -2,13 +2,13 @@
 
 Source repository: https://github.com/searxng/searxng
 Tracked branch: master
-Source commit: c0042add30116a315ebacfcb84781bb3e1e4e77e
+Source commit: 2e624bed40eb97b46faa98094a0b74d3ececd93d
 
 # Document: AI Policy
 
 Source path: AI_POLICY.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/AI_POLICY.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/AI_POLICY.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/AI_POLICY.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/AI_POLICY.rst
 Description: Every discussion, issue, and pull request is read and reviewed by humans. It is a boundary point at which people interact with each other and the work done. It is rude and disrespectful to approach this boundary with lo…
 
 # AI Policy
@@ -33,8 +33,8 @@ The *golden rule* is that a contribution should be worth more to the project tha
 # Document: SearXNG
 
 Source path: CHANGELOG.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/CHANGELOG.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/CHANGELOG.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/CHANGELOG.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/CHANGELOG.rst
 Description: SearXNG development has been started in the middle of 2021 as a fork of the searx project. Since it beginning its a rolling release pulled from SearXNG's master branch:
 
 # SearXNG
@@ -52,8 +52,8 @@ master branch:
 # Document: Translations
 
 Source path: CONTRIBUTING.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/CONTRIBUTING.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/CONTRIBUTING.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/CONTRIBUTING.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/CONTRIBUTING.rst
 Description: Thank you for your interest in SearXNG.
 
 <a id="quickstart-guide"></a> <a id="commits-guide"></a> <a id="ai-policy"></a> <a id="weblate"></a> <a id="github-codespaces"></a> <a id="120-hours-per-month"></a> <a id="list-of-existing-codespaces"></a>
@@ -140,8 +140,8 @@ For our policy on the use of AI tools, please read [AI Policy](https://docs.sear
 # Document: Setup
 
 Source path: README.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/README.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/README.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/README.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/README.rst
 Description: SearXNG is a metasearch engine. Users are neither tracked nor profiled.
 
 <a id="metasearch-engine"></a> <a id="installation-guide"></a> <a id="configuration-guide"></a> <a id="contributing"></a> <a id="license"></a>
@@ -187,8 +187,8 @@ See LICENSE\_ for more details.
 # Document: Security Policy
 
 Source path: SECURITY.md
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/SECURITY.md
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/SECURITY.md
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/SECURITY.md
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/SECURITY.md
 Description: We love responsible reports of (potential) security issues in SearXNG.
 
 # Security Policy
@@ -206,8 +206,8 @@ the issue in to your report.
 # Document: Answer CAPTCHA from server's IP
 
 Source path: docs/admin/answer-captcha.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/answer-captcha.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/answer-captcha.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/answer-captcha.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/answer-captcha.rst
 Description: With a SSH tunnel we can send requests from server's IP and solve a CAPTCHA that blocks requests from this IP. If your SearXNG instance is hosted at example.org and your login is user you can setup a proxy simply by ssh…
 
 # Answer CAPTCHA from server's IP
@@ -253,7 +253,7 @@ solve the CAPTCHA from [qwant.com](https://www.qwant.com/).
 
 **Firefox**
 
-![FFox proxy on SOCKS5, 127.0.0.1:8080](https://raw.githubusercontent.com/searxng/searxng/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/assets/answer-captcha/ffox-setting-proxy-socks.png)
+![FFox proxy on SOCKS5, 127.0.0.1:8080](https://raw.githubusercontent.com/searxng/searxng/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/assets/answer-captcha/ffox-setting-proxy-socks.png)
 
 *Firefox's network settings*
 
@@ -275,8 +275,8 @@ solve the CAPTCHA from [qwant.com](https://www.qwant.com/).
 # Document: Administration API
 
 Source path: docs/admin/api.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/api.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/api.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/api.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/api.rst
 Description: The search bar can be embedded into websites. Just paste the example into the HTML of the site. URL of the SearXNG instance and values are customizable.
 
 <a id="adminapi"></a>
@@ -370,8 +370,8 @@ HTML of the site.  URL of the SearXNG instance and values are customizable.
 # Document: Architecture
 
 Source path: docs/admin/architecture.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/architecture.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/architecture.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/architecture.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/architecture.rst
 Description: Herein you will find some hints and suggestions about typical architectures of SearXNG infrastructures.
 
 <a id="architecture"></a>
@@ -396,12 +396,12 @@ up and maintained by the scripts from our [toolboxing](https://docs.searxng.org/
 
 <a id="arch-public"></a>
 
-![arch\_public.dot](https://raw.githubusercontent.com/searxng/searxng/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/arch_public.dot)
+![arch\_public.dot](https://raw.githubusercontent.com/searxng/searxng/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/arch_public.dot)
 
 *Reference architecture of a public SearXNG setup.*
 
 The reference installation activates `server.limiter` and
-`server.image_proxy` ([/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/utils/templates/etc/searxng/settings.yml))
+`server.image_proxy` ([/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/utils/templates/etc/searxng/settings.yml))
 
 Build-time include: `../../utils/templates/etc/searxng/settings.yml`
 
@@ -409,8 +409,8 @@ Build-time include: `../../utils/templates/etc/searxng/settings.yml`
 # Document: Buildhosts
 
 Source path: docs/admin/buildhosts.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/buildhosts.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/buildhosts.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/buildhosts.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/buildhosts.rst
 Description: To get best results from build, it's recommend to install additional packages on build hosts (see searxng.sh).
 
 <a id="buildhosts"></a>
@@ -453,7 +453,7 @@ Build-time include: `$DOCS_BUILD/includes/searxng.rst`
 - XeTeX\_
 - dvisvgm\_
 
-Most of the sphinx requirements are installed from [setup.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/setup.py) and the
+Most of the sphinx requirements are installed from [setup.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/setup.py) and the
 docs can be build from scratch with `make docs.html`.  For better math and
 image processing additional packages are needed.  The XeTeX\_ needed not only for
 PDF creation, it's also needed for [math](https://docs.searxng.org/dev/reST.html#math) when HTML output is build.
@@ -461,7 +461,7 @@ PDF creation, it's also needed for [math](https://docs.searxng.org/dev/reST.html
 To be able to do sphinx:math-support without CDNs, the math are rendered
 as images (`sphinx.ext.imgmath` extension).
 
-Here is the extract from the [docs/conf.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/conf.py) file, setting math renderer
+Here is the extract from the [docs/conf.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/conf.py) file, setting math renderer
 to `imgmath`:
 
 Build-time include: `../conf.py`
@@ -550,8 +550,8 @@ $ sudo dnf install ShellCheck
 # Document: Administrator documentation
 
 Source path: docs/admin/index.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/index.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/index.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/index.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/index.rst
 Description: Normalized source from docs/admin/index.rst.
 
 # Administrator documentation
@@ -578,8 +578,8 @@ Description: Normalized source from docs/admin/index.rst.
 # Document: Apache
 
 Source path: docs/admin/installation-apache.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-apache.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-apache.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation-apache.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation-apache.rst
 Description: This section explains how to set up a SearXNG instance using the HTTP server Apache\. If you did use the installation scripts and do not have any special preferences you can install the SearXNG site using searxng.sh:
 
 <a id="installation-apache"></a>
@@ -921,8 +921,8 @@ SearXNG is located at root (`/`).
 # Document: Installation container
 
 Source path: docs/admin/installation-docker.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-docker.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-docker.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation-docker.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation-docker.rst
 Description: Container images are the basis for deployments in containerized environments, Compose, Kubernetes and more.
 
 <a id="installation-container"></a>
@@ -1155,7 +1155,7 @@ Two volumes are exposed that should be mounted to preserve its contents:
 The following environment variables can be configured:
 
 - `$SEARXNG_*`: Controls the SearXNG configuration options, look out for
-  environment `$SEARXNG_*` in [settings server](https://docs.searxng.org/admin/settings/settings_server.html#settings-server), [settings general](https://docs.searxng.org/admin/settings/settings_general.html#settings-general) and the [container/.env.example](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/container/.env.example) template.
+  environment `$SEARXNG_*` in [settings server](https://docs.searxng.org/admin/settings/settings_server.html#settings-server), [settings general](https://docs.searxng.org/admin/settings/settings_general.html#settings-general) and the [container/.env.example](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/container/.env.example) template.
 - `$GRANIAN_*`: Controls the [Granian server options](https://docs.searxng.org/admin/installation-granian.html#granian-configuration).
 - `$FORCE_OWNERSHIP`: Ensures mounted volumes/files are owned by the
   `searxng:searxng` user (default: `true`)
@@ -1224,7 +1224,7 @@ $ mv ./searxng-docker/searxng/* ./searxng/core-config/
 ```
 
 If using Valkey features like bot protection (limiter), you will need to update
-the URL hostname in [searx/settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/settings.yml) file to `valkey` or
+the URL hostname in [searx/settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/settings.yml) file to `valkey` or
 `searxng-valkey`.
 
 If you have any environment variables in the old `.env` file, make
@@ -1256,8 +1256,8 @@ If everything is working on the new environment, you can remove the old
 # Document: Granian
 
 Source path: docs/admin/installation-granian.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-granian.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-granian.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation-granian.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation-granian.rst
 Description: We only recommend installing Granian with pip, as officially documented. Run the following command in the Python environment of the SearXNG installation:
 
 <a id="searxng-granian"></a>
@@ -1307,8 +1307,8 @@ you should change something, Granian documents all available parameters in the
 # Document: NGINX
 
 Source path: docs/admin/installation-nginx.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-nginx.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-nginx.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation-nginx.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation-nginx.rst
 Description: This section explains how to set up a SearXNG instance using the HTTP server nginx\. If you have used the installation scripts and do not have any special preferences you can install the SearXNG site using searxng.sh:
 
 <a id="installation-nginx"></a>
@@ -1532,8 +1532,8 @@ http {
 # Document: Installation Script
 
 Source path: docs/admin/installation-scripts.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-scripts.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-scripts.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation-scripts.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation-scripts.rst
 Description: To avoid unwanted side effects, update your OS before installing SearXNG.
 
 <a id="installation-scripts"></a>
@@ -1598,8 +1598,8 @@ We implemented installation procedures for:
 # Document: Step by step installation
 
 Source path: docs/admin/installation-searxng.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-searxng.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-searxng.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation-searxng.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation-searxng.rst
 Description: In this section we show the setup of a SearXNG instance that will be installed by the installation scripts.
 
 <a id="installation-basic"></a>
@@ -1655,12 +1655,12 @@ Build-time include: `$DOCS_BUILD/includes/searxng.rst`
 - [settings.yml](https://docs.searxng.org/admin/settings/settings.html#settings-yml)
 - [settings location](https://docs.searxng.org/admin/settings/settings.html#settings-location)
 - [settings use\_default\_settings](https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings)
-- [/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/utils/templates/etc/searxng/settings.yml)
+- [/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/utils/templates/etc/searxng/settings.yml)
 
 To create a initial `/etc/searxng/settings.yml` we recommend to start with a
-copy of the file [utils/templates/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/utils/templates/etc/searxng/settings.yml).  This setup
+copy of the file [utils/templates/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/utils/templates/etc/searxng/settings.yml).  This setup
 [use default settings](https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings) from
-[searx/settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/settings.yml) and is shown in the tab *"Use default settings"*
+[searx/settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/settings.yml) and is shown in the tab *"Use default settings"*
 below. This setup:
 
 - enables [limiter](https://docs.searxng.org/admin/searx.limiter.html#limiter) to protect against bots
@@ -1672,13 +1672,13 @@ Modify the `/etc/searxng/settings.yml` to your needs:
 
 Build-time include: `../../utils/templates/etc/searxng/settings.yml`
 
-To see the entire file jump to [utils/templates/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/utils/templates/etc/searxng/settings.yml)
+To see the entire file jump to [utils/templates/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/utils/templates/etc/searxng/settings.yml)
 
 **searx/settings.yml**
 
 Build-time include: `../../searx/settings.yml`
 
-To see the entire file jump to [searx/settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/settings.yml)
+To see the entire file jump to [searx/settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/settings.yml)
 
 For a *minimal setup* you need to set `server:secret_key`.
 
@@ -1700,8 +1700,8 @@ command twice).  At this point SearXNG is not demonized; uwsgi allows this.
 # Document: uWSGI
 
 Source path: docs/admin/installation-uwsgi.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-uwsgi.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation-uwsgi.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation-uwsgi.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation-uwsgi.rst
 Description: How uWSGI is implemented by distributors varies. The uWSGI project itself recommends two methods:
 
 <a id="searxng-uwsgi"></a>
@@ -1940,8 +1940,8 @@ Groups:
 # Document: Installation
 
 Source path: docs/admin/installation.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/installation.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/installation.rst
 Description: You're spoilt for choice, choose your preferred method of installation.
 
 <a id="installation"></a>
@@ -1967,8 +1967,8 @@ special preferences, it's recommended to use the [installation container](https:
 # Document: List of plugins
 
 Source path: docs/admin/plugins.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/plugins.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/plugins.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/plugins.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/plugins.rst
 Description: Further reading ..
 
 <a id="plugins-admin"></a>
@@ -1996,8 +1996,8 @@ Further reading ..
 # Document: Favicons
 
 Source path: docs/admin/searx.favicons.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/searx.favicons.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/searx.favicons.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/searx.favicons.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/searx.favicons.rst
 Description: Don't activate the favicons before reading the documentation.
 
 <a id="favicons"></a>
@@ -2236,8 +2236,8 @@ into the *proxy*:
 # Document: Limiter
 
 Source path: docs/admin/searx.limiter.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/searx.limiter.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/searx.limiter.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/searx.limiter.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/searx.limiter.rst
 Description: The limiter requires a Valkey database.
 
 <a id="limiter"></a>
@@ -2256,8 +2256,8 @@ Static Python API reference (`automodule`).
 # Document: Settings
 
 Source path: docs/admin/settings/index.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/index.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/index.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/index.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/index.rst
 Description: Normalized source from docs/admin/settings/index.rst.
 
 <a id="searxng-settings-yml"></a>
@@ -2300,15 +2300,15 @@ Description: Normalized source from docs/admin/settings/index.rst.
 # Document: settings.yml
 
 Source path: docs/admin/settings/settings.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings.rst
 Description: This page describe the options possibilities of the searx/settings.yml file.
 
 <a id="settings-yml"></a>
 
 # `settings.yml`
 
-This page describe the options possibilities of the [searx/settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/settings.yml)
+This page describe the options possibilities of the [searx/settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/settings.yml)
 file.
 
 ### Further reading ..
@@ -2326,7 +2326,7 @@ The initial `settings.yml` we be load from these locations:
 2. `/etc/searxng/settings.yml`
 
 If these files don't exist (or are empty or can't be read), SearXNG uses the
-[searx/settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/settings.yml) file.  Read [settings use\_default\_settings](https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings) to
+[searx/settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/settings.yml) file.  Read [settings use\_default\_settings](https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings) to
 see how you can simplify your *user defined* `settings.yml`.
 
 <a id="settings-use-default-settings"></a>
@@ -2337,17 +2337,17 @@ see how you can simplify your *user defined* `settings.yml`.
 
 - [settings location](https://docs.searxng.org/admin/settings/settings.html#settings-location)
 - [use\_default\_settings.yml](https://docs.searxng.org/admin/installation-searxng.html#use-default-settings-yml)
-- [/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/utils/templates/etc/searxng/settings.yml)
+- [/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/utils/templates/etc/searxng/settings.yml)
 
 The user defined `settings.yml` is loaded from the [settings location](https://docs.searxng.org/admin/settings/settings.html#settings-location)
-**and can relied on the default configuration [searx/settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/settings.yml) using:**
+**and can relied on the default configuration [searx/settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/settings.yml) using:**
 
 `use_default_settings: true`
 
 **`server:`**
 
 In the following example, the actual settings are the default settings defined
-in [searx/settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/settings.yml) with the exception of the `secret_key` and
+in [searx/settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/settings.yml) with the exception of the `secret_key` and
 the `bind_address`:
 
 ```yaml
@@ -2418,8 +2418,8 @@ engines:
 # Document: brand:
 
 Source path: docs/admin/settings/settings_brand.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_brand.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_brand.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_brand.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_brand.rst
 Description: Options for configuring brand properties.
 
 <a id="settings-brand"></a>
@@ -2508,8 +2508,8 @@ future.
 # Document: categoriesastabs:
 
 Source path: docs/admin/settings/settings_categories_as_tabs.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_categories_as_tabs.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_categories_as_tabs.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_categories_as_tabs.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_categories_as_tabs.rst
 Description: A list of the categories that are displayed as tabs in the user interface. Categories not listed here can still be searched with the search-syntax.
 
 <a id="settings-categories-as-tabs"></a>
@@ -2546,8 +2546,8 @@ in one of the UI tabs (not included in `categories_as_tabs`).
 # Document: engines:
 
 Source path: docs/admin/settings/settings_engines.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_engines.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_engines.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_engines.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_engines.rst
 Description: In the section engines: is a list of the engines that are to be made available in the instance. Each list entry is in turn a key/value mapping.
 
 <a id="settings-engines"></a>
@@ -2830,8 +2830,8 @@ When searching, the default google engine will return German results and
 # Document: general:
 
 Source path: docs/admin/settings/settings_general.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_general.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_general.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_general.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_general.rst
 Description: debug : $SEARXNGDEBUG
 
 <a id="settings-general"></a>
@@ -2890,8 +2890,8 @@ Basic Auth can be randomly chosen as only the password is being validated.
 # Document: outgoing:
 
 Source path: docs/admin/settings/settings_outgoing.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_outgoing.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_outgoing.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_outgoing.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_outgoing.rst
 Description: Communication with search engines.
 
 <a id="settings-outgoing"></a>
@@ -3000,8 +3000,8 @@ Using tor proxy (`true`) or not (`false`) for all engines.  The default is
 # Document: plugins:
 
 Source path: docs/admin/settings/settings_plugins.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_plugins.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_plugins.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_plugins.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_plugins.rst
 Description: In SearXNG, plugins can be registered in the PluginStore via a fully qualified class name.
 
 <a id="settings-plugins"></a>
@@ -3121,8 +3121,8 @@ to improve search quality.
 # Document: preferences:
 
 Source path: docs/admin/settings/settings_preferences.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_preferences.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_preferences.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_preferences.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_preferences.rst
 Description: Options for configuring the preferences
 
 <a id="settings-preferences"></a>
@@ -3148,8 +3148,8 @@ preferences:
 # Document: redis:
 
 Source path: docs/admin/settings/settings_redis.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_redis.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_redis.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_redis.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_redis.rst
 Description: If you have built and installed a local Redis DB for SearXNG, it is recommended to uninstall it now and replace it with the installation of a Valkey\ DB.
 
 <a id="settings-redis"></a>
@@ -3189,8 +3189,8 @@ To install Valkey\_ read: [Valkey Developer Notes](https://docs.searxng.org/admi
 # Document: search:
 
 Source path: docs/admin/settings/settings_search.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_search.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_search.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_search.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_search.rst
 Description: safesearch:
 
 <a id="settings-search"></a>
@@ -3258,12 +3258,12 @@ favicons before reading the [Favicons documentation](https://docs.searxng.org/ad
 **`default_lang`:**
 
 Default search language - leave blank to detect from browser information or
-use codes from [searx/sxng\_locales.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/sxng_locales.py).
+use codes from [searx/sxng\_locales.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/sxng_locales.py).
 
 **`languages`:**
 
 List of available languages - leave unset to use all codes from
-[searx/sxng\_locales.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/sxng_locales.py).  Otherwise list codes of available languages.
+[searx/sxng\_locales.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/sxng_locales.py).  Otherwise list codes of available languages.
 The `all` value is shown as the `Default language` in the user interface
 (in most cases, it is meant to send the query without a language parameter ;
 in some cases, it means the English language) Example:
@@ -3332,8 +3332,8 @@ case).
 # Document: server:
 
 Source path: docs/admin/settings/settings_server.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_server.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_server.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_server.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_server.rst
 Description: baseurl : $SEARXNGBASEURL
 
 <a id="settings-server"></a>
@@ -3420,8 +3420,8 @@ Set additional [HTTP headers](https://docs.searxng.org/admin/settings/settings_s
 # Document: ui:
 
 Source path: docs/admin/settings/settings_ui.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_ui.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_ui.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_ui.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_ui.rst
 Description: defaultlocale :
 
 <a id="settings-ui"></a>
@@ -3461,7 +3461,7 @@ privacy, since the browser can records the page titles.
 
 When enabled, the results are centered instead of being in the left (or RTL)
 side of the screen.  This setting only affects the *desktop layout*
-([min-width: @tablet](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/client/simple/src/less/definitions.less))
+([min-width: @tablet](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/client/simple/src/less/definitions.less))
 
 **`cache_url` : `https://web.archive.org/web/`**
 
@@ -3499,8 +3499,8 @@ Formatting type to use for result URLs: `pretty`, `full` or `host`.
 # Document: valkey:
 
 Source path: docs/admin/settings/settings_valkey.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_valkey.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/settings/settings_valkey.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_valkey.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_valkey.rst
 Description: A Valkey\ DB can be connected by an URL, in section valkey db you will find a description to test your valkey connection in SearXNG.
 
 <a id="settings-valkey"></a>
@@ -3560,8 +3560,8 @@ $ ./utils/searxng.sh install valkey
 # Document: SearXNG maintenance
 
 Source path: docs/admin/update-searxng.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/update-searxng.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/update-searxng.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/update-searxng.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/update-searxng.rst
 Description: How to update depends on the installation method. If you have used the installation scripts, use the update command from the searxng.sh script.
 
 <a id="searxng-maintenance"></a>
@@ -3648,8 +3648,8 @@ INFO    searx.valkeydb                 : connected to Valkey
 # Document: Searxng
 
 Source path: docs/build-templates/searxng.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/build-templates/searxng.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/build-templates/searxng.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/build-templates/searxng.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/build-templates/searxng.rst
 Description: Ubuntu / debian
 
 **Ubuntu / debian**
@@ -3817,8 +3817,8 @@ HTTP/1.0 200 OK
 # Document: Built-in Answerers
 
 Source path: docs/dev/answerers/builtins.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/answerers/builtins.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/answerers/builtins.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/answerers/builtins.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/answerers/builtins.rst
 Description: Normalized source from docs/dev/answerers/builtins.rst.
 
 <a id="builtin-answerers"></a>
@@ -3832,8 +3832,8 @@ Description: Normalized source from docs/dev/answerers/builtins.rst.
 # Document: Answerer Development
 
 Source path: docs/dev/answerers/development.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/answerers/development.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/answerers/development.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/answerers/development.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/answerers/development.rst
 Description: Static Python API reference (automodule).
 
 <a id="dev-answerers"></a>
@@ -3848,8 +3848,8 @@ Static Python API reference (`automodule`).
 # Document: Answerers
 
 Source path: docs/dev/answerers/index.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/answerers/index.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/answerers/index.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/answerers/index.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/answerers/index.rst
 Description: Normalized source from docs/dev/answerers/index.rst.
 
 # Answerers
@@ -3861,8 +3861,8 @@ Description: Normalized source from docs/dev/answerers/index.rst.
 # Document: Random
 
 Source path: docs/dev/answerers/random.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/answerers/random.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/answerers/random.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/answerers/random.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/answerers/random.rst
 Description: Random value generator
 
 <a id="answerer-random"></a>
@@ -3879,8 +3879,8 @@ Random value generator
 # Document: Statistics
 
 Source path: docs/dev/answerers/statistics.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/answerers/statistics.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/answerers/statistics.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/answerers/statistics.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/answerers/statistics.rst
 Description: Statistics functions
 
 <a id="answerer-statistics"></a>
@@ -3897,8 +3897,8 @@ Statistics functions
 # Document: Git Commits & Change Management
 
 Source path: docs/dev/commits.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/commits.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/commits.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/commits.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/commits.rst
 Description: A commit and its commit message are among the most important information available to a developer for bug fixing and further development. A commit is a change and changes have a context (a change request).
 
 <a id="create-commit"></a>
@@ -4011,8 +4011,8 @@ full commit messages:
 # Document: How to contribute
 
 Source path: docs/dev/contribution_guide.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/contribution_guide.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/contribution_guide.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/contribution_guide.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/contribution_guide.rst
 Description: SearXNG has two prime directives, privacy-by-design and hackability . The hackability comes in three levels:
 
 <a id="how-to-contribute"></a>
@@ -4084,7 +4084,7 @@ In order to submit a patch, please follow the steps below:
 
 - If your code can be unit-tested, add unit tests.
 
-- Add yourself to the [AUTHORS.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/AUTHORS.rst) file.
+- Add yourself to the [AUTHORS.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/AUTHORS.rst) file.
 
 - Choose meaningful commit messages, see [create commit](https://docs.searxng.org/dev/commits.html#create-commit)
 
@@ -4104,7 +4104,7 @@ Translation currently takes place on [weblate](https://docs.searxng.org/dev/tran
 
 ### The reST sources
 
-has been moved from `gh-branch` into `master` ([docs](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs)).
+has been moved from `gh-branch` into `master` ([docs](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs)).
 
 The documentation is built using Sphinx\_.  So in order to be able to generate
 the required files, you have to install it on your system.  Much easier, use
@@ -4174,8 +4174,8 @@ $ make docs.clean docs.gh-pages
 # Document: Demo Offline Engine
 
 Source path: docs/dev/engines/demo/demo_offline.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/demo/demo_offline.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/demo/demo_offline.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/demo/demo_offline.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/demo/demo_offline.rst
 Description: Static Python API reference (automodule).
 
 <a id="demo-offline-engine"></a>
@@ -4190,8 +4190,8 @@ Static Python API reference (`automodule`).
 # Document: Demo Online Engine
 
 Source path: docs/dev/engines/demo/demo_online.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/demo/demo_online.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/demo/demo_online.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/demo/demo_online.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/demo/demo_online.rst
 Description: Static Python API reference (automodule).
 
 <a id="demo-online-engine"></a>
@@ -4206,8 +4206,8 @@ Static Python API reference (`automodule`).
 # Document: Engine Overview
 
 Source path: docs/dev/engines/engine_overview.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/engine_overview.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/engine_overview.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/engine_overview.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/engine_overview.rst
 Description: SearXNG is a metasearch-engine\, so it uses different search engines to provide better results.
 
 <a id="engines-dev"></a>
@@ -4226,7 +4226,7 @@ better results.
 
 Because there is no general search API which could be used for every search
 engine, an adapter has to be built between SearXNG and the external search
-engines.  Adapters are stored under the folder [searx/engines](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines).
+engines.  Adapters are stored under the folder [searx/engines](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines).
 
 <a id="general-engine-configuration"></a>
 
@@ -4421,8 +4421,8 @@ by templates.  For more details read section:
 # Document: Engine Library
 
 Source path: docs/dev/engines/enginelib.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/enginelib.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/enginelib.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/enginelib.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/enginelib.rst
 Description: Static Python API reference (automodule).
 
 <a id="searx-enginelib"></a>
@@ -4445,8 +4445,8 @@ Static Python API reference (`automodule`).
 # Document: SearXNG's engines loader
 
 Source path: docs/dev/engines/engines.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/engines.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/engines.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/engines.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/engines.rst
 Description: Global registered engine instances.
 
 <a id="searx-engines-loader"></a>
@@ -4463,8 +4463,8 @@ Global registered engine instances.
 # Document: Engine Implementations
 
 Source path: docs/dev/engines/index.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/index.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/index.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/index.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/index.rst
 Description: Base class of all result lists (abstract).
 
 <a id="engine-implementations"></a>
@@ -4508,7 +4508,7 @@ determines which [search processor](https://docs.searxng.org/src/searx.search.pr
 the engine.
 
 In this section a list of the engines that are documented is given, a complete
-list of the engines can be found in the source under: [searx/engines](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines).
+list of the engines can be found in the source under: [searx/engines](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines).
 
 <a id="online-engines"></a>
 
@@ -4576,8 +4576,8 @@ list of the engines can be found in the source under: [searx/engines](https://gi
 # Document: JSON Engine
 
 Source path: docs/dev/engines/json_engine.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/json_engine.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/json_engine.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/json_engine.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/json_engine.rst
 Description: Static Python API reference (automodule).
 
 <a id="json-engine-engine"></a>
@@ -4592,8 +4592,8 @@ Static Python API reference (`automodule`).
 # Document: MediaWiki Engine
 
 Source path: docs/dev/engines/mediawiki.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/mediawiki.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/mediawiki.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/mediawiki.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/mediawiki.rst
 Description: Static Python API reference (automodule).
 
 <a id="mediawiki-engine"></a>
@@ -4608,8 +4608,8 @@ Static Python API reference (`automodule`).
 # Document: Command Line Engines
 
 Source path: docs/dev/engines/offline/command-line-engines.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/offline/command-line-engines.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/offline/command-line-engines.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/offline/command-line-engines.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/offline/command-line-engines.rst
 Description: Initial sponsored by Search and Discovery Fund \ of NLnet Foundation.
 
 <a id="engine-command"></a>
@@ -4618,7 +4618,7 @@ Description: Initial sponsored by Search and Discovery Fund \ of NLnet Foundatio
 
 ### info
 
-- [command.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines/command.py)
+- [command.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines/command.py)
 - [offline engines](https://docs.searxng.org/dev/engines/index.html#offline-engines)
 
 ### info
@@ -4633,8 +4633,8 @@ Static Python API reference (`automodule`).
 # Document: NoSQL databases
 
 Source path: docs/dev/engines/offline/nosql-engines.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/offline/nosql-engines.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/offline/nosql-engines.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/offline/nosql-engines.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/offline/nosql-engines.rst
 Description: Initial sponsored by Search and Discovery Fund \ of NLnet Foundation.
 
 <a id="nosql-engines"></a>
@@ -4656,11 +4656,11 @@ The following NoSQL database are supported:
 - [engine valkey\_server](https://docs.searxng.org/dev/engines/offline/nosql-engines.html#engine-valkey-server)
 - [engine mongodb](https://docs.searxng.org/dev/engines/offline/nosql-engines.html#engine-mongodb)
 
-All of the engines above are just commented out in the [settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/settings.yml), as you have to set various options and install
+All of the engines above are just commented out in the [settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/settings.yml), as you have to set various options and install
 dependencies before using them.
 
 By default, the engines use the `key-value` template for displaying results /
-see [simple](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/key-value.html)
+see [simple](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/key-value.html)
 theme.  If you are not satisfied with the original result layout, you can use
 your own template, set `result_template` attribute to `{template_name}` and
 place the templates at:
@@ -4700,7 +4700,7 @@ their structure.
 
 - `pip install` valkey\_
 - valkey.io\_
-- [valkey\_server.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines/valkey_server.py)
+- [valkey\_server.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines/valkey_server.py)
 
 #### `searx.engines.valkey_server`
 
@@ -4716,7 +4716,7 @@ Static Python API reference (`automodule`).
 
 - `pip install` pymongo\_
 - MongoDB\_
-- [mongodb.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines/mongodb.py)
+- [mongodb.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines/mongodb.py)
 
 #### `searx.engines.mongodb`
 
@@ -4726,8 +4726,8 @@ Static Python API reference (`automodule`).
 # Document: Local Search APIs
 
 Source path: docs/dev/engines/offline/search-indexer-engines.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/offline/search-indexer-engines.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/offline/search-indexer-engines.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/offline/search-indexer-engines.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/offline/search-indexer-engines.rst
 Description: Initial sponsored by Search and Discovery Fund \ of NLnet Foundation.
 
 # Local Search APIs
@@ -4786,8 +4786,8 @@ Static Python API reference (`automodule`).
 # Document: SQL Engines
 
 Source path: docs/dev/engines/offline/sql-engines.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/offline/sql-engines.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/offline/sql-engines.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/offline/sql-engines.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/offline/sql-engines.rst
 Description: Initial sponsored by Search and Discovery Fund \ of NLnet Foundation.
 
 <a id="sql-engines"></a>
@@ -4811,7 +4811,7 @@ Relational Database Management System (RDBMS) are supported:
 - [engine postgresql](https://docs.searxng.org/dev/engines/offline/sql-engines.html#engine-postgresql)
 - [engine mysql\_server](https://docs.searxng.org/dev/engines/offline/sql-engines.html#engine-mysql-server) & [engine mariadb\_server](https://docs.searxng.org/dev/engines/offline/sql-engines.html#engine-mariadb-server)
 
-All of the engines above are just commented out in the [settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/settings.yml), as you have to set the required attributes for the
+All of the engines above are just commented out in the [settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/settings.yml), as you have to set the required attributes for the
 engines, e.g. `database:` ...
 
 ```yaml
@@ -4823,7 +4823,7 @@ engines, e.g. `database:` ...
 ```
 
 By default, the engines use the `key-value` template for displaying results /
-see [simple](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/key-value.html)
+see [simple](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/key-value.html)
 theme.  If you are not satisfied with the original result layout, you can use
 your own template, set `result_template` attribute to `{template_name}` and
 place the templates at:
@@ -4866,7 +4866,7 @@ returned results use the option `limit`.
 
 ### info
 
-- [sqlite.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines/sqlite.py)
+- [sqlite.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines/sqlite.py)
 
 #### `searx.engines.sqlite`
 
@@ -4880,7 +4880,7 @@ Static Python API reference (`automodule`).
 
 ### info
 
-- [postgresql.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines/postgresql.py)
+- [postgresql.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines/postgresql.py)
 - `pip install` [psycopg2-binary](https://docs.searxng.org/dev/engines/offline/sql-engines.html#psycopg2)
 
 #### `searx.engines.postgresql`
@@ -4893,7 +4893,7 @@ Static Python API reference (`automodule`).
 
 ### info
 
-- [mysql\_server.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines/mysql_server.py)
+- [mysql\_server.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines/mysql_server.py)
 - `pip install` [mysql-connector-python](https://pypi.org/project/mysql-connector-python/)
 
 #### `searx.engines.mysql_server`
@@ -4906,7 +4906,7 @@ Static Python API reference (`automodule`).
 
 ### info
 
-- [mariadb\_server.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines/mariadb_server.py)
+- [mariadb\_server.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines/mariadb_server.py)
 - `pip install` [mariadb](https://pypi.org/project/mariadb/)
 
 #### `searx.engines.mariadb_server`
@@ -4917,8 +4917,8 @@ Static Python API reference (`automodule`).
 # Document: Offline Concept
 
 Source path: docs/dev/engines/offline_concept.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/offline_concept.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/offline_concept.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/offline_concept.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/offline_concept.rst
 Description: To extend the functionality of SearXNG, offline engines are going to be introduced. An offline engine is an engine which does not need Internet connection to perform a search and does not use HTTP to communicate.
 
 # Offline Concept
@@ -4936,8 +4936,8 @@ introduced.  An offline engine is an engine which does not need Internet
 connection to perform a search and does not use HTTP to communicate.
 
 Offline engines can be configured, by adding those to the `engines` list of
-[settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/settings.yml).  An example skeleton for offline
-engines can be found in [demo offline engine](https://docs.searxng.org/dev/engines/demo/demo_offline.html#demo-offline-engine) ([demo\_offline.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines/demo_offline.py)).
+[settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/settings.yml).  An example skeleton for offline
+engines can be found in [demo offline engine](https://docs.searxng.org/dev/engines/demo/demo_offline.html#demo-offline-engine) ([demo\_offline.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines/demo_offline.py)).
 
 # Programming Interface
 
@@ -4991,8 +4991,8 @@ search.  If not, requests from an offline engines return errors.
 # Document: 500px
 
 Source path: docs/dev/engines/online/500px.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/500px.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/500px.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/500px.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/500px.rst
 Description: Static Python API reference (automodule).
 
 <a id="500px-engine"></a>
@@ -5007,8 +5007,8 @@ Static Python API reference (`automodule`).
 # Document: Alpine Linux Packages
 
 Source path: docs/dev/engines/online/alpinelinux.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/alpinelinux.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/alpinelinux.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/alpinelinux.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/alpinelinux.rst
 Description: Static Python API reference (automodule).
 
 <a id="alpinelinux-engine"></a>
@@ -5023,8 +5023,8 @@ Static Python API reference (`automodule`).
 # Document: Anna's Archive
 
 Source path: docs/dev/engines/online/annas_archive.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/annas_archive.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/annas_archive.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/annas_archive.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/annas_archive.rst
 Description: Static Python API reference (automodule).
 
 <a id="annas-archive-engine"></a>
@@ -5039,8 +5039,8 @@ Static Python API reference (`automodule`).
 # Document: Arch Linux
 
 Source path: docs/dev/engines/online/archlinux.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/archlinux.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/archlinux.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/archlinux.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/archlinux.rst
 Description: Static Python API reference (automodule).
 
 <a id="archlinux-engine"></a>
@@ -5055,8 +5055,8 @@ Static Python API reference (`automodule`).
 # Document: arXiv
 
 Source path: docs/dev/engines/online/arxiv.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/arxiv.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/arxiv.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/arxiv.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/arxiv.rst
 Description: Static Python API reference (automodule).
 
 <a id="arxiv-engine"></a>
@@ -5071,8 +5071,8 @@ Static Python API reference (`automodule`).
 # Document: Astrophysics Data System (ADS)
 
 Source path: docs/dev/engines/online/astrophysics_data_system.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/astrophysics_data_system.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/astrophysics_data_system.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/astrophysics_data_system.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/astrophysics_data_system.rst
 Description: Static Python API reference (automodule).
 
 <a id="astrophysics-data-system-engine"></a>
@@ -5087,8 +5087,8 @@ Static Python API reference (`automodule`).
 # Document: Azure Resources
 
 Source path: docs/dev/engines/online/azure.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/azure.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/azure.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/azure.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/azure.rst
 Description: Static Python API reference (automodule).
 
 <a id="azure-engine"></a>
@@ -5103,8 +5103,8 @@ Static Python API reference (`automodule`).
 # Document: Bing Engines
 
 Source path: docs/dev/engines/online/bing.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/bing.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/bing.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/bing.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/bing.rst
 Description: Static Python API reference (automodule).
 
 <a id="bing-engines"></a>
@@ -5147,8 +5147,8 @@ Static Python API reference (`automodule`).
 # Document: Bpb
 
 Source path: docs/dev/engines/online/bpb.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/bpb.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/bpb.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/bpb.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/bpb.rst
 Description: Static Python API reference (automodule).
 
 <a id="bpb-engine"></a>
@@ -5163,8 +5163,8 @@ Static Python API reference (`automodule`).
 # Document: Brave Engines
 
 Source path: docs/dev/engines/online/brave.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/brave.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/brave.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/brave.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/brave.rst
 Description: Brave offers two different engines for SearXNG:
 
 # Brave Engines
@@ -5197,8 +5197,8 @@ The API engine requires an API key from Brave. This can be obtained from the
 # Document: BT4G
 
 Source path: docs/dev/engines/online/bt4g.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/bt4g.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/bt4g.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/bt4g.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/bt4g.rst
 Description: Static Python API reference (automodule).
 
 <a id="bt4g-engine"></a>
@@ -5213,8 +5213,8 @@ Static Python API reference (`automodule`).
 # Document: ChinaSo
 
 Source path: docs/dev/engines/online/chinaso.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/chinaso.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/chinaso.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/chinaso.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/chinaso.rst
 Description: Static Python API reference (automodule).
 
 <a id="chinaso-engine"></a>
@@ -5229,8 +5229,8 @@ Static Python API reference (`automodule`).
 # Document: CORE
 
 Source path: docs/dev/engines/online/core.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/core.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/core.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/core.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/core.rst
 Description: Static Python API reference (automodule).
 
 <a id="core-engine"></a>
@@ -5245,8 +5245,8 @@ Static Python API reference (`automodule`).
 # Document: Crossref
 
 Source path: docs/dev/engines/online/crossref.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/crossref.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/crossref.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/crossref.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/crossref.rst
 Description: Static Python API reference (automodule).
 
 <a id="crossref-engine"></a>
@@ -5261,8 +5261,8 @@ Static Python API reference (`automodule`).
 # Document: Dailymotion
 
 Source path: docs/dev/engines/online/dailymotion.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/dailymotion.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/dailymotion.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/dailymotion.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/dailymotion.rst
 Description: Static Python API reference (automodule).
 
 <a id="dailymotion-engine"></a>
@@ -5277,8 +5277,8 @@ Static Python API reference (`automodule`).
 # Document: Discourse Forums
 
 Source path: docs/dev/engines/online/discourse.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/discourse.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/discourse.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/discourse.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/discourse.rst
 Description: Static Python API reference (automodule).
 
 <a id="discourse-engine"></a>
@@ -5293,8 +5293,8 @@ Static Python API reference (`automodule`).
 # Document: DuckDuckGo Engines
 
 Source path: docs/dev/engines/online/duckduckgo.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/duckduckgo.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/duckduckgo.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/duckduckgo.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/duckduckgo.rst
 Description: Autocomplete from DuckDuckGo. Supports DuckDuckGo's languages
 
 <a id="duckduckgo-engines"></a>
@@ -5323,8 +5323,8 @@ Static Python API reference (`automodule`).
 # Document: Europe PMC
 
 Source path: docs/dev/engines/online/europepmc.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/europepmc.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/europepmc.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/europepmc.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/europepmc.rst
 Description: Static Python API reference (automodule).
 
 <a id="europepmc-engine"></a>
@@ -5339,8 +5339,8 @@ Static Python API reference (`automodule`).
 # Document: Exa API Engine
 
 Source path: docs/dev/engines/online/exaapi.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/exaapi.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/exaapi.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/exaapi.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/exaapi.rst
 Description: Static Python API reference (automodule).
 
 <a id="exaapi-engine"></a>
@@ -5355,8 +5355,8 @@ Static Python API reference (`automodule`).
 # Document: Geizhals
 
 Source path: docs/dev/engines/online/geizhals.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/geizhals.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/geizhals.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/geizhals.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/geizhals.rst
 Description: Static Python API reference (automodule).
 
 <a id="gitea-geizhals"></a>
@@ -5371,8 +5371,8 @@ Static Python API reference (`automodule`).
 # Document: Gitea
 
 Source path: docs/dev/engines/online/gitea.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/gitea.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/gitea.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/gitea.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/gitea.rst
 Description: Static Python API reference (automodule).
 
 <a id="gitea-engine"></a>
@@ -5387,8 +5387,8 @@ Static Python API reference (`automodule`).
 # Document: Github Code
 
 Source path: docs/dev/engines/online/github_code.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/github_code.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/github_code.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/github_code.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/github_code.rst
 Description: Static Python API reference (automodule).
 
 <a id="github-code-engine"></a>
@@ -5403,8 +5403,8 @@ Static Python API reference (`automodule`).
 # Document: GitLab
 
 Source path: docs/dev/engines/online/gitlab.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/gitlab.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/gitlab.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/gitlab.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/gitlab.rst
 Description: Static Python API reference (automodule).
 
 <a id="gitlab-engine"></a>
@@ -5419,8 +5419,8 @@ Static Python API reference (`automodule`).
 # Document: Google Engines
 
 Source path: docs/dev/engines/online/google.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/google.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/google.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/google.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/google.rst
 Description: SearXNG's implementation of the Google API is mainly done in getgoogleinfo.
 
 <a id="google-engines"></a>
@@ -5505,8 +5505,8 @@ Static Python API reference (`automodule`).
 # Document: Hugging Face
 
 Source path: docs/dev/engines/online/huggingface.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/huggingface.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/huggingface.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/huggingface.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/huggingface.rst
 Description: Static Python API reference (automodule).
 
 <a id="huggingface-engine"></a>
@@ -5521,8 +5521,8 @@ Static Python API reference (`automodule`).
 # Document: Jina Engine
 
 Source path: docs/dev/engines/online/jina.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/jina.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/jina.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/jina.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/jina.rst
 Description: Static Python API reference (automodule).
 
 <a id="jina-engine"></a>
@@ -5537,8 +5537,8 @@ Static Python API reference (`automodule`).
 # Document: Kagi Engines
 
 Source path: docs/dev/engines/online/kagi.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/kagi.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/kagi.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/kagi.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/kagi.rst
 Description: Autocomplete from Kagi.
 
 <a id="kagi-engines"></a>
@@ -5555,8 +5555,8 @@ Autocomplete from Kagi.
 # Document: Lemmy
 
 Source path: docs/dev/engines/online/lemmy.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/lemmy.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/lemmy.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/lemmy.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/lemmy.rst
 Description: Static Python API reference (automodule).
 
 <a id="lemmy-engine"></a>
@@ -5571,8 +5571,8 @@ Static Python API reference (`automodule`).
 # Document: Marginalia Search
 
 Source path: docs/dev/engines/online/marginalia.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/marginalia.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/marginalia.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/marginalia.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/marginalia.rst
 Description: Static Python API reference (automodule).
 
 <a id="marginalia-engine"></a>
@@ -5587,8 +5587,8 @@ Static Python API reference (`automodule`).
 # Document: Mastodon
 
 Source path: docs/dev/engines/online/mastodon.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/mastodon.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/mastodon.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/mastodon.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/mastodon.rst
 Description: Static Python API reference (automodule).
 
 <a id="mastodon-engine"></a>
@@ -5603,8 +5603,8 @@ Static Python API reference (`automodule`).
 # Document: Moviepilot
 
 Source path: docs/dev/engines/online/moviepilot.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/moviepilot.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/moviepilot.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/moviepilot.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/moviepilot.rst
 Description: Static Python API reference (automodule).
 
 <a id="moviepilot-engine"></a>
@@ -5619,8 +5619,8 @@ Static Python API reference (`automodule`).
 # Document: Matrix Rooms Search (MRS)
 
 Source path: docs/dev/engines/online/mrs.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/mrs.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/mrs.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/mrs.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/mrs.rst
 Description: Static Python API reference (automodule).
 
 <a id="mrs-engine"></a>
@@ -5635,8 +5635,8 @@ Static Python API reference (`automodule`).
 # Document: Mwmbl Engine
 
 Source path: docs/dev/engines/online/mwmbl.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/mwmbl.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/mwmbl.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/mwmbl.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/mwmbl.rst
 Description: Autocomplete from Mwmbl\.
 
 <a id="mwmbl-engine"></a>
@@ -5667,8 +5667,8 @@ Autocomplete from Mwmbl\_.
 # Document: Odysee
 
 Source path: docs/dev/engines/online/odysee.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/odysee.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/odysee.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/odysee.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/odysee.rst
 Description: Static Python API reference (automodule).
 
 <a id="odysee-engine"></a>
@@ -5683,8 +5683,8 @@ Static Python API reference (`automodule`).
 # Document: OpenAlex
 
 Source path: docs/dev/engines/online/openalex.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/openalex.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/openalex.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/openalex.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/openalex.rst
 Description: Static Python API reference (automodule).
 
 <a id="openalex-engine"></a>
@@ -5699,8 +5699,8 @@ Static Python API reference (`automodule`).
 # Document: Open Library
 
 Source path: docs/dev/engines/online/openlibrary.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/openlibrary.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/openlibrary.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/openlibrary.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/openlibrary.rst
 Description: Static Python API reference (automodule).
 
 <a id="openlibrary-engine"></a>
@@ -5715,8 +5715,8 @@ Static Python API reference (`automodule`).
 # Document: Peertube Engines
 
 Source path: docs/dev/engines/online/peertube.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/peertube.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/peertube.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/peertube.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/peertube.rst
 Description: Static Python API reference (automodule).
 
 <a id="peertube-engines"></a>
@@ -5743,8 +5743,8 @@ Static Python API reference (`automodule`).
 # Document: Piped
 
 Source path: docs/dev/engines/online/piped.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/piped.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/piped.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/piped.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/piped.rst
 Description: Static Python API reference (automodule).
 
 <a id="piped-engine"></a>
@@ -5759,8 +5759,8 @@ Static Python API reference (`automodule`).
 # Document: PubMed
 
 Source path: docs/dev/engines/online/pubmed.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/pubmed.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/pubmed.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/pubmed.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/pubmed.rst
 Description: Static Python API reference (automodule).
 
 <a id="pubmed-engine"></a>
@@ -5775,8 +5775,8 @@ Static Python API reference (`automodule`).
 # Document: Qwant
 
 Source path: docs/dev/engines/online/qwant.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/qwant.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/qwant.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/qwant.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/qwant.rst
 Description: Autocomplete from Qwant. Supports Qwant's regions.
 
 <a id="qwant-engine"></a>
@@ -5793,8 +5793,8 @@ Autocomplete from Qwant. Supports Qwant's regions.
 # Document: RadioBrowser
 
 Source path: docs/dev/engines/online/radio_browser.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/radio_browser.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/radio_browser.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/radio_browser.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/radio_browser.rst
 Description: Static Python API reference (automodule).
 
 <a id="radiobrowser-engine"></a>
@@ -5809,8 +5809,8 @@ Static Python API reference (`automodule`).
 # Document: Recoll Engine
 
 Source path: docs/dev/engines/online/recoll.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/recoll.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/recoll.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/recoll.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/recoll.rst
 Description: Static Python API reference (automodule).
 
 <a id="engine-recoll"></a>
@@ -5825,8 +5825,8 @@ Static Python API reference (`automodule`).
 # Document: Repology
 
 Source path: docs/dev/engines/online/repology.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/repology.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/repology.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/repology.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/repology.rst
 Description: Static Python API reference (automodule).
 
 <a id="repology-engine"></a>
@@ -5841,8 +5841,8 @@ Static Python API reference (`automodule`).
 # Document: Reuters
 
 Source path: docs/dev/engines/online/reuters.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/reuters.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/reuters.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/reuters.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/reuters.rst
 Description: Static Python API reference (automodule).
 
 <a id="reuters-engine"></a>
@@ -5857,8 +5857,8 @@ Static Python API reference (`automodule`).
 # Document: Semantic Scholar
 
 Source path: docs/dev/engines/online/semantic_scholar.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/semantic_scholar.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/semantic_scholar.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/semantic_scholar.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/semantic_scholar.rst
 Description: Static Python API reference (automodule).
 
 <a id="semantic-scholar-engine"></a>
@@ -5873,8 +5873,8 @@ Static Python API reference (`automodule`).
 # Document: Soundcloud
 
 Source path: docs/dev/engines/online/soundcloud.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/soundcloud.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/soundcloud.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/soundcloud.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/soundcloud.rst
 Description: Static Python API reference (automodule).
 
 <a id="soundcloud-engine"></a>
@@ -5889,8 +5889,8 @@ Static Python API reference (`automodule`).
 # Document: Sourcehut
 
 Source path: docs/dev/engines/online/sourcehut.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/sourcehut.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/sourcehut.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/sourcehut.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/sourcehut.rst
 Description: Static Python API reference (automodule).
 
 <a id="sourcehut-engine"></a>
@@ -5905,8 +5905,8 @@ Static Python API reference (`automodule`).
 # Document: Springer Nature
 
 Source path: docs/dev/engines/online/springer.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/springer.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/springer.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/springer.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/springer.rst
 Description: Static Python API reference (automodule).
 
 <a id="springer-engine"></a>
@@ -5921,8 +5921,8 @@ Static Python API reference (`automodule`).
 # Document: Startpage Engines
 
 Source path: docs/dev/engines/online/startpage.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/startpage.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/startpage.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/startpage.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/startpage.rst
 Description: Autocomplete from Startpage's Firefox extension. Supports the languages specified in lang\map.
 
 <a id="startpage-engines"></a>
@@ -5940,8 +5940,8 @@ Supports the languages specified in lang\_map.
 # Document: Tagesschau API
 
 Source path: docs/dev/engines/online/tagesschau.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/tagesschau.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/tagesschau.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/tagesschau.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/tagesschau.rst
 Description: Static Python API reference (automodule).
 
 <a id="tagesschau-engine"></a>
@@ -5956,8 +5956,8 @@ Static Python API reference (`automodule`).
 # Document: Torznab WebAPI
 
 Source path: docs/dev/engines/online/torznab.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/torznab.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/torznab.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/torznab.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/torznab.rst
 Description: Static Python API reference (automodule).
 
 <a id="torznab-engine"></a>
@@ -5972,8 +5972,8 @@ Static Python API reference (`automodule`).
 # Document: Tube Archivist
 
 Source path: docs/dev/engines/online/tubearchivist.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/tubearchivist.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/tubearchivist.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/tubearchivist.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/tubearchivist.rst
 Description: Static Python API reference (automodule).
 
 <a id="tubearchivist-engine"></a>
@@ -5988,8 +5988,8 @@ Static Python API reference (`automodule`).
 # Document: Void Linux binary packages
 
 Source path: docs/dev/engines/online/void.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/void.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/void.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/void.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/void.rst
 Description: Static Python API reference (automodule).
 
 <a id="voidlinux-engine"></a>
@@ -6004,8 +6004,8 @@ Static Python API reference (`automodule`).
 # Document: Wallhaven
 
 Source path: docs/dev/engines/online/wallhaven.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/wallhaven.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/wallhaven.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/wallhaven.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/wallhaven.rst
 Description: Static Python API reference (automodule).
 
 <a id="wallhaven-engine"></a>
@@ -6020,8 +6020,8 @@ Static Python API reference (`automodule`).
 # Document: Wikimedia
 
 Source path: docs/dev/engines/online/wikipedia.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/wikipedia.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/wikipedia.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/wikipedia.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/wikipedia.rst
 Description: Autocomplete from Wikipedia. Supports Wikipedia's languages (aka netloc).
 
 <a id="wikimedia-engines"></a>
@@ -6050,8 +6050,8 @@ Static Python API reference (`automodule`).
 # Document: Yacy
 
 Source path: docs/dev/engines/online/yacy.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/yacy.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/yacy.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/yacy.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/yacy.rst
 Description: Static Python API reference (automodule).
 
 <a id="yacy-engine"></a>
@@ -6066,8 +6066,8 @@ Static Python API reference (`automodule`).
 # Document: Yahoo Engine
 
 Source path: docs/dev/engines/online/yahoo.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/yahoo.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/yahoo.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/yahoo.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/yahoo.rst
 Description: Static Python API reference (automodule).
 
 <a id="yahoo-engine"></a>
@@ -6082,8 +6082,8 @@ Static Python API reference (`automodule`).
 # Document: Yandex Search API
 
 Source path: docs/dev/engines/online/yandex_api.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/yandex_api.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/yandex_api.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/yandex_api.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/yandex_api.rst
 Description: Static Python API reference (automodule).
 
 <a id="yandex-api-engine"></a>
@@ -6098,8 +6098,8 @@ Static Python API reference (`automodule`).
 # Document: Z-Library
 
 Source path: docs/dev/engines/online/zlibrary.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/zlibrary.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online/zlibrary.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/zlibrary.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online/zlibrary.rst
 Description: Static Python API reference (automodule).
 
 <a id="zlibrary-engine"></a>
@@ -6114,8 +6114,8 @@ Static Python API reference (`automodule`).
 # Document: Tineye
 
 Source path: docs/dev/engines/online_url_search/tineye.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online_url_search/tineye.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/online_url_search/tineye.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online_url_search/tineye.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/online_url_search/tineye.rst
 Description: Static Python API reference (automodule).
 
 <a id="tineye-engine"></a>
@@ -6130,8 +6130,8 @@ Static Python API reference (`automodule`).
 # Document: XPath Engine
 
 Source path: docs/dev/engines/xpath.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/xpath.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/engines/xpath.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/xpath.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/xpath.rst
 Description: Static Python API reference (automodule).
 
 <a id="xpath-engine"></a>
@@ -6146,8 +6146,8 @@ Static Python API reference (`automodule`).
 # Document: Extended Types
 
 Source path: docs/dev/extended_types.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/extended_types.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/extended_types.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/extended_types.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/extended_types.rst
 Description: Static Python API reference (automodule).
 
 <a id="extended-types"></a>
@@ -6162,8 +6162,8 @@ Static Python API reference (`automodule`).
 # Document: Developer documentation
 
 Source path: docs/dev/index.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/index.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/index.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/index.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/index.rst
 Description: Normalized source from docs/dev/index.rst.
 
 # Developer documentation
@@ -6187,8 +6187,8 @@ Description: Normalized source from docs/dev/index.rst.
 # Document: Makefile & ./manage
 
 Source path: docs/dev/makefile.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/makefile.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/makefile.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/makefile.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/makefile.rst
 Description: All relevant build and development tasks are implemented in the ./manage script and for CI or IDE integration a small Makefile wrapper is available. If you are not familiar with Makefiles, we recommend to read gnu-make\…
 
 <a id="makefile"></a>
@@ -6198,8 +6198,8 @@ Description: All relevant build and development tasks are implemented in the ./m
 <a id="gnu-make"></a>
 
 All relevant build and development tasks are implemented in the
-[./manage](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/manage) script and for CI or IDE integration a small
-[Makefile](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/Makefile) wrapper is available.  If you are not familiar with
+[./manage](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/manage) script and for CI or IDE integration a small
+[Makefile](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/Makefile) wrapper is available.  If you are not familiar with
 Makefiles, we recommend to read gnu-make\_ introduction.
 
 ### build environment
@@ -6219,7 +6219,7 @@ Command output generated by: `bash -c "cd ..; make --no-print-directory help"`
 
 The Makefile targets are implemented for comfort, if you can do without
 tab-completion and need to have a more granular control, use
-[manage](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/manage) without the Makefile wrappers.
+[manage](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/manage) without the Makefile wrappers.
 
 ```sh
 $ ./manage help
@@ -6235,7 +6235,7 @@ $ ./manage help
 
 We do no longer need to build up the virtualenv manually.  Jump into your git
 working tree and release a `make install` to get a virtualenv with a
-*developer install* of SearXNG ([setup.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/setup.py)). :
+*developer install* of SearXNG ([setup.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/setup.py)). :
 
 ```python
 $ cd ~/searxng-clone
@@ -6250,7 +6250,7 @@ Successfully installed searxng-2023.7.19+a446dea1b
 If you release `make install` multiple times the installation will only
 rebuild if the sha256 sum of the *requirement files* fails.  With other words:
 the check fails if you edit the requirements listed in
-[requirements-dev.txt](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/requirements-dev.txt) and [requirements.txt](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/requirements.txt)). :
+[requirements-dev.txt](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/requirements-dev.txt) and [requirements.txt](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/requirements.txt)). :
 
 ```python
 $ make install
@@ -6271,7 +6271,7 @@ Successfully installed searxng-2023.7.19+a446dea1b
 To get rid of the existing environment before re-build use [clean target](https://docs.searxng.org/dev/makefile.html#make-clean) first.
 
 If you think, something goes wrong with your ./local environment or you change
-the [setup.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/setup.py) file, you have to call [make clean](https://docs.searxng.org/dev/makefile.html#make-clean).
+the [setup.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/setup.py) file, you have to call [make clean](https://docs.searxng.org/dev/makefile.html#make-clean).
 
 <a id="make-node-env"></a>
 
@@ -6345,7 +6345,7 @@ INFO:  NVM is installed at searxng/.nvm
 # `make run`
 
 To get up a running a developer instance simply call `make run`.  This enables
-*debug* option in [searx/settings.yml](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/settings.yml), starts a `./searx/webapp.py`
+*debug* option in [searx/settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/settings.yml), starts a `./searx/webapp.py`
 instance and opens the URL in your favorite WEB browser (`xdg-open(1)`):
 
 ```python
@@ -6377,7 +6377,7 @@ $ LIVE_THEME=simple make run
 <https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html> <a id="shfmt"></a> <a id="editorconfig"></a>
 
 - Format Python source code using [Black code style](https://docs.searxng.org/dev/makefile.html#black-code-style).  See `$BLACK_OPTIONS`
-  and `$BLACK_TARGETS` in [Makefile](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/Makefile).
+  and `$BLACK_TARGETS` in [Makefile](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/Makefile).
 
 - Format Shell scripts using shfmt\_. The formatter `shfmt` reads the rules
   from the EditorConfig\_ files.
@@ -6461,7 +6461,7 @@ commit.
 
 Pylint\_ is known as one of the best source-code, bug and quality checker for the
 Python programming language.  The pylint profile used in the SearXNG project is
-found in project's root folder [.pylintrc](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/.pylintrc).
+found in project's root folder [.pylintrc](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/.pylintrc).
 
 <a id="make-themes"></a>
 
@@ -6471,7 +6471,7 @@ found in project's root folder [.pylintrc](https://github.com/searxng/searxng/bl
 
 - [devquickstart](https://docs.searxng.org/dev/quickstart.html#devquickstart)
 
-The [Makefile](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/Makefile) targets `make theme.*` cover common tasks to build the
+The [Makefile](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/Makefile) targets `make theme.*` cover common tasks to build the
 theme(s).  The `./manage themes.*` command line can be used to convenient run
 common theme build tasks.
 
@@ -6491,7 +6491,7 @@ $ LIVE_THEME=simple make run
 
 - [devquickstart](https://docs.searxng.org/dev/quickstart.html#devquickstart)
 
-The [Makefile](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/Makefile) targets `static.build.*` cover common tasks to build (a
+The [Makefile](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/Makefile) targets `static.build.*` cover common tasks to build (a
 commit of) the static files.  The `./manage static.build..*` command line
 can be used to convenient run common build tasks of the static files.
 
@@ -6512,8 +6512,8 @@ Command output generated by: `bash -c "cd ..; ./manage go.help"`
 # Document: Built-in Plugins
 
 Source path: docs/dev/plugins/builtins.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/builtins.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/builtins.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/builtins.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/builtins.rst
 Description: Normalized source from docs/dev/plugins/builtins.rst.
 
 <a id="builtin-plugins"></a>
@@ -6533,8 +6533,8 @@ Description: Normalized source from docs/dev/plugins/builtins.rst.
 # Document: Calculator
 
 Source path: docs/dev/plugins/calculator.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/calculator.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/calculator.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/calculator.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/calculator.rst
 Description: Static Python API reference (automodule).
 
 <a id="plugins-calculator"></a>
@@ -6549,8 +6549,8 @@ Static Python API reference (`automodule`).
 # Document: Plugin Development
 
 Source path: docs/dev/plugins/development.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/development.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/development.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/development.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/development.rst
 Description: Static Python API reference (automodule).
 
 <a id="dev-plugin"></a>
@@ -6565,8 +6565,8 @@ Static Python API reference (`automodule`).
 # Document: Hash Values
 
 Source path: docs/dev/plugins/hash_plugin.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/hash_plugin.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/hash_plugin.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/hash_plugin.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/hash_plugin.rst
 Description: Plugin converts strings to different hash digests. The results are displayed in area for the "answers".
 
 <a id="hash-plugin-plugin"></a>
@@ -6590,8 +6590,8 @@ Returns a result list only for the first page.
 # Document: Hostnames
 
 Source path: docs/dev/plugins/hostnames.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/hostnames.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/hostnames.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/hostnames.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/hostnames.rst
 Description: Static Python API reference (automodule).
 
 <a id="hostnames-plugin"></a>
@@ -6606,8 +6606,8 @@ Static Python API reference (`automodule`).
 # Document: Plugins
 
 Source path: docs/dev/plugins/index.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/index.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/index.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/index.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/index.rst
 Description: Normalized source from docs/dev/plugins/index.rst.
 
 # Plugins
@@ -6619,8 +6619,8 @@ Description: Normalized source from docs/dev/plugins/index.rst.
 # Document: Infinite scroll
 
 Source path: docs/dev/plugins/infinite_scroll.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/infinite_scroll.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/infinite_scroll.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/infinite_scroll.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/infinite_scroll.rst
 Description: Static Python API reference (automodule).
 
 <a id="plugins-infinite-scroll"></a>
@@ -6635,8 +6635,8 @@ Static Python API reference (`automodule`).
 # Document: Self-Info
 
 Source path: docs/dev/plugins/self_info.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/self_info.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/self_info.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/self_info.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/self_info.rst
 Description: Simple plugin that displays information about user's request, including the IP or HTTP User-Agent. The information is displayed in area for the "answers".
 
 <a id="self-info-plugin"></a>
@@ -6661,8 +6661,8 @@ Returns a result list only for the first page.
 # Document: Time Zone
 
 Source path: docs/dev/plugins/time_zone.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/time_zone.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/time_zone.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/time_zone.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/time_zone.rst
 Description: Static Python API reference (automodule).
 
 <a id="time-zone-plugin"></a>
@@ -6677,8 +6677,8 @@ Static Python API reference (`automodule`).
 # Document: Tor check
 
 Source path: docs/dev/plugins/tor_check.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/tor_check.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/tor_check.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/tor_check.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/tor_check.rst
 Description: Static Python API reference (automodule).
 
 <a id="tor-check-plugin"></a>
@@ -6693,8 +6693,8 @@ Static Python API reference (`automodule`).
 # Document: Unit Converter
 
 Source path: docs/dev/plugins/unit_converter.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/unit_converter.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/plugins/unit_converter.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/unit_converter.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/plugins/unit_converter.rst
 Description: Static Python API reference (automodule).
 
 <a id="unit-converter-plugin"></a>
@@ -6709,8 +6709,8 @@ Static Python API reference (`automodule`).
 # Document: Development Quickstart
 
 Source path: docs/dev/quickstart.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/quickstart.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/quickstart.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/quickstart.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/quickstart.rst
 Description: SearXNG loves developers; Developers do not need to worry about tool chains, the usual developer tasks can be comfortably executed via make.
 
 <a id="devquickstart"></a>
@@ -6845,8 +6845,8 @@ make static.build.drop
 # Document: reST primer
 
 Source path: docs/dev/reST.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/reST.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/reST.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/reST.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/reST.rst
 Description: Instead of defining more and more roles, we at SearXNG encourage our contributors to follow principles like KISS\ and readability\.
 
 <a id="rest-primer"></a>
@@ -6865,7 +6865,7 @@ generated and deployed at docs.searxng.org\_.  For build prerequisites read
 
 <a id="docs-searxng-org"></a>
 
-The source files of SearXNG's documentation are located at [docs](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs).
+The source files of SearXNG's documentation are located at [docs](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs).
 Sphinx assumes source files to be encoded in UTF-8 by default.  Run [make docs.live](https://docs.searxng.org/dev/contribution_guide.html#make-docs-live) to build HTML while editing.
 
 ### Further reading
@@ -6911,21 +6911,21 @@ trained author brings with, to reach a well feedback from readers:
   view.
 - Limit the subject, use cross links for any further reading.
 
-To be more concrete what a *point of view* means.  In the ([docs](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs))
+To be more concrete what a *point of view* means.  In the ([docs](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs))
 folder we have three sections (and the *blog* folder), each dedicate to a
 different group of audience.
 
-**User's POV: [docs/user](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/user)**
+**User's POV: [docs/user](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/user)**
 
 A typical user knows about search engines and might have heard about
 meta crawlers and privacy.
 
-**Admin's POV: [docs/admin](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin)**
+**Admin's POV: [docs/admin](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin)**
 
 A typical Admin knows about setting up services on a linux system, but he does
 not know all the pros and cons of a SearXNG setup.
 
-**Developer's POV: [docs/dev](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev)**
+**Developer's POV: [docs/dev](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev)**
 
 Depending on the readability\_ of code, a typical developer is able to read and
 understand source code.  Describe what a item aims to do (e.g. a function).
@@ -7113,7 +7113,7 @@ content becomes smart.
 | -------------------------- | ----------------------------------                                                                                      | ------------------------------------                                                                                      |
 | project's wiki article     | [Offline-engines](https://en.wikipedia.org/wiki/Offline-engines)                                                        | `[Offline-engines](https://en.wikipedia.org/wiki/Offline-engines)`                                                        |
 | to docs public URL         | [dev/reST.html](https://docs.searxng.org/dev/reST.html)                                                                 | `[dev/reST.html](https://docs.searxng.org/dev/reST.html)`                                                                 |
-| files & folders origin     | [docs/dev/reST.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/reST.rst) | `[docs/dev/reST.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/reST.rst)` |
+| files & folders origin     | [docs/dev/reST.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/reST.rst) | `[docs/dev/reST.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/reST.rst)` |
 | pull request               | [4](https://github.com/searxng/searxng/pull/4)                                                                          | `[4](https://github.com/searxng/searxng/pull/4)`                                                                          |
 | patch                      | [af2cae6](https://github.com/searxng/searxng/commit/af2cae6)                                                            | `[af2cae6](https://github.com/searxng/searxng/commit/af2cae6)`                                                            |
 | PyPi package               | [curl\_cffi](https://pypi.org/project/curl_cffi/)                                                                       | `[curl_cffi](https://pypi.org/project/curl_cffi/)`                                                                        |
@@ -7125,7 +7125,7 @@ content becomes smart.
 | python code object         | `datetime.datetime`                                                                                                     | `datetime.datetime`                                                                                                       |
 | flask code object          | `flask.Flask`                                                                                                           | `flask.Flask`                                                                                                             |
 
-Intersphinx is configured in [docs/conf.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/conf.py):
+Intersphinx is configured in [docs/conf.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/conf.py):
 
 ```python
 intersphinx_mapping = {
@@ -7330,7 +7330,7 @@ directives.  E.g. to insert a figure with a scalable image format use SVG
 
 <a id="svg-image-example"></a>
 
-![SVG image example](https://raw.githubusercontent.com/searxng/searxng/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/svg_image.svg)
+![SVG image example](https://raw.githubusercontent.com/searxng/searxng/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/svg_image.svg)
 
 *Simple SVG image.*
 
@@ -7362,7 +7362,7 @@ A simple example is shown in [dot file example](https://docs.searxng.org/dev/reS
 >
 > <a id="dot-file-example"></a>
 >
-> ![hello world](https://raw.githubusercontent.com/searxng/searxng/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/hello.dot)
+> ![hello world](https://raw.githubusercontent.com/searxng/searxng/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/hello.dot)
 >
 > *DOT's hello world example*
 
@@ -8034,12 +8034,12 @@ All *generic-doc* tasks are running in the [make install](https://docs.searxng.o
 Templating is suitable for documentation which is created generic at the build
 time.  The sphinx-jinja\_ extension evaluates jinja\_ templates in the [make install](https://docs.searxng.org/dev/makefile.html#make-install) (with SearXNG modules installed).  We use this e.g. to build chapter:
 [configured engines](https://docs.searxng.org/user/configured_engines.html#configured-engines).  Below the jinja directive from the
-[docs/admin/engines.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/admin/engines.rst) is shown:
+[docs/admin/engines.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/engines.rst) is shown:
 
 Build-time include: `../user/configured_engines.rst`
 
 The context for the template is selected in the line `.. jinja:: searx`.  In
-sphinx's build configuration ([docs/conf.py](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/conf.py)) the `searx` context
+sphinx's build configuration ([docs/conf.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/conf.py)) the `searx` context
 contains the `engines` and `plugins`.
 
 ```py
@@ -8151,8 +8151,8 @@ The next example shows the difference of `\tfrac` (*textstyle*) and `\dfrac`
 # Document: Answer Results
 
 Source path: docs/dev/result_types/answer.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/answer.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/answer.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/answer.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/answer.rst
 Description: The area answer results is an area in which additional information can be displayed.
 
 <a id="result-types-answer"></a>
@@ -8172,8 +8172,8 @@ Function that returns a list of answers to the question/query.
 # Document: Result
 
 Source path: docs/dev/result_types/base_result.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/base_result.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/base_result.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/base_result.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/base_result.rst
 Description: Static Python API reference (automodule).
 
 # Result
@@ -8186,8 +8186,8 @@ Static Python API reference (`automodule`).
 # Document: Correction Results
 
 Source path: docs/dev/result_types/correction.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/correction.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/correction.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/correction.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/correction.rst
 Description: The area corrections results shows the user alternative search terms.
 
 <a id="result-types-corrections"></a>
@@ -8213,7 +8213,7 @@ From this simple dict another dict is build up:
 {"url" : "!bang lorem ipsum ..", "title": "lorem ipsum .." }
 ```
 
-and used in the template [corrections.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/elements/corrections.html):
+and used in the template [corrections.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/elements/corrections.html):
 
 **title : `str`**
 
@@ -8227,8 +8227,8 @@ Not really an URL, its the value to insert in a HTML form for a SearXNG query.
 # Document: Result Types
 
 Source path: docs/dev/result_types/index.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/index.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/index.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/index.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/index.rst
 Description: To understand the typification of the results, let's take a brief look at the structure of SearXNG .. At its core, SearXNG is nothing more than an aggregator that aggregates the results from various sources, renders the…
 
 <a id="result-types"></a>
@@ -8338,8 +8338,8 @@ circumstances ..
 # Document: Infobox Results
 
 Source path: docs/dev/result_types/infobox.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/infobox.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/infobox.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/infobox.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/infobox.rst
 Description: The area info box is an area where addtional infos shown to the user.
 
 <a id="result-types-infobox"></a>
@@ -8352,7 +8352,7 @@ Description: The area info box is an area where addtional infos shown to the use
 
 The [area info box](https://docs.searxng.org/dev/result_types/index.html#area-info-box) is an area where addtional infos shown to the user.
 
-Fields used in the [infobox.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/elements/infobox.html):
+Fields used in the [infobox.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/elements/infobox.html):
 
 **img\_src: `str`**
 
@@ -8408,8 +8408,8 @@ A list of topics.  An *topic* is a dictionary with keys:
 # Document: Code Results
 
 Source path: docs/dev/result_types/main/code.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main/code.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main/code.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main/code.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main/code.rst
 Description: Static Python API reference (automodule).
 
 <a id="result-types-code"></a>
@@ -8424,8 +8424,8 @@ Static Python API reference (`automodule`).
 # Document: File Results
 
 Source path: docs/dev/result_types/main/file.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main/file.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main/file.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main/file.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main/file.rst
 Description: Static Python API reference (automodule).
 
 <a id="result-types-file"></a>
@@ -8440,8 +8440,8 @@ Static Python API reference (`automodule`).
 # Document: Image Results
 
 Source path: docs/dev/result_types/main/image.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main/image.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main/image.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main/image.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main/image.rst
 Description: Static Python API reference (automodule).
 
 <a id="result-types-image"></a>
@@ -8456,8 +8456,8 @@ Static Python API reference (`automodule`).
 # Document: Key-Value Results
 
 Source path: docs/dev/result_types/main/keyvalue.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main/keyvalue.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main/keyvalue.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main/keyvalue.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main/keyvalue.rst
 Description: Static Python API reference (automodule).
 
 <a id="result-types-keyvalue"></a>
@@ -8472,8 +8472,8 @@ Static Python API reference (`automodule`).
 # Document: Main Results
 
 Source path: docs/dev/result_types/main/mainresult.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main/mainresult.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main/mainresult.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main/mainresult.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main/mainresult.rst
 Description: Ordinary url-results are equal if their values for Result.template, Result.parsedurl (without scheme) and MainResult.imgsrc are equal.
 
 <a id="result-types-mainresult"></a>
@@ -8482,7 +8482,7 @@ Description: Ordinary url-results are equal if their values for Result.template,
 
 <a id="api-searx-result-types-base-mainresult"></a>
 
-#### `MainResult(Result): # pylint: disable=missing-class-docstring """Base class of all result types displayed in:ref:\`area main results\`.""" template: str = "default.html" """Name of the template used to render the result. By default:origin:\`result\_templates/default.html \<searx/templates/simple/result\_templates/default.html>\` is used. """ title: str = "" """Link title of the result item.""" content: str = "" """Extract or description of the result item""" img\_src: str = "" """URL of a image that is displayed in the result item.""" iframe\_src: str = "" """URL of an embedded \`\`<iframe>\`\` / the frame is collapsible.""" audio\_src: str = "" """URL of an embedded \`\`<audio controls>\`\`.""" thumbnail: str = "" """URL of a thumbnail that is displayed in the result item.""" publishedDate: datetime.datetime | None = None """The date on which the object was published.""" pubdate: str = "" """String representation of:py:obj:\`MainResult.publishedDate\` Deprecated: it is still partially used in the templates, but will one day be completely eliminated. """ length: datetime.timedelta | None = None """Playing duration in seconds.""" views: str = "" """View count in humanized number format.""" author: str = "" """Author of the title.""" metadata: str = "" """Miscellaneous metadata.""" PriorityType = t.Literal\["", "high", "low"] # pyright: ignore\[reportUnannotatedClassAttribute] priority: "MainResult.PriorityType" = "" """The priority can be set via:ref:\`hostnames plugin\`, for example.""" engines: set\[str] = set() """In a merged results list, the names of the engines that found this result are listed in this field.""" # open\_group and close\_group should not manged in the Result # class (we should drop it from here!) open\_group: bool = False close\_group: bool = False positions: list\[int] = \[] score: float = 0 category: str = "" def **hash**(self) -> int\`
+#### `MainResult(Result): # pylint: disable=missing-class-docstring """Base class of all result types displayed in:ref:\`area main results\`.""" template: str = "default.html" """Name of the template used to render the result. By default:origin:\`result\_templates/default.html \<searx/templates/simple/result\_templates/default.html>\` is used. """ title: str = "" """Link title of the result item.""" content: str = "" """Extract or description of the result item""" img\_src: str = "" """URL of a image that is displayed in the result item.""" iframe\_src: str = "" """URL of an embedded \`\`<iframe>\`\` / the frame is collapsible. To convert a standard video URL from a widely know video services into its embed format, have a look at:obj:\`searx.utils.get\_embedded\_stream\_url\`. """ audio\_src: str = "" """URL of an embedded \`\`<audio controls>\`\`.""" thumbnail: str = "" """URL of a thumbnail that is displayed in the result item.""" publishedDate: datetime.datetime | None = None """The date on which the object was published.""" pubdate: str = "" """String representation of:py:obj:\`MainResult.publishedDate\` Deprecated: it is still partially used in the templates, but will one day be completely eliminated. """ length: datetime.timedelta | None = None """Playing duration in seconds.""" views: str = "" """View count in humanized number format.""" author: str = "" """Author of the title.""" metadata: str = "" """Miscellaneous metadata.""" PriorityType = t.Literal\["", "high", "low"] # pyright: ignore\[reportUnannotatedClassAttribute] priority: "MainResult.PriorityType" = "" """The priority can be set via:ref:\`hostnames plugin\`, for example.""" engines: set\[str] = set() """In a merged results list, the names of the engines that found this result are listed in this field.""" # open\_group and close\_group should not manged in the Result # class (we should drop it from here!) open\_group: bool = False close\_group: bool = False positions: list\[int] = \[] score: float = 0 category: str = "" def **hash**(self) -> int\`
 
 Ordinary url-results are equal if their values for
 `Result.template`, `Result.parsed_url` (without scheme)
@@ -8492,8 +8492,8 @@ and `MainResult.img_src` are equal.
 # Document: Paper Results
 
 Source path: docs/dev/result_types/main/paper.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main/paper.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main/paper.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main/paper.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main/paper.rst
 Description: Static Python API reference (automodule).
 
 <a id="result-types-paper"></a>
@@ -8505,11 +8505,27 @@ Description: Static Python API reference (automodule).
 Static Python API reference (`automodule`).
 
 
+# Document: Video Results
+
+Source path: docs/dev/result_types/main/video.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main/video.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main/video.rst
+Description: Static Python API reference (automodule).
+
+<a id="result-types-video"></a>
+
+# Video Results
+
+#### `searx.result_types.video`
+
+Static Python API reference (`automodule`).
+
+
 # Document: Main Search Results
 
 Source path: docs/dev/result_types/main_result.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main_result.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main_result.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main_result.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main_result.rst
 Description: In the area main results the results that a search engine has found for the search term are displayed.
 
 <a id="main-search-results"></a>
@@ -8528,13 +8544,13 @@ following types have been implemented so far ..
 - [main/paper](https://docs.searxng.org/main/paper.html)
 - [main/file](https://docs.searxng.org/main/file.html)
 - [main/image](https://docs.searxng.org/main/image.html)
+- [main/video](https://docs.searxng.org/main/video.html)
 
 The LegacyResult is used internally for the results that
 have not yet been typed.  The templates can be used as orientation until the
 final typing is complete.
 
 - [template default](https://docs.searxng.org/dev/templates.html#template-default) / `Result`
-- [template videos](https://docs.searxng.org/dev/templates.html#template-videos)
 - [template torrent](https://docs.searxng.org/dev/templates.html#template-torrent)
 - [template map](https://docs.searxng.org/dev/templates.html#template-map)
 - [template packages](https://docs.searxng.org/dev/templates.html#template-packages)
@@ -8544,8 +8560,8 @@ final typing is complete.
 # Document: Suggestion Results
 
 Source path: docs/dev/result_types/suggestion.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/suggestion.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/suggestion.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/suggestion.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/suggestion.rst
 Description: The area suggestions results shows the user alternative search terms.
 
 <a id="result-types-suggestion"></a>
@@ -8570,7 +8586,7 @@ From this simple dict another dict is build up:
 {"url" : "!bang lorem ipsum ..", "title": "lorem ipsum" }
 ```
 
-and used in the template [suggestions.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/elements/suggestions.html):
+and used in the template [suggestions.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/elements/suggestions.html):
 
 ```python
 # use RawTextQuery to get the suggestion URLs with the same bang
@@ -8589,8 +8605,8 @@ Not really an URL, its the value to insert in a HTML form for a SearXNG query.
 # Document: Search API
 
 Source path: docs/dev/search_api.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/search_api.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/search_api.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/search_api.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/search_api.rst
 Description: SearXNG supports querying via a simple HTTP API. Two endpoints, / and /search, are supported for both GET and POST methods. The GET method expects parameters as URL query parameters, while the POST method expects parame…
 
 <a id="search-api"></a>
@@ -8682,15 +8698,15 @@ See the available options in the preferences page of the instance.
 # Document: Tooling box searxngextra
 
 Source path: docs/dev/searxng_extra/index.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/searxng_extra/index.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/searxng_extra/index.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/searxng_extra/index.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/searxng_extra/index.rst
 Description: In the folder searxng\extra/ we maintain some tools useful for CI and developers.
 
 <a id="searxng-extra"></a>
 
 # Tooling box `searxng_extra`
 
-In the folder [searxng\_extra/](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxng_extra/) we maintain some tools useful for CI and
+In the folder [searxng\_extra/](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxng_extra/) we maintain some tools useful for CI and
 developers.
 
 - [update](https://docs.searxng.org/update.html)
@@ -8699,21 +8715,21 @@ developers.
 # Document: searxngextra/update/
 
 Source path: docs/dev/searxng_extra/update.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/searxng_extra/update.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/searxng_extra/update.rst
-Description: [\[source\]](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxngextra/update/init.py)
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/searxng_extra/update.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/searxng_extra/update.rst
+Description: [\[source\]](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxngextra/update/init.py)
 
 # `searxng_extra/update/`
 
-[\[source\]](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxng_extra/update/__init__.py)
+[\[source\]](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxng_extra/update/__init__.py)
 
-Scripts to update static data in [searx/data/](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/data/)
+Scripts to update static data in [searx/data/](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/data/)
 
 <a id="update-ahmia-blacklist-py"></a>
 
 # `update_ahmia_blacklist.py`
 
-[\[source\]](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxng_extra/update/update_ahmia_blacklist.py)
+[\[source\]](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxng_extra/update/update_ahmia_blacklist.py)
 
 #### `searxng_extra.update.update_ahmia_blacklist`
 
@@ -8721,7 +8737,7 @@ Static Python API reference (`automodule`).
 
 # `update_currencies.py`
 
-[\[source\]](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxng_extra/update/update_currencies.py)
+[\[source\]](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxng_extra/update/update_currencies.py)
 
 #### `searxng_extra.update.update_currencies`
 
@@ -8729,7 +8745,7 @@ Static Python API reference (`automodule`).
 
 # `update_engine_descriptions.py`
 
-[\[source\]](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxng_extra/update/update_engine_descriptions.py)
+[\[source\]](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxng_extra/update/update_engine_descriptions.py)
 
 #### `searxng_extra.update.update_engine_descriptions`
 
@@ -8737,7 +8753,7 @@ Static Python API reference (`automodule`).
 
 # `update_external_bangs.py`
 
-[\[source\]](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxng_extra/update/update_external_bangs.py)
+[\[source\]](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxng_extra/update/update_external_bangs.py)
 
 #### `searxng_extra.update.update_external_bangs`
 
@@ -8745,7 +8761,7 @@ Static Python API reference (`automodule`).
 
 # `update_firefox_version.py`
 
-[\[source\]](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxng_extra/update/update_firefox_version.py)
+[\[source\]](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxng_extra/update/update_firefox_version.py)
 
 #### `searxng_extra.update.update_firefox_version`
 
@@ -8753,7 +8769,7 @@ Static Python API reference (`automodule`).
 
 # `update_engine_traits.py`
 
-[\[source\]](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxng_extra/update/update_engine_traits.py)
+[\[source\]](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxng_extra/update/update_engine_traits.py)
 
 #### `searxng_extra.update.update_engine_traits`
 
@@ -8763,7 +8779,7 @@ Static Python API reference (`automodule`).
 
 # `update_osm_keys_tags.py`
 
-[\[source\]](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxng_extra/update/update_osm_keys_tags.py)
+[\[source\]](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxng_extra/update/update_osm_keys_tags.py)
 
 #### `searxng_extra.update.update_osm_keys_tags`
 
@@ -8771,7 +8787,7 @@ Static Python API reference (`automodule`).
 
 # `update_pygments.py`
 
-[\[source\]](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxng_extra/update/update_pygments.py)
+[\[source\]](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxng_extra/update/update_pygments.py)
 
 #### `searxng_extra.update.update_pygments`
 
@@ -8781,7 +8797,7 @@ Static Python API reference (`automodule`).
 
 # `update_locales.py`
 
-[\[source\]](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxng_extra/update/update_locales.py)
+[\[source\]](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxng_extra/update/update_locales.py)
 
 #### `searxng_extra.update.update_locales`
 
@@ -8789,7 +8805,7 @@ Static Python API reference (`automodule`).
 
 # `update_wikidata.py`
 
-[\[source\]](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searxng_extra/update/update_wikidata.py)
+[\[source\]](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxng_extra/update/update_wikidata.py)
 
 #### `searxng_extra.update.update_wikidata`
 
@@ -8799,8 +8815,8 @@ Static Python API reference (`automodule`).
 # Document: Simple Theme Templates
 
 Source path: docs/dev/templates.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/templates.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/templates.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/templates.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/templates.rst
 Description: The simple template is complex, it consists of many different elements and also uses macros and include statements. The following is a rough overview that we would like to give the developer at hand, details must still…
 
 <a id="simple-theme-templates"></a>
@@ -8810,7 +8826,7 @@ Description: The simple template is complex, it consists of many different eleme
 The simple template is complex, it consists of many different elements and also
 uses macros and include statements.  The following is a rough overview that we
 would like to give the developer at hand, details must still be taken from the
-[sources](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/).
+[sources](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/).
 
 A [result item](https://docs.searxng.org/dev/result_types/index.html#result-types) can be of different media types.  The media
 type of a result is defined by the `result_type.Result.template`.  To
@@ -8828,7 +8844,7 @@ in the result item must be set to the desired type.
 Execpt `image.html` and some others this macro is used in nearly all result
 types in the [main result list](https://docs.searxng.org/dev/templates.html#main-result-list).
 
-Fields used in the template [macro result\_header](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/macros.html):
+Fields used in the template [macro result\_header](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/macros.html):
 
 **url :  `str`**
 
@@ -8849,7 +8865,7 @@ URL of a image or thumbnail that is displayed in the result item.
 Execpt `image.html` and some others this macro is used in nearly all result
 types in the [main result list](https://docs.searxng.org/dev/templates.html#main-result-list).
 
-Fields used in the template [macro result\_sub\_header](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/macros.html):
+Fields used in the template [macro result\_sub\_header](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/macros.html):
 
 **publishedDate : `datetime.datetime`**
 
@@ -8875,7 +8891,7 @@ Miscellaneous metadata.
 
 ## `engine_data_form`
 
-The `engine_data_form` macro is used in [results,html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/results.html) in a HTML `<form/>` element.  The
+The `engine_data_form` macro is used in [results,html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/results.html) in a HTML `<form/>` element.  The
 intention of this macro is to pass data of a engine from one `response` to the `searx.search.SearchQuery`
 of the next `request`.
 
@@ -8902,7 +8918,7 @@ def request(query, params):
 # Main Result List
 
 The **media types** of the **main result type** are the template files in
-the [result\_templates](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates).
+the [result\_templates](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates).
 
 <a id="template-default"></a>
 
@@ -8913,7 +8929,7 @@ Displays result fields from:
 - [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
 - [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
 
-Additional fields used in the [default.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/default.html):
+Additional fields used in the [default.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/default.html):
 
 **content :  `str`**
 
@@ -8927,28 +8943,6 @@ URL of an embedded `<iframe>` / the frame is collapsible.
 
 URL of an embedded `<audio controls>`.
 
-<a id="template-videos"></a>
-
-## `videos.html`
-
-Displays result fields from:
-
-- [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
-- [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
-
-Additional fields used in the [videos.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/videos.html):
-
-**iframe\_src : `str`**
-
-URL of an embedded `<iframe>` / the frame is collapsible.
-
-The videos are displayed as small thumbnails in the main results list, there
-is an additional button to collaps/open the embeded video.
-
-**content :  `str`**
-
-Description of the code fragment.
-
 <a id="template-torrent"></a>
 
 ## `torrent.html`
@@ -8960,7 +8954,7 @@ Displays result fields from:
 - [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
 - [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
 
-Additional fields used in the [torrent.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/torrent.html):
+Additional fields used in the [torrent.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/torrent.html):
 
 **magnetlink:**
 
@@ -8998,7 +8992,7 @@ Displays result fields from:
 - [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
 - [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
 
-Additional fields used in the [map.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/map.html):
+Additional fields used in the [map.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/map.html):
 
 **content :  `str`**
 
@@ -9117,7 +9111,7 @@ Displays result fields from:
 
 - [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header)
 
-Additional fields used in the [paper.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/paper.html):
+Additional fields used in the [paper.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/paper.html):
 
 **content :  `str`**
 
@@ -9192,7 +9186,7 @@ Displays result fields from:
 
 - [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header)
 
-Additional fields used in the [packages.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/packages.html):
+Additional fields used in the [packages.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/packages.html):
 
 **package\_name : `str`**
 
@@ -9247,7 +9241,7 @@ Displays result fields from:
 - [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
 - [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
 
-Additional fields used in the [products.html](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/templates/simple/result_templates/products.html):
+Additional fields used in the [products.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/products.html):
 
 **content :  `str`**
 
@@ -9287,8 +9281,8 @@ See [result\_types.infobox](https://docs.searxng.org/dev/result_types/infobox.ht
 # Document: Translation
 
 Source path: docs/dev/translation.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/translation.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/translation.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/translation.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/translation.rst
 Description: Translation takes place on translate.codeberg.org\.
 
 <a id="translation"></a>
@@ -9330,18 +9324,18 @@ only the
 
 <a id="searxng-weblate-workflow"></a>
 
-![](https://raw.githubusercontent.com/searxng/searxng/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/translation.svg)
+![](https://raw.githubusercontent.com/searxng/searxng/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/translation.svg)
 
 *SearXNG's PR workflow to be in sync with Weblate*
 
 **Sync from *origin* to *weblate*: using `make weblate.push.translations`**
 
 For each commit on the `master` branch of SearXNG *origin* the GitHub job
-[babel / Update translations branch](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/.github/workflows/integration.yml) checks for updated translations.
+[babel / Update translations branch](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/.github/workflows/integration.yml) checks for updated translations.
 
 **Sync from *weblate* to *origin*: using `make weblate.translations.commit`**
 
-Every Friday, the GitHub workflow [babel / create PR for additions from weblate](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/.github/workflows/translations-update.yml) creates a PR with the
+Every Friday, the GitHub workflow [babel / create PR for additions from weblate](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/.github/workflows/translations-update.yml) creates a PR with the
 updated translation files:
 
 - `translation/messages.pot`,
@@ -9366,8 +9360,8 @@ Replace `APIKEY` by your [API key](https://docs.searxng.org/dev/translation.html
 # Document: Acknowledgements
 
 Source path: docs/index.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/index.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/index.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/index.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/index.rst
 Description: # Welcome to SearXNG
 
 **# Welcome to SearXNG**
@@ -9445,8 +9439,8 @@ no cost:
 # Document: Why use a private instance?
 
 Source path: docs/own-instance.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/own-instance.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/own-instance.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/own-instance.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/own-instance.rst
 Description: ...is a common question among SearXNG users. Before answering this question, see what options a SearXNG user has.
 
 # Why use a private instance?
@@ -9527,8 +9521,8 @@ instance access to a privacy-respecting search service.
 # Document: Source-Code
 
 Source path: docs/src/index.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/index.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/index.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/index.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/index.rst
 Description: This is a partial documentation of our source code. We are not aiming to document every item from the source code, but we will add documentation when requested.
 
 # Source-Code
@@ -9543,8 +9537,8 @@ requested.
 # Document: Custom message extractor (i18n)
 
 Source path: docs/src/searx.babel_extract.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.babel_extract.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.babel_extract.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.babel_extract.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.babel_extract.rst
 Description: Static Python API reference (automodule).
 
 <a id="searx-babel-extract"></a>
@@ -9559,8 +9553,8 @@ Static Python API reference (`automodule`).
 # Document: Bot Detection
 
 Source path: docs/src/searx.botdetection.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.botdetection.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.botdetection.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.botdetection.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.botdetection.rst
 Description: Static Python API reference (automodule).
 
 <a id="botdetection"></a>
@@ -9633,8 +9627,8 @@ Return configuration in JSON format.
 # Document: Caches
 
 Source path: docs/src/searx.cache.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.cache.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.cache.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.cache.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.cache.rst
 Description: Static Python API reference (automodule).
 
 <a id="searx-cache"></a>
@@ -9649,8 +9643,8 @@ Static Python API reference (`automodule`).
 # Document: SearXNG Exceptions
 
 Source path: docs/src/searx.exceptions.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.exceptions.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.exceptions.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.exceptions.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.exceptions.rst
 Description: Static Python API reference (automodule).
 
 <a id="searx-exceptions"></a>
@@ -9665,8 +9659,8 @@ Static Python API reference (`automodule`).
 # Document: Favicons (source)
 
 Source path: docs/src/searx.favicons.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.favicons.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.favicons.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.favicons.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.favicons.rst
 Description: Static Python API reference (automodule).
 
 <a id="favicons-source"></a>
@@ -9715,8 +9709,8 @@ Static Python API reference (`automodule`).
 # Document: Online /info
 
 Source path: docs/src/searx.infopage.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.infopage.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.infopage.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.infopage.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.infopage.rst
 Description: Static Python API reference (automodule).
 
 <a id="searx-infopage"></a>
@@ -9731,8 +9725,8 @@ Static Python API reference (`automodule`).
 # Document: Locales
 
 Source path: docs/src/searx.locales.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.locales.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.locales.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.locales.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.locales.rst
 Description: Static Python API reference (automodule).
 
 <a id="searx-locales"></a>
@@ -9747,8 +9741,8 @@ Static Python API reference (`automodule`).
 # Document: Search processors
 
 Source path: docs/src/searx.search.processors.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.search.processors.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.search.processors.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.search.processors.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.search.processors.rst
 Description: Abstract of the file.
 
 <a id="searx-search-processors"></a>
@@ -9797,8 +9791,8 @@ Static Python API reference (`automodule`).
 # Document: Search
 
 Source path: docs/src/searx.search.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.search.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.search.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.search.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.search.rst
 Description: Reference by names to an engine and category
 
 <a id="searx-search"></a>
@@ -9871,8 +9865,8 @@ will be merged.
 # Document: Settings Loader
 
 Source path: docs/src/searx.settings.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.settings.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.settings.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.settings.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.settings.rst
 Description: Static Python API reference (automodule).
 
 <a id="searx-settings-loader"></a>
@@ -9887,8 +9881,8 @@ Static Python API reference (`automodule`).
 # Document: SQLite DB
 
 Source path: docs/src/searx.sqlitedb.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.sqlitedb.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.sqlitedb.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.sqlitedb.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.sqlitedb.rst
 Description: Static Python API reference (automodule).
 
 <a id="sqlite-db"></a>
@@ -9903,8 +9897,8 @@ Static Python API reference (`automodule`).
 # Document: Utility functions for the engines
 
 Source path: docs/src/searx.utils.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.utils.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.utils.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.utils.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.utils.rst
 Description: Static Python API reference (automodule).
 
 <a id="searx-utils"></a>
@@ -9919,8 +9913,8 @@ Static Python API reference (`automodule`).
 # Document: Valkey DB
 
 Source path: docs/src/searx.valkeydb.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.valkeydb.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.valkeydb.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.valkeydb.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.valkeydb.rst
 Description: Static Python API reference (automodule).
 
 <a id="valkey-db"></a>
@@ -9935,8 +9929,8 @@ Static Python API reference (`automodule`).
 # Document: Valkey Library
 
 Source path: docs/src/searx.valkeylib.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.valkeylib.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.valkeylib.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.valkeylib.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.valkeylib.rst
 Description: Static Python API reference (automodule).
 
 <a id="searx-valkey"></a>
@@ -9951,8 +9945,8 @@ Static Python API reference (`automodule`).
 # Document: Weather
 
 Source path: docs/src/searx.weather.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.weather.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/src/searx.weather.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.weather.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/src/searx.weather.rst
 Description: Static Python API reference (automodule).
 
 <a id="weather"></a>
@@ -9967,8 +9961,8 @@ Static Python API reference (`automodule`).
 # Document: About SearXNG
 
 Source path: docs/user/about.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/user/about.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/user/about.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/user/about.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/user/about.rst
 Description: SearXNG is a [metasearch engine], aggregating the results of other available while not storing information about its users.
 
 <a id="about-searxng"></a>
@@ -10066,8 +10060,8 @@ internet is, the more freedom we have!
 # Document: Configured Engines
 
 Source path: docs/user/configured_engines.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/user/configured_engines.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/user/configured_engines.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/user/configured_engines.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/user/configured_engines.rst
 Description: SearXNG supports available search engines of which available are enabled by default.
 
 <a id="configured-engines"></a>
@@ -10112,7 +10106,7 @@ belong to, by using a [!bing syntax](https://docs.searxng.org/user/search-syntax
     (available)
   - `!available`
     `searx.engines.available`
-    [available](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/searx/engines/available.py)
+    [available](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines/available.py)
   - available
   - available
   - available
@@ -10127,8 +10121,8 @@ belong to, by using a [!bing syntax](https://docs.searxng.org/user/search-syntax
 # Document: User information
 
 Source path: docs/user/index.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/user/index.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/user/index.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/user/index.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/user/index.rst
 Description: Normalized source from docs/user/index.rst.
 
 # User information
@@ -10141,8 +10135,8 @@ Description: Normalized source from docs/user/index.rst.
 # Document: Search syntax
 
 Source path: docs/user/search-syntax.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/user/search-syntax.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/user/search-syntax.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/user/search-syntax.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/user/search-syntax.rst
 Description: SearXNG comes with a search syntax by which you can modify the categories, engines, languages, and more. See the available for the list of engines, categories, and languages.
 
 <a id="search-syntax"></a>
@@ -10236,15 +10230,15 @@ In the available page you find keywords for
 # Document: DevOps tooling box
 
 Source path: docs/utils/index.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/utils/index.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/utils/index.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/utils/index.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/utils/index.rst
 Description: In the folder utils/ we maintain some tools useful for administrators and developers.
 
 <a id="searx-utils"></a> <a id="toolboxing"></a>
 
 # DevOps tooling box
 
-In the folder [utils/](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/utils/) we maintain some tools useful for administrators
+In the folder [utils/](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/utils/) we maintain some tools useful for administrators
 and developers.
 
 - [searxng.sh](https://docs.searxng.org/searxng.sh.html)
@@ -10270,8 +10264,8 @@ $ FORCE_TIMEOUT=0 ./utils/searxng.sh install nginx
 # Document: utils/searxng.sh
 
 Source path: docs/utils/searxng.sh.rst
-Pinned source: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/utils/searxng.sh.rst
-Canonical documentation: https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/utils/searxng.sh.rst
+Pinned source: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/utils/searxng.sh.rst
+Canonical documentation: https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/utils/searxng.sh.rst
 Description: To simplify the installation and maintenance of a SearXNG instance you can use the script utils/searxng.sh.
 
 <a id="searxng-sh"></a>
@@ -10279,7 +10273,7 @@ Description: To simplify the installation and maintenance of a SearXNG instance 
 # `utils/searxng.sh`
 
 To simplify the installation and maintenance of a SearXNG instance you can use the
-script [utils/searxng.sh](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/utils/searxng.sh).
+script [utils/searxng.sh](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/utils/searxng.sh).
 
 ### further reading
 

@@ -8,20 +8,46 @@
   "repository": "qdrant/landing_page",
   "tag": "master",
   "branch": "master",
-  "sourceCommittedAt": "2026-09-18T12:02:33Z",
-  "documentationDigest": "2b741f44726aedfaabae0f2918180717102ff5f68a515440d4dfbaa10267b979",
-  "sourceCommit": "3b58061329eedce2091c9dd380b8c47fcaa1cb64",
-  "documentCount": 321,
+  "sourceCommittedAt": "2026-09-22T18:02:02Z",
+  "documentationDigest": "b8b50cfdd32dde3395f4b717575a5ba419cf24060ca408d4248124d27cc85d10",
+  "sourceCommit": "32eb334faf299b1cbfe0bddc7cd79e10b77012c4",
+  "documentCount": 319,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 4035451,
-      "documentCount": 321,
-      "sha256": "03dfa481a9e76ae3ee13a1d88e94624738b66d65783bf6a303f55bcc2250c2da"
+      "byteLength": 3925013,
+      "documentCount": 319,
+      "sha256": "d23bd8ed7501367c8ef977836f470df82509b3db3da7c3a04509b5ea0c9848a6"
     }
   ],
-  "outputDigest": "b751a4f2884aecf494828ff4aafacd337206ed646831084cb3178b8e19b5d17e",
+  "outputDigest": "04b863e782a2bd5e9f0f03f2b0318b7fdfc0f5f0ecf37f6dd16cbaf0ebab67b6",
+  "quarantined": [
+    {
+      "sourcePath": "qdrant-landing/content/documentation/agentic-tools/_index.md",
+      "reason": "Unresolved qdrant source syntax \"{{< p\""
+    },
+    {
+      "sourcePath": "qdrant-landing/content/documentation/agentic-tools/prompts.md",
+      "reason": "Unresolved qdrant source syntax \"{{< p\""
+    },
+    {
+      "sourcePath": "qdrant-landing/content/documentation/manage-data/collections.md",
+      "reason": "Unresolved qdrant source syntax \"{{< p\""
+    },
+    {
+      "sourcePath": "qdrant-landing/content/documentation/ops-monitoring/monitoring.md",
+      "reason": "Unresolved qdrant source syntax \"{{< p\""
+    },
+    {
+      "sourcePath": "qdrant-landing/content/documentation/ops-optimization/optimize.md",
+      "reason": "Unresolved qdrant source syntax \"{{< p\""
+    },
+    {
+      "sourcePath": "qdrant-landing/content/documentation/production-checklist.md",
+      "reason": "Unresolved qdrant source syntax \"{{< p\""
+    }
+  ],
   "notes": [
     "Pages are selected from qdrant-landing/content/documentation at the pinned master commit; drafts, navigation delimiters, external-link placeholders, non-rendered pages, and headless fragments are excluded.",
     "Hugo code-snippet and include shortcodes are expanded from pinned headless Markdown, while figures, accordions, and interactive islands are reduced to their authored static Markdown content without executing Hugo or JavaScript.",

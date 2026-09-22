@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/reference/notification-webhooks.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/reference/notification-webhooks.mdx)
+> Pinned source for Vast.ai main: [guides/reference/notification-webhooks.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/guides/reference/notification-webhooks.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/reference/notification-webhooks
 
 # Notification Webhooks
@@ -26,7 +26,7 @@ Subscribing a webhook to an event automatically turns on the webhook channel for
 
 Existing webhooks appear below the notification groups. You can edit the name or URL, delete the webhook, or unsubscribe the webhook from an individual event.
 
-![Create webhook modal with webhook name and webhook URL fields](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-notification-webhook.png)
+![Create webhook modal with webhook name and webhook URL fields](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/console-notification-webhook.png)
 
 > **Warning**
 >

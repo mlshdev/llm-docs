@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/connect/ssh.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/instances/connect/ssh.mdx)
+> Pinned source for Vast.ai main: [guides/instances/connect/ssh.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/guides/instances/connect/ssh.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/connect/ssh
 
 # SSH Connection
@@ -55,7 +55,7 @@ ssh-ed25519 AAAAC3NzaC1lZ9DdI1NTE5AAAAIHWGYlMT8CxcILI/i3DsRvX74HNChkm4JSNFu0wm
 
 **3. Add it in your** [**vast account**](https://cloud.vast.ai/manage-keys/)
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/instances-sshscp.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/instances-sshscp.webp)
 
 **Add & Generate SSH Key (using** [**Vast CLI**](https://docs.vast.ai/cli/hello-world)**)**
 
@@ -75,7 +75,7 @@ ssh-ed25519 AAAAC3NzaC1lZ9DdI1NTE5AAAAIHWGYlMT8CxcILI/i3DsRvX74HNChkm4JSNFu0wm
    1. Open [CLI page](https://cloud.vast.ai/cli/)
    2. Create an API key
 
-      ![API Key creation](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/instances-sshscp-2.webp)
+      ![API Key creation](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/instances-sshscp-2.webp)
 
 3. **Generate a new SSH key pair** (you will need your vast API key):
 
@@ -102,7 +102,7 @@ ssh-ed25519 AAAAC3NzaC1lZ9DdI1NTE5AAAAIHWGYlMT8CxcILI/i3DsRvX74HNChkm4JSNFu0wm
 
 Start a new instance and click the SSH icon to see your connection information.
 
-![Connection details](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/instances-sshscp-3.webp)
+![Connection details](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/instances-sshscp-3.webp)
 
 Now you can enter the connection command string into your terminal
 
@@ -117,7 +117,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 
 You should now see a screen similar to this. You will, by default, be placed into a tmux session.
 
-![Instance SSH session](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/instances-sshscp-4.webp)
+![Instance SSH session](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/instances-sshscp-4.webp)
 
 ### Direct vs Proxy Connections
 
@@ -168,7 +168,7 @@ As a simple alternative to SSH, you might like to consider Jupyter Terminal inst
 
 Access the terminal from the Terminal Connections dialog.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/instances-sshscp-5.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/instances-sshscp-5.webp)
 
 ## Troubleshooting
 
@@ -251,16 +251,16 @@ Once you have your ssh keys set up, connecting to VS Code is quite straightforwa
 
 You will need to add the remote extension named 'Remote - SSH'.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/instances-sshscp-6.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/instances-sshscp-6.webp)
 
 ### Open Remote Window
 
 Click the open remote window button.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/instances-sshscp-7.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/instances-sshscp-7.webp)
 
 Enter your ssh address details in the box that appears at the top of your window
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/instances-sshscp-8.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/instances-sshscp-8.webp)
 
 Now simply allow a moment for VS code to configure the instance and you will be able to work with the instance as if it was a local machine.
 

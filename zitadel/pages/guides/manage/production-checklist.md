@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/manage/production-checklist.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/manage/production-checklist.mdx)
+> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/manage/production-checklist.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/manage/production-checklist.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/production-checklist
 
 This checklist is specifically designed for teams deploying on **ZITADEL Cloud**.
@@ -28,6 +28,7 @@ Eliminate Single Points of Failure (SPOF) for administrative access.
 - [ ] **Diverse MFA Methods**: Ensure your administrators enroll multiple MFA methods (e.g., one on a YubiKey, one on an Authenticator app) to maximize recovery options.
 - [ ] **Backup Service Account**: Create a dedicated Service Account with a PAT and with administrative roles (IAM\_OWNER).
   - **Why**: If a misconfigured "Action" or a CSS error breaks the Management Console UI, you can still revert changes or manage the instance directly via the ZITADEL Management API using this PAT.
+- [ ] **Dedicated administrator organization**: Keep instance administrators and the login client service account in a [dedicated organization for instance administrators](https://zitadel.com/docs/guides/manage/console/administrator-hardening) with Login Behavior and Security suited for instance administrators—not mixed with customer users or Organization Administrators.
 
 ### ZITADEL Setup and Configuration
 

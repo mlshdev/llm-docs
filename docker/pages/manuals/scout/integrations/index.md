@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/integrations/_index.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/scout/integrations/_index.md)
+> Pinned source for Docker main: [content/manuals/scout/integrations/_index.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/scout/integrations/_index.md)
 
 # Integrating Docker Scout with other systems
 
@@ -48,7 +48,7 @@ versions, in your image repositories or in your other environments.
 
 The following environment monitoring integrations are available:
 
+- [Docker Scout GitHub Action](https://docs.docker.com/scout/integrations/environment/)
 - [Generic CLI integration](https://docs.docker.com/scout/integrations/environment/cli/)
-
-For more information about environment integrations, see
-[Environments](https://docs.docker.com/scout/integrations/environment/).
+  For more information about environment integrations, see
+  [Environments](https://docs.docker.com/scout/integrations/environment/).

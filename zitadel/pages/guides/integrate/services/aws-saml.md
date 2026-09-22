@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/services/aws-saml.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/integrate/services/aws-saml.mdx)
+> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/integrate/services/aws-saml.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/integrate/services/aws-saml.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/services/aws-saml
 
 This guide shows how to enable login with ZITADEL on AWS SSO.
@@ -28,13 +28,13 @@ Described [here](https://docs.aws.amazon.com/singlesignon/latest/userguide/manag
 can connect to ZITADEL as a SAML2 IDP.
 
 1. Chose the External identity provider:
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/aws/change_idp.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/aws/change_idp.png)
 
 2. Download the metadata file, to provide ZITADEL with all the information it needs, and save the AWS SSO Sign-in URL,
    which you use to log in afterward.
 
 3. Fill out the fields as follows, to provide AWS with all the information it needs:
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/aws/configure_idp.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/aws/configure_idp.png)
 
    To connect to another environment, change the domains, for example if you would use ZITADEL under the url "
    <https://example.com>" you would have the URLs "<https://example.com/saml/v2/SSO>"
@@ -60,14 +60,14 @@ The metadata used in this part is from "Change to external identity provider ZIT
 In your existing project:
 
 1. Press the "+"-button to add an application
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/project.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/project.png)
 2. Fill in a name for the application and chose the SAML type, then click "Continue".
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/application_saml.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/application_saml.png)
 3. Either fill in the URL where ZITADEL can read the metadata from, or upload the metadata XML directly, then click "
    Continue".
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
 4. Check your application, if everything is correct, press "Create".
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/application_saml_create.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/application_saml_create.png)
 
 Everything on the side of ZITADEL is done if the application is correctly created.
 

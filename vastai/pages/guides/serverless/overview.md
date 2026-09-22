@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/overview.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/serverless/overview.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/overview.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/guides/serverless/overview.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/overview
 
 # The PyWorker
@@ -11,9 +11,9 @@ The Vast PyWorker is a Python web server designed to run alongside a machine lea
 >
 > All of Vast’s serverless templates use the Vast PyWorker. If you are using a recommended serverless template from Vast, the PyWorker is already integrated with the template and will automatically startup when a Workergroup is created.&#x20;
 
-![Pyworker Diagram](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/serverless-pyworker-light.svg)
+![Pyworker Diagram](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/serverless-pyworker-light.svg)
 
-![Pyworker Diagram](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/serverless-pyworker-dark.svg)
+![Pyworker Diagram](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/serverless-pyworker-dark.svg)
 
 In the diagram's example, a user's client is attempting to infer from a machine learning model. With Vast's Serverless setup, the client:
 
@@ -27,9 +27,9 @@ In the diagram's example, a user's client is attempting to infer from a machine 
 
 The [Vast PyWorker repository](https://github.com/vast-ai/pyworker/) gives examples that are useful for learning how to create a custom PyWorker for your custom template and integrate with Vast’s Serverless system. Even with a custom PyWorker, the PyWorker code runs on your Vast instance, and we automate its installation and activation during instance creation. The graphic below shows how the files and entities for the Serverless system are organized.
 
-![PyWorker file organization](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/serverless-pyworker-2-light.svg)
+![PyWorker file organization](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/serverless-pyworker-2-light.svg)
 
-![PyWorker file organization](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/serverless-pyworker-2-dark.svg)
+![PyWorker file organization](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/serverless-pyworker-2-dark.svg)
 
 ## Integration with Model Instance
 

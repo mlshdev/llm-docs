@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/tools/cli.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/dhi/tools/cli.md)
+> Pinned source for Docker main: [content/manuals/dhi/tools/cli.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/dhi/tools/cli.md)
 
 The `docker dhi` command-line interface (CLI) is a tool for managing Docker Hardened Images:
 
@@ -271,9 +271,23 @@ If `$XDG_CONFIG_HOME` is set, the configuration file is located at `$XDG_CONFIG_
 
 Available configuration options:
 
-| Option      | Environment Variable | Description                                                                                                               |
-| ----------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `org`       | `DHI_ORG`            | Default Docker Hub organization for mirror and customization commands.                                                    |
-| `api_token` | `DHI_API_TOKEN`      | Docker token for authentication. You can generate a token in your [Docker Hub account settings](https://hub.docker.com/). |
+| Option      | Environment Variable | Description                                                                                                                                   |
+| ----------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `org`       | `DHI_ORG`            | Default Docker Hub organization for mirror and customization commands.                                                                        |
+| `api_token` | `DHI_API_TOKEN`      | Access token for authentication, obtained by exchanging a personal access token (PAT) or organization access token (OAT) for an access token. |
 
 Environment variables take precedence over configuration file values.
+
+To get an access token, exchange a [personal access token
+(PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) or
+[organization access token
+(OAT)](https://docs.docker.com/security/access-tokens/organization-access-tokens/):
+
+```console
+$ export DHI_API_TOKEN=$(curl -s -X POST https://hub.docker.com/v2/auth/token \
+  -H "Content-Type: application/json" \
+  -d '{"identifier": "<identifier>", "secret": "<token>"}' \
+  | jq -r .access_token)
+```
+
+Use your Docker Hub username as `identifier` for a PAT, or your organization name for an OAT.

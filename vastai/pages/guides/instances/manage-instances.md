@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/manage-instances.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/instances/manage-instances.mdx)
+> Pinned source for Vast.ai main: [guides/instances/manage-instances.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/guides/instances/manage-instances.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/manage-instances
 
 # Managing Instances
@@ -17,13 +17,13 @@ The Instances page ([cloud.vast.ai/instances](https://cloud.vast.ai/instances)) 
 
 ## Instance Card Interface
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-instance-guide.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/console-instance-guide.webp)
 
 Each instance card displays comprehensive information about your rental:
 
 ### Main Status Button
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-instance-guide-2.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/console-instance-guide-2.webp)
 
 The main button (left side of card) shows instance status and provides quick access:
 
@@ -40,7 +40,7 @@ The main button (left side of card) shows instance status and provides quick acc
 
 ### Instance Information
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-instance-guide-9.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/console-instance-guide-9.webp)
 
 **ID Information:**
 
@@ -49,7 +49,7 @@ The main button (left side of card) shows instance status and provides quick acc
 - Machine ID - Physical machine identifier
 
 **Hardware Details:**
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-instance-guide-10.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/console-instance-guide-10.webp)
 
 - GPU model and count
 - CPU and RAM allocation
@@ -57,7 +57,7 @@ The main button (left side of card) shows instance status and provides quick acc
 - Network configuration
 
 **Contract Info:**
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-instance-guide-12.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/console-instance-guide-12.webp)
 
 - Instance age (time since creation)
 - Rental end date
@@ -67,7 +67,7 @@ The main button (left side of card) shows instance status and provides quick acc
 
 ### Starting, Stopping, and Destroying
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-instance-guide-5.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/console-instance-guide-5.webp)
 
 - **Stop Button** (square icon): Pauses instance, preserves data, continues storage charges
 - **Destroy Button** (trash icon): Permanently deletes instance and all data
@@ -79,7 +79,7 @@ The main button (left side of card) shows instance status and provides quick acc
 
 ### Restart Behavior
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-instance-guide-6.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/console-instance-guide-6.webp)
 
 When restarting a stopped instance:
 
@@ -91,7 +91,7 @@ When restarting a stopped instance:
 
 ### Additional Controls
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-instance-guide-13.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/console-instance-guide-13.webp)
 
 - **Label Instance** - Add custom name for identification
 - **Reboot Instance** - Restart without data loss
@@ -99,7 +99,7 @@ When restarting a stopped instance:
 
 ## Data Management
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-instance-guide-7.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/console-instance-guide-7.webp)
 
 - **Copy Data** - Transfer between your instances (see [Data Movement](https://docs.vast.ai/guides/instances/storage/data-movement))
 - **Cloud Sync** - Sync with cloud providers (see [Cloud Sync](https://docs.vast.ai/guides/instances/storage/cloud-sync))

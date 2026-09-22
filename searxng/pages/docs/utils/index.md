@@ -1,10 +1,10 @@
-> Pinned source for SearXNG master: [docs/utils/index.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/utils/index.rst)
+> Pinned source for SearXNG master: [docs/utils/index.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/utils/index.rst)
 
 <a id="searx-utils"></a> <a id="toolboxing"></a>
 
 # DevOps tooling box
 
-In the folder [utils/](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/utils/) we maintain some tools useful for administrators
+In the folder [utils/](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/utils/) we maintain some tools useful for administrators
 and developers.
 
 - [searxng.sh](https://docs.searxng.org/searxng.sh.html)

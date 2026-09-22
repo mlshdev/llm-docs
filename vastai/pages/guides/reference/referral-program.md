@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/reference/referral-program.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/reference/referral-program.mdx)
+> Pinned source for Vast.ai main: [guides/reference/referral-program.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/guides/reference/referral-program.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/reference/referral-program
 
 # Referral Program
@@ -46,7 +46,7 @@ It keeps your referral earnings clear and makes sure you’re payout-eligible.
 1. Create a new account for referrals.
 2. Go to [**Settings**](https://cloud.vast.ai/account/) → **Referral Link**.
 
-![Referral Link](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-referral.webp)
+![Referral Link](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/console-referral.webp)
 
 3. Copy the link.
 4. Share it!
@@ -101,4 +101,4 @@ For large-scale referral or marketing collaborations, reach us at **<support@vas
 
 Open your **Templates&#x20;**&#x70;age -> My Templates. On each template card, click the **three-dot menu&#x20;**&#x61;nd select **Copy Referral Link**. This gives you a ready-to-share link that includes your referral ID and the template ID, perfect for sharing with your audience.&#x20;
 
-![Three-dot menu](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-referral-2.webp)
+![Three-dot menu](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/console-referral-2.webp)

@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/rag-chatbot-red-hat-openshift-haystack.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/examples/rag-chatbot-red-hat-openshift-haystack.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/rag-chatbot-red-hat-openshift-haystack.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/examples/rag-chatbot-red-hat-openshift-haystack.md)
 > Canonical documentation: https://qdrant.tech/documentation/examples/rag-chatbot-red-hat-openshift-haystack/
 
 # Private Chatbot for Interactive Learning
@@ -10,7 +10,7 @@ With chatbots, companies can scale their training programs to accommodate a larg
 
 With a simple RAG pipeline, you can build a private chatbot. In this tutorial, you will combine open source tools inside of a closed infrastructure and tie them together with a reliable framework. This custom solution lets you run a chatbot without public internet access. You will be able to keep sensitive data secure without compromising privacy.
 
-![OpenShift](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/student-rag-haystack-red-hat-openshift-hc/openshift-diagram.png)
+![OpenShift](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/student-rag-haystack-red-hat-openshift-hc/openshift-diagram.png)
 **Figure 1:** The LLM and Qdrant Hybrid Cloud are containerized as separate services. Haystack combines them into a RAG pipeline and exposes the API via Hayhooks.
 
 ## Components
@@ -126,7 +126,7 @@ Each component has a set of inputs and outputs which might be combined in a dire
 inputs and outputs are usually provided in the documentation of the component. The `LinkContentFetcher` has the
 following parameters:
 
-![Parameters of the LinkContentFetcher](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/student-rag-haystack-red-hat-openshift-hc/haystack-link-content-fetcher.png)
+![Parameters of the LinkContentFetcher](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/student-rag-haystack-red-hat-openshift-hc/haystack-link-content-fetcher.png)
 
 *Source: <https://docs.haystack.deepset.ai/docs/linkcontentfetcher>*
 
@@ -187,7 +187,7 @@ connections between the components. It is displayed in the Jupyter notebook, but
 indexing_pipeline.draw("indexing_pipeline.png")
 ```
 
-![Structure of the indexing pipeline](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/student-rag-haystack-red-hat-openshift-hc/indexing_pipeline.png)
+![Structure of the indexing pipeline](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/student-rag-haystack-red-hat-openshift-hc/indexing_pipeline.png)
 
 #### Test the entire pipeline
 
@@ -362,7 +362,7 @@ Our final search pipeline might also be visualized, so we can see how the compon
 search_pipeline.draw("search_pipeline.png")
 ```
 
-![Structure of the search pipeline](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/student-rag-haystack-red-hat-openshift-hc/search_pipeline.png)
+![Structure of the search pipeline](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/student-rag-haystack-red-hat-openshift-hc/search_pipeline.png)
 
 ## Deployment
 
@@ -400,7 +400,7 @@ hayhooks deploy search-pipeline.yaml
 Once it's finished, you should be able to see the OpenAPI documentation at
 <http://localhost:1416/docs>, and test the newly created endpoint.
 
-![Search pipeline in the OpenAPI documentation](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/student-rag-haystack-red-hat-openshift-hc/hayhooks-openapi.png)
+![Search pipeline in the OpenAPI documentation](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/student-rag-haystack-red-hat-openshift-hc/hayhooks-openapi.png)
 
 Our search is now accessible through the HTTP endpoint, so we can integrate it with any other service. We can even
 control the other parameters, like the number of documents to return:

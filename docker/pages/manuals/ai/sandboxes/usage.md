@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/usage.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/ai/sandboxes/usage.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/usage.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/usage.md)
 
 # Usage
 
@@ -30,8 +30,9 @@ $ sbx stop my-sandbox               # pause it
 $ sbx rm my-sandbox                 # delete it entirely
 ```
 
-If the sandbox has an active session — an open attach, SSH connection, or
-in-flight SFTP transfer — `sbx rm` refuses unless you pass `--force`:
+`sbx rm` asks for confirmation before deleting a sandbox. Use `--force` to
+skip the prompt. This flag also permits removal when the sandbox has an active
+session — an open attach, SSH connection, or in-flight SFTP transfer:
 
 ```console
 $ sbx rm --force my-sandbox
@@ -187,7 +188,7 @@ To persist a variable across future sessions of an existing sandbox, append an
 export to `/etc/sandbox-persistent.sh`:
 
 ```console
-$ sbx exec -d <sandbox-name> bash -c "echo 'export INTERNAL_API_URL=https://api.example.com' >> /etc/sandbox-persistent.sh"
+$ sbx exec <sandbox-name> bash -c "echo 'export INTERNAL_API_URL=https://api.example.com' >> /etc/sandbox-persistent.sh"
 ```
 
 The `bash -c` wrapper ensures the `>>` redirect runs inside the sandbox instead
@@ -217,6 +218,9 @@ $ sbx exec -it <sandbox-name> bash
 
 Without `--workdir`, the command starts in the sandbox's primary workspace. In
 a mountless sandbox, it starts in the container image's working directory.
+
+`sbx exec` runs commands in the foreground. Detached execution (`-d` or
+`--detach`) isn't supported.
 
 ## Interactive mode
 

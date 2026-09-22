@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/automation.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/ai/sandboxes/workflows/automation.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/automation.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/workflows/automation.md)
 
 # Run sandboxes in CI
 
@@ -13,15 +13,14 @@ Generate a PAT from your
 [Docker account settings](https://app.docker.com/settings/personal-access-tokens)
 with at least **Read** scope.
 
-From there, the rest of the `sbx` workflow is the same as interactive use.
 Create the sandbox in the background with `sbx create`, run agent tasks with
-`sbx exec`, and clean up with `sbx rm`:
+`sbx exec`, and remove the sandbox when finished:
 
 ```console
 $ sbx create --name ci-task --clone claude .
 $ sbx run --name ci-task  # attach and give instructions, or use sbx exec for one-off commands
 $ git fetch sandbox-ci-task
-$ sbx rm ci-task
+$ sbx rm --force ci-task
 ```
 
 Agent credentials (API keys, GitHub token) can be preconfigured as global
@@ -40,3 +39,14 @@ CI provider's secret store, use `-t`. For example, in a GitHub Actions step:
 ```yaml
 - run: sbx secret set anthropic -t "${{ secrets.ANTHROPIC_API_KEY }}"
 ```
+
+## Cleanup and exit codes
+
+Use `--force` to skip confirmation when removing resources in scripts.
+Declining a removal or required-restart prompt returns a non-zero exit code.
+Treat this as an incomplete operation when deciding whether to continue a
+script.
+
+For repeatable cleanup, check which resources exist before removing them. For
+example, use `sbx mcp ls` before `sbx mcp rm`, which fails for an unregistered
+server even with `--force`.

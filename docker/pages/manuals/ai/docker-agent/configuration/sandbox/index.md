@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/sandbox/index.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/_vendor/github.com/docker/docker-agent/docs/configuration/sandbox/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/sandbox/index.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/_vendor/github.com/docker/docker-agent/docs/configuration/sandbox/index.md)
 
 *Run agents in an isolated sandbox VM managed by [`sbx`](https://docs.docker.com/ai/sandboxes/).*
 

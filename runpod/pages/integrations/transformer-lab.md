@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [integrations/transformer-lab.mdx](https://github.com/runpod/docs/blob/56a86f70b4ea8b225c0e5e2231e42a4925931686/integrations/transformer-lab.mdx)
+> Pinned source for Runpod main: [integrations/transformer-lab.mdx](https://github.com/runpod/docs/blob/4962c60abcb8d9bf359d92ccc07644abd5d8e610/integrations/transformer-lab.mdx)
 > Canonical documentation: https://docs.runpod.io/integrations/transformer-lab
 
 # Run Transformer Lab experiments on Runpod

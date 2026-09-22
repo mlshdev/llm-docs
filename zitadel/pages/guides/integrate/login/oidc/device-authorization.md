@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/login/oidc/device-authorization.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/integrate/login/oidc/device-authorization.mdx)
+> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/integrate/login/oidc/device-authorization.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/integrate/login/oidc/device-authorization.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login/oidc/device-authorization
 
 ZITADEL implements device authorization as per [RFC 8628](https://datatracker.ietf.org/doc/html/rfc8628). This document demonstrates its use.
@@ -21,23 +21,23 @@ To begin integrating your application with Zitadel using RFC 8628, follow the st
 
 2. Under "Applications" click the "New" button.
 
-   ![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/device-auth/device-auth-01.png)
+   ![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/device-auth/device-auth-01.png)
 
 3. Select “Native” and enter a name for the application, and click “Continue”.
 
-   ![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/device-auth/device-auth-02.png)
+   ![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/device-auth/device-auth-02.png)
 
 4. Select “Device Code”. Click “Continue”.
 
-   ![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/device-auth/device-auth-03.png)
+   ![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/device-auth/device-auth-03.png)
 
 5. Check the details and click “Create”.
 
-   ![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/device-auth/device-auth-04.png)
+   ![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/device-auth/device-auth-04.png)
 
 6. Copy the “Client ID” and store it for later use.
 
-   ![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/device-auth/device-auth-05.png)
+   ![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/device-auth/device-auth-05.png)
 
 ## Device Client Example
 
@@ -47,7 +47,7 @@ The example requires two environment variables to be set:
 
 - `ISSUER`: server address of your instance or domain. You can find the issuer URL in the “URLs” section. In this example, it will be set to <https://test-0o6zvq.zitadel.cloud>. **Do not use a trailing slash!**
 
-  ![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/device-auth/device-auth-06.png)
+  ![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/device-auth/device-auth-06.png)
 
 - `CLIENT_ID`: the Client ID we obtained earlier.
 
@@ -72,15 +72,15 @@ At this point, the device app starts polling the token endpoint at 5-second inte
 
 When you browse to the given URL and the device code is entered, the authentication flow for a user is started. If you are already logged in, it skips right ahead to the final screen where you can choose to allow or deny the request. If you are not logged in, you will have to enter your credentials for login.
 
-![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/device-auth/device-auth-07.png)
+![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/device-auth/device-auth-07.png)
 
-![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/device-auth/device-auth-08.png)
+![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/device-auth/device-auth-08.png)
 
-![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/device-auth/device-auth-09.png)
+![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/device-auth/device-auth-09.png)
 
-![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/device-auth/device-auth-10.png)
+![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/device-auth/device-auth-10.png)
 
-![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/device-auth/device-auth-11.png)
+![Device Authorization Flow in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/device-auth/device-auth-11.png)
 
 When “allow”  is clicked, the device (the CLI in this case) will receive a token on the next poll. A log line will be shown as given below:
 

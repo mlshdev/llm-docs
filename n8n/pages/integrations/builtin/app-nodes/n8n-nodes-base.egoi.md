@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.egoi.md](https://github.com/n8n-io/n8n-docs/blob/d6f969044f09a928e5d1459a080f6289b68d7be5/docs/integrations/builtin/app-nodes/n8n-nodes-base.egoi.md)
+> Pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.egoi.md](https://github.com/n8n-io/n8n-docs/blob/c43a0ee7369b37df0ae8d4176b79365055c77a5b/docs/integrations/builtin/app-nodes/n8n-nodes-base.egoi.md)
 
 # E-goi node <a id="e-goi-node"></a>
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/cli/deploy.mdx](https://github.com/runpod/docs/blob/56a86f70b4ea8b225c0e5e2231e42a4925931686/flash/cli/deploy.mdx)
+> Pinned source for Runpod main: [flash/cli/deploy.mdx](https://github.com/runpod/docs/blob/4962c60abcb8d9bf359d92ccc07644abd5d8e610/flash/cli/deploy.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/cli/deploy
 
 # deploy

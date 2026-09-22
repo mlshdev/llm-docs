@@ -1,8 +1,8 @@
-# Trigger.dev v4.6.3
+# Trigger.dev v4.6.4
 
-> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `2d03fee2e3ff368128302ed4c783ba4e32d1cb00`.
+> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.6.3.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.6.4.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow the navigation declared in docs/docs.json at the immutable release tag; snippets are inlined into the pages that import them rather than published separately.
 - API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.

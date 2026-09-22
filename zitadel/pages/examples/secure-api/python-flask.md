@@ -1,11 +1,11 @@
-> Pinned source for ZITADEL v4.17.3: [apps/docs/content/examples/secure-api/python-flask.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/examples/secure-api/python-flask.mdx)
+> Pinned source for ZITADEL v4.18.0: [apps/docs/content/examples/secure-api/python-flask.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/examples/secure-api/python-flask.mdx)
 > Canonical documentation: https://zitadel.com/docs/examples/secure-api/python-flask
 
 This example shows you how to secure a Python3 Flask API with both authentication and authorization using ZITADEL.
 
 ## Overview
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/python-flask/1.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/python-flask/1.png)
 
 The Python API will have public, private, and private-scoped routes and check if a user is authenticated and authorized to access the routes.
 The private routes expect an authorization header with a valid access token in the request. The access token is used as a bearer token to authenticate the user when calling the API.
@@ -23,7 +23,7 @@ In order to run the example you need to have `python3` and `pip3` installed.
 
 ### ZITADEL settings for the API
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/python-flask/2.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/python-flask/2.png)
 
 You need to setup a couple of things in ZITADEL.
 
@@ -181,7 +181,7 @@ CLIENT_SECRET = "NVAp70IqiGmJldbS...."
 
 ### ZITADEL settings to create a service account
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/python-flask/3.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/python-flask/3.png)
 
 1. Create a service account and a Personal Access Token (PAT) for that user by following [this guide](https://zitadel.com/docs/guides/integrate/service-accounts/personal-access-token#create-a-service-account-with-a-pat).
 2. To assign roles, follow [this guide](https://zitadel.com/docs/guides/manage/console/roles) to create a role `read:messages` on your project.

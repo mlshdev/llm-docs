@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/manage-data/multitenancy.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/manage-data/multitenancy.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/manage-data/multitenancy.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/manage-data/multitenancy.md)
 > Canonical documentation: https://qdrant.tech/documentation/manage-data/multitenancy/
 
 # Configure Multitenancy
@@ -157,7 +157,7 @@ The `is_tenant=true` parameter is optional, but specifying it gives Qdrant addit
 When set, Qdrant organizes the storage structure to co-locate vectors of the same tenant together, which can significantly improve performance by utilizing sequential reads during queries.
 Instead of many random disk seeks across the segment, the data of one tenant can be read in a single sequential pass.
 
-![Tenants defragmentation with is\_tenant](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/docs/defragmentation.png)
+![Tenants defragmentation with is\_tenant](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/defragmentation.png)
 
 *With `is_tenant=true`, the points of one tenant are stored together and read sequentially.*
 
@@ -1233,7 +1233,7 @@ There are three components in Qdrant that allow you to implement tiered multiten
 - **Fallback shards** - a special routing mechanism that allows you to route requests to either a dedicated shard (if it exists) or to a shared fallback shard. It allows you to keep requests unified, without the need to know whether a tenant is dedicated or shared.
 - **Tenant promotion** - a mechanism that allows you to move tenants from the shared fallback shard to their own dedicated shard when they grow large enough. This process is based on Qdrant's internal shard transfer mechanism, which makes promotion completely transparent for the application. The promotion process supports both read and write requests.
 
-![Tiered multitenancy with tenant promotion](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/docs/tenant-promotion.png)
+![Tiered multitenancy with tenant promotion](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/tenant-promotion.png)
 
 *Tiered multitenancy: small tenants share the fallback shard, promoted tenants get their own.*
 

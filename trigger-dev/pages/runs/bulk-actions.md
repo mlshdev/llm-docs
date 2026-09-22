@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.3: [docs/runs/bulk-actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/runs/bulk-actions.mdx)
+> Pinned source for Trigger.dev v4.6.4: [docs/runs/bulk-actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/runs/bulk-actions.mdx)
 > Canonical documentation: https://trigger.dev/docs/runs/bulk-actions
 
 # Bulk actions with the SDK

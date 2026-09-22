@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/authentication.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/ai/sandboxes/workflows/authentication.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/authentication.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/workflows/authentication.md)
 
 The sandbox proxy handles API credentials for model providers automatically,
 but agents often also need credentials for tools like `gh`, `docker`, or a
@@ -7,11 +7,8 @@ injects the resolved value into matching requests from the sandbox. Dynamic
 secret sources can retrieve a value from an authenticated host CLI without
 copying the value into the secret store.
 
-> \[!NOTE]
-> Service secrets are global by default, so all future sandboxes can use them.
-> Sandboxes that already exist when you run `sbx secret set` do not
-> receive the updated value. To update a running sandbox, scope the secret to
-> it directly: `sbx secret set <service> --sandbox <sandbox-name>`.
+For secret scope and how changes apply to existing sandboxes, see
+[Store a secret](https://docs.docker.com/ai/sandboxes/configuration/credentials/#store-a-secret).
 
 ## GitHub CLI
 

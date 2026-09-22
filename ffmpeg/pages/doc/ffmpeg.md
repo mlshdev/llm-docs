@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg.texi](https://github.com/FFmpeg/FFmpeg/blob/bfac54a03b9c1046d8956b9674bb21167e230eb9/doc/ffmpeg.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg.texi](https://github.com/FFmpeg/FFmpeg/blob/cdc79d694988afd9e2a028ddf500b1df3176c611/doc/ffmpeg.texi)
 
 # Synopsis
 
@@ -3376,15 +3376,9 @@ ffmpeg -filter_complex 'color=c=red' -t 5 out.mkv
   offset by the start time of the file. This matters only for files which do
   not start from timestamp 0, such as transport streams.
 
-- -thread\_queue\_size *size* (*input/output*)
-  For input, this option sets the maximum number of queued packets when reading
-  from the file or device. With low latency / high rate live streams, packets may
-  be discarded if they are not read in a timely manner; setting this value can
-  force ffmpeg to use a separate input thread and read packets as soon as they
-  arrive. By default ffmpeg only does this if multiple inputs are specified.
-
-For output, this option specified the maximum number of packets that may be
-queued to each muxing thread.
+- -thread\_queue\_size *size* (*output*)
+  This option specifies the maximum number of packets per stream that may be
+  queued to each muxing thread.
 
 - -sdp\_file *file* (*global*)
   Print sdp information for an output stream to *file*.

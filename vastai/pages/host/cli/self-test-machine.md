@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/cli/self-test-machine.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/host/cli/self-test-machine.mdx)
+> Pinned source for Vast.ai main: [host/cli/self-test-machine.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/host/cli/self-test-machine.mdx)
 > Canonical documentation: https://docs.vast.ai/host/cli/self-test-machine
 
 # vastai self-test machine

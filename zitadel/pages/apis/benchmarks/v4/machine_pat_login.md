@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.17.3: [apps/docs/content/apis/benchmarks/v4/machine_pat_login/index.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/apis/benchmarks/v4/machine_pat_login/index.mdx)
+> Pinned source for ZITADEL v4.18.0: [apps/docs/content/apis/benchmarks/v4/machine_pat_login/index.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/apis/benchmarks/v4/machine_pat_login/index.mdx)
 > Canonical documentation: https://zitadel.com/docs/apis/benchmarks/v4/machine_pat_login
 
 Benchmark results of v4 release of Zitadel.

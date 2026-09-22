@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/authentication.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/cloud/authentication.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/authentication.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/cloud/authentication.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud/authentication/
 
 # Database Authentication in Qdrant Managed Cloud
@@ -15,7 +15,7 @@ Database API keys with granular access control are available for clusters using 
 >
 > The API key is only shown once after creation. If you lose it, you will need to create a new one.
 
-![API Key](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/create-api-key.png)
+![API Key](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/create-api-key.png)
 
 1. Go to the [Cloud Dashboard](https://qdrant.to/cloud).
 2. Go to the **API Keys** section of the **Cluster Detail Page**.
@@ -26,7 +26,7 @@ Database API keys with granular access control are available for clusters using 
 To restrict a token to a subset of collections, you can select the Collections tab and choose from the collections available in your cluster.
 6\. Click **Create** and retrieve your API key.
 
-![API Key](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/api-key.png)
+![API Key](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/api-key.png)
 
 We recommend configuring an expiration and rotating your API keys regularly as a security best practice.
 

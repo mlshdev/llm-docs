@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/_index.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/ai/sandboxes/configuration/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/_index.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/configuration/_index.md)
 
 # Configure Docker Sandboxes
 
@@ -9,6 +9,8 @@ sandbox, see [Customize](https://docs.docker.com/ai/sandboxes/customize/).
 
 - [Credentials](https://docs.docker.com/ai/sandboxes/configuration/credentials/) configures API keys, authentication
   credentials, and registry access for sandboxed agents.
+- [Models](https://docs.docker.com/ai/sandboxes/configuration/models/) selects local models, hosted providers, or custom
+  inference endpoints for sandboxed agents.
 - [Environment files](https://docs.docker.com/ai/sandboxes/configuration/environment-files/) declare reusable project
   configuration in `sbxenv.yaml`.
 - [GPU passthrough](https://docs.docker.com/ai/sandboxes/configuration/gpu-passthrough/) configures a Linux host and sandbox for

@@ -1,0 +1,24 @@
+> Pinned source for Runpod main: [organizations/orgs-billing.mdx](https://github.com/runpod/docs/blob/4962c60abcb8d9bf359d92ccc07644abd5d8e610/organizations/orgs-billing.mdx)
+> Canonical documentation: https://docs.runpod.io/organizations/orgs-billing
+
+# Billing
+
+Understand how organization billing works, including post-paid invoicing, Billing Explorer access, and cost centers for spend attribution.
+
+Organizations are billed on a post-paid invoice model. Usage from all members accrues throughout the month and is invoiced by Runpod's finance team. There is no credit balance, credit top-up, or payment method to manage in the console.
+
+## Billing Explorer
+
+Billing Explorer shows resource usage broken down by member, resource type, and time period. All members with access can open it from **Billing** in the console left nav.
+
+Admin and billing roles see usage for all org members. Dev members see their own usage only.
+
+## Cost centers
+
+Cost centers let you attribute spend across projects, teams, or departments by tagging resources with a cost center label. Admin and billing roles can create, update, and delete cost centers.
+
+To create a cost center, go to **Cost centers** in the console and click **Create cost center**.
+
+## Invoices and payment
+
+Invoices are issued by Runpod's finance team at the end of each billing period. For invoice questions, payment terms, or billing disputes, contact your Runpod account team directly.

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/codex.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/ai/sandboxes/agents/codex.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/codex.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/agents/codex.md)
 
 # Codex
 
@@ -27,9 +27,9 @@ To create a [mountless sandbox](https://docs.docker.com/ai/sandboxes/usage/#choo
 
 ## Authentication
 
-If you haven't stored an OpenAI credential, `sbx run codex` prompts you to
-authenticate on your host before launching the sandbox. The flow runs on the
-host, so credentials are never exposed inside the sandbox.
+For the default OpenAI models, `sbx run codex` prompts you to authenticate on
+your host if you haven't stored an OpenAI credential. Authentication happens
+before launching the sandbox, so credentials are never exposed inside it.
 
 To set up authentication ahead of time, choose one of the following methods.
 
@@ -51,6 +51,11 @@ $ sbx secret set openai
 ```
 
 See [Credentials](https://docs.docker.com/ai/sandboxes/configuration/credentials/) for more details.
+
+## Model selection
+
+To use Codex with a local model or another inference provider, see
+[Use local and hosted models](https://docs.docker.com/ai/sandboxes/configuration/models/).
 
 ## Configuration
 

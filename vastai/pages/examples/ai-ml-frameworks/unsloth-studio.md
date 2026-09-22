@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [examples/ai-ml-frameworks/unsloth-studio.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/examples/ai-ml-frameworks/unsloth-studio.mdx)
+> Pinned source for Vast.ai main: [examples/ai-ml-frameworks/unsloth-studio.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/examples/ai-ml-frameworks/unsloth-studio.mdx)
 > Canonical documentation: https://docs.vast.ai/examples/ai-ml-frameworks/unsloth-studio
 
 # Unsloth Studio
@@ -58,7 +58,7 @@ On the search results page:
 3. **Check reliability**, look for instances with reliability scores above 95%.
 4. **Rent**, click the **Rent** button on your chosen instance.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/unsloth-studio/template-search.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/unsloth-studio/template-search.png)
 
 The instance takes 1-3 minutes to pull the Docker image and start. Monitor progress on your [Instances page](https://cloud.vast.ai/instances/).
 
@@ -66,15 +66,15 @@ The instance takes 1-3 minutes to pull the Docker image and start. Monitor progr
 
 Once the instance shows **Running** status, click the **Open** button on your instance.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/unsloth-studio/open-button.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/unsloth-studio/open-button.png)
 
 This opens the applications portal. Click **Launch Application** under **Unsloth Studio**.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/unsloth-studio/applications-portal.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/unsloth-studio/applications-portal.png)
 
 On first launch, Studio asks you to set a password for your account. This is stored only on the instance and not sent anywhere.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/unsloth-studio/account-setup.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/unsloth-studio/account-setup.png)
 
 ## Running Models
 
@@ -95,7 +95,7 @@ Studio supports models across four categories:
 
 For gated models (Llama, Gemma), enter your Hugging Face access token when prompted. Studio also auto-detects models already cached on the instance.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/unsloth-studio/model-selector.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/unsloth-studio/model-selector.png)
 
 > **Note**
 >
@@ -110,13 +110,13 @@ Once a model loads, use the built-in chat interface to interact with it. Studio 
 - **Web search**, models can search the web and cite sources
 - **Auto-tuned parameters**, Studio adjusts temperature, top-p, and top-k automatically
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/unsloth-studio/chat-interface.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/unsloth-studio/chat-interface.png)
 
 ### Model Arena
 
 Compare two models side by side using Model Arena. This sends the same prompt to both models simultaneously, useful for comparing a base model against a fine-tuned version, or evaluating two different models for your use case.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/unsloth-studio/model-arena.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/unsloth-studio/model-arena.png)
 
 ## Fine-Tuning a Model
 
@@ -160,7 +160,7 @@ Studio provides sensible defaults for training parameters. Key settings to be aw
 - **Context length**: 2048 (increase for longer documents, at the cost of more VRAM)
 - **LoRA rank**: 16 (higher values give more capacity but use more VRAM)
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/unsloth-studio/training-config.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/unsloth-studio/training-config.png)
 
 ### Train
 
@@ -168,7 +168,7 @@ Click **Start Training** to begin. Studio shows real-time monitoring including l
 
 Training time depends on model size, dataset size, and GPU. A small model like Qwen3.5-2B can complete a short training run in under 3 minutes on an RTX 4090.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/unsloth-studio/training-complete.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/unsloth-studio/training-complete.png)
 
 ### Evaluate
 
@@ -180,7 +180,7 @@ If the fine-tuned model does not meet your quality expectations, consider adding
 
 After training, export the fine-tuned model in a format that matches your deployment target. Click the **Export** tab in the top navigation to open the export configuration.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/unsloth-studio/export-model.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/unsloth-studio/export-model.png)
 
 | Format               | Use Case                                                         |
 | -------------------- | ---------------------------------------------------------------- |

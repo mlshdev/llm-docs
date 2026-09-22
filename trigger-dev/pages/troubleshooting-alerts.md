@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.3: [docs/troubleshooting-alerts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/troubleshooting-alerts.mdx)
+> Pinned source for Trigger.dev v4.6.4: [docs/troubleshooting-alerts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/troubleshooting-alerts.mdx)
 > Canonical documentation: https://trigger.dev/docs/troubleshooting-alerts
 
 # Alerts
@@ -14,17 +14,17 @@ We support receiving alerts for the following events:
 ## How to setup alerts
 
 1. Click on "Alerts" in the left hand side menu, then click on "New alert" to open the new alert modal.
-   ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/images/troubleshooting-alerts-blank.png)
+   ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/images/troubleshooting-alerts-blank.png)
 2. Choose to be notified by email, Slack notification or webhook whenever:
 
    - a run fails
    - a deployment fails
    - a deployment succeeds
 
-     ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/images/troubleshooting-alerts-modal.png)
+     ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/images/troubleshooting-alerts-modal.png)
 3. Click on the triple dot menu on the right side of the table row and select "Disable" or "Delete".
 
-   ![Disable and delete alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/images/troubleshooting-alerts-disable-delete.png)
+   ![Disable and delete alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/images/troubleshooting-alerts-disable-delete.png)
 
 ## Alert webhooks
 

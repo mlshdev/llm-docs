@@ -8,9 +8,9 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-18T14:19:00Z",
-  "documentationDigest": "f47c272dbeecd102fe148462e7706bda8f2631e0bfc09092226d409dc8f6715c",
-  "sourceCommit": "7d6c8bf81ab88fc6f5c4893b6259864d29de574c",
+  "sourceCommittedAt": "2026-09-22T16:43:14Z",
+  "documentationDigest": "0db1386b9b4cc4613a7282d21ef4e5b2416295b6c41ef6d68306cc78dce781f8",
+  "sourceCommit": "c69ce0fd3851270bba5473502268ff7661887b2a",
   "documentCount": 1626,
   "indexComplete": true,
   "corpusVolumes": [
@@ -18,36 +18,36 @@
       "name": "llms-full.txt",
       "byteLength": 687,
       "documentCount": 0,
-      "sha256": "75e095ddaa4c4768fadaae24617fbe63d8e3c4090246629fe0fa6fc1075a597b"
+      "sha256": "b30a15a56f23df67c60962bcaf8f36e28a1ee6aabc4b745bb83037a731fb93bb"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8372092,
-      "documentCount": 784,
-      "sha256": "40db9811a326e350c4062b9a4d365a34195c98a56ab6c30b598e757ccb92a524"
+      "byteLength": 8371219,
+      "documentCount": 783,
+      "sha256": "4014fb8f3b997f9b5d270a7bf2b3e053467eb0f15436cb5ebe68d56e5b650f7e"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 8317677,
-      "documentCount": 198,
-      "sha256": "62e4a5b9344c0959c86f00f53a2f6478b93373c71d3d4ecd2b72b2c49b475f63"
+      "byteLength": 8232940,
+      "documentCount": 197,
+      "sha256": "59768888c51cc6cabae5f0336f9878c10e0ffc42a66eb992b2a92611145f5989"
     },
     {
       "name": "llms-full.003.txt",
-      "byteLength": 6514140,
-      "documentCount": 644,
-      "sha256": "7e5d07342f5b08bfe13cdc162eb84f61a689a4273b60781e59cad1047f683cfe"
+      "byteLength": 6518620,
+      "documentCount": 646,
+      "sha256": "8e1c1e535b59010c2ca67e7f96d729917e0690756fc03798e3edffd4241fb52a"
     }
   ],
-  "outputDigest": "c8883b09d7607d47a70408121def7293fc8a12f362e8e42c19981ae1cfb4c0f6",
+  "outputDigest": "93477e6198ef7a4c5b863c035f3fad3a3ea2d068d25a67443f6a33f0e6a30042",
   "quarantined": [
     {
-      "sourcePath": "data/cli/engine/docker_inspect.yaml",
-      "reason": "Unresolved Docker template expression in data/cli/engine/docker_inspect.yaml"
+      "sourcePath": "content/manuals/ai/sandboxes/architecture.md",
+      "reason": "Unsupported Docker shortcode interactive-diagram in content/manuals/ai/sandboxes/architecture.md"
     },
     {
-      "sourcePath": "data/cli/engine/docker_plugin_set.yaml",
-      "reason": "Unresolved Docker template expression in data/cli/engine/docker_plugin_set.yaml"
+      "sourcePath": "content/manuals/ai/sandboxes/security/_index.md",
+      "reason": "Unsupported Docker shortcode interactive-diagram in content/manuals/ai/sandboxes/security/_index.md"
     }
   ],
   "notes": [

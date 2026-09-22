@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/result_types/main_result.rst](https://github.com/searxng/searxng/blob/c0042add30116a315ebacfcb84781bb3e1e4e77e/docs/dev/result_types/main_result.rst)
+> Pinned source for SearXNG master: [docs/dev/result_types/main_result.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/main_result.rst)
 
 <a id="main-search-results"></a>
 
@@ -16,13 +16,13 @@ following types have been implemented so far ..
 - [main/paper](https://docs.searxng.org/main/paper.html)
 - [main/file](https://docs.searxng.org/main/file.html)
 - [main/image](https://docs.searxng.org/main/image.html)
+- [main/video](https://docs.searxng.org/main/video.html)
 
 The LegacyResult is used internally for the results that
 have not yet been typed.  The templates can be used as orientation until the
 final typing is complete.
 
 - [template default](https://docs.searxng.org/dev/templates.html#template-default) / `Result`
-- [template videos](https://docs.searxng.org/dev/templates.html#template-videos)
 - [template torrent](https://docs.searxng.org/dev/templates.html#template-torrent)
 - [template map](https://docs.searxng.org/dev/templates.html#template-map)
 - [template packages](https://docs.searxng.org/dev/templates.html#template-packages)

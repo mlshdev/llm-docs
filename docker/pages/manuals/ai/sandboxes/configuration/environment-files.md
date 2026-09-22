@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/environment-files.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/manuals/ai/sandboxes/configuration/environment-files.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/environment-files.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/configuration/environment-files.md)
 
 A sandbox environment file captures the setup for a project in a
 `sbxenv.yaml` file. Share the file with project contributors so they use the

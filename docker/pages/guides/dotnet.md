@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/dotnet.md](https://github.com/docker/docs/blob/7d6c8bf81ab88fc6f5c4893b6259864d29de574c/content/guides/dotnet.md)
+> Pinned source for Docker main: [content/guides/dotnet.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/guides/dotnet.md)
 
 The .NET getting started guide teaches you how to create a containerized .NET application using Docker. In this guide, you'll learn how to:
 
