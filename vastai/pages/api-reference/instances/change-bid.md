@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/instances/bid_price/{id}](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/api-reference/openapi.yaml%23put%20/api/v0/instances/bid_price/%7Bid%7D)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/instances/bid_price/{id}](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/api-reference/openapi.yaml%23put%20/api/v0/instances/bid_price/%7Bid%7D)
 > Canonical documentation: https://docs.vast.ai/api-reference/instances/change-bid
 
 # change bid

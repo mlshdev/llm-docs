@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/fastembed/fastembed-semantic-search.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/fastembed/fastembed-semantic-search.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/fastembed/fastembed-semantic-search.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/fastembed/fastembed-semantic-search.md)
 > Canonical documentation: https://qdrant.tech/documentation/fastembed/fastembed-semantic-search/
 
 # Using FastEmbed with Qdrant for Vector Search

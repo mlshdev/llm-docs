@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-rbac/role-management.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/cloud-rbac/role-management.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-rbac/role-management.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/cloud-rbac/role-management.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud-rbac/role-management/
 
 # Role Management
@@ -17,13 +17,13 @@ There are three types: 
 - The **Admin Role**  has all available permissions, except for account write permissions.
 - The **Owner Role** has all available permissions assigned, including account write permissions. There can only be one Owner per account currently.
 
-![image.png](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/role-based-access-control/built-in-roles.png)
+![image.png](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/role-based-access-control/built-in-roles.png)
 
 ## Custom Roles
 
 An authorized user can create their own custom roles with specific sets of permissions, giving them more control over who has what access to which resource.
 
-![image.png](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/role-based-access-control/custom-roles.png)
+![image.png](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/role-based-access-control/custom-roles.png)
 
 ### Creating a Custom Role
 
@@ -34,13 +34,13 @@ To create a new custom role, click on the **Add** button at the top-right corn
 
 Once created, the new role will appear under the **Custom Roles** section in the navigation.
 
-![image.png](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/role-based-access-control/create-custom-role.png)
+![image.png](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/role-based-access-control/create-custom-role.png)
 
 ### Editing a Custom Role
 
 To update a specific role's permissions, select it from the list and click on the **Permissions** tab. Here, you'll find logically grouped options that are easy to identify and edit as needed. Once you've made your changes, save them to apply the updated permissions to the role.
 
-![image.png](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/role-based-access-control/update-permission.png)
+![image.png](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/role-based-access-control/update-permission.png)
 
 ### Renaming, Deleting and Duplicating a Custom Role
 
@@ -50,4 +50,4 @@ Each custom role can be renamed, duplicated or deleted via the action buttons lo
 - **Delete**: Triggers a confirmation prompt to confirm the deletion. Once confirmed, this action is irreversible. Any users assigned to the deleted role will automatically be unassigned from it.
 - **Duplicate:** Opens a dialog asking for a confirmation and also allowing users to view the list of permissions that will be assigned to the duplicated role
 
-![image.png](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/role-based-access-control/role-actions.png)
+![image.png](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/role-based-access-control/role-actions.png)

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/vscode.md](https://github.com/docker/docs/blob/71fa06427156ab4e87b88cdc9983d2efea8b7519/content/manuals/ai/sandboxes/integrations/vscode.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/vscode.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/integrations/vscode.md)
 
 # Connect VS Code to a sandbox
 

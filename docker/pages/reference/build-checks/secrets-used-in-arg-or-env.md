@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/secrets-used-in-arg-or-env.md](https://github.com/docker/docs/blob/71fa06427156ab4e87b88cdc9983d2efea8b7519/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/secrets-used-in-arg-or-env.md)
+> Pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/secrets-used-in-arg-or-env.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/secrets-used-in-arg-or-env.md)
 
 # SecretsUsedInArgOrEnv
 

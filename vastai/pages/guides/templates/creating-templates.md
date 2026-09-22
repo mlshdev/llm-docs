@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/templates/creating-templates.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/guides/templates/creating-templates.mdx)
+> Pinned source for Vast.ai main: [guides/templates/creating-templates.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/guides/templates/creating-templates.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/templates/creating-templates
 
 # Creating Templates
@@ -45,7 +45,7 @@ Let's create a simple template together. We'll edit the NVIDIA CUDA template fro
 2. Find the "NVIDIA CUDA" template (or any recommended template)
 3. Click the pencil icon to edit
 
-![Template editor showing Config tab](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-templates-5.webp)
+![Template editor showing Config tab](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/console-templates-5.webp)
 
 You'll see two tabs: `Config` and `ReadMe`. Stay on the Config tab.
 
@@ -107,7 +107,7 @@ Scroll to the bottom and click one of the save buttons:
 - **Create** - Saves the template to "My Templates" for later use
 - **Create & Use** - Saves and immediately takes you to the offers page to rent an instance
 
-![Save buttons](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/console-templates-15.webp)
+![Save buttons](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/console-templates-15.webp)
 
 Congratulations! You've created your first template.
 

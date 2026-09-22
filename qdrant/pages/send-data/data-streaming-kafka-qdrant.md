@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/send-data/data-streaming-kafka-qdrant.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/send-data/data-streaming-kafka-qdrant.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/send-data/data-streaming-kafka-qdrant.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/send-data/data-streaming-kafka-qdrant.md)
 > Canonical documentation: https://qdrant.tech/documentation/send-data/data-streaming-kafka-qdrant/
 
 # Stream Real-Time Data into Qdrant with Kafka and Confluent
@@ -12,7 +12,7 @@ This guide will walk you through the detailed steps of installing and setting up
 
 In this example, original data will be sourced from Azure Blob Storage and MongoDB.
 
-![1.webp](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-streaming-kafka-qdrant/1.webp)
+![1.webp](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/data-streaming-kafka-qdrant/1.webp)
 
 Figure 1: [Real time Change Data Capture (CDC)](https://www.confluent.io/learn/change-data-capture/) with Kafka and Qdrant.
 
@@ -94,7 +94,7 @@ To install the Qdrant Kafka connector using [Confluent Hub](https://www.confluen
 
 This command downloads and installs the specified connector directly from Confluent Hub into your Confluent Platform or Kafka Connect environment. The installation process ensures that all necessary dependencies are handled automatically, allowing for a seamless integration of the Qdrant Kafka connector with your existing setup. Once installed, the connector can be configured and managed using the Confluent Control Center or the Kafka Connect REST API, enabling efficient data streaming between Kafka and Qdrant without the need for intricate manual setup.
 
-![2.webp](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-streaming-kafka-qdrant/2.webp)
+![2.webp](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/data-streaming-kafka-qdrant/2.webp)
 
 *Figure 2: Local Confluent platform showing the Source and Sink connectors after installation.*
 
@@ -250,17 +250,17 @@ def create_qdrant_collection(collection_name: str, embed_model: str):
 
 Before we run the application, below is the state of MongoDB and Qdrant databases.
 
-![3.webp](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-streaming-kafka-qdrant/3.webp)
+![3.webp](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/data-streaming-kafka-qdrant/3.webp)
 
 Figure 3: Initial state: no collection named `test` & `no data` in the `docs` collection of MongodDB.
 
 Once you run the code the data goes into Mongodb and the CDC gets triggered and eventually Qdrant will receive this data.
 
-![4.webp](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-streaming-kafka-qdrant/4.webp)
+![4.webp](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/data-streaming-kafka-qdrant/4.webp)
 
 Figure 4: The test Qdrant collection is created automatically.
 
-![5.webp](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/data-streaming-kafka-qdrant/5.webp)
+![5.webp](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/data-streaming-kafka-qdrant/5.webp)
 
 Figure 5: Data is inserted into both MongoDB and Qdrant.
 

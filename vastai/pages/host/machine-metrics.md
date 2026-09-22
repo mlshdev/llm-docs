@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/machine-metrics.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/host/machine-metrics.mdx)
+> Pinned source for Vast.ai main: [host/machine-metrics.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/host/machine-metrics.mdx)
 > Canonical documentation: https://docs.vast.ai/host/machine-metrics
 
 # Machine Metrics
@@ -26,9 +26,9 @@ Open [Machine Metrics](https://cloud.vast.ai/host/machine-metrics/) in the Host 
 
 You can also open a specific machine from **Host → Machines** with the **View metrics** option on the machine card.
 
-![Machine Metrics time-series chart with metric toggles above it](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/machine-metrics-overview-light.webp)
+![Machine Metrics time-series chart with metric toggles above it](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/machine-metrics-overview-light.webp)
 
-![Machine Metrics time-series chart with metric toggles above it](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/machine-metrics-overview-dark.webp)
+![Machine Metrics time-series chart with metric toggles above it](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/machine-metrics-overview-dark.webp)
 
 > **Note**
 >
@@ -94,9 +94,9 @@ Expand the tab with the arrow on its right to chart each device separately. This
 | Disk    | Utilization, Read and Write IOPS, Read and Write Speed                                                 | Utilization is the share of time the disk had a request in flight. IOPS counts operations per second, speed counts bytes                                                                                                                      |
 | Network | RX and TX throughput, RX and TX Packets, RX and TX Errors, RX and TX Drops                             | RX is traffic in, TX is traffic out. Errors and drops are counted per sample rather than accumulated, so a healthy interface reads a flat zero; anything sitting above it points at a cable, NIC, or upstream problem                         |
 
-![Machine Metrics GPU tab showing eight GPUs, each with utilization, memory, temperature, power, and clock metrics](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/machine-metrics-gpu-grid-light.webp)
+![Machine Metrics GPU tab showing eight GPUs, each with utilization, memory, temperature, power, and clock metrics](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/machine-metrics-gpu-grid-light.webp)
 
-![Machine Metrics GPU tab showing eight GPUs, each with utilization, memory, temperature, power, and clock metrics](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/machine-metrics-gpu-grid-dark.webp)
+![Machine Metrics GPU tab showing eight GPUs, each with utilization, memory, temperature, power, and clock metrics](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/machine-metrics-gpu-grid-dark.webp)
 
 ### Reading the chart
 
@@ -124,9 +124,9 @@ Below the chart, a timeline shows container activity for the time range you are 
 | running (vm)           | The same, in purple, for a container running as a VM                                                              |
 | intermittent (zoom in) | A striped bar covering several runs and the gaps between them, too close together to draw separately at this zoom |
 
-![Container timeline showing several short runs at different times and one container whose run ends before its life line does](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/machine-metrics-containers-light.webp)
+![Container timeline showing several short runs at different times and one container whose run ends before its life line does](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/machine-metrics-containers-light.webp)
 
-![Container timeline showing several short runs at different times and one container whose run ends before its life line does](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/machine-metrics-containers-dark.webp)
+![Container timeline showing several short runs at different times and one container whose run ends before its life line does](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/machine-metrics-containers-dark.webp)
 
 Hover a row for the container's status, last reported state, first and last seen times, how long it existed, and its run count and total running time. Click a run to zoom the chart to it and line the rental up with the GPU, memory, and network activity behind it.
 

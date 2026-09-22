@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/improve-search/retrieval-relevance.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/improve-search/retrieval-relevance.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/improve-search/retrieval-relevance.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/improve-search/retrieval-relevance.md)
 > Canonical documentation: https://qdrant.tech/documentation/improve-search/retrieval-relevance/
 
 # Measuring Retrieval Relevance

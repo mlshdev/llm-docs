@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/machines/create_asks](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/api-reference/openapi.yaml%23put%20/api/v0/machines/create_asks)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/machines/create_asks](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/api-reference/openapi.yaml%23put%20/api/v0/machines/create_asks)
 > Canonical documentation: https://docs.vast.ai/api-reference/machines/list-machine
 
 # list machine

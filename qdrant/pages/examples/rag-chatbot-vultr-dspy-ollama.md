@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/rag-chatbot-vultr-dspy-ollama.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/examples/rag-chatbot-vultr-dspy-ollama.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/rag-chatbot-vultr-dspy-ollama.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/examples/rag-chatbot-vultr-dspy-ollama.md)
 > Canonical documentation: https://qdrant.tech/documentation/examples/rag-chatbot-vultr-dspy-ollama/
 
 # Private RAG Information Extraction Engine
@@ -21,7 +21,7 @@ this setup as a knowledge base providing the relevant pieces of documents for a 
 Hybrid Cloud mode on Vultr. The last missing piece, the DSPy application will be also running in the same environment.
 If you work in a regulated industry, or just need to keep your data private, this tutorial is for you.
 
-![Architecture diagram](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/information-extraction-ollama-vultr/architecture-diagram.png)
+![Architecture diagram](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/information-extraction-ollama-vultr/architecture-diagram.png)
 
 ## Deploying Qdrant Hybrid Cloud on Vultr
 
@@ -109,7 +109,7 @@ documents = [
 We'll be able to ask general questions, for example, about topics we are interested in or events happening in a specific
 location, but expect the results to be returned in a structured format.
 
-![An example of extracted information](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/information-extraction-ollama-vultr/extracted-information.png)
+![An example of extracted information](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/information-extraction-ollama-vultr/extracted-information.png)
 
 Indexing in Qdrant is a single call if we have the documents defined:
 

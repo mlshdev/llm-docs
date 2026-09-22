@@ -1,6 +1,6 @@
 # Qdrant master
 
-> Documentation generated from the latest `master` branch commit of [qdrant/landing_page](https://github.com/qdrant/landing_page) and pinned to immutable source commit `3b58061329eedce2091c9dd380b8c47fcaa1cb64`.
+> Documentation generated from the latest `master` branch commit of [qdrant/landing_page](https://github.com/qdrant/landing_page) and pinned to immutable source commit `32eb334faf299b1cbfe0bddc7cd79e10b77012c4`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Qdrant master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -8,6 +8,7 @@
 - Hugo code-snippet and include shortcodes are expanded from pinned headless Markdown, while figures, accordions, and interactive islands are reduced to their authored static Markdown content without executing Hugo or JavaScript.
 - Published documentation links resolve to https://qdrant.tech; repository assets resolve to immutable raw URLs at the pinned commit.
 - The upstream documentation repository declares no license, so LICENSE.upstream records a copyright notice rather than a license grant.
+- Quarantined sources (6): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
 
 ## Documentation
 
@@ -23,7 +24,6 @@
 - [Snapshots](pages/snapshots.md): Back up and restore Qdrant collections with snapshots for archiving, disaster recovery, and replicating deployments. (20785 bytes)
 - [Upgrades](pages/upgrades.md): Upgrade Qdrant safely on Cloud, Kubernetes, or Docker with rolling restarts, replica-aware planning, and SDK compatibility checks. (2421 bytes)
 - [Security](pages/security.md): Harden self-hosted Qdrant with API keys, network binding, TLS encryption, and JWT-based access control. (35867 bytes)
-- [Production Checklist](pages/production-checklist.md): Run through the Qdrant production checklist — sharding, replication, quantization, load balancing, and observability before launch. (8737 bytes)
 - [Troubleshooting](pages/common-errors.md): Diagnose and resolve common Qdrant errors, from open-file limits and quota rejections to incompatible file systems and corrupted collection metadata. (6292 bytes)
 - [Getting Started](pages/cloud-getting-started.md): Get started with Qdrant Managed Cloud: prepare access, size your cluster, deploy, and prepare a workload for production. (2639 bytes)
 - [Account Setup](pages/cloud-account-setup.md): Set up your Qdrant Cloud account: register, switch between accounts, invite teammates, and manage account settings and ownership. (6699 bytes)
@@ -35,9 +35,8 @@
 - [Qdrant Cloud CLI](pages/cloud-cli.md): Manage Qdrant Cloud from your terminal with qcloud — create clusters, rotate keys, and switch between accounts and environments. (3070 bytes)
 - [Billing & Payments](pages/cloud-pricing-payments.md): Understand Qdrant Cloud pricing based on CPU, memory, and storage, and pay by credit card or AWS, GCP, or Azure Marketplace. (5432 bytes)
 - [Premium Tier](pages/cloud-premium.md): Upgrade to Qdrant Cloud Premium for 24/7 support, higher uptime SLAs, SSO, VPC private links, and customer-managed encryption keys. (1615 bytes)
-- [Agent Skills](pages/skills.md): Qdrant agent skills encode solutions architect knowledge for AI coding assistants, helping them diagnose vector search problems, recommend the right configuration, and navigate to the exact documentation without install… (5785 bytes)
 - [Support](pages/support.md): Open Qdrant Cloud support tickets through the JSM portal with severity levels and request types matched to your issue. (3458 bytes)
-- [Overview](pages/tutorials-lp-overview.md): Browse Qdrant tutorials covering basics, search engineering, retrieval quality, operations, migrations, and integrations. (12164 bytes)
+- [Overview](pages/tutorials-lp-overview.md): Browse Qdrant tutorials covering basics, search engineering, retrieval quality, operations, migrations, and integrations. (12466 bytes)
 - [Practice Datasets](pages/datasets.md): Skip the embedding step with ready-made Qdrant snapshots of public datasets you can import and explore right away. (10595 bytes)
 
 ## Data Management
@@ -280,7 +279,6 @@
 - [Points](pages/manage-data/points.md): Insert, update, and delete points in Qdrant — the core records that pair a vector with an optional payload. (84250 bytes)
 - [Vectors](pages/manage-data/vectors.md): Configure dense, sparse, and multivector representations in Qdrant to model text, images, and multimodal data. (61624 bytes)
 - [Payload](pages/manage-data/payload.md): Attach JSON payloads to Qdrant points to store metadata alongside vectors and filter or rank results on it. (35826 bytes)
-- [Collections](pages/manage-data/collections.md): Create and configure Qdrant collections — named sets of points sharing vector dimensions and a distance metric. (66080 bytes)
 - [Storage](pages/manage-data/storage.md): Tune how Qdrant stores vectors and payloads across segments, with options for in-memory, mmap, and on-disk storage. (14718 bytes)
 - [Indexing](pages/manage-data/indexing.md): Combine HNSW vector indexes with payload indexes in Qdrant for fast filtered search across structured fields. (83735 bytes)
 - [Quantization](pages/manage-data/quantization.md): Compress vectors with scalar, product, or binary quantization to shrink memory use and speed up Qdrant search. (73049 bytes)
@@ -323,23 +321,6 @@
 - [Usage Statistics](pages/ops-configuration/usage-statistics.md): Understand and control the anonymized usage statistics collected by the Qdrant open-source container, including how to opt out. (4119 bytes)
 - [Running with GPU](pages/ops-configuration/running-with-GPU.md): Accelerate Qdrant vector indexing with GPU support using dedicated Docker images for NVIDIA and AMD hardware via the Vulkan API. (7781 bytes)
 - [Configuration](pages/ops-configuration/index.md): Configure and administer Qdrant with guides on config files, environment variables, runtime administration, telemetry, and GPU support. (1681 bytes)
-
-## Monitoring & Telemetry
-
-- [Monitoring & Telemetry](pages/ops-monitoring/monitoring.md): Expose Qdrant metrics in Prometheus and OpenMetrics format and integrate with Grafana for cluster, collection, and node-level dashboards. (16991 bytes)
-- [Memory Usage](pages/ops-monitoring/memory-usage.md): Inspect disk space, RAM, and OS page cache usage for a Qdrant collection across the cluster, broken down by component. (3750 bytes)
-- [Slow Request Log](pages/ops-monitoring/slow-request-log.md): Identify the slowest queries in your Qdrant deployment with the built-in slow request log, which records the slowest unique operations on each node since startup. (3384 bytes)
-- [Managed Cloud Prometheus Monitoring](pages/ops-monitoring/managed-cloud-prometheus.md): Monitor Qdrant Managed Cloud clusters with Prometheus and Grafana running in your own Kubernetes environment for full visibility. (3387 bytes)
-- [Self-Hosted Prometheus Monitoring](pages/ops-monitoring/hybrid-cloud-prometheus.md): Monitor Qdrant Hybrid Cloud and Private Cloud deployments by deploying Prometheus and Grafana into your Kubernetes cluster. (3817 bytes)
-- [Monitoring with Datadog](pages/ops-monitoring/hybrid-cloud-datadog.md): Monitor Qdrant Hybrid Cloud and Private Cloud deployments by setting up the Datadog Operator and Agent in your Kubernetes cluster. (4394 bytes)
-- [Monitoring & Telemetry](pages/ops-monitoring/index.md): Monitor Qdrant deployments with built-in metrics endpoints, Prometheus and Grafana integrations, and built-in tools for diagnosing memory usage and slow requests. (1893 bytes)
-
-## Optimization
-
-- [Optimize Performance](pages/ops-optimization/optimize.md): Tune Qdrant performance with quantization, on-disk storage, and HNSW parameters to balance speed, precision, and memory usage. (36744 bytes)
-- [Optimizer](pages/ops-optimization/optimizer.md): Understand how Qdrant's background optimizer rebuilds segments through vacuum, merge, and indexing stages to maintain efficient storage. (17925 bytes)
-- [Read-Write Contention](pages/ops-optimization/read-write-contention.md): Tune Qdrant under continuous ingestion to reduce optimizer contention and keep query latency low. (24119 bytes)
-- [Optimization](pages/ops-optimization/index.md): Tune Qdrant for high-speed search, high precision, or low memory usage, and troubleshoot read-write contention under continuous write load. (1081 bytes)
 
 ## Overview
 
@@ -395,6 +376,19 @@
 - [Query Decomposition for Multi-Hop Questions](pages/improve-search/query-decomposition.md): Answer multi-hop questions by retrieving in steps: an LLM asks each follow-up sub-question, then fuse the per-hop results with RRF. (6056 bytes)
 - [Improve Search](pages/improve-search/index.md): Embedding choice, chunking strategies, and retrieval evaluation using Python ecosystem tools. (1350 bytes)
 
+## Monitoring & Telemetry
+
+- [Memory Usage](pages/ops-monitoring/memory-usage.md): Inspect disk space, RAM, and OS page cache usage for a Qdrant collection across the cluster, broken down by component. (3750 bytes)
+- [Slow Request Log](pages/ops-monitoring/slow-request-log.md): Identify the slowest queries in your Qdrant deployment with the built-in slow request log, which records the slowest unique operations on each node since startup. (3384 bytes)
+- [Managed Cloud Prometheus Monitoring](pages/ops-monitoring/managed-cloud-prometheus.md): Monitor Qdrant Managed Cloud clusters with Prometheus and Grafana running in your own Kubernetes environment for full visibility. (3387 bytes)
+- [Self-Hosted Prometheus Monitoring](pages/ops-monitoring/hybrid-cloud-prometheus.md): Monitor Qdrant Hybrid Cloud and Private Cloud deployments by deploying Prometheus and Grafana into your Kubernetes cluster. (3817 bytes)
+- [Monitoring with Datadog](pages/ops-monitoring/hybrid-cloud-datadog.md): Monitor Qdrant Hybrid Cloud and Private Cloud deployments by setting up the Datadog Operator and Agent in your Kubernetes cluster. (4394 bytes)
+- [Monitoring & Telemetry](pages/ops-monitoring/index.md): Monitor Qdrant deployments with built-in metrics endpoints, Prometheus and Grafana integrations, and built-in tools for diagnosing memory usage and slow requests. (1893 bytes)
+
+## Agentic Tools
+
+- [Agent Skills](pages/agentic-tools/skills.md): Qdrant agent skills encode solutions architect knowledge for AI coding assistants, helping them diagnose vector search problems, recommend the right configuration, and navigate to the exact documentation without install… (5785 bytes)
+
 ## FastEmbed
 
 - [Quickstart](pages/fastembed/fastembed-quickstart.md): Get started with FastEmbed: install the library, load a default text embedding model, and generate vectors from sample documents in minutes. (2264 bytes)
@@ -416,9 +410,16 @@
 - [Matryoshka Models](pages/inference/matryoshka-models.md): Matryoshka Representation Learning (MRL) is a technique used to train embedding models to produce vectors that can be reduced in size with minimal loss of information. On Qdrant Cloud, for supported models, you can spec… (15309 bytes)
 - [Inference](pages/inference/index.md): Generate vector embeddings inside Qdrant — server-side inference removes the need to run separate embedding infrastructure. (3921 bytes)
 
+## Optimization
+
+- [Optimizer](pages/ops-optimization/optimizer.md): Understand how Qdrant's background optimizer rebuilds segments through vacuum, merge, and indexing stages to maintain efficient storage. (17925 bytes)
+- [Read-Write Contention](pages/ops-optimization/read-write-contention.md): Tune Qdrant under continuous ingestion to reduce optimizer contention and keep query latency low. (24119 bytes)
+- [Optimization](pages/ops-optimization/index.md): Tune Qdrant for high-speed search, high precision, or low memory usage, and troubleshoot read-write contention under continuous write load. (1081 bytes)
+
 ## Operations & Scale
 
 - [Snapshots](pages/tutorials-operations/create-snapshot.md): Back up and restore Qdrant collections with snapshots across single-node and distributed multi-node clusters. (11194 bytes)
+- [Scaling and Monitoring Hybrid Cloud](pages/tutorials-operations/scaling-and-monitoring-pods.md): Scaling a Qdrant cluster on Hybrid Cloud looks like a Kubernetes problem from the outside: you have a pod, and you want it to have more CPU, memory, or disk. In practice, the Operator owns those numbers, and the support… (7466 bytes)
 - [Data Migration](pages/tutorials-operations/migration.md): Migrate vector data into Qdrant from Pinecone, Weaviate, Chroma, or other Qdrant clusters using the Qdrant Migration Tool. (4321 bytes)
 - [Migrate to a New Embedding Model](pages/tutorials-operations/embedding-model-migration.md): Migrate a Qdrant collection to a new embedding model with zero downtime using a blue-green dual-collection strategy. (50134 bytes)
 - [Incremental Embedding Updates](pages/tutorials-operations/incremental-embedding-updates.md): Sync embeddings with raw text data that changes over time. (69778 bytes)
@@ -426,9 +427,10 @@
 - [Blue-Green Cluster Deployment](pages/tutorials-operations/blue-green-deployment.md): Deploy changes to Qdrant with zero production risk using a blue-green cluster strategy: build and test on a new cluster, then switch traffic over. (9111 bytes)
 - [Time-Based Sharding](pages/tutorials-operations/time-based-sharding.md): Implement time-based sharding in Qdrant to route fast-moving data by timestamp and prune old shards without expensive re-indexing. (44936 bytes)
 - [Large-Scale Search](pages/tutorials-operations/large-scale-search.md): Index and search hundreds of millions of vectors in Qdrant cost-efficiently with minimal hardware and tuned configuration. (17190 bytes)
+- [Securing and Exposing a Hybrid Cloud Cluster](pages/tutorials-operations/secure-and-expose-hybrid-cloud.md): Authentication and TLS management for Qdrant Hybrid Cloud clusters (10773 bytes)
 - [GPU-Accelerated HNSW Indexing](pages/tutorials-operations/gpu-accelerated-hnsw-indexing.md): Speed up HNSW index builds with GPU acceleration on Qdrant Cloud, and measure the effect on indexing time, query latency, and cost. (23096 bytes)
 - [Secure a Self-Hosted Qdrant Instance](pages/tutorials-operations/secure-qdrant.md): Harden a self-hosted Qdrant deployment with TLS, an Admin API key, a Read-Only key, and Granular Access Control. (23462 bytes)
-- [Operations & Scale](pages/tutorials-operations/index.md): Production operations tutorials for Qdrant: snapshots, migrations, sharding, and large-scale indexing for high-volume workloads. (3700 bytes)
+- [Operations & Scale](pages/tutorials-operations/index.md): Production operations tutorials for Qdrant: snapshots, migrations, sharding, and large-scale indexing for high-volume workloads. (4002 bytes)
 
 ## Tutorials & Examples
 

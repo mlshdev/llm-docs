@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [stable-diffusion.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/stable-diffusion.mdx)
+> Pinned source for Vast.ai main: [stable-diffusion.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/stable-diffusion.mdx)
 > Canonical documentation: https://docs.vast.ai/stable-diffusion
 
 # Stable Diffusion
@@ -17,7 +17,7 @@ The first thing to do if you are new to Vast is to create an account. Then head 
 
 Click on the Change template button from the create page. Then click on the edit button on the Stable Diffusion template. We will need to set a username and password, so it is very important that we *edit* our template to set a username and password first.
 
-![Stablediffusionedit](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/stable-diffusion-stablediffusionedit.webp "Stablediffusionedit")
+![Stablediffusionedit](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/stable-diffusion-stablediffusionedit.webp "Stablediffusionedit")
 
 ## 3) Set your username and password
 
@@ -31,17 +31,17 @@ To set your username and password, go to the beginning of the Docker Options and
 
 as shown below.
 
-![Stablediffusionoptions](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/stable-diffusion-stablediffusionoptions.webp)
+![Stablediffusionoptions](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/stable-diffusion-stablediffusionoptions.webp)
 
 You can also add the variables one by one in the env input
 
-![Stablediffusionenv](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/stable-diffusion-stablediffusionenv.webp)
+![Stablediffusionenv](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/stable-diffusion-stablediffusionenv.webp)
 
 ## 4) Pick a GPU offer
 
 Stable Diffusion can only run on a 1X GPU so select 1X from the filter menu on the top nav. This will then update the interface to show 1X GPU offers. Note that some Stable Diffusion models require large amounts of GPU VRAM. For max settings, you want more GPU RAM. Use the GPU RAM slider in the interface to find offers with over 20GB. We recommend an A6000, A40 or A100 if you want to max the Stable Diffusion settings.
 
-![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads Pyphz4Oz3M2Fz8Kwl7Wo Stable Diffusion Gpu Selection](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/stable-diffusion-stable-diffusion-gpu-selection.webp)
+![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads Pyphz4Oz3M2Fz8Kwl7Wo Stable Diffusion Gpu Selection](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/stable-diffusion-stable-diffusion-gpu-selection.webp)
 
 If available, it is also best to pick a host with the datacenter label, as those machines are more reliable.
 
@@ -61,7 +61,7 @@ And there you go! Please read the [Automatic111 documentation](https://github.co
 
 There are buttons to save and download the artwork, and also to zip it up.
 
-![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads Klcmg0Mgpmu9Bmipwvsv Stable Diffusion Working](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/stable-diffusion-stable-diffusion-working.webp)
+![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads Klcmg0Mgpmu9Bmipwvsv Stable Diffusion Working](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/stable-diffusion-stable-diffusion-working.webp)
 
 ## 6) Upload other model checkpoints
 

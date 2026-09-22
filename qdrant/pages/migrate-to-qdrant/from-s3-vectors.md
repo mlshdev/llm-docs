@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/migrate-to-qdrant/from-s3-vectors.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/migrate-to-qdrant/from-s3-vectors.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/migrate-to-qdrant/from-s3-vectors.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/migrate-to-qdrant/from-s3-vectors.md)
 > Canonical documentation: https://qdrant.tech/documentation/migrate-to-qdrant/from-s3-vectors/
 
 # Migrate from S3 Vectors to Qdrant

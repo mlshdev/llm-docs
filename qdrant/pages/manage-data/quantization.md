@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/manage-data/quantization.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/manage-data/quantization.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/manage-data/quantization.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/manage-data/quantization.md)
 > Canonical documentation: https://qdrant.tech/documentation/manage-data/quantization/
 
 # Quantization
@@ -162,7 +162,7 @@ In order to build 2-bit representation, Qdrant computes values distribution and 
 
 1.5-bit quantization is similar, but it merges buckets of element pairs into binary triplets.
 
-![2-bit quantization](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/docs/2-bit-quantization.png)
+![2-bit quantization](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/2-bit-quantization.png)
 
 *Binary quantization at 1, 1.5 and 2 bits per dimension.*
 
@@ -177,7 +177,7 @@ A particularly interesting combination is binary stored vectors and Scalar quant
 With a binary query, every dimension contributes the same ±1 vote to the score, even where the query component is close to zero and its sign is mostly noise.
 A scalar-quantized query keeps the magnitude of each component, so each dimension's contribution stays close to the exact float32 value.
 
-![Asymmetric quantization](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/docs/asymmetric-quantization.png)
+![Asymmetric quantization](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/asymmetric-quantization.png)
 
 *Asymmetric quantization: a binary stored vector scored against a binary and a scalar-quantized query.*
 

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [examples/serving-infrastructure/sglang-router-vast.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/examples/serving-infrastructure/sglang-router-vast.mdx)
+> Pinned source for Vast.ai main: [examples/serving-infrastructure/sglang-router-vast.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/examples/serving-infrastructure/sglang-router-vast.mdx)
 > Canonical documentation: https://docs.vast.ai/examples/serving-infrastructure/sglang-router-vast
 
 # SGLang Router

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [examples/migrations/salad-to-vast.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/examples/migrations/salad-to-vast.mdx)
+> Pinned source for Vast.ai main: [examples/migrations/salad-to-vast.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/examples/migrations/salad-to-vast.mdx)
 > Canonical documentation: https://docs.vast.ai/examples/migrations/salad-to-vast
 
 # Migrate from Salad Cloud to Vast.ai

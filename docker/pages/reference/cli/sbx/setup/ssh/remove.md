@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_setup_ssh_remove.yaml](https://github.com/docker/docs/blob/71fa06427156ab4e87b88cdc9983d2efea8b7519/data/sbx_cli/sbx_setup_ssh_remove.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_setup_ssh_remove.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_setup_ssh_remove.yaml)
 
 # sbx setup ssh remove
 

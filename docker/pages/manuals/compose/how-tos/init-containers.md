@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/compose/how-tos/init-containers.md](https://github.com/docker/docs/blob/71fa06427156ab4e87b88cdc9983d2efea8b7519/content/manuals/compose/how-tos/init-containers.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/init-containers.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/compose/how-tos/init-containers.md)
 
 # Use init containers in Compose
 

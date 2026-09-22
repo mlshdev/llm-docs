@@ -23,10 +23,10 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "71fa06427156ab4e87b88cdc9983d2efea8b7519",
-      "sourceCommittedAt": "2026-09-21T16:34:52Z",
-      "observedCommit": "71fa06427156ab4e87b88cdc9983d2efea8b7519",
-      "documentationDigest": "c14f89f1b04a90a8fe46b8f14ae03253b774dac7b2e675c40c90993ac55fd53f"
+      "sourceCommit": "c69ce0fd3851270bba5473502268ff7661887b2a",
+      "sourceCommittedAt": "2026-09-22T16:43:14Z",
+      "observedCommit": "c69ce0fd3851270bba5473502268ff7661887b2a",
+      "documentationDigest": "0db1386b9b4cc4613a7282d21ef4e5b2416295b6c41ef6d68306cc78dce781f8"
     },
     "container": {
       "tag": "1.4.1",
@@ -89,7 +89,7 @@
       "branch": "master",
       "sourceCommit": "cdc79d694988afd9e2a028ddf500b1df3176c611",
       "sourceCommittedAt": "2026-09-10T09:00:23Z",
-      "observedCommit": "cdc79d694988afd9e2a028ddf500b1df3176c611",
+      "observedCommit": "7499a8ba58888e718971dec771b1a43bc9e0cd93",
       "documentationDigest": "d81d05c443d5450a9f6a813d99855d154de841524a9c030a6676f006cc6a71b8"
     },
     "yt-dlp": {
@@ -103,7 +103,7 @@
       "branch": "master",
       "sourceCommit": "2e624bed40eb97b46faa98094a0b74d3ececd93d",
       "sourceCommittedAt": "2026-09-17T14:31:25Z",
-      "observedCommit": "df67eb6c2608c5b2f909ed7c42b0a4bd3823f78f",
+      "observedCommit": "2ed96e6fcfc96ca1045155fc52a12f5f7b070417",
       "documentationDigest": "7e3c093014c0a592a7ad137cadb4cd9ae7f94e5eb5404db353bb927957ad9a02"
     },
     "bun": {
@@ -113,10 +113,10 @@
       "sourceCommit": "744846f844374847c902b5e7fd59b4342a51ef99"
     },
     "trigger-dev": {
-      "tag": "v4.6.3",
-      "releaseId": 390655698,
-      "releasePublishedAt": "2026-09-17T11:27:28Z",
-      "sourceCommit": "2d03fee2e3ff368128302ed4c783ba4e32d1cb00"
+      "tag": "v4.6.4",
+      "releaseId": 393972896,
+      "releasePublishedAt": "2026-09-22T17:27:49Z",
+      "sourceCommit": "51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7"
     },
     "aria2": {
       "tag": "release-1.37.0",
@@ -132,10 +132,10 @@
     "vastai": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "b8a3a45b02508573367fc8479ce3a9206139e2a8",
-      "sourceCommittedAt": "2026-09-16T22:20:19Z",
-      "observedCommit": "b8a3a45b02508573367fc8479ce3a9206139e2a8",
-      "documentationDigest": "6eb7965dbd69ae3ed98ea4f468d6bc7206dbd2a58e7ae2090a623a1dd94c27dd"
+      "sourceCommit": "f9a51524095d083230a1da1c2e38e736ded25582",
+      "sourceCommittedAt": "2026-09-22T01:22:41Z",
+      "observedCommit": "f9a51524095d083230a1da1c2e38e736ded25582",
+      "documentationDigest": "1e6d4e3e70f2dc7a5ab922f08534180100802920eda01481ee0df93bfe187f11"
     },
     "runpod": {
       "tag": "main",
@@ -159,10 +159,10 @@
     "qdrant": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "3b58061329eedce2091c9dd380b8c47fcaa1cb64",
-      "sourceCommittedAt": "2026-09-18T12:02:33Z",
-      "observedCommit": "3b58061329eedce2091c9dd380b8c47fcaa1cb64",
-      "documentationDigest": "2b741f44726aedfaabae0f2918180717102ff5f68a515440d4dfbaa10267b979"
+      "sourceCommit": "32eb334faf299b1cbfe0bddc7cd79e10b77012c4",
+      "sourceCommittedAt": "2026-09-22T18:02:02Z",
+      "observedCommit": "32eb334faf299b1cbfe0bddc7cd79e10b77012c4",
+      "documentationDigest": "b8b50cfdd32dde3395f4b717575a5ba419cf24060ca408d4248124d27cc85d10"
     },
     "apple-swift": {
       "tag": "snapshot-5915b24a1311",

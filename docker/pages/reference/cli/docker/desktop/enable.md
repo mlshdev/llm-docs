@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/desktop/docker_desktop_enable.yaml](https://github.com/docker/docs/blob/71fa06427156ab4e87b88cdc9983d2efea8b7519/data/cli/desktop/docker_desktop_enable.yaml)
+> Pinned source for Docker main: [data/cli/desktop/docker_desktop_enable.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/cli/desktop/docker_desktop_enable.yaml)
 
 # docker desktop enable
 

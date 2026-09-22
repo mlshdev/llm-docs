@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [examples/text-generation/nemotron-3-super.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/examples/text-generation/nemotron-3-super.mdx)
+> Pinned source for Vast.ai main: [examples/text-generation/nemotron-3-super.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/examples/text-generation/nemotron-3-super.mdx)
 > Canonical documentation: https://docs.vast.ai/examples/text-generation/nemotron-3-super
 
 # NVIDIA Nemotron 3 Super

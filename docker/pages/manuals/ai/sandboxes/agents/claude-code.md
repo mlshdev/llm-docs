@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/claude-code.md](https://github.com/docker/docs/blob/71fa06427156ab4e87b88cdc9983d2efea8b7519/content/manuals/ai/sandboxes/agents/claude-code.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/claude-code.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/agents/claude-code.md)
 
 # Claude Code
 
@@ -26,7 +26,9 @@ To create a [mountless sandbox](https://docs.docker.com/ai/sandboxes/usage/#choo
 
 ## Authentication
 
-Claude Code requires either an Anthropic API key or a Claude subscription.
+For the default Anthropic models, Claude Code requires either an Anthropic
+API key or a Claude subscription. For other models, see
+[Use a local model](#use-a-local-model).
 
 **API key**: Store your key using
 [stored secrets](https://docs.docker.com/ai/sandboxes/configuration/credentials/#stored-secrets):
@@ -122,44 +124,5 @@ this base.
 
 ## Use a local model
 
-The `--model` flag routes Claude Code's Anthropic API requests to a model
-served on your host. This feature is experimental and isn't supported on
-Windows.
-
-Enable the feature:
-
-```console
-$ sbx settings set platform.allowExperimentalFeatures true
-$ sbx settings set feature.model true
-```
-
-To use the bundled `llmman` model server, pass a GGUF model reference or short
-name:
-
-```console
-$ sbx run --model gemma4 claude
-```
-
-On first use, `sbx` starts `llmman`, pulls the model, and leaves the server
-running on your host. Later sandboxes reuse the server and its model store.
-
-To use an existing Ollama installation instead, set the provider to `ollama`:
-
-```console
-$ sbx run --model gemma4 --provider ollama claude
-```
-
-Ollama must already be installed and running. `sbx` connects to it but doesn't
-start or manage the Ollama process.
-
-You can also change the model for an existing sandbox:
-
-```console
-$ sbx run --name <sandbox-name> --model <model-name>
-```
-
-Changing the model recreates the sandbox container. The workspace and
-kit-owned volumes persist.
-
-To use Docker Model Runner instead, see
-[Run Claude Code in a Docker Sandbox with Docker Model Runner](https://docs.docker.com/guides/claude-code-sandbox-model-runner/).
+For local models, hosted providers, and custom inference endpoints, see
+[Use local and hosted models](https://docs.docker.com/ai/sandboxes/configuration/models/).

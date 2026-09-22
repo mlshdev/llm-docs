@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/hybrid-cloud/hybrid-cloud-cluster-creation.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/hybrid-cloud/hybrid-cloud-cluster-creation.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/hybrid-cloud/hybrid-cloud-cluster-creation.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/hybrid-cloud/hybrid-cloud-cluster-creation.md)
 > Canonical documentation: https://qdrant.tech/documentation/hybrid-cloud/hybrid-cloud-cluster-creation/
 
 # Creating a Qdrant Cluster in Hybrid Cloud
@@ -7,7 +7,7 @@ Once a Hybrid Cloud Environment has been created you can follow the normal proce
 
 Make sure to select your Hybrid Cloud Environment as the target.
 
-![Create Hybrid Cloud Cluster](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/hybrid_cloud_create_cluster.png)
+![Create Hybrid Cloud Cluster](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/hybrid_cloud_create_cluster.png)
 
 In the "Set up Your Storage" section, you can configure:
 
@@ -39,7 +39,7 @@ In Hybrid Cloud the authentication information is provided by Kubernetes secrets
 
 You can configure authentication for your Qdrant clusters in the "Configuration" section of the Qdrant Cluster detail page. There you can configure the Kubernetes secret name and key to be used as an API key and/or read-only API key.
 
-![Hybrid Cloud API Key configuration](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/hybrid_cloud_api_key.png)
+![Hybrid Cloud API Key configuration](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/hybrid_cloud_api_key.png)
 
 One way to create a secret is with kubectl:
 
@@ -98,7 +98,7 @@ You can also expose the database outside the Kubernetes cluster with a `LoadBala
 
 The service type and necessary annotations can be configured in the "Kubernetes Configuration" section during cluster creation, or on the cluster detail page.
 
-![Hybrid Cloud API Key configuration](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/hybrid_cloud_service.png)
+![Hybrid Cloud API Key configuration](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/hybrid_cloud_service.png)
 
 Especially if you create a LoadBalancer Service, you may need to provide annotations for the loadbalancer configuration. Please refer to the documentation of your cloud provider for more details.
 
@@ -170,7 +170,7 @@ If you want to offload TLS at the ingress or loadbancer level, please refer to t
 
 If you want to configure TLS directly in the Qdrant database, you can reference a secret containing the TLS certificate and key in the "Configuration" section of the Qdrant Cluster detail page.
 
-![Hybrid Cloud API Key configuration](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/hybrid_cloud_tls.png)
+![Hybrid Cloud API Key configuration](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/hybrid_cloud_tls.png)
 
 To create such a secret, you can use `kubectl`:
 

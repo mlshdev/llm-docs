@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/users/{user_id}/machine-earnings](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/api-reference/openapi.yaml%23get%20/api/v0/users/%7Buser_id%7D/machine-earnings)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/users/{user_id}/machine-earnings](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/api-reference/openapi.yaml%23get%20/api/v0/users/%7Buser_id%7D/machine-earnings)
 > Canonical documentation: https://docs.vast.ai/api-reference/billing/show-earnings
 
 # show earnings

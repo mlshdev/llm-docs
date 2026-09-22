@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/set-maintenance-window.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/host/set-maintenance-window.mdx)
+> Pinned source for Vast.ai main: [host/set-maintenance-window.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/host/set-maintenance-window.mdx)
 > Canonical documentation: https://docs.vast.ai/host/set-maintenance-window
 
 # Set a Maintenance Window
@@ -29,11 +29,11 @@ when the window arrives.
    machine you want to take down.
 2. Click **Settings** on the machine's card.
 
-   ![Machines page with the Settings button on a machine card circled](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/set-maintenance-window-machines-page-settings.webp)
+   ![Machines page with the Settings button on a machine card circled](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/set-maintenance-window-machines-page-settings.webp)
 3. The settings dialog opens on **Listing Settings**. Switch to **Machine
    Maintenances**.
 
-   ![Machine settings dialog open on Listing Settings with the Machine Maintenances tab circled](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/set-maintenance-window-maintenances-tab.webp)
+   ![Machine settings dialog open on Listing Settings with the Machine Maintenances tab circled](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/set-maintenance-window-maintenances-tab.webp)
 4. Fill in all three fields:
 
    - **Maintenance start** — the date and time the machine goes down. It
@@ -43,14 +43,14 @@ when the window arrives.
    - **Reason** — what the maintenance is for. See
      [Reasons](#reasons) for the full list.
 
-   ![Maintenance start, duration, and reason filled in, with the Add button circled](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/set-maintenance-window-form-filled.webp)
+   ![Maintenance start, duration, and reason filled in, with the Add button circled](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/set-maintenance-window-form-filled.webp)
 5. **Add** stays disabled until the duration is a positive whole number and a
    reason is selected. Once you click it, the window is created and renters are
    notified.
 
    The new window appears in the table below the form, marked **Upcoming**.
 
-   ![Maintenance table listing a 48 hour window marked Upcoming, with its start, duration, and reason](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/set-maintenance-window-scheduled-table.webp)
+   ![Maintenance table listing a 48 hour window marked Upcoming, with its start, duration, and reason](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/set-maintenance-window-scheduled-table.webp)
 
 ***
 
@@ -63,7 +63,7 @@ switch — you can schedule a single window for all of them in one pass.
    to take every machine in the current view. A bar appears showing how many are
    selected, with a **Bulk Edit** button on the right.
 
-   ![Machines page with a machine checked and the Bulk Edit button in the selection bar](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/set-maintenance-window-bulk-select.webp)
+   ![Machines page with a machine checked and the Bulk Edit button in the selection bar](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/set-maintenance-window-bulk-select.webp)
 2. The same settings dialog opens, titled with the number of machines selected
    instead of a single machine ID.
 3. Go to **Machine Maintenances** and fill in the start, duration, and reason
@@ -132,7 +132,7 @@ The redesigned Machines page is opt-in while it is in Early Access. To turn it o
 open [Account Settings](https://cloud.vast.ai/account/), find the **Early Access**
 section, and enable **Machines page**.
 
-![Early Access section of Account Settings with the Machines page toggle](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/set-maintenance-window-early-access-toggle.webp)
+![Early Access section of Account Settings with the Machines page toggle](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/set-maintenance-window-early-access-toggle.webp)
 
 You get there the same way: **Settings** on a single machine, or **Bulk Edit**
 once you have selected several. The dialog is what differs. It has no tabs — the
@@ -145,7 +145,7 @@ Existing windows appear under **Scheduled Maintenances**, with a **Category**
 column that shows the stored value rather than the label used on the redesigned
 page — a window set to **Updates** reads as `software` here.
 
-![Set Machine Maintenance section of the classic machine settings dialog](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/set-maintenance-window-classic-modal.webp)
+![Set Machine Maintenance section of the classic machine settings dialog](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/set-maintenance-window-classic-modal.webp)
 
 ***
 

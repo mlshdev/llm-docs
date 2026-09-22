@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/large-scale-search.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/tutorials-operations/large-scale-search.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/large-scale-search.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/tutorials-operations/large-scale-search.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-operations/large-scale-search/
 
 # Large-Scale Search in Qdrant
@@ -40,7 +40,7 @@ After some initial experiments, we figured out a minimal hardware configuration 
 - 64Gb RAM
 - 650Gb Disk space
 
-![Hardware configuration](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/tutorials/large-scale-search/hardware.png)
+![Hardware configuration](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/large-scale-search/hardware.png)
 
 *Hardware configuration*
 
@@ -111,7 +111,7 @@ The second stage of the search can explicitly determine how many times we can af
 In our experiment, the upload process was going at 5000 points per second.
 The indexation process was going in parallel with the upload and was happening at the rate of approximately 4000 points per second.
 
-![Upload and indexation process](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/tutorials/large-scale-search/upload_process.png)
+![Upload and indexation process](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/large-scale-search/upload_process.png)
 
 *Upload and indexation process*
 
@@ -119,7 +119,7 @@ The indexation process was going in parallel with the upload and was happening a
 
 After the upload and indexation process is finished, let's take a detailed look at the memory usage of the Qdrant server.
 
-![Memory usage](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/tutorials/large-scale-search/memory_usage.png)
+![Memory usage](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/large-scale-search/memory_usage.png)
 
 *Memory usage*
 
@@ -209,11 +209,11 @@ After the dataset is uploaded and indexed, we can start searching for similar ve
 
 We can start by exploring the dataset in Web-UI. So you can get an intuition into the search performance, not just table numbers.
 
-![Web-UI Bear image](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/tutorials/large-scale-search/web-ui-bear1.png)
+![Web-UI Bear image](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/large-scale-search/web-ui-bear1.png)
 
 *Web-UI Bear image*
 
-![Web-UI similar Bear image](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/tutorials/large-scale-search/web-ui-bear2.png)
+![Web-UI similar Bear image](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/large-scale-search/web-ui-bear2.png)
 
 *Web-UI similar Bear image*
 
@@ -308,7 +308,7 @@ storage:
 
 In Qdrant Managed cloud Async IO can be enabled via `Advanced optimizations` section in cluster `Configuration` tab.
 
-![Async IO configuration in Cloud](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/tutorials/large-scale-search/async_io.png)
+![Async IO configuration in Cloud](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/large-scale-search/async_io.png)
 
 *Async IO configuration in Cloud*
 
@@ -337,7 +337,7 @@ In our request we achieved the following results:
 
 Additional experiments with `m=16` demonstrated that we can achieve `85%` precision with `rescore_limit=1000`, but they would require slightly more memory.
 
-![Log of search evaluation](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/tutorials/large-scale-search/precision.png)
+![Log of search evaluation](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/large-scale-search/precision.png)
 
 *Log of search evaluation*
 

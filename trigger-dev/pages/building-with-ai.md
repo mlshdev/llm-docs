@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.3: [docs/building-with-ai.mdx](https://github.com/triggerdotdev/trigger.dev/blob/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/building-with-ai.mdx)
+> Pinned source for Trigger.dev v4.6.4: [docs/building-with-ai.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/building-with-ai.mdx)
 > Canonical documentation: https://trigger.dev/docs/building-with-ai
 
 # Building with AI: overview

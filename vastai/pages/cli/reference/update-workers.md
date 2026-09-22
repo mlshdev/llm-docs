@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cli/reference/update-workers.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/cli/reference/update-workers.mdx)
+> Pinned source for Vast.ai main: [cli/reference/update-workers.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/cli/reference/update-workers.mdx)
 > Canonical documentation: https://docs.vast.ai/cli/reference/update-workers
 
 # vastai update workers

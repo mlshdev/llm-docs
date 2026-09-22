@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [disco-diffusion.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/disco-diffusion.mdx)
+> Pinned source for Vast.ai main: [disco-diffusion.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/disco-diffusion.mdx)
 > Canonical documentation: https://docs.vast.ai/disco-diffusion
 
 # Disco Diffusion
@@ -25,7 +25,7 @@ We have created a video guide that shows all the steps for using Disco Diffusion
 
 Open up the vast console and click on the EDIT IMAGE & CONFIG blue button. Select the pytorch-pytorch image. Click again to open up the config menu. Then select the jupyter-python notebook option.We also recommend checking the box for Jupyter direct HTTPS, although it is not required. To explain the tradeoff- direct HTTPS limits your search to machines with open ports which can be more expensive. HTTPS direct also requires you to install our TLS certificate or click through an "unsafe" warning on your browser. The big benefit is that you get faster download speeds and a more reliable connection. Leaving the box unchecked is fine, you will then connect to Jupyter through one of our proxy servers. It isn't as fast, but doesn't require any further setup.
 
-![Select](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/disco-diffusion-select.webp)
+![Select](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/disco-diffusion-select.webp)
 
 ### 2) Allocate more disk space
 
@@ -39,7 +39,7 @@ Here is the fun part! You can now select the GPU you want to rent. For Disco Dif
 
 Navigate to the instances in your account. You should see your instance booting up. Once it is ready, click on the OPEN button to open the Jupyter interface. Note that it can sometimes take an additional 30-60 seconds for Jupyter to start after the button appears. If you get an error, wait a while and then reload.
 
-![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads Biatmxba96Wrwp8Riyi9 Rdy Juypter Instance](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/disco-diffusion-rdy-juypter-instance.webp)
+![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads Biatmxba96Wrwp8Riyi9 Rdy Juypter Instance](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/disco-diffusion-rdy-juypter-instance.webp)
 
 ### 6) Run the modified DD notebook
 
@@ -57,11 +57,11 @@ Change the Prompts at the end of section 3. Doing a quick Ctrl+F and searching f
 
 Once you have customized your settings, select Cell->Run All to start. The code will start to execute from top to bottom. The first couple of cells will install libs and download the CLIP models. This can take 5-15 minutes. The output of the code will appear in a text box.
 
-![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads Wmy8Fsvuhwzdw8Avsmnb Dd Loading Models](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/disco-diffusion-dd-loading-models.webp)
+![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads Wmy8Fsvuhwzdw8Avsmnb Dd Loading Models](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/disco-diffusion-dd-loading-models.webp)
 
 Scroll down to the bottom of the notebook to the end of step 4. Right above step 5 you should see the in-progress image.
 
-![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads 9T2Xnymyqqygntuvkrzg Disco Time](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/disco-diffusion-disco-time.webp)
+![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads 9T2Xnymyqqygntuvkrzg Disco Time](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/disco-diffusion-disco-time.webp)
 
 ### 7) Changing settings and downloading images
 
@@ -71,7 +71,7 @@ After each image generates, it is placed into the images\_out/TimeToDisco folder
 
 If you end up generating tens or hundreds! of images, there is a way to zip them up into a single file and then download them all. To more conveniently download folders or a number of files, you can use the command line zip tool. First open a new terminal by clicking New->Terminal:
 
-![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads Nggbmr0I6L36Rzek1Izx Image](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/disco-diffusion-image.webp)
+![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads Nggbmr0I6L36Rzek1Izx Image](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/disco-diffusion-image.webp)
 
 Then in the terminal copy and paste the following:
 
@@ -105,7 +105,7 @@ Also in the second line, use the following option to set the ENV variable:
 -e JUPYTER_DIR=/
 ```
 
-![Jinai](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/disco-diffusion-jinai.webp)
+![Jinai](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/disco-diffusion-jinai.webp)
 
 Follow steps 2) and 3) to allocate more disk space and select an offer.
 
@@ -115,8 +115,8 @@ Open the discoart folder and then open the discoart notebook. Change the prompt 
 
 ## Examples using Vast.ai machines
 
-![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads Sacdwzfaycnharkav4Ur Dd Cliff City 1](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/disco-diffusion-dd-cliff-city-1.webp)
+![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads Sacdwzfaycnharkav4Ur Dd Cliff City 1](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/disco-diffusion-dd-cliff-city-1.webp)
 
 \\
 
-![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads Uvlxehktlsqr8Ibbqo9G Dd Sorceress Darksun T4](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/disco-diffusion-dd-sorceress-darksun-t4.webp)
+![Spaces Mgwtdaam0Bo2Skpvyo6Q Uploads Uvlxehktlsqr8Ibbqo9G Dd Sorceress Darksun T4](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/disco-diffusion-dd-sorceress-darksun-t4.webp)

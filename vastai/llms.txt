@@ -1,6 +1,6 @@
 # Vast.ai main
 
-> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `b8a3a45b02508573367fc8479ce3a9206139e2a8`.
+> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `f9a51524095d083230a1da1c2e38e736ded25582`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Vast.ai main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -439,6 +439,7 @@
 - [VMs](pages/host/vms.md): Vast now supports VM instances running on Kernel Virtual Machine (KVM) in addition to Docker container based instances. VM support is currently an optional feature for hosts as it usually requires additional configurati… (5369 bytes)
 - [Set a Maintenance Window](pages/host/set-maintenance-window.md): Schedule a maintenance window on one machine or on many at once from the Machines page, so renters are warned before you take hardware down. (7429 bytes)
 - [Upgrade the Kernel](pages/host/upgrade-kernel.md): Check whether your host machine's kernel is up to date, install the update, and confirm the machine came back online. (15806 bytes)
+- [Upgrade Docker and System Packages](pages/host/upgrade-docker-and-packages.md): Safely upgrade Docker, containerd, the NVIDIA stack, and other system packages on a Vast.ai host machine without disrupting clients. (15791 bytes)
 - [Disable SSH Password Login](pages/host/disable-ssh-password-login.md): Turn off SSH password login to protect your machine. (4758 bytes)
 - [Offline Machine - Troubleshooting Steps](pages/host/machine-offline.md): Steps to identify and resolve connectivity, service, and GPU-related issues when a Vast.ai host machine shows as Offline. (11863 bytes)
 

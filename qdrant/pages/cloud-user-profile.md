@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-user-profile.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/cloud-user-profile.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-user-profile.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/cloud-user-profile.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud-user-profile/
 
 # Your User Profile & Preferences
@@ -13,13 +13,13 @@ Open the **user menu** at the bottom left of the Qdrant Cloud Console to access:
 - **Accounts** — the accounts overview. See [Managing Accounts](https://qdrant.tech/documentation/cloud-account-setup/#managing-accounts).
 - **Logout**.
 
-![User menu and Explore Qdrant Cloud](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/user-menu.png)
+![User menu and Explore Qdrant Cloud](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/user-menu.png)
 
 ## Profile Details
 
 On the **Preferences** page, the **Your details** section shows your personal information — first name, last name, email address, and the date you became a member. Use **Edit Profile Details** to update how your name is displayed across the platform.
 
-![Profile details and preferences](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/profile-preferences.png)
+![Profile details and preferences](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/profile-preferences.png)
 
 ## Color Scheme
 
@@ -39,7 +39,7 @@ The **Cookie Consent Preferences** section lets you control how cookies are used
 
 When someone invites you to their account, the invitation appears on your **Invitations** page as a pending invitation, where you can accept it. Once accepted, the account becomes available in your [account switcher](https://qdrant.tech/documentation/cloud-account-setup/#switching-between-accounts).
 
-![Pending invitations](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/pending-invitations.png)
+![Pending invitations](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/pending-invitations.png)
 
 > **Note:** This page is for invitations *you* have received. To invite other users to an account you manage, use the **Access Management** page instead. See [Inviting Users to an Account](https://qdrant.tech/documentation/cloud-rbac/user-management/#inviting-users-to-an-account).
 
@@ -47,4 +47,4 @@ When someone invites you to their account, the invitation appears on your **Invi
 
 Use **Deactivate my User** on the **Preferences** page to permanently deactivate your Qdrant user and all associated data. If you own any accounts, you must first [transfer their ownership](https://qdrant.tech/documentation/cloud-account-setup/#transferring-account-ownership) to another member or delete them.
 
-![Deactivate user](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/cloud/deactivate-user.png)
+![Deactivate user](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/deactivate-user.png)

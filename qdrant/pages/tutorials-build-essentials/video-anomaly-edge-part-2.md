@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-2.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-2.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-2.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-2.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-build-essentials/video-anomaly-edge-part-2/
 
 # Video Anomaly Detection: Edge-to-Cloud Pipeline
@@ -44,7 +44,7 @@ Why can't we just run a single shard on the edge? Two reasons: (1) Building an H
 
 ### The Solution: Mutable + Immutable Shards
 
-![Edge shards: mutable shard for live writes with brute-force search, immutable shard with HNSW index synced from cloud, merged and ranked for top-k results](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/video-anomaly-edge/edge-shards.png)
+![Edge shards: mutable shard for live writes with brute-force search, immutable shard with HNSW index synced from cloud, merged and ranked for top-k results](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/articles_data/video-anomaly-edge/edge-shards.png)
 
 The edge collection uses two `EdgeShard` instances:
 
@@ -176,7 +176,7 @@ The two-tier architecture only works *because* the edge is imperfect and the clo
 
 ## Edge-to-Cloud Escalation
 
-![Escalation pipeline: edge tier drops 85% of footage, escalates 15% to cloud tier where ensemble scoring achieves 95% recall](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/video-anomaly-edge/escalation-pipeline.png)
+![Escalation pipeline: edge tier drops 85% of footage, escalates 15% to cloud tier where ensemble scoring achieves 95% recall](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/articles_data/video-anomaly-edge/escalation-pipeline.png)
 
 When an edge device scores a clip above the escalation threshold, it sends the clip to the cloud for re-analysis. Here's where Twelve Labs and Qdrant work together for the final verdict.
 
@@ -247,7 +247,7 @@ async def handle_escalation(request: EscalationRequest) -> EscalationResult:
 
 ### Ensemble Scoring
 
-![Ensemble scoring: 70% cloud VSS score combined with 30% edge score for final anomaly determination](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/video-anomaly-edge/ensemble-score.png)
+![Ensemble scoring: 70% cloud VSS score combined with 30% edge score for final anomaly determination](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/articles_data/video-anomaly-edge/ensemble-score.png)
 
 The ensemble weighting reflects the accuracy differential between tiers:
 
@@ -344,7 +344,7 @@ After syncing, points that were already uploaded to the cloud are purged from th
 
 ### Offline Resilience
 
-![Shard sync: cloud baseline syncs to edge immutable shard via incremental snapshot transfer, with offline buffer persisting escalations to disk when cloud is unreachable](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/video-anomaly-edge/shard-sync.png)
+![Shard sync: cloud baseline syncs to edge immutable shard via incremental snapshot transfer, with offline buffer persisting escalations to disk when cloud is unreachable](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/articles_data/video-anomaly-edge/shard-sync.png)
 
 If the cloud is unreachable, escalation data is persisted to disk as JSON files:
 

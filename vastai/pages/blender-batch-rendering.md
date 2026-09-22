@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [blender-batch-rendering.mdx](https://github.com/vast-ai/docs/blob/b8a3a45b02508573367fc8479ce3a9206139e2a8/blender-batch-rendering.mdx)
+> Pinned source for Vast.ai main: [blender-batch-rendering.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/blender-batch-rendering.mdx)
 > Canonical documentation: https://docs.vast.ai/blender-batch-rendering
 
 # Blender Batch Rendering
@@ -19,7 +19,7 @@ Click on this link [Blender Batch Renderer Template](https://cloud.vast.ai/?ref_
 
 You can narrow your search results to only data center machines if you want insured security standards from our trusted datacenters.
 
-![Highlighted Secure Cloud](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/highlighted-secure-cloud.webp)
+![Highlighted Secure Cloud](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/highlighted-secure-cloud.webp)
 
 ## Step 3 - Filter for a GPU that you feel best suits your needs
 
@@ -31,24 +31,24 @@ Go to the GPUs filter and check the box for RTX 4090 or another GPU instance.
 
 For example,
 
-![Highlighted Rtx 4090 Filter Pic](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/highlighted-rtx-4090-filter-pic.webp)
+![Highlighted Rtx 4090 Filter Pic](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/highlighted-rtx-4090-filter-pic.webp)
 
 ## Step 4 - Choose a GPU by Clicking "RENT"
 
 Choose a GPU that meets your budget, desired reliability %, and other constraints by clicking "RENT". GPUs are sorted by a complex proprietary algorithm that aims to give users the best machines for their value by default.
 You can filter GPUs further per your requirements if desired.
 
-![Highlighted Rent](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/highlighted-rent.webp)
+![Highlighted Rent](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/highlighted-rent.webp)
 
 ## Step 5 - Use Jupyter Direct HTTPS Launch Mode
 
 Follow the instructions related to adding a certificate to your browser if you need to when it asks you to "Setup Jupyter Direct HTTPS" and click "CONTINUE". Here's more information on the Jupyter direct HTTPS Launch Mode and Installing the TLS certificate: [Jupyter](https://docs.vast.ai/guides/instances/jupyter).
 
-![Updated Jupyter Direct Https Continue](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/updated-jupyter-direct-https-continue.webp)
+![Updated Jupyter Direct Https Continue](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/updated-jupyter-direct-https-continue.webp)
 
 ## Step 6 - Click the Open Button or Jupyter Notebook button to open Jupyter Notebook
 
-![Jupyter Notebook Button](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/jupyter-notebook-button.webp)
+![Jupyter Notebook Button](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/jupyter-notebook-button.webp)
 
 ## Step 7 - To Render Animation For Each Blend File In Batch Of Blend Files
 
@@ -56,27 +56,27 @@ If you want to render a respective animation for each blend file in a batch of b
 
 Go to /Desktop/render\_animation\_for\_each\_blend\_file\_in\_batch\_of\_blend\_files/ folder in Jupyter Notebook
 
-![Go Render Animation For Batch Folder](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/blender-batch-rendering-go-render-animation-for-batch-folder.webp)
+![Go Render Animation For Batch Folder](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/blender-batch-rendering-go-render-animation-for-batch-folder.webp)
 
 Upload .blend files to /Desktop/render\_animation\_for\_each\_blend\_file\_in\_batch\_of\_blend\_files/ folder
 
-![Upload 100 Color Vortex](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/blender-batch-rendering-upload-100-color-vortex.webp)
+![Upload 100 Color Vortex](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/blender-batch-rendering-upload-100-color-vortex.webp)
 
 \\
 
-![Upload Render Animation Batch Highlighted](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/blender-batch-rendering-upload-render-animation-batch-highlighted.webp)
+![Upload Render Animation Batch Highlighted](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/blender-batch-rendering-upload-render-animation-batch-highlighted.webp)
 
 Open render\_animation\_for\_each\_blend\_file\_in\_batch\_of\_blend\_files.ipynb
 
-![Open Render Animation For Batch Folder Notebook](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/blender-batch-rendering-open-render-animation-for-batch-folder-notebook.webp)
+![Open Render Animation For Batch Folder Notebook](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/blender-batch-rendering-open-render-animation-for-batch-folder-notebook.webp)
 
 Click the Run tab and click Run All Cells
 
-![Show Rendering Animations](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/blender-batch-rendering-show-rendering-animations.webp)
+![Show Rendering Animations](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/blender-batch-rendering-show-rendering-animations.webp)
 
 \\
 
-![Click Run All Cells Highlighted](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/blender-batch-rendering-click-run-all-cells-highlighted.webp)
+![Click Run All Cells Highlighted](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/blender-batch-rendering-click-run-all-cells-highlighted.webp)
 
 Now a corresponding animation will be rendered for each .blend file you have uploaded to this folder.
 You can also close out your jupyter notebook tab in your browser and this notebook will keep running as long as your instance in Vast is running.
@@ -87,31 +87,31 @@ If you want to render a respective animation for the Xth frame of each blend fil
 
 Go to /Desktop/render\_Xth\_frame\_of\_batch\_of\_blend\_files/ folder in Jupyter Notebook
 
-![Go To Render Xth Frame For Batch Folder](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/blender-batch-rendering-go-to-render-xth-frame-for-batch-folder.webp)
+![Go To Render Xth Frame For Batch Folder](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/blender-batch-rendering-go-to-render-xth-frame-for-batch-folder.webp)
 
 Upload .blend files to /Desktop/render\_Xth\_frame\_of\_batch\_of\_blend\_files/ folder
 
-![Upload Blend Files For Xth Frame](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/blender-batch-rendering-upload-blend-files-for-xth-frame.webp)
+![Upload Blend Files For Xth Frame](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/blender-batch-rendering-upload-blend-files-for-xth-frame.webp)
 
 \\
 
-![Upload Xth Frame Highlighted](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/blender-batch-rendering-upload-xth-frame-highlighted.webp)
+![Upload Xth Frame Highlighted](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/blender-batch-rendering-upload-xth-frame-highlighted.webp)
 
 Open render\_Xth\_frame\_of\_batch\_of\_blend\_files.ipynb
 
-![Open Render Animation For Each Blend File In Batch Of Blend Files Ipynb](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/blender-batch-rendering-open-render-animation-for-each-blend-file-in-batch-of-blend-files-ipynb.webp)
+![Open Render Animation For Each Blend File In Batch Of Blend Files Ipynb](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/blender-batch-rendering-open-render-animation-for-each-blend-file-in-batch-of-blend-files-ipynb.webp)
 
 Set frame\_number equal to a particular frame number. For ex. frame\_number=2
 
-![Set Frame Number 2](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/blender-batch-rendering-set-frame-number-2.webp)
+![Set Frame Number 2](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/blender-batch-rendering-set-frame-number-2.webp)
 
 Click the Run tab and click Run All Cells
 
-![Xth Frames Rendering](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/blender-batch-rendering-xth-frames-rendering.webp)
+![Xth Frames Rendering](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/blender-batch-rendering-xth-frames-rendering.webp)
 
 \\
 
-![Run All Cells Xth Frame Highlighted](https://raw.githubusercontent.com/vast-ai/docs/b8a3a45b02508573367fc8479ce3a9206139e2a8/images/blender-batch-rendering-run-all-cells-xth-frame-highlighted.webp)
+![Run All Cells Xth Frame Highlighted](https://raw.githubusercontent.com/vast-ai/docs/f9a51524095d083230a1da1c2e38e736ded25582/images/blender-batch-rendering-run-all-cells-xth-frame-highlighted.webp)
 
 Now a corresponding animation will be rendered for each Xth frame of each .blend file you have uploaded to this folder.
 You can also close out your jupyter notebook tab in your browser and this notebook will keep running as long as your instance in Vast is running.

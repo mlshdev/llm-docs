@@ -6,10 +6,10 @@
   "title": "Trigger.dev",
   "homepage": "https://trigger.dev/docs",
   "repository": "triggerdotdev/trigger.dev",
-  "tag": "v4.6.3",
-  "releaseId": 390655698,
-  "releasePublishedAt": "2026-09-17T11:27:28Z",
-  "sourceCommit": "2d03fee2e3ff368128302ed4c783ba4e32d1cb00",
+  "tag": "v4.6.4",
+  "releaseId": 393972896,
+  "releasePublishedAt": "2026-09-22T17:27:49Z",
+  "sourceCommit": "51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7",
   "documentCount": 327,
   "indexComplete": true,
   "corpusVolumes": [
@@ -17,10 +17,10 @@
       "name": "llms-full.txt",
       "byteLength": 2876081,
       "documentCount": 327,
-      "sha256": "3eb50eafafa5886f07f483836ea7320707ac9993197a32bd84e0302c111df0bb"
+      "sha256": "1ebdcc25c97fbf3d532f568d02fc6ed763fd0c2f147352d81bc233fb41a32cb3"
     }
   ],
-  "outputDigest": "3be9f4d5cf1241942cb74ac0abc73dda57d98771b2087b7f23390590a447b4df",
+  "outputDigest": "129dbe0065156f2a7eedbec96bcf7e4ccef6a8aeff4a2f52ca8d4e3896747e65",
   "notes": [
     "Pages follow the navigation declared in docs/docs.json at the immutable release tag; snippets are inlined into the pages that import them rather than published separately.",
     "API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.",

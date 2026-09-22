@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/enterprise/enterprise-deployment/ms-store.md](https://github.com/docker/docs/blob/71fa06427156ab4e87b88cdc9983d2efea8b7519/content/manuals/enterprise/enterprise-deployment/ms-store.md)
+> Pinned source for Docker main: [content/manuals/enterprise/enterprise-deployment/ms-store.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/enterprise/enterprise-deployment/ms-store.md)
 
 # Install Docker Desktop from the Microsoft Store on Windows
 

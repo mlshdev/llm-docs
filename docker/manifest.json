@@ -8,9 +8,9 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-21T16:34:52Z",
-  "documentationDigest": "c14f89f1b04a90a8fe46b8f14ae03253b774dac7b2e675c40c90993ac55fd53f",
-  "sourceCommit": "71fa06427156ab4e87b88cdc9983d2efea8b7519",
+  "sourceCommittedAt": "2026-09-22T16:43:14Z",
+  "documentationDigest": "0db1386b9b4cc4613a7282d21ef4e5b2416295b6c41ef6d68306cc78dce781f8",
+  "sourceCommit": "c69ce0fd3851270bba5473502268ff7661887b2a",
   "documentCount": 1626,
   "indexComplete": true,
   "corpusVolumes": [
@@ -18,28 +18,28 @@
       "name": "llms-full.txt",
       "byteLength": 687,
       "documentCount": 0,
-      "sha256": "c9d2a83015ac3c838cff74c4a79688c76a3fb823e337261ebc524de0cb3eaa7a"
+      "sha256": "b30a15a56f23df67c60962bcaf8f36e28a1ee6aabc4b745bb83037a731fb93bb"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8384923,
+      "byteLength": 8371219,
       "documentCount": 783,
-      "sha256": "2318d46a64bf3c12179d2ae1b7ce62ae36c61ad1ed57d02bcfd97e8637840ca2"
+      "sha256": "4014fb8f3b997f9b5d270a7bf2b3e053467eb0f15436cb5ebe68d56e5b650f7e"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 8293806,
+      "byteLength": 8232940,
       "documentCount": 197,
-      "sha256": "0b1b8d8937ea31b28cde522f9a365b0459bbd0ab910750a59aa4fe79b6ae49b3"
+      "sha256": "59768888c51cc6cabae5f0336f9878c10e0ffc42a66eb992b2a92611145f5989"
     },
     {
       "name": "llms-full.003.txt",
       "byteLength": 6518620,
       "documentCount": 646,
-      "sha256": "c4116e1afdad634d40ab1ec585a6aa37825db5a709137ad6f053ac6b918dc186"
+      "sha256": "8e1c1e535b59010c2ca67e7f96d729917e0690756fc03798e3edffd4241fb52a"
     }
   ],
-  "outputDigest": "8589974d2c2109e37f12a1883a47688c915b04946ccc6710bcd138fda67df9e4",
+  "outputDigest": "93477e6198ef7a4c5b863c035f3fad3a3ea2d068d25a67443f6a33f0e6a30042",
   "quarantined": [
     {
       "sourcePath": "content/manuals/ai/sandboxes/architecture.md",

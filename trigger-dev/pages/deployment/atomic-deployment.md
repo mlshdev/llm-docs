@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.3: [docs/deployment/atomic-deployment.mdx](https://github.com/triggerdotdev/trigger.dev/blob/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/deployment/atomic-deployment.mdx)
+> Pinned source for Trigger.dev v4.6.4: [docs/deployment/atomic-deployment.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/deployment/atomic-deployment.mdx)
 > Canonical documentation: https://trigger.dev/docs/deployment/atomic-deployment
 
 # Atomic deploys
@@ -100,7 +100,7 @@ By default, Vercel automatically promotes new deployments to production. To prev
 1. Go to your Production environment settings in Vercel at `https://vercel.com/<team-slug>/<project-slug>/settings/environments/production`
 2. Disable the "Auto-assign Custom Production Domains" setting:
 
-![Vercel project settings showing the auto-promotion setting](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/2d03fee2e3ff368128302ed4c783ba4e32d1cb00/docs/deployment/auto-assign-production-domains.png)
+![Vercel project settings showing the auto-promotion setting](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/deployment/auto-assign-production-domains.png)
 
 3. Hit the "Save" button to apply the changes.
 

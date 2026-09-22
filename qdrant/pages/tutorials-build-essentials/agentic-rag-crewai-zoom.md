@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/agentic-rag-crewai-zoom.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/tutorials-build-essentials/agentic-rag-crewai-zoom.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/agentic-rag-crewai-zoom.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/tutorials-build-essentials/agentic-rag-crewai-zoom.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-build-essentials/agentic-rag-crewai-zoom/
 
 # Qdrant Agentic RAG System with CrewAI
@@ -32,23 +32,23 @@ When you interact with the system, here's what happens behind the scenes:
 
 First the user submits a query to the system. In this example, we want to find out the average length of Marketing meetings. Since one of the data points from the meetings is the duration of the meeting, the agent can calculate the average duration of the meetings by averaging the duration of all meetings with the keyword "Marketing" in the topic or content.
 
-![User Query Interface](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/agentic-rag-crewai-zoom/query1.png)
+![User Query Interface](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/articles_data/agentic-rag-crewai-zoom/query1.png)
 
 Next, the agent used the `search_meetings` tool to search the Qdrant vector database for the most semantically similar meeting points. We asked about Marketing meetings, so the agent searched the database with the search meeting tool for all meetings with the keyword "Marketing" in the topic or content.
 
-![Vector Search Results](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/agentic-rag-crewai-zoom/output0.png)
+![Vector Search Results](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/articles_data/agentic-rag-crewai-zoom/output0.png)
 
 Next, the agent used the `calculator` tool to find the average duration of the meetings.
 
-![Duration Calculation](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/agentic-rag-crewai-zoom/output.png)
+![Duration Calculation](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/articles_data/agentic-rag-crewai-zoom/output.png)
 
 Finally, the agent used the `Information Synthesizer` tool to synthesize the analysis and present it in a natural language format.
 
-![Synthesized Analysis](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/agentic-rag-crewai-zoom/output4.png)
+![Synthesized Analysis](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/articles_data/agentic-rag-crewai-zoom/output4.png)
 
 The user sees the final output in a chat-like interface.
 
-![Chat Interface](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/articles_data/agentic-rag-crewai-zoom/app.png)
+![Chat Interface](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/articles_data/agentic-rag-crewai-zoom/app.png)
 
 The user can then continue to interact with the system by asking more questions.
 

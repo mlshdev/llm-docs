@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/rag-contract-management-stackit-aleph-alpha.md](https://github.com/qdrant/landing_page/blob/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/content/documentation/examples/rag-contract-management-stackit-aleph-alpha.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/rag-contract-management-stackit-aleph-alpha.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/examples/rag-contract-management-stackit-aleph-alpha.md)
 > Canonical documentation: https://qdrant.tech/documentation/examples/rag-contract-management-stackit-aleph-alpha/
 
 # Region-Specific Contract Management System
@@ -10,7 +10,7 @@ Contract management benefits greatly from Retrieval Augmented Generation (RAG), 
 
 Companies want their data to be kept and processed within specific geographical boundaries. For that reason, this RAG-centric tutorial focuses on dealing with a region-specific cloud provider. You will set up a contract management system using [Aleph Alpha's](https://aleph-alpha.com/) embeddings and LLM. You will host everything on [STACKIT](https://www.stackit.de/), a German business cloud provider. On this platform, you will run Qdrant Hybrid Cloud as well as the rest of your RAG application. This setup will ensure that your data is stored and processed in Germany.
 
-![Architecture diagram](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/contract-management-stackit-aleph-alpha/architecture-diagram.png)
+![Architecture diagram](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/contract-management-stackit-aleph-alpha/architecture-diagram.png)
 
 ## Components
 
@@ -163,7 +163,7 @@ documents = {
 
 This is how the documents might look like:
 
-![Example of the indexed document](https://raw.githubusercontent.com/qdrant/landing_page/3b58061329eedce2091c9dd380b8c47fcaa1cb64/qdrant-landing/static/documentation/examples/contract-management-stackit-aleph-alpha/indexed-document.png)
+![Example of the indexed document](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/contract-management-stackit-aleph-alpha/indexed-document.png)
 
 Each has to be split into chunks first; there is no silver bullet. Our chunking algorithm will be simple and based on
 recursive splitting, with the maximum chunk size of 500 characters and the overlap of 100 characters.
