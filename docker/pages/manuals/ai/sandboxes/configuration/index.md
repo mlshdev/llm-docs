@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/_index.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/configuration/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/_index.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/configuration/_index.md)
 
 # Configure Docker Sandboxes
 
@@ -7,6 +7,8 @@ network environment. These settings control sandbox creation, authentication,
 and connectivity. To change the tools and agent configuration inside a
 sandbox, see [Customize](https://docs.docker.com/ai/sandboxes/customize/).
 
+- [Settings](https://docs.docker.com/ai/sandboxes/configuration/settings/) lists host-level settings, environment variable
+  equivalents, and commands to inspect and change values.
 - [Credentials](https://docs.docker.com/ai/sandboxes/configuration/credentials/) configures API keys, authentication
   credentials, and registry access for sandboxed agents.
 - [Models](https://docs.docker.com/ai/sandboxes/configuration/models/) selects local models, hosted providers, or custom

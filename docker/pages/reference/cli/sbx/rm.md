@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_rm.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_rm.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_rm.yaml)
 
 # sbx rm
 
@@ -14,7 +14,10 @@ ID (sbx\_\*) or name from "sbx --cloud ls".
 For local sandboxes, stops them, removes their containers, cleans up any Git
 worktrees, deletes sandbox state, and deletes secrets scoped to each removed
 sandbox. This action cannot be undone. With --cloud, deletes
-the sandbox in Docker Sandboxes Cloud. This action cannot be undone.
+the sandbox in Docker Sandboxes Cloud. This action cannot be undone. Once the
+server accepts the request, rm waits up to 60 seconds per sandbox for the
+deletion. A removal still completing after that exits 0. Verify it later with
+"sbx --cloud ls".
 
 Removal requires confirmation; use --force to skip confirmation prompts
 (for non-interactive scripts) and to delete a sandbox that is in use
@@ -32,8 +35,7 @@ workloads. Pass IDs explicitly in --cloud mode.
 
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |

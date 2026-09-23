@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/solution-scenarios/configurations.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/solution-scenarios/configurations.mdx)
+> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/solution-scenarios/configurations.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/solution-scenarios/configurations.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/solution-scenarios/configurations
 
 Each customer does have different needs and use-cases. In ZITADEL you are able to adjust settings depending on your needs.
@@ -53,7 +53,7 @@ There are two different possibilities to achieve login with an email.
 1. Use an email address as username
 2. Use the email field of the user as additional login to the username
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/scenarios/domain_policy_org_domain_disabled.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/scenarios/domain_policy_org_domain_disabled.png)
 
 ### Use an email address as username
 
@@ -71,7 +71,7 @@ You can additionally allow login with the email attribute of the user.
 You can find this in the "Login Behavior and Security" Setting of your instance or organizations.
 Go to the "Advanced" section, per default login with email address should be allowed. It is possible to disable it.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/scenarios/login_policy_advanced.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/scenarios/login_policy_advanced.png)
 
 ## Use phone number to login
 
@@ -80,7 +80,7 @@ There are two different possibilities to achieve login with a phone number.
 1. Use a phone number as username
 2. Use the phone number field of the user as additional login to the username
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/scenarios/domain_policy_org_domain_disabled.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/scenarios/domain_policy_org_domain_disabled.png)
 
 ### Use a phone number as username
 
@@ -98,7 +98,7 @@ you can additionally allow login with the phone number attribute of the user.
 You can enable this feature in the "Login Behavior and Security" Setting of your instance or organizations.
 Go to the "Advanced" section, per default login with phone number should be allowed. It is possible to disable it.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/scenarios/login_policy_advanced_phone.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/scenarios/login_policy_advanced_phone.png)
 
 ## Embedding ZITADEL in an iFrame
 
@@ -126,7 +126,7 @@ If your applications need to load ZITADEL inside an iframe, e.g. for a silent lo
 
 You can add further hosts later on.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/scenarios/security_policy.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/scenarios/security_policy.png)
 
 This will change the CSP to the following:
 
@@ -150,4 +150,4 @@ This prompt is shown even if multi-factor is not enforced for the users.
 If you do want to disable the prompt for your users, go to the login behavior settings and set the "Multifactor Init Lifetime" to 0.
 If the setting is not configured to 0, it means that after that time, the user will be asked again to setup a factor.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/scenarios/login-settings-mfa-init-lifetime.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/scenarios/login-settings-mfa-init-lifetime.png)

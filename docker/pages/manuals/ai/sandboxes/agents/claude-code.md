@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/claude-code.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/agents/claude-code.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/claude-code.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/agents/claude-code.md)
 
 # Claude Code
 
@@ -50,8 +50,8 @@ for workarounds.
 
 ### Remote control
 
-To use Claude Code's `/remote-control` command inside a sandbox, turn on remote
-control:
+To use Claude Code's `/remote-control` command inside a sandbox, turn on
+[`claude.remoteControl`](https://docs.docker.com/ai/sandboxes/configuration/settings/#clauderemotecontrol):
 
 ```console
 $ sbx settings set claude.remoteControl true

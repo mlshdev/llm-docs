@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_ls.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_policy_ls.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_ls.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_policy_ls.yaml)
 
 # sbx policy ls
 
@@ -26,22 +26,23 @@ rule.
 
 ## Options
 
-| Option               | Default | Description                                                                |
-| -------------------- | ------- | -------------------------------------------------------------------------- |
-| `--decision`         |         | Filter policies by decision: "allow" or "deny"                             |
-| `--include-inactive` |         | Show inactive policy rules hidden by remote governance                     |
-| `--json`             |         | Output filtered policy rules as JSON                                       |
-| `--source`           |         | Filter policies by source: "local", "org", or "kit"                        |
-| `--type`             | `all`   | Filter policies by type: "all", "network", or "filesystem" (default "all") |
-| `--wide`             |         | Show detailed rule-level output with rule IDs and resources                |
+| Option               | Default | Description                                                                                |
+| -------------------- | ------- | ------------------------------------------------------------------------------------------ |
+| `--created-via`      |         | Filter policies by how they were created: "default", "added", "provisioned", or "approval" |
+| `--decision`         |         | Filter policies by decision: "allow" or "deny"                                             |
+| `--include-inactive` |         | Show inactive policy rules hidden by remote governance                                     |
+| `--json`             |         | Output filtered policy rules as JSON                                                       |
+| `--protocol`         |         | Filter network rules by protocol: tcp or udp                                               |
+| `--source`           |         | Filter policies by source: "local", "org", or "kit"                                        |
+| `--type`             | `all`   | Filter policies by type: "all", "network", "filesystem" (default "all")                    |
+| `--wide`             |         | Show detailed rule-level output with rule IDs and resources                                |
 
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
 
 ## Examples
 
@@ -63,6 +64,9 @@ rule.
 
   # List organization policies that deny access
   sbx policy ls --source org --decision deny
+
+  # List persistent rules created from approval prompts
+  sbx policy ls --wide --created-via approval
 
   # Include inactive rules hidden by remote governance
   sbx policy ls --include-inactive

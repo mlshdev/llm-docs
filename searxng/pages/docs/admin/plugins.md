@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/admin/plugins.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/plugins.rst)
+> Pinned source for SearXNG master: [docs/admin/plugins.rst](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/docs/admin/plugins.rst)
 
 <a id="plugins-admin"></a>
 

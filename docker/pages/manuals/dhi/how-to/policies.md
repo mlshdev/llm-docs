@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/how-to/policies.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/dhi/how-to/policies.md)
+> Pinned source for Docker main: [content/manuals/dhi/how-to/policies.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/dhi/how-to/policies.md)
 
 Docker publishes the set of security and compliance policies that Docker
 Hardened Images (DHIs) are built to meet, so you can hold your own images to the

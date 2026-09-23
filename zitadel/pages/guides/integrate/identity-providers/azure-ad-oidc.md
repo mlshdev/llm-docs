@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/integrate/identity-providers/azure-ad-oidc.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/integrate/identity-providers/azure-ad-oidc.mdx)
+> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/integrate/identity-providers/azure-ad-oidc.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/integrate/identity-providers/azure-ad-oidc.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/identity-providers/azure-ad-oidc
 
 This guides shows you how to connect Entra ID (former Azure Active Directory) as an identity provider in ZITADEL.
@@ -16,14 +16,14 @@ Go to the settings page of your instance or organization and choose "Identity Pr
 In the table you can see all the providers you have configured.
 Also, you see all provider templates that are available.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/zitadel_identity_provider_overview.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/zitadel_identity_provider_overview.png)
 
 Select the Microsoft Provider template.
 
 Click on the ZITADEL Callback URL to copy it to your clipboard.
 You will have to paste it in the Entra ID Client later.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/zitadel_azure_provider2.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/zitadel_azure_provider2.png)
 
 ## Entra ID Configuration
 
@@ -37,9 +37,9 @@ You need to have access to an Entra ID Tenant. If you do not yet have one follow
 4. Save the Application (client) ID and the Directory (tenant) ID from the detail page
 5. Register the application
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/azure_app_registration.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/azure_app_registration.png)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/azure_client_tenant_id.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/azure_client_tenant_id.png)
 
 ### Add client secret
 
@@ -49,7 +49,7 @@ Generate a new client secret to authenticate your user.
 2. Click on "+ New client secret" and enter a description and an expiry date, add the secret afterward
 3. Copy the value of the secret. You will not be able to see the value again after some time
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/azure_client_secret.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/azure_client_secret.png)
 
 ### Token settings
 
@@ -59,7 +59,7 @@ To allow ZITADEL to get the information from the authenticating user you have to
 2. Click on "+ Add optional claim"
 3. Add email, family\_name (last name of the user), given\_name (first name of the user) and preferred\_username to the id token
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/azure_token_configuration.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/azure_token_configuration.png)
 
 ### API permissions
 
@@ -69,7 +69,7 @@ To be able to get all the information that ZITADEL needs, you have to configure 
 2. Make sure the permissions include "Microsoft Graph": email, profile and User.Read
 3. The "Other permissions granted" should include "Microsoft Graph: openid"
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/azure_api_permissions.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/azure_api_permissions.png)
 
 ## ZITADEL Setup
 
@@ -118,7 +118,7 @@ The provider can also be activated via API. As the identity providers are sub-re
 - [Activate Default Identity Provider](https://zitadel.com/docs/reference/api/admin/zitadel.admin.v1.AdminService.AddIDPToLoginPolicy)
 - [Activate Organization Identity Provider](https://zitadel.com/docs/reference/api/management/zitadel.management.v1.ManagementService.AddIDPToLoginPolicy)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/zitadel_activate_azure.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/zitadel_activate_azure.png)
 
 ### Ensure your Login Policy allows External IDPs
 
@@ -133,7 +133,7 @@ You can also change the settings through the API directly either in the default 
 - [Update Default Login Settings](https://zitadel.com/docs/reference/api/admin/zitadel.admin.v1.AdminService.UpdateLoginPolicy)
 - [Update Organization Login Settings](https://zitadel.com/docs/reference/api/management/zitadel.management.v1.ManagementService.UpdateCustomLoginPolicy)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/zitadel_allow_external_idp.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/zitadel_allow_external_idp.png)
 
 ## Test the setup
 
@@ -147,6 +147,6 @@ The organization scope looks like this: `urn:zitadel:iam:org:id:{id}`.
 You can [read more about the reserved scopes](https://zitadel.com/docs/apis/openidoauth/scopes#reserved-scopes)
 or [use the ZITADEL OIDC Playground](https://zitadel.com/playgrounds/oidc) to see what happens with the login when you send different scopes.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/zitadel_login_azure.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/zitadel_login_azure.png)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/microsoft_login.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/microsoft_login.png)

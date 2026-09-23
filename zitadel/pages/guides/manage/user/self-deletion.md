@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/manage/user/self-deletion.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/manage/user/self-deletion.mdx)
+> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/manage/user/self-deletion.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/manage/user/self-deletion.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/user/self-deletion
 
 ZITADEL lets a user delete their own account. This is useful if you are building a "Delete my account" feature into your application, or if you need to comply with data deletion requests (e.g. GDPR right to erasure).

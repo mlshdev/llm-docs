@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/integrate/actions/webhook-site-setup.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/integrate/actions/webhook-site-setup.mdx)
+> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/integrate/actions/webhook-site-setup.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/integrate/actions/webhook-site-setup.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/actions/webhook-site-setup
 
 ## 1. Introduction
@@ -57,7 +57,7 @@ if req.Method == http.MethodOptions {
 
 6. Keep the Webhook.site browser tab open while testing.
 
-![Screenshot: Webhook.site XHR Redirect configuration interface](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/actions-v2/webhook-xhr.png)
+![Screenshot: Webhook.site XHR Redirect configuration interface](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/actions-v2/webhook-xhr.png)
 
 ***
 
@@ -71,7 +71,7 @@ go run actionsRequest.go
 
 You should see output in your console whenever the listener is called.
 
-![Screenshot: Console output showing listener receiving webhook requests](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/actions-v2/console.png)
+![Screenshot: Console output showing listener receiving webhook requests](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/actions-v2/console.png)
 
 ***
 
@@ -96,7 +96,7 @@ curl -L -X POST 'https://${CUSTOM_DOMAIN}/v2/actions/targets' \
 }'
 ```
 
-![Screenshot: Webhook.site target creation interface](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/actions-v2/webhook-url.png)
+![Screenshot: Webhook.site target creation interface](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/actions-v2/webhook-url.png)
 
 ***
 
@@ -163,11 +163,11 @@ Both your Webhook.site and your local listener should now print out something li
 
 Your local listener should look like this:
 
-![Screenshot: Local listener output](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/actions-v2/local-listener.png)
+![Screenshot: Local listener output](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/actions-v2/local-listener.png)
 
 Your Webhook.site should look like this:
 
-![Screenshot: Webhook.site request log](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/actions-v2/webhook-listener.png)
+![Screenshot: Webhook.site request log](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/actions-v2/webhook-listener.png)
 
 ***
 

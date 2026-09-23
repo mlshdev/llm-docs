@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/upstream-proxy.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/configuration/upstream-proxy.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/upstream-proxy.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/configuration/upstream-proxy.md)
 
 # Configure an upstream proxy
 
@@ -33,7 +33,8 @@ your OS has no proxy configured, traffic goes direct.
 
 ## Set a proxy manually
 
-Use `sbx settings set` to override the default for one or both kinds of traffic:
+Use [`sbx settings set`](https://docs.docker.com/ai/sandboxes/configuration/settings/#change-a-setting) to override the default
+for one or both kinds of traffic:
 
 ```console
 $ sbx settings set proxy http://proxy.corp:3128          # both kinds of traffic
@@ -79,9 +80,8 @@ environment variables, so existing setups keep working without migration:
   form of `proxy.sandbox` and `no_proxy.sandbox`. They apply to sandbox traffic
   only and never affect daemon traffic.
 
-The daemon reads these variables when it starts, so set them before your first
-`sbx` command, or restart the daemon for a change to affect daemon and sandbox
-traffic. Supported CLI clients read their environment on each invocation.
+For how to apply environment variable changes to the CLI and daemon, see
+[Settings environment variables](https://docs.docker.com/ai/sandboxes/configuration/settings/#environment-variables).
 
 ## Precedence
 

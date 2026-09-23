@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/faq.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/faq.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/faq.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/faq.md)
 
 # FAQ
 
@@ -164,7 +164,7 @@ sends it directly. Pasting an image or screenshot with `Ctrl+V` is different:
 the agent reads it from your host clipboard, and the sandbox blocks that access
 unless you opt in.
 
-Turn it on with a local setting:
+Turn on [`clipboard.imagePaste`](https://docs.docker.com/ai/sandboxes/configuration/settings/#clipboardimagepaste):
 
 ```console
 $ sbx settings set clipboard.imagePaste true

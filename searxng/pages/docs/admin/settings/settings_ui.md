@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/admin/settings/settings_ui.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/admin/settings/settings_ui.rst)
+> Pinned source for SearXNG master: [docs/admin/settings/settings_ui.rst](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/docs/admin/settings/settings_ui.rst)
 
 <a id="settings-ui"></a>
 
@@ -37,7 +37,7 @@ privacy, since the browser can records the page titles.
 
 When enabled, the results are centered instead of being in the left (or RTL)
 side of the screen.  This setting only affects the *desktop layout*
-([min-width: @tablet](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/client/simple/src/less/definitions.less))
+([min-width: @tablet](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/client/simple/src/less/definitions.less))
 
 **`cache_url` : `https://web.archive.org/web/`**
 

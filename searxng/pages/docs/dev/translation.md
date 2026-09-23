@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/translation.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/translation.rst)
+> Pinned source for SearXNG master: [docs/dev/translation.rst](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/docs/dev/translation.rst)
 
 <a id="translation"></a>
 
@@ -39,18 +39,18 @@ only the
 
 <a id="searxng-weblate-workflow"></a>
 
-![](https://raw.githubusercontent.com/searxng/searxng/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/translation.svg)
+![](https://raw.githubusercontent.com/searxng/searxng/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/docs/dev/translation.svg)
 
 *SearXNG's PR workflow to be in sync with Weblate*
 
 **Sync from *origin* to *weblate*: using `make weblate.push.translations`**
 
 For each commit on the `master` branch of SearXNG *origin* the GitHub job
-[babel / Update translations branch](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/.github/workflows/integration.yml) checks for updated translations.
+[babel / Update translations branch](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/.github/workflows/integration.yml) checks for updated translations.
 
 **Sync from *weblate* to *origin*: using `make weblate.translations.commit`**
 
-Every Friday, the GitHub workflow [babel / create PR for additions from weblate](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/.github/workflows/translations-update.yml) creates a PR with the
+Every Friday, the GitHub workflow [babel / create PR for additions from weblate](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/.github/workflows/translations-update.yml) creates a PR with the
 updated translation files:
 
 - `translation/messages.pot`,

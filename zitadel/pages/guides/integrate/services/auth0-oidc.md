@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/integrate/services/auth0-oidc.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/integrate/services/auth0-oidc.mdx)
+> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/integrate/services/auth0-oidc.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/integrate/services/auth0-oidc.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/services/auth0-oidc
 
 This guide shows how to enable login with ZITADEL on Auth0.
@@ -22,14 +22,14 @@ Prerequisites:
 In Authentication > Enterprise
 
 1. Press the "+" button right to "OpenID Connect"
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/oidc/auth0/auth0-create-app.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/oidc/auth0/auth0-create-app.png)
 2. Set a connection name for example "ZITADEL"
 3. The issuer url is `https://${CUSTOM_DOMAIN}/.well-known/openid-configuration`
 4. Copy the callback URL (ending with `/login/callback`)
 
 The settings should look like this:
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/oidc/auth0/auth0-init-app.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/oidc/auth0/auth0-init-app.png)
 
 Next we have to switch to the ZITADEL Management Console.
 
@@ -41,13 +41,13 @@ First of all we create the application in your project.
 
 1. Copy the client id from ZITADEL and paste it into the **Client ID** field
 2. Copy the client secret from ZITADEL and paste it into the **Client Secret** field
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/oidc/auth0/auth0-full.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/oidc/auth0/auth0-full.png)
 3. click Create
 4. To verify the connection go to the "Applications" tab and enable the Default App
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/oidc/auth0/auth0-enable-app.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/oidc/auth0/auth0-enable-app.png)
 5. Click "Back to OpenID Connect"
 6. Click on the "..." button right to the newly created connection and click "Try"
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/oidc/auth0/auth0-try.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/oidc/auth0/auth0-try.png)
 7. ZITADEL should open on a new tab, and you can enter your login information
 8. After you logged in you should see the following:
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/oidc/auth0/auth0-works.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/oidc/auth0/auth0-works.png)

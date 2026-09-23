@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/_index.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/governance/access-controls/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/_index.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/governance/access-controls/_index.md)
 
 # Access controls
 
@@ -17,7 +17,7 @@ and filesystem rule format.
 ## Access surfaces
 
 - [Network access policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/network/): control outbound network access from
-  sandboxes.
+  sandboxes. A local policy rule can match a host, or an HTTP method and path.
 - [Filesystem access policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/filesystem/): control which host paths
   sandboxes can mount as workspaces.
 - [MCP access policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/mcp/): control MCP server registration, tool calls,

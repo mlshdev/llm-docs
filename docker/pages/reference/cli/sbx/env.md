@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_env.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_env.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_env.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_env.yaml)
 
 # sbx env
 
@@ -17,6 +17,16 @@ The file describes the agent, optional mixin kits, workspace mounts,
 environment variables, secrets to provision, and per-service credential
 bindings. Secrets are provisioned at the environment's sandbox scope so
 `sbx env rm` can remove everything it created.
+
+A secret with `command` or `ref` can set `snapshot: true` to resolve on
+the host after approval and store the result as a literal. This works locally
+and with --cloud. Snapshots do not refresh; recreate the environment to rotate
+them. A snapshot cannot set refresh or noVerify.
+
+secrets:
+github:
+command: gh auth token
+snapshot: true
 
 A file may declare its own inputs in an `args:` block, each with a default or
 `required: true` and an optional description, enum, or pattern. Reference one
@@ -169,10 +179,56 @@ environment's commands are your own and run many times a day,
 "sbx settings set env.rememberHostCommands true" asks about them only when
 they change.
 
+With --cloud, create, run, exec, rm and plan manage a cloud sandbox from the same
+file. Supported declarations are agents and kits, sandbox environment variables,
+CPU and memory sizing, literal or snapshot secrets and bindings for supported providers, and
+host lifecycle commands. Kits can publish TCP ports through cloud endpoints.
+Stored cloud secrets are inherited as with cloud create/run; sandbox-scoped secrets
+override account defaults, and secrets declared in the file override both. The plan
+shows inherited credentials. Removal deletes only secrets provisioned by this environment.
+
+Bindings merge into the same global credentials.yaml as local environments and
+are retained on removal unless --prune-bindings is passed. Cloud must advertise
+kit credential support. Third-party kit domains must be approved by the binding;
+creation refuses implicit provider-default routing for a bound secret. Bindings
+and secrets are provisioned at creation; editing them requires recreating the sandbox.
+
+Snapshot references use the host's supported CLI resolvers (such as op\:// and AWS
+Secrets Manager ARNs); the sdk backend is unsupported. An interrupted secret
+upload reuses the saved value in the host credential store. If that value is
+unavailable, resolution is not repeated: follow the recovery error before cleanup.
+
+workspace, additionalWorkspaces and clone name host directories, which a cloud
+sandbox cannot mount; remove them and clone the project inside the sandbox from a
+kit instead. Host port bindings, registry credentials, MCP definitions, custom
+credential providers, local sandbox options and dynamic secret sources are also
+rejected before host commands or provisioning. Initialize commands may prepare
+local kit sources; kit validation follows initialization and precedes cloud baking.
+
+State belongs to this machine, the selected cloud endpoint, Docker identity and
+ordered environment files. Use the same target and files for subsequent commands.
+DOCKER\_ACCESS\_TOKEN uses a token-specific state scope: changing the token starts
+with separate state. Use sbx login for state that survives token refresh.
+
+If creation is interrupted, retry the same command and declaration within 23 hours.
+Removal waits for unresolved writes to be recovered. Older unresolved attempts
+retain their journal; the error names its path. Before deleting that journal,
+confirm the original requests have finished and remove their sandbox and secrets
+using ordinary cloud commands in the same account and endpoint. If the outcome
+cannot be confirmed, retain the journal and contact support.
+
+Lifecycle commands inherit the cloud endpoint and expose SBX\_SANDBOX\_ID after
+creation. Sandbox env values apply to new sessions; rejoining a live agent keeps
+that process's existing environment.
+
+sbx --cloud env plan ./sbxenv.yaml
+sbx --cloud env run --auto-approve --detached ./sbxenv.yaml
+sbx --cloud env exec ./sbxenv.yaml -- git status
+sbx --cloud env rm --force ./sbxenv.yaml
+
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |

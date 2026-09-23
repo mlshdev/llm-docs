@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/integrate/login/oidc/login-users.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/integrate/login/oidc/login-users.mdx)
+> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/integrate/login/oidc/login-users.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/integrate/login/oidc/login-users.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login/oidc/login-users
 
 ## Overview
@@ -25,7 +25,7 @@ For a basic understanding of OAuth and its flows, we'll briefly describe the mos
 
 The following diagram demonstrates a basic authorization\_code flow:
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/auth_flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/auth_flow.png)
 
 1. When an unauthenticated user visits your application,
 2. you will create an authorization request to the authorization endpoint.

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/guides/headless/index.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/_vendor/github.com/docker/docker-agent/docs/guides/headless/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/guides/headless/index.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/_vendor/github.com/docker/docker-agent/docs/guides/headless/index.md)
 
 *Run Docker Agent without a TUI: structured JSON output, event hooks, sandboxed CI isolation, and a GitHub Actions example.*
 

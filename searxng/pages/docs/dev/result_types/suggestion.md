@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/result_types/suggestion.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/result_types/suggestion.rst)
+> Pinned source for SearXNG master: [docs/dev/result_types/suggestion.rst](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/docs/dev/result_types/suggestion.rst)
 
 <a id="result-types-suggestion"></a>
 
@@ -22,7 +22,7 @@ From this simple dict another dict is build up:
 {"url" : "!bang lorem ipsum ..", "title": "lorem ipsum" }
 ```
 
-and used in the template [suggestions.html](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/elements/suggestions.html):
+and used in the template [suggestions.html](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/searx/templates/simple/elements/suggestions.html):
 
 ```python
 # use RawTextQuery to get the suggestion URLs with the same bang

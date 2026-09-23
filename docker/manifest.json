@@ -8,42 +8,46 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-22T16:43:14Z",
-  "documentationDigest": "0db1386b9b4cc4613a7282d21ef4e5b2416295b6c41ef6d68306cc78dce781f8",
-  "sourceCommit": "c69ce0fd3851270bba5473502268ff7661887b2a",
-  "documentCount": 1624,
+  "sourceCommittedAt": "2026-09-23T14:43:21Z",
+  "documentationDigest": "59433dae9d7bff0e7749993dea7d0ab77b66277847650edba114fcd7183507e6",
+  "sourceCommit": "b62199cbc77c551cd38bae7ffdeda67c88a06d1d",
+  "documentCount": 1641,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
       "byteLength": 687,
       "documentCount": 0,
-      "sha256": "f4aeb154451d803b70b3547b2872c113043fce0d309476f52f082d9a6db6d73d"
+      "sha256": "f7197de7c94869cc0699253fb922cc29d422ef424b118b063a445e25ecf58c77"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8371219,
+      "byteLength": 8384401,
       "documentCount": 783,
-      "sha256": "4014fb8f3b997f9b5d270a7bf2b3e053467eb0f15436cb5ebe68d56e5b650f7e"
+      "sha256": "45d14229cae14ed871d74ed7a813e21bf64272f43b6b79244140a6ee806a265e"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 8232940,
+      "byteLength": 8231284,
       "documentCount": 197,
-      "sha256": "59768888c51cc6cabae5f0336f9878c10e0ffc42a66eb992b2a92611145f5989"
+      "sha256": "55950879464e9f82aa69be99820dca8d73d9b7be8b14569fb6fec8645a7926f8"
     },
     {
       "name": "llms-full.003.txt",
-      "byteLength": 6514140,
-      "documentCount": 644,
-      "sha256": "d80645b37e5962895c5e4a7c3ace56611d408e47fc4d4d6e5dda333a79b83817"
+      "byteLength": 6489191,
+      "documentCount": 661,
+      "sha256": "ac99f075c8b4368982dce85c84c8ce87b3c8c5056a5074fbe1ae520d971d296c"
     }
   ],
-  "outputDigest": "a4a04593480d0e6fba78cc4de6ac9548d2c632f9172ca73ddbe02c7d560dd0bd",
+  "outputDigest": "cf0da4cbf65c4c32b04554f2af597a23f69bae3ce5005d3fbb6f54264cb2758b",
   "quarantined": [
     {
       "sourcePath": "content/manuals/ai/sandboxes/architecture.md",
       "reason": "Unsupported Docker shortcode interactive-diagram in content/manuals/ai/sandboxes/architecture.md"
+    },
+    {
+      "sourcePath": "content/manuals/ai/sandboxes/configuration/settings.md",
+      "reason": "Unsupported Docker shortcode setting-metadata in content/manuals/ai/sandboxes/configuration/settings.md"
     },
     {
       "sourcePath": "content/manuals/ai/sandboxes/security/_index.md",

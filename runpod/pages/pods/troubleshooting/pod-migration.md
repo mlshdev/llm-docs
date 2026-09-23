@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/troubleshooting/pod-migration.mdx](https://github.com/runpod/docs/blob/4962c60abcb8d9bf359d92ccc07644abd5d8e610/pods/troubleshooting/pod-migration.mdx)
+> Pinned source for Runpod main: [pods/troubleshooting/pod-migration.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/pods/troubleshooting/pod-migration.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/troubleshooting/pod-migration
 
 # Pod migration

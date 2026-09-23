@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/security/defaults.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/security/defaults.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/security/defaults.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/security/defaults.md)
 
 # Default security posture
 
@@ -36,7 +36,9 @@ workspace modes and what to review after a direct-mount session.
 ## Shared skills defaults
 
 Sandboxes created for supported agents mount a persistent shared skills store
-read-only by default. The `skills.defaultMode` setting can change this default,
+read-only by default. The
+[`skills.defaultMode`](https://docs.docker.com/ai/sandboxes/configuration/settings/#skillsdefaultmode) setting
+can change this default,
 and `--skills` overrides it for a sandbox at creation. A sandbox with `readwrite` access can change skills that other
 participating sandboxes load, including those with `readonly` access. Use
 `--skills=off` when creating a sandbox to omit the shared store. Existing

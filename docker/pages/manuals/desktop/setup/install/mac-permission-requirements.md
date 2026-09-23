@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/install/mac-permission-requirements.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/desktop/setup/install/mac-permission-requirements.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/install/mac-permission-requirements.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/desktop/setup/install/mac-permission-requirements.md)
 
 # Understand permission requirements for Docker Desktop on Mac
 

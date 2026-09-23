@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/dev/api/backend.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/extensions/extensions-sdk/dev/api/backend.md)
+> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/dev/api/backend.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/extensions/extensions-sdk/dev/api/backend.md)
 
 # Extension Backend
 
@@ -13,7 +13,7 @@ Performs an HTTP GET request to a backend service.
 ```typescript
 ddClient.extension.vm.service
  .get("/some/service")
- .then((value: any) => console.log(value)
+ .then((value: any) => console.log(value))
 ```
 
 See [Service API Reference](https://docs.docker.com/reference/api/extensions-sdk/HttpService/) for other HTTP methods.

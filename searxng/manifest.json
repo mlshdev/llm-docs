@@ -8,9 +8,9 @@
   "repository": "searxng/searxng",
   "tag": "master",
   "branch": "master",
-  "sourceCommittedAt": "2026-09-17T14:31:25Z",
-  "documentationDigest": "7e3c093014c0a592a7ad137cadb4cd9ae7f94e5eb5404db353bb927957ad9a02",
-  "sourceCommit": "2e624bed40eb97b46faa98094a0b74d3ececd93d",
+  "sourceCommittedAt": "2026-09-23T15:18:45Z",
+  "documentationDigest": "16cd4676f97b7bdaa68b899c801cbd8af53d119d8233fa904a16ab9d9ca6dfd8",
+  "sourceCommit": "3cd69d30e2a78dfc817be9e349e7c2e4317c92e3",
   "documentCount": 177,
   "indexComplete": true,
   "corpusVolumes": [
@@ -18,10 +18,10 @@
       "name": "llms-full.txt",
       "byteLength": 359816,
       "documentCount": 177,
-      "sha256": "341eeff5f10883d7df9737a502072aef065e02f54d331987ddfb04e3a0314177"
+      "sha256": "14a3d0e601e117ed0d01d389f78fdf7d734ec267c47395d2ae5d12276db0e83a"
     }
   ],
-  "outputDigest": "65f116ac080375effd868304af14ec8d6a35ce1b6505173c5b5654d87049a04f",
+  "outputDigest": "71a172b270f49236496e2ece824cd1c44949db665f74c191fcb96acd587a7e79",
   "notes": [
     "SearXNG tracks master because the repository publishes neither GitHub releases nor release tags.",
     "Checked-in RST and Markdown includes are expanded without executing Sphinx, Jinja, or imported Python modules.",

@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/engines/offline_concept.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/offline_concept.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/offline_concept.rst](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/docs/dev/engines/offline_concept.rst)
 
 # Offline Concept
 
@@ -15,8 +15,8 @@ introduced.  An offline engine is an engine which does not need Internet
 connection to perform a search and does not use HTTP to communicate.
 
 Offline engines can be configured, by adding those to the `engines` list of
-[settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/settings.yml).  An example skeleton for offline
-engines can be found in [demo offline engine](https://docs.searxng.org/dev/engines/demo/demo_offline.html#demo-offline-engine) ([demo\_offline.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines/demo_offline.py)).
+[settings.yml](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/searx/settings.yml).  An example skeleton for offline
+engines can be found in [demo offline engine](https://docs.searxng.org/dev/engines/demo/demo_offline.html#demo-offline-engine) ([demo\_offline.py](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/searx/engines/demo_offline.py)).
 
 # Programming Interface
 

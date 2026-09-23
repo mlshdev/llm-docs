@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/release-notes/cli.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/dhi/release-notes/cli.md)
+> Pinned source for Docker main: [content/manuals/dhi/release-notes/cli.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/dhi/release-notes/cli.md)
 
 This page lists changes in recent stable releases of the DHI CLI (`docker dhi`). For
 the full release history, including pre-releases and downloads, see the

@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `4962c60abcb8d9bf359d92ccc07644abd5d8e610`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -200,6 +200,7 @@
 - [Cost centers](pages/accounts-billing/cost-centers.md): Track and organize Runpod spending by team, project, or department. Review account, billing, and management details for Runpod. (6433 bytes)
 - [Referral, affiliate, and creator programs](pages/accounts-billing/referrals.md): Earn additional revenue through Runpod's referral, affiliate, and creator programs. Review account, billing, and management details for Runpod. (6036 bytes)
 - [Troubleshoot payment card declines](pages/accounts-billing/manage-payment-cards.md): Resolve declined payment cards and prevent service interruptions on Runpod. Review account, billing, and management details for Runpod. (4017 bytes)
+- [Post-paid billing](pages/accounts-billing/post-paid-billing.md): Learn how Runpod's enterprise post-paid billing works: usage is metered and invoiced in arrears at your contracted rates, with a different console experience. (4594 bytes)
 - [Sales tax on Runpod purchases](pages/accounts-billing/sales-tax.md): Understand how sales tax applies to Runpod purchases, what determines your rate, and how it appears on your receipts. (2082 bytes)
 - [Adding your tax ID](pages/accounts-billing/add-tax-id.md): Add a tax ID to your Runpod account to update how tax is applied to your purchases. (1776 bytes)
 

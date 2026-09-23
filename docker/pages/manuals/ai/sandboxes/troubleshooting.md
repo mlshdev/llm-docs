@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/troubleshooting.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/troubleshooting.md)
 
 # Troubleshooting
 
@@ -125,7 +125,8 @@ ERROR: resolve kits: kit "git+https://github.com/docker/sbx-kits-contrib.git#dir
 
 `sbx` restricts kit installs to an allowlist of sources, which defaults to
 Docker Hub (`docker.io/`) only. Add the kit's publisher to the
-`kit.allowedSources` setting, keeping the entries you want to retain:
+[`kit.allowedSources`](https://docs.docker.com/ai/sandboxes/configuration/settings/#kitallowedsources) setting,
+keeping the entries you want to retain:
 
 ```console
 $ sbx settings set kit.allowedSources '["docker.io/","github.com/docker/"]'
@@ -391,8 +392,10 @@ If the socket exists but forwarding still fails, check the
 Docker Sandboxes can sign Git commits with SSH keys from your host agent.
 For setup steps, see [Commit signing](https://docs.docker.com/ai/sandboxes/workflows/git/#commit-signing).
 
-Forwarding is enabled by default. Confirm that it hasn't been disabled and
-check whether a fixed socket path is configured:
+Forwarding is enabled by default. Check
+[`ssh.agentForwardingEnabled`](https://docs.docker.com/ai/sandboxes/configuration/settings/#sshagentforwardingenabled)
+and [`ssh.agentSocketPath`](https://docs.docker.com/ai/sandboxes/configuration/settings/#sshagentsocketpath) to
+confirm that forwarding is enabled and inspect the socket selection:
 
 ```console
 $ sbx settings get ssh.agentForwardingEnabled
@@ -504,7 +507,9 @@ If you have set custom `XDG_STATE_HOME`, `XDG_CACHE_HOME`, or
 
 ## Enable automatic diagnostics uploads
 
-To opt in to automatic diagnostics uploads after certain daemon errors, run:
+To opt in to automatic diagnostics uploads after certain daemon errors, set
+[`diagnostics.autoUpload`](https://docs.docker.com/ai/sandboxes/configuration/settings/#diagnosticsautoupload) to
+`yes`:
 
 ```console
 $ sbx settings set diagnostics.autoUpload yes

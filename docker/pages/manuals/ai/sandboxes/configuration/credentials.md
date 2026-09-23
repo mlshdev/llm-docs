@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/configuration/credentials.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/configuration/credentials.md)
 
 # Manage credentials
 
@@ -305,9 +305,10 @@ configure that path for every sandbox:
 $ sbx settings set ssh.agentSocketPath "$SSH_AUTH_SOCK"
 ```
 
-An empty `ssh.agentSocketPath`, which is the default, uses each client's
-current `SSH_AUTH_SOCK` instead. The `ssh.agentForwardingEnabled` setting is a
-boolean that turns forwarding on or off.
+An empty [`ssh.agentSocketPath`](https://docs.docker.com/ai/sandboxes/configuration/settings/#sshagentsocketpath), which is the
+default, uses each client's current `SSH_AUTH_SOCK` instead. Use
+[`ssh.agentForwardingEnabled`](https://docs.docker.com/ai/sandboxes/configuration/settings/#sshagentforwardingenabled) to turn
+forwarding on or off.
 
 After changing forwarding or the socket selection, restart the daemon so
 existing sandboxes use the new configuration:

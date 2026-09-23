@@ -1,8 +1,8 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_ls.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_mcp_ls.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_ls.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_mcp_ls.yaml)
 
 # sbx mcp ls
 
-List MCP servers, grouped by the gateway that serves them
+List MCP servers
 
 **Usage:** `sbx mcp ls [flags]`
 
@@ -10,8 +10,8 @@ List MCP servers, grouped by the gateway that serves them
 
 List registered MCP servers under the gateway that serves them.
 
-The gateway header reports where it runs, who controls it, and whether you are
-signed in; each server row reports its transport and whether it is usable now.
+The GATEWAY column reports where each server runs, who controls it, and the
+signed-in identity; each row also reports its transport and whether it is usable now.
 Servers needing authorization carry the 'sbx mcp auth' next step.
 
 A server registered with custom headers is marked as such; one whose header
@@ -23,19 +23,28 @@ themselves and the state of each placeholder.
 Auth status is read without starting an OAuth flow — from the local token store
 in local data-plane mode, otherwise from the hosted control plane.
 
+With --cloud:
+List MCP servers reported by existing cloud sandbox gateways, with the
+sandboxes that reference each server. Servers skipped by a gateway are excluded.
+This is not a complete inventory of configured servers: unused configurations
+and gateways that do not report server names are absent, including with --quiet.
+
+Specify a sandbox to show its gateway state and host, requested servers, and
+skipped servers.
+
 ## Options
 
-| Option   | Default | Description           |
-| -------- | ------- | --------------------- |
-| `--json` |         | Output in JSON format |
+| Option          | Default | Description                   |
+| --------------- | ------- | ----------------------------- |
+| `--json`        |         | Output in JSON format         |
+| `-q`, `--quiet` |         | Only display MCP server names |
 
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
 
 ## Examples
 
@@ -44,4 +53,10 @@ sbx mcp ls
 
   # Machine-readable output for scripting
   sbx mcp ls --json
+
+  # Cloud: list servers reported across existing sandboxes
+  sbx --cloud mcp ls
+
+  # Cloud: show a cloud sandbox's gateway by name or sbx_ ID
+  sbx --cloud mcp ls my-sbx
 ```

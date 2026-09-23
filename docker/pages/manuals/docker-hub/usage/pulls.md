@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/usage/pulls.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/docker-hub/usage/pulls.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/usage/pulls.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/docker-hub/usage/pulls.md)
 
 # Docker Hub pull usage and limits
 

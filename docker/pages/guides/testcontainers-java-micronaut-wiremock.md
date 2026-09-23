@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/testcontainers-java-micronaut-wiremock.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/guides/testcontainers-java-micronaut-wiremock.md)
+> Pinned source for Docker main: [content/guides/testcontainers-java-micronaut-wiremock.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/guides/testcontainers-java-micronaut-wiremock.md)
 
 # Testing REST API integrations in Micronaut apps using WireMock
 

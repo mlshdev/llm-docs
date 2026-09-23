@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_stop.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_stop.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_stop.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_stop.yaml)
 
 # sbx stop
 
@@ -14,10 +14,12 @@ ID (sbx\_\*) or name from "sbx --cloud ls".
 Stopped sandboxes retain their state and can be restarted with "sbx run".
 
 With --cloud, stop suspends each sandbox in place: its full state (memory +
-disk) is preserved, the host is released, and the sandbox keeps its ID.
-Restart it — same ID — by running its agent again ("sbx --cloud run <agent>")
-and picking the stopped sandbox from the prompt. A detached run (--detached)
-creates a new sandbox instead of restarting a stopped one.
+disk) is preserved, the host is released, and the sandbox keeps its ID. Stop
+returns once the request is accepted. Watch the sandbox reach the stopped
+state with "sbx --cloud ls".
+Restart it — same ID — with "sbx --cloud attach SANDBOX", with
+"sbx --cloud run AGENT --name NAME" (also non-interactively with --detached),
+or by running its agent again and picking it from the prompt.
 
 Stop does not create a template and does not delete the sandbox. To capture
 a durable, shareable template from a running sandbox instead, use
@@ -26,8 +28,7 @@ running).
 
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |

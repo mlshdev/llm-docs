@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/_index.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/extensions/_index.md)
+> Pinned source for Docker main: [content/manuals/extensions/_index.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/extensions/_index.md)
 
 # Docker Extensions
 
@@ -7,8 +7,6 @@ Docker Extensions let you use third-party tools within Docker Desktop to extend 
 You can seamlessly connect your favorite development tools to your application development and deployment workflows. Augment Docker Desktop with debugging, testing, security, and networking functionalities, and create custom add-ons using the Extensions [SDK](https://docs.docker.com/extensions/extensions-sdk/).
 
 Anyone can use Docker Extensions and there is no limit to the number of extensions you can install.
-
-![Extensions Marketplace](https://raw.githubusercontent.com/docker/docs/c69ce0fd3851270bba5473502268ff7661887b2a/static/assets/images/extensions.webp)
 
 ## What extensions are available?
 

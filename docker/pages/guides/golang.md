@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/golang.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/guides/golang.md)
+> Pinned source for Docker main: [content/guides/golang.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/guides/golang.md)
 
 This guide will show you how to create, test, and deploy containerized Go applications using Docker.
 

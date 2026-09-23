@@ -1,7 +1,7 @@
-> Pinned source for ZITADEL v4.18.0: [apps/docs/content/sdk-examples/client-libraries/ruby.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/sdk-examples/client-libraries/ruby.mdx)
+> Pinned source for ZITADEL v4.19.1: [apps/docs/content/sdk-examples/client-libraries/ruby.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/sdk-examples/client-libraries/ruby.mdx)
 > Canonical documentation: https://zitadel.com/docs/sdk-examples/client-libraries/ruby
 
-![ruby logo](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/tech/ruby.svg)
+![ruby logo](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/tech/ruby.svg)
 
 This guide covers the official Zitadel Management API Client for Ruby (3.1+), which allows you to programmatically manage resources in your Zitadel instance.
 

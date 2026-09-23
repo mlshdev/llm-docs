@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/registry-mirror.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/configuration/registry-mirror.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/registry-mirror.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/configuration/registry-mirror.md)
 
 # Configure a registry mirror
 
@@ -8,8 +8,8 @@ Docker Engine's requirements, Docker inside the sandbox uses it too.
 
 ## Configure the mirror
 
-Set `platform.images.registryMirror` to the mirror host. Include a port when
-needed, but omit the URL scheme:
+Set [`platform.images.registryMirror`](https://docs.docker.com/ai/sandboxes/configuration/settings/#platformimagesregistrymirror)
+to the mirror host. Include a port when needed, but omit the URL scheme:
 
 ```console
 $ sbx settings set platform.images.registryMirror registry.example.com

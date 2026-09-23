@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/bake/targets.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/build/bake/targets.md)
+> Pinned source for Docker main: [content/manuals/build/bake/targets.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/build/bake/targets.md)
 
 A target in a Bake file represents a build invocation. It holds all the
 information you would normally pass to a `docker build` command using flags.

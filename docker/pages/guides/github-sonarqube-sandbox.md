@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/github-sonarqube-sandbox.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/guides/github-sonarqube-sandbox.md)
+> Pinned source for Docker main: [content/guides/github-sonarqube-sandbox.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/guides/github-sonarqube-sandbox.md)
 
 This guide demonstrates how to build an AI-powered code quality workflow using
 [E2B sandboxes](https://e2b.dev/docs) with Docker’s MCP catalog. You’ll create

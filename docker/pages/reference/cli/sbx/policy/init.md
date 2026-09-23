@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_init.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_policy_init.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_init.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_policy_init.yaml)
 
 # sbx policy init
 
@@ -26,6 +26,14 @@ deny-all    All outbound network traffic is blocked
 After initializing, use "sbx policy allow/deny/rm" to change the global policy.
 Use "sbx policy reset" to clear all policies and start over.
 
+With --cloud:
+Set the default network mode of the cloud policy.
+
+There is no one-time setup: init sets the default mode for the account, or for
+one sandbox with --sandbox, keeps the existing allow and deny rules, and can be
+run again. balanced is deny-all plus the balanced allow list added to the scope.
+Use "sbx --cloud policy reset" to clear the rules first.
+
 ## Options
 
 | Option      | Default | Description                                         |
@@ -34,11 +42,10 @@ Use "sbx policy reset" to clear all policies and start over.
 
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
 
 ## Examples
 
@@ -52,4 +59,10 @@ Use "sbx policy reset" to clear all policies and start over.
   # Block everything, then allow specific sites
   sbx policy init deny-all
   sbx policy allow network api.example.com:443
+
+  # Set the account default to balanced
+  sbx --cloud policy init balanced
+
+  # Block everything for one sandbox, keeping its allow rules
+  sbx --cloud policy init deny-all --sandbox my-sandbox
 ```

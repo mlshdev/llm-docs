@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [community-solutions/copyparty-file-manager/overview.mdx](https://github.com/runpod/docs/blob/4962c60abcb8d9bf359d92ccc07644abd5d8e610/community-solutions/copyparty-file-manager/overview.mdx)
+> Pinned source for Runpod main: [community-solutions/copyparty-file-manager/overview.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/community-solutions/copyparty-file-manager/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/community-solutions/copyparty-file-manager/overview
 
 # CopyParty file manager
@@ -38,19 +38,19 @@ You can access the terminal in two ways:
 #### Option 1: Web terminal
 
 If you see this option when clicking "Connect" on your Pod page, you have web terminal access:
-![Web Terminal Access](https://raw.githubusercontent.com/runpod/docs/4962c60abcb8d9bf359d92ccc07644abd5d8e610/community-solutions/copyparty-file-manager/webterminal.png)
+![Web Terminal Access](https://raw.githubusercontent.com/runpod/docs/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/community-solutions/copyparty-file-manager/webterminal.png)
 
 #### Option 2: JupyterLab terminal
 
 If you have JupyterLab installed on your Pod, you can access the terminal there:
-![JupyterLab Terminal](https://raw.githubusercontent.com/runpod/docs/4962c60abcb8d9bf359d92ccc07644abd5d8e610/community-solutions/copyparty-file-manager/labsterminal.png)
+![JupyterLab Terminal](https://raw.githubusercontent.com/runpod/docs/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/community-solutions/copyparty-file-manager/labsterminal.png)
 
 ## Installation steps
 
 ### Step 1: Access your Pod settings
 
 Navigate to your Pod page and locate the settings:
-![Edit Pod Settings](https://raw.githubusercontent.com/runpod/docs/4962c60abcb8d9bf359d92ccc07644abd5d8e610/community-solutions/copyparty-file-manager/edit.png)
+![Edit Pod Settings](https://raw.githubusercontent.com/runpod/docs/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/community-solutions/copyparty-file-manager/edit.png)
 
 ### Step 2: Add an HTTP port
 
@@ -62,7 +62,7 @@ Navigate to your Pod page and locate the settings:
 
 Add a dedicated HTTP port for the CopyParty interface. If port 8888 is already in use (common for Jupyter), try port 8000 or another available port.
 
-![Add HTTP Port](https://raw.githubusercontent.com/runpod/docs/4962c60abcb8d9bf359d92ccc07644abd5d8e610/community-solutions/copyparty-file-manager/addhttp.png)
+![Add HTTP Port](https://raw.githubusercontent.com/runpod/docs/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/community-solutions/copyparty-file-manager/addhttp.png)
 
 ### Step 3: Install and run CopyParty
 
@@ -112,19 +112,19 @@ This command:
 ### Step 4: Access the CopyParty interface
 
 Once CopyParty is running, click on the port number in your Runpod dashboard:
-![Access Port](https://raw.githubusercontent.com/runpod/docs/4962c60abcb8d9bf359d92ccc07644abd5d8e610/community-solutions/copyparty-file-manager/port.png)
+![Access Port](https://raw.githubusercontent.com/runpod/docs/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/community-solutions/copyparty-file-manager/port.png)
 
 ## Using CopyParty
 
 ### File navigation
 
 The interface displays your file system on the left side:
-![Directory View](https://raw.githubusercontent.com/runpod/docs/4962c60abcb8d9bf359d92ccc07644abd5d8e610/community-solutions/copyparty-file-manager/directory.png)
+![Directory View](https://raw.githubusercontent.com/runpod/docs/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/community-solutions/copyparty-file-manager/directory.png)
 
 ### Uploading files
 
 Simply drag and drop files into the interface to upload them:
-![Upload Files](https://raw.githubusercontent.com/runpod/docs/4962c60abcb8d9bf359d92ccc07644abd5d8e610/community-solutions/copyparty-file-manager/upload.png)
+![Upload Files](https://raw.githubusercontent.com/runpod/docs/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/community-solutions/copyparty-file-manager/upload.png)
 
 ### Downloading files
 
@@ -135,7 +135,7 @@ To download files:
    - **"dl"** - Download individual files
    - **"zip"** - Download multiple files as a zip archive
 
-![Download Files](https://raw.githubusercontent.com/runpod/docs/4962c60abcb8d9bf359d92ccc07644abd5d8e610/community-solutions/copyparty-file-manager/download.png)
+![Download Files](https://raw.githubusercontent.com/runpod/docs/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/community-solutions/copyparty-file-manager/download.png)
 
 ## Tips and best practices
 

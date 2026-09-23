@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_ports.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_ports.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_ports.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_ports.yaml)
 
 # sbx ports
 
@@ -31,25 +31,30 @@ When unpublishing without a PROTOCOL, the mapping is removed whether it was
 published with that same default or as dual-stack tcp. Name the protocol to
 remove a tcp6 or udp mapping; anything left behind is reported.
 
-In cloud mode (--cloud), the sandbox may be given by ID (sbx\_\*) or name, and
-only the sandbox port number is accepted. The cloud control plane assigns a
-publicly reachable URL for each exposed port.
+With --cloud:
+Manage the exposed ports of a cloud sandbox.
+
+List, publish, or unpublish ports on a cloud sandbox given by ID (sbx\_\*) or
+name. Without --publish or --unpublish flags, lists the exposed ports.
+
+A port is the sandbox port number alone or with a /tcp suffix; UDP and host
+bindings are refused. The cloud control plane assigns a publicly reachable URL
+for each exposed port.
 
 ## Options
 
-| Option        | Default | Description                                                                                                            |
-| ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `--json`      |         | Output in JSON format (for port listing)                                                                               |
-| `--publish`   |         | Publish a port (can be repeated): \[\[HOST\_IP:]HOST\_PORT:]SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT (cloud) |
-| `--unpublish` |         | Unpublish a port (can be repeated): \[HOST\_IP:]HOST\_PORT:SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT (cloud)  |
+| Option        | Default | Description                                                                                                                   |
+| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `--json`      |         | Output in JSON format (for port listing)                                                                                      |
+| `--publish`   |         | Publish a port (can be repeated): \[\[HOST\_IP:]HOST\_PORT:]SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT\[/tcp] (cloud) |
+| `--unpublish` |         | Unpublish a port (can be repeated): \[HOST\_IP:]HOST\_PORT:SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT\[/tcp] (cloud)  |
 
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
 
 ## Examples
 
@@ -67,8 +72,8 @@ publicly reachable URL for each exposed port.
   sbx ports my-sandbox --unpublish 3000:8080
 
   # Expose port 8080 on a cloud sandbox
-  sbx ports sbx_abc123 --cloud --publish 8080
+  sbx --cloud ports sbx_abc123 --publish 8080
 
   # Remove an exposed port from a cloud sandbox
-  sbx ports sbx_abc123 --cloud --unpublish 8080
+  sbx --cloud ports sbx_abc123 --unpublish 8080
 ```

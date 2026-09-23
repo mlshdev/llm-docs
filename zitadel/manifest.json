@@ -6,21 +6,21 @@
   "title": "ZITADEL",
   "homepage": "https://zitadel.com/docs",
   "repository": "zitadel/zitadel",
-  "tag": "v4.18.0",
-  "releaseId": 392920404,
-  "releasePublishedAt": "2026-09-21T11:56:42Z",
-  "sourceCommit": "6d7878a2e4128517684f43ba7774dd4a9f64ba36",
+  "tag": "v4.19.1",
+  "releaseId": 394854261,
+  "releasePublishedAt": "2026-09-23T16:33:07Z",
+  "sourceCommit": "76959769b9020fe96e45d9ee78ed079fdd6ad0e8",
   "documentCount": 335,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 2857079,
+      "byteLength": 2857228,
       "documentCount": 335,
-      "sha256": "80b5686306ad83f490b9fa06c6f7be5b58c23e8c5b0189a62244ab476fc48419"
+      "sha256": "846936009d4477270cc0a35023afd851fd699c25b8e8ccca3e6bba1806afa575"
     }
   ],
-  "outputDigest": "0890ac0bf31c923b3dbdbccb4e71ac1834bdcf4567b0ee882e7a9868092cead2",
+  "outputDigest": "6d2d0dcc4d4bbcd2aff5c816a08c6d62b5c10704cf9784ee1ef3575f3c9fb8b9",
   "notes": [
     "Pages come from the Fumadocs content tree in apps/docs/content; underscore-prefixed partials are inlined into the pages that import them.",
     "Interactive elements the site renders from JavaScript - framework pickers, benchmark charts, permission and PII tables, and React partials such as the quick start console walkthroughs - are omitted because they carry no static prose.",

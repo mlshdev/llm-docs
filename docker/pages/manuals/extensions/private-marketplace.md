@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/private-marketplace.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/extensions/private-marketplace.md)
+> Pinned source for Docker main: [content/manuals/extensions/private-marketplace.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/extensions/private-marketplace.md)
 
 **Private marketplace requirements**
 
@@ -175,8 +175,6 @@ It's recommended that you try the private marketplace on your Docker Desktop ins
 > > If your org is managing settings via [Docker Home](https://docs.docker.com/extensions/manuals/enterprise/security/hardened-desktop/settings-management/configure-admin-console/), in Docker Desktop 4.59 and earlier, you must manually delete the `admin-settings.json` file created in the target folder by the `apply` command before step 2. In Docker Desktop 4.60 and later, this step is no longer necessary.
 
 When you select the **Extensions** tab, you should see the private marketplace listing only the extensions you have allowed in `extensions.txt`.
-
-![Extensions Private Marketplace](https://raw.githubusercontent.com/docker/docs/c69ce0fd3851270bba5473502268ff7661887b2a/static/assets/images/extensions-private-marketplace.webp)
 
 ## Step six: Distribute the private marketplace
 

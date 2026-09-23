@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/environment-files.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/configuration/environment-files.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/environment-files.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/configuration/environment-files.md)
 
 A sandbox environment file captures the setup for a project in a
 `sbxenv.yaml` file. Share the file with project contributors so they use the
@@ -462,7 +462,7 @@ kits:
 ```
 
 Remote kit sources must match the
-[kit source allowlist](https://docs.docker.com/ai/sandboxes/customize/kits/#restrict-kit-sources). Docker Hub is
+[`kit.allowedSources`](https://docs.docker.com/ai/sandboxes/configuration/settings/#kitallowedsources) setting. Docker Hub is
 allowed by default. To use Git kits from `docker/sbx-kits-contrib`, add its
 source:
 
@@ -581,7 +581,9 @@ commands.
 Plans containing lifecycle commands or credential `command` sources require
 approval for every invocation by default, even when the command text hasn't
 changed. Approve one invocation with `--auto-approve`, skip lifecycle commands
-with `--skip-host-commands`, or remember approval until the commands change:
+with `--skip-host-commands`, or turn on
+[`env.rememberHostCommands`](https://docs.docker.com/ai/sandboxes/configuration/settings/#envrememberhostcommands) to remember
+approval until the commands change:
 
 ```console
 $ sbx settings set env.rememberHostCommands true

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_secret_set-custom.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_secret_set-custom.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_secret_set-custom.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_secret_set-custom.yaml)
 
 # sbx secret set-custom
 
@@ -26,29 +26,35 @@ and "\*\*" matches any number of labels. For example "*.example.com" covers
 Custom secrets apply globally by default. Use --sandbox to scope one to a
 specific sandbox.
 
+With --cloud, --host takes exact DNS names only (no IP addresses or wildcards)
+and the proxy sets --header on requests to those hosts instead of substituting
+the placeholder.
+
 ## Options
 
-| Option          | Default | Description                                                                      |
-| --------------- | ------- | -------------------------------------------------------------------------------- |
-| `--command`     |         | Use a command's standard output as the secret value                              |
-| `--env`         |         | Set this env var in the sandbox to the placeholder value                         |
-| `--host`        |         | Host, IP, or wildcard pattern (e.g. \*.example.com); repeatable                  |
-| `--no-verify`   |         | Skip checking the --ref or --command source when storing it                      |
-| `--placeholder` |         | Placeholder value; use {rand} for a random suffix (e.g. sk-{rand})               |
-| `--ref`         |         | Use a 1Password op\:// reference or AWS Secrets Manager ARN as the secret source |
-| `--refresh`     |         | Secret refresh policy: on-demand (default) or after a duration                   |
-| `--sandbox`     |         | Scope the secret to one sandbox (default: all sandboxes)                         |
-| `--show-error`  |         | Show resolver standard error if the initial check fails (may contain secrets)    |
-| `-t`, `--token` |         | Secret value (less secure: visible in shell history)                             |
-| `--value`       |         | Secret value (less secure: visible in shell history)                             |
+| Option          | Default | Description                                                                                              |
+| --------------- | ------- | -------------------------------------------------------------------------------------------------------- |
+| `--command`     |         | Use a command's standard output as the secret value                                                      |
+| `--env`         |         | Set this env var in the sandbox to the placeholder value                                                 |
+| `--format`      |         | How the value fills the header, with one %s; default "Bearer %s" when --header is omitted (with --cloud) |
+| `--header`      |         | HTTP header the proxy sets to the secret on requests to --host; default Authorization (with --cloud)     |
+| `--host`        |         | Host, IP, or wildcard pattern (e.g. \*.example.com); repeatable; with --cloud, exact DNS names only      |
+| `--name`        |         | Secret name; default derived from the first --host (with --cloud)                                        |
+| `--no-verify`   |         | Skip checking the --ref or --command source when storing it                                              |
+| `--placeholder` |         | Placeholder value; use {rand} for a random suffix (e.g. sk-{rand})                                       |
+| `--ref`         |         | Use a 1Password op\:// reference or AWS Secrets Manager ARN as the secret source                         |
+| `--refresh`     |         | Secret refresh policy: on-demand (default) or after a duration                                           |
+| `--sandbox`     |         | Scope the secret to one sandbox (default: all sandboxes)                                                 |
+| `--show-error`  |         | Show resolver standard error if the initial check fails (may contain secrets)                            |
+| `-t`, `--token` |         | Secret value (less secure: visible in shell history)                                                     |
+| `--value`       |         | Secret value (less secure: visible in shell history)                                                     |
 
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
 
 ## Examples
 

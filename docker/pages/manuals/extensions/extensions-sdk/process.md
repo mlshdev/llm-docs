@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/process.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/extensions/extensions-sdk/process.md)
+> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/process.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/extensions/extensions-sdk/process.md)
 
 # The build and publish process
 
@@ -50,7 +50,3 @@ If you want your extension published in the Marketplace, read the [publish docum
 If you want to get up and running with creating a Docker Extension, see the [Quickstart guide](https://docs.docker.com/extensions/extensions-sdk/quickstart/).
 
 Alternatively, get started with reading the "Part one: Build" section for more in-depth information about each step of the extension creation process.
-
-For an in-depth tutorial of the entire build process, we recommend the following video walkthrough from DockerCon 2022.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Yv7OG-EGJsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

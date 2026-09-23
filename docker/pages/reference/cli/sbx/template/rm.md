@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_template_rm.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_template_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_template_rm.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_template_rm.yaml)
 
 # sbx template rm
 
@@ -16,15 +16,20 @@ images and their IDs.
 
 With --cloud:
 The template can be identified by its tmpl\_\* ID or by its human name
-(resolved via the server-side ?name= filter). Use "sbx template ls --cloud".
+(resolved via the server-side ?name= filter). Use "sbx --cloud template ls".
+
+## Options
+
+| Option          | Default | Description               |
+| --------------- | ------- | ------------------------- |
+| `-f`, `--force` |         | Skip confirmation prompts |
 
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
 
 ## Examples
 
@@ -36,8 +41,8 @@ The template can be identified by its tmpl\_\* ID or by its human name
   sbx template rm abc123
 
   # Cloud: remove by name
-  sbx template rm my-template --cloud
+  sbx --cloud template rm my-template
 
   # Cloud: remove by tmpl_* id
-  sbx template rm tmpl_abc123 --cloud
+  sbx --cloud template rm tmpl_abc123
 ```

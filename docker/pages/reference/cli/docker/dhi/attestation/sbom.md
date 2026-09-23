@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/dhi/docker_dhi_attestation_sbom.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/cli/dhi/docker_dhi_attestation_sbom.yaml)
+> Pinned source for Docker main: [data/cli/dhi/docker_dhi_attestation_sbom.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/cli/dhi/docker_dhi_attestation_sbom.yaml)
 
 # docker dhi attestation sbom
 

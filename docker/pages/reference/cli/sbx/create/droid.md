@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_create_droid.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_create_droid.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_create_droid.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_create_droid.yaml)
 
 # sbx create droid
 

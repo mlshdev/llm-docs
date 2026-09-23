@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_rm_network.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_policy_rm_network.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_rm_network.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_policy_rm_network.yaml)
 
 # sbx policy rm network
 
@@ -19,23 +19,32 @@ The rule is removed from the global policy by default. Use --sandbox to
 remove from policy "local" scoped to a single sandbox instead.
 
 Use "sbx policy ls --wide" to see active rule IDs and resources, or
-"sbx policy ls --json" for the raw filtered daemon response.
+"sbx policy ls --json" for the filtered rules; network values are printed in
+the form the CLI accepts back.
+
+With --cloud:
+Remove a cloud network rule by pattern.
+
+Cloud rules have no IDs: --resource removes the pattern from both the allow
+and deny lists, and the output names each list it was removed from. The rule
+leaves the account policy by default; use --sandbox to scope the removal to one
+sandbox. Use "sbx --cloud policy ls" to see the current rules.
 
 ## Options
 
-| Option       | Default | Description                                                      |
-| ------------ | ------- | ---------------------------------------------------------------- |
-| `--id`       |         | Remove by rule ID                                                |
-| `--resource` |         | Remove by resource value(s), comma-separated                     |
-| `--sandbox`  |         | Scope the removal to a specific sandbox (default: global policy) |
+| Option          | Default | Description                                                      |
+| --------------- | ------- | ---------------------------------------------------------------- |
+| `-f`, `--force` |         | Skip confirmation prompts                                        |
+| `--id`          |         | Remove by rule ID                                                |
+| `--resource`    |         | Remove by resource value(s), comma-separated                     |
+| `--sandbox`     |         | Scope the removal to a specific sandbox (default: global policy) |
 
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
 
 ## Examples
 
@@ -51,4 +60,10 @@ Use "sbx policy ls --wide" to see active rule IDs and resources, or
 
   # Remove a sandbox-scoped rule by resource
   sbx policy rm network --sandbox my-sandbox --resource api.example.com
+
+  # Remove a cloud rule by pattern, from the allow or deny list it is in
+  sbx --cloud policy rm network --resource api.example.com
+
+  # Remove a pattern from one cloud sandbox's rules
+  sbx --cloud policy rm network --sandbox my-sandbox --resource api.example.com
 ```

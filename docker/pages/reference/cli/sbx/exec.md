@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_exec.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_exec.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_exec.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_exec.yaml)
 
 # sbx exec
 
@@ -11,7 +11,8 @@ Execute a command inside a sandbox
 Execute a command in a sandbox. If the sandbox is stopped, it is started first. Or — with --cloud — the cloud sandbox
 ID (sbx\_\*) or name from "sbx --cloud ls".
 
-Flags match the behavior of "docker exec". Some flags (-d, --user, --privileged)
+Flags match the behavior of "docker exec", except detached exec (-d/--detach)
+is not supported. Some flags (-d, --user, --privileged)
 are not supported with --cloud and are rejected rather than silently ignored.
 \--detach-keys applies only to an interactive (-i/-t) cloud exec.
 
@@ -19,7 +20,7 @@ are not supported with --cloud and are rejected rather than silently ignored.
 
 | Option                | Default | Description                                             |
 | --------------------- | ------- | ------------------------------------------------------- |
-| `-d`, `--detach`      |         | Detached mode: run command in the background            |
+| `-d`, `--detach`      |         | Detached mode (not supported)                           |
 | `--detach-keys`       |         | Override the key sequence for detaching a container     |
 | `-e`, `--env`         |         | Set environment variables                               |
 | `--env-file`          |         | Read in a file of environment variables                 |
@@ -31,20 +32,16 @@ are not supported with --cloud and are rejected rather than silently ignored.
 
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
 
 ## Examples
 
 ```console
 # Open a shell inside a sandbox
   sbx exec -it my-sandbox bash
-
-  # Run a command in the background
-  sbx exec -d my-sandbox npm start
 
   # Run as root
   sbx exec -u root my-sandbox apt-get update

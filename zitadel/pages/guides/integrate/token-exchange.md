@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/integrate/token-exchange.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/integrate/token-exchange.mdx)
+> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/integrate/token-exchange.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/integrate/token-exchange.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/token-exchange
 
 The Token Exchange grant implements [RFC 8693, OAuth 2.0 Token Exchange](https://www.rfc-editor.org/rfc/rfc8693) and can be used to exchange tokens to a different scope, audience or subject. Changing the subject of an authenticated token is called impersonation or delegation. This guide will explain how token exchange is implemented inside ZITADEL and gives some usage examples.
@@ -208,7 +208,7 @@ Next we need to select an application that is allowed to perform Token Exchange.
 >
 > ZITADEL allows any application to use Token Exchange, however we strongly recommend to only configure confidential clients (using either client credentials or JWT assertion) with the Token Exchange grant type. This is because there is some trust placed in the application when it comes to defining scope and that it obtained tokens in a legitimate way. For example, if the app possesses a token of an admin user with impersonation permissions it can obtain tokens for any other user in your instance. It is your responsibility to make sure the application can be trusted with this kind of powers. If you configure a public client with the Token Exchange grant, you risk a leaked token can be used by an attacker who knows the client ID of a granted public client.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/token-exchange/app-token-exchange-grant.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/token-exchange/app-token-exchange-grant.png)
 
 #### Organization layout
 
@@ -466,7 +466,7 @@ We continue with the same application and project layout from the above examples
 
 If you want to impersonate users by Token Exchange, the security settings of the instance must be configured to allow this. Go to "Default settings" and in the sidebar select "Security Settings". Enable the "Allow Impersonation" setting.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/token-exchange/instance-security-impersonation.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/token-exchange/instance-security-impersonation.png)
 
 #### Impersonation permissions
 
@@ -481,7 +481,7 @@ Next, we need to configure which users are allowed to impersonate other users. Z
 
 In this example we will assign the `ORG_END_USER_IMPERSONATOR` role to a user:
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/token-exchange/org-role-end-user-impersonator.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/token-exchange/org-role-end-user-impersonator.png)
 
 #### Authenticated impersonator tokens
 
@@ -883,7 +883,7 @@ In the user view of the management console, we can see whenever a new access tok
 The existing `Access Token created` event is also used in the case of a token exchange.
 When there was an `actor_token` present during token exchange, we also log a `User impersonated` event.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/token-exchange/user-audit-log.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/token-exchange/user-audit-log.png)
 
 In the [instance event list](https://zitadel.com/docs/concepts/eventstore/overview) the `User impersonated` carries the actor in the payload:
 

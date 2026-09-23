@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/integrate/scim-okta-guide.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/integrate/scim-okta-guide.mdx)
+> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/integrate/scim-okta-guide.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/integrate/scim-okta-guide.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/scim-okta-guide
 
 This guide provides step-by-step instructions to configure SCIM provisioning from Okta into ZITADEL.
@@ -45,13 +45,13 @@ Follow these precise steps to configure SCIM provisioning in Okta:
 
 4. In the **Provisioning** section, select **SCIM** and then **Save**.
 
-![Enable SCIM provisioning in Okta](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/manage/users/enable-scim-provisioning.png)
+![Enable SCIM provisioning in Okta](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/manage/users/enable-scim-provisioning.png)
 
 5. Under the **General** tab, also confirm that [Federation Broker Mode](https://help.okta.com/en-us/content/topics/apps/apps-fbm-main.htm) is disabled.
 
 6. Click on the **Provisioning** tab, then go to the **Integration** tab and select **Edit**.
 
-![Select provisioning actions in Okta](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/manage/users/select-provisioning-actions.png)
+![Select provisioning actions in Okta](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/manage/users/select-provisioning-actions.png)
 
 7. Enter the **SCIM connector base URL** using this format:
 
@@ -89,7 +89,7 @@ Like the example in the above image:
 
 14. Click **Save** to apply these settings.
 
-![Enable provisioning to App in Okta](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/manage/users/provisioning-to-app.png)
+![Enable provisioning to App in Okta](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/manage/users/provisioning-to-app.png)
 
 ## Step 3: Attribute Mapping (Recommended)
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/agent-skills.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/workflows/agent-skills.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/agent-skills.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/workflows/agent-skills.md)
 
 # Share agent skills
 
@@ -133,15 +133,13 @@ For example, create a sandbox without the shared store:
 $ sbx run --skills=off claude
 ```
 
-To change the default for future sandboxes, set `skills.defaultMode` to `off`,
+To change the default for future sandboxes, set
+[`skills.defaultMode`](https://docs.docker.com/ai/sandboxes/configuration/settings/#skillsdefaultmode) to `off`,
 `readonly`, or `readwrite`:
 
 ```console
 $ sbx settings set skills.defaultMode readonly
 ```
-
-When no mode is specified, the daemon uses `skills.defaultMode`, whose built-in
-value is `readonly`. An explicit `--skills` value overrides that default.
 
 The mode is applied only when a sandbox is created. Upgrading `sbx` or changing
 `skills.defaultMode` leaves existing sandbox mounts unchanged. Remove and

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/docker-build-cloud.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/guides/docker-build-cloud.md)
+> Pinned source for Docker main: [content/guides/docker-build-cloud.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/guides/docker-build-cloud.md)
 
 # Docker Build Cloud: Reclaim your time with fast, multi-architecture builds
 

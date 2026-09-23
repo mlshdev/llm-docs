@@ -1,41 +1,40 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_attach.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_attach.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_attach.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_attach.yaml)
 
 # sbx attach
 
-Attach to a running cloud sandbox
+Attach to a cloud sandbox, starting it first if it is stopped
 
 **Usage:** `sbx attach SANDBOX [flags]`
 
 ## Description
 
-Attach an interactive terminal session to a running cloud sandbox.
+Attach an interactive terminal session to a cloud sandbox.
 
 SANDBOX is the cloud sandbox ID (sbx\_\*) or name from "sbx --cloud ls".
 
 Opens a PTY-backed exec session against the sandbox's agent process. The
-sandbox must already exist and be in a running state; use `sbx --cloud run`
-to create a sandbox and attach in one step.
+sandbox must already exist; a stopped one is started first. Use
+`sbx --cloud run` to create a sandbox and attach in one step.
 
 Only supported with --cloud. See <https://docs.docker.com/ai/sandboxes/> for the cloud sandbox model.
 
 ## Options
 
-| Option          | Default | Description                                                                                                                                                                                      |
-| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `--detach-keys` |         | Override the detach gesture that leaves the agent running (Docker-style, e.g. "ctrl-", "ctrl-x,ctrl-d"). Default: Ctrl-. Use this when the default collides with an agent's keymap (cloud only). |
+| Option          | Default | Description                                                                                                                                                                                        |
+| --------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--detach-keys` |         | Override the detach gesture that leaves the session running (Docker-style, e.g. "ctrl-", "ctrl-x,ctrl-d"). Default: Ctrl-. Use this when the default collides with an agent's keymap (cloud only). |
 
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
 
 ## Examples
 
 ```console
-# Attach to a running sandbox by ID or name
+# Attach to a sandbox by ID or name
   sbx --cloud attach sbx_abc123
   sbx --cloud attach claude/my-sandbox
 ```

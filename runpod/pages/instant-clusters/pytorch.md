@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [instant-clusters/pytorch.mdx](https://github.com/runpod/docs/blob/4962c60abcb8d9bf359d92ccc07644abd5d8e610/instant-clusters/pytorch.mdx)
+> Pinned source for Runpod main: [instant-clusters/pytorch.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/instant-clusters/pytorch.mdx)
 > Canonical documentation: https://docs.runpod.io/instant-clusters/pytorch
 
 # Deploy an Instant Cluster with PyTorch
@@ -141,7 +141,7 @@ The specific number and order of ranks may be different in your terminal, and th
 
 This diagram illustrates how local and global ranks are distributed across multiple Pods:
 
-![](https://raw.githubusercontent.com/runpod/docs/4962c60abcb8d9bf359d92ccc07644abd5d8e610/images/79e746f3-instant-clusters-rank-diagram.png)
+![](https://raw.githubusercontent.com/runpod/docs/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/images/79e746f3-instant-clusters-rank-diagram.png)
 
 ## Step 5: Clean up
 

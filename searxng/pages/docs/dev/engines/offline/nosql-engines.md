@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/engines/offline/nosql-engines.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/dev/engines/offline/nosql-engines.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/offline/nosql-engines.rst](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/docs/dev/engines/offline/nosql-engines.rst)
 
 <a id="nosql-engines"></a>
 
@@ -19,11 +19,11 @@ The following NoSQL database are supported:
 - [engine valkey\_server](https://docs.searxng.org/dev/engines/offline/nosql-engines.html#engine-valkey-server)
 - [engine mongodb](https://docs.searxng.org/dev/engines/offline/nosql-engines.html#engine-mongodb)
 
-All of the engines above are just commented out in the [settings.yml](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/settings.yml), as you have to set various options and install
+All of the engines above are just commented out in the [settings.yml](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/searx/settings.yml), as you have to set various options and install
 dependencies before using them.
 
 By default, the engines use the `key-value` template for displaying results /
-see [simple](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/templates/simple/result_templates/key-value.html)
+see [simple](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/searx/templates/simple/result_templates/key-value.html)
 theme.  If you are not satisfied with the original result layout, you can use
 your own template, set `result_template` attribute to `{template_name}` and
 place the templates at:
@@ -63,7 +63,7 @@ their structure.
 
 - `pip install` valkey\_
 - valkey.io\_
-- [valkey\_server.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines/valkey_server.py)
+- [valkey\_server.py](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/searx/engines/valkey_server.py)
 
 #### `searx.engines.valkey_server`
 
@@ -79,7 +79,7 @@ Static Python API reference (`automodule`).
 
 - `pip install` pymongo\_
 - MongoDB\_
-- [mongodb.py](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searx/engines/mongodb.py)
+- [mongodb.py](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/searx/engines/mongodb.py)
 
 #### `searx.engines.mongodb`
 

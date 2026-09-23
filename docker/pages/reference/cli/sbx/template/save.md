@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_template_save.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_template_save.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_template_save.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_template_save.yaml)
 
 # sbx template save
 
@@ -11,7 +11,10 @@ Save a snapshot of the sandbox as a template
 Save a snapshot of the sandbox as a template.
 
 The saved image is stored in the sandbox runtime's image store and can be
-used as a template for new sandboxes with: sbx run -t TAG AGENT \[WORKSPACE]
+used as a template for new sandboxes with:
+sbx run --pull never -t TAG AGENT \[WORKSPACE]
+
+Use --pull never to use the saved image without trying to pull it from a registry.
 
 Use --output to also export the image to a tar file that can be shared
 and loaded on another host with: sbx template load FILE
@@ -39,11 +42,10 @@ minutes to complete. See <https://docs.docker.com/ai/sandboxes/> for the snapsho
 
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
 
 ## Examples
 
@@ -55,11 +57,11 @@ minutes to complete. See <https://docs.docker.com/ai/sandboxes/> for the snapsho
   sbx template save my-sandbox myimage:v1.0 --output /tmp/myimage.tar
 
   # Cloud: snapshot a running cloud sandbox into a cloud-managed template
-  sbx template save sbx_abc123 my-snap --cloud
+  sbx --cloud template save sbx_abc123 my-snap
 
   # Cloud: attach a description to the saved template
-  sbx template save sbx_abc123 my-snap --cloud --description "nightly build"
+  sbx --cloud template save sbx_abc123 my-snap --description "nightly build"
 
   # Cloud: capture memory + disk + microVM checkpoint for sub-second resume
-  sbx template save sbx_abc123 my-snap --cloud --capture-mode all
+  sbx --cloud template save sbx_abc123 my-snap --capture-mode all
 ```

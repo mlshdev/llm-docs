@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_secret_rm.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_secret_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_secret_rm.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_secret_rm.yaml)
 
 # sbx secret rm
 
@@ -8,26 +8,28 @@ Remove a secret
 
 ## Options
 
-| Option            | Default | Description                                                                   |
-| ----------------- | ------- | ----------------------------------------------------------------------------- |
-| `--all`           |         | Remove every stored secret across all scopes                                  |
-| `--all-sandboxes` |         | Remove registry credentials injected into every sandbox (requires --registry) |
-| `-f`, `--force`   |         | Delete without confirmation prompt                                            |
-| `--registry`      |         | Registry hostname to remove pull credentials for                              |
-| `--sandbox`       |         | Scope the removal to one sandbox (default: global)                            |
+| Option            | Default | Description                                                                                             |
+| ----------------- | ------- | ------------------------------------------------------------------------------------------------------- |
+| `--all`           |         | Remove every stored secret across all scopes                                                            |
+| `--all-sandboxes` |         | Remove registry credentials injected into every sandbox (requires --registry)                           |
+| `-f`, `--force`   |         | Delete without confirmation prompt                                                                      |
+| `--registry`      |         | Registry hostname to remove pull credentials for                                                        |
+| `--sandbox`       |         | Scope the removal to one sandbox (default: all scopes when choosing interactively, global with SERVICE) |
 
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
 
 ## Examples
 
 ```console
-# Remove a global secret
+# Choose an existing secret to remove with the arrow keys
+  sbx secret rm
+
+  # Remove a global secret
   sbx secret rm github
 
   # Remove a sandbox-scoped secret
@@ -52,4 +54,8 @@ Remove a secret
   # Remove every stored secret across every scope (service secrets, custom
   # secrets, OAuth tokens, and registry credentials)
   sbx secret rm --all
+
+  # Remove a cloud custom secret by its name, or by a host it routes
+  sbx --cloud secret rm api-example-com
+  sbx --cloud secret rm --host api.example.com
 ```

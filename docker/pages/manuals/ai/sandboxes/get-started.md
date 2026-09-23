@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/get-started.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/get-started.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/get-started.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/get-started.md)
 
 # Get started with Docker Sandboxes
 
@@ -166,7 +166,7 @@ Run `sbx` with no arguments to open the interactive dashboard: a live view of
 every sandbox where you can attach to agents, open shells, and manage network
 rules from one place.
 
-![The interactive dashboard showing sandbox status, resource usage, and network governance controls.](https://raw.githubusercontent.com/docker/docs/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/ai/sandboxes/images/sbx-dashboard.png)
+![The interactive dashboard showing sandbox status, resource usage, and network governance controls.](https://raw.githubusercontent.com/docker/docs/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/images/sbx-dashboard.png)
 
 Then explore:
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/building/multi-platform.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/build/building/multi-platform.md)
+> Pinned source for Docker main: [content/manuals/build/building/multi-platform.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/build/building/multi-platform.md)
 
 A multi-platform build refers to a single build invocation that targets
 multiple different operating system or CPU architecture combinations. When

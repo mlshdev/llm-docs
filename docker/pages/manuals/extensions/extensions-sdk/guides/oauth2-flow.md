@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/guides/oauth2-flow.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/extensions/extensions-sdk/guides/oauth2-flow.md)
+> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/guides/oauth2-flow.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/extensions/extensions-sdk/guides/oauth2-flow.md)
 
 # Authentication
 
@@ -16,7 +16,7 @@ The Authorization Code grant type is used by confidential and public clients to 
 
 After the user returns to the client via the redirect URL, the application gets the authorization code from the URL and uses it to request an access token.
 
-![Flow for OAuth 2.0](https://raw.githubusercontent.com/docker/docs/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/extensions/extensions-sdk/guides/images/oauth.png)
+![Flow for OAuth 2.0](https://raw.githubusercontent.com/docker/docs/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/extensions/extensions-sdk/guides/images/oauth.png)
 
 The image above shows that:
 
@@ -74,7 +74,7 @@ POST https://authorization-server.com/token
 
 > \[!NOTE]
 >
-> The client's credentials are included in the `POST` query params in this example. OAuth authorization servers may require that the credentials are sent as a HTTP Basic Authentication header or might support different formats. See your OAuth provider docs for details.
+> The client's credentials are included in the `POST` query params in this example. OAuth authorization servers may require that the credentials are sent as an HTTP Basic Authentication header or might support different formats. See your OAuth provider docs for details.
 
 ### Store the access token
 

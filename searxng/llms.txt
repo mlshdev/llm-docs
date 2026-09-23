@@ -1,6 +1,6 @@
 # SearXNG master
 
-> Documentation generated from the latest `master` branch commit of [searxng/searxng](https://github.com/searxng/searxng) and pinned to immutable source commit `2e624bed40eb97b46faa98094a0b74d3ececd93d`.
+> Documentation generated from the latest `master` branch commit of [searxng/searxng](https://github.com/searxng/searxng) and pinned to immutable source commit `3cd69d30e2a78dfc817be9e349e7c2e4317c92e3`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for SearXNG master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -171,7 +171,7 @@
 - [Suggestion Results](pages/docs/dev/result_types/suggestion.md): The area suggestions results shows the user alternative search terms. (1058 bytes)
 - [Search API](pages/docs/dev/search_api.md): SearXNG supports querying via a simple HTTP API. Two endpoints, / and /search, are supported for both GET and POST methods. The GET method expects parameters as URL query parameters, while the POST method expects parame… (3192 bytes)
 - [Tooling box searxngextra](pages/docs/dev/searxng_extra/index.md): In the folder searxng\extra/ we maintain some tools useful for CI and developers. (291 bytes)
-- [searxngextra/update/](pages/docs/dev/searxng_extra/update.md): [\[source\]](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/searxngextra/update/init.py) (3033 bytes)
+- [searxngextra/update/](pages/docs/dev/searxng_extra/update.md): [\[source\]](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/searxngextra/update/init.py) (3033 bytes)
 - [Simple Theme Templates](pages/docs/dev/templates.md): The simple template is complex, it consists of many different elements and also uses macros and include statements. The following is a rough overview that we would like to give the developer at hand, details must still… (11903 bytes)
 - [Translation](pages/docs/dev/translation.md): Translation takes place on translate.codeberg.org\. (3352 bytes)
 

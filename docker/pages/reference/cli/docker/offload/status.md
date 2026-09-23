@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/offload/docker_offload_status.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/cli/offload/docker_offload_status.yaml)
+> Pinned source for Docker main: [data/cli/offload/docker_offload_status.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/cli/offload/docker_offload_status.yaml)
 
 # docker offload status
 

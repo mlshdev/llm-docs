@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/start/quickstart.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/start/quickstart.mdx)
+> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/start/quickstart.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/start/quickstart.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/start/quickstart
 
 In this guide, you’ll set up a Zitadel account and configure it to work with our pre-built example applications.
@@ -20,14 +20,14 @@ This is the administrative hub for managing your billing, teams, and instances.
 
 3. **Access**: Once authenticated, you will be redirected to the Customer Portal dashboard.
 
-![Home Page](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/cloud_sign_up.png)
-![Registration Page](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/cloud_register.png)
+![Home Page](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/cloud_sign_up.png)
+![Registration Page](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/cloud_register.png)
 
 ### 2. Quick Onboarding
 
 Complete the brief onboarding questions.
 This data helps us prioritize the development of new features, SDKs, and integrations that matter most to our community.
-![Onboarding Questions](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/onboarding_questions.png)
+![Onboarding Questions](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/onboarding_questions.png)
 
 ### 3. Create your ZITADEL instance
 
@@ -45,7 +45,7 @@ Follow these steps to deploy your first instance:
 4. **Admin Setup**: Create your Instance Administrator. This user has "root" permissions to manage all organizations, policies, and settings within this specific instance.
 5. **Deploy**: Review your settings and click Create Instance.
 
-![Create Instance](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/cloud_create_instance.png)
+![Create Instance](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/cloud_create_instance.png)
 
 ### 4. Create your Project and Application
 
@@ -56,14 +56,14 @@ This allows multiple applications (like a React frontend and a Go backend) to sh
 
 Click **Create your app**. This opens the Management Console for your instance in a new tab.
 Log in using the Admin credentials you just created.
-![Create App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/cloud_create_app.png)
+![Create App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/cloud_create_app.png)
 
 #### Step 1: Define your Project
 
 - **Name**: Enter a name (e.g., Project1).
 - **Framework**: Select your preferred framework
 - **Continue**: Click the Continue button.
-  ![Project Name and Framework/Language](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/create_project_react.png)
+  ![Project Name and Framework/Language](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/create_project_react.png)
 
 #### Step 2: Review Default Settings
 
@@ -113,7 +113,7 @@ ZITADEL automatically configures the best security settings for your selected fr
 
 **Vue.js**
 
-![Project Configuration Overview](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/project_config_overview_react.png)
+![Project Configuration Overview](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/project_config_overview_react.png)
 
 ### 5. Collect your Integration Keys
 
@@ -813,7 +813,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Angular Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/angular_example_app.png)
+![Angular Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/angular_example_app.png)
 
 **Astro**
 
@@ -823,7 +823,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Astro Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/astro_example_app.png)
+![Astro Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/astro_example_app.png)
 
 **ASP.NET Core**
 
@@ -841,7 +841,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Django Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/django_example_app.png)
+![Django Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/django_example_app.png)
 
 **Express.js**
 
@@ -851,7 +851,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Express.js Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/expressjs_example_app.png)
+![Express.js Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/expressjs_example_app.png)
 
 **Fastify**
 
@@ -861,7 +861,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Fastify Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/fastify_example_app.png)
+![Fastify Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/fastify_example_app.png)
 
 **FastAPI**
 
@@ -871,7 +871,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![FastAPI Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/fastapi_example_app.png)
+![FastAPI Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/fastapi_example_app.png)
 
 **Flask**
 
@@ -881,7 +881,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Flask Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/flask_example_app.png)
+![Flask Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/flask_example_app.png)
 
 **Flutter**
 
@@ -893,7 +893,7 @@ flutter run -d chrome --web-port=4444 --dart-define zitadel_url=[zitadel_issuer]
 
 Your app will be live at `http://localhost:4444`.
 
-![Flutter Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/flutter_example_app.png)
+![Flutter Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/flutter_example_app.png)
 
 **Go**
 
@@ -905,7 +905,7 @@ go run example/app/app.go --domain [zitadel_domain] --key XKv2Lqd7YAq13NUZVUWZEW
 
 Your app will be live at `http://localhost:8089`.
 
-![Go Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/go_example_app.png)
+![Go Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/go_example_app.png)
 
 **Hono**
 
@@ -915,7 +915,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Hono Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/hono_example_app.png)
+![Hono Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/hono_example_app.png)
 
 **Laravel**
 
@@ -925,7 +925,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Laravel Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/laravel_example_app.png)
+![Laravel Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/laravel_example_app.png)
 
 **NestJS**
 
@@ -935,7 +935,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![NestJS Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/nestjs_example_app.png)
+![NestJS Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/nestjs_example_app.png)
 
 **Next.js**
 
@@ -945,7 +945,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Next.js Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/next_example_app.png)
+![Next.js Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/next_example_app.png)
 
 **Nuxt**
 
@@ -955,7 +955,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Nuxt Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/nuxt_example_app.png)
+![Nuxt Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/nuxt_example_app.png)
 
 **Qwik**
 
@@ -965,7 +965,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Qwik Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/qwik_example_app.png)
+![Qwik Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/qwik_example_app.png)
 
 **React**
 
@@ -975,7 +975,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![React Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/react_example_app.png)
+![React Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/react_example_app.png)
 
 **SolidStart**
 
@@ -985,7 +985,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![SolidStart Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/solidstart_example_app.png)
+![SolidStart Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/solidstart_example_app.png)
 
 **Spring**
 
@@ -995,7 +995,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Spring Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/spring_example_app.png)
+![Spring Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/spring_example_app.png)
 
 **Symfony**
 
@@ -1005,7 +1005,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Symfony Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/symfony_example_app.png)
+![Symfony Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/symfony_example_app.png)
 
 **Svelte**
 
@@ -1015,7 +1015,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Svelte Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/sveltekit_example_app.png)
+![Svelte Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/sveltekit_example_app.png)
 
 **Vue.js**
 
@@ -1025,7 +1025,7 @@ make start
 
 Your app will be live at `http://localhost:3000`.
 
-![Vue Example App](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/quickstart/vue_example_app.png)
+![Vue Example App](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/quickstart/vue_example_app.png)
 
 ## Success! 🚀
 

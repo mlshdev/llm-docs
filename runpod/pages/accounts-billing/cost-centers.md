@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [accounts-billing/cost-centers.mdx](https://github.com/runpod/docs/blob/4962c60abcb8d9bf359d92ccc07644abd5d8e610/accounts-billing/cost-centers.mdx)
+> Pinned source for Runpod main: [accounts-billing/cost-centers.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/accounts-billing/cost-centers.mdx)
 > Canonical documentation: https://docs.runpod.io/accounts-billing/cost-centers
 
 # Cost centers

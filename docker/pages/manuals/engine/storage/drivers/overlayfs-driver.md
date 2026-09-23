@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/storage/drivers/overlayfs-driver.md](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/engine/storage/drivers/overlayfs-driver.md)
+> Pinned source for Docker main: [content/manuals/engine/storage/drivers/overlayfs-driver.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/engine/storage/drivers/overlayfs-driver.md)
 
 # OverlayFS storage driver
 
@@ -210,7 +210,7 @@ layered. The image layer is the `lowerdir` and the container layer is the
 are used. The unified view is exposed through a directory called `merged` which
 is effectively the containers mount point.
 
-![How Docker constructs map to OverlayFS constructs](https://raw.githubusercontent.com/docker/docs/c69ce0fd3851270bba5473502268ff7661887b2a/content/manuals/engine/storage/drivers/images/overlay_constructs.webp)
+![How Docker constructs map to OverlayFS constructs](https://raw.githubusercontent.com/docker/docs/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/engine/storage/drivers/images/overlay_constructs.webp)
 
 Where the image layer and the container layer contain the same files, the
 container layer (`upperdir`) takes precedence and obscures the existence of the

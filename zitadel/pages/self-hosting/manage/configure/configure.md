@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.18.0: [apps/docs/content/self-hosting/manage/configure/configure.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/self-hosting/manage/configure/configure.mdx)
+> Pinned source for ZITADEL v4.19.1: [apps/docs/content/self-hosting/manage/configure/configure.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/self-hosting/manage/configure/configure.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/manage/configure/configure
 
 This guide assumes you are familiar with [running ZITADEL using the least amount of configuration possible](https://zitadel.com/docs/self-hosting/deploy/overview).
@@ -2671,6 +2671,8 @@ BackfillUniqueConstraintOwners:
   # backfill leftover empty owners and enable owner-only unique-constraint delete.
   # Default false: owner-delete waits until the next release runs 79 again.
   ForceFinalize: false # ZITADEL_BACKFILLUNIQUECONSTRAINTOWNERS_FORCEFINALIZE
+  # Rows read from each projection per statement. Each page commits on its own.
+  BatchSize: 5000 # ZITADEL_BACKFILLUNIQUECONSTRAINTOWNERS_BATCHSIZE
 ```
 
 ### Pre-existing Database and User

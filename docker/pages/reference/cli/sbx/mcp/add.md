@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_add.yaml](https://github.com/docker/docs/blob/c69ce0fd3851270bba5473502268ff7661887b2a/data/sbx_cli/sbx_mcp_add.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_add.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_mcp_add.yaml)
 
 # sbx mcp add
 
@@ -39,10 +39,11 @@ DNS-rebinding targets by making them visible, not by blocking them). Some
 legitimate servers live on private networks (split-horizon DNS, internal
 load balancers, VPN-only endpoints, PrivateLink), so their public hostname
 resolves to a private address and the warning is expected noise for them.
-OAuth authorization-server metadata has a separate SSRF guard that blocks
-disallowed addresses. Pass --skip-ssrf-check to disable both checks for this
-add, including OAuth metadata redirects, when you trust the provider and
-its discovery destinations; use it only for URLs you control.
+OAuth authorization-server metadata has a separate SSRF guard with the same
+warn-and-proceed posture: a disallowed address is logged, not blocked. Pass
+\--skip-ssrf-check to disable both checks for this add, including OAuth
+metadata redirects (silencing the warning too), when you trust the provider
+and its discovery destinations; use it only for URLs you control.
 
 OAuth for remote endpoints (--oauth-authorization-server / --client-id):
 Two related options configure OAuth for a remote --url server (both are
@@ -235,6 +236,7 @@ can. Do not use --command with untrusted executables.
 | `--client-id`                  |         | OAuth client id for a pre-registered client (with --url; may be used with or without --oauth-authorization-server). A confidential client's secret comes from 'sbx secret set mcp:<server>:client\_secret'                                                                                                                                                                                                                                                                                                                  |
 | `--command`                    |         | Executable to run for a local stdio server                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `--dir`                        |         | Working directory (cwd) for a --command host server                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `--disable-http2`              |         | Do not negotiate HTTP/2 for this remote server, leaving HTTP/1.1. Applies to --url servers.                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `--header`                     |         | Custom HTTP header to send to a remote --url endpoint, in curl form 'Name: value' (repeatable). A ${placeholder} in the value is substituted at connect time from 'sbx secret set mcp:<server>:<placeholder>'                                                                                                                                                                                                                                                                                                               |
 | `--local`                      |         | Run registry OCI server locally via docker run                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | `--no-scope`                   |         | Request no scopes during add-time authorization, so the authorization server applies its own default grant. Suppresses required and OIDC fallback scopes; cannot be combined with --scope. Applies to --url remote OAuth servers.                                                                                                                                                                                                                                                                                           |
@@ -247,11 +249,10 @@ can. Do not use --command with untrusted executables.
 
 ## Global options
 
-| Option            | Default                                  | Description                                                                                                                                                                                                             |
-| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
+| Option          | Default | Description                                                                                                                                            |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
 
 ## Examples
 

@@ -1,11 +1,11 @@
-> Pinned source for SearXNG master: [docs/utils/searxng.sh.rst](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/docs/utils/searxng.sh.rst)
+> Pinned source for SearXNG master: [docs/utils/searxng.sh.rst](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/docs/utils/searxng.sh.rst)
 
 <a id="searxng-sh"></a>
 
 # `utils/searxng.sh`
 
 To simplify the installation and maintenance of a SearXNG instance you can use the
-script [utils/searxng.sh](https://github.com/searxng/searxng/blob/2e624bed40eb97b46faa98094a0b74d3ececd93d/utils/searxng.sh).
+script [utils/searxng.sh](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/utils/searxng.sh).
 
 ### further reading
 

@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.18.0: [apps/docs/content/guides/integrate/services/google-workspace.mdx](https://github.com/zitadel/zitadel/blob/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/content/guides/integrate/services/google-workspace.mdx)
+> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/integrate/services/google-workspace.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/integrate/services/google-workspace.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/services/google-workspace
 
 This guide shows how to enable login with ZITADEL on Google Workspace.
@@ -29,7 +29,7 @@ Prerequisites:
 
 Open the Google settings for [SSO with third-party IdP](https://admin.google.com/u/1/ac/security/sso) and click on *ADD SSO PROFILE*.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/integrate/services/google-workspace-sso-overview.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/integrate/services/google-workspace-sso-overview.png)
 
 Download the public certificate from your ZITADEL instance by requesting `${CUSTOM_DOMAIN}/saml/v2/certificate`
 
@@ -74,16 +74,16 @@ Set or replace the variables with the values from the next screen as follows:
 In your existing project:
 
 Press the "+"-button to add an application
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/project.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/saml/zitadel/project.png)
 
 Fill in a name for the application and chose the SAML type, then click "Continue".
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/application_saml.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/saml/zitadel/application_saml.png)
 
 Either fill in the URL where ZITADEL can read the metadata from, or upload the metadata XML directly, then click "Continue".
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
 
 Check your application, if everything is correct, press "Create".
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/application_saml_create.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/saml/zitadel/application_saml_create.png)
 
 ### Activate the SSO profile for your organization
 
@@ -91,11 +91,11 @@ Make sure to enable the SSO profile for your organization.
 
 In the [domain-specific service URLs](https://admin.google.com/u/1/ac/security/sso/domain-specific-service-urls) settings select "Automatically redirect users to the third-party IdP in the following SSO profile" and select as SSO profile "SSO profile for your organization".
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/integrate/services/google-workspace-domain-sepcific-urls.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/integrate/services/google-workspace-domain-sepcific-urls.png)
 
 Save the settings.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/integrate/services/google-workspace-sso-bottom.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/integrate/services/google-workspace-sso-bottom.png)
 
 ### Verify the SSO profile for your organization
 
@@ -115,7 +115,7 @@ Configure a third party SSO SAML profile and login users with ZITADEL to Google 
 
 Open the Google settings for [SSO with third-party IdP](https://admin.google.com/u/1/ac/security/sso) and click on *ADD SAML PROFILE*.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/integrate/services/google-workspace-sso-overview.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/integrate/services/google-workspace-sso-overview.png)
 
 Download the public certificate from your ZITADEL instance by requesting `${CUSTOM_DOMAIN}/saml/v2/certificate`
 
@@ -142,11 +142,11 @@ Now go ahead and click *SAVE*
 
 Open the Google settings for [SSO with third-party IdP](https://admin.google.com/u/1/ac/security/sso) and click on the SAML Profile *ZITADEL SSO*
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/integrate/services/google-workspace-sso-zitadel.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/integrate/services/google-workspace-sso-zitadel.png)
 
 You can copy the "Entity ID" and "ACS URL" from the "SP details" section.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/integrate/services/google-workspace-zitadel-profile-configured.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/integrate/services/google-workspace-zitadel-profile-configured.png)
 
 ### Create a SAML application in ZITADEL
 
@@ -171,16 +171,16 @@ Replace `<your_value>` with the values from the [SSO profile](#entity-id-and-acs
 In your existing project:
 
 Press the "+"-button to add an application
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/project.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/saml/zitadel/project.png)
 
 Fill in a name for the application and chose the SAML type, then click "Continue".
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/application_saml.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/saml/zitadel/application_saml.png)
 
 Either fill in the URL where ZITADEL can read the metadata from, or upload the metadata XML directly, then click "Continue".
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
 
 Check your application, if everything is correct, press "Create".
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/saml/zitadel/application_saml_create.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/saml/zitadel/application_saml_create.png)
 
 ### Activate the SSO profile
 
@@ -188,11 +188,11 @@ Make sure to enable the SSO profile.
 
 In the [domain-specific service URLs](https://admin.google.com/u/1/ac/security/sso/domain-specific-service-urls) settings select "Automatically redirect users to the third-party IdP in the following SSO profile" and select as SSO profile "ZITADEL SSO".
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/integrate/services/google-workspace-zitadel-set-profile.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/integrate/services/google-workspace-zitadel-set-profile.png)
 
 Save the settings.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/6d7878a2e4128517684f43ba7774dd4a9f64ba36/apps/docs/public/img/guides/integrate/services/google-workspace-sso-zitadel.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/integrate/services/google-workspace-sso-zitadel.png)
 
 ### Verify the SAML SSO profile
 
