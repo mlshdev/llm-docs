@@ -1,6 +1,10 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/mcp-gateway.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/mcp-gateway.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/mcp-gateway.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/mcp-gateway.md)
 
 # MCP gateway
+
+This page describes the local MCP gateway. Cloud sandboxes use MCP servers
+configured in Docker Agentic Platform: see
+[Load an MCP server](https://docs.docker.com/ai/sandboxes/cloud/usage/#load-an-mcp-server).
 
 Docker Sandboxes includes an MCP gateway for connecting agents to Model Context
 Protocol servers. The gateway gives the agent inside the sandbox one MCP

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/monitor-and-enforce/monitoring.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/governance/monitor-and-enforce/monitoring.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/monitor-and-enforce/monitoring.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/governance/monitor-and-enforce/monitoring.md)
 
 # Monitoring policies
 
@@ -24,7 +24,7 @@ The columns are:
 - `POLICY`: the policy name.
 - `SOURCE`: where the policy came from. `local` means your local configuration
   — a preset or rules you added with `sbx policy`. `kit` means a
-  [kit](https://docs.docker.com/ai/sandboxes/customize/kits/#control-network-access). `org` means your
+  [kit](https://docs.docker.com/ai/sandboxes/governance/concepts/#precedence). `org` means your
   organization.
 - `APPLIES TO`: which sandboxes the policy applies to. `all` means the policy
   is global. `sandbox:<name>` scopes it to a single sandbox; a profile name
@@ -44,6 +44,10 @@ $ sbx policy inspect Balanced
 
 Use `--source` to filter by origin (`local`, `org`, or `kit`) and `--decision`
 to filter by outcome (`allow` or `deny`).
+
+Use `--protocol tcp` or `--protocol udp` to filter network rules. The
+`--created-via` filter selects how a rule was created: `default`, `added`,
+`provisioned`, or `approval`.
 
 A `STATUS` column also appears when you pass `--include-inactive`; see
 [Showing inactive rules](#showing-inactive-rules).
@@ -185,7 +189,7 @@ The `PROXY` column shows how the request left the sandbox:
 | `forward`        | Routed through the forward proxy. Supports [credential injection](https://docs.docker.com/ai/sandboxes/configuration/credentials/). |
 | `forward-bypass` | Routed through the forward proxy without credential injection.                                                                      |
 | `transparent`    | Intercepted by the transparent proxy. Policy is enforced but credential injection is not available.                                 |
-| `network`        | Non-HTTP traffic (raw TCP, UDP, ICMP). TCP can be allowed with a policy rule. UDP and ICMP are always blocked.                      |
+| `network`        | Non-HTTP traffic. TCP and experimental UDP egress follow network policy. ICMP is blocked.                                           |
 | `browser-open`   | A sandbox process requested opening a URL in the host browser. Policy is enforced before opening the URL.                           |
 
 The `RULE` column identifies the policy rule that matched the request. The

@@ -1,9 +1,9 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/pdf-retrieval-at-scale.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/tutorials-search-engineering/pdf-retrieval-at-scale.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/pdf-retrieval-at-scale.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/tutorials-search-engineering/pdf-retrieval-at-scale.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-search-engineering/pdf-retrieval-at-scale/
 
 # Qdrant Multivector Document Retrieval with ColPali/ColQwen
 
-![scaling-pdf-retrieval-qdrant](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/pdf-retrieval-at-scale/image1.png)
+![scaling-pdf-retrieval-qdrant](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/pdf-retrieval-at-scale/image1.png)
 
 | Time: 30 min | Level: Intermediate | Output: [GitHub](https://github.com/qdrant/examples/blob/master/pdf-retrieval-at-scale/ColPali_ColQwen2_Tutorial.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/qdrant/examples/blob/master/pdf-retrieval-at-scale/ColPali_ColQwen2_Tutorial.ipynb) |
 | ------------ | ------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -62,7 +62,7 @@ For example:
 - ColPali divides PDF page into **1,024 patches**.
 - Applying mean pooling by rows (or columns) of this patch matrix reduces the page representation to just **32 vectors**.
 
-![ColPali patching of a PDF page](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/pdf-retrieval-at-scale/pooling-by-rows.png)
+![ColPali patching of a PDF page](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/pdf-retrieval-at-scale/pooling-by-rows.png)
 
 We tested this approach with the ColPali model, mean pooling its multivectors by PDF page rows. The results showed:
 
@@ -199,7 +199,7 @@ ColQwen dynamically determines the number of patches in "rows and columns" of a 
 
 For example, that's how ColQwen multivector output is formed.
 
-![that's how ColQwen multivector output is formed](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/pdf-retrieval-at-scale/ColQwen-preprocessing.png)
+![that's how ColQwen multivector output is formed](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/pdf-retrieval-at-scale/ColQwen-preprocessing.png)
 
 The `get_patches` function is to get the number of `x_patches` (rows) and `y_patches` (columns) ColPali/ColQwen2 models will divide a PDF page into.
 For ColPali, the numbers will always be 32 by 32; ColQwen will define them dynamically based on the PDF page size.
@@ -326,7 +326,7 @@ And check the top retrieved result to our query *"Lee Harvey Oswald's involvemen
 dataset[response.points[0].payload['index']]['image']
 ```
 
-![Results, ColPali](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/pdf-retrieval-at-scale/result-VLLMs.png)
+![Results, ColPali](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/pdf-retrieval-at-scale/result-VLLMs.png)
 
 ## Conclusion
 

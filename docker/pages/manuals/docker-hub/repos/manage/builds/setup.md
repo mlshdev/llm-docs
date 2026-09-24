@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/setup.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/docker-hub/repos/manage/builds/setup.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/setup.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/docker-hub/repos/manage/builds/setup.md)
 
 # Set up automated builds
 

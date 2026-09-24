@@ -1,6 +1,10 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/network.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/governance/access-controls/network.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/network.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/governance/access-controls/network.md)
 
 # Network access policies
+
+The governance described here applies to local sandboxes. Cloud sandboxes
+use separate network policy configuration. See
+[Cloud network policy](https://docs.docker.com/ai/sandboxes/cloud/network-policy/) for cloud controls.
 
 Network access policies control outbound connections from sandboxes. Each
 policy contains one or more rules that allow the domains, IP ranges, and ports a
@@ -22,10 +26,9 @@ policy. See [Precedence](https://docs.docker.com/ai/sandboxes/governance/concept
 
 ## Rule syntax
 
-Network rules use the action `connect:tcp`. Resources are hostnames, CIDR
-ranges, ports, or hostnames with ports. The governance policy schema also
-accepts `connect:udp`, but Docker Sandboxes always blocks direct external UDP
-and ICMP. `connect:udp` rules have no effect.
+Network rules use `connect:tcp` for TCP and `connect:udp` for UDP. Resources are
+hostnames, CIDR ranges, ports, or hostnames with ports. UDP requires
+[experimental outbound UDP](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/#allow-outbound-udp). ICMP is blocked.
 
 Examples:
 

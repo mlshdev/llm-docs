@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/ann-recall.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/tutorials-search-engineering/ann-recall.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/ann-recall.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/tutorials-search-engineering/ann-recall.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-search-engineering/ann-recall/
 
 # Measuring ANN Recall
@@ -25,7 +25,7 @@ A high score on a higher layer requires acceptable scores on the layers below. E
 
 Qdrant's Web UI includes an ANN Recall tab that measures the gap between approximate and exact search without writing evaluation code. Open the dashboard at `http://localhost:6333/dashboard` (or your cluster's dashboard on Qdrant Cloud), navigate to your collection, open the ANN Recall tab, and click **Check Index Quality** to run the comparison.
 
-![ANN Recall tab with default evaluation results](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/retrieval-quality/search-quality-tab.png)
+![ANN Recall tab with default evaluation results](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/retrieval-quality/search-quality-tab.png)
 
 The tab reports average **recall\@k** (1.0 = perfect overlap; 0.95+ is typical for well-tuned HNSW).
 
@@ -35,7 +35,7 @@ Toggle **advanced mode** in the ANN Recall tab to tune search-time parameters in
 
 Recall should increase at the cost of higher query latency.
 
-![ANN Recall advanced mode with HNSW parameters](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/retrieval-quality/search-quality-advanced.png)
+![ANN Recall advanced mode with HNSW parameters](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/retrieval-quality/search-quality-advanced.png)
 
 If `hnsw_ef` alone does not get you to your recall target, the build-time parameters `m` and `ef_construct` set the ceiling on the recall approximate search can achieve. Changing them requires rebuilding the HNSW index. For the trade-offs and how to choose values, see [HNSW Indexing Fundamentals](https://qdrant.tech/course/essentials/day-2/what-is-hnsw/) in the Qdrant Essentials course.
 

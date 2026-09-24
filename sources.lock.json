@@ -23,10 +23,10 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "b62199cbc77c551cd38bae7ffdeda67c88a06d1d",
-      "sourceCommittedAt": "2026-09-23T14:43:21Z",
-      "observedCommit": "b62199cbc77c551cd38bae7ffdeda67c88a06d1d",
-      "documentationDigest": "59433dae9d7bff0e7749993dea7d0ab77b66277847650edba114fcd7183507e6"
+      "sourceCommit": "4ef3a0062f7cdb22aa0423459f513d4d3783db7d",
+      "sourceCommittedAt": "2026-09-24T17:29:02Z",
+      "observedCommit": "4ef3a0062f7cdb22aa0423459f513d4d3783db7d",
+      "documentationDigest": "171e20895fee46ecfcc2351df2cd01029076336917f4d7bbd586af51b5e59cc0"
     },
     "container": {
       "tag": "1.4.1",
@@ -89,7 +89,7 @@
       "branch": "master",
       "sourceCommit": "cdc79d694988afd9e2a028ddf500b1df3176c611",
       "sourceCommittedAt": "2026-09-10T09:00:23Z",
-      "observedCommit": "3fc4f99a79728b9adb7a0c641b4db2dda2445e63",
+      "observedCommit": "9058b3622ebbcfb820712c7da97a434b3cd1da7c",
       "documentationDigest": "d81d05c443d5450a9f6a813d99855d154de841524a9c030a6676f006cc6a71b8"
     },
     "yt-dlp": {
@@ -159,10 +159,10 @@
     "qdrant": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "32eb334faf299b1cbfe0bddc7cd79e10b77012c4",
-      "sourceCommittedAt": "2026-09-22T18:02:02Z",
-      "observedCommit": "32eb334faf299b1cbfe0bddc7cd79e10b77012c4",
-      "documentationDigest": "b8b50cfdd32dde3395f4b717575a5ba419cf24060ca408d4248124d27cc85d10"
+      "sourceCommit": "78beef7e019cb0e5c3cdf851163a98df8c04c37f",
+      "sourceCommittedAt": "2026-09-24T14:00:08Z",
+      "observedCommit": "78beef7e019cb0e5c3cdf851163a98df8c04c37f",
+      "documentationDigest": "8155623948ca895278f0a7176ed7db4f0e059e3a5efc806285bb9fcffdab2f5f"
     },
     "apple-swift": {
       "tag": "snapshot-5915b24a1311",

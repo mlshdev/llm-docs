@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/mistral-vibe-sandbox.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/guides/mistral-vibe-sandbox.md)
+> Pinned source for Docker main: [content/guides/mistral-vibe-sandbox.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/guides/mistral-vibe-sandbox.md)
 
 Mistral Vibe is Mistral's open source coding agent. This guide shows how to
 package it as a Docker Sandbox agent so it runs in an isolated microVM instead
@@ -16,6 +16,9 @@ In this guide, you'll learn how to:
 - Build a pinned, multi-architecture image that ships Vibe on the `shell` template
 - Write an agent kit that wires Vibe to the Mistral API through the proxy
 - Validate, launch, and iterate on the sandbox
+
+This guide uses the v2 format. For its reference and migration
+guidance, see [Kits v2](https://docs.docker.com/ai/sandboxes/customize/kits-v2/).
 
 ## How isolation works
 
@@ -157,7 +160,7 @@ Each field does the following:
 | Field                         | Purpose                                                                                                       |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | `kind: sandbox`               | Declares a sandbox agent: a complete image plus its launch configuration.                                     |
-| `name`                        | The kit's identifier, reused in the `sbx run` command.                                                        |
+| `name`                        | The kit's identifier. Pass the kit directory to `sbx run`.                                                    |
 | `sandbox.image`               | The pinned image you published in Step 3. Its `CMD` launches Vibe, so the kit doesn't set an entrypoint.      |
 | `agentInstructions.filename`  | The instructions file Vibe reads in the project.                                                              |
 | `agentInstructions.content`   | Markdown appended to `AGENTS.md` at creation to prime the agent about its environment.                        |
@@ -165,9 +168,6 @@ Each field does the following:
 | `credentials[].service`       | The built-in service that supplies the key. `mistral` maps to `MISTRAL_API_KEY` and `api.mistral.ai`.         |
 | `credentials[].apiKey.name`   | The environment variable the proxy manages. Vibe sees a sentinel value; the proxy swaps in the real key.      |
 | `credentials[].apiKey.inject` | Where and how the proxy attaches the key. `scheme: bearer` sets `Authorization: Bearer <key>` for the domain. |
-
-For the full kit format, see
-[Kits](https://docs.docker.com/ai/sandboxes/customize/kits/).
 
 > \[!WARNING]
 > `--agent auto-approve` runs Vibe in a mode that approves every tool
@@ -186,13 +186,13 @@ $ sbx kit validate ./mistral-vibe
 Then, from your project directory, launch the agent with the kit:
 
 ```console
-$ sbx run --kit ./mistral-vibe --name mistral-vibe mistral-vibe .
+$ sbx run ./mistral-vibe --name mistral-vibe .
 ```
 
-- `--kit ./mistral-vibe` points to the folder that contains `spec.yaml`.
+- `./mistral-vibe` is the sandbox kit reference, pointing to the folder that
+  contains `spec.yaml`.
 - `--name mistral-vibe` names the sandbox. Without it, `sbx` derives a name
   from the agent and the working directory, and the commands below won't match.
-- `mistral-vibe` is the agent name from `spec.yaml`.
 - `.` is the project directory to mount in the sandbox.
 
 Vibe starts in an isolated microVM, talks to the Mistral API through the
@@ -212,7 +212,7 @@ it. Use it to spot a host missing from `permissions.network.allow`. After you
 change `spec.yaml`, recreate the sandbox for a clean start:
 
 ```console
-$ sbx rm mistral-vibe && sbx run --kit ./mistral-vibe --name mistral-vibe mistral-vibe .
+$ sbx rm mistral-vibe && sbx run ./mistral-vibe --name mistral-vibe .
 ```
 
 ## Clean up
@@ -234,7 +234,7 @@ Files in your workspace are unaffected.
 ## Learn more
 
 - [Get started with Docker Sandboxes](https://docs.docker.com/ai/sandboxes/get-started/)
-- [Build your own agent kit](https://docs.docker.com/ai/sandboxes/customize/build-an-agent/)
-- [Customize sandboxes with kits](https://docs.docker.com/ai/sandboxes/customize/kits/)
+- [Build a v3 agent workload](https://docs.docker.com/ai/sandboxes/customize/author/build-an-agent/)
+- [Customize sandboxes with kits](https://docs.docker.com/ai/sandboxes/customize/)
 - [Credentials and built-in services](https://docs.docker.com/ai/sandboxes/configuration/credentials/#built-in-services)
 - [Mistral Vibe](https://github.com/mistralai/mistral-vibe)

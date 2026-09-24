@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/image-library/search.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/docker-hub/image-library/search.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/image-library/search.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/docker-hub/image-library/search.md)
 
 # Docker Hub search
 
@@ -73,14 +73,17 @@ Extensions](https://docs.docker.com/extensions/).
 Docker Hub hosts kits for [Docker Sandboxes](https://docs.docker.com/ai/sandboxes/),
 which run AI coding agents in isolated microVM sandboxes. A kit packages what
 an agent needs to run in a sandbox, such as its image, tools, credentials,
-network rules, and startup commands. Sandbox kits come in two kinds:
+network rules, and startup commands. In the v2 format, kits have two kinds:
 
 - Sandbox: Defines a full agent from scratch, including its image and
   entrypoint.
 - Mixin: Layers tools, credentials, or configuration onto an existing agent.
 
-To learn more about building and running kits, see
-[Kits](https://docs.docker.com/ai/sandboxes/customize/kits/).
+For these kits, see the [v2 reference](https://docs.docker.com/ai/sandboxes/customize/kits-v2/).
+The experimental v3 format uses workloads and mixins, and adds sets for
+publishing a composition as one kit. See the
+[Kits overview](https://docs.docker.com/ai/sandboxes/customize/) for the v3 model and
+version compatibility.
 
 #### Helm charts
 

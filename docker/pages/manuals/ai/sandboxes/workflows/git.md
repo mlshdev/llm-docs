@@ -1,6 +1,12 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/git.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/workflows/git.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/git.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/workflows/git.md)
 
 # Use Git with sandboxes
+
+These workspace modes apply to local sandboxes. In cloud sandboxes,
+[transfer files or clone a remote repository](https://docs.docker.com/ai/sandboxes/cloud/usage/#transfer-files).
+To copy a sandbox filesystem between environments, see
+[Move a sandbox](https://docs.docker.com/ai/sandboxes/cloud/move/). Host mounts and clone-mode volumes are not
+included in that snapshot.
 
 Sandboxes support three approaches for working with Git repositories. The
 right choice depends on whether you want branch isolation and whether you
@@ -209,8 +215,8 @@ you turned off forwarding or use a fixed SSH agent socket, see
 
 To apply this configuration automatically to every sandbox, use the
 [`git-ssh-sign`](https://github.com/docker/sbx-kits-contrib/tree/main/git-ssh-sign)
-community kit, which handles all of the above setup. See [Kits](https://docs.docker.com/ai/sandboxes/customize/kits/)
-if you want to package it alongside other sandbox customizations.
+community kit, which handles all of the above setup. For using it with the
+built-in agents, see [Kits v2](https://docs.docker.com/ai/sandboxes/customize/kits-v2/).
 
 For troubleshooting, see
 [Sandbox commits aren't signed](https://docs.docker.com/ai/sandboxes/troubleshooting/#sandbox-commits-arent-signed).

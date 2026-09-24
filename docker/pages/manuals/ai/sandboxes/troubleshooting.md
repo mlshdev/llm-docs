@@ -1,6 +1,12 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/troubleshooting.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/troubleshooting.md)
 
 # Troubleshooting
+
+The following diagnostics and recovery steps apply to local sandboxes. Use
+[`sbx --cloud diagnose`](https://docs.docker.com/ai/sandboxes/cloud/usage/#diagnose-cloud-access) to check cloud
+connectivity and account access. For cloud files, expiration, and network access, see
+[Cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/). Local daemon restarts and `sbx reset` do not repair
+cloud sandbox state.
 
 ## Run diagnostics
 
@@ -133,7 +139,7 @@ $ sbx settings set kit.allowedSources '["docker.io/","github.com/docker/"]'
 ```
 
 Then run the command again. For details, including how to allow local kits or
-any remote source, see [Restrict kit sources](https://docs.docker.com/ai/sandboxes/customize/kits/#restrict-kit-sources).
+any remote source, see [Restrict kit sources](https://docs.docker.com/ai/sandboxes/customize/use-kits/#restrict-kit-sources).
 
 ## SSH and other non-HTTP connections fail
 
@@ -153,8 +159,8 @@ can't be recovered. Use an address-based rule in that case:
 $ sbx policy allow network "10.1.2.3:22"
 ```
 
-UDP and ICMP traffic is blocked at the network layer and can't be unblocked
-with policy rules.
+UDP requires [experimental UDP egress](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/#allow-outbound-udp)
+and UDP allow rules. ICMP is blocked and can't be unblocked with policy rules.
 
 For Git operations over SSH, you can either add an allow rule for the Git
 server's hostname or IP address, or use HTTPS URLs instead:
@@ -217,9 +223,10 @@ your organization's internal root CA inside the sandbox so the agent and its
 SDKs trust certificates signed by the proxy. Certificate errors can stop a
 request before the credential proxy can inject credentials.
 
-For repeatable setup, create a [sandbox kit](https://docs.docker.com/ai/sandboxes/customize/kits/) that installs
-the CA when the sandbox is created. See
-[Install an internal CA certificate](https://docs.docker.com/ai/sandboxes/customize/kit-examples/#install-an-internal-ca-certificate)
+For repeatable setup with a built-in agent, create a
+[v2 mixin kit](https://docs.docker.com/ai/sandboxes/customize/kits-v2/) that installs the CA when the
+sandbox is created. See
+[Install an internal CA certificate](https://docs.docker.com/ai/sandboxes/customize/kits-v2/#install-an-internal-ca-certificate)
 for an example kit.
 
 Use a PEM-encoded certificate with a `.crt` extension. If traffic can be signed

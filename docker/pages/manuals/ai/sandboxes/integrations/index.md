@@ -1,9 +1,13 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/_index.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/integrations/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/_index.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/integrations/_index.md)
 
 **Docker Sandboxes SSH requirements**
 
 - Availability: GA
 - Requires: Docker Sandboxes 0.37.0 or later
+
+These integrations use local sandbox SSH access. Cloud sandboxes use a
+different SSH configuration and address: see
+[Connect with SSH](https://docs.docker.com/ai/sandboxes/cloud/usage/#connect-with-ssh).
 
 You can connect an external editor or desktop app to a running sandbox over
 SSH. This lets you use the tools you already know — VS Code, Cursor, Claude

@@ -1,6 +1,10 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/concepts.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/governance/concepts.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/concepts.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/governance/concepts.md)
 
 # Policy concepts
+
+The governance described here applies to local sandboxes. Cloud sandboxes
+use separate network policy configuration. See
+[Cloud network policy](https://docs.docker.com/ai/sandboxes/cloud/network-policy/) for cloud controls.
 
 ## Resource model
 
@@ -74,10 +78,10 @@ plus every team-scoped policy for a team they belong to. See
 
 ### Network rules
 
-Network rules use the action `connect:tcp`. Resources are hostnames, CIDR
-ranges, or ports. The governance policy schema also accepts `connect:udp`, but
-Docker Sandboxes always blocks direct external UDP and ICMP. `connect:udp`
-rules have no effect.
+Network rules use `connect:tcp` for TCP and `connect:udp` for UDP. Resources are
+hostnames, CIDR ranges, or ports. UDP requires
+[experimental outbound UDP](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/#allow-outbound-udp).
+ICMP is blocked.
 
 **Hostname patterns**
 
@@ -239,14 +243,17 @@ from those sources do still apply. See [Precedence](#precedence).
 
 What applies depends on whether your organization has governance enabled:
 
-- No organization governance: local rules and any
-  [kit-defined network rules](https://docs.docker.com/ai/sandboxes/customize/kits/#control-network-access)
+- No organization governance: local rules and any kit-defined network rules
   determine what sandboxes can access.
 - Organization governance active: organization policy determines what access can
   be granted. Only organization allow rules grant access, so local and
   kit-defined allow rules are inactive and can't expand what the organization
   permits. Deny rules apply from every source, so a local or kit-defined deny
   can still restrict access further.
+
+For kit-defined rules, see
+[Network policies](https://github.com/docker/sandbox-kit-spec/blob/main/docs/spec/capabilities/com.docker.sandbox/network-policy@1.md)
+in the kit specification.
 
 Precedence is decided by a rule's decision rather than its source:
 

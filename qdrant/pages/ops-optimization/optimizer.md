@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/ops-optimization/optimizer.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/ops-optimization/optimizer.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/ops-optimization/optimizer.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/ops-optimization/optimizer.md)
 > Canonical documentation: https://qdrant.tech/documentation/ops-optimization/optimizer/
 
 # Optimizer
@@ -8,7 +8,7 @@ It is much more efficient to apply changes in batches than perform each change i
 Storage optimization in Qdrant occurs at the segment level (see [storage](https://qdrant.tech/documentation/manage-data/storage/)).
 In this case, the segment to be optimized remains readable for the time of the rebuild.
 
-![Segment optimization](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/articles_data/immutable-data-structures/optimization.png)
+![Segment optimization](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/articles_data/immutable-data-structures/optimization.png)
 
 The availability is achieved by wrapping the segment into a proxy that transparently handles data changes.
 Changed data is placed in the copy-on-write segment, which has priority for retrieval and subsequent updates.
@@ -384,8 +384,8 @@ GET /collections/{collection_name}/optimizations?with=queued,completed
 
 The same information is also accessible via the **Optimizations** tab within the **Collections** interface in [the Web UI](https://qdrant.tech/documentation/web-ui/). For a specific collection, this tab provides an overview of the current optimization status and a timeline of current and past optimization cycles:
 
-![The Optimizations tab in Web UI shows progress and a timeline of optimization cycles](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/web-ui-optimizations-progress-timeline.png)
+![The Optimizations tab in Web UI shows progress and a timeline of optimization cycles](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/web-ui-optimizations-progress-timeline.png)
 
 Selecting a specific optimization cycle from the timeline provides detailed information about the tasks performed during that cycle, including their durations:
 
-![The Optimizations tab in Web UI provides access to detailed information about optimization tasks and their durations](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/web-ui-optimizations-tree.png)
+![The Optimizations tab in Web UI provides access to detailed information about optimization tasks and their durations](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/web-ui-optimizations-tree.png)

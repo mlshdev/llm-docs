@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/text-search/full-text-search.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/search/text-search/full-text-search.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/text-search/full-text-search.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/search/text-search/full-text-search.md)
 > Canonical documentation: https://qdrant.tech/documentation/search/text-search/full-text-search/
 
 # Full-Text Search
@@ -693,6 +693,12 @@ client.Upsert(context.Background(), &qdrant.UpsertPoints{
 When designing a multi-representation collection (combining short fields like titles and tags with longer body text), the practical default is BM25 on the shorter, structured fields with dense vectors carrying the longer ones. BM25F is the principled extension for multi-field text of varying length; Qdrant doesn't support it natively today, but the [Multi-Representation Search](https://qdrant.tech/documentation/tutorials-search-engineering/multi-representation-search/) tutorial shows the workaround: separate sparse vectors per field, fused via the Query API.
 
 ### BM25 Text Processing
+
+Before BM25 can score a text, Qdrant breaks it down into individual tokens (words) and applies several normalization steps to them. This ensures that searches can match variations of words. For query tokens to match the indexed tokens, the query text must go through the same steps.
+
+![Text processing can break down a sentence like "The quick brown fox" into the tokens "quick", "brown", and "fox".](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/text-processing.png)
+
+*Text processing turns a sentence into tokens. By default, BM25 lowercases tokens, removes English stopwords, and applies English stemming.*
 
 By default, BM25 uses English-specific settings for tokenization, stemming, and stopword removal. Words are reduced to their English root form, and common English stopwords are removed. If your data is not in English, this leads to suboptimal search results. To achieve optimal results for other languages, configure language-specific BM25 settings.
 

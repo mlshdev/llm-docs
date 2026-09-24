@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/configure-cluster.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/cloud/configure-cluster.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/configure-cluster.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/cloud/configure-cluster.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud/configure-cluster/
 
 # Configure Qdrant Cloud Clusters
@@ -17,7 +17,7 @@ In addition, the cloud platform automatically configures the following settings 
 - The cluster mode is automatically enabled to allow distributed deployments and horizontal scaling.
 - The maximum amount of payload indexes per collection is set to 100. Larger numbers of payload indexes lead to performance degradation (starting with Qdrant v1.16.0).
 
-![Cluster node endpoints](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/cloud-advanced-configuration.png)
+![Cluster node endpoints](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/cloud/cloud-advanced-configuration.png)
 
 ## Collection Defaults
 
@@ -47,7 +47,7 @@ Enables async scorer which uses io\_uring when rescoring. See [Qdrant under the 
 
 If configured, only the chosen IP ranges will be allowed to access the cluster. This is useful for securing your cluster and ensuring that only clients coming from trusted networks can connect to it.
 
-![Cluster node endpoints](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/cloud-ip-restrictions.png)
+![Cluster node endpoints](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/cloud/cloud-ip-restrictions.png)
 
 ## Restart Mode
 
@@ -57,7 +57,7 @@ If you have a multi-node cluster, but all collections have a replication factor 
 
 It is possible to override your cluster's default restart mode in the advanced configuration section of the Cluster Details page.
 
-![Cluster node endpoints](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/cloud-restart-mode.png)
+![Cluster node endpoints](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/cloud/cloud-restart-mode.png)
 
 ## Shard Rebalancing
 
@@ -71,23 +71,23 @@ Qdrant Cloud offers three strategies for shard rebalancing:
 
 If you manually move a shard (see [Moving Shards](https://qdrant.tech/documentation/scaling/distributed_deployment/#moving-shards)) while automatic rebalancing is active, and that move leaves a node's shard count or size outside the target, automatic rebalancing can move a shard back to correct it. To manually control shard distribution across nodes, deactivate automatic shard rebalancing by selecting **Disabled** for the **Shard Rebalance Strategy** option.
 
-![Cluster node endpoints](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/cloud-shard-rebalancing.png)
+![Cluster node endpoints](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/cloud/cloud-shard-rebalancing.png)
 
 ## Rename a Cluster
 
 You can rename a Qdrant Cluster from the cluster's detail page.
 
-![Cluster Actions](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/cloud-cluster-actions.png)
+![Cluster Actions](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/cloud/cloud-cluster-actions.png)
 
 Renaming a cluster does not affect its functionality or configuration. The cluster's unique ID and cluster URLs will remain the same.
 
-![Rename Cluster Dialog](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/cloud-rename-cluster.png)
+![Rename Cluster Dialog](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/cloud/cloud-rename-cluster.png)
 
 ## Adding Labels to a Cluster
 
 You can add labels to a Qdrant Cluster from the cluster's detail page. Labels are key-value pairs that help you organize and manage your clusters.
 
-![Cluster Labels](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/cloud-cluster-labels.png)
+![Cluster Labels](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/cloud/cloud-cluster-labels.png)
 
 ## Audit Logging
 

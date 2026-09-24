@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/cli/docs/extend/config.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/_vendor/github.com/docker/cli/docs/extend/config.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/cli/docs/extend/config.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/_vendor/github.com/docker/cli/docs/extend/config.md)
 
 # Plugin Config Version 1 of Plugin V2
 

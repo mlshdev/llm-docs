@@ -1,4 +1,7 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/authentication.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/workflows/authentication.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/authentication.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/workflows/authentication.md)
+
+These workflows resolve credentials on the host for local sandboxes. For
+cloud secret setup, see [Authenticate cloud agents](https://docs.docker.com/ai/sandboxes/cloud/credentials/).
 
 The sandbox proxy handles API credentials for model providers automatically,
 but agents often also need credentials for tools like `gh`, `docker`, or a
@@ -41,7 +44,7 @@ The token is never stored in plaintext inside the sandbox. See
 
 When using Docker Hub, authentication is handled automatically; `sbx` reuses
 your existing login session. For other registries, you need to configure
-credentials for `sbx` so it can pull private [templates](https://docs.docker.com/ai/sandboxes/customize/templates/)
+credentials for `sbx` so it can pull private [templates](https://docs.docker.com/ai/sandboxes/usage/#load-a-template)
 and kits when creating a sandbox:
 
 ```console

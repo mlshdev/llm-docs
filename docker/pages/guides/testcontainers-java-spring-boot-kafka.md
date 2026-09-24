@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/testcontainers-java-spring-boot-kafka.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/guides/testcontainers-java-spring-boot-kafka.md)
+> Pinned source for Docker main: [content/guides/testcontainers-java-spring-boot-kafka.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/guides/testcontainers-java-spring-boot-kafka.md)
 
 # Testing Spring Boot Kafka Listener using Testcontainers
 

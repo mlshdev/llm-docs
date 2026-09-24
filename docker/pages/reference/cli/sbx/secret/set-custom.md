@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_secret_set-custom.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_secret_set-custom.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_secret_set-custom.yaml](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/data/sbx_cli/sbx_secret_set-custom.yaml)
 
 # sbx secret set-custom
 
@@ -25,6 +25,16 @@ and "\*\*" matches any number of labels. For example "*.example.com" covers
 
 Custom secrets apply globally by default. Use --sandbox to scope one to a
 specific sandbox.
+
+Command secrets run from a fresh temporary directory on the host during
+verification and refresh. The host temporary directory must be absolute and must
+remain outside writable sandbox mounts. Relative references such as ./helper or
+cat token no longer resolve against the project or daemon working directory. Use an absolute
+helper path outside shared workspaces. sbx does not copy helpers, inspect their
+dependencies, or confine their execution. Helpers and any code or configuration
+they load must remain outside writable sandbox mounts. Explicit paths into shared
+workspaces and broad mounts exposing host configuration or the host temporary
+directory remain unsafe, including mounts added later with sbx mount.
 
 With --cloud, --host takes exact DNS names only (no IP addresses or wildcards)
 and the proxy sets --header on requests to those hosts instead of substituting

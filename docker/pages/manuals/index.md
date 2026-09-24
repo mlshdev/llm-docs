@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/_index.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/_index.md)
+> Pinned source for Docker main: [content/manuals/_index.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/_index.md)
 
 # Manuals
 
@@ -9,11 +9,14 @@ Docker products.
 
 All the Docker AI tools in one easy-to-access location.
 
+- [Docker Agentic Platform](https://docs.docker.com/agentic-platform/): Run agents in cloud sandboxes with this experimental platform.
 - [Docker Sandboxes](https://docs.docker.com/ai/sandboxes/): Run AI coding agents in isolated environments.
+- [Sandboxes API and SDK](https://docs.docker.com/ai/sandboxes-api/): Create and manage cloud sandboxes from your applications.
 - [MCP Catalog and Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/): Augment your AI workflow with MCP servers.
 - [Gordon](https://docs.docker.com/ai/gordon/): Streamline your workflow and get the most out of the Docker ecosystem with your personal AI assistant.
 - [Docker Model Runner](https://docs.docker.com/ai/model-runner/): View and manage your local models.
 - [Docker Agent](https://docs.docker.com/ai/docker-agent/): The open-source multi-agent solution to assist you in your tasks.
+- [Docker Skills](https://docs.docker.com/ai/skills/): Docker's official skills for AI coding agents.
 
 ## Application development
 

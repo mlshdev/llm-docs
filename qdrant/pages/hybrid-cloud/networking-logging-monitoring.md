@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/hybrid-cloud/networking-logging-monitoring.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/hybrid-cloud/networking-logging-monitoring.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/hybrid-cloud/networking-logging-monitoring.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/hybrid-cloud/networking-logging-monitoring.md)
 > Canonical documentation: https://qdrant.tech/documentation/hybrid-cloud/networking-logging-monitoring/
 
 # Configuring Networking, Logging & Monitoring in Qdrant Hybrid Cloud
@@ -64,4 +64,4 @@ If you want to integrate Qdrant metrics into your own monitoring system, configu
 
 If you scrape the above metrics into your own monitoring system, and you are using Grafana, you can use our [Grafana dashboard](https://github.com/qdrant/qdrant-cloud-grafana-dashboard) to visualize these metrics.
 
-![Grafana dashboard](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/cloud-grafana-dashboard.png)
+![Grafana dashboard](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/cloud/cloud-grafana-dashboard.png)

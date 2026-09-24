@@ -1,6 +1,9 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/registry-mirror.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/configuration/registry-mirror.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/registry-mirror.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/configuration/registry-mirror.md)
 
 # Configure a registry mirror
+
+This page describes local sandboxes. For cloud behavior and limitations, see
+[Compare local and cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/local-vs-cloud/).
 
 A registry mirror routes Docker Hub pulls for sandbox templates and OCI kits
 through your organization's registry infrastructure. If the mirror meets
@@ -50,7 +53,7 @@ mirror URL paths differently from image repository prefixes.
 Docker Engine connects to the mirror over HTTPS, so the sandbox must trust the
 certificate that the mirror presents. For a mirror that uses an internal
 certificate authority, add the CA to the sandbox's system trust store. See
-[Install an internal CA certificate](https://docs.docker.com/ai/sandboxes/customize/kit-examples/#install-an-internal-ca-certificate).
+[Install an internal CA certificate](https://docs.docker.com/ai/sandboxes/customize/kits-v2/#install-an-internal-ca-certificate).
 
 Template and kit pulls use the changed setting immediately. Existing sandboxes
 retain the Docker Engine mirror configuration with which they were created.

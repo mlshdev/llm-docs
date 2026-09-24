@@ -1,6 +1,9 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/shell.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/agents/shell.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/shell.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/agents/shell.md)
 
 # Shell
+
+This page describes local sandboxes. For cloud behavior and limitations, see
+[Compare local and cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/local-vs-cloud/).
 
 `sbx run shell` drops you into a Bash login shell inside a sandbox with no
 pre-installed agent binary. It's useful for installing and configuring
@@ -49,7 +52,7 @@ $ sbx secret set openai
 
 Once inside the shell, you can install agents using their standard methods,
 for example `npm install -g @continuedev/cli`. For complex setups, build a
-[custom template](https://docs.docker.com/ai/sandboxes/customize/templates/) instead of installing
+[workload kit](https://docs.docker.com/ai/sandboxes/customize/) instead of installing
 interactively each time.
 
 ## Base image

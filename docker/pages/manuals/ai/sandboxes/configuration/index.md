@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/_index.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/configuration/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/_index.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/configuration/_index.md)
 
 # Configure Docker Sandboxes
 
@@ -14,7 +14,7 @@ sandbox, see [Customize](https://docs.docker.com/ai/sandboxes/customize/).
 - [Models](https://docs.docker.com/ai/sandboxes/configuration/models/) selects local models, hosted providers, or custom
   inference endpoints for sandboxed agents.
 - [Environment files](https://docs.docker.com/ai/sandboxes/configuration/environment-files/) declare reusable project
-  configuration in `sbxenv.yaml`.
+  configuration in `sbxenv.yaml` for local or cloud sandboxes.
 - [GPU passthrough](https://docs.docker.com/ai/sandboxes/configuration/gpu-passthrough/) configures a Linux host and sandbox for
   NVIDIA GPU workloads.
 - [Registry mirror](https://docs.docker.com/ai/sandboxes/configuration/registry-mirror/) routes Docker Hub template, kit, and

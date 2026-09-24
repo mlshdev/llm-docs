@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-develop/neural-search.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/tutorials-develop/neural-search.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-develop/neural-search.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/tutorials-develop/neural-search.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-develop/neural-search/
 
 # Build a Semantic Search API with Qdrant
@@ -19,7 +19,7 @@ A neural search service uses artificial neural networks to improve the accuracy 
 
 To create a neural search service, you will need to transform your raw data and then create a search function to manipulate it. First, you will 1) download and prepare a sample dataset using a modified version of the BERT ML model. Then, you will 2) load the data into Qdrant, 3) create a neural search API and 4) serve it using FastAPI.
 
-![Neural Search Workflow](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/workflow-neural-search.png)
+![Neural Search Workflow](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/workflow-neural-search.png)
 
 > **Note**: The code for this tutorial can be found here: | [Step 1: Data Preparation Process](https://colab.research.google.com/drive/1kPktoudAP8Tu8n8l-iVMOQhVmHkWV_L9?usp=sharing) | [Step 2: Full Code for Neural Search](https://github.com/qdrant/qdrant_demo/tree/sentense-transformers). |
 
@@ -322,7 +322,7 @@ python service.py
 
 You should be able to see a debug interface for your service.
 
-![FastAPI Swagger interface](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/fastapi_neural_search.png)
+![FastAPI Swagger interface](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/fastapi_neural_search.png)
 
 Feel free to play around with it, make queries regarding the companies in our corpus, and check out the results.
 

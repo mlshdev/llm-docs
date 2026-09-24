@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/enable-eci.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/enable-eci.md)
+> Pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/enable-eci.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/enable-eci.md)
 
 # Enable Enhanced Container Isolation
 

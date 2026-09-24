@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/gpu-passthrough.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/configuration/gpu-passthrough.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/gpu-passthrough.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/configuration/gpu-passthrough.md)
 
 # Enable NVIDIA GPU passthrough
 
@@ -6,8 +6,8 @@
 > GPU passthrough is experimental. The `--gpu` flag, the driver bundle, and the
 > setup steps on this page are subject to change.
 
-Docker Sandboxes supports GPU passthrough, which allows running
-workloads against a physical NVIDIA GPU.
+GPU passthrough in local Docker Sandboxes runs workloads on a physical NVIDIA
+GPU.
 
 GPU passthrough in Docker sandboxes works via [VFIO](https://www.kernel.org/doc/html/latest/driver-api/vfio.html), a Linux feature
 that assigns a PCI device directly to a virtual machine. The GPU is

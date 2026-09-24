@@ -1,9 +1,9 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/data-management/confluent.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/data-management/confluent.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/data-management/confluent.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/data-management/confluent.md)
 > Canonical documentation: https://qdrant.tech/documentation/data-management/confluent/
 
 # Confluent Kafka
 
-![Confluent Logo](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/confluent/confluent-logo.png)
+![Confluent Logo](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/confluent/confluent-logo.png)
 
 Built by the original creators of Apache Kafka®, [Confluent Cloud](https://www.confluent.io/confluent-cloud/?utm_campaign=tm.pmm_cd.cwc_partner_Qdrant_generic\&utm_source=Qdrant\&utm_medium=partnerref) is a cloud-native and complete data streaming platform available on AWS, Azure, and Google Cloud. The platform includes a fully managed, elastically scaling Kafka engine, 120+ connectors, serverless Apache Flink®, enterprise-grade security controls, and a robust governance suite.
 
@@ -24,17 +24,17 @@ With our [Qdrant-Kafka Sink Connector](https://github.com/qdrant/qdrant-kafka), 
 
 3. Navigate to the `Connectors` section of the Confluent cluster and click `Add Plugin`. Upload the zip file with the following info.
 
-![Qdrant Connector Install](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/confluent/install.png)
+![Qdrant Connector Install](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/confluent/install.png)
 
 4. Once installed, navigate to the connector and set the following configuration values.
 
-![Qdrant Connector Config](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/confluent/config.png)
+![Qdrant Connector Config](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/confluent/config.png)
 
 Replace the placeholder values with your credentials.
 
 5. Add the Qdrant instance host to the allowed networking endpoints.
 
-![Qdrant Connector Endpoint](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/confluent/endpoint.png)
+![Qdrant Connector Endpoint](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/confluent/endpoint.png)
 
 7. Start the connector.
 
@@ -42,7 +42,7 @@ Replace the placeholder values with your credentials.
 
 You can now produce messages for the configured topic, and they'll be written into the configured Qdrant instance.
 
-![Qdrant Connector Message](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/confluent/message.png)
+![Qdrant Connector Message](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/confluent/message.png)
 
 ## Message Formats
 

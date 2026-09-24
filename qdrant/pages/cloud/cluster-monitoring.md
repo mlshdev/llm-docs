@@ -1,17 +1,17 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/cluster-monitoring.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/cloud/cluster-monitoring.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/cluster-monitoring.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/cloud/cluster-monitoring.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud/cluster-monitoring/
 
 # Monitoring Qdrant Cloud Clusters
 
 ## Telemetry
 
-![Cluster Metrics](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/cluster-metrics.png)
+![Cluster Metrics](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/cloud/cluster-metrics.png)
 
 Qdrant Cloud provides you with a set of metrics to monitor the health of your database cluster. You can access these metrics in the Qdrant Cloud Console in the **Metrics** and **Request** sections of the Cluster Details page.
 
 ## Logs
 
-![Cluster Logs](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/cluster-logs.png)
+![Cluster Logs](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/cloud/cluster-logs.png)
 
 Logs of the database cluster are available in the Qdrant Cloud Console in the **Logs** section of the Cluster Details page.
 
@@ -305,7 +305,7 @@ Metrics in a Prometheus-compatible format are available at the `/sys_metrics` cl
 
 If you scrape your Qdrant cluster system metrics into your own monitoring system, and you are using Grafana, you can use our [Grafana dashboard](https://github.com/qdrant/qdrant-cloud-grafana-dashboard) to visualize these metrics.
 
-![Grafana dashboard](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/cloud-grafana-dashboard.png)
+![Grafana dashboard](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/cloud/cloud-grafana-dashboard.png)
 
 [Embedded content](https://www.youtube.com/embed/pKPP-tL5_6w?si=ASKiG1P61m2YYk9J)
 

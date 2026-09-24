@@ -1,6 +1,10 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/claude-code.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/agents/claude-code.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/claude-code.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/agents/claude-code.md)
 
 # Claude Code
+
+The following instructions apply to local sandboxes. For cloud authentication
+and usage, see [Authenticate cloud agents](https://docs.docker.com/ai/sandboxes/cloud/credentials/) and
+[Use cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/usage/).
 
 Official documentation: [Claude Code](https://code.claude.com/docs)
 
@@ -119,7 +123,7 @@ See [Git workflows](https://docs.docker.com/ai/sandboxes/workflows/git/) for clo
 ## Base image
 
 The sandbox uses `docker/sandbox-templates:claude-code`. See
-[Templates](https://docs.docker.com/ai/sandboxes/customize/templates/) to build your own image on top of
+[Base images](https://docs.docker.com/ai/sandboxes/customize/author/base-images/) to build your own image on top of
 this base.
 
 ## Use a local model

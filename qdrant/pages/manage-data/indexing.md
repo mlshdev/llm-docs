@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/manage-data/indexing.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/manage-data/indexing.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/manage-data/indexing.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/manage-data/indexing.md)
 > Canonical documentation: https://qdrant.tech/documentation/manage-data/indexing/
 
 # Indexing
@@ -2167,7 +2167,7 @@ However, for cases in the middle, this approach does not work well.
 On one hand, we cannot apply a full scan on too many vectors.
 On the other hand, the HNSW graph starts to fall apart when using filters that are too strict.
 
-![HNSW fail](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/precision_by_m.png)
+![HNSW fail](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/precision_by_m.png)
 
 Qdrant solves this problem by extending the HNSW graph with additional edges based on indexed payload values.
 Extra edges allow you to efficiently search for nearby vectors using the HNSW index and apply filters as you search in the graph.

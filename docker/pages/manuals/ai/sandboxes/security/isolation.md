@@ -1,6 +1,9 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/security/isolation.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/security/isolation.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/security/isolation.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/security/isolation.md)
 
 # Isolation layers
+
+This page describes local sandboxes. For cloud behavior and limitations, see
+[Compare local and cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/local-vs-cloud/).
 
 AI coding agents need to execute code, install packages, and run tools on
 your behalf. Docker Sandboxes run each agent in its own microVM. Five
@@ -46,8 +49,10 @@ routes traffic through either a forward proxy or a transparent proxy depending
 on the client's configuration. Both enforce the network policy. Only the
 forward proxy [injects credentials](https://docs.docker.com/ai/sandboxes/configuration/credentials/) for AI services.
 
-Direct external UDP and ICMP are blocked at the network layer. DNS queries use
-the sandbox's internal resolver, which enforces network policy. TCP connections
+Outbound UDP is disabled by default. When you turn on
+[experimental UDP egress](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/#allow-outbound-udp),
+network policy controls its destinations. ICMP is blocked. DNS queries use the
+sandbox's internal resolver, which enforces network policy. TCP connections
 are allowed only when a policy rule matches the destination.
 
 For the default set of allowed domains, see

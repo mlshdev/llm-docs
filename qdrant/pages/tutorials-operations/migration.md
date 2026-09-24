@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/migration.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/tutorials-operations/migration.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/migration.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/tutorials-operations/migration.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-operations/migration/
 
 # Migrate Your Embeddings to Qdrant
@@ -58,7 +58,7 @@ docker run --rm -it \
 
 Let’s now walk through an example of migrating from Pinecone to Qdrant. Assume your Pinecone index looks like this:
 
-![Pinecone Dashboard showing index details](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/guides/pinecone-index.png)
+![Pinecone Dashboard showing index details](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/guides/pinecone-index.png)
 
 The information you need from Pinecone is:
 

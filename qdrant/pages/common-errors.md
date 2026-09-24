@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/common-errors.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/common-errors.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/common-errors.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/common-errors.md)
 > Canonical documentation: https://qdrant.tech/documentation/common-errors/
 
 # Solving common errors

@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/agentic-rag-langgraph.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/tutorials-build-essentials/agentic-rag-langgraph.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/agentic-rag-langgraph.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/tutorials-build-essentials/agentic-rag-langgraph.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-build-essentials/agentic-rag-langgraph/
 
 # Agentic RAG with LangGraph and Qdrant
@@ -22,7 +22,7 @@ This selective approach gives your system the flexibility to choose the best dat
 
 ## Workflow
 
-![image1](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/agentic-rag-langgraph/image1.png)
+![image1](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/examples/agentic-rag-langgraph/image1.png)
 
 | **Step**                            | **Description**                                                                                                                                                                                                                                                                                         |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -324,7 +324,7 @@ graph_builder.add_edge(START, "agent")
 
 This is what the graph looks like:
 
-![image2](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/agentic-rag-langgraph/image2.jpg)
+![image2](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/examples/agentic-rag-langgraph/image2.jpg)
 
 Fig. 3: Agentic RAG with LangGraph
 

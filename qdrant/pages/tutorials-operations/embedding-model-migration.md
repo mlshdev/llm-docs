@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/embedding-model-migration.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/tutorials-operations/embedding-model-migration.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/embedding-model-migration.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/tutorials-operations/embedding-model-migration.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-operations/embedding-model-migration/
 
 # Migrate to a New Embedding Model with Zero Downtime in Qdrant
@@ -48,7 +48,7 @@ Unlike Option 1, point deletions are safe during this migration. Deleting a poin
 
 A blue-green migration uses two collections: the first collection contains the old embeddings, and the second one is used to store the new embeddings. A migration process copies the data from the old collection to the new one, re-embedding vectors using the new model. During the migration, you keep searching the old collection while writing any data updates to both collections. Once all vectors are re-embedded, switch the search to use the new collection.
 
-![Blue-green embedding model migration](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/embedding-model-migration.png)
+![Blue-green embedding model migration](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/embedding-model-migration.png)
 
 *Blue-green embedding model migration*
 

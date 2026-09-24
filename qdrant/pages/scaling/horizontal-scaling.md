@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/scaling/horizontal-scaling.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/scaling/horizontal-scaling.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/scaling/horizontal-scaling.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/scaling/horizontal-scaling.md)
 > Canonical documentation: https://qdrant.tech/documentation/scaling/horizontal-scaling/
 
 # Horizontal Scaling
@@ -45,7 +45,7 @@ In summary:
 
 A Qdrant collection is partitioned into one or more shards. Each shard is an independent store of points capable of performing all the operations a collection supports. Each shard holds a distinct portion of the collection's points.
 
-![A three-node cluster with a collection with three shards. Each shard holds one-third of the collection's points.](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/scaling/cluster-no-replication.png)
+![A three-node cluster with a collection with three shards. Each shard holds one-third of the collection's points.](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/scaling/cluster-no-replication.png)
 
 *A three-node cluster with a collection with three shards. Each shard holds one-third of the collection's points.*
 
@@ -64,7 +64,7 @@ See [Sharding](https://qdrant.tech/documentation/scaling/distributed_deployment/
 
 Qdrant allows you to replicate shards between nodes in the cluster, keeping several copies of a shard spread across the cluster. This ensures the availability of data in case of node failures, except if all replicas are lost.
 
-![A three-node cluster with a collection with three shards and a replication factor of two. Each of the three shards (0, 1, and 2) is replicated onto two nodes.](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/scaling/cluster-with-replication.png)
+![A three-node cluster with a collection with three shards and a replication factor of two. Each of the three shards (0, 1, and 2) is replicated onto two nodes.](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/scaling/cluster-with-replication.png)
 
 *A three-node cluster with a collection with three shards and a replication factor of two. Each of the three shards (0, 1, and 2) is replicated onto two nodes.*
 

@@ -1,8 +1,8 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/_index.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/agents/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/_index.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/agents/_index.md)
 
 # Supported agents
 
-Docker Sandboxes runs the following agents out of the box:
+Docker Sandboxes runs the following agents in local sandboxes:
 
 - [Claude Code](https://docs.docker.com/ai/sandboxes/agents/claude-code/)
 - [Codex](https://docs.docker.com/ai/sandboxes/agents/codex/)

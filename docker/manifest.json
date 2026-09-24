@@ -8,39 +8,43 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-23T14:43:21Z",
-  "documentationDigest": "59433dae9d7bff0e7749993dea7d0ab77b66277847650edba114fcd7183507e6",
-  "sourceCommit": "b62199cbc77c551cd38bae7ffdeda67c88a06d1d",
-  "documentCount": 1641,
+  "sourceCommittedAt": "2026-09-24T17:29:02Z",
+  "documentationDigest": "171e20895fee46ecfcc2351df2cd01029076336917f4d7bbd586af51b5e59cc0",
+  "sourceCommit": "4ef3a0062f7cdb22aa0423459f513d4d3783db7d",
+  "documentCount": 1698,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
       "byteLength": 687,
       "documentCount": 0,
-      "sha256": "f7197de7c94869cc0699253fb922cc29d422ef424b118b063a445e25ecf58c77"
+      "sha256": "e035665e8425899854907f9f5a00e0c0128c6ca4fee0d1c74c2fdf8fc0c52537"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8384401,
-      "documentCount": 783,
-      "sha256": "45d14229cae14ed871d74ed7a813e21bf64272f43b6b79244140a6ee806a265e"
+      "byteLength": 8373756,
+      "documentCount": 818,
+      "sha256": "3b662b4ed5195bdd9e0dd45fe82541266b5699de52e2ecaeab62e88a0026c126"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 8231284,
-      "documentCount": 197,
-      "sha256": "55950879464e9f82aa69be99820dca8d73d9b7be8b14569fb6fec8645a7926f8"
+      "byteLength": 7872805,
+      "documentCount": 220,
+      "sha256": "2bf844354a7b75e1aea4022826f0db687ff58529fedbd51606fb52b1ecd4cccf"
     },
     {
       "name": "llms-full.003.txt",
-      "byteLength": 6489191,
-      "documentCount": 661,
-      "sha256": "ac99f075c8b4368982dce85c84c8ce87b3c8c5056a5074fbe1ae520d971d296c"
+      "byteLength": 7177361,
+      "documentCount": 660,
+      "sha256": "3cdad14bbf9f9cf5d52a3f3d45531c2d1d3bb032822255f1c4afaa1fbb666c73"
     }
   ],
-  "outputDigest": "cf0da4cbf65c4c32b04554f2af597a23f69bae3ce5005d3fbb6f54264cb2758b",
+  "outputDigest": "51bee16eeff1fc72ebe2eccec73303b7ecdd45569a4bcb052ba6c075949b3790",
   "quarantined": [
+    {
+      "sourcePath": "content/manuals/ai/sandboxes-api/cookbook/_index.md",
+      "reason": "Unsupported Docker shortcode recipe-list in content/manuals/ai/sandboxes-api/cookbook/_index.md"
+    },
     {
       "sourcePath": "content/manuals/ai/sandboxes/architecture.md",
       "reason": "Unsupported Docker shortcode interactive-diagram in content/manuals/ai/sandboxes/architecture.md"

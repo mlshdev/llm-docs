@@ -1,6 +1,9 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/docker-agent.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/agents/docker-agent.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/docker-agent.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/agents/docker-agent.md)
 
 # Docker Agent
+
+This page describes local sandboxes. For cloud behavior and limitations, see
+[Compare local and cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/local-vs-cloud/).
 
 Official documentation: [Docker Agent](https://docs.docker.com/ai/docker-agent/)
 
@@ -64,5 +67,5 @@ $ sbx run --name <sandbox-name> -- run --yolo agent.yml
 ## Base image
 
 The sandbox uses `docker/sandbox-templates:docker-agent`. See
-[Templates](https://docs.docker.com/ai/sandboxes/customize/templates/) to build your own image on top of
+[Base images](https://docs.docker.com/ai/sandboxes/customize/author/base-images/) to build your own image on top of
 this base.

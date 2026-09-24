@@ -1,6 +1,10 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/upstream-proxy.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/configuration/upstream-proxy.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/upstream-proxy.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/configuration/upstream-proxy.md)
 
 # Configure an upstream proxy
+
+This page describes proxy settings for local sandboxes and the local daemon.
+For cloud sandbox egress controls, see
+[Cloud network policy](https://docs.docker.com/ai/sandboxes/cloud/network-policy/).
 
 > \[!IMPORTANT]
 > Upstream proxy support is experimental. Everything described on this page —

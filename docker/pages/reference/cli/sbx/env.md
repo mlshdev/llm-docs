@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_env.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/sbx_cli/sbx_env.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_env.yaml](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/data/sbx_cli/sbx_env.yaml)
 
 # sbx env
 
@@ -22,6 +22,16 @@ A secret with `command` or `ref` can set `snapshot: true` to resolve on
 the host after approval and store the result as a literal. This works locally
 and with --cloud. Snapshots do not refresh; recreate the environment to rotate
 them. A snapshot cannot set refresh or noVerify.
+
+Command secrets run from a fresh temporary directory on the host during
+verification and refresh. The host temporary directory must be absolute and must
+remain outside writable sandbox mounts. Relative references such as ./helper or
+cat token no longer resolve against the project or daemon working directory. Use an absolute
+helper path outside shared workspaces. sbx does not copy helpers, inspect their
+dependencies, or confine their execution. Helpers and any code or configuration
+they load must remain outside writable sandbox mounts. Explicit paths into shared
+workspaces and broad mounts exposing host configuration or the host temporary
+directory remain unsafe, including mounts added later with sbx mount.
 
 secrets:
 github:

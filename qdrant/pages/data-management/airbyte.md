@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/data-management/airbyte.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/data-management/airbyte.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/data-management/airbyte.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/data-management/airbyte.md)
 > Canonical documentation: https://qdrant.tech/documentation/data-management/airbyte/
 
 # Airbyte
@@ -31,7 +31,7 @@ Before you start, make sure you have the following:
 Once you have a running instance of Airbyte, you can set up Qdrant as a destination directly in the UI.
 Airbyte's Qdrant destination is connected with a single collection in Qdrant.
 
-![Airbyte Qdrant destination](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/airbyte/qdrant-destination.png)
+![Airbyte Qdrant destination](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/airbyte/qdrant-destination.png)
 
 ### Text processing
 
@@ -39,26 +39,26 @@ Airbyte has some built-in mechanisms to transform your texts into embeddings. Yo
 chunk your fields into pieces before calculating the embeddings, but also which fields should be used to
 create the point payload.
 
-![Processing settings](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/airbyte/processing.png)
+![Processing settings](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/airbyte/processing.png)
 
 ### Embeddings
 
 You can choose the model that will be used to calculate the embeddings. Currently, Airbyte supports multiple
 models, including OpenAI and Cohere.
 
-![Embeddings settings](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/airbyte/embedding.png)
+![Embeddings settings](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/airbyte/embedding.png)
 
 Using some precomputed embeddings from your data source is also possible. In this case, you can pass the field
 name containing the embeddings and their dimensionality.
 
-![Precomputed embeddings settings](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/airbyte/precomputed-embedding.png)
+![Precomputed embeddings settings](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/airbyte/precomputed-embedding.png)
 
 ### Qdrant connection details
 
 Finally, we can configure the target Qdrant instance and collection. In case you use the built-in authentication
 mechanism, here is where you can pass the token.
 
-![Qdrant connection details](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/airbyte/qdrant-config.png)
+![Qdrant connection details](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/airbyte/qdrant-config.png)
 
 Once you confirm creating the destination, Airbyte will test if a specified Qdrant cluster is accessible and
 might be used as a destination.
@@ -69,7 +69,7 @@ Airbyte combines sources and destinations into a single entity called a connecti
 configured and a source, you can create a connection between them. It doesn't matter what source you use, as
 long as Airbyte supports it. The process is pretty straightforward, but depends on the source you use.
 
-![Airbyte connection](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/airbyte/connection.png)
+![Airbyte connection](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/airbyte/connection.png)
 
 ## Further Reading
 

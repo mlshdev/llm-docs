@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/image-library/catalogs.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/docker-hub/image-library/catalogs.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/image-library/catalogs.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/docker-hub/image-library/catalogs.md)
 
 # Generative AI content
 
@@ -63,6 +63,9 @@ simplifies the model management experience.
 coding agent needs to run in a [Docker Sandbox](https://docs.docker.com/ai/sandboxes/):
 its image, tools, credentials, network rules, and startup commands.
 
-Each kit's Hub page shows the command to run it, in the form
-`sbx run <agent> --kit docker.io/<namespace>/<kit-name>`. To learn more about
-building and running kits, see [Kits](https://docs.docker.com/ai/sandboxes/customize/kits/).
+Follow the publisher's instructions for the kit's schema version and role.
+A kit that defines a complete environment is the main reference passed to
+`sbx run`. Add mixins with `--kit`. Components in one sandbox must use
+compatible kit formats. See [Kits](https://docs.docker.com/ai/sandboxes/customize/) for
+the v3 model and [Kits v2](https://docs.docker.com/ai/sandboxes/customize/kits-v2/) for
+kits used with built-in agents.

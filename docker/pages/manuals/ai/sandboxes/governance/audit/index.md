@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/audit/_index.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/governance/audit/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/audit/_index.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/governance/audit/_index.md)
 
 # AI Governance Audit Logs
 
@@ -6,6 +6,11 @@
 
 - Subscription: AI Governance
 - Requires: Docker Sandboxes [0.39.0](https://docs.docker.com/ai/sandboxes/release-notes/) or later
+
+The Docker Sandboxes coverage on this page applies to local sandboxes.
+Docker Cloud delivery stores their audit records in the cloud; it does not add
+cloud sandbox coverage. For cloud network decisions, see
+[Cloud policy logs](https://docs.docker.com/ai/sandboxes/cloud/network-policy/#inspect-network-policy).
 
 AI Governance Audit Logs record Docker AI Governance activity for your
 organization. Each record captures the principal, action, target, decision, and

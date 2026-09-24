@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/send-data/qdrant-airflow-astronomer.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/send-data/qdrant-airflow-astronomer.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/send-data/qdrant-airflow-astronomer.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/send-data/qdrant-airflow-astronomer.md)
 > Canonical documentation: https://qdrant.tech/documentation/send-data/qdrant-airflow-astronomer/
 
 # Qdrant Semantic Querying with Airflow and Astronomer
@@ -215,15 +215,15 @@ Head over to your terminal and run
 
 A local Airflow container should spawn. You can now access the Airflow UI at <http://localhost:8080>. Visit our DAG by clicking on `books_recommend`.
 
-![DAG](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/airflow/demo-dag.png)
+![DAG](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/examples/airflow/demo-dag.png)
 
 Hit the PLAY button on the right to run the DAG. You'll be asked for input about your preference, with the default value already filled in.
 
-![Preference](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/airflow/preference-input.png)
+![Preference](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/examples/airflow/preference-input.png)
 
 After your DAG run completes, you should be able to see the output of your search in the logs of the `search_qdrant` task.
 
-![Output](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/examples/airflow/output.png)
+![Output](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/examples/airflow/output.png)
 
 There you have it, an Airflow pipeline that interfaces with Qdrant! Feel free to fiddle around and explore Airflow. There are references below that might come in handy.
 

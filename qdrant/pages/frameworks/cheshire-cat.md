@@ -1,11 +1,11 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/frameworks/cheshire-cat.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/frameworks/cheshire-cat.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/frameworks/cheshire-cat.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/frameworks/cheshire-cat.md)
 > Canonical documentation: https://qdrant.tech/documentation/frameworks/cheshire-cat/
 
 # Cheshire Cat
 
 [Cheshire Cat](https://cheshirecat.ai/) is an open-source framework that allows you to develop intelligent agents on top of many Large Language Models (LLM). You can develop your custom AI architecture to assist you in a wide range of tasks.
 
-![Cheshire cat](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/cheshire-cat/cat.jpg)
+![Cheshire cat](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/cheshire-cat/cat.jpg)
 
 ## Cheshire Cat and Qdrant
 
@@ -28,7 +28,7 @@ Cheshire Cat takes great advantage of the following features of Qdrant:
 - [Snapshots](https://qdrant.tech/documentation/snapshots/) to not miss any information.
 - [Community](https://discord.com/invite/tdtYvXjC4h)
 
-![RAG Pipeline](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/cheshire-cat/stregatto.jpg)
+![RAG Pipeline](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/cheshire-cat/stregatto.jpg)
 
 ## How to use the Cheshire Cat
 

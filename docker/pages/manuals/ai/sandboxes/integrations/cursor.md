@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/cursor.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/integrations/cursor.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/cursor.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/integrations/cursor.md)
 
 # Connect Cursor to a sandbox
 
@@ -6,6 +6,9 @@
 
 - Availability: GA
 - Requires: Docker Sandboxes 0.37.0 or later
+
+These connection instructions use a local sandbox. For cloud SSH setup, see
+[Connect with SSH](https://docs.docker.com/ai/sandboxes/cloud/usage/#connect-with-ssh).
 
 Cursor is built on VS Code, so it connects to a sandbox the same way, using
 Remote - SSH. Your editor stays on your host while files, terminals, and

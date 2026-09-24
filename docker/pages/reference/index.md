@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/_index.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/reference/_index.md)
+> Pinned source for Docker main: [content/reference/_index.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/reference/_index.md)
 
 # Reference documentation
 
@@ -18,6 +18,7 @@ various APIs, CLIs, drivers and specifications, and file formats.
 
 ## Application programming interfaces (APIs)
 
+- [Sandboxes API (Experimental)](https://docs.docker.com/reference/api/sandboxes/latest/): Create cloud sandboxes, run processes, and manage sandbox resources.
 - [Engine API](https://docs.docker.com/reference/api/engine/): The main API for Docker, provides programmatic access to a daemon.
 - [Docker Hub API](https://docs.docker.com/reference/api/hub/latest/): API to interact with Docker Hub.
 - [DVP Data API](https://docs.docker.com/reference/api/dvp/latest/): API for Docker Verified Publishers to fetch analytics data.

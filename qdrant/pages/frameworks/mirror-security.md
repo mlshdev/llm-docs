@@ -1,7 +1,7 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/frameworks/mirror-security.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/frameworks/mirror-security.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/frameworks/mirror-security.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/frameworks/mirror-security.md)
 > Canonical documentation: https://qdrant.tech/documentation/frameworks/mirror-security/
 
-![VectaX Logo](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/mirror-security/vectax-logo.png)
+![VectaX Logo](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/mirror-security/vectax-logo.png)
 
 [VectaX](https://mirrorsecurity.io/vectax) by Mirror Security is an AI-centric access control and encryption system  designed for managing and protecting vector embeddings. It combines similarity-preserving encryption with fine-grained RBAC to enable secure storage, retrieval, and operations on vector data.
 

@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/gpu-accelerated-hnsw-indexing.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/tutorials-operations/gpu-accelerated-hnsw-indexing.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/gpu-accelerated-hnsw-indexing.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/tutorials-operations/gpu-accelerated-hnsw-indexing.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-operations/gpu-accelerated-hnsw-indexing/
 
 # GPU-Accelerated HNSW Indexing in Qdrant
@@ -14,7 +14,7 @@ At scale, with millions or tens of millions of points, **CPU-based re-indexing c
 
 Building an HNSW index involves many small operations, mostly node and edge placement in the graph, so it benefits from GPU acceleration far more than I/O-bound work, which usually requires sequential access to files.
 
-![A CPU writes one HNSW edge at a time, while a GPU writes many in the same pass.](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/gpu-accelerated-hnsw-indexing/cpu-vs-gpu-indexing.png)
+![A CPU writes one HNSW edge at a time, while a GPU writes many in the same pass.](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/gpu-accelerated-hnsw-indexing/cpu-vs-gpu-indexing.png)
 
 In this tutorial, you'll set up HNSW indexing on Qdrant Cloud, measure its effect on indexing speed and query latency, compare costs with CPU index builds, and see what tradeoffs it brings.
 
@@ -366,7 +366,7 @@ As a result of this monitoring, we expect the GPU-powered cluster to show faster
 
 Query times should be similar across both clusters, though the CPU-only cluster may show more latency spikes, since queries and optimizations compete for the same CPU cycles, increasing resource contention between reads and writes.
 
-![On the CPU-only cluster, serving queries and building the index compete for the same CPU cycles. On the GPU-accelerated cluster, the GPU builds the index on its own hardware, leaving the CPU free to serve queries.](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/gpu-accelerated-hnsw-indexing/gpu-cpu-query-contention.png)
+![On the CPU-only cluster, serving queries and building the index compete for the same CPU cycles. On the GPU-accelerated cluster, the GPU builds the index on its own hardware, leaving the CPU free to serve queries.](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/gpu-accelerated-hnsw-indexing/gpu-cpu-query-contention.png)
 
 ## Analyzing the Results
 
@@ -522,7 +522,7 @@ Both clusters had identical specs (16 GB RAM, 4 vCPU, 64 GB disk) and indexed th
 
 **Indexing time**: the GPU cluster finished HNSW indexing in about 6.1s, while the CPU cluster took about 66.3s, roughly a 10x speedup. This matches the polling data: indexing on GPU wrapped up within 27 optimization snapshots (at a 0.2s polling interval), while the CPU run needed 277 snapshots to reach the same idle state.
 
-![HNSW indexing duration for the same 100,000-vector collection, GPU vs. CPU.](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/gpu-accelerated-hnsw-indexing/cpu-vs-gpu-indexing-time.png)
+![HNSW indexing duration for the same 100,000-vector collection, GPU vs. CPU.](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/gpu-accelerated-hnsw-indexing/cpu-vs-gpu-indexing-time.png)
 
 **Query latency while indexing**: throughput stayed nearly the same on both clusters (about 21 qps on GPU vs. about 21 qps on CPU), and so did the typical (p50) and even p95 latency.
 
@@ -530,7 +530,7 @@ Both clusters had identical specs (16 GB RAM, 4 vCPU, 64 GB disk) and indexed th
 
 In other words, the CPU had to share cycles between building the index and serving queries, which occasionally stalled a request, while the GPU offloaded index construction and left query serving largely undisturbed.
 
-![Query latency percentiles measured while HNSW indexing ran, GPU vs. CPU.](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/gpu-accelerated-hnsw-indexing/cpu-vs-gpu-query-latency.png)
+![Query latency percentiles measured while HNSW indexing ran, GPU vs. CPU.](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/gpu-accelerated-hnsw-indexing/cpu-vs-gpu-query-latency.png)
 
 > **Note**
 >
@@ -554,7 +554,7 @@ It is important to consider, though, that a GPU cluster mostly pays for itself i
 **If neither applies, an idle GPU cluster could result in a worse deal than a CPU-only one**: you might be paying the higher hourly rate with none of the speedup to offset it, since there's no indexing work for the GPU to accelerate.
 
 ![Whether GPU acceleration pays off depends on how often you re-index, not on indexing s
-peed alone.](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/tutorials/gpu-accelerated-hnsw-indexing/gpu-idle-cost-tradeoff.png)
+peed alone.](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/gpu-accelerated-hnsw-indexing/gpu-idle-cost-tradeoff.png)
 
 > **Note**
 >

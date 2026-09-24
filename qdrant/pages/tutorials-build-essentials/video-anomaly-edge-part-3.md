@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-3.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-3.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-3.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-3.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-build-essentials/video-anomaly-edge-part-3/
 
 # Video Anomaly Detection: Scoring, Governance, and Deployment
@@ -71,7 +71,7 @@ Incidents within a 20-second cooldown window are merged to prevent fragmentation
 
 ## Baseline Governance
 
-![Baseline governance: quarantine, scrubbing, and poisoning prevention to maintain detection quality](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/articles_data/video-anomaly-edge/governance.png)
+![Baseline governance: quarantine, scrubbing, and poisoning prevention to maintain detection quality](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/articles_data/video-anomaly-edge/governance.png)
 
 The baseline is the system's ground truth for "normal." If contaminated with anomalous clips, detection quality degrades silently. The memory governor implements three defenses.
 
@@ -195,7 +195,7 @@ GET  /health                           Service health check
 
 ## Results
 
-![UMAP scatter plot of video embeddings showing normal baseline clusters and anomaly outliers in vector space](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/articles_data/video-anomaly-edge/umap-scatter.png)
+![UMAP scatter plot of video embeddings showing normal baseline clusters and anomaly outliers in vector space](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/articles_data/video-anomaly-edge/umap-scatter.png)
 
 We evaluated on the [UCF-Crime dataset](https://www.crcv.ucf.edu/projects/real-world/), the standard benchmark for video anomaly detection. The dataset contains 1,900 surveillance videos across 13 anomaly categories (abuse, arrest, arson, assault, burglary, explosion, fighting, road accidents, robbery, shooting, shoplifting, stealing, vandalism) plus normal footage.
 
@@ -214,7 +214,7 @@ We evaluated on the [UCF-Crime dataset](https://www.crcv.ucf.edu/projects/real-w
 
 **Per-category performance** varies. Explosions and arson (dramatic visual changes) are detected reliably. Shoplifting and stealing (subtle, context-dependent) are harder, but still detectable because they differ from normal, even if the model has never seen a shoplifting example.
 
-![Benchmark results on UCF-Crime dataset](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/articles_data/video-anomaly-edge/benchmark-results.png)
+![Benchmark results on UCF-Crime dataset](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/articles_data/video-anomaly-edge/benchmark-results.png)
 
 ***
 

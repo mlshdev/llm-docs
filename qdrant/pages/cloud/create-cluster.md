@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/create-cluster.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/cloud/create-cluster.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/create-cluster.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/cloud/create-cluster.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud/create-cluster/
 
 # Creating a Qdrant Cloud Cluster
@@ -56,7 +56,7 @@ For payment information see [**Pricing and Payments**](https://qdrant.tech/docum
 
 ## Create a Cluster
 
-![Create Cluster Page](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/create-cluster.png)
+![Create Cluster Page](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/cloud/create-cluster.png)
 
 This page shows you how to use the Qdrant Cloud Console to create a custom Qdrant Cloud cluster.
 
@@ -101,7 +101,7 @@ This page shows you how to use the Qdrant Cloud Console to create a custom Qdran
 
 Once provisioned, you can access your cluster on ports 443 and 6333 (REST) and 6334 (gRPC).
 
-![Cluster configured in the UI](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/cluster-detail.png)
+![Cluster configured in the UI](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/cloud/cluster-detail.png)
 
 You should now see the new cluster in the **Clusters** menu.
 
@@ -144,7 +144,7 @@ For more information on how to create a production-ready cluster, see our [**Vec
 
 You can delete a Qdrant database cluster from the cluster's detail page.
 
-![Delete Cluster](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/cloud/delete-cluster.png)
+![Delete Cluster](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/cloud/delete-cluster.png)
 
 ## Next Steps
 

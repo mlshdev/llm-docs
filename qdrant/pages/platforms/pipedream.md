@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/platforms/pipedream.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/platforms/pipedream.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/platforms/pipedream.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/platforms/pipedream.md)
 > Canonical documentation: https://qdrant.tech/documentation/platforms/pipedream/
 
 # Pipedream
@@ -16,19 +16,19 @@ You can use the [Qdrant app](https://pipedream.com/apps/qdrant) in Pipedream to 
 
 Search for the Qdrant app in your workflow apps.
 
-![Qdrant Pipedream App](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/pipedream/qdrant-app.png)
+![Qdrant Pipedream App](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/pipedream/qdrant-app.png)
 
 The Qdrant app offers extensible API interface and pre-built actions.
 
-![Qdrant App Features](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/pipedream/app-features.png)
+![Qdrant App Features](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/pipedream/app-features.png)
 
 Select any of the actions of the app to set up a connection.
 
-![Qdrant Connect Account](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/pipedream/app-upsert-action.png)
+![Qdrant Connect Account](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/pipedream/app-upsert-action.png)
 
 Configure connection with the credentials of your Qdrant instance.
 
-![Qdrant Connection Credentials](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/pipedream/app-connection.png)
+![Qdrant Connection Credentials](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/pipedream/app-connection.png)
 
 You can verify your credentials using the "Test Connection" button.
 

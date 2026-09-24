@@ -1,6 +1,6 @@
 # Qdrant master
 
-> Documentation generated from the latest `master` branch commit of [qdrant/landing_page](https://github.com/qdrant/landing_page) and pinned to immutable source commit `32eb334faf299b1cbfe0bddc7cd79e10b77012c4`.
+> Documentation generated from the latest `master` branch commit of [qdrant/landing_page](https://github.com/qdrant/landing_page) and pinned to immutable source commit `78beef7e019cb0e5c3cdf851163a98df8c04c37f`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Qdrant master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -165,8 +165,8 @@
 
 ## Search
 
-- [Text Filtering](pages/search/text-search/text-filtering.md): Filter Qdrant search results on keyword and text strings, including exact string, multi-value, full-text, and phrase filters. (58373 bytes)
-- [Full-Text Search](pages/search/text-search/full-text-search.md): Perform ranked full-text search in Qdrant using BM25 and sparse vector models like SPLADE++ and miniCOIL. (45383 bytes)
+- [Text Filtering](pages/search/text-search/text-filtering.md): Filter Qdrant search results on keyword and text strings, including exact string, multi-value, full-text, and phrase filters. (58480 bytes)
+- [Full-Text Search](pages/search/text-search/full-text-search.md): Perform ranked full-text search in Qdrant using BM25 and sparse vector models like SPLADE++ and miniCOIL. (46070 bytes)
 - [Hybrid Search](pages/search/text-search/hybrid-search.md): Combine dense and sparse vectors in Qdrant for hybrid search that handles both semantic queries and keyword lookups in a single request. (11520 bytes)
 - [Search](pages/search/search.md): Run similarity search in Qdrant to find points whose vectors are nearest to a query in the configured vector space. (86802 bytes)
 - [Filtering](pages/search/filtering.md): Combine vector similarity with payload filters in Qdrant to enforce business rules and refine search results. (82332 bytes)
@@ -344,7 +344,7 @@
 - [Vertical Scaling](pages/scaling/vertical-scaling.md): Scale Qdrant by increasing CPU, RAM, or disk on existing nodes, with RAM sizing guidelines and signs it's time to scale horizontally instead. (4316 bytes)
 - [Horizontal Scaling](pages/scaling/horizontal-scaling.md): Understand how Qdrant scales out across nodes through sharding, replication, Raft consensus, and consistency guarantees. (9873 bytes)
 - [Resilience](pages/scaling/resilience.md): Configure Qdrant's replication factor, node count, and Multi-AZ settings for fault tolerance, plus failover best practices for production. (7468 bytes)
-- [Distributed Deployment](pages/scaling/distributed_deployment.md): Run Qdrant in distributed mode across multiple nodes for higher availability, scalable throughput, and fault-tolerant vector search. (39284 bytes)
+- [Distributed Deployment](pages/scaling/distributed_deployment.md): Run Qdrant in distributed mode across multiple nodes for higher availability, scalable throughput, and fault-tolerant vector search. (39433 bytes)
 - [Consistency Guarantees](pages/scaling/consistency-guarantees.md): Configure Qdrant's write consistency factor, read consistency, and write ordering to trade throughput for stronger consistency guarantees. (22661 bytes)
 - [Node Failure Recovery](pages/scaling/node-failure-recovery.md): Recover a Qdrant cluster after a node fails, from restarting a replicated node to recreating one from a snapshot. (4349 bytes)
 - [Scaling & Resilience](pages/scaling/index.md): Scale Qdrant vertically or horizontally as your data and traffic grow, and configure replication, node count, and Multi-AZ for production resilience. (4045 bytes)
@@ -425,7 +425,7 @@
 - [Incremental Embedding Updates](pages/tutorials-operations/incremental-embedding-updates.md): Sync embeddings with raw text data that changes over time. (69778 bytes)
 - [Prevent Unoptimized Usage](pages/tutorials-operations/prevent-unoptimized-usage.md): Defer visibility of unindexed points to stop bulk uploads from slowing down search. (13004 bytes)
 - [Blue-Green Cluster Deployment](pages/tutorials-operations/blue-green-deployment.md): Deploy changes to Qdrant with zero production risk using a blue-green cluster strategy: build and test on a new cluster, then switch traffic over. (9111 bytes)
-- [Time-Based Sharding](pages/tutorials-operations/time-based-sharding.md): Implement time-based sharding in Qdrant to route fast-moving data by timestamp and prune old shards without expensive re-indexing. (44936 bytes)
+- [Time-Based Sharding](pages/tutorials-operations/time-based-sharding.md): Implement time-based sharding in Qdrant to route fast-moving data by timestamp and prune old shards without expensive re-indexing. (44921 bytes)
 - [Large-Scale Search](pages/tutorials-operations/large-scale-search.md): Index and search hundreds of millions of vectors in Qdrant cost-efficiently with minimal hardware and tuned configuration. (17190 bytes)
 - [Securing and Exposing a Hybrid Cloud Cluster](pages/tutorials-operations/secure-and-expose-hybrid-cloud.md): Authentication and TLS management for Qdrant Hybrid Cloud clusters (10773 bytes)
 - [GPU-Accelerated HNSW Indexing](pages/tutorials-operations/gpu-accelerated-hnsw-indexing.md): Speed up HNSW index builds with GPU acceleration on Qdrant Cloud, and measure the effect on indexing time, query latency, and cost. (23096 bytes)

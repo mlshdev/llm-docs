@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/search.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/search/search.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/search.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/search/search.md)
 > Canonical documentation: https://qdrant.tech/documentation/search/search/
 
 # Similarity Search
@@ -7,7 +7,7 @@ Searching for the nearest vectors is at the core of many representational learni
 Modern neural networks are trained to transform objects into vectors so that objects close in the real world appear close in vector space.
 It could be, for example, texts with similar meanings, visually similar pictures, or songs of the same genre.
 
-![This is how vector similarity works](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/encoders.png)
+![This is how vector similarity works](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/encoders.png)
 
 *This is how vector similarity works*
 
@@ -246,7 +246,7 @@ Qdrant supports these most popular types of metrics:
 
 The most typical metric used in similarity learning models is the cosine metric.
 
-![Embeddings](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/cos.png)
+![Embeddings](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/cos.png)
 
 Qdrant counts this metric in 2 steps, due to which a higher search speed is achieved.
 The first step is to normalize the vector when adding it to the collection.
@@ -2474,7 +2474,7 @@ When the points in a group share large fields like titles, abstracts, or full do
 
 `with_lookup` solves this. Store the shared data once in a separate collection, then attach it to each group at query time using the [groups API](#grouping-api).
 
-![Group id matches point id](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/lookup_id_linking.png)
+![Group id matches point id](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/lookup_id_linking.png)
 
 > **Note**
 >

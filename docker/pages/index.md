@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/_index.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/_index.md)
+> Pinned source for Docker main: [content/_index.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/_index.md)
 
 # Home
 
@@ -26,7 +26,7 @@ reference material for everyday development and operations tasks.
 
 - [Join Docker Verified Publisher through self-service plans](https://docs.docker.com/subscription-billing/plans/docker-verified-publisher/) (Docker Verified Publisher, 2026-08-20): Apply for DVP Starter or Growth, complete checkout after approval, and manage publisher analytics, consuming domains, and billing.
 
-- [Sign and enforce trusted sandbox kits](https://docs.docker.com/ai/sandboxes/customize/kits/#sign-and-verify-kits) (Docker Sandboxes, 2026-08-20): Sign kits with cosign-compatible Sigstore signatures, verify keyless or key-based signatures, and reject kits outside a trusted-signer policy.
+- [Sign and enforce trusted sandbox kits](https://docs.docker.com/ai/sandboxes/customize/kits-v2/#sign-and-verify-kits) (Docker Sandboxes, 2026-08-20): Sign kits with cosign-compatible Sigstore signatures, verify keyless or key-based signatures, and reject kits outside a trusted-signer policy.
 
 - [Define reproducible sandbox environments](https://docs.docker.com/ai/sandboxes/configuration/environment-files/) (Docker Sandboxes, 2026-08-19): Capture an agent, workspaces, kits, credentials, ports, and resources in a shareable sbxenv.yaml file and manage it with sbx env.
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/t3-code.md](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/content/manuals/ai/sandboxes/integrations/t3-code.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/t3-code.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/sandboxes/integrations/t3-code.md)
 
 # Connect T3 Code to a sandbox
 
@@ -6,6 +6,9 @@
 
 - Availability: GA
 - Requires: Docker Sandboxes 0.37.0 or later
+
+These connection instructions use a local sandbox. For cloud SSH setup, see
+[Connect with SSH](https://docs.docker.com/ai/sandboxes/cloud/usage/#connect-with-ssh).
 
 T3 Code's SSH integration lets the desktop app drive coding agents inside a
 sandbox. T3 Code has no dedicated Docker Sandboxes integration — it treats the
@@ -48,8 +51,8 @@ $ sbx exec <sandbox> -- sh -lc 'command -v g++ && command -v make && command -v 
 
 A manual install lasts only until the sandbox is recreated, and the first
 connection still builds `node-pty` from source. For a setup that persists,
-recreate the sandbox with the [kit](https://docs.docker.com/ai/sandboxes/customize/kits/) or a custom
-[template](https://docs.docker.com/ai/sandboxes/customize/templates/).
+recreate the sandbox with the [v2 kit](https://docs.docker.com/ai/sandboxes/customize/kits-v2/) or a custom
+[template](https://docs.docker.com/ai/sandboxes/customize/author/base-images/).
 
 ## Connect
 

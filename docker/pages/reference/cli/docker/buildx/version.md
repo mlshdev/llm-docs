@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/buildx/docker_buildx_version.yaml](https://github.com/docker/docs/blob/b62199cbc77c551cd38bae7ffdeda67c88a06d1d/data/cli/buildx/docker_buildx_version.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_version.yaml](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/data/cli/buildx/docker_buildx_version.yaml)
 
 # docker buildx version
 

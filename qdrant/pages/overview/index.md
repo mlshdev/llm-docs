@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/overview/_index.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/overview/_index.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/overview/_index.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/overview/_index.md)
 > Canonical documentation: https://qdrant.tech/documentation/overview/
 
 # Qdrant Overview
@@ -11,7 +11,7 @@ Whether you’re getting started with Qdrant Open-Source or Cloud, this brief pr
 
 Vector search is a transformative information retrieval technique that goes beyond keyword matching to find data based on semantic meaning. It begins with **embedding models**, which convert unstructured data (text, images, audio) into **dense vector embeddings**, fixed-length lists of numbers that represent the data's conceptual essence. These vectors are mapped into a high-dimensional **vector space**, where items with similar meanings are positioned closely together. This spatial organization allows a search for "climate change" to retrieve documents about "global warming," even if the exact words differ.
 
-![Workflow Overview](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/gettingstarted/Orientation-Guide-Diagram-1.png)
+![Workflow Overview](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/gettingstarted/Orientation-Guide-Diagram-1.png)
 
 While dense vectors excel at capturing context, they can sometimes miss specific technical terms or unique identifiers. To bridge this gap, Qdrant also utilizes **sparse vectors** designed to capture precise **lexical matches** for specific keywords. Learn more in [this guide](https://qdrant.tech/documentation/search/text-search/).
 
@@ -19,7 +19,7 @@ The process of generating embeddings from unstructured data is called [inference
 
 The search process itself revolves into the concept of **Top-K** retrieval. When a user submits a request, it is instantly transformed into a **query vector**. The engine then calculates the similarity between this query vector and document vectors, returning the "Top-K" closest matches, where K is a user-defined number representing the desired volume of results. This allows developers to fine-tune the balance between the breadth of the search and the precision of the answers.
 
-![Retrieval Process](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/gettingstarted/Orientation-Guide-Diagram-2.png)
+![Retrieval Process](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/gettingstarted/Orientation-Guide-Diagram-2.png)
 
 To deliver the most robust search experience, Qdrant enables **Hybrid Retrieval** with semantic and lexical search, which you can learn more about [here](https://qdrant.tech/documentation/search/hybrid-queries/).
 
@@ -29,7 +29,7 @@ Qdrants operates in a client-server architecture, providing official [client lib
 
 ## Data Structure {#data-structure}
 
-![Qdrant organizes data around collections - named sets of points that you search within. Each point consists of a vector (numerical representation of your data) and optional payload metadata. Points are identified by 64-bit integers or UUIDs. Collections support multiple vector types per point, dense or sparse, and named vectors are used for storing different embedding types in a single point. When creating a collection, you specify vector dimensionality and distance metric for each of the named vectors you want to store. The HNSW index enables fast similarity search by building a graph structure that efficiently traverses similar vectors. Payload indexes can be created on specific fields to enable filtering during search, extending the HNSW graph for combined vector similarity and metadata filtering in a single pass. Data is organized into segments - storage units containing vectors and indexes - which are automatically optimized in the background. For distributed deployments, collections are split into shards, each containing its own segments. Strict mode prevents performance issues by enforcing constraints like blocking queries on unindexed fields.](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/gettingstarted/Orientation-Guide-Diagram-3.png)
+![Qdrant organizes data around collections - named sets of points that you search within. Each point consists of a vector (numerical representation of your data) and optional payload metadata. Points are identified by 64-bit integers or UUIDs. Collections support multiple vector types per point, dense or sparse, and named vectors are used for storing different embedding types in a single point. When creating a collection, you specify vector dimensionality and distance metric for each of the named vectors you want to store. The HNSW index enables fast similarity search by building a graph structure that efficiently traverses similar vectors. Payload indexes can be created on specific fields to enable filtering during search, extending the HNSW graph for combined vector similarity and metadata filtering in a single pass. Data is organized into segments - storage units containing vectors and indexes - which are automatically optimized in the background. For distributed deployments, collections are split into shards, each containing its own segments. Strict mode prevents performance issues by enforcing constraints like blocking queries on unindexed fields.](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/gettingstarted/Orientation-Guide-Diagram-3.png)
 
 Qdrant collections are designed for horizontal and vertical scaling. You can learn about the details in the above diagram from links below:
 
@@ -81,7 +81,7 @@ The payload index is a helper data structure that enables effective filtering on
 
 A unique aspect of the payload index is that it extends the HNSW graph, allowing filtering criteria to be applied during the semantic search phase. That means it’s a single-pass graph traversal, rather than pre- or post-filtering, which both have some drawbacks.
 
-*![HNSW Graph with Filtering](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/gettingstarted/Orientation-Guide-Diagram-4.png)*
+*![HNSW Graph with Filtering](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/gettingstarted/Orientation-Guide-Diagram-4.png)*
 
 The fact that a payload index extends the HNSW graph means it’s more efficient to create it before indexing the data, as the optimizer will need to build the graph once. However, in some cases, you may already have a collection with a lot of vectors and recognize a need to filter by a specific attribute. In such cases, you can still create a payload index, yet **it won't immediately affect the HNSW graph**.
 
@@ -105,7 +105,7 @@ For optimal throughput, set `shard_number` equal to your node count (read more [
 
 The replication factor determines how many copies of each shard exist. **For production systems, a replication factor of at least 2 is strongly recommended**.
 
-![Choosing a Replication Factor: RF=1 causes operational problems: node restarts make parts of your collection unavailable, and data loss is permanent without backups. Use RF=1 only for non-production workloads, development environments, or when data can be easily regenerated. RF=2 provides the optimal balance for most production deployments: data remains available during single-node failures, read operations benefit from load balancing, and rolling updates work without downtime. RF>2 is a throughput optimization for read-heavy workloads. More replicas distribute read operations across more nodes, increasing cluster throughput. The cost is proportionally increased storage and higher write overhead.](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/docs/gettingstarted/Orientation-Guide-Diagram-5.png)
+![Choosing a Replication Factor: RF=1 causes operational problems: node restarts make parts of your collection unavailable, and data loss is permanent without backups. Use RF=1 only for non-production workloads, development environments, or when data can be easily regenerated. RF=2 provides the optimal balance for most production deployments: data remains available during single-node failures, read operations benefit from load balancing, and rolling updates work without downtime. RF>2 is a throughput optimization for read-heavy workloads. More replicas distribute read operations across more nodes, increasing cluster throughput. The cost is proportionally increased storage and higher write overhead.](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/gettingstarted/Orientation-Guide-Diagram-5.png)
 
 #### Segment Configuration {#segment-configuration}
 

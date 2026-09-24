@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/edge/edge-data-synchronization-patterns.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/edge/edge-data-synchronization-patterns.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/edge/edge-data-synchronization-patterns.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/edge/edge-data-synchronization-patterns.md)
 > Canonical documentation: https://qdrant.tech/documentation/edge/edge-data-synchronization-patterns/
 
 # Data Synchronization Patterns
@@ -9,7 +9,7 @@ This page describes patterns for synchronizing data between Qdrant Edge Shards a
 
 Instead of starting with an empty Edge Shard, you may want to initialize it with pre-existing data from a collection on a Qdrant server. You can achieve this by restoring a snapshot of a shard in the server-side collection.
 
-![Qdrant Edge Shards can be initialized from snapshots of server-side shards](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/edge/qdrant-edge-restore-snapshot.png)
+![Qdrant Edge Shards can be initialized from snapshots of server-side shards](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/edge/qdrant-edge-restore-snapshot.png)
 
 When creating a snapshot for synchronization, specify the applicable server-side shard ID in the snapshot URL. This allows for a single collection to serve multiple independent users or devices, each with its own Edge Shard. Read more about Qdrant's sharding strategy in the [Tiered Multitenancy Documentation](https://qdrant.tech/documentation/manage-data/multitenancy/#tiered-multitenancy).
 

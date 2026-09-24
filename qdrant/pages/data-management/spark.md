@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/data-management/spark.md](https://github.com/qdrant/landing_page/blob/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/content/documentation/data-management/spark.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/data-management/spark.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/data-management/spark.md)
 > Canonical documentation: https://qdrant.tech/documentation/data-management/spark/
 
 # Apache Spark
@@ -228,7 +228,7 @@ You can use the `qdrant-spark` connector as a library in [Databricks](https://ww
 - Select `Install New` to open the library installation modal.
 - Search for `io.qdrant:spark:VERSION` in the Maven packages and click `Install`.
 
-![Databricks](https://raw.githubusercontent.com/qdrant/landing_page/32eb334faf299b1cbfe0bddc7cd79e10b77012c4/qdrant-landing/static/documentation/frameworks/spark/databricks.png)
+![Databricks](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/frameworks/spark/databricks.png)
 
 ## Datatype support
 
