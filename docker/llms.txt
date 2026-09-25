@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `4ef3a0062f7cdb22aa0423459f513d4d3783db7d`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `0bd254d2b506fd6c8bbf8b55affcce84fc02bb48`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -38,7 +38,7 @@
 
 - [Set up your company for success with Docker](pages/guides/admin-set-up.md): Docker's tools provide a scalable, secure platform that empowers your developers to create, ship, and run applications faster. As an administrator, you can streamline workflows, standardize development environments, and… (14472 bytes)
 - [Mastering user and access management](pages/guides/admin-user-management.md): Managing roles and permissions is key to securing your Docker environment while enabling easy collaboration and operational efficiency. This guide walks IT administrators through the essentials of user and access manage… (11019 bytes)
-- [Build and run agentic AI applications with Docker](pages/guides/agentic-ai.md): Agentic applications are transforming how software gets built. These apps don't just respond, they decide, plan, and act. They're powered by models, orchestrated by agents, and integrated with APIs, tools, and services… (13564 bytes)
+- [Build and run agentic AI applications with Docker](pages/guides/agentic-ai.md): Agentic applications are transforming how software gets built. These apps don't just respond, they decide, plan, and act. They're powered by models, orchestrated by agents, and integrated with APIs, tools, and services… (13630 bytes)
 - [Angular language-specific guide](pages/guides/angular.md): The Angular language-specific guide shows you how to containerize an Angular application using Docker, following best practices for creating efficient, production-ready containers. (25997 bytes)
 - [Introduction to Azure Pipelines with Docker](pages/guides/azure-pipelines.md): Before you begin, ensure you have the following requirements: (10667 bytes)
 - [Mastering multi-platform builds, testing, and more with Docker Buildx Bake](pages/guides/bake.md): This guide demonstrates how to simplify and automate the process of building images, testing, and generating build artifacts using Docker Buildx Bake. By defining build configurations in a declarative docker-bake.hcl fi… (16269 bytes)
@@ -179,11 +179,10 @@
 
 ## Ai Overview.Md
 
-- [Docker AI overview](pages/manuals/ai-overview.md): Docker provides tools for working with AI across your development workflow. Each tool serves a different purpose. (3614 bytes)
+- [Docker AI overview](pages/manuals/ai-overview.md): Docker provides tools for working with AI across your development workflow. Each tool serves a different purpose. (3695 bytes)
 
 ## Ai
 
-- [Define AI Models in Docker Compose applications](pages/manuals/ai/compose/models-and-compose.md): Compose models requirements (9267 bytes)
 - [Contributing](pages/manuals/ai/docker-agent/community/contributing/index.md): Docker Agent is open source. Here's how to set up your development environment and contribute. (4374 bytes)
 - [OpenTelemetry Tracing](pages/manuals/ai/docker-agent/community/opentelemetry/index.md): Docker Agent can export OpenTelemetry traces of an agent run to any OTLP/HTTP backend. This is separate from product-analytics telemetry and is opt-in via the --otel flag. (5084 bytes)
 - [Telemetry](pages/manuals/ai/docker-agent/community/telemetry/index.md): Docker Agent collects anonymous usage data to help improve the tool. Telemetry can be disabled at any time. (2395 bytes)
@@ -233,7 +232,7 @@
 - [Managing Secrets](pages/manuals/ai/docker-agent/guides/secrets/index.md): How to securely provide API keys and credentials to Docker Agent. (12355 bytes)
 - [Thinking / Reasoning](pages/manuals/ai/docker-agent/guides/thinking/index.md): Control how much a model reasons before responding. Works across OpenAI, Anthropic, Google Gemini, AWS Bedrock, and Docker Model Runner. (20152 bytes)
 - [Tips & Best Practices](pages/manuals/ai/docker-agent/guides/tips/index.md): Expert guidance for building effective, efficient, and secure agents. (12508 bytes)
-- [Docker Agent](pages/manuals/ai/docker-agent/index.md): Docker Agent is an open-source framework for building teams of specialized AI agents. Instead of prompting one generalist model, you define agents with specific roles and instructions that collaborate to solve problems.… (5392 bytes)
+- [Docker Agent](pages/manuals/ai/docker-agent/index.md): Docker Agent is an open-source framework for building teams of specialized AI agents. Instead of prompting one generalist model, you define agents with specific roles and instructions that collaborate to solve problems.… (5420 bytes)
 - [Anthropic](pages/manuals/ai/docker-agent/providers/anthropic/index.md): Use Claude Sonnet 4, Claude Sonnet 4.5, and other Anthropic models with Docker Agent. (9396 bytes)
 - [Baseten](pages/manuals/ai/docker-agent/providers/baseten/index.md): Use Baseten AI models with Docker Agent. (2064 bytes)
 - [AWS Bedrock](pages/manuals/ai/docker-agent/providers/bedrock/index.md): Access Claude, Nova, Llama, and more through AWS infrastructure with enterprise-grade security and compliance. (7706 bytes)
@@ -301,22 +300,12 @@
 - [Gordon](pages/manuals/ai/gordon/index.md): Gordon requirements (4261 bytes)
 - [Gordon usage limits and tiers](pages/manuals/ai/gordon/usage-limits.md): Gordon requirements (1601 bytes)
 - [Gordon use cases and examples](pages/manuals/ai/gordon/use-cases.md): Gordon requirements (4587 bytes)
-- [Docker MCP Catalog](pages/manuals/ai/mcp-catalog-and-toolkit/catalog.md): Docker MCP Catalog requirements (5351 bytes)
-- [Use MCP Toolkit from the CLI](pages/manuals/ai/mcp-catalog-and-toolkit/cli.md): Docker MCP Toolkit requirements (9899 bytes)
-- [Dynamic MCP](pages/manuals/ai/mcp-catalog-and-toolkit/dynamic-mcp.md): Dynamic MCP enables AI agents to discover and add MCP servers on-demand during a conversation, without manual configuration. Instead of pre-configuring every MCP server before starting your agent session, clients can se… (6125 bytes)
-- [E2B sandboxes](pages/manuals/ai/mcp-catalog-and-toolkit/e2b-sandboxes.md): E2B provides secure cloud sandboxes for AI agents with direct access to Docker's MCP Catalog, a collection of 200+ tools from publishers including GitHub, Notion, and Stripe. (11454 bytes)
-- [MCP Toolkit FAQs](pages/manuals/ai/mcp-catalog-and-toolkit/faqs.md): Docker MCP Catalog and Toolkit is a solution for securely building, sharing, and running MCP tools. This page answers common questions about MCP Catalog and Toolkit security. (5944 bytes)
-- [Get started with Docker MCP Toolkit](pages/manuals/ai/mcp-catalog-and-toolkit/get-started.md): Docker MCP Toolkit requirements (14034 bytes)
-- [Docker MCP Catalog and Toolkit](pages/manuals/ai/mcp-catalog-and-toolkit/index.md): Docker MCP Catalog and Toolkit requirements (3958 bytes)
-- [MCP Gateway](pages/manuals/ai/mcp-catalog-and-toolkit/mcp-gateway.md): The MCP Gateway is Docker's open source solution for orchestrating Model Context Protocol (MCP) servers. It acts as a centralized proxy between clients and servers, managing configuration, credentials, and access contro… (4014 bytes)
-- [MCP Profiles](pages/manuals/ai/mcp-catalog-and-toolkit/profiles.md): MCP Profiles requirements (9414 bytes)
-- [Docker MCP Toolkit](pages/manuals/ai/mcp-catalog-and-toolkit/toolkit.md): Docker MCP Toolkit requirements (7730 bytes)
 - [DMR REST API](pages/manuals/ai/model-runner/api-reference.md): Once Model Runner is enabled, new API endpoints are available. You can use these endpoints to interact with a model programmatically. Docker Model Runner provides compatibility with OpenAI, Anthropic, and Ollama API for… (16206 bytes)
-- [Configuration options](pages/manuals/ai/model-runner/configuration.md): Docker Model Runner provides several configuration options to tune model behavior, memory usage, and inference performance. This guide covers the key settings and how to apply them. (9313 bytes)
-- [DMR examples](pages/manuals/ai/model-runner/examples.md): See some examples of complete workflows using Docker Model Runner. (6422 bytes)
-- [Get started with DMR](pages/manuals/ai/model-runner/get-started.md): Docker Model Runner (DMR) lets you run and manage AI models locally using Docker. This page shows you how to enable DMR, pull and run a model, configure model settings, and publish custom models. (7374 bytes)
+- [Configuration options](pages/manuals/ai/model-runner/configuration.md): Docker Model Runner provides several configuration options to tune model behavior, memory usage, and inference performance. This guide covers the key settings and how to apply them. (9323 bytes)
+- [DMR examples](pages/manuals/ai/model-runner/examples.md): See some examples of complete workflows using Docker Model Runner. (6427 bytes)
+- [Get started with DMR](pages/manuals/ai/model-runner/get-started.md): Docker Model Runner (DMR) lets you run and manage AI models locally using Docker. This page shows you how to enable DMR, pull and run a model, configure model settings, and publish custom models. (7384 bytes)
 - [IDE and tool integrations](pages/manuals/ai/model-runner/ide-integrations.md): Docker Model Runner can serve as a local backend for popular AI coding assistants and development tools. This guide shows how to configure common tools to use models running in DMR. (11591 bytes)
-- [Docker Model Runner](pages/manuals/ai/model-runner/index.md): Docker Model Runner requirements (8303 bytes)
+- [Docker Model Runner](pages/manuals/ai/model-runner/index.md): Docker Model Runner requirements (8308 bytes)
 - [Inference engines](pages/manuals/ai/model-runner/inference-engines.md): Docker Model Runner supports three inference engines: llama.cpp, vLLM, and Diffusers. Each engine has different strengths, supported platforms, and model format requirements. This guide helps you choose the right engine… (13209 bytes)
 - [Open WebUI integration](pages/manuals/ai/model-runner/openwebui-integration.md): Open WebUI is an open-source, self-hosted web interface that provides a ChatGPT-like experience for local AI models. You can connect it to Docker Model Runner to get a polished chat interface for your models. (6800 bytes)
 - [Authentication and authorization](pages/manuals/ai/sandboxes-api/authentication.md): Use browser sign-in when running an application interactively, or a personal access token (PAT) for automation. The SDK obtains short-lived access tokens and renews them as needed. (5644 bytes)
@@ -427,7 +416,7 @@
 - [Connect T3 Code to a sandbox](pages/manuals/ai/sandboxes/integrations/t3-code.md): Docker Sandboxes SSH requirements (6043 bytes)
 - [Connect VS Code to a sandbox](pages/manuals/ai/sandboxes/integrations/vscode.md): Docker Sandboxes SSH requirements (2778 bytes)
 - [MCP gateway](pages/manuals/ai/sandboxes/mcp-gateway.md): This page describes the local MCP gateway. Cloud sandboxes use MCP servers configured in Docker Agentic Platform: see Load an MCP server. (20666 bytes)
-- [Docker Sandboxes release notes](pages/manuals/ai/sandboxes/release-notes.md): This page lists changes in recent stable releases of Docker Sandboxes. For the full release history, including pre-releases and downloads, see the Docker Sandboxes releases on GitHub. (27968 bytes)
+- [Docker Sandboxes release notes](pages/manuals/ai/sandboxes/release-notes.md): This page lists changes in recent stable releases of Docker Sandboxes. For the full release history, including pre-releases and downloads, see the Docker Sandboxes releases on GitHub. (28483 bytes)
 - [Default security posture](pages/manuals/ai/sandboxes/security/defaults.md): This page describes local sandboxes. For cloud behavior and limitations, see Compare local and cloud sandboxes. (4212 bytes)
 - [Isolation layers](pages/manuals/ai/sandboxes/security/isolation.md): This page describes local sandboxes. For cloud behavior and limitations, see Compare local and cloud sandboxes. (13023 bytes)
 - [Troubleshooting](pages/manuals/ai/sandboxes/troubleshooting.md): The following diagnostics and recovery steps apply to local sandboxes. Use sbx --cloud diagnose to check cloud connectivity and account access. For cloud files, expiration, and network access, see Cloud sandboxes. Local… (21123 bytes)
@@ -568,6 +557,7 @@
 - [Run Docker Compose services with GPU access](pages/manuals/compose/how-tos/gpu-support.md): Compose services can define GPU device reservations if the Docker host contains such devices and the Docker Daemon is set accordingly. For this, make sure you install the prerequisites if you haven't already done so. (7013 bytes)
 - [Use init containers in Compose](pages/manuals/compose/how-tos/init-containers.md): Compose pre\start requirements (7301 bytes)
 - [Using lifecycle hooks with Compose](pages/manuals/compose/how-tos/lifecycle.md): Compose lifecycle hooks requirements (2752 bytes)
+- [Define AI Models in Docker Compose applications](pages/manuals/compose/how-tos/models-and-compose.md): Compose models requirements (9267 bytes)
 - [Extend your Compose file](pages/manuals/compose/how-tos/multiple-compose-files/extends.md): Docker Compose's extends attribute lets you share common configurations among different files, or even different projects entirely. (5119 bytes)
 - [Include](pages/manuals/compose/how-tos/multiple-compose-files/include.md): Compose include requirements (4139 bytes)
 - [Use multiple Compose files](pages/manuals/compose/how-tos/multiple-compose-files/index.md): This section contains information on the ways you can work with multiple Compose files. (1633 bytes)
@@ -577,7 +567,7 @@
 - [Use Compose in production](pages/manuals/compose/how-tos/production.md): When you define your app with Compose in development, you can use this definition to run your application in different environments such as CI, staging, and production. (2922 bytes)
 - [Using profiles with Compose](pages/manuals/compose/how-tos/profiles.md): Profiles help you adjust your Compose application for different environments or use cases by selectively activating services. Services can be assigned to one or more profiles; unassigned services start/stop by default,… (5535 bytes)
 - [Specify a project name](pages/manuals/compose/how-tos/project-name.md): By default, Compose assigns the project name based on the name of the directory that contains the Compose file. You can override this with several methods. (2528 bytes)
-- [Use provider services](pages/manuals/compose/how-tos/provider-services.md): Compose provider services requirements (5043 bytes)
+- [Use provider services](pages/manuals/compose/how-tos/provider-services.md): Compose provider services requirements (5048 bytes)
 - [Control startup and shutdown order in Compose](pages/manuals/compose/how-tos/startup-order.md): You can control the order of service startup and shutdown with the depends\on attribute. Compose always starts and stops containers in dependency order, where dependencies are determined by dependson, links, volumesfrom… (2844 bytes)
 - [Manage secrets securely in Docker Compose](pages/manuals/compose/how-tos/use-secrets.md): A secret is any piece of data, such as a password, certificate, or API key, that shouldn’t be transmitted over a network or stored unencrypted in a Dockerfile or in your application’s source code. (4248 bytes)
 - [Docker Compose](pages/manuals/compose/index.md): Docker Compose is a tool for defining and running multi-container applications. It is the key to unlocking a streamlined and efficient development and deployment experience. (1904 bytes)
@@ -597,6 +587,16 @@
 - [containerd image store](pages/manuals/desktop/features/containerd.md): Docker Desktop uses containerd as its image store by default. The image store is the component responsible for pushing, pulling, and storing images on your filesystem. The containerd image store supports features like m… (3123 bytes)
 - [Use the Docker Desktop CLI](pages/manuals/desktop/features/desktop-cli.md): The Docker Desktop CLI lets you perform key operations such as starting, stopping, restarting, and updating Docker Desktop directly from the command line. (2880 bytes)
 - [GPU support in Docker Desktop for Windows](pages/manuals/desktop/features/gpu.md): Docker Desktop for Windows supports NVIDIA GPU Paravirtualization (GPU-PV) on NVIDIA GPUs, allowing containers to access GPU resources for compute-intensive workloads like AI, machine learning, or video processing. (3159 bytes)
+- [Docker MCP Catalog](pages/manuals/desktop/features/mcp-catalog-and-toolkit/catalog.md): Docker MCP Catalog requirements (5449 bytes)
+- [Use MCP Toolkit from the CLI](pages/manuals/desktop/features/mcp-catalog-and-toolkit/cli.md): Docker MCP Toolkit requirements (9997 bytes)
+- [Dynamic MCP](pages/manuals/desktop/features/mcp-catalog-and-toolkit/dynamic-mcp.md): Dynamic MCP enables AI agents to discover and add MCP servers on-demand during a conversation, without manual configuration. Instead of pre-configuring every MCP server before starting your agent session, clients can se… (6223 bytes)
+- [E2B sandboxes](pages/manuals/desktop/features/mcp-catalog-and-toolkit/e2b-sandboxes.md): E2B provides secure cloud sandboxes for AI agents with direct access to Docker's MCP Catalog, a collection of 200+ tools from publishers including GitHub, Notion, and Stripe. (11482 bytes)
+- [MCP Toolkit FAQs](pages/manuals/desktop/features/mcp-catalog-and-toolkit/faqs.md): Docker MCP Catalog and Toolkit is a solution for securely building, sharing, and running MCP tools. This page answers common questions about MCP Catalog and Toolkit security. (6014 bytes)
+- [Get started with Docker MCP Toolkit](pages/manuals/desktop/features/mcp-catalog-and-toolkit/get-started.md): Docker MCP Toolkit requirements (14230 bytes)
+- [Docker MCP Catalog and Toolkit](pages/manuals/desktop/features/mcp-catalog-and-toolkit/index.md): Docker MCP Catalog and Toolkit requirements (3972 bytes)
+- [MCP Gateway](pages/manuals/desktop/features/mcp-catalog-and-toolkit/mcp-gateway.md): The MCP Gateway is Docker's open source solution for orchestrating Model Context Protocol (MCP) servers. It acts as a centralized proxy between clients and servers, managing configuration, credentials, and access contro… (4070 bytes)
+- [MCP Profiles](pages/manuals/desktop/features/mcp-catalog-and-toolkit/profiles.md): MCP Profiles requirements (9512 bytes)
+- [Docker MCP Toolkit](pages/manuals/desktop/features/mcp-catalog-and-toolkit/toolkit.md): Docker MCP Toolkit requirements (7828 bytes)
 - [Networking on Docker Desktop](pages/manuals/desktop/features/networking/index.md): This page explains how Docker Desktop routes network traffic and file I/O between containers, the VM, and the host, and how this behavior is visible to firewalls and endpoint protection tools. (7778 bytes)
 - [Explore networking how-tos on Docker Desktop](pages/manuals/desktop/features/networking/networking-how-tos.md): This page explains how to configure and use networking features, connect containers to host services, work behind proxies or VPNs, and troubleshoot common issues. (7836 bytes)
 - [Synchronized file shares](pages/manuals/desktop/features/synchronized-file-sharing.md): Synchronized file sharing requirements (6198 bytes)
@@ -607,8 +607,8 @@
 - [Custom kernels on WSL](pages/manuals/desktop/features/wsl/custom-kernels.md): Docker Desktop depends on several kernel features built into the default WSL 2 Linux kernel distributed by Microsoft. (1079 bytes)
 - [Docker Desktop WSL 2 backend on Windows](pages/manuals/desktop/features/wsl/index.md): Windows Subsystem for Linux (WSL) 2 is a full Linux kernel built by Microsoft that lets Linux distributions run without managing virtual machines. With Docker Desktop running on WSL 2, users can leverage Linux workspace… (6110 bytes)
 - [Develop with Docker Desktop using WSL 2 on Windows](pages/manuals/desktop/features/wsl/use-wsl.md): The following section describes how to start developing your applications using Docker and WSL 2. (1379 bytes)
-- [Docker Desktop](pages/manuals/desktop/index.md): Docker Desktop is a one-click-install application for your Mac, Linux, or Windows environment that lets you build, share, and run containerized applications and microservices. (3171 bytes)
-- [Docker Desktop release notes](pages/manuals/desktop/release-notes.md): This page contains information about the new features, improvements, known issues, and bug fixes in Docker Desktop releases. (346894 bytes)
+- [Docker Desktop](pages/manuals/desktop/index.md): Docker Desktop is a one-click-install application for your Mac, Linux, or Windows environment that lets you build, share, and run containerized applications and microservices. (3185 bytes)
+- [Docker Desktop release notes](pages/manuals/desktop/release-notes.md): This page contains information about the new features, improvements, known issues, and bug fixes in Docker Desktop releases. (346927 bytes)
 - [How to back up and restore your Docker Desktop data](pages/manuals/desktop/settings-and-maintenance/backup-and-restore.md): Use this procedure to back up and restore your images and container data. This is useful if you want to reset your VM disk or to move your Docker environment to a new computer, or recover from a failed Docker Desktop up… (4685 bytes)
 - [Change your Docker Desktop settings](pages/manuals/desktop/settings-and-maintenance/settings.md): Customize Docker Desktop behavior and optimize performance and resource usage with Docker Desktop's settings. (51873 bytes)
 - [Allowlist for Docker Desktop](pages/manuals/desktop/setup/allow-list.md): Allow list requirements (2156 bytes)
@@ -713,7 +713,7 @@
 
 ## Docker Hub
 
-- [Generative AI content](pages/manuals/docker-hub/image-library/catalogs.md): Docker Hub groups its generative AI content, including curated catalogs and sandbox kits, under Generative AI. Catalogs are your go-to collections of trusted, ready-to-use container images and resources, tailored to mee… (3400 bytes)
+- [Generative AI content](pages/manuals/docker-hub/image-library/catalogs.md): Docker Hub groups its generative AI content, including curated catalogs and sandbox kits, under Generative AI. Catalogs are your go-to collections of trusted, ready-to-use container images and resources, tailored to mee… (3414 bytes)
 - [Content library](pages/manuals/docker-hub/image-library/index.md): Docker Hub's content library is the world's largest collection of container images, extensions, and plugins. It provides a central location to discover pre-built images and tools designed to streamline your container wo… (1072 bytes)
 - [Mirror the Docker Hub library](pages/manuals/docker-hub/image-library/mirror.md): If you have multiple instances of Docker running in your environment, such as multiple physical or virtual machines all running Docker, each daemon goes out to the internet and fetches an image it doesn't have locally,… (5170 bytes)
 - [Docker Hub search](pages/manuals/docker-hub/image-library/search.md): The Docker Hub search interface lets you explore millions of resources. To help you find exactly what you need, it offers a variety of filters that let you narrow your results or discover different types of content. (13428 bytes)
@@ -944,9 +944,9 @@
 - [Registry Access Management](pages/manuals/enterprise/security/hardened-desktop/registry-access-management.md): Registry access management requirements (5701 bytes)
 - [Desktop settings reporting](pages/manuals/enterprise/security/hardened-desktop/settings-management/compliance-reporting.md): Compliance reporting requirements (4976 bytes)
 - [Configure Settings Management in Docker Home](pages/manuals/enterprise/security/hardened-desktop/settings-management/configure-admin-console.md): Admin Console requirements (4086 bytes)
-- [Configure Settings Management with a JSON file](pages/manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file.md): Hardened Docker Desktop requirements (35555 bytes)
+- [Configure Settings Management with a JSON file](pages/manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file.md): Hardened Docker Desktop requirements (35639 bytes)
 - [Settings Management](pages/manuals/enterprise/security/hardened-desktop/settings-management/index.md): Hardened Docker Desktop requirements (5567 bytes)
-- [Settings reference](pages/manuals/enterprise/security/hardened-desktop/settings-management/settings-reference.md): This reference documents Docker Desktop settings that administrators can configure using Settings Management. Use this page to understand which settings are available, their accepted values, platform compatibility, and… (30001 bytes)
+- [Settings reference](pages/manuals/enterprise/security/hardened-desktop/settings-management/settings-reference.md): This reference documents Docker Desktop settings that administrators can configure using Settings Management. Use this page to understand which settings are available, their accepted values, platform compatibility, and… (30015 bytes)
 - [Security for enterprises](pages/manuals/enterprise/security/index.md): Hardened Docker Desktop provides security features that help organizations secure developer environments, including Settings Management, Enhanced Container Isolation, Registry Access Management, and related controls. (607 bytes)
 
 ## Extensions
@@ -1199,7 +1199,7 @@
 - [Interpolation](pages/reference/compose-file/interpolation.md): Values in a Compose file can be set by variables and interpolated at runtime. Compose files use a Bash-like syntax ${VARIABLE}. Both $VARIABLE and ${VARIABLE} syntax is supported. (2576 bytes)
 - [Legacy versions](pages/reference/compose-file/legacy-versions.md): The legacy versions of the Compose file reference has moved to the V1 branch of the Compose repository. They are no longer being actively maintained. (583 bytes)
 - [Merge Compose files](pages/reference/compose-file/merge.md): Compose lets you define a Compose application model through multiple Compose files. When doing so, Compose follows certain rules to merge Compose files. (5151 bytes)
-- [Models](pages/reference/compose-file/models.md): Compose models requirements (1880 bytes)
+- [Models](pages/reference/compose-file/models.md): Compose models requirements (1885 bytes)
 - [Define and manage networks in Docker Compose](pages/reference/compose-file/networks.md): Networks let services communicate with each other. By default Compose sets up a single network for your app. Each container for a service joins the default network and is both reachable by other containers on that netwo… (7498 bytes)
 - [Learn how to use profiles in Docker Compose](pages/reference/compose-file/profiles.md): With profiles you can define a set of active profiles so your Compose application model is adjusted for various usages and environments. (2862 bytes)
 - [Secrets](pages/reference/compose-file/secrets.md): Secrets are a flavor of Configs focusing on sensitive data, with specific constraint for this usage. (1703 bytes)

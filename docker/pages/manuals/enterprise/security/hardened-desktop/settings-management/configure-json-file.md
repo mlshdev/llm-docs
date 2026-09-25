@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file.md)
+> Pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file.md)
 
 # Configure Settings Management with a JSON file
 
@@ -398,12 +398,12 @@ For more information, see [Networking](https://docs.docker.com/desktop/features/
 >
 > For Docker Desktop versions 4.41 and earlier, some of these settings lived under the **Experimental features** tab on the **Features in development** page.
 
-| Parameter                   | OS | Description                                                                                                                                                                                                                                                            | Version |
-| :-------------------------- | -- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `allowBetaFeatures`         |    | If `value` is set to `true`, beta features are enabled.                                                                                                                                                                                                                |         |
-| `enableDockerAI`            |    | If `allowBetaFeatures` is true, setting `enableDockerAI` to `true` enables [Gordon](https://docs.docker.com/ai/gordon/) by default. You can independently control this setting from the `allowBetaFeatures` setting.                                                   |         |
-| `enableDockerMCPToolkit`    |    | If `allowBetaFeatures` is true, setting `enableDockerMCPToolkit` to `true` enables the [MCP Toolkit feature](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/) by default. You can independently control this setting from the `allowBetaFeatures` setting. |         |
-| `allowExperimentalFeatures` |    | If `value` is set to `true`, experimental features are enabled.                                                                                                                                                                                                        |         |
+| Parameter                   | OS | Description                                                                                                                                                                                                                                                                          | Version |
+| :-------------------------- | -- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `allowBetaFeatures`         |    | If `value` is set to `true`, beta features are enabled.                                                                                                                                                                                                                              |         |
+| `enableDockerAI`            |    | If `allowBetaFeatures` is true, setting `enableDockerAI` to `true` enables [Gordon](https://docs.docker.com/ai/gordon/) by default. You can independently control this setting from the `allowBetaFeatures` setting.                                                                 |         |
+| `enableDockerMCPToolkit`    |    | If `allowBetaFeatures` is true, setting `enableDockerMCPToolkit` to `true` enables the [MCP Toolkit feature](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/toolkit/) by default. You can independently control this setting from the `allowBetaFeatures` setting. |         |
+| `allowExperimentalFeatures` |    | If `value` is set to `true`, experimental features are enabled.                                                                                                                                                                                                                      |         |
 
 ### Enhanced Container Isolation
 

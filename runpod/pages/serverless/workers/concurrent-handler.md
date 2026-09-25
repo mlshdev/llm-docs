@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/workers/concurrent-handler.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/serverless/workers/concurrent-handler.mdx)
+> Pinned source for Runpod main: [serverless/workers/concurrent-handler.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/serverless/workers/concurrent-handler.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/workers/concurrent-handler
 
 # Build a concurrent handler

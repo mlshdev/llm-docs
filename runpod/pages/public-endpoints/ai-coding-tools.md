@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/ai-coding-tools.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/public-endpoints/ai-coding-tools.mdx)
+> Pinned source for Runpod main: [public-endpoints/ai-coding-tools.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/public-endpoints/ai-coding-tools.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/ai-coding-tools
 
 # Connect AI coding tools with Public Endpoints
@@ -115,7 +115,7 @@ OpenCode supports multiple provider configurations, so you can set up both Runpo
 
    Press Ctrl + p to open the command palette and select **Switch model** to select a Runpod endpoint.
 
-   ![](https://raw.githubusercontent.com/runpod/docs/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/images/ai-coding-opencode-command-palette.png)
+   ![](https://raw.githubusercontent.com/runpod/docs/2ed145e18217c606416d3dbc47314da01a479792/images/ai-coding-opencode-command-palette.png)
 
 ## Configure Cursor
 
@@ -128,7 +128,7 @@ Cursor supports a single global OpenAI-compatible endpoint override, so you can 
 1. Launch Cursor and press Shift + Cmd + J (macOS) or Shift + Ctrl + J (Windows/Linux) to open Settings.
 2. Go to **Cursor Settings > Models** and expand the **API Keys** section.
 
-   ![](https://raw.githubusercontent.com/runpod/docs/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/images/ai-coding-cursor-settings.png)
+   ![](https://raw.githubusercontent.com/runpod/docs/2ed145e18217c606416d3dbc47314da01a479792/images/ai-coding-cursor-settings.png)
 3. Find the **OpenAI API Key** field. Enable it, then enter your Runpod API key (`rpa_...`).
 4. Enable **Override OpenAI Base URL** and enter:
 
@@ -158,7 +158,7 @@ Cline is a VS Code extension with its own settings panel. Unlike Cursor, Cline s
    | API Key  | `rpa_YOUR_API_KEY`                                |
    | Model ID | `openai/gpt-oss-120b`                             |
 
-   ![](https://raw.githubusercontent.com/runpod/docs/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/images/ai-coding-cline-settings.png)
+   ![](https://raw.githubusercontent.com/runpod/docs/2ed145e18217c606416d3dbc47314da01a479792/images/ai-coding-cline-settings.png)
 4. Click **Save** to apply your settings.
 
 To use Qwen3 instead, use these values:

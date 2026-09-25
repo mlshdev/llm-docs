@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/skills/_index.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/skills/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/skills/_index.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/ai/skills/_index.md)
 
 # Docker Skills
 

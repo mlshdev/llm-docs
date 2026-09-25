@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/get-started.mdx)
+> Pinned source for Runpod main: [get-started.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/get-started.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started
 
 # Deploy your first Pod
@@ -21,17 +21,11 @@ Now that you've created your account, you're ready to deploy your first Pod:
 
 Use this path to launch a Pod from the console. Configure your workload, choose a region and GPU, review the pricing, and deploy.
 
-Runpod is rolling out an updated deployment flow through [early access](https://console.runpod.io/user/early-access). Use the tabs below to follow the version that matches what you see in the console.
-
 To open the deploy page, click **+ New** in the top-right corner of the console and select **Pod**.
 
 > **Tip**
 >
 > You can also click **Pods** in the left sidebar.
-
-> **Warning**
->
-> These instructions describe the early access version of the deployment flow. If you don't see this flow, follow the **Legacy flow** tab, or enable the new flow from [Account → Early access](https://console.runpod.io/user/early-access).
 
 1. In the **Workload** panel at the top of the page:
 
@@ -39,7 +33,7 @@ To open the deploy page, click **+ New** in the top-right corner of the console 
    - **Pod name**: a name is auto-generated. You can replace it with any name you prefer.
    - **Options**: when you select an [official Runpod template](https://docs.runpod.io/pods/templates/overview), two extra options appear. These options are not shown for community templates.
      - **Start Jupyter notebook**: launches a Jupyter server when the Pod starts, accessible from the console. Enabled by default.
-     - **SSH terminal access**: enables SSH into the Pod. If enabled, paste your SSH public key in the field that appears. [Learn how to create an SSH key](https://docs.runpod.io/pods/configuration/use-ssh).
+     - **SSH terminal access**: enables SSH into the Pod. If enabled, paste your SSH public key in the field that appears. [Learn how to create an SSH key](https://docs.runpod.io/get-started/credentials#ssh-public-keys).
 2. Set the **Region** for your Pod. It's set to **Any region** by default. Click to restrict deployment to a specific geographic region.
 3. In the **Compute** panel, choose a GPU from one of four tabs:
 
@@ -97,11 +91,8 @@ To open the deploy page, click **+ New** in the top-right corner of the console 
    2. In the **Deploy when available** modal:
 
       - **Notifications**: choose how you want to be notified when your Pod deploys:
-
         - **Email**: sends a notification to one of your account's email addresses. Select which address to use. If you're a member of a team, you can also select the team's email address.
-        - **In-console notification**: shows an alert inside the Runpod console.
-
-        Both are enabled by default.
+        - **In-console notification**: shows an alert inside the Runpod console. Both are enabled by default.
       - **Subscription window**: set the time range during which Runpod monitors for availability and auto-deploys your Pod:
         - The default window is 24 hours from now.
         - Click the date range to adjust the start and end time.
@@ -118,7 +109,11 @@ To open the deploy page, click **+ New** in the top-right corner of the console 
       >
       > If the GPU doesn't become available within your subscription window, your subscription expires and no Pod is deployed. You can create a new subscription at any time.
 
-1) The deploy page opens to a grid of available GPUs. Use the controls at the top of the grid to narrow the list, then click a card to configure it.
+> **Note**
+>
+> To switch back to the legacy flow, go to [Settings](https://console.runpod.io/user/settings) and enable **Switch back to the legacy deploy flow** under **Legacy Pod deploy experience**.
+
+1. The deploy page opens to a grid of available GPUs. Use the controls at the top of the grid to narrow the list, then click a card to configure it.
 
    - Filter the list with the row of toggles: **Secure Cloud**, **Network volume**, **Any region**, **Global Networking**, and **Additional filters**.
    - Drag the **VRAM** slider to set a minimum amount of VRAM.
@@ -128,7 +123,7 @@ To open the deploy page, click **+ New** in the top-right corner of the console 
    Each card shows the GPU's price per hour, VRAM, maximum count, and current availability (High, Medium, Low, or Unavailable).
 
    Click a card to select that GPU and open the Configure deployment panel below.
-2) After you select a GPU, the Configure deployment panel opens below the grid. Set the following:
+2. After you select a GPU, the Configure deployment panel opens below the grid. Set the following:
 
    - **Pod name**: a name is auto-generated. You can replace it with any name you prefer.
    - **Pod template**: click **Edit** to modify the current template's settings, or **Change template** to swap it for a different one.
@@ -136,7 +131,7 @@ To open the deploy page, click **+ New** in the top-right corner of the console 
    - **Instance pricing**: choose **On-Demand** for standard pricing, or **Reserved** to reserve capacity (click **Talk to sales** to arrange a reservation).
    - **Options**: enable **Encrypt volume**, **SSH terminal access**, or **Start Jupyter notebook**. Start Jupyter notebook is enabled by default.
    - **Storage configuration**: set the **Container disk** size, then choose between a **Network volume** and a **Volume disk** for persistent storage.
-3) You must complete the storage configuration before you can deploy. If you haven't selected persistent storage, a warning appears: "No network volume has been selected. Please select a network volume above or switch to volume disk." Select a network volume or switch to a volume disk to enable the deploy button.
+3. You must complete the storage configuration before you can deploy. If you haven't selected persistent storage, a warning appears: "No network volume has been selected. Please select a network volume above or switch to volume disk." Select a network volume or switch to a volume disk to enable the deploy button.
 
    Review the **Pricing summary** and **Pod summary** to confirm your configuration, then click **Deploy On-Demand** to deploy and start your Pod. You'll be redirected back to the Pods page after a few seconds.
 
@@ -191,7 +186,7 @@ Once your Pod finishes initializing, connect and run some code:
 
 > **Note**
 >
-> You'll need an [SSH key added to your account](https://docs.runpod.io/pods/configuration/use-ssh) for this to work. You can run `runpodctl doctor` to set this up automatically.
+> You'll need an [SSH key added to your account](https://docs.runpod.io/get-started/credentials#ssh-public-keys) for this to work. You can run `runpodctl doctor` to set this up automatically.
 
 Get the SSH command for your Pod:
 
@@ -253,9 +248,9 @@ runpodctl pod delete $RUNPOD_POD_ID
 
 ## Next steps
 
-- [Generate API keys](https://docs.runpod.io/get-started/api-keys)
+- [Manage credentials](https://docs.runpod.io/get-started/credentials)
 
-  Create API keys for programmatic resource management.
+  Create API keys, SSH keys, and other credentials.
 - [Manage your account](https://docs.runpod.io/accounts-billing/manage-accounts)
 
   Create teams and invite collaborators.

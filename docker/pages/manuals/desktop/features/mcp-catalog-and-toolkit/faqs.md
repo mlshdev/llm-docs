@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/mcp-catalog-and-toolkit/faqs.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/mcp-catalog-and-toolkit/faqs.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/mcp-catalog-and-toolkit/faqs.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/desktop/features/mcp-catalog-and-toolkit/faqs.md)
 
 # MCP Toolkit FAQs
 
@@ -16,7 +16,7 @@ Currently, a majority of the servers in the catalog are built directly by Docker
 - Signed SBOMs: Software Bill of Materials with cryptographic signatures.
 
 > \[!NOTE]
-> When using the images with [Docker MCP gateway](https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/),
+> When using the images with [Docker MCP gateway](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/mcp-gateway/),
 > you can verify attestations at runtime using the `docker mcp gateway run --verify-signatures` CLI command.
 
 In addition to Docker-built servers, the catalog includes select servers from trusted registries such as GitHub and HashiCorp. Each third-party server undergoes a verification process that includes:
@@ -63,9 +63,9 @@ After the update completes, refresh the **Catalog** tab in Docker Desktop.
 
 ### What's the difference between profiles and the catalog?
 
-The [catalog](https://docs.docker.com/ai/mcp-catalog-and-toolkit/catalog/) is the source of
+The [catalog](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/catalog/) is the source of
 available MCP servers - a library of tools you can choose from.
-[Profiles](https://docs.docker.com/ai/mcp-catalog-and-toolkit/profiles/) are collections of
+[Profiles](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/profiles/) are collections of
 servers you've added to organize your work. Think of the catalog as a library,
 and profiles as your personal bookshelves containing the books you've selected
 for different purposes.
@@ -103,5 +103,5 @@ different settings for different projects or environments.
 
 ## Related pages
 
-- [Get started with MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/get-started/)
-- [Open-source MCP Gateway](https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/)
+- [Get started with MCP Toolkit](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/get-started/)
+- [Open-source MCP Gateway](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/mcp-gateway/)

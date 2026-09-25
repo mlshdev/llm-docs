@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/model-runner/configuration.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/model-runner/configuration.md)
+> Pinned source for Docker main: [content/manuals/ai/model-runner/configuration.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/ai/model-runner/configuration.md)
 
 # Configuration options
 
@@ -282,7 +282,7 @@ You can also configure models via environment variables in containers:
 | `LLM_URL`   | Auto-injected URL of the model endpoint |
 | `LLM_MODEL` | Auto-injected model identifier          |
 
-See [Models and Compose](https://docs.docker.com/ai/compose/models-and-compose/) for details on how these are populated.
+See [Models and Compose](https://docs.docker.com/compose/how-tos/models-and-compose/) for details on how these are populated.
 
 ## Reset configuration
 
@@ -299,4 +299,4 @@ Using `-1` resets to the default value.
 
 - [Inference engines](https://docs.docker.com/ai/model-runner/inference-engines/) - Learn about llama.cpp and vLLM
 - [API reference](https://docs.docker.com/ai/model-runner/api-reference/) - API parameters for per-request configuration
-- [Models and Compose](https://docs.docker.com/ai/compose/models-and-compose/) - Configure models in Compose applications
+- [Models and Compose](https://docs.docker.com/compose/how-tos/models-and-compose/) - Configure models in Compose applications

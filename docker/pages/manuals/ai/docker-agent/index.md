@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/docker-agent/_index.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/docker-agent/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/docker-agent/_index.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/ai/docker-agent/_index.md)
 
 # Docker Agent
 
@@ -98,7 +98,7 @@ define. Each agent:
 - Has its own context (agents don't share knowledge)
 - Can access built-in tools like todo lists, memory, and task delegation
 - Can use external tools via [MCP
-  servers](https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/)
+  servers](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/mcp-gateway/)
 
 The root agent delegates tasks to agents listed under `sub_agents`. Sub-agents
 can have their own sub-agents for deeper hierarchies.
@@ -150,5 +150,5 @@ it doesn't exist yet.
 - Browse example agent configurations in the [Docker Agent
   repository](https://github.com/docker/docker-agent/tree/main/examples)
 - Connect agents to external tools via the [Docker MCP
-  Gateway](https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/)
+  Gateway](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/mcp-gateway/)
 - Read the full [configuration reference](https://docs.docker.com/ai/docker-agent/configuration/overview/)

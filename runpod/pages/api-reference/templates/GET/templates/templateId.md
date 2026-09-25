@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference/templates/GET/templates/templateId.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/api-reference/templates/GET/templates/templateId.mdx)
+> Pinned source for Runpod main: [api-reference/templates/GET/templates/templateId.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/api-reference/templates/GET/templates/templateId.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference/templates/GET/templates/templateId
 
 # Find a template by ID

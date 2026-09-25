@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/desktop/release-notes.md)
+> Pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/desktop/release-notes.md)
 
 # Docker Desktop release notes
 
@@ -1486,7 +1486,7 @@ Download Docker Desktop:
 
 ### New
 
-- With Docker MCP Toolkit, you can now use [profiles](https://docs.docker.com/ai/mcp-catalog-and-toolkit/profiles/) to organize your MCP servers into named collections. You can also create custom catalogs — curated collections of servers for your team or organization.
+- With Docker MCP Toolkit, you can now use [profiles](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/profiles/) to organize your MCP servers into named collections. You can also create custom catalogs — curated collections of servers for your team or organization.
 
 ### Updates
 
@@ -1869,7 +1869,7 @@ Download Docker Desktop:
 
 ### New
 
-- [Dynamic MCP](https://docs.docker.com/ai/mcp-catalog-and-toolkit/dynamic-mcp/)(Experimental) is now available in Docker Desktop .
+- [Dynamic MCP](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/dynamic-mcp/)(Experimental) is now available in Docker Desktop .
 - Introduced a new Welcome Survey to improve onboarding. New users can now provide information to help tailor their Docker Desktop experience.
 
 ### Upgrades
@@ -2397,7 +2397,7 @@ Download Docker Desktop:
 - Docker Model Runner is now available on x86 Windows machines with NVIDIA GPUs.
 - You can now [push models](https://docs.docker.com/ai/model-runner/#push-a-model-to-docker-hub) to Docker Hub with Docker Model Runner.
 - Added support for Docker Model Runner's model management and chat interface in Docker Desktop for Mac and Windows (on hardware supporting Docker Model Runner). Users can now view, interact with, and manage local AI models through a new dedicated interface.
-- [Docker Compose](https://docs.docker.com/ai/compose/models-and-compose/) and Testcontainers [Java](https://java.testcontainers.org/modules/docker_model_runner/) and [Go](https://golang.testcontainers.org/modules/dockermodelrunner/) now support Docker Model Runner.
+- [Docker Compose](https://docs.docker.com/compose/how-tos/models-and-compose/) and Testcontainers [Java](https://java.testcontainers.org/modules/docker_model_runner/) and [Go](https://golang.testcontainers.org/modules/dockermodelrunner/) now support Docker Model Runner.
 - Introducing Docker Desktop in the [Microsoft App Store](https://apps.microsoft.com/detail/xp8cbj40xlbwkx?hl=en-GB\&gl=GB).
 
 ### Upgrades

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/swarm/swarm_manager_locking.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/engine/swarm/swarm_manager_locking.md)
+> Pinned source for Docker main: [content/manuals/engine/swarm/swarm_manager_locking.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/engine/swarm/swarm_manager_locking.md)
 
 # Lock your swarm to protect its encryption key
 

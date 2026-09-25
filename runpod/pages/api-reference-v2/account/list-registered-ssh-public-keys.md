@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/account/list-registered-ssh-public-keys.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/api-reference-v2/account/list-registered-ssh-public-keys.mdx)
+> Pinned source for Runpod main: [api-reference-v2/account/list-registered-ssh-public-keys.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/api-reference-v2/account/list-registered-ssh-public-keys.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/account/list-registered-ssh-public-keys
 
 # List Registered Ssh Public Keys

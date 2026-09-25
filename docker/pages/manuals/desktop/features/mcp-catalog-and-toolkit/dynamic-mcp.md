@@ -1,15 +1,15 @@
-> Pinned source for Docker main: [content/manuals/ai/mcp-catalog-and-toolkit/dynamic-mcp.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/mcp-catalog-and-toolkit/dynamic-mcp.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/mcp-catalog-and-toolkit/dynamic-mcp.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/desktop/features/mcp-catalog-and-toolkit/dynamic-mcp.md)
 
 # Dynamic MCP
 
 Dynamic MCP enables AI agents to discover and add MCP servers on-demand during
 a conversation, without manual configuration. Instead of pre-configuring every
 MCP server before starting your agent session, clients can search the
-[MCP Catalog](https://docs.docker.com/ai/mcp-catalog-and-toolkit/catalog/) and add servers
+[MCP Catalog](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/catalog/) and add servers
 as needed.
 
 This capability is enabled automatically when you connect an MCP client to the
-[MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/). The gateway
+[MCP Toolkit](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/toolkit/). The gateway
 provides a set of primordial tools that agents use to discover and manage
 servers during runtime.
 
@@ -44,18 +44,18 @@ restart or manual configuration.
 Dynamically added servers and tools are associated with your *current session
 only*. They're not persisted to your profile. When you start a new session,
 only servers you've added to your profile through the
-[MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/) or
-[Profiles](https://docs.docker.com/ai/mcp-catalog-and-toolkit/profiles/) are available.
+[MCP Toolkit](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/toolkit/) or
+[Profiles](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/profiles/) are available.
 
 ## Prerequisites
 
 To use Dynamic MCP, you need:
 
-- Docker Desktop version 4.50 or later, with [MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/) enabled
+- Docker Desktop version 4.50 or later, with [MCP Toolkit](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/toolkit/) enabled
 - An LLM application that supports MCP (such as Claude Desktop, Visual Studio Code, or Claude Code)
 - Your client configured to connect to the MCP Gateway
 
-See [Get started with Docker MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/get-started/)
+See [Get started with Docker MCP Toolkit](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/get-started/)
 for setup instructions.
 
 ## Usage
@@ -72,7 +72,7 @@ What MCP servers can I use for working with SQL databases?
 ```
 
 Given this prompt, your agent will use the `mcp-find` tool provided by MCP
-Toolkit to search for SQL-related servers in the [MCP Catalog](https://docs.docker.com/ai/mcp-catalog-and-toolkit/catalog/).
+Toolkit to search for SQL-related servers in the [MCP Catalog](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/catalog/).
 
 And to add a server to a session, simply write a prompt and the MCP Toolkit
 takes care of installing and running the server:

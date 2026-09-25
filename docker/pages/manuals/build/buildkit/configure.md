@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/buildkit/configure.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/build/buildkit/configure.md)
+> Pinned source for Docker main: [content/manuals/build/buildkit/configure.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/build/buildkit/configure.md)
 
 If you create a `docker-container` or `kubernetes` builder with Buildx, you can
 apply a custom [BuildKit configuration](https://docs.docker.com/build/buildkit/toml-configuration/) by passing the

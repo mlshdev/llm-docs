@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/development/huggingface-models.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/serverless/development/huggingface-models.mdx)
+> Pinned source for Runpod main: [serverless/development/huggingface-models.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/serverless/development/huggingface-models.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/development/huggingface-models
 
 # Use Hugging Face models

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/image-library/catalogs.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/docker-hub/image-library/catalogs.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/image-library/catalogs.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/docker-hub/image-library/catalogs.md)
 
 # Generative AI content
 
@@ -36,7 +36,7 @@ minimize configuration headaches. For developers working with Claude Desktop or
 other MCP clients, the catalog provides an easy way to extend functionality with
 drop-in tools.
 
-To learn more about MCP servers, see [MCP Catalog and Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/).
+To learn more about MCP servers, see [MCP Catalog and Toolkit](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/).
 
 ## AI Models Catalog
 

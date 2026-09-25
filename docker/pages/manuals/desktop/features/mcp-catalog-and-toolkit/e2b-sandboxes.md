@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/mcp-catalog-and-toolkit/e2b-sandboxes.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/mcp-catalog-and-toolkit/e2b-sandboxes.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/mcp-catalog-and-toolkit/e2b-sandboxes.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/desktop/features/mcp-catalog-and-toolkit/e2b-sandboxes.md)
 
 # E2B sandboxes
 
@@ -436,6 +436,6 @@ The sandbox connected multiple MCP servers and orchestrated a workflow across No
 - [How to build an AI-powered code quality workflow with SonarQube and E2B](https://docs.docker.com/guides/github-sonarqube-sandbox/)
 - [Docker + E2B: Building the Future of Trusted AI](https://www.docker.com/blog/docker-e2b-building-the-future-of-trusted-ai/)
 - [Docker Sandboxes](https://docs.docker.com/ai/sandboxes/)
-- [Docker MCP Toolkit and Catalog](https://docs.docker.com/ai/mcp-catalog-and-toolkit/)
-- [Docker MCP Gateway](https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/)
+- [Docker MCP Toolkit and Catalog](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/)
+- [Docker MCP Gateway](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/mcp-gateway/)
 - [E2B MCP documentation](https://e2b.dev/docs/mcp)

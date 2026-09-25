@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `2ed145e18217c606416d3dbc47314da01a479792`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -12,7 +12,7 @@
 ## Get started
 
 - [Welcome to Runpod](pages/overview.md): Explore our guides and examples to deploy your AI/ML application on Runpod. Review setup and usage guidance in the Runpod documentation. (4471 bytes)
-- [Deploy your first Pod](pages/get-started.md): Run code on a remote GPU in minutes. Review setup steps, core concepts, and recommended next actions for building on Runpod. (14033 bytes)
+- [Deploy your first Pod](pages/get-started.md): Run code on a remote GPU in minutes. Review setup steps, core concepts, and recommended next actions for building on Runpod. (13792 bytes)
 - [Choose a workflow](pages/get-started/connect-to-runpod.md): Review available methods for accessing and managing Runpod resources. Review setup steps and core concepts for building on Runpod. (2219 bytes)
 - [Concepts](pages/get-started/concepts.md): Key concepts and terminology for understanding Runpod's platform and products. Review setup steps and core concepts for building on Runpod. (2935 bytes)
 - [Manage API keys](pages/get-started/api-keys.md): Create, edit, and disable Runpod API keys. Review setup steps, core concepts, and recommended next actions for building on Runpod. (2177 bytes)

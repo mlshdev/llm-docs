@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/api/extensions-sdk/ExtensionVM.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/reference/api/extensions-sdk/ExtensionVM.md)
+> Pinned source for Docker main: [content/reference/api/extensions-sdk/ExtensionVM.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/reference/api/extensions-sdk/ExtensionVM.md)
 
 # Interface: ExtensionVM
 

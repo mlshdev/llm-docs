@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/pods/comfyui.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/tutorials/pods/comfyui.mdx)
+> Pinned source for Runpod main: [tutorials/pods/comfyui.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/tutorials/pods/comfyui.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/pods/comfyui
 
 # Generate images with ComfyUI

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/agentic-ai.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/guides/agentic-ai.md)
+> Pinned source for Docker main: [content/guides/agentic-ai.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/guides/agentic-ai.md)
 
 > \[!TIP]
 >
@@ -32,7 +32,7 @@ Docker makes this AI-powered stack simpler, faster, and more secure by unifying
 models, and tool gateways into a developer-friendly workflow that uses Docker
 Compose.
 
-![A diagram of the agentic stack](https://raw.githubusercontent.com/docker/docs/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/guides/images/agentic-ai-diagram.webp)
+![A diagram of the agentic stack](https://raw.githubusercontent.com/docker/docs/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/guides/images/agentic-ai-diagram.webp)
 
 This guide walks you through the core components of agentic development and
 shows how Docker ties them all together with the following tools:
@@ -40,11 +40,11 @@ shows how Docker ties them all together with the following tools:
 - [Docker Model Runner](https://docs.docker.com/ai/model-runner/) lets you run LLMs
   locally with simple command and OpenAI-compatible APIs.
 - [Docker MCP Catalog and
-  Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/) helps you discover
+  Toolkit](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/) helps you discover
   and securely run external tools, like APIs and databases, using the Model
   Context Protocol (MCP).
-- [Docker MCP Gateway](https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/) lets you orchestrate and manage MCP servers.
-- [Docker Compose](https://docs.docker.com/ai/compose/models-and-compose/) is the tool that ties it all
+- [Docker MCP Gateway](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/mcp-gateway/) lets you orchestrate and manage MCP servers.
+- [Docker Compose](https://docs.docker.com/compose/how-tos/models-and-compose/) is the tool that ties it all
   together, letting you define and run multi-container applications with a
   single file.
 
@@ -105,7 +105,7 @@ To run the application locally, follow these steps:
    incorrect fact in the prompt and hit enter. An agent searches DuckDuckGo to
    verify it and another agent revises the output.
 
-![Screenshot of the application](https://raw.githubusercontent.com/docker/docs/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/guides/images/agentic-ai-app.png)
+![Screenshot of the application](https://raw.githubusercontent.com/docker/docs/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/guides/images/agentic-ai-app.png)
 
 3. Press ctrl-c in the terminal to stop the application when you're done.
 
@@ -328,11 +328,11 @@ that support agentic AI development:
 - [Docker Model Runner](https://docs.docker.com/ai/model-runner/): Run and serve
   open-source models locally via OpenAI-compatible APIs.
 - [Docker MCP Catalog and
-  Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/): Launch and manage
+  Toolkit](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/): Launch and manage
   tool integrations that follow the Model Context Protocol (MCP) standard.
-- [Docker MCP Gateway](https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/): Orchestrate and manage
+- [Docker MCP Gateway](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/mcp-gateway/): Orchestrate and manage
   MCP servers to connect agents to external tools and services.
-- [Docker Compose](https://docs.docker.com/ai/compose/models-and-compose/): Define and run
+- [Docker Compose](https://docs.docker.com/compose/how-tos/models-and-compose/): Define and run
   multi-container agentic AI applications with a single file, using the same
   workflow.
 

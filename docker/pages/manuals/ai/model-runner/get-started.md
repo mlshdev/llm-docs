@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/model-runner/get-started.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/model-runner/get-started.md)
+> Pinned source for Docker main: [content/manuals/ai/model-runner/get-started.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/ai/model-runner/get-started.md)
 
 Docker Model Runner (DMR) lets you run and manage AI models locally using Docker. This page shows you how to enable DMR, pull and run a model, configure model settings, and publish custom models.
 
@@ -79,7 +79,7 @@ Models are cached locally.
 1. Select **Models** and select the **Docker Hub** tab.
 2. Find the model you want and select **Pull**.
 
-![Screenshot showing the Docker Hub view.](https://raw.githubusercontent.com/docker/docs/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/model-runner/images/dmr-catalog.png)
+![Screenshot showing the Docker Hub view.](https://raw.githubusercontent.com/docker/docs/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/ai/model-runner/images/dmr-catalog.png)
 
 **From the Docker CLI**
 
@@ -101,7 +101,7 @@ docker model pull hf.co/bartowski/Llama-3.2-1B-Instruct-GGUF
 1. Select **Models** and select the **Local** tab.
 2. Select the play button. The interactive chat screen opens.
 
-![Screenshot showing the Local view.](https://raw.githubusercontent.com/docker/docs/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/model-runner/images/dmr-run.png)
+![Screenshot showing the Local view.](https://raw.githubusercontent.com/docker/docs/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/ai/model-runner/images/dmr-run.png)
 
 **From the Docker CLI**
 
@@ -111,7 +111,7 @@ Use the [`docker model run` command](https://docs.docker.com/reference/cli/docke
 
 You can configure a model, such as its maximum token limit and more,
 use Docker Compose.
-See [Models and Compose - Model configuration options](https://docs.docker.com/ai/compose/models-and-compose/#model-configuration-options).
+See [Models and Compose - Model configuration options](https://docs.docker.com/compose/how-tos/models-and-compose/#model-configuration-options).
 
 ## Publish a model
 
@@ -160,7 +160,7 @@ To troubleshoot issues, display the logs:
 
 Select **Models** and select the **Logs** tab.
 
-![Screenshot showing the Models view.](https://raw.githubusercontent.com/docker/docs/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/model-runner/images/dmr-logs.png)
+![Screenshot showing the Models view.](https://raw.githubusercontent.com/docker/docs/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/ai/model-runner/images/dmr-logs.png)
 
 **From the Docker CLI**
 
@@ -195,5 +195,5 @@ In Docker Desktop, to inspect the requests and responses for each model:
 - [Inference engines](https://docs.docker.com/ai/model-runner/inference-engines/) - llama.cpp and vLLM details
 - [IDE integrations](https://docs.docker.com/ai/model-runner/ide-integrations/) - Connect Cline, Continue, Cursor, and more
 - [Open WebUI integration](https://docs.docker.com/ai/model-runner/openwebui-integration/) - Set up a web chat interface
-- [Models and Compose](https://docs.docker.com/ai/compose/models-and-compose/) - Use models in Compose applications
+- [Models and Compose](https://docs.docker.com/compose/how-tos/models-and-compose/) - Use models in Compose applications
 - [Docker Model Runner CLI reference](https://docs.docker.com/reference/cli/docker/model/) - Complete CLI documentation

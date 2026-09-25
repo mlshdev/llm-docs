@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/qwen-image-edit-2511.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/public-endpoints/models/qwen-image-edit-2511.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/qwen-image-edit-2511.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/public-endpoints/models/qwen-image-edit-2511.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/qwen-image-edit-2511
 
 # Qwen Image Edit 2511

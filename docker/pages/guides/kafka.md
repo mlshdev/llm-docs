@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/kafka.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/guides/kafka.md)
+> Pinned source for Docker main: [content/guides/kafka.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/guides/kafka.md)
 
 # Developing event-driven applications with Kafka and Docker
 
@@ -164,7 +164,7 @@ To help this make sense, let’s look at how Kafka needs to be configured to sup
 
 Since there are two different methods clients need to connect, two different listeners are required - `HOST` and `DOCKER`. The `HOST` listener will tell clients to connect using localhost:9092, while the `DOCKER` listener will inform clients to connect using `kafka:9093`. Notice this means Kafka is listening on both ports 9092 and 9093. But, only the host listener needs to be exposed to the host.
 
-![Diagram showing the DOCKER and HOST listeners and how they are exposed to the host and Docker networks](https://raw.githubusercontent.com/docker/docs/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/guides/images/kafka-1.webp)
+![Diagram showing the DOCKER and HOST listeners and how they are exposed to the host and Docker networks](https://raw.githubusercontent.com/docker/docs/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/guides/images/kafka-1.webp)
 
 In order to set this up, the `compose.yaml` for Kafka needs some additional configuration. Once you start overriding some of the defaults, you also need to specify a few other options in order for KRaft mode to work.
 

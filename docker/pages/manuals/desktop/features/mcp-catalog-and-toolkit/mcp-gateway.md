@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/mcp-catalog-and-toolkit/mcp-gateway.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/mcp-catalog-and-toolkit/mcp-gateway.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/mcp-catalog-and-toolkit/mcp-gateway.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/desktop/features/mcp-catalog-and-toolkit/mcp-gateway.md)
 
 # MCP Gateway
 
@@ -13,7 +13,7 @@ When using MCP servers without the MCP Gateway, you need to configure
 applications individually for each AI application. With the MCP Gateway, you
 configure applications to connect to the Gateway. The Gateway then handles
 server lifecycle, routing, and authentication across all servers in your
-[profiles](https://docs.docker.com/ai/mcp-catalog-and-toolkit/profiles/).
+[profiles](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/profiles/).
 
 If you use Docker Desktop with MCP Toolkit enabled, the Gateway runs
 automatically in the background. You don't need to start or configure it
@@ -22,7 +22,7 @@ manually. This documentation is for users who want to understand how the Gateway
 > \[!TIP]
 > E2B sandboxes now include direct access to the Docker MCP Catalog, giving developers
 > access to over 200 tools and services to seamlessly build and run AI agents. For
-> more information, see [E2B Sandboxes](https://docs.docker.com/ai/mcp-catalog-and-toolkit/e2b-sandboxes/).
+> more information, see [E2B Sandboxes](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/e2b-sandboxes/).
 
 ## How it works
 
@@ -52,9 +52,9 @@ to determine which servers are made available to clients.
 ## Usage
 
 To use the MCP Gateway, you'll need Docker Desktop with MCP Toolkit enabled.
-Follow the [MCP Toolkit guide](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/) to enable and configure servers
+Follow the [MCP Toolkit guide](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/toolkit/) to enable and configure servers
 through the Docker Desktop interface, or see
-[Use MCP Toolkit from the CLI](https://docs.docker.com/ai/mcp-catalog-and-toolkit/cli/) for terminal-based workflows.
+[Use MCP Toolkit from the CLI](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/cli/) for terminal-based workflows.
 
 ### Install the MCP Gateway manually
 

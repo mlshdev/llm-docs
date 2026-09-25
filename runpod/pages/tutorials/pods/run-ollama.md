@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/pods/run-ollama.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/tutorials/pods/run-ollama.mdx)
+> Pinned source for Runpod main: [tutorials/pods/run-ollama.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/tutorials/pods/run-ollama.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/pods/run-ollama
 
 # Set up Ollama on a Pod

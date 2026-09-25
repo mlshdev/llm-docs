@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/mcp-catalog-and-toolkit/catalog.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/mcp-catalog-and-toolkit/catalog.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/mcp-catalog-and-toolkit/catalog.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/desktop/features/mcp-catalog-and-toolkit/catalog.md)
 
 # Docker MCP Catalog
 
@@ -12,14 +12,14 @@ Hub. It solves common challenges with running MCP servers locally: environment
 conflicts, setup complexity, and security concerns.
 
 The catalog serves as the source of available MCP servers. When you add servers
-to your [profiles](https://docs.docker.com/ai/mcp-catalog-and-toolkit/profiles/), you select
+to your [profiles](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/profiles/), you select
 them from the catalog. Each server runs as an isolated container, making it
 portable and consistent across different environments.
 
 > \[!NOTE]
 > E2B sandboxes now include direct access to the Docker MCP Catalog, giving
 > developers access to over 200 tools and services to seamlessly build and run
-> AI agents. For more information, see [E2B Sandboxes](https://docs.docker.com/ai/mcp-catalog-and-toolkit/e2b-sandboxes/).
+> AI agents. For more information, see [E2B Sandboxes](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/e2b-sandboxes/).
 
 ## What's in the catalog
 
@@ -63,8 +63,8 @@ To add a server from the catalog to a profile:
 2. Choose the profile to add it to from the drop-down.
 
 For step-by-step instructions and client connection, see
-[Get started with MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/get-started/) or
-[MCP Profiles](https://docs.docker.com/ai/mcp-catalog-and-toolkit/profiles/).
+[Get started with MCP Toolkit](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/get-started/) or
+[MCP Profiles](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/profiles/).
 
 ## Custom catalogs
 
@@ -77,7 +77,7 @@ Common use cases:
 - Restrict which servers your organization approves for use
 - Add your organization's private MCP servers alongside public ones
 - Control which server versions your team uses
-- Define the server set available to AI agents using [Dynamic MCP](https://docs.docker.com/ai/mcp-catalog-and-toolkit/dynamic-mcp/)
+- Define the server set available to AI agents using [Dynamic MCP](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/dynamic-mcp/)
 
 ### Custom catalogs with Dynamic MCP
 
@@ -114,7 +114,7 @@ its servers to your profiles.
 ### Create and manage custom catalogs
 
 Creating and managing custom catalogs requires the CLI. See
-[Custom catalogs](https://docs.docker.com/ai/mcp-catalog-and-toolkit/cli/#custom-catalogs)
+[Custom catalogs](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/cli/#custom-catalogs)
 in the CLI how-to for step-by-step instructions, including:
 
 - Curating a subset of the Docker catalog
@@ -131,7 +131,7 @@ The MCP server registry is available at
 When your pull request is reviewed and approved, your MCP server is available
 within 24 hours on:
 
-- Docker Desktop's [MCP Toolkit feature](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/).
+- Docker Desktop's [MCP Toolkit feature](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/toolkit/).
 - The [Docker MCP Catalog](https://hub.docker.com/mcp).
 - The [Docker Hub](https://hub.docker.com/u/mcp) `mcp` namespace (for MCP
   servers built by Docker).

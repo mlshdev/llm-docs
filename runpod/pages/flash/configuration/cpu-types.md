@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/configuration/cpu-types.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/flash/configuration/cpu-types.mdx)
+> Pinned source for Runpod main: [flash/configuration/cpu-types.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/flash/configuration/cpu-types.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/configuration/cpu-types
 
 # CPU types

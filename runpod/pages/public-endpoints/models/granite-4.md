@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/granite-4.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/public-endpoints/models/granite-4.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/granite-4.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/public-endpoints/models/granite-4.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/granite-4
 
 # IBM Granite 4.0

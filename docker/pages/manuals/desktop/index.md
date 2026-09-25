@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/_index.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/desktop/_index.md)
+> Pinned source for Docker main: [content/manuals/desktop/_index.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/desktop/_index.md)
 
 # Docker Desktop
 
@@ -23,7 +23,7 @@ Docker Desktop integrates with your preferred development tools and languages, a
 
 ## Products inside Docker Desktop
 
-- [Docker MCP Toolkit and Catalog](https://docs.docker.com/ai/mcp-catalog-and-toolkit/)
+- [Docker MCP Toolkit and Catalog](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/)
 - [Docker Model Runner](https://docs.docker.com/ai/model-runner/)
 - [Gordon](https://docs.docker.com/ai/gordon/)
 - [Docker Offload](https://docs.docker.com/offload/)

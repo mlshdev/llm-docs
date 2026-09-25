@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/cdc79d694988afd9e2a028ddf500b1df3176c611/doc/ffmpeg-protocols.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/c966a1de0a66de605f6f3c97fc90aff27eee71f0/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -1158,6 +1158,37 @@ connection may be closed and recreated for each subsequent initial request.
   Set the threshold, in bytes, for when a readahead should be preferred over a seek and
   new HTTP request. This is useful, for example, to make sure the same connection
   is used for reading large video packets with small audio packets in between.
+
+- icy
+  If set to 1 request ICY (SHOUTcast) metadata from the server. If the server
+  supports this, the metadata has to be retrieved by the application by reading
+  the `icy_metadata_headers` and `icy_metadata_packet` options.
+  The default is 1.
+
+- icy\_status
+  If set to 1 accept the legacy Shoutcast v1 `ICY 200 OK` status line in
+  place of an HTTP one. Any reply whose status line starts with `ICY 200`
+  is then treated as a successful HTTP 200.
+  The default is 1.
+
+- icy\_metadata\_headers
+  If the server supports ICY metadata, this contains the ICY-specific HTTP reply
+  headers, separated by newline characters.
+
+- icy\_metadata\_packet
+  If the server supports ICY metadata, and `icy` was set to 1, this
+  contains the last non-empty metadata packet sent by the server. It should be
+  polled in regular intervals by applications interested in mid-stream metadata
+  updates.
+
+- metadata
+  Set an exported dictionary containing Icecast metadata from the bitstream, if present.
+  Only useful with the C API.
+
+A stream carrying in-band ICY metadata is always treated as non-seekable, since
+its byte offsets do not address the payload. `seekable`,
+`request_size` and `max_retries` therefore have no effect on such
+a stream.
 
 For more information see: <https://curl.se/libcurl/>.
 

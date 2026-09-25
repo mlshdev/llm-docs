@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/mcp-catalog-and-toolkit/toolkit.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/mcp-catalog-and-toolkit/toolkit.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/mcp-catalog-and-toolkit/toolkit.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/desktop/features/mcp-catalog-and-toolkit/toolkit.md)
 
 # Docker MCP Toolkit
 
@@ -26,7 +26,7 @@ clients. It is the fastest way from MCP tool discovery to local execution.
 - Organizes MCP servers into profiles, acting as a gateway for clients to access the servers in each profile.
 
 > \[!TIP]
-> The MCP Toolkit includes [Dynamic MCP](https://docs.docker.com/ai/mcp-catalog-and-toolkit/dynamic-mcp/),
+> The MCP Toolkit includes [Dynamic MCP](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/dynamic-mcp/),
 > which enables AI agents to discover, add, and compose MCP servers on-demand during
 > conversations, without manual configuration. Your agent can search the catalog and
 > add tools as needed when you connect to the gateway.
@@ -65,7 +65,7 @@ Passive security refers to measures implemented at build-time, when the MCP
 server code is packaged into a Docker image.
 
 - Image signing and attestation: All MCP server images under `mcp/` in the [MCP
-  Catalog](https://docs.docker.com/ai/mcp-catalog-and-toolkit/catalog/) are built by Docker and digitally signed to verify their
+  Catalog](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/catalog/) are built by Docker and digitally signed to verify their
   source and integrity. Each image includes a Software Bill of Materials (SBOM)
   for full transparency.
 
@@ -175,17 +175,17 @@ You can interact with all your installed MCP servers in Visual Studio Code:
 
 2. In Visual Studio Code, open a new Chat and select the **Agent** mode:
 
-![Copilot mode switching](https://raw.githubusercontent.com/docker/docs/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/mcp-catalog-and-toolkit/images/copilot-mode.png)
+![Copilot mode switching](https://raw.githubusercontent.com/docker/docs/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/desktop/features/mcp-catalog-and-toolkit/images/copilot-mode.png)
 
 1. You can also check the available MCP tools:
 
-![Displaying tools in VSCode](https://raw.githubusercontent.com/docker/docs/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/mcp-catalog-and-toolkit/images/tools.png)
+![Displaying tools in VSCode](https://raw.githubusercontent.com/docker/docs/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/desktop/features/mcp-catalog-and-toolkit/images/tools.png)
 
 For more information about the Agent mode, see the
 [Visual Studio Code documentation](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_use-mcp-tools-in-agent-mode).
 
 ## Further reading
 
-- [Use MCP Toolkit from the CLI](https://docs.docker.com/ai/mcp-catalog-and-toolkit/cli/)
-- [MCP Catalog](https://docs.docker.com/ai/mcp-catalog-and-toolkit/catalog/)
-- [MCP Gateway](https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/)
+- [Use MCP Toolkit from the CLI](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/cli/)
+- [MCP Catalog](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/catalog/)
+- [MCP Gateway](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/mcp-gateway/)

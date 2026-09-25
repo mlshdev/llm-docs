@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/ai-sdk.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/public-endpoints/ai-sdk.mdx)
+> Pinned source for Runpod main: [public-endpoints/ai-sdk.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/public-endpoints/ai-sdk.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/ai-sdk
 
 # Vercel AI SDK

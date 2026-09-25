@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/minimax-speech.mdx](https://github.com/runpod/docs/blob/6bedc9afe6be9f0bfbbaa77c2ee91f08714e0dec/public-endpoints/models/minimax-speech.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/minimax-speech.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/public-endpoints/models/minimax-speech.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/minimax-speech
 
 # Minimax Speech 02 HD

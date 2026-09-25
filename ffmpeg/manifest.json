@@ -8,20 +8,20 @@
   "repository": "FFmpeg/FFmpeg",
   "tag": "master",
   "branch": "master",
-  "sourceCommittedAt": "2026-09-10T09:00:23Z",
-  "documentationDigest": "d81d05c443d5450a9f6a813d99855d154de841524a9c030a6676f006cc6a71b8",
-  "sourceCommit": "cdc79d694988afd9e2a028ddf500b1df3176c611",
+  "sourceCommittedAt": "2026-09-25T16:48:10Z",
+  "documentationDigest": "3d463a6a434e48b931451dea8a2575da546d32f909de524fa755926458ac8447",
+  "sourceCommit": "c966a1de0a66de605f6f3c97fc90aff27eee71f0",
   "documentCount": 33,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 1970726,
+      "byteLength": 1971960,
       "documentCount": 33,
-      "sha256": "0098f4da14112961404e071545499e36fd844df7004c424685f36838bbea1db0"
+      "sha256": "110ad58df988ea7fcdbf8de923eeb0888cf04bcabf6eb926ad0498119e30c186"
     }
   ],
-  "outputDigest": "29fe831d000c5df74fafa14f79019ae5dbb9c71b63232ed949c941c804d899fc",
+  "outputDigest": "72a9460b17c64b7af1b20860fbedd2bec29fd2d7d004aaff5a4c03554036a5b1",
   "notes": [
     "FFmpeg tracks master because its GitHub mirror does not publish GitHub releases.",
     "Primary Texinfo manuals and their checked-in includes are converted without executing Make, Texinfo, or FFmpeg binaries.",

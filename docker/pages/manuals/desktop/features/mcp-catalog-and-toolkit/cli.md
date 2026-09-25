@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/mcp-catalog-and-toolkit/cli.md](https://github.com/docker/docs/blob/4ef3a0062f7cdb22aa0423459f513d4d3783db7d/content/manuals/ai/mcp-catalog-and-toolkit/cli.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/mcp-catalog-and-toolkit/cli.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/desktop/features/mcp-catalog-and-toolkit/cli.md)
 
 # Use MCP Toolkit from the CLI
 
@@ -113,7 +113,7 @@ description: Description of the server
 ```
 
 If the server requires OAuth authentication, authorize it in Docker Desktop
-after adding. See [OAuth authentication](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/#oauth-authentication).
+after adding. See [OAuth authentication](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/toolkit/#oauth-authentication).
 
 ### List servers
 
@@ -266,7 +266,7 @@ file. Any authentication credentials must be configured separately if needed.
 
 Custom catalogs let you curate a focused collection of servers for your team
 or organization. For an overview of what custom catalogs are and when to use
-them, see [Custom catalogs](https://docs.docker.com/ai/mcp-catalog-and-toolkit/catalog/#custom-catalogs).
+them, see [Custom catalogs](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/catalog/#custom-catalogs).
 
 Catalogs are referenced by OCI reference, for example
 `registry.example.com/mcp/my-catalog:latest`. Servers within a catalog use
@@ -364,7 +364,7 @@ Run the gateway with your catalog instead of the default Docker catalog:
 $ docker mcp gateway run --catalog <oci-reference>
 ```
 
-For [Dynamic MCP](https://docs.docker.com/ai/mcp-catalog-and-toolkit/dynamic-mcp/), where
+For [Dynamic MCP](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/dynamic-mcp/), where
 agents discover and add servers during conversations, this limits what agents
 can find to your curated set.
 
@@ -377,7 +377,7 @@ $ docker mcp gateway run --catalog <oci-reference> \
 
 ## Further reading
 
-- [Get started with MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/get-started/)
-- [MCP Profiles](https://docs.docker.com/ai/mcp-catalog-and-toolkit/profiles/)
-- [MCP Catalog](https://docs.docker.com/ai/mcp-catalog-and-toolkit/catalog/)
-- [MCP Gateway](https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/)
+- [Get started with MCP Toolkit](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/get-started/)
+- [MCP Profiles](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/profiles/)
+- [MCP Catalog](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/catalog/)
+- [MCP Gateway](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/mcp-gateway/)
