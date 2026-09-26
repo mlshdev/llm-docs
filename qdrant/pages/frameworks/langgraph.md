@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/frameworks/langgraph.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/frameworks/langgraph.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/frameworks/langgraph.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/frameworks/langgraph.md)
 > Canonical documentation: https://qdrant.tech/documentation/frameworks/langgraph/
 
 # LangGraph
@@ -31,7 +31,7 @@ from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_qdrant import FastEmbedSparse, QdrantVectorStore, RetrievalMode
 
 # We'll set up Qdrant to retrieve documents using Hybrid search.
-# Learn more at https://qdrant.tech/articles/hybrid-search/
+# Learn more at https://qdrant.tech/documentation/search-tuning/hybrid-search/
 retriever = QdrantVectorStore.from_texts(
     url="http://localhost:6333/",
     collection_name="langgraph-collection",

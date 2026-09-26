@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [overview.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/overview.mdx)
+> Pinned source for Runpod main: [overview.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/overview
 
 # Welcome to Runpod
@@ -12,9 +12,9 @@ Runpod is a cloud computing platform built for AI, machine learning, and general
 - [Quickstart](https://docs.runpod.io/get-started)
 
   Create an account, deploy your first GPU Pod, and use it to execute code.
-- [Create an API key](https://docs.runpod.io/get-started/api-keys)
+- [Manage credentials](https://docs.runpod.io/get-started/credentials)
 
-  Create API keys to manage your access to Runpod resources.
+  Create API keys, SSH keys, and other credentials.
 - [Concepts](https://docs.runpod.io/get-started/concepts)
 
   Learn about the key concepts and terminology for the Runpod platform.
@@ -30,7 +30,7 @@ Runpod is a cloud computing platform built for AI, machine learning, and general
 
 ## Use our model endpoints
 
-Runpod offers [Public Endpoints](https://docs.runpod.io/public-endpoints/overview) for instant API access to pre-deployed AI models for image, video, audio, and text generation. No deployment or infrastructure required—just [create an API key](https://docs.runpod.io/get-started/api-keys) and make a request:
+Runpod offers [Public Endpoints](https://docs.runpod.io/public-endpoints/overview) for instant API access to pre-deployed AI models for image, video, audio, and text generation. No deployment or infrastructure required—just [create an API key](https://docs.runpod.io/get-started/credentials#api-keys) and make a request:
 
 ```python Python
 import requests

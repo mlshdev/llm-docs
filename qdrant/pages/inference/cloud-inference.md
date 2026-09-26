@@ -1,9 +1,9 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/inference/cloud-inference.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/inference/cloud-inference.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/inference/cloud-inference.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/inference/cloud-inference.md)
 > Canonical documentation: https://qdrant.tech/documentation/inference/cloud-inference/
 
 # Qdrant Cloud Inference
 
-![Qdrant Cloud Inference](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/docs/qdrant-cloud-inference.png)
+![Qdrant Cloud Inference](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/docs/qdrant-cloud-inference.png)
 
 Clusters on Qdrant Managed Cloud can use [Qdrant Cloud Inference](https://qdrant.tech/documentation/cloud/inference/) to generate embeddings. For a list of available models and their dimensions, visit the Inference tab of the Cluster Detail page in the Qdrant Cloud Console. You can also enable Cloud Inference for a cluster from this tab.
 

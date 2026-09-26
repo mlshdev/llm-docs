@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/hybrid-cloud/operator-configuration.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/hybrid-cloud/operator-configuration.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/hybrid-cloud/operator-configuration.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/hybrid-cloud/operator-configuration.md)
 > Canonical documentation: https://qdrant.tech/documentation/hybrid-cloud/operator-configuration/
 
 # Configuring Qdrant Operator: Advanced Options

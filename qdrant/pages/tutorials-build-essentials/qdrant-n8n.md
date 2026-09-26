@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/qdrant-n8n.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/tutorials-build-essentials/qdrant-n8n.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/qdrant-n8n.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/tutorials-build-essentials/qdrant-n8n.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-build-essentials/qdrant-n8n/
 
 # Automate Qdrant Workflows with n8n
@@ -74,7 +74,7 @@ Vector search's ability to determine semantic similarity between objects is ofte
 
 The combination of similarity and dissimilarity metrics in vector space expands vector search to recommendations, discovery search, and large-scale unstructured data analysis.
 
-![overview](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/examples/qdrant-n8n-2/overview.png)
+![overview](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/examples/qdrant-n8n-2/overview.png)
 
 ### Recommendations
 
@@ -82,7 +82,7 @@ When searching for new music, films, books, or food, it can be difficult to arti
 
 The [Qdrant Recommendation API](https://qdrant.tech/articles/new-recommendation-api/) is built to make these discovery searches possible by using positive and negative examples as anchors. It helps find new relevant results based on your preferences.
 
-![recommendations](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/examples/qdrant-n8n-2/recommendations.png)
+![recommendations](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/examples/qdrant-n8n-2/recommendations.png)
 
 #### Movie Recommendations
 
@@ -130,7 +130,7 @@ One definition of "anomaly" comes intuitively after projecting vector representa
 
 Points that don't belong to any clusters are more likely to be anomalous.
 
-![anomalies-on-2D](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/examples/qdrant-n8n-2/anomalies-2D.png)
+![anomalies-on-2D](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/examples/qdrant-n8n-2/anomalies-2D.png)
 
 With that intuition comes the recipe for building an anomaly detection tool. We will demonstrate it on anomaly detection in agricultural crops. Qdrant will be used to:
 
@@ -139,7 +139,7 @@ With that intuition comes the recipe for building an anomaly detection tool. We 
 3. Define the borders of each cluster.
 4. Check if new images fall within these boundaries. If an image does not fit within any cluster, it is flagged as anomalous. Alternatively, you can check if an image is anomalous to a specific cluster.
 
-![anomaly-detection](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/examples/qdrant-n8n-2/anomaly-detection.png)
+![anomaly-detection](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/examples/qdrant-n8n-2/anomaly-detection.png)
 
 **Setup:**
 
@@ -159,7 +159,7 @@ With the release of the [official Qdrant node](https://github.com/qdrant/n8n-nod
 An [1/3 Uploading Images to Qdrant Template Workflow](https://n8n.io/workflows/2654-vector-database-as-a-big-data-analysis-tool-for-ai-agents-13-anomaly12-knn/) consists of the following blocks:
 
 1. **Check Collection**: Verifies if a collection with the specified name exists in Qdrant. If not, it creates one.
-2. **Payload Index**: Adds a [payload index](https://qdrant.tech/documentation/manage-data/indexing/#payload-index) on the `crop_name` payload (metadata) field. This field stores crop class labels, and indexing it improves the speed of filterable searches in Qdrant. It changes the way a vector index is constructed, adapting it for fast vector search under filtering constraints. For more details, refer to this [guide on filtering in Qdrant](https://qdrant.tech/articles/vector-search-filtering/).
+2. **Payload Index**: Adds a [payload index](https://qdrant.tech/documentation/manage-data/indexing/#payload-index) on the `crop_name` payload (metadata) field. This field stores crop class labels, and indexing it improves the speed of filterable searches in Qdrant. It changes the way a vector index is constructed, adapting it for fast vector search under filtering constraints. For more details, refer to this [guide on filtering in Qdrant](https://qdrant.tech/documentation/search-patterns/vector-search-filtering/).
 3. **Fetch Images**: Fetches images from Google Cloud Storage using the [Google Cloud Storage node](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudstorage).
 4. **Generate IDs**: Assigns UUIDs to each data point.
 5. **Embed Images**: Embeds the images using the Voyage API.
@@ -229,7 +229,7 @@ The anomaly detection tool can also be used for classification, but there's a si
 
 > "Show me your friends, and I will tell you who you are."
 
-![KNN-2D](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/examples/qdrant-n8n-2/classification.png)
+![KNN-2D](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/examples/qdrant-n8n-2/classification.png)
 
 The KNN method labels a data point by analyzing its classified neighbors and assigning this point the majority class in the neighborhood. This approach doesn't require all data points to be labeled—a subset of labeled examples can serve as anchors to propagate labels across the dataset.
 

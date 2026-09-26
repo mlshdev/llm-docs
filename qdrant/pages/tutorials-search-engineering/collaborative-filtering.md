@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/collaborative-filtering.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/tutorials-search-engineering/collaborative-filtering.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/collaborative-filtering.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/tutorials-search-engineering/collaborative-filtering.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-search-engineering/collaborative-filtering/
 
 # Build a Recommendation System with Collaborative Filtering using Qdrant
@@ -111,7 +111,7 @@ for row in ratings_agg_df.itertuples():
     user_sparse_vectors[row.userId]["indices"].append(int(row.movieId))
 ```
 
-![collaborative-filtering](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/blog/collaborative-filtering/collaborative-filtering.png)
+![collaborative-filtering](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/blog/collaborative-filtering/collaborative-filtering.png)
 
 ### Upload the data
 

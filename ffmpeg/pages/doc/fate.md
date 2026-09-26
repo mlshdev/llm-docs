@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/fate.texi](https://github.com/FFmpeg/FFmpeg/blob/c966a1de0a66de605f6f3c97fc90aff27eee71f0/doc/fate.texi)
+> Pinned source for FFmpeg master: [doc/fate.texi](https://github.com/FFmpeg/FFmpeg/blob/d97584959417519597a24c8fdd13dc4b9af1a876/doc/fate.texi)
 
 # Introduction
 

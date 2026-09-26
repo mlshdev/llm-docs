@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/c966a1de0a66de605f6f3c97fc90aff27eee71f0/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/d97584959417519597a24c8fdd13dc4b9af1a876/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -8571,7 +8571,11 @@ Substation Alpha) subtitles files.
 
 This filter accepts `filename`/`f`, `original_size`,
 `fontsdir`, and `alpha` from the subtitles filter, plus the
-following option:
+following options:
+
+- script
+  The ASS script to render, given inline. Exactly one of `filename` and
+  `script` must be set.
 
 - shaping
   Set the shaping engine.
@@ -8588,6 +8592,11 @@ Available values are:
   and Thai. Requires libass to be built with HarfBuzz.
 
 The default is `auto`.
+
+### Commands
+
+This filter supports the `script` option as commands; the new
+script replaces the one being rendered.
 
 ## atadenoise
 

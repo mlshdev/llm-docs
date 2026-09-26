@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/filtering.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/search/filtering.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/filtering.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/search/filtering.md)
 > Canonical documentation: https://qdrant.tech/documentation/search/filtering/
 
 # Filtering
@@ -3844,4 +3844,4 @@ Slicing is based on a hash of the point IDs. A point matches slice `index` of `t
 
 ## Read More
 
-Refer to [A Complete Guide to Filtering in Vector Search](https://qdrant.tech/articles/vector-search-filtering/) for developer advice on proper usage and advanced practices.
+Refer to [A Complete Guide to Filtering in Vector Search](https://qdrant.tech/documentation/search-patterns/vector-search-filtering/) for developer advice on proper usage and advanced practices.

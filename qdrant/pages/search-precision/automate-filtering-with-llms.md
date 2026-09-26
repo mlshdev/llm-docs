@@ -1,9 +1,9 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-precision/automate-filtering-with-llms.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/search-precision/automate-filtering-with-llms.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-precision/automate-filtering-with-llms.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/search-precision/automate-filtering-with-llms.md)
 > Canonical documentation: https://qdrant.tech/documentation/search-precision/automate-filtering-with-llms/
 
 # LLM-Powered Filter Automation with Qdrant
 
-Our [complete guide to filtering in vector search](https://qdrant.tech/articles/vector-search-filtering/) describes why filtering is
+Our [complete guide to filtering in vector search](https://qdrant.tech/documentation/search-patterns/vector-search-filtering/) describes why filtering is
 important, and how to implement it with Qdrant. However, applying filters is easier when you build an application
 with a traditional interface. Your UI may contain a form with checkboxes, sliders, and other elements that users can
 use to set their criteria. But what if you want to build a RAG-powered application with just the conversational

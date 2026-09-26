@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/ecosystem-tab.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/ecosystem-tab.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/ecosystem-tab.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/ecosystem-tab.md)
 > Canonical documentation: https://qdrant.tech/documentation/ecosystem/
 
 # Explore the Qdrant Ecosystem
@@ -21,5 +21,5 @@
 
 - [Essential Examples](https://qdrant.tech/documentation/tutorials-build-essentials/index.md) — Hands-on tutorials for agentic RAG, multimodal search, data ingestion, and automation integrations.
 - [Build Prototypes](https://qdrant.tech/documentation/examples/index.md) — End-to-end code samples for RAG pipelines, hybrid search, multitenancy, recommendations, and multimodal search.
-- [Improve Search](https://qdrant.tech/documentation/improve-search/index.md) — Techniques for improving retrieval relevance and pipeline output quality.
+- [Search Evaluation](https://qdrant.tech/documentation/search-evaluation/index.md) — Techniques for improving retrieval relevance and pipeline output quality.
 - [Practice Datasets](https://qdrant.tech/documentation/datasets/index.md) — Ready-made Qdrant snapshots of public datasets you can import and explore without the embedding step.

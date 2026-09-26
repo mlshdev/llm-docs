@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/quickstart.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/flash/quickstart.mdx)
+> Pinned source for Runpod main: [flash/quickstart.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/flash/quickstart.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/quickstart
 
 # Get started with Flash
@@ -10,7 +10,7 @@ This quickstart gets you running GPU workloads on Runpod in minutes. You'll exec
 ## Requirements
 
 - [Runpod account](https://docs.runpod.io/accounts-billing/manage-accounts) with a verified email address.
-- [An API key](https://docs.runpod.io/get-started/api-keys) with **All** access permissions to your Runpod account.
+- [An API key](https://docs.runpod.io/get-started/credentials#api-keys) with **All** access permissions to your Runpod account.
 - [Python 3.10, 3.11, 3.12, or 3.13](https://www.python.org/downloads/) installed.
 - [uv](https://docs.astral.sh/uv/) installed.
 
@@ -146,7 +146,7 @@ The first run takes 30-60 seconds, while Runpod provisions the endpoint, install
 > export RUNPOD_API_KEY="your_key"
 > ```
 >
-> Replace `your_key` with your actual API key from the [Runpod console](https://console.runpod.io/user/settings).
+> Replace `your_key` with your actual API key from the [Credentials page](https://console.runpod.io/user/credentials).
 
 ## Step 5: Update and run again
 

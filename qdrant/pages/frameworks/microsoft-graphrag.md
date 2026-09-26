@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/frameworks/microsoft-graphrag.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/frameworks/microsoft-graphrag.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/frameworks/microsoft-graphrag.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/frameworks/microsoft-graphrag.md)
 > Canonical documentation: https://qdrant.tech/documentation/frameworks/microsoft-graphrag/
 
 # Microsoft GraphRAG

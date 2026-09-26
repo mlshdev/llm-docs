@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/multi-representation-search.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/tutorials-search-engineering/multi-representation-search.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/multi-representation-search.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/tutorials-search-engineering/multi-representation-search.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-search-engineering/multi-representation-search/
 
 # Multi-Representation Search Across Titles, Abstracts, and Chunks
@@ -165,7 +165,7 @@ client.upload_points(collection_name="arxiv_multi_repr", points=points, batch_si
 
 After the upload completes, opening any point in the Qdrant Cloud UI shows all four named vectors attached to one chunk. `dense_chunk` carries the chunk's own embedding, while `dense_title`, `dense_abstract`, and `sparse_title` are the same across every chunk of this paper.
 
-![A point in the arxiv\_multi\_repr collection showing all four named vectors](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/multi-representation-search/point.png)
+![A point in the arxiv\_multi\_repr collection showing all four named vectors](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/tutorials/multi-representation-search/point.png)
 
 ## Retrieval
 
@@ -234,7 +234,7 @@ In this formula, `$score[i]` is the score from prefetch `i`, so the order of you
 
 > **Note**
 >
-> Linear combinations of raw scores break down when prefetches use different scoring scales — for example, dense scores in \[0, 1] alongside unbounded BM25 scores. See <a href="https://qdrant.tech/articles/hybrid-search/#why-not-a-linear-combination">Why not a linear combination?</a> for the full argument.
+> Linear combinations of raw scores break down when prefetches use different scoring scales — for example, dense scores in \[0, 1] alongside unbounded BM25 scores. See <a href="https://qdrant.tech/documentation/search-tuning/hybrid-search/#why-not-a-linear-combination">Why not a linear combination?</a> for the full argument.
 
 The other two fusion strategies handle this for you: RRF discards scores entirely, and DBSF normalizes each prefetch before summing. With a custom formula, you have to normalize the scores yourself, typically using [decay functions](https://qdrant.tech/documentation/search/search-relevance/#decay-functions). The full FormulaQuery syntax lives in the [Score Boosting](https://qdrant.tech/documentation/search/search-relevance/#score-boosting) reference.
 
@@ -258,6 +258,6 @@ Real corpora rarely have clean metadata across every document. If yours has gaps
 
 Related reading:
 
-- [Hybrid Search Revamped](https://qdrant.tech/articles/hybrid-search/) for the why behind RRF over linear weighting.
+- [Hybrid Search Revamped](https://qdrant.tech/documentation/search-tuning/hybrid-search/) for the why behind RRF over linear weighting.
 - [Hybrid Queries reference](https://qdrant.tech/documentation/search/hybrid-queries/) for the full Query API surface, including grouping.
 - [Search Relevance reference](https://qdrant.tech/documentation/search/search-relevance/) for the formula and decay function syntax.

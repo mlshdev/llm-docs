@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/ann-recall.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/tutorials-search-engineering/ann-recall.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/ann-recall.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/tutorials-search-engineering/ann-recall.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-search-engineering/ann-recall/
 
 # Measuring ANN Recall
@@ -15,8 +15,8 @@ This tutorial focuses on **ANN recall**: how closely approximate nearest-neighbo
 ANN recall measures how closely approximate search matches exact kNN. It's the first of four evaluation layers; each higher layer measures a different property of the retrieval system, with different tools.
 
 - **ANN recall** (this tutorial). Is the approximate index close to exact kNN?
-- **Retrieval relevance** ([Measuring Retrieval Relevance](https://qdrant.tech/documentation/improve-search/retrieval-relevance/)). Do the top-k results match query intent?
-- **Pipeline output quality** ([Evaluating Pipeline Output Quality](https://qdrant.tech/documentation/improve-search/pipeline-output-quality/)). Does the end-to-end pipeline (retrieval + generator, ranker, or UI) produce the right output?
+- **Retrieval relevance** ([Measuring Retrieval Relevance](https://qdrant.tech/documentation/search-evaluation/retrieval-relevance/)). Do the top-k results match query intent?
+- **Pipeline output quality** ([Evaluating Pipeline Output Quality](https://qdrant.tech/documentation/search-evaluation/pipeline-output-quality/)). Does the end-to-end pipeline (retrieval + generator, ranker, or UI) produce the right output?
 - **Business impact**. Do the KPIs the business cares about move? Application-specific, out of scope for these tutorials.
 
 A high score on a higher layer requires acceptable scores on the layers below. Embedding quality (separately measured by benchmarks like [MTEB](https://huggingface.co/spaces/mteb/leaderboard)) sets the ceiling on every downstream metric.
@@ -25,7 +25,7 @@ A high score on a higher layer requires acceptable scores on the layers below. E
 
 Qdrant's Web UI includes an ANN Recall tab that measures the gap between approximate and exact search without writing evaluation code. Open the dashboard at `http://localhost:6333/dashboard` (or your cluster's dashboard on Qdrant Cloud), navigate to your collection, open the ANN Recall tab, and click **Check Index Quality** to run the comparison.
 
-![ANN Recall tab with default evaluation results](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/retrieval-quality/search-quality-tab.png)
+![ANN Recall tab with default evaluation results](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/tutorials/retrieval-quality/search-quality-tab.png)
 
 The tab reports average **recall\@k** (1.0 = perfect overlap; 0.95+ is typical for well-tuned HNSW).
 
@@ -35,7 +35,7 @@ Toggle **advanced mode** in the ANN Recall tab to tune search-time parameters in
 
 Recall should increase at the cost of higher query latency.
 
-![ANN Recall advanced mode with HNSW parameters](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/retrieval-quality/search-quality-advanced.png)
+![ANN Recall advanced mode with HNSW parameters](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/tutorials/retrieval-quality/search-quality-advanced.png)
 
 If `hnsw_ef` alone does not get you to your recall target, the build-time parameters `m` and `ef_construct` set the ceiling on the recall approximate search can achieve. Changing them requires rebuilding the HNSW index. For the trade-offs and how to choose values, see [HNSW Indexing Fundamentals](https://qdrant.tech/course/essentials/day-2/what-is-hnsw/) in the Qdrant Essentials course.
 
@@ -81,4 +81,4 @@ Wire it into CI and fail the job when recall falls below your target threshold. 
 
 ## Next Steps
 
-Once ANN recall is on target, continue with [Measuring Retrieval Relevance](https://qdrant.tech/documentation/improve-search/retrieval-relevance/) to check how well those results match user intent.
+Once ANN recall is on target, continue with [Measuring Retrieval Relevance](https://qdrant.tech/documentation/search-evaluation/retrieval-relevance/) to check how well those results match user intent.

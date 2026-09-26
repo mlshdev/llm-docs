@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/logging/drivers/journald.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/engine/logging/drivers/journald.md)
+> Pinned source for Docker main: [content/manuals/engine/logging/drivers/journald.md](https://github.com/docker/docs/blob/938f943d945d222a29f8615cadf03ff536f895a8/content/manuals/engine/logging/drivers/journald.md)
 
 # Journald logging driver
 

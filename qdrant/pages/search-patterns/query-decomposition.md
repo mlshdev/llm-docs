@@ -1,5 +1,5 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/improve-search/query-decomposition.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/improve-search/query-decomposition.md)
-> Canonical documentation: https://qdrant.tech/documentation/improve-search/query-decomposition/
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-patterns/query-decomposition.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/search-patterns/query-decomposition.md)
+> Canonical documentation: https://qdrant.tech/documentation/search-patterns/query-decomposition/
 
 # Query Decomposition for Multi-Hop Questions
 
@@ -115,4 +115,4 @@ The birthplace chunk never mentions Inception, so the original question won't su
 
 ## When to Use It
 
-Decomposition adds an LLM call and a query per hop, so reach for it only when a question spans multiple facts. For single-fact questions, one query is faster and just as accurate. To confirm it helps on your data, compare `recall@k` for single-pass against decomposition on a small set of multi-hop questions; the [Measuring Retrieval Relevance](https://qdrant.tech/documentation/improve-search/retrieval-relevance/) tutorial covers the setup.
+Decomposition adds an LLM call and a query per hop, so reach for it only when a question spans multiple facts. For single-fact questions, one query is faster and just as accurate. To confirm it helps on your data, compare `recall@k` for single-pass against decomposition on a small set of multi-hop questions; the [Measuring Retrieval Relevance](https://qdrant.tech/documentation/search-evaluation/retrieval-relevance/) tutorial covers the setup.

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/let-a-stopped-sandbox-resume-on-demand.md](https://github.com/docker/docs/blob/0bd254d2b506fd6c8bbf8b55affcce84fc02bb48/content/manuals/ai/sandboxes-api/cookbook/let-a-stopped-sandbox-resume-on-demand.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/let-a-stopped-sandbox-resume-on-demand.md](https://github.com/docker/docs/blob/938f943d945d222a29f8615cadf03ff536f895a8/content/manuals/ai/sandboxes-api/cookbook/let-a-stopped-sandbox-resume-on-demand.md)
 
 # Let a stopped sandbox resume on demand
 
@@ -47,7 +47,9 @@ export async function createWithAutoResume(
 
 ## Read the effective setting {#2-read-the-effective-setting}
 
-Get the sandbox and inspect the effective automatic-resume value together with its state. This checks what the service recorded; it does not send a request to the application or prove that the application can start.
+Get the sandbox and inspect the effective lifecycle automatic-resume value together with its state. The example falls back to the timeout value for older responses and reports an error if neither value is present. An absent value is unknown, not disabled.
+
+This checks what the service recorded; it does not send a request to the application or prove that the application can start. Authentication is still required.
 
 To verify the whole flow, stop the sandbox, request its published application URL, and confirm that the application becomes ready. Allow for startup time and keep the application's own authentication enabled.
 
@@ -55,8 +57,14 @@ To verify the whole flow, stop the sandbox, request its published application UR
 
 ```typescript
 const sandbox = await client.get(name);
+const active =
+  sandbox.effectiveFeatures?.lifecycle?.autoResume ??
+  sandbox.effectiveFeatures?.timeouts?.autoResume;
+if (active == null) {
+  throw new Error(`sandbox ${name}: auto-resume setting is unknown`);
+}
 return {
-  autoResume: sandbox.effectiveFeatures?.timeouts?.autoResume ?? false,
+  autoResume: active,
   status: sandbox.status,
 };
 ```
@@ -69,8 +77,14 @@ import type { Sandboxes } from '@docker/sandboxes';
 
 export async function autoResumeInForce(client: Sandboxes, name: string) {
   const sandbox = await client.get(name);
+  const active =
+    sandbox.effectiveFeatures?.lifecycle?.autoResume ??
+    sandbox.effectiveFeatures?.timeouts?.autoResume;
+  if (active == null) {
+    throw new Error(`sandbox ${name}: auto-resume setting is unknown`);
+  }
   return {
-    autoResume: sandbox.effectiveFeatures?.timeouts?.autoResume ?? false,
+    autoResume: active,
     status: sandbox.status,
   };
 }

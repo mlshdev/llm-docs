@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-premium.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/cloud-premium.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-premium.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/cloud-premium.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud-premium/
 
 # Qdrant Cloud Premium Tier

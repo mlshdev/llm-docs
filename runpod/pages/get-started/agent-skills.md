@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started/agent-skills.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/get-started/agent-skills.mdx)
+> Pinned source for Runpod main: [get-started/agent-skills.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/get-started/agent-skills.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started/agent-skills
 
 # Agent skills for AI coding tools
@@ -25,7 +25,7 @@ curl -sSL https://cli.runpod.net | bash
 brew install runpod/runpodctl/runpodctl
 ```
 
-Then authenticate with your [Runpod API key](https://docs.runpod.io/get-started/api-keys). The same key works for the CLI, Flash, and the bundled MCP server:
+Then authenticate with your [Runpod API key](https://docs.runpod.io/get-started/credentials#api-keys). The same key works for the CLI, Flash, and the bundled MCP server:
 
 ```bash
 # Set the key for the current shell (add to ~/.zshrc or ~/.bashrc to persist):

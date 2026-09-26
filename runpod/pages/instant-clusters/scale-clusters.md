@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [instant-clusters/scale-clusters.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/instant-clusters/scale-clusters.mdx)
+> Pinned source for Runpod main: [instant-clusters/scale-clusters.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/instant-clusters/scale-clusters.mdx)
 > Canonical documentation: https://docs.runpod.io/instant-clusters/scale-clusters
 
 # Scale an Instant Cluster

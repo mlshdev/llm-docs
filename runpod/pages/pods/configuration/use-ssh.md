@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/configuration/use-ssh.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/pods/configuration/use-ssh.mdx)
+> Pinned source for Runpod main: [pods/configuration/use-ssh.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/pods/configuration/use-ssh.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/configuration/use-ssh
 
 # Connect to a Pod with SSH
@@ -17,38 +17,9 @@ SSH provides secure, reliable access to your Pod for long-running processes and 
 
 SSH key authentication is recommended for security and convenience.
 
-## Generate an SSH key and add it to your Runpod account
+## Set up SSH access
 
-1. Run this command on your local terminal to generate an SSH key, replacing `YOUR_EMAIL@DOMAIN.COM` with your actual email:
-
-   ```sh
-   ssh-keygen -t ed25519 -C "YOUR_EMAIL@DOMAIN.COM"
-   ```
-
-   This saves a public/private key pair on your local machine to `~/.ssh/id_ed25519.pub` and `~/.ssh/id_ed25519` respectively.
-
-   > **Warning**
-   >
-   > If you are using Command Prompt on Windows instead of the Linux terminal or WSL, your public and private key pair will be saved to `C:\Users\YOUR_USER_ACCOUNT\.ssh\id_ed25519.pub` and `C:\Users\YOUR_USER_ACCOUNT\.ssh\id_ed25519`, respectively.
-2. 1. Run `cat ~/.ssh/id_ed25519.pub` to display your public key.
-   2. Copy the output (starts with `ssh-ed25519`).
-   3. Paste it into the **SSH Public Keys** field in your [Runpod account settings](https://www.console.runpod.io/user/settings).
-
-   > **Warning**
-   >
-   > If you need to add multiple SSH keys, make sure each key is on its own line.
-
-   Use [runpodctl](https://docs.runpod.io/runpodctl/overview) to add your key directly:
-
-   ```sh
-   runpodctl ssh add-key --key-file ~/.ssh/id_ed25519.pub
-   ```
-
-   Verify it was added:
-
-   ```sh
-   runpodctl ssh list-keys
-   ```
+Before connecting, [add your SSH public key to the Credentials page](https://docs.runpod.io/get-started/credentials#ssh-public-keys).
 
 ### Override your public key for a specific Pod
 
@@ -58,7 +29,7 @@ Runpod will attempt to automatically inject the public SSH keys added in your ac
 
 All Pods provide a basic SSH connection that is proxied through Runpod's systems. This method does not support commands like SCP (Secure Copy Protocol) or SFTP (SSH File Transfer Protocol).
 
-1. Ensure you have an [SSH key pair](#generate-an-ssh-key-and-add-it-to-your-runpod-account) generated on your local machine and added to your Runpod account.
+1. Ensure you have an [SSH public key added to your account](https://docs.runpod.io/get-started/credentials#ssh-public-keys).
 2. Navigate to the [Pods page](https://console.runpod.io/pods) in the Runpod console. Select the Pod you want to connect to from the list to open its connection options.
 3. In the Pod's **Connect** tab, copy the command listed under **SSH**. It should look something like this:
 
@@ -86,14 +57,14 @@ mkdir -p ~/.ssh; \
 cd ~/.ssh; \
 chmod 700 ~/.ssh; \
 echo "$PUBLIC_KEY" >> authorized_keys; \
-chmod 700 authorized_keys; \
+chmod 600 authorized_keys; \
 service ssh start; \
 sleep infinity'
 ```
 
 Once you're sure that the SSH daemon is running, you can connect to your Pod by following these steps:
 
-1. Ensure you have an [SSH key pair](#generate-an-ssh-key-and-add-it-to-your-runpod-account) generated on your local machine and added to your Runpod account.
+1. Ensure you have an [SSH public key added to your account](https://docs.runpod.io/get-started/credentials#ssh-public-keys).
 2. An SSH daemon must be started in your Pod. Runpod official templates, such as "Runpod PyTorch", often have this pre-configured. If you're using a custom template, ensure TCP port 22 is exposed and the SSH daemon is started. Refer to the [Use SSH guide](https://docs.runpod.io/pods/configuration/use-ssh) for commands to include in your custom Docker template.
 3. Navigate to the [Pods page](https://console.runpod.io/pods) in the Runpod console. Select the Pod you want to connect to from the list to open its connection options.
 4. In the Pod's **Connect** tab, copy the command listed under **SSH over exposed TCP**. It should look something like this:

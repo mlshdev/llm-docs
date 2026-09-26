@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/faq/qdrant-fundamentals.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/faq/qdrant-fundamentals.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/faq/qdrant-fundamentals.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/faq/qdrant-fundamentals.md)
 > Canonical documentation: https://qdrant.tech/documentation/faq/qdrant-fundamentals/
 
 # Frequently Asked Questions: General Topics
@@ -140,7 +140,7 @@ What Qdrant doesn't plan to support:
 - Query analyzers and other NLP tools
 
 Of course, you can always combine Qdrant with any specialized tool you need, including full-text search engines.
-Read more about [our approach](https://qdrant.tech/articles/hybrid-search/) to hybrid search.
+Read more about [our approach](https://qdrant.tech/documentation/search-tuning/hybrid-search/) to hybrid search.
 
 ### When should I use Reciprocal Rank Fusion (RRF) vs. Distribution-Based Score Fusion (DBSF) for hybrid search?
 
@@ -151,7 +151,7 @@ Both methods combine scores from multiple retrieval legs (for example, dense and
 
 For custom fusion, use the [Formula Query](https://qdrant.tech/documentation/search/search-relevance/#score-boosting). For example, you can use decay functions to normalize both scores to a 0-1 range and then fuse them. This approach requires you to determine the approximate score distribution for each corpus, since you can't set decay function parameters dynamically. The Formula Query doesn't support custom rank-based fusion because it doesn't have access to prefetch ranks; only to the raw scores.
 
-To evaluate which works better for your use case, create a small golden query set and compare [retrieval quality metrics](https://qdrant.tech/documentation/improve-search/retrieval-relevance/) (for example, NDCG\@10) under each method.
+To evaluate which works better for your use case, create a small golden query set and compare [retrieval quality metrics](https://qdrant.tech/documentation/search-evaluation/retrieval-relevance/) (for example, NDCG\@10) under each method.
 
 See also: the [Choosing a Fusion Method](https://qdrant.tech/documentation/search/hybrid-queries/#choosing-a-fusion-method) decision table in the Hybrid Queries reference, and the [Choosing a Fusion Method notebook](https://github.com/qdrant/examples/blob/master/fusion-methods/Choosing_a_Fusion_Method.ipynb) for a runnable RRF vs weighted RRF vs DBSF eval on BEIR/SciFact with a reusable weight-tuning helper.
 

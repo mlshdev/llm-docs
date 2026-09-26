@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffplay.texi](https://github.com/FFmpeg/FFmpeg/blob/c966a1de0a66de605f6f3c97fc90aff27eee71f0/doc/ffplay.texi)
+> Pinned source for FFmpeg master: [doc/ffplay.texi](https://github.com/FFmpeg/FFmpeg/blob/d97584959417519597a24c8fdd13dc4b9af1a876/doc/ffplay.texi)
 
 # Synopsis
 
@@ -698,6 +698,28 @@ frame, and pause.
 
 - page down/page up
   Seek to previous/next chapter or backward/forward 10 minutes if no chapters.
+  The chapter list is shown briefly, marking the chapter being played at its
+  left edge. It needs the ass filter and the SDL renderer, so it is unavailable
+  in builds without libass and with the Vulkan renderer.
+
+- l
+  Keep the chapter list on screen. While it is kept, typing filters the list by
+  artist and title, down/up move its selection and escape closes it.
+
+- enter
+  Seek to the chapter selected in the chapter list while it is shown.
+
+- mouse wheel
+  Move the chapter list selection while it is shown.
+
+- mouse over the (i) symbol
+  Show the metadata of that chapter list entry.
+
+- left mouse click
+  Seek to the clicked chapter list entry, or sort the list by the clicked column
+  button. Clicking the same button again flips the order, and ties are resolved
+  by the columns clicked before. The shuffle button orders the list by a seed
+  that its left half lowers and its right half raises.
 
 - right mouse click
   Seek to percentage in file corresponding to fraction of width.

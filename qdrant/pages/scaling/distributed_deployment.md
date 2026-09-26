@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/scaling/distributed_deployment.md](https://github.com/qdrant/landing_page/blob/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/content/documentation/scaling/distributed_deployment.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/scaling/distributed_deployment.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/scaling/distributed_deployment.md)
 > Canonical documentation: https://qdrant.tech/documentation/scaling/distributed_deployment/
 
 # Distributed Deployment
@@ -249,7 +249,7 @@ client.CreateCollection(context.Background(), &qdrant.CreateCollection{
 
 To ensure all nodes in your cluster are evenly utilized, the number of shards must be a multiple of the number of nodes you are currently running in your cluster.
 
-> Aside: Advanced use cases such as multitenancy may require an uneven distribution of shards. See [Multitenancy](https://qdrant.tech/articles/multitenancy/).
+> Aside: Advanced use cases such as multitenancy may require an uneven distribution of shards. See [Multitenancy](https://qdrant.tech/documentation/production-operations/multitenant-search/).
 
 We recommend creating at least 2 shards per node to allow future expansion without having to re-shard. [Resharding](https://qdrant.tech/documentation/cloud/cluster-scaling/#resharding) is possible on Qdrant Cloud, but should be avoided if hosting elsewhere as it would require creating a new collection.
 
@@ -747,7 +747,7 @@ Now you can target the operations to specific shard(s) by specifying the `shard_
 
 Another use case for user-defined sharding is time-based sharding, where you route points to a specific shard (or shards) based on timestamp. This enables efficient querying of recent data and efficient data lifecycle management by deleting old shards once they pass a certain age. See the [Time-Based Sharding](https://qdrant.tech/documentation/tutorials-operations/time-based-sharding/) tutorial for more details.
 
-![Time-based sharding across daily shards](https://raw.githubusercontent.com/qdrant/landing_page/78beef7e019cb0e5c3cdf851163a98df8c04c37f/qdrant-landing/static/documentation/tutorials/time-based-sharding/time-based-sharding.png)
+![Time-based sharding across daily shards](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/tutorials/time-based-sharding/time-based-sharding.png)
 
 *One shard per day: writes go to the newest shard, and a query's shard key selector decides how many of them it reads from.*
 

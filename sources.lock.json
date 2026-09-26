@@ -23,10 +23,10 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "0bd254d2b506fd6c8bbf8b55affcce84fc02bb48",
-      "sourceCommittedAt": "2026-09-25T18:16:25Z",
-      "observedCommit": "0bd254d2b506fd6c8bbf8b55affcce84fc02bb48",
-      "documentationDigest": "a9a939e4728444515c3d987c4cfc86dce8382f96caec59c83477ff3a2efda5cd"
+      "sourceCommit": "938f943d945d222a29f8615cadf03ff536f895a8",
+      "sourceCommittedAt": "2026-09-25T18:34:38Z",
+      "observedCommit": "938f943d945d222a29f8615cadf03ff536f895a8",
+      "documentationDigest": "899e2cd24ec1082c47a018a361a9bd44f06c5cb80013d6a5771c8d8ac0a6c113"
     },
     "container": {
       "tag": "1.4.1",
@@ -87,10 +87,10 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "c966a1de0a66de605f6f3c97fc90aff27eee71f0",
-      "sourceCommittedAt": "2026-09-25T16:48:10Z",
-      "observedCommit": "c966a1de0a66de605f6f3c97fc90aff27eee71f0",
-      "documentationDigest": "3d463a6a434e48b931451dea8a2575da546d32f909de524fa755926458ac8447"
+      "sourceCommit": "d97584959417519597a24c8fdd13dc4b9af1a876",
+      "sourceCommittedAt": "2026-09-25T21:24:30Z",
+      "observedCommit": "d97584959417519597a24c8fdd13dc4b9af1a876",
+      "documentationDigest": "33f3b54b82748349639b3b238bb3ab6250b7d53a6645ceec9f032edfc52d0ee2"
     },
     "yt-dlp": {
       "tag": "2026.08.19",
@@ -140,10 +140,10 @@
     "runpod": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "2ed145e18217c606416d3dbc47314da01a479792",
-      "sourceCommittedAt": "2026-09-25T17:51:50Z",
-      "observedCommit": "2ed145e18217c606416d3dbc47314da01a479792",
-      "documentationDigest": "41070c9e674b7da610cb30c25828fd24ff9f4872e96695a5bfe97e6282194f9c"
+      "sourceCommit": "28a1e156d785d50592385acab35e9b5f11b603d0",
+      "sourceCommittedAt": "2026-09-25T20:53:01Z",
+      "observedCommit": "28a1e156d785d50592385acab35e9b5f11b603d0",
+      "documentationDigest": "dc92024433d925f4b6d57da0ed95e8d240adfbf62248b058bb3abfae3b16506c"
     },
     "discord-py-self": {
       "tag": "v2.1.0",
@@ -159,10 +159,10 @@
     "qdrant": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "78beef7e019cb0e5c3cdf851163a98df8c04c37f",
-      "sourceCommittedAt": "2026-09-24T14:00:08Z",
-      "observedCommit": "ffa6101708342eae52a9f09a2cd179b1e6b56b8d",
-      "documentationDigest": "8155623948ca895278f0a7176ed7db4f0e059e3a5efc806285bb9fcffdab2f5f"
+      "sourceCommit": "c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab",
+      "sourceCommittedAt": "2026-09-25T22:38:58Z",
+      "observedCommit": "c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab",
+      "documentationDigest": "0a1d9e0e2817bbcd5c02d26363b60b70504f201e8f94003c5199959c4a707add"
     },
     "apple-swift": {
       "tag": "snapshot-5915b24a1311",

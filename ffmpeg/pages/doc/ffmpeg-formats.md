@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/c966a1de0a66de605f6f3c97fc90aff27eee71f0/doc/ffmpeg-formats.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/d97584959417519597a24c8fdd13dc4b9af1a876/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -523,6 +523,15 @@ there are resolution changes.
   the duration of the respective file segments in the concatenated output
   expressed in microseconds. The duration metadata is only set if it is known
   based on the concat file.
+  The default is 0.
+
+- chapter\_per\_file
+  If set to 1, add a chapter for each file, named after the `title`
+  metadata of the file or, failing that, its file name, and carrying the rest
+  of the file's metadata. The files are opened in order when the script is read
+  to learn their durations, stopping after the first file whose duration is
+  unknown, which gets the last chapter; when all durations are known, this also
+  makes the total duration known and the output seekable.
   The default is 0.
 
 ### Examples

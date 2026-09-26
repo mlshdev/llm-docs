@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [organizations/orgs-overview.mdx](https://github.com/runpod/docs/blob/2ed145e18217c606416d3dbc47314da01a479792/organizations/orgs-overview.mdx)
+> Pinned source for Runpod main: [organizations/orgs-overview.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/organizations/orgs-overview.mdx)
 > Canonical documentation: https://docs.runpod.io/organizations/orgs-overview
 
 # Organizations
@@ -18,7 +18,7 @@ Organizations are Runpod's enterprise account model, designed for teams that nee
 | **Resource ownership** | Resources owned by the team owner's user account | Resources owned by the organization, surviving if any member leaves                    |
 | **Billing**            | Prepaid credit balance                           | Post-paid invoice only. No credit balance or payment method management in the console. |
 | **Membership**         | A user can own one team and belong to others     | A user belongs to at most one organization                                             |
-| **Social unit**        | Team (has an owner)                              | Group (leaderless, additive)                                                           |
+| **Social unit**        | Team (has an owner)                              | Group (no owner; members can belong to multiple groups)                                |
 | **Mutual exclusivity** | Compatible with personal accounts                | Mutually exclusive with Teams, permanently                                             |
 
 > **Warning**
@@ -27,12 +27,14 @@ Organizations are Runpod's enterprise account model, designed for teams that nee
 
 ## Key concepts
 
-**Ownership.** The organization owns all resources, not the member who created them. If a member is removed or suspended, their Pods, endpoints, and volumes continue running under the organization.
+**Ownership:** The organization owns all resources, not the member who created them. If a member is removed or suspended, their Pods, endpoints, and volumes continue running under the organization.
 
-**Membership.** A user can belong to at most one organization. Joining an organization is permanent and mutually exclusive with Team membership. There is no path back to a Team account once you join.
+**Membership:** A user can belong to at most one organization. Joining an organization is permanent and mutually exclusive with Team membership. There is no path back to a Team account once you join.
 
-**Roles.** Every member is assigned one of four built-in roles: admin, billing, dev, or basic. There is no owner role; admin is the highest level. Roles control what a member can create, manage, or view across compute, billing, and org settings. See [Roles](https://docs.runpod.io/organizations/roles) for the full permissions matrix.
+**Roles:** Every member is assigned one of four built-in roles: admin, billing, dev, or basic. There is no owner role; admin is the highest level. Roles control what a member can create, manage, or view across compute, billing, and org settings. See [Roles](https://docs.runpod.io/organizations/roles) for the full permissions matrix.
 
-**Groups.** Groups are the social unit within an organization. They are leaderless and additive: a member can belong to zero or many groups simultaneously. Only org admins can manage group membership. See [Groups](https://docs.runpod.io/organizations/groups).
+**Groups:** Groups are the social unit within an organization. They are leaderless and additive: a member can belong to zero or many groups simultaneously. Only org admins can manage group membership. See [Groups](https://docs.runpod.io/organizations/groups).
 
-**Billing.** Organizations are billed on a post-paid invoice model. Usage accrues throughout the month and is invoiced by Runpod's finance team. There is no credit balance, credit top-up, credit code redemption, or autopay. All members can view their own usage in Billing Explorer; org admins can view any member's usage. See [Billing](https://docs.runpod.io/organizations/billing).
+**Billing:** Organizations are billed on a post-paid invoice model. Usage accrues throughout the month and is invoiced by Runpod's finance team. There is no credit balance, credit top-up, credit code redemption, or autopay. All members can view their own usage in Billing Explorer; org admins can view any member's usage. See [Billing](https://docs.runpod.io/organizations/billing).
+
+**SSH keys:** Each org member manages their SSH keys on the [Credentials page](https://console.runpod.io/user/credentials?tab=ssh-key).
