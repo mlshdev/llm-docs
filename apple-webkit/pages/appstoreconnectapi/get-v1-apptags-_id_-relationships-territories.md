@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-apptags-_id_-relationships-territories
 
 # List territory IDs for an app tag
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 4.1+
+**Availability:** App Store Connect API 4.1+ (deprecated in 4.5)
 
 List territory IDs for an app tag.
+
+> This endpoint is deprecated.
 
 ## URL
 
@@ -35,10 +37,14 @@ GET https://api.appstoreconnect.apple.com/v1/appTags/{id}/relationships/territor
 - `404` Not Found — `ErrorResponse`:
 - `429` — `ErrorResponse`:
 
+## Mentioned In
+
+- [App Store Connect API 4.5 release notes](app-store-connect-api-4-5-release-notes.md)
+
 ## See Also
 
 ### Reading app tag information
 
 - [List App Tags](get-v1-apps-_id_-apptags.md): List all app tags for a specific app.
 - [List app tags IDs](get-v1-apps-_id_-relationships-apptags.md): List all app tag IDs for a specific app.
-- [List Territories for an App Tag](get-v1-apptags-_id_-territories.md): List territory availability for a specific app tag.
+- [List Territories for an App Tag](get-v1-apptags-_id_-territories.md): Deprecated. List territory availability for a specific app tag.

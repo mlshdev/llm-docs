@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avfoundation/streaming-depth-data-from-the-truedepth-camera
 
 # Streaming depth data from the TrueDepth camera (Swift)

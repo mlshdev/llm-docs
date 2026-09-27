@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseoffercodeonetimeusecode/relationships-data.dictionary/deactivatedbyactor-data.dictionary
 
 # InAppPurchaseOfferCodeOneTimeUseCode.Relationships.DeactivatedByActor
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 4.2+
 
-The data that describes the deactivated by actor of the in-app purchase offer code one-time use code.
+The data that describes the deactivated by actor of the In-App Purchase offer code one-time use code.
 
 ## Declaration
 
@@ -31,5 +31,5 @@ object InAppPurchaseOfferCodeOneTimeUseCode.Relationships.DeactivatedByActor
 
 ### Dictionaries
 
-- [InAppPurchaseOfferCodeOneTimeUseCode.Relationships.CreatedByActor](createdbyactor-data.dictionary.md): The data that describes the created by actor of the in-app purchase offer code one-time use code.
-- [InAppPurchaseOfferCodeOneTimeUseCode.Relationships.Values](values-data.dictionary.md): Information about the values of the in-app purchase offer code one-time use code.
+- [InAppPurchaseOfferCodeOneTimeUseCode.Relationships.CreatedByActor](createdbyactor-data.dictionary.md): The data that describes the created by actor of the In-App Purchase offer code one-time use code.
+- [InAppPurchaseOfferCodeOneTimeUseCode.Relationships.Values](values-data.dictionary.md): Information about the values of the In-App Purchase offer code one-time use code.

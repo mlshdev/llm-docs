@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/safari-release-notes
 
 # Safari Release Notes
@@ -15,6 +15,7 @@ Safari is a web browser app and web technology platform available on iOS and mac
 
 ### Version 27
 
+- [Safari 27.2 Beta Release Notes](safari-release-notes/safari-27_2-release-notes.md): Released September 16, 2026 — 27.2 beta (20625.2.4)
 - [Safari 27 Release Notes](safari-release-notes/safari-27-release-notes.md): Released September 14, 2026 — 27.0 (20625.1.29)
 
 ### Version 26

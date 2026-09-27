@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/securityinterface/sfcertificatetrustpanel
 
 # SFCertificateTrustPanel (Swift)
@@ -68,6 +68,8 @@ To display a certificate in a panel or sheet without editable trust settings, us
 - [NSUserActivityRestoring](../appkit/nsuseractivityrestoring.md)
 - [NSUserInterfaceItemIdentification](../appkit/nsuserinterfaceitemidentification.md)
 - [NSUserInterfaceValidations](../appkit/nsuserinterfacevalidations.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 

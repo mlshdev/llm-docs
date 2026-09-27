@@ -1,10 +1,1287 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 48
+
+# Document: MPSTemporaryImage
+
+Source path: documentation/metalperformanceshaders/mpstemporaryimage
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage
+Description: Framework: Metal Performance Shaders Kind: Class Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+# MPSTemporaryImage (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Class  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+A texture for use in convolutional neural networks that stores transient data to be used and discarded promptly.
+
+## Declaration
+
+```swift
+class MPSTemporaryImage
+```
+
+<a id="overview"></a>
+
+## Overview
+
+[MPSTemporaryImage](mpstemporaryimage.md) objects can provide a profound reduction in the aggregate texture memory and associated CPU-side allocation cost in your app. Metal Performance Shaders achieves this by automatically identifying [MPSTemporaryImage](mpstemporaryimage.md) objects that do not overlap in time over the course of a [MTLCommandBuffer](../metal/mtlcommandbuffer.md) object’s lifetime and can therefore reuse the same memory. [MPSTemporaryImage](mpstemporaryimage.md) objects leverage an internal cache of preallocated reusable memory to hold pixel data to avoid typical memory allocation performance penalties common to ordinary [MPSImage](mpsimage.md) and [MTLTexture](../metal/mtltexture.md) objects.
+
+To avoid data corruption due to aliasing, [MPSTemporaryImage](mpstemporaryimage.md) objects impose some important restrictions:
+
+- The underlying texture storage mode is [MTLStorageMode.private](../metal/mtlstoragemode/private.md). You cannot, for example, use the [getBytes(\_:bytesPerRow:from:mipmapLevel:)](../metal/mtltexture/getbytes%28__bytesperrow_from_mipmaplevel_%29.md) or [replace(region:mipmapLevel:withBytes:bytesPerRow:)](../metal/mtltexture/replace%28region_mipmaplevel_withbytes_bytesperrow_%29.md) methods with them. Temporary images are strictly read and written by the GPU.
+- The temporary image may be used only on a single [MTLCommandBuffer](../metal/mtlcommandbuffer.md) object. This limits the chronology to a single linear time stream.
+- The [readCount](mpstemporaryimage/readcount.md) property must be managed correctly.
+- Temporary images must also adhere to the general pixel format restrictions for [MPSImage](mpsimage.md) objects.
+
+Since temporary images can only be used with a single command buffer, and can not be used off the GPU, they generally should not be kept around past the completion of their associated command buffer. The lifetime of a temporary image is typically expected to be extremely short, perhaps spanning only a few lines of code.
+
+To keep the lifetime of the underlying texture allocation as short as possible, the texture is not allocated until the first time the [MPSTemporaryImage](mpstemporaryimage.md) object is used by an [MPSCNNKernel](mpscnnkernel.md) object or until the first time the [texture](mpsimage/texture.md) property is read. The [readCount](mpstemporaryimage/readcount.md) property serves to limit the lifetime of the texture on deallocation.
+
+You may use the [texture](mpsimage/texture.md) property with the `encode` methods of an [MPSUnaryImageKernel](mpsunaryimagekernel.md) subclass, if `featureChannels<=4` and the texture conforms to the requirements of the given kernel. In such cases, the [readCount](mpstemporaryimage/readcount.md) property is not modified, since the enclosing object is not available. There is no locking mechanism provided to prevent a [MTLTexture](../metal/mtltexture.md) object returned from the [texture](mpsimage/texture.md) property from becoming invalid when the value of the [readCount](mpstemporaryimage/readcount.md) property reaches 0.
+
+[MPSTemporaryImage](mpstemporaryimage.md) objects can otherwise be used wherever [MPSImage](mpsimage.md) objects are used.
+
+<a id="The-MPSTemporaryImage-Class"></a>
+
+### The MPSTemporaryImage Class
+
+The [MPSTemporaryImage](mpstemporaryimage.md) class extends the [MPSImage](mpsimage.md) class to provide advanced caching of unused memory, in order to increase performance and reduce memory footprint. [MPSTemporaryImage](mpstemporaryimage.md) objects are intended as fast GPU-only storage for intermediate image data needed only transiently within a single [MTLCommandBuffer](../metal/mtlcommandbuffer.md) object. They accelerate the common case of image data which is created only to be consumed and destroyed immediately by the next operation(s) encoded in a command buffer. [MPSTemporaryImage](mpstemporaryimage.md) objects provide a convenient and simple way to save memory by automatically aliasing other [MPSTemporaryImage](mpstemporaryimage.md) objects in the same command buffer. Because they alias (i.e., share texel storage with) other textures in the same command buffer, the valid lifetime of the data in an [MPSTemporaryImage](mpstemporaryimage.md) object is extremely short, limited to a portion of a the command buffer itself.
+
+You can not read or write data to an [MPSTemporaryImage](mpstemporaryimage.md) using the CPU, or use the data in other [MTLCommandBuffer](../metal/mtlcommandbuffer.md) objects. Use regular [MPSImage](mpsimage.md) objects for more persistent storage.
+
+## Topics
+
+### Initializers
+
+- [init(commandBuffer:imageDescriptor:)](mpstemporaryimage/init%28commandbuffer_imagedescriptor_%29.md): Initializes a temporary image for use on a command buffer.
+- [MPSImageDescriptor](mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](mpsimage.md).
+- [init(commandBuffer:textureDescriptor:)](mpstemporaryimage/init%28commandbuffer_texturedescriptor_%29.md): Low-level interface for creating a temporary image using a texture descriptor.
+- [MTLTextureDescriptor](../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
+- [init(commandBuffer:textureDescriptor:featureChannels:)](mpstemporaryimage/init%28commandbuffer_texturedescriptor_featurechannels_%29.md)
+
+### Methods
+
+- [prefetchStorage(with:imageDescriptorList:)](mpstemporaryimage/prefetchstorage%28with_imagedescriptorlist_%29.md): A method that helps the framework decide which allocations to make ahead of time.
+
+### Methods to Get an Image Allocator
+
+- [defaultAllocator()](mpstemporaryimage/defaultallocator%28%29.md)
+- [MPSImageAllocator](mpsimageallocator.md)
+
+### Properties
+
+- [readCount](mpstemporaryimage/readcount.md): The number of times a temporary image may be read by a CNN kernel before its contents become undefined.
+
+## Relationships
+
+### Inherits From
+
+- [MPSImage](mpsimage.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Neural Networks
+
+- [Training a Neural Network with Metal Performance Shaders](training-a-neural-network-with-metal-performance-shaders.md): Use an MPS neural network graph to train a simple neural network digit classifier.
+- [MPSImage](mpsimage.md): A texture that may have more than four channels for use in convolutional neural networks.
+- [Objects that Simplify the Creation of Neural Networks](objects-that-simplify-the-creation-of-neural-networks.md): Simplify the creation of neural networks using networks of filter, image, and state nodes.
+- [Convolutional Neural Network Kernels](convolutional-neural-network-kernels.md): Build neural networks with layers.
+- [Recurrent Neural Networks](recurrent-neural-networks.md): Create recurrent neural networks.
+
+# MPSTemporaryImage (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Class  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+A texture for use in convolutional neural networks that stores transient data to be used and discarded promptly.
+
+## Declaration
+
+```objectivec
+@interface MPSTemporaryImage : MPSImage
+```
+
+<a id="overview"></a>
+
+## Overview
+
+[MPSTemporaryImage](mpstemporaryimage.md) objects can provide a profound reduction in the aggregate texture memory and associated CPU-side allocation cost in your app. Metal Performance Shaders achieves this by automatically identifying [MPSTemporaryImage](mpstemporaryimage.md) objects that do not overlap in time over the course of a [MTLCommandBuffer](../metal/mtlcommandbuffer.md) object’s lifetime and can therefore reuse the same memory. [MPSTemporaryImage](mpstemporaryimage.md) objects leverage an internal cache of preallocated reusable memory to hold pixel data to avoid typical memory allocation performance penalties common to ordinary [MPSImage](mpsimage.md) and [MTLTexture](../metal/mtltexture.md) objects.
+
+To avoid data corruption due to aliasing, [MPSTemporaryImage](mpstemporaryimage.md) objects impose some important restrictions:
+
+- The underlying texture storage mode is [MTLStorageModePrivate](../metal/mtlstoragemode/private.md). You cannot, for example, use the [getBytes:bytesPerRow:fromRegion:mipmapLevel:](../metal/mtltexture/getbytes%28__bytesperrow_from_mipmaplevel_%29.md) or [replaceRegion:mipmapLevel:withBytes:bytesPerRow:](../metal/mtltexture/replace%28region_mipmaplevel_withbytes_bytesperrow_%29.md) methods with them. Temporary images are strictly read and written by the GPU.
+- The temporary image may be used only on a single [MTLCommandBuffer](../metal/mtlcommandbuffer.md) object. This limits the chronology to a single linear time stream.
+- The [readCount](mpstemporaryimage/readcount.md) property must be managed correctly.
+- Temporary images must also adhere to the general pixel format restrictions for [MPSImage](mpsimage.md) objects.
+
+Since temporary images can only be used with a single command buffer, and can not be used off the GPU, they generally should not be kept around past the completion of their associated command buffer. The lifetime of a temporary image is typically expected to be extremely short, perhaps spanning only a few lines of code.
+
+To keep the lifetime of the underlying texture allocation as short as possible, the texture is not allocated until the first time the [MPSTemporaryImage](mpstemporaryimage.md) object is used by an [MPSCNNKernel](mpscnnkernel.md) object or until the first time the [texture](mpsimage/texture.md) property is read. The [readCount](mpstemporaryimage/readcount.md) property serves to limit the lifetime of the texture on deallocation.
+
+You may use the [texture](mpsimage/texture.md) property with the `encode` methods of an [MPSUnaryImageKernel](mpsunaryimagekernel.md) subclass, if `featureChannels<=4` and the texture conforms to the requirements of the given kernel. In such cases, the [readCount](mpstemporaryimage/readcount.md) property is not modified, since the enclosing object is not available. There is no locking mechanism provided to prevent a [MTLTexture](../metal/mtltexture.md) object returned from the [texture](mpsimage/texture.md) property from becoming invalid when the value of the [readCount](mpstemporaryimage/readcount.md) property reaches 0.
+
+[MPSTemporaryImage](mpstemporaryimage.md) objects can otherwise be used wherever [MPSImage](mpsimage.md) objects are used.
+
+<a id="The-MPSTemporaryImage-Class"></a>
+
+### The MPSTemporaryImage Class
+
+The [MPSTemporaryImage](mpstemporaryimage.md) class extends the [MPSImage](mpsimage.md) class to provide advanced caching of unused memory, in order to increase performance and reduce memory footprint. [MPSTemporaryImage](mpstemporaryimage.md) objects are intended as fast GPU-only storage for intermediate image data needed only transiently within a single [MTLCommandBuffer](../metal/mtlcommandbuffer.md) object. They accelerate the common case of image data which is created only to be consumed and destroyed immediately by the next operation(s) encoded in a command buffer. [MPSTemporaryImage](mpstemporaryimage.md) objects provide a convenient and simple way to save memory by automatically aliasing other [MPSTemporaryImage](mpstemporaryimage.md) objects in the same command buffer. Because they alias (i.e., share texel storage with) other textures in the same command buffer, the valid lifetime of the data in an [MPSTemporaryImage](mpstemporaryimage.md) object is extremely short, limited to a portion of a the command buffer itself.
+
+You can not read or write data to an [MPSTemporaryImage](mpstemporaryimage.md) using the CPU, or use the data in other [MTLCommandBuffer](../metal/mtlcommandbuffer.md) objects. Use regular [MPSImage](mpsimage.md) objects for more persistent storage.
+
+## Topics
+
+### Initializers
+
+- [temporaryImageWithCommandBuffer:imageDescriptor:](mpstemporaryimage/init%28commandbuffer_imagedescriptor_%29.md): Initializes a temporary image for use on a command buffer.
+- [MPSImageDescriptor](mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](mpsimage.md).
+- [temporaryImageWithCommandBuffer:textureDescriptor:](mpstemporaryimage/init%28commandbuffer_texturedescriptor_%29.md): Low-level interface for creating a temporary image using a texture descriptor.
+- [MTLTextureDescriptor](../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
+- [temporaryImageWithCommandBuffer:textureDescriptor:featureChannels:](mpstemporaryimage/init%28commandbuffer_texturedescriptor_featurechannels_%29.md)
+
+### Methods
+
+- [prefetchStorageWithCommandBuffer:imageDescriptorList:](mpstemporaryimage/prefetchstorage%28with_imagedescriptorlist_%29.md): A method that helps the framework decide which allocations to make ahead of time.
+
+### Methods to Get an Image Allocator
+
+- [defaultAllocator](mpstemporaryimage/defaultallocator%28%29.md)
+- [MPSImageAllocator](mpsimageallocator.md)
+
+### Properties
+
+- [readCount](mpstemporaryimage/readcount.md): The number of times a temporary image may be read by a CNN kernel before its contents become undefined.
+
+## Relationships
+
+### Inherits From
+
+- [MPSImage](mpsimage.md)
+
+## See Also
+
+### Neural Networks
+
+- [Training a Neural Network with Metal Performance Shaders](training-a-neural-network-with-metal-performance-shaders.md): Use an MPS neural network graph to train a simple neural network digit classifier.
+- [MPSImage](mpsimage.md): A texture that may have more than four channels for use in convolutional neural networks.
+- [Objects that Simplify the Creation of Neural Networks](objects-that-simplify-the-creation-of-neural-networks.md): Simplify the creation of neural networks using networks of filter, image, and state nodes.
+- [Convolutional Neural Network Kernels](convolutional-neural-network-kernels.md): Build neural networks with layers.
+- [Recurrent Neural Networks](recurrent-neural-networks.md): Create recurrent neural networks.
+
+# Document: defaultAllocator()
+
+Source path: documentation/metalperformanceshaders/mpstemporaryimage/defaultallocator()
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage/defaultallocator()
+Description: Framework: Metal Performance Shaders Kind: Type Method Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+# defaultAllocator() (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+class func defaultAllocator() -> any MPSImageAllocator
+```
+
+## See Also
+
+### Methods to Get an Image Allocator
+
+- [MPSImageAllocator](../mpsimageallocator.md)
+
+# defaultAllocator (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
++ (id<MPSImageAllocator>) defaultAllocator;
+```
+
+## See Also
+
+### Methods to Get an Image Allocator
+
+- [MPSImageAllocator](../mpsimageallocator.md)
+
+# Document: init(commandBuffer:imageDescriptor:)
+
+Source path: documentation/metalperformanceshaders/mpstemporaryimage/init(commandbuffer:imagedescriptor:)
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage/init(commandbuffer:imagedescriptor:)
+Description: Framework: Metal Performance Shaders Kind: Initializer Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+# init(commandBuffer:imageDescriptor:) (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Initializer  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+Initializes a temporary image for use on a command buffer.
+
+## Declaration
+
+```swift
+convenience init(commandBuffer: any MTLCommandBuffer, imageDescriptor: MPSImageDescriptor)
+```
+
+## Parameters
+
+- `commandBuffer`: The command buffer on which the temporary image will be exclusively used.
+- `imageDescriptor`: An image descriptor that describes the image to create.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A valid [MPSTemporaryImage](../mpstemporaryimage.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The temporary image will be released when the command buffer is committed. The underlying texture will become invalid before this time due to the action of the [readCount](readcount.md) property.
+
+## See Also
+
+### Initializers
+
+- [MPSImageDescriptor](../mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](../mpsimage.md).
+- [init(commandBuffer:textureDescriptor:)](init%28commandbuffer_texturedescriptor_%29.md): Low-level interface for creating a temporary image using a texture descriptor.
+- [MTLTextureDescriptor](../../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
+- [init(commandBuffer:textureDescriptor:featureChannels:)](init%28commandbuffer_texturedescriptor_featurechannels_%29.md)
+
+# temporaryImageWithCommandBuffer:imageDescriptor: (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+Initializes a temporary image for use on a command buffer.
+
+## Declaration
+
+```objectivec
++ (instancetype) temporaryImageWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer imageDescriptor:(const MPSImageDescriptor *) imageDescriptor;
+```
+
+## Parameters
+
+- `commandBuffer`: The command buffer on which the temporary image will be exclusively used.
+- `imageDescriptor`: An image descriptor that describes the image to create.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A valid [MPSTemporaryImage](../mpstemporaryimage.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The temporary image will be released when the command buffer is committed. The underlying texture will become invalid before this time due to the action of the [readCount](readcount.md) property.
+
+## See Also
+
+### Initializers
+
+- [MPSImageDescriptor](../mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](../mpsimage.md).
+- [temporaryImageWithCommandBuffer:textureDescriptor:](init%28commandbuffer_texturedescriptor_%29.md): Low-level interface for creating a temporary image using a texture descriptor.
+- [MTLTextureDescriptor](../../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
+- [temporaryImageWithCommandBuffer:textureDescriptor:featureChannels:](init%28commandbuffer_texturedescriptor_featurechannels_%29.md)
+
+# Document: init(commandBuffer:textureDescriptor:)
+
+Source path: documentation/metalperformanceshaders/mpstemporaryimage/init(commandbuffer:texturedescriptor:)
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage/init(commandbuffer:texturedescriptor:)
+Description: Framework: Metal Performance Shaders Kind: Initializer Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+# init(commandBuffer:textureDescriptor:) (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Initializer  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+Low-level interface for creating a temporary image using a texture descriptor.
+
+## Declaration
+
+```swift
+convenience init(commandBuffer: any MTLCommandBuffer, textureDescriptor: MTLTextureDescriptor)
+```
+
+## Parameters
+
+- `commandBuffer`: The command buffer on which the temporary image will be exclusively used.
+- `textureDescriptor`: A texture descriptor that describes the temporary image texture to create.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A valid [MPSTemporaryImage](../mpstemporaryimage.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The temporary image will be released when the command buffer is committed. The underlying texture will become invalid before this time due to the action of the [readCount](readcount.md) property.
+
+This function provides access to pixel formats not typically covered by the [init(commandBuffer:imageDescriptor:)](init%28commandbuffer_imagedescriptor_%29.md) method. The feature channels will be inferred from the pixel format without changing the width. The following restrictions apply:
+
+- The texture type must be [MTLTextureType.type2D](../../metal/mtltexturetype/type2d.md) or [MTLTextureType.type2DArray](../../metal/mtltexturetype/type2darray.md).
+- The texture usage must contain at least one of [shaderRead](../../metal/mtltextureusage/shaderread.md) or [shaderWrite](../../metal/mtltextureusage/shaderwrite.md).
+- The storage mode must be [MTLStorageMode.private](../../metal/mtlstoragemode/private.md).
+- The depth must be 1.
+
+## See Also
+
+### Initializers
+
+- [init(commandBuffer:imageDescriptor:)](init%28commandbuffer_imagedescriptor_%29.md): Initializes a temporary image for use on a command buffer.
+- [MPSImageDescriptor](../mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](../mpsimage.md).
+- [MTLTextureDescriptor](../../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
+- [init(commandBuffer:textureDescriptor:featureChannels:)](init%28commandbuffer_texturedescriptor_featurechannels_%29.md)
+
+# temporaryImageWithCommandBuffer:textureDescriptor: (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+Low-level interface for creating a temporary image using a texture descriptor.
+
+## Declaration
+
+```objectivec
++ (instancetype) temporaryImageWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer textureDescriptor:(const MTLTextureDescriptor *) textureDescriptor;
+```
+
+## Parameters
+
+- `commandBuffer`: The command buffer on which the temporary image will be exclusively used.
+- `textureDescriptor`: A texture descriptor that describes the temporary image texture to create.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A valid [MPSTemporaryImage](../mpstemporaryimage.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The temporary image will be released when the command buffer is committed. The underlying texture will become invalid before this time due to the action of the [readCount](readcount.md) property.
+
+This function provides access to pixel formats not typically covered by the [temporaryImageWithCommandBuffer:imageDescriptor:](init%28commandbuffer_imagedescriptor_%29.md) method. The feature channels will be inferred from the pixel format without changing the width. The following restrictions apply:
+
+- The texture type must be [MTLTextureType2D](../../metal/mtltexturetype/type2d.md) or [MTLTextureType2DArray](../../metal/mtltexturetype/type2darray.md).
+- The texture usage must contain at least one of [MTLTextureUsageShaderRead](../../metal/mtltextureusage/shaderread.md) or [MTLTextureUsageShaderWrite](../../metal/mtltextureusage/shaderwrite.md).
+- The storage mode must be [MTLStorageModePrivate](../../metal/mtlstoragemode/private.md).
+- The depth must be 1.
+
+## See Also
+
+### Initializers
+
+- [temporaryImageWithCommandBuffer:imageDescriptor:](init%28commandbuffer_imagedescriptor_%29.md): Initializes a temporary image for use on a command buffer.
+- [MPSImageDescriptor](../mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](../mpsimage.md).
+- [MTLTextureDescriptor](../../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
+- [temporaryImageWithCommandBuffer:textureDescriptor:featureChannels:](init%28commandbuffer_texturedescriptor_featurechannels_%29.md)
+
+# Document: init(commandBuffer:textureDescriptor:featureChannels:)
+
+Source path: documentation/metalperformanceshaders/mpstemporaryimage/init(commandbuffer:texturedescriptor:featurechannels:)
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage/init(commandbuffer:texturedescriptor:featurechannels:)
+Description: Framework: Metal Performance Shaders Kind: Initializer Availability: iOS 11.3+ · iPadOS 11.3+ · Mac Catalyst 13.0+ · macOS 10.13.4+ · tvOS 11.3+ · visionOS 1.0+
+
+# init(commandBuffer:textureDescriptor:featureChannels:) (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Initializer  
+**Availability:** iOS 11.3+ · iPadOS 11.3+ · Mac Catalyst 13.0+ · macOS 10.13.4+ · tvOS 11.3+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+convenience init(commandBuffer: any MTLCommandBuffer, textureDescriptor: MTLTextureDescriptor, featureChannels: Int)
+```
+
+## See Also
+
+### Initializers
+
+- [init(commandBuffer:imageDescriptor:)](init%28commandbuffer_imagedescriptor_%29.md): Initializes a temporary image for use on a command buffer.
+- [MPSImageDescriptor](../mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](../mpsimage.md).
+- [init(commandBuffer:textureDescriptor:)](init%28commandbuffer_texturedescriptor_%29.md): Low-level interface for creating a temporary image using a texture descriptor.
+- [MTLTextureDescriptor](../../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
+
+# temporaryImageWithCommandBuffer:textureDescriptor:featureChannels: (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 11.3+ · iPadOS 11.3+ · Mac Catalyst 13.0+ · macOS 10.13.4+ · tvOS 11.3+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
++ (instancetype) temporaryImageWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer textureDescriptor:(const MTLTextureDescriptor *) textureDescriptor featureChannels:(NSUInteger) featureChannels;
+```
+
+## See Also
+
+### Initializers
+
+- [temporaryImageWithCommandBuffer:imageDescriptor:](init%28commandbuffer_imagedescriptor_%29.md): Initializes a temporary image for use on a command buffer.
+- [MPSImageDescriptor](../mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](../mpsimage.md).
+- [temporaryImageWithCommandBuffer:textureDescriptor:](init%28commandbuffer_texturedescriptor_%29.md): Low-level interface for creating a temporary image using a texture descriptor.
+- [MTLTextureDescriptor](../../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
+
+# Document: prefetchStorage(with:imageDescriptorList:)
+
+Source path: documentation/metalperformanceshaders/mpstemporaryimage/prefetchstorage(with:imagedescriptorlist:)
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage/prefetchstorage(with:imagedescriptorlist:)
+Description: Framework: Metal Performance Shaders Kind: Type Method Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+# prefetchStorage(with:imageDescriptorList:) (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+A method that helps the framework decide which allocations to make ahead of time.
+
+## Declaration
+
+```swift
+class func prefetchStorage(with commandBuffer: any MTLCommandBuffer, imageDescriptorList descriptorList: [MPSImageDescriptor])
+```
+
+## Parameters
+
+- `commandBuffer`: The command buffer on which the temporary images will be exclusively used.
+- `descriptorList`: An array of image descriptors that describe the temporary images that will be created.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The texture cache that underlies the temporary images can automatically allocate new storage as needed, whenever you create new temporary images. However, sometimes a more global view of what you plan to make is useful for maximizing memory reuse to get the most efficient operation. Calling this class method provides a hint to the texture cache about what the list of temporary images will be.
+
+> **Note**
+
+>  Calling this method is purely a performance and memory optimization; it is never *necessary* to call this method.
+
+# prefetchStorageWithCommandBuffer:imageDescriptorList: (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+A method that helps the framework decide which allocations to make ahead of time.
+
+## Declaration
+
+```objectivec
++ (void) prefetchStorageWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer imageDescriptorList:(NSArray<MPSImageDescriptor *> *) descriptorList;
+```
+
+## Parameters
+
+- `commandBuffer`: The command buffer on which the temporary images will be exclusively used.
+- `descriptorList`: An array of image descriptors that describe the temporary images that will be created.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The texture cache that underlies the temporary images can automatically allocate new storage as needed, whenever you create new temporary images. However, sometimes a more global view of what you plan to make is useful for maximizing memory reuse to get the most efficient operation. Calling this class method provides a hint to the texture cache about what the list of temporary images will be.
+
+> **Note**
+
+>  Calling this method is purely a performance and memory optimization; it is never *necessary* to call this method.
+
+# Document: readCount
+
+Source path: documentation/metalperformanceshaders/mpstemporaryimage/readcount
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage/readcount
+Description: Framework: Metal Performance Shaders Kind: Instance Property Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+# readCount (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+The number of times a temporary image may be read by a CNN kernel before its contents become undefined.
+
+## Declaration
+
+```swift
+var readCount: Int { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Temporary images must release their underlying textures for reuse immediately after last use. In order to facilitate *prompt* and convenient memory recycling, each time a [MPSTemporaryImage](../mpstemporaryimage.md) object is read by an `encode` method of an [MPSCNNKernel](../mpscnnkernel.md) object, the value of its [readCount](readcount.md) property is automatically decremented. When the value of [readCount](readcount.md) reaches 0, the underlying texture is automatically made available and reusable to the framework for its own needs (and for other [MPSTemporaryImage](../mpstemporaryimage.md) objects prior to return from the `encode` method). The contents of the underlying texture become undefined at this time.
+
+By default, the value of [readCount](readcount.md) is initialized to 1, indicating a temporary image that may be overwritten any number of times, but read only once.
+
+You may change the value of [readCount](readcount.md) as desired to allow [MPSCNNKernel](../mpscnnkernel.md) objects to read the [MPSTemporaryImage](../mpstemporaryimage.md) object additional times. However, it is an error to change the value of [readCount](readcount.md) once it reaches 0 (it is also an error to read or write to a temporary image with a [readCount](readcount.md) value of 0). You may set the value of  [readCount](readcount.md) to 0 yourself to cause the underlying texture to be returned to the framework. Writing to a temporary image does not adjust the value of [readCount](readcount.md).
+
+The Metal API Validation layer will assert if a temporary image is deallocated with a non-zero [readCount](readcount.md) value to help identify cases when resources are not returned promptly.
+
+# readCount (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+The number of times a temporary image may be read by a CNN kernel before its contents become undefined.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readwrite) NSUInteger readCount;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Temporary images must release their underlying textures for reuse immediately after last use. In order to facilitate *prompt* and convenient memory recycling, each time a [MPSTemporaryImage](../mpstemporaryimage.md) object is read by an `encode` method of an [MPSCNNKernel](../mpscnnkernel.md) object, the value of its [readCount](readcount.md) property is automatically decremented. When the value of [readCount](readcount.md) reaches 0, the underlying texture is automatically made available and reusable to the framework for its own needs (and for other [MPSTemporaryImage](../mpstemporaryimage.md) objects prior to return from the `encode` method). The contents of the underlying texture become undefined at this time.
+
+By default, the value of [readCount](readcount.md) is initialized to 1, indicating a temporary image that may be overwritten any number of times, but read only once.
+
+You may change the value of [readCount](readcount.md) as desired to allow [MPSCNNKernel](../mpscnnkernel.md) objects to read the [MPSTemporaryImage](../mpstemporaryimage.md) object additional times. However, it is an error to change the value of [readCount](readcount.md) once it reaches 0 (it is also an error to read or write to a temporary image with a [readCount](readcount.md) value of 0). You may set the value of  [readCount](readcount.md) to 0 yourself to cause the underlying texture to be returned to the framework. Writing to a temporary image does not adjust the value of [readCount](readcount.md).
+
+The Metal API Validation layer will assert if a temporary image is deallocated with a non-zero [readCount](readcount.md) value to help identify cases when resources are not returned promptly.
+
+# Document: MPSTemporaryMatrix
+
+Source path: documentation/metalperformanceshaders/mpstemporarymatrix
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporarymatrix
+Description: Framework: Metal Performance Shaders Kind: Class Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+# MPSTemporaryMatrix (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Class  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+A matrix allocated on GPU private memory.
+
+## Declaration
+
+```swift
+class MPSTemporaryMatrix
+```
+
+## Topics
+
+### Initializers
+
+- [init(commandBuffer:matrixDescriptor:)](mpstemporarymatrix/init%28commandbuffer_matrixdescriptor_%29.md)
+
+### Instance Properties
+
+- [readCount](mpstemporarymatrix/readcount.md)
+
+### Type Methods
+
+- [prefetchStorage(with:matrixDescriptorList:)](mpstemporarymatrix/prefetchstorage%28with_matrixdescriptorlist_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MPSMatrix](mpsmatrix.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Matrices
+
+- [MPSMatrix](mpsmatrix.md): A 2D array of data that stores the data’s values.
+- [MPSMatrixDescriptor](mpsmatrixdescriptor.md): A description of attributes used to create an MPS matrix.
+
+# MPSTemporaryMatrix (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Class  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+A matrix allocated on GPU private memory.
+
+## Declaration
+
+```objectivec
+@interface MPSTemporaryMatrix : MPSMatrix
+```
+
+## Topics
+
+### Initializers
+
+- [temporaryMatrixWithCommandBuffer:matrixDescriptor:](mpstemporarymatrix/init%28commandbuffer_matrixdescriptor_%29.md)
+
+### Instance Properties
+
+- [readCount](mpstemporarymatrix/readcount.md)
+
+### Type Methods
+
+- [prefetchStorageWithCommandBuffer:matrixDescriptorList:](mpstemporarymatrix/prefetchstorage%28with_matrixdescriptorlist_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MPSMatrix](mpsmatrix.md)
+
+## See Also
+
+### Matrices
+
+- [MPSMatrix](mpsmatrix.md): A 2D array of data that stores the data’s values.
+- [MPSMatrixDescriptor](mpsmatrixdescriptor.md): A description of attributes used to create an MPS matrix.
+
+# Document: init(commandBuffer:matrixDescriptor:)
+
+Source path: documentation/metalperformanceshaders/mpstemporarymatrix/init(commandbuffer:matrixdescriptor:)
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporarymatrix/init(commandbuffer:matrixdescriptor:)
+Description: Framework: Metal Performance Shaders Kind: Initializer Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+# init(commandBuffer:matrixDescriptor:) (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Initializer  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+convenience init(commandBuffer: any MTLCommandBuffer, matrixDescriptor: MPSMatrixDescriptor)
+```
+
+# temporaryMatrixWithCommandBuffer:matrixDescriptor: (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
++ (instancetype) temporaryMatrixWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer matrixDescriptor:(MPSMatrixDescriptor *) matrixDescriptor;
+```
+
+# Document: prefetchStorage(with:matrixDescriptorList:)
+
+Source path: documentation/metalperformanceshaders/mpstemporarymatrix/prefetchstorage(with:matrixdescriptorlist:)
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporarymatrix/prefetchstorage(with:matrixdescriptorlist:)
+Description: Framework: Metal Performance Shaders Kind: Type Method Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+# prefetchStorage(with:matrixDescriptorList:) (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+class func prefetchStorage(with commandBuffer: any MTLCommandBuffer, matrixDescriptorList descriptorList: [MPSMatrixDescriptor])
+```
+
+# prefetchStorageWithCommandBuffer:matrixDescriptorList: (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
++ (void) prefetchStorageWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer matrixDescriptorList:(NSArray<MPSMatrixDescriptor *> *) descriptorList;
+```
+
+# Document: readCount
+
+Source path: documentation/metalperformanceshaders/mpstemporarymatrix/readcount
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporarymatrix/readcount
+Description: Framework: Metal Performance Shaders Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+# readCount (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+var readCount: Int { get set }
+```
+
+# readCount (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readwrite) NSUInteger readCount;
+```
+
+# Document: MPSTemporaryNDArray
+
+Source path: documentation/metalperformanceshaders/mpstemporaryndarray
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryndarray
+Description: Framework: Metal Performance Shaders Kind: Class Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+# MPSTemporaryNDArray (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Class  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+class MPSTemporaryNDArray
+```
+
+## Topics
+
+### Initializers
+
+- [init(commandBuffer:descriptor:)](mpstemporaryndarray/init%28commandbuffer_descriptor_%29.md)
+
+### Instance Properties
+
+- [readCount](mpstemporaryndarray/readcount.md)
+
+### Type Methods
+
+- [defaultAllocator()](mpstemporaryndarray/defaultallocator%28%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MPSNDArray](mpsndarray.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MPSTemporaryNDArray (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Class  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
+@interface MPSTemporaryNDArray : MPSNDArray
+```
+
+## Topics
+
+### Instance Properties
+
+- [readCount](mpstemporaryndarray/readcount.md)
+
+### Type Methods
+
+- [defaultAllocator](mpstemporaryndarray/defaultallocator%28%29.md)
+- [temporaryNDArrayWithCommandBuffer:descriptor:](mpstemporaryndarray/init%28commandbuffer_descriptor_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MPSNDArray](mpsndarray.md)
+
+# Document: defaultAllocator()
+
+Source path: documentation/metalperformanceshaders/mpstemporaryndarray/defaultallocator()
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryndarray/defaultallocator()
+Description: Framework: Metal Performance Shaders Kind: Type Method Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+# defaultAllocator() (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+class func defaultAllocator() -> any MPSNDArrayAllocator
+```
+
+# defaultAllocator (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
++ (id<MPSNDArrayAllocator>) defaultAllocator;
+```
+
+# Document: init(commandBuffer:descriptor:)
+
+Source path: documentation/metalperformanceshaders/mpstemporaryndarray/init(commandbuffer:descriptor:)
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryndarray/init(commandbuffer:descriptor:)
+Description: Framework: Metal Performance Shaders Kind: Initializer Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+# init(commandBuffer:descriptor:) (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Initializer  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+convenience init(commandBuffer: any MTLCommandBuffer, descriptor: MPSNDArrayDescriptor)
+```
+
+# temporaryNDArrayWithCommandBuffer:descriptor: (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
++ (instancetype) temporaryNDArrayWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer descriptor:(MPSNDArrayDescriptor *) descriptor;
+```
+
+# Document: readCount
+
+Source path: documentation/metalperformanceshaders/mpstemporaryndarray/readcount
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryndarray/readcount
+Description: Framework: Metal Performance Shaders Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+# readCount (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+var readCount: Int { get set }
+```
+
+# readCount (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readwrite) NSUInteger readCount;
+```
+
+# Document: MPSTemporaryVector
+
+Source path: documentation/metalperformanceshaders/mpstemporaryvector
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryvector
+Description: Framework: Metal Performance Shaders Kind: Class Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+# MPSTemporaryVector (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Class  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+A vector allocated on GPU private memory.
+
+## Declaration
+
+```swift
+class MPSTemporaryVector
+```
+
+## Topics
+
+### Initializers
+
+- [init(commandBuffer:descriptor:)](mpstemporaryvector/init%28commandbuffer_descriptor_%29.md)
+
+### Instance Properties
+
+- [readCount](mpstemporaryvector/readcount.md)
+
+### Type Methods
+
+- [prefetchStorage(with:descriptorList:)](mpstemporaryvector/prefetchstorage%28with_descriptorlist_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MPSVector](mpsvector.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Vectors
+
+- [MPSVector](mpsvector.md): A 1D array of data that stores the data’s values.
+- [MPSVectorDescriptor](mpsvectordescriptor.md): A description of the length and data type of a vector.
+
+# MPSTemporaryVector (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Class  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+A vector allocated on GPU private memory.
+
+## Declaration
+
+```objectivec
+@interface MPSTemporaryVector : MPSVector
+```
+
+## Topics
+
+### Instance Properties
+
+- [readCount](mpstemporaryvector/readcount.md)
+
+### Type Methods
+
+- [temporaryVectorWithCommandBuffer:descriptor:](mpstemporaryvector/init%28commandbuffer_descriptor_%29.md)
+- [prefetchStorageWithCommandBuffer:descriptorList:](mpstemporaryvector/prefetchstorage%28with_descriptorlist_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MPSVector](mpsvector.md)
+
+## See Also
+
+### Vectors
+
+- [MPSVector](mpsvector.md): A 1D array of data that stores the data’s values.
+- [MPSVectorDescriptor](mpsvectordescriptor.md): A description of the length and data type of a vector.
+
+# Document: init(commandBuffer:descriptor:)
+
+Source path: documentation/metalperformanceshaders/mpstemporaryvector/init(commandbuffer:descriptor:)
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryvector/init(commandbuffer:descriptor:)
+Description: Framework: Metal Performance Shaders Kind: Initializer Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+# init(commandBuffer:descriptor:) (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Initializer  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+convenience init(commandBuffer: any MTLCommandBuffer, descriptor: MPSVectorDescriptor)
+```
+
+# temporaryVectorWithCommandBuffer:descriptor: (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
++ (instancetype) temporaryVectorWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer descriptor:(MPSVectorDescriptor *) descriptor;
+```
+
+# Document: prefetchStorage(with:descriptorList:)
+
+Source path: documentation/metalperformanceshaders/mpstemporaryvector/prefetchstorage(with:descriptorlist:)
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryvector/prefetchstorage(with:descriptorlist:)
+Description: Framework: Metal Performance Shaders Kind: Type Method Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+# prefetchStorage(with:descriptorList:) (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+class func prefetchStorage(with commandBuffer: any MTLCommandBuffer, descriptorList: [MPSVectorDescriptor])
+```
+
+# prefetchStorageWithCommandBuffer:descriptorList: (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
++ (void) prefetchStorageWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer descriptorList:(NSArray<MPSVectorDescriptor *> *) descriptorList;
+```
+
+# Document: readCount
+
+Source path: documentation/metalperformanceshaders/mpstemporaryvector/readcount
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryvector/readcount
+Description: Framework: Metal Performance Shaders Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+# readCount (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+var readCount: Int { get set }
+```
+
+# readCount (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readwrite) NSUInteger readCount;
+```
+
+# Document: MPSTextureLinkingConstantIndex
+
+Source path: documentation/metalperformanceshaders/mpstexturelinkingconstantindex
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstexturelinkingconstantindex
+Description: Framework: Metal Performance Shaders Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# MPSTextureLinkingConstantIndex (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var MPSTextureLinkingConstantIndex: Int32 { get }
+```
+
+# MPSTextureLinkingConstantIndex (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define MPSTextureLinkingConstantIndex
+```
+
+# Document: MPSTransformType
+
+Source path: documentation/metalperformanceshaders/mpstransformtype
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstransformtype
+Description: Framework: Metal Performance Shaders Kind: Enumeration Availability: iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.0+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+
+
+# MPSTransformType (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Enumeration  
+**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.0+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+
+
+Constants that indicate instance transformation types.
+
+## Declaration
+
+```swift
+enum MPSTransformType
+```
+
+## Topics
+
+### Enumeration Cases
+
+- [MPSTransformType.float4x4](mpstransformtype/float4x4.md)
+- [MPSTransformType.identity](mpstransformtype/identity.md)
+
+### Initializers
+
+- [init(rawValue:)](mpstransformtype/init%28rawvalue_%29.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Enumerations
+
+- [MPSAccelerationStructureStatus](mpsaccelerationstructurestatus.md): Deprecated. Constants that indicate an acceleration structure build state.
+- [MPSAccelerationStructureUsage](mpsaccelerationstructureusage.md): Deprecated. Options that describe how an acceleration structure will be used.
+- [MPSAliasingStrategy](mpsaliasingstrategy.md)
+- [MPSBoundingBoxIntersectionTestType](mpsboundingboxintersectiontesttype.md): Deprecated. Options for the intersection test type for a ray intersector bounding box.
+- [MPSCNNBatchNormalizationFlags](mpscnnbatchnormalizationflags.md): Options that define how statistics are calculated during batch normalization.
+- [MPSCNNConvolutionGradientOption](mpscnnconvolutiongradientoption.md): Options that control which gradient to compute during backward propagation.
+- [MPSCNNConvolutionWeightsLayout](mpscnnconvolutionweightslayout.md)
+- [MPSCNNLossType](mpscnnlosstype.md): Constants that indicate supported loss filter types.
+- [MPSCNNReductionType](mpscnnreductiontype.md): Constants that indicate supported reduction types.
+- [MPSCNNWeightsQuantizationType](mpscnnweightsquantizationtype.md): Options that specify the type of quantization used to generate unsigned integer weights.
+- [MPSCustomKernelIndex](mpscustomkernelindex.md)
+- [MPSDeviceCapsValues](mpsdevicecapsvalues.md)
+- [MPSDeviceOptions](mpsdeviceoptions.md)
+- [MPSFloatDataTypeBit](mpsfloatdatatypebit.md)
+- [MPSFloatDataTypeShift](mpsfloatdatatypeshift.md)
+
+# MPSTransformType (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Enumeration  
+**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.0+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+
+
+Constants that indicate instance transformation types.
+
+## Declaration
+
+```objectivec
+enum MPSTransformType : NSUInteger;
+```
+
+## Topics
+
+### Enumeration Cases
+
+- [MPSTransformTypeFloat4x4](mpstransformtype/float4x4.md)
+- [MPSTransformTypeIdentity](mpstransformtype/identity.md)
+
+## See Also
+
+### Enumerations
+
+- [MPSAccelerationStructureStatus](mpsaccelerationstructurestatus.md): Deprecated. Constants that indicate an acceleration structure build state.
+- [MPSAccelerationStructureUsage](mpsaccelerationstructureusage.md): Deprecated. Options that describe how an acceleration structure will be used.
+- [MPSAliasingStrategy](mpsaliasingstrategy.md)
+- [MPSBoundingBoxIntersectionTestType](mpsboundingboxintersectiontesttype.md): Deprecated. Options for the intersection test type for a ray intersector bounding box.
+- [MPSCNNBatchNormalizationFlags](mpscnnbatchnormalizationflags.md): Options that define how statistics are calculated during batch normalization.
+- [MPSCNNConvolutionGradientOption](mpscnnconvolutiongradientoption.md): Options that control which gradient to compute during backward propagation.
+- [MPSCNNConvolutionWeightsLayout](mpscnnconvolutionweightslayout.md)
+- [MPSCNNLossType](mpscnnlosstype.md): Constants that indicate supported loss filter types.
+- [MPSCNNReductionType](mpscnnreductiontype.md): Constants that indicate supported reduction types.
+- [MPSCNNWeightsQuantizationType](mpscnnweightsquantizationtype.md): Options that specify the type of quantization used to generate unsigned integer weights.
+- [MPSCustomKernelIndex](mpscustomkernelindex.md)
+- [MPSDeviceCapsValues](mpsdevicecapsvalues.md)
+- [MPSDeviceOptions](mpsdeviceoptions.md)
+- [MPSFloatDataTypeBit](mpsfloatdatatypebit.md)
+- [MPSFloatDataTypeShift](mpsfloatdatatypeshift.md)
+
+# Document: MPSTransformType.float4x4
+
+Source path: documentation/metalperformanceshaders/mpstransformtype/float4x4
+Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstransformtype/float4x4
+Description: Framework: Metal Performance Shaders Kind: Case Availability: iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.0+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+
+
+# MPSTransformType.float4x4 (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Case  
+**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.0+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+case float4x4
+```
+
+# MPSTransformTypeFloat4x4 (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Enumeration Case  
+**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.0+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
+MPSTransformTypeFloat4x4
+```
 
 # Document: MPSTransformType.identity
 
@@ -175915,1242 +177192,3 @@ Each viewpoint is assumed to be horizontally offset from the camera’s position
 - [overlap](overlap.md): The amount, as a fraction of image width, by which the images from the camera’s two viewpoints overlap.
 - [leftVergence](leftvergence.md): The angle, in degrees, at which the camera’s left viewpoint faces toward a central focal point.
 - [rightVergence](rightvergence.md): The angle, in degrees, at which the camera’s right viewpoint faces toward a central focal point.
-
-# Document: leftProjectionMatrix
-
-Source path: documentation/modelio/mdlstereoscopiccamera/leftprojectionmatrix
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlstereoscopiccamera/leftprojectionmatrix
-Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# leftProjectionMatrix (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
-
-## Declaration
-
-```swift
-var leftProjectionMatrix: matrix_float4x4 { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Model I/O  automatically generates this matrix from the same properties that produce the [projectionMatrix](../mdlcamera/projectionmatrix.md) property of a monocular camera, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [leftVergence](leftvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
-
-A renderer uses this matrix, along with the [leftViewMatrix](leftviewmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
-
-## See Also
-
-### Generating View and Projection Matrices
-
-- [leftViewMatrix](leftviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
-- [rightViewMatrix](rightviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
-- [rightProjectionMatrix](rightprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
-
-# leftProjectionMatrix (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readonly) matrix_float4x4 leftProjectionMatrix;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Model I/O  automatically generates this matrix from the same properties that produce the [projectionMatrix](../mdlcamera/projectionmatrix.md) property of a monocular camera, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [leftVergence](leftvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
-
-A renderer uses this matrix, along with the [leftViewMatrix](leftviewmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
-
-## See Also
-
-### Generating View and Projection Matrices
-
-- [leftViewMatrix](leftviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
-- [rightViewMatrix](rightviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
-- [rightProjectionMatrix](rightprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
-
-# Document: leftVergence
-
-Source path: documentation/modelio/mdlstereoscopiccamera/leftvergence
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlstereoscopiccamera/leftvergence
-Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# leftVergence (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The angle, in degrees, at which the camera’s left viewpoint faces toward a central focal point.
-
-## Declaration
-
-```swift
-var leftVergence: Float { get set }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-A stereoscopic camera simulates binocular vision by looking toward a central point in a scene from two slightly different viewpoints. Vergence measures the difference between the camera’s forward axis and the angle from each viewpoint toward that central point, called the *vergence point*. There are two common ways to model a stereoscopic camera:
-
-- In a toed-in camera, each simulated lens and imaging surface is rotated (by the [leftVergence](leftvergence.md) and [rightVergence](rightvergence.md) angles) to face toward the focal point. That is, a line from the focal point through the center of the lens reaches the center of the imaging surface and is perpendicular to the image plane.
-- In a parallel stereoscopic camera, the imaging surfaces are perpendicular to the camera’s forward axis and are shifted horizontally relative to the center of each lens. The distance by which each imaging surface shifts is given by the following formula:
-
-`shift = (focalLength * interPupillaryDistance) / distanceToVergencePoint`
-
-## See Also
-
-### Modeling Stereoscopic Imaging
-
-- [interPupillaryDistance](interpupillarydistance.md): The distance, in millimeters, between the stereoscopic camera’s two viewpoints.
-- [overlap](overlap.md): The amount, as a fraction of image width, by which the images from the camera’s two viewpoints overlap.
-- [rightVergence](rightvergence.md): The angle, in degrees, at which the camera’s right viewpoint faces toward a central focal point.
-
-# leftVergence (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The angle, in degrees, at which the camera’s left viewpoint faces toward a central focal point.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, assign) float leftVergence;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-A stereoscopic camera simulates binocular vision by looking toward a central point in a scene from two slightly different viewpoints. Vergence measures the difference between the camera’s forward axis and the angle from each viewpoint toward that central point, called the *vergence point*. There are two common ways to model a stereoscopic camera:
-
-- In a toed-in camera, each simulated lens and imaging surface is rotated (by the [leftVergence](leftvergence.md) and [rightVergence](rightvergence.md) angles) to face toward the focal point. That is, a line from the focal point through the center of the lens reaches the center of the imaging surface and is perpendicular to the image plane.
-- In a parallel stereoscopic camera, the imaging surfaces are perpendicular to the camera’s forward axis and are shifted horizontally relative to the center of each lens. The distance by which each imaging surface shifts is given by the following formula:
-
-`shift = (focalLength * interPupillaryDistance) / distanceToVergencePoint`
-
-## See Also
-
-### Modeling Stereoscopic Imaging
-
-- [interPupillaryDistance](interpupillarydistance.md): The distance, in millimeters, between the stereoscopic camera’s two viewpoints.
-- [overlap](overlap.md): The amount, as a fraction of image width, by which the images from the camera’s two viewpoints overlap.
-- [rightVergence](rightvergence.md): The angle, in degrees, at which the camera’s right viewpoint faces toward a central focal point.
-
-# Document: leftViewMatrix
-
-Source path: documentation/modelio/mdlstereoscopiccamera/leftviewmatrix
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlstereoscopiccamera/leftviewmatrix
-Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# leftViewMatrix (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
-
-## Declaration
-
-```swift
-var leftViewMatrix: matrix_float4x4 { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Model I/O  automatically generates this matrix from the camera’s position and orientation, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [leftVergence](leftvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
-
-A renderer uses this matrix, along with the [leftProjectionMatrix](leftprojectionmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
-
-## See Also
-
-### Generating View and Projection Matrices
-
-- [leftProjectionMatrix](leftprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
-- [rightViewMatrix](rightviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
-- [rightProjectionMatrix](rightprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
-
-# leftViewMatrix (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readonly) matrix_float4x4 leftViewMatrix;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Model I/O  automatically generates this matrix from the camera’s position and orientation, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [leftVergence](leftvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
-
-A renderer uses this matrix, along with the [leftProjectionMatrix](leftprojectionmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
-
-## See Also
-
-### Generating View and Projection Matrices
-
-- [leftProjectionMatrix](leftprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
-- [rightViewMatrix](rightviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
-- [rightProjectionMatrix](rightprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
-
-# Document: overlap
-
-Source path: documentation/modelio/mdlstereoscopiccamera/overlap
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlstereoscopiccamera/overlap
-Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# overlap (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The amount, as a fraction of image width, by which the images from the camera’s two viewpoints overlap.
-
-## Declaration
-
-```swift
-var overlap: Float { get set }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Some stereoscopic rendering processes require shifting the location of each viewpoint’s rendered image in a framebuffer before display. Use this property to determine the distance to shift images by during rendering.
-
-## See Also
-
-### Modeling Stereoscopic Imaging
-
-- [interPupillaryDistance](interpupillarydistance.md): The distance, in millimeters, between the stereoscopic camera’s two viewpoints.
-- [leftVergence](leftvergence.md): The angle, in degrees, at which the camera’s left viewpoint faces toward a central focal point.
-- [rightVergence](rightvergence.md): The angle, in degrees, at which the camera’s right viewpoint faces toward a central focal point.
-
-# overlap (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The amount, as a fraction of image width, by which the images from the camera’s two viewpoints overlap.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, assign) float overlap;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Some stereoscopic rendering processes require shifting the location of each viewpoint’s rendered image in a framebuffer before display. Use this property to determine the distance to shift images by during rendering.
-
-## See Also
-
-### Modeling Stereoscopic Imaging
-
-- [interPupillaryDistance](interpupillarydistance.md): The distance, in millimeters, between the stereoscopic camera’s two viewpoints.
-- [leftVergence](leftvergence.md): The angle, in degrees, at which the camera’s left viewpoint faces toward a central focal point.
-- [rightVergence](rightvergence.md): The angle, in degrees, at which the camera’s right viewpoint faces toward a central focal point.
-
-# Document: rightProjectionMatrix
-
-Source path: documentation/modelio/mdlstereoscopiccamera/rightprojectionmatrix
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlstereoscopiccamera/rightprojectionmatrix
-Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# rightProjectionMatrix (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
-
-## Declaration
-
-```swift
-var rightProjectionMatrix: matrix_float4x4 { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Model I/O  automatically generates this matrix from the same properties that produce the [projectionMatrix](../mdlcamera/projectionmatrix.md) property of a monocular camera, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [rightVergence](rightvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
-
-A renderer uses this matrix, along with the [rightViewMatrix](rightviewmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
-
-## See Also
-
-### Generating View and Projection Matrices
-
-- [leftViewMatrix](leftviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
-- [leftProjectionMatrix](leftprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
-- [rightViewMatrix](rightviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
-
-# rightProjectionMatrix (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readonly) matrix_float4x4 rightProjectionMatrix;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Model I/O  automatically generates this matrix from the same properties that produce the [projectionMatrix](../mdlcamera/projectionmatrix.md) property of a monocular camera, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [rightVergence](rightvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
-
-A renderer uses this matrix, along with the [rightViewMatrix](rightviewmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
-
-## See Also
-
-### Generating View and Projection Matrices
-
-- [leftViewMatrix](leftviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
-- [leftProjectionMatrix](leftprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
-- [rightViewMatrix](rightviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
-
-# Document: rightVergence
-
-Source path: documentation/modelio/mdlstereoscopiccamera/rightvergence
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlstereoscopiccamera/rightvergence
-Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# rightVergence (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The angle, in degrees, at which the camera’s right viewpoint faces toward a central focal point.
-
-## Declaration
-
-```swift
-var rightVergence: Float { get set }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-A stereoscopic camera simulates binocular vision by looking toward a central point in a scene from two slightly different viewpoints. Vergence measures the difference between the camera’s forward axis and the angle from each viewpoint toward that central point, called the *vergence point*. There are two common ways to model a stereoscopic camera:
-
-- In a toed-in camera, each simulated lens and imaging surface is rotated (by the [leftVergence](leftvergence.md) and [rightVergence](rightvergence.md) angles) to face toward the focal point. That is, a line from the focal point through the center of the lens reaches the center of the imaging surface and is perpendicular to the image plane.
-- In a parallel stereoscopic camera, the imaging surfaces are perpendicular to the camera’s forward axis and are shifted horizontally relative to the center of each lens. The distance by which each imaging surface shifts is given by the following formula:
-
-`shift = (focalLength * interPupillaryDistance) / distanceToVergencePoint`
-
-## See Also
-
-### Modeling Stereoscopic Imaging
-
-- [interPupillaryDistance](interpupillarydistance.md): The distance, in millimeters, between the stereoscopic camera’s two viewpoints.
-- [overlap](overlap.md): The amount, as a fraction of image width, by which the images from the camera’s two viewpoints overlap.
-- [leftVergence](leftvergence.md): The angle, in degrees, at which the camera’s left viewpoint faces toward a central focal point.
-
-# rightVergence (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The angle, in degrees, at which the camera’s right viewpoint faces toward a central focal point.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, assign) float rightVergence;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-A stereoscopic camera simulates binocular vision by looking toward a central point in a scene from two slightly different viewpoints. Vergence measures the difference between the camera’s forward axis and the angle from each viewpoint toward that central point, called the *vergence point*. There are two common ways to model a stereoscopic camera:
-
-- In a toed-in camera, each simulated lens and imaging surface is rotated (by the [leftVergence](leftvergence.md) and [rightVergence](rightvergence.md) angles) to face toward the focal point. That is, a line from the focal point through the center of the lens reaches the center of the imaging surface and is perpendicular to the image plane.
-- In a parallel stereoscopic camera, the imaging surfaces are perpendicular to the camera’s forward axis and are shifted horizontally relative to the center of each lens. The distance by which each imaging surface shifts is given by the following formula:
-
-`shift = (focalLength * interPupillaryDistance) / distanceToVergencePoint`
-
-## See Also
-
-### Modeling Stereoscopic Imaging
-
-- [interPupillaryDistance](interpupillarydistance.md): The distance, in millimeters, between the stereoscopic camera’s two viewpoints.
-- [overlap](overlap.md): The amount, as a fraction of image width, by which the images from the camera’s two viewpoints overlap.
-- [leftVergence](leftvergence.md): The angle, in degrees, at which the camera’s left viewpoint faces toward a central focal point.
-
-# Document: rightViewMatrix
-
-Source path: documentation/modelio/mdlstereoscopiccamera/rightviewmatrix
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlstereoscopiccamera/rightviewmatrix
-Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# rightViewMatrix (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
-
-## Declaration
-
-```swift
-var rightViewMatrix: matrix_float4x4 { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Model I/O  automatically generates this matrix from the camera’s position and orientation, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [rightVergence](rightvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
-
-A renderer uses this matrix, along with the [rightProjectionMatrix](rightprojectionmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
-
-## See Also
-
-### Generating View and Projection Matrices
-
-- [leftViewMatrix](leftviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
-- [leftProjectionMatrix](leftprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
-- [rightProjectionMatrix](rightprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
-
-# rightViewMatrix (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readonly) matrix_float4x4 rightViewMatrix;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Model I/O  automatically generates this matrix from the camera’s position and orientation, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [rightVergence](rightvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
-
-A renderer uses this matrix, along with the [rightProjectionMatrix](rightprojectionmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
-
-## See Also
-
-### Generating View and Projection Matrices
-
-- [leftViewMatrix](leftviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
-- [leftProjectionMatrix](leftprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
-- [rightProjectionMatrix](rightprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
-
-# Document: MDLSubmesh
-
-Source path: documentation/modelio/mdlsubmesh
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh
-Description: Framework: Model I/O Kind: Class Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# MDLSubmesh (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Class  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-A container for index buffer data and material information to be used in rendering all or part of a 3D object.
-
-## Declaration
-
-```swift
-class MDLSubmesh
-```
-
-<a id="overview"></a>
-
-## Overview
-
-Submeshes are contained in [MDLMesh](mdlmesh.md) objects, which provide vertex buffer data that a submesh’s index data refers to. Together, the vertex and index data describe the geometric form of a portion of the mesh, and the submesh’s [material](mdlsubmesh/material.md) property determines its intended surface appearance for rendering.
-
-## Topics
-
-### Creating a Submesh
-
-- [init(indexBuffer:indexCount:indexType:geometryType:material:)](mdlsubmesh/init%28indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a submesh with an index buffer and the specified properties.
-- [init(name:indexBuffer:indexCount:indexType:geometryType:material:)](mdlsubmesh/init%28name_indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a named submesh with an index buffer and the specified properties.
-- [init(name:indexBuffer:indexCount:indexType:geometryType:material:topology:)](mdlsubmesh/init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
-- [init(mdlSubmesh:indexType:geometryType:)](mdlsubmesh/init%28mdlsubmesh_indextype_geometrytype_%29-4czyc.md): Initializes a submesh by copying or converting another submesh.
-
-### Working with a Submesh’s Index Buffer
-
-- [indexBuffer](mdlsubmesh/indexbuffer.md): An object that provides index data for the submesh.
-- [indexCount](mdlsubmesh/indexcount.md): The number of indices in the submesh’s index buffer.
-- [indexType](mdlsubmesh/indextype.md): The data type for each element in the submesh’s index buffer.
-- [geometryType](mdlsubmesh/geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
-- [topology](mdlsubmesh/topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
-- [indexBuffer(asIndexType:)](mdlsubmesh/indexbuffer%28asindextype_%29.md)
-
-### Associating Materials with a Submesh
-
-- [material](mdlsubmesh/material.md): An object that describes the intended surface appearance of the submesh for rendering.
-
-### Identifying a Submesh
-
-- [name](mdlsubmesh/name.md): A descriptive name for the submesh.
-
-### Constants
-
-- [MDLIndexBitDepth](mdlindexbitdepth.md): Options for the size of integer data in a submesh’s index buffer, used by the [indexType](mdlsubmesh/indextype.md) property.
-- [MDLGeometryType](mdlgeometrytype.md): Types of geometric primitives for rendering a submesh, used by the [geometryType](mdlsubmesh/geometrytype.md) property.
-
-### Initializers
-
-- [init(MDLSubmesh:indexType:geometryType:)](mdlsubmesh/init%28mdlsubmesh_indextype_geometrytype_%29-6b9cm.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [MDLNamed](mdlnamed.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-## See Also
-
-### 3D Asset Basics
-
-- [MDLAsset](mdlasset.md): An indexed container for 3D objects and associated information, such as transform hierarchies, meshes, cameras, and lights.
-- [MDLObject](mdlobject.md): The base class for objects that are part of a 3D asset, including meshes, cameras, and lights.
-- [MDLTransform](mdltransform.md): A description of the local coordinate space transformations for a 3D object.
-- [MDLMesh](mdlmesh.md): A container for vertex buffer data to be used in rendering a 3D object.
-- [MDLSubmeshTopology](mdlsubmeshtopology.md): A description of how a submesh’s index buffer data is arranged and how that arrangement should be used to produce the submesh’s intended 3D shape.
-- [MDLNamed](mdlnamed.md): The common interface for Model I/O objects that expose a human-readable name.
-
-# MDLSubmesh (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Class  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-A container for index buffer data and material information to be used in rendering all or part of a 3D object.
-
-## Declaration
-
-```objectivec
-@interface MDLSubmesh : NSObject
-```
-
-<a id="overview"></a>
-
-## Overview
-
-Submeshes are contained in [MDLMesh](mdlmesh.md) objects, which provide vertex buffer data that a submesh’s index data refers to. Together, the vertex and index data describe the geometric form of a portion of the mesh, and the submesh’s [material](mdlsubmesh/material.md) property determines its intended surface appearance for rendering.
-
-## Topics
-
-### Creating a Submesh
-
-- [initWithIndexBuffer:indexCount:indexType:geometryType:material:](mdlsubmesh/init%28indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a submesh with an index buffer and the specified properties.
-- [initWithName:indexBuffer:indexCount:indexType:geometryType:material:](mdlsubmesh/init%28name_indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a named submesh with an index buffer and the specified properties.
-- [initWithName:indexBuffer:indexCount:indexType:geometryType:material:topology:](mdlsubmesh/init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
-- [initWithMDLSubmesh:indexType:geometryType:](mdlsubmesh/init%28mdlsubmesh_indextype_geometrytype_%29-4czyc.md): Initializes a submesh by copying or converting another submesh.
-
-### Working with a Submesh’s Index Buffer
-
-- [indexBuffer](mdlsubmesh/indexbuffer.md): An object that provides index data for the submesh.
-- [indexCount](mdlsubmesh/indexcount.md): The number of indices in the submesh’s index buffer.
-- [indexType](mdlsubmesh/indextype.md): The data type for each element in the submesh’s index buffer.
-- [geometryType](mdlsubmesh/geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
-- [topology](mdlsubmesh/topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
-- [indexBufferAsIndexType:](mdlsubmesh/indexbuffer%28asindextype_%29.md)
-
-### Associating Materials with a Submesh
-
-- [material](mdlsubmesh/material.md): An object that describes the intended surface appearance of the submesh for rendering.
-
-### Identifying a Submesh
-
-- [name](mdlsubmesh/name.md): A descriptive name for the submesh.
-
-### Constants
-
-- [MDLIndexBitDepth](mdlindexbitdepth.md): Options for the size of integer data in a submesh’s index buffer, used by the [indexType](mdlsubmesh/indextype.md) property.
-- [MDLGeometryType](mdlgeometrytype.md): Types of geometric primitives for rendering a submesh, used by the [geometryType](mdlsubmesh/geometrytype.md) property.
-
-### Type Methods
-
-- [submeshWithSCNGeometryElement:](mdlsubmesh/submeshwithscngeometryelement_.md)
-- [submeshWithSCNGeometryElement:bufferAllocator:](mdlsubmesh/submeshwithscngeometryelement_bufferallocator_.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Conforms To
-
-- [MDLNamed](mdlnamed.md)
-
-## See Also
-
-### 3D Asset Basics
-
-- [MDLAsset](mdlasset.md): An indexed container for 3D objects and associated information, such as transform hierarchies, meshes, cameras, and lights.
-- [MDLObject](mdlobject.md): The base class for objects that are part of a 3D asset, including meshes, cameras, and lights.
-- [MDLTransform](mdltransform.md): A description of the local coordinate space transformations for a 3D object.
-- [MDLMesh](mdlmesh.md): A container for vertex buffer data to be used in rendering a 3D object.
-- [MDLSubmeshTopology](mdlsubmeshtopology.md): A description of how a submesh’s index buffer data is arranged and how that arrangement should be used to produce the submesh’s intended 3D shape.
-- [MDLNamed](mdlnamed.md): The common interface for Model I/O objects that expose a human-readable name.
-
-# Document: geometryType
-
-Source path: documentation/modelio/mdlsubmesh/geometrytype
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/geometrytype
-Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# geometryType (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The type of geometric primitives described by the submesh’s index buffer.
-
-## Declaration
-
-```swift
-var geometryType: MDLGeometryType { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This property determines how the sequence of indices in the submesh’s index buffer should be interpreted for rendering. For example, if the geometry type is [MDLGeometryType.triangles](../mdlgeometrytype/triangles.md), each triangle to be rendered comes from an independent set of three indices, but if the geometry type is [MDLGeometryType.triangleStrips](../mdlgeometrytype/trianglestrips.md), triangles to be rendered can come from overlapping sets of indices in the sequence. If the geometry type is [MDLGeometryType.variableTopology](../mdlgeometrytype/variabletopology.md), the [topology](topology.md) property describes the non-uniform layout of the index buffer.
-
-## See Also
-
-### Working with a Submesh’s Index Buffer
-
-- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
-- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
-- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
-- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
-- [indexBuffer(asIndexType:)](indexbuffer%28asindextype_%29.md)
-
-# geometryType (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The type of geometric primitives described by the submesh’s index buffer.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readonly) MDLGeometryType geometryType;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This property determines how the sequence of indices in the submesh’s index buffer should be interpreted for rendering. For example, if the geometry type is [MDLGeometryTypeTriangles](../mdlgeometrytype/triangles.md), each triangle to be rendered comes from an independent set of three indices, but if the geometry type is [MDLGeometryTypeTriangleStrips](../mdlgeometrytype/trianglestrips.md), triangles to be rendered can come from overlapping sets of indices in the sequence. If the geometry type is [MDLGeometryTypeVariableTopology](../mdlgeometrytype/variabletopology.md), the [topology](topology.md) property describes the non-uniform layout of the index buffer.
-
-## See Also
-
-### Working with a Submesh’s Index Buffer
-
-- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
-- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
-- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
-- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
-- [indexBufferAsIndexType:](indexbuffer%28asindextype_%29.md)
-
-# Document: indexBuffer
-
-Source path: documentation/modelio/mdlsubmesh/indexbuffer
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/indexbuffer
-Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# indexBuffer (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-An object that provides index data for the submesh.
-
-## Declaration
-
-```swift
-var indexBuffer: any MDLMeshBuffer { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-An index buffer contains indices, each of which identifies a vertex in the vertex buffers of the [MDLMesh](../mdlmesh.md) object containing the mesh. Together with the submesh’s [geometryType](geometrytype.md) property, the sequence of indices determines how to interpret the mesh’s vertex data to construct the geometric form for a portion of the mesh.
-
-## See Also
-
-### Working with a Submesh’s Index Buffer
-
-- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
-- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
-- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
-- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
-- [indexBuffer(asIndexType:)](indexbuffer%28asindextype_%29.md)
-
-# indexBuffer (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-An object that provides index data for the submesh.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, retain, readonly) id<MDLMeshBuffer> indexBuffer;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-An index buffer contains indices, each of which identifies a vertex in the vertex buffers of the [MDLMesh](../mdlmesh.md) object containing the mesh. Together with the submesh’s [geometryType](geometrytype.md) property, the sequence of indices determines how to interpret the mesh’s vertex data to construct the geometric form for a portion of the mesh.
-
-## See Also
-
-### Working with a Submesh’s Index Buffer
-
-- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
-- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
-- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
-- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
-- [indexBufferAsIndexType:](indexbuffer%28asindextype_%29.md)
-
-# Document: indexBuffer(asIndexType:)
-
-Source path: documentation/modelio/mdlsubmesh/indexbuffer(asindextype:)
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/indexbuffer(asindextype:)
-Description: Framework: Model I/O Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# indexBuffer(asIndexType:) (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-func indexBuffer(asIndexType indexType: MDLIndexBitDepth) -> any MDLMeshBuffer
-```
-
-## See Also
-
-### Working with a Submesh’s Index Buffer
-
-- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
-- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
-- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
-- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
-- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
-
-# indexBufferAsIndexType: (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-- (id<MDLMeshBuffer>) indexBufferAsIndexType:(MDLIndexBitDepth) indexType;
-```
-
-## See Also
-
-### Working with a Submesh’s Index Buffer
-
-- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
-- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
-- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
-- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
-- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
-
-# Document: indexCount
-
-Source path: documentation/modelio/mdlsubmesh/indexcount
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/indexcount
-Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# indexCount (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The number of indices in the submesh’s index buffer.
-
-## Declaration
-
-```swift
-var indexCount: Int { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this index count when rendering the submesh.
-
-## See Also
-
-### Working with a Submesh’s Index Buffer
-
-- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
-- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
-- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
-- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
-- [indexBuffer(asIndexType:)](indexbuffer%28asindextype_%29.md)
-
-# indexCount (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The number of indices in the submesh’s index buffer.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readonly) NSUInteger indexCount;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this index count when rendering the submesh.
-
-## See Also
-
-### Working with a Submesh’s Index Buffer
-
-- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
-- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
-- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
-- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
-- [indexBufferAsIndexType:](indexbuffer%28asindextype_%29.md)
-
-# Document: indexType
-
-Source path: documentation/modelio/mdlsubmesh/indextype
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/indextype
-Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# indexType (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The data type for each element in the submesh’s index buffer.
-
-## Declaration
-
-```swift
-var indexType: MDLIndexBitDepth { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-For optimum performance, an index buffer should generally use the smallest possible data type to fit its number of indices.
-
-## See Also
-
-### Working with a Submesh’s Index Buffer
-
-- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
-- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
-- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
-- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
-- [indexBuffer(asIndexType:)](indexbuffer%28asindextype_%29.md)
-
-# indexType (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The data type for each element in the submesh’s index buffer.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readonly) MDLIndexBitDepth indexType;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-For optimum performance, an index buffer should generally use the smallest possible data type to fit its number of indices.
-
-## See Also
-
-### Working with a Submesh’s Index Buffer
-
-- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
-- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
-- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
-- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
-- [indexBufferAsIndexType:](indexbuffer%28asindextype_%29.md)
-
-# Document: init(indexBuffer:indexCount:indexType:geometryType:material:)
-
-Source path: documentation/modelio/mdlsubmesh/init(indexbuffer:indexcount:indextype:geometrytype:material:)
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/init(indexbuffer:indexcount:indextype:geometrytype:material:)
-Description: Framework: Model I/O Kind: Initializer Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# init(indexBuffer:indexCount:indexType:geometryType:material:) (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Initializer  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Initializes a submesh with an index buffer and the specified properties.
-
-## Declaration
-
-```swift
-init(indexBuffer: any MDLMeshBuffer, indexCount: Int, indexType: MDLIndexBitDepth, geometryType: MDLGeometryType, material: MDLMaterial?)
-```
-
-## Parameters
-
-- `indexBuffer`: An object that provides index data for the submesh.
-- `indexCount`: The number of indices in the index buffer.
-- `indexType`: The data type of each index in the index buffer.
-- `geometryType`: The type of geometric primitives described by the index buffer.
-- `material`: A description of the intended surface appearance for rendering the submesh.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new submesh object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Typically, a submesh is imported from an asset file as a member of a [MDLMesh](../mdlmesh.md) object, but you can also use this method to create a submesh programmatically.
-
-## See Also
-
-### Creating a Submesh
-
-- [init(name:indexBuffer:indexCount:indexType:geometryType:material:)](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a named submesh with an index buffer and the specified properties.
-- [init(name:indexBuffer:indexCount:indexType:geometryType:material:topology:)](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
-- [init(mdlSubmesh:indexType:geometryType:)](init%28mdlsubmesh_indextype_geometrytype_%29-4czyc.md): Initializes a submesh by copying or converting another submesh.
-
-# initWithIndexBuffer:indexCount:indexType:geometryType:material: (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Initializes a submesh with an index buffer and the specified properties.
-
-## Declaration
-
-```objectivec
-- (instancetype) initWithIndexBuffer:(id<MDLMeshBuffer>) indexBuffer indexCount:(NSUInteger) indexCount indexType:(MDLIndexBitDepth) indexType geometryType:(MDLGeometryType) geometryType material:(MDLMaterial *) material;
-```
-
-## Parameters
-
-- `indexBuffer`: An object that provides index data for the submesh.
-- `indexCount`: The number of indices in the index buffer.
-- `indexType`: The data type of each index in the index buffer.
-- `geometryType`: The type of geometric primitives described by the index buffer.
-- `material`: A description of the intended surface appearance for rendering the submesh.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new submesh object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Typically, a submesh is imported from an asset file as a member of a [MDLMesh](../mdlmesh.md) object, but you can also use this method to create a submesh programmatically.
-
-## See Also
-
-### Creating a Submesh
-
-- [initWithName:indexBuffer:indexCount:indexType:geometryType:material:](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a named submesh with an index buffer and the specified properties.
-- [initWithName:indexBuffer:indexCount:indexType:geometryType:material:topology:](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
-- [initWithMDLSubmesh:indexType:geometryType:](init%28mdlsubmesh_indextype_geometrytype_%29-4czyc.md): Initializes a submesh by copying or converting another submesh.
-
-# Document: init(mdlSubmesh:indexType:geometryType:)
-
-Source path: documentation/modelio/mdlsubmesh/init(mdlsubmesh:indextype:geometrytype:)-4czyc
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/init(mdlsubmesh:indextype:geometrytype:)-4czyc
-Description: Framework: Model I/O Kind: Initializer Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# init(mdlSubmesh:indexType:geometryType:) (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Initializer  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Initializes a submesh by copying or converting another submesh.
-
-## Declaration
-
-```swift
-init?(mdlSubmesh submesh: MDLSubmesh, indexType: MDLIndexBitDepth, geometryType: MDLGeometryType)
-```
-
-## Parameters
-
-- `submesh`: The submesh to copy or convert from.
-- `indexType`: The data type of each index for the new submesh’s index buffer.
-- `geometryType`: The type of geometric primitives for the new submesh’s index buffer.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new submesh object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If the `indexType` or `geometryType` parameter does not match the corresponding property of the object in the `submesh` parameter, this method creates a new index buffer by converting the submesh’s index buffer to the described format while preserving shape and topology. For example, you can use this method to convert a quad mesh to a triangle mesh for rendering using GPUs that do not support quad primitives, or to convert a triangle mesh to triangle strips to create a smaller index buffer.
-
-If the `indexType` and `geometryType` parameters match the corresponding properties of the input submesh, this method simply copies that submesh’s index buffer to create the new submesh.
-
-## See Also
-
-### Creating a Submesh
-
-- [init(indexBuffer:indexCount:indexType:geometryType:material:)](init%28indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a submesh with an index buffer and the specified properties.
-- [init(name:indexBuffer:indexCount:indexType:geometryType:material:)](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a named submesh with an index buffer and the specified properties.
-- [init(name:indexBuffer:indexCount:indexType:geometryType:material:topology:)](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
-
-# initWithMDLSubmesh:indexType:geometryType: (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Initializes a submesh by copying or converting another submesh.
-
-## Declaration
-
-```objectivec
-- (instancetype) initWithMDLSubmesh:(MDLSubmesh *) submesh indexType:(MDLIndexBitDepth) indexType geometryType:(MDLGeometryType) geometryType;
-```
-
-## Parameters
-
-- `submesh`: The submesh to copy or convert from.
-- `indexType`: The data type of each index for the new submesh’s index buffer.
-- `geometryType`: The type of geometric primitives for the new submesh’s index buffer.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new submesh object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If the `indexType` or `geometryType` parameter does not match the corresponding property of the object in the `submesh` parameter, this method creates a new index buffer by converting the submesh’s index buffer to the described format while preserving shape and topology. For example, you can use this method to convert a quad mesh to a triangle mesh for rendering using GPUs that do not support quad primitives, or to convert a triangle mesh to triangle strips to create a smaller index buffer.
-
-If the `indexType` and `geometryType` parameters match the corresponding properties of the input submesh, this method simply copies that submesh’s index buffer to create the new submesh.
-
-## See Also
-
-### Creating a Submesh
-
-- [initWithIndexBuffer:indexCount:indexType:geometryType:material:](init%28indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a submesh with an index buffer and the specified properties.
-- [initWithName:indexBuffer:indexCount:indexType:geometryType:material:](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a named submesh with an index buffer and the specified properties.
-- [initWithName:indexBuffer:indexCount:indexType:geometryType:material:topology:](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
-
-# Document: init(MDLSubmesh:indexType:geometryType:)
-
-Source path: documentation/modelio/mdlsubmesh/init(mdlsubmesh:indextype:geometrytype:)-6b9cm
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/init(mdlsubmesh:indextype:geometrytype:)-6b9cm
-Description: Framework: Model I/O Kind: Initializer Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# init(MDLSubmesh:indexType:geometryType:)
-
-**Framework:** Model I/O  
-**Kind:** Initializer  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-init?(MDLSubmesh submesh: MDLSubmesh, indexType: MDLIndexBitDepth, geometryType: MDLGeometryType)
-```
-
-# Document: init(name:indexBuffer:indexCount:indexType:geometryType:material:)
-
-Source path: documentation/modelio/mdlsubmesh/init(name:indexbuffer:indexcount:indextype:geometrytype:material:)
-Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/init(name:indexbuffer:indexcount:indextype:geometrytype:material:)
-Description: Framework: Model I/O Kind: Initializer Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# init(name:indexBuffer:indexCount:indexType:geometryType:material:) (Swift)
-
-**Framework:** Model I/O  
-**Kind:** Initializer  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Initializes a named submesh with an index buffer and the specified properties.
-
-## Declaration
-
-```swift
-init(name: String, indexBuffer: any MDLMeshBuffer, indexCount: Int, indexType: MDLIndexBitDepth, geometryType: MDLGeometryType, material: MDLMaterial?)
-```
-
-## Parameters
-
-- `name`: A descriptive name for the submesh. This property is not used in rendering, but can be useful in debugging.
-- `indexBuffer`: An object that provides index data for the submesh.
-- `indexCount`: The number of indices in the index buffer.
-- `indexType`: The data type of each index in the index buffer.
-- `geometryType`: The type of geometric primitives described by the index buffer.
-- `material`: A description of the intended surface appearance for rendering the submesh.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new submesh object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Typically, a submesh is imported from an asset file as a member of a [MDLMesh](../mdlmesh.md) object, but you can also use this method to create a submesh programmatically.
-
-## See Also
-
-### Creating a Submesh
-
-- [init(indexBuffer:indexCount:indexType:geometryType:material:)](init%28indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a submesh with an index buffer and the specified properties.
-- [init(name:indexBuffer:indexCount:indexType:geometryType:material:topology:)](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
-- [init(mdlSubmesh:indexType:geometryType:)](init%28mdlsubmesh_indextype_geometrytype_%29-4czyc.md): Initializes a submesh by copying or converting another submesh.
-
-# initWithName:indexBuffer:indexCount:indexType:geometryType:material: (Objective-C)
-
-**Framework:** Model I/O  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Initializes a named submesh with an index buffer and the specified properties.
-
-## Declaration
-
-```objectivec
-- (instancetype) initWithName:(NSString *) name indexBuffer:(id<MDLMeshBuffer>) indexBuffer indexCount:(NSUInteger) indexCount indexType:(MDLIndexBitDepth) indexType geometryType:(MDLGeometryType) geometryType material:(MDLMaterial *) material;
-```
-
-## Parameters
-
-- `name`: A descriptive name for the submesh. This property is not used in rendering, but can be useful in debugging.
-- `indexBuffer`: An object that provides index data for the submesh.
-- `indexCount`: The number of indices in the index buffer.
-- `indexType`: The data type of each index in the index buffer.
-- `geometryType`: The type of geometric primitives described by the index buffer.
-- `material`: A description of the intended surface appearance for rendering the submesh.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new submesh object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Typically, a submesh is imported from an asset file as a member of a [MDLMesh](../mdlmesh.md) object, but you can also use this method to create a submesh programmatically.
-
-## See Also
-
-### Creating a Submesh
-
-- [initWithIndexBuffer:indexCount:indexType:geometryType:material:](init%28indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a submesh with an index buffer and the specified properties.
-- [initWithName:indexBuffer:indexCount:indexType:geometryType:material:topology:](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
-- [initWithMDLSubmesh:indexType:geometryType:](init%28mdlsubmesh_indextype_geometrytype_%29-4czyc.md): Initializes a submesh by copying or converting another submesh.

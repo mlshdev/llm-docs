@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/delete-v1-gamecenterleaderboardsets-_id_
 
 # Delete a Leaderboard Set
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 3.0+
+**Availability:** App Store Connect API 3.0+ (deprecated in 4.3)
 
 Delete a specific leaderboard set.
+
+> This endpoint is deprecated. Use [Delete a Game Center Leaderboard Set](delete-v2-gamecenterleaderboardsets-_id_.md) instead.
 
 ## URL
 

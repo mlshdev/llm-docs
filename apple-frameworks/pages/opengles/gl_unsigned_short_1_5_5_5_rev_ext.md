@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/opengles/gl_unsigned_short_1_5_5_5_rev_ext
 
 # GL_UNSIGNED_SHORT_1_5_5_5_REV_EXT (Swift)

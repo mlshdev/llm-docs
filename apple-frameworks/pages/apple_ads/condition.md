@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/condition
 
 # Condition
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Object  
-**Availability:** Search Ads 2.0+
+**Availability:** Search Ads 2.0+ (deprecated in 5.2)
 
 The list of condition objects that allow users to filter a list of records.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -58,7 +60,7 @@ The `Condition` object functionality is similar to the `WHERE` clause in SQL.
 
 ### API Usability
 
-- [PageDetail](pagedetail.md): The number of items that return in the page.
-- [Pagination](pagination.md): The procedure to refine returned results using limit and offset parameters.
-- [Selector](selector.md): The selector objects available to filter returned data.
-- [Sorting](sorting.md): The order of grouped results.
+- [PageDetail](pagedetail.md): Deprecated. The number of items that return in the page.
+- [Pagination](pagination.md): Deprecated. The procedure to refine returned results using limit and offset parameters.
+- [Selector](selector.md): Deprecated. The selector objects available to filter returned data.
+- [Sorting](sorting.md): Deprecated. The order of grouped results.

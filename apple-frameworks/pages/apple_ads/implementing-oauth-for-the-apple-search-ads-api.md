@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/implementing-oauth-for-the-apple-search-ads-api
 
 # Implementing OAuth for the Apple Ads API
@@ -13,6 +13,10 @@ Manage secure access to Ads accounts.
 <a id="overview"></a>
 
 ## Overview
+
+> **Deprecated**
+
+> The Apple Ads Campaign Management API is deprecated and will be sunset on January 26, 2027. Use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api) instead.
 
 The Apple Ads Campaign Management API supports OAuth 2. With OAuth 2, users authenticate with credentials in exchange for an access token to make authenticated requests to Apple Ads API. OAuth 2 replaces key and certificate credentials authentication in previous versions of the API.
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseoffercodeonetimeusecodecreaterequest/data-data.dictionary/relationships-data.dictionary
 
 # InAppPurchaseOfferCodeOneTimeUseCodeCreateRequest.Data.Relationships
@@ -25,10 +25,10 @@ object InAppPurchaseOfferCodeOneTimeUseCodeCreateRequest.Data.Relationships
 
 ### Dictionaries
 
-- [InAppPurchaseOfferCodeOneTimeUseCodeCreateRequest.Data.Relationships.OfferCode](relationships-data.dictionary/offercode-data.dictionary.md): The request body you use to create an in-app purchase offer code one-time use code for a data relationships offer code.
+- [InAppPurchaseOfferCodeOneTimeUseCodeCreateRequest.Data.Relationships.OfferCode](relationships-data.dictionary/offercode-data.dictionary.md): The request body you use to create an In-App Purchase offer code one-time use code for a data relationships offer code.
 
 ## See Also
 
 ### Dictionaries
 
-- [InAppPurchaseOfferCodeOneTimeUseCodeCreateRequest.Data.Attributes](attributes-data.dictionary.md): The request body you use to create an in-app purchase offer code one-time use code create request.
+- [InAppPurchaseOfferCodeOneTimeUseCodeCreateRequest.Data.Attributes](attributes-data.dictionary.md): The request body you use to create an In-App Purchase offer code one-time use code create request.

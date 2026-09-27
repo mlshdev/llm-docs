@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_authentication_type_auto_unlock
 
 # ES_AUTHENTICATION_TYPE_AUTO_UNLOCK (Swift)

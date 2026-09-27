@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/game-center-groups
 
 # Game Center groups
@@ -87,3 +87,4 @@ Use this resource to:
 ### Details and groups
 
 - [Game Center details](game-center-details.md): Manage enablement, achievement, leaderboard, and localization details for your apps.
+- [Game Center blocked players](game-center-blocked-players.md): Block and unblock the Game Center players who can play your game.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/get-supported-countries-or-regions
 
 # Get Supported Countries or Regions
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Web Service Endpoint  
-**Availability:** Search Ads 5.0+
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 Fetches supported languages and language codes.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## URL
 
@@ -165,7 +167,7 @@ GET https://api.searchads.apple.com/api/v5/countries-or-regions?countriesOrRegio
 
 ### Product Page Endpoints
 
-- [Get Product Pages](get-product-pages.md): Fetches metadata of all your custom product pages.
-- [Get Product Pages by Identifier](get-product-pages-by-identifier.md): Fetches metadata for a specific product page.
-- [Get Product Page Locales](get-product-page-locales.md): Fetches product page locales by identifier.
-- [Get App Preview Device Sizes](get-app-preview-device-sizes.md): Fetches supported app preview device-size mappings.
+- [Get Product Pages](get-product-pages.md): Deprecated. Fetches metadata of all your custom product pages.
+- [Get Product Pages by Identifier](get-product-pages-by-identifier.md): Deprecated. Fetches metadata for a specific product page.
+- [Get Product Page Locales](get-product-page-locales.md): Deprecated. Fetches product page locales by identifier.
+- [Get App Preview Device Sizes](get-app-preview-device-sizes.md): Deprecated. Fetches supported app preview device-size mappings.

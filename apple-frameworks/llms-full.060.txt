@@ -1,10 +1,1258 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 60
+
+# Document: kSCPropNetInterfaceHardware
+
+Source path: documentation/systemconfiguration/kscpropnetinterfacehardware-c.macro
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetinterfacehardware-c.macro
+Description: Interface language: Objective-C
+
+# kSCPropNetInterfaceHardware
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define kSCPropNetInterfaceHardware
+```
+
+## See Also
+
+### Macros
+
+- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
+- [kSCCompGlobal](ksccompglobal-c.macro.md)
+- [kSCCompHostNames](ksccomphostnames-c.macro.md)
+- [kSCCompInterface](ksccompinterface-c.macro.md)
+- [kSCCompNetwork](ksccompnetwork-c.macro.md)
+- [kSCCompService](ksccompservice-c.macro.md)
+- [kSCCompSystem](ksccompsystem-c.macro.md)
+- [kSCCompUsers](ksccompusers-c.macro.md)
+- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
+- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
+- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
+- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
+- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
+- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
+- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
+
+# Document: kSCPropNetInterfaceHardware
+
+Source path: documentation/systemconfiguration/kscpropnetinterfacehardware-swift.var
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetinterfacehardware-swift.var
+Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.1+
+
+# kSCPropNetInterfaceHardware (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.1+
+
+The Interface key `Hardware`, whose value is of type `CFString`.
+
+## Declaration
+
+```swift
+let kSCPropNetInterfaceHardware: CFString
+```
+
+## See Also
+
+### Constants
+
+- [kSCPropNetInterfaceDeviceName](kscpropnetinterfacedevicename-swift.var.md): The Interface key `DeviceName`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceType](kscpropnetinterfacetype-swift.var.md): The Interface key `Type`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceSubType](kscpropnetinterfacesubtype-swift.var.md): The Interface key `SubType`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceSupportsModemOnHold](kscpropnetinterfacesupportsmodemonhold-swift.var.md): Deprecated. The Interface key `SupportsModemOnHold`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+
+# kSCPropNetInterfaceHardware (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.1+
+
+The Interface key `Hardware`, whose value is of type `CFString`.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSCPropNetInterfaceHardware;
+```
+
+## See Also
+
+### Constants
+
+- [kSCPropNetInterfaceDeviceName](kscpropnetinterfacedevicename-swift.var.md): The Interface key `DeviceName`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceType](kscpropnetinterfacetype-swift.var.md): The Interface key `Type`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceSubType](kscpropnetinterfacesubtype-swift.var.md): The Interface key `SubType`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceSupportsModemOnHold](kscpropnetinterfacesupportsmodemonhold-swift.var.md): Deprecated. The Interface key `SupportsModemOnHold`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+
+# Document: kSCPropNetInterfaces
+
+Source path: documentation/systemconfiguration/kscpropnetinterfaces-c.macro
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetinterfaces-c.macro
+Description: Interface language: Objective-C
+
+# kSCPropNetInterfaces
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define kSCPropNetInterfaces
+```
+
+## See Also
+
+### Macros
+
+- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
+- [kSCCompGlobal](ksccompglobal-c.macro.md)
+- [kSCCompHostNames](ksccomphostnames-c.macro.md)
+- [kSCCompInterface](ksccompinterface-c.macro.md)
+- [kSCCompNetwork](ksccompnetwork-c.macro.md)
+- [kSCCompService](ksccompservice-c.macro.md)
+- [kSCCompSystem](ksccompsystem-c.macro.md)
+- [kSCCompUsers](ksccompusers-c.macro.md)
+- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
+- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
+- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
+- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
+- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
+- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
+- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
+
+# Document: kSCPropNetInterfaces
+
+Source path: documentation/systemconfiguration/kscpropnetinterfaces-swift.var
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetinterfaces-swift.var
+Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.2+
+
+# kSCPropNetInterfaces (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.2+
+
+The Network key `Interfaces`, whose value is of type `CFArray`, containing elements of type `CFString`.
+
+## Declaration
+
+```swift
+let kSCPropNetInterfaces: CFString
+```
+
+# kSCPropNetInterfaces (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.2+
+
+The Network key `Interfaces`, whose value is of type `CFArray`, containing elements of type `CFString`.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSCPropNetInterfaces;
+```
+
+# Document: kSCPropNetInterfaceSubType
+
+Source path: documentation/systemconfiguration/kscpropnetinterfacesubtype-c.macro
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetinterfacesubtype-c.macro
+Description: Interface language: Objective-C
+
+# kSCPropNetInterfaceSubType
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define kSCPropNetInterfaceSubType
+```
+
+## See Also
+
+### Macros
+
+- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
+- [kSCCompGlobal](ksccompglobal-c.macro.md)
+- [kSCCompHostNames](ksccomphostnames-c.macro.md)
+- [kSCCompInterface](ksccompinterface-c.macro.md)
+- [kSCCompNetwork](ksccompnetwork-c.macro.md)
+- [kSCCompService](ksccompservice-c.macro.md)
+- [kSCCompSystem](ksccompsystem-c.macro.md)
+- [kSCCompUsers](ksccompusers-c.macro.md)
+- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
+- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
+- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
+- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
+- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
+- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
+- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
+
+# Document: kSCPropNetInterfaceSubType
+
+Source path: documentation/systemconfiguration/kscpropnetinterfacesubtype-swift.var
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetinterfacesubtype-swift.var
+Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.1+
+
+# kSCPropNetInterfaceSubType (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.1+
+
+The Interface key `SubType`, whose value is of type `CFString`.
+
+## Declaration
+
+```swift
+let kSCPropNetInterfaceSubType: CFString
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This key can be passed the following constants when the `Type` key has the value `PPP`:
+
+- `kSCValNetInterfaceSubTypePPPoE`, which has the value `PPPoE`
+- `kSCValNetInterfaceSubTypePPPSerial`, which has the value `PPPSerial`
+- `kSCValNetInterfaceSubTypePPTP`, which has the value `PPTP`
+- `kSCValNetInterfaceSubTypeL2TP`, which has the value `L2TP`
+
+## See Also
+
+### Constants
+
+- [kSCPropNetInterfaceDeviceName](kscpropnetinterfacedevicename-swift.var.md): The Interface key `DeviceName`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceHardware](kscpropnetinterfacehardware-swift.var.md): The Interface key `Hardware`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceType](kscpropnetinterfacetype-swift.var.md): The Interface key `Type`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceSupportsModemOnHold](kscpropnetinterfacesupportsmodemonhold-swift.var.md): Deprecated. The Interface key `SupportsModemOnHold`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+
+# kSCPropNetInterfaceSubType (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.1+
+
+The Interface key `SubType`, whose value is of type `CFString`.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSCPropNetInterfaceSubType;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This key can be passed the following constants when the `Type` key has the value `PPP`:
+
+- `kSCValNetInterfaceSubTypePPPoE`, which has the value `PPPoE`
+- `kSCValNetInterfaceSubTypePPPSerial`, which has the value `PPPSerial`
+- `kSCValNetInterfaceSubTypePPTP`, which has the value `PPTP`
+- `kSCValNetInterfaceSubTypeL2TP`, which has the value `L2TP`
+
+## See Also
+
+### Constants
+
+- [kSCPropNetInterfaceDeviceName](kscpropnetinterfacedevicename-swift.var.md): The Interface key `DeviceName`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceHardware](kscpropnetinterfacehardware-swift.var.md): The Interface key `Hardware`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceType](kscpropnetinterfacetype-swift.var.md): The Interface key `Type`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceSupportsModemOnHold](kscpropnetinterfacesupportsmodemonhold-swift.var.md): Deprecated. The Interface key `SupportsModemOnHold`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+
+# Document: kSCPropNetInterfaceSupportsModemOnHold
+
+Source path: documentation/systemconfiguration/kscpropnetinterfacesupportsmodemonhold-c.macro
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetinterfacesupportsmodemonhold-c.macro
+Description: Interface language: Objective-C
+
+# kSCPropNetInterfaceSupportsModemOnHold
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define kSCPropNetInterfaceSupportsModemOnHold
+```
+
+## See Also
+
+### Macros
+
+- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
+- [kSCCompGlobal](ksccompglobal-c.macro.md)
+- [kSCCompHostNames](ksccomphostnames-c.macro.md)
+- [kSCCompInterface](ksccompinterface-c.macro.md)
+- [kSCCompNetwork](ksccompnetwork-c.macro.md)
+- [kSCCompService](ksccompservice-c.macro.md)
+- [kSCCompSystem](ksccompsystem-c.macro.md)
+- [kSCCompUsers](ksccompusers-c.macro.md)
+- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
+- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
+- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
+- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
+- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
+- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
+- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
+
+# Document: kSCPropNetInterfaceSupportsModemOnHold
+
+Source path: documentation/systemconfiguration/kscpropnetinterfacesupportsmodemonhold-swift.var
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetinterfacesupportsmodemonhold-swift.var
+Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.2+ (deprecated in 10.13)
+
+# kSCPropNetInterfaceSupportsModemOnHold (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.2+ (deprecated in 10.13)
+
+The Interface key `SupportsModemOnHold`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+
+> No longer supported
+
+## Declaration
+
+```swift
+let kSCPropNetInterfaceSupportsModemOnHold: CFString
+```
+
+## See Also
+
+### Constants
+
+- [kSCPropNetInterfaceDeviceName](kscpropnetinterfacedevicename-swift.var.md): The Interface key `DeviceName`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceHardware](kscpropnetinterfacehardware-swift.var.md): The Interface key `Hardware`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceType](kscpropnetinterfacetype-swift.var.md): The Interface key `Type`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceSubType](kscpropnetinterfacesubtype-swift.var.md): The Interface key `SubType`, whose value is of type `CFString`.
+
+# kSCPropNetInterfaceSupportsModemOnHold (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.2+ (deprecated in 10.13)
+
+The Interface key `SupportsModemOnHold`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+
+> No longer supported
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSCPropNetInterfaceSupportsModemOnHold;
+```
+
+## See Also
+
+### Constants
+
+- [kSCPropNetInterfaceDeviceName](kscpropnetinterfacedevicename-swift.var.md): The Interface key `DeviceName`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceHardware](kscpropnetinterfacehardware-swift.var.md): The Interface key `Hardware`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceType](kscpropnetinterfacetype-swift.var.md): The Interface key `Type`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceSubType](kscpropnetinterfacesubtype-swift.var.md): The Interface key `SubType`, whose value is of type `CFString`.
+
+# Document: kSCPropNetInterfaceType
+
+Source path: documentation/systemconfiguration/kscpropnetinterfacetype-c.macro
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetinterfacetype-c.macro
+Description: Interface language: Objective-C
+
+# kSCPropNetInterfaceType
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define kSCPropNetInterfaceType
+```
+
+## See Also
+
+### Macros
+
+- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
+- [kSCCompGlobal](ksccompglobal-c.macro.md)
+- [kSCCompHostNames](ksccomphostnames-c.macro.md)
+- [kSCCompInterface](ksccompinterface-c.macro.md)
+- [kSCCompNetwork](ksccompnetwork-c.macro.md)
+- [kSCCompService](ksccompservice-c.macro.md)
+- [kSCCompSystem](ksccompsystem-c.macro.md)
+- [kSCCompUsers](ksccompusers-c.macro.md)
+- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
+- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
+- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
+- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
+- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
+- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
+- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
+
+# Document: kSCPropNetInterfaceType
+
+Source path: documentation/systemconfiguration/kscpropnetinterfacetype-swift.var
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetinterfacetype-swift.var
+Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.1+
+
+# kSCPropNetInterfaceType (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.1+
+
+The Interface key `Type`, whose value is of type `CFString`.
+
+## Declaration
+
+```swift
+let kSCPropNetInterfaceType: CFString
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This key can be passed the following constants:
+
+- `kSCValNetInterfaceTypeEthernet`, which has the value `Ethernet`
+- `kSCValNetInterfaceTypeFireWire`, which has the value `FireWire`
+- `kSCValNetInterfaceTypePPP`, which has the value `PPP`
+- `kSCValNetInterfaceType6to4`, which has the value `6to4`
+
+## See Also
+
+### Constants
+
+- [kSCPropNetInterfaceDeviceName](kscpropnetinterfacedevicename-swift.var.md): The Interface key `DeviceName`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceHardware](kscpropnetinterfacehardware-swift.var.md): The Interface key `Hardware`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceSubType](kscpropnetinterfacesubtype-swift.var.md): The Interface key `SubType`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceSupportsModemOnHold](kscpropnetinterfacesupportsmodemonhold-swift.var.md): Deprecated. The Interface key `SupportsModemOnHold`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+
+# kSCPropNetInterfaceType (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.1+
+
+The Interface key `Type`, whose value is of type `CFString`.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSCPropNetInterfaceType;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This key can be passed the following constants:
+
+- `kSCValNetInterfaceTypeEthernet`, which has the value `Ethernet`
+- `kSCValNetInterfaceTypeFireWire`, which has the value `FireWire`
+- `kSCValNetInterfaceTypePPP`, which has the value `PPP`
+- `kSCValNetInterfaceType6to4`, which has the value `6to4`
+
+## See Also
+
+### Constants
+
+- [kSCPropNetInterfaceDeviceName](kscpropnetinterfacedevicename-swift.var.md): The Interface key `DeviceName`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceHardware](kscpropnetinterfacehardware-swift.var.md): The Interface key `Hardware`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceSubType](kscpropnetinterfacesubtype-swift.var.md): The Interface key `SubType`, whose value is of type `CFString`.
+- [kSCPropNetInterfaceSupportsModemOnHold](kscpropnetinterfacesupportsmodemonhold-swift.var.md): Deprecated. The Interface key `SupportsModemOnHold`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+
+# Document: kSCPropNetIPSecAuthenticationMethod
+
+Source path: documentation/systemconfiguration/kscpropnetipsecauthenticationmethod-c.macro
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetipsecauthenticationmethod-c.macro
+Description: Interface language: Objective-C
+
+# kSCPropNetIPSecAuthenticationMethod
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define kSCPropNetIPSecAuthenticationMethod
+```
+
+## See Also
+
+### Macros
+
+- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
+- [kSCCompGlobal](ksccompglobal-c.macro.md)
+- [kSCCompHostNames](ksccomphostnames-c.macro.md)
+- [kSCCompInterface](ksccompinterface-c.macro.md)
+- [kSCCompNetwork](ksccompnetwork-c.macro.md)
+- [kSCCompService](ksccompservice-c.macro.md)
+- [kSCCompSystem](ksccompsystem-c.macro.md)
+- [kSCCompUsers](ksccompusers-c.macro.md)
+- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
+- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
+- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
+- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
+- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
+- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
+- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
+
+# Document: kSCPropNetIPSecAuthenticationMethod
+
+Source path: documentation/systemconfiguration/kscpropnetipsecauthenticationmethod-swift.var
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetipsecauthenticationmethod-swift.var
+Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.5+
+
+# kSCPropNetIPSecAuthenticationMethod (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.5+
+
+The IPSec key `AuthenticationMethod`, whose value is of type `CFString`.
+
+## Declaration
+
+```swift
+let kSCPropNetIPSecAuthenticationMethod: CFString
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This key can be passed the following constants:
+
+- `kSCValNetIPSecAuthenticationMethodSharedSecret`, which has the value `SharedSecret`
+- `kSCValNetIPSecAuthenticationMethodCertificate`, which has the value `Certificate`
+
+## See Also
+
+### Constants
+
+- [kSCPropNetIPSecLocalIdentifier](kscpropnetipseclocalidentifier-swift.var.md): The IPSec key `LocalIdentifier`, whose value is of type `CFString`.
+- [kSCPropNetIPSecLocalIdentifierType](kscpropnetipseclocalidentifiertype-swift.var.md): The IPSec key `LocalIdentifierType`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecret](kscpropnetipsecsharedsecret-swift.var.md): The IPSec key `SharedSecret`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecretEncryption](kscpropnetipsecsharedsecretencryption-swift.var.md): The IPSec key `SharedSecretEncryption`, whose value is of type `CFString`.
+- [kSCPropNetIPSecLocalCertificate](kscpropnetipseclocalcertificate-swift.var.md): The IPSec key `LocalCertificate`, whose value is of type `CFData`.
+- [kSCPropNetIPSecConnectTime](kscpropnetipsecconnecttime-swift.var.md): The IPSec key ConnectTime.
+- [kSCPropNetIPSecRemoteAddress](kscpropnetipsecremoteaddress-swift.var.md): The IPSec key RemoteAddress.
+- [kSCPropNetIPSecStatus](kscpropnetipsecstatus-swift.var.md): The IPSec key Status.
+- [kSCPropNetIPSecXAuthEnabled](kscpropnetipsecxauthenabled-swift.var.md): The IPSec key XAuthEnabled.
+- [kSCPropNetIPSecXAuthName](kscpropnetipsecxauthname-swift.var.md): The IPSec key XAuthName.
+- [kSCPropNetIPSecXAuthPassword](kscpropnetipsecxauthpassword-swift.var.md): The IPSec key XAuthPassword.
+- [kSCPropNetIPSecXAuthPasswordEncryption](kscpropnetipsecxauthpasswordencryption-swift.var.md): The IPSec key XAuthPasswordEncryption.
+
+# kSCPropNetIPSecAuthenticationMethod (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.5+
+
+The IPSec key `AuthenticationMethod`, whose value is of type `CFString`.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSCPropNetIPSecAuthenticationMethod;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This key can be passed the following constants:
+
+- `kSCValNetIPSecAuthenticationMethodSharedSecret`, which has the value `SharedSecret`
+- `kSCValNetIPSecAuthenticationMethodCertificate`, which has the value `Certificate`
+
+## See Also
+
+### Constants
+
+- [kSCPropNetIPSecLocalIdentifier](kscpropnetipseclocalidentifier-swift.var.md): The IPSec key `LocalIdentifier`, whose value is of type `CFString`.
+- [kSCPropNetIPSecLocalIdentifierType](kscpropnetipseclocalidentifiertype-swift.var.md): The IPSec key `LocalIdentifierType`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecret](kscpropnetipsecsharedsecret-swift.var.md): The IPSec key `SharedSecret`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecretEncryption](kscpropnetipsecsharedsecretencryption-swift.var.md): The IPSec key `SharedSecretEncryption`, whose value is of type `CFString`.
+- [kSCPropNetIPSecLocalCertificate](kscpropnetipseclocalcertificate-swift.var.md): The IPSec key `LocalCertificate`, whose value is of type `CFData`.
+- [kSCPropNetIPSecConnectTime](kscpropnetipsecconnecttime-swift.var.md): The IPSec key ConnectTime.
+- [kSCPropNetIPSecRemoteAddress](kscpropnetipsecremoteaddress-swift.var.md): The IPSec key RemoteAddress.
+- [kSCPropNetIPSecStatus](kscpropnetipsecstatus-swift.var.md): The IPSec key Status.
+- [kSCPropNetIPSecXAuthEnabled](kscpropnetipsecxauthenabled-swift.var.md): The IPSec key XAuthEnabled.
+- [kSCPropNetIPSecXAuthName](kscpropnetipsecxauthname-swift.var.md): The IPSec key XAuthName.
+- [kSCPropNetIPSecXAuthPassword](kscpropnetipsecxauthpassword-swift.var.md): The IPSec key XAuthPassword.
+- [kSCPropNetIPSecXAuthPasswordEncryption](kscpropnetipsecxauthpasswordencryption-swift.var.md): The IPSec key XAuthPasswordEncryption.
+
+# Document: kSCPropNetIPSecConnectTime
+
+Source path: documentation/systemconfiguration/kscpropnetipsecconnecttime-c.macro
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetipsecconnecttime-c.macro
+Description: Interface language: Objective-C
+
+# kSCPropNetIPSecConnectTime
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define kSCPropNetIPSecConnectTime
+```
+
+## See Also
+
+### Macros
+
+- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
+- [kSCCompGlobal](ksccompglobal-c.macro.md)
+- [kSCCompHostNames](ksccomphostnames-c.macro.md)
+- [kSCCompInterface](ksccompinterface-c.macro.md)
+- [kSCCompNetwork](ksccompnetwork-c.macro.md)
+- [kSCCompService](ksccompservice-c.macro.md)
+- [kSCCompSystem](ksccompsystem-c.macro.md)
+- [kSCCompUsers](ksccompusers-c.macro.md)
+- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
+- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
+- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
+- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
+- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
+- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
+- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
+
+# Document: kSCPropNetIPSecConnectTime
+
+Source path: documentation/systemconfiguration/kscpropnetipsecconnecttime-swift.var
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetipsecconnecttime-swift.var
+Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.6+
+
+# kSCPropNetIPSecConnectTime (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.6+
+
+The IPSec key ConnectTime.
+
+## Declaration
+
+```swift
+let kSCPropNetIPSecConnectTime: CFString
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this key is of type [CFNumber](../corefoundation/cfnumber.md).
+
+## See Also
+
+### Constants
+
+- [kSCCompAnyRegex](ksccompanyregex-swift.var.md): A regular expression pattern that matches any component.
+- [kSCPropNetIPSecRemoteAddress](kscpropnetipsecremoteaddress-swift.var.md): The IPSec key RemoteAddress.
+- [kSCPropNetIPSecStatus](kscpropnetipsecstatus-swift.var.md): The IPSec key Status.
+- [kSCPropNetIPSecXAuthEnabled](kscpropnetipsecxauthenabled-swift.var.md): The IPSec key XAuthEnabled.
+- [kSCPropNetIPSecXAuthName](kscpropnetipsecxauthname-swift.var.md): The IPSec key XAuthName.
+- [kSCPropNetIPSecXAuthPassword](kscpropnetipsecxauthpassword-swift.var.md): The IPSec key XAuthPassword.
+- [kSCPropNetIPSecXAuthPasswordEncryption](kscpropnetipsecxauthpasswordencryption-swift.var.md): The IPSec key XAuthPasswordEncryption.
+- [kSCPropNetProxiesProxyAutoConfigJavaScript](kscpropnetproxiesproxyautoconfigjavascript-swift.var.md): The Proxies key ProxyAutoConfigJavaScript.
+- [kSCResvInactive](kscresvinactive-swift.var.md): The reserved key \__INACTIVE\__.
+- [kSCResvLink](kscresvlink-swift.var.md): The reserved key \__LINK\__.
+- [kSCValNetIPSecAuthenticationMethodCertificate](kscvalnetipsecauthenticationmethodcertificate-swift.var.md): The constant value Certificate.
+- [kSCValNetIPSecAuthenticationMethodHybrid](kscvalnetipsecauthenticationmethodhybrid-swift.var.md): The constant value Hybrid.
+- [kSCValNetIPSecAuthenticationMethodSharedSecret](kscvalnetipsecauthenticationmethodsharedsecret-swift.var.md): The constant value SharedSecret.
+- [kSCValNetIPSecLocalIdentifierTypeKeyID](kscvalnetipseclocalidentifiertypekeyid-swift.var.md): The constant value KeyID.
+- [kSCValNetIPSecSharedSecretEncryptionKeychain](kscvalnetipsecsharedsecretencryptionkeychain-swift.var.md): The constant value Keychain.
+
+# kSCPropNetIPSecConnectTime (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.6+
+
+The IPSec key ConnectTime.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSCPropNetIPSecConnectTime;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this key is of type [CFNumberRef](../corefoundation/cfnumber.md).
+
+## See Also
+
+### Constants
+
+- [kCNNetworkInfoKeyBSSID](kcnnetworkinfokeybssid.md): The key for the network’s BSSID, which is represented as a [CFStringRef](../corefoundation/cfstring.md) object.
+- [kCNNetworkInfoKeySSID](kcnnetworkinfokeyssid.md): The key for the network’s SSID, which is represented as a [CFStringRef](../corefoundation/cfstring.md) object.
+- [kCNNetworkInfoKeySSIDData](kcnnetworkinfokeyssiddata.md): The key for the network’s SSID, which is represented as a [CFDataRef](../corefoundation/cfdata.md) object.
+- [kSCCompAnyRegex](ksccompanyregex-swift.var.md): A regular expression pattern that matches any component.
+- [kSCPropNetIPSecRemoteAddress](kscpropnetipsecremoteaddress-swift.var.md): The IPSec key RemoteAddress.
+- [kSCPropNetIPSecStatus](kscpropnetipsecstatus-swift.var.md): The IPSec key Status.
+- [kSCPropNetIPSecXAuthEnabled](kscpropnetipsecxauthenabled-swift.var.md): The IPSec key XAuthEnabled.
+- [kSCPropNetIPSecXAuthName](kscpropnetipsecxauthname-swift.var.md): The IPSec key XAuthName.
+- [kSCPropNetIPSecXAuthPassword](kscpropnetipsecxauthpassword-swift.var.md): The IPSec key XAuthPassword.
+- [kSCPropNetIPSecXAuthPasswordEncryption](kscpropnetipsecxauthpasswordencryption-swift.var.md): The IPSec key XAuthPasswordEncryption.
+- [kSCPropNetProxiesProxyAutoConfigJavaScript](kscpropnetproxiesproxyautoconfigjavascript-swift.var.md): The Proxies key ProxyAutoConfigJavaScript.
+- [kSCPropUsersConsoleUserGID](kscpropusersconsoleusergid-c.var.md): Deprecated. The deprecated key GID.
+- [kSCPropUsersConsoleUserName](kscpropusersconsoleusername-c.var.md): Deprecated. The deprecated key Name.
+- [kSCPropUsersConsoleUserUID](kscpropusersconsoleuseruid-c.var.md): Deprecated. The deprecated key UID.
+- [kSCResvInactive](kscresvinactive-swift.var.md): The reserved key \__INACTIVE\__.
+
+# Document: kSCPropNetIPSecLocalCertificate
+
+Source path: documentation/systemconfiguration/kscpropnetipseclocalcertificate-c.macro
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetipseclocalcertificate-c.macro
+Description: Interface language: Objective-C
+
+# kSCPropNetIPSecLocalCertificate
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define kSCPropNetIPSecLocalCertificate
+```
+
+## See Also
+
+### Macros
+
+- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
+- [kSCCompGlobal](ksccompglobal-c.macro.md)
+- [kSCCompHostNames](ksccomphostnames-c.macro.md)
+- [kSCCompInterface](ksccompinterface-c.macro.md)
+- [kSCCompNetwork](ksccompnetwork-c.macro.md)
+- [kSCCompService](ksccompservice-c.macro.md)
+- [kSCCompSystem](ksccompsystem-c.macro.md)
+- [kSCCompUsers](ksccompusers-c.macro.md)
+- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
+- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
+- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
+- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
+- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
+- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
+- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
+
+# Document: kSCPropNetIPSecLocalCertificate
+
+Source path: documentation/systemconfiguration/kscpropnetipseclocalcertificate-swift.var
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetipseclocalcertificate-swift.var
+Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.5+
+
+# kSCPropNetIPSecLocalCertificate (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.5+
+
+The IPSec key `LocalCertificate`, whose value is of type `CFData`.
+
+## Declaration
+
+```swift
+let kSCPropNetIPSecLocalCertificate: CFString
+```
+
+## See Also
+
+### Constants
+
+- [kSCPropNetIPSecLocalIdentifier](kscpropnetipseclocalidentifier-swift.var.md): The IPSec key `LocalIdentifier`, whose value is of type `CFString`.
+- [kSCPropNetIPSecLocalIdentifierType](kscpropnetipseclocalidentifiertype-swift.var.md): The IPSec key `LocalIdentifierType`, whose value is of type `CFString`.
+- [kSCPropNetIPSecAuthenticationMethod](kscpropnetipsecauthenticationmethod-swift.var.md): The IPSec key `AuthenticationMethod`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecret](kscpropnetipsecsharedsecret-swift.var.md): The IPSec key `SharedSecret`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecretEncryption](kscpropnetipsecsharedsecretencryption-swift.var.md): The IPSec key `SharedSecretEncryption`, whose value is of type `CFString`.
+- [kSCPropNetIPSecConnectTime](kscpropnetipsecconnecttime-swift.var.md): The IPSec key ConnectTime.
+- [kSCPropNetIPSecRemoteAddress](kscpropnetipsecremoteaddress-swift.var.md): The IPSec key RemoteAddress.
+- [kSCPropNetIPSecStatus](kscpropnetipsecstatus-swift.var.md): The IPSec key Status.
+- [kSCPropNetIPSecXAuthEnabled](kscpropnetipsecxauthenabled-swift.var.md): The IPSec key XAuthEnabled.
+- [kSCPropNetIPSecXAuthName](kscpropnetipsecxauthname-swift.var.md): The IPSec key XAuthName.
+- [kSCPropNetIPSecXAuthPassword](kscpropnetipsecxauthpassword-swift.var.md): The IPSec key XAuthPassword.
+- [kSCPropNetIPSecXAuthPasswordEncryption](kscpropnetipsecxauthpasswordencryption-swift.var.md): The IPSec key XAuthPasswordEncryption.
+
+# kSCPropNetIPSecLocalCertificate (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.5+
+
+The IPSec key `LocalCertificate`, whose value is of type `CFData`.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSCPropNetIPSecLocalCertificate;
+```
+
+## See Also
+
+### Constants
+
+- [kSCPropNetIPSecLocalIdentifier](kscpropnetipseclocalidentifier-swift.var.md): The IPSec key `LocalIdentifier`, whose value is of type `CFString`.
+- [kSCPropNetIPSecLocalIdentifierType](kscpropnetipseclocalidentifiertype-swift.var.md): The IPSec key `LocalIdentifierType`, whose value is of type `CFString`.
+- [kSCPropNetIPSecAuthenticationMethod](kscpropnetipsecauthenticationmethod-swift.var.md): The IPSec key `AuthenticationMethod`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecret](kscpropnetipsecsharedsecret-swift.var.md): The IPSec key `SharedSecret`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecretEncryption](kscpropnetipsecsharedsecretencryption-swift.var.md): The IPSec key `SharedSecretEncryption`, whose value is of type `CFString`.
+- [kSCPropNetIPSecConnectTime](kscpropnetipsecconnecttime-swift.var.md): The IPSec key ConnectTime.
+- [kSCPropNetIPSecRemoteAddress](kscpropnetipsecremoteaddress-swift.var.md): The IPSec key RemoteAddress.
+- [kSCPropNetIPSecStatus](kscpropnetipsecstatus-swift.var.md): The IPSec key Status.
+- [kSCPropNetIPSecXAuthEnabled](kscpropnetipsecxauthenabled-swift.var.md): The IPSec key XAuthEnabled.
+- [kSCPropNetIPSecXAuthName](kscpropnetipsecxauthname-swift.var.md): The IPSec key XAuthName.
+- [kSCPropNetIPSecXAuthPassword](kscpropnetipsecxauthpassword-swift.var.md): The IPSec key XAuthPassword.
+- [kSCPropNetIPSecXAuthPasswordEncryption](kscpropnetipsecxauthpasswordencryption-swift.var.md): The IPSec key XAuthPasswordEncryption.
+
+# Document: kSCPropNetIPSecLocalIdentifier
+
+Source path: documentation/systemconfiguration/kscpropnetipseclocalidentifier-c.macro
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetipseclocalidentifier-c.macro
+Description: Interface language: Objective-C
+
+# kSCPropNetIPSecLocalIdentifier
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define kSCPropNetIPSecLocalIdentifier
+```
+
+## See Also
+
+### Macros
+
+- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
+- [kSCCompGlobal](ksccompglobal-c.macro.md)
+- [kSCCompHostNames](ksccomphostnames-c.macro.md)
+- [kSCCompInterface](ksccompinterface-c.macro.md)
+- [kSCCompNetwork](ksccompnetwork-c.macro.md)
+- [kSCCompService](ksccompservice-c.macro.md)
+- [kSCCompSystem](ksccompsystem-c.macro.md)
+- [kSCCompUsers](ksccompusers-c.macro.md)
+- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
+- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
+- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
+- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
+- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
+- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
+- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
+
+# Document: kSCPropNetIPSecLocalIdentifier
+
+Source path: documentation/systemconfiguration/kscpropnetipseclocalidentifier-swift.var
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetipseclocalidentifier-swift.var
+Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.5+
+
+# kSCPropNetIPSecLocalIdentifier (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.5+
+
+The IPSec key `LocalIdentifier`, whose value is of type `CFString`.
+
+## Declaration
+
+```swift
+let kSCPropNetIPSecLocalIdentifier: CFString
+```
+
+## See Also
+
+### Constants
+
+- [kSCPropNetIPSecLocalIdentifierType](kscpropnetipseclocalidentifiertype-swift.var.md): The IPSec key `LocalIdentifierType`, whose value is of type `CFString`.
+- [kSCPropNetIPSecAuthenticationMethod](kscpropnetipsecauthenticationmethod-swift.var.md): The IPSec key `AuthenticationMethod`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecret](kscpropnetipsecsharedsecret-swift.var.md): The IPSec key `SharedSecret`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecretEncryption](kscpropnetipsecsharedsecretencryption-swift.var.md): The IPSec key `SharedSecretEncryption`, whose value is of type `CFString`.
+- [kSCPropNetIPSecLocalCertificate](kscpropnetipseclocalcertificate-swift.var.md): The IPSec key `LocalCertificate`, whose value is of type `CFData`.
+- [kSCPropNetIPSecConnectTime](kscpropnetipsecconnecttime-swift.var.md): The IPSec key ConnectTime.
+- [kSCPropNetIPSecRemoteAddress](kscpropnetipsecremoteaddress-swift.var.md): The IPSec key RemoteAddress.
+- [kSCPropNetIPSecStatus](kscpropnetipsecstatus-swift.var.md): The IPSec key Status.
+- [kSCPropNetIPSecXAuthEnabled](kscpropnetipsecxauthenabled-swift.var.md): The IPSec key XAuthEnabled.
+- [kSCPropNetIPSecXAuthName](kscpropnetipsecxauthname-swift.var.md): The IPSec key XAuthName.
+- [kSCPropNetIPSecXAuthPassword](kscpropnetipsecxauthpassword-swift.var.md): The IPSec key XAuthPassword.
+- [kSCPropNetIPSecXAuthPasswordEncryption](kscpropnetipsecxauthpasswordencryption-swift.var.md): The IPSec key XAuthPasswordEncryption.
+
+# kSCPropNetIPSecLocalIdentifier (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.5+
+
+The IPSec key `LocalIdentifier`, whose value is of type `CFString`.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSCPropNetIPSecLocalIdentifier;
+```
+
+## See Also
+
+### Constants
+
+- [kSCPropNetIPSecLocalIdentifierType](kscpropnetipseclocalidentifiertype-swift.var.md): The IPSec key `LocalIdentifierType`, whose value is of type `CFString`.
+- [kSCPropNetIPSecAuthenticationMethod](kscpropnetipsecauthenticationmethod-swift.var.md): The IPSec key `AuthenticationMethod`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecret](kscpropnetipsecsharedsecret-swift.var.md): The IPSec key `SharedSecret`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecretEncryption](kscpropnetipsecsharedsecretencryption-swift.var.md): The IPSec key `SharedSecretEncryption`, whose value is of type `CFString`.
+- [kSCPropNetIPSecLocalCertificate](kscpropnetipseclocalcertificate-swift.var.md): The IPSec key `LocalCertificate`, whose value is of type `CFData`.
+- [kSCPropNetIPSecConnectTime](kscpropnetipsecconnecttime-swift.var.md): The IPSec key ConnectTime.
+- [kSCPropNetIPSecRemoteAddress](kscpropnetipsecremoteaddress-swift.var.md): The IPSec key RemoteAddress.
+- [kSCPropNetIPSecStatus](kscpropnetipsecstatus-swift.var.md): The IPSec key Status.
+- [kSCPropNetIPSecXAuthEnabled](kscpropnetipsecxauthenabled-swift.var.md): The IPSec key XAuthEnabled.
+- [kSCPropNetIPSecXAuthName](kscpropnetipsecxauthname-swift.var.md): The IPSec key XAuthName.
+- [kSCPropNetIPSecXAuthPassword](kscpropnetipsecxauthpassword-swift.var.md): The IPSec key XAuthPassword.
+- [kSCPropNetIPSecXAuthPasswordEncryption](kscpropnetipsecxauthpasswordencryption-swift.var.md): The IPSec key XAuthPasswordEncryption.
+
+# Document: kSCPropNetIPSecLocalIdentifierType
+
+Source path: documentation/systemconfiguration/kscpropnetipseclocalidentifiertype-c.macro
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetipseclocalidentifiertype-c.macro
+Description: Interface language: Objective-C
+
+# kSCPropNetIPSecLocalIdentifierType
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define kSCPropNetIPSecLocalIdentifierType
+```
+
+## See Also
+
+### Macros
+
+- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
+- [kSCCompGlobal](ksccompglobal-c.macro.md)
+- [kSCCompHostNames](ksccomphostnames-c.macro.md)
+- [kSCCompInterface](ksccompinterface-c.macro.md)
+- [kSCCompNetwork](ksccompnetwork-c.macro.md)
+- [kSCCompService](ksccompservice-c.macro.md)
+- [kSCCompSystem](ksccompsystem-c.macro.md)
+- [kSCCompUsers](ksccompusers-c.macro.md)
+- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
+- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
+- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
+- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
+- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
+- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
+- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
+
+# Document: kSCPropNetIPSecLocalIdentifierType
+
+Source path: documentation/systemconfiguration/kscpropnetipseclocalidentifiertype-swift.var
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetipseclocalidentifiertype-swift.var
+Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.5+
+
+# kSCPropNetIPSecLocalIdentifierType (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.5+
+
+The IPSec key `LocalIdentifierType`, whose value is of type `CFString`.
+
+## Declaration
+
+```swift
+let kSCPropNetIPSecLocalIdentifierType: CFString
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This key can be passed the following constant:
+
+- `kSCValNetIPSecLocalIdentifierTypeKeyID`, which has the value `KeyID`
+
+## See Also
+
+### Constants
+
+- [kSCPropNetIPSecLocalIdentifier](kscpropnetipseclocalidentifier-swift.var.md): The IPSec key `LocalIdentifier`, whose value is of type `CFString`.
+- [kSCPropNetIPSecAuthenticationMethod](kscpropnetipsecauthenticationmethod-swift.var.md): The IPSec key `AuthenticationMethod`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecret](kscpropnetipsecsharedsecret-swift.var.md): The IPSec key `SharedSecret`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecretEncryption](kscpropnetipsecsharedsecretencryption-swift.var.md): The IPSec key `SharedSecretEncryption`, whose value is of type `CFString`.
+- [kSCPropNetIPSecLocalCertificate](kscpropnetipseclocalcertificate-swift.var.md): The IPSec key `LocalCertificate`, whose value is of type `CFData`.
+- [kSCPropNetIPSecConnectTime](kscpropnetipsecconnecttime-swift.var.md): The IPSec key ConnectTime.
+- [kSCPropNetIPSecRemoteAddress](kscpropnetipsecremoteaddress-swift.var.md): The IPSec key RemoteAddress.
+- [kSCPropNetIPSecStatus](kscpropnetipsecstatus-swift.var.md): The IPSec key Status.
+- [kSCPropNetIPSecXAuthEnabled](kscpropnetipsecxauthenabled-swift.var.md): The IPSec key XAuthEnabled.
+- [kSCPropNetIPSecXAuthName](kscpropnetipsecxauthname-swift.var.md): The IPSec key XAuthName.
+- [kSCPropNetIPSecXAuthPassword](kscpropnetipsecxauthpassword-swift.var.md): The IPSec key XAuthPassword.
+- [kSCPropNetIPSecXAuthPasswordEncryption](kscpropnetipsecxauthpasswordencryption-swift.var.md): The IPSec key XAuthPasswordEncryption.
+
+# kSCPropNetIPSecLocalIdentifierType (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.5+
+
+The IPSec key `LocalIdentifierType`, whose value is of type `CFString`.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSCPropNetIPSecLocalIdentifierType;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This key can be passed the following constant:
+
+- `kSCValNetIPSecLocalIdentifierTypeKeyID`, which has the value `KeyID`
+
+## See Also
+
+### Constants
+
+- [kSCPropNetIPSecLocalIdentifier](kscpropnetipseclocalidentifier-swift.var.md): The IPSec key `LocalIdentifier`, whose value is of type `CFString`.
+- [kSCPropNetIPSecAuthenticationMethod](kscpropnetipsecauthenticationmethod-swift.var.md): The IPSec key `AuthenticationMethod`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecret](kscpropnetipsecsharedsecret-swift.var.md): The IPSec key `SharedSecret`, whose value is of type `CFString`.
+- [kSCPropNetIPSecSharedSecretEncryption](kscpropnetipsecsharedsecretencryption-swift.var.md): The IPSec key `SharedSecretEncryption`, whose value is of type `CFString`.
+- [kSCPropNetIPSecLocalCertificate](kscpropnetipseclocalcertificate-swift.var.md): The IPSec key `LocalCertificate`, whose value is of type `CFData`.
+- [kSCPropNetIPSecConnectTime](kscpropnetipsecconnecttime-swift.var.md): The IPSec key ConnectTime.
+- [kSCPropNetIPSecRemoteAddress](kscpropnetipsecremoteaddress-swift.var.md): The IPSec key RemoteAddress.
+- [kSCPropNetIPSecStatus](kscpropnetipsecstatus-swift.var.md): The IPSec key Status.
+- [kSCPropNetIPSecXAuthEnabled](kscpropnetipsecxauthenabled-swift.var.md): The IPSec key XAuthEnabled.
+- [kSCPropNetIPSecXAuthName](kscpropnetipsecxauthname-swift.var.md): The IPSec key XAuthName.
+- [kSCPropNetIPSecXAuthPassword](kscpropnetipsecxauthpassword-swift.var.md): The IPSec key XAuthPassword.
+- [kSCPropNetIPSecXAuthPasswordEncryption](kscpropnetipsecxauthpasswordencryption-swift.var.md): The IPSec key XAuthPasswordEncryption.
+
+# Document: kSCPropNetIPSecRemoteAddress
+
+Source path: documentation/systemconfiguration/kscpropnetipsecremoteaddress-c.macro
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetipsecremoteaddress-c.macro
+Description: Interface language: Objective-C
+
+# kSCPropNetIPSecRemoteAddress
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define kSCPropNetIPSecRemoteAddress
+```
+
+## See Also
+
+### Macros
+
+- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
+- [kSCCompGlobal](ksccompglobal-c.macro.md)
+- [kSCCompHostNames](ksccomphostnames-c.macro.md)
+- [kSCCompInterface](ksccompinterface-c.macro.md)
+- [kSCCompNetwork](ksccompnetwork-c.macro.md)
+- [kSCCompService](ksccompservice-c.macro.md)
+- [kSCCompSystem](ksccompsystem-c.macro.md)
+- [kSCCompUsers](ksccompusers-c.macro.md)
+- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
+- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
+- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
+- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
+- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
+- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
+- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
+
+# Document: kSCPropNetIPSecRemoteAddress
+
+Source path: documentation/systemconfiguration/kscpropnetipsecremoteaddress-swift.var
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetipsecremoteaddress-swift.var
+Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.6+
+
+# kSCPropNetIPSecRemoteAddress (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.6+
+
+The IPSec key RemoteAddress.
+
+## Declaration
+
+```swift
+let kSCPropNetIPSecRemoteAddress: CFString
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this key is of type [CFString](../corefoundation/cfstring.md).
+
+## See Also
+
+### Constants
+
+- [kSCCompAnyRegex](ksccompanyregex-swift.var.md): A regular expression pattern that matches any component.
+- [kSCPropNetIPSecConnectTime](kscpropnetipsecconnecttime-swift.var.md): The IPSec key ConnectTime.
+- [kSCPropNetIPSecStatus](kscpropnetipsecstatus-swift.var.md): The IPSec key Status.
+- [kSCPropNetIPSecXAuthEnabled](kscpropnetipsecxauthenabled-swift.var.md): The IPSec key XAuthEnabled.
+- [kSCPropNetIPSecXAuthName](kscpropnetipsecxauthname-swift.var.md): The IPSec key XAuthName.
+- [kSCPropNetIPSecXAuthPassword](kscpropnetipsecxauthpassword-swift.var.md): The IPSec key XAuthPassword.
+- [kSCPropNetIPSecXAuthPasswordEncryption](kscpropnetipsecxauthpasswordencryption-swift.var.md): The IPSec key XAuthPasswordEncryption.
+- [kSCPropNetProxiesProxyAutoConfigJavaScript](kscpropnetproxiesproxyautoconfigjavascript-swift.var.md): The Proxies key ProxyAutoConfigJavaScript.
+- [kSCResvInactive](kscresvinactive-swift.var.md): The reserved key \__INACTIVE\__.
+- [kSCResvLink](kscresvlink-swift.var.md): The reserved key \__LINK\__.
+- [kSCValNetIPSecAuthenticationMethodCertificate](kscvalnetipsecauthenticationmethodcertificate-swift.var.md): The constant value Certificate.
+- [kSCValNetIPSecAuthenticationMethodHybrid](kscvalnetipsecauthenticationmethodhybrid-swift.var.md): The constant value Hybrid.
+- [kSCValNetIPSecAuthenticationMethodSharedSecret](kscvalnetipsecauthenticationmethodsharedsecret-swift.var.md): The constant value SharedSecret.
+- [kSCValNetIPSecLocalIdentifierTypeKeyID](kscvalnetipseclocalidentifiertypekeyid-swift.var.md): The constant value KeyID.
+- [kSCValNetIPSecSharedSecretEncryptionKeychain](kscvalnetipsecsharedsecretencryptionkeychain-swift.var.md): The constant value Keychain.
+
+# kSCPropNetIPSecRemoteAddress (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.6+
+
+The IPSec key RemoteAddress.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSCPropNetIPSecRemoteAddress;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this key is of type [CFStringRef](../corefoundation/cfstring.md).
+
+## See Also
+
+### Constants
+
+- [kCNNetworkInfoKeyBSSID](kcnnetworkinfokeybssid.md): The key for the network’s BSSID, which is represented as a [CFStringRef](../corefoundation/cfstring.md) object.
+- [kCNNetworkInfoKeySSID](kcnnetworkinfokeyssid.md): The key for the network’s SSID, which is represented as a [CFStringRef](../corefoundation/cfstring.md) object.
+- [kCNNetworkInfoKeySSIDData](kcnnetworkinfokeyssiddata.md): The key for the network’s SSID, which is represented as a [CFDataRef](../corefoundation/cfdata.md) object.
+- [kSCCompAnyRegex](ksccompanyregex-swift.var.md): A regular expression pattern that matches any component.
+- [kSCPropNetIPSecConnectTime](kscpropnetipsecconnecttime-swift.var.md): The IPSec key ConnectTime.
+- [kSCPropNetIPSecStatus](kscpropnetipsecstatus-swift.var.md): The IPSec key Status.
+- [kSCPropNetIPSecXAuthEnabled](kscpropnetipsecxauthenabled-swift.var.md): The IPSec key XAuthEnabled.
+- [kSCPropNetIPSecXAuthName](kscpropnetipsecxauthname-swift.var.md): The IPSec key XAuthName.
+- [kSCPropNetIPSecXAuthPassword](kscpropnetipsecxauthpassword-swift.var.md): The IPSec key XAuthPassword.
+- [kSCPropNetIPSecXAuthPasswordEncryption](kscpropnetipsecxauthpasswordencryption-swift.var.md): The IPSec key XAuthPasswordEncryption.
+- [kSCPropNetProxiesProxyAutoConfigJavaScript](kscpropnetproxiesproxyautoconfigjavascript-swift.var.md): The Proxies key ProxyAutoConfigJavaScript.
+- [kSCPropUsersConsoleUserGID](kscpropusersconsoleusergid-c.var.md): Deprecated. The deprecated key GID.
+- [kSCPropUsersConsoleUserName](kscpropusersconsoleusername-c.var.md): Deprecated. The deprecated key Name.
+- [kSCPropUsersConsoleUserUID](kscpropusersconsoleuseruid-c.var.md): Deprecated. The deprecated key UID.
+- [kSCResvInactive](kscresvinactive-swift.var.md): The reserved key \__INACTIVE\__.
+
+# Document: kSCPropNetIPSecSharedSecret
+
+Source path: documentation/systemconfiguration/kscpropnetipsecsharedsecret-c.macro
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscpropnetipsecsharedsecret-c.macro
+Description: Interface language: Objective-C
+
+# kSCPropNetIPSecSharedSecret
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define kSCPropNetIPSecSharedSecret
+```
+
+## See Also
+
+### Macros
+
+- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
+- [kSCCompGlobal](ksccompglobal-c.macro.md)
+- [kSCCompHostNames](ksccomphostnames-c.macro.md)
+- [kSCCompInterface](ksccompinterface-c.macro.md)
+- [kSCCompNetwork](ksccompnetwork-c.macro.md)
+- [kSCCompService](ksccompservice-c.macro.md)
+- [kSCCompSystem](ksccompsystem-c.macro.md)
+- [kSCCompUsers](ksccompusers-c.macro.md)
+- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
+- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
+- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
+- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
+- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
+- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
+- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
 
 # Document: kSCPropNetIPSecSharedSecret
 
@@ -174240,7 +175488,7 @@ For issues not mentioned in release notes, file bugs through [Feedback Assistant
 
 ### tvOS 27
 
-- [tvOS 27.2 Beta Release Notes](tvos-release-notes/tvos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [tvOS 27.2 Beta 2 Release Notes](tvos-release-notes/tvos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [tvOS 27 Release Notes](tvos-release-notes/tvos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### tvOS 26
@@ -178611,15 +179859,15 @@ The tvOS 27 SDK provides support to develop tvOS apps for Apple TV devices runni
 
 ### tvOS 27
 
-- [tvOS 27.2 Beta Release Notes](tvos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [tvOS 27.2 Beta 2 Release Notes](tvos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
-# Document: tvOS 27.2 Beta Release Notes
+# Document: tvOS 27.2 Beta 2 Release Notes
 
 Source path: documentation/tvos-release-notes/tvos-27_2-release-notes
 Canonical documentation: https://developer.apple.com/documentation/tvos-release-notes/tvos-27_2-release-notes
 Description: Kind: Article
 
-# tvOS 27.2 Beta Release Notes
+# tvOS 27.2 Beta 2 Release Notes
 
 **Kind:** Article
 
@@ -178629,7 +179877,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 27.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 27.2 beta. The SDK comes bundled with Xcode 27.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
+The tvOS 27.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 27.2 beta 2. The SDK comes bundled with Xcode 27.2. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
 
 <a id="StoreKit-Testing-in-Xcode"></a>
 
@@ -187385,846 +188633,3 @@ The activity type used to open the main screen of the TV Provider app
 ```objectivec
 extern NSString * const TVUserActivityTypeBrowsingEntertainmentContent;
 ```
-
-# Document: TVUserIdentifier
-
-Source path: documentation/tvservices/tvuseridentifier
-Canonical documentation: https://developer.apple.com/documentation/tvservices/tvuseridentifier
-Description: Framework: TV Services Kind: Type Alias Availability: tvOS 13.0+ (deprecated in 16.0)
-
-# TVUserIdentifier (Swift)
-
-**Framework:** TV Services  
-**Kind:** Type Alias  
-**Availability:** tvOS 13.0+ (deprecated in 16.0)
-
-A unique string for differentiating between accounts on Apple TV.
-
-> Manually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the [User Management Entitlement](../bundleresources/entitlements/com.apple.developer.user-management.md) to your target, with a value of `runs-as-current-user-with-user-independent-keychain`. For more information, see [Mapping Apple TV users to app profiles](mapping-apple-tv-users-to-app-profiles.md).
-
-## Declaration
-
-```swift
-typealias TVUserIdentifier = String
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This type stores an ASCII string containing no more than 64 characters. The string isn’t the same as the user’s Apple ID, and you should never display it in your app’s interface. It’s a random string generated by the [TVUserManager](tvusermanager.md) object and shared among the Apple TV devices on the user’s HomeKit network. You use it to differentiate between different accounts on the same Apple TV.
-
-## See Also
-
-### Deprecated symbols
-
-- [currentUserIdentifier](tvusermanager/currentuseridentifier.md): Deprecated. A unique identifier representing the currently active Apple TV user.
-- [currentUserIdentifierDidChangeNotification](tvusermanager/currentuseridentifierdidchangenotification.md): Deprecated. The notification the system sends when a different user becomes current.
-- [presentProfilePreferencePanel(currentSettings:availableProfiles:completion:)](tvusermanager/presentprofilepreferencepanel%28currentsettings_availableprofiles_completion_%29.md): Deprecated. Presents a user-to-profile configuration panel, which lets the user specify their preferred profile.
-- [shouldStorePreferenceForCurrentUser(to:completion:)](tvusermanager/shouldstorepreferenceforcurrentuser%28to_completion_%29.md): Deprecated. Prompts the user to save the specified profile as the preferred profile for the current user.
-- [TVAppProfileDescriptor](tvappprofiledescriptor.md): Deprecated. A model object that you use to represent an app-specific profile.
-- [userIdentifiersForCurrentProfile](tvusermanager/useridentifiersforcurrentprofile.md): Deprecated. An array of system user identifiers that you associated with the current app-specific profile.
-
-# TVUserIdentifier (Objective-C)
-
-**Framework:** TV Services  
-**Kind:** Type Alias  
-**Availability:** tvOS 13.0+ (deprecated in 16.0)
-
-A unique string for differentiating between accounts on Apple TV.
-
-> Manually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the [User Management Entitlement](../bundleresources/entitlements/com.apple.developer.user-management.md) to your target, with a value of `runs-as-current-user-with-user-independent-keychain`. For more information, see [Mapping Apple TV users to app profiles](mapping-apple-tv-users-to-app-profiles.md).
-
-## Declaration
-
-```objectivec
-typedef NSString * TVUserIdentifier;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This type stores an ASCII string containing no more than 64 characters. The string isn’t the same as the user’s Apple ID, and you should never display it in your app’s interface. It’s a random string generated by the [TVUserManager](tvusermanager.md) object and shared among the Apple TV devices on the user’s HomeKit network. You use it to differentiate between different accounts on the same Apple TV.
-
-## See Also
-
-### Deprecated symbols
-
-- [currentUserIdentifier](tvusermanager/currentuseridentifier.md): Deprecated. A unique identifier representing the currently active Apple TV user.
-- [TVUserManagerCurrentUserIdentifierDidChangeNotification](tvusermanager/currentuseridentifierdidchangenotification.md): Deprecated. The notification the system sends when a different user becomes current.
-- [presentProfilePreferencePanelWithCurrentSettings:availableProfiles:completion:](tvusermanager/presentprofilepreferencepanel%28currentsettings_availableprofiles_completion_%29.md): Deprecated. Presents a user-to-profile configuration panel, which lets the user specify their preferred profile.
-- [shouldStorePreferenceForCurrentUserToProfile:completion:](tvusermanager/shouldstorepreferenceforcurrentuser%28to_completion_%29.md): Deprecated. Prompts the user to save the specified profile as the preferred profile for the current user.
-- [TVAppProfileDescriptor](tvappprofiledescriptor.md): Deprecated. A model object that you use to represent an app-specific profile.
-- [userIdentifiersForCurrentProfile](tvusermanager/useridentifiersforcurrentprofile.md): Deprecated. An array of system user identifiers that you associated with the current app-specific profile.
-
-# Document: TVUserManager
-
-Source path: documentation/tvservices/tvusermanager
-Canonical documentation: https://developer.apple.com/documentation/tvservices/tvusermanager
-Description: Framework: TV Services Kind: Class Availability: tvOS 13.0+
-
-# TVUserManager (Swift)
-
-**Framework:** TV Services  
-**Kind:** Class  
-**Availability:** tvOS 13.0+
-
-An object that indicates how to store preferences for multiple people on a shared device.
-
-## Declaration
-
-```swift
-class TVUserManager
-```
-
-<a id="overview"></a>
-
-## Overview
-
-Some apps rely on profiles to maintain separate information for each person who uses a shared device, such as a video content app that retains which shows they watch. To avoid interrupting people with a profile picker each time they launch your app, you can save and retrieve the current user’s selection on a shared device.
-
-> **Important**
-
->  To create a [TVUserManager](tvusermanager.md) object, add the [User Management Entitlement](../bundleresources/entitlements/com.apple.developer.user-management.md) capability to your app or app extension in Xcode, and select the Runs as Current User, Only When User-Independent Keychain is Available option. This enables the system to take care of separating each user’s data for your app.
-
-To determine the current user’s profile, first check [shouldStorePreferencesForCurrentUser](tvusermanager/shouldstorepreferencesforcurrentuser.md). If that value is [false](https://developer.apple.com/documentation/swift/false), display the profile picker to determine which profile to use for the current session, but don’t save the selected profile. If the value is [true](https://developer.apple.com/documentation/swift/true), and there isn’t a saved profile in [UserDefaults](../foundation/userdefaults.md), display the profile picker and save the selected profile for future use. If the value is [true](https://developer.apple.com/documentation/swift/true) and there’s already a saved profile, skip the prompt and use the saved profile.
-
-## Topics
-
-### Retaining profile selection for the current Apple TV account
-
-- [shouldStorePreferencesForCurrentUser](tvusermanager/shouldstorepreferencesforcurrentuser.md): A Boolean value that indicates whether your app needs to retain a selected profile.
-
-### Deprecated symbols
-
-- [currentUserIdentifier](tvusermanager/currentuseridentifier.md): Deprecated. A unique identifier representing the currently active Apple TV user.
-- [currentUserIdentifierDidChangeNotification](tvusermanager/currentuseridentifierdidchangenotification.md): Deprecated. The notification the system sends when a different user becomes current.
-- [presentProfilePreferencePanel(currentSettings:availableProfiles:completion:)](tvusermanager/presentprofilepreferencepanel%28currentsettings_availableprofiles_completion_%29.md): Deprecated. Presents a user-to-profile configuration panel, which lets the user specify their preferred profile.
-- [shouldStorePreferenceForCurrentUser(to:completion:)](tvusermanager/shouldstorepreferenceforcurrentuser%28to_completion_%29.md): Deprecated. Prompts the user to save the specified profile as the preferred profile for the current user.
-- [TVAppProfileDescriptor](tvappprofiledescriptor.md): Deprecated. A model object that you use to represent an app-specific profile.
-- [TVUserIdentifier](tvuseridentifier.md): Deprecated. A unique string for differentiating between accounts on Apple TV.
-- [userIdentifiersForCurrentProfile](tvusermanager/useridentifiersforcurrentprofile.md): Deprecated. An array of system user identifiers that you associated with the current app-specific profile.
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-## See Also
-
-### Multiple users
-
-- [Personalizing Your App for Each User on Apple TV](personalizing-your-app-for-each-user-on-apple-tv.md): Use account-specific storage to segregate data on a multiuser system.
-- [Supporting Multiple Users in Your tvOS App](supporting-multiple-users-in-your-tvos-app.md): Store separate data for each user with the new Runs as Current User capability.
-- [Mapping Apple TV users to app profiles](mapping-apple-tv-users-to-app-profiles.md): Adapt the content of your app for the current viewer by using an entitlement and simplifying sign-in flows.
-
-# TVUserManager (Objective-C)
-
-**Framework:** TV Services  
-**Kind:** Class  
-**Availability:** tvOS 13.0+
-
-An object that indicates how to store preferences for multiple people on a shared device.
-
-## Declaration
-
-```objectivec
-@interface TVUserManager : NSObject
-```
-
-<a id="overview"></a>
-
-## Overview
-
-Some apps rely on profiles to maintain separate information for each person who uses a shared device, such as a video content app that retains which shows they watch. To avoid interrupting people with a profile picker each time they launch your app, you can save and retrieve the current user’s selection on a shared device.
-
-> **Important**
-
->  To create a [TVUserManager](tvusermanager.md) object, add the [User Management Entitlement](../bundleresources/entitlements/com.apple.developer.user-management.md) capability to your app or app extension in Xcode, and select the Runs as Current User, Only When User-Independent Keychain is Available option. This enables the system to take care of separating each user’s data for your app.
-
-To determine the current user’s profile, first check [shouldStorePreferencesForCurrentUser](tvusermanager/shouldstorepreferencesforcurrentuser.md). If that value is [false](https://developer.apple.com/documentation/swift/false), display the profile picker to determine which profile to use for the current session, but don’t save the selected profile. If the value is [true](https://developer.apple.com/documentation/swift/true), and there isn’t a saved profile in [NSUserDefaults](../foundation/userdefaults.md), display the profile picker and save the selected profile for future use. If the value is [true](https://developer.apple.com/documentation/swift/true) and there’s already a saved profile, skip the prompt and use the saved profile.
-
-## Topics
-
-### Retaining profile selection for the current Apple TV account
-
-- [shouldStorePreferencesForCurrentUser](tvusermanager/shouldstorepreferencesforcurrentuser.md): A Boolean value that indicates whether your app needs to retain a selected profile.
-
-### Deprecated symbols
-
-- [currentUserIdentifier](tvusermanager/currentuseridentifier.md): Deprecated. A unique identifier representing the currently active Apple TV user.
-- [TVUserManagerCurrentUserIdentifierDidChangeNotification](tvusermanager/currentuseridentifierdidchangenotification.md): Deprecated. The notification the system sends when a different user becomes current.
-- [presentProfilePreferencePanelWithCurrentSettings:availableProfiles:completion:](tvusermanager/presentprofilepreferencepanel%28currentsettings_availableprofiles_completion_%29.md): Deprecated. Presents a user-to-profile configuration panel, which lets the user specify their preferred profile.
-- [shouldStorePreferenceForCurrentUserToProfile:completion:](tvusermanager/shouldstorepreferenceforcurrentuser%28to_completion_%29.md): Deprecated. Prompts the user to save the specified profile as the preferred profile for the current user.
-- [TVAppProfileDescriptor](tvappprofiledescriptor.md): Deprecated. A model object that you use to represent an app-specific profile.
-- [TVUserIdentifier](tvuseridentifier.md): Deprecated. A unique string for differentiating between accounts on Apple TV.
-- [userIdentifiersForCurrentProfile](tvusermanager/useridentifiersforcurrentprofile.md): Deprecated. An array of system user identifiers that you associated with the current app-specific profile.
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-## See Also
-
-### Multiple users
-
-- [Personalizing Your App for Each User on Apple TV](personalizing-your-app-for-each-user-on-apple-tv.md): Use account-specific storage to segregate data on a multiuser system.
-- [Supporting Multiple Users in Your tvOS App](supporting-multiple-users-in-your-tvos-app.md): Store separate data for each user with the new Runs as Current User capability.
-- [Mapping Apple TV users to app profiles](mapping-apple-tv-users-to-app-profiles.md): Adapt the content of your app for the current viewer by using an entitlement and simplifying sign-in flows.
-
-# Document: currentUserIdentifier
-
-Source path: documentation/tvservices/tvusermanager/currentuseridentifier
-Canonical documentation: https://developer.apple.com/documentation/tvservices/tvusermanager/currentuseridentifier
-Description: Framework: TV Services Kind: Instance Property Availability: tvOS 13.0+ (deprecated in 16.0)
-
-# currentUserIdentifier (Swift)
-
-**Framework:** TV Services  
-**Kind:** Instance Property  
-**Availability:** tvOS 13.0+ (deprecated in 16.0)
-
-A unique identifier representing the currently active Apple TV user.
-
-> Manually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the [User Management Entitlement](../../bundleresources/entitlements/com.apple.developer.user-management.md) to your target, with a value of `runs-as-current-user-with-user-independent-keychain`. For more information, see [Mapping Apple TV users to app profiles](../mapping-apple-tv-users-to-app-profiles.md).
-
-## Declaration
-
-```swift
-var currentUserIdentifier: TVUserIdentifier? { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this property to identify which Apple TV user is currently active. On Apple TV, users may provide credentials for multiple Apple accounts and switch quickly between them. This property uniquely identifies the user for the active account. You might use this information to select an appropriate user profile for your app.
-
-The string in this property is randomly generated, and isn’t the same as the user’s Apple ID. Don’t display the string to your users. All Apple TVs on the user’s HomeKit network return the same string for the same account.
-
-You can track changes to this property using key-value observing. You may access this property from an app extension.
-
-## See Also
-
-### Deprecated symbols
-
-- [currentUserIdentifierDidChangeNotification](currentuseridentifierdidchangenotification.md): Deprecated. The notification the system sends when a different user becomes current.
-- [presentProfilePreferencePanel(currentSettings:availableProfiles:completion:)](presentprofilepreferencepanel%28currentsettings_availableprofiles_completion_%29.md): Deprecated. Presents a user-to-profile configuration panel, which lets the user specify their preferred profile.
-- [shouldStorePreferenceForCurrentUser(to:completion:)](shouldstorepreferenceforcurrentuser%28to_completion_%29.md): Deprecated. Prompts the user to save the specified profile as the preferred profile for the current user.
-- [TVAppProfileDescriptor](../tvappprofiledescriptor.md): Deprecated. A model object that you use to represent an app-specific profile.
-- [TVUserIdentifier](../tvuseridentifier.md): Deprecated. A unique string for differentiating between accounts on Apple TV.
-- [userIdentifiersForCurrentProfile](useridentifiersforcurrentprofile.md): Deprecated. An array of system user identifiers that you associated with the current app-specific profile.
-
-# currentUserIdentifier (Objective-C)
-
-**Framework:** TV Services  
-**Kind:** Instance Property  
-**Availability:** tvOS 13.0+ (deprecated in 16.0)
-
-A unique identifier representing the currently active Apple TV user.
-
-> Manually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the [User Management Entitlement](../../bundleresources/entitlements/com.apple.developer.user-management.md) to your target, with a value of `runs-as-current-user-with-user-independent-keychain`. For more information, see [Mapping Apple TV users to app profiles](../mapping-apple-tv-users-to-app-profiles.md).
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readonly, nullable) TVUserIdentifier currentUserIdentifier;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this property to identify which Apple TV user is currently active. On Apple TV, users may provide credentials for multiple Apple accounts and switch quickly between them. This property uniquely identifies the user for the active account. You might use this information to select an appropriate user profile for your app.
-
-The string in this property is randomly generated, and isn’t the same as the user’s Apple ID. Don’t display the string to your users. All Apple TVs on the user’s HomeKit network return the same string for the same account.
-
-You can track changes to this property using key-value observing. You may access this property from an app extension.
-
-## See Also
-
-### Deprecated symbols
-
-- [TVUserManagerCurrentUserIdentifierDidChangeNotification](currentuseridentifierdidchangenotification.md): Deprecated. The notification the system sends when a different user becomes current.
-- [presentProfilePreferencePanelWithCurrentSettings:availableProfiles:completion:](presentprofilepreferencepanel%28currentsettings_availableprofiles_completion_%29.md): Deprecated. Presents a user-to-profile configuration panel, which lets the user specify their preferred profile.
-- [shouldStorePreferenceForCurrentUserToProfile:completion:](shouldstorepreferenceforcurrentuser%28to_completion_%29.md): Deprecated. Prompts the user to save the specified profile as the preferred profile for the current user.
-- [TVAppProfileDescriptor](../tvappprofiledescriptor.md): Deprecated. A model object that you use to represent an app-specific profile.
-- [TVUserIdentifier](../tvuseridentifier.md): Deprecated. A unique string for differentiating between accounts on Apple TV.
-- [userIdentifiersForCurrentProfile](useridentifiersforcurrentprofile.md): Deprecated. An array of system user identifiers that you associated with the current app-specific profile.
-
-# Document: currentUserIdentifierDidChangeNotification
-
-Source path: documentation/tvservices/tvusermanager/currentuseridentifierdidchangenotification
-Canonical documentation: https://developer.apple.com/documentation/tvservices/tvusermanager/currentuseridentifierdidchangenotification
-Description: Framework: TV Services Kind: Type Property Availability: tvOS 13.0+ (deprecated in 16.0)
-
-# currentUserIdentifierDidChangeNotification (Swift)
-
-**Framework:** TV Services  
-**Kind:** Type Property  
-**Availability:** tvOS 13.0+ (deprecated in 16.0)
-
-The notification the system sends when a different user becomes current.
-
-> Manually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the [User Management Entitlement](../../bundleresources/entitlements/com.apple.developer.user-management.md) to your target, with a value of `runs-as-current-user-with-user-independent-keychain`. For more information, see [Mapping Apple TV users to app profiles](../mapping-apple-tv-users-to-app-profiles.md).
-
-## Declaration
-
-```swift
-class let currentUserIdentifierDidChangeNotification: NSNotification.Name
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The object of the notification is `nil`. The notification doesn’t add any keys to the [userInfo](../../foundation/nsnotification/userinfo.md) dictionary.
-
-## See Also
-
-### Deprecated symbols
-
-- [currentUserIdentifier](currentuseridentifier.md): Deprecated. A unique identifier representing the currently active Apple TV user.
-- [presentProfilePreferencePanel(currentSettings:availableProfiles:completion:)](presentprofilepreferencepanel%28currentsettings_availableprofiles_completion_%29.md): Deprecated. Presents a user-to-profile configuration panel, which lets the user specify their preferred profile.
-- [shouldStorePreferenceForCurrentUser(to:completion:)](shouldstorepreferenceforcurrentuser%28to_completion_%29.md): Deprecated. Prompts the user to save the specified profile as the preferred profile for the current user.
-- [TVAppProfileDescriptor](../tvappprofiledescriptor.md): Deprecated. A model object that you use to represent an app-specific profile.
-- [TVUserIdentifier](../tvuseridentifier.md): Deprecated. A unique string for differentiating between accounts on Apple TV.
-- [userIdentifiersForCurrentProfile](useridentifiersforcurrentprofile.md): Deprecated. An array of system user identifiers that you associated with the current app-specific profile.
-
-# TVUserManagerCurrentUserIdentifierDidChangeNotification (Objective-C)
-
-**Framework:** TV Services  
-**Kind:** Global Variable  
-**Availability:** tvOS 13.0+ (deprecated in 16.0)
-
-The notification the system sends when a different user becomes current.
-
-> Manually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the [User Management Entitlement](../../bundleresources/entitlements/com.apple.developer.user-management.md) to your target, with a value of `runs-as-current-user-with-user-independent-keychain`. For more information, see [Mapping Apple TV users to app profiles](../mapping-apple-tv-users-to-app-profiles.md).
-
-## Declaration
-
-```objectivec
-extern NSNotificationName const TVUserManagerCurrentUserIdentifierDidChangeNotification;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The object of the notification is `nil`. The notification doesn’t add any keys to the [userInfo](../../foundation/nsnotification/userinfo.md) dictionary.
-
-## See Also
-
-### Deprecated symbols
-
-- [currentUserIdentifier](currentuseridentifier.md): Deprecated. A unique identifier representing the currently active Apple TV user.
-- [presentProfilePreferencePanelWithCurrentSettings:availableProfiles:completion:](presentprofilepreferencepanel%28currentsettings_availableprofiles_completion_%29.md): Deprecated. Presents a user-to-profile configuration panel, which lets the user specify their preferred profile.
-- [shouldStorePreferenceForCurrentUserToProfile:completion:](shouldstorepreferenceforcurrentuser%28to_completion_%29.md): Deprecated. Prompts the user to save the specified profile as the preferred profile for the current user.
-- [TVAppProfileDescriptor](../tvappprofiledescriptor.md): Deprecated. A model object that you use to represent an app-specific profile.
-- [TVUserIdentifier](../tvuseridentifier.md): Deprecated. A unique string for differentiating between accounts on Apple TV.
-- [userIdentifiersForCurrentProfile](useridentifiersforcurrentprofile.md): Deprecated. An array of system user identifiers that you associated with the current app-specific profile.
-
-# Document: presentProfilePreferencePanel(currentSettings:availableProfiles:completion:)
-
-Source path: documentation/tvservices/tvusermanager/presentprofilepreferencepanel(currentsettings:availableprofiles:completion:)
-Canonical documentation: https://developer.apple.com/documentation/tvservices/tvusermanager/presentprofilepreferencepanel(currentsettings:availableprofiles:completion:)
-Description: Framework: TV Services Kind: Instance Method Availability: tvOS 13.0+ (deprecated in 16.0)
-
-# presentProfilePreferencePanel(currentSettings:availableProfiles:completion:) (Swift)
-
-**Framework:** TV Services  
-**Kind:** Instance Method  
-**Availability:** tvOS 13.0+ (deprecated in 16.0)
-
-Presents a user-to-profile configuration panel, which lets the user specify their preferred profile.
-
-> Manually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the [User Management Entitlement](../../bundleresources/entitlements/com.apple.developer.user-management.md) to your target, with a value of `runs-as-current-user-with-user-independent-keychain`. For more information, see [Mapping Apple TV users to app profiles](../mapping-apple-tv-users-to-app-profiles.md).
-
-## Declaration
-
-```swift
-func presentProfilePreferencePanel(currentSettings: [TVUserIdentifier : TVAppProfileDescriptor], availableProfiles: [TVAppProfileDescriptor], completion: @escaping @Sendable ([TVUserIdentifier : TVAppProfileDescriptor]) -> Void)
-```
-
-```swift
-func presentProfilePreferencePanel(currentSettings: [TVUserIdentifier : TVAppProfileDescriptor], availableProfiles: [TVAppProfileDescriptor]) async -> [TVUserIdentifier : TVAppProfileDescriptor]
-```
-
-## Parameters
-
-- `availableProfiles`: The complete list of app-specific profiles available in your app. The configuration panel displays this set of profiles to the user.
-- `completion`: The completion handler to call when the user dismisses the configuration panel. This handler has no return value and takes the following parameter:
-
-  - **newSettings**: A dictionary containing an updated map from system user to app profile. The information is similar to what you provide in the `existingSettings` parameter, but reflects the changes made by the user.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-> **Important**
-
->  You can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:
->
-> ```swift
-> func presentProfilePreferencePanel(currentSettings: [TVUserIdentifier : TVAppProfileDescriptor], availableProfiles: [TVAppProfileDescriptor]) async -> [TVUserIdentifier : TVAppProfileDescriptor]
-> ```
->
-> For information about concurrency and asynchronous code in Swift, see [Calling Objective-C APIs Asynchronously](https://developer.apple.com/documentation/swift/calling-objective-c-apis-asynchronously).
-
-Calling this method displays a panel that lets the user configure which app-specific profile to associate with each Apple TV user account. The panel gives the user the option to select from any of the profiles in the `availableProfiles` parameter. It also uses the information in the `existingSettings` parameter to configure the initial mapping between users and profiles. After configuring the user accounts and dismissing the panel, the system calls your `completion` handler to deliver the updated mapping between user accounts and profiles.
-
-## See Also
-
-### Deprecated symbols
-
-- [currentUserIdentifier](currentuseridentifier.md): Deprecated. A unique identifier representing the currently active Apple TV user.
-- [currentUserIdentifierDidChangeNotification](currentuseridentifierdidchangenotification.md): Deprecated. The notification the system sends when a different user becomes current.
-- [shouldStorePreferenceForCurrentUser(to:completion:)](shouldstorepreferenceforcurrentuser%28to_completion_%29.md): Deprecated. Prompts the user to save the specified profile as the preferred profile for the current user.
-- [TVAppProfileDescriptor](../tvappprofiledescriptor.md): Deprecated. A model object that you use to represent an app-specific profile.
-- [TVUserIdentifier](../tvuseridentifier.md): Deprecated. A unique string for differentiating between accounts on Apple TV.
-- [userIdentifiersForCurrentProfile](useridentifiersforcurrentprofile.md): Deprecated. An array of system user identifiers that you associated with the current app-specific profile.
-
-# presentProfilePreferencePanelWithCurrentSettings:availableProfiles:completion: (Objective-C)
-
-**Framework:** TV Services  
-**Kind:** Instance Method  
-**Availability:** tvOS 13.0+ (deprecated in 16.0)
-
-Presents a user-to-profile configuration panel, which lets the user specify their preferred profile.
-
-> Manually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the [User Management Entitlement](../../bundleresources/entitlements/com.apple.developer.user-management.md) to your target, with a value of `runs-as-current-user-with-user-independent-keychain`. For more information, see [Mapping Apple TV users to app profiles](../mapping-apple-tv-users-to-app-profiles.md).
-
-## Declaration
-
-```objectivec
-- (void) presentProfilePreferencePanelWithCurrentSettings:(NSDictionary<NSString *,TVAppProfileDescriptor *> *) currentSettings availableProfiles:(NSArray<TVAppProfileDescriptor *> *) availableProfiles completion:(void (^)(NSDictionary<NSString *,TVAppProfileDescriptor *> *newSettings)) completion;
-```
-
-## Parameters
-
-- `availableProfiles`: The complete list of app-specific profiles available in your app. The configuration panel displays this set of profiles to the user.
-- `completion`: The completion handler to call when the user dismisses the configuration panel. This handler has no return value and takes the following parameter:
-
-  - **newSettings**: A dictionary containing an updated map from system user to app profile. The information is similar to what you provide in the `existingSettings` parameter, but reflects the changes made by the user.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-> **Important**
-
->  You can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:
->
-> ```swift
-> func presentProfilePreferencePanel(currentSettings: [TVUserIdentifier : TVAppProfileDescriptor], availableProfiles: [TVAppProfileDescriptor]) async -> [TVUserIdentifier : TVAppProfileDescriptor]
-> ```
->
-> For information about concurrency and asynchronous code in Swift, see [Calling Objective-C APIs Asynchronously](https://developer.apple.com/documentation/swift/calling-objective-c-apis-asynchronously).
-
-Calling this method displays a panel that lets the user configure which app-specific profile to associate with each Apple TV user account. The panel gives the user the option to select from any of the profiles in the `availableProfiles` parameter. It also uses the information in the `existingSettings` parameter to configure the initial mapping between users and profiles. After configuring the user accounts and dismissing the panel, the system calls your `completion` handler to deliver the updated mapping between user accounts and profiles.
-
-## See Also
-
-### Deprecated symbols
-
-- [currentUserIdentifier](currentuseridentifier.md): Deprecated. A unique identifier representing the currently active Apple TV user.
-- [TVUserManagerCurrentUserIdentifierDidChangeNotification](currentuseridentifierdidchangenotification.md): Deprecated. The notification the system sends when a different user becomes current.
-- [shouldStorePreferenceForCurrentUserToProfile:completion:](shouldstorepreferenceforcurrentuser%28to_completion_%29.md): Deprecated. Prompts the user to save the specified profile as the preferred profile for the current user.
-- [TVAppProfileDescriptor](../tvappprofiledescriptor.md): Deprecated. A model object that you use to represent an app-specific profile.
-- [TVUserIdentifier](../tvuseridentifier.md): Deprecated. A unique string for differentiating between accounts on Apple TV.
-- [userIdentifiersForCurrentProfile](useridentifiersforcurrentprofile.md): Deprecated. An array of system user identifiers that you associated with the current app-specific profile.
-
-# Document: shouldStorePreferenceForCurrentUser(to:completion:)
-
-Source path: documentation/tvservices/tvusermanager/shouldstorepreferenceforcurrentuser(to:completion:)
-Canonical documentation: https://developer.apple.com/documentation/tvservices/tvusermanager/shouldstorepreferenceforcurrentuser(to:completion:)
-Description: Framework: TV Services Kind: Instance Method Availability: tvOS 13.0+ (deprecated in 16.0)
-
-# shouldStorePreferenceForCurrentUser(to:completion:) (Swift)
-
-**Framework:** TV Services  
-**Kind:** Instance Method  
-**Availability:** tvOS 13.0+ (deprecated in 16.0)
-
-Prompts the user to save the specified profile as the preferred profile for the current user.
-
-> Manually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the [User Management Entitlement](../../bundleresources/entitlements/com.apple.developer.user-management.md) to your target, with a value of `runs-as-current-user-with-user-independent-keychain`. For more information, see [Mapping Apple TV users to app profiles](../mapping-apple-tv-users-to-app-profiles.md).
-
-## Declaration
-
-```swift
-func shouldStorePreferenceForCurrentUser(to profile: TVAppProfileDescriptor, completion: @escaping @Sendable (Bool) -> Void)
-```
-
-```swift
-func shouldStorePreferenceForCurrentUser(to profile: TVAppProfileDescriptor) async -> Bool
-```
-
-## Parameters
-
-- `profile`: The profile to associate with the current user.
-- `completion`: The completion handler to call with the results. This handler has no return value and takes the following parameter:
-
-  - **shouldCreateMapping**: A Boolean value indicating whether your app should associate the specified profile with the current user. If this parameter is [true](https://developer.apple.com/documentation/swift/true), save the association in your app’s data structures.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-> **Important**
-
->  You can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:
->
-> ```swift
-> func shouldStorePreferenceForCurrentUser(to profile: TVAppProfileDescriptor) async -> Bool
-> ```
->
-> For information about concurrency and asynchronous code in Swift, see [Calling Objective-C APIs Asynchronously](https://developer.apple.com/documentation/swift/calling-objective-c-apis-asynchronously).
-
-Use this method to confirm that the profile chosen by the user should become their new preferred profile. The method prompts the user to confirm the profile change and calls the completion handler with the results. Call this method only once for each user.
-
-## See Also
-
-### Deprecated symbols
-
-- [currentUserIdentifier](currentuseridentifier.md): Deprecated. A unique identifier representing the currently active Apple TV user.
-- [currentUserIdentifierDidChangeNotification](currentuseridentifierdidchangenotification.md): Deprecated. The notification the system sends when a different user becomes current.
-- [presentProfilePreferencePanel(currentSettings:availableProfiles:completion:)](presentprofilepreferencepanel%28currentsettings_availableprofiles_completion_%29.md): Deprecated. Presents a user-to-profile configuration panel, which lets the user specify their preferred profile.
-- [TVAppProfileDescriptor](../tvappprofiledescriptor.md): Deprecated. A model object that you use to represent an app-specific profile.
-- [TVUserIdentifier](../tvuseridentifier.md): Deprecated. A unique string for differentiating between accounts on Apple TV.
-- [userIdentifiersForCurrentProfile](useridentifiersforcurrentprofile.md): Deprecated. An array of system user identifiers that you associated with the current app-specific profile.
-
-# shouldStorePreferenceForCurrentUserToProfile:completion: (Objective-C)
-
-**Framework:** TV Services  
-**Kind:** Instance Method  
-**Availability:** tvOS 13.0+ (deprecated in 16.0)
-
-Prompts the user to save the specified profile as the preferred profile for the current user.
-
-> Manually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the [User Management Entitlement](../../bundleresources/entitlements/com.apple.developer.user-management.md) to your target, with a value of `runs-as-current-user-with-user-independent-keychain`. For more information, see [Mapping Apple TV users to app profiles](../mapping-apple-tv-users-to-app-profiles.md).
-
-## Declaration
-
-```objectivec
-- (void) shouldStorePreferenceForCurrentUserToProfile:(TVAppProfileDescriptor *) profile completion:(void (^)(BOOL shouldCreateMapping)) completion;
-```
-
-## Parameters
-
-- `profile`: The profile to associate with the current user.
-- `completion`: The completion handler to call with the results. This handler has no return value and takes the following parameter:
-
-  - **shouldCreateMapping**: A Boolean value indicating whether your app should associate the specified profile with the current user. If this parameter is [true](https://developer.apple.com/documentation/swift/true), save the association in your app’s data structures.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-> **Important**
-
->  You can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:
->
-> ```swift
-> func shouldStorePreferenceForCurrentUser(to profile: TVAppProfileDescriptor) async -> Bool
-> ```
->
-> For information about concurrency and asynchronous code in Swift, see [Calling Objective-C APIs Asynchronously](https://developer.apple.com/documentation/swift/calling-objective-c-apis-asynchronously).
-
-Use this method to confirm that the profile chosen by the user should become their new preferred profile. The method prompts the user to confirm the profile change and calls the completion handler with the results. Call this method only once for each user.
-
-## See Also
-
-### Deprecated symbols
-
-- [currentUserIdentifier](currentuseridentifier.md): Deprecated. A unique identifier representing the currently active Apple TV user.
-- [TVUserManagerCurrentUserIdentifierDidChangeNotification](currentuseridentifierdidchangenotification.md): Deprecated. The notification the system sends when a different user becomes current.
-- [presentProfilePreferencePanelWithCurrentSettings:availableProfiles:completion:](presentprofilepreferencepanel%28currentsettings_availableprofiles_completion_%29.md): Deprecated. Presents a user-to-profile configuration panel, which lets the user specify their preferred profile.
-- [TVAppProfileDescriptor](../tvappprofiledescriptor.md): Deprecated. A model object that you use to represent an app-specific profile.
-- [TVUserIdentifier](../tvuseridentifier.md): Deprecated. A unique string for differentiating between accounts on Apple TV.
-- [userIdentifiersForCurrentProfile](useridentifiersforcurrentprofile.md): Deprecated. An array of system user identifiers that you associated with the current app-specific profile.
-
-# Document: shouldStorePreferencesForCurrentUser
-
-Source path: documentation/tvservices/tvusermanager/shouldstorepreferencesforcurrentuser
-Canonical documentation: https://developer.apple.com/documentation/tvservices/tvusermanager/shouldstorepreferencesforcurrentuser
-Description: Framework: TV Services Kind: Instance Property Availability: tvOS 16.0+
-
-# shouldStorePreferencesForCurrentUser (Swift)
-
-**Framework:** TV Services  
-**Kind:** Instance Property  
-**Availability:** tvOS 16.0+
-
-A Boolean value that indicates whether your app needs to retain a selected profile.
-
-## Declaration
-
-```swift
-var shouldStorePreferencesForCurrentUser: Bool { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-> **Important**
-
->  To create a [TVUserManager](../tvusermanager.md) object, add the [User Management Entitlement](../../bundleresources/entitlements/com.apple.developer.user-management.md) to your app or app extension, and select the Runs as Current User, Only When User-Independent Keychain is Available option.
-
-Some apps rely on profiles to maintain separate information for each person who uses a shared device, such as a video content app that retains which shows they watch. To avoid interrupting people with a profile picker each time they launch your app, you can save the current user’s selection on a shared device. After someone selects a profile, use [shouldStorePreferencesForCurrentUser](shouldstorepreferencesforcurrentuser.md) to determine whether to retain the profile selection or to prompt each time your app launches. This property might be [false](https://developer.apple.com/documentation/swift/false) if people share a device, but don’t configure multiple users on that device.
-
-If the property’s value is [false](https://developer.apple.com/documentation/swift/false), display the profile picker to determine which profile to use for the current session, but don’t save the selected profile. If the value is [true](https://developer.apple.com/documentation/swift/true), and there isn’t a saved profile in [UserDefaults](../../foundation/userdefaults.md), display the profile picker and save the selected profile for future use. If the value is [true](https://developer.apple.com/documentation/swift/true) and there’s already a saved profile, skip the prompt and use the saved profile.
-
-> **Tip**
-
->  When your app runs in tvOS 15 or earlier, where [shouldStorePreferencesForCurrentUser](shouldstorepreferencesforcurrentuser.md) isn’t available, display the profile picker at the beginning of each session.
-
-# shouldStorePreferencesForCurrentUser (Objective-C)
-
-**Framework:** TV Services  
-**Kind:** Instance Property  
-**Availability:** tvOS 16.0+
-
-A Boolean value that indicates whether your app needs to retain a selected profile.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, assign, readonly) BOOL shouldStorePreferencesForCurrentUser;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-> **Important**
-
->  To create a [TVUserManager](../tvusermanager.md) object, add the [User Management Entitlement](../../bundleresources/entitlements/com.apple.developer.user-management.md) to your app or app extension, and select the Runs as Current User, Only When User-Independent Keychain is Available option.
-
-Some apps rely on profiles to maintain separate information for each person who uses a shared device, such as a video content app that retains which shows they watch. To avoid interrupting people with a profile picker each time they launch your app, you can save the current user’s selection on a shared device. After someone selects a profile, use [shouldStorePreferencesForCurrentUser](shouldstorepreferencesforcurrentuser.md) to determine whether to retain the profile selection or to prompt each time your app launches. This property might be [false](https://developer.apple.com/documentation/swift/false) if people share a device, but don’t configure multiple users on that device.
-
-If the property’s value is [false](https://developer.apple.com/documentation/swift/false), display the profile picker to determine which profile to use for the current session, but don’t save the selected profile. If the value is [true](https://developer.apple.com/documentation/swift/true), and there isn’t a saved profile in [NSUserDefaults](../../foundation/userdefaults.md), display the profile picker and save the selected profile for future use. If the value is [true](https://developer.apple.com/documentation/swift/true) and there’s already a saved profile, skip the prompt and use the saved profile.
-
-> **Tip**
-
->  When your app runs in tvOS 15 or earlier, where [shouldStorePreferencesForCurrentUser](shouldstorepreferencesforcurrentuser.md) isn’t available, display the profile picker at the beginning of each session.
-
-# Document: userIdentifiersForCurrentProfile
-
-Source path: documentation/tvservices/tvusermanager/useridentifiersforcurrentprofile
-Canonical documentation: https://developer.apple.com/documentation/tvservices/tvusermanager/useridentifiersforcurrentprofile
-Description: Framework: TV Services Kind: Instance Property Availability: tvOS 13.0+ (deprecated in 16.0)
-
-# userIdentifiersForCurrentProfile (Swift)
-
-**Framework:** TV Services  
-**Kind:** Instance Property  
-**Availability:** tvOS 13.0+ (deprecated in 16.0)
-
-An array of system user identifiers that you associated with the current app-specific profile.
-
-> Manually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the [User Management Entitlement](../../bundleresources/entitlements/com.apple.developer.user-management.md) to your target, with a value of `runs-as-current-user-with-user-independent-keychain`. For more information, see [Mapping Apple TV users to app profiles](../mapping-apple-tv-users-to-app-profiles.md).
-
-## Declaration
-
-```swift
-var userIdentifiersForCurrentProfile: [TVUserIdentifier] { get set }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If your app remembers which app-specific profile each Apple TV user prefers, use this property to provide that information to the system. Fill this property with zero or more user identifiers that you previously retrieved from the [currentUserIdentifier](currentuseridentifier.md) property. Doing so creates a mapping between your app profiles and the Apple TV accounts that prefer them. The system uses the information in this property to provide better information in user dialogs and doesn’t change the property’s value.
-
-Update this property whenever the user selects a different app profile. The system doesn’t change the value in this property, so it contains the last value that you assigned to it since app launch. However, the property supports key-value observing if you want to track the changes that you make from other parts of your app.
-
-## See Also
-
-### Deprecated symbols
-
-- [currentUserIdentifier](currentuseridentifier.md): Deprecated. A unique identifier representing the currently active Apple TV user.
-- [currentUserIdentifierDidChangeNotification](currentuseridentifierdidchangenotification.md): Deprecated. The notification the system sends when a different user becomes current.
-- [presentProfilePreferencePanel(currentSettings:availableProfiles:completion:)](presentprofilepreferencepanel%28currentsettings_availableprofiles_completion_%29.md): Deprecated. Presents a user-to-profile configuration panel, which lets the user specify their preferred profile.
-- [shouldStorePreferenceForCurrentUser(to:completion:)](shouldstorepreferenceforcurrentuser%28to_completion_%29.md): Deprecated. Prompts the user to save the specified profile as the preferred profile for the current user.
-- [TVAppProfileDescriptor](../tvappprofiledescriptor.md): Deprecated. A model object that you use to represent an app-specific profile.
-- [TVUserIdentifier](../tvuseridentifier.md): Deprecated. A unique string for differentiating between accounts on Apple TV.
-
-# userIdentifiersForCurrentProfile (Objective-C)
-
-**Framework:** TV Services  
-**Kind:** Instance Property  
-**Availability:** tvOS 13.0+ (deprecated in 16.0)
-
-An array of system user identifiers that you associated with the current app-specific profile.
-
-> Manually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the [User Management Entitlement](../../bundleresources/entitlements/com.apple.developer.user-management.md) to your target, with a value of `runs-as-current-user-with-user-independent-keychain`. For more information, see [Mapping Apple TV users to app profiles](../mapping-apple-tv-users-to-app-profiles.md).
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy) NSArray<NSString *> * userIdentifiersForCurrentProfile;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If your app remembers which app-specific profile each Apple TV user prefers, use this property to provide that information to the system. Fill this property with zero or more user identifiers that you previously retrieved from the [currentUserIdentifier](currentuseridentifier.md) property. Doing so creates a mapping between your app profiles and the Apple TV accounts that prefer them. The system uses the information in this property to provide better information in user dialogs and doesn’t change the property’s value.
-
-Update this property whenever the user selects a different app profile. The system doesn’t change the value in this property, so it contains the last value that you assigned to it since app launch. However, the property supports key-value observing if you want to track the changes that you make from other parts of your app.
-
-## See Also
-
-### Deprecated symbols
-
-- [currentUserIdentifier](currentuseridentifier.md): Deprecated. A unique identifier representing the currently active Apple TV user.
-- [TVUserManagerCurrentUserIdentifierDidChangeNotification](currentuseridentifierdidchangenotification.md): Deprecated. The notification the system sends when a different user becomes current.
-- [presentProfilePreferencePanelWithCurrentSettings:availableProfiles:completion:](presentprofilepreferencepanel%28currentsettings_availableprofiles_completion_%29.md): Deprecated. Presents a user-to-profile configuration panel, which lets the user specify their preferred profile.
-- [shouldStorePreferenceForCurrentUserToProfile:completion:](shouldstorepreferenceforcurrentuser%28to_completion_%29.md): Deprecated. Prompts the user to save the specified profile as the preferred profile for the current user.
-- [TVAppProfileDescriptor](../tvappprofiledescriptor.md): Deprecated. A model object that you use to represent an app-specific profile.
-- [TVUserIdentifier](../tvuseridentifier.md): Deprecated. A unique string for differentiating between accounts on Apple TV.
-
-# Document: TVUIKit
-
-Source path: documentation/tvuikit
-Canonical documentation: https://developer.apple.com/documentation/tvuikit
-Description: Framework: TVUIKit Kind: Framework Availability: tvOS 12.0+
-
-# TVUIKit (Swift)
-
-**Framework:** TVUIKit  
-**Kind:** Framework  
-**Availability:** tvOS 12.0+
-
-Show common user interface elements from Apple TV in your native app.
-
-<a id="overview"></a>
-
-## Overview
-
-When you build an app for tvOS with [UIKit](uikit.md), you can use [TVUIKit](tvuikit.md) to refine the display of your content for a TV environment. Use the [TV Services](tvservices.md) framework to provide deeper integration between your app and Apple TV.
-
-For more information about combining Apple technologies to build a great Apple TV experience, see [Planning your tvOS app](https://developer.apple.com/tvos/planning/#build-the-data-structures-youll-use-in-your-app).
-
-![A figure containing a hexagonal UIKit framework icon, an arrow pointing to the right, a hexagon with the label TVUIKit, an arrow pointing to the right, and a TV screen. The TV screen shows a centered image of a palm tree, with other images partially visible on either side of the palm tree.](https://developer.apple.com/images/com.apple.tvuikit/media-4133629@2x.png)
-
-## Topics
-
-### Collections of content
-
-- [Creating immersive experiences using a full-screen layout](tvuikit/creating-immersive-experiences-using-a-full-screen-layout.md): Display content with a collection view that maximizes the tvOS experience.
-- [TVCollectionViewFullScreenLayout](tvuikit/tvcollectionviewfullscreenlayout.md): A collection view layout that organizes items into a browsable, full-screen display format.
-- [TVCollectionViewDelegateFullScreenLayout](tvuikit/tvcollectionviewdelegatefullscreenlayout.md): Methods that send notifications of events during cell transitions.
-- [TVCollectionViewFullScreenCell](tvuikit/tvcollectionviewfullscreencell.md): A full-screen cell to use in full-screen display format.
-- [TVCollectionViewFullScreenLayoutAttributes](tvuikit/tvcollectionviewfullscreenlayoutattributes.md): Attributes to manage the appearance of the collection view’s layout.
-
-### Content views
-
-- [TVMediaItemContentView](tvuikit/tvmediaitemcontentview.md): A view that represents media content, such as movies and TV shows.
-- [TVMonogramContentView](tvuikit/tvmonogramcontentview.md): A view that contains a circular image of a person or the person’s initials.
-
-### Numeric input
-
-- [TVDigitEntryViewController](tvuikit/tvdigitentryviewcontroller.md): A view controller that enables the user to enter digits, like a passcode, in your app.
-
-### Lockup views
-
-- [TVLockupView](tvuikit/tvlockupview.md): A focusable view that presents main content, like a movie poster, and an optional header and footer.
-- [TVLockupViewComponent](tvuikit/tvlockupviewcomponent.md): The protocol for responding to lockup view state changes.
-- [TVLockupHeaderFooterView](tvuikit/tvlockupheaderfooterview.md): A view that contains header and footer information.
-- [TVCardView](tvuikit/tvcardview.md): A view that responds to focus interaction with a motion effect it applies to all of its subviews.
-- [TVPosterView](tvuikit/tvposterview.md): An optimized view for displaying an image, a header, and a footer.
-- [TVCaptionButtonView](tvuikit/tvcaptionbuttonview.md): A button-like view that responds to user interactions.
-- [TVMonogramView](tvuikit/tvmonogramview.md): Deprecated. A specialized lockup view that contains a circular image of a person or the person’s initials, along with a footer view.
-
-# TVUIKit (Objective-C)
-
-**Framework:** TVUIKit  
-**Kind:** Framework  
-**Availability:** tvOS 12.0+
-
-Show common user interface elements from Apple TV in your native app.
-
-<a id="overview"></a>
-
-## Overview
-
-When you build an app for tvOS with [UIKit](uikit.md), you can use [TVUIKit](tvuikit.md) to refine the display of your content for a TV environment. Use the [TV Services](tvservices.md) framework to provide deeper integration between your app and Apple TV.
-
-For more information about combining Apple technologies to build a great Apple TV experience, see [Planning your tvOS app](https://developer.apple.com/tvos/planning/#build-the-data-structures-youll-use-in-your-app).
-
-![A figure containing a hexagonal UIKit framework icon, an arrow pointing to the right, a hexagon with the label TVUIKit, an arrow pointing to the right, and a TV screen. The TV screen shows a centered image of a palm tree, with other images partially visible on either side of the palm tree.](https://developer.apple.com/images/com.apple.tvuikit/media-4133629@2x.png)
-
-## Topics
-
-### Collections of content
-
-- [TVCollectionViewFullScreenLayout](tvuikit/tvcollectionviewfullscreenlayout.md): A collection view layout that organizes items into a browsable, full-screen display format.
-- [TVCollectionViewDelegateFullScreenLayout](tvuikit/tvcollectionviewdelegatefullscreenlayout.md): Methods that send notifications of events during cell transitions.
-- [TVCollectionViewFullScreenCell](tvuikit/tvcollectionviewfullscreencell.md): A full-screen cell to use in full-screen display format.
-- [TVCollectionViewFullScreenLayoutAttributes](tvuikit/tvcollectionviewfullscreenlayoutattributes.md): Attributes to manage the appearance of the collection view’s layout.
-
-### Content views
-
-- [TVMediaItemContentView](tvuikit/tvmediaitemcontentview.md): A view that represents media content, such as movies and TV shows.
-- [TVMonogramContentView](tvuikit/tvmonogramcontentview.md): A view that contains a circular image of a person or the person’s initials.
-
-### Numeric input
-
-- [TVDigitEntryViewController](tvuikit/tvdigitentryviewcontroller.md): A view controller that enables the user to enter digits, like a passcode, in your app.
-
-### Lockup views
-
-- [TVLockupView](tvuikit/tvlockupview.md): A focusable view that presents main content, like a movie poster, and an optional header and footer.
-- [TVLockupViewComponent](tvuikit/tvlockupviewcomponent.md): The protocol for responding to lockup view state changes.
-- [TVLockupHeaderFooterView](tvuikit/tvlockupheaderfooterview.md): A view that contains header and footer information.
-- [TVCardView](tvuikit/tvcardview.md): A view that responds to focus interaction with a motion effect it applies to all of its subviews.
-- [TVPosterView](tvuikit/tvposterview.md): An optimized view for displaying an image, a header, and a footer.
-- [TVCaptionButtonView](tvuikit/tvcaptionbuttonview.md): A button-like view that responds to user interactions.
-- [TVMonogramView](tvuikit/tvmonogramview.md): Deprecated. A specialized lockup view that contains a circular image of a person or the person’s initials, along with a footer view.
-
-# Document: Creating immersive experiences using a full-screen layout
-
-Source path: documentation/tvuikit/creating-immersive-experiences-using-a-full-screen-layout
-Canonical documentation: https://developer.apple.com/documentation/tvuikit/creating-immersive-experiences-using-a-full-screen-layout
-Description: Framework: TVUIKit Kind: Sample Code Availability: tvOS 13.0+ · Xcode 14.2+
-
-# Creating immersive experiences using a full-screen layout
-
-**Framework:** TVUIKit  
-**Kind:** Sample Code  
-**Availability:** tvOS 13.0+ · Xcode 14.2+
-
-Display content with a collection view that maximizes the tvOS experience.
-
-<a id="Overview"></a>
-
-## Overview
-
-> **Note**
-
-> This sample code project is associated with WWDC 2019 session [211: Mastering the Living Room with tvOS](https://developer.apple.com/videos/play/wwdc19/211/).
-
-## See Also
-
-### Collections of content
-
-- [TVCollectionViewFullScreenLayout](tvcollectionviewfullscreenlayout.md): A collection view layout that organizes items into a browsable, full-screen display format.
-- [TVCollectionViewDelegateFullScreenLayout](tvcollectionviewdelegatefullscreenlayout.md): Methods that send notifications of events during cell transitions.
-- [TVCollectionViewFullScreenCell](tvcollectionviewfullscreencell.md): A full-screen cell to use in full-screen display format.
-- [TVCollectionViewFullScreenLayoutAttributes](tvcollectionviewfullscreenlayoutattributes.md): Attributes to manage the appearance of the collection view’s layout.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/get-a-list-of-geo-locations
 
 # Get a List of Geo Locations
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Web Service Endpoint  
-**Availability:** Search Ads 5.0+
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 Gets geolocation details using a geoidentifier.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## URL
 
@@ -90,4 +92,4 @@ POST https://api.searchads.apple.com/api/v5/search/geo
 
 ### Search Geolocation Endpoints
 
-- [Search for Geolocations](search-for-geolocations.md): Fetches a list of geolocations for targeting.
+- [Search for Geolocations](search-for-geolocations.md): Deprecated. Fetches a list of geolocations for targeting.

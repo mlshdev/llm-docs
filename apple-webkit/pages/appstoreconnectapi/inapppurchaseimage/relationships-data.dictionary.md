@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseimage/relationships-data.dictionary
 
 # InAppPurchaseImage.Relationships
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 2.0+ (deprecated in 4.4.1)
 
-The relationships for an in-app purchase image, linking it to its associated in-app purchase.
+The relationships for an In-App Purchase image, linking it to its associated In-App Purchase.
 
 > This object is deprecated. Use [InAppPurchaseImageV2](../inapppurchaseimagev2.md) instead.
 

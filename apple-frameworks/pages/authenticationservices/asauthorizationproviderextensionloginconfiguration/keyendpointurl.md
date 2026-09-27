@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/authenticationservices/asauthorizationproviderextensionloginconfiguration/keyendpointurl
 
 # keyEndpointURL (Swift)
@@ -19,6 +19,7 @@ var keyEndpointURL: URL? { get set }
 - [Supporting key requests and key exchange requests](../supporting-key-requests-and-key-exchange-requests.md)
 - [Creating a refresh request](../creating-a-refresh-request.md)
 - [Creating extensions that support Platform SSO](../creating-extensions-that-support-platform-sso.md)
+- [Interpreting Platform Single Sign-on authorization scopes](../interpreting-platform-single-sign-on-authorization-scopes.md)
 
 ## See Also
 
@@ -58,6 +59,7 @@ var keyEndpointURL: URL? { get set }
 - [Supporting key requests and key exchange requests](../supporting-key-requests-and-key-exchange-requests.md)
 - [Creating a refresh request](../creating-a-refresh-request.md)
 - [Creating extensions that support Platform SSO](../creating-extensions-that-support-platform-sso.md)
+- [Interpreting Platform Single Sign-on authorization scopes](../interpreting-platform-single-sign-on-authorization-scopes.md)
 
 ## See Also
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/gamecenterleaderboardimage
 
 # GameCenterLeaderboardImage
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Object  
-**Availability:** App Store Connect API 3.0+
+**Availability:** App Store Connect API 3.0+ (deprecated in 4.3)
 
 The data structure that represent a leaderboard image resource.
+
+> This object is deprecated. Use [GameCenterLeaderboardImageV2](gamecenterleaderboardimagev2.md) instead.
 
 ## Declaration
 

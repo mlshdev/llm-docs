@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/appasset
 
 # AppAsset
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Object  
-**Availability:** Search Ads 4.8+
+**Availability:** Search Ads 4.8+ (deprecated in 5.2)
 
 The app assets associated with an adam ID.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -58,7 +60,7 @@ object AppAsset
 
 ### Ad Rejection Reason Objects
 
-- [AppAssetListResponse](appassetlistresponse.md): The response to a request that returns a list of app assets.
-- [ProductPageReason](productpagereason.md): The ad creative rejection reason based on a product page.
-- [ProductPageReasonListResponse](productpagereasonlistresponse.md): The response to a request that returns a list of product page rejection reasons.
-- [ProductPageReasonResponse](productpagereasonresponse.md): A container for product page reasons.
+- [AppAssetListResponse](appassetlistresponse.md): Deprecated. The response to a request that returns a list of app assets.
+- [ProductPageReason](productpagereason.md): Deprecated. The ad creative rejection reason based on a product page.
+- [ProductPageReasonListResponse](productpagereasonlistresponse.md): Deprecated. The response to a request that returns a list of product page rejection reasons.
+- [ProductPageReasonResponse](productpagereasonresponse.md): Deprecated. A container for product page reasons.

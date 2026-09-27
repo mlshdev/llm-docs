@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseoffercodecustomcode/relationships-data.dictionary/createdbyactor-data.dictionary
 
 # InAppPurchaseOfferCodeCustomCode.Relationships.CreatedByActor
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 4.2+
 
-The data that describes the created by actor of the in-app purchase offer code custom code.
+The data that describes the created by actor of the In-App Purchase offer code custom code.
 
 ## Declaration
 
@@ -31,4 +31,4 @@ object InAppPurchaseOfferCodeCustomCode.Relationships.CreatedByActor
 
 ### Dictionaries
 
-- [InAppPurchaseOfferCodeCustomCode.Relationships.DeactivatedByActor](deactivatedbyactor-data.dictionary.md): The data that describes the deactivated by actor of the in-app purchase offer code custom code.
+- [InAppPurchaseOfferCodeCustomCode.Relationships.DeactivatedByActor](deactivatedbyactor-data.dictionary.md): The data that describes the deactivated by actor of the In-App Purchase offer code custom code.

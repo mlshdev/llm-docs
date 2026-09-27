@@ -1,9 +1,9 @@
-# Apple Swift snapshot-5915b24a1311: full documentation
+# Apple Swift snapshot-3cd4d1098779: full documentation
 
 Source: https://developer.apple.com/documentation/swift
-Catalog snapshot: 5915b24a13116058563ec2085adb7610a331e7e4aea596f8d2f1f1b39a6e0f1c
-Content digest: 8b137be1ef278f1d522a4d88c557c8c07b458d20c03cd9e5596b61253f263486
-Captured at: 2026-09-16T18:21:42.073Z
+Catalog snapshot: 3cd4d1098779f6b6fc16e524bcbb296cd3ca44b5de1a8f9d83171d61b7b63adb
+Content digest: cb3ffbf838cd5f0be6ae77f16fdae59481730abbd878246936617c12df1785d3
+Captured at: 2026-09-27T18:07:09.584Z
 Volume 2
 
 # Document: Equatable
@@ -3211,8 +3211,6 @@ func extractIsolation<each Arg, Result>(_ fn: @escaping @isolated(any) (repeat e
 - [UnsafeConcurrentValue](unsafeconcurrentvalue.md): Deprecated.
 - [UnsafeSendable](unsafesendable.md): Deprecated. A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
 - [UnsafeThrowingContinuation](unsafethrowingcontinuation.md): Deprecated.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 - [withUnsafeThrowingContinuation(isolation:\_:)](withunsafethrowingcontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md).
 
 # Document: false
@@ -99439,6 +99437,13 @@ protocol Iterable<Element, Failure> : ~Copyable, ~Escapable
 - [Span](span.md)
 - [UniqueArray](uniquearray.md)
 
+## See Also
+
+### Borrowing Iteration
+
+- [BorrowingIteratorProtocol](borrowingiteratorprotocol.md): A type that provides borrowed access to the values of a borrowing sequence.
+- [BorrowingIteratorAdapter](borrowingiteratoradapter.md)
+
 # Document: BorrowingIterator
 
 Source path: documentation/swift/iterable/borrowingiterator
@@ -99832,10 +99837,10 @@ for count in threeTwoOne {
 
 ## See Also
 
-### Manual Iteration
+### First Steps
 
-- [BorrowingIteratorProtocol](borrowingiteratorprotocol.md): A type that provides borrowed access to the values of a borrowing sequence.
-- [BorrowingIteratorAdapter](borrowingiteratoradapter.md)
+- [Sequence](sequence.md): A type that provides sequential, iterated access to its elements.
+- [Collection](collection.md): A sequence whose elements can be traversed multiple times, nondestructively, and accessed by an indexed subscript.
 
 # Document: Element
 
@@ -102370,8 +102375,6 @@ Unless you’re implementing a scheduler, you don’t generally interact with jo
 - [UnsafeConcurrentValue](unsafeconcurrentvalue.md): Deprecated.
 - [UnsafeSendable](unsafesendable.md): Deprecated. A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
 - [UnsafeThrowingContinuation](unsafethrowingcontinuation.md): Deprecated.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 - [withUnsafeThrowingContinuation(isolation:\_:)](withunsafethrowingcontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md).
 
 # Document: description
@@ -167693,8 +167696,6 @@ typealias PartialAsyncTask = UnownedJob
 - [UnsafeConcurrentValue](unsafeconcurrentvalue.md): Deprecated.
 - [UnsafeSendable](unsafesendable.md): Deprecated. A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
 - [UnsafeThrowingContinuation](unsafethrowingcontinuation.md): Deprecated.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 - [withUnsafeThrowingContinuation(isolation:\_:)](withunsafethrowingcontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md).
 
 # Document: PartialKeyPath
@@ -204735,6 +204736,7 @@ Use a sequence of rectangles and other types to perform operations on an AppKit 
 
 ### First Steps
 
+- [IteratorProtocol](iteratorprotocol.md): A type that supplies the values of a sequence one at a time.
 - [Collection](collection.md): A sequence whose elements can be traversed multiple times, nondestructively, and accessed by an indexed subscript.
 
 # Document: sequence(first:next:)
@@ -204868,6 +204870,7 @@ Write generic code that works with any collection, or build your own collection 
 
 ### First Steps
 
+- [IteratorProtocol](iteratorprotocol.md): A type that supplies the values of a sequence one at a time.
 - [Sequence](sequence.md): A type that provides sequential, iterated access to its elements.
 - [Collection](collection.md): A sequence whose elements can be traversed multiple times, nondestructively, and accessed by an indexed subscript.
 
@@ -204881,9 +204884,9 @@ Write generic code that works with any collection, or build your own collection 
 - [MutableCollection](mutablecollection.md): A collection that supports subscript assignment.
 - [RangeReplaceableCollection](rangereplaceablecollection.md): A collection that supports replacement of an arbitrary subrange of elements with the elements of another collection.
 
-### Manual Iteration
+### Borrowing Iteration
 
-- [IteratorProtocol](iteratorprotocol.md): A type that supplies the values of a sequence one at a time.
+- [Iterable](iterable.md): A type that provides sequential, borrowing access to its elements.
 - [BorrowingIteratorProtocol](borrowingiteratorprotocol.md): A type that provides borrowed access to the values of a borrowing sequence.
 - [BorrowingIteratorAdapter](borrowingiteratoradapter.md)
 
@@ -219667,4 +219670,22 @@ Description: Framework: Swift Kind: Operator Availability: iOS 8.0+ · iPadOS 8.
 
 ```swift
 static func &= (a: inout Self, b: Self.Scalar)
+```
+
+# Document: &=(_:_:)
+
+Source path: documentation/swift/simd/&=(_:_:)-9p2uz
+Canonical documentation: https://developer.apple.com/documentation/swift/simd/&=(_:_:)-9p2uz
+Description: Framework: Swift Kind: Operator Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+# &=(\_:\_:)
+
+**Framework:** Swift  
+**Kind:** Operator  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+## Declaration
+
+```swift
+static func &= (a: inout Self, b: Self)
 ```

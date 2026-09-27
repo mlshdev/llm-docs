@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/authenticationservices/platform-single-sign-on-sso
 
 # Platform Single Sign-on (SSO) (Swift)
@@ -72,6 +72,7 @@ For more information, see [Configuring Platform Single Sign-on](../devicemanagem
 ### Configuration
 
 - [Configuring authentication with the identity provider (IdP)](configuring-authentication-with-the-identity-provider-idp.md): Specify how Platform SSO authenticates with the identity provider.
+- [Interpreting Platform Single Sign-on authorization scopes](interpreting-platform-single-sign-on-authorization-scopes.md): Use authorization scopes to apply authentication policies.
 - [ASAuthorizationProviderExtensionLoginConfiguration](asauthorizationproviderextensionloginconfiguration.md): An interface for configuring platform single sign-on.
 - [ASAuthorizationProviderExtensionLoginManager](asauthorizationproviderextensionloginmanager.md): An interface to maintain platform single sign-on (SSO) during authentication and registration.
 - [Configuring Platform Single Sign-on](../devicemanagement/configuring-platform-single-sign-on.md): Provide a seamless login and authentication experience when integrating with your identity provider.
@@ -160,6 +161,7 @@ For more information, see [Configuring Platform Single Sign-on](../devicemanagem
 ### Configuration
 
 - [Configuring authentication with the identity provider (IdP)](configuring-authentication-with-the-identity-provider-idp.md): Specify how Platform SSO authenticates with the identity provider.
+- [Interpreting Platform Single Sign-on authorization scopes](interpreting-platform-single-sign-on-authorization-scopes.md): Use authorization scopes to apply authentication policies.
 - [ASAuthorizationProviderExtensionLoginConfiguration](asauthorizationproviderextensionloginconfiguration.md): An interface for configuring platform single sign-on.
 - [ASAuthorizationProviderExtensionLoginManager](asauthorizationproviderextensionloginmanager.md): An interface to maintain platform single sign-on (SSO) during authentication and registration.
 - [Configuring Platform Single Sign-on](../devicemanagement/configuring-platform-single-sign-on.md): Provide a seamless login and authentication experience when integrating with your identity provider.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/customreportresponse
 
 # CustomReportResponse
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Object  
-**Availability:** Search Ads 4.7+
+**Availability:** Search Ads 4.7+ (deprecated in 5.2)
 
 A container for Impression Share report metrics.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -64,6 +66,6 @@ See also [Impression Share Report](impression-share-report.md),  [Get a Single I
 
 ### Impression Share Report Request and Response Objects
 
-- [CustomReportRequest](customreportrequest.md): The Impression Share report request body.
-- [CustomReportResponseBody](customreportresponsebody.md): A container for the Impression Share report response body.
-- [SovCondition](sovcondition.md): The list of condition objects that allow users to filter a list of records.
+- [CustomReportRequest](customreportrequest.md): Deprecated. The Impression Share report request body.
+- [CustomReportResponseBody](customreportresponsebody.md): Deprecated. A container for the Impression Share report response body.
+- [SovCondition](sovcondition.md): Deprecated. The list of condition objects that allow users to filter a list of records.

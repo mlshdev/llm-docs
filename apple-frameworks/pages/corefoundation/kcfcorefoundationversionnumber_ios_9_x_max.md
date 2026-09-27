@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/corefoundation/kcfcorefoundationversionnumber_ios_9_x_max
 
 # kCFCoreFoundationVersionNumber_iOS_9_x_Max (Swift)

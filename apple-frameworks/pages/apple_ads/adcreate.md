@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/adcreate
 
 # AdCreate
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Object  
-**Availability:** Search Ads 4.0+
+**Availability:** Search Ads 4.0+ (deprecated in 5.2)
 
 The request to create an ad, and assign a creative to an ad group.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -73,7 +75,7 @@ object AdCreate
 
 ### Ad Request and Response Objects
 
-- [Ad](ad.md): The assignment of a creative to an ad group.
-- [AdUpdate](adupdate.md): The request to update an ad.
-- [AdResponse](adresponse.md): The response to an ad request.
-- [AdListResponse](adlistresponse.md): The response to a request that returns a list of ads.
+- [Ad](ad.md): Deprecated. The assignment of a creative to an ad group.
+- [AdUpdate](adupdate.md): Deprecated. The request to update an ad.
+- [AdResponse](adresponse.md): Deprecated. The response to an ad request.
+- [AdListResponse](adlistresponse.md): Deprecated. The response to a request that returns a list of ads.

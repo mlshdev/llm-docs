@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchasesubmission
 
 # InAppPurchaseSubmission
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 2.0+ (deprecated in 4.4.1)
 
-A submission of an in-app purchase to App Store review, triggering the review process for that item.
+A submission of an In-App Purchase to App Store review, triggering the review process for that item.
 
 > This object is deprecated. Use the review submissions workflow instead.
 
@@ -36,5 +36,5 @@ object InAppPurchaseSubmission
 
 ### Objects
 
-- [InAppPurchaseSubmissionCreateRequest](inapppurchasesubmissioncreaterequest.md): Deprecated. The request body you use to create an in-app purchase submission.
-- [InAppPurchaseSubmissionResponse](inapppurchasesubmissionresponse.md): Deprecated. A response confirming the submission of an in-app purchase for App Store review.
+- [InAppPurchaseSubmissionCreateRequest](inapppurchasesubmissioncreaterequest.md): Deprecated. The request body you use to create an In-App Purchase submission.
+- [InAppPurchaseSubmissionResponse](inapppurchasesubmissionresponse.md): Deprecated. A response confirming the submission of an In-App Purchase for App Store review.

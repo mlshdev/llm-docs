@@ -1,9 +1,9 @@
-# Apple macOS snapshot-dddbaaa5d689: full documentation
+# Apple macOS snapshot-0513df389cc7: full documentation
 
 Source: https://developer.apple.com/macos/
-Catalog snapshot: dddbaaa5d68938b78e25cd7258d52d42bee99da54bada6dfdcdac6d27ed6d784
-Content digest: b46afb0276671af8bc9a785353506dd6e354ab37bfecc3472e56a0b846339d6c
-Captured at: 2026-09-19T05:14:28.772Z
+Catalog snapshot: 0513df389cc7d03925548349e7911a6ebef119a2d6175e34677a7c70890bc66d
+Content digest: ec427c6239650887b82e5cacb977fcdddd983ad9801ba5ba438444988e4f778c
+Captured at: 2026-09-27T18:07:09.722Z
 Volume 13
 
 # Document: clock_reply_subsystem

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/get-localized-app-details
 
 # Get Localized App Details
@@ -6,9 +6,12 @@
 **Interface language:** Data
 
 **Framework:** Apple Ads  
-**Kind:** Web Service Endpoint
+**Kind:** Web Service Endpoint  
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 Fetches the localized default product page for an app.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## URL
 
@@ -99,4 +102,4 @@ GET https://api.searchads.apple.com/api/v5/apps/{adamId}/locale-details
 
 ### App Details
 
-- [Get App Details](get-app-details.md): Fetches app metadata.
+- [Get App Details](get-app-details.md): Deprecated. Fetches app metadata.

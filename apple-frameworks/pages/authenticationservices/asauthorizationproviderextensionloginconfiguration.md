@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/authenticationservices/asauthorizationproviderextensionloginconfiguration
 
 # ASAuthorizationProviderExtensionLoginConfiguration (Swift)
@@ -18,6 +18,7 @@ class ASAuthorizationProviderExtensionLoginConfiguration
 ## Mentioned In
 
 - [Creating extensions that support Platform SSO](creating-extensions-that-support-platform-sso.md)
+- [Interpreting Platform Single Sign-on authorization scopes](interpreting-platform-single-sign-on-authorization-scopes.md)
 
 <a id="overview"></a>
 
@@ -139,6 +140,7 @@ This class provides login configuration information for platform single sign-on.
 ### Configuration
 
 - [Configuring authentication with the identity provider (IdP)](configuring-authentication-with-the-identity-provider-idp.md): Specify how Platform SSO authenticates with the identity provider.
+- [Interpreting Platform Single Sign-on authorization scopes](interpreting-platform-single-sign-on-authorization-scopes.md): Use authorization scopes to apply authentication policies.
 - [ASAuthorizationProviderExtensionLoginManager](asauthorizationproviderextensionloginmanager.md): An interface to maintain platform single sign-on (SSO) during authentication and registration.
 
 # ASAuthorizationProviderExtensionLoginConfiguration (Objective-C)
@@ -158,6 +160,7 @@ An interface for configuring platform single sign-on.
 ## Mentioned In
 
 - [Creating extensions that support Platform SSO](creating-extensions-that-support-platform-sso.md)
+- [Interpreting Platform Single Sign-on authorization scopes](interpreting-platform-single-sign-on-authorization-scopes.md)
 
 <a id="overview"></a>
 
@@ -270,4 +273,5 @@ This class provides login configuration information for platform single sign-on.
 ### Configuration
 
 - [Configuring authentication with the identity provider (IdP)](configuring-authentication-with-the-identity-provider-idp.md): Specify how Platform SSO authenticates with the identity provider.
+- [Interpreting Platform Single Sign-on authorization scopes](interpreting-platform-single-sign-on-authorization-scopes.md): Use authorization scopes to apply authentication policies.
 - [ASAuthorizationProviderExtensionLoginManager](asauthorizationproviderextensionloginmanager.md): An interface to maintain platform single sign-on (SSO) during authentication and registration.

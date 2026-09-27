@@ -1,13 +1,13 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89
+# Apple cross-platform frameworks snapshot-df12c7e37114
 
-> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/documentation/technologies](https://developer.apple.com/documentation/technologies) and pinned to catalog snapshot `c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72` captured at 2026-09-19T05:14:28.876Z.
+> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/documentation/technologies](https://developer.apple.com/documentation/technologies) and pinned to catalog snapshot `df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800` captured at 2026-09-27T18:07:10.128Z.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Apple cross-platform frameworks snapshot-c3455ae26d89.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple cross-platform frameworks snapshot-df12c7e37114.
 - [Provenance manifest](manifest.json): Snapshot digest, capture time, document count, and generation notes.
 - Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.
-- 269 frameworks in this catalog, captured at 2026-09-19T05:14:28.876Z.
+- 269 frameworks in this catalog, captured at 2026-09-27T18:07:10.128Z.
 - Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.
-- Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.
+- Weekly reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive weekly check.
 - Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream.
 
 ## Frameworks
@@ -35,7 +35,7 @@
 - [App Tracking Transparency](pages/apptrackingtransparency.md): 13 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
 - [Apple Ads](pages/apple_ads.md): 253 pages. Platforms: Apple Ads.
 - [Apple Archive](pages/applearchive.md): 653 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
-- [Apple Business API](pages/applebusinessapi.md): 336 pages. Platforms: Apple Business API.
+- [Apple Business API](pages/applebusinessapi.md): 372 pages. Platforms: Apple Business API.
 - [Apple CryptoKit](pages/cryptokit.md): 705 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
 - [Apple Maps Server API](pages/applemapsserverapi.md): 48 pages. Platforms: Apple Maps Server API.
 - [Apple Music Feed](pages/applemusicfeed.md): 40 pages. Platforms: AppleMusicFeed.
@@ -50,13 +50,13 @@
 - [Audio Toolbox](pages/audiotoolbox.md): 3731 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
 - [Audio Unit](pages/audiounit.md): 2 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
 - [AudioDriverKit](pages/audiodriverkit.md): 535 pages. Platforms: DriverKit.
-- [Authentication Services](pages/authenticationservices.md): 1452 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Authentication Services](pages/authenticationservices.md): 1453 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
 - [Automatic Assessment Configuration](pages/automaticassessmentconfiguration.md): 156 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS.
 - [Automatic Sign-In API](pages/automaticsigninapi.md): 5 pages. Platforms: Automatic Sign-In API.
 - [Background Assets](pages/backgroundassets.md): 245 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
 - [Background Tasks](pages/backgroundtasks.md): 64 pages. Platforms: iOS, iPadOS, Mac Catalyst, tvOS, visionOS.
 - [BlockStorageDeviceDriverKit](pages/blockstoragedevicedriverkit.md): 41 pages. Platforms: DriverKit.
-- [Bundle Resources](pages/bundleresources.md): 911 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Bundle Resources](pages/bundleresources.md): 912 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
 - [CFNetwork](pages/cfnetwork.md): 419 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
 - [CallKit](pages/callkit.md): 284 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS.
 - [Cinematic](pages/cinematic.md): 400 pages. Platforms: iOS, iPadOS, macOS, tvOS.

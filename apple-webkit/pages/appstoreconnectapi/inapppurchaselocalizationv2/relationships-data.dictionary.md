@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaselocalizationv2/relationships-data.dictionary
 
 # InAppPurchaseLocalizationV2.Relationships
@@ -25,10 +25,10 @@ object InAppPurchaseLocalizationV2.Relationships
 
 ### Objects
 
-- [InAppPurchaseLocalizationV2.Relationships.Version](relationships-data.dictionary/version-data.dictionary.md): The in-app purchase version for the in-app purchase localization.
+- [InAppPurchaseLocalizationV2.Relationships.Version](relationships-data.dictionary/version-data.dictionary.md): The In-App Purchase version for the In-App Purchase localization.
 
 ## See Also
 
 ### Objects and types
 
-- [InAppPurchaseLocalizationV2.Attributes](attributes-data.dictionary.md): Attributes that describe an in-app purchase localization resource.
+- [InAppPurchaseLocalizationV2.Attributes](attributes-data.dictionary.md): Attributes that describe an In-App Purchase localization resource.

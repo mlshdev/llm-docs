@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/tvuikit/tvlockupheaderfooterview
 
 # TVLockupHeaderFooterView (Swift)
@@ -49,6 +49,8 @@ You can add header and footer views containing titles and subtitles to the locku
 - [Hashable](https://developer.apple.com/documentation/swift/hashable)
 - [NSCoding](../foundation/nscoding.md)
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [TVLockupViewComponent](tvlockupviewcomponent.md)
 - [UIAccessibilityIdentification](../uikit/uiaccessibilityidentification.md)
 - [UIActivityItemsConfigurationProviding](../uikit/uiactivityitemsconfigurationproviding.md)

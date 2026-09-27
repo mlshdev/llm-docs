@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/creativestatereason
 
 # CreativeStateReason
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Type  
-**Availability:** Search Ads 4.0+
+**Availability:** Search Ads 4.0+ (deprecated in 5.2)
 
 Reasons the system provides when an ad isn’t running.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -28,5 +30,5 @@ string CreativeStateReason
 
 ### Data Types
 
-- [CreativeType](creativetype.md): The type of creative.
-- [CreativeState](creativestate.md): The system state of the creative.
+- [CreativeType](creativetype.md): Deprecated. The type of creative.
+- [CreativeState](creativestate.md): Deprecated. The system state of the creative.

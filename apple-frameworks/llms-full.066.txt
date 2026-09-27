@@ -1,10 +1,1713 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 66
+
+# Document: IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor
+
+Source path: documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor
+Description: Interface language: Objective-C
+
+# IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Structure  
+**Availability:** DriverKit 19.0+
+
+The descriptor for a SuperSpeedPlus Isochronous USB Endpoint Companion.
+
+## Declaration
+
+```objectivec
+struct IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+See USB 3.1 9.6.8: SuperSpeedPlus Isochronous Endpoint Companion in the USB Specification at [http://www.usb.org](http://www.usb.org).
+
+## Topics
+
+### Accessing the Descriptor Properties
+
+- [bLength](iousbsuperspeedplusisochronousendpointcompaniondescriptor/blength.md)
+- [bDescriptorType](iousbsuperspeedplusisochronousendpointcompaniondescriptor/bdescriptortype.md)
+- [wReserved](iousbsuperspeedplusisochronousendpointcompaniondescriptor/wreserved.md)
+- [dwBytesPerInterval](iousbsuperspeedplusisochronousendpointcompaniondescriptor/dwbytesperinterval.md)
+
+## See Also
+
+### Endpoint Descriptors
+
+- [IOUSBEndpointDescriptor](iousbendpointdescriptor.md): The structure for storing an endpoint descriptor.
+- [IOUSBSuperSpeedEndpointCompanionDescriptor](iousbsuperspeedendpointcompaniondescriptor.md): The descriptor for a SuperSpeed USB Endpoint Companion.
+- [tIOUSBEndpointType](tiousbendpointtype.md): Constants describing the types of endpoints.
+- [Endpoint Attributes](endpoint_attributes-enum.md): Constants for endpoint attributes.
+- [SuperSpeed USB Endpoint Descriptor Options](superspeed_usb_endpoint_descript-enum.md): Constants for super-speed endpoint attributes.
+- [tIOUSBEndpointDirection](tiousbendpointdirection.md): The direction of data transfers on an endpoint.
+- [tIOUSBEndpointSynchronizationType](tiousbendpointsynchronizationtype.md): Constants for the endpoint synchronization types.
+- [tIOUSBEndpointUsageType](tiousbendpointusagetype.md): Constants for the endpoint usage types.
+- [tIOUSBLanguageID](tiousblanguageid.md): Constants for the USB language identifiers.
+
+# Document: bDescriptorType
+
+Source path: documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/bdescriptortype
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/bdescriptortype
+Description: Interface language: Objective-C
+
+# bDescriptorType
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Instance Property  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+uint8_t bDescriptorType;
+```
+
+## See Also
+
+### Accessing the Descriptor Properties
+
+- [bLength](blength.md)
+- [wReserved](wreserved.md)
+- [dwBytesPerInterval](dwbytesperinterval.md)
+
+# Document: bLength
+
+Source path: documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/blength
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/blength
+Description: Interface language: Objective-C
+
+# bLength
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Instance Property  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+uint8_t bLength;
+```
+
+## See Also
+
+### Accessing the Descriptor Properties
+
+- [bDescriptorType](bdescriptortype.md)
+- [wReserved](wreserved.md)
+- [dwBytesPerInterval](dwbytesperinterval.md)
+
+# Document: dwBytesPerInterval
+
+Source path: documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/dwbytesperinterval
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/dwbytesperinterval
+Description: Interface language: Objective-C
+
+# dwBytesPerInterval
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Instance Property  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+uint32_t dwBytesPerInterval;
+```
+
+## See Also
+
+### Accessing the Descriptor Properties
+
+- [bLength](blength.md)
+- [bDescriptorType](bdescriptortype.md)
+- [wReserved](wreserved.md)
+
+# Document: wReserved
+
+Source path: documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/wreserved
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/wreserved
+Description: Interface language: Objective-C
+
+# wReserved
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Instance Property  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+uint16_t wReserved;
+```
+
+## See Also
+
+### Accessing the Descriptor Properties
+
+- [bLength](blength.md)
+- [bDescriptorType](bdescriptortype.md)
+- [dwBytesPerInterval](dwbytesperinterval.md)
+
+# Document: kAppleCurrentExtra
+
+Source path: documentation/usbdriverkit/kapplecurrentextra
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kapplecurrentextra
+Description: Interface language: Objective-C
+
+# kAppleCurrentExtra
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+#define kAppleCurrentExtra
+```
+
+## See Also
+
+### Macros
+
+- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
+- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
+- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
+- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
+- [iokit_usb_codemask](iokit_usb_codemask.md)
+- [iokit_usbhost_err](iokit_usbhost_err.md)
+- [iokit_usbhost_group](iokit_usbhost_group.md)
+- [iokit_usbhost_msg](iokit_usbhost_msg.md)
+- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
+- [iokit_usblegacy_group](iokit_usblegacy_group.md)
+- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
+- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
+- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
+- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
+- [kIOUSB20BitrateFull](kiousb20bitratefull.md)
+
+# Document: kAppleCurrentExtraInSleep
+
+Source path: documentation/usbdriverkit/kapplecurrentextrainsleep
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kapplecurrentextrainsleep
+Description: Interface language: Objective-C
+
+# kAppleCurrentExtraInSleep
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+#define kAppleCurrentExtraInSleep
+```
+
+## See Also
+
+### Macros
+
+- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
+- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
+- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
+- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
+- [iokit_usb_codemask](iokit_usb_codemask.md)
+- [iokit_usbhost_err](iokit_usbhost_err.md)
+- [iokit_usbhost_group](iokit_usbhost_group.md)
+- [iokit_usbhost_msg](iokit_usbhost_msg.md)
+- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
+- [iokit_usblegacy_group](iokit_usblegacy_group.md)
+- [kAppleCurrentExtra](kapplecurrentextra.md)
+- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
+- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
+- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
+- [kIOUSB20BitrateFull](kiousb20bitratefull.md)
+
+# Document: kAppleExternalConnectorBitmap
+
+Source path: documentation/usbdriverkit/kappleexternalconnectorbitmap
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kappleexternalconnectorbitmap
+Description: Interface language: Objective-C
+
+# kAppleExternalConnectorBitmap
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+#define kAppleExternalConnectorBitmap
+```
+
+## See Also
+
+### Macros
+
+- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
+- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
+- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
+- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
+- [iokit_usb_codemask](iokit_usb_codemask.md)
+- [iokit_usbhost_err](iokit_usbhost_err.md)
+- [iokit_usbhost_group](iokit_usbhost_group.md)
+- [iokit_usbhost_msg](iokit_usbhost_msg.md)
+- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
+- [iokit_usblegacy_group](iokit_usblegacy_group.md)
+- [kAppleCurrentExtra](kapplecurrentextra.md)
+- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
+- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
+- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
+- [kIOUSB20BitrateFull](kiousb20bitratefull.md)
+
+# Document: kAppleMaxPortCurrent
+
+Source path: documentation/usbdriverkit/kapplemaxportcurrent
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kapplemaxportcurrent
+Description: Interface language: Objective-C
+
+# kAppleMaxPortCurrent
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+#define kAppleMaxPortCurrent
+```
+
+## See Also
+
+### Macros
+
+- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
+- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
+- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
+- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
+- [iokit_usb_codemask](iokit_usb_codemask.md)
+- [iokit_usbhost_err](iokit_usbhost_err.md)
+- [iokit_usbhost_group](iokit_usbhost_group.md)
+- [iokit_usbhost_msg](iokit_usbhost_msg.md)
+- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
+- [iokit_usblegacy_group](iokit_usblegacy_group.md)
+- [kAppleCurrentExtra](kapplecurrentextra.md)
+- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
+- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
+- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
+- [kIOUSB20BitrateFull](kiousb20bitratefull.md)
+
+# Document: kAppleMaxPortCurrentInSleep
+
+Source path: documentation/usbdriverkit/kapplemaxportcurrentinsleep
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kapplemaxportcurrentinsleep
+Description: Interface language: Objective-C
+
+# kAppleMaxPortCurrentInSleep
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+#define kAppleMaxPortCurrentInSleep
+```
+
+## See Also
+
+### Macros
+
+- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
+- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
+- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
+- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
+- [iokit_usb_codemask](iokit_usb_codemask.md)
+- [iokit_usbhost_err](iokit_usbhost_err.md)
+- [iokit_usbhost_group](iokit_usbhost_group.md)
+- [iokit_usbhost_msg](iokit_usbhost_msg.md)
+- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
+- [iokit_usblegacy_group](iokit_usblegacy_group.md)
+- [kAppleCurrentExtra](kapplecurrentextra.md)
+- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
+- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
+- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
+- [kIOUSB20BitrateFull](kiousb20bitratefull.md)
+
+# Document: kIOUSB20BitrateFull
+
+Source path: documentation/usbdriverkit/kiousb20bitratefull
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousb20bitratefull
+Description: Interface language: Objective-C
+
+# kIOUSB20BitrateFull
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+#define kIOUSB20BitrateFull
+```
+
+## See Also
+
+### Macros
+
+- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
+- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
+- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
+- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
+- [iokit_usb_codemask](iokit_usb_codemask.md)
+- [iokit_usbhost_err](iokit_usbhost_err.md)
+- [iokit_usbhost_group](iokit_usbhost_group.md)
+- [iokit_usbhost_msg](iokit_usbhost_msg.md)
+- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
+- [iokit_usblegacy_group](iokit_usblegacy_group.md)
+- [kAppleCurrentExtra](kapplecurrentextra.md)
+- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
+- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
+- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
+- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
+
+# Document: kIOUSB20BitrateHigh
+
+Source path: documentation/usbdriverkit/kiousb20bitratehigh
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousb20bitratehigh
+Description: Interface language: Objective-C
+
+# kIOUSB20BitrateHigh
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+#define kIOUSB20BitrateHigh
+```
+
+## See Also
+
+### Macros
+
+- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
+- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
+- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
+- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
+- [iokit_usb_codemask](iokit_usb_codemask.md)
+- [iokit_usbhost_err](iokit_usbhost_err.md)
+- [iokit_usbhost_group](iokit_usbhost_group.md)
+- [iokit_usbhost_msg](iokit_usbhost_msg.md)
+- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
+- [iokit_usblegacy_group](iokit_usblegacy_group.md)
+- [kAppleCurrentExtra](kapplecurrentextra.md)
+- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
+- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
+- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
+- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
+
+# Document: kIOUSB20BitrateLow
+
+Source path: documentation/usbdriverkit/kiousb20bitratelow
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousb20bitratelow
+Description: Interface language: Objective-C
+
+# kIOUSB20BitrateLow
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+#define kIOUSB20BitrateLow
+```
+
+## See Also
+
+### Macros
+
+- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
+- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
+- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
+- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
+- [iokit_usb_codemask](iokit_usb_codemask.md)
+- [iokit_usbhost_err](iokit_usbhost_err.md)
+- [iokit_usbhost_group](iokit_usbhost_group.md)
+- [iokit_usbhost_msg](iokit_usbhost_msg.md)
+- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
+- [iokit_usblegacy_group](iokit_usblegacy_group.md)
+- [kAppleCurrentExtra](kapplecurrentextra.md)
+- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
+- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
+- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
+- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
+
+# Document: kIOUSB30Bitrate10Gbps
+
+Source path: documentation/usbdriverkit/kiousb30bitrate10gbps
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousb30bitrate10gbps
+Description: Interface language: Objective-C
+
+# kIOUSB30Bitrate10Gbps
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+#define kIOUSB30Bitrate10Gbps
+```
+
+## See Also
+
+### Bitrate Constants
+
+- [kIOUSB30Bitrate5Gbps](kiousb30bitrate5gbps.md)
+- [kIOUSB32Bitrate20Gbps](kiousb32bitrate20gbps.md)
+
+# Document: kIOUSB30Bitrate5Gbps
+
+Source path: documentation/usbdriverkit/kiousb30bitrate5gbps
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousb30bitrate5gbps
+Description: Interface language: Objective-C
+
+# kIOUSB30Bitrate5Gbps
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+#define kIOUSB30Bitrate5Gbps
+```
+
+## See Also
+
+### Bitrate Constants
+
+- [kIOUSB30Bitrate10Gbps](kiousb30bitrate10gbps.md)
+- [kIOUSB32Bitrate20Gbps](kiousb32bitrate20gbps.md)
+
+# Document: kIOUSB30RetimerDepthLimit
+
+Source path: documentation/usbdriverkit/kiousb30retimerdepthlimit
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousb30retimerdepthlimit
+Description: Interface language: Objective-C
+
+# kIOUSB30RetimerDepthLimit
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSB30RetimerDepthLimit
+```
+
+# Document: kIOUSB32Bitrate20Gbps
+
+Source path: documentation/usbdriverkit/kiousb32bitrate20gbps
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousb32bitrate20gbps
+Description: Interface language: Objective-C
+
+# kIOUSB32Bitrate20Gbps
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+#define kIOUSB32Bitrate20Gbps
+```
+
+## See Also
+
+### Bitrate Constants
+
+- [kIOUSB30Bitrate5Gbps](kiousb30bitrate5gbps.md)
+- [kIOUSB30Bitrate10Gbps](kiousb30bitrate10gbps.md)
+
+# Document: kIOUSBAppleVendorID
+
+Source path: documentation/usbdriverkit/kiousbapplevendorid
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbapplevendorid
+Description: Interface language: Objective-C
+
+# kIOUSBAppleVendorID
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBAppleVendorID
+```
+
+# Document: kIOUSBBillboardEntitlement
+
+Source path: documentation/usbdriverkit/kiousbbillboardentitlement
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbbillboardentitlement
+Description: Interface language: Objective-C
+
+# kIOUSBBillboardEntitlement
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+#define kIOUSBBillboardEntitlement
+```
+
+## See Also
+
+### Macros
+
+- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
+- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
+- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
+- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
+- [iokit_usb_codemask](iokit_usb_codemask.md)
+- [iokit_usbhost_err](iokit_usbhost_err.md)
+- [iokit_usbhost_group](iokit_usbhost_group.md)
+- [iokit_usbhost_msg](iokit_usbhost_msg.md)
+- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
+- [iokit_usblegacy_group](iokit_usblegacy_group.md)
+- [kAppleCurrentExtra](kapplecurrentextra.md)
+- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
+- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
+- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
+- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
+
+# Document: kIOUSBConfigurationDescriptorAttributeRemoteWakeCapable
+
+Source path: documentation/usbdriverkit/kiousbconfigurationdescriptorattributeremotewakecapable
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbconfigurationdescriptorattributeremotewakecapable
+Description: Interface language: Objective-C
+
+# kIOUSBConfigurationDescriptorAttributeRemoteWakeCapable
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBConfigurationDescriptorAttributeRemoteWakeCapable
+```
+
+## See Also
+
+### Getting the Settings
+
+- [kIOUSBConfigurationDescriptorAttributeSelfPowered](kiousbconfigurationdescriptorattributeselfpowered.md)
+
+# Document: kIOUSBConfigurationDescriptorAttributeSelfPowered
+
+Source path: documentation/usbdriverkit/kiousbconfigurationdescriptorattributeselfpowered
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbconfigurationdescriptorattributeselfpowered
+Description: Interface language: Objective-C
+
+# kIOUSBConfigurationDescriptorAttributeSelfPowered
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBConfigurationDescriptorAttributeSelfPowered
+```
+
+## See Also
+
+### Getting the Settings
+
+- [kIOUSBConfigurationDescriptorAttributeRemoteWakeCapable](kiousbconfigurationdescriptorattributeremotewakecapable.md)
+
+# Document: kIOUSBDeviceFeatureSelectorLTMEnable
+
+Source path: documentation/usbdriverkit/kiousbdevicefeatureselectorltmenable
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicefeatureselectorltmenable
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceFeatureSelectorLTMEnable
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceFeatureSelectorLTMEnable
+```
+
+## See Also
+
+### Getting the Selector Types
+
+- [kIOUSBDeviceFeatureSelectorRemoteWakeup](kiousbdevicefeatureselectorremotewakeup.md)
+- [kIOUSBDeviceFeatureSelectorTestMode](kiousbdevicefeatureselectortestmode.md)
+- [kIOUSBDeviceFeatureSelectorU1Enable](kiousbdevicefeatureselectoru1enable.md)
+- [kIOUSBDeviceFeatureSelectorU2Enable](kiousbdevicefeatureselectoru2enable.md)
+- [kIOUSBInterfaceFeatureSelectorSuspend](kiousbinterfacefeatureselectorsuspend.md)
+- [IOUSBEndpointFeatureSelectorStall](iousbendpointfeatureselectorstall.md)
+
+# Document: kIOUSBDeviceFeatureSelectorRemoteWakeup
+
+Source path: documentation/usbdriverkit/kiousbdevicefeatureselectorremotewakeup
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicefeatureselectorremotewakeup
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceFeatureSelectorRemoteWakeup
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceFeatureSelectorRemoteWakeup
+```
+
+## See Also
+
+### Getting the Selector Types
+
+- [kIOUSBDeviceFeatureSelectorTestMode](kiousbdevicefeatureselectortestmode.md)
+- [kIOUSBDeviceFeatureSelectorU1Enable](kiousbdevicefeatureselectoru1enable.md)
+- [kIOUSBDeviceFeatureSelectorU2Enable](kiousbdevicefeatureselectoru2enable.md)
+- [kIOUSBDeviceFeatureSelectorLTMEnable](kiousbdevicefeatureselectorltmenable.md)
+- [kIOUSBInterfaceFeatureSelectorSuspend](kiousbinterfacefeatureselectorsuspend.md)
+- [IOUSBEndpointFeatureSelectorStall](iousbendpointfeatureselectorstall.md)
+
+# Document: kIOUSBDeviceFeatureSelectorTestMode
+
+Source path: documentation/usbdriverkit/kiousbdevicefeatureselectortestmode
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicefeatureselectortestmode
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceFeatureSelectorTestMode
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceFeatureSelectorTestMode
+```
+
+## See Also
+
+### Getting the Selector Types
+
+- [kIOUSBDeviceFeatureSelectorRemoteWakeup](kiousbdevicefeatureselectorremotewakeup.md)
+- [kIOUSBDeviceFeatureSelectorU1Enable](kiousbdevicefeatureselectoru1enable.md)
+- [kIOUSBDeviceFeatureSelectorU2Enable](kiousbdevicefeatureselectoru2enable.md)
+- [kIOUSBDeviceFeatureSelectorLTMEnable](kiousbdevicefeatureselectorltmenable.md)
+- [kIOUSBInterfaceFeatureSelectorSuspend](kiousbinterfacefeatureselectorsuspend.md)
+- [IOUSBEndpointFeatureSelectorStall](iousbendpointfeatureselectorstall.md)
+
+# Document: kIOUSBDeviceFeatureSelectorU1Enable
+
+Source path: documentation/usbdriverkit/kiousbdevicefeatureselectoru1enable
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicefeatureselectoru1enable
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceFeatureSelectorU1Enable
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceFeatureSelectorU1Enable
+```
+
+## See Also
+
+### Getting the Selector Types
+
+- [kIOUSBDeviceFeatureSelectorRemoteWakeup](kiousbdevicefeatureselectorremotewakeup.md)
+- [kIOUSBDeviceFeatureSelectorTestMode](kiousbdevicefeatureselectortestmode.md)
+- [kIOUSBDeviceFeatureSelectorU2Enable](kiousbdevicefeatureselectoru2enable.md)
+- [kIOUSBDeviceFeatureSelectorLTMEnable](kiousbdevicefeatureselectorltmenable.md)
+- [kIOUSBInterfaceFeatureSelectorSuspend](kiousbinterfacefeatureselectorsuspend.md)
+- [IOUSBEndpointFeatureSelectorStall](iousbendpointfeatureselectorstall.md)
+
+# Document: kIOUSBDeviceFeatureSelectorU2Enable
+
+Source path: documentation/usbdriverkit/kiousbdevicefeatureselectoru2enable
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicefeatureselectoru2enable
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceFeatureSelectorU2Enable
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceFeatureSelectorU2Enable
+```
+
+## See Also
+
+### Getting the Selector Types
+
+- [kIOUSBDeviceFeatureSelectorRemoteWakeup](kiousbdevicefeatureselectorremotewakeup.md)
+- [kIOUSBDeviceFeatureSelectorTestMode](kiousbdevicefeatureselectortestmode.md)
+- [kIOUSBDeviceFeatureSelectorU1Enable](kiousbdevicefeatureselectoru1enable.md)
+- [kIOUSBDeviceFeatureSelectorLTMEnable](kiousbdevicefeatureselectorltmenable.md)
+- [kIOUSBInterfaceFeatureSelectorSuspend](kiousbinterfacefeatureselectorsuspend.md)
+- [IOUSBEndpointFeatureSelectorStall](iousbendpointfeatureselectorstall.md)
+
+# Document: kIOUSBDeviceRequestClearFeature
+
+Source path: documentation/usbdriverkit/kiousbdevicerequestclearfeature
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestclearfeature
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceRequestClearFeature
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceRequestClearFeature
+```
+
+## See Also
+
+### Getting the Request Types
+
+- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
+- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
+- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
+- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
+- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
+- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
+- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
+- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
+- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
+- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
+- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
+- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
+- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
+
+# Document: kIOUSBDeviceRequestGetConfiguration
+
+Source path: documentation/usbdriverkit/kiousbdevicerequestgetconfiguration
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestgetconfiguration
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceRequestGetConfiguration
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceRequestGetConfiguration
+```
+
+## See Also
+
+### Getting the Request Types
+
+- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
+- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
+- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
+- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
+- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
+- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
+- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
+- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
+- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
+- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
+- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
+- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
+- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
+
+# Document: kIOUSBDeviceRequestGetDescriptor
+
+Source path: documentation/usbdriverkit/kiousbdevicerequestgetdescriptor
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestgetdescriptor
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceRequestGetDescriptor
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceRequestGetDescriptor
+```
+
+## See Also
+
+### Getting the Request Types
+
+- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
+- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
+- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
+- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
+- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
+- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
+- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
+- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
+- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
+- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
+- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
+- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
+- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
+
+# Document: kIOUSBDeviceRequestGetInterface
+
+Source path: documentation/usbdriverkit/kiousbdevicerequestgetinterface
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestgetinterface
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceRequestGetInterface
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceRequestGetInterface
+```
+
+## See Also
+
+### Getting the Request Types
+
+- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
+- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
+- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
+- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
+- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
+- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
+- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
+- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
+- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
+- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
+- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
+- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
+- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
+
+# Document: kIOUSBDeviceRequestGetState
+
+Source path: documentation/usbdriverkit/kiousbdevicerequestgetstate
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestgetstate
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceRequestGetState
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceRequestGetState
+```
+
+## See Also
+
+### Getting the Request Types
+
+- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
+- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
+- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
+- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
+- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
+- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
+- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
+- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
+- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
+- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
+- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
+- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
+- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
+
+# Document: kIOUSBDeviceRequestGetStatus
+
+Source path: documentation/usbdriverkit/kiousbdevicerequestgetstatus
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestgetstatus
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceRequestGetStatus
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceRequestGetStatus
+```
+
+## See Also
+
+### Getting the Request Types
+
+- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
+- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
+- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
+- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
+- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
+- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
+- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
+- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
+- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
+- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
+- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
+- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
+- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
+
+# Document: kIOUSBDeviceRequestSetAddress
+
+Source path: documentation/usbdriverkit/kiousbdevicerequestsetaddress
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsetaddress
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceRequestSetAddress
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceRequestSetAddress
+```
+
+## See Also
+
+### Getting the Request Types
+
+- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
+- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
+- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
+- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
+- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
+- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
+- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
+- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
+- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
+- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
+- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
+- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
+- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
+
+# Document: kIOUSBDeviceRequestSetConfiguration
+
+Source path: documentation/usbdriverkit/kiousbdevicerequestsetconfiguration
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsetconfiguration
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceRequestSetConfiguration
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceRequestSetConfiguration
+```
+
+## See Also
+
+### Getting the Request Types
+
+- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
+- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
+- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
+- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
+- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
+- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
+- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
+- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
+- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
+- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
+- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
+- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
+- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
+
+# Document: kIOUSBDeviceRequestSetDescriptor
+
+Source path: documentation/usbdriverkit/kiousbdevicerequestsetdescriptor
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsetdescriptor
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceRequestSetDescriptor
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceRequestSetDescriptor
+```
+
+## See Also
+
+### Getting the Request Types
+
+- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
+- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
+- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
+- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
+- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
+- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
+- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
+- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
+- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
+- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
+- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
+- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
+- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
+
+# Document: kIOUSBDeviceRequestSetFeature
+
+Source path: documentation/usbdriverkit/kiousbdevicerequestsetfeature
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsetfeature
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceRequestSetFeature
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceRequestSetFeature
+```
+
+## See Also
+
+### Getting the Request Types
+
+- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
+- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
+- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
+- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
+- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
+- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
+- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
+- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
+- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
+- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
+- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
+- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
+- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
+
+# Document: kIOUSBDeviceRequestSetInterface
+
+Source path: documentation/usbdriverkit/kiousbdevicerequestsetinterface
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsetinterface
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceRequestSetInterface
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceRequestSetInterface
+```
+
+## See Also
+
+### Getting the Request Types
+
+- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
+- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
+- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
+- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
+- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
+- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
+- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
+- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
+- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
+- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
+- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
+- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
+- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
+
+# Document: kIOUSBDeviceRequestSetIsochronousDelay
+
+Source path: documentation/usbdriverkit/kiousbdevicerequestsetisochronousdelay
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsetisochronousdelay
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceRequestSetIsochronousDelay
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceRequestSetIsochronousDelay
+```
+
+## See Also
+
+### Getting the Request Types
+
+- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
+- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
+- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
+- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
+- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
+- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
+- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
+- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
+- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
+- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
+- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
+- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
+- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
+
+# Document: kIOUSBDeviceRequestSetSel
+
+Source path: documentation/usbdriverkit/kiousbdevicerequestsetsel
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsetsel
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceRequestSetSel
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceRequestSetSel
+```
+
+## See Also
+
+### Getting the Request Types
+
+- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
+- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
+- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
+- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
+- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
+- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
+- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
+- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
+- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
+- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
+- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
+- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
+- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
+
+# Document: kIOUSBDeviceRequestSynchFrame
+
+Source path: documentation/usbdriverkit/kiousbdevicerequestsynchframe
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsynchframe
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceRequestSynchFrame
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceRequestSynchFrame
+```
+
+## See Also
+
+### Getting the Request Types
+
+- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
+- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
+- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
+- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
+- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
+- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
+- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
+- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
+- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
+- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
+- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
+- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
+- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
+
+# Document: kIOUSBDeviceStatusLTMEnable
+
+Source path: documentation/usbdriverkit/kiousbdevicestatusltmenable
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicestatusltmenable
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceStatusLTMEnable
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceStatusLTMEnable
+```
+
+## See Also
+
+### Getting the Options
+
+- [kIOUSBDeviceStatusSelfPowered](kiousbdevicestatusselfpowered.md)
+- [kIOUSBDeviceStatusRemoteWakeEnable](kiousbdevicestatusremotewakeenable.md)
+- [kIOUSBDeviceStatusU1Enable](kiousbdevicestatusu1enable.md)
+- [kIOUSBDeviceStatusU2Enable](kiousbdevicestatusu2enable.md)
+- [kIOUSBInterfaceStatusRemoteWakeCapable](kiousbinterfacestatusremotewakecapable.md)
+- [kIOUSBInterfaceStatusRemoteWakeEnable](kiousbinterfacestatusremotewakeenable.md)
+- [IOUSBEndpointStatusHalt](iousbendpointstatushalt.md)
+
+# Document: kIOUSBDeviceStatusRemoteWakeEnable
+
+Source path: documentation/usbdriverkit/kiousbdevicestatusremotewakeenable
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicestatusremotewakeenable
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceStatusRemoteWakeEnable
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceStatusRemoteWakeEnable
+```
+
+## See Also
+
+### Getting the Options
+
+- [kIOUSBDeviceStatusSelfPowered](kiousbdevicestatusselfpowered.md)
+- [kIOUSBDeviceStatusU1Enable](kiousbdevicestatusu1enable.md)
+- [kIOUSBDeviceStatusU2Enable](kiousbdevicestatusu2enable.md)
+- [kIOUSBDeviceStatusLTMEnable](kiousbdevicestatusltmenable.md)
+- [kIOUSBInterfaceStatusRemoteWakeCapable](kiousbinterfacestatusremotewakecapable.md)
+- [kIOUSBInterfaceStatusRemoteWakeEnable](kiousbinterfacestatusremotewakeenable.md)
+- [IOUSBEndpointStatusHalt](iousbendpointstatushalt.md)
+
+# Document: kIOUSBDeviceStatusSelfPowered
+
+Source path: documentation/usbdriverkit/kiousbdevicestatusselfpowered
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicestatusselfpowered
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceStatusSelfPowered
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceStatusSelfPowered
+```
+
+## See Also
+
+### Getting the Options
+
+- [kIOUSBDeviceStatusRemoteWakeEnable](kiousbdevicestatusremotewakeenable.md)
+- [kIOUSBDeviceStatusU1Enable](kiousbdevicestatusu1enable.md)
+- [kIOUSBDeviceStatusU2Enable](kiousbdevicestatusu2enable.md)
+- [kIOUSBDeviceStatusLTMEnable](kiousbdevicestatusltmenable.md)
+- [kIOUSBInterfaceStatusRemoteWakeCapable](kiousbinterfacestatusremotewakecapable.md)
+- [kIOUSBInterfaceStatusRemoteWakeEnable](kiousbinterfacestatusremotewakeenable.md)
+- [IOUSBEndpointStatusHalt](iousbendpointstatushalt.md)
+
+# Document: kIOUSBDeviceStatusU1Enable
+
+Source path: documentation/usbdriverkit/kiousbdevicestatusu1enable
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicestatusu1enable
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceStatusU1Enable
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceStatusU1Enable
+```
+
+## See Also
+
+### Getting the Options
+
+- [kIOUSBDeviceStatusSelfPowered](kiousbdevicestatusselfpowered.md)
+- [kIOUSBDeviceStatusRemoteWakeEnable](kiousbdevicestatusremotewakeenable.md)
+- [kIOUSBDeviceStatusU2Enable](kiousbdevicestatusu2enable.md)
+- [kIOUSBDeviceStatusLTMEnable](kiousbdevicestatusltmenable.md)
+- [kIOUSBInterfaceStatusRemoteWakeCapable](kiousbinterfacestatusremotewakecapable.md)
+- [kIOUSBInterfaceStatusRemoteWakeEnable](kiousbinterfacestatusremotewakeenable.md)
+- [IOUSBEndpointStatusHalt](iousbendpointstatushalt.md)
+
+# Document: kIOUSBDeviceStatusU2Enable
+
+Source path: documentation/usbdriverkit/kiousbdevicestatusu2enable
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicestatusu2enable
+Description: Interface language: Objective-C
+
+# kIOUSBDeviceStatusU2Enable
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBDeviceStatusU2Enable
+```
+
+## See Also
+
+### Getting the Options
+
+- [kIOUSBDeviceStatusSelfPowered](kiousbdevicestatusselfpowered.md)
+- [kIOUSBDeviceStatusRemoteWakeEnable](kiousbdevicestatusremotewakeenable.md)
+- [kIOUSBDeviceStatusU1Enable](kiousbdevicestatusu1enable.md)
+- [kIOUSBDeviceStatusLTMEnable](kiousbdevicestatusltmenable.md)
+- [kIOUSBInterfaceStatusRemoteWakeCapable](kiousbinterfacestatusremotewakecapable.md)
+- [kIOUSBInterfaceStatusRemoteWakeEnable](kiousbinterfacestatusremotewakeenable.md)
+- [IOUSBEndpointStatusHalt](iousbendpointstatushalt.md)
+
+# Document: kIOUSBEndpointDescriptorDirection
+
+Source path: documentation/usbdriverkit/kiousbendpointdescriptordirection
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbendpointdescriptordirection
+Description: Interface language: Objective-C
+
+# kIOUSBEndpointDescriptorDirection
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBEndpointDescriptorDirection
+```
+
+## See Also
+
+### Getting the Options
+
+- [kIOUSBEndpointDescriptorNumber](kiousbendpointdescriptornumber.md)
+- [kIOUSBEndpointDescriptorNumberPhase](kiousbendpointdescriptornumberphase.md)
+- [kIOUSBEndpointDescriptorEndpointAddressReserved](kiousbendpointdescriptorendpointaddressreserved.md)
+- [kIOUSBEndpointDescriptorDirectionPhase](kiousbendpointdescriptordirectionphase.md)
+- [kIOUSBEndpointDescriptorDirectionOut](kiousbendpointdescriptordirectionout.md)
+- [kIOUSBEndpointDescriptorDirectionIn](kiousbendpointdescriptordirectionin.md)
+- [kIOUSBEndpointDescriptorTransferType](kiousbendpointdescriptortransfertype.md)
+- [kIOUSBEndpointDescriptorTransferTypePhase](kiousbendpointdescriptortransfertypephase.md)
+- [kIOUSBEndpointDescriptorTransferTypeControl](kiousbendpointdescriptortransfertypecontrol.md)
+- [kIOUSBEndpointDescriptorTransferTypeIsochronous](kiousbendpointdescriptortransfertypeisochronous.md)
+- [kIOUSBEndpointDescriptorTransferTypeBulk](kiousbendpointdescriptortransfertypebulk.md)
+- [kIOUSBEndpointDescriptorTransferTypeInterrupt](kiousbendpointdescriptortransfertypeinterrupt.md)
+- [kIOUSBEndpointDescriptorSynchronizationType](kiousbendpointdescriptorsynchronizationtype.md)
+- [kIOUSBEndpointDescriptorSynchronizationTypePhase](kiousbendpointdescriptorsynchronizationtypephase.md)
+- [kIOUSBEndpointDescriptorSynchronizationTypeNone](kiousbendpointdescriptorsynchronizationtypenone.md)
+
+# Document: kIOUSBEndpointDescriptorDirectionIn
+
+Source path: documentation/usbdriverkit/kiousbendpointdescriptordirectionin
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbendpointdescriptordirectionin
+Description: Interface language: Objective-C
+
+# kIOUSBEndpointDescriptorDirectionIn
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBEndpointDescriptorDirectionIn
+```
+
+## See Also
+
+### Getting the Options
+
+- [kIOUSBEndpointDescriptorNumber](kiousbendpointdescriptornumber.md)
+- [kIOUSBEndpointDescriptorNumberPhase](kiousbendpointdescriptornumberphase.md)
+- [kIOUSBEndpointDescriptorEndpointAddressReserved](kiousbendpointdescriptorendpointaddressreserved.md)
+- [kIOUSBEndpointDescriptorDirection](kiousbendpointdescriptordirection.md)
+- [kIOUSBEndpointDescriptorDirectionPhase](kiousbendpointdescriptordirectionphase.md)
+- [kIOUSBEndpointDescriptorDirectionOut](kiousbendpointdescriptordirectionout.md)
+- [kIOUSBEndpointDescriptorTransferType](kiousbendpointdescriptortransfertype.md)
+- [kIOUSBEndpointDescriptorTransferTypePhase](kiousbendpointdescriptortransfertypephase.md)
+- [kIOUSBEndpointDescriptorTransferTypeControl](kiousbendpointdescriptortransfertypecontrol.md)
+- [kIOUSBEndpointDescriptorTransferTypeIsochronous](kiousbendpointdescriptortransfertypeisochronous.md)
+- [kIOUSBEndpointDescriptorTransferTypeBulk](kiousbendpointdescriptortransfertypebulk.md)
+- [kIOUSBEndpointDescriptorTransferTypeInterrupt](kiousbendpointdescriptortransfertypeinterrupt.md)
+- [kIOUSBEndpointDescriptorSynchronizationType](kiousbendpointdescriptorsynchronizationtype.md)
+- [kIOUSBEndpointDescriptorSynchronizationTypePhase](kiousbendpointdescriptorsynchronizationtypephase.md)
+- [kIOUSBEndpointDescriptorSynchronizationTypeNone](kiousbendpointdescriptorsynchronizationtypenone.md)
+
+# Document: kIOUSBEndpointDescriptorDirectionOut
+
+Source path: documentation/usbdriverkit/kiousbendpointdescriptordirectionout
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbendpointdescriptordirectionout
+Description: Interface language: Objective-C
+
+# kIOUSBEndpointDescriptorDirectionOut
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBEndpointDescriptorDirectionOut
+```
+
+## See Also
+
+### Getting the Options
+
+- [kIOUSBEndpointDescriptorNumber](kiousbendpointdescriptornumber.md)
+- [kIOUSBEndpointDescriptorNumberPhase](kiousbendpointdescriptornumberphase.md)
+- [kIOUSBEndpointDescriptorEndpointAddressReserved](kiousbendpointdescriptorendpointaddressreserved.md)
+- [kIOUSBEndpointDescriptorDirection](kiousbendpointdescriptordirection.md)
+- [kIOUSBEndpointDescriptorDirectionPhase](kiousbendpointdescriptordirectionphase.md)
+- [kIOUSBEndpointDescriptorDirectionIn](kiousbendpointdescriptordirectionin.md)
+- [kIOUSBEndpointDescriptorTransferType](kiousbendpointdescriptortransfertype.md)
+- [kIOUSBEndpointDescriptorTransferTypePhase](kiousbendpointdescriptortransfertypephase.md)
+- [kIOUSBEndpointDescriptorTransferTypeControl](kiousbendpointdescriptortransfertypecontrol.md)
+- [kIOUSBEndpointDescriptorTransferTypeIsochronous](kiousbendpointdescriptortransfertypeisochronous.md)
+- [kIOUSBEndpointDescriptorTransferTypeBulk](kiousbendpointdescriptortransfertypebulk.md)
+- [kIOUSBEndpointDescriptorTransferTypeInterrupt](kiousbendpointdescriptortransfertypeinterrupt.md)
+- [kIOUSBEndpointDescriptorSynchronizationType](kiousbendpointdescriptorsynchronizationtype.md)
+- [kIOUSBEndpointDescriptorSynchronizationTypePhase](kiousbendpointdescriptorsynchronizationtypephase.md)
+- [kIOUSBEndpointDescriptorSynchronizationTypeNone](kiousbendpointdescriptorsynchronizationtypenone.md)
+
+# Document: kIOUSBEndpointDescriptorDirectionPhase
+
+Source path: documentation/usbdriverkit/kiousbendpointdescriptordirectionphase
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbendpointdescriptordirectionphase
+Description: Interface language: Objective-C
+
+# kIOUSBEndpointDescriptorDirectionPhase
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBEndpointDescriptorDirectionPhase
+```
+
+## See Also
+
+### Getting the Options
+
+- [kIOUSBEndpointDescriptorNumber](kiousbendpointdescriptornumber.md)
+- [kIOUSBEndpointDescriptorNumberPhase](kiousbendpointdescriptornumberphase.md)
+- [kIOUSBEndpointDescriptorEndpointAddressReserved](kiousbendpointdescriptorendpointaddressreserved.md)
+- [kIOUSBEndpointDescriptorDirection](kiousbendpointdescriptordirection.md)
+- [kIOUSBEndpointDescriptorDirectionOut](kiousbendpointdescriptordirectionout.md)
+- [kIOUSBEndpointDescriptorDirectionIn](kiousbendpointdescriptordirectionin.md)
+- [kIOUSBEndpointDescriptorTransferType](kiousbendpointdescriptortransfertype.md)
+- [kIOUSBEndpointDescriptorTransferTypePhase](kiousbendpointdescriptortransfertypephase.md)
+- [kIOUSBEndpointDescriptorTransferTypeControl](kiousbendpointdescriptortransfertypecontrol.md)
+- [kIOUSBEndpointDescriptorTransferTypeIsochronous](kiousbendpointdescriptortransfertypeisochronous.md)
+- [kIOUSBEndpointDescriptorTransferTypeBulk](kiousbendpointdescriptortransfertypebulk.md)
+- [kIOUSBEndpointDescriptorTransferTypeInterrupt](kiousbendpointdescriptortransfertypeinterrupt.md)
+- [kIOUSBEndpointDescriptorSynchronizationType](kiousbendpointdescriptorsynchronizationtype.md)
+- [kIOUSBEndpointDescriptorSynchronizationTypePhase](kiousbendpointdescriptorsynchronizationtypephase.md)
+- [kIOUSBEndpointDescriptorSynchronizationTypeNone](kiousbendpointdescriptorsynchronizationtypenone.md)
 
 # Document: kIOUSBEndpointDescriptorEndpointAddressReserved
 
@@ -186737,1359 +188440,3 @@ The warp transform matrix to morph the floating image into the reference image.
 ```swift
 let warpTransform: matrix_float3x3
 ```
-
-# Document: ImageProcessingRequest
-
-Source path: documentation/vision/imageprocessingrequest
-Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest
-Description: Framework: Vision Kind: Protocol Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# ImageProcessingRequest
-
-**Framework:** Vision  
-**Kind:** Protocol  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-A type for image-analysis requests that focus on a specific part of an image.
-
-## Declaration
-
-```swift
-protocol ImageProcessingRequest : VisionRequest
-```
-
-## Topics
-
-### Setting the region
-
-- [regionOfInterest](imageprocessingrequest/regionofinterest.md): The region of the image where the framework performs the request.
-
-### Performing a request
-
-- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-80bya.md): Performs the request on an image URL and produces observations.
-- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-3f3f1.md): Performs the request on image data and produces observations.
-- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-qxxx.md): Performs the request on a Core Graphics image and produces observations.
-- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-xspx.md): Performs the request on a pixel buffer and produces observations.
-- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-3hddl.md): Performs the request on a Core Media buffer and produces observations.
-- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-85ex1.md): Performs the request on a Core Image image and produces observations.
-
-## Relationships
-
-### Inherits From
-
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-- [VisionRequest](visionrequest.md)
-
-### Conforming Types
-
-- [CalculateImageAestheticsScoresRequest](calculateimageaestheticsscoresrequest.md)
-- [ClassifyImageRequest](classifyimagerequest.md)
-- [CoreMLRequest](coremlrequest.md)
-- [DetectAnimalBodyPoseRequest](detectanimalbodyposerequest.md)
-- [DetectBarcodesRequest](detectbarcodesrequest.md)
-- [DetectContoursRequest](detectcontoursrequest.md)
-- [DetectDocumentSegmentationRequest](detectdocumentsegmentationrequest.md)
-- [DetectFaceCaptureQualityRequest](detectfacecapturequalityrequest.md)
-- [DetectFaceLandmarksRequest](detectfacelandmarksrequest.md)
-- [DetectFaceRectanglesRequest](detectfacerectanglesrequest.md)
-- [DetectHorizonRequest](detecthorizonrequest.md)
-- [DetectHumanBodyPose3DRequest](detecthumanbodypose3drequest.md)
-- [DetectHumanBodyPoseRequest](detecthumanbodyposerequest.md)
-- [DetectHumanHandPoseRequest](detecthumanhandposerequest.md)
-- [DetectHumanRectanglesRequest](detecthumanrectanglesrequest.md)
-- [DetectLensSmudgeRequest](detectlenssmudgerequest.md)
-- [DetectRectanglesRequest](detectrectanglesrequest.md)
-- [DetectTextRectanglesRequest](detecttextrectanglesrequest.md)
-- [DetectTrajectoriesRequest](detecttrajectoriesrequest.md)
-- [GenerateAttentionBasedSaliencyImageRequest](generateattentionbasedsaliencyimagerequest.md)
-- [GenerateForegroundInstanceMaskRequest](generateforegroundinstancemaskrequest.md)
-- [GenerateImageFeaturePrintRequest](generateimagefeatureprintrequest.md)
-- [GenerateIterativeSegmentationRequest](generateiterativesegmentationrequest.md)
-- [GenerateObjectnessBasedSaliencyImageRequest](generateobjectnessbasedsaliencyimagerequest.md)
-- [GeneratePersonInstanceMaskRequest](generatepersoninstancemaskrequest.md)
-- [GeneratePersonSegmentationRequest](generatepersonsegmentationrequest.md)
-- [RecognizeAnimalsRequest](recognizeanimalsrequest.md)
-- [RecognizeDocumentsRequest](recognizedocumentsrequest.md)
-- [RecognizeTextRequest](recognizetextrequest.md)
-- [TrackHomographicImageRegistrationRequest](trackhomographicimageregistrationrequest.md)
-- [TrackObjectRequest](trackobjectrequest.md)
-- [TrackOpticalFlowRequest](trackopticalflowrequest.md)
-- [TrackRectangleRequest](trackrectanglerequest.md)
-- [TrackTranslationalImageRegistrationRequest](tracktranslationalimageregistrationrequest.md)
-
-## See Also
-
-### Protocols
-
-- [PoseProviding](poseproviding.md): An observation that provides a collection of joints that make up a pose.
-- [StatefulRequest](statefulrequest.md): The protocol for a type that builds evidence of a condition over time.
-- [TargetedRequest](targetedrequest.md): A type for analyzing two images together.
-- [VisionObservation](visionobservation.md): A type for objects produced by image-analysis requests.
-- [VisionRequest](visionrequest.md): A type for image-analysis requests.
-- [DownloadableAssetsRequest](downloadableassetsrequest.md): A request whose execution depends on assets that may need to be downloaded.
-- [DownloadableAssetsRequestStatus](downloadableassetsrequeststatus.md): The status of the assets required by a [DownloadableAssetsRequest](downloadableassetsrequest.md).
-
-# Document: perform(on:orientation:)
-
-Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-1mquz
-Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-1mquz
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
-
-# perform(on:orientation:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
-
-## Declaration
-
-```swift
-func perform(on image: CIImage, orientation: CGImagePropertyOrientation? = nil) async throws -> Self.Result
-```
-
-# Document: perform(on:orientation:)
-
-Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-2q3hx
-Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-2q3hx
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# perform(on:orientation:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-## Declaration
-
-```swift
-func perform(on data: Data, orientation: CGImagePropertyOrientation? = nil) async throws -> Self.Result
-```
-
-# Document: perform(on:orientation:)
-
-Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-3f3f1
-Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-3f3f1
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# perform(on:orientation:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Performs the request on image data and produces observations.
-
-## Declaration
-
-```swift
-func perform(on data: Data, orientation: CGImagePropertyOrientation?) async throws -> Self.Result
-```
-
-## Parameters
-
-- `data`: The input [Data](../../foundation/data.md) on which to perform the request.
-- `orientation`: The orientation of the input image. Default is `nil`.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The observation — or list of observations — the request produces.
-
-## Default Implementations
-
-### ImageProcessingRequest Implementations
-
-- [perform(on:orientation:)](perform%28on_orientation_%29-1mquz.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-2q3hx.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-6hrxe.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-82mjf.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-8wluq.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-967mr.md)
-
-## See Also
-
-### Performing a request
-
-- [perform(on:orientation:)](perform%28on_orientation_%29-80bya.md): Performs the request on an image URL and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-qxxx.md): Performs the request on a Core Graphics image and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-xspx.md): Performs the request on a pixel buffer and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-3hddl.md): Performs the request on a Core Media buffer and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-85ex1.md): Performs the request on a Core Image image and produces observations.
-
-# Document: perform(on:orientation:)
-
-Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-3hddl
-Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-3hddl
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# perform(on:orientation:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Performs the request on a Core Media buffer and produces observations.
-
-## Declaration
-
-```swift
-func perform(on sampleBuffer: CMSampleBuffer, orientation: CGImagePropertyOrientation?) async throws -> Self.Result
-```
-
-## Parameters
-
-- `sampleBuffer`: The input [CMSampleBuffer](../../coremedia/cmsamplebuffer.md) on which to perform the request.
-- `orientation`: The orientation of the input image. Default is `nil`.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The observation — or list of observations — the request produces.
-
-## Default Implementations
-
-### ImageProcessingRequest Implementations
-
-- [perform(on:orientation:)](perform%28on_orientation_%29-1mquz.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-2q3hx.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-6hrxe.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-82mjf.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-8wluq.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-967mr.md)
-
-## See Also
-
-### Performing a request
-
-- [perform(on:orientation:)](perform%28on_orientation_%29-80bya.md): Performs the request on an image URL and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-3f3f1.md): Performs the request on image data and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-qxxx.md): Performs the request on a Core Graphics image and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-xspx.md): Performs the request on a pixel buffer and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-85ex1.md): Performs the request on a Core Image image and produces observations.
-
-# Document: perform(on:orientation:)
-
-Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-6hrxe
-Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-6hrxe
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# perform(on:orientation:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-## Declaration
-
-```swift
-func perform(on url: URL, orientation: CGImagePropertyOrientation? = nil) async throws -> Self.Result
-```
-
-# Document: perform(on:orientation:)
-
-Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-80bya
-Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-80bya
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# perform(on:orientation:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Performs the request on an image URL and produces observations.
-
-## Declaration
-
-```swift
-func perform(on url: URL, orientation: CGImagePropertyOrientation?) async throws -> Self.Result
-```
-
-## Parameters
-
-- `url`: The input [URL](../../foundation/url.md) on which to perform the request.
-- `orientation`: The orientation of the input image. Default is `nil`.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The observation — or list of observations — the request produces.
-
-## Default Implementations
-
-### ImageProcessingRequest Implementations
-
-- [perform(on:orientation:)](perform%28on_orientation_%29-1mquz.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-2q3hx.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-6hrxe.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-82mjf.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-8wluq.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-967mr.md)
-
-## See Also
-
-### Performing a request
-
-- [perform(on:orientation:)](perform%28on_orientation_%29-3f3f1.md): Performs the request on image data and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-qxxx.md): Performs the request on a Core Graphics image and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-xspx.md): Performs the request on a pixel buffer and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-3hddl.md): Performs the request on a Core Media buffer and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-85ex1.md): Performs the request on a Core Image image and produces observations.
-
-# Document: perform(on:orientation:)
-
-Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-82mjf
-Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-82mjf
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# perform(on:orientation:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-## Declaration
-
-```swift
-func perform(on sampleBuffer: CMSampleBuffer, orientation: CGImagePropertyOrientation? = nil) async throws -> Self.Result
-```
-
-# Document: perform(on:orientation:)
-
-Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-85ex1
-Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-85ex1
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
-
-# perform(on:orientation:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
-
-Performs the request on a Core Image image and produces observations.
-
-## Declaration
-
-```swift
-func perform(on image: CIImage, orientation: CGImagePropertyOrientation?) async throws -> Self.Result
-```
-
-## Parameters
-
-- `image`: The input [CIImage](../../coreimage/ciimage.md) on which to perform the request.
-- `orientation`: The orientation of the input image. Default is `nil`.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The observation — or list of observations — the request produces.
-
-## Default Implementations
-
-### ImageProcessingRequest Implementations
-
-- [perform(on:orientation:)](perform%28on_orientation_%29-1mquz.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-2q3hx.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-6hrxe.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-82mjf.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-8wluq.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-967mr.md)
-
-## See Also
-
-### Performing a request
-
-- [perform(on:orientation:)](perform%28on_orientation_%29-80bya.md): Performs the request on an image URL and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-3f3f1.md): Performs the request on image data and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-qxxx.md): Performs the request on a Core Graphics image and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-xspx.md): Performs the request on a pixel buffer and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-3hddl.md): Performs the request on a Core Media buffer and produces observations.
-
-# Document: perform(on:orientation:)
-
-Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-8wluq
-Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-8wluq
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# perform(on:orientation:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-## Declaration
-
-```swift
-func perform(on pixelBuffer: CVPixelBuffer, orientation: CGImagePropertyOrientation? = nil) async throws -> Self.Result
-```
-
-# Document: perform(on:orientation:)
-
-Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-967mr
-Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-967mr
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# perform(on:orientation:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-## Declaration
-
-```swift
-func perform(on image: CGImage, orientation: CGImagePropertyOrientation? = nil) async throws -> Self.Result
-```
-
-# Document: perform(on:orientation:)
-
-Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-qxxx
-Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-qxxx
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# perform(on:orientation:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Performs the request on a Core Graphics image and produces observations.
-
-## Declaration
-
-```swift
-func perform(on image: CGImage, orientation: CGImagePropertyOrientation?) async throws -> Self.Result
-```
-
-## Parameters
-
-- `image`: The input [CGImage](../../coregraphics/cgimage.md) on which to perform the request.
-- `orientation`: The orientation of the input image. Default is `nil`.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The observation — or list of observations — the request produces.
-
-## Default Implementations
-
-### ImageProcessingRequest Implementations
-
-- [perform(on:orientation:)](perform%28on_orientation_%29-1mquz.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-2q3hx.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-6hrxe.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-82mjf.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-8wluq.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-967mr.md)
-
-## See Also
-
-### Performing a request
-
-- [perform(on:orientation:)](perform%28on_orientation_%29-80bya.md): Performs the request on an image URL and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-3f3f1.md): Performs the request on image data and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-xspx.md): Performs the request on a pixel buffer and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-3hddl.md): Performs the request on a Core Media buffer and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-85ex1.md): Performs the request on a Core Image image and produces observations.
-
-# Document: perform(on:orientation:)
-
-Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-xspx
-Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-xspx
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# perform(on:orientation:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Performs the request on a pixel buffer and produces observations.
-
-## Declaration
-
-```swift
-func perform(on pixelBuffer: CVPixelBuffer, orientation: CGImagePropertyOrientation?) async throws -> Self.Result
-```
-
-## Parameters
-
-- `pixelBuffer`: The input [CVPixelBuffer](../../corevideo/cvpixelbuffer.md) on which to perform the request.
-- `orientation`: The orientation of the input image. Default is `nil`.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The observation — or list of observations — the request produces.
-
-## Default Implementations
-
-### ImageProcessingRequest Implementations
-
-- [perform(on:orientation:)](perform%28on_orientation_%29-1mquz.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-2q3hx.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-6hrxe.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-82mjf.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-8wluq.md)
-- [perform(on:orientation:)](perform%28on_orientation_%29-967mr.md)
-
-## See Also
-
-### Performing a request
-
-- [perform(on:orientation:)](perform%28on_orientation_%29-80bya.md): Performs the request on an image URL and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-3f3f1.md): Performs the request on image data and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-qxxx.md): Performs the request on a Core Graphics image and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-3hddl.md): Performs the request on a Core Media buffer and produces observations.
-- [perform(on:orientation:)](perform%28on_orientation_%29-85ex1.md): Performs the request on a Core Image image and produces observations.
-
-# Document: regionOfInterest
-
-Source path: documentation/vision/imageprocessingrequest/regionofinterest
-Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/regionofinterest
-Description: Framework: Vision Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# regionOfInterest
-
-**Framework:** Vision  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-The region of the image where the framework performs the request.
-
-## Declaration
-
-```swift
-var regionOfInterest: NormalizedRect { get set }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The system normalizes the rectangle to the dimensions of the processed image. Its origin is the image’s lower-left corner.
-
-The default value is `{ { 0, 0 }, { 1, 1 } }`.
-
-# Document: ImageRequestHandler
-
-Source path: documentation/vision/imagerequesthandler
-Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler
-Description: Framework: Vision Kind: Class Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# ImageRequestHandler
-
-**Framework:** Vision  
-**Kind:** Class  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-An object that processes one or more image-analysis requests pertaining to a single image.
-
-## Declaration
-
-```swift
-final class ImageRequestHandler
-```
-
-<a id="overview"></a>
-
-## Overview
-
-Instantiate this handler to perform Vision requests on a single image. You specify the image, and then call [perform(\_:)](imagerequesthandler/perform%28__%29-7b6g5.md) to begin executing the request.
-
-## Topics
-
-### Creating a request handler
-
-- [init(\_:orientation:)](imagerequesthandler/init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
-- [init(\_:orientation:)](imagerequesthandler/init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
-- [init(\_:orientation:)](imagerequesthandler/init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
-- [init(\_:depthData:orientation:)](imagerequesthandler/init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
-- [init(\_:depthData:orientation:)](imagerequesthandler/init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
-- [init(\_:orientation:)](imagerequesthandler/init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
-- [init(\_:orientation:)](imagerequesthandler/init%28__orientation_%29-3zrh5.md)
-- [init(\_:orientation:)](imagerequesthandler/init%28__orientation_%29-8q7vz.md)
-
-### Performing the request
-
-- [perform(\_:)](imagerequesthandler/perform%28__%29-l6er.md): Performs one or more framework requests on the handler’s image.
-- [perform(\_:)](imagerequesthandler/perform%28__%29-7b6g5.md): Performs a framework request on the handler’s image.
-- [performAll(\_:)](imagerequesthandler/performall%28__%29.md): Schedules a collection of framework requests to perform on the handler’s image.
-
-## Relationships
-
-### Conforms To
-
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Request handlers
-
-- [TargetedImageRequestHandler](targetedimagerequesthandler.md): An object that performs image-analysis requests on two images.
-- [VideoProcessor](videoprocessor.md): An object that performs offline analysis of video content.
-
-# Document: init(_:depthData:orientation:)
-
-Source path: documentation/vision/imagerequesthandler/init(_:depthdata:orientation:)-3ebxg
-Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:depthdata:orientation:)-3ebxg
-Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
-
-# init(\_:depthData:orientation:)
-
-**Framework:** Vision  
-**Kind:** Initializer  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
-
-Creates a handler for performing requests on a Core Video pixel buffer.
-
-## Declaration
-
-```swift
-convenience init(_ pixelBuffer: CVPixelBuffer, depthData: AVDepthData? = nil, orientation: CGImagePropertyOrientation? = nil)
-```
-
-## See Also
-
-### Creating a request handler
-
-- [init(\_:orientation:)](init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
-- [init(\_:orientation:)](init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
-- [init(\_:orientation:)](init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
-- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
-- [init(\_:orientation:)](init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
-- [init(\_:orientation:)](init%28__orientation_%29-3zrh5.md)
-- [init(\_:orientation:)](init%28__orientation_%29-8q7vz.md)
-
-# Document: init(_:depthData:orientation:)
-
-Source path: documentation/vision/imagerequesthandler/init(_:depthdata:orientation:)-5itte
-Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:depthdata:orientation:)-5itte
-Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
-
-# init(\_:depthData:orientation:)
-
-**Framework:** Vision  
-**Kind:** Initializer  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
-
-Creates a request handler that performs requests on an image contained within a sample buffer.
-
-## Declaration
-
-```swift
-convenience init(_ sampleBuffer: CMSampleBuffer, depthData: AVDepthData? = nil, orientation: CGImagePropertyOrientation? = nil)
-```
-
-## See Also
-
-### Creating a request handler
-
-- [init(\_:orientation:)](init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
-- [init(\_:orientation:)](init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
-- [init(\_:orientation:)](init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
-- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
-- [init(\_:orientation:)](init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
-- [init(\_:orientation:)](init%28__orientation_%29-3zrh5.md)
-- [init(\_:orientation:)](init%28__orientation_%29-8q7vz.md)
-
-# Document: init(_:orientation:)
-
-Source path: documentation/vision/imagerequesthandler/init(_:orientation:)-2hvfr
-Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:orientation:)-2hvfr
-Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
-
-# init(\_:orientation:)
-
-**Framework:** Vision  
-**Kind:** Initializer  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
-
-Creates a handler for performing requests on Core Image images.
-
-## Declaration
-
-```swift
-convenience init(_ image: CIImage, orientation: CGImagePropertyOrientation? = nil)
-```
-
-## See Also
-
-### Creating a request handler
-
-- [init(\_:orientation:)](init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
-- [init(\_:orientation:)](init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
-- [init(\_:orientation:)](init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
-- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
-- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
-- [init(\_:orientation:)](init%28__orientation_%29-3zrh5.md)
-- [init(\_:orientation:)](init%28__orientation_%29-8q7vz.md)
-
-# Document: init(_:orientation:)
-
-Source path: documentation/vision/imagerequesthandler/init(_:orientation:)-3zrh5
-Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:orientation:)-3zrh5
-Description: Framework: Vision Kind: Initializer Availability: watchOS 27.0+
-
-# init(\_:orientation:)
-
-**Framework:** Vision  
-**Kind:** Initializer  
-**Availability:** watchOS 27.0+
-
-## Declaration
-
-```swift
-convenience init(_ pixelBuffer: CVPixelBuffer, orientation: CGImagePropertyOrientation? = nil)
-```
-
-## See Also
-
-### Creating a request handler
-
-- [init(\_:orientation:)](init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
-- [init(\_:orientation:)](init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
-- [init(\_:orientation:)](init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
-- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
-- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
-- [init(\_:orientation:)](init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
-- [init(\_:orientation:)](init%28__orientation_%29-8q7vz.md)
-
-# Document: init(_:orientation:)
-
-Source path: documentation/vision/imagerequesthandler/init(_:orientation:)-6imw8
-Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:orientation:)-6imw8
-Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# init(\_:orientation:)
-
-**Framework:** Vision  
-**Kind:** Initializer  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Creates a handler for performing requests on an image at the specified URL.
-
-## Declaration
-
-```swift
-convenience init(_ imageURL: URL, orientation: CGImagePropertyOrientation? = nil)
-```
-
-## See Also
-
-### Creating a request handler
-
-- [init(\_:orientation:)](init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
-- [init(\_:orientation:)](init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
-- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
-- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
-- [init(\_:orientation:)](init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
-- [init(\_:orientation:)](init%28__orientation_%29-3zrh5.md)
-- [init(\_:orientation:)](init%28__orientation_%29-8q7vz.md)
-
-# Document: init(_:orientation:)
-
-Source path: documentation/vision/imagerequesthandler/init(_:orientation:)-8cwes
-Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:orientation:)-8cwes
-Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# init(\_:orientation:)
-
-**Framework:** Vision  
-**Kind:** Initializer  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Creates a handler for performing requests on an image contained in a data object.
-
-## Declaration
-
-```swift
-convenience init(_ data: Data, orientation: CGImagePropertyOrientation? = nil)
-```
-
-## See Also
-
-### Creating a request handler
-
-- [init(\_:orientation:)](init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
-- [init(\_:orientation:)](init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
-- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
-- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
-- [init(\_:orientation:)](init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
-- [init(\_:orientation:)](init%28__orientation_%29-3zrh5.md)
-- [init(\_:orientation:)](init%28__orientation_%29-8q7vz.md)
-
-# Document: init(_:orientation:)
-
-Source path: documentation/vision/imagerequesthandler/init(_:orientation:)-8nodt
-Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:orientation:)-8nodt
-Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# init(\_:orientation:)
-
-**Framework:** Vision  
-**Kind:** Initializer  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Creates a handler for performing requests on Core Graphics images.
-
-## Declaration
-
-```swift
-convenience init(_ image: CGImage, orientation: CGImagePropertyOrientation? = nil)
-```
-
-## See Also
-
-### Creating a request handler
-
-- [init(\_:orientation:)](init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
-- [init(\_:orientation:)](init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
-- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
-- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
-- [init(\_:orientation:)](init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
-- [init(\_:orientation:)](init%28__orientation_%29-3zrh5.md)
-- [init(\_:orientation:)](init%28__orientation_%29-8q7vz.md)
-
-# Document: init(_:orientation:)
-
-Source path: documentation/vision/imagerequesthandler/init(_:orientation:)-8q7vz
-Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:orientation:)-8q7vz
-Description: Framework: Vision Kind: Initializer Availability: watchOS 27.0+
-
-# init(\_:orientation:)
-
-**Framework:** Vision  
-**Kind:** Initializer  
-**Availability:** watchOS 27.0+
-
-## Declaration
-
-```swift
-convenience init(_ sampleBuffer: CMSampleBuffer, orientation: CGImagePropertyOrientation? = nil)
-```
-
-## See Also
-
-### Creating a request handler
-
-- [init(\_:orientation:)](init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
-- [init(\_:orientation:)](init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
-- [init(\_:orientation:)](init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
-- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
-- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
-- [init(\_:orientation:)](init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
-- [init(\_:orientation:)](init%28__orientation_%29-3zrh5.md)
-
-# Document: perform(_:)
-
-Source path: documentation/vision/imagerequesthandler/perform(_:)-7b6g5
-Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/perform(_:)-7b6g5
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# perform(\_:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Performs a framework request on the handler’s image.
-
-## Declaration
-
-```swift
-final func perform<T>(_ request: T) async throws -> T.Result where T : VisionRequest
-```
-
-## See Also
-
-### Performing the request
-
-- [perform(\_:)](perform%28__%29-l6er.md): Performs one or more framework requests on the handler’s image.
-- [performAll(\_:)](performall%28__%29.md): Schedules a collection of framework requests to perform on the handler’s image.
-
-# Document: perform(_:)
-
-Source path: documentation/vision/imagerequesthandler/perform(_:)-l6er
-Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/perform(_:)-l6er
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# perform(\_:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Performs one or more framework requests on the handler’s image.
-
-## Declaration
-
-```swift
-final func perform<each T>(_ request: repeat each T) async throws -> (repeat (each T).Result) where repeat each T : VisionRequest
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The function returns after all requests complete.
-
-## See Also
-
-### Performing the request
-
-- [perform(\_:)](perform%28__%29-7b6g5.md): Performs a framework request on the handler’s image.
-- [performAll(\_:)](performall%28__%29.md): Schedules a collection of framework requests to perform on the handler’s image.
-
-# Document: performAll(_:)
-
-Source path: documentation/vision/imagerequesthandler/performall(_:)
-Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/performall(_:)
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# performAll(\_:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Schedules a collection of framework requests to perform on the handler’s image.
-
-## Declaration
-
-```swift
-final func performAll(_ requests: some Collection<any VisionRequest>) -> some AsyncSequence<VisionResult, Never>
-
-```
-
-## Parameters
-
-- `requests`: A collection of requests to perform.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A sequence of requests results.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This function doesn’t wait for requests to complete before returning. You can receive request results from the `AsyncSequence` as they become available.
-
-## See Also
-
-### Performing the request
-
-- [perform(\_:)](perform%28__%29-l6er.md): Performs one or more framework requests on the handler’s image.
-- [perform(\_:)](perform%28__%29-7b6g5.md): Performs a framework request on the handler’s image.
-
-# Document: ImageTranslationAlignmentObservation
-
-Source path: documentation/vision/imagetranslationalignmentobservation
-Canonical documentation: https://developer.apple.com/documentation/vision/imagetranslationalignmentobservation
-Description: Framework: Vision Kind: Structure Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# ImageTranslationAlignmentObservation
-
-**Framework:** Vision  
-**Kind:** Structure  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Affine transform information that an image-alignment request produces.
-
-## Declaration
-
-```swift
-struct ImageTranslationAlignmentObservation
-```
-
-<a id="overview"></a>
-
-## Overview
-
-This type of observation results from a [TrackTranslationalImageRegistrationRequest](tracktranslationalimageregistrationrequest.md), informing the [alignmentTransform](imagetranslationalignmentobservation/alignmenttransform.md) performed to align the input images.
-
-## Topics
-
-### Creating an observation
-
-- [init(\_:)](imagetranslationalignmentobservation/init%28__%29.md): Creates a translation alignment observation.
-
-### Inspecting an observation
-
-- [alignmentTransform](imagetranslationalignmentobservation/alignmenttransform.md): The alignment transform to align the floating image with the reference image.
-
-### Applying a transform
-
-- [applyTransform(to:)](imagetranslationalignmentobservation/applytransform%28to_%29.md): Applies the transform to an image.
-
-## Relationships
-
-### Conforms To
-
-- [Copyable](https://developer.apple.com/documentation/swift/copyable)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Decodable](https://developer.apple.com/documentation/swift/decodable)
-- [Encodable](https://developer.apple.com/documentation/swift/encodable)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Escapable](https://developer.apple.com/documentation/swift/escapable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-- [VisionObservation](visionobservation.md)
-
-# Document: alignmentTransform
-
-Source path: documentation/vision/imagetranslationalignmentobservation/alignmenttransform
-Canonical documentation: https://developer.apple.com/documentation/vision/imagetranslationalignmentobservation/alignmenttransform
-Description: Framework: Vision Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# alignmentTransform
-
-**Framework:** Vision  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-The alignment transform to align the floating image with the reference image.
-
-## Declaration
-
-```swift
-let alignmentTransform: CGAffineTransform
-```
-
-# Document: applyTransform(to:)
-
-Source path: documentation/vision/imagetranslationalignmentobservation/applytransform(to:)
-Canonical documentation: https://developer.apple.com/documentation/vision/imagetranslationalignmentobservation/applytransform(to:)
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
-
-# applyTransform(to:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
-
-Applies the transform to an image.
-
-## Declaration
-
-```swift
-func applyTransform(to ciImage: CIImage) -> CIImage
-```
-
-# Document: init(_:)
-
-Source path: documentation/vision/imagetranslationalignmentobservation/init(_:)
-Canonical documentation: https://developer.apple.com/documentation/vision/imagetranslationalignmentobservation/init(_:)
-Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
-
-# init(\_:)
-
-**Framework:** Vision  
-**Kind:** Initializer  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
-
-Creates a translation alignment observation.
-
-## Declaration
-
-```swift
-init(_ observation: VNImageTranslationAlignmentObservation)
-```
-
-# Document: Implementing saliency-based image cropping in iOS and watchOS
-
-Source path: documentation/vision/implementing-saliency-based-image-cropping-in-ios-and-watchos
-Canonical documentation: https://developer.apple.com/documentation/vision/implementing-saliency-based-image-cropping-in-ios-and-watchos
-Description: Framework: Vision Kind: Sample Code Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · watchOS 27.0+ · Xcode 27.0+
-
-# Implementing saliency-based image cropping in iOS and watchOS
-
-**Framework:** Vision  
-**Kind:** Sample Code  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · watchOS 27.0+ · Xcode 27.0+
-
-Crop regions most likely drawing people’s attention from an image in your iOS or watchOS app.
-
-<a id="Overview"></a>
-
-## Overview
-
-> **Note**
-
-> This sample code project is associated with WWDC26 session 237: [What’s new in image understanding](https://developer.apple.com/wwdc26/237/).
-
-<a id="Configure-the-sample-code-project"></a>
-
-## Configure the sample code project
-
-To configure the sample code project, do the following:
-
-1. Open the sample with the latest version of Xcode.
-2. Set the developer team for all targets to let Xcode automatically manage the provisioning profile. For more information, see [Set the bundle ID](https://developer.apple.com/documentation/xcode/preparing-your-app-for-distribution#Set-the-bundle-ID) and [Assign the project to a team](https://developer.apple.com/documentation/xcode/preparing-your-app-for-distribution#Assign-the-project-to-a-team).
-
-> **Note**
-
-> This sample code needs to run on a physical device.
-
-## See Also
-
-### Image quality and saliency analysis
-
-- [Generating high-quality thumbnails from videos](generating-thumbnails-from-videos.md): Identify the most visually pleasing frames in a video by using the image-aesthetics scores request.
-- [CalculateImageAestheticsScoresRequest](calculateimageaestheticsscoresrequest.md): A request that analyzes an image for aesthetically pleasing attributes.
-- [DetectLensSmudgeRequest](detectlenssmudgerequest.md): A request that detects a smudge on a lens from an image or video frame capture.
-- [GenerateAttentionBasedSaliencyImageRequest](generateattentionbasedsaliencyimagerequest.md): An object that produces a heat map that identifies the parts of an image most likely to draw attention.
-- [GenerateObjectnessBasedSaliencyImageRequest](generateobjectnessbasedsaliencyimagerequest.md): A request that generates a heat map that identifies the parts of an image most likely to represent objects.
-
-# Document: InstanceMaskObservation
-
-Source path: documentation/vision/instancemaskobservation
-Canonical documentation: https://developer.apple.com/documentation/vision/instancemaskobservation
-Description: Framework: Vision Kind: Structure Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# InstanceMaskObservation
-
-**Framework:** Vision  
-**Kind:** Structure  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-An observation that contains an instance mask that labels instances in the mask.
-
-## Declaration
-
-```swift
-struct InstanceMaskObservation
-```
-
-## Topics
-
-### Creating an observation
-
-- [init(\_:)](instancemaskobservation/init%28__%29.md): Creates an instance mask observation.
-
-### Inspecting an observation
-
-- [RequestDescriptor](requestdescriptor.md): A type that describes the request and revision combination.
-
-### Generating a mask
-
-- [generateMask(for:)](instancemaskobservation/generatemask%28for_%29.md): Creates a low-resolution mask from the instances you specify.
-- [generateMaskedImage(for:imageFrom:croppedToInstancesExtent:)](instancemaskobservation/generatemaskedimage%28for_imagefrom_croppedtoinstancesextent_%29.md): Creates a high-resolution image with everything except for the instances you specify masked out.
-- [generateScaledMask(for:scaledToImageFrom:)](instancemaskobservation/generatescaledmask%28for_scaledtoimagefrom_%29.md): Creates a high-resolution mask representing a combination of the instances you specify.
-
-### Getting instances
-
-- [instanceAtPoint(\_:)](instancemaskobservation/instanceatpoint%28__%29.md): Returns an instance at the point you specify.
-- [allInstances](instancemaskobservation/allinstances.md): The collection that contains all instances, excluding the background.
-- [allInstancesMask](instancemaskobservation/allinstancesmask.md): The resulting mask that represents all instances.
-- [PixelBufferObservation](pixelbufferobservation.md): An object that represents an image that an image-analysis request produces.
-
-## Relationships
-
-### Conforms To
-
-- [Copyable](https://developer.apple.com/documentation/swift/copyable)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Decodable](https://developer.apple.com/documentation/swift/decodable)
-- [Encodable](https://developer.apple.com/documentation/swift/encodable)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Escapable](https://developer.apple.com/documentation/swift/escapable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-- [VisionObservation](visionobservation.md)
-
-# Document: allInstances
-
-Source path: documentation/vision/instancemaskobservation/allinstances
-Canonical documentation: https://developer.apple.com/documentation/vision/instancemaskobservation/allinstances
-Description: Framework: Vision Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# allInstances
-
-**Framework:** Vision  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-The collection that contains all instances, excluding the background.
-
-## Declaration
-
-```swift
-let allInstances: IndexSet
-```
-
-## See Also
-
-### Getting instances
-
-- [instanceAtPoint(\_:)](instanceatpoint%28__%29.md): Returns an instance at the point you specify.
-- [allInstancesMask](allinstancesmask.md): The resulting mask that represents all instances.
-- [PixelBufferObservation](../pixelbufferobservation.md): An object that represents an image that an image-analysis request produces.
-
-# Document: allInstancesMask
-
-Source path: documentation/vision/instancemaskobservation/allinstancesmask
-Canonical documentation: https://developer.apple.com/documentation/vision/instancemaskobservation/allinstancesmask
-Description: Framework: Vision Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# allInstancesMask
-
-**Framework:** Vision  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-The resulting mask that represents all instances.
-
-## Declaration
-
-```swift
-let allInstancesMask: PixelBufferObservation
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-A pixel can only correspond to one instance. A `0` represents the background, and all other values represent the indices of the instances.
-
-## See Also
-
-### Getting instances
-
-- [instanceAtPoint(\_:)](instanceatpoint%28__%29.md): Returns an instance at the point you specify.
-- [allInstances](allinstances.md): The collection that contains all instances, excluding the background.
-- [PixelBufferObservation](../pixelbufferobservation.md): An object that represents an image that an image-analysis request produces.
-
-# Document: generateMask(for:)
-
-Source path: documentation/vision/instancemaskobservation/generatemask(for:)
-Canonical documentation: https://developer.apple.com/documentation/vision/instancemaskobservation/generatemask(for:)
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# generateMask(for:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Creates a low-resolution mask from the instances you specify.
-
-## Declaration
-
-```swift
-func generateMask(for instances: IndexSet) throws -> CVPixelBuffer
-```
-
-## Parameters
-
-- `instances`: An indexed set of selected instances, where `0` is the background.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The pixel buffer that contains the mask.
-
-## See Also
-
-### Generating a mask
-
-- [generateMaskedImage(for:imageFrom:croppedToInstancesExtent:)](generatemaskedimage%28for_imagefrom_croppedtoinstancesextent_%29.md): Creates a high-resolution image with everything except for the instances you specify masked out.
-- [generateScaledMask(for:scaledToImageFrom:)](generatescaledmask%28for_scaledtoimagefrom_%29.md): Creates a high-resolution mask representing a combination of the instances you specify.
-
-# Document: generateMaskedImage(for:imageFrom:croppedToInstancesExtent:)
-
-Source path: documentation/vision/instancemaskobservation/generatemaskedimage(for:imagefrom:croppedtoinstancesextent:)
-Canonical documentation: https://developer.apple.com/documentation/vision/instancemaskobservation/generatemaskedimage(for:imagefrom:croppedtoinstancesextent:)
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# generateMaskedImage(for:imageFrom:croppedToInstancesExtent:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Creates a high-resolution image with everything except for the instances you specify masked out.
-
-## Declaration
-
-```swift
-func generateMaskedImage(for instances: IndexSet, imageFrom requestHandler: ImageRequestHandler, croppedToInstancesExtent: Bool = false) throws -> CVPixelBuffer
-```
-
-## Parameters
-
-- `instances`: An indexed set of selected instances, where `0` is the background.
-- `requestHandler`: A request handler containing an image to be masked.
-- `croppedToInstancesExtent`: Crops the image to the smallest rectangle containing all instances. Default is `false`.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The pixel buffer that contains the image.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-## See Also
-
-### Generating a mask
-
-- [generateMask(for:)](generatemask%28for_%29.md): Creates a low-resolution mask from the instances you specify.
-- [generateScaledMask(for:scaledToImageFrom:)](generatescaledmask%28for_scaledtoimagefrom_%29.md): Creates a high-resolution mask representing a combination of the instances you specify.
-
-# Document: generateScaledMask(for:scaledToImageFrom:)
-
-Source path: documentation/vision/instancemaskobservation/generatescaledmask(for:scaledtoimagefrom:)
-Canonical documentation: https://developer.apple.com/documentation/vision/instancemaskobservation/generatescaledmask(for:scaledtoimagefrom:)
-Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# generateScaledMask(for:scaledToImageFrom:)
-
-**Framework:** Vision  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Creates a high-resolution mask representing a combination of the instances you specify.
-
-## Declaration
-
-```swift
-func generateScaledMask(for instances: IndexSet, scaledToImageFrom requestHandler: ImageRequestHandler) throws -> CVPixelBuffer
-```
-
-## Parameters
-
-- `instances`: An indexed set of selected instances, where `0` is the background.
-- `requestHandler`: A request handler containing an image to be masked.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The pixel buffer that contains the mask.
-
-## See Also
-
-### Generating a mask
-
-- [generateMask(for:)](generatemask%28for_%29.md): Creates a low-resolution mask from the instances you specify.
-- [generateMaskedImage(for:imageFrom:croppedToInstancesExtent:)](generatemaskedimage%28for_imagefrom_croppedtoinstancesextent_%29.md): Creates a high-resolution image with everything except for the instances you specify masked out.

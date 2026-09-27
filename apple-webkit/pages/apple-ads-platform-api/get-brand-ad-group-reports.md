@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/get-brand-ad-group-reports
 
 # Ad Groups Report (Brands)
@@ -61,12 +61,12 @@ The `groupBy` array supports three dimensions for ad groups: device class, busin
 | `locationId` | Break down metrics per business location. |
 | `supplyPlacement` | Break down metrics by ad placement. |
 
-Each granularity value comes with its own date range restrictions, from a 7-day lookback for `HOURLY` to a 90-day-old end date for `MONTHLY`.
+Each granularity value comes with its own date range restrictions, from a 7-day span limit for `HOURLY` to a 90-day-old end date for `MONTHLY`.
 
 | Granularity | Constraint |
 | --- | --- |
 | `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
-| `HOURLY` | Date range start must be within the last 7 days. |
+| `HOURLY` | Date range must span 7 days or less, and the start date must be within the last 365 days. |
 | `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
 | `MONTHLY` | End date must be at least 90 days in the past. |
 

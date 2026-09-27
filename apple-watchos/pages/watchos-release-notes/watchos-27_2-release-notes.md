@@ -1,7 +1,7 @@
-> Snapshot-pinned source payload for Apple watchOS snapshot-4bff84466040; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple watchOS snapshot-a3a5c01bb2da; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/watchos-release-notes/watchos-27_2-release-notes
 
-# watchOS 27.2 Beta Release Notes
+# watchOS 27.2 Beta 2 Release Notes
 
 **Kind:** Article
 
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 27.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 27.2 beta. The SDK comes bundled with Xcode 27.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
+The watchOS 27.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 27.2 beta 2. The SDK comes bundled with Xcode 27.2. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
 
 <a id="StoreKit-Testing-in-Xcode"></a>
 

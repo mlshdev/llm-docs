@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/selector
 
 # Selector
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Object  
-**Availability:** Search Ads 2.0+
+**Availability:** Search Ads 2.0+ (deprecated in 5.2)
 
 The selector objects available to filter returned data.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -108,7 +110,7 @@ The following example returns both deleted and undeleted resources:
 
 ### API Usability
 
-- [Condition](condition.md): The list of condition objects that allow users to filter a list of records.
-- [PageDetail](pagedetail.md): The number of items that return in the page.
-- [Pagination](pagination.md): The procedure to refine returned results using limit and offset parameters.
-- [Sorting](sorting.md): The order of grouped results.
+- [Condition](condition.md): Deprecated. The list of condition objects that allow users to filter a list of records.
+- [PageDetail](pagedetail.md): Deprecated. The number of items that return in the page.
+- [Pagination](pagination.md): Deprecated. The procedure to refine returned results using limit and offset parameters.
+- [Sorting](sorting.md): Deprecated. The order of grouped results.

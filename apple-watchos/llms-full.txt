@@ -1,9 +1,9 @@
-# Apple watchOS snapshot-4bff84466040: full documentation
+# Apple watchOS snapshot-a3a5c01bb2da: full documentation
 
 Source: https://developer.apple.com/watchos/
-Catalog snapshot: 4bff8446604017f7d50029c94e521f55e311ea5e5ac9b46cdfb847f859b3bc1c
-Content digest: bdfe1621bbc2d42c8cb4a682bb7e57f9bfa7a7a59f6b911797e34642e4791127
-Captured at: 2026-09-16T18:21:42.211Z
+Catalog snapshot: a3a5c01bb2daa6e5b05b5f912615fe697fc6a01a5d070c58d528670dcc2bc090
+Content digest: 969d356ee45d18f331ae9e63dc5d3d9e1c8d1e118e170d2545729c62d2ffbec0
+Captured at: 2026-09-27T18:07:09.723Z
 
 # Document: WatchKit
 
@@ -55631,7 +55631,7 @@ Apple Watch users have come to expect that the apps on their watches just work, 
 
 Create a watch-only app for apps that only run on Apple Watch. If you have watchOS and iOS apps that are substantially similar, release them as companion apps.
 
-People can purchase watchOS apps directly from the App Store on Apple Watch. They can make in-app purchases directly on Apple Watch as well. If you create a watchOS app with a companion iOS app, the in-app purchases are universal. Users make the purchase once, and the content is available in both watchOS and iOS. For more information, see [Original API for In-App Purchase](https://developer.apple.com/documentation/storekit/original-api-for-in-app-purchase).
+People can purchase watchOS apps directly from the App Store on Apple Watch. They can make in-app purchases directly on Apple Watch as well. If you create a watchOS app with a companion iOS app, the in-app purchases are universal. Users make the purchase once, and the content is available in both watchOS and iOS. For more information, see [Original API for Apple In-App Purchase](https://developer.apple.com/documentation/storekit/original-api-for-in-app-purchase).
 
 ![A screenshot of a watch face displaying the App Store on Apple Watch.](https://developer.apple.com/images/com.apple.watchOS-Apps/creating-independent-watchos-apps-2@2x.png)
 
@@ -57303,7 +57303,7 @@ For issues not mentioned in release notes, file bugs through [Feedback Assistant
 
 ### watchOS 27
 
-- [watchOS 27.2 Beta Release Notes](watchos-release-notes/watchos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [watchOS 27.2 Beta 2 Release Notes](watchos-release-notes/watchos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [watchOS 27 Release Notes](watchos-release-notes/watchos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### watchOS 26
@@ -60110,15 +60110,15 @@ The watchOS 27 SDK provides support to develop watchOS apps for Apple Watch devi
 
 ### watchOS 27
 
-- [watchOS 27.2 Beta Release Notes](watchos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [watchOS 27.2 Beta 2 Release Notes](watchos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
-# Document: watchOS 27.2 Beta Release Notes
+# Document: watchOS 27.2 Beta 2 Release Notes
 
 Source path: documentation/watchos-release-notes/watchos-27_2-release-notes
 Canonical documentation: https://developer.apple.com/documentation/watchos-release-notes/watchos-27_2-release-notes
 Description: Kind: Article
 
-# watchOS 27.2 Beta Release Notes
+# watchOS 27.2 Beta 2 Release Notes
 
 **Kind:** Article
 
@@ -60128,7 +60128,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 27.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 27.2 beta. The SDK comes bundled with Xcode 27.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
+The watchOS 27.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 27.2 beta 2. The SDK comes bundled with Xcode 27.2. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
 
 <a id="StoreKit-Testing-in-Xcode"></a>
 

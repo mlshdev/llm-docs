@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/subscription/attributes-data.dictionary
 
 # Subscription.Attributes
@@ -26,6 +26,10 @@ object Subscription.Attributes
 - `state` — `string`: **Allowed values:** `MISSING_METADATA`, `READY_TO_SUBMIT`, `WAITING_FOR_REVIEW`, `IN_REVIEW`, `DEVELOPER_ACTION_NEEDED`, `PENDING_BINARY_APPROVAL`, `APPROVED`, `DEVELOPER_REMOVED_FROM_SALE`, `REMOVED_FROM_SALE`, `REJECTED`
 - `subscriptionPeriod` — `string`: **Allowed values:** `ONE_WEEK`, `ONE_MONTH`, `TWO_MONTHS`, `THREE_MONTHS`, `SIX_MONTHS`, `ONE_YEAR`
 - `groupLevel` — `integer`:
+- `marketSettings` — `[string]`: The markets in which the subscription is available for multi-seat purchase.
+  **Allowed values:** `APPLE_SCHOOL`, `APP_STORE`, `APPLE_BUSINESS`
+- `multiSeatStatus` — `string`: The status that indicates whether the subscription supports multiple seats for organizations. Turning on Family Sharing for the subscription automatically sets this value to DISABLED.
+  **Allowed values:** `ENABLED`, `DISABLED`
 
 ## See Also
 

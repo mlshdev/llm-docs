@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/opendirectory/odconfiguration/addtrusttype(_:trustaccount:trustpassword:username:password:joinexisting:)
 
 # addTrustType(\_:trustAccount:trustPassword:username:password:joinExisting:) (Swift)

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/applebusinessapi
 
 # Apple Business API
@@ -7,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Web Service  
-**Availability:** Apple Business API 2.5+
+**Availability:** Apple Business API 2.6+
 
 Automate device management activities, view device information, and manage users and user groups in Apple Business.
 
@@ -198,6 +198,8 @@ Automate device management activities, view device information, and manage users
 - [ActivationLockType](applebusinessapi/activationlocktype.md): Strings that represent the type of Activation Lock on a device.
 - [AuditEventActorType](applebusinessapi/auditeventactortype.md): Strings that represent the type of entity that performed an action.
 - [AuditEventCategory](applebusinessapi/auditeventcategory.md): Strings that represent audit event categories.
+- [AuditEventIdpProtocol](applebusinessapi/auditeventidpprotocol.md): Strings that represent the federation protocol used by an identity provider.
+- [AuditEventIdpVendorName](applebusinessapi/auditeventidpvendorname.md): Strings that represent the identity provider vendor.
 - [AuditEventOutcome](applebusinessapi/auditeventoutcome.md): Strings that represent the result of an action.
 - [AuditEventPurchaseSourceType](applebusinessapi/auditeventpurchasesourcetype.md): Strings that represent how a device was added to an organization.
 - [AuditEventReleaseEntityType](applebusinessapi/auditeventreleaseentitytype.md): Strings that represent the type of entity that conducted the release operation.
@@ -221,6 +223,14 @@ Automate device management activities, view device information, and manage users
 - [AuditEventAccountAddedAttributes](applebusinessapi/auditeventaccountaddedattributes.md): The attributes for an account added audit event.
 - [AuditEventAccountDeleted](applebusinessapi/auditeventaccountdeleted.md): The data structure that represents the event data for an account deleted audit event.
 - [AuditEventAccountDeletedAttributes](applebusinessapi/auditeventaccountdeletedattributes.md): The attributes for an account deleted audit event.
+- [AuditEventAccountImageRemoved](applebusinessapi/auditeventaccountimageremoved.md): The data structure that represents the event data for an account image removed audit event.
+- [AuditEventAccountImageRemovedAttributes](applebusinessapi/auditeventaccountimageremovedattributes.md): The attributes for an account image removed audit event.
+- [AuditEventAccountImageReplaced](applebusinessapi/auditeventaccountimagereplaced.md): The data structure that represents the event data for an account image replaced audit event.
+- [AuditEventAccountImageReplacedAttributes](applebusinessapi/auditeventaccountimagereplacedattributes.md): The attributes for an account image replaced audit event.
+- [AuditEventAccountImageSet](applebusinessapi/auditeventaccountimageset.md): The data structure that represents the event data for an account image set audit event.
+- [AuditEventAccountImageSetAttributes](applebusinessapi/auditeventaccountimagesetattributes.md): The attributes for an account image set audit event.
+- [AuditEventAccountPasswordChanged](applebusinessapi/auditeventaccountpasswordchanged.md): The data structure that represents the event data for an account password changed audit event.
+- [AuditEventAccountPasswordChangedAttributes](applebusinessapi/auditeventaccountpasswordchangedattributes.md): The attributes for an account password changed audit event.
 - [AuditEventAccountRoleLocation](applebusinessapi/auditeventaccountrolelocation.md): The data structure that represents a role and location assignment.
 - [AuditEventAccountRoleLocationChanged](applebusinessapi/auditeventaccountrolelocationchanged.md): The data structure that represents the event data for an account role location changed audit event.
 - [AuditEventAccountRoleLocationChangedAttributes](applebusinessapi/auditeventaccountrolelocationchangedattributes.md): The attributes for an account role location changed audit event.
@@ -238,6 +248,10 @@ Automate device management activities, view device information, and manage users
 - [AuditEventApiAccountNameChangedAttributes](applebusinessapi/auditeventapiaccountnamechangedattributes.md): The attributes for an API account name changed audit event.
 - [AuditEventApiAccountRoleLocationChanged](applebusinessapi/auditeventapiaccountrolelocationchanged.md): The data structure that represents the event data for an API account role location changed audit event.
 - [AuditEventApiAccountRoleLocationChangedAttributes](applebusinessapi/auditeventapiaccountrolelocationchangedattributes.md): The attributes for an API account role location changed audit event.
+- [AuditEventAppleServicesSettingsUpdated](applebusinessapi/auditeventappleservicessettingsupdated.md): The data structure that represents the event data for an Apple services settings updated audit event.
+- [AuditEventAppleServicesSettingsUpdatedAttributes](applebusinessapi/auditeventappleservicessettingsupdatedattributes.md): The attributes for an Apple services settings updated audit event.
+- [AuditEventBatchPasswordResetInitiated](applebusinessapi/auditeventbatchpasswordresetinitiated.md): The data structure that represents the event data for a batch password reset initiated audit event.
+- [AuditEventBatchPasswordResetInitiatedAttributes](applebusinessapi/auditeventbatchpasswordresetinitiatedattributes.md): The attributes for a batch password reset initiated audit event.
 - [AuditEventCollectionCreated](applebusinessapi/auditeventcollectioncreated.md): The data structure that represents the event data for a collection created audit event.
 - [AuditEventCollectionCreatedAttributes](applebusinessapi/auditeventcollectioncreatedattributes.md): The attributes for a collection created audit event.
 - [AuditEventCollectionDeleted](applebusinessapi/auditeventcollectiondeleted.md): The data structure that represents the event data for a collection deleted audit event.
@@ -263,6 +277,10 @@ Automate device management activities, view device information, and manage users
 - [AuditEventDeviceUnassignedFromServerAttributes](applebusinessapi/auditeventdeviceunassignedfromserverattributes.md): The attributes for a device unassigned from server audit event.
 - [AuditEventDomainAdded](applebusinessapi/auditeventdomainadded.md): The data structure that represents the event data for a domain added audit event.
 - [AuditEventDomainAddedAttributes](applebusinessapi/auditeventdomainaddedattributes.md): The attributes for a domain added audit event.
+- [AuditEventDomainFederationDisabled](applebusinessapi/auditeventdomainfederationdisabled.md): The data structure that represents the event data for a domain federation disabled audit event.
+- [AuditEventDomainFederationDisabledAttributes](applebusinessapi/auditeventdomainfederationdisabledattributes.md): The attributes for a domain federation disabled audit event.
+- [AuditEventDomainFederationEnabled](applebusinessapi/auditeventdomainfederationenabled.md): The data structure that represents the event data for a domain federation enabled audit event.
+- [AuditEventDomainFederationEnabledAttributes](applebusinessapi/auditeventdomainfederationenabledattributes.md): The attributes for a domain federation enabled audit event.
 - [AuditEventDomainRemoved](applebusinessapi/auditeventdomainremoved.md): The data structure that represents the event data for a domain removed audit event.
 - [AuditEventDomainRemovedAttributes](applebusinessapi/auditeventdomainremovedattributes.md): The attributes for a domain removed audit event.
 - [AuditEventDomainVerified](applebusinessapi/auditeventdomainverified.md): The data structure that represents the event data for a domain verified audit event.
@@ -271,6 +289,22 @@ Automate device management activities, view device information, and manage users
 - [AuditEventExternalAccountAssociatedAttributes](applebusinessapi/auditeventexternalaccountassociatedattributes.md): The attributes for an external account associated audit event.
 - [AuditEventExternalAccountDisassociated](applebusinessapi/auditeventexternalaccountdisassociated.md): The data structure that represents the event data for an external account disassociated audit event.
 - [AuditEventExternalAccountDisassociatedAttributes](applebusinessapi/auditeventexternalaccountdisassociatedattributes.md): The attributes for an external account disassociated audit event.
+- [AuditEventExternalAccountInvited](applebusinessapi/auditeventexternalaccountinvited.md): The data structure that represents the event data for an external account invited audit event.
+- [AuditEventExternalAccountInvitedAttributes](applebusinessapi/auditeventexternalaccountinvitedattributes.md): The attributes for an external account invited audit event.
+- [AuditEventIdpAccountSyncDisabled](applebusinessapi/auditeventidpaccountsyncdisabled.md): The data structure that represents the event data for an identity provider account sync disabled audit event.
+- [AuditEventIdpAccountSyncDisabledAttributes](applebusinessapi/auditeventidpaccountsyncdisabledattributes.md): The attributes for an identity provider account sync disabled audit event.
+- [AuditEventIdpAccountSyncEnabled](applebusinessapi/auditeventidpaccountsyncenabled.md): The data structure that represents the event data for an identity provider account sync enabled audit event.
+- [AuditEventIdpAccountSyncEnabledAttributes](applebusinessapi/auditeventidpaccountsyncenabledattributes.md): The attributes for an identity provider account sync enabled audit event.
+- [AuditEventIdpCreated](applebusinessapi/auditeventidpcreated.md): The data structure that represents the event data for an identity provider created audit event.
+- [AuditEventIdpCreatedAttributes](applebusinessapi/auditeventidpcreatedattributes.md): The attributes for an identity provider created audit event.
+- [AuditEventIdpDeleted](applebusinessapi/auditeventidpdeleted.md): The data structure that represents the event data for an identity provider deleted audit event.
+- [AuditEventIdpDeletedAttributes](applebusinessapi/auditeventidpdeletedattributes.md): The attributes for an identity provider deleted audit event.
+- [AuditEventIdpUpdated](applebusinessapi/auditeventidpupdated.md): The data structure that represents the event data for an identity provider updated audit event.
+- [AuditEventIdpUpdatedAttributes](applebusinessapi/auditeventidpupdatedattributes.md): The attributes for an identity provider updated audit event.
+- [AuditEventRoleCreated](applebusinessapi/auditeventrolecreated.md): The data structure that represents the event data for a role created audit event.
+- [AuditEventRoleCreatedAttributes](applebusinessapi/auditeventrolecreatedattributes.md): The attributes for a role created audit event.
+- [AuditEventRoleUpdated](applebusinessapi/auditeventroleupdated.md): The data structure that represents the event data for a role updated audit event.
+- [AuditEventRoleUpdatedAttributes](applebusinessapi/auditeventroleupdatedattributes.md): The attributes for a role updated audit event.
 - [AuditEventSubjectHasAppleCarePurchaseAdded](applebusinessapi/auditeventsubjecthasapplecarepurchaseadded.md): The data structure that represents the event data for a subject has AppleCare purchase added audit event.
 - [AuditEventSubjectHasAppleCarePurchaseRemoved](applebusinessapi/auditeventsubjecthasapplecarepurchaseremoved.md): The data structure that represents the event data for a subject has AppleCare purchase removed audit event.
 - [AuditEventSubjectHasApplecarePurchaseAddedAttributes](applebusinessapi/auditeventsubjecthasapplecarepurchaseaddedattributes.md): The attributes for a subject has AppleCare purchase added audit event.
@@ -285,6 +319,8 @@ Automate device management activities, view device information, and manage users
 - [AuditEventSubscriptionDeletedAttributes](applebusinessapi/auditeventsubscriptiondeletedattributes.md): The attributes for a subscription deleted audit event.
 - [AuditEventSubscriptionUpdated](applebusinessapi/auditeventsubscriptionupdated.md): The data structure that represents the event data for a subscription updated audit event.
 - [AuditEventSubscriptionUpdatedAttributes](applebusinessapi/auditeventsubscriptionupdatedattributes.md): The attributes for a subscription updated audit event.
+- [AuditEventTermsAccepted](applebusinessapi/auditeventtermsaccepted.md): The data structure that represents the event data for a terms accepted audit event.
+- [AuditEventTermsAcceptedAttributes](applebusinessapi/auditeventtermsacceptedattributes.md): The attributes for a terms accepted audit event.
 - [MdmServerCreateRequest](applebusinessapi/mdmservercreaterequest.md): A request to create a new device management service.
 - [MdmServerUpdateRequest](applebusinessapi/mdmserverupdaterequest.md): A request to update an existing device management service.
 

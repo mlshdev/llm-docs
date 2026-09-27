@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accelerate/vimagetransferfunction/init(c0:c1:c2:c3:gamma:cutoff:c4:c5:)
 
 # init(c0:c1:c2:c3:gamma:cutoff:c4:c5:)

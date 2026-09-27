@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseversion/relationships-data.dictionary
 
 # InAppPurchaseVersion.Relationships
@@ -28,13 +28,13 @@ object InAppPurchaseVersion.Relationships
 
 ### Objects
 
-- [InAppPurchaseVersion.Relationships.InAppPurchase](relationships-data.dictionary/inapppurchase-data.dictionary.md): The in-app purchase for the in-app purchase version.
-- [InAppPurchaseVersion.Relationships.Image](relationships-data.dictionary/image-data.dictionary.md): The review image for the in-app purchase version.
-- [InAppPurchaseVersion.Relationships.Images](relationships-data.dictionary/images-data.dictionary.md): The review images for the in-app purchase version.
-- [InAppPurchaseVersion.Relationships.Localizations](relationships-data.dictionary/localizations-data.dictionary.md): The localizations for the in-app purchase version.
+- [InAppPurchaseVersion.Relationships.InAppPurchase](relationships-data.dictionary/inapppurchase-data.dictionary.md): The In-App Purchase for the In-App Purchase version.
+- [InAppPurchaseVersion.Relationships.Image](relationships-data.dictionary/image-data.dictionary.md): The review image for the In-App Purchase version.
+- [InAppPurchaseVersion.Relationships.Images](relationships-data.dictionary/images-data.dictionary.md): The review images for the In-App Purchase version.
+- [InAppPurchaseVersion.Relationships.Localizations](relationships-data.dictionary/localizations-data.dictionary.md): The localizations for the In-App Purchase version.
 
 ## See Also
 
 ### Objects and types
 
-- [InAppPurchaseVersion.Attributes](attributes-data.dictionary.md): Attributes that describe an in-app purchase version resource.
+- [InAppPurchaseVersion.Attributes](attributes-data.dictionary.md): Attributes that describe an In-App Purchase version resource.

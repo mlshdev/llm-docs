@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/get-me-details
 
 # Get Me Details
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Web Service Endpoint  
-**Availability:** Search Ads 5.0+
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 Fetches details of an API caller.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## URL
 
@@ -62,8 +64,8 @@ curl "https://api.searchads.apple.com/api/v5/me"
 
 ### Access Control List
 
-- [Get User ACL](get-user-acl.md): Fetches roles and organizations that the API has access to.
-- [UserAcl](useracl.md): The response to ACL requests.
-- [UserAclListResponse](useracllistresponse.md): A container for ACL call responses.
-- [MeDetail](medetail.md): The API caller identifiers.
-- [MeDetailResponse](medetailresponse.md): The response from me detail calls.
+- [Get User ACL](get-user-acl.md): Deprecated. Fetches roles and organizations that the API has access to.
+- [UserAcl](useracl.md): Deprecated. The response to ACL requests.
+- [UserAclListResponse](useracllistresponse.md): Deprecated. A container for ACL call responses.
+- [MeDetail](medetail.md): Deprecated. The API caller identifiers.
+- [MeDetailResponse](medetailresponse.md): Deprecated. The response from me detail calls.

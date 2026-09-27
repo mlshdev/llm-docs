@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/search-apps
 
 # Search Apps
@@ -10,16 +10,24 @@
 
 Search for iOS apps to promote in a campaign.
 
+<a id="overview"></a>
+
+## Overview
+
+> **Deprecated**
+
+> The Apple Ads Campaign Management API is deprecated and will be sunset on January 26, 2027. Use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api) instead.
+
 ## Topics
 
 ### Search Apps Endpoints
 
-- [Search for iOS apps](search-for-ios-apps.md): Searches for iOS apps to promote in a campaign.
+- [Search for iOS apps](search-for-ios-apps.md): Deprecated. Searches for iOS apps to promote in a campaign.
 
 ### Search Apps Request and Response Objects
 
-- [AppInfo](appinfo.md): The response to an app search request.
-- [AppInfoListResponse](appinfolistresponse.md): The response details of app search requests.
+- [AppInfo](appinfo.md): Deprecated. The response to an app search request.
+- [AppInfoListResponse](appinfolistresponse.md): Deprecated. The response details of app search requests.
 
 ## See Also
 

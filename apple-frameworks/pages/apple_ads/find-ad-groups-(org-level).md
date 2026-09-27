@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/find-ad-groups-(org-level)
 
 # Find Ad Groups (org-level)
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Web Service Endpoint  
-**Availability:** Search Ads 5.0+
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 Fetches ad groups within an organization.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## URL
 
@@ -180,9 +182,9 @@ POST https://api.searchads.apple.com/api/v5/adgroups/find
 
 ### Ad Group Endpoints
 
-- [Create an Ad Group](create-an-ad-group.md): Creates an ad group as part of a campaign.
-- [Find Ad Groups](find-ad-groups.md): Fetches ad groups within a campaign.
-- [Get an Ad Group](get-an-ad-group.md): Fetches a specific ad group with a campaign and ad group identifier.
-- [Get all Ad Groups](get-all-ad-groups.md): Fetches all ad groups with a campaign identifier.
-- [Update an Ad Group](update-an-ad-group.md): Updates an ad group with an ad group identifier.
-- [Delete an Ad Group](delete-an-ad-group.md): Deletes an ad group with a campaign and ad group identifier.
+- [Create an Ad Group](create-an-ad-group.md): Deprecated. Creates an ad group as part of a campaign.
+- [Find Ad Groups](find-ad-groups.md): Deprecated. Fetches ad groups within a campaign.
+- [Get an Ad Group](get-an-ad-group.md): Deprecated. Fetches a specific ad group with a campaign and ad group identifier.
+- [Get all Ad Groups](get-all-ad-groups.md): Deprecated. Fetches all ad groups with a campaign identifier.
+- [Update an Ad Group](update-an-ad-group.md): Deprecated. Updates an ad group with an ad group identifier.
+- [Delete an Ad Group](delete-an-ad-group.md): Deprecated. Deletes an ad group with a campaign and ad group identifier.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/kernel/task_inspect_flavor/task_inspect_basic_counts
 
 # TASK_INSPECT_BASIC_COUNTS

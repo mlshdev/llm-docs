@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/get-all-ads
 
 # Get All Ads
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Web Service Endpoint  
-**Availability:** Search Ads 5.0+
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 Fetches all ads assigned to an ad group.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## URL
 
@@ -74,9 +76,9 @@ GET https://api.searchads.apple.com/api/v5/campaigns/{campaignId}/adgroups/{adgr
 
 ### Ad Endpoints
 
-- [Create an Ad](create-an-ad.md): Creates an ad in an ad group with a creative.
-- [Find Ads](find-ads.md): Finds ads within a campaign by selector criteria.
-- [Find Ads (org-level)](find-ads-%28org-level%29.md): Fetches ads within an organization by selector criteria.
-- [Get an Ad](get-an-ad.md): Fetches an ad assigned to an ad group by identifier.
-- [Update an Ad](update-an-ad.md): Updates an ad in an ad group.
-- [Delete an Ad](delete-an-ad.md): Deletes an ad from an ad group.
+- [Create an Ad](create-an-ad.md): Deprecated. Creates an ad in an ad group with a creative.
+- [Find Ads](find-ads.md): Deprecated. Finds ads within a campaign by selector criteria.
+- [Find Ads (org-level)](find-ads-%28org-level%29.md): Deprecated. Fetches ads within an organization by selector criteria.
+- [Get an Ad](get-an-ad.md): Deprecated. Fetches an ad assigned to an ad group by identifier.
+- [Update an Ad](update-an-ad.md): Deprecated. Updates an ad in an ad group.
+- [Delete an Ad](delete-an-ad.md): Deprecated. Deletes an ad from an ad group.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/locationqueryresponse
 
 # LocationQueryResponse
@@ -87,7 +87,7 @@ You can assign only locations with `eligibility.status: ELIGIBLE` to ad group ta
     }
   ],
   "pagination": {
-    "pageSize": 20,
+    "pageSize": 1,
     "offset": 0,
     "totalCount": 1
   }

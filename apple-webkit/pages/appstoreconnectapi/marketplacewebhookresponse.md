@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/marketplacewebhookresponse
 
 # MarketplaceWebhookResponse
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Object  
-**Availability:** App Store Connect API 3.3+
+**Availability:** App Store Connect API 3.3+ (deprecated in 4.0.1)
 
 A response containing a single marketplace webhook endpoint configuration.
+
+> This object is deprecated.
 
 ## Declaration
 

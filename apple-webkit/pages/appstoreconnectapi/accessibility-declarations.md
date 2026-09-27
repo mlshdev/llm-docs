@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/accessibility-declarations
 
 # Accessibility declarations
@@ -22,7 +22,7 @@ Accessibility declarations enable you to show the accessibility modalities and t
 
 > The default value for each attribute in an accessibility declaration is `false`. If you modify a subset of the available attributes, the remaining attributes default to `false`.
 
-To add an accessibility URL to your the App Store page for your app, use [Modify an app](patch-v1-apps-_id_.md) and update the the `accessibilityUrl` attribute.
+To add an accessibility URL to the App Store page for your app, use [Modify an app](patch-v1-apps-_id_.md) and update the `accessibilityUrl` attribute.
 
 To manage accessibility declarations, be sure you have one of the following user roles:
 

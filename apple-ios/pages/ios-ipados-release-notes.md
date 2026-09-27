@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-d0d1b2f13e0d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes
 
 # iOS & iPadOS Release Notes
@@ -23,7 +23,7 @@ When writing your report, please include the full version number in the title an
 
 ### iOS & iPadOS 27
 
-- [iOS & iPadOS 27.2 Beta Release Notes](ios-ipados-release-notes/ios-ipados-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 27.2 Beta 2 Release Notes](ios-ipados-release-notes/ios-ipados-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [iOS & iPadOS 27 Release Notes](ios-ipados-release-notes/ios-ipados-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### iOS & iPadOS 26

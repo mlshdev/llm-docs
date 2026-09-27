@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/georequest
 
 # GeoRequest
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Object  
-**Availability:** Search Ads 2.0+
+**Availability:** Search Ads 2.0+ (deprecated in 5.2)
 
 The geosearch request object.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -29,5 +31,5 @@ object GeoRequest
 
 ### Search Geolocation Request and Response Objects
 
-- [SearchEntity](searchentity.md): The list of geolocations that includes the geoidentifier and entity type.
-- [SearchEntityListResponse](searchentitylistresponse.md): The response details of geosearch requests.
+- [SearchEntity](searchentity.md): Deprecated. The list of geolocations that includes the geoidentifier and entity type.
+- [SearchEntityListResponse](searchentitylistresponse.md): Deprecated. The response details of geosearch requests.

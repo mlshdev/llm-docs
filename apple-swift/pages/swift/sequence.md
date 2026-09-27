@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Swift snapshot-3cd4d1098779; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swift/sequence
 
 # Sequence
@@ -339,4 +339,5 @@ Use a sequence of rectangles and other types to perform operations on an AppKit 
 
 ### First Steps
 
+- [IteratorProtocol](iteratorprotocol.md): A type that supplies the values of a sequence one at a time.
 - [Collection](collection.md): A sequence whose elements can be traversed multiple times, nondestructively, and accessed by an indexed subscript.

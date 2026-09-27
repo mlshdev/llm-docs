@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-subscriptions-_id_
 
 # Read subscription information
@@ -28,7 +28,7 @@ GET https://api.appstoreconnect.apple.com/v1/subscriptions/{id}
 - `fields[subscriptionLocalizations]` — `[string]`: **Allowed values:** `name`, `locale`, `description`, `state`, `subscription`
 - `fields[subscriptionOfferCodes]` — `[string]`: **Allowed values:** `name`, `customerEligibilities`, `offerEligibility`, `duration`, `offerMode`, `numberOfPeriods`, `totalNumberOfCodes`, `productionCodeCount`, `sandboxCodeCount`, `active`, `autoRenewEnabled`, `targetSubscriptionPlanType`, `subscription`, `oneTimeUseCodes`, `customCodes`, `prices`
 - `fields[subscriptionPrices]` — `[string]`: **Allowed values:** `startDate`, `preserved`, `planType`, `territory`, `subscriptionPricePoint`
-- `fields[subscriptions]` — `[string]`: **Allowed values:** `name`, `productId`, `familySharable`, `state`, `subscriptionPeriod`, `reviewNote`, `groupLevel`, `subscriptionLocalizations`, `appStoreReviewScreenshot`, `group`, `introductoryOffers`, `promotionalOffers`, `offerCodes`, `prices`, `pricePoints`, `promotedPurchase`, `subscriptionAvailability`, `winBackOffers`, `images`, `planAvailabilities`, `versions`
+- `fields[subscriptions]` — `[string]`: **Allowed values:** `name`, `productId`, `familySharable`, `state`, `subscriptionPeriod`, `reviewNote`, `groupLevel`, `multiSeatStatus`, `marketSettings`, `subscriptionLocalizations`, `appStoreReviewScreenshot`, `group`, `introductoryOffers`, `promotionalOffers`, `offerCodes`, `prices`, `pricePoints`, `promotedPurchase`, `subscriptionAvailability`, `winBackOffers`, `images`, `planAvailabilities`, `versions`
 - `include` — `[string]`: **Allowed values:** `subscriptionLocalizations`, `appStoreReviewScreenshot`, `group`, `introductoryOffers`, `promotionalOffers`, `offerCodes`, `prices`, `promotedPurchase`, `subscriptionAvailability`, `winBackOffers`, `images`, `planAvailabilities`, `versions`
 - `limit[introductoryOffers]` — `integer`: **Maximum:** `50`
 - `limit[offerCodes]` — `integer`: **Maximum:** `50`
@@ -56,6 +56,10 @@ GET https://api.appstoreconnect.apple.com/v1/subscriptions/{id}
 - `403` Forbidden — `ErrorResponse`:
 - `404` Not Found — `ErrorResponse`:
 - `429` — `ErrorResponse`:
+
+## Mentioned In
+
+- [Configuring multi-seat subscriptions for organizations](configuring-multi-seat-subscriptions-for-organizations.md)
 
 ## See Also
 

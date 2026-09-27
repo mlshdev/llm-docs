@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/patch-v1-gamecenterleaderboardsets-_id_
 
 # Edit a Leaderboard Set
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 3.0+
+**Availability:** App Store Connect API 3.0+ (deprecated in 4.3)
 
 Modify the metadata for a leaderboard set.
+
+> This endpoint is deprecated. Use [Modify a Game Center Leaderboard Set](patch-v2-gamecenterleaderboardsets-_id_.md) instead.
 
 ## URL
 

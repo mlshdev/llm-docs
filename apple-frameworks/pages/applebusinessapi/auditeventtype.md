@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/auditeventtype
 
 # AuditEventType
@@ -7,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Type  
-**Availability:** Apple Business API 2.5+
+**Availability:** Apple Business API 2.6+
 
 Strings that represent audit event types.
 
@@ -52,6 +52,23 @@ string AuditEventType
 - `API_ACCOUNT_KEY_GENERATED`:
 - `API_ACCOUNT_ROLE_LOCATION_CHANGED`:
 - `API_ACCOUNT_NAME_CHANGED`:
+- `ROLE_CREATED`:
+- `ROLE_UPDATED`:
+- `TERMS_ACCEPTED`:
+- `DOMAIN_FEDERATION_ENABLED`:
+- `DOMAIN_FEDERATION_DISABLED`:
+- `BATCH_PASSWORD_RESET_INITIATED`:
+- `EXTERNAL_ACCOUNT_INVITED`:
+- `ACCOUNT_IMAGE_SET`:
+- `ACCOUNT_IMAGE_REPLACED`:
+- `ACCOUNT_IMAGE_REMOVED`:
+- `IDP_CREATED`:
+- `IDP_UPDATED`:
+- `IDP_DELETED`:
+- `IDP_ACCOUNT_SYNC_ENABLED`:
+- `IDP_ACCOUNT_SYNC_DISABLED`:
+- `APPLE_SERVICES_SETTINGS_UPDATED`:
+- `ACCOUNT_PASSWORD_CHANGED`:
 
 <a id="discussion"></a>
 
@@ -92,3 +109,20 @@ string AuditEventType
   - API_ACCOUNT_KEY_GENERATED: Key generated for API account.
   - API_ACCOUNT_ROLE_LOCATION_CHANGED: API account’s role@location changed.
   - API_ACCOUNT_NAME_CHANGED: API account name changed.
+  - ROLE_CREATED: Role created.
+  - ROLE_UPDATED: Role updated.
+  - TERMS_ACCEPTED: Terms and conditions accepted.
+  - DOMAIN_FEDERATION_ENABLED: Domain federation enabled.
+  - DOMAIN_FEDERATION_DISABLED: Domain federation disabled.
+  - BATCH_PASSWORD_RESET_INITIATED: Batch password reset initiated.
+  - EXTERNAL_ACCOUNT_INVITED: External account invited.
+  - ACCOUNT_IMAGE_SET: Account image set.
+  - ACCOUNT_IMAGE_REPLACED: Account image replaced.
+  - ACCOUNT_IMAGE_REMOVED: Account image removed.
+  - IDP_CREATED: Identity provider created.
+  - IDP_UPDATED: Identity provider updated.
+  - IDP_DELETED: Identity provider deleted.
+  - IDP_ACCOUNT_SYNC_ENABLED: Identity provider account sync enabled.
+  - IDP_ACCOUNT_SYNC_DISABLED: Identity provider account sync disabled.
+  - APPLE_SERVICES_SETTINGS_UPDATED: Apple services settings updated.
+  - ACCOUNT_PASSWORD_CHANGED: Account password changed.

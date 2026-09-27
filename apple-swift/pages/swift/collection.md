@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Swift snapshot-3cd4d1098779; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swift/collection
 
 # Collection
@@ -344,4 +344,5 @@ The performance of some collection operations depends on the type of index that 
 
 ### First Steps
 
+- [IteratorProtocol](iteratorprotocol.md): A type that supplies the values of a sequence one at a time.
 - [Sequence](sequence.md): A type that provides sequential, iterated access to its elements.

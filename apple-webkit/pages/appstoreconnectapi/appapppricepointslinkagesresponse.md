@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appapppricepointslinkagesresponse
 
 # AppAppPricePointsLinkagesResponse
@@ -39,8 +39,8 @@ object AppAppPricePointsLinkagesResponse
 - [AppResponse](appresponse.md): The response body for endpoints that read or modify a single app in your team.
 - [AppsResponse](appsresponse.md): A response containing a list of apps registered in your App Store Connect team.
 - [InAppPurchase](inapppurchase.md): Deprecated. A one-time purchasable item available in an app, such as a consumable, non-consumable, or non-renewing subscription.
-- [InAppPurchaseResponse](inapppurchaseresponse.md): Deprecated. The response body for endpoints that read a single in-app purchase.
-- [InAppPurchasesResponse](inapppurchasesresponse.md): Deprecated. The response body for endpoints that list in-app purchases for an app.
+- [InAppPurchaseResponse](inapppurchaseresponse.md): Deprecated. The response body for endpoints that read a single In-App Purchase.
+- [InAppPurchasesResponse](inapppurchasesresponse.md): Deprecated. The response body for endpoints that list In-App Purchases for an app.
 - [AppBetaTestersLinkagesRequest](appbetatesterslinkagesrequest.md): A request body you use to remove beta testers from an app.
 - [AppPricePointV3](apppricepointv3.md): A specific price tier in App Store pricing, defining the customer price and developer proceeds across territories.
 - [AppPricePointV3Response](apppricepointv3response.md): A response containing a single App Store price point with its territory-specific pricing details.

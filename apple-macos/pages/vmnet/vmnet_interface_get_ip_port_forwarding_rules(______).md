@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/vmnet/vmnet_interface_get_ip_port_forwarding_rules(_:_:_:)
 
 # vmnet_interface_get_ip_port_forwarding_rules(\_:\_:\_:) (Swift)

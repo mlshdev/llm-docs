@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/authenticationservices/asauthorizationproviderextensionloginconfiguration/tokenendpointurl
 
 # tokenEndpointURL (Swift)
@@ -14,6 +14,10 @@ The token endpoint URL for login requests.
 ```swift
 var tokenEndpointURL: URL { get set }
 ```
+
+## Mentioned In
+
+- [Interpreting Platform Single Sign-on authorization scopes](../interpreting-platform-single-sign-on-authorization-scopes.md)
 
 ## See Also
 
@@ -37,6 +41,10 @@ The token endpoint URL for login requests.
 ```objectivec
 @property (nonatomic, copy) NSURL * tokenEndpointURL;
 ```
+
+## Mentioned In
+
+- [Interpreting Platform Single Sign-on authorization scopes](../interpreting-platform-single-sign-on-authorization-scopes.md)
 
 ## See Also
 

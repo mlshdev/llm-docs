@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/eligibilityresponse
 
 # EligibilityResponse
@@ -22,12 +22,14 @@ object EligibilityResponse
 - `adamId` — `int64`: The Adam ID of the app. Read-only.
 - `supplyPlacement` — `string`: The supply placement being checked. Read-only.
 - `supplySource` — `string`: The supply source being checked. Read-only.
+  **Allowed values:** `APPSTORE`, `MAPS`
 - `minAge` — `number`: The minimum age rating required to serve ads for this app in this market. Read-only.
 - `state` — `string`: Eligibility state: `ELIGIBLE` or `INELIGIBLE`. Defaults to `ELIGIBLE`. Read-only.
   **Default:** `ELIGIBLE`  
   **Allowed values:** `ELIGIBLE`, `INELIGIBLE`
 - `countryOrRegion` — `string`: The country or region evaluated. Read-only.
 - `deviceClass` — `string`: The device class evaluated. Read-only.
+  **Allowed values:** `IPHONE`, `IPAD`
 - `creationTime` — `date-time`: The date and time this eligibility record was created. Read-only.
 - `modificationTime` — `date-time`: The date and time this eligibility record was last modified. Read-only.
 

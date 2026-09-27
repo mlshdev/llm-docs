@@ -1,7 +1,7 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-inapppurchaseappstorereviewscreenshots-_id_
 
-# Read in-app purchase review screenshot information
+# Read In-App Purchase review screenshot information
 
 **Interface language:** Data
 
@@ -9,7 +9,7 @@
 **Kind:** Web Service Endpoint  
 **Availability:** App Store Connect API 2.0+
 
-Get information about a specific review screenshot for an in-app purchase.
+Get information about a specific review screenshot for an In-App Purchase.
 
 ## URL
 
@@ -38,12 +38,12 @@ GET https://api.appstoreconnect.apple.com/v1/inAppPurchaseAppStoreReviewScreensh
 
 ## Mentioned In
 
-- [Managing in-app purchases](managing-in-app-purchases.md)
+- [Managing In-App Purchases](managing-in-app-purchases.md)
 
 ## See Also
 
 ### Endpoints
 
-- [Create an in-app purchase review screenshot](post-v1-inapppurchaseappstorereviewscreenshots.md): Reserve a review screenshot for an in-app purchase.
-- [Commit a review screenshot for an in-app purchase](patch-v1-inapppurchaseappstorereviewscreenshots-_id_.md): Commit an uploaded image asset as a review screenshot for an in-app purchase.
-- [Delete a review screenshot for an in-app purchase](delete-v1-inapppurchaseappstorereviewscreenshots-_id_.md): Delete an image that you uploaded for review of an in-app purchase.
+- [Create an In-App Purchase review screenshot](post-v1-inapppurchaseappstorereviewscreenshots.md): Reserve a review screenshot for an In-App Purchase.
+- [Commit a review screenshot for an In-App Purchase](patch-v1-inapppurchaseappstorereviewscreenshots-_id_.md): Commit an uploaded image asset as a review screenshot for an In-App Purchase.
+- [Delete a review screenshot for an In-App Purchase](delete-v1-inapppurchaseappstorereviewscreenshots-_id_.md): Delete an image that you uploaded for review of an In-App Purchase.

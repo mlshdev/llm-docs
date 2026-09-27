@@ -1,7 +1,7 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/post-v1-inapppurchaselocalizations
 
-# Create an in-app purchase localization (v1)
+# Create an In-App Purchase localization (v1)
 
 **Interface language:** Data
 
@@ -9,9 +9,9 @@
 **Kind:** Web Service Endpoint  
 **Availability:** App Store Connect API 2.0+ (deprecated in 4.4.1)
 
-Create a localized display name and description for an in-app purchase.
+Create a localized display name and description for an In-App Purchase.
 
-> This endpoint is deprecated. Use [Create an in-app purchase localization](post-v2-inapppurchaselocalizations.md) instead.
+> This endpoint is deprecated. Use [Create an In-App Purchase localization](post-v2-inapppurchaselocalizations.md) instead.
 
 ## URL
 
@@ -47,7 +47,7 @@ Type: `InAppPurchaseLocalizationCreateRequest`
 
 ### Endpoints
 
-- [List all localizations for an in-app purchase](get-v2-inapppurchases-_id_-inapppurchaselocalizations.md): Deprecated. Get a list of localized display names and descriptions for a specific in-app purchase.
-- [Read in-app purchase localization information (v1)](get-v1-inapppurchaselocalizations-_id_.md): Deprecated. Get the display name and description for a specific locale for an in-app purchase.
-- [Modify an in-app purchase localization (v1)](patch-v1-inapppurchaselocalizations-_id_.md): Deprecated. Update the display name and description for a specific locale of an in-app purchase.
-- [Delete an in-app purchase localization (v1)](delete-v1-inapppurchaselocalizations-_id_.md): Deprecated. Delete the metadata for a single in-app purchase localization.
+- [List all localizations for an In-App Purchase](get-v2-inapppurchases-_id_-inapppurchaselocalizations.md): Deprecated. Get a list of localized display names and descriptions for a specific In-App Purchase.
+- [Read In-App Purchase localization information (v1)](get-v1-inapppurchaselocalizations-_id_.md): Deprecated. Get the display name and description for a specific locale for an In-App Purchase.
+- [Modify an In-App Purchase localization (v1)](patch-v1-inapppurchaselocalizations-_id_.md): Deprecated. Update the display name and description for a specific locale of an In-App Purchase.
+- [Delete an In-App Purchase localization (v1)](delete-v1-inapppurchaselocalizations-_id_.md): Deprecated. Delete the metadata for a single In-App Purchase localization.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/coreai/integrating-on-device-ai-models-in-your-app-with-core-ai
 
 # Integrating on-device AI models in your app with Core AI
@@ -15,6 +15,14 @@ Power your app’s intelligent features with an on-device AI model.
 Core AI allows you to deploy AI models within your app. Inference happens on device, so data stays private, AI features can be readily available and work offline, and there is no per-inference cost to you or the people using your app.
 
 You start with an `.aimodel` file, either converted from a model using the [Core AI PyTorch Extensions Python package](https://apple.github.io/coreai-torch) or already prepared in the correct format. The model it represents should contain one or more inference functions needed to power your app’s intelligent features.
+
+<a id="Choose-a-model"></a>
+
+## Choose a model
+
+When you have more than one model to choose from, you can compare their quality using the [Evaluations](../evaluations.md) framework. Comparing models this way doesn’t require matching input or output shapes; your own code adapts each model’s output into a form the evaluation can score.
+
+Quality can also shift over time: a different dataset, a new model judge, or a newer model version can change which model scores best, even after you’ve already bundled one. `Evaluating a Core AI model` shows this pattern: one evaluation definition run against two different models with the same metrics, compared side by side. For details, see [Evaluating a Core AI model](../evaluations/evaluating-a-core-ai-model.md).
 
 <a id="Add-the-model-file-to-your-project"></a>
 
@@ -78,6 +86,8 @@ Most models have a single function. The named inputs and outputs describe what d
 ## Load the model
 
 Load the model in your app by creating an [AIModel](aimodel.md) from the `.aimodel` file.
+
+If your model is a language model, you can also run it through [LanguageModelSession](../foundationmodels/languagemodelsession.md), using the same session, prompting, and structured-output features you’d use with Foundation Models’ [SystemLanguageModel](../foundationmodels/systemlanguagemodel.md). For details, see [Running a Core AI model in a Foundation Models session](../foundationmodels/running-a-core-ai-model-in-a-foundation-models-session.md).
 
 ```swift
 import CoreAI

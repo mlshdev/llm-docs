@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/kernel/mach_port_guard_exception_codes/kguard_exc_service_port_violation_non_fatal
 
 # kGUARD_EXC_SERVICE_PORT_VIOLATION_NON_FATAL

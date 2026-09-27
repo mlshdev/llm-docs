@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/appssearchtermreportrow
 
 # AppsSearchTermReportRow
@@ -120,7 +120,7 @@ The `metadata` field captures the search term text and its associated keyword an
     "campaignId": 123456789,
     "adAccountId": 987654321,
     "searchTermText": "awayfinder travel app",
-    "searchTermSource": "SEARCH",
+    "searchTermSource": "AUTO",
     "keyword": {
       "id": 555666777,
       "campaignId": 123456789,

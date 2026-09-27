@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accelerate/bnns/fusedconvolutionnormalizationlayer/init(input:output:convolutionweights:convolutionbias:convolutionstride:convolutiondilationstride:convolutionpadding:normalization:normalizationbeta:normalizationgamma:normalizationmomentum:normalizationepsilon:normalizationactivation:filter-30cwy
 
 # init(input:output:convolutionWeights:convolutionBias:convolutionStride:convolutionDilationStride:convolutionPadding:normalization:normalizationBeta:normalizationGamma:normalizationMomentum:normalizationEpsilon:normalizationActivation:filterParameters:)

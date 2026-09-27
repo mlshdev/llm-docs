@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/creativeeligibility
 
 # CreativeEligibility
@@ -19,7 +19,8 @@ object CreativeEligibility
 
 ## Properties
 
-- `status` — `string`: The overall eligibility status. Values: `ELIGIBLE`, `INELIGIBLE`. Read-only.
+- `status` — `string`: The overall eligibility status. Read-only.
+  **Allowed values:** `ELIGIBLE`, `INELIGIBLE`
 - `allowedGroups` — `CreativeEligibility.AllowedGroups`: The supply sources and placements where this ad creative is eligible to serve. Read-only.
 - `blockedGroups` — `CreativeEligibility.BlockedGroups`: The supply sources and placements where this ad creative is not eligible to serve, along with the blocking reason. Read-only.
 

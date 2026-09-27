@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseversioncreaterequest
 
 # InAppPurchaseVersionCreateRequest
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 4.4.1+
 
-The request body you use to create a draft version of an in-app purchase.
+The request body you use to create a draft version of an In-App Purchase.
 
 ## Declaration
 
@@ -25,16 +25,16 @@ object InAppPurchaseVersionCreateRequest
 
 ### Objects and types
 
-- [InAppPurchaseVersionCreateRequest.Data](inapppurchaseversioncreaterequest/data-data.dictionary.md): The request body you use to create a draft version of an in-app purchase.
+- [InAppPurchaseVersionCreateRequest.Data](inapppurchaseversioncreaterequest/data-data.dictionary.md): The request body you use to create a draft version of an In-App Purchase.
 
 ## See Also
 
 ### Objects
 
-- [InAppPurchaseVersion](inapppurchaseversion.md): A draft version of an in-app purchase that captures its localized metadata and review images for App Review submission.
-- [InAppPurchaseVersionImageLinkageResponse](inapppurchaseversionimagelinkageresponse.md): A response containing the resource identifier of the review image for an in-app purchase version.
-- [InAppPurchaseVersionImagesLinkagesResponse](inapppurchaseversionimageslinkagesresponse.md): A response containing the resource identifiers of the review images for an in-app purchase version.
-- [InAppPurchaseVersionLocalizationsLinkagesResponse](inapppurchaseversionlocalizationslinkagesresponse.md): A response containing the resource identifiers of the localizations for an in-app purchase version.
-- [InAppPurchaseVersionResponse](inapppurchaseversionresponse.md): The response body for endpoints that create or read an in-app purchase version.
-- [InAppPurchaseVersionsResponse](inapppurchaseversionsresponse.md): The response body for endpoints that list in-app purchase versions.
-- [InAppPurchaseV2VersionsLinkagesResponse](inapppurchasev2versionslinkagesresponse.md): A response containing the resource identifiers of the versions of an in-app purchase configured with the v2 API.
+- [InAppPurchaseVersion](inapppurchaseversion.md): A draft version of an In-App Purchase that captures its localized metadata and review images for App Review submission.
+- [InAppPurchaseVersionImageLinkageResponse](inapppurchaseversionimagelinkageresponse.md): A response containing the resource identifier of the review image for an In-App Purchase version.
+- [InAppPurchaseVersionImagesLinkagesResponse](inapppurchaseversionimageslinkagesresponse.md): A response containing the resource identifiers of the review images for an In-App Purchase version.
+- [InAppPurchaseVersionLocalizationsLinkagesResponse](inapppurchaseversionlocalizationslinkagesresponse.md): A response containing the resource identifiers of the localizations for an In-App Purchase version.
+- [InAppPurchaseVersionResponse](inapppurchaseversionresponse.md): The response body for endpoints that create or read an In-App Purchase version.
+- [InAppPurchaseVersionsResponse](inapppurchaseversionsresponse.md): The response body for endpoints that list In-App Purchase versions.
+- [InAppPurchaseV2VersionsLinkagesResponse](inapppurchasev2versionslinkagesresponse.md): A response containing the resource identifiers of the versions of an In-App Purchase configured with the v2 API.

@@ -1,10 +1,1400 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 52
+
+# Document: path
+
+Source path: documentation/pencilkit/pkstroke-swift.struct/path
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/path
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# path
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+The B-spline path that describes this stroke.
+
+## Declaration
+
+```swift
+var path: PKStrokePath { get set }
+```
+
+## See Also
+
+### Getting the stroke properties
+
+- [ink](ink.md): The Ink, which is a combination of a tool used to render this stroke.
+- [mask](mask-8g6sx.md): The pretransform mask used to clip the rendering of the stroke.
+- [mask](mask-16kkz.md): The pretransform mask used to clip the rendering of the stroke.
+- [maskedPathRanges](maskedpathranges.md): The range of points in the stroke path reference that intersect the stroke’s mask.
+- [renderBounds](renderbounds.md): The bounds of the rendered stroke, including the width and line properties of the stroke after applying the transform.
+- [transform](transform.md): The affine transform of the stroke after rendering.
+- [randomSeed](randomseed.md)
+
+# Document: randomSeed
+
+Source path: documentation/pencilkit/pkstroke-swift.struct/randomseed
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/randomseed
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · visionOS 1.0+
+
+# randomSeed
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+var randomSeed: UInt32 { get set }
+```
+
+## See Also
+
+### Getting the stroke properties
+
+- [ink](ink.md): The Ink, which is a combination of a tool used to render this stroke.
+- [mask](mask-8g6sx.md): The pretransform mask used to clip the rendering of the stroke.
+- [mask](mask-16kkz.md): The pretransform mask used to clip the rendering of the stroke.
+- [maskedPathRanges](maskedpathranges.md): The range of points in the stroke path reference that intersect the stroke’s mask.
+- [path](path.md): The B-spline path that describes this stroke.
+- [renderBounds](renderbounds.md): The bounds of the rendered stroke, including the width and line properties of the stroke after applying the transform.
+- [transform](transform.md): The affine transform of the stroke after rendering.
+
+# Document: renderBounds
+
+Source path: documentation/pencilkit/pkstroke-swift.struct/renderbounds
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/renderbounds
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# renderBounds
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+The bounds of the rendered stroke, including the width and line properties of the stroke after applying the transform.
+
+## Declaration
+
+```swift
+var renderBounds: CGRect { get }
+```
+
+## See Also
+
+### Getting the stroke properties
+
+- [ink](ink.md): The Ink, which is a combination of a tool used to render this stroke.
+- [mask](mask-8g6sx.md): The pretransform mask used to clip the rendering of the stroke.
+- [mask](mask-16kkz.md): The pretransform mask used to clip the rendering of the stroke.
+- [maskedPathRanges](maskedpathranges.md): The range of points in the stroke path reference that intersect the stroke’s mask.
+- [path](path.md): The B-spline path that describes this stroke.
+- [transform](transform.md): The affine transform of the stroke after rendering.
+- [randomSeed](randomseed.md)
+
+# Document: renderGroupID
+
+Source path: documentation/pencilkit/pkstroke-swift.struct/rendergroupid
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/rendergroupid
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# renderGroupID
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Strokes with certain inks (such as marker) can composite to look as if they were drawn while the previous stroke with the same ink was still wet. This UUID may be set to a single value for a run of strokes which should be rendered together in this manner.
+
+## Declaration
+
+```swift
+var renderGroupID: UUID? { get set }
+```
+
+## Mentioned In
+
+- [Controlling stroke rendering for animation and editing](../controlling-stroke-rendering-for-animation-and-editing.md)
+
+## See Also
+
+### Configuring rendering
+
+- [renderState](renderstate-swift.property.md): Contains information about the render details (such as particle positioning) of this stroke, which can be useful when manipulating the model in certain ways. For example, this may be set on substrokes returned by `substroke(range:)`. nil uses default rendering.
+- [PKStroke.RenderState](renderstate-swift.struct.md): A value that captures the render-time state of a stroke, such as grain texture position.
+
+# Document: renderState
+
+Source path: documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.property
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.property
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# renderState
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Contains information about the render details (such as particle positioning) of this stroke, which can be useful when manipulating the model in certain ways. For example, this may be set on substrokes returned by `substroke(range:)`. nil uses default rendering.
+
+## Declaration
+
+```swift
+var renderState: PKStroke.RenderState? { get set }
+```
+
+## Mentioned In
+
+- [Controlling stroke rendering for animation and editing](../controlling-stroke-rendering-for-animation-and-editing.md)
+
+## See Also
+
+### Configuring rendering
+
+- [renderGroupID](rendergroupid.md): Strokes with certain inks (such as marker) can composite to look as if they were drawn while the previous stroke with the same ink was still wet. This UUID may be set to a single value for a run of strokes which should be rendered together in this manner.
+- [PKStroke.RenderState](renderstate-swift.struct.md): A value that captures the render-time state of a stroke, such as grain texture position.
+
+# Document: PKStroke.RenderState
+
+Source path: documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct
+Description: Framework: PencilKit Kind: Structure Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# PKStroke.RenderState
+
+**Framework:** PencilKit  
+**Kind:** Structure  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+A value that captures the render-time state of a stroke, such as grain texture position.
+
+## Declaration
+
+```swift
+struct RenderState
+```
+
+## Mentioned In
+
+- [Controlling stroke rendering for animation and editing](../controlling-stroke-rendering-for-animation-and-editing.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Use `RenderState` to preserve rendering fidelity when you manipulate strokes programmatically. For example, substrokes returned by [substroke(range:)](substroke%28range_%29.md) may include a `renderState` so that the extracted portion renders identically to the corresponding section of the original stroke. A value of `nil` uses default rendering.
+
+The [grainOffset](renderstate-swift.struct/grainoffset.md) property is directly readable and writable. All state, including opaque internal properties, can be persisted by encoding the value using `Codable`.
+
+## Topics
+
+### Creating a render state
+
+- [init(grainOffset:)](renderstate-swift.struct/init%28grainoffset_%29.md): Creates a render state with the specified grain offset.
+
+### Getting the render state
+
+- [grainOffset](renderstate-swift.struct/grainoffset.md): The pre-transform position of the grain texture for strokes with a backing grain texture such as crayon.
+
+### Using reference types
+
+- [PKStrokeRenderStateReference](../pkstrokerenderstatereference.md): An object that captures the render-time state of a stroke, such as grain texture position.
+
+### Initializers
+
+- [init(\_:)](renderstate-swift.struct/init%28__%29.md): Creates a `RenderState` from its Objective-C counterpart `PKStrokeRenderStateReference`.
+
+## Relationships
+
+### Conforms To
+
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Configuring rendering
+
+- [renderGroupID](rendergroupid.md): Strokes with certain inks (such as marker) can composite to look as if they were drawn while the previous stroke with the same ink was still wet. This UUID may be set to a single value for a run of strokes which should be rendered together in this manner.
+- [renderState](renderstate-swift.property.md): Contains information about the render details (such as particle positioning) of this stroke, which can be useful when manipulating the model in certain ways. For example, this may be set on substrokes returned by `substroke(range:)`. nil uses default rendering.
+
+# Document: grainOffset
+
+Source path: documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct/grainoffset
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct/grainoffset
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# grainOffset
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+The pre-transform position of the grain texture for strokes with a backing grain texture such as crayon.
+
+## Declaration
+
+```swift
+var grainOffset: CGPoint?
+```
+
+## Mentioned In
+
+- [Controlling stroke rendering for animation and editing](../../controlling-stroke-rendering-for-animation-and-editing.md)
+
+# Document: init(_:)
+
+Source path: documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct/init(_:)
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct/init(_:)
+Description: Framework: PencilKit Kind: Initializer Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# init(\_:)
+
+**Framework:** PencilKit  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Creates a `RenderState` from its Objective-C counterpart `PKStrokeRenderStateReference`.
+
+## Declaration
+
+```swift
+init(_ objcValue: PKStrokeRenderStateReference)
+```
+
+## Parameters
+
+- `objcValue`: The Objective-C `PKStrokeRenderStateReference` to convert from.
+
+# Document: init(grainOffset:)
+
+Source path: documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct/init(grainoffset:)
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct/init(grainoffset:)
+Description: Framework: PencilKit Kind: Initializer Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# init(grainOffset:)
+
+**Framework:** PencilKit  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Creates a render state with the specified grain offset.
+
+## Declaration
+
+```swift
+init(grainOffset: CGPoint? = nil)
+```
+
+## Parameters
+
+- `grainOffset`: The grain texture offset. Defaults to nil.
+
+# Document: requiredContentVersion
+
+Source path: documentation/pencilkit/pkstroke-swift.struct/requiredcontentversion
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/requiredcontentversion
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · visionOS 1.0+
+
+# requiredContentVersion
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · visionOS 1.0+
+
+The version of PencilKit necessary to use the stroke.
+
+## Declaration
+
+```swift
+var requiredContentVersion: PKContentVersion { get }
+```
+
+# Document: substroke(range:)
+
+Source path: documentation/pencilkit/pkstroke-swift.struct/substroke(range:)
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/substroke(range:)
+Description: Framework: PencilKit Kind: Instance Method Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# substroke(range:)
+
+**Framework:** PencilKit  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Returns a copy of this stroke containing the control points in the given range.
+
+## Declaration
+
+```swift
+func substroke(range: ClosedRange<CGFloat>) -> PKStroke
+```
+
+## Parameters
+
+- `range`: The range of control points in the receiver to copy to the returned stroke.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new stroke containing only the control points within the specified range.
+
+## Mentioned In
+
+- [Controlling stroke rendering for animation and editing](../controlling-stroke-rendering-for-animation-and-editing.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+Maintains information for PencilKit rendering to make the copied part of the stroke render the same as the receiver. The returned stroke may have a `renderState` set to maintain this information.
+
+# Document: transform
+
+Source path: documentation/pencilkit/pkstroke-swift.struct/transform
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/transform
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# transform
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+The affine transform of the stroke after rendering.
+
+## Declaration
+
+```swift
+var transform: CGAffineTransform { get set }
+```
+
+## See Also
+
+### Getting the stroke properties
+
+- [ink](ink.md): The Ink, which is a combination of a tool used to render this stroke.
+- [mask](mask-8g6sx.md): The pretransform mask used to clip the rendering of the stroke.
+- [mask](mask-16kkz.md): The pretransform mask used to clip the rendering of the stroke.
+- [maskedPathRanges](maskedpathranges.md): The range of points in the stroke path reference that intersect the stroke’s mask.
+- [path](path.md): The B-spline path that describes this stroke.
+- [renderBounds](renderbounds.md): The bounds of the rendered stroke, including the width and line properties of the stroke after applying the transform.
+- [randomSeed](randomseed.md)
+
+# Document: Protocol implementations
+
+Source path: documentation/pencilkit/pkstrokepath-protocol-implementations
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-protocol-implementations
+Description: Interface languages: Swift, Objective-C
+
+# Protocol implementations
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** PencilKit
+
+Access the stroke path’s implementations of protocol methods.
+
+# Document: PKStrokePath
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct
+Description: Framework: PencilKit Kind: Structure Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# PKStrokePath
+
+**Framework:** PencilKit  
+**Kind:** Structure  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+A structure that captures the components of a stroke and provides methods to find and interpolate points along the stroke’s path.
+
+## Declaration
+
+```swift
+struct PKStrokePath
+```
+
+## Mentioned In
+
+- [Importing Bézier path data into PencilKit](importing-external-drawing-data-into-pencilkit.md)
+
+## Topics
+
+### Creating a new stroke path
+
+- [init()](pkstrokepath-swift.struct/init%28%29.md): Creates an empty stroke path.
+- [init(controlPoints:creationDate:)](pkstrokepath-swift.struct/init%28controlpoints_creationdate_%29.md): Creates a stroke path with the cubic B-spline control points and a date that you specify.
+- [init(controlPoints:creationDate:id:)](pkstrokepath-swift.struct/init%28controlpoints_creationdate_id_%29.md): Creates a stroke path with the specified cubic B-spline control points and a unique identifier.
+- [init(bezierPath:creationDate:pointProvider:)](pkstrokepath-swift.struct/init%28bezierpath_creationdate_pointprovider_%29.md): Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
+- [PKStrokePath.ConvertedBezierPoint](pkstrokepath-swift.struct/convertedbezierpoint.md): Information about a B-spline control point converted from a Bézier path.
+
+### Identifying the path
+
+- [id](pkstrokepath-swift.struct/id.md): The unique identity of the stroke path.
+
+### Converting to and from Bézier paths
+
+- [bezierRepresentation](pkstrokepath-swift.struct/bezierrepresentation.md): A Bézier path representation of the path’s curve, computed in linear time.
+
+### Getting the stroke path properties
+
+- [creationDate](pkstrokepath-swift.struct/creationdate.md): The creation date and time of this stroke path.
+
+### Accessing and interpolating points
+
+- [interpolatedPoints(in:by:)](pkstrokepath-swift.struct/interpolatedpoints%28in_by_%29.md): Returns the slice on-curve points using the floating point range and stride that you specify.
+- [interpolatedLocation(at:)](pkstrokepath-swift.struct/interpolatedlocation%28at_%29.md): Returns the on-curve point for the floating point parametric value.
+- [interpolatedPoint(at:)](pkstrokepath-swift.struct/interpolatedpoint%28at_%29.md): Returns the on-curve point for the provided floating point parameter.
+- [parametricValue(\_:offsetBy:)](pkstrokepath-swift.struct/parametricvalue%28__offsetby_%29.md)
+
+### Supporting types
+
+- [PKStrokePath.InterpolatedSlice](pkstrokepath-swift.struct/interpolatedslice.md): A struct representing an interpolated slice of stroke points with a specific stride across a range of this stroke data.
+
+### Supporting protocol requirements
+
+- [Protocol implementations](pkstrokepath-protocol-implementations.md): Access the stroke path’s implementations of protocol methods.
+
+### Using reference types
+
+- [PKStrokePathReference](pkstrokepathreference.md): A class that captures the components of a stroke and provides methods to find and interpolate points along the stroke’s path.
+
+### Subscripts
+
+- [subscript(\_:)](pkstrokepath-swift.struct/subscript%28__%29.md): Access the stroke point at the provided index.
+
+### Default Implementations
+
+- [Identifiable Implementations](pkstrokepath-swift.struct/identifiable-implementations.md)
+
+## Relationships
+
+### Conforms To
+
+- [BidirectionalCollection](https://developer.apple.com/documentation/swift/bidirectionalcollection)
+- [Collection](https://developer.apple.com/documentation/swift/collection)
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Identifiable](https://developer.apple.com/documentation/swift/identifiable)
+- [RandomAccessCollection](https://developer.apple.com/documentation/swift/randomaccesscollection)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [Sequence](https://developer.apple.com/documentation/swift/sequence)
+
+## See Also
+
+### Canvas
+
+- [Drawing with PencilKit](drawing-with-pencilkit.md): Add expressive, low-latency drawing to your app using PencilKit.
+- [Customizing Scribble with Interactions](customizing-scribble-with-interactions.md): Enable writing on a non-text-input view by adding interactions.
+- [Inspecting, Modifying, and Constructing PencilKit Drawings](inspecting-modifying-and-constructing-pencilkit-drawings.md): Score users’ ability to match PencilKit drawings generated from text, by accessing the strokes and points inside PencilKit drawings.
+- [Importing Bézier path data into PencilKit](importing-external-drawing-data-into-pencilkit.md): Convert existing Bézier-based stroke data into PencilKit drawing strokes.
+- [Controlling stroke rendering for animation and editing](controlling-stroke-rendering-for-animation-and-editing.md): Slice, animate, and blend PencilKit strokes in code, while keeping grain texture and wet ink intact.
+- [PKCanvasView](pkcanvasview.md): A view that captures Apple Pencil input and displays the rendered results in an iOS app.
+- [PKDrawing](pkdrawing-swift.struct.md): A structure representing the drawing information captured by a canvas view.
+- [PKStroke](pkstroke-swift.struct.md): A structure that represents the paths, boundaries, and other properties of a stroke drawn on a canvas.
+- [PKStrokePoint](pkstrokepoint-swift.struct.md): A structure that represents the properties of a specific point along a stroke’s path.
+- [PKInk](pkink-swift.struct.md): A structure that represents an ink that specifies its type, color, and width.
+
+# Document: bezierRepresentation
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/bezierrepresentation
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/bezierrepresentation
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# bezierRepresentation
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+A Bézier path representation of the path’s curve, computed in linear time.
+
+## Declaration
+
+```swift
+var bezierRepresentation: CGPath { get }
+```
+
+## Mentioned In
+
+- [Importing Bézier path data into PencilKit](../importing-external-drawing-data-into-pencilkit.md)
+
+# Document: PKStrokePath.ConvertedBezierPoint
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint
+Description: Framework: PencilKit Kind: Structure Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# PKStrokePath.ConvertedBezierPoint
+
+**Framework:** PencilKit  
+**Kind:** Structure  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Information about a B-spline control point converted from a Bézier path.
+
+## Declaration
+
+```swift
+struct ConvertedBezierPoint
+```
+
+## Mentioned In
+
+- [Importing Bézier path data into PencilKit](../importing-external-drawing-data-into-pencilkit.md)
+
+<a id="overview"></a>
+
+## Overview
+
+`ConvertedBezierPoint` values are passed one at a time to the `pointProvider` closure of [init(bezierPath:creationDate:pointProvider:)](init%28bezierpath_creationdate_pointprovider_%29.md). Use the provided location, index, and segment information to initialize each `PKStrokePoint` with appropriate size, opacity, force, and other drawing properties.
+
+## Topics
+
+### Getting the point data
+
+- [index](convertedbezierpoint/index.md): The index of the point along the path.
+- [pointCount](convertedbezierpoint/pointcount.md): The total number of B-Spline control points in the path.
+- [location](convertedbezierpoint/location.md): The location of the cubic uniform B-Spline control point.
+- [bezierSegmentIndex](convertedbezierpoint/beziersegmentindex.md): The index of the Bézier segment the point originates from, not including `move to` elements.
+
+### Using reference types
+
+- [PKConvertedBezierPointReference](../pkconvertedbezierpointreference.md): An object that provides information about a B-spline control point converted from a Bézier path.
+
+## See Also
+
+### Creating a new stroke path
+
+- [init()](init%28%29.md): Creates an empty stroke path.
+- [init(controlPoints:creationDate:)](init%28controlpoints_creationdate_%29.md): Creates a stroke path with the cubic B-spline control points and a date that you specify.
+- [init(controlPoints:creationDate:id:)](init%28controlpoints_creationdate_id_%29.md): Creates a stroke path with the specified cubic B-spline control points and a unique identifier.
+- [init(bezierPath:creationDate:pointProvider:)](init%28bezierpath_creationdate_pointprovider_%29.md): Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
+
+# Document: bezierSegmentIndex
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/beziersegmentindex
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/beziersegmentindex
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# bezierSegmentIndex
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+The index of the Bézier segment the point originates from, not including `move to` elements.
+
+## Declaration
+
+```swift
+let bezierSegmentIndex: Int
+```
+
+## Mentioned In
+
+- [Importing Bézier path data into PencilKit](../../importing-external-drawing-data-into-pencilkit.md)
+
+## See Also
+
+### Getting the point data
+
+- [index](index.md): The index of the point along the path.
+- [pointCount](pointcount.md): The total number of B-Spline control points in the path.
+- [location](location.md): The location of the cubic uniform B-Spline control point.
+
+# Document: index
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/index
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/index
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# index
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+The index of the point along the path.
+
+## Declaration
+
+```swift
+let index: Int
+```
+
+## Mentioned In
+
+- [Importing Bézier path data into PencilKit](../../importing-external-drawing-data-into-pencilkit.md)
+
+## See Also
+
+### Getting the point data
+
+- [pointCount](pointcount.md): The total number of B-Spline control points in the path.
+- [location](location.md): The location of the cubic uniform B-Spline control point.
+- [bezierSegmentIndex](beziersegmentindex.md): The index of the Bézier segment the point originates from, not including `move to` elements.
+
+# Document: location
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/location
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/location
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# location
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+The location of the cubic uniform B-Spline control point.
+
+## Declaration
+
+```swift
+let location: CGPoint
+```
+
+## Mentioned In
+
+- [Importing Bézier path data into PencilKit](../../importing-external-drawing-data-into-pencilkit.md)
+
+## See Also
+
+### Getting the point data
+
+- [index](index.md): The index of the point along the path.
+- [pointCount](pointcount.md): The total number of B-Spline control points in the path.
+- [bezierSegmentIndex](beziersegmentindex.md): The index of the Bézier segment the point originates from, not including `move to` elements.
+
+# Document: pointCount
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/pointcount
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/pointcount
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# pointCount
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+The total number of B-Spline control points in the path.
+
+## Declaration
+
+```swift
+let pointCount: Int
+```
+
+## Mentioned In
+
+- [Importing Bézier path data into PencilKit](../../importing-external-drawing-data-into-pencilkit.md)
+
+## See Also
+
+### Getting the point data
+
+- [index](index.md): The index of the point along the path.
+- [location](location.md): The location of the cubic uniform B-Spline control point.
+- [bezierSegmentIndex](beziersegmentindex.md): The index of the Bézier segment the point originates from, not including `move to` elements.
+
+# Document: creationDate
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/creationdate
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/creationdate
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# creationDate
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+The creation date and time of this stroke path.
+
+## Declaration
+
+```swift
+var creationDate: Date { get }
+```
+
+# Document: id
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/id
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/id
+Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# id
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+The unique identity of the stroke path.
+
+## Declaration
+
+```swift
+var id: UUID { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Warning**
+
+> Using multiple stroke paths with identical IDs but different control points will result in undefined rendering behavior. Ensure each stroke path has a unique identifier.
+
+# Document: Identifiable Implementations
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/identifiable-implementations
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/identifiable-implementations
+Description: Framework: PencilKit Kind: API Collection
+
+# Identifiable Implementations
+
+**Framework:** PencilKit  
+**Kind:** API Collection
+
+## Topics
+
+### Instance Properties
+
+- [id](id.md): The unique identity of the stroke path.
+
+# Document: init()
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/init()
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/init()
+Description: Framework: PencilKit Kind: Initializer Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# init()
+
+**Framework:** PencilKit  
+**Kind:** Initializer  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+Creates an empty stroke path.
+
+## Declaration
+
+```swift
+init()
+```
+
+## See Also
+
+### Creating a new stroke path
+
+- [init(controlPoints:creationDate:)](init%28controlpoints_creationdate_%29.md): Creates a stroke path with the cubic B-spline control points and a date that you specify.
+- [init(controlPoints:creationDate:id:)](init%28controlpoints_creationdate_id_%29.md): Creates a stroke path with the specified cubic B-spline control points and a unique identifier.
+- [init(bezierPath:creationDate:pointProvider:)](init%28bezierpath_creationdate_pointprovider_%29.md): Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
+- [PKStrokePath.ConvertedBezierPoint](convertedbezierpoint.md): Information about a B-spline control point converted from a Bézier path.
+
+# Document: init(bezierPath:creationDate:pointProvider:)
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/init(bezierpath:creationdate:pointprovider:)
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/init(bezierpath:creationdate:pointprovider:)
+Description: Framework: PencilKit Kind: Initializer Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# init(bezierPath:creationDate:pointProvider:)
+
+**Framework:** PencilKit  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
+
+## Declaration
+
+```swift
+init(bezierPath: CGPath, creationDate: Date, pointProvider: (PKStrokePath.ConvertedBezierPoint) -> PKStrokePoint)
+```
+
+## Parameters
+
+- `bezierPath`: The Bézier path to convert to a cubic uniform B-Spline
+- `creationDate`: The start time of this path.
+- `pointProvider`: Closure to initialize the `PKStrokePoint`s of the path with specific values.
+
+## Mentioned In
+
+- [Importing Bézier path data into PencilKit](../importing-external-drawing-data-into-pencilkit.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+The count of control points of the generated spline is not guaranteed to be a specific value except when the provided path is the output of `bezierRepresentation->CGPath`, where it will match the original curve.
+
+The output B-Spline will have continuous curvature and 0 curvature at the endpoints. In cases where the B-Spline cannot fully recreate the Bézier path, it will be an approximation. For example, if the given Bézier path includes `line to` elements, these will produce straight line segments in the resulting B-Spline, but if a `line to` element is adjacent to a `curve to` element, the resulting curve may not match the original.
+
+> **Warning**
+
+> For a Bézier path with multiple subpaths, only the first will be converted.
+
+## See Also
+
+### Creating a new stroke path
+
+- [init()](init%28%29.md): Creates an empty stroke path.
+- [init(controlPoints:creationDate:)](init%28controlpoints_creationdate_%29.md): Creates a stroke path with the cubic B-spline control points and a date that you specify.
+- [init(controlPoints:creationDate:id:)](init%28controlpoints_creationdate_id_%29.md): Creates a stroke path with the specified cubic B-spline control points and a unique identifier.
+- [PKStrokePath.ConvertedBezierPoint](convertedbezierpoint.md): Information about a B-spline control point converted from a Bézier path.
+
+# Document: init(controlPoints:creationDate:)
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/init(controlpoints:creationdate:)
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/init(controlpoints:creationdate:)
+Description: Framework: PencilKit Kind: Initializer Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# init(controlPoints:creationDate:)
+
+**Framework:** PencilKit  
+**Kind:** Initializer  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+Creates a stroke path with the cubic B-spline control points and a date that you specify.
+
+## Declaration
+
+```swift
+init<T>(controlPoints: T, creationDate: Date) where T : Sequence, T.Element == PKStrokePoint
+```
+
+## Parameters
+
+- `controlPoints`: An array of control points for a cubic B-spline.
+- `creationDate`: The creation time of this path. The `timeOffset` of points in this stroke path is relative to this date.
+
+## See Also
+
+### Creating a new stroke path
+
+- [init()](init%28%29.md): Creates an empty stroke path.
+- [init(controlPoints:creationDate:id:)](init%28controlpoints_creationdate_id_%29.md): Creates a stroke path with the specified cubic B-spline control points and a unique identifier.
+- [init(bezierPath:creationDate:pointProvider:)](init%28bezierpath_creationdate_pointprovider_%29.md): Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
+- [PKStrokePath.ConvertedBezierPoint](convertedbezierpoint.md): Information about a B-spline control point converted from a Bézier path.
+
+# Document: init(controlPoints:creationDate:id:)
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/init(controlpoints:creationdate:id:)
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/init(controlpoints:creationdate:id:)
+Description: Framework: PencilKit Kind: Initializer Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# init(controlPoints:creationDate:id:)
+
+**Framework:** PencilKit  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Creates a stroke path with the specified cubic B-spline control points and a unique identifier.
+
+## Declaration
+
+```swift
+init<T>(controlPoints: T, creationDate: Date, id: UUID) where T : Sequence, T.Element == PKStrokePoint
+```
+
+## Parameters
+
+- `controlPoints`: An array of control points for a cubic B-spline.
+- `creationDate`: The start time of this path.
+- `id`: The unique identity of the path.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Warning**
+
+> Using multiple stroke paths with identical IDs but different control points will result in undefined rendering behavior. Ensure each stroke path has a unique identifier.
+
+## See Also
+
+### Creating a new stroke path
+
+- [init()](init%28%29.md): Creates an empty stroke path.
+- [init(controlPoints:creationDate:)](init%28controlpoints_creationdate_%29.md): Creates a stroke path with the cubic B-spline control points and a date that you specify.
+- [init(bezierPath:creationDate:pointProvider:)](init%28bezierpath_creationdate_pointprovider_%29.md): Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
+- [PKStrokePath.ConvertedBezierPoint](convertedbezierpoint.md): Information about a B-spline control point converted from a Bézier path.
+
+# Document: interpolatedLocation(at:)
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedlocation(at:)
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedlocation(at:)
+Description: Framework: PencilKit Kind: Instance Method Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# interpolatedLocation(at:)
+
+**Framework:** PencilKit  
+**Kind:** Instance Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+Returns the on-curve point for the floating point parametric value.
+
+## Declaration
+
+```swift
+func interpolatedLocation(at parametricValue: CGFloat) -> CGPoint
+```
+
+## Parameters
+
+- `parametricValue`: The on-curve location `[0, count-1]` where interpolation occurs.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A [CGPoint](../../corefoundation/cgpoint.md) interpolated from the supplied `parametricValue`.
+
+## See Also
+
+### Accessing and interpolating points
+
+- [interpolatedPoints(in:by:)](interpolatedpoints%28in_by_%29.md): Returns the slice on-curve points using the floating point range and stride that you specify.
+- [interpolatedPoint(at:)](interpolatedpoint%28at_%29.md): Returns the on-curve point for the provided floating point parameter.
+- [parametricValue(\_:offsetBy:)](parametricvalue%28__offsetby_%29.md)
+
+# Document: interpolatedPoint(at:)
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedpoint(at:)
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedpoint(at:)
+Description: Framework: PencilKit Kind: Instance Method Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# interpolatedPoint(at:)
+
+**Framework:** PencilKit  
+**Kind:** Instance Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+Returns the on-curve point for the provided floating point parameter.
+
+## Declaration
+
+```swift
+func interpolatedPoint(at parametricValue: CGFloat) -> PKStrokePoint
+```
+
+## Parameters
+
+- `parametricValue`: The on-curve location `[0, count-1]` where interpolation occurs.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A [PKStrokePoint](../pkstrokepoint-swift.struct.md) interpolated from the supplied `parametricValue.`
+
+## See Also
+
+### Accessing and interpolating points
+
+- [interpolatedPoints(in:by:)](interpolatedpoints%28in_by_%29.md): Returns the slice on-curve points using the floating point range and stride that you specify.
+- [interpolatedLocation(at:)](interpolatedlocation%28at_%29.md): Returns the on-curve point for the floating point parametric value.
+- [parametricValue(\_:offsetBy:)](parametricvalue%28__offsetby_%29.md)
+
+# Document: interpolatedPoints(in:by:)
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedpoints(in:by:)
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedpoints(in:by:)
+Description: Framework: PencilKit Kind: Instance Method Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# interpolatedPoints(in:by:)
+
+**Framework:** PencilKit  
+**Kind:** Instance Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+Returns the slice on-curve points using the floating point range and stride that you specify.
+
+## Declaration
+
+```swift
+func interpolatedPoints(in range: ClosedRange<CGFloat>? = nil, by stride: PKStrokePath.InterpolatedSlice.Stride) -> PKStrokePath.InterpolatedSlice
+```
+
+## Parameters
+
+- `range`: The floating point range for the points of interest.
+- `stride`: The stride component of the current slice.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An interpolated slice whose points are within the specified `range`.
+
+## See Also
+
+### Accessing and interpolating points
+
+- [interpolatedLocation(at:)](interpolatedlocation%28at_%29.md): Returns the on-curve point for the floating point parametric value.
+- [interpolatedPoint(at:)](interpolatedpoint%28at_%29.md): Returns the on-curve point for the provided floating point parameter.
+- [parametricValue(\_:offsetBy:)](parametricvalue%28__offsetby_%29.md)
+
+# Document: PKStrokePath.InterpolatedSlice
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice
+Description: Framework: PencilKit Kind: Structure Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# PKStrokePath.InterpolatedSlice
+
+**Framework:** PencilKit  
+**Kind:** Structure  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+A struct representing an interpolated slice of stroke points with a specific stride across a range of this stroke data.
+
+## Declaration
+
+```swift
+struct InterpolatedSlice
+```
+
+## Topics
+
+### Traversing slices
+
+- [PKStrokePath.InterpolatedSlice.Stride](interpolatedslice/stride.md): The stride between elements of this slice.
+
+### Supporting protocol requirements
+
+- [Protocol implementations](../interpolatedslice-protocol-implementations.md): Access the interpolated slice’s implementations of protocol methods.
+
+## Relationships
+
+### Conforms To
+
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [IteratorProtocol](https://developer.apple.com/documentation/swift/iteratorprotocol)
+- [Sequence](https://developer.apple.com/documentation/swift/sequence)
+
+# Document: PKStrokePath.InterpolatedSlice.Stride
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride
+Description: Framework: PencilKit Kind: Enumeration Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# PKStrokePath.InterpolatedSlice.Stride
+
+**Framework:** PencilKit  
+**Kind:** Enumeration  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+The stride between elements of this slice.
+
+## Declaration
+
+```swift
+enum Stride
+```
+
+## Topics
+
+### Stride types
+
+- [PKStrokePath.InterpolatedSlice.Stride.distance(\_:)](stride/distance%28__%29.md): A stride based on a distance between elements you provide.
+- [PKStrokePath.InterpolatedSlice.Stride.parametricStep(\_:)](stride/parametricstep%28__%29.md): A stride based on a parametric step value you provide.
+- [PKStrokePath.InterpolatedSlice.Stride.time(\_:)](stride/time%28__%29.md): A stride based on a time interval in seconds you provide.
+
+# Document: PKStrokePath.InterpolatedSlice.Stride.distance(_:)
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride/distance(_:)
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride/distance(_:)
+Description: Framework: PencilKit Kind: Case Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# PKStrokePath.InterpolatedSlice.Stride.distance(\_:)
+
+**Framework:** PencilKit  
+**Kind:** Case  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+A stride based on a distance between elements you provide.
+
+## Declaration
+
+```swift
+case distance(CGFloat)
+```
+
+## See Also
+
+### Stride types
+
+- [PKStrokePath.InterpolatedSlice.Stride.parametricStep(\_:)](parametricstep%28__%29.md): A stride based on a parametric step value you provide.
+- [PKStrokePath.InterpolatedSlice.Stride.time(\_:)](time%28__%29.md): A stride based on a time interval in seconds you provide.
+
+# Document: PKStrokePath.InterpolatedSlice.Stride.parametricStep(_:)
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride/parametricstep(_:)
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride/parametricstep(_:)
+Description: Framework: PencilKit Kind: Case Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# PKStrokePath.InterpolatedSlice.Stride.parametricStep(\_:)
+
+**Framework:** PencilKit  
+**Kind:** Case  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+A stride based on a parametric step value you provide.
+
+## Declaration
+
+```swift
+case parametricStep(CGFloat)
+```
+
+## See Also
+
+### Stride types
+
+- [PKStrokePath.InterpolatedSlice.Stride.distance(\_:)](distance%28__%29.md): A stride based on a distance between elements you provide.
+- [PKStrokePath.InterpolatedSlice.Stride.time(\_:)](time%28__%29.md): A stride based on a time interval in seconds you provide.
+
+# Document: PKStrokePath.InterpolatedSlice.Stride.time(_:)
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride/time(_:)
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride/time(_:)
+Description: Framework: PencilKit Kind: Case Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# PKStrokePath.InterpolatedSlice.Stride.time(\_:)
+
+**Framework:** PencilKit  
+**Kind:** Case  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+A stride based on a time interval in seconds you provide.
+
+## Declaration
+
+```swift
+case time(TimeInterval)
+```
+
+## See Also
+
+### Stride types
+
+- [PKStrokePath.InterpolatedSlice.Stride.distance(\_:)](distance%28__%29.md): A stride based on a distance between elements you provide.
+- [PKStrokePath.InterpolatedSlice.Stride.parametricStep(\_:)](parametricstep%28__%29.md): A stride based on a parametric step value you provide.
+
+# Document: parametricValue(_:offsetBy:)
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/parametricvalue(_:offsetby:)
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/parametricvalue(_:offsetby:)
+Description: Framework: PencilKit Kind: Instance Method Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# parametricValue(\_:offsetBy:)
+
+**Framework:** PencilKit  
+**Kind:** Instance Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+func parametricValue(_ parametricValue: CGFloat, offsetBy step: PKStrokePath.InterpolatedSlice.Stride) -> CGFloat
+```
+
+## See Also
+
+### Accessing and interpolating points
+
+- [interpolatedPoints(in:by:)](interpolatedpoints%28in_by_%29.md): Returns the slice on-curve points using the floating point range and stride that you specify.
+- [interpolatedLocation(at:)](interpolatedlocation%28at_%29.md): Returns the on-curve point for the floating point parametric value.
+- [interpolatedPoint(at:)](interpolatedpoint%28at_%29.md): Returns the on-curve point for the provided floating point parameter.
+
+# Document: subscript(_:)
+
+Source path: documentation/pencilkit/pkstrokepath-swift.struct/subscript(_:)
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/subscript(_:)
+Description: Framework: PencilKit Kind: Instance Subscript Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# subscript(\_:)
+
+**Framework:** PencilKit  
+**Kind:** Instance Subscript  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Access the stroke point at the provided index.
+
+## Declaration
+
+```swift
+subscript(range: ClosedRange<CGFloat>) -> PKStrokePath { get }
+```
+
+# Document: PKStrokePathReference
+
+Source path: documentation/pencilkit/pkstrokepathreference
+Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepathreference
+Description: Framework: PencilKit Kind: Class Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+# PKStrokePathReference (Swift)
+
+**Framework:** PencilKit  
+**Kind:** Class  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+A class that captures the components of a stroke and provides methods to find and interpolate points along the stroke’s path.
+
+## Declaration
+
+```swift
+class PKStrokePathReference
+```
+
+## Topics
+
+### Creating a new stroke path
+
+- [init(controlPoints:creationDate:)](pkstrokepathreference/init%28controlpoints_creationdate_%29.md): Creates a stroke path with the cubic B-spline control points and a date that you specify.
+
+### Getting the stroke path properties
+
+- [count](pkstrokepathreference/count.md): The number of control points in this stroke path.
+- [creationDate](pkstrokepathreference/creationdate.md): The time at which this stroke path starts.
+
+### Accessing and interpolating points
+
+- [enumerateInterpolatedPoints(in:strideByDistance:using:)](pkstrokepathreference/enumerateinterpolatedpoints%28in_stridebydistance_using_%29.md): Deprecated. Executes a given block using each point in a range with a distance step.
+- [enumerateInterpolatedPoints(in:strideByParametricStep:using:)](pkstrokepathreference/enumerateinterpolatedpoints%28in_stridebyparametricstep_using_%29.md): Deprecated. Executes a given block using each point in a range with a parametric step.
+- [enumerateInterpolatedPoints(in:strideByTime:using:)](pkstrokepathreference/enumerateinterpolatedpoints%28in_stridebytime_using_%29.md): Deprecated. Executes a given block using each point in a range with a time step.
+- [interpolatedLocation(at:)](pkstrokepathreference/interpolatedlocation%28at_%29.md): Returns the on-curve point for the floating point parametric value.
+- [interpolatedPoint(at:)](pkstrokepathreference/interpolatedpoint%28at_%29.md): Returns the on-curve point for the provided floating point parameter.
+- [parametricValue(\_:offsetByDistance:)](pkstrokepathreference/parametricvalue%28__offsetbydistance_%29.md): Returns a parametric value on the B-spline that’s a specified distance from the given parametric value.
+- [parametricValue(\_:offsetByTime:)](pkstrokepathreference/parametricvalue%28__offsetbytime_%29.md): Returns a parametric value on the B-spline that’s a specified time from the given parametric value.
+- [point(at:)](pkstrokepathreference/point%28at_%29.md): Returns the B-spline control point at an index point that you provide.
+- [subscript(\_:)](pkstrokepathreference/subscript%28__%29.md): Returns the B-spline control point the location index that you provide.
+
+### Initializers
+
+- [init(bezierPath:creationDate:pointProvider:)](pkstrokepathreference/init%28bezierpath_creationdate_pointprovider_%29.md): Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
+- [init(controlPoints:creationDate:strokePathID:)](pkstrokepathreference/init%28controlpoints_creationdate_strokepathid_%29.md): Creates a stroke path with the specified control points and a unique identifier.
+
+### Instance Properties
+
+- [bezierRepresentation](pkstrokepathreference/bezierrepresentation.md): A Bézier path representation of the path’s curve, computed in linear time.
+- [strokePathID](pkstrokepathreference/strokepathid.md): The unique identity of the stroke path.
+
+### Instance Methods
+
+- [subpath(with:)](pkstrokepathreference/subpath%28with_%29.md): Returns a copy of the path containing the control points in the specified parametric range.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+# PKStrokePath (Objective-C)
+
+**Framework:** PencilKit  
+**Kind:** Class  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+A class that captures the components of a stroke and provides methods to find and interpolate points along the stroke’s path.
+
+## Declaration
+
+```objectivec
+@interface PKStrokePath : NSObject
+```
+
+## Topics
+
+### Creating a new stroke path
+
+- [initWithControlPoints:creationDate:](pkstrokepathreference/init%28controlpoints_creationdate_%29.md): Creates a stroke path with the cubic B-spline control points and a date that you specify.
+
+### Getting the stroke path properties
+
+- [count](pkstrokepathreference/count.md): The number of control points in this stroke path.
+- [creationDate](pkstrokepathreference/creationdate.md): The time at which this stroke path starts.
+
+### Accessing and interpolating points
+
+- [enumerateInterpolatedPointsInRange:strideByDistance:usingBlock:](pkstrokepathreference/enumerateinterpolatedpoints%28in_stridebydistance_using_%29.md): Deprecated. Executes a given block using each point in a range with a distance step.
+- [enumerateInterpolatedPointsInRange:strideByParametricStep:usingBlock:](pkstrokepathreference/enumerateinterpolatedpoints%28in_stridebyparametricstep_using_%29.md): Deprecated. Executes a given block using each point in a range with a parametric step.
+- [enumerateInterpolatedPointsInRange:strideByTime:usingBlock:](pkstrokepathreference/enumerateinterpolatedpoints%28in_stridebytime_using_%29.md): Deprecated. Executes a given block using each point in a range with a time step.
+- [interpolatedLocationAt:](pkstrokepathreference/interpolatedlocation%28at_%29.md): Returns the on-curve point for the floating point parametric value.
+- [interpolatedPointAt:](pkstrokepathreference/interpolatedpoint%28at_%29.md): Returns the on-curve point for the provided floating point parameter.
+- [parametricValue:offsetByDistance:](pkstrokepathreference/parametricvalue%28__offsetbydistance_%29.md): Returns a parametric value on the B-spline that’s a specified distance from the given parametric value.
+- [parametricValue:offsetByTime:](pkstrokepathreference/parametricvalue%28__offsetbytime_%29.md): Returns a parametric value on the B-spline that’s a specified time from the given parametric value.
+- [pointAtIndex:](pkstrokepathreference/point%28at_%29.md): Returns the B-spline control point at an index point that you provide.
+- [objectAtIndexedSubscript:](pkstrokepathreference/subscript%28__%29.md): Returns the B-spline control point the location index that you provide.
+
+### Instance Properties
+
+- [bezierRepresentation](pkstrokepathreference/bezierrepresentation.md): A Bézier path representation of the path’s curve, computed in linear time.
+- [strokePathID](pkstrokepathreference/strokepathid.md): The unique identity of the stroke path.
+
+### Instance Methods
+
+- [initWithBezierPath:creationDate:pointProvider:](pkstrokepathreference/init%28bezierpath_creationdate_pointprovider_%29.md): Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
+- [initWithControlPoints:creationDate:strokePathID:](pkstrokepathreference/init%28controlpoints_creationdate_strokepathid_%29.md): Creates a stroke path with the specified control points and a unique identifier.
+- [subpathWithRange:](pkstrokepathreference/subpath%28with_%29.md): Returns a copy of the path containing the control points in the specified parametric range.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [NSCopying](../foundation/nscopying.md)
+
+## See Also
+
+### Canvas
+
+- [Drawing with PencilKit](drawing-with-pencilkit.md): Add expressive, low-latency drawing to your app using PencilKit.
+- [Customizing Scribble with Interactions](customizing-scribble-with-interactions.md): Enable writing on a non-text-input view by adding interactions.
+- [Inspecting, Modifying, and Constructing PencilKit Drawings](inspecting-modifying-and-constructing-pencilkit-drawings.md): Score users’ ability to match PencilKit drawings generated from text, by accessing the strokes and points inside PencilKit drawings.
+- [Importing Bézier path data into PencilKit](importing-external-drawing-data-into-pencilkit.md): Convert existing Bézier-based stroke data into PencilKit drawing strokes.
+- [Controlling stroke rendering for animation and editing](controlling-stroke-rendering-for-animation-and-editing.md): Slice, animate, and blend PencilKit strokes in code, while keeping grain texture and wet ink intact.
+- [PKCanvasView](pkcanvasview.md): A view that captures Apple Pencil input and displays the rendered results in an iOS app.
+- [PKDrawing](pkdrawingreference.md): A data structure that contains the drawing information captured by a canvas view.
+- [PKStroke](pkstrokereference.md): A class that represents the paths, boundaries and other properties of a stroke drawn on a canvas.
+- [PKStrokePoint](pkstrokepointreference.md): A class that represents the properties of a specific point along a stroke’s path.
+- [PKInk](pkinkreference.md): Provides a description of the creation and rendering of marks on a canvas.
+- [PKStrokeRenderState](pkstrokerenderstatereference.md): An object that captures the render-time state of a stroke, such as grain texture position.
+- [PKConvertedBezierPoint](pkconvertedbezierpointreference.md): An object that provides information about a B-spline control point converted from a Bézier path.
+- [PKFloatRange](pkfloatrange.md): A utility class that represents range components of a stroke.
+- [PKInkTypeReed](pkinktypereed.md)
 
 # Document: bezierRepresentation
 
@@ -173724,1404 +175114,3 @@ kFxError_PluginNotFound
 - [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
 - [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
 - [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# Document: kFxError_Success
-
-Source path: documentation/professional_video_applications/kfxerror_success
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxerror_success
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxError_Success (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-No error occurred.
-
-## Declaration
-
-```swift
-var kFxError_Success: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
-- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
-- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
-- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
-- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
-- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
-- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
-- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
-- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
-- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
-- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
-- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
-- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
-- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
-- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# kFxError_Success (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-No error occurred.
-
-## Declaration
-
-```objectivec
-kFxError_Success
-```
-
-## See Also
-
-### Constants
-
-- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
-- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
-- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
-- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
-- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
-- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
-- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
-- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
-- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
-- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
-- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
-- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
-- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
-- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
-- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# Document: kFxError_ThirdPartyDeveloperStart
-
-Source path: documentation/professional_video_applications/kfxerror_thirdpartydeveloperstart
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxerror_thirdpartydeveloperstart
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxError_ThirdPartyDeveloperStart (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-All third-party error values must be greater than or equal to this value.
-
-## Declaration
-
-```swift
-var kFxError_ThirdPartyDeveloperStart: Int { get }
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-All third-party error values should be `>= 100000` if none of the above error enumeration values are sufficient.
-
-## See Also
-
-### Constants
-
-- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
-- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
-- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
-- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
-- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
-- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
-- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
-- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
-- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
-- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
-- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
-- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
-- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
-- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
-- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# kFxError_ThirdPartyDeveloperStart (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-All third-party error values must be greater than or equal to this value.
-
-## Declaration
-
-```objectivec
-kFxError_ThirdPartyDeveloperStart
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-All third-party error values should be `>= 100000` if none of the above error enumeration values are sufficient.
-
-## See Also
-
-### Constants
-
-- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
-- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
-- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
-- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
-- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
-- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
-- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
-- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
-- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
-- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
-- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
-- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
-- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
-- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
-- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# Document: kFxError_UnableToCreateDynamicRegistrationEndpoint
-
-Source path: documentation/professional_video_applications/kfxerror_unabletocreatedynamicregistrationendpoint
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxerror_unabletocreatedynamicregistrationendpoint
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.1+
-
-# kFxError_UnableToCreateDynamicRegistrationEndpoint (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 4.1+
-
-An error that indicates that the XPC service was unable to create a new XPC Listener Endpoint for communication with the host application.
-
-## Declaration
-
-```swift
-var kFxError_UnableToCreateDynamicRegistrationEndpoint: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
-- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
-- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
-- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
-- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
-- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
-- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
-- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
-- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
-- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
-- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
-- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
-- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
-- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
-- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# kFxError_UnableToCreateDynamicRegistrationEndpoint (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-An error that indicates that the XPC service was unable to create a new XPC Listener Endpoint for communication with the host application.
-
-## Declaration
-
-```objectivec
-kFxError_UnableToCreateDynamicRegistrationEndpoint
-```
-
-## See Also
-
-### Constants
-
-- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
-- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
-- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
-- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
-- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
-- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
-- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
-- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
-- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
-- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
-- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
-- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
-- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
-- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
-- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# Document: kFxError_UnableToInstantiateDynamicRegistrar
-
-Source path: documentation/professional_video_applications/kfxerror_unabletoinstantiatedynamicregistrar
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxerror_unabletoinstantiatedynamicregistrar
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.1+
-
-# kFxError_UnableToInstantiateDynamicRegistrar (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 4.1+
-
-An error that indicates that the XPC service was unable to instantiate a dynamic registrar object.
-
-## Declaration
-
-```swift
-var kFxError_UnableToInstantiateDynamicRegistrar: Int { get }
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-This error may occur either because no class name was listed in the XPC’s `Info.plist` file, or because the class listed was incorrect or had an error during instantiation.
-
-## See Also
-
-### Constants
-
-- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
-- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
-- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
-- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
-- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
-- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
-- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
-- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
-- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
-- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
-- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
-- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
-- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
-- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
-- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# kFxError_UnableToInstantiateDynamicRegistrar (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-An error that indicates that the XPC service was unable to instantiate a dynamic registrar object.
-
-## Declaration
-
-```objectivec
-kFxError_UnableToInstantiateDynamicRegistrar
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-This error may occur either because no class name was listed in the XPC’s `Info.plist` file, or because the class listed was incorrect or had an error during instantiation.
-
-## See Also
-
-### Constants
-
-- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
-- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
-- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
-- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
-- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
-- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
-- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
-- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
-- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
-- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
-- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
-- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
-- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
-- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
-- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# Document: kFxError_UnableToMovePlayhead
-
-Source path: documentation/professional_video_applications/kfxerror_unabletomoveplayhead
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxerror_unabletomoveplayhead
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.2+
-
-# kFxError_UnableToMovePlayhead (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 4.2+
-
-An error that indicates that an attempt by the host to move the playhead failed.
-
-## Declaration
-
-```swift
-var kFxError_UnableToMovePlayhead: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
-- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
-- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
-- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
-- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
-- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
-- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
-- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
-- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
-- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
-- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
-- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
-- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
-- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
-- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# kFxError_UnableToMovePlayhead (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-An error that indicates that an attempt by the host to move the playhead failed.
-
-## Declaration
-
-```objectivec
-kFxError_UnableToMovePlayhead
-```
-
-## See Also
-
-### Constants
-
-- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
-- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
-- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
-- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
-- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
-- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
-- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
-- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
-- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
-- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
-- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
-- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
-- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
-- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
-- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# Document: kFxError_UnableToObtainProjectAspectRatio
-
-Source path: documentation/professional_video_applications/kfxerror_unabletoobtainprojectaspectratio
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxerror_unabletoobtainprojectaspectratio
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.2.9+
-
-# kFxError_UnableToObtainProjectAspectRatio (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 4.2.9+
-
-An error that indicates that the host couldn’t obtain the project’s aspect ratio.
-
-## Declaration
-
-```swift
-var kFxError_UnableToObtainProjectAspectRatio: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
-- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
-- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
-- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
-- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
-- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
-- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
-- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
-- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
-- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
-- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
-- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
-- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
-- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
-- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# kFxError_UnableToObtainProjectAspectRatio (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-An error that indicates that the host couldn’t obtain the project’s aspect ratio.
-
-## Declaration
-
-```objectivec
-kFxError_UnableToObtainProjectAspectRatio
-```
-
-## See Also
-
-### Constants
-
-- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
-- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
-- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
-- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
-- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
-- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
-- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
-- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
-- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
-- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
-- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
-- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
-- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
-- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
-- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# Document: kFxError_UserCancelled
-
-Source path: documentation/professional_video_applications/kfxerror_usercancelled
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxerror_usercancelled
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.2+
-
-# kFxError_UserCancelled (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 4.2+
-
-An error that indicates that an analysis operation was canceled by the user.
-
-## Declaration
-
-```swift
-var kFxError_UserCancelled: Int { get }
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-This error tells the host or plug-in that the analysis operation was cancelled by the user, allowing the host or plug-in to stop an ongoing analysis operation without showing an error to the user.
-
-## See Also
-
-### Constants
-
-- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
-- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
-- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
-- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
-- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
-- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
-- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
-- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
-- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
-- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
-- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
-- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
-- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
-- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
-- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# kFxError_UserCancelled (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-An error that indicates that an analysis operation was canceled by the user.
-
-## Declaration
-
-```objectivec
-kFxError_UserCancelled
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-This error tells the host or plug-in that the analysis operation was cancelled by the user, allowing the host or plug-in to stop an ongoing analysis operation without showing an error to the user.
-
-## See Also
-
-### Constants
-
-- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
-- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
-- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
-- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
-- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
-- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
-- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
-- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
-- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
-- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
-- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
-- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
-- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
-- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
-- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
-
-# Document: kFxEyeType_LEFT
-
-Source path: documentation/professional_video_applications/kfxeyetype_left
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxeyetype_left
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.0+
-
-# kFxEyeType_LEFT (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 4.0+
-
-The left eye portion of the stereoscopic image.
-
-## Declaration
-
-```swift
-var kFxEyeType_LEFT: FxEyeType { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxEyeType_MONO](kfxeyetype_mono.md): Monoscopic only.
-- [kFxEyeType_RIGHT](kfxeyetype_right.md): The right eye portion of the stereoscopic image.
-
-# kFxEyeType_LEFT (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-The left eye portion of the stereoscopic image.
-
-## Declaration
-
-```objectivec
-kFxEyeType_LEFT
-```
-
-## See Also
-
-### Constants
-
-- [kFxEyeType_MONO](kfxeyetype_mono.md): Monoscopic only.
-- [kFxEyeType_RIGHT](kfxeyetype_right.md): The right eye portion of the stereoscopic image.
-
-# Document: kFxEyeType_MONO
-
-Source path: documentation/professional_video_applications/kfxeyetype_mono
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxeyetype_mono
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.0+
-
-# kFxEyeType_MONO (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 4.0+
-
-Monoscopic only.
-
-## Declaration
-
-```swift
-var kFxEyeType_MONO: FxEyeType { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxEyeType_LEFT](kfxeyetype_left.md): The left eye portion of the stereoscopic image.
-- [kFxEyeType_RIGHT](kfxeyetype_right.md): The right eye portion of the stereoscopic image.
-
-# kFxEyeType_MONO (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-Monoscopic only.
-
-## Declaration
-
-```objectivec
-kFxEyeType_MONO
-```
-
-## See Also
-
-### Constants
-
-- [kFxEyeType_LEFT](kfxeyetype_left.md): The left eye portion of the stereoscopic image.
-- [kFxEyeType_RIGHT](kfxeyetype_right.md): The right eye portion of the stereoscopic image.
-
-# Document: kFxEyeType_RIGHT
-
-Source path: documentation/professional_video_applications/kfxeyetype_right
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxeyetype_right
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.0+
-
-# kFxEyeType_RIGHT (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 4.0+
-
-The right eye portion of the stereoscopic image.
-
-## Declaration
-
-```swift
-var kFxEyeType_RIGHT: FxEyeType { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxEyeType_LEFT](kfxeyetype_left.md): The left eye portion of the stereoscopic image.
-- [kFxEyeType_MONO](kfxeyetype_mono.md): Monoscopic only.
-
-# kFxEyeType_RIGHT (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-The right eye portion of the stereoscopic image.
-
-## Declaration
-
-```objectivec
-kFxEyeType_RIGHT
-```
-
-## See Also
-
-### Constants
-
-- [kFxEyeType_LEFT](kfxeyetype_left.md): The left eye portion of the stereoscopic image.
-- [kFxEyeType_MONO](kfxeyetype_mono.md): Monoscopic only.
-
-# Document: kFxField_LOWER
-
-Source path: documentation/professional_video_applications/kfxfield_lower
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxfield_lower
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxField_LOWER (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-Lower field.
-
-## Declaration
-
-```swift
-var kFxField_LOWER: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxField_NONE](kfxfield_none.md): Full frame, progressive (no fields).
-- [kFxField_UPPER](kfxfield_upper.md): Upper field.
-
-# kFxField_LOWER (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-Lower field.
-
-## Declaration
-
-```objectivec
-kFxField_LOWER
-```
-
-## See Also
-
-### Constants
-
-- [kFxField_NONE](kfxfield_none.md): Full frame, progressive (no fields).
-- [kFxField_UPPER](kfxfield_upper.md): Upper field.
-
-# Document: kFxField_NONE
-
-Source path: documentation/professional_video_applications/kfxfield_none
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxfield_none
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxField_NONE (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-Full frame, progressive (no fields).
-
-## Declaration
-
-```swift
-var kFxField_NONE: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxField_LOWER](kfxfield_lower.md): Lower field.
-- [kFxField_UPPER](kfxfield_upper.md): Upper field.
-
-# kFxField_NONE (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-Full frame, progressive (no fields).
-
-## Declaration
-
-```objectivec
-kFxField_NONE
-```
-
-## See Also
-
-### Constants
-
-- [kFxField_LOWER](kfxfield_lower.md): Lower field.
-- [kFxField_UPPER](kfxfield_upper.md): Upper field.
-
-# Document: kFxField_UPPER
-
-Source path: documentation/professional_video_applications/kfxfield_upper
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxfield_upper
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxField_UPPER (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-Upper field.
-
-## Declaration
-
-```swift
-var kFxField_UPPER: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxField_LOWER](kfxfield_lower.md): Lower field.
-- [kFxField_NONE](kfxfield_none.md): Full frame, progressive (no fields).
-
-# kFxField_UPPER (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-Upper field.
-
-## Declaration
-
-```objectivec
-kFxField_UPPER
-```
-
-## See Also
-
-### Constants
-
-- [kFxField_LOWER](kfxfield_lower.md): Lower field.
-- [kFxField_NONE](kfxfield_none.md): Full frame, progressive (no fields).
-
-# Document: kFxFieldOrder_LOWER_FIRST
-
-Source path: documentation/professional_video_applications/kfxfieldorder_lower_first
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxfieldorder_lower_first
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxFieldOrder_LOWER_FIRST (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-Lower field first.
-
-## Declaration
-
-```swift
-var kFxFieldOrder_LOWER_FIRST: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxFieldOrder_PROGRESSIVE](kfxfieldorder_progressive.md): Full frame, progressive (no fields).
-- [kFxFieldOrder_UPPER_FIRST](kfxfieldorder_upper_first.md): Upper field first.
-
-# kFxFieldOrder_LOWER_FIRST (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-Lower field first.
-
-## Declaration
-
-```objectivec
-kFxFieldOrder_LOWER_FIRST
-```
-
-## See Also
-
-### Constants
-
-- [kFxFieldOrder_PROGRESSIVE](kfxfieldorder_progressive.md): Full frame, progressive (no fields).
-- [kFxFieldOrder_UPPER_FIRST](kfxfieldorder_upper_first.md): Upper field first.
-
-# Document: kFxFieldOrder_PROGRESSIVE
-
-Source path: documentation/professional_video_applications/kfxfieldorder_progressive
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxfieldorder_progressive
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxFieldOrder_PROGRESSIVE (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-Full frame, progressive (no fields).
-
-## Declaration
-
-```swift
-var kFxFieldOrder_PROGRESSIVE: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxFieldOrder_LOWER_FIRST](kfxfieldorder_lower_first.md): Lower field first.
-- [kFxFieldOrder_UPPER_FIRST](kfxfieldorder_upper_first.md): Upper field first.
-
-# kFxFieldOrder_PROGRESSIVE (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-Full frame, progressive (no fields).
-
-## Declaration
-
-```objectivec
-kFxFieldOrder_PROGRESSIVE
-```
-
-## See Also
-
-### Constants
-
-- [kFxFieldOrder_LOWER_FIRST](kfxfieldorder_lower_first.md): Lower field first.
-- [kFxFieldOrder_UPPER_FIRST](kfxfieldorder_upper_first.md): Upper field first.
-
-# Document: kFxFieldOrder_UPPER_FIRST
-
-Source path: documentation/professional_video_applications/kfxfieldorder_upper_first
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxfieldorder_upper_first
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxFieldOrder_UPPER_FIRST (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-Upper field first.
-
-## Declaration
-
-```swift
-var kFxFieldOrder_UPPER_FIRST: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxFieldOrder_LOWER_FIRST](kfxfieldorder_lower_first.md): Lower field first.
-- [kFxFieldOrder_PROGRESSIVE](kfxfieldorder_progressive.md): Full frame, progressive (no fields).
-
-# kFxFieldOrder_UPPER_FIRST (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-Upper field first.
-
-## Declaration
-
-```objectivec
-kFxFieldOrder_UPPER_FIRST
-```
-
-## See Also
-
-### Constants
-
-- [kFxFieldOrder_LOWER_FIRST](kfxfieldorder_lower_first.md): Lower field first.
-- [kFxFieldOrder_PROGRESSIVE](kfxfieldorder_progressive.md): Full frame, progressive (no fields).
-
-# Document: kFxHistogramChannel_Alpha
-
-Source path: documentation/professional_video_applications/kfxhistogramchannel_alpha
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxhistogramchannel_alpha
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxHistogramChannel_Alpha (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-## Declaration
-
-```swift
-var kFxHistogramChannel_Alpha: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
-- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
-- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
-- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
-
-# kFxHistogramChannel_Alpha (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-## Declaration
-
-```objectivec
-kFxHistogramChannel_Alpha
-```
-
-## See Also
-
-### Constants
-
-- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
-- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
-- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
-- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
-
-# Document: kFxHistogramChannel_Blue
-
-Source path: documentation/professional_video_applications/kfxhistogramchannel_blue
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxhistogramchannel_blue
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxHistogramChannel_Blue (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-## Declaration
-
-```swift
-var kFxHistogramChannel_Blue: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
-- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
-- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
-- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
-
-# kFxHistogramChannel_Blue (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-## Declaration
-
-```objectivec
-kFxHistogramChannel_Blue
-```
-
-## See Also
-
-### Constants
-
-- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
-- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
-- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
-- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
-
-# Document: kFxHistogramChannel_Green
-
-Source path: documentation/professional_video_applications/kfxhistogramchannel_green
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxhistogramchannel_green
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxHistogramChannel_Green (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-## Declaration
-
-```swift
-var kFxHistogramChannel_Green: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
-- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
-- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
-- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
-
-# kFxHistogramChannel_Green (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-## Declaration
-
-```objectivec
-kFxHistogramChannel_Green
-```
-
-## See Also
-
-### Constants
-
-- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
-- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
-- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
-- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
-
-# Document: kFxHistogramChannel_Red
-
-Source path: documentation/professional_video_applications/kfxhistogramchannel_red
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxhistogramchannel_red
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxHistogramChannel_Red (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-## Declaration
-
-```swift
-var kFxHistogramChannel_Red: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
-- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
-- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
-- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
-
-# kFxHistogramChannel_Red (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-## Declaration
-
-```objectivec
-kFxHistogramChannel_Red
-```
-
-## See Also
-
-### Constants
-
-- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
-- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
-- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
-- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
-
-# Document: kFxHistogramChannel_RGB
-
-Source path: documentation/professional_video_applications/kfxhistogramchannel_rgb
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxhistogramchannel_rgb
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxHistogramChannel_RGB (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-## Declaration
-
-```swift
-var kFxHistogramChannel_RGB: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
-- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
-- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
-- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
-
-# kFxHistogramChannel_RGB (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-## Declaration
-
-```objectivec
-kFxHistogramChannel_RGB
-```
-
-## See Also
-
-### Constants
-
-- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
-- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
-- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
-- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
-
-# Document: kFxImageColorInfo_RGB_GAMMA_VIDEO
-
-Source path: documentation/professional_video_applications/kfximagecolorinfo_rgb_gamma_video
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfximagecolorinfo_rgb_gamma_video
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxImageColorInfo_RGB_GAMMA_VIDEO (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-RGB at video gamma (2.2).
-
-## Declaration
-
-```swift
-var kFxImageColorInfo_RGB_GAMMA_VIDEO: Int { get }
-```
-
-## Mentioned In
-
-- [Managing color space and gamut in plug-ins](../professional-video-applications/managing-color-space-and-gamut-in-plug-ins.md)
-
-## See Also
-
-### Constants
-
-- [kFxImageColorInfo_RGB_LINEAR](kfximagecolorinfo_rgb_linear.md): RGB linear (not gamma corrected).
-
-# kFxImageColorInfo_RGB_GAMMA_VIDEO (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-RGB at video gamma (2.2).
-
-## Declaration
-
-```objectivec
-kFxImageColorInfo_RGB_GAMMA_VIDEO
-```
-
-## Mentioned In
-
-- [Managing color space and gamut in plug-ins](../professional-video-applications/managing-color-space-and-gamut-in-plug-ins.md)
-
-## See Also
-
-### Constants
-
-- [kFxImageColorInfo_RGB_LINEAR](kfximagecolorinfo_rgb_linear.md): RGB linear (not gamma corrected).
-
-# Document: kFxImageColorInfo_RGB_LINEAR
-
-Source path: documentation/professional_video_applications/kfximagecolorinfo_rgb_linear
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfximagecolorinfo_rgb_linear
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
-
-# kFxImageColorInfo_RGB_LINEAR (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+
-
-RGB linear (not gamma corrected).
-
-## Declaration
-
-```swift
-var kFxImageColorInfo_RGB_LINEAR: Int { get }
-```
-
-## Mentioned In
-
-- [Managing color space and gamut in plug-ins](../professional-video-applications/managing-color-space-and-gamut-in-plug-ins.md)
-
-## See Also
-
-### Constants
-
-- [kFxImageColorInfo_RGB_GAMMA_VIDEO](kfximagecolorinfo_rgb_gamma_video.md): RGB at video gamma (2.2).
-
-# kFxImageColorInfo_RGB_LINEAR (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-RGB linear (not gamma corrected).
-
-## Declaration
-
-```objectivec
-kFxImageColorInfo_RGB_LINEAR
-```
-
-## Mentioned In
-
-- [Managing color space and gamut in plug-ins](../professional-video-applications/managing-color-space-and-gamut-in-plug-ins.md)
-
-## See Also
-
-### Constants
-
-- [kFxImageColorInfo_RGB_GAMMA_VIDEO](kfximagecolorinfo_rgb_gamma_video.md): RGB at video gamma (2.2).
-
-# Document: kFxImageOrigin_BOTTOM_LEFT
-
-Source path: documentation/professional_video_applications/kfximageorigin_bottom_left
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfximageorigin_bottom_left
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+ (deprecated in 4.0)
-
-# kFxImageOrigin_BOTTOM_LEFT (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+ (deprecated in 4.0)
-
-Right-handed “bottom-up” coordinate system where Y values increase upwardly.
-
-## Declaration
-
-```swift
-var kFxImageOrigin_BOTTOM_LEFT: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxImageOrigin_TOP_LEFT](kfximageorigin_top_left.md): Left-handed “top-down” coordinate system where Y values increase downwardly.
-
-# kFxImageOrigin_BOTTOM_LEFT (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-Right-handed “bottom-up” coordinate system where Y values increase upwardly.
-
-## Declaration
-
-```objectivec
-kFxImageOrigin_BOTTOM_LEFT
-```
-
-## See Also
-
-### Constants
-
-- [kFxImageOrigin_TOP_LEFT](kfximageorigin_top_left.md): Left-handed “top-down” coordinate system where Y values increase downwardly.
-
-# Document: kFxImageOrigin_TOP_LEFT
-
-Source path: documentation/professional_video_applications/kfximageorigin_top_left
-Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfximageorigin_top_left
-Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+ (deprecated in 4.0)
-
-# kFxImageOrigin_TOP_LEFT (Swift)
-
-**Framework:** Professional Video Applications  
-**Kind:** Global Variable  
-**Availability:** FxPlug 3.1+ (deprecated in 4.0)
-
-Left-handed “top-down” coordinate system where Y values increase downwardly.
-
-## Declaration
-
-```swift
-var kFxImageOrigin_TOP_LEFT: Int { get }
-```
-
-## See Also
-
-### Constants
-
-- [kFxImageOrigin_BOTTOM_LEFT](kfximageorigin_bottom_left.md): Right-handed “bottom-up” coordinate system where Y values increase upwardly.
-
-# kFxImageOrigin_TOP_LEFT (Objective-C)
-
-**Framework:** Professional Video Applications  
-**Kind:** Enumeration Case
-
-Left-handed “top-down” coordinate system where Y values increase downwardly.
-
-## Declaration
-
-```objectivec
-kFxImageOrigin_TOP_LEFT
-```
-
-## See Also
-
-### Constants
-
-- [kFxImageOrigin_BOTTOM_LEFT](kfximageorigin_bottom_left.md): Right-handed “bottom-up” coordinate system where Y values increase upwardly.

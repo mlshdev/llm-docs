@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitem
 
 # ReviewSubmissionItem
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 1.7+
 
-An individual reviewable item — such as an app version, in-app purchase, or App Clip — included in a review submission.
+An individual reviewable item — such as an app version, In-App Purchase, or App Clip — included in a review submission.
 
 ## Declaration
 
@@ -36,7 +36,7 @@ object ReviewSubmissionItem
 
 ### Objects
 
-- [ReviewSubmission](reviewsubmission.md): A formal submission to App Store review grouping one or more items — app versions, in-app purchases, or events — for simultaneous review.
+- [ReviewSubmission](reviewsubmission.md): A formal submission to App Store review grouping one or more items — app versions, In-App Purchases, or events — for simultaneous review.
 - [ReviewSubmissionUpdateRequest](reviewsubmissionupdaterequest.md): The request body you use to update a review submission update request.
 - [ReviewSubmissionCreateRequest](reviewsubmissioncreaterequest.md): The request body for creating a review submission for an App Store version or associated items.
 - [ReviewSubmissionResponse](reviewsubmissionresponse.md): The response body for endpoints that create, read, or modify a single review submission.

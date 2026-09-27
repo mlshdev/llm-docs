@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseimagev2createrequest/data-data.dictionary/relationships-data.dictionary/version-data.dictionary
 
 # InAppPurchaseImageV2CreateRequest.Data.Relationships.Version
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 4.4.1+
 
-The version to associate with the new in-app purchase image.
+The version to associate with the new In-App Purchase image.
 
 ## Declaration
 
@@ -25,4 +25,4 @@ object InAppPurchaseImageV2CreateRequest.Data.Relationships.Version
 
 ### Objects
 
-- [InAppPurchaseImageV2CreateRequest.Data.Relationships.Version.Data](version-data.dictionary/data-data.dictionary.md): The request body you use to create an in-app purchase image with the v2 API.
+- [InAppPurchaseImageV2CreateRequest.Data.Relationships.Version.Data](version-data.dictionary/data-data.dictionary.md): The request body you use to create an In-App Purchase image with the v2 API.

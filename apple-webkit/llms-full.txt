@@ -1,14 +1,14 @@
-# Apple WebKit and Safari snapshot-a0a4b8d281c3: full documentation
+# Apple WebKit and Safari snapshot-33695ec62253: full documentation
 
 Source: https://developer.apple.com/documentation/webkit
-Catalog snapshot: a0a4b8d281c3f7aea28b686494365f12c4270621bbf6d43cdea12ffe295fbfab
-Content digest: 734bf10815a2acca72e71faa3a510eace5521c5201527ea636458dac7a773b04
-Captured at: 2026-09-17T18:22:51.558Z
+Catalog snapshot: 33695ec62253d7c27ab92cec13d777a7a1ab7c195e074c2faaa71df986300bb8
+Content digest: 98d5355b9314806fc6d4eada2ecb2a93176a5f08e3e4ac247a479ef447e7b53a
+Captured at: 2026-09-27T18:07:09.617Z
 
 This corpus is published as 5 retrieval-sized volumes. Read the volumes in order for the complete corpus.
 
-- [Volume 1](llms-full.001.txt): 3223 documents, 8386280 bytes, SHA-256 `46de8bd78f2b92ca7de8f2cb972ed9ce411a44e9dedff00a8a0dc0ad78a0d445`.
-- [Volume 2](llms-full.002.txt): 3867 documents, 8386916 bytes, SHA-256 `e303a456b0ffb62af4b95b7407f926641df096d61731e655ea10269e36e9ec19`.
-- [Volume 3](llms-full.003.txt): 4776 documents, 8388543 bytes, SHA-256 `7c09c68fcf9040d5b1438f3527dac796400fb7b8d48e133ce77873a22376741d`.
-- [Volume 4](llms-full.004.txt): 5820 documents, 8387238 bytes, SHA-256 `950aa44b12ca830f95c2a650c6ba5a5b8982f17785f85b23f1a4f409ab42d3b3`.
-- [Volume 5](llms-full.005.txt): 1007 documents, 7735831 bytes, SHA-256 `356e51b91ca9c074f6711aae4288539ec1fce954e1902cd38a5682824dd86a2b`.
+- [Volume 1](llms-full.001.txt): 3192 documents, 8388156 bytes, SHA-256 `e26f1b722ee2c27573d24eea9f183eebfd2f26c961e63219b0f67831a92c918c`.
+- [Volume 2](llms-full.002.txt): 3850 documents, 8387968 bytes, SHA-256 `72b69fc67547608ade33ed651f0032962dfba8d395a3a99c1f0f1e31bbd6e486`.
+- [Volume 3](llms-full.003.txt): 4718 documents, 8386966 bytes, SHA-256 `31be4032dd74c564e5c9c20bb8345560a44e353336cae9edd485fee70b1a82b3`.
+- [Volume 4](llms-full.004.txt): 5968 documents, 8386251 bytes, SHA-256 `15f29d5fa712e0ebdb858dfe1a66e90a532349495620f5d7276c5c52499c4b9b`.
+- [Volume 5](llms-full.005.txt): 1020 documents, 7920458 bytes, SHA-256 `e0984fc6e5bfee95cfdd485f3aa7b20a924e5793b10e872b4b1c3ad2bce13f3e`.

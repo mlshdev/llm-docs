@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/creatives-endpoints
 
 # Creatives Endpoints
@@ -15,7 +15,7 @@ Create, retrieve, update, and delete ad creatives through these endpoints.
 
 ## Overview
 
-You create a [Creative](creative.md) object at the ad account level, and an [Ad](ad.md) object references it to define what users see when your ad serves. Ad creatives are reusable; you can link the same ad creative to multiple ads across different ad groups.
+You create a [Creative](creative.md) object at the ad account level, and an [Ad](ad.md) object references it to define what users see when your ad serves. Since an ad creative lives at the ad account level, you can reuse the same one across multiple ads, even ads in different ad groups, instead of creating a new ad creative for each ad.
 
 <a id="Use-the-Creatives-Endpoints"></a>
 

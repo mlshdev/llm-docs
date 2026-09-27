@@ -1,10 +1,1068 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 68
+
+# Document: xpc_array_create_empty()
+
+Source path: documentation/xpc/xpc_array_create_empty()
+Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_create_empty()
+Description: Framework: XPC Kind: Function Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
+
+# xpc_array_create_empty() (Swift)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
+
+Creates an XPC object that represents an array of XPC objects.
+
+## Declaration
+
+```swift
+func xpc_array_create_empty() -> xpc_object_t
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new array object.
+
+## See Also
+
+### Array objects
+
+- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
+- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+
+# xpc_array_create_empty (Objective-C)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
+
+Creates an XPC object that represents an array of XPC objects.
+
+## Declaration
+
+```objectivec
+extern xpc_object_txpc_array_create_empty();
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new array object.
+
+## See Also
+
+### Array objects
+
+- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
+
+# Document: xpc_array_dup_fd(_:_:)
+
+Source path: documentation/xpc/xpc_array_dup_fd(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_dup_fd(_:_:)
+Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+# xpc_array_dup_fd(\_:\_:) (Swift)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Gets a file descriptor from an array directly.
+
+## Declaration
+
+```swift
+func xpc_array_dup_fd(_ xarray: xpc_object_t, _ index: Int) -> Int32
+```
+
+## Parameters
+
+- `xarray`: The array which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new file descriptor created from the value at the specified index. You are responsible for closing this descriptor. `-1` if the value at the specified index is not a file descriptor value.
+
+## See Also
+
+### Array objects
+
+- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
+- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+
+# xpc_array_dup_fd (Objective-C)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Gets a file descriptor from an array directly.
+
+## Declaration
+
+```objectivec
+extern int xpc_array_dup_fd(xpc_object_t xarray, size_t index);
+```
+
+## Parameters
+
+- `xarray`: The array which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new file descriptor created from the value at the specified index. You are responsible for closing this descriptor. `-1` if the value at the specified index is not a file descriptor value.
+
+## See Also
+
+### Array objects
+
+- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
+
+# Document: xpc_array_get_array(_:_:)
+
+Source path: documentation/xpc/xpc_array_get_array(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_array(_:_:)
+Description: Framework: XPC Kind: Function Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+# xpc_array_get_array(\_:\_:) (Swift)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns the array at the specified index in the array.
+
+## Declaration
+
+```swift
+func xpc_array_get_array(_ xarray: xpc_object_t, _ index: Int) -> xpc_object_t?
+```
+
+## Parameters
+
+- `xarray`: The array object which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the range of indexes as specified in [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+The object at the specified index within the array or `NULL` if the given object was not an XPC array or if the the value at the specified index was not an array.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method does not grant the caller a reference to the underlying object, so the caller is not responsible for releasing the object.
+
+## See Also
+
+### Array objects
+
+- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
+- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+
+# xpc_array_get_array (Objective-C)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns the array at the specified index in the array.
+
+## Declaration
+
+```objectivec
+extern xpc_object_txpc_array_get_array(xpc_object_t xarray, size_t index);
+```
+
+## Parameters
+
+- `xarray`: The array object which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the range of indexes as specified in [xpc_array_set_value](xpc_array_set_value%28______%29.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+The object at the specified index within the array or `NULL` if the given object was not an XPC array or if the the value at the specified index was not an array.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method does not grant the caller a reference to the underlying object, so the caller is not responsible for releasing the object.
+
+## See Also
+
+### Array objects
+
+- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
+
+# Document: xpc_array_get_bool(_:_:)
+
+Source path: documentation/xpc/xpc_array_get_bool(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_bool(_:_:)
+Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+# xpc_array_get_bool(\_:\_:) (Swift)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Gets a Boolean primitive value from an array directly.
+
+## Declaration
+
+```swift
+func xpc_array_get_bool(_ xarray: xpc_object_t, _ index: Int) -> Bool
+```
+
+## Parameters
+
+- `xarray`: The array which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The underlying `bool` value at the specified index. false if the value at the specified index is not a Boolean value.
+
+## See Also
+
+### Array objects
+
+- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
+- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+
+# xpc_array_get_bool (Objective-C)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Gets a Boolean primitive value from an array directly.
+
+## Declaration
+
+```objectivec
+extern bool xpc_array_get_bool(xpc_object_t xarray, size_t index);
+```
+
+## Parameters
+
+- `xarray`: The array which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The underlying `bool` value at the specified index. false if the value at the specified index is not a Boolean value.
+
+## See Also
+
+### Array objects
+
+- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
+
+# Document: xpc_array_get_count(_:)
+
+Source path: documentation/xpc/xpc_array_get_count(_:)
+Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_count(_:)
+Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+# xpc_array_get_count(\_:) (Swift)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Returns the count of values in the array.
+
+## Declaration
+
+```swift
+func xpc_array_get_count(_ xarray: xpc_object_t) -> Int
+```
+
+## Parameters
+
+- `xarray`: The array object which is to be examined.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The count of values in the array.
+
+## See Also
+
+### Array objects
+
+- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
+- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+
+# xpc_array_get_count (Objective-C)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Returns the count of values in the array.
+
+## Declaration
+
+```objectivec
+extern size_t xpc_array_get_count(xpc_object_t xarray);
+```
+
+## Parameters
+
+- `xarray`: The array object which is to be examined.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The count of values in the array.
+
+## See Also
+
+### Array objects
+
+- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
+
+# Document: xpc_array_get_data(_:_:_:)
+
+Source path: documentation/xpc/xpc_array_get_data(_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_data(_:_:_:)
+Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+# xpc_array_get_data(\_:\_:\_:) (Swift)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Gets a pointer to the raw bytes of a data object from an array directly.
+
+## Declaration
+
+```swift
+func xpc_array_get_data(_ xarray: xpc_object_t, _ index: Int, _ length: UnsafeMutablePointer<Int>?) -> UnsafeRawPointer?
+```
+
+## Parameters
+
+- `xarray`: The array which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
+- `length`: Upon return output, will contain the length of the data corresponding to the specified key.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The underlying bytes at the specified index. NULL if the value at the specified index is not a data value.
+
+## See Also
+
+### Array objects
+
+- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
+- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+
+# xpc_array_get_data (Objective-C)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Gets a pointer to the raw bytes of a data object from an array directly.
+
+## Declaration
+
+```objectivec
+extern const void *xpc_array_get_data(xpc_object_t xarray, size_t index, size_t *length);
+```
+
+## Parameters
+
+- `xarray`: The array which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
+- `length`: Upon return output, will contain the length of the data corresponding to the specified key.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The underlying bytes at the specified index. NULL if the value at the specified index is not a data value.
+
+## See Also
+
+### Array objects
+
+- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
+
+# Document: xpc_array_get_date(_:_:)
+
+Source path: documentation/xpc/xpc_array_get_date(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_date(_:_:)
+Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+# xpc_array_get_date(\_:\_:) (Swift)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Gets a date interval from an array directly.
+
+## Declaration
+
+```swift
+func xpc_array_get_date(_ xarray: xpc_object_t, _ index: Int) -> Int64
+```
+
+## Parameters
+
+- `xarray`: The array which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The underlying date interval at the specified index. 0 if the value at the specified index is not a date value.
+
+## See Also
+
+### Array objects
+
+- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
+- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+
+# xpc_array_get_date (Objective-C)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Gets a date interval from an array directly.
+
+## Declaration
+
+```objectivec
+extern int64_t xpc_array_get_date(xpc_object_t xarray, size_t index);
+```
+
+## Parameters
+
+- `xarray`: The array which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The underlying date interval at the specified index. 0 if the value at the specified index is not a date value.
+
+## See Also
+
+### Array objects
+
+- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
+
+# Document: xpc_array_get_dictionary(_:_:)
+
+Source path: documentation/xpc/xpc_array_get_dictionary(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_dictionary(_:_:)
+Description: Framework: XPC Kind: Function Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+# xpc_array_get_dictionary(\_:\_:) (Swift)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns the dictionary at the specified index in the array.
+
+## Declaration
+
+```swift
+func xpc_array_get_dictionary(_ xarray: xpc_object_t, _ index: Int) -> xpc_object_t?
+```
+
+## Parameters
+
+- `xarray`: The array object which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the range of indexes as specified in [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+The object at the specified index within the array or `NULL` if the given object was not an XPC array or if the the value at the specified index was not a dictionary.
+
+## See Also
+
+### Array objects
+
+- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
+- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+
+# xpc_array_get_dictionary (Objective-C)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns the dictionary at the specified index in the array.
+
+## Declaration
+
+```objectivec
+extern xpc_object_txpc_array_get_dictionary(xpc_object_t xarray, size_t index);
+```
+
+## Parameters
+
+- `xarray`: The array object which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the range of indexes as specified in [xpc_array_set_value](xpc_array_set_value%28______%29.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+The object at the specified index within the array or `NULL` if the given object was not an XPC array or if the the value at the specified index was not a dictionary.
+
+## See Also
+
+### Array objects
+
+- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
+
+# Document: xpc_array_get_double(_:_:)
+
+Source path: documentation/xpc/xpc_array_get_double(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_double(_:_:)
+Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+# xpc_array_get_double(\_:\_:) (Swift)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Gets a double-precision floating point primitive value from an array directly.
+
+## Declaration
+
+```swift
+func xpc_array_get_double(_ xarray: xpc_object_t, _ index: Int) -> Double
+```
+
+## Parameters
+
+- `xarray`: The array which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The underlying `double` value at the specified index. NAN if the value at the specified index is not a floating point value.
+
+## See Also
+
+### Array objects
+
+- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
+- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+
+# xpc_array_get_double (Objective-C)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Gets a double-precision floating point primitive value from an array directly.
+
+## Declaration
+
+```objectivec
+extern double xpc_array_get_double(xpc_object_t xarray, size_t index);
+```
+
+## Parameters
+
+- `xarray`: The array which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The underlying `double` value at the specified index. NAN if the value at the specified index is not a floating point value.
+
+## See Also
+
+### Array objects
+
+- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
+
+# Document: xpc_array_get_int64(_:_:)
+
+Source path: documentation/xpc/xpc_array_get_int64(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_int64(_:_:)
+Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+# xpc_array_get_int64(\_:\_:) (Swift)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Gets a 64-bit integer primitive value from an array directly.
+
+## Declaration
+
+```swift
+func xpc_array_get_int64(_ xarray: xpc_object_t, _ index: Int) -> Int64
+```
+
+## Parameters
+
+- `xarray`: The array which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The underlying `int64_t` value at the specified index. 0 if the value at the specified index is not a signed integer value.
+
+## See Also
+
+### Array objects
+
+- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
+- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+
+# xpc_array_get_int64 (Objective-C)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Gets a 64-bit integer primitive value from an array directly.
+
+## Declaration
+
+```objectivec
+extern int64_t xpc_array_get_int64(xpc_object_t xarray, size_t index);
+```
+
+## Parameters
+
+- `xarray`: The array which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The underlying `int64_t` value at the specified index. 0 if the value at the specified index is not a signed integer value.
+
+## See Also
+
+### Array objects
+
+- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+
+# Document: xpc_array_get_string(_:_:)
+
+Source path: documentation/xpc/xpc_array_get_string(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_string(_:_:)
+Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+# xpc_array_get_string(\_:\_:) (Swift)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Gets a C-string value from an array directly.
+
+## Declaration
+
+```swift
+func xpc_array_get_string(_ xarray: xpc_object_t, _ index: Int) -> UnsafePointer<CChar>?
+```
+
+## Parameters
+
+- `xarray`: The array which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The underlying C string at the specified index. NULL if the value at the specified index is not a C string value.
+
+## See Also
+
+### Array objects
+
+- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
+- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+
+# xpc_array_get_string (Objective-C)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Gets a C-string value from an array directly.
+
+## Declaration
+
+```objectivec
+extern const char *xpc_array_get_string(xpc_object_t xarray, size_t index);
+```
+
+## Parameters
+
+- `xarray`: The array which is to be examined.
+- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The underlying C string at the specified index. NULL if the value at the specified index is not a C string value.
+
+## See Also
+
+### Array objects
+
+- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
 
 # Document: xpc_array_get_uint64(_:_:)
 

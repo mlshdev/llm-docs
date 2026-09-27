@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/backgroundassetversionappstorereleasestate
 
 # BackgroundAssetVersionAppStoreReleaseState
@@ -28,6 +28,10 @@ string BackgroundAssetVersionAppStoreReleaseState
 - `PROCESSING_FOR_DISTRIBUTION`:
 - `READY_FOR_DISTRIBUTION`:
 - `SUPERSEDED`:
+
+## Mentioned In
+
+- [Understanding webhook events](webhook-events.md)
 
 ## See Also
 

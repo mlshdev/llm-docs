@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseoffercode/relationships-data.dictionary
 
 # InAppPurchaseOfferCode.Relationships
@@ -27,12 +27,12 @@ object InAppPurchaseOfferCode.Relationships
 
 ### Dictionaries
 
-- [InAppPurchaseOfferCode.Relationships.CustomCodes](relationships-data.dictionary/customcodes-data.dictionary.md): The data and links that describe the custom codes of the in-app purchase offer code.
-- [InAppPurchaseOfferCode.Relationships.OneTimeUseCodes](relationships-data.dictionary/onetimeusecodes-data.dictionary.md): The data and links that describe the one-time use codes of the in-app purchase offer code.
-- [InAppPurchaseOfferCode.Relationships.Prices](relationships-data.dictionary/prices-data.dictionary.md): The data and links that describe the prices of the in-app purchase offer code.
+- [InAppPurchaseOfferCode.Relationships.CustomCodes](relationships-data.dictionary/customcodes-data.dictionary.md): The data and links that describe the custom codes of the In-App Purchase offer code.
+- [InAppPurchaseOfferCode.Relationships.OneTimeUseCodes](relationships-data.dictionary/onetimeusecodes-data.dictionary.md): The data and links that describe the one-time use codes of the In-App Purchase offer code.
+- [InAppPurchaseOfferCode.Relationships.Prices](relationships-data.dictionary/prices-data.dictionary.md): The data and links that describe the prices of the In-App Purchase offer code.
 
 ## See Also
 
 ### Dictionaries
 
-- [InAppPurchaseOfferCode.Attributes](attributes-data.dictionary.md): Attributes that describe an in-app purchase offer code resource.
+- [InAppPurchaseOfferCode.Attributes](attributes-data.dictionary.md): Attributes that describe an In-App Purchase offer code resource.

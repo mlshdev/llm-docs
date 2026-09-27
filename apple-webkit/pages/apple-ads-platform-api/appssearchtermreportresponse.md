@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/appssearchtermreportresponse
 
 # AppsSearchTermReportResponse
@@ -42,7 +42,7 @@ Search term reports require the ORTZ timezone. UTC isn’t supported. Each row l
           "campaignId": 444555666,
           "adAccountId": 123456789,
           "searchTermText": "awayfinder travel app",
-          "searchTermSource": "SEARCH",
+          "searchTermSource": "AUTO",
           "keyword": {
             "id": 987654321,
             "campaignId": 444555666,

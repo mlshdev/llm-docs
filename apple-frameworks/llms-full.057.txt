@@ -1,10 +1,1423 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 57
+
+# Document: Macros
+
+Source path: documentation/sharedwithyou/macros
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/macros
+Description: Framework: Shared with You Kind: API Collection
+
+# Macros (Swift)
+
+**Framework:** Shared with You  
+**Kind:** API Collection
+
+# Macros (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** API Collection
+
+## Topics
+
+### Macros
+
+- [SW_EXTERN](../sharedwithyoucore/sw_extern.md)
+- [SW_HIDDEN](../sharedwithyoucore/sw_hidden.md)
+
+# Document: Making your app content shareable
+
+Source path: documentation/sharedwithyou/making-your-app-content-shareable
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/making-your-app-content-shareable
+Description: Framework: Shared with You Kind: Article
+
+# Making your app content shareable (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Article
+
+Add support for universal links and a Shared with You shelf to support shared content in your app.
+
+<a id="overview"></a>
+
+## Overview
+
+System apps like Safari, News, Music, Photos, and Podcasts use Shared with You to make it easier to share content with friends and family. By adopting universal links and adding a Shared with You shelf to your app, you can also share your content using Messages. When you add views to showcase shared content activity, your app allows people to view Messages conversations that contain your shared content and still stay focused on your app.
+
+Your app can also manage who can view or share your content using the [SWAttributionView](swattributionview.md). This adds a new level of collaboration to your app. You can customize your content’s contextual menu to add even more functionality to shared content.
+
+<a id="Adopt-universal-links"></a>
+
+### Adopt universal links
+
+Your app uses universal links to share content with other apps. When a user activates a universal link, the system launches your app and sends it an [NSUserActivity](../foundation/nsuseractivity.md) object. Query this object to take actions for your shared content.
+
+To support universal links in your app:
+
+1. Create a two-way association between your app and your website and specify the URLs that your app handles. See [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains).
+2. Update your app delegate to respond when it receives an `NSUserActivity` object with the [activityType](../foundation/nsuseractivity/activitytype.md) set to [NSUserActivityTypeBrowsingWeb](../foundation/nsuseractivitytypebrowsingweb.md).
+
+For more information, see [Supporting universal links in your app](https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app).
+
+<a id="Add-Shared-with-You-capability"></a>
+
+### Add Shared with You capability
+
+To add the Shared with You capability in Xcode, follow these steps:
+
+1. Select your project target.
+2. Select the Signing & Capabilities pane.
+3. Click + Capability to bring up the [Capabilities](https://developer.apple.com/documentation/xcode/capabilities) library.
+4. Choose the Shared with You capability.
+
+For more information, see [Adding capabilities to your app](https://developer.apple.com/documentation/xcode/adding-capabilities-to-your-app).
+
+<a id="Add-Shared-with-You-shelf"></a>
+
+### Add Shared with You shelf
+
+Instead of relying on Messages to display shared content activity, you can add a Shared with You shelf to your app. This is a custom view your app creates and manages to display [SWHighlightCenter](swhighlightcenter.md) activity. People can see new content shares and interact with existing ones from your app.
+
+```swift
+// Enumerate Shared with You shelf.
+
+class SharedWithYouViewController: UIViewController, SWHighlightCenterDelegate {
+    let highlightCenter = SWHighlightCenter()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        highlightCenter.delegate = self
+    }
+    
+    func highlightCenterHighlightsDidChange(_ highlightCenter: SWHighlightCenter) {
+        for highlight in highlightCenter.highlights {
+            let highlightURL = highlight.url
+            // Generate a rich preview for this highlight.
+        }
+    }
+}
+```
+
+<a id="Add-an-SWAttributionView-to-your-content"></a>
+
+### Add an SWAttributionView to your content
+
+The [SWAttributionView](swattributionview.md) is the user interface your app customizes to give people a way to interact with [SWHighlight](swhighlight.md) events, like the addition of a new participant or a title change to the shared content. You can adjust the alignment of the content, the width, and the [SWAttributionView.DisplayContext](swattributionview/displaycontext-swift.enum.md) format.
+
+```swift
+// Set the horizontal alignment for an attribution view.
+
+let attributionView = SWAttributionView()
+attributionView.highlight = self.highlightCenter.highlights[index]
+attributionView.preferredMaxLayoutWidth = maximumWidthForView
+attributionView.horizontalAlignment = .leading
+```
+
+You can show the `displayContext` as an [SWAttributionView.DisplayContext.summary](swattributionview/displaycontext-swift.enum/summary.md) or an [SWAttributionView.DisplayContext.detail](swattributionview/displaycontext-swift.enum/detail.md) view. The detail view is ideal if you have more vertical space in your app to provide a larger image of the shared content and more related information.
+
+```swift
+// Set the display context for an attribution view.
+
+let attributionView = SWAttributionView()
+attributionView.highlight = self.highlightCenter.highlights[index]
+attributionView.preferredMaxLayoutWidth = maximumWidthForView
+attributionView.horizontalAlignment = .center
+attributionView.displayContext = .summary
+```
+
+You can also customize the highlight menu text and add additional menu items.
+
+```swift
+// Add Shared with You content menu to your app’s content.
+
+let attributionView = SWAttributionView()
+attributionView.highlight = self.highlightCenter.highlights[index]
+attributionView.menuTitleForHideAction = "Remove Item"
+
+let contextMenuConfig = UIContextMenuConfiguration(identifier: nil,previewProvider: nil) { [weak self] _ in
+        let additionalMenu = attributionView.supplementalMenu
+        // Append additional menu items to your content menu.
+}
+```
+
+## See Also
+
+### Shared content
+
+- [Shared content interactions](shared-content-interactions.md): Use highlights and attribution views to manage participants and trigger events for shared content.
+
+# Making your app content shareable (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Article
+
+Add support for universal links and a Shared with You shelf to support shared content in your app.
+
+<a id="overview"></a>
+
+## Overview
+
+System apps like Safari, News, Music, Photos, and Podcasts use Shared with You to make it easier to share content with friends and family. By adopting universal links and adding a Shared with You shelf to your app, you can also share your content using Messages. When you add views to showcase shared content activity, your app allows people to view Messages conversations that contain your shared content and still stay focused on your app.
+
+Your app can also manage who can view or share your content using the [SWAttributionView](swattributionview.md). This adds a new level of collaboration to your app. You can customize your content’s contextual menu to add even more functionality to shared content.
+
+<a id="Adopt-universal-links"></a>
+
+### Adopt universal links
+
+Your app uses universal links to share content with other apps. When a user activates a universal link, the system launches your app and sends it an [NSUserActivity](../foundation/nsuseractivity.md) object. Query this object to take actions for your shared content.
+
+To support universal links in your app:
+
+1. Create a two-way association between your app and your website and specify the URLs that your app handles. See [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains).
+2. Update your app delegate to respond when it receives an `NSUserActivity` object with the [activityType](../foundation/nsuseractivity/activitytype.md) set to [NSUserActivityTypeBrowsingWeb](../foundation/nsuseractivitytypebrowsingweb.md).
+
+For more information, see [Supporting universal links in your app](https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app).
+
+<a id="Add-Shared-with-You-capability"></a>
+
+### Add Shared with You capability
+
+To add the Shared with You capability in Xcode, follow these steps:
+
+1. Select your project target.
+2. Select the Signing & Capabilities pane.
+3. Click + Capability to bring up the [Capabilities](https://developer.apple.com/documentation/xcode/capabilities) library.
+4. Choose the Shared with You capability.
+
+For more information, see [Adding capabilities to your app](https://developer.apple.com/documentation/xcode/adding-capabilities-to-your-app).
+
+<a id="Add-Shared-with-You-shelf"></a>
+
+### Add Shared with You shelf
+
+Instead of relying on Messages to display shared content activity, you can add a Shared with You shelf to your app. This is a custom view your app creates and manages to display [SWHighlightCenter](swhighlightcenter.md) activity. People can see new content shares and interact with existing ones from your app.
+
+```swift
+// Enumerate Shared with You shelf.
+
+class SharedWithYouViewController: UIViewController, SWHighlightCenterDelegate {
+    let highlightCenter = SWHighlightCenter()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        highlightCenter.delegate = self
+    }
+    
+    func highlightCenterHighlightsDidChange(_ highlightCenter: SWHighlightCenter) {
+        for highlight in highlightCenter.highlights {
+            let highlightURL = highlight.url
+            // Generate a rich preview for this highlight.
+        }
+    }
+}
+```
+
+<a id="Add-an-SWAttributionView-to-your-content"></a>
+
+### Add an SWAttributionView to your content
+
+The [SWAttributionView](swattributionview.md) is the user interface your app customizes to give people a way to interact with [SWHighlight](swhighlight.md) events, like the addition of a new participant or a title change to the shared content. You can adjust the alignment of the content, the width, and the [SWAttributionViewDisplayContext](swattributionview/displaycontext-swift.enum.md) format.
+
+```swift
+// Set the horizontal alignment for an attribution view.
+
+let attributionView = SWAttributionView()
+attributionView.highlight = self.highlightCenter.highlights[index]
+attributionView.preferredMaxLayoutWidth = maximumWidthForView
+attributionView.horizontalAlignment = .leading
+```
+
+You can show the `displayContext` as an [SWAttributionViewDisplayContextSummary](swattributionview/displaycontext-swift.enum/summary.md) or an [SWAttributionViewDisplayContextDetail](swattributionview/displaycontext-swift.enum/detail.md) view. The detail view is ideal if you have more vertical space in your app to provide a larger image of the shared content and more related information.
+
+```swift
+// Set the display context for an attribution view.
+
+let attributionView = SWAttributionView()
+attributionView.highlight = self.highlightCenter.highlights[index]
+attributionView.preferredMaxLayoutWidth = maximumWidthForView
+attributionView.horizontalAlignment = .center
+attributionView.displayContext = .summary
+```
+
+You can also customize the highlight menu text and add additional menu items.
+
+```swift
+// Add Shared with You content menu to your app’s content.
+
+let attributionView = SWAttributionView()
+attributionView.highlight = self.highlightCenter.highlights[index]
+attributionView.menuTitleForHideAction = "Remove Item"
+
+let contextMenuConfig = UIContextMenuConfiguration(identifier: nil,previewProvider: nil) { [weak self] _ in
+        let additionalMenu = attributionView.supplementalMenu
+        // Append additional menu items to your content menu.
+}
+```
+
+## See Also
+
+### Shared content
+
+- [Shared content interactions](shared-content-interactions.md): Use highlights and attribution views to manage participants and trigger events for shared content.
+
+# Document: NSPasteboardTypeCollaborationMetadata
+
+Source path: documentation/sharedwithyou/nspasteboardtypecollaborationmetadata
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/nspasteboardtypecollaborationmetadata
+Description: Interface language: Objective-C
+
+# NSPasteboardTypeCollaborationMetadata
+
+**Interface language:** Objective-C
+
+**Framework:** Shared with You  
+**Kind:** Global Variable  
+**Availability:** macOS
+
+An object you use for conveying data during a collaboration.
+
+## Declaration
+
+```objectivec
+extern NSPasteboardType const NSPasteboardTypeCollaborationMetadata;
+```
+
+# Document: Shared content interactions
+
+Source path: documentation/sharedwithyou/shared-content-interactions
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/shared-content-interactions
+Description: Framework: Shared with You Kind: API Collection
+
+# Shared content interactions (Swift)
+
+**Framework:** Shared with You  
+**Kind:** API Collection
+
+Use highlights and attribution views to manage participants and trigger events for shared content.
+
+## Topics
+
+### Attributions
+
+- [SWAttributionView](swattributionview.md): A view that displays the sender who shares a highlight and provides related actions.
+
+### Highlights
+
+- [SWHighlight](swhighlight.md): An object that represents a universal link to share by any number of contacts in one or more conversations.
+- [SWHighlightCenter](swhighlightcenter.md): An object that contains a priority-ordered list of universal links to share with the current user.
+
+### Highlight events
+
+- [SWHighlightEvent](swhighlightevent.md): A protocol that defines an activity that the system posts in response to a user action for a highlight.
+- [SWHighlightChangeEvent](swhighlightchangeevent.md): An object that represents change activity for a highlight.
+- [SWHighlightMembershipEvent](swhighlightmembershipevent.md): An object that represents membership activity for a highlight.
+- [SWHighlightMentionEvent](swhighlightmentionevent.md): An object that represents mention activity for a highlight.
+- [SWHighlightPersistenceEvent](swhighlightpersistenceevent.md): An object that represents persistence activity for a highlight.
+
+### Participants
+
+- [SWPerson](../sharedwithyoucore/swperson.md): An object that tracks participants in a collaboration.
+- [SWRemoveParticipantAlert](swremoveparticipantalert.md): An alert that prompts the user to remove a participant from a Messages group.
+
+## See Also
+
+### Shared content
+
+- [Making your app content shareable](making-your-app-content-shareable.md): Add support for universal links and a Shared with You shelf to support shared content in your app.
+
+# Shared content interactions (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** API Collection
+
+Use highlights and attribution views to manage participants and trigger events for shared content.
+
+## Topics
+
+### Attributions
+
+- [SWAttributionView](swattributionview.md): A view that displays the sender who shares a highlight and provides related actions.
+
+### Highlights
+
+- [SWHighlight](swhighlight.md): An object that represents a universal link to share by any number of contacts in one or more conversations.
+- [SWHighlightCenter](swhighlightcenter.md): An object that contains a priority-ordered list of universal links to share with the current user.
+
+### Highlight events
+
+- [SWHighlightEvent](swhighlightevent.md): A protocol that defines an activity that the system posts in response to a user action for a highlight.
+- [SWHighlightChangeEvent](swhighlightchangeevent.md): An object that represents change activity for a highlight.
+- [SWHighlightMembershipEvent](swhighlightmembershipevent.md): An object that represents membership activity for a highlight.
+- [SWHighlightMentionEvent](swhighlightmentionevent.md): An object that represents mention activity for a highlight.
+- [SWHighlightPersistenceEvent](swhighlightpersistenceevent.md): An object that represents persistence activity for a highlight.
+
+### Participants
+
+- [SWPerson](../sharedwithyoucore/swperson.md): An object that tracks participants in a collaboration.
+- [SWRemoveParticipantAlert](swremoveparticipantalert.md): An alert that prompts the user to remove a participant from a Messages group.
+
+### Pasteboard Types
+
+- [NSPasteboardTypeCollaborationMetadata](nspasteboardtypecollaborationmetadata.md): An object you use for conveying data during a collaboration.
+
+## See Also
+
+### Shared content
+
+- [Making your app content shareable](making-your-app-content-shareable.md): Add support for universal links and a Shared with You shelf to support shared content in your app.
+
+# Document: SWAttributionView
+
+Source path: documentation/sharedwithyou/swattributionview
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview
+Description: Framework: Shared with You Kind: Class Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# SWAttributionView (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Class  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+A view that displays the sender who shares a highlight and provides related actions.
+
+## Declaration
+
+```swift
+class SWAttributionView
+```
+
+## Mentioned In
+
+- [Making your app content shareable](making-your-app-content-shareable.md)
+
+<a id="overview"></a>
+
+## Overview
+
+The `SWAttributionView` also allows users to get back to the conversation about the [SWHighlight](swhighlight.md) content, and other related actions using a [highlightMenu](swattributionview/highlightmenu.md).
+
+Place an `SWAttributionView` next to the content represented by its `SWHighlight`. The `SWAttributionView` displays the names and avatars within the provided horizontal space.
+
+You can constrain this view’s width anchor or set its frame width to control the maximum width of its contents after which truncation may occur. Don’t constrain the view’s height, as the height is dependent on the [preferredContentSizeCategory](../uikit/uiapplication/preferredcontentsizecategory.md), and the resulting font size. To provide enough vertical space around this view, reference its [heightAnchor](../uikit/uiview/heightanchor.md) when using Auto Layout, or its [intrinsicContentSize](../uikit/uiview/intrinsiccontentsize.md) when using manual layout.
+
+## Topics
+
+### Customizing highlights
+
+- [backgroundStyle](swattributionview/backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
+- [displayContext](swattributionview/displaycontext-swift.property.md): The context for the content the system displays with this view.
+- [highlight](swattributionview/highlight.md): The highlight you use to display this attribution.
+- [highlightMenu](swattributionview/highlightmenu.md): A menu with a list of system actions specific to this hightlight.
+- [horizontalAlignment](swattributionview/horizontalalignment-swift.property.md): The horizontal alignment of the view.
+- [menuTitleForHideAction](swattributionview/menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
+- [preferredMaxLayoutWidth](swattributionview/preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
+- [supplementalMenu](swattributionview/supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
+
+### Customizing the view
+
+- [SWAttributionView.BackgroundStyle](swattributionview/backgroundstyle-swift.enum.md): The background styling of the attribution view’s contents.
+- [SWAttributionView.DisplayContext](swattributionview/displaycontext-swift.enum.md): The context for the content that influences the ranking of this view’s highlight.
+- [SWAttributionView.HorizontalAlignment](swattributionview/horizontalalignment-swift.enum.md): The horizontal alignment of attribution view’s contents.
+
+## Relationships
+
+### Inherits From
+
+- [NSView](https://developer.apple.com/documentation/appkit/nsview)
+- [UIView](../uikit/uiview.md)
+
+### Conforms To
+
+- [CALayerDelegate](../quartzcore/calayerdelegate.md)
+- [CLBodyIdentifiable](../corelocation/clbodyidentifiable.md)
+- [CMBodyIdentifiable](../coremotion/cmbodyidentifiable.md)
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSAccessibilityElementProtocol](https://developer.apple.com/documentation/appkit/nsaccessibilityelementprotocol)
+- [NSAccessibilityProtocol](https://developer.apple.com/documentation/appkit/nsaccessibilityprotocol)
+- [NSAnimatablePropertyContainer](https://developer.apple.com/documentation/appkit/nsanimatablepropertycontainer)
+- [NSAppearanceCustomization](https://developer.apple.com/documentation/appkit/nsappearancecustomization)
+- [NSCoding](../foundation/nscoding.md)
+- [NSDraggingDestination](https://developer.apple.com/documentation/appkit/nsdraggingdestination)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [NSStandardKeyBindingResponding](https://developer.apple.com/documentation/appkit/nsstandardkeybindingresponding)
+- [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
+- [NSUserActivityRestoring](https://developer.apple.com/documentation/appkit/nsuseractivityrestoring)
+- [NSUserInterfaceItemIdentification](https://developer.apple.com/documentation/appkit/nsuserinterfaceitemidentification)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [UIAccessibilityIdentification](../uikit/uiaccessibilityidentification.md)
+- [UIActivityItemsConfigurationProviding](../uikit/uiactivityitemsconfigurationproviding.md)
+- [UIAppearance](../uikit/uiappearance.md)
+- [UIAppearanceContainer](../uikit/uiappearancecontainer.md)
+- [UICoordinateSpace](../uikit/uicoordinatespace.md)
+- [UIDynamicItem](../uikit/uidynamicitem.md)
+- [UIFocusEnvironment](../uikit/uifocusenvironment.md)
+- [UIFocusItem](../uikit/uifocusitem.md)
+- [UIFocusItemContainer](../uikit/uifocusitemcontainer.md)
+- [UILargeContentViewerItem](../uikit/uilargecontentvieweritem.md)
+- [UIPasteConfigurationSupporting](../uikit/uipasteconfigurationsupporting.md)
+- [UIPopoverPresentationControllerSourceItem](../uikit/uipopoverpresentationcontrollersourceitem.md)
+- [UIResponderStandardEditActions](../uikit/uiresponderstandardeditactions.md)
+- [UITraitChangeObservable](../uikit/uitraitchangeobservable-67e94.md)
+- [UITraitEnvironment](../uikit/uitraitenvironment.md)
+- [UIUserActivityRestoring](../uikit/uiuseractivityrestoring.md)
+
+# SWAttributionView (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Class  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+A view that displays the sender who shares a highlight and provides related actions.
+
+## Declaration
+
+```objectivec
+@interface SWAttributionView : UIView
+```
+
+```objectivec
+@interface SWAttributionView : NSView
+```
+
+## Mentioned In
+
+- [Making your app content shareable](making-your-app-content-shareable.md)
+
+<a id="overview"></a>
+
+## Overview
+
+The `SWAttributionView` also allows users to get back to the conversation about the [SWHighlight](swhighlight.md) content, and other related actions using a [highlightMenu](swattributionview/highlightmenu.md).
+
+Place an `SWAttributionView` next to the content represented by its `SWHighlight`. The `SWAttributionView` displays the names and avatars within the provided horizontal space.
+
+You can constrain this view’s width anchor or set its frame width to control the maximum width of its contents after which truncation may occur. Don’t constrain the view’s height, as the height is dependent on the [preferredContentSizeCategory](../uikit/uiapplication/preferredcontentsizecategory.md), and the resulting font size. To provide enough vertical space around this view, reference its [heightAnchor](../uikit/uiview/heightanchor.md) when using Auto Layout, or its [intrinsicContentSize](../uikit/uiview/intrinsiccontentsize.md) when using manual layout.
+
+## Topics
+
+### Customizing highlights
+
+- [backgroundStyle](swattributionview/backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
+- [displayContext](swattributionview/displaycontext-swift.property.md): The context for the content the system displays with this view.
+- [highlight](swattributionview/highlight.md): The highlight you use to display this attribution.
+- [highlightMenu](swattributionview/highlightmenu.md): A menu with a list of system actions specific to this hightlight.
+- [horizontalAlignment](swattributionview/horizontalalignment-swift.property.md): The horizontal alignment of the view.
+- [menuTitleForHideAction](swattributionview/menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
+- [preferredMaxLayoutWidth](swattributionview/preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
+- [supplementalMenu](swattributionview/supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
+- [enablesMarquee](swattributionview/enablesmarquee.md): Automatically enables a marquee effect.
+
+### Customizing the view
+
+- [SWAttributionViewBackgroundStyle](swattributionview/backgroundstyle-swift.enum.md): The background styling of the attribution view’s contents.
+- [SWAttributionViewDisplayContext](swattributionview/displaycontext-swift.enum.md): The context for the content that influences the ranking of this view’s highlight.
+- [SWAttributionViewHorizontalAlignment](swattributionview/horizontalalignment-swift.enum.md): The horizontal alignment of attribution view’s contents.
+
+## Relationships
+
+### Inherits From
+
+- [NSView](https://developer.apple.com/documentation/appkit/nsview)
+- [UIView](../uikit/uiview.md)
+
+# Document: SWAttributionView.BackgroundStyle
+
+Source path: documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum
+Description: Framework: Shared with You Kind: Enumeration Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# SWAttributionView.BackgroundStyle (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Enumeration  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+The background styling of the attribution view’s contents.
+
+## Declaration
+
+```swift
+enum BackgroundStyle
+```
+
+## Topics
+
+### Background styles
+
+- [SWAttributionView.BackgroundStyle.default](backgroundstyle-swift.enum/default.md): The default background style the system chooses.
+- [SWAttributionView.BackgroundStyle.color](backgroundstyle-swift.enum/color.md): A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
+- [SWAttributionView.BackgroundStyle.material](backgroundstyle-swift.enum/material.md): A material background blur for the view’s contents, best when placed over multicolored backgrounds.
+
+### Initializers
+
+- [init(rawValue:)](backgroundstyle-swift.enum/init%28rawvalue_%29.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Customizing the view
+
+- [SWAttributionView.DisplayContext](displaycontext-swift.enum.md): The context for the content that influences the ranking of this view’s highlight.
+- [SWAttributionView.HorizontalAlignment](horizontalalignment-swift.enum.md): The horizontal alignment of attribution view’s contents.
+
+# SWAttributionViewBackgroundStyle (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Enumeration  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+The background styling of the attribution view’s contents.
+
+## Declaration
+
+```objectivec
+enum SWAttributionViewBackgroundStyle : NSInteger;
+```
+
+## Topics
+
+### Background styles
+
+- [SWAttributionViewBackgroundStyleDefault](backgroundstyle-swift.enum/default.md): The default background style the system chooses.
+- [SWAttributionViewBackgroundStyleColor](backgroundstyle-swift.enum/color.md): A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
+- [SWAttributionViewBackgroundStyleMaterial](backgroundstyle-swift.enum/material.md): A material background blur for the view’s contents, best when placed over multicolored backgrounds.
+
+## See Also
+
+### Customizing the view
+
+- [SWAttributionViewDisplayContext](displaycontext-swift.enum.md): The context for the content that influences the ranking of this view’s highlight.
+- [SWAttributionViewHorizontalAlignment](horizontalalignment-swift.enum.md): The horizontal alignment of attribution view’s contents.
+
+# Document: SWAttributionView.BackgroundStyle.color
+
+Source path: documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/color
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/color
+Description: Framework: Shared with You Kind: Case Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# SWAttributionView.BackgroundStyle.color (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
+
+## Declaration
+
+```swift
+case color
+```
+
+## See Also
+
+### Background styles
+
+- [SWAttributionView.BackgroundStyle.default](default.md): The default background style the system chooses.
+- [SWAttributionView.BackgroundStyle.material](material.md): A material background blur for the view’s contents, best when placed over multicolored backgrounds.
+
+# SWAttributionViewBackgroundStyleColor (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Enumeration Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
+
+## Declaration
+
+```objectivec
+SWAttributionViewBackgroundStyleColor
+```
+
+## See Also
+
+### Background styles
+
+- [SWAttributionViewBackgroundStyleDefault](default.md): The default background style the system chooses.
+- [SWAttributionViewBackgroundStyleMaterial](material.md): A material background blur for the view’s contents, best when placed over multicolored backgrounds.
+
+# Document: SWAttributionView.BackgroundStyle.default
+
+Source path: documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/default
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/default
+Description: Framework: Shared with You Kind: Case Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# SWAttributionView.BackgroundStyle.default (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+The default background style the system chooses.
+
+## Declaration
+
+```swift
+case `default`
+```
+
+## See Also
+
+### Background styles
+
+- [SWAttributionView.BackgroundStyle.color](color.md): A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
+- [SWAttributionView.BackgroundStyle.material](material.md): A material background blur for the view’s contents, best when placed over multicolored backgrounds.
+
+# SWAttributionViewBackgroundStyleDefault (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Enumeration Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+The default background style the system chooses.
+
+## Declaration
+
+```objectivec
+SWAttributionViewBackgroundStyleDefault
+```
+
+## See Also
+
+### Background styles
+
+- [SWAttributionViewBackgroundStyleColor](color.md): A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
+- [SWAttributionViewBackgroundStyleMaterial](material.md): A material background blur for the view’s contents, best when placed over multicolored backgrounds.
+
+# Document: init(rawValue:)
+
+Source path: documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/init(rawvalue:)
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/init(rawvalue:)
+Description: Framework: Shared with You Kind: Initializer Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# init(rawValue:)
+
+**Framework:** Shared with You  
+**Kind:** Initializer  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+init?(rawValue: Int)
+```
+
+# Document: SWAttributionView.BackgroundStyle.material
+
+Source path: documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/material
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/material
+Description: Framework: Shared with You Kind: Case Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# SWAttributionView.BackgroundStyle.material (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+A material background blur for the view’s contents, best when placed over multicolored backgrounds.
+
+## Declaration
+
+```swift
+case material
+```
+
+## See Also
+
+### Background styles
+
+- [SWAttributionView.BackgroundStyle.default](default.md): The default background style the system chooses.
+- [SWAttributionView.BackgroundStyle.color](color.md): A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
+
+# SWAttributionViewBackgroundStyleMaterial (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Enumeration Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+A material background blur for the view’s contents, best when placed over multicolored backgrounds.
+
+## Declaration
+
+```objectivec
+SWAttributionViewBackgroundStyleMaterial
+```
+
+## See Also
+
+### Background styles
+
+- [SWAttributionViewBackgroundStyleDefault](default.md): The default background style the system chooses.
+- [SWAttributionViewBackgroundStyleColor](color.md): A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
+
+# Document: backgroundStyle
+
+Source path: documentation/sharedwithyou/swattributionview/backgroundstyle-swift.property
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/backgroundstyle-swift.property
+Description: Framework: Shared with You Kind: Instance Property Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# backgroundStyle (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+The background style of the child view that contains names and avatars.
+
+## Declaration
+
+```swift
+var backgroundStyle: SWAttributionView.BackgroundStyle { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you don’t specify a background style, the system chooses one automatically. In general, [SWAttributionView.BackgroundStyle.color](backgroundstyle-swift.enum/color.md) looks best on monochrome backgrounds, while [SWAttributionView.BackgroundStyle.material](backgroundstyle-swift.enum/material.md) looks better on colored backgrounds.
+
+## See Also
+
+### Customizing highlights
+
+- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
+- [highlight](highlight.md): The highlight you use to display this attribution.
+- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
+- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
+- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
+- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
+- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
+
+# backgroundStyle (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+The background style of the child view that contains names and avatars.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign, readwrite) SWAttributionViewBackgroundStyle backgroundStyle;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you don’t specify a background style, the system chooses one automatically. In general, [SWAttributionViewBackgroundStyleColor](backgroundstyle-swift.enum/color.md) looks best on monochrome backgrounds, while [SWAttributionViewBackgroundStyleMaterial](backgroundstyle-swift.enum/material.md) looks better on colored backgrounds.
+
+## See Also
+
+### Customizing highlights
+
+- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
+- [highlight](highlight.md): The highlight you use to display this attribution.
+- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
+- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
+- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
+- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
+- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
+- [enablesMarquee](enablesmarquee.md): Automatically enables a marquee effect.
+
+# Document: SWAttributionView.DisplayContext
+
+Source path: documentation/sharedwithyou/swattributionview/displaycontext-swift.enum
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/displaycontext-swift.enum
+Description: Framework: Shared with You Kind: Enumeration Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# SWAttributionView.DisplayContext (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Enumeration  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+The context for the content that influences the ranking of this view’s highlight.
+
+## Declaration
+
+```swift
+enum DisplayContext
+```
+
+## Mentioned In
+
+- [Making your app content shareable](../making-your-app-content-shareable.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Set the appropriate display context on [SWAttributionView](../swattributionview.md) before the system adds the view to a window. This informs the system about how the user is consuming the attributed content, and influences future relevancy ranking of the [SWHighlight](../swhighlight.md) for this view.
+
+## Topics
+
+### Context styles
+
+- [SWAttributionView.DisplayContext.summary](displaycontext-swift.enum/summary.md): Indicates that the system is offering the attributed content shown along with this view to the user for consumption.
+- [SWAttributionView.DisplayContext.detail](displaycontext-swift.enum/detail.md): Indicates that the attributed content shown along with this view is being actively consumed by the user.
+
+### Initializers
+
+- [init(rawValue:)](displaycontext-swift.enum/init%28rawvalue_%29.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Customizing the view
+
+- [SWAttributionView.BackgroundStyle](backgroundstyle-swift.enum.md): The background styling of the attribution view’s contents.
+- [SWAttributionView.HorizontalAlignment](horizontalalignment-swift.enum.md): The horizontal alignment of attribution view’s contents.
+
+# SWAttributionViewDisplayContext (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Enumeration  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+The context for the content that influences the ranking of this view’s highlight.
+
+## Declaration
+
+```objectivec
+enum SWAttributionViewDisplayContext : NSInteger;
+```
+
+## Mentioned In
+
+- [Making your app content shareable](../making-your-app-content-shareable.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Set the appropriate display context on [SWAttributionView](../swattributionview.md) before the system adds the view to a window. This informs the system about how the user is consuming the attributed content, and influences future relevancy ranking of the [SWHighlight](../swhighlight.md) for this view.
+
+## Topics
+
+### Context styles
+
+- [SWAttributionViewDisplayContextSummary](displaycontext-swift.enum/summary.md): Indicates that the system is offering the attributed content shown along with this view to the user for consumption.
+- [SWAttributionViewDisplayContextDetail](displaycontext-swift.enum/detail.md): Indicates that the attributed content shown along with this view is being actively consumed by the user.
+
+## See Also
+
+### Customizing the view
+
+- [SWAttributionViewBackgroundStyle](backgroundstyle-swift.enum.md): The background styling of the attribution view’s contents.
+- [SWAttributionViewHorizontalAlignment](horizontalalignment-swift.enum.md): The horizontal alignment of attribution view’s contents.
+
+# Document: SWAttributionView.DisplayContext.detail
+
+Source path: documentation/sharedwithyou/swattributionview/displaycontext-swift.enum/detail
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/displaycontext-swift.enum/detail
+Description: Framework: Shared with You Kind: Case Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# SWAttributionView.DisplayContext.detail (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Indicates that the attributed content shown along with this view is being actively consumed by the user.
+
+## Declaration
+
+```swift
+case detail
+```
+
+## Mentioned In
+
+- [Making your app content shareable](../../making-your-app-content-shareable.md)
+
+## See Also
+
+### Context styles
+
+- [SWAttributionView.DisplayContext.summary](summary.md): Indicates that the system is offering the attributed content shown along with this view to the user for consumption.
+
+# SWAttributionViewDisplayContextDetail (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Enumeration Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Indicates that the attributed content shown along with this view is being actively consumed by the user.
+
+## Declaration
+
+```objectivec
+SWAttributionViewDisplayContextDetail
+```
+
+## Mentioned In
+
+- [Making your app content shareable](../../making-your-app-content-shareable.md)
+
+## See Also
+
+### Context styles
+
+- [SWAttributionViewDisplayContextSummary](summary.md): Indicates that the system is offering the attributed content shown along with this view to the user for consumption.
+
+# Document: init(rawValue:)
+
+Source path: documentation/sharedwithyou/swattributionview/displaycontext-swift.enum/init(rawvalue:)
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/displaycontext-swift.enum/init(rawvalue:)
+Description: Framework: Shared with You Kind: Initializer Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# init(rawValue:)
+
+**Framework:** Shared with You  
+**Kind:** Initializer  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+init?(rawValue: Int)
+```
+
+# Document: SWAttributionView.DisplayContext.summary
+
+Source path: documentation/sharedwithyou/swattributionview/displaycontext-swift.enum/summary
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/displaycontext-swift.enum/summary
+Description: Framework: Shared with You Kind: Case Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# SWAttributionView.DisplayContext.summary (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Indicates that the system is offering the attributed content shown along with this view to the user for consumption.
+
+## Declaration
+
+```swift
+case summary
+```
+
+## Mentioned In
+
+- [Making your app content shareable](../../making-your-app-content-shareable.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The is the default value for [displayContext](../displaycontext-swift.property.md).
+
+## See Also
+
+### Context styles
+
+- [SWAttributionView.DisplayContext.detail](detail.md): Indicates that the attributed content shown along with this view is being actively consumed by the user.
+
+# SWAttributionViewDisplayContextSummary (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Enumeration Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Indicates that the system is offering the attributed content shown along with this view to the user for consumption.
+
+## Declaration
+
+```objectivec
+SWAttributionViewDisplayContextSummary
+```
+
+## Mentioned In
+
+- [Making your app content shareable](../../making-your-app-content-shareable.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The is the default value for [displayContext](../displaycontext-swift.property.md).
+
+## See Also
+
+### Context styles
+
+- [SWAttributionViewDisplayContextDetail](detail.md): Indicates that the attributed content shown along with this view is being actively consumed by the user.
+
+# Document: displayContext
+
+Source path: documentation/sharedwithyou/swattributionview/displaycontext-swift.property
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/displaycontext-swift.property
+Description: Framework: Shared with You Kind: Instance Property Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# displayContext (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+The context for the content the system displays with this view.
+
+## Declaration
+
+```swift
+var displayContext: SWAttributionView.DisplayContext { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Set the `displayContext` prior to adding this view to your view hierarchy.
+
+## See Also
+
+### Customizing highlights
+
+- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
+- [highlight](highlight.md): The highlight you use to display this attribution.
+- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
+- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
+- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
+- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
+- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
+
+# displayContext (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+The context for the content the system displays with this view.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign, readwrite) SWAttributionViewDisplayContext displayContext;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Set the `displayContext` prior to adding this view to your view hierarchy.
+
+## See Also
+
+### Customizing highlights
+
+- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
+- [highlight](highlight.md): The highlight you use to display this attribution.
+- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
+- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
+- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
+- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
+- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
+- [enablesMarquee](enablesmarquee.md): Automatically enables a marquee effect.
+
+# Document: enablesMarquee
+
+Source path: documentation/sharedwithyou/swattributionview/enablesmarquee
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/enablesmarquee
+Description: Interface language: Objective-C
+
+# enablesMarquee
+
+**Interface language:** Objective-C
+
+**Framework:** Shared with You  
+**Kind:** Instance Property
+
+Automatically enables a marquee effect.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign, readwrite) BOOL enablesMarquee;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Automatically enables a marquee effect if the text contents extend past the bounds of the view.
+
+## See Also
+
+### Customizing highlights
+
+- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
+- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
+- [highlight](highlight.md): The highlight you use to display this attribution.
+- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
+- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
+- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
+- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
+- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
+
+# Document: highlight
+
+Source path: documentation/sharedwithyou/swattributionview/highlight
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/highlight
+Description: Framework: Shared with You Kind: Instance Property Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# highlight (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+The highlight you use to display this attribution.
+
+## Declaration
+
+```swift
+var highlight: SWHighlight? { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When your app sets this property to a new `highlight`, the system reloads the contents of the view.
+
+## See Also
+
+### Customizing highlights
+
+- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
+- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
+- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
+- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
+- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
+- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
+- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
+
+# highlight (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+The highlight you use to display this attribution.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, strong, readwrite, nullable) SWHighlight * highlight;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When your app sets this property to a new `highlight`, the system reloads the contents of the view.
+
+## See Also
+
+### Customizing highlights
+
+- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
+- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
+- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
+- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
+- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
+- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
+- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
+- [enablesMarquee](enablesmarquee.md): Automatically enables a marquee effect.
+
+# Document: highlightMenu
+
+Source path: documentation/sharedwithyou/swattributionview/highlightmenu
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/highlightmenu
+Description: Framework: Shared with You Kind: Instance Property Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# highlightMenu (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+A menu with a list of system actions specific to this hightlight.
+
+## Declaration
+
+```swift
+var highlightMenu: UIMenu { get }
+```
+
+```swift
+var highlightMenu: NSMenu { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this menu to augment an existing menu that the system attaches to the content represented by this [SWAttributionView](../swattributionview.md). This menu allows the user to reply to or hide the highlight. Your app needs to add this `hightlightMenu` inline with, and at the end of, the menu elements it augments.
+
+## See Also
+
+### Customizing highlights
+
+- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
+- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
+- [highlight](highlight.md): The highlight you use to display this attribution.
+- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
+- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
+- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
+- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
+
+# highlightMenu (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+A menu with a list of system actions specific to this hightlight.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, strong, readonly) UIMenu * highlightMenu;
+```
+
+```objectivec
+@property (nonatomic, strong, readonly) NSMenu * highlightMenu;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this menu to augment an existing menu that the system attaches to the content represented by this [SWAttributionView](../swattributionview.md). This menu allows the user to reply to or hide the highlight. Your app needs to add this `hightlightMenu` inline with, and at the end of, the menu elements it augments.
+
+## See Also
+
+### Customizing highlights
+
+- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
+- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
+- [highlight](highlight.md): The highlight you use to display this attribution.
+- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
+- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
+- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
+- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
+- [enablesMarquee](enablesmarquee.md): Automatically enables a marquee effect.
+
+# Document: SWAttributionView.HorizontalAlignment
+
+Source path: documentation/sharedwithyou/swattributionview/horizontalalignment-swift.enum
+Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/horizontalalignment-swift.enum
+Description: Framework: Shared with You Kind: Enumeration Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# SWAttributionView.HorizontalAlignment (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Enumeration  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+The horizontal alignment of attribution view’s contents.
+
+## Declaration
+
+```swift
+enum HorizontalAlignment
+```
+
+## Topics
+
+### Horizontal alignments
+
+- [SWAttributionView.HorizontalAlignment.default](horizontalalignment-swift.enum/default.md): Allows the system to choose the horizontal alignment.
+- [SWAttributionView.HorizontalAlignment.leading](horizontalalignment-swift.enum/leading.md): Aligns horizontally with the leading edge of the view.
+- [SWAttributionView.HorizontalAlignment.center](horizontalalignment-swift.enum/center.md): Aligns horizontally with the center of the view.
+- [SWAttributionView.HorizontalAlignment.trailing](horizontalalignment-swift.enum/trailing.md): Aligns horizontally with the trailing edge of the view.
+
+### Initializers
+
+- [init(rawValue:)](horizontalalignment-swift.enum/init%28rawvalue_%29.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Customizing the view
+
+- [SWAttributionView.BackgroundStyle](backgroundstyle-swift.enum.md): The background styling of the attribution view’s contents.
+- [SWAttributionView.DisplayContext](displaycontext-swift.enum.md): The context for the content that influences the ranking of this view’s highlight.
+
+# SWAttributionViewHorizontalAlignment (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Enumeration  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+The horizontal alignment of attribution view’s contents.
+
+## Declaration
+
+```objectivec
+enum SWAttributionViewHorizontalAlignment : NSInteger;
+```
+
+## Topics
+
+### Horizontal alignments
+
+- [SWAttributionViewHorizontalAlignmentDefault](horizontalalignment-swift.enum/default.md): Allows the system to choose the horizontal alignment.
+- [SWAttributionViewHorizontalAlignmentLeading](horizontalalignment-swift.enum/leading.md): Aligns horizontally with the leading edge of the view.
+- [SWAttributionViewHorizontalAlignmentCenter](horizontalalignment-swift.enum/center.md): Aligns horizontally with the center of the view.
+- [SWAttributionViewHorizontalAlignmentTrailing](horizontalalignment-swift.enum/trailing.md): Aligns horizontally with the trailing edge of the view.
+
+## See Also
+
+### Customizing the view
+
+- [SWAttributionViewBackgroundStyle](backgroundstyle-swift.enum.md): The background styling of the attribution view’s contents.
+- [SWAttributionViewDisplayContext](displaycontext-swift.enum.md): The context for the content that influences the ranking of this view’s highlight.
 
 # Document: SWAttributionView.HorizontalAlignment.center
 
@@ -209992,1479 +211405,3 @@ static simd_short2 simd_short_sat(simd_float2 __x);
 - [simd_short_sat](simd_short_sat-3mfdp.md): Returns a new vector from the specified vector of 64-bit, signed integer elements.
 - [simd_short_sat](simd_short_sat-3mpct.md): Returns a new vector from the specified vector of 64-bit, unsigned integer elements.
 - [simd_short_sat](simd_short_sat-3mmpp.md): Returns a new vector from the specified vector of 64-bit, floating point elements.
-
-# Document: simd_short_sat
-
-Source path: documentation/simd/simd_short_sat-3mmpp
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-3mmpp
-Description: Interface language: Objective-C
-
-# simd_short_sat
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns a new vector from the specified vector of 64-bit, floating point elements.
-
-## Declaration
-
-```objectivec
-static simd_short2 simd_short_sat(simd_double2 __x);
-```
-
-## See Also
-
-### Functions to Perform Saturating Conversion From Vectors of Other Types
-
-- [simd_short_sat](simd_short_sat-3md2f.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mn6v.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-3m83r.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mi6f.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-3mg4b.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mqaj.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-3mfdp.md): Returns a new vector from the specified vector of 64-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mpct.md): Returns a new vector from the specified vector of 64-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-3mm1h.md): Returns a new vector from the specified vector of 32-bit, floating point elements.
-
-# Document: simd_short_sat
-
-Source path: documentation/simd/simd_short_sat-3mn6v
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-3mn6v
-Description: Interface language: Objective-C
-
-# simd_short_sat
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
-
-## Declaration
-
-```objectivec
-static simd_short2 simd_short_sat(simd_uchar2 __x);
-```
-
-## See Also
-
-### Functions to Perform Saturating Conversion From Vectors of Other Types
-
-- [simd_short_sat](simd_short_sat-3md2f.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3m83r.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mi6f.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-3mg4b.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mqaj.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-3mfdp.md): Returns a new vector from the specified vector of 64-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mpct.md): Returns a new vector from the specified vector of 64-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-3mm1h.md): Returns a new vector from the specified vector of 32-bit, floating point elements.
-- [simd_short_sat](simd_short_sat-3mmpp.md): Returns a new vector from the specified vector of 64-bit, floating point elements.
-
-# Document: simd_short_sat
-
-Source path: documentation/simd/simd_short_sat-3mpct
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-3mpct
-Description: Interface language: Objective-C
-
-# simd_short_sat
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns a new vector from the specified vector of 64-bit, unsigned integer elements.
-
-## Declaration
-
-```objectivec
-static simd_short2 simd_short_sat(simd_ulong2 __x);
-```
-
-## See Also
-
-### Functions to Perform Saturating Conversion From Vectors of Other Types
-
-- [simd_short_sat](simd_short_sat-3md2f.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mn6v.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-3m83r.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mi6f.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-3mg4b.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mqaj.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-3mfdp.md): Returns a new vector from the specified vector of 64-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mm1h.md): Returns a new vector from the specified vector of 32-bit, floating point elements.
-- [simd_short_sat](simd_short_sat-3mmpp.md): Returns a new vector from the specified vector of 64-bit, floating point elements.
-
-# Document: simd_short_sat
-
-Source path: documentation/simd/simd_short_sat-3mqaj
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-3mqaj
-Description: Interface language: Objective-C
-
-# simd_short_sat
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
-
-## Declaration
-
-```objectivec
-static simd_short2 simd_short_sat(simd_uint2 __x);
-```
-
-## See Also
-
-### Functions to Perform Saturating Conversion From Vectors of Other Types
-
-- [simd_short_sat](simd_short_sat-3md2f.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mn6v.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-3m83r.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mi6f.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-3mg4b.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mfdp.md): Returns a new vector from the specified vector of 64-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-3mpct.md): Returns a new vector from the specified vector of 64-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-3mm1h.md): Returns a new vector from the specified vector of 32-bit, floating point elements.
-- [simd_short_sat](simd_short_sat-3mmpp.md): Returns a new vector from the specified vector of 64-bit, floating point elements.
-
-# Document: simd_short_sat
-
-Source path: documentation/simd/simd_short_sat-3mqel
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-3mqel
-Description: Interface language: Objective-C
-
-# simd_short_sat
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-## Declaration
-
-```objectivec
-static simd_short2 simd_short_sat(simd_half2 __x);
-```
-
-# Document: simd_short_sat
-
-Source path: documentation/simd/simd_short_sat-54l40
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-54l40
-Description: Interface language: Objective-C
-
-# simd_short_sat
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns a new vector from the specified vector of 16-bit, signed integer elements.
-
-## Declaration
-
-```objectivec
-static simd_short16 simd_short_sat(simd_short16 __x);
-```
-
-## See Also
-
-### Functions to Perform Saturating Conversion From Vectors of Other Types
-
-- [simd_short_sat](simd_short_sat-54q0w.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-55000.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54uxs.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54rx4.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-551w8.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54yg4.md): Returns a new vector from the specified vector of 32-bit, floating-point elements.
-
-# Document: simd_short_sat
-
-Source path: documentation/simd/simd_short_sat-54q0w
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-54q0w
-Description: Interface language: Objective-C
-
-# simd_short_sat
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns a new vector from the specified vector of 8-bit, signed integer elements.
-
-## Declaration
-
-```objectivec
-static simd_short16 simd_short_sat(simd_char16 __x);
-```
-
-## See Also
-
-### Functions to Perform Saturating Conversion From Vectors of Other Types
-
-- [simd_short_sat](simd_short_sat-55000.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54l40.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-54uxs.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54rx4.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-551w8.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54yg4.md): Returns a new vector from the specified vector of 32-bit, floating-point elements.
-
-# Document: simd_short_sat
-
-Source path: documentation/simd/simd_short_sat-54rx4
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-54rx4
-Description: Interface language: Objective-C
-
-# simd_short_sat
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns a new vector from the specified vector of 32-bit, signed integer elements.
-
-## Declaration
-
-```objectivec
-static simd_short16 simd_short_sat(simd_int16 __x);
-```
-
-## See Also
-
-### Functions to Perform Saturating Conversion From Vectors of Other Types
-
-- [simd_short_sat](simd_short_sat-54q0w.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-55000.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54l40.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-54uxs.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-551w8.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54yg4.md): Returns a new vector from the specified vector of 32-bit, floating-point elements.
-
-# Document: simd_short_sat
-
-Source path: documentation/simd/simd_short_sat-54uxs
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-54uxs
-Description: Interface language: Objective-C
-
-# simd_short_sat
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
-
-## Declaration
-
-```objectivec
-static simd_short16 simd_short_sat(simd_ushort16 __x);
-```
-
-## See Also
-
-### Functions to Perform Saturating Conversion From Vectors of Other Types
-
-- [simd_short_sat](simd_short_sat-54q0w.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-55000.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54l40.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-54rx4.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-551w8.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54yg4.md): Returns a new vector from the specified vector of 32-bit, floating-point elements.
-
-# Document: simd_short_sat
-
-Source path: documentation/simd/simd_short_sat-54yg4
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-54yg4
-Description: Interface language: Objective-C
-
-# simd_short_sat
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns a new vector from the specified vector of 32-bit, floating-point elements.
-
-## Declaration
-
-```objectivec
-static simd_short16 simd_short_sat(simd_float16 __x);
-```
-
-## See Also
-
-### Functions to Perform Saturating Conversion From Vectors of Other Types
-
-- [simd_short_sat](simd_short_sat-54q0w.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-55000.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54l40.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-54uxs.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54rx4.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-551w8.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
-
-# Document: simd_short_sat
-
-Source path: documentation/simd/simd_short_sat-55000
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-55000
-Description: Interface language: Objective-C
-
-# simd_short_sat
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
-
-## Declaration
-
-```objectivec
-static simd_short16 simd_short_sat(simd_uchar16 __x);
-```
-
-## See Also
-
-### Functions to Perform Saturating Conversion From Vectors of Other Types
-
-- [simd_short_sat](simd_short_sat-54q0w.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-54l40.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-54uxs.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54rx4.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-551w8.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54yg4.md): Returns a new vector from the specified vector of 32-bit, floating-point elements.
-
-# Document: simd_short_sat
-
-Source path: documentation/simd/simd_short_sat-551gs
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-551gs
-Description: Interface language: Objective-C
-
-# simd_short_sat
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-## Declaration
-
-```objectivec
-static simd_short16 simd_short_sat(simd_half16 __x);
-```
-
-# Document: simd_short_sat
-
-Source path: documentation/simd/simd_short_sat-551w8
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-551w8
-Description: Interface language: Objective-C
-
-# simd_short_sat
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
-
-## Declaration
-
-```objectivec
-static simd_short16 simd_short_sat(simd_uint16 __x);
-```
-
-## See Also
-
-### Functions to Perform Saturating Conversion From Vectors of Other Types
-
-- [simd_short_sat](simd_short_sat-54q0w.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-55000.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54l40.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-54uxs.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
-- [simd_short_sat](simd_short_sat-54rx4.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
-- [simd_short_sat](simd_short_sat-54yg4.md): Returns a new vector from the specified vector of 32-bit, floating-point elements.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-6goju
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-6goju
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_double3) -> simd_double3
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-8db3x.md): Returns the absolute value of each element in a vector.
-- [abs(\_:)](abs%28__%29-8miv.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-2jao.md): Returns each element in a vector clamped to a specified range.
-- [clamp(\_:min:max:)](clamp%28__min_max_%29-5otf7.md): Returns each element in a vector clamped to a specified range.
-- [clamp(\_:min:max:)](clamp%28__min_max_%29-6m2so.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-4v2cb.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract(\_:)](simd_fract%28__%29-47n4w.md): Returns the fractional part of each element in a vector.
-- [fract(\_:)](fract%28__%29-swov.md): Returns the fractional part of each element in a vector.
-- [sign(\_:)](sign%28__%29-2qtea.md): Returns the sign of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-2gbx7.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-- [step(\_:edge:)](step%28__edge_%29-4azct.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_double3 simd_sign(simd_double3 x);
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs](simd_abs%28__%29-8db3x.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-2jao.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal](simd_equal%28____%29-4v2cb.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract](simd_fract%28__%29-47n4w.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-2gbx7.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-6gp3q
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-6gp3q
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_float3) -> simd_float3
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-8dafp.md): Returns the absolute value of each element in a vector.
-- [abs(\_:)](abs%28__%29-6lc19.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-5szev.md): Returns each element in a vector clamped to a specified range.
-- [clamp(\_:min:max:)](clamp%28__min_max_%29-3esdw.md): Returns each element in a vector clamped to a specified range.
-- [clamp(\_:min:max:)](clamp%28__min_max_%29-9eeiz.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-6i7q4.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [fract(\_:)](fract%28__%29-3rsxo.md): Returns the fractional part of each element in a vector.
-- [simd_fract(\_:)](simd_fract%28__%29-47mh4.md): Returns the fractional part of each element in a vector.
-- [sign(\_:)](sign%28__%29-9p5uo.md): Returns the sign of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-9ygnw.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-- [step(\_:edge:)](step%28__edge_%29-48vbr.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_float3 simd_sign(simd_float3 x);
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs](simd_abs%28__%29-8dafp.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-5szev.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal](simd_equal%28____%29-6i7q4.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract](simd_fract%28__%29-47mh4.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-9ygnw.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-6gppu
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-6gppu
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_half3) -> simd_half3
-```
-
-## See Also
-
-### Common functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-8derx.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-2h8ov.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-9k8m9.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract(\_:)](simd_fract%28__%29-47quw.md): Returns the fractional part of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-8w7e.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_half3 simd_sign(simd_half3 x);
-```
-
-## See Also
-
-### Common functions
-
-- [simd_abs](simd_abs%28__%29-8derx.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-2h8ov.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal](simd_equal%28____%29-9k8m9.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract](simd_fract%28__%29-47quw.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-8w7e.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-6jld1
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-6jld1
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_float2) -> simd_float2
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-886vq.md): Returns the absolute value of each element in a vector.
-- [abs(\_:)](abs%28__%29-6ckob.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-9b6uf.md): Returns each element in a vector clamped to a specified range.
-- [clamp(\_:min:max:)](clamp%28__min_max_%29-5rthg.md): Returns each element in a vector clamped to a specified range.
-- [clamp(\_:min:max:)](clamp%28__min_max_%29-3oo0f.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-9z8e8.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract(\_:)](simd_fract%28__%29-42ipv.md): Returns the fractional part of each element in a vector.
-- [fract(\_:)](fract%28__%29-7rplw.md): Returns the fractional part of each element in a vector.
-- [sign(\_:)](sign%28__%29-2e6do.md): Returns the sign of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-9xjdc.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-- [step(\_:edge:)](step%28__edge_%29-1pthr.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_float2 simd_sign(simd_float2 x);
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs](simd_abs%28__%29-886vq.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-9b6uf.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal](simd_equal%28____%29-9z8e8.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract](simd_fract%28__%29-42ipv.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-9xjdc.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-6jlx9
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-6jlx9
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_double2) -> simd_double2
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-8869e.md): Returns the absolute value of each element in a vector.
-- [abs(\_:)](abs%28__%29-1p8t7.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-6puwa.md): Returns each element in a vector clamped to a specified range.
-- [clamp(\_:min:max:)](clamp%28__min_max_%29-7n2jv.md): Returns each element in a vector clamped to a specified range.
-- [clamp(\_:min:max:)](clamp%28__min_max_%29-6d1s7.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-vmn4.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract(\_:)](simd_fract%28__%29-42i3r.md): Returns the fractional part of each element in a vector.
-- [fract(\_:)](fract%28__%29-2gjrn.md): Returns the fractional part of each element in a vector.
-- [sign(\_:)](sign%28__%29-5fczz.md): Returns the sign of each element in a vector.
-- [step(\_:edge:)](step%28__edge_%29-2qauk.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-- [simd_step(\_:\_:)](simd_step%28____%29-8jlf2.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_double2 simd_sign(simd_double2 x);
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs](simd_abs%28__%29-8869e.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-6puwa.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal](simd_equal%28____%29-vmn4.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract](simd_fract%28__%29-42i3r.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-8jlf2.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-6jn8t
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-6jn8t
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_half2) -> simd_half2
-```
-
-## See Also
-
-### Common functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-889zu.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-8crce.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-6mu96.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract(\_:)](simd_fract%28__%29-42lx3.md): Returns the fractional part of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-4dqzp.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_half2 simd_sign(simd_half2 x);
-```
-
-## See Also
-
-### Common functions
-
-- [simd_abs](simd_abs%28__%29-889zu.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-8crce.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal](simd_equal%28____%29-6mu96.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract](simd_fract%28__%29-42lx3.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-4dqzp.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-74z7b
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-74z7b
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_double4) -> simd_double4
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-81rjc.md): Returns the absolute value of each element in a vector.
-- [abs(\_:)](abs%28__%29-63bb7.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-8skia.md): Returns each element in a vector clamped to a specified range.
-- [clamp(\_:min:max:)](clamp%28__min_max_%29-3iua3.md): Returns each element in a vector clamped to a specified range.
-- [clamp(\_:min:max:)](clamp%28__min_max_%29-51jkt.md): Returns each element in a vector clamped to a specified range.
-- [simd_fract(\_:)](simd_fract%28__%29-3w3dh.md): Returns the fractional part of each element in a vector.
-- [fract(\_:)](fract%28__%29-8mowg.md): Returns the fractional part of each element in a vector.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-6lpka.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [sign(\_:)](sign%28__%29-86tur.md): Returns the sign of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-6nrf4.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-- [step(\_:edge:)](step%28__edge_%29-641e1.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_double4 simd_sign(simd_double4 x);
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs](simd_abs%28__%29-81rjc.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-8skia.md): Returns each element in a vector clamped to a specified range.
-- [simd_fract](simd_fract%28__%29-3w3dh.md): Returns the fractional part of each element in a vector.
-- [simd_equal](simd_equal%28____%29-6lpka.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_step](simd_step%28____%29-6nrf4.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-74zwz
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-74zwz
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_float4) -> simd_float4
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-81qo8.md): Returns the absolute value of each element in a vector.
-- [abs(\_:)](abs%28__%29-1fzhv.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-6vmhh.md): Returns each element in a vector clamped to a specified range.
-- [clamp(\_:min:max:)](clamp%28__min_max_%29-46ay6.md): Returns each element in a vector clamped to a specified range.
-- [clamp(\_:min:max:)](clamp%28__min_max_%29-19q7w.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-6sa26.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract(\_:)](simd_fract%28__%29-3w2rh.md): Returns the fractional part of each element in a vector.
-- [fract(\_:)](fract%28__%29-9s3df.md): Returns the fractional part of each element in a vector.
-- [sign(\_:)](sign%28__%29-167c1.md): Returns the sign of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-1fxwh.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-- [step(\_:edge:)](step%28__edge_%29-8we4c.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_float4 simd_sign(simd_float4 x);
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs](simd_abs%28__%29-81qo8.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-6vmhh.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal](simd_equal%28____%29-6sa26.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract](simd_fract%28__%29-3w2rh.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-1fxwh.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-7533b
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-7533b
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_half4) -> simd_half4
-```
-
-## See Also
-
-### Common functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-81q3k.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-2vvpa.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-6nuuw.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract(\_:)](simd_fract%28__%29-3w251.md): Returns the fractional part of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-4knqw.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_half4 simd_sign(simd_half4 x);
-```
-
-## See Also
-
-### Common functions
-
-- [simd_abs](simd_abs%28__%29-81q3k.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-2vvpa.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal](simd_equal%28____%29-6nuuw.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract](simd_fract%28__%29-3w251.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-4knqw.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-7hb8r
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-7hb8r
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_double8) -> simd_double8
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-7p0dw.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-q88m.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-8pk1m.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract(\_:)](simd_fract%28__%29-3jcfd.md): Returns the fractional part of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-1vckv.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_double8 simd_sign(simd_double8 x);
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs](simd_abs%28__%29-7p0dw.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-q88m.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal](simd_equal%28____%29-8pk1m.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract](simd_fract%28__%29-3jcfd.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-1vckv.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-7hbzz
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-7hbzz
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_float8) -> simd_float8
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-7ozws.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-14mzm.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-7of37.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract(\_:)](simd_fract%28__%29-3jbrt.md): Returns the fractional part of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-96e50.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_float8 simd_sign(simd_float8 x);
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs](simd_abs%28__%29-7ozws.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-14mzm.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal](simd_equal%28____%29-7of37.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract](simd_fract%28__%29-3jbrt.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-96e50.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-7hck3
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-7hck3
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_half8) -> simd_half8
-```
-
-## See Also
-
-### Common functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-7p1mc.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-7a090.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-8nejo.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract(\_:)](simd_fract%28__%29-3jdnl.md): Returns the fractional part of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-5v3vi.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_half8 simd_sign(simd_half8 x);
-```
-
-## See Also
-
-### Common functions
-
-- [simd_abs](simd_abs%28__%29-7p1mc.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-7a090.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal](simd_equal%28____%29-8nejo.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract](simd_fract%28__%29-3jdnl.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-5v3vi.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-9365i
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-9365i
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: Float16) -> Float16
-```
-
-## See Also
-
-### Common functions
-
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-c4d6.md): Returns each element in a vector clamped to a specified range.
-- [simd_fract(\_:)](simd_fract%28__%29-1wwew.md): Returns the fractional part of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-u24h.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static _Float16 simd_sign(_Float16 x);
-```
-
-## See Also
-
-### Common functions
-
-- [simd_clamp](simd_clamp%28______%29-c4d6.md): Returns each element in a vector clamped to a specified range.
-- [simd_fract](simd_fract%28__%29-1wwew.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-u24h.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-937ee
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-937ee
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: Double) -> Double
-```
-
-## See Also
-
-### Common Functions
-
-- [step(\_:edge:)](step%28__edge_%29-382a5.md)
-- [simd_step(\_:\_:)](simd_step%28____%29-8mpre.md)
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-1ktlk.md): Returns each element in a vector clamped to a specified range.
-- [simd_fract(\_:)](simd_fract%28__%29-1wsn4.md): Returns the fractional part of each element in a vector.
-- [sign(\_:)](sign%28__%29-iwmp.md): Returns the sign of each element in a vector.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static double simd_sign(double x);
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_step](simd_step%28____%29-8mpre.md)
-- [simd_clamp](simd_clamp%28______%29-1ktlk.md): Returns each element in a vector clamped to a specified range.
-- [simd_fract](simd_fract%28__%29-1wsn4.md): Returns the fractional part of each element in a vector.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-9380i
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-9380i
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: Float) -> Float
-```
-
-## See Also
-
-### Common Functions
-
-- [step(\_:edge:)](step%28__edge_%29-7md5f.md): Returns zero for each element in a vector less than a specified edge; one otherwise.
-- [simd_step(\_:\_:)](simd_step%28____%29-7127e.md): Returns zero for each element in a vector less than a specified edge; one otherwise.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-8f4ck.md): Returns each element in a vector clamped to a specified range.
-- [simd_fract(\_:)](simd_fract%28__%29-1ws2w.md): Returns the fractional part of each element in a vector.
-- [sign(\_:)](sign%28__%29-iw0p.md): Returns the sign of each element in a vector.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static float simd_sign(float x);
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_step](simd_step%28____%29-7127e.md): Returns zero for each element in a vector less than a specified edge; one otherwise.
-- [simd_clamp](simd_clamp%28______%29-8f4ck.md): Returns each element in a vector clamped to a specified range.
-- [simd_fract](simd_fract%28__%29-1ws2w.md): Returns the fractional part of each element in a vector.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-9r24j
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-9r24j
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_half32) -> simd_half32
-```
-
-## See Also
-
-### Common functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-2byol.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-868pk.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-5620v.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract(\_:)](simd_fract%28__%29-4zj0y.md): Returns the fractional part of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-2kbac.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_half32 simd_sign(simd_half32 x);
-```
-
-## See Also
-
-### Common functions
-
-- [simd_abs](simd_abs%28__%29-2byol.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-868pk.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal](simd_equal%28____%29-5620v.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract](simd_fract%28__%29-4zj0y.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-2kbac.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-tc2v
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-tc2v
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_float16) -> simd_float16
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-47h6g.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-92son.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-376kl.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract(\_:)](simd_fract%28__%29-6v1ix.md): Returns the fractional part of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-14cn0.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_float16 simd_sign(simd_float16 x);
-```
-
-## See Also
-
-### Common Functions
-
-- [simd_abs](simd_abs%28__%29-47h6g.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-92son.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal](simd_equal%28____%29-376kl.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract](simd_fract%28__%29-6v1ix.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-14cn0.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_sign(_:)
-
-Source path: documentation/simd/simd_sign(_:)-tcn7
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-tcn7
-Description: Framework: simd Kind: Function
-
-# simd_sign(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_sign(_ x: simd_half16) -> simd_half16
-```
-
-## See Also
-
-### Common functions
-
-- [simd_abs(\_:)](simd_abs%28__%29-47hrc.md): Returns the absolute value of each element in a vector.
-- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-5xcny.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal(\_:\_:)](simd_equal%28____%29-9ijsx.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract(\_:)](simd_fract%28__%29-6v27d.md): Returns the fractional part of each element in a vector.
-- [simd_step(\_:\_:)](simd_step%28____%29-7ryeb.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# simd_sign (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the sign of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_half16 simd_sign(simd_half16 x);
-```
-
-## See Also
-
-### Common functions
-
-- [simd_abs](simd_abs%28__%29-47hrc.md): Returns the absolute value of each element in a vector.
-- [simd_clamp](simd_clamp%28______%29-5xcny.md): Returns each element in a vector clamped to a specified range.
-- [simd_equal](simd_equal%28____%29-9ijsx.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
-- [simd_fract](simd_fract%28__%29-6v27d.md): Returns the fractional part of each element in a vector.
-- [simd_step](simd_step%28____%29-7ryeb.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
-
-# Document: simd_slerp(_:_:_:)
-
-Source path: documentation/simd/simd_slerp(_:_:_:)-65dt5
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_slerp(_:_:_:)-65dt5
-Description: Framework: simd Kind: Function
-
-# simd_slerp(\_:\_:\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns a spherical linearly interpolated value along the shortest arc between two quaternions.
-
-## Declaration
-
-```swift
-func simd_slerp(_ q0: simd_quatd, _ q1: simd_quatd, _ t: Double) -> simd_quatd
-```
-
-## See Also
-
-### Applying geometric operations to quaternions
-
-- [simd_act(\_:\_:)](simd_act%28____%29-47h09.md): Returns a vector rotated by a quaternion.
-- [act(\_:)](simd_quatd/act%28__%29.md): Returns the specified vector rotated by the quaternion.
-- [simd_angle(\_:)](simd_angle%28__%29-zuvx.md): Returns the angle by which a quaternion rotates.
-- [simd_axis(\_:)](simd_axis%28__%29-56wf4.md): Returns the normalized axis about which the action of the specified quaternion rotates.
-- [simd_bezier(\_:\_:\_:\_:\_:)](simd_bezier%28__________%29-556xd.md): Returns the spherical cubic Bezier interpolation between quaternions.
-- [simd_conjugate(\_:)](simd_conjugate%28__%29-98awl.md): Returns the conjugate of a quaternion.
-- [simd_imag(\_:)](simd_imag%28__%29-2c7fz.md): Returns the imaginary (vector) part of a quaternion.
-- [simd_negate(\_:)](simd_negate%28__%29-3ysgu.md): Returns the negation of a quaternion.
-- [simd_real(\_:)](simd_real%28__%29-75t5f.md): Returns the real (scalar) part of a quaternion.
-- [simd_slerp_longest(\_:\_:\_:)](simd_slerp_longest%28______%29-8hbz2.md): Returns a spherical linearly interpolated value along the longest arc between two quaternions.
-- [simd_spline(\_:\_:\_:\_:\_:)](simd_spline%28__________%29-19wbg.md): Returns an interpolated value between two quaternions along a spherical cubic spline.
-- [simd_dot(\_:\_:)](simd_dot%28____%29-2bnqp.md): Returns the dot product of two quaternions.
-- [dot(\_:\_:)](dot%28____%29-438xp.md)
-- [simd_length(\_:)](simd_length%28__%29-52o29.md): Returns the length of a quaternion.
-- [simd_normalize(\_:)](simd_normalize%28__%29-ud11.md): Returns a quaternion pointing in the same direction as the supplied quaternion with a length of 1.
-
-# simd_slerp (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns a spherical linearly interpolated value along the shortest arc between two quaternions.
-
-## Declaration
-
-```objectivec
-static simd_quatd simd_slerp(simd_quatd q0, simd_quatd q1, double t);
-```
-
-## See Also
-
-### Applying geometric operations to quaternions
-
-- [simd_act](simd_act%28____%29-47h09.md): Returns a vector rotated by a quaternion.
-- [simd_angle](simd_angle%28__%29-zuvx.md): Returns the angle by which a quaternion rotates.
-- [simd_axis](simd_axis%28__%29-56wf4.md): Returns the normalized axis about which the action of the specified quaternion rotates.
-- [simd_bezier](simd_bezier%28__________%29-556xd.md): Returns the spherical cubic Bezier interpolation between quaternions.
-- [simd_conjugate](simd_conjugate%28__%29-98awl.md): Returns the conjugate of a quaternion.
-- [simd_imag](simd_imag%28__%29-2c7fz.md): Returns the imaginary (vector) part of a quaternion.
-- [simd_negate](simd_negate%28__%29-3ysgu.md): Returns the negation of a quaternion.
-- [simd_real](simd_real%28__%29-75t5f.md): Returns the real (scalar) part of a quaternion.
-- [simd_slerp_longest](simd_slerp_longest%28______%29-8hbz2.md): Returns a spherical linearly interpolated value along the longest arc between two quaternions.
-- [simd_spline](simd_spline%28__________%29-19wbg.md): Returns an interpolated value between two quaternions along a spherical cubic spline.
-- [simd_dot](simd_dot%28____%29-2bnqp.md): Returns the dot product of two quaternions.
-- [simd_length](simd_length%28__%29-52o29.md): Returns the length of a quaternion.
-- [simd_normalize](simd_normalize%28__%29-ud11.md): Returns a quaternion pointing in the same direction as the supplied quaternion with a length of 1.
-
-# Document: simd_slerp(_:_:_:)
-
-Source path: documentation/simd/simd_slerp(_:_:_:)-7vayy
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_slerp(_:_:_:)-7vayy
-Description: Framework: simd Kind: Function
-
-# simd_slerp(\_:\_:\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-## Declaration
-
-```swift
-func simd_slerp(_ q0: simd_quath, _ q1: simd_quath, _ t: Float16) -> simd_quath
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-Spherical linear interpolation along the shortest arc between quaternions `q0` and `q1`.
-
-# simd_slerp (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-## Declaration
-
-```objectivec
-static simd_quath simd_slerp(simd_quath q0, simd_quath q1, _Float16 t);
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-Spherical linear interpolation along the shortest arc between quaternions `q0` and `q1`.

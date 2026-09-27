@@ -1,10 +1,1411 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 53
+
+# Document: kFxError_Success
+
+Source path: documentation/professional_video_applications/kfxerror_success
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxerror_success
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxError_Success (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+No error occurred.
+
+## Declaration
+
+```swift
+var kFxError_Success: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
+- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
+- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
+- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
+- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
+- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
+- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
+- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
+- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
+- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
+- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
+- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
+- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
+- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
+- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
+
+# kFxError_Success (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+No error occurred.
+
+## Declaration
+
+```objectivec
+kFxError_Success
+```
+
+## See Also
+
+### Constants
+
+- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
+- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
+- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
+- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
+- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
+- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
+- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
+- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
+- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
+- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
+- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
+- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
+- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
+- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
+- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
+
+# Document: kFxError_ThirdPartyDeveloperStart
+
+Source path: documentation/professional_video_applications/kfxerror_thirdpartydeveloperstart
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxerror_thirdpartydeveloperstart
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxError_ThirdPartyDeveloperStart (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+All third-party error values must be greater than or equal to this value.
+
+## Declaration
+
+```swift
+var kFxError_ThirdPartyDeveloperStart: Int { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+All third-party error values should be `>= 100000` if none of the above error enumeration values are sufficient.
+
+## See Also
+
+### Constants
+
+- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
+- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
+- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
+- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
+- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
+- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
+- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
+- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
+- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
+- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
+- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
+- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
+- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
+- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
+- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
+
+# kFxError_ThirdPartyDeveloperStart (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+All third-party error values must be greater than or equal to this value.
+
+## Declaration
+
+```objectivec
+kFxError_ThirdPartyDeveloperStart
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+All third-party error values should be `>= 100000` if none of the above error enumeration values are sufficient.
+
+## See Also
+
+### Constants
+
+- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
+- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
+- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
+- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
+- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
+- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
+- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
+- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
+- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
+- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
+- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
+- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
+- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
+- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
+- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
+
+# Document: kFxError_UnableToCreateDynamicRegistrationEndpoint
+
+Source path: documentation/professional_video_applications/kfxerror_unabletocreatedynamicregistrationendpoint
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxerror_unabletocreatedynamicregistrationendpoint
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.1+
+
+# kFxError_UnableToCreateDynamicRegistrationEndpoint (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 4.1+
+
+An error that indicates that the XPC service was unable to create a new XPC Listener Endpoint for communication with the host application.
+
+## Declaration
+
+```swift
+var kFxError_UnableToCreateDynamicRegistrationEndpoint: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
+- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
+- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
+- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
+- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
+- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
+- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
+- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
+- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
+- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
+- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
+- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
+- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
+- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
+- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
+
+# kFxError_UnableToCreateDynamicRegistrationEndpoint (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+An error that indicates that the XPC service was unable to create a new XPC Listener Endpoint for communication with the host application.
+
+## Declaration
+
+```objectivec
+kFxError_UnableToCreateDynamicRegistrationEndpoint
+```
+
+## See Also
+
+### Constants
+
+- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
+- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
+- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
+- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
+- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
+- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
+- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
+- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
+- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
+- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
+- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
+- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
+- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
+- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
+- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
+
+# Document: kFxError_UnableToInstantiateDynamicRegistrar
+
+Source path: documentation/professional_video_applications/kfxerror_unabletoinstantiatedynamicregistrar
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxerror_unabletoinstantiatedynamicregistrar
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.1+
+
+# kFxError_UnableToInstantiateDynamicRegistrar (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 4.1+
+
+An error that indicates that the XPC service was unable to instantiate a dynamic registrar object.
+
+## Declaration
+
+```swift
+var kFxError_UnableToInstantiateDynamicRegistrar: Int { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This error may occur either because no class name was listed in the XPC’s `Info.plist` file, or because the class listed was incorrect or had an error during instantiation.
+
+## See Also
+
+### Constants
+
+- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
+- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
+- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
+- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
+- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
+- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
+- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
+- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
+- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
+- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
+- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
+- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
+- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
+- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
+- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
+
+# kFxError_UnableToInstantiateDynamicRegistrar (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+An error that indicates that the XPC service was unable to instantiate a dynamic registrar object.
+
+## Declaration
+
+```objectivec
+kFxError_UnableToInstantiateDynamicRegistrar
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This error may occur either because no class name was listed in the XPC’s `Info.plist` file, or because the class listed was incorrect or had an error during instantiation.
+
+## See Also
+
+### Constants
+
+- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
+- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
+- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
+- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
+- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
+- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
+- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
+- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
+- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
+- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
+- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
+- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
+- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
+- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
+- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
+
+# Document: kFxError_UnableToMovePlayhead
+
+Source path: documentation/professional_video_applications/kfxerror_unabletomoveplayhead
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxerror_unabletomoveplayhead
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.2+
+
+# kFxError_UnableToMovePlayhead (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 4.2+
+
+An error that indicates that an attempt by the host to move the playhead failed.
+
+## Declaration
+
+```swift
+var kFxError_UnableToMovePlayhead: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
+- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
+- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
+- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
+- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
+- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
+- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
+- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
+- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
+- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
+- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
+- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
+- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
+- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
+- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
+
+# kFxError_UnableToMovePlayhead (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+An error that indicates that an attempt by the host to move the playhead failed.
+
+## Declaration
+
+```objectivec
+kFxError_UnableToMovePlayhead
+```
+
+## See Also
+
+### Constants
+
+- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
+- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
+- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
+- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
+- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
+- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
+- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
+- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
+- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
+- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
+- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
+- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
+- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
+- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
+- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
+
+# Document: kFxError_UnableToObtainProjectAspectRatio
+
+Source path: documentation/professional_video_applications/kfxerror_unabletoobtainprojectaspectratio
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxerror_unabletoobtainprojectaspectratio
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.2.9+
+
+# kFxError_UnableToObtainProjectAspectRatio (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 4.2.9+
+
+An error that indicates that the host couldn’t obtain the project’s aspect ratio.
+
+## Declaration
+
+```swift
+var kFxError_UnableToObtainProjectAspectRatio: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
+- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
+- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
+- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
+- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
+- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
+- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
+- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
+- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
+- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
+- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
+- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
+- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
+- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
+- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
+
+# kFxError_UnableToObtainProjectAspectRatio (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+An error that indicates that the host couldn’t obtain the project’s aspect ratio.
+
+## Declaration
+
+```objectivec
+kFxError_UnableToObtainProjectAspectRatio
+```
+
+## See Also
+
+### Constants
+
+- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
+- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
+- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
+- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
+- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
+- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
+- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
+- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
+- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
+- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
+- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
+- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
+- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
+- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
+- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
+
+# Document: kFxError_UserCancelled
+
+Source path: documentation/professional_video_applications/kfxerror_usercancelled
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxerror_usercancelled
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.2+
+
+# kFxError_UserCancelled (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 4.2+
+
+An error that indicates that an analysis operation was canceled by the user.
+
+## Declaration
+
+```swift
+var kFxError_UserCancelled: Int { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This error tells the host or plug-in that the analysis operation was cancelled by the user, allowing the host or plug-in to stop an ongoing analysis operation without showing an error to the user.
+
+## See Also
+
+### Constants
+
+- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
+- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
+- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
+- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
+- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
+- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
+- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
+- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
+- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
+- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
+- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
+- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
+- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
+- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
+- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
+
+# kFxError_UserCancelled (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+An error that indicates that an analysis operation was canceled by the user.
+
+## Declaration
+
+```objectivec
+kFxError_UserCancelled
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This error tells the host or plug-in that the analysis operation was cancelled by the user, allowing the host or plug-in to stop an ongoing analysis operation without showing an error to the user.
+
+## See Also
+
+### Constants
+
+- [kFxError_AnalysisError](kfxerror_analysiserror.md): An error with analysis occurred.
+- [kFxError_AnalysisExtensionNotFound](kfxerror_analysisextensionnotfound.md): An error that indicates Analysis extension is not found.
+- [kFxError_APIUnavailable](kfxerror_apiunavailable.md): An error that indicates that the requested API cannot be used by the plug-in at this time.
+- [kFxError_CommandNotProcessed](kfxerror_commandnotprocessed.md): An error that indicates that the command sent to the `FxCommandAPI` is unable to complete.
+- [kFxError_HostUnreachable](kfxerror_hostunreachable.md): An error that indicates that the host application cannot be reached to complete an operation.
+- [kFxError_InvalidColorGamut](kfxerror_invalidcolorgamut.md): An Error that indicates that an attempt to get color gamut info from the host failed.
+- [kFxError_InvalidDataLength](kfxerror_invaliddatalength.md): An error that indicates an invalid data length was found by the plug-in while the host or framework was decoding data.
+- [kFxError_InvalidKeyframeIndex](kfxerror_invalidkeyframeindex.md): An error that indicates that the plug-in passed an invalid keyframe index to the host.
+- [kFxError_InvalidLightAccess](kfxerror_invalidlightaccess.md): An error that indicates that an attempt was made by the plug-in to access lights without first requesting light access.
+- [kFxError_InvalidParameter](kfxerror_invalidparameter.md): An error that indicates that a parameter sent by the caller to an API method was invalid.
+- [kFxError_InvalidParameterChannelIndex](kfxerror_invalidparameterchannelindex.md): An error that indicates that the plug-in passed an invalid channel number for a parameter to the host.
+- [kFxError_InvalidParameterID](kfxerror_invalidparameterid.md): An error that indicates that the plug-in passed an invalid parameter to the host.
+- [kFxError_InvalidPathID](kfxerror_invalidpathid.md): An error that indicates that no path with that ID exists.
+- [kFxError_InvalidPathIndex](kfxerror_invalidpathindex.md): An error that indicates that the index is greater than the number of paths.
+- [kFxError_InvalidPaths](kfxerror_invalidpaths.md): An error that indicates that an attempt to get path info from the host failed.
+
+# Document: kFxEyeType_LEFT
+
+Source path: documentation/professional_video_applications/kfxeyetype_left
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxeyetype_left
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.0+
+
+# kFxEyeType_LEFT (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 4.0+
+
+The left eye portion of the stereoscopic image.
+
+## Declaration
+
+```swift
+var kFxEyeType_LEFT: FxEyeType { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxEyeType_MONO](kfxeyetype_mono.md): Monoscopic only.
+- [kFxEyeType_RIGHT](kfxeyetype_right.md): The right eye portion of the stereoscopic image.
+
+# kFxEyeType_LEFT (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+The left eye portion of the stereoscopic image.
+
+## Declaration
+
+```objectivec
+kFxEyeType_LEFT
+```
+
+## See Also
+
+### Constants
+
+- [kFxEyeType_MONO](kfxeyetype_mono.md): Monoscopic only.
+- [kFxEyeType_RIGHT](kfxeyetype_right.md): The right eye portion of the stereoscopic image.
+
+# Document: kFxEyeType_MONO
+
+Source path: documentation/professional_video_applications/kfxeyetype_mono
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxeyetype_mono
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.0+
+
+# kFxEyeType_MONO (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 4.0+
+
+Monoscopic only.
+
+## Declaration
+
+```swift
+var kFxEyeType_MONO: FxEyeType { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxEyeType_LEFT](kfxeyetype_left.md): The left eye portion of the stereoscopic image.
+- [kFxEyeType_RIGHT](kfxeyetype_right.md): The right eye portion of the stereoscopic image.
+
+# kFxEyeType_MONO (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+Monoscopic only.
+
+## Declaration
+
+```objectivec
+kFxEyeType_MONO
+```
+
+## See Also
+
+### Constants
+
+- [kFxEyeType_LEFT](kfxeyetype_left.md): The left eye portion of the stereoscopic image.
+- [kFxEyeType_RIGHT](kfxeyetype_right.md): The right eye portion of the stereoscopic image.
+
+# Document: kFxEyeType_RIGHT
+
+Source path: documentation/professional_video_applications/kfxeyetype_right
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxeyetype_right
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 4.0+
+
+# kFxEyeType_RIGHT (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 4.0+
+
+The right eye portion of the stereoscopic image.
+
+## Declaration
+
+```swift
+var kFxEyeType_RIGHT: FxEyeType { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxEyeType_LEFT](kfxeyetype_left.md): The left eye portion of the stereoscopic image.
+- [kFxEyeType_MONO](kfxeyetype_mono.md): Monoscopic only.
+
+# kFxEyeType_RIGHT (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+The right eye portion of the stereoscopic image.
+
+## Declaration
+
+```objectivec
+kFxEyeType_RIGHT
+```
+
+## See Also
+
+### Constants
+
+- [kFxEyeType_LEFT](kfxeyetype_left.md): The left eye portion of the stereoscopic image.
+- [kFxEyeType_MONO](kfxeyetype_mono.md): Monoscopic only.
+
+# Document: kFxField_LOWER
+
+Source path: documentation/professional_video_applications/kfxfield_lower
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxfield_lower
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxField_LOWER (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+Lower field.
+
+## Declaration
+
+```swift
+var kFxField_LOWER: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxField_NONE](kfxfield_none.md): Full frame, progressive (no fields).
+- [kFxField_UPPER](kfxfield_upper.md): Upper field.
+
+# kFxField_LOWER (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+Lower field.
+
+## Declaration
+
+```objectivec
+kFxField_LOWER
+```
+
+## See Also
+
+### Constants
+
+- [kFxField_NONE](kfxfield_none.md): Full frame, progressive (no fields).
+- [kFxField_UPPER](kfxfield_upper.md): Upper field.
+
+# Document: kFxField_NONE
+
+Source path: documentation/professional_video_applications/kfxfield_none
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxfield_none
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxField_NONE (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+Full frame, progressive (no fields).
+
+## Declaration
+
+```swift
+var kFxField_NONE: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxField_LOWER](kfxfield_lower.md): Lower field.
+- [kFxField_UPPER](kfxfield_upper.md): Upper field.
+
+# kFxField_NONE (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+Full frame, progressive (no fields).
+
+## Declaration
+
+```objectivec
+kFxField_NONE
+```
+
+## See Also
+
+### Constants
+
+- [kFxField_LOWER](kfxfield_lower.md): Lower field.
+- [kFxField_UPPER](kfxfield_upper.md): Upper field.
+
+# Document: kFxField_UPPER
+
+Source path: documentation/professional_video_applications/kfxfield_upper
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxfield_upper
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxField_UPPER (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+Upper field.
+
+## Declaration
+
+```swift
+var kFxField_UPPER: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxField_LOWER](kfxfield_lower.md): Lower field.
+- [kFxField_NONE](kfxfield_none.md): Full frame, progressive (no fields).
+
+# kFxField_UPPER (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+Upper field.
+
+## Declaration
+
+```objectivec
+kFxField_UPPER
+```
+
+## See Also
+
+### Constants
+
+- [kFxField_LOWER](kfxfield_lower.md): Lower field.
+- [kFxField_NONE](kfxfield_none.md): Full frame, progressive (no fields).
+
+# Document: kFxFieldOrder_LOWER_FIRST
+
+Source path: documentation/professional_video_applications/kfxfieldorder_lower_first
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxfieldorder_lower_first
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxFieldOrder_LOWER_FIRST (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+Lower field first.
+
+## Declaration
+
+```swift
+var kFxFieldOrder_LOWER_FIRST: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxFieldOrder_PROGRESSIVE](kfxfieldorder_progressive.md): Full frame, progressive (no fields).
+- [kFxFieldOrder_UPPER_FIRST](kfxfieldorder_upper_first.md): Upper field first.
+
+# kFxFieldOrder_LOWER_FIRST (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+Lower field first.
+
+## Declaration
+
+```objectivec
+kFxFieldOrder_LOWER_FIRST
+```
+
+## See Also
+
+### Constants
+
+- [kFxFieldOrder_PROGRESSIVE](kfxfieldorder_progressive.md): Full frame, progressive (no fields).
+- [kFxFieldOrder_UPPER_FIRST](kfxfieldorder_upper_first.md): Upper field first.
+
+# Document: kFxFieldOrder_PROGRESSIVE
+
+Source path: documentation/professional_video_applications/kfxfieldorder_progressive
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxfieldorder_progressive
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxFieldOrder_PROGRESSIVE (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+Full frame, progressive (no fields).
+
+## Declaration
+
+```swift
+var kFxFieldOrder_PROGRESSIVE: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxFieldOrder_LOWER_FIRST](kfxfieldorder_lower_first.md): Lower field first.
+- [kFxFieldOrder_UPPER_FIRST](kfxfieldorder_upper_first.md): Upper field first.
+
+# kFxFieldOrder_PROGRESSIVE (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+Full frame, progressive (no fields).
+
+## Declaration
+
+```objectivec
+kFxFieldOrder_PROGRESSIVE
+```
+
+## See Also
+
+### Constants
+
+- [kFxFieldOrder_LOWER_FIRST](kfxfieldorder_lower_first.md): Lower field first.
+- [kFxFieldOrder_UPPER_FIRST](kfxfieldorder_upper_first.md): Upper field first.
+
+# Document: kFxFieldOrder_UPPER_FIRST
+
+Source path: documentation/professional_video_applications/kfxfieldorder_upper_first
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxfieldorder_upper_first
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxFieldOrder_UPPER_FIRST (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+Upper field first.
+
+## Declaration
+
+```swift
+var kFxFieldOrder_UPPER_FIRST: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxFieldOrder_LOWER_FIRST](kfxfieldorder_lower_first.md): Lower field first.
+- [kFxFieldOrder_PROGRESSIVE](kfxfieldorder_progressive.md): Full frame, progressive (no fields).
+
+# kFxFieldOrder_UPPER_FIRST (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+Upper field first.
+
+## Declaration
+
+```objectivec
+kFxFieldOrder_UPPER_FIRST
+```
+
+## See Also
+
+### Constants
+
+- [kFxFieldOrder_LOWER_FIRST](kfxfieldorder_lower_first.md): Lower field first.
+- [kFxFieldOrder_PROGRESSIVE](kfxfieldorder_progressive.md): Full frame, progressive (no fields).
+
+# Document: kFxHistogramChannel_Alpha
+
+Source path: documentation/professional_video_applications/kfxhistogramchannel_alpha
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxhistogramchannel_alpha
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxHistogramChannel_Alpha (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+## Declaration
+
+```swift
+var kFxHistogramChannel_Alpha: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
+- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
+- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
+- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
+
+# kFxHistogramChannel_Alpha (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+## Declaration
+
+```objectivec
+kFxHistogramChannel_Alpha
+```
+
+## See Also
+
+### Constants
+
+- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
+- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
+- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
+- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
+
+# Document: kFxHistogramChannel_Blue
+
+Source path: documentation/professional_video_applications/kfxhistogramchannel_blue
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxhistogramchannel_blue
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxHistogramChannel_Blue (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+## Declaration
+
+```swift
+var kFxHistogramChannel_Blue: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
+- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
+- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
+- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
+
+# kFxHistogramChannel_Blue (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+## Declaration
+
+```objectivec
+kFxHistogramChannel_Blue
+```
+
+## See Also
+
+### Constants
+
+- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
+- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
+- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
+- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
+
+# Document: kFxHistogramChannel_Green
+
+Source path: documentation/professional_video_applications/kfxhistogramchannel_green
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxhistogramchannel_green
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxHistogramChannel_Green (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+## Declaration
+
+```swift
+var kFxHistogramChannel_Green: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
+- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
+- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
+- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
+
+# kFxHistogramChannel_Green (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+## Declaration
+
+```objectivec
+kFxHistogramChannel_Green
+```
+
+## See Also
+
+### Constants
+
+- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
+- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
+- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
+- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
+
+# Document: kFxHistogramChannel_Red
+
+Source path: documentation/professional_video_applications/kfxhistogramchannel_red
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxhistogramchannel_red
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxHistogramChannel_Red (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+## Declaration
+
+```swift
+var kFxHistogramChannel_Red: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
+- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
+- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
+- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
+
+# kFxHistogramChannel_Red (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+## Declaration
+
+```objectivec
+kFxHistogramChannel_Red
+```
+
+## See Also
+
+### Constants
+
+- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
+- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
+- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
+- [kFxHistogramChannel_RGB](kfxhistogramchannel_rgb.md)
+
+# Document: kFxHistogramChannel_RGB
+
+Source path: documentation/professional_video_applications/kfxhistogramchannel_rgb
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfxhistogramchannel_rgb
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxHistogramChannel_RGB (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+## Declaration
+
+```swift
+var kFxHistogramChannel_RGB: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
+- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
+- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
+- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
+
+# kFxHistogramChannel_RGB (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+## Declaration
+
+```objectivec
+kFxHistogramChannel_RGB
+```
+
+## See Also
+
+### Constants
+
+- [kFxHistogramChannel_Alpha](kfxhistogramchannel_alpha.md)
+- [kFxHistogramChannel_Blue](kfxhistogramchannel_blue.md)
+- [kFxHistogramChannel_Green](kfxhistogramchannel_green.md)
+- [kFxHistogramChannel_Red](kfxhistogramchannel_red.md)
+
+# Document: kFxImageColorInfo_RGB_GAMMA_VIDEO
+
+Source path: documentation/professional_video_applications/kfximagecolorinfo_rgb_gamma_video
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfximagecolorinfo_rgb_gamma_video
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxImageColorInfo_RGB_GAMMA_VIDEO (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+RGB at video gamma (2.2).
+
+## Declaration
+
+```swift
+var kFxImageColorInfo_RGB_GAMMA_VIDEO: Int { get }
+```
+
+## Mentioned In
+
+- [Managing color space and gamut in plug-ins](../professional-video-applications/managing-color-space-and-gamut-in-plug-ins.md)
+
+## See Also
+
+### Constants
+
+- [kFxImageColorInfo_RGB_LINEAR](kfximagecolorinfo_rgb_linear.md): RGB linear (not gamma corrected).
+
+# kFxImageColorInfo_RGB_GAMMA_VIDEO (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+RGB at video gamma (2.2).
+
+## Declaration
+
+```objectivec
+kFxImageColorInfo_RGB_GAMMA_VIDEO
+```
+
+## Mentioned In
+
+- [Managing color space and gamut in plug-ins](../professional-video-applications/managing-color-space-and-gamut-in-plug-ins.md)
+
+## See Also
+
+### Constants
+
+- [kFxImageColorInfo_RGB_LINEAR](kfximagecolorinfo_rgb_linear.md): RGB linear (not gamma corrected).
+
+# Document: kFxImageColorInfo_RGB_LINEAR
+
+Source path: documentation/professional_video_applications/kfximagecolorinfo_rgb_linear
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfximagecolorinfo_rgb_linear
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+
+
+# kFxImageColorInfo_RGB_LINEAR (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+
+
+RGB linear (not gamma corrected).
+
+## Declaration
+
+```swift
+var kFxImageColorInfo_RGB_LINEAR: Int { get }
+```
+
+## Mentioned In
+
+- [Managing color space and gamut in plug-ins](../professional-video-applications/managing-color-space-and-gamut-in-plug-ins.md)
+
+## See Also
+
+### Constants
+
+- [kFxImageColorInfo_RGB_GAMMA_VIDEO](kfximagecolorinfo_rgb_gamma_video.md): RGB at video gamma (2.2).
+
+# kFxImageColorInfo_RGB_LINEAR (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+RGB linear (not gamma corrected).
+
+## Declaration
+
+```objectivec
+kFxImageColorInfo_RGB_LINEAR
+```
+
+## Mentioned In
+
+- [Managing color space and gamut in plug-ins](../professional-video-applications/managing-color-space-and-gamut-in-plug-ins.md)
+
+## See Also
+
+### Constants
+
+- [kFxImageColorInfo_RGB_GAMMA_VIDEO](kfximagecolorinfo_rgb_gamma_video.md): RGB at video gamma (2.2).
+
+# Document: kFxImageOrigin_BOTTOM_LEFT
+
+Source path: documentation/professional_video_applications/kfximageorigin_bottom_left
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfximageorigin_bottom_left
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+ (deprecated in 4.0)
+
+# kFxImageOrigin_BOTTOM_LEFT (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+ (deprecated in 4.0)
+
+Right-handed “bottom-up” coordinate system where Y values increase upwardly.
+
+## Declaration
+
+```swift
+var kFxImageOrigin_BOTTOM_LEFT: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxImageOrigin_TOP_LEFT](kfximageorigin_top_left.md): Left-handed “top-down” coordinate system where Y values increase downwardly.
+
+# kFxImageOrigin_BOTTOM_LEFT (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+Right-handed “bottom-up” coordinate system where Y values increase upwardly.
+
+## Declaration
+
+```objectivec
+kFxImageOrigin_BOTTOM_LEFT
+```
+
+## See Also
+
+### Constants
+
+- [kFxImageOrigin_TOP_LEFT](kfximageorigin_top_left.md): Left-handed “top-down” coordinate system where Y values increase downwardly.
+
+# Document: kFxImageOrigin_TOP_LEFT
+
+Source path: documentation/professional_video_applications/kfximageorigin_top_left
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kfximageorigin_top_left
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: FxPlug 3.1+ (deprecated in 4.0)
+
+# kFxImageOrigin_TOP_LEFT (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** FxPlug 3.1+ (deprecated in 4.0)
+
+Left-handed “top-down” coordinate system where Y values increase downwardly.
+
+## Declaration
+
+```swift
+var kFxImageOrigin_TOP_LEFT: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kFxImageOrigin_BOTTOM_LEFT](kfximageorigin_bottom_left.md): Right-handed “bottom-up” coordinate system where Y values increase upwardly.
+
+# kFxImageOrigin_TOP_LEFT (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Enumeration Case
+
+Left-handed “top-down” coordinate system where Y values increase downwardly.
+
+## Declaration
+
+```objectivec
+kFxImageOrigin_TOP_LEFT
+```
+
+## See Also
+
+### Constants
+
+- [kFxImageOrigin_BOTTOM_LEFT](kfximageorigin_bottom_left.md): Right-handed “bottom-up” coordinate system where Y values increase upwardly.
 
 # Document: kFxImageTileRequestSourceEffectClip
 
@@ -183400,1384 +184801,3 @@ Applies the field-of-view degrees in the camera’s vertical axis.
 ```swift
 case vertical
 ```
-
-# Document: CameraRealityCoordinateSpace
-
-Source path: documentation/realitykit/camerarealitycoordinatespace
-Canonical documentation: https://developer.apple.com/documentation/realitykit/camerarealitycoordinatespace
-Description: Framework: RealityKit Kind: Structure Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+
-
-# CameraRealityCoordinateSpace
-
-**Framework:** RealityKit  
-**Kind:** Structure  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+
-
-The coordinate space that represents the scene’s active camera.
-
-## Declaration
-
-```swift
-struct CameraRealityCoordinateSpace
-```
-
-## Topics
-
-### Initializers
-
-- [init()](camerarealitycoordinatespace/init%28%29.md): Creates a camera coordinate space.
-
-## Relationships
-
-### Conforms To
-
-- [RealityCoordinateSpace](realitycoordinatespace.md)
-
-## See Also
-
-### Coordinate space conversions
-
-- [RealityCoordinateSpaceConverting](realitycoordinatespaceconverting.md): A value that can be converted between SwiftUI `CoordinateSpace` and RealityKit `Entity`.
-- [SceneRealityCoordinateSpace](scenerealitycoordinatespace.md): The coordinate space that represents the center of a RealityKit scene.
-- [RealityCoordinateSpace](realitycoordinatespace.md): A 3D coordinate space that exists within a RealityKit hierarchy.
-- [RealityCoordinateSpaceProjecting](realitycoordinatespaceprojecting.md): A protocol for coordinate spaces that can project 2D points to and from 3D.
-
-# Document: init()
-
-Source path: documentation/realitykit/camerarealitycoordinatespace/init()
-Canonical documentation: https://developer.apple.com/documentation/realitykit/camerarealitycoordinatespace/init()
-Description: Framework: RealityKit Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+
-
-# init()
-
-**Framework:** RealityKit  
-**Kind:** Initializer  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+
-
-Creates a camera coordinate space.
-
-## Declaration
-
-```swift
-init()
-```
-
-# Document: Capturing photographs for RealityKit Object Capture
-
-Source path: documentation/realitykit/capturing-photographs-for-realitykit-object-capture
-Canonical documentation: https://developer.apple.com/documentation/realitykit/capturing-photographs-for-realitykit-object-capture
-Description: Framework: RealityKit Kind: Article
-
-# Capturing photographs for RealityKit Object Capture
-
-**Framework:** RealityKit  
-**Kind:** Article
-
-Take high-quality images of objects to generate 3D models.
-
-<a id="Overview"></a>
-
-## Overview
-
-In iOS 17 and later, and macOS 12 and later, you can create 3D objects from photographs using a process called *photogrammetry*. You provide RealityKit Object Capture with a series of well-lit photographs taken from many different angles. It analyzes the overlap area between different images to match up landmarks, and then produces a 3D model of the photographed object.
-
-To generate the best 3D representation from the object-creation process, provide RealityKit with high-quality, high-resolution photographs that don’t contain hard shadows or strong highlights.
-
-![An illustration showing a toy robot. There are several cameras at different heights around the robot with dotted blue circular arrows indicating movement.](https://developer.apple.com/images/com.apple.RealityKit/capturing-photographs-for-realitykit-object-capture-1@2x.png)
-
-<a id="Select-an-object-to-photograph"></a>
-
-### Select an object to photograph
-
-Choose objects that are static and won’t bend or deform while you’re taking photos. You can move the object between shots in order to photograph all sides, but a soft, articulated, or bendable object that changes shape when you move it can compromise RealityKit’s ability to match landmarks between different images, which may cause Object Capture to fail or produce low-quality results.
-
-Avoid objects that are very thin in one dimension, highly reflective, transparent, or translucent. Additionally, objects that are a single, solid color or have a very smooth surface may not provide enough data necessary for the object-creation algorithm to construct a 3D shape. You can draw or paint on the surface of an object to add color or texture, then match the original color or texture on the created 3D object with the material inspector in Xcode’s 3D model viewer or the property inspector in Reality Composer.
-
-<a id="Choose-an-approach"></a>
-
-### Choose an approach
-
-You can approach taking photographs for object creation in two ways: Either move the camera around the object, taking photographs from different angles at different heights, or put the object on a turntable and rotate the object while taking pictures. When using a turntable, take pictures in front of a well-lit, solid color background to minimize extraneous image data that can interfere with the object-creation process and use a tripod if available. Standing the object on different sides while photographing it on a turntable captures the entire object with no gaps or holes.
-
-The number of pictures that RealityKit needs in order to create an accurate 3D representation varies depending on the complexity and size of the object, but adjacent shots must have substantial overlap. Position sequential images so they have a 70% overlap or more. Anything less than 50% overlap between neighboring shots, and the object-creation process may fail or result in a low-quality recreation.
-
-![An illustration of a robot, showing the overlapping field of view for two cameras next to each other. The overlap is labeled “Ideal overlap: 70%”.](https://developer.apple.com/images/com.apple.RealityKit/capturing-photographs-for-realitykit-object-capture-2@2x.png)
-
-RealityKit object creation accepts images captured by any digital camera, including the cameras on an iPhone or iPad, a DSLR or mirrorless camera, or even a camera-equipped drone. If your source images contain depth data, RealityKit uses it to calculate the real-world size of the scanned object. RealityKit can also create objects from images without depth data, but you may have to scale the object when placing it into your AR scene. For more information on capturing image depth data, see [Capturing photos with depth](../avfoundation/capturing-photos-with-depth.md).
-
-> **Note**
-
-> RealityKit object creation doesn’t require you to take images in any specific order or name them in a specific way.
-
-<a id="Compose-your-shots"></a>
-
-### Compose your shots
-
-Position the object so it fills as much of the camera’s frame as possible without excluding or cutting off any part. Use an aperture setting narrow enough to maintain a crisp focus. Shoot at the highest resolution your camera supports and use RAW format if possible.
-
-> **Important**
-
-> Shooting with a narrow aperture requires more light but gives your photographs a greater depth of field, increasing the area of the object that’s in focus. If you don’t have enough light to use a narrow aperture, consider increasing your camera’s ISO setting or adding more light.
-
-In low-light situations, cameras with autofocus can have difficulty finding and maintaining focus. Focus manually if there isn’t enough ambient light to get a focus lock, and put your camera on a tripod to make sure you keep it steady. Use a remote trigger, such as the Apple Watch Camera Remote app, to make sure the camera doesn’t move or shake when you press the button to take a photo.
-
-Use diffused lighting if possible. Hard light, such as from an on-camera flash, direct sunlight, or a bare light bulb can cause problems during object creation. This type of lighting casts hard shadows that can confuse the photogrammetry algorithm. Instead, bounce the light off of a reflector, a wall, or the ceiling, or put a diffusing material like a lamp shade or thin white fabric between the light source and the object. You can also use light modifiers or a light tent designed for photographing objects.
-
-When photographing an object outdoors, keep the sun out of your images if possible. Shoot at midday so the sun is high enough in the sky that it won’t be visible in any of your images, or shoot on an overcast day.
-
-<a id="Capture-consistent-images-and-perform-post-processing"></a>
-
-### Capture consistent images and perform post-processing
-
-In order to ensure that RealityKit can match up landmarks between overlapping photographs, keep your camera settings as consistent as possible from shot to shot. If possible, don’t make changes to any camera settings while shooting, including the focal length (zoom), aperture, shutter speed, or ISO.
-
-If your camera offers manual control of any settings, set those values to keep them consistent between shots. When shooting with the camera on an iPhone or iPad, you can lock the exposure and focus settings by long-pressing the image feed view until you see “AE/AF Lock” appear at the top of the screen.
-
-In addition, masking out objects in the background so the image only contains the object you’re capturing removes unnecessary data that can confuse the photogrammetry algorithm.
-
-There may be times when you can’t capture images under ideal conditions, such as when photographing a large object in a crowded public space. Adjust for image shortcomings using an image editor. Modify a photograph’s contrast, brightness, sharpness, or exposure to compensate for problems in the original capture.
-
-For information on using the RealityKit Object Capture APIs, see [Creating 3D objects from photographs](creating-3d-objects-from-photographs.md).
-
-## See Also
-
-### Model creation
-
-- [Creating 3D objects from photographs](creating-3d-objects-from-photographs.md): Construct virtual objects to use in your AR experiences.
-- [Scanning objects using Object Capture](scanning-objects-using-object-capture.md): Implement a full scanning workflow for capturing objects on iOS devices.
-- [Building an object reconstruction app](building-an-object-reconstruction-app.md): Reconstruct objects from user-selected input images by using photogrammetry.
-- [Creating a photogrammetry command-line app](creating-a-photogrammetry-command-line-app.md): Generate 3D objects from images using RealityKit Object Capture.
-- [Using object capture assets in RealityKit](using-object-capture-assets-in-realitykit.md): Create a chess game using RealityKit and assets created using Object Capture.
-- [PhotogrammetrySession](photogrammetrysession.md): Manages the creation of a 3D model from a set of images.
-- [PhotogrammetrySample](photogrammetrysample.md): An object that represents one image and its corresponding metadata.
-- [ObjectCaptureView](objectcaptureview.md): A view that guides a user through capturing images for object capture.
-- [ObjectCaptureSession](objectcapturesession.md): A session object that monitors and controls image capture for photogrammetry.
-- [ObjectCapturePointCloudView](objectcapturepointcloudview.md): Renders the current state of the point cloud from an object capture session.
-
-# Document: ChannelAudioComponent
-
-Source path: documentation/realitykit/channelaudiocomponent
-Canonical documentation: https://developer.apple.com/documentation/realitykit/channelaudiocomponent
-Description: Framework: RealityKit Kind: Structure Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 1.0+
-
-# ChannelAudioComponent
-
-**Framework:** RealityKit  
-**Kind:** Structure  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 1.0+
-
-A component that configures channel-based rendering of sounds from an entity.
-
-## Declaration
-
-```swift
-struct ChannelAudioComponent
-```
-
-<a id="overview"></a>
-
-## Overview
-
-Channel audio sources route the audio resource’s channels directly to the device’s output without any spatialization or reverberation applied. Neither the position nor orientation of the entity is taken into consideration for channel rendering. For example, the left channel is heard from the left, and the right channel is heard from the right, regardless of where the user is oriented.
-
-The channels of multichannel audio resources are panned according to their channel layout, including rear channels.
-
-```swift
-let entity = Entity()
-let resource = try AudioFileResource.load(named: "MyAudioFile")
-entity.channelAudio = ChannelAudioComponent()
-entity.playAudio(resource)
-```
-
-The `ChannelAudioComponent` allows you to set the overall level of all sounds played from the entity with the `gain` property, in relative Decibels, in the range `-.infinity ... .zero` where `-infinity` is silent and `.zero` is nominal.
-
-```swift
-entity.channelAudio?.gain = -10
-```
-
-Channel audio sources are well suited to play back sounds not associated with any visual elements in a scene.
-
-## Topics
-
-### Initializers
-
-- [init(gain:)](channelaudiocomponent/init%28gain_%29.md): Configure the behavior of a channel audio source.
-
-### Instance Properties
-
-- [gain](channelaudiocomponent/gain.md): The overall level for all sounds emitted from an entity. In relative Decibels, in the range `-.infinity ... .zero` where `.zero` is the default.
-
-## Relationships
-
-### Conforms To
-
-- [Component](component.md)
-- [Copyable](https://developer.apple.com/documentation/swift/copyable)
-- [Decodable](https://developer.apple.com/documentation/swift/decodable)
-- [Encodable](https://developer.apple.com/documentation/swift/encodable)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Escapable](https://developer.apple.com/documentation/swift/escapable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-
-## See Also
-
-### Audio source components
-
-- [Creating a Spaceship game](creating-a-spaceship-game.md): Build an immersive game using RealityKit audio, simulation, and rendering features.
-- [Playing spatial audio](../visionos/playing-spatial-audio-in-visionos.md): Create and adjust spatial audio in visionOS with RealityKit.
-- [SpatialAudioComponent](spatialaudiocomponent.md): A component that configures how sounds emit from an entity into a person’s environment.
-- [AmbientAudioComponent](ambientaudiocomponent.md): A component that configures the ambient rendering of sounds from an entity.
-
-# Document: gain
-
-Source path: documentation/realitykit/channelaudiocomponent/gain
-Canonical documentation: https://developer.apple.com/documentation/realitykit/channelaudiocomponent/gain
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 1.0+
-
-# gain
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 1.0+
-
-The overall level for all sounds emitted from an entity. In relative Decibels, in the range  `-.infinity ... .zero` where `.zero` is the default.
-
-## Declaration
-
-```swift
-var gain: Audio.Decibel { get set }
-```
-
-# Document: init(gain:)
-
-Source path: documentation/realitykit/channelaudiocomponent/init(gain:)
-Canonical documentation: https://developer.apple.com/documentation/realitykit/channelaudiocomponent/init(gain:)
-Description: Framework: RealityKit Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 1.0+
-
-# init(gain:)
-
-**Framework:** RealityKit  
-**Kind:** Initializer  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 1.0+
-
-Configure the behavior of a channel audio source.
-
-## Declaration
-
-```swift
-init(gain: Audio.Decibel = .zero)
-```
-
-## Parameters
-
-- `gain`: The overall level for all sounds emitted from an entity.
-
-# Document: CharacterControllerComponent
-
-Source path: documentation/realitykit/charactercontrollercomponent
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent
-Description: Framework: RealityKit Kind: Structure Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# CharacterControllerComponent
-
-**Framework:** RealityKit  
-**Kind:** Structure  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-A component that manages character movement.
-
-## Declaration
-
-```swift
-struct CharacterControllerComponent
-```
-
-<a id="overview"></a>
-
-## Overview
-
-To use a character controller, add a `CharacterControllerComponent` to your entity to make it a character entity. Use [moveCharacter(by:deltaTime:relativeTo:collisionHandler:)](entity/movecharacter%28by_deltatime_relativeto_collisionhandler_%29.md) to move your character and respond to collisions, or [teleportCharacter(to:relativeTo:)](entity/teleportcharacter%28to_relativeto_%29.md) to place your character instantaneously in 3D space.
-
-> **Note**
-
-> [PhysicsBodyComponent](physicsbodycomponent.md) and [CollisionComponent](collisioncomponent.md) are incompatible with `CharacterControllerComponent`, and RealityKit deactivates them if you add them to the same entity.
-
-<a id="Handle-collision"></a>
-
-## Handle collision
-
-Character entities are capsular, and you can specify their height and radius in the component’s initializer. A character’s capsule shape aligns with its [upVector](charactercontrollercomponent/upvector.md) so that the top and bottom of the capsule pass through that direction vector.
-
-Although characters don’t have a `CollisionComponent`, they can still interact with colliders. The collision handler in `moveCharacter(by:deltaTime:relativeTo:collisionHandler:)` allows you to respond to collisions with solid colliders in your scene.
-
-```swift
-entity.moveCharacter(by: velocity * deltaTime, deltaTime: deltaTime, relativeTo: nil) {
-    event in
-    // Your character collided with `event.hitEntity`.
-}
-```
-
-To handle collisions with colliders that have a [mode](collisioncomponent/mode-swift.property.md) of [CollisionComponent.Mode.trigger](collisioncomponent/mode-swift.enum/trigger.md), subscribe to the [CollisionEvents.Began](collisionevents/began.md) event for your [RealityView](realityview.md). This event doesn’t occur for solid collisions with your character, but RealityKit invokes it when your character enters a trigger. This is useful for collecting coins, claiming checkpoints, activating enemy behavior when your character enters an area, and many other interactions within games.
-
-<a id="Update-your-character"></a>
-
-## Update your character
-
-A common use case for `CharacterControllerComponent` is to control a character in a video game. Video games have update loops where characters and game logic update once each frame, allowing them to respond to player input in real time. `CharacterControllerComponent` works well in such a setup.
-
-To move your character in response to player input, subscribe to [PhysicsSimulationEvents.WillSimulate](physicssimulationevents/willsimulate.md) on [RealityViewContent](realityviewcontent.md) for your scene. The event object contains information like the time delta since the last update, and you can treat this callback as the update loop for your game.
-
-> **Note**
-
-> You can also use [SceneEvents.Update](sceneevents/update.md) to run code for each frame, but avoid using it to control physics-based motion in your scene.
-
-Read the values from [CharacterControllerStateComponent](charactercontrollerstatecomponent.md) to accumulate forces (such as gravity) and to check whether the character is on the ground. RealityKit calculates [isOnGround](charactercontrollerstatecomponent/isonground.md) and  [velocity](charactercontrollerstatecomponent/velocity.md) only after you call `moveCharacter(by:deltaTime:relativeTo:collisionHandler:)`, so it’s a good idea to call this function at each update.
-
-```swift
-let gravity: SIMD3<Float> = [0, -50, 0]
-let jumpSpeed: Float = 10
-content.subscribe(to: PhysicsSimulationEvents.WillSimulate.self, on: playerEntity) {
-    event in
-    let deltaTime: Float = event.deltaTime
-    var velocity: SIMD3<Float> = .zero
-    var isOnGround: Bool = false
-
-    // RealityKit automatically adds `CharacterControllerStateComponent` after moving the character for the first time.
-    if let ccState = playerEntity.components[CharacterControllerStateComponent.self] {
-        velocity = ccState.velocity
-        isOnGround = ccState.isOnGround
-    }
-
-    if !isOnGround {
-        // Gravity is a force, so you need to accumulate it for each frame.
-        velocity += gravity * deltaTime
-    } else if myPlayerInput.jump {
-        // Set the character's velocity directly to launch it in the air when the player jumps.
-        velocity.y = jumpSpeed
-    }
-
-    playerEntity.moveCharacter(by: velocity * deltaTime, deltaTime: deltaTime, relativeTo: nil) {
-        event in
-        print("playerEntity collided with \(event.hitEntity.name)")
-    }
-}
-```
-
-The following video shows a character entity jumping in response to player input:
-
-Video: character_controller_component_jump.mp4
-
-## Topics
-
-### Creating a character controller component
-
-- [init()](charactercontrollercomponent/init%28%29.md): Creates a character controller component using default values.
-- [init(radius:height:skinWidth:slopeLimit:stepLimit:upVector:collisionFilter:)](charactercontrollercomponent/init%28radius_height_skinwidth_slopelimit_steplimit_upvector_collisionfilter_%29.md): Creates a character controller component using specified values.
-
-### Configuring a character
-
-- [height](charactercontrollercomponent/height.md): The capsule height.
-- [radius](charactercontrollercomponent/radius.md): The capsule radius.
-- [skinWidth](charactercontrollercomponent/skinwidth.md): An added tolerance around the character capsule.
-- [slopeLimit](charactercontrollercomponent/slopelimit.md): The slope limit expressed as a limit angle in radians.
-- [stepLimit](charactercontrollercomponent/steplimit.md): The maximum obstacle height that the controller can move over.
-- [upVector](charactercontrollercomponent/upvector.md): The y-axis direction relative to the physics origin.
-
-### Managing character collisions
-
-- [collisionFilter](charactercontrollercomponent/collisionfilter.md): The character’s collision filter.
-
-### Reading default values
-
-- [defaultHeight](charactercontrollercomponent/defaultheight.md): The capsule height value RealityKit applies when you use the default initializer.
-- [defaultRadius](charactercontrollercomponent/defaultradius.md): The capsule default radius RealityKit applies when you use the default initializer.
-- [defaultSkinWidth](charactercontrollercomponent/defaultskinwidth.md): The skin width value RealityKit applies when you use the default initializer.
-- [defaultSlopeLimit](charactercontrollercomponent/defaultslopelimit.md): The slope limit value RealityKit applies when you use the default initializer.
-- [defaultStepLimit](charactercontrollercomponent/defaultsteplimit.md): The step limit value RealityKit applies when you use the default initializer.
-- [defaultUpVector](charactercontrollercomponent/defaultupvector.md): The default up vector RealityKit applies when you use the default initializer.
-
-### Animating a character
-
-- [JointTransforms](jointtransforms.md): A set of animatable transform values for joints that collectively represent a single skeletal pose.
-
-### Handling collisions
-
-- [CharacterControllerComponent.Collision](charactercontrollercomponent/collision.md): A container that holds collision state for the character controller.
-- [CharacterControllerComponent.CollisionFlags](charactercontrollercomponent/collisionflags.md): An option set that specifies which parts of the character capsule have collided with other objects.
-
-## Relationships
-
-### Conforms To
-
-- [Component](component.md)
-
-## See Also
-
-### Character control
-
-- [CharacterControllerComponent.Collision](charactercontrollercomponent/collision.md): A container that holds collision state for the character controller.
-- [CharacterControllerComponent.CollisionFlags](charactercontrollercomponent/collisionflags.md): An option set that specifies which parts of the character capsule have collided with other objects.
-- [CharacterControllerStateComponent](charactercontrollerstatecomponent.md): A component that represents the state of a character controller.
-
-# Document: CharacterControllerComponent.Collision
-
-Source path: documentation/realitykit/charactercontrollercomponent/collision
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision
-Description: Framework: RealityKit Kind: Structure Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# CharacterControllerComponent.Collision
-
-**Framework:** RealityKit  
-**Kind:** Structure  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-A container that holds collision state for the character controller.
-
-## Declaration
-
-```swift
-struct Collision
-```
-
-<a id="overview"></a>
-
-## Overview
-
-All coordinates are in *physics space*, the coordinate system of the physics simulation.
-
-## Topics
-
-### Initializers
-
-- [init(characterEntity:hitEntity:hitPosition:hitNormal:moveDirection:moveDistance:)](collision/init%28characterentity_hitentity_hitposition_hitnormal_movedirection_movedistance_%29.md): Create Collision and initialize all fields.
-
-### Instance Properties
-
-- [characterEntity](collision/characterentity.md): Entity owning the character controller component.
-- [hitEntity](collision/hitentity.md): The entity that was hit by the character controller.
-- [hitNormal](collision/hitnormal.md): Hit normal relative to physics origin. In physics space.
-- [hitPosition](collision/hitposition.md): Hit position relative to physics origin. In physics space.
-- [moveDirection](collision/movedirection.md): Move direction controller was moving (unit vector). In physics space.
-- [moveDistance](collision/movedistance.md): Move distance controller was attempting to move. In physics space.
-
-## See Also
-
-### Character control
-
-- [CharacterControllerComponent](../charactercontrollercomponent.md): A component that manages character movement.
-- [CharacterControllerComponent.CollisionFlags](collisionflags.md): An option set that specifies which parts of the character capsule have collided with other objects.
-- [CharacterControllerStateComponent](../charactercontrollerstatecomponent.md): A component that represents the state of a character controller.
-
-# Document: characterEntity
-
-Source path: documentation/realitykit/charactercontrollercomponent/collision/characterentity
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/characterentity
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# characterEntity
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-Entity owning the character controller component.
-
-## Declaration
-
-```swift
-var characterEntity: Entity
-```
-
-# Document: hitEntity
-
-Source path: documentation/realitykit/charactercontrollercomponent/collision/hitentity
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/hitentity
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# hitEntity
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The entity that was hit by the character controller.
-
-## Declaration
-
-```swift
-var hitEntity: Entity
-```
-
-# Document: hitNormal
-
-Source path: documentation/realitykit/charactercontrollercomponent/collision/hitnormal
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/hitnormal
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# hitNormal
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-Hit normal relative to physics origin. In physics space.
-
-## Declaration
-
-```swift
-var hitNormal: SIMD3<Float>
-```
-
-# Document: hitPosition
-
-Source path: documentation/realitykit/charactercontrollercomponent/collision/hitposition
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/hitposition
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# hitPosition
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-Hit position relative to physics origin. In physics space.
-
-## Declaration
-
-```swift
-var hitPosition: SIMD3<Float>
-```
-
-# Document: init(characterEntity:hitEntity:hitPosition:hitNormal:moveDirection:moveDistance:)
-
-Source path: documentation/realitykit/charactercontrollercomponent/collision/init(characterentity:hitentity:hitposition:hitnormal:movedirection:movedistance:)
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/init(characterentity:hitentity:hitposition:hitnormal:movedirection:movedistance:)
-Description: Framework: RealityKit Kind: Initializer Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# init(characterEntity:hitEntity:hitPosition:hitNormal:moveDirection:moveDistance:)
-
-**Framework:** RealityKit  
-**Kind:** Initializer  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-Create Collision and initialize all fields.
-
-## Declaration
-
-```swift
-init(characterEntity: Entity, hitEntity: Entity, hitPosition: SIMD3<Float>, hitNormal: SIMD3<Float>, moveDirection: SIMD3<Float>, moveDistance: Float)
-```
-
-# Document: moveDirection
-
-Source path: documentation/realitykit/charactercontrollercomponent/collision/movedirection
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/movedirection
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# moveDirection
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-Move direction controller was moving (unit vector). In physics space.
-
-## Declaration
-
-```swift
-var moveDirection: SIMD3<Float>
-```
-
-# Document: moveDistance
-
-Source path: documentation/realitykit/charactercontrollercomponent/collision/movedistance
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/movedistance
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# moveDistance
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-Move distance controller was attempting to move. In physics space.
-
-## Declaration
-
-```swift
-var moveDistance: Float
-```
-
-# Document: collisionFilter
-
-Source path: documentation/realitykit/charactercontrollercomponent/collisionfilter
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionfilter
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# collisionFilter
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The character’s collision filter.
-
-## Declaration
-
-```swift
-var collisionFilter: CollisionFilter
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-For more information on using collision filters, see doc://com.apple.documentation/documentation/realitykit/controlling_entity_collisions_in_realitykit.
-
-# Document: CharacterControllerComponent.CollisionFlags
-
-Source path: documentation/realitykit/charactercontrollercomponent/collisionflags
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionflags
-Description: Framework: RealityKit Kind: Structure Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# CharacterControllerComponent.CollisionFlags
-
-**Framework:** RealityKit  
-**Kind:** Structure  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-An option set that specifies which parts of the character capsule have collided with other objects.
-
-## Declaration
-
-```swift
-struct CollisionFlags
-```
-
-## Topics
-
-### Initializers
-
-- [init(rawValue:)](collisionflags/init%28rawvalue_%29.md): Initializes collisions flags from a raw value.
-
-### Instance Properties
-
-- [rawValue](collisionflags/rawvalue.md): The bitmask representation of the option set.
-
-### Type Properties
-
-- [bottom](collisionflags/bottom.md): The bottom of capsule was hit when moving in the down direction.
-- [none](collisionflags/none.md): No collision.
-- [side](collisionflags/side.md): The side of capsule was hit when moving in the direction tangent to the up vector.
-- [top](collisionflags/top.md): The top of capsule was hit when moving in the up direction.
-
-## Relationships
-
-### Conforms To
-
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [ExpressibleByArrayLiteral](https://developer.apple.com/documentation/swift/expressiblebyarrayliteral)
-- [OptionSet](https://developer.apple.com/documentation/swift/optionset)
-- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
-- [SetAlgebra](https://developer.apple.com/documentation/swift/setalgebra)
-
-## See Also
-
-### Character control
-
-- [CharacterControllerComponent](../charactercontrollercomponent.md): A component that manages character movement.
-- [CharacterControllerComponent.Collision](collision.md): A container that holds collision state for the character controller.
-- [CharacterControllerStateComponent](../charactercontrollerstatecomponent.md): A component that represents the state of a character controller.
-
-# Document: bottom
-
-Source path: documentation/realitykit/charactercontrollercomponent/collisionflags/bottom
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionflags/bottom
-Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# bottom
-
-**Framework:** RealityKit  
-**Kind:** Type Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The bottom of capsule was hit when moving in the down direction.
-
-## Declaration
-
-```swift
-static let bottom: CharacterControllerComponent.CollisionFlags
-```
-
-# Document: init(rawValue:)
-
-Source path: documentation/realitykit/charactercontrollercomponent/collisionflags/init(rawvalue:)
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionflags/init(rawvalue:)
-Description: Framework: RealityKit Kind: Initializer Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# init(rawValue:)
-
-**Framework:** RealityKit  
-**Kind:** Initializer  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-Initializes collisions flags from a raw value.
-
-## Declaration
-
-```swift
-init(rawValue: UInt8)
-```
-
-# Document: none
-
-Source path: documentation/realitykit/charactercontrollercomponent/collisionflags/none
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionflags/none
-Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# none
-
-**Framework:** RealityKit  
-**Kind:** Type Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-No collision.
-
-## Declaration
-
-```swift
-static let none: CharacterControllerComponent.CollisionFlags
-```
-
-# Document: rawValue
-
-Source path: documentation/realitykit/charactercontrollercomponent/collisionflags/rawvalue
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionflags/rawvalue
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# rawValue
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The bitmask representation of the option set.
-
-## Declaration
-
-```swift
-let rawValue: UInt8
-```
-
-# Document: side
-
-Source path: documentation/realitykit/charactercontrollercomponent/collisionflags/side
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionflags/side
-Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# side
-
-**Framework:** RealityKit  
-**Kind:** Type Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The side of capsule was hit when moving in the direction tangent to the up vector.
-
-## Declaration
-
-```swift
-static let side: CharacterControllerComponent.CollisionFlags
-```
-
-# Document: top
-
-Source path: documentation/realitykit/charactercontrollercomponent/collisionflags/top
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionflags/top
-Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# top
-
-**Framework:** RealityKit  
-**Kind:** Type Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The top of capsule was hit when moving in the up direction.
-
-## Declaration
-
-```swift
-static let top: CharacterControllerComponent.CollisionFlags
-```
-
-# Document: defaultHeight
-
-Source path: documentation/realitykit/charactercontrollercomponent/defaultheight
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/defaultheight
-Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# defaultHeight
-
-**Framework:** RealityKit  
-**Kind:** Type Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The capsule height value RealityKit applies when you use the default initializer.
-
-## Declaration
-
-```swift
-static let defaultHeight: Float
-```
-
-## See Also
-
-### Reading default values
-
-- [defaultRadius](defaultradius.md): The capsule default radius RealityKit applies when you use the default initializer.
-- [defaultSkinWidth](defaultskinwidth.md): The skin width value RealityKit applies when you use the default initializer.
-- [defaultSlopeLimit](defaultslopelimit.md): The slope limit value RealityKit applies when you use the default initializer.
-- [defaultStepLimit](defaultsteplimit.md): The step limit value RealityKit applies when you use the default initializer.
-- [defaultUpVector](defaultupvector.md): The default up vector RealityKit applies when you use the default initializer.
-
-# Document: defaultRadius
-
-Source path: documentation/realitykit/charactercontrollercomponent/defaultradius
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/defaultradius
-Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# defaultRadius
-
-**Framework:** RealityKit  
-**Kind:** Type Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The capsule default radius RealityKit applies when you use the default initializer.
-
-## Declaration
-
-```swift
-static let defaultRadius: Float
-```
-
-## See Also
-
-### Reading default values
-
-- [defaultHeight](defaultheight.md): The capsule height value RealityKit applies when you use the default initializer.
-- [defaultSkinWidth](defaultskinwidth.md): The skin width value RealityKit applies when you use the default initializer.
-- [defaultSlopeLimit](defaultslopelimit.md): The slope limit value RealityKit applies when you use the default initializer.
-- [defaultStepLimit](defaultsteplimit.md): The step limit value RealityKit applies when you use the default initializer.
-- [defaultUpVector](defaultupvector.md): The default up vector RealityKit applies when you use the default initializer.
-
-# Document: defaultSkinWidth
-
-Source path: documentation/realitykit/charactercontrollercomponent/defaultskinwidth
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/defaultskinwidth
-Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# defaultSkinWidth
-
-**Framework:** RealityKit  
-**Kind:** Type Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The skin width value RealityKit applies when you use the default initializer.
-
-## Declaration
-
-```swift
-static let defaultSkinWidth: Float
-```
-
-## See Also
-
-### Reading default values
-
-- [defaultHeight](defaultheight.md): The capsule height value RealityKit applies when you use the default initializer.
-- [defaultRadius](defaultradius.md): The capsule default radius RealityKit applies when you use the default initializer.
-- [defaultSlopeLimit](defaultslopelimit.md): The slope limit value RealityKit applies when you use the default initializer.
-- [defaultStepLimit](defaultsteplimit.md): The step limit value RealityKit applies when you use the default initializer.
-- [defaultUpVector](defaultupvector.md): The default up vector RealityKit applies when you use the default initializer.
-
-# Document: defaultSlopeLimit
-
-Source path: documentation/realitykit/charactercontrollercomponent/defaultslopelimit
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/defaultslopelimit
-Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# defaultSlopeLimit
-
-**Framework:** RealityKit  
-**Kind:** Type Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The slope limit value RealityKit applies when you use the default initializer.
-
-## Declaration
-
-```swift
-static let defaultSlopeLimit: Float
-```
-
-## See Also
-
-### Reading default values
-
-- [defaultHeight](defaultheight.md): The capsule height value RealityKit applies when you use the default initializer.
-- [defaultRadius](defaultradius.md): The capsule default radius RealityKit applies when you use the default initializer.
-- [defaultSkinWidth](defaultskinwidth.md): The skin width value RealityKit applies when you use the default initializer.
-- [defaultStepLimit](defaultsteplimit.md): The step limit value RealityKit applies when you use the default initializer.
-- [defaultUpVector](defaultupvector.md): The default up vector RealityKit applies when you use the default initializer.
-
-# Document: defaultStepLimit
-
-Source path: documentation/realitykit/charactercontrollercomponent/defaultsteplimit
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/defaultsteplimit
-Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# defaultStepLimit
-
-**Framework:** RealityKit  
-**Kind:** Type Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The step limit value RealityKit applies when you use the default initializer.
-
-## Declaration
-
-```swift
-static let defaultStepLimit: Float
-```
-
-## See Also
-
-### Reading default values
-
-- [defaultHeight](defaultheight.md): The capsule height value RealityKit applies when you use the default initializer.
-- [defaultRadius](defaultradius.md): The capsule default radius RealityKit applies when you use the default initializer.
-- [defaultSkinWidth](defaultskinwidth.md): The skin width value RealityKit applies when you use the default initializer.
-- [defaultSlopeLimit](defaultslopelimit.md): The slope limit value RealityKit applies when you use the default initializer.
-- [defaultUpVector](defaultupvector.md): The default up vector RealityKit applies when you use the default initializer.
-
-# Document: defaultUpVector
-
-Source path: documentation/realitykit/charactercontrollercomponent/defaultupvector
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/defaultupvector
-Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# defaultUpVector
-
-**Framework:** RealityKit  
-**Kind:** Type Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The default up vector RealityKit applies when you use the default initializer.
-
-## Declaration
-
-```swift
-static let defaultUpVector: SIMD3<Float>
-```
-
-## See Also
-
-### Reading default values
-
-- [defaultHeight](defaultheight.md): The capsule height value RealityKit applies when you use the default initializer.
-- [defaultRadius](defaultradius.md): The capsule default radius RealityKit applies when you use the default initializer.
-- [defaultSkinWidth](defaultskinwidth.md): The skin width value RealityKit applies when you use the default initializer.
-- [defaultSlopeLimit](defaultslopelimit.md): The slope limit value RealityKit applies when you use the default initializer.
-- [defaultStepLimit](defaultsteplimit.md): The step limit value RealityKit applies when you use the default initializer.
-
-# Document: height
-
-Source path: documentation/realitykit/charactercontrollercomponent/height
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/height
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# height
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The capsule height.
-
-## Declaration
-
-```swift
-var height: Float
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-The capsule height includes radii and should be specified the entity’s coordinate system.
-
-## See Also
-
-### Configuring a character
-
-- [radius](radius.md): The capsule radius.
-- [skinWidth](skinwidth.md): An added tolerance around the character capsule.
-- [slopeLimit](slopelimit.md): The slope limit expressed as a limit angle in radians.
-- [stepLimit](steplimit.md): The maximum obstacle height that the controller can move over.
-- [upVector](upvector.md): The y-axis direction relative to the physics origin.
-
-# Document: init()
-
-Source path: documentation/realitykit/charactercontrollercomponent/init()
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/init()
-Description: Framework: RealityKit Kind: Initializer Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# init()
-
-**Framework:** RealityKit  
-**Kind:** Initializer  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-Creates a character controller component using default values.
-
-## Declaration
-
-```swift
-init()
-```
-
-## See Also
-
-### Creating a character controller component
-
-- [init(radius:height:skinWidth:slopeLimit:stepLimit:upVector:collisionFilter:)](init%28radius_height_skinwidth_slopelimit_steplimit_upvector_collisionfilter_%29.md): Creates a character controller component using specified values.
-
-# Document: init(radius:height:skinWidth:slopeLimit:stepLimit:upVector:collisionFilter:)
-
-Source path: documentation/realitykit/charactercontrollercomponent/init(radius:height:skinwidth:slopelimit:steplimit:upvector:collisionfilter:)
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/init(radius:height:skinwidth:slopelimit:steplimit:upvector:collisionfilter:)
-Description: Framework: RealityKit Kind: Initializer Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# init(radius:height:skinWidth:slopeLimit:stepLimit:upVector:collisionFilter:)
-
-**Framework:** RealityKit  
-**Kind:** Initializer  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-Creates a character controller component using specified values.
-
-## Declaration
-
-```swift
-init(radius: Float, height: Float, skinWidth: Float = defaultSkinWidth, slopeLimit: Float = defaultSlopeLimit, stepLimit: Float = defaultStepLimit, upVector: SIMD3<Float> = defaultUpVector, collisionFilter: CollisionFilter = .default)
-```
-
-## See Also
-
-### Creating a character controller component
-
-- [init()](init%28%29.md): Creates a character controller component using default values.
-
-# Document: radius
-
-Source path: documentation/realitykit/charactercontrollercomponent/radius
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/radius
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# radius
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The capsule radius.
-
-## Declaration
-
-```swift
-var radius: Float
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-Specify this value in the entity’s coordinate system.
-
-## See Also
-
-### Configuring a character
-
-- [height](height.md): The capsule height.
-- [skinWidth](skinwidth.md): An added tolerance around the character capsule.
-- [slopeLimit](slopelimit.md): The slope limit expressed as a limit angle in radians.
-- [stepLimit](steplimit.md): The maximum obstacle height that the controller can move over.
-- [upVector](upvector.md): The y-axis direction relative to the physics origin.
-
-# Document: skinWidth
-
-Source path: documentation/realitykit/charactercontrollercomponent/skinwidth
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/skinwidth
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# skinWidth
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-An added tolerance around the character capsule.
-
-## Declaration
-
-```swift
-var skinWidth: Float
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-A small skin, known as the *contact offset*, is maintained around the controller’s volume to avoid rounding and precision issues with collision detection. Specify this value relative to the entity’s coordinate system.
-
-## See Also
-
-### Configuring a character
-
-- [height](height.md): The capsule height.
-- [radius](radius.md): The capsule radius.
-- [slopeLimit](slopelimit.md): The slope limit expressed as a limit angle in radians.
-- [stepLimit](steplimit.md): The maximum obstacle height that the controller can move over.
-- [upVector](upvector.md): The y-axis direction relative to the physics origin.
-
-# Document: slopeLimit
-
-Source path: documentation/realitykit/charactercontrollercomponent/slopelimit
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/slopelimit
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# slopeLimit
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The slope limit expressed as a limit angle in radians.
-
-## Declaration
-
-```swift
-var slopeLimit: Float
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-This value represents the maximum slope that the character can move over. RealityKit applies this value to characters that are walking on static objects, but not when walking on kinematic or dynamic objects.
-
-Changing this value after the CharacterControllerComponent has been created and added to Entity has no effect.
-
-## See Also
-
-### Configuring a character
-
-- [height](height.md): The capsule height.
-- [radius](radius.md): The capsule radius.
-- [skinWidth](skinwidth.md): An added tolerance around the character capsule.
-- [stepLimit](steplimit.md): The maximum obstacle height that the controller can move over.
-- [upVector](upvector.md): The y-axis direction relative to the physics origin.
-
-# Document: stepLimit
-
-Source path: documentation/realitykit/charactercontrollercomponent/steplimit
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/steplimit
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# stepLimit
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The maximum obstacle height that the controller can move over.
-
-## Declaration
-
-```swift
-var stepLimit: Float
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-Specify this value relative to the entity’s coordinate system.
-
-Changing this value after the CharacterControllerComponent has been created and added to Entity has no effect.
-
-## See Also
-
-### Configuring a character
-
-- [height](height.md): The capsule height.
-- [radius](radius.md): The capsule radius.
-- [skinWidth](skinwidth.md): An added tolerance around the character capsule.
-- [slopeLimit](slopelimit.md): The slope limit expressed as a limit angle in radians.
-- [upVector](upvector.md): The y-axis direction relative to the physics origin.
-
-# Document: upVector
-
-Source path: documentation/realitykit/charactercontrollercomponent/upvector
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/upvector
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# upVector
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The y-axis direction relative to the physics origin.
-
-## Declaration
-
-```swift
-var upVector: SIMD3<Float>
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-Rotates the object so that the vertical height is along the up vector. Normalize and specify the vector in *physics space*, the coordinate system of the physics simulation.
-
-## See Also
-
-### Configuring a character
-
-- [height](height.md): The capsule height.
-- [radius](radius.md): The capsule radius.
-- [skinWidth](skinwidth.md): An added tolerance around the character capsule.
-- [slopeLimit](slopelimit.md): The slope limit expressed as a limit angle in radians.
-- [stepLimit](steplimit.md): The maximum obstacle height that the controller can move over.
-
-# Document: CharacterControllerStateComponent
-
-Source path: documentation/realitykit/charactercontrollerstatecomponent
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollerstatecomponent
-Description: Framework: RealityKit Kind: Structure Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# CharacterControllerStateComponent
-
-**Framework:** RealityKit  
-**Kind:** Structure  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-A component that represents the state of a character controller.
-
-## Declaration
-
-```swift
-struct CharacterControllerStateComponent
-```
-
-<a id="overview"></a>
-
-## Overview
-
-RealityKit adds this component to an entity when you add a [CharacterControllerComponent](charactercontrollercomponent.md) instance to it. Manually adding this component to an entity that has a character controller component has no effect because it’s redundant.
-
-## Topics
-
-### Creating a state component
-
-- [init()](charactercontrollerstatecomponent/init%28%29.md)
-
-### Accessing character controller state
-
-- [isOnGround](charactercontrollerstatecomponent/isonground.md): A Boolean value that indicates whether the character controller is on the ground.
-- [velocity](charactercontrollerstatecomponent/velocity.md): The linear speed relative to the origin in physics space.
-
-## Relationships
-
-### Conforms To
-
-- [Component](component.md)
-
-## See Also
-
-### Character control
-
-- [CharacterControllerComponent](charactercontrollercomponent.md): A component that manages character movement.
-- [CharacterControllerComponent.Collision](charactercontrollercomponent/collision.md): A container that holds collision state for the character controller.
-- [CharacterControllerComponent.CollisionFlags](charactercontrollercomponent/collisionflags.md): An option set that specifies which parts of the character capsule have collided with other objects.
-
-# Document: init()
-
-Source path: documentation/realitykit/charactercontrollerstatecomponent/init()
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollerstatecomponent/init()
-Description: Framework: RealityKit Kind: Initializer Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# init()
-
-**Framework:** RealityKit  
-**Kind:** Initializer  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-## Declaration
-
-```swift
-init()
-```
-
-# Document: isOnGround
-
-Source path: documentation/realitykit/charactercontrollerstatecomponent/isonground
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollerstatecomponent/isonground
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# isOnGround
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-A Boolean value that indicates whether the character controller is on the ground.
-
-## Declaration
-
-```swift
-let isOnGround: Bool
-```
-
-## See Also
-
-### Accessing character controller state
-
-- [velocity](velocity.md): The linear speed relative to the origin in physics space.
-
-# Document: velocity
-
-Source path: documentation/realitykit/charactercontrollerstatecomponent/velocity
-Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollerstatecomponent/velocity
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# velocity
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-The linear speed relative to the origin in physics space.
-
-## Declaration
-
-```swift
-let velocity: SIMD3<Float>
-```
-
-## See Also
-
-### Accessing character controller state
-
-- [isOnGround](isonground.md): A Boolean value that indicates whether the character controller is on the ground.

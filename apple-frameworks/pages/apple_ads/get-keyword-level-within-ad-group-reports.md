@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/get-keyword-level-within-ad-group-reports
 
 # Get Keyword-Level within Ad Group Reports
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Web Service Endpoint  
-**Availability:** Search Ads 5.0+
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 Fetches reports for targeting keywords within an ad group.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## URL
 
@@ -170,9 +172,9 @@ POST https://api.searchads.apple.com/api/v5/reports/campaigns/{campaignId}/adgro
 
 ### Reports Endpoints
 
-- [Get Campaign-Level Reports](get-campaign-level-reports.md): Fetches reports for campaigns.
-- [Get Ad Group-Level Reports](get-ad-group-level-reports.md): Fetches reports for ad groups within a campaign.
-- [Get Keyword-Level Reports](get-keyword-level-reports.md): Fetches reports for targeting keywords within a campaign.
-- [Get Search Term-Level Reports](get-search-term-level-reports.md): Fetches reports for search terms within a campaign.
-- [Get Search Term-Level within Ad Group Reports](get-search-term-level-within-ad-group-reports.md): Fetches reports for search terms within an ad group.
-- [Get Ad-Level Reports](get-ad-level-reports.md): Fetches ad performance data within a campaign.
+- [Get Campaign-Level Reports](get-campaign-level-reports.md): Deprecated. Fetches reports for campaigns.
+- [Get Ad Group-Level Reports](get-ad-group-level-reports.md): Deprecated. Fetches reports for ad groups within a campaign.
+- [Get Keyword-Level Reports](get-keyword-level-reports.md): Deprecated. Fetches reports for targeting keywords within a campaign.
+- [Get Search Term-Level Reports](get-search-term-level-reports.md): Deprecated. Fetches reports for search terms within a campaign.
+- [Get Search Term-Level within Ad Group Reports](get-search-term-level-within-ad-group-reports.md): Deprecated. Fetches reports for search terms within an ad group.
+- [Get Ad-Level Reports](get-ad-level-reports.md): Deprecated. Fetches ad performance data within a campaign.

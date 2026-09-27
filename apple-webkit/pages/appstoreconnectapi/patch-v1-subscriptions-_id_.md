@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/patch-v1-subscriptions-_id_
 
 # Modify an auto-renewable subscription
@@ -37,6 +37,10 @@ Type: `SubscriptionUpdateRequest`
 - `409` Conflict — `ErrorResponse`:
 - `422` — `ErrorResponse`:
 - `429` — `ErrorResponse`:
+
+## Mentioned In
+
+- [Configuring multi-seat subscriptions for organizations](configuring-multi-seat-subscriptions-for-organizations.md)
 
 <a id="Discussion"></a>
 

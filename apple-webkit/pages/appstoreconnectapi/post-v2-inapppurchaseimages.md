@@ -1,7 +1,7 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/post-v2-inapppurchaseimages
 
-# Create an in-app purchase image
+# Create an In-App Purchase image
 
 **Interface language:** Data
 
@@ -9,7 +9,7 @@
 **Kind:** Web Service Endpoint  
 **Availability:** App Store Connect API 4.4.1+
 
-Reserve a promotion image for an in-app purchase configured with the v2 API and prepare its asset upload.
+Reserve a promotion image for an In-App Purchase configured with the v2 API and prepare its asset upload.
 
 ## URL
 
@@ -36,12 +36,12 @@ Type: `InAppPurchaseImageV2CreateRequest`
 ## Mentioned In
 
 - [App Store Connect API 4.4.1 release notes](app-store-connect-api-4-4-1-release-notes.md)
-- [Working with in-app purchase versions](working-with-in-app-purchase-versions.md)
+- [Working with In-App Purchase versions](working-with-in-app-purchase-versions.md)
 
 ## See Also
 
 ### Endpoints
 
-- [Read in-app purchase image information](get-v2-inapppurchaseimages-_id_.md): Get the metadata for an in-app purchase image configured with the v2 API, including the asset upload state.
-- [Modify an in-app purchase image](patch-v2-inapppurchaseimages-_id_.md): Commit the asset upload for an in-app purchase image configured with the v2 API.
-- [Delete an in-app purchase image](delete-v2-inapppurchaseimages-_id_.md): Delete an in-app purchase image configured with the v2 API.
+- [Read In-App Purchase image information](get-v2-inapppurchaseimages-_id_.md): Get the metadata for an In-App Purchase image configured with the v2 API, including the asset upload state.
+- [Modify an In-App Purchase image](patch-v2-inapppurchaseimages-_id_.md): Commit the asset upload for an In-App Purchase image configured with the v2 API.
+- [Delete an In-App Purchase image](delete-v2-inapppurchaseimages-_id_.md): Delete an In-App Purchase image configured with the v2 API.

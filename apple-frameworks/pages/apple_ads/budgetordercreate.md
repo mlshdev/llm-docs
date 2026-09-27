@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/budgetordercreate
 
 # BudgetOrderCreate
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Object  
-**Availability:** Search Ads 4.11+
+**Availability:** Search Ads 4.11+ (deprecated in 5.2)
 
 The parent object response to a request to create a budget order.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -32,10 +34,10 @@ object BudgetOrderCreate
 
 ### Budget Order Request and Response Objects
 
-- [BudgetOrder](budgetorder.md): The response to requests for budget order details.
-- [BudgetOrderInfo](budgetorderinfo.md): The parent object response to a request for budget order details.
-- [BudgetOrderUpdate](budgetorderupdate.md): The parent object response to a request to update a budget order.
-- [BudgetOrderInfoResponse](budgetorderinforesponse.md): A container for the budget order response body.
-- [BudgetOrderInfoListResponse](budgetorderinfolistresponse.md): The response details to budget order requests.
-- [LOCInvoiceDetails](locinvoicedetails.md): The response to a request to fetch details for `LOC` invoicing details.
-- [Money](money.md): The response to requests for budget amounts in campaigns.
+- [BudgetOrder](budgetorder.md): Deprecated. The response to requests for budget order details.
+- [BudgetOrderInfo](budgetorderinfo.md): Deprecated. The parent object response to a request for budget order details.
+- [BudgetOrderUpdate](budgetorderupdate.md): Deprecated. The parent object response to a request to update a budget order.
+- [BudgetOrderInfoResponse](budgetorderinforesponse.md): Deprecated. A container for the budget order response body.
+- [BudgetOrderInfoListResponse](budgetorderinfolistresponse.md): Deprecated. The response details to budget order requests.
+- [LOCInvoiceDetails](locinvoicedetails.md): Deprecated. The response to a request to fetch details for `LOC` invoicing details.
+- [Money](money.md): Deprecated. The response to requests for budget amounts in campaigns.

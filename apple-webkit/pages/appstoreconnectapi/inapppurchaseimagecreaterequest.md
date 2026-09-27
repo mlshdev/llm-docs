@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseimagecreaterequest
 
 # InAppPurchaseImageCreateRequest
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 2.0+ (deprecated in 4.4.1)
 
-The request body you use to create an in-app purchase image reservation.
+The request body you use to create an In-App Purchase image reservation.
 
 > This object is deprecated. Use [InAppPurchaseImageV2CreateRequest](inapppurchaseimagev2createrequest.md) instead.
 
@@ -33,7 +33,7 @@ object InAppPurchaseImageCreateRequest
 
 ### Objects
 
-- [InAppPurchaseImage](inapppurchaseimage.md): Deprecated. A screenshot or image associated with an in-app purchase or subscription, displayed on the App Store product page.
-- [InAppPurchaseImageResponse](inapppurchaseimageresponse.md): Deprecated. A response containing a single image for an in-app purchase.
-- [InAppPurchaseImageUpdateRequest](inapppurchaseimageupdaterequest.md): Deprecated. The request body for updating the upload state or file content of an in-app purchase image.
-- [InAppPurchaseImagesResponse](inapppurchaseimagesresponse.md): Deprecated. A response containing a list of images for an in-app purchase.
+- [InAppPurchaseImage](inapppurchaseimage.md): Deprecated. A screenshot or image associated with an In-App Purchase or subscription, displayed on the App Store product page.
+- [InAppPurchaseImageResponse](inapppurchaseimageresponse.md): Deprecated. A response containing a single image for an In-App Purchase.
+- [InAppPurchaseImageUpdateRequest](inapppurchaseimageupdaterequest.md): Deprecated. The request body for updating the upload state or file content of an In-App Purchase image.
+- [InAppPurchaseImagesResponse](inapppurchaseimagesresponse.md): Deprecated. A response containing a list of images for an In-App Purchase.

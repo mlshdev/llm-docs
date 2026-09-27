@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appbackgroundassetslinkagesresponse/data-data.dictionary
 
 # AppBackgroundAssetsLinkagesResponse.Data
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 4.0+
 
-The the type and ID of a background asset resource linked to an app.
+The type and ID of a background asset resource linked to an app.
 
 ## Declaration
 

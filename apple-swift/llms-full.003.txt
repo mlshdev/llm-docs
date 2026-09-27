@@ -1,28 +1,10 @@
-# Apple Swift snapshot-5915b24a1311: full documentation
+# Apple Swift snapshot-3cd4d1098779: full documentation
 
 Source: https://developer.apple.com/documentation/swift
-Catalog snapshot: 5915b24a13116058563ec2085adb7610a331e7e4aea596f8d2f1f1b39a6e0f1c
-Content digest: 8b137be1ef278f1d522a4d88c557c8c07b458d20c03cd9e5596b61253f263486
-Captured at: 2026-09-16T18:21:42.073Z
+Catalog snapshot: 3cd4d1098779f6b6fc16e524bcbb296cd3ca44b5de1a8f9d83171d61b7b63adb
+Content digest: cb3ffbf838cd5f0be6ae77f16fdae59481730abbd878246936617c12df1785d3
+Captured at: 2026-09-27T18:07:09.584Z
 Volume 3
-
-# Document: &=(_:_:)
-
-Source path: documentation/swift/simd/&=(_:_:)-9p2uz
-Canonical documentation: https://developer.apple.com/documentation/swift/simd/&=(_:_:)-9p2uz
-Description: Framework: Swift Kind: Operator Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-# &=(\_:\_:)
-
-**Framework:** Swift  
-**Kind:** Operator  
-**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-## Declaration
-
-```swift
-static func &= (a: inout Self, b: Self)
-```
 
 # Document: &>>(_:_:)
 
@@ -157778,6 +157760,7 @@ deinit actor
 
 ### Shielding Tasks from Cancellation
 
+- [hasActiveCancellationShield](task/hasactivecancellationshield.md): Conforms when `Success` is `Never` and `Failure` is `Never`. Checks if the current task is executing in a scope with a task cancellation shield activated by the `withTaskCancellationShield(operation:)-(()->Value)` function.
 - [withTaskCancellationShield(operation:)](withtaskcancellationshield%28operation_%29-2lzl8.md): Enters a scope in which a task cancellation shield is active.
 - [withTaskCancellationShield(operation:)](withtaskcancellationshield%28operation_%29-8zlgh.md): Enters a scope in which a task cancellation shield is active.
 
@@ -157819,10 +157802,6 @@ deinit actor
 ### Instance Properties
 
 - [name](task/name-swift.property.md): Conforms when `Success` conforms to `Sendable` and `Failure` conforms to `Error`. Return the task’s name, if it was set during its creation.
-
-### Type Properties
-
-- [hasActiveCancellationShield](task/hasactivecancellationshield.md): Conforms when `Success` is `Never` and `Failure` is `Never`. Checks if the current task is executing in a scope with a task cancellation shield activated by the `withTaskCancellationShield(operation:)-(()->Value)` function.
 
 ### Default Implementations
 
@@ -158632,6 +158611,13 @@ Cancellation shields are not automatically inherited by child tasks; each child 
 > **See Also**
 
 > [hasActiveCancellationShield](../unsafecurrenttask/hasactivecancellationshield.md)
+
+## See Also
+
+### Shielding Tasks from Cancellation
+
+- [withTaskCancellationShield(operation:)](../withtaskcancellationshield%28operation_%29-2lzl8.md): Enters a scope in which a task cancellation shield is active.
+- [withTaskCancellationShield(operation:)](../withtaskcancellationshield%28operation_%29-8zlgh.md): Enters a scope in which a task cancellation shield is active.
 
 # Document: hash(into:)
 

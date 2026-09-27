@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/reportingkeyword
 
 # ReportingKeyword
@@ -33,9 +33,11 @@ object ReportingKeyword
 - `modificationTime` — `date-time`: The time the keyword was last modified.
 - `creationTime` — `date-time`: The time the keyword was created.
 - `displayStatus` — `string`: The computed display status of the keyword.
+  **Allowed values:** `AD_GROUP_ON_HOLD`, `CAMPAIGN_ON_HOLD`, `DELETED`, `PAUSED`, `RUNNING`
 - `adGroup` — `ReportingAdGroupMin`: See [ReportingAdGroupMin](reportingadgroupmin.md) for details.
 - `countryOrRegion` — `string`: Country or region groupBy dimension value.
 - `deviceClass` — `string`: Device class groupBy dimension value.
+  **Allowed values:** `IPHONE`, `IPAD`
 
 <a id="Discussion"></a>
 

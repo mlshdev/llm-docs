@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/gamecenterdetail/relationships-data.dictionary
 
 # GameCenterDetail.Relationships
@@ -35,6 +35,7 @@ object GameCenterDetail.Relationships
 - `challengesMinimumPlatformVersions` — `GameCenterDetail.Relationships.ChallengesMinimumPlatformVersions`:
 - `gameCenterActivities` — `GameCenterDetail.Relationships.GameCenterActivities`:
 - `gameCenterChallenges` — `GameCenterDetail.Relationships.GameCenterChallenges`:
+- `blockedPlayers` — `GameCenterDetail.Relationships.BlockedPlayers`:
 - `defaultGroupLeaderboardV2` — `GameCenterDetail.Relationships.DefaultGroupLeaderboardV2`:
 - `defaultLeaderboardV2` — `GameCenterDetail.Relationships.DefaultLeaderboardV2`:
 - `gameCenterAchievementsV2` — `GameCenterDetail.Relationships.GameCenterAchievementsV2`:
@@ -60,6 +61,7 @@ object GameCenterDetail.Relationships
 ### Dictionaries
 
 - [GameCenterDetail.Relationships.ActivityReleases](relationships-data.dictionary/activityreleases-data.dictionary.md): Deprecated.
+- [GameCenterDetail.Relationships.BlockedPlayers](relationships-data.dictionary/blockedplayers-data.dictionary.md)
 - [GameCenterDetail.Relationships.ChallengeReleases](relationships-data.dictionary/challengereleases-data.dictionary.md): Deprecated.
 - [GameCenterDetail.Relationships.ChallengesMinimumPlatformVersions](relationships-data.dictionary/challengesminimumplatformversions-data.dictionary.md)
 - [GameCenterDetail.Relationships.DefaultGroupLeaderboardV2](relationships-data.dictionary/defaultgroupleaderboardv2-data.dictionary.md): The data that describes the default group leaderboard of the Game Center detail.

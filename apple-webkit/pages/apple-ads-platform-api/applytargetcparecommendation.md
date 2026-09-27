@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/applytargetcparecommendation
 
 # ApplyTargetCpaRecommendation
@@ -22,6 +22,7 @@ object ApplyTargetCpaRecommendation
 - `id` — `string` (required): The unique identifier of the recommendation to act on.
 - `promotedObjectId` — `string` (required): The ID of the promoted object. For `APPSTORE_APP`, this is the app Adam ID. For `BUSINESS_BRAND`, this is the brand ID.
 - `promotedObjectType` — `string` (required): The type of the promoted object.
+  **Allowed values:** `APPSTORE_APP`, `BUSINESS_BRAND`
 - `appliedTargetCPA` — `RecommendationMoney`: The target CPA value to apply. Overrides `recommendedTargetCPA` if provided. Ignored on dismiss. See [Money](recommendationmoney.md).
 - `historyId` — `string`: Optional reference to a prior history record.
 

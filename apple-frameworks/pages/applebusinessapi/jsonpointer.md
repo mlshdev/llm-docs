@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/jsonpointer
 
 # JsonPointer
@@ -7,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Object  
-**Availability:** Apple Business API 2.5+
+**Availability:** Apple Business API 2.6+
 
 An object that contains the JSON pointer that indicates the location of the error.
 

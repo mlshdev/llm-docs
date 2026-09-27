@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintents/intentparameter/init(description:default:kind:requestvaluedialog:inputconnectionbehavior:resolvers:)-74s2f
 
 # init(description:default:kind:requestValueDialog:inputConnectionBehavior:resolvers:)

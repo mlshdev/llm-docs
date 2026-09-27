@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Swift snapshot-3cd4d1098779; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swift/borrowingiteratorprotocol
 
 # BorrowingIteratorProtocol
@@ -37,7 +37,7 @@ protocol BorrowingIteratorProtocol<Element, Failure> : ~Copyable, ~Escapable
 
 ## See Also
 
-### Manual Iteration
+### Borrowing Iteration
 
-- [IteratorProtocol](iteratorprotocol.md): A type that supplies the values of a sequence one at a time.
+- [Iterable](iterable.md): A type that provides sequential, borrowing access to its elements.
 - [BorrowingIteratorAdapter](borrowingiteratoradapter.md)

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/pagedetail
 
 # PageDetail
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Object  
-**Availability:** Search Ads 2.0+
+**Availability:** Search Ads 2.0+ (deprecated in 5.2)
 
 The number of items that return in the page.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -48,7 +50,7 @@ The `PageDetail` object contains the pagination response for returned multiple r
 
 ### API Usability
 
-- [Condition](condition.md): The list of condition objects that allow users to filter a list of records.
-- [Pagination](pagination.md): The procedure to refine returned results using limit and offset parameters.
-- [Selector](selector.md): The selector objects available to filter returned data.
-- [Sorting](sorting.md): The order of grouped results.
+- [Condition](condition.md): Deprecated. The list of condition objects that allow users to filter a list of records.
+- [Pagination](pagination.md): Deprecated. The procedure to refine returned results using limit and offset parameters.
+- [Selector](selector.md): Deprecated. The selector objects available to filter returned data.
+- [Sorting](sorting.md): Deprecated. The order of grouped results.

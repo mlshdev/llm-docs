@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseappstorereviewscreenshot
 
 # InAppPurchaseAppStoreReviewScreenshot
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 2.0+
 
-A screenshot of the in-app purchase flow submitted alongside an in-app purchase for App Store review.
+A screenshot of the In-App Purchase flow submitted alongside an In-App Purchase for App Store review.
 
 ## Declaration
 
@@ -29,13 +29,13 @@ object InAppPurchaseAppStoreReviewScreenshot
 
 ### Objects
 
-- [InAppPurchaseAppStoreReviewScreenshot.Attributes](inapppurchaseappstorereviewscreenshot/attributes-data.dictionary.md): Attributes that describe an in-app purchase App Store review screenshot resource.
+- [InAppPurchaseAppStoreReviewScreenshot.Attributes](inapppurchaseappstorereviewscreenshot/attributes-data.dictionary.md): Attributes that describe an In-App Purchase App Store review screenshot resource.
 - [InAppPurchaseAppStoreReviewScreenshot.Relationships](inapppurchaseappstorereviewscreenshot/relationships-data.dictionary.md): The relationships you include in the request and those on which you can operate.
 
 ## See Also
 
 ### Objects
 
-- [InAppPurchaseAppStoreReviewScreenshotCreateRequest](inapppurchaseappstorereviewscreenshotcreaterequest.md): The request body you use to create an in-app purchase App Store review screenshot.
-- [InAppPurchaseAppStoreReviewScreenshotResponse](inapppurchaseappstorereviewscreenshotresponse.md): A response containing a single App Store review screenshot for an in-app purchase.
-- [InAppPurchaseAppStoreReviewScreenshotUpdateRequest](inapppurchaseappstorereviewscreenshotupdaterequest.md): The request body you use to update an in-app purchase App Store review screenshot update request.
+- [InAppPurchaseAppStoreReviewScreenshotCreateRequest](inapppurchaseappstorereviewscreenshotcreaterequest.md): The request body you use to create an In-App Purchase App Store review screenshot.
+- [InAppPurchaseAppStoreReviewScreenshotResponse](inapppurchaseappstorereviewscreenshotresponse.md): A response containing a single App Store review screenshot for an In-App Purchase.
+- [InAppPurchaseAppStoreReviewScreenshotUpdateRequest](inapppurchaseappstorereviewscreenshotupdaterequest.md): The request body you use to update an In-App Purchase App Store review screenshot update request.

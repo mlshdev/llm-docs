@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseimagev2/attributes-data.dictionary
 
 # InAppPurchaseImageV2.Attributes
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 4.4.1+
 
-Attributes that describe an in-app purchase image resource.
+Attributes that describe an In-App Purchase image resource.
 
 ## Declaration
 

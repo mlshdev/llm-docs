@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/game-center-details
 
 # Game Center details
@@ -119,3 +119,4 @@ To enable Game Center, begin by calling [Enable game center for an app](post-v1-
 ### Details and groups
 
 - [Game Center groups](game-center-groups.md): Manage groups between your apps.
+- [Game Center blocked players](game-center-blocked-players.md): Block and unblock the Game Center players who can play your game.

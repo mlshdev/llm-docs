@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/gets-a-product-page-reason
 
 # Get Ad Creative Rejection Reasons
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Web Service Endpoint  
-**Availability:** Search Ads 5.0+
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 Fetches ad creative rejection reasons by custom product page ID.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## URL
 
@@ -74,5 +76,5 @@ GET https://api.searchads.apple.com/api/v5/product-page-reasons/{productPageReas
 
 ### Ad Rejections
 
-- [Find Ad Creative Rejection Reasons](find-ad-creative-rejection-reasons.md): Fetches ad creative rejection reasons.
-- [Find App Assets](find-app-assets.md): Fetches app asset metadata by adam ID.
+- [Find Ad Creative Rejection Reasons](find-ad-creative-rejection-reasons.md): Deprecated. Fetches ad creative rejection reasons.
+- [Find App Assets](find-app-assets.md): Deprecated. Fetches app asset metadata by adam ID.

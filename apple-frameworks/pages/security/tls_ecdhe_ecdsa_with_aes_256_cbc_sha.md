@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/security/tls_ecdhe_ecdsa_with_aes_256_cbc_sha
 
 # TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (Swift)

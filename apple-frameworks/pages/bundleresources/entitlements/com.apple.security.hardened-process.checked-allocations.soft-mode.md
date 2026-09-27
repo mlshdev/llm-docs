@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.security.hardened-process.checked-allocations.soft-mode
 
 # com.apple.security.hardened-process.checked-allocations.soft-mode
@@ -38,3 +38,4 @@ For more information, see [Enabling enhanced security for your app](https://deve
 - [com.apple.security.hardened-process.checked-allocations](com.apple.security.hardened-process.checked-allocations.md): A Boolean value that enables tagging of pointers and memory allocations.
 - [com.apple.security.hardened-process.checked-allocations.enable-pure-data](com.apple.security.hardened-process.checked-allocations.enable-pure-data.md): A Boolean value that indicates whether to tag memory that contains only data.
 - [com.apple.security.hardened-process.checked-allocations.no-tagged-receive](com.apple.security.hardened-process.checked-allocations.no-tagged-receive.md): A Boolean value that indicates whether to prevent receiving tagged memory from other processes.
+- [Check for Overflow of Pointer Arithmetic](com.apple.security.hardened-process.checked-allocations.enforce-checked-pointer-arithmetic-overflow.md): A Boolean value that enables checking pointers for arithmetic overflow.

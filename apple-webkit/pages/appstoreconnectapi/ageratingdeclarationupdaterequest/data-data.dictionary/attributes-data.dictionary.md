@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/ageratingdeclarationupdaterequest/data-data.dictionary/attributes-data.dictionary
 
 # AgeRatingDeclarationUpdateRequest.Data.Attributes
@@ -61,8 +61,9 @@ object AgeRatingDeclarationUpdateRequest.Data.Attributes
   **Allowed values:** `NONE`, `NINE_PLUS`, `THIRTEEN_PLUS`, `SIXTEEN_PLUS`, `SEVENTEEN_PLUS`, `UNRATED`
 - `ageRatingOverrideV2` — `string`: An override you set for the app’s calculated age rating. Allowed values are NONE, NINE_PLUS, THIRTEEN_PLUS, SIXTEEN_PLUS, EIGHTEEN_PLUS, and UNRATED.
   **Allowed values:** `NONE`, `NINE_PLUS`, `THIRTEEN_PLUS`, `SIXTEEN_PLUS`, `EIGHTEEN_PLUS`, `UNRATED`
-- `koreaAgeRatingOverride` — `string`: An override you set for the app’s calculated age rating in Korea. Allowed values are NONE, FIFTEEN_PLUS, and NINETEEN_PLUS.
-  **Allowed values:** `NONE`, `FIFTEEN_PLUS`, `NINETEEN_PLUS`
+- `koreaAgeRatingOverride` — `string`: An override you set for the app’s calculated age rating in Korea.
+  **Allowed values:** `NONE`, `ALL`, `TWELVE_PLUS`, `FIFTEEN_PLUS`, `NINETEEN_PLUS`
+- `gracRatingClassificationNumber` — `string`: The rating classification number provided by Game Rating and Administration Committee (GRAC). To learn more, see the [Game Rating and Administration Committee](https://www.gcrb.or.kr) website.
 - `developerAgeRatingInfoUrl` — `uri`: The URL where people can find more information about how you determine the app’s age rating.
 
 ## Mentioned In

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/blueprintorgdeviceslinkagesrequest
 
 # BlueprintOrgDevicesLinkagesRequest
@@ -7,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Object  
-**Availability:** Apple Business API 2.5+
+**Availability:** Apple Business API 2.6+
 
 A request to get a list of device resource linkages for a Blueprint.
 

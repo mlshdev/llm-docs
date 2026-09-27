@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/get-the-activation-lock-status-information-for-an-orgdevice
 
 # Get the Activation Lock Status for a Device
@@ -7,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Web Service Endpoint  
-**Availability:** Apple Business API 2.5+
+**Availability:** Apple Business API 2.6+
 
 Get the Activation Lock status of an organization device.
 

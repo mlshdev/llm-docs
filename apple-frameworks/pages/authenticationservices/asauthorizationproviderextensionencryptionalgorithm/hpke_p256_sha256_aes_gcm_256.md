@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/authenticationservices/asauthorizationproviderextensionencryptionalgorithm/hpke_p256_sha256_aes_gcm_256
 
 # hpke_P256_SHA256_AES_GCM_256 (Swift)

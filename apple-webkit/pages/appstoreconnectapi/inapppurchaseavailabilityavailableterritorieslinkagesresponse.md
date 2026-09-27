@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseavailabilityavailableterritorieslinkagesresponse
 
 # InAppPurchaseAvailabilityAvailableTerritoriesLinkagesResponse
@@ -31,6 +31,6 @@ object InAppPurchaseAvailabilityAvailableTerritoriesLinkagesResponse
 
 ### Objects
 
-- [InAppPurchaseAvailability](inapppurchaseavailability.md): The territory availability configuration for an in-app purchase, specifying which App Store regions it’s offered in.
-- [InAppPurchaseAvailabilityCreateRequest](inapppurchaseavailabilitycreaterequest.md): The request body you use to create an in-app purchase availability.
-- [InAppPurchaseAvailabilityResponse](inapppurchaseavailabilityresponse.md): A response containing a single territory availability configuration for an in-app purchase.
+- [InAppPurchaseAvailability](inapppurchaseavailability.md): The territory availability configuration for an In-App Purchase, specifying which App Store regions it’s offered in.
+- [InAppPurchaseAvailabilityCreateRequest](inapppurchaseavailabilitycreaterequest.md): The request body you use to create an In-App Purchase availability.
+- [InAppPurchaseAvailabilityResponse](inapppurchaseavailabilityresponse.md): A response containing a single territory availability configuration for an In-App Purchase.

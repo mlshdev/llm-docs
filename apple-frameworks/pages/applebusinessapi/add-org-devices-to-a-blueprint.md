@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/add-org-devices-to-a-blueprint
 
 # Add Devices to a Blueprint
@@ -7,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Web Service Endpoint  
-**Availability:** Apple Business API 2.5+
+**Availability:** Apple Business API 2.6+
 
 Add devices to a Blueprint.
 

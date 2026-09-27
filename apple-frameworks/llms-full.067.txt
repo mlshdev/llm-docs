@@ -1,10 +1,1366 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 67
+
+# Document: ImageProcessingRequest
+
+Source path: documentation/vision/imageprocessingrequest
+Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest
+Description: Framework: Vision Kind: Protocol Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# ImageProcessingRequest
+
+**Framework:** Vision  
+**Kind:** Protocol  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+A type for image-analysis requests that focus on a specific part of an image.
+
+## Declaration
+
+```swift
+protocol ImageProcessingRequest : VisionRequest
+```
+
+## Topics
+
+### Setting the region
+
+- [regionOfInterest](imageprocessingrequest/regionofinterest.md): The region of the image where the framework performs the request.
+
+### Performing a request
+
+- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-80bya.md): Performs the request on an image URL and produces observations.
+- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-3f3f1.md): Performs the request on image data and produces observations.
+- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-qxxx.md): Performs the request on a Core Graphics image and produces observations.
+- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-xspx.md): Performs the request on a pixel buffer and produces observations.
+- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-3hddl.md): Performs the request on a Core Media buffer and produces observations.
+- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-85ex1.md): Performs the request on a Core Image image and produces observations.
+
+## Relationships
+
+### Inherits From
+
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [VisionRequest](visionrequest.md)
+
+### Conforming Types
+
+- [CalculateImageAestheticsScoresRequest](calculateimageaestheticsscoresrequest.md)
+- [ClassifyImageRequest](classifyimagerequest.md)
+- [CoreMLRequest](coremlrequest.md)
+- [DetectAnimalBodyPoseRequest](detectanimalbodyposerequest.md)
+- [DetectBarcodesRequest](detectbarcodesrequest.md)
+- [DetectContoursRequest](detectcontoursrequest.md)
+- [DetectDocumentSegmentationRequest](detectdocumentsegmentationrequest.md)
+- [DetectFaceCaptureQualityRequest](detectfacecapturequalityrequest.md)
+- [DetectFaceLandmarksRequest](detectfacelandmarksrequest.md)
+- [DetectFaceRectanglesRequest](detectfacerectanglesrequest.md)
+- [DetectHorizonRequest](detecthorizonrequest.md)
+- [DetectHumanBodyPose3DRequest](detecthumanbodypose3drequest.md)
+- [DetectHumanBodyPoseRequest](detecthumanbodyposerequest.md)
+- [DetectHumanHandPoseRequest](detecthumanhandposerequest.md)
+- [DetectHumanRectanglesRequest](detecthumanrectanglesrequest.md)
+- [DetectLensSmudgeRequest](detectlenssmudgerequest.md)
+- [DetectRectanglesRequest](detectrectanglesrequest.md)
+- [DetectTextRectanglesRequest](detecttextrectanglesrequest.md)
+- [DetectTrajectoriesRequest](detecttrajectoriesrequest.md)
+- [GenerateAttentionBasedSaliencyImageRequest](generateattentionbasedsaliencyimagerequest.md)
+- [GenerateForegroundInstanceMaskRequest](generateforegroundinstancemaskrequest.md)
+- [GenerateImageFeaturePrintRequest](generateimagefeatureprintrequest.md)
+- [GenerateIterativeSegmentationRequest](generateiterativesegmentationrequest.md)
+- [GenerateObjectnessBasedSaliencyImageRequest](generateobjectnessbasedsaliencyimagerequest.md)
+- [GeneratePersonInstanceMaskRequest](generatepersoninstancemaskrequest.md)
+- [GeneratePersonSegmentationRequest](generatepersonsegmentationrequest.md)
+- [RecognizeAnimalsRequest](recognizeanimalsrequest.md)
+- [RecognizeDocumentsRequest](recognizedocumentsrequest.md)
+- [RecognizeTextRequest](recognizetextrequest.md)
+- [TrackHomographicImageRegistrationRequest](trackhomographicimageregistrationrequest.md)
+- [TrackObjectRequest](trackobjectrequest.md)
+- [TrackOpticalFlowRequest](trackopticalflowrequest.md)
+- [TrackRectangleRequest](trackrectanglerequest.md)
+- [TrackTranslationalImageRegistrationRequest](tracktranslationalimageregistrationrequest.md)
+
+## See Also
+
+### Protocols
+
+- [PoseProviding](poseproviding.md): An observation that provides a collection of joints that make up a pose.
+- [StatefulRequest](statefulrequest.md): The protocol for a type that builds evidence of a condition over time.
+- [TargetedRequest](targetedrequest.md): A type for analyzing two images together.
+- [VisionObservation](visionobservation.md): A type for objects produced by image-analysis requests.
+- [VisionRequest](visionrequest.md): A type for image-analysis requests.
+- [DownloadableAssetsRequest](downloadableassetsrequest.md): A request whose execution depends on assets that may need to be downloaded.
+- [DownloadableAssetsRequestStatus](downloadableassetsrequeststatus.md): The status of the assets required by a [DownloadableAssetsRequest](downloadableassetsrequest.md).
+
+# Document: perform(on:orientation:)
+
+Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-1mquz
+Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-1mquz
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+# perform(on:orientation:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+## Declaration
+
+```swift
+func perform(on image: CIImage, orientation: CGImagePropertyOrientation? = nil) async throws -> Self.Result
+```
+
+# Document: perform(on:orientation:)
+
+Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-2q3hx
+Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-2q3hx
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# perform(on:orientation:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+## Declaration
+
+```swift
+func perform(on data: Data, orientation: CGImagePropertyOrientation? = nil) async throws -> Self.Result
+```
+
+# Document: perform(on:orientation:)
+
+Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-3f3f1
+Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-3f3f1
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# perform(on:orientation:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Performs the request on image data and produces observations.
+
+## Declaration
+
+```swift
+func perform(on data: Data, orientation: CGImagePropertyOrientation?) async throws -> Self.Result
+```
+
+## Parameters
+
+- `data`: The input [Data](../../foundation/data.md) on which to perform the request.
+- `orientation`: The orientation of the input image. Default is `nil`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The observation — or list of observations — the request produces.
+
+## Default Implementations
+
+### ImageProcessingRequest Implementations
+
+- [perform(on:orientation:)](perform%28on_orientation_%29-1mquz.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-2q3hx.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-6hrxe.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-82mjf.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-8wluq.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-967mr.md)
+
+## See Also
+
+### Performing a request
+
+- [perform(on:orientation:)](perform%28on_orientation_%29-80bya.md): Performs the request on an image URL and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-qxxx.md): Performs the request on a Core Graphics image and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-xspx.md): Performs the request on a pixel buffer and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-3hddl.md): Performs the request on a Core Media buffer and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-85ex1.md): Performs the request on a Core Image image and produces observations.
+
+# Document: perform(on:orientation:)
+
+Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-3hddl
+Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-3hddl
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# perform(on:orientation:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Performs the request on a Core Media buffer and produces observations.
+
+## Declaration
+
+```swift
+func perform(on sampleBuffer: CMSampleBuffer, orientation: CGImagePropertyOrientation?) async throws -> Self.Result
+```
+
+## Parameters
+
+- `sampleBuffer`: The input [CMSampleBuffer](../../coremedia/cmsamplebuffer.md) on which to perform the request.
+- `orientation`: The orientation of the input image. Default is `nil`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The observation — or list of observations — the request produces.
+
+## Default Implementations
+
+### ImageProcessingRequest Implementations
+
+- [perform(on:orientation:)](perform%28on_orientation_%29-1mquz.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-2q3hx.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-6hrxe.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-82mjf.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-8wluq.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-967mr.md)
+
+## See Also
+
+### Performing a request
+
+- [perform(on:orientation:)](perform%28on_orientation_%29-80bya.md): Performs the request on an image URL and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-3f3f1.md): Performs the request on image data and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-qxxx.md): Performs the request on a Core Graphics image and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-xspx.md): Performs the request on a pixel buffer and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-85ex1.md): Performs the request on a Core Image image and produces observations.
+
+# Document: perform(on:orientation:)
+
+Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-6hrxe
+Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-6hrxe
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# perform(on:orientation:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+## Declaration
+
+```swift
+func perform(on url: URL, orientation: CGImagePropertyOrientation? = nil) async throws -> Self.Result
+```
+
+# Document: perform(on:orientation:)
+
+Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-80bya
+Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-80bya
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# perform(on:orientation:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Performs the request on an image URL and produces observations.
+
+## Declaration
+
+```swift
+func perform(on url: URL, orientation: CGImagePropertyOrientation?) async throws -> Self.Result
+```
+
+## Parameters
+
+- `url`: The input [URL](../../foundation/url.md) on which to perform the request.
+- `orientation`: The orientation of the input image. Default is `nil`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The observation — or list of observations — the request produces.
+
+## Default Implementations
+
+### ImageProcessingRequest Implementations
+
+- [perform(on:orientation:)](perform%28on_orientation_%29-1mquz.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-2q3hx.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-6hrxe.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-82mjf.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-8wluq.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-967mr.md)
+
+## See Also
+
+### Performing a request
+
+- [perform(on:orientation:)](perform%28on_orientation_%29-3f3f1.md): Performs the request on image data and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-qxxx.md): Performs the request on a Core Graphics image and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-xspx.md): Performs the request on a pixel buffer and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-3hddl.md): Performs the request on a Core Media buffer and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-85ex1.md): Performs the request on a Core Image image and produces observations.
+
+# Document: perform(on:orientation:)
+
+Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-82mjf
+Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-82mjf
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# perform(on:orientation:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+## Declaration
+
+```swift
+func perform(on sampleBuffer: CMSampleBuffer, orientation: CGImagePropertyOrientation? = nil) async throws -> Self.Result
+```
+
+# Document: perform(on:orientation:)
+
+Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-85ex1
+Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-85ex1
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+# perform(on:orientation:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+Performs the request on a Core Image image and produces observations.
+
+## Declaration
+
+```swift
+func perform(on image: CIImage, orientation: CGImagePropertyOrientation?) async throws -> Self.Result
+```
+
+## Parameters
+
+- `image`: The input [CIImage](../../coreimage/ciimage.md) on which to perform the request.
+- `orientation`: The orientation of the input image. Default is `nil`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The observation — or list of observations — the request produces.
+
+## Default Implementations
+
+### ImageProcessingRequest Implementations
+
+- [perform(on:orientation:)](perform%28on_orientation_%29-1mquz.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-2q3hx.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-6hrxe.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-82mjf.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-8wluq.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-967mr.md)
+
+## See Also
+
+### Performing a request
+
+- [perform(on:orientation:)](perform%28on_orientation_%29-80bya.md): Performs the request on an image URL and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-3f3f1.md): Performs the request on image data and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-qxxx.md): Performs the request on a Core Graphics image and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-xspx.md): Performs the request on a pixel buffer and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-3hddl.md): Performs the request on a Core Media buffer and produces observations.
+
+# Document: perform(on:orientation:)
+
+Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-8wluq
+Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-8wluq
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# perform(on:orientation:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+## Declaration
+
+```swift
+func perform(on pixelBuffer: CVPixelBuffer, orientation: CGImagePropertyOrientation? = nil) async throws -> Self.Result
+```
+
+# Document: perform(on:orientation:)
+
+Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-967mr
+Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-967mr
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# perform(on:orientation:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+## Declaration
+
+```swift
+func perform(on image: CGImage, orientation: CGImagePropertyOrientation? = nil) async throws -> Self.Result
+```
+
+# Document: perform(on:orientation:)
+
+Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-qxxx
+Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-qxxx
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# perform(on:orientation:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Performs the request on a Core Graphics image and produces observations.
+
+## Declaration
+
+```swift
+func perform(on image: CGImage, orientation: CGImagePropertyOrientation?) async throws -> Self.Result
+```
+
+## Parameters
+
+- `image`: The input [CGImage](../../coregraphics/cgimage.md) on which to perform the request.
+- `orientation`: The orientation of the input image. Default is `nil`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The observation — or list of observations — the request produces.
+
+## Default Implementations
+
+### ImageProcessingRequest Implementations
+
+- [perform(on:orientation:)](perform%28on_orientation_%29-1mquz.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-2q3hx.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-6hrxe.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-82mjf.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-8wluq.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-967mr.md)
+
+## See Also
+
+### Performing a request
+
+- [perform(on:orientation:)](perform%28on_orientation_%29-80bya.md): Performs the request on an image URL and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-3f3f1.md): Performs the request on image data and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-xspx.md): Performs the request on a pixel buffer and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-3hddl.md): Performs the request on a Core Media buffer and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-85ex1.md): Performs the request on a Core Image image and produces observations.
+
+# Document: perform(on:orientation:)
+
+Source path: documentation/vision/imageprocessingrequest/perform(on:orientation:)-xspx
+Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/perform(on:orientation:)-xspx
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# perform(on:orientation:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Performs the request on a pixel buffer and produces observations.
+
+## Declaration
+
+```swift
+func perform(on pixelBuffer: CVPixelBuffer, orientation: CGImagePropertyOrientation?) async throws -> Self.Result
+```
+
+## Parameters
+
+- `pixelBuffer`: The input [CVPixelBuffer](../../corevideo/cvpixelbuffer.md) on which to perform the request.
+- `orientation`: The orientation of the input image. Default is `nil`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The observation — or list of observations — the request produces.
+
+## Default Implementations
+
+### ImageProcessingRequest Implementations
+
+- [perform(on:orientation:)](perform%28on_orientation_%29-1mquz.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-2q3hx.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-6hrxe.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-82mjf.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-8wluq.md)
+- [perform(on:orientation:)](perform%28on_orientation_%29-967mr.md)
+
+## See Also
+
+### Performing a request
+
+- [perform(on:orientation:)](perform%28on_orientation_%29-80bya.md): Performs the request on an image URL and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-3f3f1.md): Performs the request on image data and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-qxxx.md): Performs the request on a Core Graphics image and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-3hddl.md): Performs the request on a Core Media buffer and produces observations.
+- [perform(on:orientation:)](perform%28on_orientation_%29-85ex1.md): Performs the request on a Core Image image and produces observations.
+
+# Document: regionOfInterest
+
+Source path: documentation/vision/imageprocessingrequest/regionofinterest
+Canonical documentation: https://developer.apple.com/documentation/vision/imageprocessingrequest/regionofinterest
+Description: Framework: Vision Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# regionOfInterest
+
+**Framework:** Vision  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+The region of the image where the framework performs the request.
+
+## Declaration
+
+```swift
+var regionOfInterest: NormalizedRect { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The system normalizes the rectangle to the dimensions of the processed image. Its origin is the image’s lower-left corner.
+
+The default value is `{ { 0, 0 }, { 1, 1 } }`.
+
+# Document: ImageRequestHandler
+
+Source path: documentation/vision/imagerequesthandler
+Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler
+Description: Framework: Vision Kind: Class Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# ImageRequestHandler
+
+**Framework:** Vision  
+**Kind:** Class  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+An object that processes one or more image-analysis requests pertaining to a single image.
+
+## Declaration
+
+```swift
+final class ImageRequestHandler
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Instantiate this handler to perform Vision requests on a single image. You specify the image, and then call [perform(\_:)](imagerequesthandler/perform%28__%29-7b6g5.md) to begin executing the request.
+
+## Topics
+
+### Creating a request handler
+
+- [init(\_:orientation:)](imagerequesthandler/init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
+- [init(\_:orientation:)](imagerequesthandler/init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
+- [init(\_:orientation:)](imagerequesthandler/init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
+- [init(\_:depthData:orientation:)](imagerequesthandler/init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
+- [init(\_:depthData:orientation:)](imagerequesthandler/init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
+- [init(\_:orientation:)](imagerequesthandler/init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
+- [init(\_:orientation:)](imagerequesthandler/init%28__orientation_%29-3zrh5.md)
+- [init(\_:orientation:)](imagerequesthandler/init%28__orientation_%29-8q7vz.md)
+
+### Performing the request
+
+- [perform(\_:)](imagerequesthandler/perform%28__%29-l6er.md): Performs one or more framework requests on the handler’s image.
+- [perform(\_:)](imagerequesthandler/perform%28__%29-7b6g5.md): Performs a framework request on the handler’s image.
+- [performAll(\_:)](imagerequesthandler/performall%28__%29.md): Schedules a collection of framework requests to perform on the handler’s image.
+
+## Relationships
+
+### Conforms To
+
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Request handlers
+
+- [TargetedImageRequestHandler](targetedimagerequesthandler.md): An object that performs image-analysis requests on two images.
+- [VideoProcessor](videoprocessor.md): An object that performs offline analysis of video content.
+
+# Document: init(_:depthData:orientation:)
+
+Source path: documentation/vision/imagerequesthandler/init(_:depthdata:orientation:)-3ebxg
+Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:depthdata:orientation:)-3ebxg
+Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+# init(\_:depthData:orientation:)
+
+**Framework:** Vision  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+Creates a handler for performing requests on a Core Video pixel buffer.
+
+## Declaration
+
+```swift
+convenience init(_ pixelBuffer: CVPixelBuffer, depthData: AVDepthData? = nil, orientation: CGImagePropertyOrientation? = nil)
+```
+
+## See Also
+
+### Creating a request handler
+
+- [init(\_:orientation:)](init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
+- [init(\_:orientation:)](init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
+- [init(\_:orientation:)](init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
+- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
+- [init(\_:orientation:)](init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
+- [init(\_:orientation:)](init%28__orientation_%29-3zrh5.md)
+- [init(\_:orientation:)](init%28__orientation_%29-8q7vz.md)
+
+# Document: init(_:depthData:orientation:)
+
+Source path: documentation/vision/imagerequesthandler/init(_:depthdata:orientation:)-5itte
+Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:depthdata:orientation:)-5itte
+Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+# init(\_:depthData:orientation:)
+
+**Framework:** Vision  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+Creates a request handler that performs requests on an image contained within a sample buffer.
+
+## Declaration
+
+```swift
+convenience init(_ sampleBuffer: CMSampleBuffer, depthData: AVDepthData? = nil, orientation: CGImagePropertyOrientation? = nil)
+```
+
+## See Also
+
+### Creating a request handler
+
+- [init(\_:orientation:)](init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
+- [init(\_:orientation:)](init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
+- [init(\_:orientation:)](init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
+- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
+- [init(\_:orientation:)](init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
+- [init(\_:orientation:)](init%28__orientation_%29-3zrh5.md)
+- [init(\_:orientation:)](init%28__orientation_%29-8q7vz.md)
+
+# Document: init(_:orientation:)
+
+Source path: documentation/vision/imagerequesthandler/init(_:orientation:)-2hvfr
+Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:orientation:)-2hvfr
+Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+# init(\_:orientation:)
+
+**Framework:** Vision  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+Creates a handler for performing requests on Core Image images.
+
+## Declaration
+
+```swift
+convenience init(_ image: CIImage, orientation: CGImagePropertyOrientation? = nil)
+```
+
+## See Also
+
+### Creating a request handler
+
+- [init(\_:orientation:)](init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
+- [init(\_:orientation:)](init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
+- [init(\_:orientation:)](init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
+- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
+- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
+- [init(\_:orientation:)](init%28__orientation_%29-3zrh5.md)
+- [init(\_:orientation:)](init%28__orientation_%29-8q7vz.md)
+
+# Document: init(_:orientation:)
+
+Source path: documentation/vision/imagerequesthandler/init(_:orientation:)-3zrh5
+Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:orientation:)-3zrh5
+Description: Framework: Vision Kind: Initializer Availability: watchOS 27.0+
+
+# init(\_:orientation:)
+
+**Framework:** Vision  
+**Kind:** Initializer  
+**Availability:** watchOS 27.0+
+
+## Declaration
+
+```swift
+convenience init(_ pixelBuffer: CVPixelBuffer, orientation: CGImagePropertyOrientation? = nil)
+```
+
+## See Also
+
+### Creating a request handler
+
+- [init(\_:orientation:)](init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
+- [init(\_:orientation:)](init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
+- [init(\_:orientation:)](init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
+- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
+- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
+- [init(\_:orientation:)](init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
+- [init(\_:orientation:)](init%28__orientation_%29-8q7vz.md)
+
+# Document: init(_:orientation:)
+
+Source path: documentation/vision/imagerequesthandler/init(_:orientation:)-6imw8
+Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:orientation:)-6imw8
+Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# init(\_:orientation:)
+
+**Framework:** Vision  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Creates a handler for performing requests on an image at the specified URL.
+
+## Declaration
+
+```swift
+convenience init(_ imageURL: URL, orientation: CGImagePropertyOrientation? = nil)
+```
+
+## See Also
+
+### Creating a request handler
+
+- [init(\_:orientation:)](init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
+- [init(\_:orientation:)](init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
+- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
+- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
+- [init(\_:orientation:)](init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
+- [init(\_:orientation:)](init%28__orientation_%29-3zrh5.md)
+- [init(\_:orientation:)](init%28__orientation_%29-8q7vz.md)
+
+# Document: init(_:orientation:)
+
+Source path: documentation/vision/imagerequesthandler/init(_:orientation:)-8cwes
+Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:orientation:)-8cwes
+Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# init(\_:orientation:)
+
+**Framework:** Vision  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Creates a handler for performing requests on an image contained in a data object.
+
+## Declaration
+
+```swift
+convenience init(_ data: Data, orientation: CGImagePropertyOrientation? = nil)
+```
+
+## See Also
+
+### Creating a request handler
+
+- [init(\_:orientation:)](init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
+- [init(\_:orientation:)](init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
+- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
+- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
+- [init(\_:orientation:)](init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
+- [init(\_:orientation:)](init%28__orientation_%29-3zrh5.md)
+- [init(\_:orientation:)](init%28__orientation_%29-8q7vz.md)
+
+# Document: init(_:orientation:)
+
+Source path: documentation/vision/imagerequesthandler/init(_:orientation:)-8nodt
+Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:orientation:)-8nodt
+Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# init(\_:orientation:)
+
+**Framework:** Vision  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Creates a handler for performing requests on Core Graphics images.
+
+## Declaration
+
+```swift
+convenience init(_ image: CGImage, orientation: CGImagePropertyOrientation? = nil)
+```
+
+## See Also
+
+### Creating a request handler
+
+- [init(\_:orientation:)](init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
+- [init(\_:orientation:)](init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
+- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
+- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
+- [init(\_:orientation:)](init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
+- [init(\_:orientation:)](init%28__orientation_%29-3zrh5.md)
+- [init(\_:orientation:)](init%28__orientation_%29-8q7vz.md)
+
+# Document: init(_:orientation:)
+
+Source path: documentation/vision/imagerequesthandler/init(_:orientation:)-8q7vz
+Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/init(_:orientation:)-8q7vz
+Description: Framework: Vision Kind: Initializer Availability: watchOS 27.0+
+
+# init(\_:orientation:)
+
+**Framework:** Vision  
+**Kind:** Initializer  
+**Availability:** watchOS 27.0+
+
+## Declaration
+
+```swift
+convenience init(_ sampleBuffer: CMSampleBuffer, orientation: CGImagePropertyOrientation? = nil)
+```
+
+## See Also
+
+### Creating a request handler
+
+- [init(\_:orientation:)](init%28__orientation_%29-6imw8.md): Creates a handler for performing requests on an image at the specified URL.
+- [init(\_:orientation:)](init%28__orientation_%29-8cwes.md): Creates a handler for performing requests on an image contained in a data object.
+- [init(\_:orientation:)](init%28__orientation_%29-8nodt.md): Creates a handler for performing requests on Core Graphics images.
+- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-3ebxg.md): Creates a handler for performing requests on a Core Video pixel buffer.
+- [init(\_:depthData:orientation:)](init%28__depthdata_orientation_%29-5itte.md): Creates a request handler that performs requests on an image contained within a sample buffer.
+- [init(\_:orientation:)](init%28__orientation_%29-2hvfr.md): Creates a handler for performing requests on Core Image images.
+- [init(\_:orientation:)](init%28__orientation_%29-3zrh5.md)
+
+# Document: perform(_:)
+
+Source path: documentation/vision/imagerequesthandler/perform(_:)-7b6g5
+Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/perform(_:)-7b6g5
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# perform(\_:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Performs a framework request on the handler’s image.
+
+## Declaration
+
+```swift
+final func perform<T>(_ request: T) async throws -> T.Result where T : VisionRequest
+```
+
+## See Also
+
+### Performing the request
+
+- [perform(\_:)](perform%28__%29-l6er.md): Performs one or more framework requests on the handler’s image.
+- [performAll(\_:)](performall%28__%29.md): Schedules a collection of framework requests to perform on the handler’s image.
+
+# Document: perform(_:)
+
+Source path: documentation/vision/imagerequesthandler/perform(_:)-l6er
+Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/perform(_:)-l6er
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# perform(\_:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Performs one or more framework requests on the handler’s image.
+
+## Declaration
+
+```swift
+final func perform<each T>(_ request: repeat each T) async throws -> (repeat (each T).Result) where repeat each T : VisionRequest
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The function returns after all requests complete.
+
+## See Also
+
+### Performing the request
+
+- [perform(\_:)](perform%28__%29-7b6g5.md): Performs a framework request on the handler’s image.
+- [performAll(\_:)](performall%28__%29.md): Schedules a collection of framework requests to perform on the handler’s image.
+
+# Document: performAll(_:)
+
+Source path: documentation/vision/imagerequesthandler/performall(_:)
+Canonical documentation: https://developer.apple.com/documentation/vision/imagerequesthandler/performall(_:)
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# performAll(\_:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Schedules a collection of framework requests to perform on the handler’s image.
+
+## Declaration
+
+```swift
+final func performAll(_ requests: some Collection<any VisionRequest>) -> some AsyncSequence<VisionResult, Never>
+
+```
+
+## Parameters
+
+- `requests`: A collection of requests to perform.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A sequence of requests results.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function doesn’t wait for requests to complete before returning. You can receive request results from the `AsyncSequence` as they become available.
+
+## See Also
+
+### Performing the request
+
+- [perform(\_:)](perform%28__%29-l6er.md): Performs one or more framework requests on the handler’s image.
+- [perform(\_:)](perform%28__%29-7b6g5.md): Performs a framework request on the handler’s image.
+
+# Document: ImageTranslationAlignmentObservation
+
+Source path: documentation/vision/imagetranslationalignmentobservation
+Canonical documentation: https://developer.apple.com/documentation/vision/imagetranslationalignmentobservation
+Description: Framework: Vision Kind: Structure Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# ImageTranslationAlignmentObservation
+
+**Framework:** Vision  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Affine transform information that an image-alignment request produces.
+
+## Declaration
+
+```swift
+struct ImageTranslationAlignmentObservation
+```
+
+<a id="overview"></a>
+
+## Overview
+
+This type of observation results from a [TrackTranslationalImageRegistrationRequest](tracktranslationalimageregistrationrequest.md), informing the [alignmentTransform](imagetranslationalignmentobservation/alignmenttransform.md) performed to align the input images.
+
+## Topics
+
+### Creating an observation
+
+- [init(\_:)](imagetranslationalignmentobservation/init%28__%29.md): Creates a translation alignment observation.
+
+### Inspecting an observation
+
+- [alignmentTransform](imagetranslationalignmentobservation/alignmenttransform.md): The alignment transform to align the floating image with the reference image.
+
+### Applying a transform
+
+- [applyTransform(to:)](imagetranslationalignmentobservation/applytransform%28to_%29.md): Applies the transform to an image.
+
+## Relationships
+
+### Conforms To
+
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [VisionObservation](visionobservation.md)
+
+# Document: alignmentTransform
+
+Source path: documentation/vision/imagetranslationalignmentobservation/alignmenttransform
+Canonical documentation: https://developer.apple.com/documentation/vision/imagetranslationalignmentobservation/alignmenttransform
+Description: Framework: Vision Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# alignmentTransform
+
+**Framework:** Vision  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+The alignment transform to align the floating image with the reference image.
+
+## Declaration
+
+```swift
+let alignmentTransform: CGAffineTransform
+```
+
+# Document: applyTransform(to:)
+
+Source path: documentation/vision/imagetranslationalignmentobservation/applytransform(to:)
+Canonical documentation: https://developer.apple.com/documentation/vision/imagetranslationalignmentobservation/applytransform(to:)
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+# applyTransform(to:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+Applies the transform to an image.
+
+## Declaration
+
+```swift
+func applyTransform(to ciImage: CIImage) -> CIImage
+```
+
+# Document: init(_:)
+
+Source path: documentation/vision/imagetranslationalignmentobservation/init(_:)
+Canonical documentation: https://developer.apple.com/documentation/vision/imagetranslationalignmentobservation/init(_:)
+Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+# init(\_:)
+
+**Framework:** Vision  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+Creates a translation alignment observation.
+
+## Declaration
+
+```swift
+init(_ observation: VNImageTranslationAlignmentObservation)
+```
+
+# Document: Implementing saliency-based image cropping in iOS and watchOS
+
+Source path: documentation/vision/implementing-saliency-based-image-cropping-in-ios-and-watchos
+Canonical documentation: https://developer.apple.com/documentation/vision/implementing-saliency-based-image-cropping-in-ios-and-watchos
+Description: Framework: Vision Kind: Sample Code Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · watchOS 27.0+ · Xcode 27.0+
+
+# Implementing saliency-based image cropping in iOS and watchOS
+
+**Framework:** Vision  
+**Kind:** Sample Code  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · watchOS 27.0+ · Xcode 27.0+
+
+Crop regions most likely drawing people’s attention from an image in your iOS or watchOS app.
+
+<a id="Overview"></a>
+
+## Overview
+
+> **Note**
+
+> This sample code project is associated with WWDC26 session 237: [What’s new in image understanding](https://developer.apple.com/wwdc26/237/).
+
+<a id="Configure-the-sample-code-project"></a>
+
+## Configure the sample code project
+
+To configure the sample code project, do the following:
+
+1. Open the sample with the latest version of Xcode.
+2. Set the developer team for all targets to let Xcode automatically manage the provisioning profile. For more information, see [Set the bundle ID](https://developer.apple.com/documentation/xcode/preparing-your-app-for-distribution#Set-the-bundle-ID) and [Assign the project to a team](https://developer.apple.com/documentation/xcode/preparing-your-app-for-distribution#Assign-the-project-to-a-team).
+
+> **Note**
+
+> This sample code needs to run on a physical device.
+
+## See Also
+
+### Image quality and saliency analysis
+
+- [Generating high-quality thumbnails from videos](generating-thumbnails-from-videos.md): Identify the most visually pleasing frames in a video by using the image-aesthetics scores request.
+- [CalculateImageAestheticsScoresRequest](calculateimageaestheticsscoresrequest.md): A request that analyzes an image for aesthetically pleasing attributes.
+- [DetectLensSmudgeRequest](detectlenssmudgerequest.md): A request that detects a smudge on a lens from an image or video frame capture.
+- [GenerateAttentionBasedSaliencyImageRequest](generateattentionbasedsaliencyimagerequest.md): An object that produces a heat map that identifies the parts of an image most likely to draw attention.
+- [GenerateObjectnessBasedSaliencyImageRequest](generateobjectnessbasedsaliencyimagerequest.md): A request that generates a heat map that identifies the parts of an image most likely to represent objects.
+
+# Document: InstanceMaskObservation
+
+Source path: documentation/vision/instancemaskobservation
+Canonical documentation: https://developer.apple.com/documentation/vision/instancemaskobservation
+Description: Framework: Vision Kind: Structure Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# InstanceMaskObservation
+
+**Framework:** Vision  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+An observation that contains an instance mask that labels instances in the mask.
+
+## Declaration
+
+```swift
+struct InstanceMaskObservation
+```
+
+## Topics
+
+### Creating an observation
+
+- [init(\_:)](instancemaskobservation/init%28__%29.md): Creates an instance mask observation.
+
+### Inspecting an observation
+
+- [RequestDescriptor](requestdescriptor.md): A type that describes the request and revision combination.
+
+### Generating a mask
+
+- [generateMask(for:)](instancemaskobservation/generatemask%28for_%29.md): Creates a low-resolution mask from the instances you specify.
+- [generateMaskedImage(for:imageFrom:croppedToInstancesExtent:)](instancemaskobservation/generatemaskedimage%28for_imagefrom_croppedtoinstancesextent_%29.md): Creates a high-resolution image with everything except for the instances you specify masked out.
+- [generateScaledMask(for:scaledToImageFrom:)](instancemaskobservation/generatescaledmask%28for_scaledtoimagefrom_%29.md): Creates a high-resolution mask representing a combination of the instances you specify.
+
+### Getting instances
+
+- [instanceAtPoint(\_:)](instancemaskobservation/instanceatpoint%28__%29.md): Returns an instance at the point you specify.
+- [allInstances](instancemaskobservation/allinstances.md): The collection that contains all instances, excluding the background.
+- [allInstancesMask](instancemaskobservation/allinstancesmask.md): The resulting mask that represents all instances.
+- [PixelBufferObservation](pixelbufferobservation.md): An object that represents an image that an image-analysis request produces.
+
+## Relationships
+
+### Conforms To
+
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [VisionObservation](visionobservation.md)
+
+# Document: allInstances
+
+Source path: documentation/vision/instancemaskobservation/allinstances
+Canonical documentation: https://developer.apple.com/documentation/vision/instancemaskobservation/allinstances
+Description: Framework: Vision Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# allInstances
+
+**Framework:** Vision  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+The collection that contains all instances, excluding the background.
+
+## Declaration
+
+```swift
+let allInstances: IndexSet
+```
+
+## See Also
+
+### Getting instances
+
+- [instanceAtPoint(\_:)](instanceatpoint%28__%29.md): Returns an instance at the point you specify.
+- [allInstancesMask](allinstancesmask.md): The resulting mask that represents all instances.
+- [PixelBufferObservation](../pixelbufferobservation.md): An object that represents an image that an image-analysis request produces.
+
+# Document: allInstancesMask
+
+Source path: documentation/vision/instancemaskobservation/allinstancesmask
+Canonical documentation: https://developer.apple.com/documentation/vision/instancemaskobservation/allinstancesmask
+Description: Framework: Vision Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# allInstancesMask
+
+**Framework:** Vision  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+The resulting mask that represents all instances.
+
+## Declaration
+
+```swift
+let allInstancesMask: PixelBufferObservation
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A pixel can only correspond to one instance. A `0` represents the background, and all other values represent the indices of the instances.
+
+## See Also
+
+### Getting instances
+
+- [instanceAtPoint(\_:)](instanceatpoint%28__%29.md): Returns an instance at the point you specify.
+- [allInstances](allinstances.md): The collection that contains all instances, excluding the background.
+- [PixelBufferObservation](../pixelbufferobservation.md): An object that represents an image that an image-analysis request produces.
+
+# Document: generateMask(for:)
+
+Source path: documentation/vision/instancemaskobservation/generatemask(for:)
+Canonical documentation: https://developer.apple.com/documentation/vision/instancemaskobservation/generatemask(for:)
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# generateMask(for:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Creates a low-resolution mask from the instances you specify.
+
+## Declaration
+
+```swift
+func generateMask(for instances: IndexSet) throws -> CVPixelBuffer
+```
+
+## Parameters
+
+- `instances`: An indexed set of selected instances, where `0` is the background.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The pixel buffer that contains the mask.
+
+## See Also
+
+### Generating a mask
+
+- [generateMaskedImage(for:imageFrom:croppedToInstancesExtent:)](generatemaskedimage%28for_imagefrom_croppedtoinstancesextent_%29.md): Creates a high-resolution image with everything except for the instances you specify masked out.
+- [generateScaledMask(for:scaledToImageFrom:)](generatescaledmask%28for_scaledtoimagefrom_%29.md): Creates a high-resolution mask representing a combination of the instances you specify.
+
+# Document: generateMaskedImage(for:imageFrom:croppedToInstancesExtent:)
+
+Source path: documentation/vision/instancemaskobservation/generatemaskedimage(for:imagefrom:croppedtoinstancesextent:)
+Canonical documentation: https://developer.apple.com/documentation/vision/instancemaskobservation/generatemaskedimage(for:imagefrom:croppedtoinstancesextent:)
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# generateMaskedImage(for:imageFrom:croppedToInstancesExtent:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Creates a high-resolution image with everything except for the instances you specify masked out.
+
+## Declaration
+
+```swift
+func generateMaskedImage(for instances: IndexSet, imageFrom requestHandler: ImageRequestHandler, croppedToInstancesExtent: Bool = false) throws -> CVPixelBuffer
+```
+
+## Parameters
+
+- `instances`: An indexed set of selected instances, where `0` is the background.
+- `requestHandler`: A request handler containing an image to be masked.
+- `croppedToInstancesExtent`: Crops the image to the smallest rectangle containing all instances. Default is `false`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The pixel buffer that contains the image.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+## See Also
+
+### Generating a mask
+
+- [generateMask(for:)](generatemask%28for_%29.md): Creates a low-resolution mask from the instances you specify.
+- [generateScaledMask(for:scaledToImageFrom:)](generatescaledmask%28for_scaledtoimagefrom_%29.md): Creates a high-resolution mask representing a combination of the instances you specify.
+
+# Document: generateScaledMask(for:scaledToImageFrom:)
+
+Source path: documentation/vision/instancemaskobservation/generatescaledmask(for:scaledtoimagefrom:)
+Canonical documentation: https://developer.apple.com/documentation/vision/instancemaskobservation/generatescaledmask(for:scaledtoimagefrom:)
+Description: Framework: Vision Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+# generateScaledMask(for:scaledToImageFrom:)
+
+**Framework:** Vision  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+Creates a high-resolution mask representing a combination of the instances you specify.
+
+## Declaration
+
+```swift
+func generateScaledMask(for instances: IndexSet, scaledToImageFrom requestHandler: ImageRequestHandler) throws -> CVPixelBuffer
+```
+
+## Parameters
+
+- `instances`: An indexed set of selected instances, where `0` is the background.
+- `requestHandler`: A request handler containing an image to be masked.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The pixel buffer that contains the mask.
+
+## See Also
+
+### Generating a mask
+
+- [generateMask(for:)](generatemask%28for_%29.md): Creates a low-resolution mask from the instances you specify.
+- [generateMaskedImage(for:imageFrom:croppedToInstancesExtent:)](generatemaskedimage%28for_imagefrom_croppedtoinstancesextent_%29.md): Creates a high-resolution image with everything except for the instances you specify masked out.
 
 # Document: init(_:)
 
@@ -82238,7 +83594,7 @@ For issues not mentioned in release notes, file bugs through [Feedback Assistant
 
 ### visionOS 27
 
-- [visionOS 27.2 Beta Release Notes](visionos-release-notes/visionos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [visionOS 27.2 Beta 2 Release Notes](visionos-release-notes/visionos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [visionOS 27 Release Notes](visionos-release-notes/visionos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### visionOS 26
@@ -85976,15 +87332,15 @@ The visionOS 27 SDK provides support to develop apps for Apple Vision Pro device
 
 ### visionOS 27
 
-- [visionOS 27.2 Beta Release Notes](visionos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [visionOS 27.2 Beta 2 Release Notes](visionos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
-# Document: visionOS 27.2 Beta Release Notes
+# Document: visionOS 27.2 Beta 2 Release Notes
 
 Source path: documentation/visionos-release-notes/visionos-27_2-release-notes
 Canonical documentation: https://developer.apple.com/documentation/visionos-release-notes/visionos-27_2-release-notes
 Description: Kind: Article
 
-# visionOS 27.2 Beta Release Notes
+# visionOS 27.2 Beta 2 Release Notes
 
 **Kind:** Article
 
@@ -85994,7 +87350,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The visionOS 27.2 SDK provides support to develop apps for Apple Vision Pro devices running visionOS 27.2 beta. The SDK comes bundled with Xcode 27.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
+The visionOS 27.2 SDK provides support to develop apps for Apple Vision Pro devices running visionOS 27.2 beta 2. The SDK comes bundled with Xcode 27.2. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
 
 <a id="Quick-Look"></a>
 
@@ -171313,1061 +172669,3 @@ A new connection created from the value at the specified index. You are responsi
 - [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
 - [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
 - [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
-
-# Document: xpc_array_create_empty()
-
-Source path: documentation/xpc/xpc_array_create_empty()
-Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_create_empty()
-Description: Framework: XPC Kind: Function Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
-
-# xpc_array_create_empty() (Swift)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
-
-Creates an XPC object that represents an array of XPC objects.
-
-## Declaration
-
-```swift
-func xpc_array_create_empty() -> xpc_object_t
-```
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new array object.
-
-## See Also
-
-### Array objects
-
-- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
-- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-
-# xpc_array_create_empty (Objective-C)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
-
-Creates an XPC object that represents an array of XPC objects.
-
-## Declaration
-
-```objectivec
-extern xpc_object_txpc_array_create_empty();
-```
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new array object.
-
-## See Also
-
-### Array objects
-
-- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
-
-# Document: xpc_array_dup_fd(_:_:)
-
-Source path: documentation/xpc/xpc_array_dup_fd(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_dup_fd(_:_:)
-Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-# xpc_array_dup_fd(\_:\_:) (Swift)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Gets a file descriptor from an array directly.
-
-## Declaration
-
-```swift
-func xpc_array_dup_fd(_ xarray: xpc_object_t, _ index: Int) -> Int32
-```
-
-## Parameters
-
-- `xarray`: The array which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new file descriptor created from the value at the specified index. You are responsible for closing this descriptor. `-1` if the value at the specified index is not a file descriptor value.
-
-## See Also
-
-### Array objects
-
-- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
-- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-
-# xpc_array_dup_fd (Objective-C)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Gets a file descriptor from an array directly.
-
-## Declaration
-
-```objectivec
-extern int xpc_array_dup_fd(xpc_object_t xarray, size_t index);
-```
-
-## Parameters
-
-- `xarray`: The array which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new file descriptor created from the value at the specified index. You are responsible for closing this descriptor. `-1` if the value at the specified index is not a file descriptor value.
-
-## See Also
-
-### Array objects
-
-- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
-
-# Document: xpc_array_get_array(_:_:)
-
-Source path: documentation/xpc/xpc_array_get_array(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_array(_:_:)
-Description: Framework: XPC Kind: Function Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-# xpc_array_get_array(\_:\_:) (Swift)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-Returns the array at the specified index in the array.
-
-## Declaration
-
-```swift
-func xpc_array_get_array(_ xarray: xpc_object_t, _ index: Int) -> xpc_object_t?
-```
-
-## Parameters
-
-- `xarray`: The array object which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the range of indexes as specified in [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md).
-
-<a id="return-value"></a>
-
-## Return Value
-
-The object at the specified index within the array or `NULL` if the given object was not an XPC array or if the the value at the specified index was not an array.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This method does not grant the caller a reference to the underlying object, so the caller is not responsible for releasing the object.
-
-## See Also
-
-### Array objects
-
-- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
-- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-
-# xpc_array_get_array (Objective-C)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-Returns the array at the specified index in the array.
-
-## Declaration
-
-```objectivec
-extern xpc_object_txpc_array_get_array(xpc_object_t xarray, size_t index);
-```
-
-## Parameters
-
-- `xarray`: The array object which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the range of indexes as specified in [xpc_array_set_value](xpc_array_set_value%28______%29.md).
-
-<a id="return-value"></a>
-
-## Return Value
-
-The object at the specified index within the array or `NULL` if the given object was not an XPC array or if the the value at the specified index was not an array.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This method does not grant the caller a reference to the underlying object, so the caller is not responsible for releasing the object.
-
-## See Also
-
-### Array objects
-
-- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
-
-# Document: xpc_array_get_bool(_:_:)
-
-Source path: documentation/xpc/xpc_array_get_bool(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_bool(_:_:)
-Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-# xpc_array_get_bool(\_:\_:) (Swift)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Gets a Boolean primitive value from an array directly.
-
-## Declaration
-
-```swift
-func xpc_array_get_bool(_ xarray: xpc_object_t, _ index: Int) -> Bool
-```
-
-## Parameters
-
-- `xarray`: The array which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The underlying `bool` value at the specified index. false if the value at the specified index is not a Boolean value.
-
-## See Also
-
-### Array objects
-
-- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
-- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-
-# xpc_array_get_bool (Objective-C)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Gets a Boolean primitive value from an array directly.
-
-## Declaration
-
-```objectivec
-extern bool xpc_array_get_bool(xpc_object_t xarray, size_t index);
-```
-
-## Parameters
-
-- `xarray`: The array which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The underlying `bool` value at the specified index. false if the value at the specified index is not a Boolean value.
-
-## See Also
-
-### Array objects
-
-- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
-
-# Document: xpc_array_get_count(_:)
-
-Source path: documentation/xpc/xpc_array_get_count(_:)
-Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_count(_:)
-Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-# xpc_array_get_count(\_:) (Swift)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Returns the count of values in the array.
-
-## Declaration
-
-```swift
-func xpc_array_get_count(_ xarray: xpc_object_t) -> Int
-```
-
-## Parameters
-
-- `xarray`: The array object which is to be examined.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The count of values in the array.
-
-## See Also
-
-### Array objects
-
-- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
-- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-
-# xpc_array_get_count (Objective-C)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Returns the count of values in the array.
-
-## Declaration
-
-```objectivec
-extern size_t xpc_array_get_count(xpc_object_t xarray);
-```
-
-## Parameters
-
-- `xarray`: The array object which is to be examined.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The count of values in the array.
-
-## See Also
-
-### Array objects
-
-- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
-
-# Document: xpc_array_get_data(_:_:_:)
-
-Source path: documentation/xpc/xpc_array_get_data(_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_data(_:_:_:)
-Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-# xpc_array_get_data(\_:\_:\_:) (Swift)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Gets a pointer to the raw bytes of a data object from an array directly.
-
-## Declaration
-
-```swift
-func xpc_array_get_data(_ xarray: xpc_object_t, _ index: Int, _ length: UnsafeMutablePointer<Int>?) -> UnsafeRawPointer?
-```
-
-## Parameters
-
-- `xarray`: The array which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
-- `length`: Upon return output, will contain the length of the data corresponding to the specified key.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The underlying bytes at the specified index. NULL if the value at the specified index is not a data value.
-
-## See Also
-
-### Array objects
-
-- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
-- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-
-# xpc_array_get_data (Objective-C)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Gets a pointer to the raw bytes of a data object from an array directly.
-
-## Declaration
-
-```objectivec
-extern const void *xpc_array_get_data(xpc_object_t xarray, size_t index, size_t *length);
-```
-
-## Parameters
-
-- `xarray`: The array which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
-- `length`: Upon return output, will contain the length of the data corresponding to the specified key.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The underlying bytes at the specified index. NULL if the value at the specified index is not a data value.
-
-## See Also
-
-### Array objects
-
-- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
-
-# Document: xpc_array_get_date(_:_:)
-
-Source path: documentation/xpc/xpc_array_get_date(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_date(_:_:)
-Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-# xpc_array_get_date(\_:\_:) (Swift)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Gets a date interval from an array directly.
-
-## Declaration
-
-```swift
-func xpc_array_get_date(_ xarray: xpc_object_t, _ index: Int) -> Int64
-```
-
-## Parameters
-
-- `xarray`: The array which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The underlying date interval at the specified index. 0 if the value at the specified index is not a date value.
-
-## See Also
-
-### Array objects
-
-- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
-- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-
-# xpc_array_get_date (Objective-C)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Gets a date interval from an array directly.
-
-## Declaration
-
-```objectivec
-extern int64_t xpc_array_get_date(xpc_object_t xarray, size_t index);
-```
-
-## Parameters
-
-- `xarray`: The array which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The underlying date interval at the specified index. 0 if the value at the specified index is not a date value.
-
-## See Also
-
-### Array objects
-
-- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
-
-# Document: xpc_array_get_dictionary(_:_:)
-
-Source path: documentation/xpc/xpc_array_get_dictionary(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_dictionary(_:_:)
-Description: Framework: XPC Kind: Function Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-# xpc_array_get_dictionary(\_:\_:) (Swift)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-Returns the dictionary at the specified index in the array.
-
-## Declaration
-
-```swift
-func xpc_array_get_dictionary(_ xarray: xpc_object_t, _ index: Int) -> xpc_object_t?
-```
-
-## Parameters
-
-- `xarray`: The array object which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the range of indexes as specified in [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md).
-
-<a id="return-value"></a>
-
-## Return Value
-
-The object at the specified index within the array or `NULL` if the given object was not an XPC array or if the the value at the specified index was not a dictionary.
-
-## See Also
-
-### Array objects
-
-- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
-- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-
-# xpc_array_get_dictionary (Objective-C)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-Returns the dictionary at the specified index in the array.
-
-## Declaration
-
-```objectivec
-extern xpc_object_txpc_array_get_dictionary(xpc_object_t xarray, size_t index);
-```
-
-## Parameters
-
-- `xarray`: The array object which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the range of indexes as specified in [xpc_array_set_value](xpc_array_set_value%28______%29.md).
-
-<a id="return-value"></a>
-
-## Return Value
-
-The object at the specified index within the array or `NULL` if the given object was not an XPC array or if the the value at the specified index was not a dictionary.
-
-## See Also
-
-### Array objects
-
-- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
-
-# Document: xpc_array_get_double(_:_:)
-
-Source path: documentation/xpc/xpc_array_get_double(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_double(_:_:)
-Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-# xpc_array_get_double(\_:\_:) (Swift)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Gets a double-precision floating point primitive value from an array directly.
-
-## Declaration
-
-```swift
-func xpc_array_get_double(_ xarray: xpc_object_t, _ index: Int) -> Double
-```
-
-## Parameters
-
-- `xarray`: The array which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The underlying `double` value at the specified index. NAN if the value at the specified index is not a floating point value.
-
-## See Also
-
-### Array objects
-
-- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
-- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-
-# xpc_array_get_double (Objective-C)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Gets a double-precision floating point primitive value from an array directly.
-
-## Declaration
-
-```objectivec
-extern double xpc_array_get_double(xpc_object_t xarray, size_t index);
-```
-
-## Parameters
-
-- `xarray`: The array which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The underlying `double` value at the specified index. NAN if the value at the specified index is not a floating point value.
-
-## See Also
-
-### Array objects
-
-- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
-
-# Document: xpc_array_get_int64(_:_:)
-
-Source path: documentation/xpc/xpc_array_get_int64(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_int64(_:_:)
-Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-# xpc_array_get_int64(\_:\_:) (Swift)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Gets a 64-bit integer primitive value from an array directly.
-
-## Declaration
-
-```swift
-func xpc_array_get_int64(_ xarray: xpc_object_t, _ index: Int) -> Int64
-```
-
-## Parameters
-
-- `xarray`: The array which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The underlying `int64_t` value at the specified index. 0 if the value at the specified index is not a signed integer value.
-
-## See Also
-
-### Array objects
-
-- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
-- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-
-# xpc_array_get_int64 (Objective-C)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Gets a 64-bit integer primitive value from an array directly.
-
-## Declaration
-
-```objectivec
-extern int64_t xpc_array_get_int64(xpc_object_t xarray, size_t index);
-```
-
-## Parameters
-
-- `xarray`: The array which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The underlying `int64_t` value at the specified index. 0 if the value at the specified index is not a signed integer value.
-
-## See Also
-
-### Array objects
-
-- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
-
-# Document: xpc_array_get_string(_:_:)
-
-Source path: documentation/xpc/xpc_array_get_string(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/xpc/xpc_array_get_string(_:_:)
-Description: Framework: XPC Kind: Function Availability: iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-# xpc_array_get_string(\_:\_:) (Swift)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Gets a C-string value from an array directly.
-
-## Declaration
-
-```swift
-func xpc_array_get_string(_ xarray: xpc_object_t, _ index: Int) -> UnsafePointer<CChar>?
-```
-
-## Parameters
-
-- `xarray`: The array which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The underlying C string at the specified index. NULL if the value at the specified index is not a C string value.
-
-## See Also
-
-### Array objects
-
-- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
-- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-
-# xpc_array_get_string (Objective-C)
-
-**Framework:** XPC  
-**Kind:** Function  
-**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
-
-Gets a C-string value from an array directly.
-
-## Declaration
-
-```objectivec
-extern const char *xpc_array_get_string(xpc_object_t xarray, size_t index);
-```
-
-## Parameters
-
-- `xarray`: The array which is to be examined.
-- `index`: The index of the value to obtain. This value must lie within the index space of the array (0 to N-1 inclusive, where N is the count of the array). If the index is outside that range, the behavior is undefined.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The underlying C string at the specified index. NULL if the value at the specified index is not a C string value.
-
-## See Also
-
-### Array objects
-
-- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
-- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
-- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
-- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
-- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
-- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
-- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
-- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
-- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
-- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
-- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
-- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
-- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
-- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseavailability/relationships-data.dictionary/availableterritories-data.dictionary
 
 # InAppPurchaseAvailability.Relationships.AvailableTerritories
@@ -25,4 +25,4 @@ object InAppPurchaseAvailability.Relationships.AvailableTerritories
 
 ### Objects
 
-- [InAppPurchaseAvailability.Relationships.AvailableTerritories.Data](availableterritories-data.dictionary/data-data.dictionary.md): The request body you use to update an in-app purchase availability.
+- [InAppPurchaseAvailability.Relationships.AvailableTerritories.Data](availableterritories-data.dictionary/data-data.dictionary.md): The request body you use to update an In-App Purchase availability.

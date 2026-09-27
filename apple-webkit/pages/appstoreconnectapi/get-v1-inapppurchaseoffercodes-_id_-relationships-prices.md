@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-inapppurchaseoffercodes-_id_-relationships-prices
 
 # Get All Price IDs for an In-App Purchase Offer Code
@@ -9,7 +9,7 @@
 **Kind:** Web Service Endpoint  
 **Availability:** App Store Connect API 4.2+
 
-Get a list of price resource IDs for a specific in-app purchase offer code.
+Get a list of price resource IDs for a specific In-App Purchase offer code.
 
 ## URL
 
@@ -38,7 +38,7 @@ GET https://api.appstoreconnect.apple.com/v1/inAppPurchaseOfferCodes/{id}/relati
 
 ### Creating and Managing In-App Purchase Offer Codes
 
-- [Create an In-App Purchase Offer Code](post-v1-inapppurchaseoffercodes.md): Create an offer code for an in-app purchase.
-- [Read In-App Purchase Offer Code Information](get-v1-inapppurchaseoffercodes-_id_.md): Get information about a specific in-app purchase offer code.
-- [Modify an In-App Purchase Offer Code](patch-v1-inapppurchaseoffercodes-_id_.md): Update a specific in-app purchase offer code.
-- [List All Prices for an In-App Purchase Offer Code](get-v1-inapppurchaseoffercodes-_id_-prices.md): Get a list of prices for a specific in-app purchase offer code.
+- [Create an In-App Purchase Offer Code](post-v1-inapppurchaseoffercodes.md): Create an offer code for an In-App Purchase.
+- [Read In-App Purchase Offer Code Information](get-v1-inapppurchaseoffercodes-_id_.md): Get information about a specific In-App Purchase offer code.
+- [Modify an In-App Purchase Offer Code](patch-v1-inapppurchaseoffercodes-_id_.md): Update a specific In-App Purchase offer code.
+- [List All Prices for an In-App Purchase Offer Code](get-v1-inapppurchaseoffercodes-_id_-prices.md): Get a list of prices for a specific In-App Purchase offer code.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/keyword
 
 # Keyword
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Object  
-**Availability:** Search Ads 2.0+
+**Availability:** Search Ads 2.0+ (deprecated in 5.2)
 
 Targeting keyword parameters to use in requests and responses.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -56,9 +58,9 @@ object Keyword
 
 ### Keywords Request and Response Objects
 
-- [NegativeKeyword](negativekeyword.md): Negative keyword parameters to use in requests and responses.
-- [KeywordResponse](keywordresponse.md): A container for the targeting keywords response body.
-- [KeywordListResponse](keywordlistresponse.md): The response details of targeting keyword requests.
-- [KeywordUpdateRequest](keywordupdaterequest.md): Targeting keyword parameters to use in requests and responses.
-- [NegativeKeywordResponse](negativekeywordresponse.md): A container for the negative keyword response body.
-- [NegativeKeywordListResponse](negativekeywordlistresponse.md): The response details of negative keyword requests.
+- [NegativeKeyword](negativekeyword.md): Deprecated. Negative keyword parameters to use in requests and responses.
+- [KeywordResponse](keywordresponse.md): Deprecated. A container for the targeting keywords response body.
+- [KeywordListResponse](keywordlistresponse.md): Deprecated. The response details of targeting keyword requests.
+- [KeywordUpdateRequest](keywordupdaterequest.md): Deprecated. Targeting keyword parameters to use in requests and responses.
+- [NegativeKeywordResponse](negativekeywordresponse.md): Deprecated. A container for the negative keyword response body.
+- [NegativeKeywordListResponse](negativekeywordlistresponse.md): Deprecated. The response details of negative keyword requests.

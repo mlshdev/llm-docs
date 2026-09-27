@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/post-v1-inapppurchaseavailabilities
 
 # Modify the Territory Availablity of an In-App Purchase
@@ -9,7 +9,7 @@
 **Kind:** Web Service Endpoint  
 **Availability:** App Store Connect API 2.3+
 
-Update the territory availablity of a specific in-app purchase.
+Update the territory availablity of a specific In-App Purchase.
 
 ## URL
 
@@ -111,6 +111,6 @@ https://api.appstoreconnect.apple.com/v1/inAppPurchaseAvailabilities -d
 
 ### Endpoints
 
-- [Read information about the availablity of an in-app purchase](get-v1-inapppurchaseavailabilities-_id_.md): Get information about the territory availablity for an in-app purchase.
-- [List the Territory Availablity of an In-App Purchase](get-v1-inapppurchaseavailabilities-_id_-availableterritories.md): List all the territories where an in-app purchase is available.
-- [List available territory IDs for an in-app purchase availability](get-v1-inapppurchaseavailabilities-_id_-relationships-availableterritories.md)
+- [Read information about the availablity of an In-App Purchase](get-v1-inapppurchaseavailabilities-_id_.md): Get information about the territory availablity for an In-App Purchase.
+- [List the Territory Availablity of an In-App Purchase](get-v1-inapppurchaseavailabilities-_id_-availableterritories.md): List all the territories where an In-App Purchase is available.
+- [List available territory IDs for an In-App Purchase availability](get-v1-inapppurchaseavailabilities-_id_-relationships-availableterritories.md)

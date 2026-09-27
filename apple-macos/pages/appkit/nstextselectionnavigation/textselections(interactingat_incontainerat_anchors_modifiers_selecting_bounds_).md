@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appkit/nstextselectionnavigation/textselections(interactingat:incontainerat:anchors:modifiers:selecting:bounds:)
 
 # textSelections(interactingAt:inContainerAt:anchors:modifiers:selecting:bounds:) (Swift)

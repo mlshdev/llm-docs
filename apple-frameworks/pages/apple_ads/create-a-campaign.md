@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/create-a-campaign
 
 # Create a Campaign
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Web Service Endpoint  
-**Availability:** Search Ads 5.0+
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 Creates a campaign to promote an app.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## URL
 
@@ -235,8 +237,8 @@ POST https://api.searchads.apple.com/api/v5/campaigns
 
 ### Campaign Endpoints
 
-- [Find Campaigns](find-campaigns.md): Fetches campaigns with selector operators.
-- [Get a Campaign](get-a-campaign.md): Fetches a specific campaign by campaign identifier.
-- [Get all Campaigns](get-all-campaigns.md): Fetches all of an organization’s assigned campaigns.
-- [Update a Campaign](update-a-campaign.md): Updates a campaign with a campaign identifier.
-- [Delete a Campaign](delete-a-campaign.md): Deletes a specific campaign by campaign identifier.
+- [Find Campaigns](find-campaigns.md): Deprecated. Fetches campaigns with selector operators.
+- [Get a Campaign](get-a-campaign.md): Deprecated. Fetches a specific campaign by campaign identifier.
+- [Get all Campaigns](get-all-campaigns.md): Deprecated. Fetches all of an organization’s assigned campaigns.
+- [Update a Campaign](update-a-campaign.md): Deprecated. Updates a campaign with a campaign identifier.
+- [Delete a Campaign](delete-a-campaign.md): Deprecated. Deletes a specific campaign by campaign identifier.

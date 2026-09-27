@@ -1,10 +1,1249 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 49
+
+# Document: leftProjectionMatrix
+
+Source path: documentation/modelio/mdlstereoscopiccamera/leftprojectionmatrix
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlstereoscopiccamera/leftprojectionmatrix
+Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# leftProjectionMatrix (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
+
+## Declaration
+
+```swift
+var leftProjectionMatrix: matrix_float4x4 { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Model I/O  automatically generates this matrix from the same properties that produce the [projectionMatrix](../mdlcamera/projectionmatrix.md) property of a monocular camera, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [leftVergence](leftvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
+
+A renderer uses this matrix, along with the [leftViewMatrix](leftviewmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
+
+## See Also
+
+### Generating View and Projection Matrices
+
+- [leftViewMatrix](leftviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
+- [rightViewMatrix](rightviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
+- [rightProjectionMatrix](rightprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
+
+# leftProjectionMatrix (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) matrix_float4x4 leftProjectionMatrix;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Model I/O  automatically generates this matrix from the same properties that produce the [projectionMatrix](../mdlcamera/projectionmatrix.md) property of a monocular camera, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [leftVergence](leftvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
+
+A renderer uses this matrix, along with the [leftViewMatrix](leftviewmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
+
+## See Also
+
+### Generating View and Projection Matrices
+
+- [leftViewMatrix](leftviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
+- [rightViewMatrix](rightviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
+- [rightProjectionMatrix](rightprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
+
+# Document: leftVergence
+
+Source path: documentation/modelio/mdlstereoscopiccamera/leftvergence
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlstereoscopiccamera/leftvergence
+Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# leftVergence (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The angle, in degrees, at which the camera’s left viewpoint faces toward a central focal point.
+
+## Declaration
+
+```swift
+var leftVergence: Float { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A stereoscopic camera simulates binocular vision by looking toward a central point in a scene from two slightly different viewpoints. Vergence measures the difference between the camera’s forward axis and the angle from each viewpoint toward that central point, called the *vergence point*. There are two common ways to model a stereoscopic camera:
+
+- In a toed-in camera, each simulated lens and imaging surface is rotated (by the [leftVergence](leftvergence.md) and [rightVergence](rightvergence.md) angles) to face toward the focal point. That is, a line from the focal point through the center of the lens reaches the center of the imaging surface and is perpendicular to the image plane.
+- In a parallel stereoscopic camera, the imaging surfaces are perpendicular to the camera’s forward axis and are shifted horizontally relative to the center of each lens. The distance by which each imaging surface shifts is given by the following formula:
+
+`shift = (focalLength * interPupillaryDistance) / distanceToVergencePoint`
+
+## See Also
+
+### Modeling Stereoscopic Imaging
+
+- [interPupillaryDistance](interpupillarydistance.md): The distance, in millimeters, between the stereoscopic camera’s two viewpoints.
+- [overlap](overlap.md): The amount, as a fraction of image width, by which the images from the camera’s two viewpoints overlap.
+- [rightVergence](rightvergence.md): The angle, in degrees, at which the camera’s right viewpoint faces toward a central focal point.
+
+# leftVergence (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The angle, in degrees, at which the camera’s left viewpoint faces toward a central focal point.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign) float leftVergence;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A stereoscopic camera simulates binocular vision by looking toward a central point in a scene from two slightly different viewpoints. Vergence measures the difference between the camera’s forward axis and the angle from each viewpoint toward that central point, called the *vergence point*. There are two common ways to model a stereoscopic camera:
+
+- In a toed-in camera, each simulated lens and imaging surface is rotated (by the [leftVergence](leftvergence.md) and [rightVergence](rightvergence.md) angles) to face toward the focal point. That is, a line from the focal point through the center of the lens reaches the center of the imaging surface and is perpendicular to the image plane.
+- In a parallel stereoscopic camera, the imaging surfaces are perpendicular to the camera’s forward axis and are shifted horizontally relative to the center of each lens. The distance by which each imaging surface shifts is given by the following formula:
+
+`shift = (focalLength * interPupillaryDistance) / distanceToVergencePoint`
+
+## See Also
+
+### Modeling Stereoscopic Imaging
+
+- [interPupillaryDistance](interpupillarydistance.md): The distance, in millimeters, between the stereoscopic camera’s two viewpoints.
+- [overlap](overlap.md): The amount, as a fraction of image width, by which the images from the camera’s two viewpoints overlap.
+- [rightVergence](rightvergence.md): The angle, in degrees, at which the camera’s right viewpoint faces toward a central focal point.
+
+# Document: leftViewMatrix
+
+Source path: documentation/modelio/mdlstereoscopiccamera/leftviewmatrix
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlstereoscopiccamera/leftviewmatrix
+Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# leftViewMatrix (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
+
+## Declaration
+
+```swift
+var leftViewMatrix: matrix_float4x4 { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Model I/O  automatically generates this matrix from the camera’s position and orientation, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [leftVergence](leftvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
+
+A renderer uses this matrix, along with the [leftProjectionMatrix](leftprojectionmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
+
+## See Also
+
+### Generating View and Projection Matrices
+
+- [leftProjectionMatrix](leftprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
+- [rightViewMatrix](rightviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
+- [rightProjectionMatrix](rightprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
+
+# leftViewMatrix (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) matrix_float4x4 leftViewMatrix;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Model I/O  automatically generates this matrix from the camera’s position and orientation, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [leftVergence](leftvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
+
+A renderer uses this matrix, along with the [leftProjectionMatrix](leftprojectionmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
+
+## See Also
+
+### Generating View and Projection Matrices
+
+- [leftProjectionMatrix](leftprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
+- [rightViewMatrix](rightviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
+- [rightProjectionMatrix](rightprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
+
+# Document: overlap
+
+Source path: documentation/modelio/mdlstereoscopiccamera/overlap
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlstereoscopiccamera/overlap
+Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# overlap (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The amount, as a fraction of image width, by which the images from the camera’s two viewpoints overlap.
+
+## Declaration
+
+```swift
+var overlap: Float { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Some stereoscopic rendering processes require shifting the location of each viewpoint’s rendered image in a framebuffer before display. Use this property to determine the distance to shift images by during rendering.
+
+## See Also
+
+### Modeling Stereoscopic Imaging
+
+- [interPupillaryDistance](interpupillarydistance.md): The distance, in millimeters, between the stereoscopic camera’s two viewpoints.
+- [leftVergence](leftvergence.md): The angle, in degrees, at which the camera’s left viewpoint faces toward a central focal point.
+- [rightVergence](rightvergence.md): The angle, in degrees, at which the camera’s right viewpoint faces toward a central focal point.
+
+# overlap (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The amount, as a fraction of image width, by which the images from the camera’s two viewpoints overlap.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign) float overlap;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Some stereoscopic rendering processes require shifting the location of each viewpoint’s rendered image in a framebuffer before display. Use this property to determine the distance to shift images by during rendering.
+
+## See Also
+
+### Modeling Stereoscopic Imaging
+
+- [interPupillaryDistance](interpupillarydistance.md): The distance, in millimeters, between the stereoscopic camera’s two viewpoints.
+- [leftVergence](leftvergence.md): The angle, in degrees, at which the camera’s left viewpoint faces toward a central focal point.
+- [rightVergence](rightvergence.md): The angle, in degrees, at which the camera’s right viewpoint faces toward a central focal point.
+
+# Document: rightProjectionMatrix
+
+Source path: documentation/modelio/mdlstereoscopiccamera/rightprojectionmatrix
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlstereoscopiccamera/rightprojectionmatrix
+Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# rightProjectionMatrix (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
+
+## Declaration
+
+```swift
+var rightProjectionMatrix: matrix_float4x4 { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Model I/O  automatically generates this matrix from the same properties that produce the [projectionMatrix](../mdlcamera/projectionmatrix.md) property of a monocular camera, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [rightVergence](rightvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
+
+A renderer uses this matrix, along with the [rightViewMatrix](rightviewmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
+
+## See Also
+
+### Generating View and Projection Matrices
+
+- [leftViewMatrix](leftviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
+- [leftProjectionMatrix](leftprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
+- [rightViewMatrix](rightviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
+
+# rightProjectionMatrix (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) matrix_float4x4 rightProjectionMatrix;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Model I/O  automatically generates this matrix from the same properties that produce the [projectionMatrix](../mdlcamera/projectionmatrix.md) property of a monocular camera, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [rightVergence](rightvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
+
+A renderer uses this matrix, along with the [rightViewMatrix](rightviewmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
+
+## See Also
+
+### Generating View and Projection Matrices
+
+- [leftViewMatrix](leftviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
+- [leftProjectionMatrix](leftprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
+- [rightViewMatrix](rightviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
+
+# Document: rightVergence
+
+Source path: documentation/modelio/mdlstereoscopiccamera/rightvergence
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlstereoscopiccamera/rightvergence
+Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# rightVergence (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The angle, in degrees, at which the camera’s right viewpoint faces toward a central focal point.
+
+## Declaration
+
+```swift
+var rightVergence: Float { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A stereoscopic camera simulates binocular vision by looking toward a central point in a scene from two slightly different viewpoints. Vergence measures the difference between the camera’s forward axis and the angle from each viewpoint toward that central point, called the *vergence point*. There are two common ways to model a stereoscopic camera:
+
+- In a toed-in camera, each simulated lens and imaging surface is rotated (by the [leftVergence](leftvergence.md) and [rightVergence](rightvergence.md) angles) to face toward the focal point. That is, a line from the focal point through the center of the lens reaches the center of the imaging surface and is perpendicular to the image plane.
+- In a parallel stereoscopic camera, the imaging surfaces are perpendicular to the camera’s forward axis and are shifted horizontally relative to the center of each lens. The distance by which each imaging surface shifts is given by the following formula:
+
+`shift = (focalLength * interPupillaryDistance) / distanceToVergencePoint`
+
+## See Also
+
+### Modeling Stereoscopic Imaging
+
+- [interPupillaryDistance](interpupillarydistance.md): The distance, in millimeters, between the stereoscopic camera’s two viewpoints.
+- [overlap](overlap.md): The amount, as a fraction of image width, by which the images from the camera’s two viewpoints overlap.
+- [leftVergence](leftvergence.md): The angle, in degrees, at which the camera’s left viewpoint faces toward a central focal point.
+
+# rightVergence (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The angle, in degrees, at which the camera’s right viewpoint faces toward a central focal point.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign) float rightVergence;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A stereoscopic camera simulates binocular vision by looking toward a central point in a scene from two slightly different viewpoints. Vergence measures the difference between the camera’s forward axis and the angle from each viewpoint toward that central point, called the *vergence point*. There are two common ways to model a stereoscopic camera:
+
+- In a toed-in camera, each simulated lens and imaging surface is rotated (by the [leftVergence](leftvergence.md) and [rightVergence](rightvergence.md) angles) to face toward the focal point. That is, a line from the focal point through the center of the lens reaches the center of the imaging surface and is perpendicular to the image plane.
+- In a parallel stereoscopic camera, the imaging surfaces are perpendicular to the camera’s forward axis and are shifted horizontally relative to the center of each lens. The distance by which each imaging surface shifts is given by the following formula:
+
+`shift = (focalLength * interPupillaryDistance) / distanceToVergencePoint`
+
+## See Also
+
+### Modeling Stereoscopic Imaging
+
+- [interPupillaryDistance](interpupillarydistance.md): The distance, in millimeters, between the stereoscopic camera’s two viewpoints.
+- [overlap](overlap.md): The amount, as a fraction of image width, by which the images from the camera’s two viewpoints overlap.
+- [leftVergence](leftvergence.md): The angle, in degrees, at which the camera’s left viewpoint faces toward a central focal point.
+
+# Document: rightViewMatrix
+
+Source path: documentation/modelio/mdlstereoscopiccamera/rightviewmatrix
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlstereoscopiccamera/rightviewmatrix
+Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# rightViewMatrix (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
+
+## Declaration
+
+```swift
+var rightViewMatrix: matrix_float4x4 { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Model I/O  automatically generates this matrix from the camera’s position and orientation, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [rightVergence](rightvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
+
+A renderer uses this matrix, along with the [rightProjectionMatrix](rightprojectionmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
+
+## See Also
+
+### Generating View and Projection Matrices
+
+- [leftViewMatrix](leftviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
+- [leftProjectionMatrix](leftprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
+- [rightProjectionMatrix](rightprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
+
+# rightViewMatrix (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The transformation matrix that determines the position and orientation of the camera’s right viewpoint relative to a scene.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) matrix_float4x4 rightViewMatrix;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Model I/O  automatically generates this matrix from the camera’s position and orientation, additionally using the [interPupillaryDistance](interpupillarydistance.md) and [rightVergence](rightvergence.md) properties to account for the offset and angle of a stereoscopic camera’s left viewpoint.
+
+A renderer uses this matrix, along with the [rightProjectionMatrix](rightprojectionmatrix.md) property and model matrices derived from the camera’s position and orientation (the [transform](../mdlobject/transform.md) property) and the content to be rendered, to transform vertex data to the renderer’s 2D screen space at render time.
+
+## See Also
+
+### Generating View and Projection Matrices
+
+- [leftViewMatrix](leftviewmatrix.md): The transformation matrix that determines the position and orientation of the camera’s left viewpoint relative to a scene.
+- [leftProjectionMatrix](leftprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s left viewpoint.
+- [rightProjectionMatrix](rightprojectionmatrix.md): The transformation matrix that determines the extent of a scene visible to the camera’s right viewpoint.
+
+# Document: MDLSubmesh
+
+Source path: documentation/modelio/mdlsubmesh
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh
+Description: Framework: Model I/O Kind: Class Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# MDLSubmesh (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Class  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+A container for index buffer data and material information to be used in rendering all or part of a 3D object.
+
+## Declaration
+
+```swift
+class MDLSubmesh
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Submeshes are contained in [MDLMesh](mdlmesh.md) objects, which provide vertex buffer data that a submesh’s index data refers to. Together, the vertex and index data describe the geometric form of a portion of the mesh, and the submesh’s [material](mdlsubmesh/material.md) property determines its intended surface appearance for rendering.
+
+## Topics
+
+### Creating a Submesh
+
+- [init(indexBuffer:indexCount:indexType:geometryType:material:)](mdlsubmesh/init%28indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a submesh with an index buffer and the specified properties.
+- [init(name:indexBuffer:indexCount:indexType:geometryType:material:)](mdlsubmesh/init%28name_indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a named submesh with an index buffer and the specified properties.
+- [init(name:indexBuffer:indexCount:indexType:geometryType:material:topology:)](mdlsubmesh/init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
+- [init(mdlSubmesh:indexType:geometryType:)](mdlsubmesh/init%28mdlsubmesh_indextype_geometrytype_%29-4czyc.md): Initializes a submesh by copying or converting another submesh.
+
+### Working with a Submesh’s Index Buffer
+
+- [indexBuffer](mdlsubmesh/indexbuffer.md): An object that provides index data for the submesh.
+- [indexCount](mdlsubmesh/indexcount.md): The number of indices in the submesh’s index buffer.
+- [indexType](mdlsubmesh/indextype.md): The data type for each element in the submesh’s index buffer.
+- [geometryType](mdlsubmesh/geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
+- [topology](mdlsubmesh/topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
+- [indexBuffer(asIndexType:)](mdlsubmesh/indexbuffer%28asindextype_%29.md)
+
+### Associating Materials with a Submesh
+
+- [material](mdlsubmesh/material.md): An object that describes the intended surface appearance of the submesh for rendering.
+
+### Identifying a Submesh
+
+- [name](mdlsubmesh/name.md): A descriptive name for the submesh.
+
+### Constants
+
+- [MDLIndexBitDepth](mdlindexbitdepth.md): Options for the size of integer data in a submesh’s index buffer, used by the [indexType](mdlsubmesh/indextype.md) property.
+- [MDLGeometryType](mdlgeometrytype.md): Types of geometric primitives for rendering a submesh, used by the [geometryType](mdlsubmesh/geometrytype.md) property.
+
+### Initializers
+
+- [init(MDLSubmesh:indexType:geometryType:)](mdlsubmesh/init%28mdlsubmesh_indextype_geometrytype_%29-6b9cm.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [MDLNamed](mdlnamed.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### 3D Asset Basics
+
+- [MDLAsset](mdlasset.md): An indexed container for 3D objects and associated information, such as transform hierarchies, meshes, cameras, and lights.
+- [MDLObject](mdlobject.md): The base class for objects that are part of a 3D asset, including meshes, cameras, and lights.
+- [MDLTransform](mdltransform.md): A description of the local coordinate space transformations for a 3D object.
+- [MDLMesh](mdlmesh.md): A container for vertex buffer data to be used in rendering a 3D object.
+- [MDLSubmeshTopology](mdlsubmeshtopology.md): A description of how a submesh’s index buffer data is arranged and how that arrangement should be used to produce the submesh’s intended 3D shape.
+- [MDLNamed](mdlnamed.md): The common interface for Model I/O objects that expose a human-readable name.
+
+# MDLSubmesh (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Class  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+A container for index buffer data and material information to be used in rendering all or part of a 3D object.
+
+## Declaration
+
+```objectivec
+@interface MDLSubmesh : NSObject
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Submeshes are contained in [MDLMesh](mdlmesh.md) objects, which provide vertex buffer data that a submesh’s index data refers to. Together, the vertex and index data describe the geometric form of a portion of the mesh, and the submesh’s [material](mdlsubmesh/material.md) property determines its intended surface appearance for rendering.
+
+## Topics
+
+### Creating a Submesh
+
+- [initWithIndexBuffer:indexCount:indexType:geometryType:material:](mdlsubmesh/init%28indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a submesh with an index buffer and the specified properties.
+- [initWithName:indexBuffer:indexCount:indexType:geometryType:material:](mdlsubmesh/init%28name_indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a named submesh with an index buffer and the specified properties.
+- [initWithName:indexBuffer:indexCount:indexType:geometryType:material:topology:](mdlsubmesh/init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
+- [initWithMDLSubmesh:indexType:geometryType:](mdlsubmesh/init%28mdlsubmesh_indextype_geometrytype_%29-4czyc.md): Initializes a submesh by copying or converting another submesh.
+
+### Working with a Submesh’s Index Buffer
+
+- [indexBuffer](mdlsubmesh/indexbuffer.md): An object that provides index data for the submesh.
+- [indexCount](mdlsubmesh/indexcount.md): The number of indices in the submesh’s index buffer.
+- [indexType](mdlsubmesh/indextype.md): The data type for each element in the submesh’s index buffer.
+- [geometryType](mdlsubmesh/geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
+- [topology](mdlsubmesh/topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
+- [indexBufferAsIndexType:](mdlsubmesh/indexbuffer%28asindextype_%29.md)
+
+### Associating Materials with a Submesh
+
+- [material](mdlsubmesh/material.md): An object that describes the intended surface appearance of the submesh for rendering.
+
+### Identifying a Submesh
+
+- [name](mdlsubmesh/name.md): A descriptive name for the submesh.
+
+### Constants
+
+- [MDLIndexBitDepth](mdlindexbitdepth.md): Options for the size of integer data in a submesh’s index buffer, used by the [indexType](mdlsubmesh/indextype.md) property.
+- [MDLGeometryType](mdlgeometrytype.md): Types of geometric primitives for rendering a submesh, used by the [geometryType](mdlsubmesh/geometrytype.md) property.
+
+### Type Methods
+
+- [submeshWithSCNGeometryElement:](mdlsubmesh/submeshwithscngeometryelement_.md)
+- [submeshWithSCNGeometryElement:bufferAllocator:](mdlsubmesh/submeshwithscngeometryelement_bufferallocator_.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [MDLNamed](mdlnamed.md)
+
+## See Also
+
+### 3D Asset Basics
+
+- [MDLAsset](mdlasset.md): An indexed container for 3D objects and associated information, such as transform hierarchies, meshes, cameras, and lights.
+- [MDLObject](mdlobject.md): The base class for objects that are part of a 3D asset, including meshes, cameras, and lights.
+- [MDLTransform](mdltransform.md): A description of the local coordinate space transformations for a 3D object.
+- [MDLMesh](mdlmesh.md): A container for vertex buffer data to be used in rendering a 3D object.
+- [MDLSubmeshTopology](mdlsubmeshtopology.md): A description of how a submesh’s index buffer data is arranged and how that arrangement should be used to produce the submesh’s intended 3D shape.
+- [MDLNamed](mdlnamed.md): The common interface for Model I/O objects that expose a human-readable name.
+
+# Document: geometryType
+
+Source path: documentation/modelio/mdlsubmesh/geometrytype
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/geometrytype
+Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# geometryType (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The type of geometric primitives described by the submesh’s index buffer.
+
+## Declaration
+
+```swift
+var geometryType: MDLGeometryType { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property determines how the sequence of indices in the submesh’s index buffer should be interpreted for rendering. For example, if the geometry type is [MDLGeometryType.triangles](../mdlgeometrytype/triangles.md), each triangle to be rendered comes from an independent set of three indices, but if the geometry type is [MDLGeometryType.triangleStrips](../mdlgeometrytype/trianglestrips.md), triangles to be rendered can come from overlapping sets of indices in the sequence. If the geometry type is [MDLGeometryType.variableTopology](../mdlgeometrytype/variabletopology.md), the [topology](topology.md) property describes the non-uniform layout of the index buffer.
+
+## See Also
+
+### Working with a Submesh’s Index Buffer
+
+- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
+- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
+- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
+- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
+- [indexBuffer(asIndexType:)](indexbuffer%28asindextype_%29.md)
+
+# geometryType (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The type of geometric primitives described by the submesh’s index buffer.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) MDLGeometryType geometryType;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property determines how the sequence of indices in the submesh’s index buffer should be interpreted for rendering. For example, if the geometry type is [MDLGeometryTypeTriangles](../mdlgeometrytype/triangles.md), each triangle to be rendered comes from an independent set of three indices, but if the geometry type is [MDLGeometryTypeTriangleStrips](../mdlgeometrytype/trianglestrips.md), triangles to be rendered can come from overlapping sets of indices in the sequence. If the geometry type is [MDLGeometryTypeVariableTopology](../mdlgeometrytype/variabletopology.md), the [topology](topology.md) property describes the non-uniform layout of the index buffer.
+
+## See Also
+
+### Working with a Submesh’s Index Buffer
+
+- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
+- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
+- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
+- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
+- [indexBufferAsIndexType:](indexbuffer%28asindextype_%29.md)
+
+# Document: indexBuffer
+
+Source path: documentation/modelio/mdlsubmesh/indexbuffer
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/indexbuffer
+Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# indexBuffer (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+An object that provides index data for the submesh.
+
+## Declaration
+
+```swift
+var indexBuffer: any MDLMeshBuffer { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+An index buffer contains indices, each of which identifies a vertex in the vertex buffers of the [MDLMesh](../mdlmesh.md) object containing the mesh. Together with the submesh’s [geometryType](geometrytype.md) property, the sequence of indices determines how to interpret the mesh’s vertex data to construct the geometric form for a portion of the mesh.
+
+## See Also
+
+### Working with a Submesh’s Index Buffer
+
+- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
+- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
+- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
+- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
+- [indexBuffer(asIndexType:)](indexbuffer%28asindextype_%29.md)
+
+# indexBuffer (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+An object that provides index data for the submesh.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, retain, readonly) id<MDLMeshBuffer> indexBuffer;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+An index buffer contains indices, each of which identifies a vertex in the vertex buffers of the [MDLMesh](../mdlmesh.md) object containing the mesh. Together with the submesh’s [geometryType](geometrytype.md) property, the sequence of indices determines how to interpret the mesh’s vertex data to construct the geometric form for a portion of the mesh.
+
+## See Also
+
+### Working with a Submesh’s Index Buffer
+
+- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
+- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
+- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
+- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
+- [indexBufferAsIndexType:](indexbuffer%28asindextype_%29.md)
+
+# Document: indexBuffer(asIndexType:)
+
+Source path: documentation/modelio/mdlsubmesh/indexbuffer(asindextype:)
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/indexbuffer(asindextype:)
+Description: Framework: Model I/O Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# indexBuffer(asIndexType:) (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+func indexBuffer(asIndexType indexType: MDLIndexBitDepth) -> any MDLMeshBuffer
+```
+
+## See Also
+
+### Working with a Submesh’s Index Buffer
+
+- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
+- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
+- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
+- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
+- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
+
+# indexBufferAsIndexType: (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
+- (id<MDLMeshBuffer>) indexBufferAsIndexType:(MDLIndexBitDepth) indexType;
+```
+
+## See Also
+
+### Working with a Submesh’s Index Buffer
+
+- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
+- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
+- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
+- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
+- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
+
+# Document: indexCount
+
+Source path: documentation/modelio/mdlsubmesh/indexcount
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/indexcount
+Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# indexCount (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The number of indices in the submesh’s index buffer.
+
+## Declaration
+
+```swift
+var indexCount: Int { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this index count when rendering the submesh.
+
+## See Also
+
+### Working with a Submesh’s Index Buffer
+
+- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
+- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
+- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
+- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
+- [indexBuffer(asIndexType:)](indexbuffer%28asindextype_%29.md)
+
+# indexCount (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The number of indices in the submesh’s index buffer.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) NSUInteger indexCount;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this index count when rendering the submesh.
+
+## See Also
+
+### Working with a Submesh’s Index Buffer
+
+- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
+- [indexType](indextype.md): The data type for each element in the submesh’s index buffer.
+- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
+- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
+- [indexBufferAsIndexType:](indexbuffer%28asindextype_%29.md)
+
+# Document: indexType
+
+Source path: documentation/modelio/mdlsubmesh/indextype
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/indextype
+Description: Framework: Model I/O Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# indexType (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The data type for each element in the submesh’s index buffer.
+
+## Declaration
+
+```swift
+var indexType: MDLIndexBitDepth { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For optimum performance, an index buffer should generally use the smallest possible data type to fit its number of indices.
+
+## See Also
+
+### Working with a Submesh’s Index Buffer
+
+- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
+- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
+- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
+- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
+- [indexBuffer(asIndexType:)](indexbuffer%28asindextype_%29.md)
+
+# indexType (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The data type for each element in the submesh’s index buffer.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) MDLIndexBitDepth indexType;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For optimum performance, an index buffer should generally use the smallest possible data type to fit its number of indices.
+
+## See Also
+
+### Working with a Submesh’s Index Buffer
+
+- [indexBuffer](indexbuffer.md): An object that provides index data for the submesh.
+- [indexCount](indexcount.md): The number of indices in the submesh’s index buffer.
+- [geometryType](geometrytype.md): The type of geometric primitives described by the submesh’s index buffer.
+- [topology](topology.md): A description of how the non-uniform layout of the submesh’s index buffer defines the shape of the mesh.
+- [indexBufferAsIndexType:](indexbuffer%28asindextype_%29.md)
+
+# Document: init(indexBuffer:indexCount:indexType:geometryType:material:)
+
+Source path: documentation/modelio/mdlsubmesh/init(indexbuffer:indexcount:indextype:geometrytype:material:)
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/init(indexbuffer:indexcount:indextype:geometrytype:material:)
+Description: Framework: Model I/O Kind: Initializer Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# init(indexBuffer:indexCount:indexType:geometryType:material:) (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Initializer  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Initializes a submesh with an index buffer and the specified properties.
+
+## Declaration
+
+```swift
+init(indexBuffer: any MDLMeshBuffer, indexCount: Int, indexType: MDLIndexBitDepth, geometryType: MDLGeometryType, material: MDLMaterial?)
+```
+
+## Parameters
+
+- `indexBuffer`: An object that provides index data for the submesh.
+- `indexCount`: The number of indices in the index buffer.
+- `indexType`: The data type of each index in the index buffer.
+- `geometryType`: The type of geometric primitives described by the index buffer.
+- `material`: A description of the intended surface appearance for rendering the submesh.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new submesh object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Typically, a submesh is imported from an asset file as a member of a [MDLMesh](../mdlmesh.md) object, but you can also use this method to create a submesh programmatically.
+
+## See Also
+
+### Creating a Submesh
+
+- [init(name:indexBuffer:indexCount:indexType:geometryType:material:)](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a named submesh with an index buffer and the specified properties.
+- [init(name:indexBuffer:indexCount:indexType:geometryType:material:topology:)](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
+- [init(mdlSubmesh:indexType:geometryType:)](init%28mdlsubmesh_indextype_geometrytype_%29-4czyc.md): Initializes a submesh by copying or converting another submesh.
+
+# initWithIndexBuffer:indexCount:indexType:geometryType:material: (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Initializes a submesh with an index buffer and the specified properties.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithIndexBuffer:(id<MDLMeshBuffer>) indexBuffer indexCount:(NSUInteger) indexCount indexType:(MDLIndexBitDepth) indexType geometryType:(MDLGeometryType) geometryType material:(MDLMaterial *) material;
+```
+
+## Parameters
+
+- `indexBuffer`: An object that provides index data for the submesh.
+- `indexCount`: The number of indices in the index buffer.
+- `indexType`: The data type of each index in the index buffer.
+- `geometryType`: The type of geometric primitives described by the index buffer.
+- `material`: A description of the intended surface appearance for rendering the submesh.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new submesh object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Typically, a submesh is imported from an asset file as a member of a [MDLMesh](../mdlmesh.md) object, but you can also use this method to create a submesh programmatically.
+
+## See Also
+
+### Creating a Submesh
+
+- [initWithName:indexBuffer:indexCount:indexType:geometryType:material:](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a named submesh with an index buffer and the specified properties.
+- [initWithName:indexBuffer:indexCount:indexType:geometryType:material:topology:](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
+- [initWithMDLSubmesh:indexType:geometryType:](init%28mdlsubmesh_indextype_geometrytype_%29-4czyc.md): Initializes a submesh by copying or converting another submesh.
+
+# Document: init(mdlSubmesh:indexType:geometryType:)
+
+Source path: documentation/modelio/mdlsubmesh/init(mdlsubmesh:indextype:geometrytype:)-4czyc
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/init(mdlsubmesh:indextype:geometrytype:)-4czyc
+Description: Framework: Model I/O Kind: Initializer Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# init(mdlSubmesh:indexType:geometryType:) (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Initializer  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Initializes a submesh by copying or converting another submesh.
+
+## Declaration
+
+```swift
+init?(mdlSubmesh submesh: MDLSubmesh, indexType: MDLIndexBitDepth, geometryType: MDLGeometryType)
+```
+
+## Parameters
+
+- `submesh`: The submesh to copy or convert from.
+- `indexType`: The data type of each index for the new submesh’s index buffer.
+- `geometryType`: The type of geometric primitives for the new submesh’s index buffer.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new submesh object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the `indexType` or `geometryType` parameter does not match the corresponding property of the object in the `submesh` parameter, this method creates a new index buffer by converting the submesh’s index buffer to the described format while preserving shape and topology. For example, you can use this method to convert a quad mesh to a triangle mesh for rendering using GPUs that do not support quad primitives, or to convert a triangle mesh to triangle strips to create a smaller index buffer.
+
+If the `indexType` and `geometryType` parameters match the corresponding properties of the input submesh, this method simply copies that submesh’s index buffer to create the new submesh.
+
+## See Also
+
+### Creating a Submesh
+
+- [init(indexBuffer:indexCount:indexType:geometryType:material:)](init%28indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a submesh with an index buffer and the specified properties.
+- [init(name:indexBuffer:indexCount:indexType:geometryType:material:)](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a named submesh with an index buffer and the specified properties.
+- [init(name:indexBuffer:indexCount:indexType:geometryType:material:topology:)](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
+
+# initWithMDLSubmesh:indexType:geometryType: (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Initializes a submesh by copying or converting another submesh.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithMDLSubmesh:(MDLSubmesh *) submesh indexType:(MDLIndexBitDepth) indexType geometryType:(MDLGeometryType) geometryType;
+```
+
+## Parameters
+
+- `submesh`: The submesh to copy or convert from.
+- `indexType`: The data type of each index for the new submesh’s index buffer.
+- `geometryType`: The type of geometric primitives for the new submesh’s index buffer.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new submesh object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the `indexType` or `geometryType` parameter does not match the corresponding property of the object in the `submesh` parameter, this method creates a new index buffer by converting the submesh’s index buffer to the described format while preserving shape and topology. For example, you can use this method to convert a quad mesh to a triangle mesh for rendering using GPUs that do not support quad primitives, or to convert a triangle mesh to triangle strips to create a smaller index buffer.
+
+If the `indexType` and `geometryType` parameters match the corresponding properties of the input submesh, this method simply copies that submesh’s index buffer to create the new submesh.
+
+## See Also
+
+### Creating a Submesh
+
+- [initWithIndexBuffer:indexCount:indexType:geometryType:material:](init%28indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a submesh with an index buffer and the specified properties.
+- [initWithName:indexBuffer:indexCount:indexType:geometryType:material:](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a named submesh with an index buffer and the specified properties.
+- [initWithName:indexBuffer:indexCount:indexType:geometryType:material:topology:](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
+
+# Document: init(MDLSubmesh:indexType:geometryType:)
+
+Source path: documentation/modelio/mdlsubmesh/init(mdlsubmesh:indextype:geometrytype:)-6b9cm
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/init(mdlsubmesh:indextype:geometrytype:)-6b9cm
+Description: Framework: Model I/O Kind: Initializer Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# init(MDLSubmesh:indexType:geometryType:)
+
+**Framework:** Model I/O  
+**Kind:** Initializer  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+init?(MDLSubmesh submesh: MDLSubmesh, indexType: MDLIndexBitDepth, geometryType: MDLGeometryType)
+```
+
+# Document: init(name:indexBuffer:indexCount:indexType:geometryType:material:)
+
+Source path: documentation/modelio/mdlsubmesh/init(name:indexbuffer:indexcount:indextype:geometrytype:material:)
+Canonical documentation: https://developer.apple.com/documentation/modelio/mdlsubmesh/init(name:indexbuffer:indexcount:indextype:geometrytype:material:)
+Description: Framework: Model I/O Kind: Initializer Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# init(name:indexBuffer:indexCount:indexType:geometryType:material:) (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Initializer  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Initializes a named submesh with an index buffer and the specified properties.
+
+## Declaration
+
+```swift
+init(name: String, indexBuffer: any MDLMeshBuffer, indexCount: Int, indexType: MDLIndexBitDepth, geometryType: MDLGeometryType, material: MDLMaterial?)
+```
+
+## Parameters
+
+- `name`: A descriptive name for the submesh. This property is not used in rendering, but can be useful in debugging.
+- `indexBuffer`: An object that provides index data for the submesh.
+- `indexCount`: The number of indices in the index buffer.
+- `indexType`: The data type of each index in the index buffer.
+- `geometryType`: The type of geometric primitives described by the index buffer.
+- `material`: A description of the intended surface appearance for rendering the submesh.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new submesh object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Typically, a submesh is imported from an asset file as a member of a [MDLMesh](../mdlmesh.md) object, but you can also use this method to create a submesh programmatically.
+
+## See Also
+
+### Creating a Submesh
+
+- [init(indexBuffer:indexCount:indexType:geometryType:material:)](init%28indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a submesh with an index buffer and the specified properties.
+- [init(name:indexBuffer:indexCount:indexType:geometryType:material:topology:)](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
+- [init(mdlSubmesh:indexType:geometryType:)](init%28mdlsubmesh_indextype_geometrytype_%29-4czyc.md): Initializes a submesh by copying or converting another submesh.
+
+# initWithName:indexBuffer:indexCount:indexType:geometryType:material: (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Initializes a named submesh with an index buffer and the specified properties.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithName:(NSString *) name indexBuffer:(id<MDLMeshBuffer>) indexBuffer indexCount:(NSUInteger) indexCount indexType:(MDLIndexBitDepth) indexType geometryType:(MDLGeometryType) geometryType material:(MDLMaterial *) material;
+```
+
+## Parameters
+
+- `name`: A descriptive name for the submesh. This property is not used in rendering, but can be useful in debugging.
+- `indexBuffer`: An object that provides index data for the submesh.
+- `indexCount`: The number of indices in the index buffer.
+- `indexType`: The data type of each index in the index buffer.
+- `geometryType`: The type of geometric primitives described by the index buffer.
+- `material`: A description of the intended surface appearance for rendering the submesh.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new submesh object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Typically, a submesh is imported from an asset file as a member of a [MDLMesh](../mdlmesh.md) object, but you can also use this method to create a submesh programmatically.
+
+## See Also
+
+### Creating a Submesh
+
+- [initWithIndexBuffer:indexCount:indexType:geometryType:material:](init%28indexbuffer_indexcount_indextype_geometrytype_material_%29.md): Initializes a submesh with an index buffer and the specified properties.
+- [initWithName:indexBuffer:indexCount:indexType:geometryType:material:topology:](init%28name_indexbuffer_indexcount_indextype_geometrytype_material_topology_%29.md): Initializes a named submesh with a specific topology.
+- [initWithMDLSubmesh:indexType:geometryType:](init%28mdlsubmesh_indextype_geometrytype_%29-4czyc.md): Initializes a submesh by copying or converting another submesh.
 
 # Document: init(name:indexBuffer:indexCount:indexType:geometryType:material:topology:)
 
@@ -165656,1271 +166895,3 @@ case invalidFramePayloadData
 - [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
 - [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
 - [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
-
-# Document: NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension
-
-Source path: documentation/network/nwprotocolwebsocket/closecode/defined/mandatoryextension
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/mandatoryextension
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
-
-## Declaration
-
-```swift
-case mandatoryExtension
-```
-
-## See Also
-
-### Defined Close Codes
-
-- [NWProtocolWebSocket.CloseCode.Defined.normalClosure](normalclosure.md): A normal closure occurred with no errors.
-- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
-- [NWProtocolWebSocket.CloseCode.Defined.protocolError](protocolerror.md): An endpoint is terminating the connection due to a protocol error.
-- [NWProtocolWebSocket.CloseCode.Defined.unsupportedData](unsupporteddata.md): An endpoint is terminating the connection because it received a type of data it cannot accept.
-- [NWProtocolWebSocket.CloseCode.Defined.noStatusReceived](nostatusreceived.md): This value is reserved for local errors and indicates that no Close code was received.
-- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
-- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
-- [NWProtocolWebSocket.CloseCode.Defined.policyViolation](policyviolation.md): An endpoint is terminating the connection because it received a message that violates its policy.
-- [NWProtocolWebSocket.CloseCode.Defined.messageTooBig](messagetoobig.md): An endpoint is terminating the connection because it received a message that is too big for it to process.
-- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
-- [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
-
-# Document: NWProtocolWebSocket.CloseCode.Defined.messageTooBig
-
-Source path: documentation/network/nwprotocolwebsocket/closecode/defined/messagetoobig
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/messagetoobig
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.CloseCode.Defined.messageTooBig
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-An endpoint is terminating the connection because it received a message that is too big for it to process.
-
-## Declaration
-
-```swift
-case messageTooBig
-```
-
-## See Also
-
-### Defined Close Codes
-
-- [NWProtocolWebSocket.CloseCode.Defined.normalClosure](normalclosure.md): A normal closure occurred with no errors.
-- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
-- [NWProtocolWebSocket.CloseCode.Defined.protocolError](protocolerror.md): An endpoint is terminating the connection due to a protocol error.
-- [NWProtocolWebSocket.CloseCode.Defined.unsupportedData](unsupporteddata.md): An endpoint is terminating the connection because it received a type of data it cannot accept.
-- [NWProtocolWebSocket.CloseCode.Defined.noStatusReceived](nostatusreceived.md): This value is reserved for local errors and indicates that no Close code was received.
-- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
-- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
-- [NWProtocolWebSocket.CloseCode.Defined.policyViolation](policyviolation.md): An endpoint is terminating the connection because it received a message that violates its policy.
-- [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
-- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
-- [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
-
-# Document: NWProtocolWebSocket.CloseCode.Defined.normalClosure
-
-Source path: documentation/network/nwprotocolwebsocket/closecode/defined/normalclosure
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/normalclosure
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.CloseCode.Defined.normalClosure
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-A normal closure occurred with no errors.
-
-## Declaration
-
-```swift
-case normalClosure
-```
-
-## See Also
-
-### Defined Close Codes
-
-- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
-- [NWProtocolWebSocket.CloseCode.Defined.protocolError](protocolerror.md): An endpoint is terminating the connection due to a protocol error.
-- [NWProtocolWebSocket.CloseCode.Defined.unsupportedData](unsupporteddata.md): An endpoint is terminating the connection because it received a type of data it cannot accept.
-- [NWProtocolWebSocket.CloseCode.Defined.noStatusReceived](nostatusreceived.md): This value is reserved for local errors and indicates that no Close code was received.
-- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
-- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
-- [NWProtocolWebSocket.CloseCode.Defined.policyViolation](policyviolation.md): An endpoint is terminating the connection because it received a message that violates its policy.
-- [NWProtocolWebSocket.CloseCode.Defined.messageTooBig](messagetoobig.md): An endpoint is terminating the connection because it received a message that is too big for it to process.
-- [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
-- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
-- [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
-
-# Document: NWProtocolWebSocket.CloseCode.Defined.noStatusReceived
-
-Source path: documentation/network/nwprotocolwebsocket/closecode/defined/nostatusreceived
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/nostatusreceived
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.CloseCode.Defined.noStatusReceived
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-This value is reserved for local errors and indicates that no Close code was received.
-
-## Declaration
-
-```swift
-case noStatusReceived
-```
-
-## See Also
-
-### Defined Close Codes
-
-- [NWProtocolWebSocket.CloseCode.Defined.normalClosure](normalclosure.md): A normal closure occurred with no errors.
-- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
-- [NWProtocolWebSocket.CloseCode.Defined.protocolError](protocolerror.md): An endpoint is terminating the connection due to a protocol error.
-- [NWProtocolWebSocket.CloseCode.Defined.unsupportedData](unsupporteddata.md): An endpoint is terminating the connection because it received a type of data it cannot accept.
-- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
-- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
-- [NWProtocolWebSocket.CloseCode.Defined.policyViolation](policyviolation.md): An endpoint is terminating the connection because it received a message that violates its policy.
-- [NWProtocolWebSocket.CloseCode.Defined.messageTooBig](messagetoobig.md): An endpoint is terminating the connection because it received a message that is too big for it to process.
-- [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
-- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
-- [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
-
-# Document: NWProtocolWebSocket.CloseCode.Defined.policyViolation
-
-Source path: documentation/network/nwprotocolwebsocket/closecode/defined/policyviolation
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/policyviolation
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.CloseCode.Defined.policyViolation
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-An endpoint is terminating the connection because it received a message that violates its policy.
-
-## Declaration
-
-```swift
-case policyViolation
-```
-
-## See Also
-
-### Defined Close Codes
-
-- [NWProtocolWebSocket.CloseCode.Defined.normalClosure](normalclosure.md): A normal closure occurred with no errors.
-- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
-- [NWProtocolWebSocket.CloseCode.Defined.protocolError](protocolerror.md): An endpoint is terminating the connection due to a protocol error.
-- [NWProtocolWebSocket.CloseCode.Defined.unsupportedData](unsupporteddata.md): An endpoint is terminating the connection because it received a type of data it cannot accept.
-- [NWProtocolWebSocket.CloseCode.Defined.noStatusReceived](nostatusreceived.md): This value is reserved for local errors and indicates that no Close code was received.
-- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
-- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
-- [NWProtocolWebSocket.CloseCode.Defined.messageTooBig](messagetoobig.md): An endpoint is terminating the connection because it received a message that is too big for it to process.
-- [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
-- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
-- [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
-
-# Document: NWProtocolWebSocket.CloseCode.Defined.protocolError
-
-Source path: documentation/network/nwprotocolwebsocket/closecode/defined/protocolerror
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/protocolerror
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.CloseCode.Defined.protocolError
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-An endpoint is terminating the connection due to a protocol error.
-
-## Declaration
-
-```swift
-case protocolError
-```
-
-## See Also
-
-### Defined Close Codes
-
-- [NWProtocolWebSocket.CloseCode.Defined.normalClosure](normalclosure.md): A normal closure occurred with no errors.
-- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
-- [NWProtocolWebSocket.CloseCode.Defined.unsupportedData](unsupporteddata.md): An endpoint is terminating the connection because it received a type of data it cannot accept.
-- [NWProtocolWebSocket.CloseCode.Defined.noStatusReceived](nostatusreceived.md): This value is reserved for local errors and indicates that no Close code was received.
-- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
-- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
-- [NWProtocolWebSocket.CloseCode.Defined.policyViolation](policyviolation.md): An endpoint is terminating the connection because it received a message that violates its policy.
-- [NWProtocolWebSocket.CloseCode.Defined.messageTooBig](messagetoobig.md): An endpoint is terminating the connection because it received a message that is too big for it to process.
-- [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
-- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
-- [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
-
-# Document: NWProtocolWebSocket.CloseCode.Defined.tlsHandshake
-
-Source path: documentation/network/nwprotocolwebsocket/closecode/defined/tlshandshake
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/tlshandshake
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.CloseCode.Defined.tlsHandshake
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-This value is reserved for local errors and indicates that the TLS handshake failed.
-
-## Declaration
-
-```swift
-case tlsHandshake
-```
-
-## See Also
-
-### Defined Close Codes
-
-- [NWProtocolWebSocket.CloseCode.Defined.normalClosure](normalclosure.md): A normal closure occurred with no errors.
-- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
-- [NWProtocolWebSocket.CloseCode.Defined.protocolError](protocolerror.md): An endpoint is terminating the connection due to a protocol error.
-- [NWProtocolWebSocket.CloseCode.Defined.unsupportedData](unsupporteddata.md): An endpoint is terminating the connection because it received a type of data it cannot accept.
-- [NWProtocolWebSocket.CloseCode.Defined.noStatusReceived](nostatusreceived.md): This value is reserved for local errors and indicates that no Close code was received.
-- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
-- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
-- [NWProtocolWebSocket.CloseCode.Defined.policyViolation](policyviolation.md): An endpoint is terminating the connection because it received a message that violates its policy.
-- [NWProtocolWebSocket.CloseCode.Defined.messageTooBig](messagetoobig.md): An endpoint is terminating the connection because it received a message that is too big for it to process.
-- [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
-- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
-
-# Document: NWProtocolWebSocket.CloseCode.Defined.unsupportedData
-
-Source path: documentation/network/nwprotocolwebsocket/closecode/defined/unsupporteddata
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/unsupporteddata
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.CloseCode.Defined.unsupportedData
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-An endpoint is terminating the connection because it received a type of data it cannot accept.
-
-## Declaration
-
-```swift
-case unsupportedData
-```
-
-## See Also
-
-### Defined Close Codes
-
-- [NWProtocolWebSocket.CloseCode.Defined.normalClosure](normalclosure.md): A normal closure occurred with no errors.
-- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
-- [NWProtocolWebSocket.CloseCode.Defined.protocolError](protocolerror.md): An endpoint is terminating the connection due to a protocol error.
-- [NWProtocolWebSocket.CloseCode.Defined.noStatusReceived](nostatusreceived.md): This value is reserved for local errors and indicates that no Close code was received.
-- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
-- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
-- [NWProtocolWebSocket.CloseCode.Defined.policyViolation](policyviolation.md): An endpoint is terminating the connection because it received a message that violates its policy.
-- [NWProtocolWebSocket.CloseCode.Defined.messageTooBig](messagetoobig.md): An endpoint is terminating the connection because it received a message that is too big for it to process.
-- [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
-- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
-- [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
-
-# Document: init(rawValue:)
-
-Source path: documentation/network/nwprotocolwebsocket/closecode/init(rawvalue:)
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/init(rawvalue:)
-Description: Framework: Network Kind: Initializer Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# init(rawValue:)
-
-**Framework:** Network  
-**Kind:** Initializer  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-Initializes a close code with a raw value.
-
-## Declaration
-
-```swift
-init(rawValue: UInt16) throws
-```
-
-## See Also
-
-### Close Code Types
-
-- [NWProtocolWebSocket.CloseCode.protocolCode(\_:)](protocolcode%28__%29.md): A well-known close code reserved by the protocol (values 1000-2999).
-- [NWProtocolWebSocket.CloseCode.Defined](defined.md): Well-known close code values.
-- [NWProtocolWebSocket.CloseCode.applicationCode(\_:)](applicationcode%28__%29.md): A close code in the range reserved for applications and frameworks (3000-3999).
-- [NWProtocolWebSocket.CloseCode.privateCode(\_:)](privatecode%28__%29.md): A close code in the private-use range (4000-4999).
-
-# Document: NWProtocolWebSocket.CloseCode.privateCode(_:)
-
-Source path: documentation/network/nwprotocolwebsocket/closecode/privatecode(_:)
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/privatecode(_:)
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.CloseCode.privateCode(\_:)
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-A close code in the private-use range (4000-4999).
-
-## Declaration
-
-```swift
-case privateCode(UInt16)
-```
-
-## See Also
-
-### Close Code Types
-
-- [init(rawValue:)](init%28rawvalue_%29.md): Initializes a close code with a raw value.
-- [NWProtocolWebSocket.CloseCode.protocolCode(\_:)](protocolcode%28__%29.md): A well-known close code reserved by the protocol (values 1000-2999).
-- [NWProtocolWebSocket.CloseCode.Defined](defined.md): Well-known close code values.
-- [NWProtocolWebSocket.CloseCode.applicationCode(\_:)](applicationcode%28__%29.md): A close code in the range reserved for applications and frameworks (3000-3999).
-
-# Document: NWProtocolWebSocket.CloseCode.protocolCode(_:)
-
-Source path: documentation/network/nwprotocolwebsocket/closecode/protocolcode(_:)
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/protocolcode(_:)
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.CloseCode.protocolCode(\_:)
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-A well-known close code reserved by the protocol (values 1000-2999).
-
-## Declaration
-
-```swift
-case protocolCode(NWProtocolWebSocket.CloseCode.Defined)
-```
-
-## See Also
-
-### Close Code Types
-
-- [init(rawValue:)](init%28rawvalue_%29.md): Initializes a close code with a raw value.
-- [NWProtocolWebSocket.CloseCode.Defined](defined.md): Well-known close code values.
-- [NWProtocolWebSocket.CloseCode.applicationCode(\_:)](applicationcode%28__%29.md): A close code in the range reserved for applications and frameworks (3000-3999).
-- [NWProtocolWebSocket.CloseCode.privateCode(\_:)](privatecode%28__%29.md): A close code in the private-use range (4000-4999).
-
-# Document: definition
-
-Source path: documentation/network/nwprotocolwebsocket/definition
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/definition
-Description: Framework: Network Kind: Type Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# definition
-
-**Framework:** Network  
-**Kind:** Type Property  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-The system definition of the WebSocket protocol.
-
-## Declaration
-
-```swift
-static let definition: NWProtocolDefinition
-```
-
-## See Also
-
-### Creating WebSocket Connections
-
-- [NWProtocolWebSocket.Options](options.md): A container of options for configuring how WebSocket is used on a connection.
-
-# Document: NWProtocolWebSocket.Metadata
-
-Source path: documentation/network/nwprotocolwebsocket/metadata
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/metadata
-Description: Framework: Network Kind: Class Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.Metadata
-
-**Framework:** Network  
-**Kind:** Class  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-A WebSocket message you configure when sending and receiving packets.
-
-## Declaration
-
-```swift
-class Metadata
-```
-
-## Topics
-
-### Sending Messages
-
-- [init(opcode:)](metadata/init%28opcode_%29.md): Initializes a WebSocket message with a specific type code.
-- [NWProtocolWebSocket.Opcode](opcode.md): Types of messages that you send and receive on a WebSocket connection.
-- [setPongHandler(\_:handler:)](metadata/setponghandler%28__handler_%29.md): Sets a handler on a Ping message to be invoked when the corresponding Pong message is received.
-- [closeCode](metadata/closecode.md): The close code on a WebSocket message.
-- [NWProtocolWebSocket.CloseCode](closecode.md): Types of codes used upon closing a WebSocket connection.
-
-### Receiving Messages
-
-- [opcode](metadata/opcode.md): The type code of a WebSocket message.
-- [closeCode](metadata/closecode.md): The close code on a WebSocket message.
-- [NWProtocolWebSocket.CloseCode](closecode.md): Types of codes used upon closing a WebSocket connection.
-
-### Inspecting Handshake Results
-
-- [selectedSubprotocol](metadata/selectedsubprotocol.md): The subprotocol selected by the server during the WebSocket handshake.
-- [additionalServerHeaders](metadata/additionalserverheaders.md): Additional HTTP headers sent by the server during the WebSocket handshake.
-
-## Relationships
-
-### Inherits From
-
-- [NWProtocolMetadata](../nwprotocolmetadata.md)
-
-### Conforms To
-
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-# Document: additionalServerHeaders
-
-Source path: documentation/network/nwprotocolwebsocket/metadata/additionalserverheaders
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/metadata/additionalserverheaders
-Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# additionalServerHeaders
-
-**Framework:** Network  
-**Kind:** Instance Property  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-Additional HTTP headers sent by the server during the WebSocket handshake.
-
-## Declaration
-
-```swift
-var additionalServerHeaders: [(String, String)]? { get }
-```
-
-## See Also
-
-### Inspecting Handshake Results
-
-- [selectedSubprotocol](selectedsubprotocol.md): The subprotocol selected by the server during the WebSocket handshake.
-
-# Document: closeCode
-
-Source path: documentation/network/nwprotocolwebsocket/metadata/closecode
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/metadata/closecode
-Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# closeCode
-
-**Framework:** Network  
-**Kind:** Instance Property  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-The close code on a WebSocket message.
-
-## Declaration
-
-```swift
-var closeCode: NWProtocolWebSocket.CloseCode { get set }
-```
-
-## See Also
-
-### Sending Messages
-
-- [init(opcode:)](init%28opcode_%29.md): Initializes a WebSocket message with a specific type code.
-- [NWProtocolWebSocket.Opcode](../opcode.md): Types of messages that you send and receive on a WebSocket connection.
-- [setPongHandler(\_:handler:)](setponghandler%28__handler_%29.md): Sets a handler on a Ping message to be invoked when the corresponding Pong message is received.
-- [NWProtocolWebSocket.CloseCode](../closecode.md): Types of codes used upon closing a WebSocket connection.
-
-# Document: init(opcode:)
-
-Source path: documentation/network/nwprotocolwebsocket/metadata/init(opcode:)
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/metadata/init(opcode:)
-Description: Framework: Network Kind: Initializer Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# init(opcode:)
-
-**Framework:** Network  
-**Kind:** Initializer  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-Initializes a WebSocket message with a specific type code.
-
-## Declaration
-
-```swift
-init(opcode: NWProtocolWebSocket.Opcode)
-```
-
-## See Also
-
-### Sending Messages
-
-- [NWProtocolWebSocket.Opcode](../opcode.md): Types of messages that you send and receive on a WebSocket connection.
-- [setPongHandler(\_:handler:)](setponghandler%28__handler_%29.md): Sets a handler on a Ping message to be invoked when the corresponding Pong message is received.
-- [closeCode](closecode.md): The close code on a WebSocket message.
-- [NWProtocolWebSocket.CloseCode](../closecode.md): Types of codes used upon closing a WebSocket connection.
-
-# Document: opcode
-
-Source path: documentation/network/nwprotocolwebsocket/metadata/opcode
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/metadata/opcode
-Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# opcode
-
-**Framework:** Network  
-**Kind:** Instance Property  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-The type code of a WebSocket message.
-
-## Declaration
-
-```swift
-final let opcode: NWProtocolWebSocket.Opcode
-```
-
-## See Also
-
-### Receiving Messages
-
-- [closeCode](closecode.md): The close code on a WebSocket message.
-- [NWProtocolWebSocket.CloseCode](../closecode.md): Types of codes used upon closing a WebSocket connection.
-
-# Document: selectedSubprotocol
-
-Source path: documentation/network/nwprotocolwebsocket/metadata/selectedsubprotocol
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/metadata/selectedsubprotocol
-Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# selectedSubprotocol
-
-**Framework:** Network  
-**Kind:** Instance Property  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-The subprotocol selected by the server during the WebSocket handshake.
-
-## Declaration
-
-```swift
-var selectedSubprotocol: String? { get }
-```
-
-## See Also
-
-### Inspecting Handshake Results
-
-- [additionalServerHeaders](additionalserverheaders.md): Additional HTTP headers sent by the server during the WebSocket handshake.
-
-# Document: setPongHandler(_:handler:)
-
-Source path: documentation/network/nwprotocolwebsocket/metadata/setponghandler(_:handler:)
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/metadata/setponghandler(_:handler:)
-Description: Framework: Network Kind: Instance Method Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# setPongHandler(\_:handler:)
-
-**Framework:** Network  
-**Kind:** Instance Method  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-Sets a handler on a Ping message to be invoked when the corresponding Pong message is received.
-
-## Declaration
-
-```swift
-@preconcurrency func setPongHandler(_ queue: DispatchQueue, handler: @escaping @Sendable (NWError?) -> Void)
-```
-
-## See Also
-
-### Sending Messages
-
-- [init(opcode:)](init%28opcode_%29.md): Initializes a WebSocket message with a specific type code.
-- [NWProtocolWebSocket.Opcode](../opcode.md): Types of messages that you send and receive on a WebSocket connection.
-- [closeCode](closecode.md): The close code on a WebSocket message.
-- [NWProtocolWebSocket.CloseCode](../closecode.md): Types of codes used upon closing a WebSocket connection.
-
-# Document: NWProtocolWebSocket.Opcode
-
-Source path: documentation/network/nwprotocolwebsocket/opcode
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/opcode
-Description: Framework: Network Kind: Enumeration Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.Opcode
-
-**Framework:** Network  
-**Kind:** Enumeration  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-Types of messages that you send and receive on a WebSocket connection.
-
-## Declaration
-
-```swift
-enum Opcode
-```
-
-## Topics
-
-### Data Types
-
-- [NWProtocolWebSocket.Opcode.binary](opcode/binary.md): A binary data message.
-- [NWProtocolWebSocket.Opcode.text](opcode/text.md): A text data message.
-- [NWProtocolWebSocket.Opcode.cont](opcode/cont.md): A continuation message.
-
-### Control Types
-
-- [NWProtocolWebSocket.Opcode.ping](opcode/ping.md): A Ping message, which requests a Pong from the peer.
-- [NWProtocolWebSocket.Opcode.pong](opcode/pong.md): A Pong message in response to a Ping from the peer.
-- [NWProtocolWebSocket.Opcode.close](opcode/close.md): A message indicating a close of the connection.
-
-## Relationships
-
-### Conforms To
-
-- [Copyable](https://developer.apple.com/documentation/swift/copyable)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Escapable](https://developer.apple.com/documentation/swift/escapable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Sending Messages
-
-- [init(opcode:)](metadata/init%28opcode_%29.md): Initializes a WebSocket message with a specific type code.
-- [setPongHandler(\_:handler:)](metadata/setponghandler%28__handler_%29.md): Sets a handler on a Ping message to be invoked when the corresponding Pong message is received.
-- [closeCode](metadata/closecode.md): The close code on a WebSocket message.
-- [NWProtocolWebSocket.CloseCode](closecode.md): Types of codes used upon closing a WebSocket connection.
-
-# Document: NWProtocolWebSocket.Opcode.binary
-
-Source path: documentation/network/nwprotocolwebsocket/opcode/binary
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/opcode/binary
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.Opcode.binary
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-A binary data message.
-
-## Declaration
-
-```swift
-case binary
-```
-
-## See Also
-
-### Data Types
-
-- [NWProtocolWebSocket.Opcode.text](text.md): A text data message.
-- [NWProtocolWebSocket.Opcode.cont](cont.md): A continuation message.
-
-# Document: NWProtocolWebSocket.Opcode.close
-
-Source path: documentation/network/nwprotocolwebsocket/opcode/close
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/opcode/close
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.Opcode.close
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-A message indicating a close of the connection.
-
-## Declaration
-
-```swift
-case close
-```
-
-## See Also
-
-### Control Types
-
-- [NWProtocolWebSocket.Opcode.ping](ping.md): A Ping message, which requests a Pong from the peer.
-- [NWProtocolWebSocket.Opcode.pong](pong.md): A Pong message in response to a Ping from the peer.
-
-# Document: NWProtocolWebSocket.Opcode.cont
-
-Source path: documentation/network/nwprotocolwebsocket/opcode/cont
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/opcode/cont
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.Opcode.cont
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-A continuation message.
-
-## Declaration
-
-```swift
-case cont
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Continuations are handled automatically, and should not be manually sent.
-
-## See Also
-
-### Data Types
-
-- [NWProtocolWebSocket.Opcode.binary](binary.md): A binary data message.
-- [NWProtocolWebSocket.Opcode.text](text.md): A text data message.
-
-# Document: NWProtocolWebSocket.Opcode.ping
-
-Source path: documentation/network/nwprotocolwebsocket/opcode/ping
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/opcode/ping
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.Opcode.ping
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-A Ping message, which requests a Pong from the peer.
-
-## Declaration
-
-```swift
-case ping
-```
-
-## See Also
-
-### Control Types
-
-- [NWProtocolWebSocket.Opcode.pong](pong.md): A Pong message in response to a Ping from the peer.
-- [NWProtocolWebSocket.Opcode.close](close.md): A message indicating a close of the connection.
-
-# Document: NWProtocolWebSocket.Opcode.pong
-
-Source path: documentation/network/nwprotocolwebsocket/opcode/pong
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/opcode/pong
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.Opcode.pong
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-A Pong message in response to a Ping from the peer.
-
-## Declaration
-
-```swift
-case pong
-```
-
-## See Also
-
-### Control Types
-
-- [NWProtocolWebSocket.Opcode.ping](ping.md): A Ping message, which requests a Pong from the peer.
-- [NWProtocolWebSocket.Opcode.close](close.md): A message indicating a close of the connection.
-
-# Document: NWProtocolWebSocket.Opcode.text
-
-Source path: documentation/network/nwprotocolwebsocket/opcode/text
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/opcode/text
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.Opcode.text
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-A text data message.
-
-## Declaration
-
-```swift
-case text
-```
-
-## See Also
-
-### Data Types
-
-- [NWProtocolWebSocket.Opcode.binary](binary.md): A binary data message.
-- [NWProtocolWebSocket.Opcode.cont](cont.md): A continuation message.
-
-# Document: NWProtocolWebSocket.Options
-
-Source path: documentation/network/nwprotocolwebsocket/options
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options
-Description: Framework: Network Kind: Class Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.Options
-
-**Framework:** Network  
-**Kind:** Class  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-A container of options for configuring how WebSocket is used on a connection.
-
-## Declaration
-
-```swift
-class Options
-```
-
-## Topics
-
-### Configuring WebSocket Options
-
-- [init(\_:)](options/init%28__%29.md): Initializes a default set of WebSocket connection options.
-- [NWProtocolWebSocket.Version](version.md): Supported versions of the WebSocket protocol.
-- [autoReplyPing](options/autoreplyping.md): A Boolean indicating whether the connection automatically replies to Ping messages instead of delivering them to you.
-- [maximumMessageSize](options/maximummessagesize.md): The maximum allowed message size, in bytes, to be received by the WebSocket connection.
-
-### Configuring Client Handshakes
-
-- [setAdditionalHeaders(\_:)](options/setadditionalheaders%28__%29.md): Sets additional HTTP header fields to be sent by the client during the WebSocket handshake.
-- [setSubprotocols(\_:)](options/setsubprotocols%28__%29.md): Adds to the list of supported application protocols that will be presented to a WebSocket server during connection establishment.
-- [skipHandshake](options/skiphandshake.md): A Boolean indicating whether the WebSocket protocol skips its handshake and begins framing data once the underlying connection is established.
-
-### Handling Server Handshakes
-
-- [setClientRequestHandler(\_:handler:)](options/setclientrequesthandler%28__handler_%29.md): Sets a handler to react to as a server to inbound WebSocket client handshakes.
-- [NWProtocolWebSocket.Response](response.md): A WebSocket handshake reponse sent from a server to a client.
-
-## Relationships
-
-### Inherits From
-
-- [NWProtocolOptions](../nwprotocoloptions.md)
-
-### Conforms To
-
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Creating WebSocket Connections
-
-- [definition](definition.md): The system definition of the WebSocket protocol.
-
-# Document: autoReplyPing
-
-Source path: documentation/network/nwprotocolwebsocket/options/autoreplyping
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options/autoreplyping
-Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# autoReplyPing
-
-**Framework:** Network  
-**Kind:** Instance Property  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-A Boolean indicating whether the connection automatically replies to Ping messages instead of delivering them to you.
-
-## Declaration
-
-```swift
-var autoReplyPing: Bool { get set }
-```
-
-## See Also
-
-### Configuring WebSocket Options
-
-- [init(\_:)](init%28__%29.md): Initializes a default set of WebSocket connection options.
-- [NWProtocolWebSocket.Version](../version.md): Supported versions of the WebSocket protocol.
-- [maximumMessageSize](maximummessagesize.md): The maximum allowed message size, in bytes, to be received by the WebSocket connection.
-
-# Document: init(_:)
-
-Source path: documentation/network/nwprotocolwebsocket/options/init(_:)
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options/init(_:)
-Description: Framework: Network Kind: Initializer Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# init(\_:)
-
-**Framework:** Network  
-**Kind:** Initializer  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-Initializes a default set of WebSocket connection options.
-
-## Declaration
-
-```swift
-init(_ version: NWProtocolWebSocket.Version = .version13)
-```
-
-## See Also
-
-### Configuring WebSocket Options
-
-- [NWProtocolWebSocket.Version](../version.md): Supported versions of the WebSocket protocol.
-- [autoReplyPing](autoreplyping.md): A Boolean indicating whether the connection automatically replies to Ping messages instead of delivering them to you.
-- [maximumMessageSize](maximummessagesize.md): The maximum allowed message size, in bytes, to be received by the WebSocket connection.
-
-# Document: maximumMessageSize
-
-Source path: documentation/network/nwprotocolwebsocket/options/maximummessagesize
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options/maximummessagesize
-Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# maximumMessageSize
-
-**Framework:** Network  
-**Kind:** Instance Property  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-The maximum allowed message size, in bytes, to be received by the WebSocket connection.
-
-## Declaration
-
-```swift
-var maximumMessageSize: Int { get set }
-```
-
-## See Also
-
-### Configuring WebSocket Options
-
-- [init(\_:)](init%28__%29.md): Initializes a default set of WebSocket connection options.
-- [NWProtocolWebSocket.Version](../version.md): Supported versions of the WebSocket protocol.
-- [autoReplyPing](autoreplyping.md): A Boolean indicating whether the connection automatically replies to Ping messages instead of delivering them to you.
-
-# Document: setAdditionalHeaders(_:)
-
-Source path: documentation/network/nwprotocolwebsocket/options/setadditionalheaders(_:)
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options/setadditionalheaders(_:)
-Description: Framework: Network Kind: Instance Method Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# setAdditionalHeaders(\_:)
-
-**Framework:** Network  
-**Kind:** Instance Method  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-Sets additional HTTP header fields to be sent by the client during the WebSocket handshake.
-
-## Declaration
-
-```swift
-func setAdditionalHeaders(_ headers: [(name: String, value: String)])
-```
-
-## See Also
-
-### Configuring Client Handshakes
-
-- [setSubprotocols(\_:)](setsubprotocols%28__%29.md): Adds to the list of supported application protocols that will be presented to a WebSocket server during connection establishment.
-- [skipHandshake](skiphandshake.md): A Boolean indicating whether the WebSocket protocol skips its handshake and begins framing data once the underlying connection is established.
-
-# Document: setClientRequestHandler(_:handler:)
-
-Source path: documentation/network/nwprotocolwebsocket/options/setclientrequesthandler(_:handler:)
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options/setclientrequesthandler(_:handler:)
-Description: Framework: Network Kind: Instance Method Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# setClientRequestHandler(\_:handler:)
-
-**Framework:** Network  
-**Kind:** Instance Method  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-Sets a handler to react to as a server to inbound WebSocket client handshakes.
-
-## Declaration
-
-```swift
-@preconcurrency func setClientRequestHandler(_ queue: DispatchQueue, handler: @escaping @Sendable ([String], [(name: String, value: String)]) -> NWProtocolWebSocket.Response)
-```
-
-## See Also
-
-### Handling Server Handshakes
-
-- [NWProtocolWebSocket.Response](../response.md): A WebSocket handshake reponse sent from a server to a client.
-
-# Document: setSubprotocols(_:)
-
-Source path: documentation/network/nwprotocolwebsocket/options/setsubprotocols(_:)
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options/setsubprotocols(_:)
-Description: Framework: Network Kind: Instance Method Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# setSubprotocols(\_:)
-
-**Framework:** Network  
-**Kind:** Instance Method  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-Adds to the list of supported application protocols that will be presented to a WebSocket server during connection establishment.
-
-## Declaration
-
-```swift
-func setSubprotocols(_ subprotocols: [String])
-```
-
-## See Also
-
-### Configuring Client Handshakes
-
-- [setAdditionalHeaders(\_:)](setadditionalheaders%28__%29.md): Sets additional HTTP header fields to be sent by the client during the WebSocket handshake.
-- [skipHandshake](skiphandshake.md): A Boolean indicating whether the WebSocket protocol skips its handshake and begins framing data once the underlying connection is established.
-
-# Document: skipHandshake
-
-Source path: documentation/network/nwprotocolwebsocket/options/skiphandshake
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options/skiphandshake
-Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# skipHandshake
-
-**Framework:** Network  
-**Kind:** Instance Property  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-A Boolean indicating whether the WebSocket protocol skips its handshake and begins framing data once the underlying connection is established.
-
-## Declaration
-
-```swift
-var skipHandshake: Bool { get set }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This option should not be set when communicating with a generic WebSocket server or client. This option allows a custom handshake (or no handshake) to be implemented below the WebSocket layer when both client and server are coordinated.
-
-## See Also
-
-### Configuring Client Handshakes
-
-- [setAdditionalHeaders(\_:)](setadditionalheaders%28__%29.md): Sets additional HTTP header fields to be sent by the client during the WebSocket handshake.
-- [setSubprotocols(\_:)](setsubprotocols%28__%29.md): Adds to the list of supported application protocols that will be presented to a WebSocket server during connection establishment.
-
-# Document: NWProtocolWebSocket.Response
-
-Source path: documentation/network/nwprotocolwebsocket/response
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/response
-Description: Framework: Network Kind: Structure Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.Response
-
-**Framework:** Network  
-**Kind:** Structure  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-A WebSocket handshake reponse sent from a server to a client.
-
-## Declaration
-
-```swift
-struct Response
-```
-
-## Topics
-
-### Sending Handshake Responses
-
-- [init(status:subprotocol:additionalHeaders:)](response/init%28status_subprotocol_additionalheaders_%29.md): Initializes a WebSocket server response with a status, selected subprotocol, and additional HTTP headers.
-- [NWProtocolWebSocket.Response.Status](response/status-swift.enum.md): Status values that are sent with a WebSocket server response.
-- [status](response/status-swift.property.md): The status of a WebSocket server response.
-- [subprotocol](response/subprotocol.md): The selected subprotocol in a WebSocket server response.
-- [additionalHeaders](response/additionalheaders.md): Any additional HTTP headers in a WebSocket server response.
-
-## Relationships
-
-### Conforms To
-
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Handling Server Handshakes
-
-- [setClientRequestHandler(\_:handler:)](options/setclientrequesthandler%28__handler_%29.md): Sets a handler to react to as a server to inbound WebSocket client handshakes.
-
-# Document: additionalHeaders
-
-Source path: documentation/network/nwprotocolwebsocket/response/additionalheaders
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/response/additionalheaders
-Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# additionalHeaders
-
-**Framework:** Network  
-**Kind:** Instance Property  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-Any additional HTTP headers in a WebSocket server response.
-
-## Declaration
-
-```swift
-let additionalHeaders: [(name: String, value: String)]?
-```
-
-## See Also
-
-### Sending Handshake Responses
-
-- [init(status:subprotocol:additionalHeaders:)](init%28status_subprotocol_additionalheaders_%29.md): Initializes a WebSocket server response with a status, selected subprotocol, and additional HTTP headers.
-- [NWProtocolWebSocket.Response.Status](status-swift.enum.md): Status values that are sent with a WebSocket server response.
-- [status](status-swift.property.md): The status of a WebSocket server response.
-- [subprotocol](subprotocol.md): The selected subprotocol in a WebSocket server response.
-
-# Document: init(status:subprotocol:additionalHeaders:)
-
-Source path: documentation/network/nwprotocolwebsocket/response/init(status:subprotocol:additionalheaders:)
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/response/init(status:subprotocol:additionalheaders:)
-Description: Framework: Network Kind: Initializer Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# init(status:subprotocol:additionalHeaders:)
-
-**Framework:** Network  
-**Kind:** Initializer  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-Initializes a WebSocket server response with a status, selected subprotocol, and additional HTTP headers.
-
-## Declaration
-
-```swift
-init(status: NWProtocolWebSocket.Response.Status, subprotocol: String?, additionalHeaders: [(name: String, value: String)]? = nil)
-```
-
-## See Also
-
-### Sending Handshake Responses
-
-- [NWProtocolWebSocket.Response.Status](status-swift.enum.md): Status values that are sent with a WebSocket server response.
-- [status](status-swift.property.md): The status of a WebSocket server response.
-- [subprotocol](subprotocol.md): The selected subprotocol in a WebSocket server response.
-- [additionalHeaders](additionalheaders.md): Any additional HTTP headers in a WebSocket server response.
-
-# Document: NWProtocolWebSocket.Response.Status
-
-Source path: documentation/network/nwprotocolwebsocket/response/status-swift.enum
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/response/status-swift.enum
-Description: Framework: Network Kind: Enumeration Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.Response.Status
-
-**Framework:** Network  
-**Kind:** Enumeration  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-Status values that are sent with a WebSocket server response.
-
-## Declaration
-
-```swift
-enum Status
-```
-
-## Topics
-
-### Handshake Status Values
-
-- [NWProtocolWebSocket.Response.Status.accept](status-swift.enum/accept.md): The client request is being accepted.
-- [NWProtocolWebSocket.Response.Status.reject](status-swift.enum/reject.md): The client request is being rejected.
-
-## Relationships
-
-### Conforms To
-
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Sending Handshake Responses
-
-- [init(status:subprotocol:additionalHeaders:)](init%28status_subprotocol_additionalheaders_%29.md): Initializes a WebSocket server response with a status, selected subprotocol, and additional HTTP headers.
-- [status](status-swift.property.md): The status of a WebSocket server response.
-- [subprotocol](subprotocol.md): The selected subprotocol in a WebSocket server response.
-- [additionalHeaders](additionalheaders.md): Any additional HTTP headers in a WebSocket server response.
-
-# Document: NWProtocolWebSocket.Response.Status.accept
-
-Source path: documentation/network/nwprotocolwebsocket/response/status-swift.enum/accept
-Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/response/status-swift.enum/accept
-Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-# NWProtocolWebSocket.Response.Status.accept
-
-**Framework:** Network  
-**Kind:** Case  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
-
-The client request is being accepted.
-
-## Declaration
-
-```swift
-case accept
-```
-
-## See Also
-
-### Handshake Status Values
-
-- [NWProtocolWebSocket.Response.Status.reject](reject.md): The client request is being rejected.

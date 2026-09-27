@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/gamekit/gkgamesessionsharingviewcontroller
 
 # GKGameSessionSharingViewController (Swift)
@@ -55,8 +55,6 @@ The sharing view controller on tvOS presents a user’s Game Center friend list,
 - [NSCoding](../foundation/nscoding.md)
 - [NSExtensionRequestHandling](../foundation/nsextensionrequesthandling.md)
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](../uikit/uiactivityitemsconfigurationproviding.md)
 - [UIAppearanceContainer](../uikit/uiappearancecontainer.md)
 - [UIContentContainer](../uikit/uicontentcontainer.md)

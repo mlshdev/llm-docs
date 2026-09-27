@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseavailability
 
 # InAppPurchaseAvailability
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 2.3+
 
-The territory availability configuration for an in-app purchase, specifying which App Store regions it’s offered in.
+The territory availability configuration for an In-App Purchase, specifying which App Store regions it’s offered in.
 
 ## Declaration
 
@@ -29,13 +29,13 @@ object InAppPurchaseAvailability
 
 ### Objects
 
-- [InAppPurchaseAvailability.Attributes](inapppurchaseavailability/attributes-data.dictionary.md): Attributes that describe an in-app purchase availability resource.
+- [InAppPurchaseAvailability.Attributes](inapppurchaseavailability/attributes-data.dictionary.md): Attributes that describe an In-App Purchase availability resource.
 - [InAppPurchaseAvailability.Relationships](inapppurchaseavailability/relationships-data.dictionary.md): The relationships you include in the request and those on which you can operate.
 
 ## See Also
 
 ### Objects
 
-- [InAppPurchaseAvailabilityCreateRequest](inapppurchaseavailabilitycreaterequest.md): The request body you use to create an in-app purchase availability.
-- [InAppPurchaseAvailabilityResponse](inapppurchaseavailabilityresponse.md): A response containing a single territory availability configuration for an in-app purchase.
+- [InAppPurchaseAvailabilityCreateRequest](inapppurchaseavailabilitycreaterequest.md): The request body you use to create an In-App Purchase availability.
+- [InAppPurchaseAvailabilityResponse](inapppurchaseavailabilityresponse.md): A response containing a single territory availability configuration for an In-App Purchase.
 - [InAppPurchaseAvailabilityAvailableTerritoriesLinkagesResponse](inapppurchaseavailabilityavailableterritorieslinkagesresponse.md)

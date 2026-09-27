@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/app-store-connect-api-3-7-release-notes
 
 # App Store Connect API 3.7 release notes
@@ -23,7 +23,7 @@ App Store Connect API version 3.7 provides resources that enable you to automate
 - Developers now need to provide a description for all beta localizations before submitting to beta app review for external testing with TestFlight. You can update `betaAppLocalizations` with [Modify a beta app localization](patch-v1-betaapplocalizations-_id_.md).
 - Added `WIN_BACK_ELIGIBILITY` report type to [Download sales and trends reports](get-v1-salesreports.md).
 - Name is now a required field when using [Create an app info localization](post-v1-appinfolocalizations.md). To see other attributes you can create or modify, see  [AppInfoLocalizationCreateRequest.Data.Attributes](appinfolocalizationcreaterequest/data-data.dictionary/attributes-data.dictionary.md).
-- Developers can now look up in-app purchase price point equalization using [List All In-App Purchase Price Point Equalizations](get-v1-inapppurchasepricepoints-_id_-equalizations.md).
+- Developers can now look up In-App Purchase price point equalization using [List All In-App Purchase Price Point Equalizations](get-v1-inapppurchasepricepoints-_id_-equalizations.md).
 - The enum `UNIVERSAL` is now added to [BundleIdPlatform](bundleidplatform.md). To learn more, see [Preparing your app for distribution](https://developer.apple.com/documentation/xcode/preparing-your-app-for-distribution/#Set-the-bundle-ID).
 - The enums `DEVELOPER_ID_APPLICATION_G2` and `DEVELOPER_ID_KEXT_G2` are now available when using [CertificateType](certificatetype.md). To learn more, see [Notarizing macOS software before distribution](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution) and [macOS Code Signing Tips and Tricks](https://developer.apple.com/library/archive/technotes/tn2206/_index.html#//apple_ref/doc/uid/DTS40007919).
 - You can now read age ratings for France by using [Read app info information](get-v1-appinfos-_id_.md).
@@ -56,6 +56,7 @@ App Store Connect API version 3.7 provides resources that enable you to automate
 
 ### Versions
 
+- [App Store Connect API 4.5 release notes](app-store-connect-api-4-5-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
 - [App Store Connect API 4.4.1 release notes](app-store-connect-api-4-4-1-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
 - [App Store Connect API 4.4 release notes](app-store-connect-api-4-4-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
 - [App Store Connect API 4.3.1 release notes](app-store-connect-api-4-3-1-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
@@ -70,4 +71,3 @@ App Store Connect API version 3.7 provides resources that enable you to automate
 - [App Store Connect API 3.3 release notes](app-store-connect-api-3-3-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
 - [App Store Connect API 3.2 release notes](app-store-connect-api-3-2-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
 - [App Store Connect API 3.1 release notes](app-store-connect-api-3-1-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
-- [App Store Connect API 3.0 release notes](app-store-connect-api-3-0-release-notes.md): Update your server-side code to use new features, and test your code against API changes.

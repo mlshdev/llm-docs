@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/apierrorresponse
 
 # ApiErrorResponse
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Object  
-**Availability:** Search Ads 4.0+
+**Availability:** Search Ads 4.0+ (deprecated in 5.2)
 
 A parent object of the error response body.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -25,7 +27,7 @@ object ApiErrorResponse
 
 ### Error Responses
 
-- [ErrorResponseBody](errorresponsebody.md): A parent object of the error response.
-- [ErrorResponseItem](errorresponseitem.md): The error response details in the response body.
-- [IntegerResponse](integerresponse.md): A common integer type response.
-- [VoidResponse](voidresponse.md): A default generic null response.
+- [ErrorResponseBody](errorresponsebody.md): Deprecated. A parent object of the error response.
+- [ErrorResponseItem](errorresponseitem.md): Deprecated. The error response details in the response body.
+- [IntegerResponse](integerresponse.md): Deprecated. A common integer type response.
+- [VoidResponse](voidresponse.md): Deprecated. A default generic null response.

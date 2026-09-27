@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/using-apple-search-ads-api-functionality
 
 # Using Apple Ads API Functionality
@@ -12,6 +12,10 @@ Call endpoints using CRUD methods.
 <a id="overview"></a>
 
 ## Overview
+
+> **Deprecated**
+
+> The Apple Ads Campaign Management API is deprecated and will be sunset on January 26, 2027. Use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api) instead.
 
 The Apple Ads API uses a REST data model, and you use CRUD (create, read, update, delete) functions to call endpoint resources.
 

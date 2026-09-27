@@ -1,10 +1,1740 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 45
+
+# Document: MTRUnitTestingClusterTestNestedStructListArgumentRequestParams
+
+Source path: documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams
+Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# MTRUnitTestingClusterTestNestedStructListArgumentRequestParams (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+class MTRUnitTestingClusterTestNestedStructListArgumentRequestParams
+```
+
+## Topics
+
+### Instance Properties
+
+- [arg1](mtrunittestingclustertestnestedstructlistargumentrequestparams/arg1.md)
+- [serverSideProcessingTimeout](mtrunittestingclustertestnestedstructlistargumentrequestparams/serversideprocessingtimeout.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestnestedstructlistargumentrequestparams/timedinvoketimeoutms.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestNestedStructListArgumentRequestParams](mtrtestclusterclustertestnestedstructlistargumentrequestparams.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRUnitTestingClusterTestNestedStructListArgumentRequestParams (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@interface MTRUnitTestingClusterTestNestedStructListArgumentRequestParams : NSObject
+```
+
+## Topics
+
+### Instance Properties
+
+- [arg1](mtrunittestingclustertestnestedstructlistargumentrequestparams/arg1.md)
+- [serverSideProcessingTimeout](mtrunittestingclustertestnestedstructlistargumentrequestparams/serversideprocessingtimeout.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestnestedstructlistargumentrequestparams/timedinvoketimeoutms.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestNestedStructListArgumentRequestParams](mtrtestclusterclustertestnestedstructlistargumentrequestparams.md)
+
+### Conforms To
+
+- [NSCopying](../foundation/nscopying.md)
+
+# Document: arg1
+
+Source path: documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams/arg1
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams/arg1
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# arg1 (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var arg1: MTRUnitTestingClusterNestedStructList { get set }
+```
+
+# arg1 (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) MTRUnitTestingClusterNestedStructList * arg1;
+```
+
+# Document: serverSideProcessingTimeout
+
+Source path: documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams/serversideprocessingtimeout
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams/serversideprocessingtimeout
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# serverSideProcessingTimeout (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
+```
+
+# serverSideProcessingTimeout (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
+```
+
+# Document: timedInvokeTimeoutMs
+
+Source path: documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams/timedinvoketimeoutms
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams/timedinvoketimeoutms
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# timedInvokeTimeoutMs (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
+```
+
+# timedInvokeTimeoutMs (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
+```
+
+# Document: MTRUnitTestingClusterTestNotHandledParams
+
+Source path: documentation/matter/mtrunittestingclustertestnothandledparams
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnothandledparams
+Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# MTRUnitTestingClusterTestNotHandledParams (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+class MTRUnitTestingClusterTestNotHandledParams
+```
+
+## Topics
+
+### Instance Properties
+
+- [serverSideProcessingTimeout](mtrunittestingclustertestnothandledparams/serversideprocessingtimeout.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestnothandledparams/timedinvoketimeoutms.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestNotHandledParams](mtrtestclusterclustertestnothandledparams.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRUnitTestingClusterTestNotHandledParams (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@interface MTRUnitTestingClusterTestNotHandledParams : NSObject
+```
+
+## Topics
+
+### Instance Properties
+
+- [serverSideProcessingTimeout](mtrunittestingclustertestnothandledparams/serversideprocessingtimeout.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestnothandledparams/timedinvoketimeoutms.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestNotHandledParams](mtrtestclusterclustertestnothandledparams.md)
+
+### Conforms To
+
+- [NSCopying](../foundation/nscopying.md)
+
+# Document: serverSideProcessingTimeout
+
+Source path: documentation/matter/mtrunittestingclustertestnothandledparams/serversideprocessingtimeout
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnothandledparams/serversideprocessingtimeout
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# serverSideProcessingTimeout (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
+```
+
+# serverSideProcessingTimeout (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
+```
+
+# Document: timedInvokeTimeoutMs
+
+Source path: documentation/matter/mtrunittestingclustertestnothandledparams/timedinvoketimeoutms
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnothandledparams/timedinvoketimeoutms
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# timedInvokeTimeoutMs (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
+```
+
+# timedInvokeTimeoutMs (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
+```
+
+# Document: MTRUnitTestingClusterTestNullableOptionalRequestParams
+
+Source path: documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams
+Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# MTRUnitTestingClusterTestNullableOptionalRequestParams (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+class MTRUnitTestingClusterTestNullableOptionalRequestParams
+```
+
+## Topics
+
+### Instance Properties
+
+- [arg1](mtrunittestingclustertestnullableoptionalrequestparams/arg1.md)
+- [serverSideProcessingTimeout](mtrunittestingclustertestnullableoptionalrequestparams/serversideprocessingtimeout.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestnullableoptionalrequestparams/timedinvoketimeoutms.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestNullableOptionalRequestParams](mtrtestclusterclustertestnullableoptionalrequestparams.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRUnitTestingClusterTestNullableOptionalRequestParams (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@interface MTRUnitTestingClusterTestNullableOptionalRequestParams : NSObject
+```
+
+## Topics
+
+### Instance Properties
+
+- [arg1](mtrunittestingclustertestnullableoptionalrequestparams/arg1.md)
+- [serverSideProcessingTimeout](mtrunittestingclustertestnullableoptionalrequestparams/serversideprocessingtimeout.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestnullableoptionalrequestparams/timedinvoketimeoutms.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestNullableOptionalRequestParams](mtrtestclusterclustertestnullableoptionalrequestparams.md)
+
+### Conforms To
+
+- [NSCopying](../foundation/nscopying.md)
+
+# Document: arg1
+
+Source path: documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams/arg1
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams/arg1
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# arg1 (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var arg1: NSNumber? { get set }
+```
+
+# arg1 (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) NSNumber * arg1;
+```
+
+# Document: serverSideProcessingTimeout
+
+Source path: documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams/serversideprocessingtimeout
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams/serversideprocessingtimeout
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# serverSideProcessingTimeout (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
+```
+
+# serverSideProcessingTimeout (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
+```
+
+# Document: timedInvokeTimeoutMs
+
+Source path: documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams/timedinvoketimeoutms
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams/timedinvoketimeoutms
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# timedInvokeTimeoutMs (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
+```
+
+# timedInvokeTimeoutMs (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
+```
+
+# Document: MTRUnitTestingClusterTestNullableOptionalResponseParams
+
+Source path: documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams
+Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# MTRUnitTestingClusterTestNullableOptionalResponseParams (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+class MTRUnitTestingClusterTestNullableOptionalResponseParams
+```
+
+## Topics
+
+### Initializers
+
+- [init(responseValue:)](mtrunittestingclustertestnullableoptionalresponseparams/init%28responsevalue_%29.md)
+
+### Instance Properties
+
+- [originalValue](mtrunittestingclustertestnullableoptionalresponseparams/originalvalue.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestnullableoptionalresponseparams/timedinvoketimeoutms.md): Deprecated.
+- [value](mtrunittestingclustertestnullableoptionalresponseparams/value.md)
+- [wasNull](mtrunittestingclustertestnullableoptionalresponseparams/wasnull.md)
+- [wasPresent](mtrunittestingclustertestnullableoptionalresponseparams/waspresent.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestNullableOptionalResponseParams](mtrtestclusterclustertestnullableoptionalresponseparams.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRUnitTestingClusterTestNullableOptionalResponseParams (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@interface MTRUnitTestingClusterTestNullableOptionalResponseParams : NSObject
+```
+
+## Topics
+
+### Initializers
+
+- [initWithResponseValue:error:](mtrunittestingclustertestnullableoptionalresponseparams/init%28responsevalue_%29.md)
+
+### Instance Properties
+
+- [originalValue](mtrunittestingclustertestnullableoptionalresponseparams/originalvalue.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestnullableoptionalresponseparams/timedinvoketimeoutms.md): Deprecated.
+- [value](mtrunittestingclustertestnullableoptionalresponseparams/value.md)
+- [wasNull](mtrunittestingclustertestnullableoptionalresponseparams/wasnull.md)
+- [wasPresent](mtrunittestingclustertestnullableoptionalresponseparams/waspresent.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestNullableOptionalResponseParams](mtrtestclusterclustertestnullableoptionalresponseparams.md)
+
+### Conforms To
+
+- [NSCopying](../foundation/nscopying.md)
+
+# Document: init(responseValue:)
+
+Source path: documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/init(responsevalue:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/init(responsevalue:)
+Description: Framework: Matter Kind: Initializer Availability: iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+# init(responseValue:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Initializer  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+## Declaration
+
+```swift
+init(responseValue: [String : Any]) throws
+```
+
+# initWithResponseValue:error: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithResponseValue:(NSDictionary<NSString *,id> *) responseValue error:(NSError **) error;
+```
+
+# Document: originalValue
+
+Source path: documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/originalvalue
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/originalvalue
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# originalValue (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var originalValue: NSNumber? { get set }
+```
+
+# originalValue (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) NSNumber * originalValue;
+```
+
+# Document: timedInvokeTimeoutMs
+
+Source path: documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/timedinvoketimeoutms
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/timedinvoketimeoutms
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (depre…
+
+# timedInvokeTimeoutMs (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
+
+> Timed invoke does not make sense for server to client commands
+
+## Declaration
+
+```swift
+@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
+```
+
+# timedInvokeTimeoutMs (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ (deprecated in 16.4) · iPadOS 16.4+ (deprecated in 16.4) · Mac Catalyst 16.4+ (deprecated in 16.4) · macOS 13.3+ (deprecated in 13.3) · tvOS 16.4+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.4+ (deprecated in 9.4)
+
+> Timed invoke does not make sense for server to client commands
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
+```
+
+# Document: value
+
+Source path: documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/value
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/value
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# value (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var value: NSNumber? { get set }
+```
+
+# value (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) NSNumber * value;
+```
+
+# Document: wasNull
+
+Source path: documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/wasnull
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/wasnull
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# wasNull (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var wasNull: NSNumber? { get set }
+```
+
+# wasNull (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) NSNumber * wasNull;
+```
+
+# Document: wasPresent
+
+Source path: documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/waspresent
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/waspresent
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# wasPresent (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var wasPresent: NSNumber { get set }
+```
+
+# wasPresent (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) NSNumber * wasPresent;
+```
+
+# Document: MTRUnitTestingClusterTestParams
+
+Source path: documentation/matter/mtrunittestingclustertestparams
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestparams
+Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# MTRUnitTestingClusterTestParams (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+class MTRUnitTestingClusterTestParams
+```
+
+## Topics
+
+### Instance Properties
+
+- [serverSideProcessingTimeout](mtrunittestingclustertestparams/serversideprocessingtimeout.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestparams/timedinvoketimeoutms.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestParams](mtrtestclusterclustertestparams.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRUnitTestingClusterTestParams (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@interface MTRUnitTestingClusterTestParams : NSObject
+```
+
+## Topics
+
+### Instance Properties
+
+- [serverSideProcessingTimeout](mtrunittestingclustertestparams/serversideprocessingtimeout.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestparams/timedinvoketimeoutms.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestParams](mtrtestclusterclustertestparams.md)
+
+### Conforms To
+
+- [NSCopying](../foundation/nscopying.md)
+
+# Document: serverSideProcessingTimeout
+
+Source path: documentation/matter/mtrunittestingclustertestparams/serversideprocessingtimeout
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestparams/serversideprocessingtimeout
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# serverSideProcessingTimeout (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
+```
+
+# serverSideProcessingTimeout (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
+```
+
+# Document: timedInvokeTimeoutMs
+
+Source path: documentation/matter/mtrunittestingclustertestparams/timedinvoketimeoutms
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestparams/timedinvoketimeoutms
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# timedInvokeTimeoutMs (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
+```
+
+# timedInvokeTimeoutMs (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
+```
+
+# Document: MTRUnitTestingClusterTestSimpleArgumentRequestParams
+
+Source path: documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams
+Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# MTRUnitTestingClusterTestSimpleArgumentRequestParams (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+class MTRUnitTestingClusterTestSimpleArgumentRequestParams
+```
+
+## Topics
+
+### Instance Properties
+
+- [arg1](mtrunittestingclustertestsimpleargumentrequestparams/arg1.md)
+- [serverSideProcessingTimeout](mtrunittestingclustertestsimpleargumentrequestparams/serversideprocessingtimeout.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestsimpleargumentrequestparams/timedinvoketimeoutms.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestSimpleArgumentRequestParams](mtrtestclusterclustertestsimpleargumentrequestparams.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRUnitTestingClusterTestSimpleArgumentRequestParams (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@interface MTRUnitTestingClusterTestSimpleArgumentRequestParams : NSObject
+```
+
+## Topics
+
+### Instance Properties
+
+- [arg1](mtrunittestingclustertestsimpleargumentrequestparams/arg1.md)
+- [serverSideProcessingTimeout](mtrunittestingclustertestsimpleargumentrequestparams/serversideprocessingtimeout.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestsimpleargumentrequestparams/timedinvoketimeoutms.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestSimpleArgumentRequestParams](mtrtestclusterclustertestsimpleargumentrequestparams.md)
+
+### Conforms To
+
+- [NSCopying](../foundation/nscopying.md)
+
+# Document: arg1
+
+Source path: documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams/arg1
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams/arg1
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# arg1 (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var arg1: NSNumber { get set }
+```
+
+# arg1 (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) NSNumber * arg1;
+```
+
+# Document: serverSideProcessingTimeout
+
+Source path: documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams/serversideprocessingtimeout
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams/serversideprocessingtimeout
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# serverSideProcessingTimeout (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
+```
+
+# serverSideProcessingTimeout (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
+```
+
+# Document: timedInvokeTimeoutMs
+
+Source path: documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams/timedinvoketimeoutms
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams/timedinvoketimeoutms
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# timedInvokeTimeoutMs (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
+```
+
+# timedInvokeTimeoutMs (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
+```
+
+# Document: MTRUnitTestingClusterTestSimpleArgumentResponseParams
+
+Source path: documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams
+Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# MTRUnitTestingClusterTestSimpleArgumentResponseParams (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+class MTRUnitTestingClusterTestSimpleArgumentResponseParams
+```
+
+## Topics
+
+### Initializers
+
+- [init(responseValue:)](mtrunittestingclustertestsimpleargumentresponseparams/init%28responsevalue_%29.md)
+
+### Instance Properties
+
+- [returnValue](mtrunittestingclustertestsimpleargumentresponseparams/returnvalue.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestsimpleargumentresponseparams/timedinvoketimeoutms.md): Deprecated.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestSimpleArgumentResponseParams](mtrtestclusterclustertestsimpleargumentresponseparams.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRUnitTestingClusterTestSimpleArgumentResponseParams (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@interface MTRUnitTestingClusterTestSimpleArgumentResponseParams : NSObject
+```
+
+## Topics
+
+### Initializers
+
+- [initWithResponseValue:error:](mtrunittestingclustertestsimpleargumentresponseparams/init%28responsevalue_%29.md)
+
+### Instance Properties
+
+- [returnValue](mtrunittestingclustertestsimpleargumentresponseparams/returnvalue.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestsimpleargumentresponseparams/timedinvoketimeoutms.md): Deprecated.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestSimpleArgumentResponseParams](mtrtestclusterclustertestsimpleargumentresponseparams.md)
+
+### Conforms To
+
+- [NSCopying](../foundation/nscopying.md)
+
+# Document: init(responseValue:)
+
+Source path: documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams/init(responsevalue:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams/init(responsevalue:)
+Description: Framework: Matter Kind: Initializer Availability: iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+# init(responseValue:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Initializer  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+## Declaration
+
+```swift
+init(responseValue: [String : Any]) throws
+```
+
+# initWithResponseValue:error: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithResponseValue:(NSDictionary<NSString *,id> *) responseValue error:(NSError **) error;
+```
+
+# Document: returnValue
+
+Source path: documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams/returnvalue
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams/returnvalue
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# returnValue (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var returnValue: NSNumber { get set }
+```
+
+# returnValue (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) NSNumber * returnValue;
+```
+
+# Document: timedInvokeTimeoutMs
+
+Source path: documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams/timedinvoketimeoutms
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams/timedinvoketimeoutms
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (depre…
+
+# timedInvokeTimeoutMs (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
+
+> Timed invoke does not make sense for server to client commands
+
+## Declaration
+
+```swift
+@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
+```
+
+# timedInvokeTimeoutMs (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ (deprecated in 16.4) · iPadOS 16.4+ (deprecated in 16.4) · Mac Catalyst 16.4+ (deprecated in 16.4) · macOS 13.3+ (deprecated in 13.3) · tvOS 16.4+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.4+ (deprecated in 9.4)
+
+> Timed invoke does not make sense for server to client commands
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
+```
+
+# Document: MTRUnitTestingClusterTestSimpleOptionalArgumentRequestParams
+
+Source path: documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams
+Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# MTRUnitTestingClusterTestSimpleOptionalArgumentRequestParams (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+class MTRUnitTestingClusterTestSimpleOptionalArgumentRequestParams
+```
+
+## Topics
+
+### Instance Properties
+
+- [arg1](mtrunittestingclustertestsimpleoptionalargumentrequestparams/arg1.md)
+- [serverSideProcessingTimeout](mtrunittestingclustertestsimpleoptionalargumentrequestparams/serversideprocessingtimeout.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestsimpleoptionalargumentrequestparams/timedinvoketimeoutms.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestSimpleOptionalArgumentRequestParams](mtrtestclusterclustertestsimpleoptionalargumentrequestparams.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRUnitTestingClusterTestSimpleOptionalArgumentRequestParams (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@interface MTRUnitTestingClusterTestSimpleOptionalArgumentRequestParams : NSObject
+```
+
+## Topics
+
+### Instance Properties
+
+- [arg1](mtrunittestingclustertestsimpleoptionalargumentrequestparams/arg1.md)
+- [serverSideProcessingTimeout](mtrunittestingclustertestsimpleoptionalargumentrequestparams/serversideprocessingtimeout.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestsimpleoptionalargumentrequestparams/timedinvoketimeoutms.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestSimpleOptionalArgumentRequestParams](mtrtestclusterclustertestsimpleoptionalargumentrequestparams.md)
+
+### Conforms To
+
+- [NSCopying](../foundation/nscopying.md)
+
+# Document: arg1
+
+Source path: documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams/arg1
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams/arg1
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# arg1 (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var arg1: NSNumber? { get set }
+```
+
+# arg1 (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) NSNumber * arg1;
+```
+
+# Document: serverSideProcessingTimeout
+
+Source path: documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams/serversideprocessingtimeout
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams/serversideprocessingtimeout
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# serverSideProcessingTimeout (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
+```
+
+# serverSideProcessingTimeout (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
+```
+
+# Document: timedInvokeTimeoutMs
+
+Source path: documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams/timedinvoketimeoutms
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams/timedinvoketimeoutms
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# timedInvokeTimeoutMs (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
+```
+
+# timedInvokeTimeoutMs (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
+```
+
+# Document: MTRUnitTestingClusterTestSpecificParams
+
+Source path: documentation/matter/mtrunittestingclustertestspecificparams
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestspecificparams
+Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# MTRUnitTestingClusterTestSpecificParams (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+class MTRUnitTestingClusterTestSpecificParams
+```
+
+## Topics
+
+### Instance Properties
+
+- [serverSideProcessingTimeout](mtrunittestingclustertestspecificparams/serversideprocessingtimeout.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestspecificparams/timedinvoketimeoutms.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestSpecificParams](mtrtestclusterclustertestspecificparams.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRUnitTestingClusterTestSpecificParams (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@interface MTRUnitTestingClusterTestSpecificParams : NSObject
+```
+
+## Topics
+
+### Instance Properties
+
+- [serverSideProcessingTimeout](mtrunittestingclustertestspecificparams/serversideprocessingtimeout.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestspecificparams/timedinvoketimeoutms.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestSpecificParams](mtrtestclusterclustertestspecificparams.md)
+
+### Conforms To
+
+- [NSCopying](../foundation/nscopying.md)
+
+# Document: serverSideProcessingTimeout
+
+Source path: documentation/matter/mtrunittestingclustertestspecificparams/serversideprocessingtimeout
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestspecificparams/serversideprocessingtimeout
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# serverSideProcessingTimeout (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
+```
+
+# serverSideProcessingTimeout (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
+```
+
+# Document: timedInvokeTimeoutMs
+
+Source path: documentation/matter/mtrunittestingclustertestspecificparams/timedinvoketimeoutms
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestspecificparams/timedinvoketimeoutms
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# timedInvokeTimeoutMs (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
+```
+
+# timedInvokeTimeoutMs (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
+```
+
+# Document: MTRUnitTestingClusterTestSpecificResponseParams
+
+Source path: documentation/matter/mtrunittestingclustertestspecificresponseparams
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestspecificresponseparams
+Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# MTRUnitTestingClusterTestSpecificResponseParams (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+class MTRUnitTestingClusterTestSpecificResponseParams
+```
+
+## Topics
+
+### Initializers
+
+- [init(responseValue:)](mtrunittestingclustertestspecificresponseparams/init%28responsevalue_%29.md)
+
+### Instance Properties
+
+- [returnValue](mtrunittestingclustertestspecificresponseparams/returnvalue.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestspecificresponseparams/timedinvoketimeoutms.md): Deprecated.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestSpecificResponseParams](mtrtestclusterclustertestspecificresponseparams.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRUnitTestingClusterTestSpecificResponseParams (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@interface MTRUnitTestingClusterTestSpecificResponseParams : NSObject
+```
+
+## Topics
+
+### Initializers
+
+- [initWithResponseValue:error:](mtrunittestingclustertestspecificresponseparams/init%28responsevalue_%29.md)
+
+### Instance Properties
+
+- [returnValue](mtrunittestingclustertestspecificresponseparams/returnvalue.md)
+- [timedInvokeTimeoutMs](mtrunittestingclustertestspecificresponseparams/timedinvoketimeoutms.md): Deprecated.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRTestClusterClusterTestSpecificResponseParams](mtrtestclusterclustertestspecificresponseparams.md)
+
+### Conforms To
+
+- [NSCopying](../foundation/nscopying.md)
+
+# Document: init(responseValue:)
+
+Source path: documentation/matter/mtrunittestingclustertestspecificresponseparams/init(responsevalue:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestspecificresponseparams/init(responsevalue:)
+Description: Framework: Matter Kind: Initializer Availability: iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+# init(responseValue:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Initializer  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+## Declaration
+
+```swift
+init(responseValue: [String : Any]) throws
+```
+
+# initWithResponseValue:error: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithResponseValue:(NSDictionary<NSString *,id> *) responseValue error:(NSError **) error;
+```
+
+# Document: returnValue
+
+Source path: documentation/matter/mtrunittestingclustertestspecificresponseparams/returnvalue
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestspecificresponseparams/returnvalue
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# returnValue (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var returnValue: NSNumber { get set }
+```
+
+# returnValue (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) NSNumber * returnValue;
+```
+
+# Document: timedInvokeTimeoutMs
+
+Source path: documentation/matter/mtrunittestingclustertestspecificresponseparams/timedinvoketimeoutms
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestspecificresponseparams/timedinvoketimeoutms
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (depre…
+
+# timedInvokeTimeoutMs (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
+
+> Timed invoke does not make sense for server to client commands
+
+## Declaration
+
+```swift
+@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
+```
+
+# timedInvokeTimeoutMs (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ (deprecated in 16.4) · iPadOS 16.4+ (deprecated in 16.4) · Mac Catalyst 16.4+ (deprecated in 16.4) · macOS 13.3+ (deprecated in 13.3) · tvOS 16.4+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.4+ (deprecated in 9.4)
+
+> Timed invoke does not make sense for server to client commands
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
+```
 
 # Document: MTRUnitTestingClusterTestStructArgumentRequestParams
 
@@ -172220,785 +173950,3 @@ Retrieve and reset access counters for sparse textures.
 ### Encoding a blit pass
 
 - [MTLBlitOption](mtlblitoption.md): The options that enable behavior for some blit operations.
-
-# Document: copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:)
-
-Source path: documentation/metal/mtlblitcommandencoder/copy(from:sourceoffset:sourcebytesperrow:sourcebytesperimage:sourcesize:to:destinationslice:destinationlevel:destinationorigin:)
-Canonical documentation: https://developer.apple.com/documentation/metal/mtlblitcommandencoder/copy(from:sourceoffset:sourcebytesperrow:sourcebytesperimage:sourcesize:to:destinationslice:destinationlevel:destinationorigin:)
-Description: Framework: Metal Kind: Instance Method Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
-
-# copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:) (Swift)
-
-**Framework:** Metal  
-**Kind:** Instance Method  
-**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
-
-Encodes a command to copy image data from a source buffer into a destination texture.
-
-## Declaration
-
-```swift
-func copy(from sourceBuffer: any MTLBuffer, sourceOffset: Int, sourceBytesPerRow: Int, sourceBytesPerImage: Int, sourceSize: MTLSize, to destinationTexture: any MTLTexture, destinationSlice: Int, destinationLevel: Int, destinationOrigin: MTLOrigin)
-```
-
-## Parameters
-
-- `sourceBuffer`: A buffer the command copies data from.
-- `sourceOffset`: A byte offset within `sourceBuffer` that the command copies from, which needs to be a multiple of the destination texture’s pixel size, in bytes.
-- `sourceBytesPerRow`: The number of bytes between adjacent rows of pixels in the source buffer’s memory, which needs to be:
-
-  - A multiple of the source texture’s pixel size, in bytes
-  - Less than or equal to the product of the destination texture’s pixel size, in bytes, and the largest pixel width the destination texture’s type allows
-
-  If `destinationTexture` uses a compressed pixel format, set `sourceBytesPerRow` to the number of bytes between the starts of two row blocks.
-- `sourceBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
-
-  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
-- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy to `destinationTexture`, starting at `destinationOrigin`.
-
-  Assign `1` to each dimension that’s not relevant to `destinationTexture`. For example:
-
-  - If the destination texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
-  - If the destination texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
-
-  If `destinationTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
-- `destinationTexture`: A texture with an [isFramebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data to.
-- `destinationSlice`: A slice within `destinationTexture`.
-
-  For textures that use a combined depth/stencil pixel format, call the [copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:options:)](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md) method instead. Configure that method’s `options` parameter appropriately.
-- `destinationLevel`: A mipmap level within `destinationTexture`.
-- `destinationOrigin`: A location within `destinationTexture` that the command begins copying data to.
-
-  Assign `0` to each dimension that’s not relevant to `destinationTexture`. For example:
-
-  - If the destination texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
-  - If the destination texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
-
-## Mentioned In
-
-- [Copying data to a private resource](../copying-data-to-a-private-resource.md)
-
-<a id="discussion"></a>
-
-## Discussion
-
-This method is the equivalent of passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter of [copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:options:)](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
-
-> **Important**
-
->  If the pixel format of `sourceTexture` is a PVRTC format, use [copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:options:)](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md) instead.
-
-## See Also
-
-### Copying buffer data to a texture
-
-- [copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:options:)](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md): Encodes a command to copy image data from a source buffer into a destination texture.
-
-# copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin: (Objective-C)
-
-**Framework:** Metal  
-**Kind:** Instance Method  
-**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
-
-Encodes a command to copy image data from a source buffer into a destination texture.
-
-## Declaration
-
-```objectivec
-- (void) copyFromBuffer:(id<MTLBuffer>) sourceBuffer sourceOffset:(NSUInteger) sourceOffset sourceBytesPerRow:(NSUInteger) sourceBytesPerRow sourceBytesPerImage:(NSUInteger) sourceBytesPerImage sourceSize:(MTLSize) sourceSize toTexture:(id<MTLTexture>) destinationTexture destinationSlice:(NSUInteger) destinationSlice destinationLevel:(NSUInteger) destinationLevel destinationOrigin:(MTLOrigin) destinationOrigin;
-```
-
-## Parameters
-
-- `sourceBuffer`: A buffer the command copies data from.
-- `sourceOffset`: A byte offset within `sourceBuffer` that the command copies from, which needs to be a multiple of the destination texture’s pixel size, in bytes.
-- `sourceBytesPerRow`: The number of bytes between adjacent rows of pixels in the source buffer’s memory, which needs to be:
-
-  - A multiple of the source texture’s pixel size, in bytes
-  - Less than or equal to the product of the destination texture’s pixel size, in bytes, and the largest pixel width the destination texture’s type allows
-
-  If `destinationTexture` uses a compressed pixel format, set `sourceBytesPerRow` to the number of bytes between the starts of two row blocks.
-- `sourceBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
-
-  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
-- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy to `destinationTexture`, starting at `destinationOrigin`.
-
-  Assign `1` to each dimension that’s not relevant to `destinationTexture`. For example:
-
-  - If the destination texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
-  - If the destination texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
-
-  If `destinationTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
-- `destinationTexture`: A texture with an [framebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data to.
-- `destinationSlice`: A slice within `destinationTexture`.
-
-  For textures that use a combined depth/stencil pixel format, call the [copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:options:](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md) method instead. Configure that method’s `options` parameter appropriately.
-- `destinationLevel`: A mipmap level within `destinationTexture`.
-- `destinationOrigin`: A location within `destinationTexture` that the command begins copying data to.
-
-  Assign `0` to each dimension that’s not relevant to `destinationTexture`. For example:
-
-  - If the destination texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
-  - If the destination texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
-
-## Mentioned In
-
-- [Copying data to a private resource](../copying-data-to-a-private-resource.md)
-
-<a id="discussion"></a>
-
-## Discussion
-
-This method is the equivalent of passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter of [copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:options:](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
-
-> **Important**
-
->  If the pixel format of `sourceTexture` is a PVRTC format, use [copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:options:](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md) instead.
-
-## See Also
-
-### Copying buffer data to a texture
-
-- [copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:options:](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md): Encodes a command to copy image data from a source buffer into a destination texture.
-
-# Document: copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:options:)
-
-Source path: documentation/metal/mtlblitcommandencoder/copy(from:sourceoffset:sourcebytesperrow:sourcebytesperimage:sourcesize:to:destinationslice:destinationlevel:destinationorigin:options:)
-Canonical documentation: https://developer.apple.com/documentation/metal/mtlblitcommandencoder/copy(from:sourceoffset:sourcebytesperrow:sourcebytesperimage:sourcesize:to:destinationslice:destinationlevel:destinationorigin:options:)
-Description: Framework: Metal Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:options:) (Swift)
-
-**Framework:** Metal  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Encodes a command to copy image data from a source buffer into a destination texture.
-
-## Declaration
-
-```swift
-func copy(from sourceBuffer: any MTLBuffer, sourceOffset: Int, sourceBytesPerRow: Int, sourceBytesPerImage: Int, sourceSize: MTLSize, to destinationTexture: any MTLTexture, destinationSlice: Int, destinationLevel: Int, destinationOrigin: MTLOrigin, options: MTLBlitOption)
-```
-
-## Parameters
-
-- `sourceBuffer`: A buffer the command copies data from.
-- `sourceOffset`: A byte offset within `sourceBuffer` that the command copies from, which needs to be a multiple of the destination texture’s pixel size, in bytes.
-- `sourceBytesPerRow`: The number of bytes between adjacent rows of pixels in the source buffer’s memory, which needs to be:
-
-  - A multiple of the source texture’s pixel size, in bytes
-  - Less than or equal to the product of the destination texture’s pixel size, in bytes, and the largest pixel width the destination texture’s type allows
-
-  If `destinationTexture` uses a compressed pixel format, set `sourceBytesPerRow` to the number of bytes between the starts of two row blocks.
-- `sourceBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
-
-  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
-- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy to `destinationTexture`, starting at `destinationOrigin`.
-
-  Assign `1` to each dimension that’s not relevant to `destinationTexture`. For example:
-
-  - If the destination texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
-  - If the destination texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
-
-  If `destinationTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
-- `destinationTexture`: A texture with an [isFramebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data to.
-- `destinationSlice`: A slice within `destinationTexture`.
-
-  For textures that use a combined depth/stencil pixel format, configure the `options` parameter appropriately.
-- `destinationLevel`: A mipmap level within `destinationTexture`.
-- `destinationOrigin`: A location within `destinationTexture` that the command begins copying data to.
-
-  Assign `0` to each dimension that’s not relevant to `destinationTexture`. For example:
-
-  - If the destination texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
-  - If the destination texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
-- `options`: An option set that applies to textures with applicable pixel formats, such as combined depth/stencil or PVRTC formats.
-
-  If the texture’s pixel format is a combined depth/stencil format, set `options` to either [depthFromDepthStencil](../mtlblitoption/depthfromdepthstencil.md) or [stencilFromDepthStencil](../mtlblitoption/stencilfromdepthstencil.md), but not both.
-
-  If the texture’s pixel format is a PVRTC format, set `options` to [rowLinearPVRTC](../mtlblitoption/rowlinearpvrtc.md).
-
-<a id="discussion"></a>
-
-## Discussion
-
-Passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter is the equivalent of calling [copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:)](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
-
-## See Also
-
-### Copying buffer data to a texture
-
-- [copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:)](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_%29.md): Encodes a command to copy image data from a source buffer into a destination texture.
-
-# copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:options: (Objective-C)
-
-**Framework:** Metal  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Encodes a command to copy image data from a source buffer into a destination texture.
-
-## Declaration
-
-```objectivec
-- (void) copyFromBuffer:(id<MTLBuffer>) sourceBuffer sourceOffset:(NSUInteger) sourceOffset sourceBytesPerRow:(NSUInteger) sourceBytesPerRow sourceBytesPerImage:(NSUInteger) sourceBytesPerImage sourceSize:(MTLSize) sourceSize toTexture:(id<MTLTexture>) destinationTexture destinationSlice:(NSUInteger) destinationSlice destinationLevel:(NSUInteger) destinationLevel destinationOrigin:(MTLOrigin) destinationOrigin options:(MTLBlitOption) options;
-```
-
-## Parameters
-
-- `sourceBuffer`: A buffer the command copies data from.
-- `sourceOffset`: A byte offset within `sourceBuffer` that the command copies from, which needs to be a multiple of the destination texture’s pixel size, in bytes.
-- `sourceBytesPerRow`: The number of bytes between adjacent rows of pixels in the source buffer’s memory, which needs to be:
-
-  - A multiple of the source texture’s pixel size, in bytes
-  - Less than or equal to the product of the destination texture’s pixel size, in bytes, and the largest pixel width the destination texture’s type allows
-
-  If `destinationTexture` uses a compressed pixel format, set `sourceBytesPerRow` to the number of bytes between the starts of two row blocks.
-- `sourceBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
-
-  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
-- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy to `destinationTexture`, starting at `destinationOrigin`.
-
-  Assign `1` to each dimension that’s not relevant to `destinationTexture`. For example:
-
-  - If the destination texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
-  - If the destination texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
-
-  If `destinationTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
-- `destinationTexture`: A texture with an [framebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data to.
-- `destinationSlice`: A slice within `destinationTexture`.
-
-  For textures that use a combined depth/stencil pixel format, configure the `options` parameter appropriately.
-- `destinationLevel`: A mipmap level within `destinationTexture`.
-- `destinationOrigin`: A location within `destinationTexture` that the command begins copying data to.
-
-  Assign `0` to each dimension that’s not relevant to `destinationTexture`. For example:
-
-  - If the destination texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
-  - If the destination texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
-- `options`: An option set that applies to textures with applicable pixel formats, such as combined depth/stencil or PVRTC formats.
-
-  If the texture’s pixel format is a combined depth/stencil format, set `options` to either [MTLBlitOptionDepthFromDepthStencil](../mtlblitoption/depthfromdepthstencil.md) or [MTLBlitOptionStencilFromDepthStencil](../mtlblitoption/stencilfromdepthstencil.md), but not both.
-
-  If the texture’s pixel format is a PVRTC format, set `options` to [MTLBlitOptionRowLinearPVRTC](../mtlblitoption/rowlinearpvrtc.md).
-
-<a id="discussion"></a>
-
-## Discussion
-
-Passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter is the equivalent of calling [copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
-
-## See Also
-
-### Copying buffer data to a texture
-
-- [copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_%29.md): Encodes a command to copy image data from a source buffer into a destination texture.
-
-# Document: copy(from:sourceOffset:to:destinationOffset:size:)
-
-Source path: documentation/metal/mtlblitcommandencoder/copy(from:sourceoffset:to:destinationoffset:size:)
-Canonical documentation: https://developer.apple.com/documentation/metal/mtlblitcommandencoder/copy(from:sourceoffset:to:destinationoffset:size:)
-Description: Framework: Metal Kind: Instance Method Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
-
-# copy(from:sourceOffset:to:destinationOffset:size:) (Swift)
-
-**Framework:** Metal  
-**Kind:** Instance Method  
-**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
-
-Encodes a command that copies data from one buffer into another.
-
-## Declaration
-
-```swift
-func copy(from sourceBuffer: any MTLBuffer, sourceOffset: Int, to destinationBuffer: any MTLBuffer, destinationOffset: Int, size: Int)
-```
-
-## Parameters
-
-- `sourceBuffer`: A buffer the command copies data from.
-- `sourceOffset`: A byte offset within `sourceBuffer` the command copies from. In macOS, `sourceOffset` needs to be a multiple of `4`, but can be any value in iOS and tvOS.
-- `destinationBuffer`: The destination buffer for the copy operation.
-- `destinationOffset`: A byte offset within `destinationBuffer` the command copies to. In macOS, `destinationOffset` needs to be a multiple of `4`, but can be any value in iOS and tvOS.
-- `size`: The number of bytes the command copies from `sourceBuffer` to `destinationBuffer`. In macOS, `size` needs to be a multiple of `4`, but can be any value in iOS and tvOS.
-
-## Mentioned In
-
-- [Copying data to a private resource](../copying-data-to-a-private-resource.md)
-
-<a id="discussion"></a>
-
-## Discussion
-
-You can pass the same buffer to the `sourceBuffer` and `destinationBuffer` parameters if `size` is less than the distance between `sourceOffset` and `destinationOffset`.
-
-> **Important**
-
->  Copying data to overlapping regions within the same buffer may result in unexpected behavior.
-
-# copyFromBuffer:sourceOffset:toBuffer:destinationOffset:size: (Objective-C)
-
-**Framework:** Metal  
-**Kind:** Instance Method  
-**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
-
-Encodes a command that copies data from one buffer into another.
-
-## Declaration
-
-```objectivec
-- (void) copyFromBuffer:(id<MTLBuffer>) sourceBuffer sourceOffset:(NSUInteger) sourceOffset toBuffer:(id<MTLBuffer>) destinationBuffer destinationOffset:(NSUInteger) destinationOffset size:(NSUInteger) size;
-```
-
-## Parameters
-
-- `sourceBuffer`: A buffer the command copies data from.
-- `sourceOffset`: A byte offset within `sourceBuffer` the command copies from. In macOS, `sourceOffset` needs to be a multiple of `4`, but can be any value in iOS and tvOS.
-- `destinationBuffer`: The destination buffer for the copy operation.
-- `destinationOffset`: A byte offset within `destinationBuffer` the command copies to. In macOS, `destinationOffset` needs to be a multiple of `4`, but can be any value in iOS and tvOS.
-- `size`: The number of bytes the command copies from `sourceBuffer` to `destinationBuffer`. In macOS, `size` needs to be a multiple of `4`, but can be any value in iOS and tvOS.
-
-## Mentioned In
-
-- [Copying data to a private resource](../copying-data-to-a-private-resource.md)
-
-<a id="discussion"></a>
-
-## Discussion
-
-You can pass the same buffer to the `sourceBuffer` and `destinationBuffer` parameters if `size` is less than the distance between `sourceOffset` and `destinationOffset`.
-
-> **Important**
-
->  Copying data to overlapping regions within the same buffer may result in unexpected behavior.
-
-# Document: copy(from:sourceOrigin:sourceDimensions:sourcePlane:to:destinationOrigin:destinationDimensions:destinationPlane:)
-
-Source path: documentation/metal/mtlblitcommandencoder/copy(from:sourceorigin:sourcedimensions:sourceplane:to:destinationorigin:destinationdimensions:destinationplane:)
-Canonical documentation: https://developer.apple.com/documentation/metal/mtlblitcommandencoder/copy(from:sourceorigin:sourcedimensions:sourceplane:to:destinationorigin:destinationdimensions:destinationplane:)
-Description: Framework: Metal Kind: Instance Method Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
-
-# copy(from:sourceOrigin:sourceDimensions:sourcePlane:to:destinationOrigin:destinationDimensions:destinationPlane:) (Swift)
-
-**Framework:** Metal  
-**Kind:** Instance Method  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
-
-Encodes a command to copy data from a slice of a plane of a tensor into a slice of a plane of another tensor.
-
-## Declaration
-
-```swift
-func copy(from sourceTensor: any MTLTensor, sourceOrigin: MTLTensorExtents, sourceDimensions: MTLTensorExtents, sourcePlane: MTLTensorPlaneType, to destinationTensor: any MTLTensor, destinationOrigin: MTLTensorExtents, destinationDimensions: MTLTensorExtents, destinationPlane: MTLTensorPlaneType)
-```
-
-## Parameters
-
-- `sourceTensor`: A tensor instance the method copies data from.
-- `sourceOrigin`: An array of per-dimension offsets that together locate the first element to copy in `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceDimensions`. Each offset value represents the number of elements from the start of that dimension.
-- `sourceDimensions`: An array of per-dimension sizes that together define the extent of the slice to copy from `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `sourceOrigin`.
-- `sourcePlane`: The plane the method copies data from.
-- `destinationTensor`: A tensor instance the method copies data to.
-- `destinationOrigin`: An array of per-dimension offsets that together locate the first element to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationDimensions`. Each offset value represents the number of elements from the start of that dimension.
-- `destinationDimensions`: An array of per-dimension sizes that together define the extent of the slice to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `destinationOrigin`.
-- `destinationPlane`: The plane the method copies data to.
-
-<a id="discussion"></a>
-
-## Discussion
-
-If `sourceTensor` and `destinationTensor` are not aliasable, this command applies a reshape operation. For auxiliary planes, specify origin and dimensions in plane coordinates by applying the corresponding auxiliary plane’s block factors.
-
-Ensure the first dimension of `sourceOrigin`, `sourceDimensions`, `destinationOrigin`, and `destinationDimensions` is byte aligned.
-
-# copyFromTensor:sourceOrigin:sourceDimensions:sourcePlane:toTensor:destinationOrigin:destinationDimensions:destinationPlane: (Objective-C)
-
-**Framework:** Metal  
-**Kind:** Instance Method  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
-
-Encodes a command to copy data from a slice of a plane of a tensor into a slice of a plane of another tensor.
-
-## Declaration
-
-```objectivec
-- (void) copyFromTensor:(id<MTLTensor>) sourceTensor sourceOrigin:(MTLTensorExtents *) sourceOrigin sourceDimensions:(MTLTensorExtents *) sourceDimensions sourcePlane:(MTLTensorPlaneType) sourcePlane toTensor:(id<MTLTensor>) destinationTensor destinationOrigin:(MTLTensorExtents *) destinationOrigin destinationDimensions:(MTLTensorExtents *) destinationDimensions destinationPlane:(MTLTensorPlaneType) destinationPlane;
-```
-
-## Parameters
-
-- `sourceTensor`: A tensor instance the method copies data from.
-- `sourceOrigin`: An array of per-dimension offsets that together locate the first element to copy in `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceDimensions`. Each offset value represents the number of elements from the start of that dimension.
-- `sourceDimensions`: An array of per-dimension sizes that together define the extent of the slice to copy from `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `sourceOrigin`.
-- `sourcePlane`: The plane the method copies data from.
-- `destinationTensor`: A tensor instance the method copies data to.
-- `destinationOrigin`: An array of per-dimension offsets that together locate the first element to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationDimensions`. Each offset value represents the number of elements from the start of that dimension.
-- `destinationDimensions`: An array of per-dimension sizes that together define the extent of the slice to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `destinationOrigin`.
-- `destinationPlane`: The plane the method copies data to.
-
-<a id="discussion"></a>
-
-## Discussion
-
-If `sourceTensor` and `destinationTensor` are not aliasable, this command applies a reshape operation. For auxiliary planes, specify origin and dimensions in plane coordinates by applying the corresponding auxiliary plane’s block factors.
-
-Ensure the first dimension of `sourceOrigin`, `sourceDimensions`, `destinationOrigin`, and `destinationDimensions` is byte aligned.
-
-# Document: copy(from:sourceOrigin:sourceDimensions:to:destinationOrigin:destinationDimensions:)
-
-Source path: documentation/metal/mtlblitcommandencoder/copy(from:sourceorigin:sourcedimensions:to:destinationorigin:destinationdimensions:)
-Canonical documentation: https://developer.apple.com/documentation/metal/mtlblitcommandencoder/copy(from:sourceorigin:sourcedimensions:to:destinationorigin:destinationdimensions:)
-Description: Framework: Metal Kind: Instance Method Availability: iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
-
-# copy(from:sourceOrigin:sourceDimensions:to:destinationOrigin:destinationDimensions:) (Swift)
-
-**Framework:** Metal  
-**Kind:** Instance Method  
-**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
-
-Encodes a command to copy data from a slice of the data plane of a tensor into a slice of the data plane of another tensor.
-
-## Declaration
-
-```swift
-func copy(from sourceTensor: any MTLTensor, sourceOrigin: MTLTensorExtents, sourceDimensions: MTLTensorExtents, to destinationTensor: any MTLTensor, destinationOrigin: MTLTensorExtents, destinationDimensions: MTLTensorExtents)
-```
-
-## Parameters
-
-- `sourceTensor`: A tensor instance the method copies data from.
-- `sourceOrigin`: An array of per-dimension offsets that together locate the first element to copy in `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceDimensions`. Each offset value represents the number of elements from the start of that dimension.
-- `sourceDimensions`: An array of per-dimension sizes that together define the extent of the slice to copy from `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `sourceOrigin`.
-- `destinationTensor`: A tensor instance the method copies data to.
-- `destinationOrigin`: An array of per-dimension offsets that together locate the first element to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationDimensions`. Each offset value represents the number of elements from the start of that dimension.
-- `destinationDimensions`: An array of per-dimension sizes that together define the extent of the slice to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `destinationOrigin`.
-
-<a id="discussion"></a>
-
-## Discussion
-
-If `sourceTensor` and `destinationTensor` are not aliasable, this command applies a reshape operation.
-
-Ensure the first dimension of `sourceOrigin`, `sourceDimensions`, `destinationOrigin`, and `destinationDimensions` is byte aligned.
-
-## See Also
-
-### Copying texture data to another texture
-
-- [copy(from:to:)](copy%28from_to_%29.md): Encodes a command that copies data from one texture to another.
-- [copy(from:sourceSlice:sourceLevel:to:destinationSlice:destinationLevel:sliceCount:levelCount:)](copy%28from_sourceslice_sourcelevel_to_destinationslice_destinationlevel_slicecount_levelcount_%29.md): Encodes a command that copies slices of a texture to another texture’s slices.
-- [copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:)](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationslice_destinationlevel_destinationorigin_%29.md): Encodes a command that copies image data from a texture’s slice into another slice.
-
-# copyFromTensor:sourceOrigin:sourceDimensions:toTensor:destinationOrigin:destinationDimensions: (Objective-C)
-
-**Framework:** Metal  
-**Kind:** Instance Method  
-**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
-
-Encodes a command to copy data from a slice of the data plane of a tensor into a slice of the data plane of another tensor.
-
-## Declaration
-
-```objectivec
-- (void) copyFromTensor:(id<MTLTensor>) sourceTensor sourceOrigin:(MTLTensorExtents *) sourceOrigin sourceDimensions:(MTLTensorExtents *) sourceDimensions toTensor:(id<MTLTensor>) destinationTensor destinationOrigin:(MTLTensorExtents *) destinationOrigin destinationDimensions:(MTLTensorExtents *) destinationDimensions;
-```
-
-## Parameters
-
-- `sourceTensor`: A tensor instance the method copies data from.
-- `sourceOrigin`: An array of per-dimension offsets that together locate the first element to copy in `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceDimensions`. Each offset value represents the number of elements from the start of that dimension.
-- `sourceDimensions`: An array of per-dimension sizes that together define the extent of the slice to copy from `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `sourceOrigin`.
-- `destinationTensor`: A tensor instance the method copies data to.
-- `destinationOrigin`: An array of per-dimension offsets that together locate the first element to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationDimensions`. Each offset value represents the number of elements from the start of that dimension.
-- `destinationDimensions`: An array of per-dimension sizes that together define the extent of the slice to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `destinationOrigin`.
-
-<a id="discussion"></a>
-
-## Discussion
-
-If `sourceTensor` and `destinationTensor` are not aliasable, this command applies a reshape operation.
-
-Ensure the first dimension of `sourceOrigin`, `sourceDimensions`, `destinationOrigin`, and `destinationDimensions` is byte aligned.
-
-## See Also
-
-### Copying texture data to another texture
-
-- [copyFromTexture:toTexture:](copy%28from_to_%29.md): Encodes a command that copies data from one texture to another.
-- [copyFromTexture:sourceSlice:sourceLevel:toTexture:destinationSlice:destinationLevel:sliceCount:levelCount:](copy%28from_sourceslice_sourcelevel_to_destinationslice_destinationlevel_slicecount_levelcount_%29.md): Encodes a command that copies slices of a texture to another texture’s slices.
-- [copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationslice_destinationlevel_destinationorigin_%29.md): Encodes a command that copies image data from a texture’s slice into another slice.
-
-# Document: copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:)
-
-Source path: documentation/metal/mtlblitcommandencoder/copy(from:sourceslice:sourcelevel:sourceorigin:sourcesize:to:destinationoffset:destinationbytesperrow:destinationbytesperimage:)
-Canonical documentation: https://developer.apple.com/documentation/metal/mtlblitcommandencoder/copy(from:sourceslice:sourcelevel:sourceorigin:sourcesize:to:destinationoffset:destinationbytesperrow:destinationbytesperimage:)
-Description: Framework: Metal Kind: Instance Method Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
-
-# copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:) (Swift)
-
-**Framework:** Metal  
-**Kind:** Instance Method  
-**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
-
-Encodes a command that copies image data from a texture slice to a buffer.
-
-## Declaration
-
-```swift
-func copy(from sourceTexture: any MTLTexture, sourceSlice: Int, sourceLevel: Int, sourceOrigin: MTLOrigin, sourceSize: MTLSize, to destinationBuffer: any MTLBuffer, destinationOffset: Int, destinationBytesPerRow: Int, destinationBytesPerImage: Int)
-```
-
-## Parameters
-
-- `sourceTexture`: A texture with an [isFramebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data from.
-- `sourceSlice`: A slice within `sourceTexture`.
-
-  For textures that use a combined depth/stencil pixel format, call the [copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:)](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md) method instead. Configure that method’s `options` parameter appropriately.
-- `sourceLevel`: A mipmap level within `sourceTexture`.
-- `sourceOrigin`: A location within `sourceTexture` that the command begins copying data from.
-
-  Assign `0` to each dimension that’s not relevant to `sourceTexture`. For example:
-
-  - If the source texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
-  - If the source texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
-- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy from `sourceTexture`, starting at `sourceOrigin`.
-
-  Assign `1` to each dimension that’s not relevant to `sourceTexture`. For example:
-
-  - If the source texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
-  - If the source texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
-
-  If `sourceTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
-- `destinationBuffer`: A buffer the command copies data to.
-- `destinationOffset`: A byte offset within `destinationBuffer` the command copies to, which needs to be a multiple of the source texture’s pixel size, in bytes.
-- `destinationBytesPerRow`: The number of bytes between adjacent rows of pixels in the destination buffer’s memory, which needs to be:
-
-  - A multiple of the source texture’s pixel size, in bytes
-  - Less than or equal to the product of the source texture’s pixel size, in bytes, and the largest pixel width the source texture’s type allows
-
-  If `sourceTexture` uses a compressed pixel format, set `destinationBytesPerRow` to the number of bytes between the starts of two row blocks.
-- `destinationBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
-
-  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
-
-## Mentioned In
-
-- [Copying data to a private resource](../copying-data-to-a-private-resource.md)
-
-<a id="discussion"></a>
-
-## Discussion
-
-This method is the equivalent of passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter of [copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:)](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
-
-> **Important**
-
->  If the pixel format of `sourceTexture` is a PVRTC format, use [copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:)](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md) instead.
-
-## See Also
-
-### Copying texture data to a buffer
-
-- [copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:)](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md): Encodes a command that copies image data from a texture slice to a buffer, and provides options for special texture formats.
-
-# copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage: (Objective-C)
-
-**Framework:** Metal  
-**Kind:** Instance Method  
-**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
-
-Encodes a command that copies image data from a texture slice to a buffer.
-
-## Declaration
-
-```objectivec
-- (void) copyFromTexture:(id<MTLTexture>) sourceTexture sourceSlice:(NSUInteger) sourceSlice sourceLevel:(NSUInteger) sourceLevel sourceOrigin:(MTLOrigin) sourceOrigin sourceSize:(MTLSize) sourceSize toBuffer:(id<MTLBuffer>) destinationBuffer destinationOffset:(NSUInteger) destinationOffset destinationBytesPerRow:(NSUInteger) destinationBytesPerRow destinationBytesPerImage:(NSUInteger) destinationBytesPerImage;
-```
-
-## Parameters
-
-- `sourceTexture`: A texture with an [framebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data from.
-- `sourceSlice`: A slice within `sourceTexture`.
-
-  For textures that use a combined depth/stencil pixel format, call the [copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md) method instead. Configure that method’s `options` parameter appropriately.
-- `sourceLevel`: A mipmap level within `sourceTexture`.
-- `sourceOrigin`: A location within `sourceTexture` that the command begins copying data from.
-
-  Assign `0` to each dimension that’s not relevant to `sourceTexture`. For example:
-
-  - If the source texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
-  - If the source texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
-- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy from `sourceTexture`, starting at `sourceOrigin`.
-
-  Assign `1` to each dimension that’s not relevant to `sourceTexture`. For example:
-
-  - If the source texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
-  - If the source texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
-
-  If `sourceTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
-- `destinationBuffer`: A buffer the command copies data to.
-- `destinationOffset`: A byte offset within `destinationBuffer` the command copies to, which needs to be a multiple of the source texture’s pixel size, in bytes.
-- `destinationBytesPerRow`: The number of bytes between adjacent rows of pixels in the destination buffer’s memory, which needs to be:
-
-  - A multiple of the source texture’s pixel size, in bytes
-  - Less than or equal to the product of the source texture’s pixel size, in bytes, and the largest pixel width the source texture’s type allows
-
-  If `sourceTexture` uses a compressed pixel format, set `destinationBytesPerRow` to the number of bytes between the starts of two row blocks.
-- `destinationBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
-
-  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
-
-## Mentioned In
-
-- [Copying data to a private resource](../copying-data-to-a-private-resource.md)
-
-<a id="discussion"></a>
-
-## Discussion
-
-This method is the equivalent of passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter of [copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
-
-> **Important**
-
->  If the pixel format of `sourceTexture` is a PVRTC format, use [copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md) instead.
-
-## See Also
-
-### Copying texture data to a buffer
-
-- [copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md): Encodes a command that copies image data from a texture slice to a buffer, and provides options for special texture formats.
-
-# Document: copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:)
-
-Source path: documentation/metal/mtlblitcommandencoder/copy(from:sourceslice:sourcelevel:sourceorigin:sourcesize:to:destinationoffset:destinationbytesperrow:destinationbytesperimage:options:)
-Canonical documentation: https://developer.apple.com/documentation/metal/mtlblitcommandencoder/copy(from:sourceslice:sourcelevel:sourceorigin:sourcesize:to:destinationoffset:destinationbytesperrow:destinationbytesperimage:options:)
-Description: Framework: Metal Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:) (Swift)
-
-**Framework:** Metal  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Encodes a command that copies image data from a texture slice to a buffer, and provides options for special texture formats.
-
-## Declaration
-
-```swift
-func copy(from sourceTexture: any MTLTexture, sourceSlice: Int, sourceLevel: Int, sourceOrigin: MTLOrigin, sourceSize: MTLSize, to destinationBuffer: any MTLBuffer, destinationOffset: Int, destinationBytesPerRow: Int, destinationBytesPerImage: Int, options: MTLBlitOption)
-```
-
-## Parameters
-
-- `sourceTexture`: A texture with an [isFramebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data from.
-- `sourceSlice`: A slice within `sourceTexture`.
-
-  For textures that use a combined depth/stencil pixel format, configure the `options` parameter appropriately.
-- `sourceLevel`: A mipmap level within `sourceTexture`.
-- `sourceOrigin`: A location within `sourceTexture` that the command begins copying data from.
-
-  Assign `0` to each dimension that’s not relevant to `sourceTexture`. For example:
-
-  - If the source texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
-  - If the source texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
-- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy from `sourceTexture`, starting at `sourceOrigin`.
-
-  Assign `1` to each dimension that’s not relevant to `sourceTexture`. For example:
-
-  - If the source texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
-  - If the source texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
-
-  If `sourceTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
-- `destinationBuffer`: A buffer the command copies data to.
-- `destinationOffset`: A byte offset within `destinationBuffer` the command copies to, which needs to be a multiple of the source texture’s pixel size, in bytes.
-- `destinationBytesPerRow`: The number of bytes between adjacent rows of pixels in the destination buffer’s memory, which needs to be:
-
-  - A multiple of the source texture’s pixel size, in bytes
-  - Less than or equal to the product of the source texture’s pixel size, in bytes, and the largest pixel width the source texture’s type allows
-
-  If `sourceTexture` uses a compressed pixel format, set `destinationBytesPerRow` to the number of bytes between the starts of two row blocks.
-- `destinationBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
-
-  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
-- `options`: An option set that applies to textures with applicable pixel formats, such as combined depth/stencil or PVRTC formats.
-
-  If the texture’s pixel format is a combined depth/stencil format, set `options` to either [depthFromDepthStencil](../mtlblitoption/depthfromdepthstencil.md) or [stencilFromDepthStencil](../mtlblitoption/stencilfromdepthstencil.md), but not both.
-
-  If the texture’s pixel format is a PVRTC format, set `options` to [rowLinearPVRTC](../mtlblitoption/rowlinearpvrtc.md).
-
-<a id="discussion"></a>
-
-## Discussion
-
-Passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter is the equivalent of calling [copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:)](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
-
-## See Also
-
-### Copying texture data to a buffer
-
-- [copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:)](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_%29.md): Encodes a command that copies image data from a texture slice to a buffer.
-
-# copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options: (Objective-C)
-
-**Framework:** Metal  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Encodes a command that copies image data from a texture slice to a buffer, and provides options for special texture formats.
-
-## Declaration
-
-```objectivec
-- (void) copyFromTexture:(id<MTLTexture>) sourceTexture sourceSlice:(NSUInteger) sourceSlice sourceLevel:(NSUInteger) sourceLevel sourceOrigin:(MTLOrigin) sourceOrigin sourceSize:(MTLSize) sourceSize toBuffer:(id<MTLBuffer>) destinationBuffer destinationOffset:(NSUInteger) destinationOffset destinationBytesPerRow:(NSUInteger) destinationBytesPerRow destinationBytesPerImage:(NSUInteger) destinationBytesPerImage options:(MTLBlitOption) options;
-```
-
-## Parameters
-
-- `sourceTexture`: A texture with an [framebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data from.
-- `sourceSlice`: A slice within `sourceTexture`.
-
-  For textures that use a combined depth/stencil pixel format, configure the `options` parameter appropriately.
-- `sourceLevel`: A mipmap level within `sourceTexture`.
-- `sourceOrigin`: A location within `sourceTexture` that the command begins copying data from.
-
-  Assign `0` to each dimension that’s not relevant to `sourceTexture`. For example:
-
-  - If the source texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
-  - If the source texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
-- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy from `sourceTexture`, starting at `sourceOrigin`.
-
-  Assign `1` to each dimension that’s not relevant to `sourceTexture`. For example:
-
-  - If the source texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
-  - If the source texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
-
-  If `sourceTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
-- `destinationBuffer`: A buffer the command copies data to.
-- `destinationOffset`: A byte offset within `destinationBuffer` the command copies to, which needs to be a multiple of the source texture’s pixel size, in bytes.
-- `destinationBytesPerRow`: The number of bytes between adjacent rows of pixels in the destination buffer’s memory, which needs to be:
-
-  - A multiple of the source texture’s pixel size, in bytes
-  - Less than or equal to the product of the source texture’s pixel size, in bytes, and the largest pixel width the source texture’s type allows
-
-  If `sourceTexture` uses a compressed pixel format, set `destinationBytesPerRow` to the number of bytes between the starts of two row blocks.
-- `destinationBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
-
-  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
-- `options`: An option set that applies to textures with applicable pixel formats, such as combined depth/stencil or PVRTC formats.
-
-  If the texture’s pixel format is a combined depth/stencil format, set `options` to either [MTLBlitOptionDepthFromDepthStencil](../mtlblitoption/depthfromdepthstencil.md) or [MTLBlitOptionStencilFromDepthStencil](../mtlblitoption/stencilfromdepthstencil.md), but not both.
-
-  If the texture’s pixel format is a PVRTC format, set `options` to [MTLBlitOptionRowLinearPVRTC](../mtlblitoption/rowlinearpvrtc.md).
-
-<a id="discussion"></a>
-
-## Discussion
-
-Passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter is the equivalent of calling [copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
-
-## See Also
-
-### Copying texture data to a buffer
-
-- [copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_%29.md): Encodes a command that copies image data from a texture slice to a buffer.

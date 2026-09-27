@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/subscription
 
 # Subscription
@@ -25,6 +25,10 @@ object Subscription
 - `relationships` — `Subscription.Relationships`:
 - `type` — `string` (required): **Allowed values:** `subscriptions`
 
+## Mentioned In
+
+- [App Store Connect API 4.5 release notes](app-store-connect-api-4-5-release-notes.md)
+
 ## Topics
 
 ### Objects
@@ -47,7 +51,7 @@ object Subscription
 - [SubscriptionOfferCodeResponse](subscriptionoffercoderesponse.md): The response body for endpoints that create, read, or modify a single subscription offer code.
 - [SubscriptionOfferCodesResponse](subscriptionoffercodesresponse.md): The response body for endpoints that list offer codes for a subscription.
 - [SubscriptionOfferCode](subscriptionoffercode.md): A promotional code that gives customers a discounted or free subscription for a specified duration and eligibility group.
-- [PromotedPurchaseResponse](promotedpurchaseresponse.md): The response body for endpoints that read or modify a promoted in-app purchase or subscription.
-- [PromotedPurchase](promotedpurchase.md): An in-app purchase or subscription configured to appear on the app’s App Store product page.
+- [PromotedPurchaseResponse](promotedpurchaseresponse.md): The response body for endpoints that read or modify a promoted In-App Purchase or subscription.
+- [PromotedPurchase](promotedpurchase.md): An In-App Purchase or subscription configured to appear on the app’s App Store product page.
 - [SubscriptionPricePointsResponse](subscriptionpricepointsresponse.md): The response body for endpoints that list available price points for a subscription.
 - [SubscriptionPricesResponse](subscriptionpricesresponse.md): The response body for endpoints that list scheduled prices for a subscription.

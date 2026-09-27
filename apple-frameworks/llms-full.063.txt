@@ -1,10 +1,1101 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 63
+
+# Document: documentInteractionControllerDidDismissOpenInMenu(_:)
+
+Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerdiddismissopeninmenu(_:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerdiddismissopeninmenu(_:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# documentInteractionControllerDidDismissOpenInMenu(\_:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller has dismissed its Open In menu.
+
+## Declaration
+
+```swift
+optional func documentInteractionControllerDidDismissOpenInMenu(_ controller: UIDocumentInteractionController)
+```
+
+## Parameters
+
+- `controller`: The document interaction controller that dismissed its menu.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You can use this method to remove any additional views or content you placed underneath the Open In menu in your [documentInteractionControllerWillPresentOpenInMenu(\_:)](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md) method.
+
+## See Also
+
+### Presenting the user interface
+
+- [documentInteractionControllerWillBeginPreview(\_:)](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
+- [documentInteractionControllerDidEndPreview(\_:)](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
+- [documentInteractionControllerWillPresentOptionsMenu(\_:)](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
+- [documentInteractionControllerDidDismissOptionsMenu(\_:)](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
+- [documentInteractionControllerWillPresentOpenInMenu(\_:)](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
+
+# documentInteractionControllerDidDismissOpenInMenu: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller has dismissed its Open In menu.
+
+## Declaration
+
+```objectivec
+- (void) documentInteractionControllerDidDismissOpenInMenu:(UIDocumentInteractionController *) controller;
+```
+
+## Parameters
+
+- `controller`: The document interaction controller that dismissed its menu.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You can use this method to remove any additional views or content you placed underneath the Open In menu in your [documentInteractionControllerWillPresentOpenInMenu:](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md) method.
+
+## See Also
+
+### Presenting the user interface
+
+- [documentInteractionControllerWillBeginPreview:](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
+- [documentInteractionControllerDidEndPreview:](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
+- [documentInteractionControllerWillPresentOptionsMenu:](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
+- [documentInteractionControllerDidDismissOptionsMenu:](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
+- [documentInteractionControllerWillPresentOpenInMenu:](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
+
+# Document: documentInteractionControllerDidDismissOptionsMenu(_:)
+
+Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerdiddismissoptionsmenu(_:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerdiddismissoptionsmenu(_:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# documentInteractionControllerDidDismissOptionsMenu(\_:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller has dismissed its options menu.
+
+## Declaration
+
+```swift
+optional func documentInteractionControllerDidDismissOptionsMenu(_ controller: UIDocumentInteractionController)
+```
+
+## Parameters
+
+- `controller`: The document interaction controller that dismissed its options menu.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You can use this method to remove any additional views or content you placed underneath the options menu in your [documentInteractionControllerWillPresentOptionsMenu(\_:)](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md) method.
+
+## See Also
+
+### Presenting the user interface
+
+- [documentInteractionControllerWillBeginPreview(\_:)](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
+- [documentInteractionControllerDidEndPreview(\_:)](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
+- [documentInteractionControllerWillPresentOptionsMenu(\_:)](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
+- [documentInteractionControllerWillPresentOpenInMenu(\_:)](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
+- [documentInteractionControllerDidDismissOpenInMenu(\_:)](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
+
+# documentInteractionControllerDidDismissOptionsMenu: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller has dismissed its options menu.
+
+## Declaration
+
+```objectivec
+- (void) documentInteractionControllerDidDismissOptionsMenu:(UIDocumentInteractionController *) controller;
+```
+
+## Parameters
+
+- `controller`: The document interaction controller that dismissed its options menu.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You can use this method to remove any additional views or content you placed underneath the options menu in your [documentInteractionControllerWillPresentOptionsMenu:](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md) method.
+
+## See Also
+
+### Presenting the user interface
+
+- [documentInteractionControllerWillBeginPreview:](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
+- [documentInteractionControllerDidEndPreview:](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
+- [documentInteractionControllerWillPresentOptionsMenu:](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
+- [documentInteractionControllerWillPresentOpenInMenu:](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
+- [documentInteractionControllerDidDismissOpenInMenu:](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
+
+# Document: documentInteractionControllerDidEndPreview(_:)
+
+Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerdidendpreview(_:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerdidendpreview(_:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# documentInteractionControllerDidEndPreview(\_:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller has dismissed its document preview.
+
+## Declaration
+
+```swift
+optional func documentInteractionControllerDidEndPreview(_ controller: UIDocumentInteractionController)
+```
+
+## Parameters
+
+- `controller`: The document interaction controller that dismissed its document preview.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method is called after the view containing the document preview has been removed from the application’s key window. You can use this notification to remove any interface elements you set up behind the preview elements.
+
+## See Also
+
+### Presenting the user interface
+
+- [documentInteractionControllerWillBeginPreview(\_:)](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
+- [documentInteractionControllerWillPresentOptionsMenu(\_:)](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
+- [documentInteractionControllerDidDismissOptionsMenu(\_:)](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
+- [documentInteractionControllerWillPresentOpenInMenu(\_:)](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
+- [documentInteractionControllerDidDismissOpenInMenu(\_:)](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
+
+# documentInteractionControllerDidEndPreview: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller has dismissed its document preview.
+
+## Declaration
+
+```objectivec
+- (void) documentInteractionControllerDidEndPreview:(UIDocumentInteractionController *) controller;
+```
+
+## Parameters
+
+- `controller`: The document interaction controller that dismissed its document preview.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method is called after the view containing the document preview has been removed from the application’s key window. You can use this notification to remove any interface elements you set up behind the preview elements.
+
+## See Also
+
+### Presenting the user interface
+
+- [documentInteractionControllerWillBeginPreview:](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
+- [documentInteractionControllerWillPresentOptionsMenu:](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
+- [documentInteractionControllerDidDismissOptionsMenu:](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
+- [documentInteractionControllerWillPresentOpenInMenu:](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
+- [documentInteractionControllerDidDismissOpenInMenu:](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
+
+# Document: documentInteractionControllerRectForPreview(_:)
+
+Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerrectforpreview(_:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerrectforpreview(_:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# documentInteractionControllerRectForPreview(\_:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller needs the rectangle to use as the starting point for animating the display of a document preview.
+
+## Declaration
+
+```swift
+optional func documentInteractionControllerRectForPreview(_ controller: UIDocumentInteractionController) -> CGRect
+```
+
+## Parameters
+
+- `controller`: The document interaction controller requesting the starting rectangle.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A rectangle in the coordinate system of the view returned by the [documentInteractionControllerViewForPreview(\_:)](documentinteractioncontrollerviewforpreview%28__%29.md) method.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you do not implement the [documentInteractionControllerViewForPreview(\_:)](documentinteractioncontrollerviewforpreview%28__%29.md) method, or if you do implement it but return a `nil` value, this method is not called. If you do not implement this method, the starting rectangle is assumed to be the bounds of the view returned by the [documentInteractionControllerViewForPreview(\_:)](documentinteractioncontrollerviewforpreview%28__%29.md) method.
+
+## See Also
+
+### Configuring the parent view controller
+
+- [documentInteractionControllerViewControllerForPreview(\_:)](documentinteractioncontrollerviewcontrollerforpreview%28__%29.md): Called when a document interaction controller needs a view controller for presenting a document preview.
+- [documentInteractionControllerViewForPreview(\_:)](documentinteractioncontrollerviewforpreview%28__%29.md): Called when a document interaction controller needs the starting point for animating the display of a document preview.
+
+# documentInteractionControllerRectForPreview: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller needs the rectangle to use as the starting point for animating the display of a document preview.
+
+## Declaration
+
+```objectivec
+- (CGRect) documentInteractionControllerRectForPreview:(UIDocumentInteractionController *) controller;
+```
+
+## Parameters
+
+- `controller`: The document interaction controller requesting the starting rectangle.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A rectangle in the coordinate system of the view returned by the [documentInteractionControllerViewForPreview:](documentinteractioncontrollerviewforpreview%28__%29.md) method.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you do not implement the [documentInteractionControllerViewForPreview:](documentinteractioncontrollerviewforpreview%28__%29.md) method, or if you do implement it but return a `nil` value, this method is not called. If you do not implement this method, the starting rectangle is assumed to be the bounds of the view returned by the [documentInteractionControllerViewForPreview:](documentinteractioncontrollerviewforpreview%28__%29.md) method.
+
+## See Also
+
+### Configuring the parent view controller
+
+- [documentInteractionControllerViewControllerForPreview:](documentinteractioncontrollerviewcontrollerforpreview%28__%29.md): Called when a document interaction controller needs a view controller for presenting a document preview.
+- [documentInteractionControllerViewForPreview:](documentinteractioncontrollerviewforpreview%28__%29.md): Called when a document interaction controller needs the starting point for animating the display of a document preview.
+
+# Document: documentInteractionControllerViewControllerForPreview(_:)
+
+Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerviewcontrollerforpreview(_:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerviewcontrollerforpreview(_:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# documentInteractionControllerViewControllerForPreview(\_:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller needs a view controller for presenting a document preview.
+
+## Declaration
+
+```swift
+@MainActor optional func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController
+```
+
+## Parameters
+
+- `controller`: The document interaction controller requesting the parent view controller.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The view controller to use when presenting the document preview. The return value must not be `nil`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Although technically optional, this method is required if your application attempts to display a preview for a document. The view controller returned by this method is used as the parent for the document preview.
+
+If you return a navigation controller from this method, the document interaction controller is pushed onto the navigation stack using the standard navigation controller animations. If you return any other type of view controller, the document interaction controller is displayed modally, in which case, the view controller you return must be capable of presenting a modal view controller.
+
+## See Also
+
+### Configuring the parent view controller
+
+- [documentInteractionControllerViewForPreview(\_:)](documentinteractioncontrollerviewforpreview%28__%29.md): Called when a document interaction controller needs the starting point for animating the display of a document preview.
+- [documentInteractionControllerRectForPreview(\_:)](documentinteractioncontrollerrectforpreview%28__%29.md): Called when a document interaction controller needs the rectangle to use as the starting point for animating the display of a document preview.
+
+# documentInteractionControllerViewControllerForPreview: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller needs a view controller for presenting a document preview.
+
+## Declaration
+
+```objectivec
+- (UIViewController *) documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *) controller;
+```
+
+## Parameters
+
+- `controller`: The document interaction controller requesting the parent view controller.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The view controller to use when presenting the document preview. The return value must not be `nil`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Although technically optional, this method is required if your application attempts to display a preview for a document. The view controller returned by this method is used as the parent for the document preview.
+
+If you return a navigation controller from this method, the document interaction controller is pushed onto the navigation stack using the standard navigation controller animations. If you return any other type of view controller, the document interaction controller is displayed modally, in which case, the view controller you return must be capable of presenting a modal view controller.
+
+## See Also
+
+### Configuring the parent view controller
+
+- [documentInteractionControllerViewForPreview:](documentinteractioncontrollerviewforpreview%28__%29.md): Called when a document interaction controller needs the starting point for animating the display of a document preview.
+- [documentInteractionControllerRectForPreview:](documentinteractioncontrollerrectforpreview%28__%29.md): Called when a document interaction controller needs the rectangle to use as the starting point for animating the display of a document preview.
+
+# Document: documentInteractionControllerViewForPreview(_:)
+
+Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerviewforpreview(_:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerviewforpreview(_:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# documentInteractionControllerViewForPreview(\_:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller needs the starting point for animating the display of a document preview.
+
+## Declaration
+
+```swift
+optional func documentInteractionControllerViewForPreview(_ controller: UIDocumentInteractionController) -> UIView?
+```
+
+## Parameters
+
+- `controller`: The document interaction controller requesting the starting view.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The view to use as the starting point for the animation or `nil` if you want the document preview to fade into place.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+By default, the starting rectangle for the animation is set to the bounds of the returned view. To specify a different starting rectangle, you must also override the [documentInteractionControllerRectForPreview(\_:)](documentinteractioncontrollerrectforpreview%28__%29.md) method.
+
+## See Also
+
+### Configuring the parent view controller
+
+- [documentInteractionControllerViewControllerForPreview(\_:)](documentinteractioncontrollerviewcontrollerforpreview%28__%29.md): Called when a document interaction controller needs a view controller for presenting a document preview.
+- [documentInteractionControllerRectForPreview(\_:)](documentinteractioncontrollerrectforpreview%28__%29.md): Called when a document interaction controller needs the rectangle to use as the starting point for animating the display of a document preview.
+
+# documentInteractionControllerViewForPreview: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller needs the starting point for animating the display of a document preview.
+
+## Declaration
+
+```objectivec
+- (UIView *) documentInteractionControllerViewForPreview:(UIDocumentInteractionController *) controller;
+```
+
+## Parameters
+
+- `controller`: The document interaction controller requesting the starting view.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The view to use as the starting point for the animation or `nil` if you want the document preview to fade into place.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+By default, the starting rectangle for the animation is set to the bounds of the returned view. To specify a different starting rectangle, you must also override the [documentInteractionControllerRectForPreview:](documentinteractioncontrollerrectforpreview%28__%29.md) method.
+
+## See Also
+
+### Configuring the parent view controller
+
+- [documentInteractionControllerViewControllerForPreview:](documentinteractioncontrollerviewcontrollerforpreview%28__%29.md): Called when a document interaction controller needs a view controller for presenting a document preview.
+- [documentInteractionControllerRectForPreview:](documentinteractioncontrollerrectforpreview%28__%29.md): Called when a document interaction controller needs the rectangle to use as the starting point for animating the display of a document preview.
+
+# Document: documentInteractionControllerWillBeginPreview(_:)
+
+Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerwillbeginpreview(_:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerwillbeginpreview(_:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# documentInteractionControllerWillBeginPreview(\_:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller is about to display a preview for its document.
+
+## Declaration
+
+```swift
+optional func documentInteractionControllerWillBeginPreview(_ controller: UIDocumentInteractionController)
+```
+
+## Parameters
+
+- `controller`: The document interaction controller that is about to preview its document.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method is called shortly before the view containing the document preview is presented modally. You can use this notification to set up any additional interface elements behind the preview elements.
+
+## See Also
+
+### Presenting the user interface
+
+- [documentInteractionControllerDidEndPreview(\_:)](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
+- [documentInteractionControllerWillPresentOptionsMenu(\_:)](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
+- [documentInteractionControllerDidDismissOptionsMenu(\_:)](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
+- [documentInteractionControllerWillPresentOpenInMenu(\_:)](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
+- [documentInteractionControllerDidDismissOpenInMenu(\_:)](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
+
+# documentInteractionControllerWillBeginPreview: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller is about to display a preview for its document.
+
+## Declaration
+
+```objectivec
+- (void) documentInteractionControllerWillBeginPreview:(UIDocumentInteractionController *) controller;
+```
+
+## Parameters
+
+- `controller`: The document interaction controller that is about to preview its document.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method is called shortly before the view containing the document preview is presented modally. You can use this notification to set up any additional interface elements behind the preview elements.
+
+## See Also
+
+### Presenting the user interface
+
+- [documentInteractionControllerDidEndPreview:](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
+- [documentInteractionControllerWillPresentOptionsMenu:](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
+- [documentInteractionControllerDidDismissOptionsMenu:](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
+- [documentInteractionControllerWillPresentOpenInMenu:](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
+- [documentInteractionControllerDidDismissOpenInMenu:](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
+
+# Document: documentInteractionControllerWillPresentOpenInMenu(_:)
+
+Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerwillpresentopeninmenu(_:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerwillpresentopeninmenu(_:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# documentInteractionControllerWillPresentOpenInMenu(\_:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller is about to display an Open In menu.
+
+## Declaration
+
+```swift
+optional func documentInteractionControllerWillPresentOpenInMenu(_ controller: UIDocumentInteractionController)
+```
+
+## Parameters
+
+- `controller`: The document interaction controller that is about to display a menu.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The Open In menu is used to select an application for opening the current file. You can use this method to update your user interface in response to displaying the menu.
+
+## See Also
+
+### Presenting the user interface
+
+- [documentInteractionControllerWillBeginPreview(\_:)](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
+- [documentInteractionControllerDidEndPreview(\_:)](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
+- [documentInteractionControllerWillPresentOptionsMenu(\_:)](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
+- [documentInteractionControllerDidDismissOptionsMenu(\_:)](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
+- [documentInteractionControllerDidDismissOpenInMenu(\_:)](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
+
+# documentInteractionControllerWillPresentOpenInMenu: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller is about to display an Open In menu.
+
+## Declaration
+
+```objectivec
+- (void) documentInteractionControllerWillPresentOpenInMenu:(UIDocumentInteractionController *) controller;
+```
+
+## Parameters
+
+- `controller`: The document interaction controller that is about to display a menu.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The Open In menu is used to select an application for opening the current file. You can use this method to update your user interface in response to displaying the menu.
+
+## See Also
+
+### Presenting the user interface
+
+- [documentInteractionControllerWillBeginPreview:](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
+- [documentInteractionControllerDidEndPreview:](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
+- [documentInteractionControllerWillPresentOptionsMenu:](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
+- [documentInteractionControllerDidDismissOptionsMenu:](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
+- [documentInteractionControllerDidDismissOpenInMenu:](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
+
+# Document: documentInteractionControllerWillPresentOptionsMenu(_:)
+
+Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerwillpresentoptionsmenu(_:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerwillpresentoptionsmenu(_:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# documentInteractionControllerWillPresentOptionsMenu(\_:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller is about to display an options menu.
+
+## Declaration
+
+```swift
+optional func documentInteractionControllerWillPresentOptionsMenu(_ controller: UIDocumentInteractionController)
+```
+
+## Parameters
+
+- `controller`: The document interaction controller that is about to display an options menu.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The options menu is used to present the user with options for previewing the document, opening it in an application, or copying its contents. You can use this method to update your user interface in response to displaying the menu.
+
+## See Also
+
+### Presenting the user interface
+
+- [documentInteractionControllerWillBeginPreview(\_:)](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
+- [documentInteractionControllerDidEndPreview(\_:)](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
+- [documentInteractionControllerDidDismissOptionsMenu(\_:)](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
+- [documentInteractionControllerWillPresentOpenInMenu(\_:)](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
+- [documentInteractionControllerDidDismissOpenInMenu(\_:)](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
+
+# documentInteractionControllerWillPresentOptionsMenu: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Called when a document interaction controller is about to display an options menu.
+
+## Declaration
+
+```objectivec
+- (void) documentInteractionControllerWillPresentOptionsMenu:(UIDocumentInteractionController *) controller;
+```
+
+## Parameters
+
+- `controller`: The document interaction controller that is about to display an options menu.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The options menu is used to present the user with options for previewing the document, opening it in an application, or copying its contents. You can use this method to update your user interface in response to displaying the menu.
+
+## See Also
+
+### Presenting the user interface
+
+- [documentInteractionControllerWillBeginPreview:](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
+- [documentInteractionControllerDidEndPreview:](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
+- [documentInteractionControllerDidDismissOptionsMenu:](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
+- [documentInteractionControllerWillPresentOpenInMenu:](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
+- [documentInteractionControllerDidDismissOpenInMenu:](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
+
+# Document: UIDocumentMenuDelegate
+
+Source path: documentation/uikit/uidocumentmenudelegate
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentmenudelegate
+Description: Framework: UIKit Kind: Protocol Availability: iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+# UIDocumentMenuDelegate (Swift)
+
+**Framework:** UIKit  
+**Kind:** Protocol  
+**Availability:** iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+A set of methods that you must implement to track user interactions with a document menu view controller.
+
+> For more information, see [UIDocumentMenuViewController](uidocumentmenuviewcontroller.md).
+
+## Declaration
+
+```swift
+@MainActor protocol UIDocumentMenuDelegate : NSObjectProtocol
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The document menu calls the methods of this protocol when the user selects a document picker or dismisses the menu. If the user selects a document picker, set the picker’s delegate and present it.
+
+## Topics
+
+### Responding to user actions
+
+- [documentMenu(\_:didPickDocumentPicker:)](uidocumentmenudelegate/documentmenu%28__didpickdocumentpicker_%29.md): Deprecated. Tells the delegate that the user has selected a document picker from the menu.
+- [documentMenuWasCancelled(\_:)](uidocumentmenudelegate/documentmenuwascancelled%28__%29.md): Deprecated. Tells the delegate that the user dismissed the document menu.
+
+## Relationships
+
+### Inherits From
+
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Getting the user-selected document picker
+
+- [delegate](uidocumentmenuviewcontroller/delegate.md): Deprecated. The document menu’s delegate.
+
+# UIDocumentMenuDelegate (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Protocol  
+**Availability:** iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+A set of methods that you must implement to track user interactions with a document menu view controller.
+
+> For more information, see [UIDocumentMenuViewController](uidocumentmenuviewcontroller.md).
+
+## Declaration
+
+```objectivec
+@protocol UIDocumentMenuDelegate <NSObject>
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The document menu calls the methods of this protocol when the user selects a document picker or dismisses the menu. If the user selects a document picker, set the picker’s delegate and present it.
+
+## Topics
+
+### Responding to user actions
+
+- [documentMenu:didPickDocumentPicker:](uidocumentmenudelegate/documentmenu%28__didpickdocumentpicker_%29.md): Deprecated. Tells the delegate that the user has selected a document picker from the menu.
+- [documentMenuWasCancelled:](uidocumentmenudelegate/documentmenuwascancelled%28__%29.md): Deprecated. Tells the delegate that the user dismissed the document menu.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Getting the user-selected document picker
+
+- [delegate](uidocumentmenuviewcontroller/delegate.md): Deprecated. The document menu’s delegate.
+
+# Document: documentMenu(_:didPickDocumentPicker:)
+
+Source path: documentation/uikit/uidocumentmenudelegate/documentmenu(_:didpickdocumentpicker:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentmenudelegate/documentmenu(_:didpickdocumentpicker:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+# documentMenu(\_:didPickDocumentPicker:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+Tells the delegate that the user has selected a document picker from the menu.
+
+> For more information, see [UIDocumentMenuViewController](../uidocumentmenuviewcontroller.md).
+
+## Declaration
+
+```swift
+func documentMenu(_ documentMenu: UIDocumentMenuViewController, didPickDocumentPicker documentPicker: UIDocumentPickerViewController)
+```
+
+## Parameters
+
+- `documentMenu`: The document menu object that called this method.
+- `documentPicker`: The document picker that the user selected.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The document menu calls this method when the user selects a document picker. Set the document picker’s delegate, and then present it.
+
+## See Also
+
+### Responding to user actions
+
+- [documentMenuWasCancelled(\_:)](documentmenuwascancelled%28__%29.md): Deprecated. Tells the delegate that the user dismissed the document menu.
+
+# documentMenu:didPickDocumentPicker: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+Tells the delegate that the user has selected a document picker from the menu.
+
+> For more information, see [UIDocumentMenuViewController](../uidocumentmenuviewcontroller.md).
+
+## Declaration
+
+```objectivec
+- (void) documentMenu:(UIDocumentMenuViewController *) documentMenu didPickDocumentPicker:(UIDocumentPickerViewController *) documentPicker;
+```
+
+## Parameters
+
+- `documentMenu`: The document menu object that called this method.
+- `documentPicker`: The document picker that the user selected.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The document menu calls this method when the user selects a document picker. Set the document picker’s delegate, and then present it.
+
+## See Also
+
+### Responding to user actions
+
+- [documentMenuWasCancelled:](documentmenuwascancelled%28__%29.md): Deprecated. Tells the delegate that the user dismissed the document menu.
+
+# Document: documentMenuWasCancelled(_:)
+
+Source path: documentation/uikit/uidocumentmenudelegate/documentmenuwascancelled(_:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentmenudelegate/documentmenuwascancelled(_:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+# documentMenuWasCancelled(\_:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+Tells the delegate that the user dismissed the document menu.
+
+> For more information, see [UIDocumentMenuViewController](../uidocumentmenuviewcontroller.md).
+
+## Declaration
+
+```swift
+optional func documentMenuWasCancelled(_ documentMenu: UIDocumentMenuViewController)
+```
+
+## Parameters
+
+- `documentMenu`: The document menu object that called this method.
+
+## See Also
+
+### Responding to user actions
+
+- [documentMenu(\_:didPickDocumentPicker:)](documentmenu%28__didpickdocumentpicker_%29.md): Deprecated. Tells the delegate that the user has selected a document picker from the menu.
+
+# documentMenuWasCancelled: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+Tells the delegate that the user dismissed the document menu.
+
+> For more information, see [UIDocumentMenuViewController](../uidocumentmenuviewcontroller.md).
+
+## Declaration
+
+```objectivec
+- (void) documentMenuWasCancelled:(UIDocumentMenuViewController *) documentMenu;
+```
+
+## Parameters
+
+- `documentMenu`: The document menu object that called this method.
+
+## See Also
+
+### Responding to user actions
+
+- [documentMenu:didPickDocumentPicker:](documentmenu%28__didpickdocumentpicker_%29.md): Deprecated. Tells the delegate that the user has selected a document picker from the menu.
+
+# Document: UIDocumentMenuOrder
+
+Source path: documentation/uikit/uidocumentmenuorder
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentmenuorder
+Description: Framework: UIKit Kind: Enumeration Availability: iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+# UIDocumentMenuOrder (Swift)
+
+**Framework:** UIKit  
+**Kind:** Enumeration  
+**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+The insertion point for custom menu items.
+
+## Declaration
+
+```swift
+enum UIDocumentMenuOrder
+```
+
+## Topics
+
+### Constants
+
+- [UIDocumentMenuOrder.first](uidocumentmenuorder/first.md): Deprecated. The top item in the document menu.
+- [UIDocumentMenuOrder.last](uidocumentmenuorder/last.md): Deprecated. The bottom item in the document menu.
+
+### Initializers
+
+- [init(rawValue:)](uidocumentmenuorder/init%28rawvalue_%29.md): Deprecated.
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Configuring a document menu
+
+- [addOption(withTitle:image:order:handler:)](uidocumentmenuviewcontroller/addoption%28withtitle_image_order_handler_%29.md): Deprecated. Adds a custom menu item to the list of document pickers.
+
+# UIDocumentMenuOrder (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration  
+**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+The insertion point for custom menu items.
+
+## Declaration
+
+```objectivec
+enum UIDocumentMenuOrder : NSUInteger;
+```
+
+## Topics
+
+### Constants
+
+- [UIDocumentMenuOrderFirst](uidocumentmenuorder/first.md): Deprecated. The top item in the document menu.
+- [UIDocumentMenuOrderLast](uidocumentmenuorder/last.md): Deprecated. The bottom item in the document menu.
+
+## See Also
+
+### Configuring a document menu
+
+- [addOptionWithTitle:image:order:handler:](uidocumentmenuviewcontroller/addoption%28withtitle_image_order_handler_%29.md): Deprecated. Adds a custom menu item to the list of document pickers.
+
+# Document: UIDocumentMenuOrder.first
+
+Source path: documentation/uikit/uidocumentmenuorder/first
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentmenuorder/first
+Description: Framework: UIKit Kind: Case Availability: iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+# UIDocumentMenuOrder.first (Swift)
+
+**Framework:** UIKit  
+**Kind:** Case  
+**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+The top item in the document menu.
+
+## Declaration
+
+```swift
+case first
+```
+
+## See Also
+
+### Constants
+
+- [UIDocumentMenuOrder.last](last.md): Deprecated. The bottom item in the document menu.
+
+# UIDocumentMenuOrderFirst (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+The top item in the document menu.
+
+## Declaration
+
+```objectivec
+UIDocumentMenuOrderFirst
+```
+
+## See Also
+
+### Constants
+
+- [UIDocumentMenuOrderLast](last.md): Deprecated. The bottom item in the document menu.
+
+# Document: init(rawValue:)
+
+Source path: documentation/uikit/uidocumentmenuorder/init(rawvalue:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentmenuorder/init(rawvalue:)
+Description: Framework: UIKit Kind: Initializer Availability: iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+# init(rawValue:)
+
+**Framework:** UIKit  
+**Kind:** Initializer  
+**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+## Declaration
+
+```swift
+init?(rawValue: UInt)
+```
+
+# Document: UIDocumentMenuOrder.last
+
+Source path: documentation/uikit/uidocumentmenuorder/last
+Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentmenuorder/last
+Description: Framework: UIKit Kind: Case Availability: iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+# UIDocumentMenuOrder.last (Swift)
+
+**Framework:** UIKit  
+**Kind:** Case  
+**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+The bottom item in the document menu.
+
+## Declaration
+
+```swift
+case last
+```
+
+## See Also
+
+### Constants
+
+- [UIDocumentMenuOrder.first](first.md): Deprecated. The top item in the document menu.
+
+# UIDocumentMenuOrderLast (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+The bottom item in the document menu.
+
+## Declaration
+
+```objectivec
+UIDocumentMenuOrderLast
+```
+
+## See Also
+
+### Constants
+
+- [UIDocumentMenuOrderFirst](first.md): Deprecated. The top item in the document menu.
 
 # Document: UIDocumentMenuViewController
 
@@ -177886,821 +178977,3 @@ var shipmentTrackingNumbers: [DDMatchShipmentTrackingNumber] { get }
 - [number](number.md): A number that the data detection system identifies.
 - [phoneNumbers](phonenumbers.md): An array of phone numbers that the data detection system identifies.
 - [postalAddresses](postaladdresses.md): An array of postal addresses that the data detection system identifies.
-
-# Document: UIPasteboard.DetectionPattern
-
-Source path: documentation/uikit/uipasteboard/detectionpattern
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectionpattern
-Description: Framework: UIKit Kind: Structure Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-# UIPasteboard.DetectionPattern (Swift)
-
-**Framework:** UIKit  
-**Kind:** Structure  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-An object that represents a pattern to detect for the pasteboard, such as a URL, text, or a number.
-
-## Declaration
-
-```swift
-struct DetectionPattern
-```
-
-## Topics
-
-### Detecting common patterns
-
-- [number](detectionpattern/number.md): A pattern that indicates the pasteboard contains a string that consists of a numeric value.
-- [probableWebSearch](detectionpattern/probablewebsearch.md): A pattern that indicates the pasteboard contains a string suitable for use as a web search term.
-- [probableWebURL](detectionpattern/probableweburl.md): A pattern that indicates the pasteboard contains a string that consists of a URL.
-
-### Creating a detection pattern
-
-- [init(rawValue:)](detectionpattern/init%28rawvalue_%29.md): Creates a detection pattern to detect different types of content on the pasteboard.
-
-## Relationships
-
-### Conforms To
-
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Detecting patterns of content in pasteboard items
-
-- [detectPatterns(for:completionHandler:)](detectpatterns%28for_completionhandler_%29-23vwn.md): Requests that the data detection system identify the patterns that you specify for the pasteboard, and provide the patterns that it matches to your closure.
-- [detectedPatterns(for:)](detectedpatterns%28for_%29.md): Requests that the data detection system asynchronously identify the patterns that you specify for the pasteboard, and return the patterns that it matches.
-- [detectPatterns(for:inItemSet:completionHandler:)](detectpatterns%28for_initemset_completionhandler_%29-7ubl1.md): Requests that the data detection system identify the patterns that you specify for the pasteboard items, and provide the patterns that it matches to your closure.
-- [detectedPatterns(for:inItemSet:)](detectedpatterns%28for_initemset_%29.md): Requests that the data detection system asynchronously identify the patterns that you specify for the pasteboard items, and return the patterns that it matches.
-- [detectValues(for:completionHandler:)](detectvalues%28for_completionhandler_%29-6adre.md): Requests that the data detection system identify the types of data that you specify for the pasteboard, and provide the values that it matches to your closure.
-- [detectedValues(for:)](detectedvalues%28for_%29.md): Requests that the data detection system asynchronously identify the types of values that you specify for the pasteboard, and return the values that it matches.
-- [detectValues(for:inItemSet:completionHandler:)](detectvalues%28for_initemset_completionhandler_%29-pm9l.md): Requests that the data detection system identify the types of data that you specify for the pasteboard items, and provide the values that it matches to your closure.
-- [detectedValues(for:inItemSet:)](detectedvalues%28for_initemset_%29.md): Requests that the data detection system asynchronously identify the types of values that you specify for the pasteboard item, and return the values that it matches for each pasteboard.
-- [UIPasteboard.DetectedValues](detectedvalues.md): An object that contains common types of data that the data detection system matches for a pasteboard.
-
-# UIPasteboardDetectionPattern (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Type Alias  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-An object that represents a pattern to detect for the pasteboard, such as a URL, text, or a number.
-
-## Declaration
-
-```objectivec
-typedef NSString * UIPasteboardDetectionPattern;
-```
-
-## Topics
-
-### Detecting common patterns
-
-- [UIPasteboardDetectionPatternCalendarEvent](../uipasteboarddetectionpatterncalendarevent.md): A pattern that indicates the pasteboard detects a string that contains a calendar event.
-- [UIPasteboardDetectionPatternEmailAddress](../uipasteboarddetectionpatternemailaddress.md): A pattern that indicates the pasteboard detects a string that contains an email address.
-- [UIPasteboardDetectionPatternFlightNumber](../uipasteboarddetectionpatternflightnumber.md): A pattern that indicates the pasteboard detects a string that contains a flight number.
-- [UIPasteboardDetectionPatternLink](../uipasteboarddetectionpatternlink.md): A pattern that indicates the pasteboard detects of a string that contains a URL.
-- [UIPasteboardDetectionPatternMoneyAmount](../uipasteboarddetectionpatternmoneyamount.md): A pattern that indicates the pasteboard detects a string that contains an amount of money.
-- [UIPasteboardDetectionPatternNumber](detectionpattern/number.md): A pattern that indicates the pasteboard contains a string that consists of a numeric value.
-- [UIPasteboardDetectionPatternPhoneNumber](../uipasteboarddetectionpatternphonenumber.md): A pattern that indicates the pasteboard detects a string that contains a phone number.
-- [UIPasteboardDetectionPatternPostalAddress](../uipasteboarddetectionpatternpostaladdress.md): A pattern that indicates the pasteboard detects a string that contains a postal address.
-- [UIPasteboardDetectionPatternProbableWebSearch](detectionpattern/probablewebsearch.md): A pattern that indicates the pasteboard contains a string suitable for use as a web search term.
-- [UIPasteboardDetectionPatternProbableWebURL](detectionpattern/probableweburl.md): A pattern that indicates the pasteboard contains a string that consists of a URL.
-- [UIPasteboardDetectionPatternShipmentTrackingNumber](../uipasteboarddetectionpatternshipmenttrackingnumber.md): A pattern that indicates the pasteboard detects a string that contains a parcel tracking number and carrier.
-
-## See Also
-
-### Detecting patterns of content in pasteboard items
-
-- [detectPatternsForPatterns:completionHandler:](detectpatternsforpatterns_completionhandler_.md): Determines whether the first pasteboard item matches the specified patterns, without notifying the user.
-- [detectPatternsForPatterns:inItemSet:completionHandler:](detectpatternsforpatterns_initemset_completionhandler_.md): Determines whether pasteboard items match the specified patterns, without notifying the user.
-- [detectValuesForPatterns:completionHandler:](detectvaluesforpatterns_completionhandler_.md): Determines whether the first pasteboard item matches the specified patterns, reading the contents if it finds a match.
-- [detectValuesForPatterns:inItemSet:completionHandler:](detectvaluesforpatterns_initemset_completionhandler_.md): Determines whether pasteboard items match the specified patterns, reading the contents if it finds a match.
-
-# Document: init(rawValue:)
-
-Source path: documentation/uikit/uipasteboard/detectionpattern/init(rawvalue:)
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectionpattern/init(rawvalue:)
-Description: Framework: UIKit Kind: Initializer Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-# init(rawValue:)
-
-**Framework:** UIKit  
-**Kind:** Initializer  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-Creates a detection pattern to detect different types of content on the pasteboard.
-
-## Declaration
-
-```swift
-init(rawValue: String)
-```
-
-## Parameters
-
-- `rawValue`: A string for the pattern to detect.
-
-# Document: number
-
-Source path: documentation/uikit/uipasteboard/detectionpattern/number
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectionpattern/number
-Description: Framework: UIKit Kind: Type Property Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-# number (Swift)
-
-**Framework:** UIKit  
-**Kind:** Type Property  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-A pattern that indicates the pasteboard contains a string that consists of a numeric value.
-
-## Declaration
-
-```swift
-static let number: UIPasteboard.DetectionPattern
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When you include this pattern in calls to [detectValues(for:inItemSet:completionHandler:)](../detectvalues%28for_initemset_completionhandler_%29-pm9l.md) or [detectValues(for:completionHandler:)](../detectvalues%28for_completionhandler_%29-6adre.md) — [detectValuesForPatterns:inItemSet:completionHandler:](../detectvaluesforpatterns_initemset_completionhandler_.md) or [detectValuesForPatterns:completionHandler:](../detectvaluesforpatterns_completionhandler_.md) in Objective-C — and the pasteboard detects a number, it reports the value as an [NSNumber](../../../foundation/nsnumber.md).
-
-## See Also
-
-### Detecting common patterns
-
-- [probableWebSearch](probablewebsearch.md): A pattern that indicates the pasteboard contains a string suitable for use as a web search term.
-- [probableWebURL](probableweburl.md): A pattern that indicates the pasteboard contains a string that consists of a URL.
-
-# UIPasteboardDetectionPatternNumber (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Global Variable  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-A pattern that indicates the pasteboard contains a string that consists of a numeric value.
-
-## Declaration
-
-```objectivec
-extern UIPasteboardDetectionPattern const UIPasteboardDetectionPatternNumber;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When you include this pattern in calls to [detectValues(for:inItemSet:completionHandler:)](../detectvalues%28for_initemset_completionhandler_%29-pm9l.md) or [detectValues(for:completionHandler:)](../detectvalues%28for_completionhandler_%29-6adre.md) — [detectValuesForPatterns:inItemSet:completionHandler:](../detectvaluesforpatterns_initemset_completionhandler_.md) or [detectValuesForPatterns:completionHandler:](../detectvaluesforpatterns_completionhandler_.md) in Objective-C — and the pasteboard detects a number, it reports the value as an [NSNumber](../../../foundation/nsnumber.md).
-
-## See Also
-
-### Detecting common patterns
-
-- [UIPasteboardDetectionPatternCalendarEvent](../../uipasteboarddetectionpatterncalendarevent.md): A pattern that indicates the pasteboard detects a string that contains a calendar event.
-- [UIPasteboardDetectionPatternEmailAddress](../../uipasteboarddetectionpatternemailaddress.md): A pattern that indicates the pasteboard detects a string that contains an email address.
-- [UIPasteboardDetectionPatternFlightNumber](../../uipasteboarddetectionpatternflightnumber.md): A pattern that indicates the pasteboard detects a string that contains a flight number.
-- [UIPasteboardDetectionPatternLink](../../uipasteboarddetectionpatternlink.md): A pattern that indicates the pasteboard detects of a string that contains a URL.
-- [UIPasteboardDetectionPatternMoneyAmount](../../uipasteboarddetectionpatternmoneyamount.md): A pattern that indicates the pasteboard detects a string that contains an amount of money.
-- [UIPasteboardDetectionPatternPhoneNumber](../../uipasteboarddetectionpatternphonenumber.md): A pattern that indicates the pasteboard detects a string that contains a phone number.
-- [UIPasteboardDetectionPatternPostalAddress](../../uipasteboarddetectionpatternpostaladdress.md): A pattern that indicates the pasteboard detects a string that contains a postal address.
-- [UIPasteboardDetectionPatternProbableWebSearch](probablewebsearch.md): A pattern that indicates the pasteboard contains a string suitable for use as a web search term.
-- [UIPasteboardDetectionPatternProbableWebURL](probableweburl.md): A pattern that indicates the pasteboard contains a string that consists of a URL.
-- [UIPasteboardDetectionPatternShipmentTrackingNumber](../../uipasteboarddetectionpatternshipmenttrackingnumber.md): A pattern that indicates the pasteboard detects a string that contains a parcel tracking number and carrier.
-
-# Document: probableWebSearch
-
-Source path: documentation/uikit/uipasteboard/detectionpattern/probablewebsearch
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectionpattern/probablewebsearch
-Description: Framework: UIKit Kind: Type Property Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-# probableWebSearch (Swift)
-
-**Framework:** UIKit  
-**Kind:** Type Property  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-A pattern that indicates the pasteboard contains a string suitable for use as a web search term.
-
-## Declaration
-
-```swift
-static let probableWebSearch: UIPasteboard.DetectionPattern
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When you include this pattern in calls to [detectValues(for:inItemSet:completionHandler:)](../detectvalues%28for_initemset_completionhandler_%29-pm9l.md) or [detectValues(for:completionHandler:)](../detectvalues%28for_completionhandler_%29-6adre.md) — [detectValuesForPatterns:inItemSet:completionHandler:](../detectvaluesforpatterns_initemset_completionhandler_.md) or [detectValuesForPatterns:completionHandler:](../detectvaluesforpatterns_completionhandler_.md) in Objective-C — and the pasteboard detects a string suitable for use as a web search term, it reports the value as an [NSString](../../../foundation/nsstring.md).
-
-## See Also
-
-### Detecting common patterns
-
-- [number](number.md): A pattern that indicates the pasteboard contains a string that consists of a numeric value.
-- [probableWebURL](probableweburl.md): A pattern that indicates the pasteboard contains a string that consists of a URL.
-
-# UIPasteboardDetectionPatternProbableWebSearch (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Global Variable  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-A pattern that indicates the pasteboard contains a string suitable for use as a web search term.
-
-## Declaration
-
-```objectivec
-extern UIPasteboardDetectionPattern const UIPasteboardDetectionPatternProbableWebSearch;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When you include this pattern in calls to [detectValues(for:inItemSet:completionHandler:)](../detectvalues%28for_initemset_completionhandler_%29-pm9l.md) or [detectValues(for:completionHandler:)](../detectvalues%28for_completionhandler_%29-6adre.md) — [detectValuesForPatterns:inItemSet:completionHandler:](../detectvaluesforpatterns_initemset_completionhandler_.md) or [detectValuesForPatterns:completionHandler:](../detectvaluesforpatterns_completionhandler_.md) in Objective-C — and the pasteboard detects a string suitable for use as a web search term, it reports the value as an [NSString](../../../foundation/nsstring.md).
-
-## See Also
-
-### Detecting common patterns
-
-- [UIPasteboardDetectionPatternCalendarEvent](../../uipasteboarddetectionpatterncalendarevent.md): A pattern that indicates the pasteboard detects a string that contains a calendar event.
-- [UIPasteboardDetectionPatternEmailAddress](../../uipasteboarddetectionpatternemailaddress.md): A pattern that indicates the pasteboard detects a string that contains an email address.
-- [UIPasteboardDetectionPatternFlightNumber](../../uipasteboarddetectionpatternflightnumber.md): A pattern that indicates the pasteboard detects a string that contains a flight number.
-- [UIPasteboardDetectionPatternLink](../../uipasteboarddetectionpatternlink.md): A pattern that indicates the pasteboard detects of a string that contains a URL.
-- [UIPasteboardDetectionPatternMoneyAmount](../../uipasteboarddetectionpatternmoneyamount.md): A pattern that indicates the pasteboard detects a string that contains an amount of money.
-- [UIPasteboardDetectionPatternNumber](number.md): A pattern that indicates the pasteboard contains a string that consists of a numeric value.
-- [UIPasteboardDetectionPatternPhoneNumber](../../uipasteboarddetectionpatternphonenumber.md): A pattern that indicates the pasteboard detects a string that contains a phone number.
-- [UIPasteboardDetectionPatternPostalAddress](../../uipasteboarddetectionpatternpostaladdress.md): A pattern that indicates the pasteboard detects a string that contains a postal address.
-- [UIPasteboardDetectionPatternProbableWebURL](probableweburl.md): A pattern that indicates the pasteboard contains a string that consists of a URL.
-- [UIPasteboardDetectionPatternShipmentTrackingNumber](../../uipasteboarddetectionpatternshipmenttrackingnumber.md): A pattern that indicates the pasteboard detects a string that contains a parcel tracking number and carrier.
-
-# Document: probableWebURL
-
-Source path: documentation/uikit/uipasteboard/detectionpattern/probableweburl
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectionpattern/probableweburl
-Description: Framework: UIKit Kind: Type Property Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-# probableWebURL (Swift)
-
-**Framework:** UIKit  
-**Kind:** Type Property  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-A pattern that indicates the pasteboard contains a string that consists of a URL.
-
-## Declaration
-
-```swift
-static let probableWebURL: UIPasteboard.DetectionPattern
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When you include this pattern in calls to [detectValues(for:inItemSet:completionHandler:)](../detectvalues%28for_initemset_completionhandler_%29-pm9l.md) or [detectValues(for:completionHandler:)](../detectvalues%28for_completionhandler_%29-6adre.md) — [detectValuesForPatterns:inItemSet:completionHandler:](../detectvaluesforpatterns_initemset_completionhandler_.md) or [detectValuesForPatterns:completionHandler:](../detectvaluesforpatterns_completionhandler_.md) in Objective-C — and the pasteboard detects a string that consists of a URL, it reports the value as an [NSString](../../../foundation/nsstring.md).
-
-## See Also
-
-### Detecting common patterns
-
-- [number](number.md): A pattern that indicates the pasteboard contains a string that consists of a numeric value.
-- [probableWebSearch](probablewebsearch.md): A pattern that indicates the pasteboard contains a string suitable for use as a web search term.
-
-# UIPasteboardDetectionPatternProbableWebURL (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Global Variable  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-A pattern that indicates the pasteboard contains a string that consists of a URL.
-
-## Declaration
-
-```objectivec
-extern UIPasteboardDetectionPattern const UIPasteboardDetectionPatternProbableWebURL;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When you include this pattern in calls to [detectValues(for:inItemSet:completionHandler:)](../detectvalues%28for_initemset_completionhandler_%29-pm9l.md) or [detectValues(for:completionHandler:)](../detectvalues%28for_completionhandler_%29-6adre.md) — [detectValuesForPatterns:inItemSet:completionHandler:](../detectvaluesforpatterns_initemset_completionhandler_.md) or [detectValuesForPatterns:completionHandler:](../detectvaluesforpatterns_completionhandler_.md) in Objective-C — and the pasteboard detects a string that consists of a URL, it reports the value as an [NSString](../../../foundation/nsstring.md).
-
-## See Also
-
-### Detecting common patterns
-
-- [UIPasteboardDetectionPatternCalendarEvent](../../uipasteboarddetectionpatterncalendarevent.md): A pattern that indicates the pasteboard detects a string that contains a calendar event.
-- [UIPasteboardDetectionPatternEmailAddress](../../uipasteboarddetectionpatternemailaddress.md): A pattern that indicates the pasteboard detects a string that contains an email address.
-- [UIPasteboardDetectionPatternFlightNumber](../../uipasteboarddetectionpatternflightnumber.md): A pattern that indicates the pasteboard detects a string that contains a flight number.
-- [UIPasteboardDetectionPatternLink](../../uipasteboarddetectionpatternlink.md): A pattern that indicates the pasteboard detects of a string that contains a URL.
-- [UIPasteboardDetectionPatternMoneyAmount](../../uipasteboarddetectionpatternmoneyamount.md): A pattern that indicates the pasteboard detects a string that contains an amount of money.
-- [UIPasteboardDetectionPatternNumber](number.md): A pattern that indicates the pasteboard contains a string that consists of a numeric value.
-- [UIPasteboardDetectionPatternPhoneNumber](../../uipasteboarddetectionpatternphonenumber.md): A pattern that indicates the pasteboard detects a string that contains a phone number.
-- [UIPasteboardDetectionPatternPostalAddress](../../uipasteboarddetectionpatternpostaladdress.md): A pattern that indicates the pasteboard detects a string that contains a postal address.
-- [UIPasteboardDetectionPatternProbableWebSearch](probablewebsearch.md): A pattern that indicates the pasteboard contains a string suitable for use as a web search term.
-- [UIPasteboardDetectionPatternShipmentTrackingNumber](../../uipasteboarddetectionpatternshipmenttrackingnumber.md): A pattern that indicates the pasteboard detects a string that contains a parcel tracking number and carrier.
-
-# Document: detectPatterns(for:completionHandler:)
-
-Source path: documentation/uikit/uipasteboard/detectpatterns(for:completionhandler:)-23vwn
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectpatterns(for:completionhandler:)-23vwn
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · visionOS
-
-# detectPatterns(for:completionHandler:)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · visionOS
-
-Requests that the data detection system identify the patterns that you specify for the pasteboard, and provide the patterns that it matches to your closure.
-
-## Declaration
-
-```swift
-func detectPatterns(for keyPaths: Set<PartialKeyPath<UIPasteboard.DetectedValues>>, completionHandler: @escaping (Result<Set<PartialKeyPath<UIPasteboard.DetectedValues>>, any Error>) -> ())
-```
-
-## Parameters
-
-- `keyPaths`: A set of key paths you use to indicate which types of patterns you want the data detection system to match.
-- `completionHandler`: A closure you provide to process patterns the data detection system matches, or to handle errors.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Because this method only gives an indication of whether a pasteboard item matches a particular pattern and doesn’t allow the app to access the contents, the system doesn’t notify the user about reading the contents of the pasteboard.
-
-## See Also
-
-### Detecting patterns of content in pasteboard items
-
-- [detectedPatterns(for:)](detectedpatterns%28for_%29.md): Requests that the data detection system asynchronously identify the patterns that you specify for the pasteboard, and return the patterns that it matches.
-- [detectPatterns(for:inItemSet:completionHandler:)](detectpatterns%28for_initemset_completionhandler_%29-7ubl1.md): Requests that the data detection system identify the patterns that you specify for the pasteboard items, and provide the patterns that it matches to your closure.
-- [detectedPatterns(for:inItemSet:)](detectedpatterns%28for_initemset_%29.md): Requests that the data detection system asynchronously identify the patterns that you specify for the pasteboard items, and return the patterns that it matches.
-- [detectValues(for:completionHandler:)](detectvalues%28for_completionhandler_%29-6adre.md): Requests that the data detection system identify the types of data that you specify for the pasteboard, and provide the values that it matches to your closure.
-- [detectedValues(for:)](detectedvalues%28for_%29.md): Requests that the data detection system asynchronously identify the types of values that you specify for the pasteboard, and return the values that it matches.
-- [detectValues(for:inItemSet:completionHandler:)](detectvalues%28for_initemset_completionhandler_%29-pm9l.md): Requests that the data detection system identify the types of data that you specify for the pasteboard items, and provide the values that it matches to your closure.
-- [detectedValues(for:inItemSet:)](detectedvalues%28for_initemset_%29.md): Requests that the data detection system asynchronously identify the types of values that you specify for the pasteboard item, and return the values that it matches for each pasteboard.
-- [UIPasteboard.DetectedValues](detectedvalues.md): An object that contains common types of data that the data detection system matches for a pasteboard.
-- [UIPasteboard.DetectionPattern](detectionpattern.md): An object that represents a pattern to detect for the pasteboard, such as a URL, text, or a number.
-
-# Document: detectPatterns(for:completionHandler:)
-
-Source path: documentation/uikit/uipasteboard/detectpatterns(for:completionhandler:)-5zlnd
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectpatterns(for:completionhandler:)-5zlnd
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 14.0+ (deprecated in 15.0) · iPadOS 14.0+ (deprecated in 15.0) · Mac Catalyst 14.0+ (deprecated in 15.0) · visionOS 1.0+ (deprecated in 1.0)
-
-# detectPatterns(for:completionHandler:)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 14.0+ (deprecated in 15.0) · iPadOS 14.0+ (deprecated in 15.0) · Mac Catalyst 14.0+ (deprecated in 15.0) · visionOS 1.0+ (deprecated in 1.0)
-
-Determines whether the first pasteboard item matches the specified patterns, without notifying the user.
-
-> Use [detectPatterns(for:completionHandler:)](detectpatterns%28for_completionhandler_%29-23vwn.md) instead.
-
-## Declaration
-
-```swift
-func detectPatterns(for patterns: Set<UIPasteboard.DetectionPattern>, completionHandler: @escaping (Result<Set<UIPasteboard.DetectionPattern>, any Error>) -> ())
-```
-
-## Parameters
-
-- `patterns`: The patterns to detect on the pasteboard.
-- `completionHandler`: A closure that the system invokes after detecting patterns on the pasteboard. The closure receives a `Result` instance that contains either a set with the patterns found on the pasteboard or an error if detection failed.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Because this method only gives an indication of whether a pasteboard item matches a particular pattern and doesn’t allow the app to access the contents, the system doesn’t notify the user about reading the contents of the pasteboard.
-
-## See Also
-
-### Deprecated
-
-- [isPersistent](ispersistent.md): Deprecated. A Boolean value that indicates whether the pasteboard is persistent.
-- [setPersistent(\_:)](setpersistent%28__%29.md): Deprecated. A Boolean value that indicates whether the pasteboard is persistent.
-- [detectPatterns(for:inItemSet:completionHandler:)](detectpatterns%28for_initemset_completionhandler_%29-29iwn.md): Deprecated. Determines whether pasteboard items match the specified patterns, without notifying the user.
-- [detectValues(for:completionHandler:)](detectvalues%28for_completionhandler_%29-9p2ff.md): Deprecated. Determines whether the first pasteboard item matches the specified patterns, reading the contents if it finds a match.
-- [detectValues(for:inItemSet:completionHandler:)](detectvalues%28for_initemset_completionhandler_%29-8y0iw.md): Deprecated. Determines whether pasteboard items match the specified patterns, reading the contents if it finds a match.
-
-# Document: detectPatterns(for:inItemSet:completionHandler:)
-
-Source path: documentation/uikit/uipasteboard/detectpatterns(for:initemset:completionhandler:)-29iwn
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectpatterns(for:initemset:completionhandler:)-29iwn
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 14.0+ (deprecated in 15.0) · iPadOS 14.0+ (deprecated in 15.0) · Mac Catalyst 14.0+ (deprecated in 15.0) · visionOS 1.0+ (deprecated in 1.0)
-
-# detectPatterns(for:inItemSet:completionHandler:)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 14.0+ (deprecated in 15.0) · iPadOS 14.0+ (deprecated in 15.0) · Mac Catalyst 14.0+ (deprecated in 15.0) · visionOS 1.0+ (deprecated in 1.0)
-
-Determines whether pasteboard items match the specified patterns, without notifying the user.
-
-> Use [detectPatterns(for:inItemSet:completionHandler:)](detectpatterns%28for_initemset_completionhandler_%29-7ubl1.md) instead.
-
-## Declaration
-
-```swift
-func detectPatterns(for patterns: Set<UIPasteboard.DetectionPattern>, inItemSet itemSet: IndexSet?, completionHandler: @escaping (Result<[Set<UIPasteboard.DetectionPattern>], any Error>) -> ())
-```
-
-## Parameters
-
-- `patterns`: The patterns to detect on the pasteboard.
-- `itemSet`: An index set with each integer value identifying a pasteboard item positionally in the pasteboard. Pass `nil` to detect patterns in all pasteboard items.
-- `completionHandler`: A closure that the system invokes after detecting patterns on the pasteboard. The closure receives a `Result` instance that contains either an array with the patterns found on the pasteboard or an error if detection failed. If the `Result` instance contains an array, the index of each element in the array corresponds to the pasteboard item index specified in `itemSet`.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Because this method only detects for the presence of patterns and does not read the contents of the pasteboard, the system doesn’t notify the user about reading the contents of the pasteboard.
-
-## See Also
-
-### Deprecated
-
-- [isPersistent](ispersistent.md): Deprecated. A Boolean value that indicates whether the pasteboard is persistent.
-- [setPersistent(\_:)](setpersistent%28__%29.md): Deprecated. A Boolean value that indicates whether the pasteboard is persistent.
-- [detectPatterns(for:completionHandler:)](detectpatterns%28for_completionhandler_%29-5zlnd.md): Deprecated. Determines whether the first pasteboard item matches the specified patterns, without notifying the user.
-- [detectValues(for:completionHandler:)](detectvalues%28for_completionhandler_%29-9p2ff.md): Deprecated. Determines whether the first pasteboard item matches the specified patterns, reading the contents if it finds a match.
-- [detectValues(for:inItemSet:completionHandler:)](detectvalues%28for_initemset_completionhandler_%29-8y0iw.md): Deprecated. Determines whether pasteboard items match the specified patterns, reading the contents if it finds a match.
-
-# Document: detectPatterns(for:inItemSet:completionHandler:)
-
-Source path: documentation/uikit/uipasteboard/detectpatterns(for:initemset:completionhandler:)-7ubl1
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectpatterns(for:initemset:completionhandler:)-7ubl1
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · visionOS
-
-# detectPatterns(for:inItemSet:completionHandler:)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · visionOS
-
-Requests that the data detection system identify the patterns that you specify for the pasteboard items, and provide the patterns that it matches to your closure.
-
-## Declaration
-
-```swift
-func detectPatterns(for keyPaths: Set<PartialKeyPath<UIPasteboard.DetectedValues>>, inItemSet itemSet: IndexSet?, completionHandler: @escaping (Result<[Set<PartialKeyPath<UIPasteboard.DetectedValues>>], any Error>) -> ())
-```
-
-## Parameters
-
-- `keyPaths`: A set of key paths you use to indicate which types of patterns you want the data detection system to match.
-- `itemSet`: A set of indexes you provide to indicate which pasteboard items the data detection system inspects to detect patterns.
-- `completionHandler`: A closure you provide to process patterns the data detection system matches, or to handle errors.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Because this method only gives an indication of whether a pasteboard item matches a particular pattern and doesn’t allow the app to access the contents, the system doesn’t notify the user about reading the contents of the pasteboard.
-
-## See Also
-
-### Detecting patterns of content in pasteboard items
-
-- [detectPatterns(for:completionHandler:)](detectpatterns%28for_completionhandler_%29-23vwn.md): Requests that the data detection system identify the patterns that you specify for the pasteboard, and provide the patterns that it matches to your closure.
-- [detectedPatterns(for:)](detectedpatterns%28for_%29.md): Requests that the data detection system asynchronously identify the patterns that you specify for the pasteboard, and return the patterns that it matches.
-- [detectedPatterns(for:inItemSet:)](detectedpatterns%28for_initemset_%29.md): Requests that the data detection system asynchronously identify the patterns that you specify for the pasteboard items, and return the patterns that it matches.
-- [detectValues(for:completionHandler:)](detectvalues%28for_completionhandler_%29-6adre.md): Requests that the data detection system identify the types of data that you specify for the pasteboard, and provide the values that it matches to your closure.
-- [detectedValues(for:)](detectedvalues%28for_%29.md): Requests that the data detection system asynchronously identify the types of values that you specify for the pasteboard, and return the values that it matches.
-- [detectValues(for:inItemSet:completionHandler:)](detectvalues%28for_initemset_completionhandler_%29-pm9l.md): Requests that the data detection system identify the types of data that you specify for the pasteboard items, and provide the values that it matches to your closure.
-- [detectedValues(for:inItemSet:)](detectedvalues%28for_initemset_%29.md): Requests that the data detection system asynchronously identify the types of values that you specify for the pasteboard item, and return the values that it matches for each pasteboard.
-- [UIPasteboard.DetectedValues](detectedvalues.md): An object that contains common types of data that the data detection system matches for a pasteboard.
-- [UIPasteboard.DetectionPattern](detectionpattern.md): An object that represents a pattern to detect for the pasteboard, such as a URL, text, or a number.
-
-# Document: detectPatternsForPatterns:completionHandler:
-
-Source path: documentation/uikit/uipasteboard/detectpatternsforpatterns:completionhandler:
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectpatternsforpatterns:completionhandler:
-Description: Interface language: Objective-C
-
-# detectPatternsForPatterns:completionHandler:
-
-**Interface language:** Objective-C
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-Determines whether the first pasteboard item matches the specified patterns, without notifying the user.
-
-## Declaration
-
-```objectivec
-- (void) detectPatternsForPatterns:(NSSet<NSString *> *) patterns completionHandler:(void (^)(NSSet<NSString *> *, NSError *)) completionHandler;
-```
-
-## Parameters
-
-- `patterns`: The patterns to detect on the pasteboard.
-- `completionHandler`: A block that the system invokes after detecting patterns on the pasteboard. The block receives a `Result` instance that contains either a set with the patterns found on the pasteboard or an error if detection failed.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Because this method only gives an indication of whether a pasteboard item matches a particular pattern and doesn’t allow the app to access the contents, the system doesn’t notify the user about reading the contents of the pasteboard.
-
-## See Also
-
-### Detecting patterns of content in pasteboard items
-
-- [detectPatternsForPatterns:inItemSet:completionHandler:](detectpatternsforpatterns_initemset_completionhandler_.md): Determines whether pasteboard items match the specified patterns, without notifying the user.
-- [detectValuesForPatterns:completionHandler:](detectvaluesforpatterns_completionhandler_.md): Determines whether the first pasteboard item matches the specified patterns, reading the contents if it finds a match.
-- [detectValuesForPatterns:inItemSet:completionHandler:](detectvaluesforpatterns_initemset_completionhandler_.md): Determines whether pasteboard items match the specified patterns, reading the contents if it finds a match.
-- [UIPasteboardDetectionPattern](detectionpattern.md): An object that represents a pattern to detect for the pasteboard, such as a URL, text, or a number.
-
-# Document: detectPatternsForPatterns:inItemSet:completionHandler:
-
-Source path: documentation/uikit/uipasteboard/detectpatternsforpatterns:initemset:completionhandler:
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectpatternsforpatterns:initemset:completionhandler:
-Description: Interface language: Objective-C
-
-# detectPatternsForPatterns:inItemSet:completionHandler:
-
-**Interface language:** Objective-C
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-Determines whether pasteboard items match the specified patterns, without notifying the user.
-
-## Declaration
-
-```objectivec
-- (void) detectPatternsForPatterns:(NSSet<NSString *> *) patterns inItemSet:(NSIndexSet *) itemSet completionHandler:(void (^)(NSArray<NSSet<NSString *> *> *, NSError *)) completionHandler;
-```
-
-## Parameters
-
-- `patterns`: The patterns to detect on the pasteboard.
-- `itemSet`: An index set with each integer value identifying a pasteboard item positionally in the pasteboard. Pass `nil` to detect patterns in all pasteboard items.
-- `completionHandler`: A block that the system invokes after detecting patterns on the pasteboard. The block receives a `Result` instance that contains either an array with the patterns found on the pasteboard or an error if detection failed. If the `Result` instance contains an array, the index of each element in the array corresponds to the pasteboard item index specified in `itemSet`.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Because this method only detects for the presence of patterns and does not read the contents of the pasteboard, the system doesn’t notify the user about reading the contents of the pasteboard.
-
-## See Also
-
-### Detecting patterns of content in pasteboard items
-
-- [detectPatternsForPatterns:completionHandler:](detectpatternsforpatterns_completionhandler_.md): Determines whether the first pasteboard item matches the specified patterns, without notifying the user.
-- [detectValuesForPatterns:completionHandler:](detectvaluesforpatterns_completionhandler_.md): Determines whether the first pasteboard item matches the specified patterns, reading the contents if it finds a match.
-- [detectValuesForPatterns:inItemSet:completionHandler:](detectvaluesforpatterns_initemset_completionhandler_.md): Determines whether pasteboard items match the specified patterns, reading the contents if it finds a match.
-- [UIPasteboardDetectionPattern](detectionpattern.md): An object that represents a pattern to detect for the pasteboard, such as a URL, text, or a number.
-
-# Document: detectValues(for:completionHandler:)
-
-Source path: documentation/uikit/uipasteboard/detectvalues(for:completionhandler:)-6adre
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectvalues(for:completionhandler:)-6adre
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · visionOS
-
-# detectValues(for:completionHandler:)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · visionOS
-
-Requests that the data detection system identify the types of data that you specify for the pasteboard, and provide the values that it matches to your closure.
-
-## Declaration
-
-```swift
-func detectValues(for keyPaths: Set<PartialKeyPath<UIPasteboard.DetectedValues>>, completionHandler: @escaping (Result<UIPasteboard.DetectedValues, any Error>) -> ())
-```
-
-## Parameters
-
-- `keyPaths`: A set of key paths you use to indicate which types of data you want the data detection system to match.
-- `completionHandler`: A closure you provide to process data the data detection system matches, or to handle errors.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Because this method gives the app access to the values it detects in the pasteboard, the system notifies the user about reading the contents of the pasteboard.
-
-## See Also
-
-### Detecting patterns of content in pasteboard items
-
-- [detectPatterns(for:completionHandler:)](detectpatterns%28for_completionhandler_%29-23vwn.md): Requests that the data detection system identify the patterns that you specify for the pasteboard, and provide the patterns that it matches to your closure.
-- [detectedPatterns(for:)](detectedpatterns%28for_%29.md): Requests that the data detection system asynchronously identify the patterns that you specify for the pasteboard, and return the patterns that it matches.
-- [detectPatterns(for:inItemSet:completionHandler:)](detectpatterns%28for_initemset_completionhandler_%29-7ubl1.md): Requests that the data detection system identify the patterns that you specify for the pasteboard items, and provide the patterns that it matches to your closure.
-- [detectedPatterns(for:inItemSet:)](detectedpatterns%28for_initemset_%29.md): Requests that the data detection system asynchronously identify the patterns that you specify for the pasteboard items, and return the patterns that it matches.
-- [detectedValues(for:)](detectedvalues%28for_%29.md): Requests that the data detection system asynchronously identify the types of values that you specify for the pasteboard, and return the values that it matches.
-- [detectValues(for:inItemSet:completionHandler:)](detectvalues%28for_initemset_completionhandler_%29-pm9l.md): Requests that the data detection system identify the types of data that you specify for the pasteboard items, and provide the values that it matches to your closure.
-- [detectedValues(for:inItemSet:)](detectedvalues%28for_initemset_%29.md): Requests that the data detection system asynchronously identify the types of values that you specify for the pasteboard item, and return the values that it matches for each pasteboard.
-- [UIPasteboard.DetectedValues](detectedvalues.md): An object that contains common types of data that the data detection system matches for a pasteboard.
-- [UIPasteboard.DetectionPattern](detectionpattern.md): An object that represents a pattern to detect for the pasteboard, such as a URL, text, or a number.
-
-# Document: detectValues(for:completionHandler:)
-
-Source path: documentation/uikit/uipasteboard/detectvalues(for:completionhandler:)-9p2ff
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectvalues(for:completionhandler:)-9p2ff
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 14.0+ (deprecated in 15.0) · iPadOS 14.0+ (deprecated in 15.0) · Mac Catalyst 14.0+ (deprecated in 15.0) · visionOS 1.0+ (deprecated in 1.0)
-
-# detectValues(for:completionHandler:)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 14.0+ (deprecated in 15.0) · iPadOS 14.0+ (deprecated in 15.0) · Mac Catalyst 14.0+ (deprecated in 15.0) · visionOS 1.0+ (deprecated in 1.0)
-
-Determines whether the first pasteboard item matches the specified patterns, reading the contents if it finds a match.
-
-> Use [detectValues(for:completionHandler:)](detectvalues%28for_completionhandler_%29-6adre.md) instead.
-
-## Declaration
-
-```swift
-func detectValues(for patterns: Set<UIPasteboard.DetectionPattern>, completionHandler: @escaping (Result<[UIPasteboard.DetectionPattern : Any], any Error>) -> ())
-```
-
-## Parameters
-
-- `patterns`: The patterns to detect on the pasteboard.
-- `completionHandler`: A closure that the system invokes after detecting patterns on the pasteboard. The closure receives a `Result` instance that contains either a dictionary with the patterns found on the pasteboard or an error if detection failed. If the `Result` instance contains a dictionary, the keys specify the matched pattern, and the value specifies the content of the pasteboard.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-> **Important**
-
->  Calling this method notifies the user that the app has read the contents of the pasteboard.
-
-For details about the types returned for each pattern, see [UIPasteboard.DetectionPattern](detectionpattern.md).
-
-## See Also
-
-### Deprecated
-
-- [isPersistent](ispersistent.md): Deprecated. A Boolean value that indicates whether the pasteboard is persistent.
-- [setPersistent(\_:)](setpersistent%28__%29.md): Deprecated. A Boolean value that indicates whether the pasteboard is persistent.
-- [detectPatterns(for:completionHandler:)](detectpatterns%28for_completionhandler_%29-5zlnd.md): Deprecated. Determines whether the first pasteboard item matches the specified patterns, without notifying the user.
-- [detectPatterns(for:inItemSet:completionHandler:)](detectpatterns%28for_initemset_completionhandler_%29-29iwn.md): Deprecated. Determines whether pasteboard items match the specified patterns, without notifying the user.
-- [detectValues(for:inItemSet:completionHandler:)](detectvalues%28for_initemset_completionhandler_%29-8y0iw.md): Deprecated. Determines whether pasteboard items match the specified patterns, reading the contents if it finds a match.
-
-# Document: detectValues(for:inItemSet:completionHandler:)
-
-Source path: documentation/uikit/uipasteboard/detectvalues(for:initemset:completionhandler:)-8y0iw
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectvalues(for:initemset:completionhandler:)-8y0iw
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 14.0+ (deprecated in 15.0) · iPadOS 14.0+ (deprecated in 15.0) · Mac Catalyst 14.0+ (deprecated in 15.0) · visionOS 1.0+ (deprecated in 1.0)
-
-# detectValues(for:inItemSet:completionHandler:)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 14.0+ (deprecated in 15.0) · iPadOS 14.0+ (deprecated in 15.0) · Mac Catalyst 14.0+ (deprecated in 15.0) · visionOS 1.0+ (deprecated in 1.0)
-
-Determines whether pasteboard items match the specified patterns, reading the contents if it finds a match.
-
-> Use [detectValues(for:inItemSet:completionHandler:)](detectvalues%28for_initemset_completionhandler_%29-pm9l.md) instead.
-
-## Declaration
-
-```swift
-func detectValues(for patterns: Set<UIPasteboard.DetectionPattern>, inItemSet itemSet: IndexSet?, completionHandler: @escaping (Result<[[UIPasteboard.DetectionPattern : Any]], any Error>) -> ())
-```
-
-## Parameters
-
-- `patterns`: The patterns to detect on the pasteboard.
-- `itemSet`: An index set with each integer value identifying a pasteboard item positionally in the pasteboard. Pass in nil to request all pasteboard items.
-- `completionHandler`: A closure that the system invokes after detecting patterns on the pasteboard. The closure receives a `Result` instance that contains either an array of dictionaries with the patterns and the associated values found on the pasteboard or an error if detection failed. If `Result` contains an array, the index of each element in the array corresponds to the pasteboard item index specified in `itemSet`.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-> **Important**
-
->  Calling this method notifies the user that the app has read the contents of the pasteboard.
-
-For details about the types returned for each pattern, see [UIPasteboard.DetectionPattern](detectionpattern.md).
-
-## See Also
-
-### Deprecated
-
-- [isPersistent](ispersistent.md): Deprecated. A Boolean value that indicates whether the pasteboard is persistent.
-- [setPersistent(\_:)](setpersistent%28__%29.md): Deprecated. A Boolean value that indicates whether the pasteboard is persistent.
-- [detectPatterns(for:completionHandler:)](detectpatterns%28for_completionhandler_%29-5zlnd.md): Deprecated. Determines whether the first pasteboard item matches the specified patterns, without notifying the user.
-- [detectPatterns(for:inItemSet:completionHandler:)](detectpatterns%28for_initemset_completionhandler_%29-29iwn.md): Deprecated. Determines whether pasteboard items match the specified patterns, without notifying the user.
-- [detectValues(for:completionHandler:)](detectvalues%28for_completionhandler_%29-9p2ff.md): Deprecated. Determines whether the first pasteboard item matches the specified patterns, reading the contents if it finds a match.
-
-# Document: detectValues(for:inItemSet:completionHandler:)
-
-Source path: documentation/uikit/uipasteboard/detectvalues(for:initemset:completionhandler:)-pm9l
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectvalues(for:initemset:completionhandler:)-pm9l
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · visionOS
-
-# detectValues(for:inItemSet:completionHandler:)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · visionOS
-
-Requests that the data detection system identify the types of data that you specify for the pasteboard items, and provide the values that it matches to your closure.
-
-## Declaration
-
-```swift
-func detectValues(for keyPaths: Set<PartialKeyPath<UIPasteboard.DetectedValues>>, inItemSet itemSet: IndexSet?, completionHandler: @escaping (Result<[UIPasteboard.DetectedValues], any Error>) -> ())
-```
-
-## Parameters
-
-- `keyPaths`: A set of key paths you use to indicate which types of data you want the data detection system to match.
-- `itemSet`: A set of indexes you provide to indicate which pasteboard items the data detection system inspects to detect values.
-- `completionHandler`: A closure you provide to process values the data detection system matches, or to handle errors.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Because this method gives the app access to the values it detects in a pasteboard item, the system notifies the user about reading the contents of the pasteboard.
-
-## See Also
-
-### Detecting patterns of content in pasteboard items
-
-- [detectPatterns(for:completionHandler:)](detectpatterns%28for_completionhandler_%29-23vwn.md): Requests that the data detection system identify the patterns that you specify for the pasteboard, and provide the patterns that it matches to your closure.
-- [detectedPatterns(for:)](detectedpatterns%28for_%29.md): Requests that the data detection system asynchronously identify the patterns that you specify for the pasteboard, and return the patterns that it matches.
-- [detectPatterns(for:inItemSet:completionHandler:)](detectpatterns%28for_initemset_completionhandler_%29-7ubl1.md): Requests that the data detection system identify the patterns that you specify for the pasteboard items, and provide the patterns that it matches to your closure.
-- [detectedPatterns(for:inItemSet:)](detectedpatterns%28for_initemset_%29.md): Requests that the data detection system asynchronously identify the patterns that you specify for the pasteboard items, and return the patterns that it matches.
-- [detectValues(for:completionHandler:)](detectvalues%28for_completionhandler_%29-6adre.md): Requests that the data detection system identify the types of data that you specify for the pasteboard, and provide the values that it matches to your closure.
-- [detectedValues(for:)](detectedvalues%28for_%29.md): Requests that the data detection system asynchronously identify the types of values that you specify for the pasteboard, and return the values that it matches.
-- [detectedValues(for:inItemSet:)](detectedvalues%28for_initemset_%29.md): Requests that the data detection system asynchronously identify the types of values that you specify for the pasteboard item, and return the values that it matches for each pasteboard.
-- [UIPasteboard.DetectedValues](detectedvalues.md): An object that contains common types of data that the data detection system matches for a pasteboard.
-- [UIPasteboard.DetectionPattern](detectionpattern.md): An object that represents a pattern to detect for the pasteboard, such as a URL, text, or a number.
-
-# Document: detectValuesForPatterns:completionHandler:
-
-Source path: documentation/uikit/uipasteboard/detectvaluesforpatterns:completionhandler:
-Canonical documentation: https://developer.apple.com/documentation/uikit/uipasteboard/detectvaluesforpatterns:completionhandler:
-Description: Interface language: Objective-C
-
-# detectValuesForPatterns:completionHandler:
-
-**Interface language:** Objective-C
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
-
-Determines whether the first pasteboard item matches the specified patterns, reading the contents if it finds a match.
-
-## Declaration
-
-```objectivec
-- (void) detectValuesForPatterns:(NSSet<NSString *> *) patterns completionHandler:(void (^)(NSDictionary<NSString *,id> *, NSError *)) completionHandler;
-```
-
-## Parameters
-
-- `patterns`: The patterns to detect on the pasteboard.
-- `completionHandler`: A block that the system invokes after detecting patterns on the pasteboard. The block takes a `Result` parameter that contains either a dictionary with the patterns found on the pasteboard or an error if detection failed. If the `Result` instance contains a dictionary, the keys specify the matched pattern, and the value specifies the content of the pasteboard.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-> **Important**
-
->  Calling this method notifies the user that the app has read the contents of the pasteboard.
-
-For details about the types returned for each pattern, see [UIPasteboardDetectionPattern](detectionpattern.md).
-
-## See Also
-
-### Detecting patterns of content in pasteboard items
-
-- [detectPatternsForPatterns:completionHandler:](detectpatternsforpatterns_completionhandler_.md): Determines whether the first pasteboard item matches the specified patterns, without notifying the user.
-- [detectPatternsForPatterns:inItemSet:completionHandler:](detectpatternsforpatterns_initemset_completionhandler_.md): Determines whether pasteboard items match the specified patterns, without notifying the user.
-- [detectValuesForPatterns:inItemSet:completionHandler:](detectvaluesforpatterns_initemset_completionhandler_.md): Determines whether pasteboard items match the specified patterns, reading the contents if it finds a match.
-- [UIPasteboardDetectionPattern](detectionpattern.md): An object that represents a pattern to detect for the pasteboard, such as a URL, text, or a number.

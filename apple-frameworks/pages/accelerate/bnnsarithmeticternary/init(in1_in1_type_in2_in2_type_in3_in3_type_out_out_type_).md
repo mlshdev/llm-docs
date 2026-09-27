@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accelerate/bnnsarithmeticternary/init(in1:in1_type:in2:in2_type:in3:in3_type:out:out_type:)
 
 # init(in1:in1_type:in2:in2_type:in3:in3_type:out:out_type:)

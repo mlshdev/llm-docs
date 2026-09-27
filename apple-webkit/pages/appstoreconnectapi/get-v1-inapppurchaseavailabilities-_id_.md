@@ -1,7 +1,7 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-inapppurchaseavailabilities-_id_
 
-# Read information about the availablity of an in-app purchase
+# Read information about the availablity of an In-App Purchase
 
 **Interface language:** Data
 
@@ -9,7 +9,7 @@
 **Kind:** Web Service Endpoint  
 **Availability:** App Store Connect API 2.3+
 
-Get information about the territory availablity for an in-app purchase.
+Get information about the territory availablity for an In-App Purchase.
 
 ## URL
 
@@ -19,7 +19,7 @@ GET https://api.appstoreconnect.apple.com/v1/inAppPurchaseAvailabilities/{id}
 
 ## Path Parameters
 
-- `id` — `string` (required): An opaque resource ID that uniquely identifies the resource. Obtain the in-app purchase resource ID from the [List all in-app purchases for an app](get-v1-apps-_id_-inapppurchasesv2.md) response.
+- `id` — `string` (required): An opaque resource ID that uniquely identifies the resource. Obtain the In-App Purchase resource ID from the [List all In-App Purchases for an app](get-v1-apps-_id_-inapppurchasesv2.md) response.
 
 ## Query Parameters
 
@@ -82,6 +82,6 @@ https://api.appstoreconnect.apple.com/v1/inAppPurchaseAvailabilities/6447501593
 
 ### Endpoints
 
-- [List the Territory Availablity of an In-App Purchase](get-v1-inapppurchaseavailabilities-_id_-availableterritories.md): List all the territories where an in-app purchase is available.
-- [List available territory IDs for an in-app purchase availability](get-v1-inapppurchaseavailabilities-_id_-relationships-availableterritories.md)
-- [Modify the Territory Availablity of an In-App Purchase](post-v1-inapppurchaseavailabilities.md): Update the territory availablity of a specific in-app purchase.
+- [List the Territory Availablity of an In-App Purchase](get-v1-inapppurchaseavailabilities-_id_-availableterritories.md): List all the territories where an In-App Purchase is available.
+- [List available territory IDs for an In-App Purchase availability](get-v1-inapppurchaseavailabilities-_id_-relationships-availableterritories.md)
+- [Modify the Territory Availablity of an In-App Purchase](post-v1-inapppurchaseavailabilities.md): Update the territory availablity of a specific In-App Purchase.

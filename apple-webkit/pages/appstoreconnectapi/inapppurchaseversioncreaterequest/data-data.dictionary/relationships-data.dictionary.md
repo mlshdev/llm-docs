@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseversioncreaterequest/data-data.dictionary/relationships-data.dictionary
 
 # InAppPurchaseVersionCreateRequest.Data.Relationships
@@ -25,4 +25,4 @@ object InAppPurchaseVersionCreateRequest.Data.Relationships
 
 ### Objects
 
-- [InAppPurchaseVersionCreateRequest.Data.Relationships.InAppPurchase](relationships-data.dictionary/inapppurchase-data.dictionary.md): The in-app purchase to associate with the new in-app purchase version.
+- [InAppPurchaseVersionCreateRequest.Data.Relationships.InAppPurchase](relationships-data.dictionary/inapppurchase-data.dictionary.md): The In-App Purchase to associate with the new In-App Purchase version.

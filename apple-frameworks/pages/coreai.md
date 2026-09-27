@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/coreai
 
 # Core AI
@@ -17,7 +17,7 @@ Core AI helps you build, run, and deploy AI models in your app. Designed with Ap
 
 ![An illustration showing AI models connecting to Apple devices.](https://developer.apple.com/images/com.apple.coreai/core-ai-framework-hero@2x.png)
 
-Alongside the framework, Core AI includes additional tools for model preparation, integration, and debugging. Prepare your models for Apple silicon with [Core AI Optimization](https://apple.github.io/coreai-optimization), then convert them into the `.aimodel` format with [Core AI PyTorch Extensions](https://apple.github.io/coreai-torch). The [Core AI Debugger](https://developer.apple.com/core-ai-debugger/) app supports visualization and numeric debugging, letting you inspect model structure and trace tensor values directly back to your Python source code. For a catalog of ready-to-export models and a Swift package with helpers for common inference patterns, see [Core AI Models](https://github.com/apple/coreai-models).
+Alongside the framework, Core AI includes additional tools for model preparation, integration, and debugging. Prepare your models for Apple silicon with [Core AI Optimization](https://apple.github.io/coreai-optimization), then convert them into the `.aimodel` format with [Core AI PyTorch Extensions](https://apple.github.io/coreai-torch). To measure a model’s quality, use the [Evaluations](evaluations.md) framework. For language models specifically, you can also run the model through [Foundation Models](foundationmodels.md). The [Core AI Debugger](https://developer.apple.com/core-ai-debugger/) app supports visualization and numeric debugging, enabling you to inspect model structure and trace tensor values directly back to your Python source code. For a catalog of ready-to-export models and a Swift package with helpers for common inference patterns, see [Core AI Models](https://github.com/apple/coreai-models).
 
 Core AI also integrates with Xcode and the developer toolchain. The Core AI debug gauge and Core AI instrument help you monitor and profile inference performance in your app. You can also compile models ahead of time with the `coreai-build` command-line tool.
 

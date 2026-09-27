@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_event_openssh_login_t/init(success:result_type:source_address_type:source_address:username:has_uid:uid:)
 
 # init(success:result_type:source_address_type:source_address:username:has_uid:uid:)

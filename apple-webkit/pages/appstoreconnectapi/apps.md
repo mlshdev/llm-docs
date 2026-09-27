@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/apps
 
 # Apps
@@ -84,11 +84,11 @@ To learn more about managing your apps, see [Add a new app](https://developer.ap
 - [List all app store experiments for an app](get-v1-apps-_id_-appstoreversionexperimentsv2.md): Get a list of all App Store version experiments for a specific app.
 - [List App Store version experiment IDs for an app](get-v1-apps-_id_-relationships-appstoreversionexperimentsv2.md)
 
-### Getting in-app purchase information
+### Getting In-App Purchase information
 
-- [Read in-app purchase information](get-v1-inapppurchases-_id_.md): Deprecated. Get information about an in-app purchase.
-- [List all promoted purchases for an app](get-v1-apps-_id_-promotedpurchases.md): Get a list of promoted in-app purchases, including promoted auto-renewable subscriptions, for an app.
-- [List all in-app purchases for an app v1](get-v1-apps-_id_-inapppurchases.md): Deprecated. List the in-app purchases that are available for your app.
+- [Read In-App Purchase information](get-v1-inapppurchases-_id_.md): Deprecated. Get information about an In-App Purchase.
+- [List all promoted purchases for an app](get-v1-apps-_id_-promotedpurchases.md): Get a list of promoted In-App Purchases, including promoted auto-renewable subscriptions, for an app.
+- [List all In-App Purchases for an app v1](get-v1-apps-_id_-inapppurchases.md): Deprecated. List the In-App Purchases that are available for your app.
 
 ### Getting review submissions
 
@@ -98,6 +98,10 @@ To learn more about managing your apps, see [Add a new app](https://developer.ap
 ### Getting power and performance metrics
 
 - [Get power and performance metrics for an app](get-v1-apps-_id_-perfpowermetrics.md): Get the performance and power metrics data for the most recent version of an app.
+
+### Getting performance overviews
+
+- [Get the performance overview for an app](get-v1-apps-_id_-performanceoverviews.md): Get the aggregated performance overview data for a specific app.
 
 ### Getting customer reviews
 
@@ -139,12 +143,12 @@ To learn more about managing your apps, see [Add a new app](https://developer.ap
 - [Get the subscription grace period ID for an app](get-v1-apps-_id_-relationships-subscriptiongraceperiod.md)
 - [List subscription group IDs for an app](get-v1-apps-_id_-relationships-subscriptiongroups.md)
 
-### Getting in-app purchase information
+### Getting In-App Purchase information
 
-- [List all in-app purchases for an app](get-v1-apps-_id_-inapppurchasesv2.md): Get a list of the in-app purchases for a specific app.
+- [List all In-App Purchases for an app](get-v1-apps-_id_-inapppurchasesv2.md): Get a list of the In-App Purchases for a specific app.
 - [GET /v1/apps/{id}/relationships/inAppPurchasesV2](get-v1-apps-_id_-relationships-inapppurchasesv2.md)
-- [List all in-app purchases for an app v1](get-v1-apps-_id_-inapppurchases.md): Deprecated. List the in-app purchases that are available for your app.
-- [List in-app purchases ids for an app v1](get-v1-apps-_id_-relationships-inapppurchases.md): Deprecated. Get a list of all in-app purchases IDs for a specific app V1.
+- [List all In-App Purchases for an app v1](get-v1-apps-_id_-inapppurchases.md): Deprecated. List the In-App Purchases that are available for your app.
+- [List In-App Purchases ids for an app v1](get-v1-apps-_id_-relationships-inapppurchases.md): Deprecated. Get a list of all In-App Purchases IDs for a specific app V1.
 
 ### Getting beta feedback
 
@@ -205,8 +209,8 @@ To learn more about managing your apps, see [Add a new app](https://developer.ap
 - [AppResponse](appresponse.md): The response body for endpoints that read or modify a single app in your team.
 - [AppsResponse](appsresponse.md): A response containing a list of apps registered in your App Store Connect team.
 - [InAppPurchase](inapppurchase.md): Deprecated. A one-time purchasable item available in an app, such as a consumable, non-consumable, or non-renewing subscription.
-- [InAppPurchaseResponse](inapppurchaseresponse.md): Deprecated. The response body for endpoints that read a single in-app purchase.
-- [InAppPurchasesResponse](inapppurchasesresponse.md): Deprecated. The response body for endpoints that list in-app purchases for an app.
+- [InAppPurchaseResponse](inapppurchaseresponse.md): Deprecated. The response body for endpoints that read a single In-App Purchase.
+- [InAppPurchasesResponse](inapppurchasesresponse.md): Deprecated. The response body for endpoints that list In-App Purchases for an app.
 - [AppBetaTestersLinkagesRequest](appbetatesterslinkagesrequest.md): A request body you use to remove beta testers from an app.
 - [AppPricePointV3](apppricepointv3.md): A specific price tier in App Store pricing, defining the customer price and developer proceeds across territories.
 - [AppPricePointV3Response](apppricepointv3response.md): A response containing a single App Store price point with its territory-specific pricing details.
@@ -261,6 +265,8 @@ To learn more about managing your apps, see [Add a new app](https://developer.ap
 - [AppInfoSecondarySubcategoryTwoLinkageResponse](appinfosecondarysubcategorytwolinkageresponse.md)
 - [AppMarketplaceSearchDetailLinkageResponse](appmarketplacesearchdetaillinkageresponse.md)
 - [AppPerfPowerMetricsLinkagesResponse](appperfpowermetricslinkagesresponse.md)
+- [AppPerformanceOverviewsLinkagesResponse](appperformanceoverviewslinkagesresponse.md)
+- [PerformanceOverview](performanceoverview.md): An aggregated performance overview for an app, summarizing the performance data that Xcode reports.
 - [AppPreReleaseVersionsLinkagesResponse](appprereleaseversionslinkagesresponse.md)
 - [AppPricePointV3EqualizationsLinkagesResponse](apppricepointv3equalizationslinkagesresponse.md)
 - [AppPriceScheduleAutomaticPricesLinkagesResponse](apppricescheduleautomaticpriceslinkagesresponse.md)

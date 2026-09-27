@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_event_authentication_token_t/init(instigator:pubkey_hash:token_id:kerberos_principal:instigator_token:)
 
 # init(instigator:pubkey_hash:token_id:kerberos_principal:instigator_token:)

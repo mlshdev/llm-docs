@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/territories
 
 # Territories
@@ -28,7 +28,7 @@ For more information see [Set availability for your app](https://developer.apple
 
 ### Objects
 
-- [Territory](territory.md): An App Store region (country or territory) where apps, subscriptions, and in-app purchases are offered.
+- [Territory](territory.md): An App Store region (country or territory) where apps, subscriptions, and In-App Purchases are offered.
 - [TerritoryResponse](territoryresponse.md): The response body for endpoints that read a single App Store territory.
 - [TerritoriesWithoutIncludesResponse](territorieswithoutincludesresponse.md): A response containing a list of App Store territories, without related resources.
 - [TerritoriesResponse](territoriesresponse.md): The response body for endpoints that list available App Store territories.

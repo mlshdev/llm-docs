@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-gamecenterleaderboardsetimages-_id_
 
 # Read Leaderboard Set Image Information
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 3.0+
+**Availability:** App Store Connect API 3.0+ (deprecated in 4.3)
 
 Get information about a leaderboard set image and its upload and processing status.
+
+> This endpoint is deprecated. Use [Read Game Center Leaderboard Set Image Information](get-v2-gamecenterleaderboardsetimages-_id_.md) instead.
 
 ## URL
 

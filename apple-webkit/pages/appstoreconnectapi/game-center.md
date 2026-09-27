@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/game-center
 
 # Game Center
@@ -32,6 +32,7 @@ For more information about all you can do with Game Center, see the [Game Center
 
 - [Game Center details](game-center-details.md): Manage enablement, achievement, leaderboard, and localization details for your apps.
 - [Game Center groups](game-center-groups.md): Manage groups between your apps.
+- [Game Center blocked players](game-center-blocked-players.md): Block and unblock the Game Center players who can play your game.
 
 ### Achievements
 
@@ -50,6 +51,7 @@ For more information about all you can do with Game Center, see the [Game Center
 - [Game Center leaderboard versions](game-center-leaderboard-versions.md): Manage versions for your Game Center leaderboards.
 - [Game Center leaderboard releases](game-center-leaderboard-releases.md): Read, create, and delete Game Center leaderboards releases.
 - [Game Center leaderboards scores](game-center-leaderboards-scores.md): Create and modify Game Center leaderboards scores.
+- [Game Center score moderations](game-center-score-moderations.md): Review and moderate scores players submit to your app’s leaderboards.
 
 ### Leaderboard sets
 

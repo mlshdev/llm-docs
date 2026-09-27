@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads
 
 # Apple Ads
@@ -9,15 +9,13 @@
 **Kind:** Web Service  
 **Availability:** Apple Ads 2.0+
 
+Drive app discovery by creating and managing campaigns with the Apple Ads Campaign Management API.
+
+> The Apple Ads Campaign Management API is deprecated and will be sunset on January 26, 2027. Use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api) instead.
+
 <a id="overview"></a>
 
 ## Overview
-
-> **Important**
-
-> The [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api) supersedes the Apple Ads Campaign Management API, which will be sunset on January 26, 2027.
-
-Drive app discovery by creating and managing campaigns with the Apple Ads Campaign Management API.
 
 Apple Ads is an efficient and easy way to help people discover your app when they search in the App Store. With Apple Ads Campaign Management API 5, you can build [Campaigns](apple_ads/campaigns.md) with budgets, and create ad groups that include keywords, audience refinement criteria, and scheduling.
 
@@ -40,8 +38,8 @@ You can implement your own keyword-bidding strategy in ad groups or [Build a Cam
 ### Campaigns
 
 - [Campaigns](apple_ads/campaigns.md): Create and manage Apple Ads campaigns.
-- [Budget Orders](apple_ads/budget-orders.md): Manage your budgets.
-- [Ad Groups](apple_ads/ad-groups.md): Create and manage ad groups.
+- [Budget Orders](apple_ads/budget-orders.md)
+- [Ad Groups](apple_ads/ad-groups.md)
 - [Targeting Keywords and Negative Keywords](apple_ads/targeting-keywords-and-negative-keywords.md): Apply relevant words or phrases that make your campaigns findable.
 - [Search Geolocations](apple_ads/search-geolocations.md): Search for apps and geocriteria for your campaigns.
 

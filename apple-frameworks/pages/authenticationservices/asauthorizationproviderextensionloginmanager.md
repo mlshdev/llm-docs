@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/authenticationservices/asauthorizationproviderextensionloginmanager
 
 # ASAuthorizationProviderExtensionLoginManager (Swift)
@@ -89,6 +89,7 @@ Use this class to perform registration and authentication tasks, and to repair r
 ### Configuration
 
 - [Configuring authentication with the identity provider (IdP)](configuring-authentication-with-the-identity-provider-idp.md): Specify how Platform SSO authenticates with the identity provider.
+- [Interpreting Platform Single Sign-on authorization scopes](interpreting-platform-single-sign-on-authorization-scopes.md): Use authorization scopes to apply authentication policies.
 - [ASAuthorizationProviderExtensionLoginConfiguration](asauthorizationproviderextensionloginconfiguration.md): An interface for configuring platform single sign-on.
 
 # ASAuthorizationProviderExtensionLoginManager (Objective-C)
@@ -170,4 +171,5 @@ Use this class to perform registration and authentication tasks, and to repair r
 ### Configuration
 
 - [Configuring authentication with the identity provider (IdP)](configuring-authentication-with-the-identity-provider-idp.md): Specify how Platform SSO authenticates with the identity provider.
+- [Interpreting Platform Single Sign-on authorization scopes](interpreting-platform-single-sign-on-authorization-scopes.md): Use authorization scopes to apply authentication policies.
 - [ASAuthorizationProviderExtensionLoginConfiguration](asauthorizationproviderextensionloginconfiguration.md): An interface for configuring platform single sign-on.

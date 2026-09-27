@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/coremidi/midithruconnectionparams/init(version:numsources:sources:numdestinations:destinations:channelmap:lowvelocity:highvelocity:lownote:highnote:notenumber:velocity:keypressure:channelpressure:programchange:pitchbend:filteroutsysex:filteroutmtc:filteroutbeatclock:filtero-6y1ig
 
 # init(version:numSources:sources:numDestinations:destinations:channelMap:lowVelocity:highVelocity:lowNote:highNote:noteNumber:velocity:keyPressure:channelPressure:programChange:pitchBend:filterOutSysEx:filterOutMTC:filterOutBeatClock:filterOutTuneRequest:reserved2:filterOutAllControls:numControlTransforms:numMaps:reserved3:)

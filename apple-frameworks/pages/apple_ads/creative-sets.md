@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/creative-sets
 
 # Creative Sets
@@ -26,7 +26,7 @@ Creative Sets enable you to test ad variations in ad groups and optimize for dif
 
 ### Upload Assets to App Store Connect
 
-Using ceatives in the Apple Ads Campaign Management API requires you to upload your app assets to [App Store Connect](https://developer.apple.com/app-store-connect/). For the API to return asset data, you must meet two important requirements:
+Using creatives in the Apple Ads Campaign Management API requires you to upload your app assets to [App Store Connect](https://developer.apple.com/app-store-connect/). For the API to return asset data, you must meet two important requirements:
 
 - Your app needs a  minimum number of assets. See the `Asset` object, `MediaAppPreviewOrScreenshots`, and `MediaAppPreviewOrScreenshotsDetail` for app asset descriptions.
 - The supported language for your campaign must be the same as the one for the [App Store Connect](https://developer.apple.com/app-store-connect/) territory of your app.

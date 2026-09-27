@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_new_client_result_err_too_many_clients
 
 # ES_NEW_CLIENT_RESULT_ERR_TOO_MANY_CLIENTS (Swift)

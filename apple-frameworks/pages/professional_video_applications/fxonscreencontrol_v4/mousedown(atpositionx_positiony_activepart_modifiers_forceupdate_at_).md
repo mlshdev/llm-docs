@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/fxonscreencontrol_v4/mousedown(atpositionx:positiony:activepart:modifiers:forceupdate:at:)
 
 # mouseDown(atPositionX:positionY:activePart:modifiers:forceUpdate:at:) (Swift)

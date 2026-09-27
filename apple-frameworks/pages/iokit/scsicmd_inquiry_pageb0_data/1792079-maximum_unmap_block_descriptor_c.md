@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/iokit/scsicmd_inquiry_pageb0_data/1792079-maximum_unmap_block_descriptor_c
 
 # MAXIMUM_UNMAP_BLOCK_DESCRIPTOR_COUNT

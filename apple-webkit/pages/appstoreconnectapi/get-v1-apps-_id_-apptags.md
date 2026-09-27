@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-apps-_id_-apptags
 
 # List App Tags
@@ -23,16 +23,16 @@ GET https://api.appstoreconnect.apple.com/v1/apps/{id}/appTags
 
 ## Query Parameters
 
-- `fields[appTags]` — `[string]`: Additional fields to include for each app tag resource returned by the response.
+- `fields[appTags]` — `[string]`: Additional fields to include for each app tag resource returned by the response. Note: `territories` is deprecated; after the relationship is removed, requests that use it return an error.
   **Allowed values:** `name`, `visibleInAppStore`, `territories`
-- `fields[territories]` — `[string]`: Additional fields to include for each territory resource returned by the response.
+- `fields[territories]` — `[string]`: Additional fields to include for each territory resource returned by the response. Note: this parameter is deprecated; after the `territories` relationship is removed, requests that use it return an error.
   **Allowed values:** `currency`
 - `filter[visibleInAppStore]` — `[string]`: Filter the returned app tags by visibility in the App Store.
-- `include` — `[string]`: The relationship data to include in the response.
+- `include` — `[string]`: The relationship data to include in the response. Note: `territories` is deprecated; after the relationship is removed, requests that include it return an error.
   **Allowed values:** `territories`
 - `limit` — `integer`: The maximum number of app tag resources to return.
   **Maximum:** `200`
-- `limit[territories]` — `integer`: The maximum number of related territory resources to return.
+- `limit[territories]` — `integer`: The maximum number of related territory resources to return. Note: this parameter is deprecated; after the `territories` relationship is removed, requests that use it return an error.
   **Maximum:** `50`
 - `sort` — `[string]`: Attributes by which to sort.
   **Allowed values:** `name`, `-name`
@@ -46,10 +46,14 @@ GET https://api.appstoreconnect.apple.com/v1/apps/{id}/appTags
 - `404` Not Found — `ErrorResponse`:
 - `429` — `ErrorResponse`:
 
+## Mentioned In
+
+- [App Store Connect API 4.5 release notes](app-store-connect-api-4-5-release-notes.md)
+
 ## See Also
 
 ### Reading app tag information
 
 - [List app tags IDs](get-v1-apps-_id_-relationships-apptags.md): List all app tag IDs for a specific app.
-- [List territory IDs for an app tag](get-v1-apptags-_id_-relationships-territories.md): List territory IDs for an app tag.
-- [List Territories for an App Tag](get-v1-apptags-_id_-territories.md): List territory availability for a specific app tag.
+- [List territory IDs for an app tag](get-v1-apptags-_id_-relationships-territories.md): Deprecated. List territory IDs for an app tag.
+- [List Territories for an App Tag](get-v1-apptags-_id_-territories.md): Deprecated. List territory availability for a specific app tag.

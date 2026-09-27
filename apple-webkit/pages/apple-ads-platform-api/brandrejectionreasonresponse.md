@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/brandrejectionreasonresponse
 
 # BrandRejectionReasonResponse
@@ -21,7 +21,8 @@ object BrandRejectionReasonResponse
 
 - `id` — `int64`: Policy assignment identifier. Read-only.
 - `promotedObjectId` — `string`: The brand or promoted object ID. Read-only.
-- `promotedObjectType` — `string`: The type of the promoted object (for example, `BUSINESS_BRAND`). Read-only.
+- `promotedObjectType` — `string`: The type of the promoted object. Read-only.
+  **Allowed values:** `BUSINESS_BRAND`
 - `entityId` — `string`: Identifier of the affected entity. Read-only.
 - `entityType` — `string`: Type of the affected entity (for example, `BUSINESS_BRAND`). Read-only.
 - `componentType` — `string`: Type of the entity component that triggered the policy (for example, `ENTITY_ASSET`). Read-only.

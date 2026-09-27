@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/gamecenteractivityleaderboardslinkagesrequest
 
 # GameCenterActivityLeaderboardsLinkagesRequest
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Object  
-**Availability:** App Store Connect API 4.0+
+**Availability:** App Store Connect API 4.0+ (deprecated in 4.3)
 
 The request body for updating the list of leaderboards linked to a Game Center activity.
+
+> This object is deprecated. Use [GameCenterActivityLeaderboardsV2LinkagesRequest](gamecenteractivityleaderboardsv2linkagesrequest.md) instead.
 
 ## Declaration
 

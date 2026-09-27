@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/samplecode
 
 # Sample Code Library
@@ -62,6 +62,7 @@ Explore samples that highlight new APIs featured at this year’s conference.
 - [Training a neural network to render irradiance in real time](metal/training-a-neural-network-to-render-irradiance-in-real-time.md): Train a small neural network on the GPU to approximate diffuse irradiance, and compare the result against Monte Carlo integration and a pre-trained ML model.
 - [Wishlist: Planning travel in a SwiftUI app](https://developer.apple.com/documentation/swiftui/wishlist-planning-travel-in-a-swiftui-app): Build a travel planning app that organizes trips into collections and tracks activity completion.
 - [Working with content from your Mac app using Spatial Preview](spatialpreview/working-with-content-from-your-mac-app-using-spatial-preview.md): Send and update documents, and work with 3D content live from your Mac app to a visionOS device.
+- [Rendering Gaussian splats with RealityKit](visionos/working-with-gaussian-splats-with-realitykit.md): Bring a real-world scan into your app by loading splat data from a USD or PLY file.
 
 ### Accelerate
 
@@ -299,6 +300,7 @@ Explore samples that highlight new APIs featured at this year’s conference.
 - [Streaming depth data from the TrueDepth camera](avfoundation/streaming-depth-data-from-the-truedepth-camera.md): Visualize depth data in 2D and 3D from the TrueDepth camera.
 - [Supporting Continuity Camera in your macOS app](avfoundation/supporting-continuity-camera-in-your-macos-app.md): Enable high-quality photo and video capture by using an iPhone camera as an external capture device.
 - [Supporting coordinated media playback](avfoundation/supporting-coordinated-media-playback.md): Create synchronized media experiences that enable users to watch and listen across devices.
+- [Supporting device rotation in your camera app](avfoundation/supporting-device-rotation-in-your-camera-app.md): Keep your camera preview and captured photos and video upright by applying the angles a rotation coordinator reports.
 - [Supporting remote interactions in tvOS](avfoundation/supporting-remote-interactions-in-tvos.md): Set up your app to support remote commands and events in a variety of scenarios by using the relevant approach.
 - [Using AVFoundation to play and persist HTTP live streams](avfoundation/using-avfoundation-to-play-and-persist-http-live-streams.md): Play HTTP Live Streams and persist streams on disk for offline playback using AVFoundation.
 - [Using HEVC video with alpha](avfoundation/using-hevc-video-with-alpha.md): Play, write, and export HEVC video with an alpha channel to add overlay effects to your video processing.
@@ -471,6 +473,7 @@ Explore samples that highlight new APIs featured at this year’s conference.
 - [Recording and Streaming Your macOS App](replaykit/recording-and-streaming-your-macos-app.md): Share screen recordings, or broadcast live audio and video of your app, by adding ReplayKit to your macOS apps and games.
 - [Selecting Photos and Videos in iOS](photokit/selecting-photos-and-videos-in-ios.md): Improve the user experience of finding and selecting assets by using the Photos picker.
 - [Structuring recognized text on a document](visionkit/structuring-recognized-text-on-a-document.md): Detect, recognize, and structure text on a business card or receipt using Vision and VisionKit.
+- [Supporting custom media formats and decoders](https://developer.apple.com/documentation/mediaextension/supporting-custom-media-formats-and-decoders): Extend the media formats the system can open by providing a format reader and a video decoder.
 
 ### RealityKit and Reality Composer Pro
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/creativerejectionreason
 
 # CreativeRejectionReason
@@ -24,6 +24,7 @@ object CreativeRejectionReason
 - `productPageId` — `string`: The product page ID associated with the rejection, if applicable. Read-only.
 - `assetId` — `string`: The UUID of the asset that triggered the rejection, if applicable. Read-only.
 - `supplySource` — `string`: Supply source for the rejection. Read-only.
+  **Allowed values:** `APPSTORE`, `MAPS`
 - `supplyPlacement` — `string`: Supply placement for the rejection. Read-only.
 - `countryOrRegion` — `string`: Country or region code. Read-only.
 - `languageCode` — `string`: Language code. Read-only.

@@ -1,9 +1,9 @@
-# Apple Swift snapshot-5915b24a1311: full documentation
+# Apple Swift snapshot-3cd4d1098779: full documentation
 
 Source: https://developer.apple.com/documentation/swift
-Catalog snapshot: 5915b24a13116058563ec2085adb7610a331e7e4aea596f8d2f1f1b39a6e0f1c
-Content digest: 8b137be1ef278f1d522a4d88c557c8c07b458d20c03cd9e5596b61253f263486
-Captured at: 2026-09-16T18:21:42.073Z
+Catalog snapshot: 3cd4d1098779f6b6fc16e524bcbb296cd3ca44b5de1a8f9d83171d61b7b63adb
+Content digest: cb3ffbf838cd5f0be6ae77f16fdae59481730abbd878246936617c12df1785d3
+Captured at: 2026-09-27T18:07:09.584Z
 Volume 4
 
 # Document: remainderReportingOverflow(dividingBy:)
@@ -39773,8 +39773,6 @@ typealias UnsafeConcurrentValue = UnsafeSendable
 - [PartialAsyncTask](partialasynctask.md): Deprecated.
 - [UnsafeSendable](unsafesendable.md): Deprecated. A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
 - [UnsafeThrowingContinuation](unsafethrowingcontinuation.md): Deprecated.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 - [withUnsafeThrowingContinuation(isolation:\_:)](withunsafethrowingcontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md).
 
 # Document: UnsafeContinuation
@@ -39845,6 +39843,8 @@ A *continuation* is an opaque representation of program state. To create a conti
 - [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-13yf6.md)
 - [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-2k46m.md): Invokes the passed in closure with a checked continuation for the current task.
 - [withUnsafeContinuation(\_:)](withunsafecontinuation%28__%29.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 
 # Document: init(_:)
 
@@ -68117,8 +68117,6 @@ struct MyStructure: @unchecked Sendable { ... }
 - [PartialAsyncTask](partialasynctask.md): Deprecated.
 - [UnsafeConcurrentValue](unsafeconcurrentvalue.md): Deprecated.
 - [UnsafeThrowingContinuation](unsafethrowingcontinuation.md): Deprecated.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 - [withUnsafeThrowingContinuation(isolation:\_:)](withunsafethrowingcontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md).
 
 # Document: UnsafeThrowingContinuation
@@ -68155,8 +68153,6 @@ typealias UnsafeThrowingContinuation<T> = UnsafeContinuation<T, any Error>
 - [PartialAsyncTask](partialasynctask.md): Deprecated.
 - [UnsafeConcurrentValue](unsafeconcurrentvalue.md): Deprecated.
 - [UnsafeSendable](unsafesendable.md): Deprecated. A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 - [withUnsafeThrowingContinuation(isolation:\_:)](withunsafethrowingcontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md).
 
 # Document: UnsignedInteger
@@ -71019,6 +71015,8 @@ The checked continuation offers detection of misuse, and dropping the last refer
 - [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-2k46m.md): Invokes the passed in closure with a checked continuation for the current task.
 - [UnsafeContinuation](unsafecontinuation.md): A mechanism to interface between synchronous and asynchronous code, without correctness checking.
 - [withUnsafeContinuation(\_:)](withunsafecontinuation%28__%29.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 
 # Document: withCheckedContinuation(isolation:function:_:)
 
@@ -71057,8 +71055,6 @@ func withCheckedContinuation<T>(isolation: isolated (any Actor)?, function: Stri
 - [UnsafeConcurrentValue](unsafeconcurrentvalue.md): Deprecated.
 - [UnsafeSendable](unsafesendable.md): Deprecated. A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
 - [UnsafeThrowingContinuation](unsafethrowingcontinuation.md): Deprecated.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 - [withUnsafeThrowingContinuation(isolation:\_:)](withunsafethrowingcontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md).
 
 # Document: withCheckedThrowingContinuation(function:_:)
@@ -71091,6 +71087,8 @@ Description: Framework: Swift Kind: Function Availability: iOS 13.0+ · iPadOS 1
 - [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-2k46m.md): Invokes the passed in closure with a checked continuation for the current task.
 - [UnsafeContinuation](unsafecontinuation.md): A mechanism to interface between synchronous and asynchronous code, without correctness checking.
 - [withUnsafeContinuation(\_:)](withunsafecontinuation%28__%29.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 
 # Document: withCheckedThrowingContinuation(function:_:)
 
@@ -71161,6 +71159,8 @@ The checked continuation offers detection of misuse, and dropping the last refer
 - [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-13yf6.md)
 - [UnsafeContinuation](unsafecontinuation.md): A mechanism to interface between synchronous and asynchronous code, without correctness checking.
 - [withUnsafeContinuation(\_:)](withunsafecontinuation%28__%29.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 
 # Document: withCheckedThrowingContinuation(isolation:function:_:)
 
@@ -71199,8 +71199,6 @@ func withCheckedThrowingContinuation<T>(isolation: isolated (any Actor)?, functi
 - [UnsafeConcurrentValue](unsafeconcurrentvalue.md): Deprecated.
 - [UnsafeSendable](unsafesendable.md): Deprecated. A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
 - [UnsafeThrowingContinuation](unsafethrowingcontinuation.md): Deprecated.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 - [withUnsafeThrowingContinuation(isolation:\_:)](withunsafethrowingcontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md).
 
 # Document: withContinuation(of:_:)
@@ -71254,6 +71252,8 @@ You must invoke the continuation’s `resume` method exactly once. The continuat
 - [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-2k46m.md): Invokes the passed in closure with a checked continuation for the current task.
 - [UnsafeContinuation](unsafecontinuation.md): A mechanism to interface between synchronous and asynchronous code, without correctness checking.
 - [withUnsafeContinuation(\_:)](withunsafecontinuation%28__%29.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 
 # Document: withContinuation(of:throwing:_:)
 
@@ -71307,6 +71307,8 @@ You must invoke the continuation’s `resume` method exactly once. The continuat
 - [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-2k46m.md): Invokes the passed in closure with a checked continuation for the current task.
 - [UnsafeContinuation](unsafecontinuation.md): A mechanism to interface between synchronous and asynchronous code, without correctness checking.
 - [withUnsafeContinuation(\_:)](withunsafecontinuation%28__%29.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 
 # Document: withDiscardingTaskGroup(returning:isolation:body:)
 
@@ -71825,6 +71827,7 @@ await withTaskGroup(of: Void.self) { group in
 
 ### Shielding Tasks from Cancellation
 
+- [hasActiveCancellationShield](task/hasactivecancellationshield.md): Conforms when `Success` is `Never` and `Failure` is `Never`. Checks if the current task is executing in a scope with a task cancellation shield activated by the `withTaskCancellationShield(operation:)-(()->Value)` function.
 - [withTaskCancellationShield(operation:)](withtaskcancellationshield%28operation_%29-8zlgh.md): Enters a scope in which a task cancellation shield is active.
 
 # Document: withTaskCancellationShield(operation:)
@@ -71916,6 +71919,7 @@ await withTaskGroup(of: Void.self) { group in
 
 ### Shielding Tasks from Cancellation
 
+- [hasActiveCancellationShield](task/hasactivecancellationshield.md): Conforms when `Success` is `Never` and `Failure` is `Never`. Checks if the current task is executing in a scope with a task cancellation shield activated by the `withTaskCancellationShield(operation:)-(()->Value)` function.
 - [withTaskCancellationShield(operation:)](withtaskcancellationshield%28operation_%29-2lzl8.md): Enters a scope in which a task cancellation shield is active.
 
 # Document: withTaskExecutorPreference(_:isolation:operation:)
@@ -72685,6 +72689,8 @@ Unlike the “checked” continuation variant, the `UnsafeContinuation` does not
 - [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-13yf6.md)
 - [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-2k46m.md): Invokes the passed in closure with a checked continuation for the current task.
 - [UnsafeContinuation](unsafecontinuation.md): A mechanism to interface between synchronous and asynchronous code, without correctness checking.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 
 # Document: withUnsafeContinuation(isolation:_:)
 
@@ -72722,8 +72728,6 @@ func withUnsafeContinuation<T>(isolation: isolated (any Actor)?, _ fn: (UnsafeCo
 - [UnsafeConcurrentValue](unsafeconcurrentvalue.md): Deprecated.
 - [UnsafeSendable](unsafesendable.md): Deprecated. A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
 - [UnsafeThrowingContinuation](unsafethrowingcontinuation.md): Deprecated.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 - [withUnsafeThrowingContinuation(isolation:\_:)](withunsafethrowingcontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md).
 
 # Document: withUnsafeCurrentTask(body:)
@@ -73190,21 +73194,18 @@ Unlike the “checked” continuation variant, the `UnsafeContinuation` does not
 
 ## See Also
 
-### Deprecated
+### Continuations
 
-- [extractIsolation(\_:)](extractisolation%28__%29.md): Deprecated.
-- [withCheckedContinuation(isolation:function:\_:)](withcheckedcontinuation%28isolation_function___%29.md): Deprecated. Source-compatibility overload; replaced by [withCheckedContinuation(function:\_:)](withcheckedcontinuation%28function___%29.md).
-- [withCheckedThrowingContinuation(isolation:function:\_:)](withcheckedthrowingcontinuation%28isolation_function___%29.md): Deprecated. Source-compatibility overload; replaced by [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-2k46m.md).
-- [withUnsafeContinuation(isolation:\_:)](withunsafecontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeContinuation(\_:)](withunsafecontinuation%28__%29.md).
-- [AnyActor](anyactor.md): Deprecated. Common marker protocol providing a shared “base” for both (local) `Actor` and (potentially remote) `DistributedActor` types.
-- [ConcurrentValue](concurrentvalue.md): Deprecated.
-- [Job](job.md): Deprecated. Deprecated equivalent of [ExecutorJob](executorjob.md).
-- [PartialAsyncTask](partialasynctask.md): Deprecated.
-- [UnsafeConcurrentValue](unsafeconcurrentvalue.md): Deprecated.
-- [UnsafeSendable](unsafesendable.md): Deprecated. A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
-- [UnsafeThrowingContinuation](unsafethrowingcontinuation.md): Deprecated.
+- [Continuation](continuation.md): A mechanism to interface between synchronous and asynchronous code, which enforces that the continuation is resumed exactly once.
+- [withContinuation(of:\_:)](withcontinuation%28of___%29.md): Invokes the passed in closure with a non-copyable continuation for the current task.
+- [withContinuation(of:throwing:\_:)](withcontinuation%28of_throwing___%29.md): Invokes the passed in closure with a non-copyable continuation for the current task.
+- [CheckedContinuation](checkedcontinuation.md): A mechanism to interface between synchronous and asynchronous code, logging correctness violations.
+- [withCheckedContinuation(function:\_:)](withcheckedcontinuation%28function___%29.md): Invokes the passed in closure with a checked continuation for the current task.
+- [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-13yf6.md)
+- [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-2k46m.md): Invokes the passed in closure with a checked continuation for the current task.
+- [UnsafeContinuation](unsafecontinuation.md): A mechanism to interface between synchronous and asynchronous code, without correctness checking.
+- [withUnsafeContinuation(\_:)](withunsafecontinuation%28__%29.md): Invokes the passed in closure with a unsafe continuation for the current task.
 - [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
-- [withUnsafeThrowingContinuation(isolation:\_:)](withunsafethrowingcontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md).
 
 # Document: withUnsafeThrowingContinuation(_:)
 
@@ -73226,21 +73227,18 @@ nonisolated(nonsending) func withUnsafeThrowingContinuation<T>(_ fn: (UnsafeCont
 
 ## See Also
 
-### Deprecated
+### Continuations
 
-- [extractIsolation(\_:)](extractisolation%28__%29.md): Deprecated.
-- [withCheckedContinuation(isolation:function:\_:)](withcheckedcontinuation%28isolation_function___%29.md): Deprecated. Source-compatibility overload; replaced by [withCheckedContinuation(function:\_:)](withcheckedcontinuation%28function___%29.md).
-- [withCheckedThrowingContinuation(isolation:function:\_:)](withcheckedthrowingcontinuation%28isolation_function___%29.md): Deprecated. Source-compatibility overload; replaced by [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-2k46m.md).
-- [withUnsafeContinuation(isolation:\_:)](withunsafecontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeContinuation(\_:)](withunsafecontinuation%28__%29.md).
-- [AnyActor](anyactor.md): Deprecated. Common marker protocol providing a shared “base” for both (local) `Actor` and (potentially remote) `DistributedActor` types.
-- [ConcurrentValue](concurrentvalue.md): Deprecated.
-- [Job](job.md): Deprecated. Deprecated equivalent of [ExecutorJob](executorjob.md).
-- [PartialAsyncTask](partialasynctask.md): Deprecated.
-- [UnsafeConcurrentValue](unsafeconcurrentvalue.md): Deprecated.
-- [UnsafeSendable](unsafesendable.md): Deprecated. A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
-- [UnsafeThrowingContinuation](unsafethrowingcontinuation.md): Deprecated.
+- [Continuation](continuation.md): A mechanism to interface between synchronous and asynchronous code, which enforces that the continuation is resumed exactly once.
+- [withContinuation(of:\_:)](withcontinuation%28of___%29.md): Invokes the passed in closure with a non-copyable continuation for the current task.
+- [withContinuation(of:throwing:\_:)](withcontinuation%28of_throwing___%29.md): Invokes the passed in closure with a non-copyable continuation for the current task.
+- [CheckedContinuation](checkedcontinuation.md): A mechanism to interface between synchronous and asynchronous code, logging correctness violations.
+- [withCheckedContinuation(function:\_:)](withcheckedcontinuation%28function___%29.md): Invokes the passed in closure with a checked continuation for the current task.
+- [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-13yf6.md)
+- [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-2k46m.md): Invokes the passed in closure with a checked continuation for the current task.
+- [UnsafeContinuation](unsafecontinuation.md): A mechanism to interface between synchronous and asynchronous code, without correctness checking.
+- [withUnsafeContinuation(\_:)](withunsafecontinuation%28__%29.md): Invokes the passed in closure with a unsafe continuation for the current task.
 - [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
-- [withUnsafeThrowingContinuation(isolation:\_:)](withunsafethrowingcontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md).
 
 # Document: withUnsafeThrowingContinuation(isolation:_:)
 
@@ -73279,8 +73277,6 @@ func withUnsafeThrowingContinuation<T>(isolation: isolated (any Actor)?, _ fn: (
 - [UnsafeConcurrentValue](unsafeconcurrentvalue.md): Deprecated.
 - [UnsafeSendable](unsafesendable.md): Deprecated. A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
 - [UnsafeThrowingContinuation](unsafethrowingcontinuation.md): Deprecated.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 
 # Document: withVaList(_:_:)
 

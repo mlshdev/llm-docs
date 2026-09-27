@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseimagev2updaterequest/data-data.dictionary
 
 # InAppPurchaseImageV2UpdateRequest.Data
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 4.4.1+
 
-The request body you use to modify an in-app purchase image with the v2 API.
+The request body you use to modify an In-App Purchase image with the v2 API.
 
 ## Declaration
 
@@ -27,4 +27,4 @@ object InAppPurchaseImageV2UpdateRequest.Data
 
 ### Objects
 
-- [InAppPurchaseImageV2UpdateRequest.Data.Attributes](data-data.dictionary/attributes-data.dictionary.md): Attributes that describe an in-app purchase image update request resource.
+- [InAppPurchaseImageV2UpdateRequest.Data.Attributes](data-data.dictionary/attributes-data.dictionary.md): Attributes that describe an In-App Purchase image update request resource.

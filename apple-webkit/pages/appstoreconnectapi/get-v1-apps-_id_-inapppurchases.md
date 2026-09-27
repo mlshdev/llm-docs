@@ -1,7 +1,7 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-apps-_id_-inapppurchases
 
-# List all in-app purchases for an app v1
+# List all In-App Purchases for an app v1
 
 **Interface language:** Data
 
@@ -9,9 +9,9 @@
 **Kind:** Web Service Endpoint  
 **Availability:** App Store Connect API 1.2+ (deprecated in 2.0)
 
-List the in-app purchases that are available for your app.
+List the In-App Purchases that are available for your app.
 
-> Use [List all in-app purchases for an app](get-v1-apps-_id_-inapppurchasesv2.md) instead.
+> Use [List all In-App Purchases for an app](get-v1-apps-_id_-inapppurchasesv2.md) instead.
 
 ## URL
 
@@ -26,15 +26,15 @@ GET https://api.appstoreconnect.apple.com/v1/apps/{id}/inAppPurchases
 ## Query Parameters
 
 - `fields[apps]` — `[string]`: Additional fields to include for each app resource returned by the response.
-  **Allowed values:** `accessibilityUrl`, `name`, `bundleId`, `sku`, `primaryLocale`, `isOrEverWasMadeForKids`, `subscriptionStatusUrl`, `subscriptionStatusUrlVersion`, `subscriptionStatusUrlForSandbox`, `subscriptionStatusUrlVersionForSandbox`, `contentRightsDeclaration`, `streamlinedPurchasingEnabled`, `accessibilityDeclarations`, `appEncryptionDeclarations`, `appStoreIcon`, `ciProduct`, `betaTesters`, `betaGroups`, `appStoreVersions`, `appTags`, `preReleaseVersions`, `betaAppLocalizations`, `builds`, `betaLicenseAgreement`, `betaAppReviewDetail`, `appInfos`, `appClips`, `appPricePoints`, `endUserLicenseAgreement`, `appPriceSchedule`, `appAvailabilityV2`, `inAppPurchases`, `subscriptionGroups`, `gameCenterEnabledVersions`, `perfPowerMetrics`, `appCustomProductPages`, `inAppPurchasesV2`, `promotedPurchases`, `appEvents`, `reviewSubmissions`, `subscriptionGracePeriod`, `customerReviews`, `customerReviewSummarizations`, `gameCenterDetail`, `appStoreVersionExperimentsV2`, `alternativeDistributionKey`, `analyticsReportRequests`, `marketplaceSearchDetail`, `buildUploads`, `backgroundAssets`, `betaFeedbackScreenshotSubmissions`, `betaFeedbackCrashSubmissions`, `searchKeywords`, `webhooks`, `androidToIosAppMappingDetails`
-- `fields[inAppPurchases]` — `[string]`: Additional fields to include for each in-app purchase resource returned by the response.
+  **Allowed values:** `accessibilityUrl`, `name`, `bundleId`, `sku`, `primaryLocale`, `isOrEverWasMadeForKids`, `subscriptionStatusUrl`, `subscriptionStatusUrlVersion`, `subscriptionStatusUrlForSandbox`, `subscriptionStatusUrlVersionForSandbox`, `contentRightsDeclaration`, `streamlinedPurchasingEnabled`, `accessibilityDeclarations`, `appEncryptionDeclarations`, `appStoreIcon`, `ciProduct`, `betaTesters`, `betaGroups`, `appStoreVersions`, `appTags`, `preReleaseVersions`, `betaAppLocalizations`, `builds`, `betaLicenseAgreement`, `betaAppReviewDetail`, `appInfos`, `appClips`, `appPricePoints`, `endUserLicenseAgreement`, `appPriceSchedule`, `appAvailabilityV2`, `inAppPurchases`, `subscriptionGroups`, `gameCenterEnabledVersions`, `performanceOverviews`, `perfPowerMetrics`, `appCustomProductPages`, `inAppPurchasesV2`, `promotedPurchases`, `appEvents`, `reviewSubmissions`, `subscriptionGracePeriod`, `customerReviews`, `customerReviewSummarizations`, `gameCenterDetail`, `appStoreVersionExperimentsV2`, `alternativeDistributionKey`, `analyticsReportRequests`, `marketplaceSearchDetail`, `buildUploads`, `backgroundAssets`, `betaFeedbackScreenshotSubmissions`, `betaFeedbackCrashSubmissions`, `searchKeywords`, `webhooks`, `androidToIosAppMappingDetails`
+- `fields[inAppPurchases]` — `[string]`: Additional fields to include for each In-App Purchase resource returned by the response.
   **Allowed values:** `referenceName`, `productId`, `inAppPurchaseType`, `state`, `apps`
-- `filter[canBeSubmitted]` — `[string]`: Filter the returned in-app purchases by whether they can be submitted.
-- `filter[inAppPurchaseType]` — `[string]`: Filter the returned in-app purchases by in-app purchase type.
+- `filter[canBeSubmitted]` — `[string]`: Filter the returned In-App Purchases by whether they can be submitted.
+- `filter[inAppPurchaseType]` — `[string]`: Filter the returned In-App Purchases by In-App Purchase type.
   **Allowed values:** `AUTOMATICALLY_RENEWABLE_SUBSCRIPTION`, `NON_CONSUMABLE`, `CONSUMABLE`, `NON_RENEWING_SUBSCRIPTION`, `FREE_SUBSCRIPTION`
 - `include` — `[string]`: The relationship data to include in the response.
   **Allowed values:** `apps`
-- `limit` — `integer`: The maximum number of in-app purchase resources to return.
+- `limit` — `integer`: The maximum number of In-App Purchase resources to return.
   **Maximum:** `200`
 - `sort` — `[string]`: Attributes by which to sort.
   **Allowed values:** `referenceName`, `-referenceName`, `productId`, `-productId`, `inAppPurchaseType`, `-inAppPurchaseType`
@@ -103,7 +103,7 @@ https://api.appstoreconnect.apple.com/v1/apps/6446998023/inAppPurchases
 
 ## See Also
 
-### Getting in-app purchase information
+### Getting In-App Purchase information
 
-- [Read in-app purchase information](get-v1-inapppurchases-_id_.md): Deprecated. Get information about an in-app purchase.
-- [List all promoted purchases for an app](get-v1-apps-_id_-promotedpurchases.md): Get a list of promoted in-app purchases, including promoted auto-renewable subscriptions, for an app.
+- [Read In-App Purchase information](get-v1-inapppurchases-_id_.md): Deprecated. Get information about an In-App Purchase.
+- [List all promoted purchases for an app](get-v1-apps-_id_-promotedpurchases.md): Get a list of promoted In-App Purchases, including promoted auto-renewable subscriptions, for an app.

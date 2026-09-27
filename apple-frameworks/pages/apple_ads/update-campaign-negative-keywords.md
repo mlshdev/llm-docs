@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/update-campaign-negative-keywords
 
 # Update Campaign Negative Keywords
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Web Service Endpoint  
-**Availability:** Search Ads 5.0+
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 Updates negative keywords in a campaign.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## URL
 
@@ -107,8 +109,8 @@ PUT https://api.searchads.apple.com/api/v5/campaigns/{campaignId}/negativekeywor
 
 ### Campaign Negative Keywords Endpoints
 
-- [Create Campaign Negative Keywords](create-campaign-negative-keywords.md): Creates negative keywords for a campaign.
-- [Find Campaign Negative Keywords](find-campaign-negative-keywords.md): Fetches negative keywords for campaigns.
-- [Get a Campaign Negative Keyword](get-a-campaign-negative-keyword.md): Fetches a specific negative keyword in a campaign.
-- [Get All Campaign Negative Keywords](get-all-campaign-negative-keywords.md): Fetches all negative keywords in a campaign.
-- [Delete Campaign Negative Keywords](delete-campaign-negative-keywords.md): Deletes negative keywords from a campaign.
+- [Create Campaign Negative Keywords](create-campaign-negative-keywords.md): Deprecated. Creates negative keywords for a campaign.
+- [Find Campaign Negative Keywords](find-campaign-negative-keywords.md): Deprecated. Fetches negative keywords for campaigns.
+- [Get a Campaign Negative Keyword](get-a-campaign-negative-keyword.md): Deprecated. Fetches a specific negative keyword in a campaign.
+- [Get All Campaign Negative Keywords](get-all-campaign-negative-keywords.md): Deprecated. Fetches all negative keywords in a campaign.
+- [Delete Campaign Negative Keywords](delete-campaign-negative-keywords.md): Deprecated. Deletes negative keywords from a campaign.

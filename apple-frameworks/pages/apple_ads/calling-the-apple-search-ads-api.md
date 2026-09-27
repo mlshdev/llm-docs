@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/calling-the-apple-search-ads-api
 
 # Calling the Apple Ads API
@@ -13,6 +13,10 @@ Pass your access token in the authorization header of HTTP requests.
 <a id="overview"></a>
 
 ## Overview
+
+> **Deprecated**
+
+> The Apple Ads Campaign Management API is deprecated and will be sunset on January 26, 2027. Use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api) instead.
 
 Before you can call the API, you need to perform the implementation steps in [Implementing OAuth for the Apple Ads API](implementing-oauth-for-the-apple-search-ads-api.md).
 
@@ -57,20 +61,20 @@ Set a maximum exponential backoff time, such as 16 seconds. After reaching the m
 
 ### Access Control List
 
-- [Get User ACL](get-user-acl.md): Fetches roles and organizations that the API has access to.
-- [UserAcl](useracl.md): The response to ACL requests.
-- [UserAclListResponse](useracllistresponse.md): A container for ACL call responses.
-- [Get Me Details](get-me-details.md): Fetches details of an API caller.
-- [MeDetail](medetail.md): The API caller identifiers.
-- [MeDetailResponse](medetailresponse.md): The response from me detail calls.
+- [Get User ACL](get-user-acl.md): Deprecated. Fetches roles and organizations that the API has access to.
+- [UserAcl](useracl.md): Deprecated. The response to ACL requests.
+- [UserAclListResponse](useracllistresponse.md): Deprecated. A container for ACL call responses.
+- [Get Me Details](get-me-details.md): Deprecated. Fetches details of an API caller.
+- [MeDetail](medetail.md): Deprecated. The API caller identifiers.
+- [MeDetailResponse](medetailresponse.md): Deprecated. The response from me detail calls.
 
 ### Error Responses
 
-- [ApiErrorResponse](apierrorresponse.md): A parent object of the error response body.
-- [ErrorResponseBody](errorresponsebody.md): A parent object of the error response.
-- [ErrorResponseItem](errorresponseitem.md): The error response details in the response body.
-- [IntegerResponse](integerresponse.md): A common integer type response.
-- [VoidResponse](voidresponse.md): A default generic null response.
+- [ApiErrorResponse](apierrorresponse.md): Deprecated. A parent object of the error response body.
+- [ErrorResponseBody](errorresponsebody.md): Deprecated. A parent object of the error response.
+- [ErrorResponseItem](errorresponseitem.md): Deprecated. The error response details in the response body.
+- [IntegerResponse](integerresponse.md): Deprecated. A common integer type response.
+- [VoidResponse](voidresponse.md): Deprecated. A default generic null response.
 
 ## See Also
 

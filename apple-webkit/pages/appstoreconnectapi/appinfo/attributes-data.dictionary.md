@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appinfo/attributes-data.dictionary
 
 # AppInfo.Attributes
@@ -26,7 +26,6 @@ object AppInfo.Attributes
 - `brazilAgeRatingV2` — `string`: The app’s age rating as it appears on the App Store in Brazil for all platforms.
   **Allowed values:** `SELF_RATED_L`, `SELF_RATED_TEN`, `SELF_RATED_TWELVE`, `SELF_RATED_FOURTEEN`, `SELF_RATED_SIXTEEN`, `SELF_RATED_EIGHTEEN`, `OFFICIAL_L`, `OFFICIAL_TEN`, `OFFICIAL_TWELVE`, `OFFICIAL_FOURTEEN`, `OFFICIAL_SIXTEEN`, `OFFICIAL_EIGHTEEN`
 - `franceAgeRating` — `string`: **Allowed values:** `EIGHTEEN`
-- `kidsAgeBand` — `KidsAgeBand`: This attribute is deprecated. Use ‘ageRatingDeclarations#kidsAgeBand’ instead.
 - `koreaAgeRating` — `string`: **Allowed values:** `ALL`, `TWELVE`, `FIFTEEN`, `NINETEEN`, `NOT_APPLICABLE`
 - `state` — `string`: **Allowed values:** `ACCEPTED`, `DEVELOPER_REJECTED`, `IN_REVIEW`, `PENDING_RELEASE`, `PREPARE_FOR_SUBMISSION`, `READY_FOR_DISTRIBUTION`, `READY_FOR_REVIEW`, `REJECTED`, `REPLACED_WITH_NEW_INFO`, `WAITING_FOR_REVIEW`
 

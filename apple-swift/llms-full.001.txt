@@ -1,9 +1,9 @@
-# Apple Swift snapshot-5915b24a1311: full documentation
+# Apple Swift snapshot-3cd4d1098779: full documentation
 
 Source: https://developer.apple.com/documentation/swift
-Catalog snapshot: 5915b24a13116058563ec2085adb7610a331e7e4aea596f8d2f1f1b39a6e0f1c
-Content digest: 8b137be1ef278f1d522a4d88c557c8c07b458d20c03cd9e5596b61253f263486
-Captured at: 2026-09-16T18:21:42.073Z
+Catalog snapshot: 3cd4d1098779f6b6fc16e524bcbb296cd3ca44b5de1a8f9d83171d61b7b63adb
+Content digest: cb3ffbf838cd5f0be6ae77f16fdae59481730abbd878246936617c12df1785d3
+Captured at: 2026-09-27T18:07:09.584Z
 Volume 1
 
 # Document: Distributed
@@ -33096,10 +33096,6 @@ Swift is developed in the open. To learn more about the open source Swift projec
 - [Mixing Languages in an Xcode project](swift/mixinglanguagesinanxcodeproject.md): Use C++ APIs in Swift – and Swift APIs in C++ – in a single framework target, and consume the framework’s APIs in a separate app target.
 - [Calling APIs Across Language Boundaries](swift/callingapisacrosslanguageboundaries.md): Use a variety of C++ APIs in Swift – and vice-versa – across multiple targets and frameworks in an Xcode project.
 
-### Protocols
-
-- [Iterable](swift/iterable.md): A type that provides sequential, borrowing access to its elements.
-
 # Document: !=(_:_:)
 
 Source path: documentation/swift/!=(_:_:)-18co7
@@ -36564,8 +36560,6 @@ While both local and distributed actors are conceptually “actors”, there are
 - [UnsafeConcurrentValue](unsafeconcurrentvalue.md): Deprecated.
 - [UnsafeSendable](unsafesendable.md): Deprecated. A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
 - [UnsafeThrowingContinuation](unsafethrowingcontinuation.md): Deprecated.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 - [withUnsafeThrowingContinuation(isolation:\_:)](withunsafethrowingcontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md).
 
 # Document: AnyBidirectionalCollection
@@ -115343,9 +115337,9 @@ Description: Framework: Swift Kind: Structure Availability: iOS 27.0+ · iPadOS 
 
 ## See Also
 
-### Manual Iteration
+### Borrowing Iteration
 
-- [IteratorProtocol](iteratorprotocol.md): A type that supplies the values of a sequence one at a time.
+- [Iterable](iterable.md): A type that provides sequential, borrowing access to its elements.
 - [BorrowingIteratorProtocol](borrowingiteratorprotocol.md): A type that provides borrowed access to the values of a borrowing sequence.
 
 # Document: BorrowingIteratorProtocol Implementations
@@ -115551,9 +115545,9 @@ protocol BorrowingIteratorProtocol<Element, Failure> : ~Copyable, ~Escapable
 
 ## See Also
 
-### Manual Iteration
+### Borrowing Iteration
 
-- [IteratorProtocol](iteratorprotocol.md): A type that supplies the values of a sequence one at a time.
+- [Iterable](iterable.md): A type that provides sequential, borrowing access to its elements.
 - [BorrowingIteratorAdapter](borrowingiteratoradapter.md)
 
 # Document: Element
@@ -119132,6 +119126,8 @@ Resuming from a continuation more than once is undefined behavior. Never resumin
 - [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-2k46m.md): Invokes the passed in closure with a checked continuation for the current task.
 - [UnsafeContinuation](unsafecontinuation.md): A mechanism to interface between synchronous and asynchronous code, without correctness checking.
 - [withUnsafeContinuation(\_:)](withunsafecontinuation%28__%29.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 
 # Document: init(_:function:)
 
@@ -123236,6 +123232,7 @@ The performance of some collection operations depends on the type of index that 
 
 ### First Steps
 
+- [IteratorProtocol](iteratorprotocol.md): A type that supplies the values of a sequence one at a time.
 - [Sequence](sequence.md): A type that provides sequential, iterated access to its elements.
 
 # Document: contains(_:)
@@ -137549,6 +137546,8 @@ Perform asynchronous and parallel operations.
 - [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-2k46m.md): Invokes the passed in closure with a checked continuation for the current task.
 - [UnsafeContinuation](unsafecontinuation.md): A mechanism to interface between synchronous and asynchronous code, without correctness checking.
 - [withUnsafeContinuation(\_:)](withunsafecontinuation%28__%29.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 
 ### Actors
 
@@ -137590,8 +137589,6 @@ Perform asynchronous and parallel operations.
 - [UnsafeConcurrentValue](unsafeconcurrentvalue.md): Deprecated.
 - [UnsafeSendable](unsafesendable.md): Deprecated. A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
 - [UnsafeThrowingContinuation](unsafethrowingcontinuation.md): Deprecated.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 - [withUnsafeThrowingContinuation(isolation:\_:)](withunsafethrowingcontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md).
 
 ## See Also
@@ -137639,8 +137636,6 @@ typealias ConcurrentValue = Sendable
 - [UnsafeConcurrentValue](unsafeconcurrentvalue.md): Deprecated.
 - [UnsafeSendable](unsafesendable.md): Deprecated. A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
 - [UnsafeThrowingContinuation](unsafethrowingcontinuation.md): Deprecated.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
-- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 - [withUnsafeThrowingContinuation(isolation:\_:)](withunsafethrowingcontinuation%28isolation___%29.md): Deprecated. Source-compatibility overload; replaced by [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md).
 
 # Document: ContiguousArray
@@ -145328,6 +145323,8 @@ To resume the task, suspended on a continuation, call [resume(returning:)](conti
 - [withCheckedThrowingContinuation(function:\_:)](withcheckedthrowingcontinuation%28function___%29-2k46m.md): Invokes the passed in closure with a checked continuation for the current task.
 - [UnsafeContinuation](unsafecontinuation.md): A mechanism to interface between synchronous and asynchronous code, without correctness checking.
 - [withUnsafeContinuation(\_:)](withunsafecontinuation%28__%29.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-32nwt.md): Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(\_:)](withunsafethrowingcontinuation%28__%29-7zhvy.md)
 
 # Document: resume()
 

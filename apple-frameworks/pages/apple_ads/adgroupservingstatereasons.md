@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/adgroupservingstatereasons
 
 # AdGroupServingStateReasons
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Type  
-**Availability:** Search Ads 4.0+
+**Availability:** Search Ads 4.0+ (deprecated in 5.2)
 
 A list of reasons that displays when an ad group isn’t running.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -36,9 +38,9 @@ string AdGroupServingStateReasons
 
 ### Data Types
 
-- [AdGroupDisplayStatus](adgroupdisplaystatus.md): The status of the ad group.
-- [AdGroupServingStatus](adgroupservingstatus.md): The status of whether the ad group is serving.
-- [AdGroupStatus](adgroupstatus.md): The status of whether the ad group is enabled or not.
-- [DeviceClass](deviceclass.md): The defined targeted audience to include by device type.
-- [Gender](gender.md): The defined targeted audience in a campaign.
-- [PricingModel](pricingmodel.md): The type of pricing model for a bid.
+- [AdGroupDisplayStatus](adgroupdisplaystatus.md): Deprecated. The status of the ad group.
+- [AdGroupServingStatus](adgroupservingstatus.md): Deprecated. The status of whether the ad group is serving.
+- [AdGroupStatus](adgroupstatus.md): Deprecated. The status of whether the ad group is enabled or not.
+- [DeviceClass](deviceclass.md): Deprecated. The defined targeted audience to include by device type.
+- [Gender](gender.md): Deprecated. The defined targeted audience in a campaign.
+- [PricingModel](pricingmodel.md): Deprecated. The type of pricing model for a bid.

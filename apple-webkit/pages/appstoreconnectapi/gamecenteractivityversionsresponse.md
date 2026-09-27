@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/gamecenteractivityversionsresponse
 
 # GameCenterActivityVersionsResponse
@@ -31,8 +31,8 @@ object GameCenterActivityVersionsResponse
 - [GameCenterActivityVersion](gamecenteractivityversion.md): A versioned configuration of a Game Center activity, containing its localizations and release status.
 - [GameCenterActivityVersionCreateRequest](gamecenteractivityversioncreaterequest.md): The request body for creating a version of a Game Center activity.
 - [GameCenterActivityVersionResponse](gamecenteractivityversionresponse.md): A response containing a single version of a Game Center activity.
-- [GameCenterActivityVersionUpdateRequest](gamecenteractivityversionupdaterequest.md): The request body you use to update an activity version version.
+- [GameCenterActivityVersionUpdateRequest](gamecenteractivityversionupdaterequest.md): The request body you use to update an activity version.
 - [GameCenterActivityVersionDefaultImageLinkageResponse](gamecenteractivityversiondefaultimagelinkageresponse.md)
 - [GameCenterActivityVersionLocalizationsLinkagesResponse](gamecenteractivityversionlocalizationslinkagesresponse.md)
-- [GameCenterActivityVersionUpdateRequest](gamecenteractivityversionupdaterequest.md): The request body you use to update an activity version version.
+- [GameCenterActivityVersionUpdateRequest](gamecenteractivityversionupdaterequest.md): The request body you use to update an activity version.
 - [GameCenterActivityVersionsLinkagesResponse](gamecenteractivityversionslinkagesresponse.md): A response containing the resource identifiers of versions for a Game Center activity.

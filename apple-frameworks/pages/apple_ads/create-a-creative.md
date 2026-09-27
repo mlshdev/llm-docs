@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/create-a-creative
 
 # Create a Creative
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Web Service Endpoint  
-**Availability:** Search Ads 5.0+
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 Creates a creative object within an organization.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## URL
 
@@ -84,6 +86,6 @@ POST https://api.searchads.apple.com/api/v5/creatives
 
 ### Creative Endpoints
 
-- [Find Creatives](find-creatives.md): Finds creatives within an organization.
-- [Get a Creative](get-a-creative.md): Fetches a creative by identifier.
-- [Get All Creatives](get-all-creatives.md): Fetches all creatives within an organization.
+- [Find Creatives](find-creatives.md): Deprecated. Finds creatives within an organization.
+- [Get a Creative](get-a-creative.md): Deprecated. Fetches a creative by identifier.
+- [Get All Creatives](get-all-creatives.md): Deprecated. Fetches all creatives within an organization.

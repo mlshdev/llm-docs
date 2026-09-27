@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/apple-search-ads-campaign-management-api-5
 
 # Apple Ads Campaign Management API 5
@@ -14,9 +14,9 @@ Learn about changes to Apple Ads Campaign Management API 5.
 
 ## Overview
 
-> **Important**
+> **Deprecated**
 
-> The [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api) supersedes the Apple Ads Campaign Management API, which will be sunset on January 26, 2027.
+> The Apple Ads Campaign Management API is deprecated and will be sunset on January 26, 2027. Use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api) instead.
 
 <a id="56"></a>
 

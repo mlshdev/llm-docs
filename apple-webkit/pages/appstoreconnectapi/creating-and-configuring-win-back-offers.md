@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/creating-and-configuring-win-back-offers
 
 # Creating and configuring win-back offers
@@ -39,7 +39,7 @@ Your app and subscriptions need to be approved before you can create a win-back 
 
 > **Note**
 
->  The `familySharable` field is editable only for auto-renewable subscriptions and non-consumable in-app purchases before the subscription or in-app purchase is approved by App Review.
+>  The `familySharable` field is editable only for auto-renewable subscriptions and non-consumable In-App Purchases before the subscription or In-App Purchase is approved by App Review.
 
 <a id="Plan-your-win-back-offer"></a>
 

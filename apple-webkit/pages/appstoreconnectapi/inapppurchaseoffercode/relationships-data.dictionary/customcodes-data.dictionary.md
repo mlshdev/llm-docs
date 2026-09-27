@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseoffercode/relationships-data.dictionary/customcodes-data.dictionary
 
 # InAppPurchaseOfferCode.Relationships.CustomCodes
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 4.2+
 
-The data and links that describe the custom codes of the in-app purchase offer code.
+The data and links that describe the custom codes of the In-App Purchase offer code.
 
 ## Declaration
 
@@ -33,5 +33,5 @@ object InAppPurchaseOfferCode.Relationships.CustomCodes
 
 ### Dictionaries
 
-- [InAppPurchaseOfferCode.Relationships.OneTimeUseCodes](onetimeusecodes-data.dictionary.md): The data and links that describe the one-time use codes of the in-app purchase offer code.
-- [InAppPurchaseOfferCode.Relationships.Prices](prices-data.dictionary.md): The data and links that describe the prices of the in-app purchase offer code.
+- [InAppPurchaseOfferCode.Relationships.OneTimeUseCodes](onetimeusecodes-data.dictionary.md): The data and links that describe the one-time use codes of the In-App Purchase offer code.
+- [InAppPurchaseOfferCode.Relationships.Prices](prices-data.dictionary.md): The data and links that describe the prices of the In-App Purchase offer code.

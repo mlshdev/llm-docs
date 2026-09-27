@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/macos-release-notes
 
 # macOS Release Notes
@@ -23,7 +23,7 @@ When writing your report, please include the full version number in the title an
 
 ### macOS 27
 
-- [macOS 27.2 Golden Gate Beta Release Notes](macos-release-notes/macos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [macOS 27.2 Golden Gate Beta 2 Release Notes](macos-release-notes/macos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [macOS 27 Golden Gate Release Notes](macos-release-notes/macos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### macOS 26

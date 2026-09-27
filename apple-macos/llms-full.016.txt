@@ -1,9 +1,9 @@
-# Apple macOS snapshot-dddbaaa5d689: full documentation
+# Apple macOS snapshot-0513df389cc7: full documentation
 
 Source: https://developer.apple.com/macos/
-Catalog snapshot: dddbaaa5d68938b78e25cd7258d52d42bee99da54bada6dfdcdac6d27ed6d784
-Content digest: b46afb0276671af8bc9a785353506dd6e354ab37bfecc3472e56a0b846339d6c
-Captured at: 2026-09-19T05:14:28.772Z
+Catalog snapshot: 0513df389cc7d03925548349e7911a6ebef119a2d6175e34677a7c70890bc66d
+Content digest: ec427c6239650887b82e5cacb977fcdddd983ad9801ba5ba438444988e4f778c
+Captured at: 2026-09-27T18:07:09.722Z
 Volume 16
 
 # Document: StandardUSB::kDeviceCapabilityTypeUSB20Extension
@@ -152679,7 +152679,7 @@ When writing your report, please include the full version number in the title an
 
 ### macOS 27
 
-- [macOS 27.2 Golden Gate Beta Release Notes](macos-release-notes/macos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [macOS 27.2 Golden Gate Beta 2 Release Notes](macos-release-notes/macos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [macOS 27 Golden Gate Release Notes](macos-release-notes/macos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### macOS 26
@@ -161469,15 +161469,15 @@ The macOS 27 SDK provides support to develop apps for Mac computers running macO
 
 ### macOS 27
 
-- [macOS 27.2 Golden Gate Beta Release Notes](macos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [macOS 27.2 Golden Gate Beta 2 Release Notes](macos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
-# Document: macOS 27.2 Golden Gate Beta Release Notes
+# Document: macOS 27.2 Golden Gate Beta 2 Release Notes
 
 Source path: documentation/macos-release-notes/macos-27_2-release-notes
 Canonical documentation: https://developer.apple.com/documentation/macos-release-notes/macos-27_2-release-notes
 Description: Kind: Article
 
-# macOS 27.2 Golden Gate Beta Release Notes
+# macOS 27.2 Golden Gate Beta 2 Release Notes
 
 **Kind:** Article
 
@@ -161487,20 +161487,27 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 27.2 SDK provides support to develop apps for Mac computers running macOS 27.2 Golden Gate beta. The SDK comes bundled with Xcode 27.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
+The macOS 27.2 SDK provides support to develop apps for Mac computers running macOS 27.2 Golden Gate beta 2. The SDK comes bundled with Xcode 27.2. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
 
 <a id="General"></a>
 
 ### General
 
-<a id="Known-Issues"></a>
+<a id="Resolved-Issues"></a>
 
-#### Known Issues
+#### Resolved Issues
 
-- Xcode might crash when using code completion on macOS 27.2 beta. (186939138)
+- Fixed: Xcode might crash when using code completion on macOS 27.2 beta. (186939138)
 
-  **Workaround:** Turn off enhanced code completion ranking with the following preference:
-  `defaults write com.apple.dt.Xcode CodeCompletionAssetsToLoad /dev/null`
+<a id="AppKit"></a>
+
+### AppKit
+
+<a id="Deprecations"></a>
+
+#### Deprecations
+
+- The `EnablePasteboardPrivacyDeveloperPreview` user default has been removed. (186955507)
 
 <a id="Notifications"></a>
 

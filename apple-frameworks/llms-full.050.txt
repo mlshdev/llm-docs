@@ -1,10 +1,1278 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 50
+
+# Document: NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension
+
+Source path: documentation/network/nwprotocolwebsocket/closecode/defined/mandatoryextension
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/mandatoryextension
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
+
+## Declaration
+
+```swift
+case mandatoryExtension
+```
+
+## See Also
+
+### Defined Close Codes
+
+- [NWProtocolWebSocket.CloseCode.Defined.normalClosure](normalclosure.md): A normal closure occurred with no errors.
+- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
+- [NWProtocolWebSocket.CloseCode.Defined.protocolError](protocolerror.md): An endpoint is terminating the connection due to a protocol error.
+- [NWProtocolWebSocket.CloseCode.Defined.unsupportedData](unsupporteddata.md): An endpoint is terminating the connection because it received a type of data it cannot accept.
+- [NWProtocolWebSocket.CloseCode.Defined.noStatusReceived](nostatusreceived.md): This value is reserved for local errors and indicates that no Close code was received.
+- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
+- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
+- [NWProtocolWebSocket.CloseCode.Defined.policyViolation](policyviolation.md): An endpoint is terminating the connection because it received a message that violates its policy.
+- [NWProtocolWebSocket.CloseCode.Defined.messageTooBig](messagetoobig.md): An endpoint is terminating the connection because it received a message that is too big for it to process.
+- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
+- [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
+
+# Document: NWProtocolWebSocket.CloseCode.Defined.messageTooBig
+
+Source path: documentation/network/nwprotocolwebsocket/closecode/defined/messagetoobig
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/messagetoobig
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.CloseCode.Defined.messageTooBig
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+An endpoint is terminating the connection because it received a message that is too big for it to process.
+
+## Declaration
+
+```swift
+case messageTooBig
+```
+
+## See Also
+
+### Defined Close Codes
+
+- [NWProtocolWebSocket.CloseCode.Defined.normalClosure](normalclosure.md): A normal closure occurred with no errors.
+- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
+- [NWProtocolWebSocket.CloseCode.Defined.protocolError](protocolerror.md): An endpoint is terminating the connection due to a protocol error.
+- [NWProtocolWebSocket.CloseCode.Defined.unsupportedData](unsupporteddata.md): An endpoint is terminating the connection because it received a type of data it cannot accept.
+- [NWProtocolWebSocket.CloseCode.Defined.noStatusReceived](nostatusreceived.md): This value is reserved for local errors and indicates that no Close code was received.
+- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
+- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
+- [NWProtocolWebSocket.CloseCode.Defined.policyViolation](policyviolation.md): An endpoint is terminating the connection because it received a message that violates its policy.
+- [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
+- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
+- [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
+
+# Document: NWProtocolWebSocket.CloseCode.Defined.normalClosure
+
+Source path: documentation/network/nwprotocolwebsocket/closecode/defined/normalclosure
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/normalclosure
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.CloseCode.Defined.normalClosure
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A normal closure occurred with no errors.
+
+## Declaration
+
+```swift
+case normalClosure
+```
+
+## See Also
+
+### Defined Close Codes
+
+- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
+- [NWProtocolWebSocket.CloseCode.Defined.protocolError](protocolerror.md): An endpoint is terminating the connection due to a protocol error.
+- [NWProtocolWebSocket.CloseCode.Defined.unsupportedData](unsupporteddata.md): An endpoint is terminating the connection because it received a type of data it cannot accept.
+- [NWProtocolWebSocket.CloseCode.Defined.noStatusReceived](nostatusreceived.md): This value is reserved for local errors and indicates that no Close code was received.
+- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
+- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
+- [NWProtocolWebSocket.CloseCode.Defined.policyViolation](policyviolation.md): An endpoint is terminating the connection because it received a message that violates its policy.
+- [NWProtocolWebSocket.CloseCode.Defined.messageTooBig](messagetoobig.md): An endpoint is terminating the connection because it received a message that is too big for it to process.
+- [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
+- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
+- [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
+
+# Document: NWProtocolWebSocket.CloseCode.Defined.noStatusReceived
+
+Source path: documentation/network/nwprotocolwebsocket/closecode/defined/nostatusreceived
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/nostatusreceived
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.CloseCode.Defined.noStatusReceived
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+This value is reserved for local errors and indicates that no Close code was received.
+
+## Declaration
+
+```swift
+case noStatusReceived
+```
+
+## See Also
+
+### Defined Close Codes
+
+- [NWProtocolWebSocket.CloseCode.Defined.normalClosure](normalclosure.md): A normal closure occurred with no errors.
+- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
+- [NWProtocolWebSocket.CloseCode.Defined.protocolError](protocolerror.md): An endpoint is terminating the connection due to a protocol error.
+- [NWProtocolWebSocket.CloseCode.Defined.unsupportedData](unsupporteddata.md): An endpoint is terminating the connection because it received a type of data it cannot accept.
+- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
+- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
+- [NWProtocolWebSocket.CloseCode.Defined.policyViolation](policyviolation.md): An endpoint is terminating the connection because it received a message that violates its policy.
+- [NWProtocolWebSocket.CloseCode.Defined.messageTooBig](messagetoobig.md): An endpoint is terminating the connection because it received a message that is too big for it to process.
+- [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
+- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
+- [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
+
+# Document: NWProtocolWebSocket.CloseCode.Defined.policyViolation
+
+Source path: documentation/network/nwprotocolwebsocket/closecode/defined/policyviolation
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/policyviolation
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.CloseCode.Defined.policyViolation
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+An endpoint is terminating the connection because it received a message that violates its policy.
+
+## Declaration
+
+```swift
+case policyViolation
+```
+
+## See Also
+
+### Defined Close Codes
+
+- [NWProtocolWebSocket.CloseCode.Defined.normalClosure](normalclosure.md): A normal closure occurred with no errors.
+- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
+- [NWProtocolWebSocket.CloseCode.Defined.protocolError](protocolerror.md): An endpoint is terminating the connection due to a protocol error.
+- [NWProtocolWebSocket.CloseCode.Defined.unsupportedData](unsupporteddata.md): An endpoint is terminating the connection because it received a type of data it cannot accept.
+- [NWProtocolWebSocket.CloseCode.Defined.noStatusReceived](nostatusreceived.md): This value is reserved for local errors and indicates that no Close code was received.
+- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
+- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
+- [NWProtocolWebSocket.CloseCode.Defined.messageTooBig](messagetoobig.md): An endpoint is terminating the connection because it received a message that is too big for it to process.
+- [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
+- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
+- [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
+
+# Document: NWProtocolWebSocket.CloseCode.Defined.protocolError
+
+Source path: documentation/network/nwprotocolwebsocket/closecode/defined/protocolerror
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/protocolerror
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.CloseCode.Defined.protocolError
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+An endpoint is terminating the connection due to a protocol error.
+
+## Declaration
+
+```swift
+case protocolError
+```
+
+## See Also
+
+### Defined Close Codes
+
+- [NWProtocolWebSocket.CloseCode.Defined.normalClosure](normalclosure.md): A normal closure occurred with no errors.
+- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
+- [NWProtocolWebSocket.CloseCode.Defined.unsupportedData](unsupporteddata.md): An endpoint is terminating the connection because it received a type of data it cannot accept.
+- [NWProtocolWebSocket.CloseCode.Defined.noStatusReceived](nostatusreceived.md): This value is reserved for local errors and indicates that no Close code was received.
+- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
+- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
+- [NWProtocolWebSocket.CloseCode.Defined.policyViolation](policyviolation.md): An endpoint is terminating the connection because it received a message that violates its policy.
+- [NWProtocolWebSocket.CloseCode.Defined.messageTooBig](messagetoobig.md): An endpoint is terminating the connection because it received a message that is too big for it to process.
+- [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
+- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
+- [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
+
+# Document: NWProtocolWebSocket.CloseCode.Defined.tlsHandshake
+
+Source path: documentation/network/nwprotocolwebsocket/closecode/defined/tlshandshake
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/tlshandshake
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.CloseCode.Defined.tlsHandshake
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+This value is reserved for local errors and indicates that the TLS handshake failed.
+
+## Declaration
+
+```swift
+case tlsHandshake
+```
+
+## See Also
+
+### Defined Close Codes
+
+- [NWProtocolWebSocket.CloseCode.Defined.normalClosure](normalclosure.md): A normal closure occurred with no errors.
+- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
+- [NWProtocolWebSocket.CloseCode.Defined.protocolError](protocolerror.md): An endpoint is terminating the connection due to a protocol error.
+- [NWProtocolWebSocket.CloseCode.Defined.unsupportedData](unsupporteddata.md): An endpoint is terminating the connection because it received a type of data it cannot accept.
+- [NWProtocolWebSocket.CloseCode.Defined.noStatusReceived](nostatusreceived.md): This value is reserved for local errors and indicates that no Close code was received.
+- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
+- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
+- [NWProtocolWebSocket.CloseCode.Defined.policyViolation](policyviolation.md): An endpoint is terminating the connection because it received a message that violates its policy.
+- [NWProtocolWebSocket.CloseCode.Defined.messageTooBig](messagetoobig.md): An endpoint is terminating the connection because it received a message that is too big for it to process.
+- [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
+- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
+
+# Document: NWProtocolWebSocket.CloseCode.Defined.unsupportedData
+
+Source path: documentation/network/nwprotocolwebsocket/closecode/defined/unsupporteddata
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/defined/unsupporteddata
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.CloseCode.Defined.unsupportedData
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+An endpoint is terminating the connection because it received a type of data it cannot accept.
+
+## Declaration
+
+```swift
+case unsupportedData
+```
+
+## See Also
+
+### Defined Close Codes
+
+- [NWProtocolWebSocket.CloseCode.Defined.normalClosure](normalclosure.md): A normal closure occurred with no errors.
+- [NWProtocolWebSocket.CloseCode.Defined.goingAway](goingaway.md): An endpoint is no longer available, such as when a server is down.
+- [NWProtocolWebSocket.CloseCode.Defined.protocolError](protocolerror.md): An endpoint is terminating the connection due to a protocol error.
+- [NWProtocolWebSocket.CloseCode.Defined.noStatusReceived](nostatusreceived.md): This value is reserved for local errors and indicates that no Close code was received.
+- [NWProtocolWebSocket.CloseCode.Defined.abnormalClosure](abnormalclosure.md): This value is reserved for local errors and indicates that no Close message was received.
+- [NWProtocolWebSocket.CloseCode.Defined.invalidFramePayloadData](invalidframepayloaddata.md): An endpoint is terminating the connection because it received data within a message that was inconsistent with the message type.
+- [NWProtocolWebSocket.CloseCode.Defined.policyViolation](policyviolation.md): An endpoint is terminating the connection because it received a message that violates its policy.
+- [NWProtocolWebSocket.CloseCode.Defined.messageTooBig](messagetoobig.md): An endpoint is terminating the connection because it received a message that is too big for it to process.
+- [NWProtocolWebSocket.CloseCode.Defined.mandatoryExtension](mandatoryextension.md): The WebSocket client expected the server to negotiate one or more extensions that were not negotiated.
+- [NWProtocolWebSocket.CloseCode.Defined.internalServerError](internalservererror.md): The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.
+- [NWProtocolWebSocket.CloseCode.Defined.tlsHandshake](tlshandshake.md): This value is reserved for local errors and indicates that the TLS handshake failed.
+
+# Document: init(rawValue:)
+
+Source path: documentation/network/nwprotocolwebsocket/closecode/init(rawvalue:)
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/init(rawvalue:)
+Description: Framework: Network Kind: Initializer Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# init(rawValue:)
+
+**Framework:** Network  
+**Kind:** Initializer  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Initializes a close code with a raw value.
+
+## Declaration
+
+```swift
+init(rawValue: UInt16) throws
+```
+
+## See Also
+
+### Close Code Types
+
+- [NWProtocolWebSocket.CloseCode.protocolCode(\_:)](protocolcode%28__%29.md): A well-known close code reserved by the protocol (values 1000-2999).
+- [NWProtocolWebSocket.CloseCode.Defined](defined.md): Well-known close code values.
+- [NWProtocolWebSocket.CloseCode.applicationCode(\_:)](applicationcode%28__%29.md): A close code in the range reserved for applications and frameworks (3000-3999).
+- [NWProtocolWebSocket.CloseCode.privateCode(\_:)](privatecode%28__%29.md): A close code in the private-use range (4000-4999).
+
+# Document: NWProtocolWebSocket.CloseCode.privateCode(_:)
+
+Source path: documentation/network/nwprotocolwebsocket/closecode/privatecode(_:)
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/privatecode(_:)
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.CloseCode.privateCode(\_:)
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A close code in the private-use range (4000-4999).
+
+## Declaration
+
+```swift
+case privateCode(UInt16)
+```
+
+## See Also
+
+### Close Code Types
+
+- [init(rawValue:)](init%28rawvalue_%29.md): Initializes a close code with a raw value.
+- [NWProtocolWebSocket.CloseCode.protocolCode(\_:)](protocolcode%28__%29.md): A well-known close code reserved by the protocol (values 1000-2999).
+- [NWProtocolWebSocket.CloseCode.Defined](defined.md): Well-known close code values.
+- [NWProtocolWebSocket.CloseCode.applicationCode(\_:)](applicationcode%28__%29.md): A close code in the range reserved for applications and frameworks (3000-3999).
+
+# Document: NWProtocolWebSocket.CloseCode.protocolCode(_:)
+
+Source path: documentation/network/nwprotocolwebsocket/closecode/protocolcode(_:)
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/closecode/protocolcode(_:)
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.CloseCode.protocolCode(\_:)
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A well-known close code reserved by the protocol (values 1000-2999).
+
+## Declaration
+
+```swift
+case protocolCode(NWProtocolWebSocket.CloseCode.Defined)
+```
+
+## See Also
+
+### Close Code Types
+
+- [init(rawValue:)](init%28rawvalue_%29.md): Initializes a close code with a raw value.
+- [NWProtocolWebSocket.CloseCode.Defined](defined.md): Well-known close code values.
+- [NWProtocolWebSocket.CloseCode.applicationCode(\_:)](applicationcode%28__%29.md): A close code in the range reserved for applications and frameworks (3000-3999).
+- [NWProtocolWebSocket.CloseCode.privateCode(\_:)](privatecode%28__%29.md): A close code in the private-use range (4000-4999).
+
+# Document: definition
+
+Source path: documentation/network/nwprotocolwebsocket/definition
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/definition
+Description: Framework: Network Kind: Type Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# definition
+
+**Framework:** Network  
+**Kind:** Type Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+The system definition of the WebSocket protocol.
+
+## Declaration
+
+```swift
+static let definition: NWProtocolDefinition
+```
+
+## See Also
+
+### Creating WebSocket Connections
+
+- [NWProtocolWebSocket.Options](options.md): A container of options for configuring how WebSocket is used on a connection.
+
+# Document: NWProtocolWebSocket.Metadata
+
+Source path: documentation/network/nwprotocolwebsocket/metadata
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/metadata
+Description: Framework: Network Kind: Class Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.Metadata
+
+**Framework:** Network  
+**Kind:** Class  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A WebSocket message you configure when sending and receiving packets.
+
+## Declaration
+
+```swift
+class Metadata
+```
+
+## Topics
+
+### Sending Messages
+
+- [init(opcode:)](metadata/init%28opcode_%29.md): Initializes a WebSocket message with a specific type code.
+- [NWProtocolWebSocket.Opcode](opcode.md): Types of messages that you send and receive on a WebSocket connection.
+- [setPongHandler(\_:handler:)](metadata/setponghandler%28__handler_%29.md): Sets a handler on a Ping message to be invoked when the corresponding Pong message is received.
+- [closeCode](metadata/closecode.md): The close code on a WebSocket message.
+- [NWProtocolWebSocket.CloseCode](closecode.md): Types of codes used upon closing a WebSocket connection.
+
+### Receiving Messages
+
+- [opcode](metadata/opcode.md): The type code of a WebSocket message.
+- [closeCode](metadata/closecode.md): The close code on a WebSocket message.
+- [NWProtocolWebSocket.CloseCode](closecode.md): Types of codes used upon closing a WebSocket connection.
+
+### Inspecting Handshake Results
+
+- [selectedSubprotocol](metadata/selectedsubprotocol.md): The subprotocol selected by the server during the WebSocket handshake.
+- [additionalServerHeaders](metadata/additionalserverheaders.md): Additional HTTP headers sent by the server during the WebSocket handshake.
+
+## Relationships
+
+### Inherits From
+
+- [NWProtocolMetadata](../nwprotocolmetadata.md)
+
+### Conforms To
+
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+# Document: additionalServerHeaders
+
+Source path: documentation/network/nwprotocolwebsocket/metadata/additionalserverheaders
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/metadata/additionalserverheaders
+Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# additionalServerHeaders
+
+**Framework:** Network  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Additional HTTP headers sent by the server during the WebSocket handshake.
+
+## Declaration
+
+```swift
+var additionalServerHeaders: [(String, String)]? { get }
+```
+
+## See Also
+
+### Inspecting Handshake Results
+
+- [selectedSubprotocol](selectedsubprotocol.md): The subprotocol selected by the server during the WebSocket handshake.
+
+# Document: closeCode
+
+Source path: documentation/network/nwprotocolwebsocket/metadata/closecode
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/metadata/closecode
+Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# closeCode
+
+**Framework:** Network  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+The close code on a WebSocket message.
+
+## Declaration
+
+```swift
+var closeCode: NWProtocolWebSocket.CloseCode { get set }
+```
+
+## See Also
+
+### Sending Messages
+
+- [init(opcode:)](init%28opcode_%29.md): Initializes a WebSocket message with a specific type code.
+- [NWProtocolWebSocket.Opcode](../opcode.md): Types of messages that you send and receive on a WebSocket connection.
+- [setPongHandler(\_:handler:)](setponghandler%28__handler_%29.md): Sets a handler on a Ping message to be invoked when the corresponding Pong message is received.
+- [NWProtocolWebSocket.CloseCode](../closecode.md): Types of codes used upon closing a WebSocket connection.
+
+# Document: init(opcode:)
+
+Source path: documentation/network/nwprotocolwebsocket/metadata/init(opcode:)
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/metadata/init(opcode:)
+Description: Framework: Network Kind: Initializer Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# init(opcode:)
+
+**Framework:** Network  
+**Kind:** Initializer  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Initializes a WebSocket message with a specific type code.
+
+## Declaration
+
+```swift
+init(opcode: NWProtocolWebSocket.Opcode)
+```
+
+## See Also
+
+### Sending Messages
+
+- [NWProtocolWebSocket.Opcode](../opcode.md): Types of messages that you send and receive on a WebSocket connection.
+- [setPongHandler(\_:handler:)](setponghandler%28__handler_%29.md): Sets a handler on a Ping message to be invoked when the corresponding Pong message is received.
+- [closeCode](closecode.md): The close code on a WebSocket message.
+- [NWProtocolWebSocket.CloseCode](../closecode.md): Types of codes used upon closing a WebSocket connection.
+
+# Document: opcode
+
+Source path: documentation/network/nwprotocolwebsocket/metadata/opcode
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/metadata/opcode
+Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# opcode
+
+**Framework:** Network  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+The type code of a WebSocket message.
+
+## Declaration
+
+```swift
+final let opcode: NWProtocolWebSocket.Opcode
+```
+
+## See Also
+
+### Receiving Messages
+
+- [closeCode](closecode.md): The close code on a WebSocket message.
+- [NWProtocolWebSocket.CloseCode](../closecode.md): Types of codes used upon closing a WebSocket connection.
+
+# Document: selectedSubprotocol
+
+Source path: documentation/network/nwprotocolwebsocket/metadata/selectedsubprotocol
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/metadata/selectedsubprotocol
+Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# selectedSubprotocol
+
+**Framework:** Network  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+The subprotocol selected by the server during the WebSocket handshake.
+
+## Declaration
+
+```swift
+var selectedSubprotocol: String? { get }
+```
+
+## See Also
+
+### Inspecting Handshake Results
+
+- [additionalServerHeaders](additionalserverheaders.md): Additional HTTP headers sent by the server during the WebSocket handshake.
+
+# Document: setPongHandler(_:handler:)
+
+Source path: documentation/network/nwprotocolwebsocket/metadata/setponghandler(_:handler:)
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/metadata/setponghandler(_:handler:)
+Description: Framework: Network Kind: Instance Method Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# setPongHandler(\_:handler:)
+
+**Framework:** Network  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Sets a handler on a Ping message to be invoked when the corresponding Pong message is received.
+
+## Declaration
+
+```swift
+@preconcurrency func setPongHandler(_ queue: DispatchQueue, handler: @escaping @Sendable (NWError?) -> Void)
+```
+
+## See Also
+
+### Sending Messages
+
+- [init(opcode:)](init%28opcode_%29.md): Initializes a WebSocket message with a specific type code.
+- [NWProtocolWebSocket.Opcode](../opcode.md): Types of messages that you send and receive on a WebSocket connection.
+- [closeCode](closecode.md): The close code on a WebSocket message.
+- [NWProtocolWebSocket.CloseCode](../closecode.md): Types of codes used upon closing a WebSocket connection.
+
+# Document: NWProtocolWebSocket.Opcode
+
+Source path: documentation/network/nwprotocolwebsocket/opcode
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/opcode
+Description: Framework: Network Kind: Enumeration Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.Opcode
+
+**Framework:** Network  
+**Kind:** Enumeration  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Types of messages that you send and receive on a WebSocket connection.
+
+## Declaration
+
+```swift
+enum Opcode
+```
+
+## Topics
+
+### Data Types
+
+- [NWProtocolWebSocket.Opcode.binary](opcode/binary.md): A binary data message.
+- [NWProtocolWebSocket.Opcode.text](opcode/text.md): A text data message.
+- [NWProtocolWebSocket.Opcode.cont](opcode/cont.md): A continuation message.
+
+### Control Types
+
+- [NWProtocolWebSocket.Opcode.ping](opcode/ping.md): A Ping message, which requests a Pong from the peer.
+- [NWProtocolWebSocket.Opcode.pong](opcode/pong.md): A Pong message in response to a Ping from the peer.
+- [NWProtocolWebSocket.Opcode.close](opcode/close.md): A message indicating a close of the connection.
+
+## Relationships
+
+### Conforms To
+
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Sending Messages
+
+- [init(opcode:)](metadata/init%28opcode_%29.md): Initializes a WebSocket message with a specific type code.
+- [setPongHandler(\_:handler:)](metadata/setponghandler%28__handler_%29.md): Sets a handler on a Ping message to be invoked when the corresponding Pong message is received.
+- [closeCode](metadata/closecode.md): The close code on a WebSocket message.
+- [NWProtocolWebSocket.CloseCode](closecode.md): Types of codes used upon closing a WebSocket connection.
+
+# Document: NWProtocolWebSocket.Opcode.binary
+
+Source path: documentation/network/nwprotocolwebsocket/opcode/binary
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/opcode/binary
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.Opcode.binary
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A binary data message.
+
+## Declaration
+
+```swift
+case binary
+```
+
+## See Also
+
+### Data Types
+
+- [NWProtocolWebSocket.Opcode.text](text.md): A text data message.
+- [NWProtocolWebSocket.Opcode.cont](cont.md): A continuation message.
+
+# Document: NWProtocolWebSocket.Opcode.close
+
+Source path: documentation/network/nwprotocolwebsocket/opcode/close
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/opcode/close
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.Opcode.close
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A message indicating a close of the connection.
+
+## Declaration
+
+```swift
+case close
+```
+
+## See Also
+
+### Control Types
+
+- [NWProtocolWebSocket.Opcode.ping](ping.md): A Ping message, which requests a Pong from the peer.
+- [NWProtocolWebSocket.Opcode.pong](pong.md): A Pong message in response to a Ping from the peer.
+
+# Document: NWProtocolWebSocket.Opcode.cont
+
+Source path: documentation/network/nwprotocolwebsocket/opcode/cont
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/opcode/cont
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.Opcode.cont
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A continuation message.
+
+## Declaration
+
+```swift
+case cont
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Continuations are handled automatically, and should not be manually sent.
+
+## See Also
+
+### Data Types
+
+- [NWProtocolWebSocket.Opcode.binary](binary.md): A binary data message.
+- [NWProtocolWebSocket.Opcode.text](text.md): A text data message.
+
+# Document: NWProtocolWebSocket.Opcode.ping
+
+Source path: documentation/network/nwprotocolwebsocket/opcode/ping
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/opcode/ping
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.Opcode.ping
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A Ping message, which requests a Pong from the peer.
+
+## Declaration
+
+```swift
+case ping
+```
+
+## See Also
+
+### Control Types
+
+- [NWProtocolWebSocket.Opcode.pong](pong.md): A Pong message in response to a Ping from the peer.
+- [NWProtocolWebSocket.Opcode.close](close.md): A message indicating a close of the connection.
+
+# Document: NWProtocolWebSocket.Opcode.pong
+
+Source path: documentation/network/nwprotocolwebsocket/opcode/pong
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/opcode/pong
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.Opcode.pong
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A Pong message in response to a Ping from the peer.
+
+## Declaration
+
+```swift
+case pong
+```
+
+## See Also
+
+### Control Types
+
+- [NWProtocolWebSocket.Opcode.ping](ping.md): A Ping message, which requests a Pong from the peer.
+- [NWProtocolWebSocket.Opcode.close](close.md): A message indicating a close of the connection.
+
+# Document: NWProtocolWebSocket.Opcode.text
+
+Source path: documentation/network/nwprotocolwebsocket/opcode/text
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/opcode/text
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.Opcode.text
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A text data message.
+
+## Declaration
+
+```swift
+case text
+```
+
+## See Also
+
+### Data Types
+
+- [NWProtocolWebSocket.Opcode.binary](binary.md): A binary data message.
+- [NWProtocolWebSocket.Opcode.cont](cont.md): A continuation message.
+
+# Document: NWProtocolWebSocket.Options
+
+Source path: documentation/network/nwprotocolwebsocket/options
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options
+Description: Framework: Network Kind: Class Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.Options
+
+**Framework:** Network  
+**Kind:** Class  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A container of options for configuring how WebSocket is used on a connection.
+
+## Declaration
+
+```swift
+class Options
+```
+
+## Topics
+
+### Configuring WebSocket Options
+
+- [init(\_:)](options/init%28__%29.md): Initializes a default set of WebSocket connection options.
+- [NWProtocolWebSocket.Version](version.md): Supported versions of the WebSocket protocol.
+- [autoReplyPing](options/autoreplyping.md): A Boolean indicating whether the connection automatically replies to Ping messages instead of delivering them to you.
+- [maximumMessageSize](options/maximummessagesize.md): The maximum allowed message size, in bytes, to be received by the WebSocket connection.
+
+### Configuring Client Handshakes
+
+- [setAdditionalHeaders(\_:)](options/setadditionalheaders%28__%29.md): Sets additional HTTP header fields to be sent by the client during the WebSocket handshake.
+- [setSubprotocols(\_:)](options/setsubprotocols%28__%29.md): Adds to the list of supported application protocols that will be presented to a WebSocket server during connection establishment.
+- [skipHandshake](options/skiphandshake.md): A Boolean indicating whether the WebSocket protocol skips its handshake and begins framing data once the underlying connection is established.
+
+### Handling Server Handshakes
+
+- [setClientRequestHandler(\_:handler:)](options/setclientrequesthandler%28__handler_%29.md): Sets a handler to react to as a server to inbound WebSocket client handshakes.
+- [NWProtocolWebSocket.Response](response.md): A WebSocket handshake reponse sent from a server to a client.
+
+## Relationships
+
+### Inherits From
+
+- [NWProtocolOptions](../nwprotocoloptions.md)
+
+### Conforms To
+
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Creating WebSocket Connections
+
+- [definition](definition.md): The system definition of the WebSocket protocol.
+
+# Document: autoReplyPing
+
+Source path: documentation/network/nwprotocolwebsocket/options/autoreplyping
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options/autoreplyping
+Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# autoReplyPing
+
+**Framework:** Network  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A Boolean indicating whether the connection automatically replies to Ping messages instead of delivering them to you.
+
+## Declaration
+
+```swift
+var autoReplyPing: Bool { get set }
+```
+
+## See Also
+
+### Configuring WebSocket Options
+
+- [init(\_:)](init%28__%29.md): Initializes a default set of WebSocket connection options.
+- [NWProtocolWebSocket.Version](../version.md): Supported versions of the WebSocket protocol.
+- [maximumMessageSize](maximummessagesize.md): The maximum allowed message size, in bytes, to be received by the WebSocket connection.
+
+# Document: init(_:)
+
+Source path: documentation/network/nwprotocolwebsocket/options/init(_:)
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options/init(_:)
+Description: Framework: Network Kind: Initializer Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# init(\_:)
+
+**Framework:** Network  
+**Kind:** Initializer  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Initializes a default set of WebSocket connection options.
+
+## Declaration
+
+```swift
+init(_ version: NWProtocolWebSocket.Version = .version13)
+```
+
+## See Also
+
+### Configuring WebSocket Options
+
+- [NWProtocolWebSocket.Version](../version.md): Supported versions of the WebSocket protocol.
+- [autoReplyPing](autoreplyping.md): A Boolean indicating whether the connection automatically replies to Ping messages instead of delivering them to you.
+- [maximumMessageSize](maximummessagesize.md): The maximum allowed message size, in bytes, to be received by the WebSocket connection.
+
+# Document: maximumMessageSize
+
+Source path: documentation/network/nwprotocolwebsocket/options/maximummessagesize
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options/maximummessagesize
+Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# maximumMessageSize
+
+**Framework:** Network  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+The maximum allowed message size, in bytes, to be received by the WebSocket connection.
+
+## Declaration
+
+```swift
+var maximumMessageSize: Int { get set }
+```
+
+## See Also
+
+### Configuring WebSocket Options
+
+- [init(\_:)](init%28__%29.md): Initializes a default set of WebSocket connection options.
+- [NWProtocolWebSocket.Version](../version.md): Supported versions of the WebSocket protocol.
+- [autoReplyPing](autoreplyping.md): A Boolean indicating whether the connection automatically replies to Ping messages instead of delivering them to you.
+
+# Document: setAdditionalHeaders(_:)
+
+Source path: documentation/network/nwprotocolwebsocket/options/setadditionalheaders(_:)
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options/setadditionalheaders(_:)
+Description: Framework: Network Kind: Instance Method Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# setAdditionalHeaders(\_:)
+
+**Framework:** Network  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Sets additional HTTP header fields to be sent by the client during the WebSocket handshake.
+
+## Declaration
+
+```swift
+func setAdditionalHeaders(_ headers: [(name: String, value: String)])
+```
+
+## See Also
+
+### Configuring Client Handshakes
+
+- [setSubprotocols(\_:)](setsubprotocols%28__%29.md): Adds to the list of supported application protocols that will be presented to a WebSocket server during connection establishment.
+- [skipHandshake](skiphandshake.md): A Boolean indicating whether the WebSocket protocol skips its handshake and begins framing data once the underlying connection is established.
+
+# Document: setClientRequestHandler(_:handler:)
+
+Source path: documentation/network/nwprotocolwebsocket/options/setclientrequesthandler(_:handler:)
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options/setclientrequesthandler(_:handler:)
+Description: Framework: Network Kind: Instance Method Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# setClientRequestHandler(\_:handler:)
+
+**Framework:** Network  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Sets a handler to react to as a server to inbound WebSocket client handshakes.
+
+## Declaration
+
+```swift
+@preconcurrency func setClientRequestHandler(_ queue: DispatchQueue, handler: @escaping @Sendable ([String], [(name: String, value: String)]) -> NWProtocolWebSocket.Response)
+```
+
+## See Also
+
+### Handling Server Handshakes
+
+- [NWProtocolWebSocket.Response](../response.md): A WebSocket handshake reponse sent from a server to a client.
+
+# Document: setSubprotocols(_:)
+
+Source path: documentation/network/nwprotocolwebsocket/options/setsubprotocols(_:)
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options/setsubprotocols(_:)
+Description: Framework: Network Kind: Instance Method Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# setSubprotocols(\_:)
+
+**Framework:** Network  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Adds to the list of supported application protocols that will be presented to a WebSocket server during connection establishment.
+
+## Declaration
+
+```swift
+func setSubprotocols(_ subprotocols: [String])
+```
+
+## See Also
+
+### Configuring Client Handshakes
+
+- [setAdditionalHeaders(\_:)](setadditionalheaders%28__%29.md): Sets additional HTTP header fields to be sent by the client during the WebSocket handshake.
+- [skipHandshake](skiphandshake.md): A Boolean indicating whether the WebSocket protocol skips its handshake and begins framing data once the underlying connection is established.
+
+# Document: skipHandshake
+
+Source path: documentation/network/nwprotocolwebsocket/options/skiphandshake
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/options/skiphandshake
+Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# skipHandshake
+
+**Framework:** Network  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A Boolean indicating whether the WebSocket protocol skips its handshake and begins framing data once the underlying connection is established.
+
+## Declaration
+
+```swift
+var skipHandshake: Bool { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This option should not be set when communicating with a generic WebSocket server or client. This option allows a custom handshake (or no handshake) to be implemented below the WebSocket layer when both client and server are coordinated.
+
+## See Also
+
+### Configuring Client Handshakes
+
+- [setAdditionalHeaders(\_:)](setadditionalheaders%28__%29.md): Sets additional HTTP header fields to be sent by the client during the WebSocket handshake.
+- [setSubprotocols(\_:)](setsubprotocols%28__%29.md): Adds to the list of supported application protocols that will be presented to a WebSocket server during connection establishment.
+
+# Document: NWProtocolWebSocket.Response
+
+Source path: documentation/network/nwprotocolwebsocket/response
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/response
+Description: Framework: Network Kind: Structure Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.Response
+
+**Framework:** Network  
+**Kind:** Structure  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A WebSocket handshake reponse sent from a server to a client.
+
+## Declaration
+
+```swift
+struct Response
+```
+
+## Topics
+
+### Sending Handshake Responses
+
+- [init(status:subprotocol:additionalHeaders:)](response/init%28status_subprotocol_additionalheaders_%29.md): Initializes a WebSocket server response with a status, selected subprotocol, and additional HTTP headers.
+- [NWProtocolWebSocket.Response.Status](response/status-swift.enum.md): Status values that are sent with a WebSocket server response.
+- [status](response/status-swift.property.md): The status of a WebSocket server response.
+- [subprotocol](response/subprotocol.md): The selected subprotocol in a WebSocket server response.
+- [additionalHeaders](response/additionalheaders.md): Any additional HTTP headers in a WebSocket server response.
+
+## Relationships
+
+### Conforms To
+
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Handling Server Handshakes
+
+- [setClientRequestHandler(\_:handler:)](options/setclientrequesthandler%28__handler_%29.md): Sets a handler to react to as a server to inbound WebSocket client handshakes.
+
+# Document: additionalHeaders
+
+Source path: documentation/network/nwprotocolwebsocket/response/additionalheaders
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/response/additionalheaders
+Description: Framework: Network Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# additionalHeaders
+
+**Framework:** Network  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Any additional HTTP headers in a WebSocket server response.
+
+## Declaration
+
+```swift
+let additionalHeaders: [(name: String, value: String)]?
+```
+
+## See Also
+
+### Sending Handshake Responses
+
+- [init(status:subprotocol:additionalHeaders:)](init%28status_subprotocol_additionalheaders_%29.md): Initializes a WebSocket server response with a status, selected subprotocol, and additional HTTP headers.
+- [NWProtocolWebSocket.Response.Status](status-swift.enum.md): Status values that are sent with a WebSocket server response.
+- [status](status-swift.property.md): The status of a WebSocket server response.
+- [subprotocol](subprotocol.md): The selected subprotocol in a WebSocket server response.
+
+# Document: init(status:subprotocol:additionalHeaders:)
+
+Source path: documentation/network/nwprotocolwebsocket/response/init(status:subprotocol:additionalheaders:)
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/response/init(status:subprotocol:additionalheaders:)
+Description: Framework: Network Kind: Initializer Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# init(status:subprotocol:additionalHeaders:)
+
+**Framework:** Network  
+**Kind:** Initializer  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Initializes a WebSocket server response with a status, selected subprotocol, and additional HTTP headers.
+
+## Declaration
+
+```swift
+init(status: NWProtocolWebSocket.Response.Status, subprotocol: String?, additionalHeaders: [(name: String, value: String)]? = nil)
+```
+
+## See Also
+
+### Sending Handshake Responses
+
+- [NWProtocolWebSocket.Response.Status](status-swift.enum.md): Status values that are sent with a WebSocket server response.
+- [status](status-swift.property.md): The status of a WebSocket server response.
+- [subprotocol](subprotocol.md): The selected subprotocol in a WebSocket server response.
+- [additionalHeaders](additionalheaders.md): Any additional HTTP headers in a WebSocket server response.
+
+# Document: NWProtocolWebSocket.Response.Status
+
+Source path: documentation/network/nwprotocolwebsocket/response/status-swift.enum
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/response/status-swift.enum
+Description: Framework: Network Kind: Enumeration Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.Response.Status
+
+**Framework:** Network  
+**Kind:** Enumeration  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Status values that are sent with a WebSocket server response.
+
+## Declaration
+
+```swift
+enum Status
+```
+
+## Topics
+
+### Handshake Status Values
+
+- [NWProtocolWebSocket.Response.Status.accept](status-swift.enum/accept.md): The client request is being accepted.
+- [NWProtocolWebSocket.Response.Status.reject](status-swift.enum/reject.md): The client request is being rejected.
+
+## Relationships
+
+### Conforms To
+
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Sending Handshake Responses
+
+- [init(status:subprotocol:additionalHeaders:)](init%28status_subprotocol_additionalheaders_%29.md): Initializes a WebSocket server response with a status, selected subprotocol, and additional HTTP headers.
+- [status](status-swift.property.md): The status of a WebSocket server response.
+- [subprotocol](subprotocol.md): The selected subprotocol in a WebSocket server response.
+- [additionalHeaders](additionalheaders.md): Any additional HTTP headers in a WebSocket server response.
+
+# Document: NWProtocolWebSocket.Response.Status.accept
+
+Source path: documentation/network/nwprotocolwebsocket/response/status-swift.enum/accept
+Canonical documentation: https://developer.apple.com/documentation/network/nwprotocolwebsocket/response/status-swift.enum/accept
+Description: Framework: Network Kind: Case Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+# NWProtocolWebSocket.Response.Status.accept
+
+**Framework:** Network  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+The client request is being accepted.
+
+## Declaration
+
+```swift
+case accept
+```
+
+## See Also
+
+### Handshake Status Values
+
+- [NWProtocolWebSocket.Response.Status.reject](reject.md): The client request is being rejected.
 
 # Document: NWProtocolWebSocket.Response.Status.reject
 
@@ -201268,1624 +202536,4 @@ func glFenceSync(_ condition: GLenum, _ flags: GLbitfield) -> GLsync!
 
 ```objectivec
 extern GLsyncglFenceSync(GLenum condition, GLbitfield flags);
-```
-
-# Document: glFenceSyncAPPLE(_:_:)
-
-Source path: documentation/opengles/glfencesyncapple(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glfencesyncapple(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 6.0+ (deprecated in 12.0) · iPadOS 6.0+ (deprecated in 12.0) · Mac Catalyst 6.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFenceSyncAPPLE(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 6.0+ (deprecated in 12.0) · iPadOS 6.0+ (deprecated in 12.0) · Mac Catalyst 6.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFenceSyncAPPLE(_ condition: GLenum, _ flags: GLbitfield) -> GLsync!
-```
-
-# glFenceSyncAPPLE (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 6.0+ (deprecated in 12.0) · iPadOS 6.0+ (deprecated in 12.0) · Mac Catalyst 6.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern GLsyncglFenceSyncAPPLE(GLenum condition, GLbitfield flags);
-```
-
-# Document: glFinish()
-
-Source path: documentation/opengles/glfinish()
-Canonical documentation: https://developer.apple.com/documentation/opengles/glfinish()
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFinish() (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFinish()
-```
-
-# glFinish (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glFinish();
-```
-
-# Document: GLfixed
-
-Source path: documentation/opengles/glfixed
-Canonical documentation: https://developer.apple.com/documentation/opengles/glfixed
-Description: Framework: OpenGL ES Kind: Type Alias Availability: iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ · visionOS 1.0+
-
-# GLfixed (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Type Alias  
-**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-typealias GLfixed = Int32
-```
-
-# GLfixed (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Type Alias  
-**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-typedef int32_t GLfixed;
-```
-
-# Document: GLfloat
-
-Source path: documentation/opengles/glfloat
-Canonical documentation: https://developer.apple.com/documentation/opengles/glfloat
-Description: Framework: OpenGL ES Kind: Type Alias Availability: iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ · visionOS 1.0+
-
-# GLfloat (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Type Alias  
-**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-typealias GLfloat = Float
-```
-
-# GLfloat (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Type Alias  
-**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-typedef float GLfloat;
-```
-
-# Document: glFlush()
-
-Source path: documentation/opengles/glflush()
-Canonical documentation: https://developer.apple.com/documentation/opengles/glflush()
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFlush() (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFlush()
-```
-
-# glFlush (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glFlush();
-```
-
-# Document: glFlushMappedBufferRange(_:_:_:)
-
-Source path: documentation/opengles/glflushmappedbufferrange(_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glflushmappedbufferrange(_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFlushMappedBufferRange(\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFlushMappedBufferRange(_ target: GLenum, _ offset: GLintptr, _ length: GLsizeiptr)
-```
-
-# glFlushMappedBufferRange (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glFlushMappedBufferRange(GLenum target, GLintptr offset, GLsizeiptr length);
-```
-
-# Document: glFlushMappedBufferRangeEXT(_:_:_:)
-
-Source path: documentation/opengles/glflushmappedbufferrangeext(_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glflushmappedbufferrangeext(_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 6.0+ (deprecated in 12.0) · iPadOS 6.0+ (deprecated in 12.0) · Mac Catalyst 6.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFlushMappedBufferRangeEXT(\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 6.0+ (deprecated in 12.0) · iPadOS 6.0+ (deprecated in 12.0) · Mac Catalyst 6.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFlushMappedBufferRangeEXT(_ target: GLenum, _ offset: GLintptr, _ length: GLsizeiptr)
-```
-
-# glFlushMappedBufferRangeEXT (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 6.0+ (deprecated in 12.0) · iPadOS 6.0+ (deprecated in 12.0) · Mac Catalyst 6.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern GLvoid glFlushMappedBufferRangeEXT(GLenum target, GLintptr offset, GLsizeiptr length);
-```
-
-# Document: glFogf(_:_:)
-
-Source path: documentation/opengles/glfogf(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glfogf(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFogf(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFogf(_ pname: GLenum, _ param: GLfloat)
-```
-
-# glFogf (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glFogf(GLenum pname, GLfloat param);
-```
-
-# Document: glFogfv(_:_:)
-
-Source path: documentation/opengles/glfogfv(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glfogfv(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFogfv(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFogfv(_ pname: GLenum, _ params: UnsafePointer<GLfloat>!)
-```
-
-# glFogfv (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glFogfv(GLenum pname, const GLfloat *params);
-```
-
-# Document: glFogx(_:_:)
-
-Source path: documentation/opengles/glfogx(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glfogx(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFogx(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFogx(_ pname: GLenum, _ param: GLfixed)
-```
-
-# glFogx (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glFogx(GLenum pname, GLfixed param);
-```
-
-# Document: glFogxv(_:_:)
-
-Source path: documentation/opengles/glfogxv(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glfogxv(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFogxv(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFogxv(_ pname: GLenum, _ params: UnsafePointer<GLfixed>!)
-```
-
-# glFogxv (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glFogxv(GLenum pname, const GLfixed *params);
-```
-
-# Document: glFramebufferRenderbuffer(_:_:_:_:)
-
-Source path: documentation/opengles/glframebufferrenderbuffer(_:_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glframebufferrenderbuffer(_:_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFramebufferRenderbuffer(\_:\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFramebufferRenderbuffer(_ target: GLenum, _ attachment: GLenum, _ renderbuffertarget: GLenum, _ renderbuffer: GLuint)
-```
-
-# glFramebufferRenderbuffer (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer);
-```
-
-# Document: glFramebufferRenderbufferOES(_:_:_:_:)
-
-Source path: documentation/opengles/glframebufferrenderbufferoes(_:_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glframebufferrenderbufferoes(_:_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFramebufferRenderbufferOES(\_:\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFramebufferRenderbufferOES(_ target: GLenum, _ attachment: GLenum, _ renderbuffertarget: GLenum, _ renderbuffer: GLuint)
-```
-
-# glFramebufferRenderbufferOES (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern GLvoid glFramebufferRenderbufferOES(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer);
-```
-
-# Document: glFramebufferTexture2D(_:_:_:_:_:)
-
-Source path: documentation/opengles/glframebuffertexture2d(_:_:_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glframebuffertexture2d(_:_:_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFramebufferTexture2D(\_:\_:\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFramebufferTexture2D(_ target: GLenum, _ attachment: GLenum, _ textarget: GLenum, _ texture: GLuint, _ level: GLint)
-```
-
-# glFramebufferTexture2D (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
-```
-
-# Document: glFramebufferTexture2DOES(_:_:_:_:_:)
-
-Source path: documentation/opengles/glframebuffertexture2does(_:_:_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glframebuffertexture2does(_:_:_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFramebufferTexture2DOES(\_:\_:\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFramebufferTexture2DOES(_ target: GLenum, _ attachment: GLenum, _ textarget: GLenum, _ texture: GLuint, _ level: GLint)
-```
-
-# glFramebufferTexture2DOES (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern GLvoid glFramebufferTexture2DOES(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
-```
-
-# Document: glFramebufferTextureLayer(_:_:_:_:_:)
-
-Source path: documentation/opengles/glframebuffertexturelayer(_:_:_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glframebuffertexturelayer(_:_:_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFramebufferTextureLayer(\_:\_:\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFramebufferTextureLayer(_ target: GLenum, _ attachment: GLenum, _ texture: GLuint, _ level: GLint, _ layer: GLint)
-```
-
-# glFramebufferTextureLayer (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glFramebufferTextureLayer(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer);
-```
-
-# Document: glFrontFace(_:)
-
-Source path: documentation/opengles/glfrontface(_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glfrontface(_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFrontFace(\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFrontFace(_ mode: GLenum)
-```
-
-# glFrontFace (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glFrontFace(GLenum mode);
-```
-
-# Document: glFrustumf(_:_:_:_:_:_:)
-
-Source path: documentation/opengles/glfrustumf(_:_:_:_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glfrustumf(_:_:_:_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFrustumf(\_:\_:\_:\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFrustumf(_ left: GLfloat, _ right: GLfloat, _ bottom: GLfloat, _ top: GLfloat, _ zNear: GLfloat, _ zFar: GLfloat)
-```
-
-# glFrustumf (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glFrustumf(GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat zNear, GLfloat zFar);
-```
-
-# Document: glFrustumx(_:_:_:_:_:_:)
-
-Source path: documentation/opengles/glfrustumx(_:_:_:_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glfrustumx(_:_:_:_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glFrustumx(\_:\_:\_:\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glFrustumx(_ left: GLfixed, _ right: GLfixed, _ bottom: GLfixed, _ top: GLfixed, _ zNear: GLfixed, _ zFar: GLfixed)
-```
-
-# glFrustumx (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glFrustumx(GLfixed left, GLfixed right, GLfixed bottom, GLfixed top, GLfixed zNear, GLfixed zFar);
-```
-
-# Document: glGenBuffers(_:_:)
-
-Source path: documentation/opengles/glgenbuffers(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgenbuffers(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenBuffers(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenBuffers(_ n: GLsizei, _ buffers: UnsafeMutablePointer<GLuint>!)
-```
-
-# glGenBuffers (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGenBuffers(GLsizei n, GLuint *buffers);
-```
-
-# Document: glGenerateMipmap(_:)
-
-Source path: documentation/opengles/glgeneratemipmap(_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgeneratemipmap(_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenerateMipmap(\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenerateMipmap(_ target: GLenum)
-```
-
-# glGenerateMipmap (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGenerateMipmap(GLenum target);
-```
-
-# Document: glGenerateMipmapOES(_:)
-
-Source path: documentation/opengles/glgeneratemipmapoes(_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgeneratemipmapoes(_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenerateMipmapOES(\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenerateMipmapOES(_ target: GLenum)
-```
-
-# glGenerateMipmapOES (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern GLvoid glGenerateMipmapOES(GLenum target);
-```
-
-# Document: glGenFramebuffers(_:_:)
-
-Source path: documentation/opengles/glgenframebuffers(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgenframebuffers(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenFramebuffers(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenFramebuffers(_ n: GLsizei, _ framebuffers: UnsafeMutablePointer<GLuint>!)
-```
-
-# glGenFramebuffers (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGenFramebuffers(GLsizei n, GLuint *framebuffers);
-```
-
-# Document: glGenFramebuffersOES(_:_:)
-
-Source path: documentation/opengles/glgenframebuffersoes(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgenframebuffersoes(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenFramebuffersOES(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenFramebuffersOES(_ n: GLsizei, _ framebuffers: UnsafeMutablePointer<GLuint>!)
-```
-
-# glGenFramebuffersOES (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern GLvoid glGenFramebuffersOES(GLsizei n, GLuint *framebuffers);
-```
-
-# Document: glGenProgramPipelinesEXT(_:_:)
-
-Source path: documentation/opengles/glgenprogrampipelinesext(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgenprogrampipelinesext(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 5.0+ (deprecated in 12.0) · iPadOS 5.0+ (deprecated in 12.0) · Mac Catalyst 5.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenProgramPipelinesEXT(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 5.0+ (deprecated in 12.0) · iPadOS 5.0+ (deprecated in 12.0) · Mac Catalyst 5.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenProgramPipelinesEXT(_ n: GLsizei, _ pipelines: UnsafeMutablePointer<GLuint>!)
-```
-
-# glGenProgramPipelinesEXT (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 5.0+ (deprecated in 12.0) · iPadOS 5.0+ (deprecated in 12.0) · Mac Catalyst 5.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern GLvoid glGenProgramPipelinesEXT(GLsizei n, GLuint *pipelines);
-```
-
-# Document: glGenQueries(_:_:)
-
-Source path: documentation/opengles/glgenqueries(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgenqueries(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenQueries(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenQueries(_ n: GLsizei, _ ids: UnsafeMutablePointer<GLuint>!)
-```
-
-# glGenQueries (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGenQueries(GLsizei n, GLuint *ids);
-```
-
-# Document: glGenQueriesEXT(_:_:)
-
-Source path: documentation/opengles/glgenqueriesext(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgenqueriesext(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 5.0+ (deprecated in 12.0) · iPadOS 5.0+ (deprecated in 12.0) · Mac Catalyst 5.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenQueriesEXT(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 5.0+ (deprecated in 12.0) · iPadOS 5.0+ (deprecated in 12.0) · Mac Catalyst 5.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenQueriesEXT(_ n: GLsizei, _ ids: UnsafeMutablePointer<GLuint>!)
-```
-
-# glGenQueriesEXT (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 5.0+ (deprecated in 12.0) · iPadOS 5.0+ (deprecated in 12.0) · Mac Catalyst 5.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern GLvoid glGenQueriesEXT(GLsizei n, GLuint *ids);
-```
-
-# Document: glGenRenderbuffers(_:_:)
-
-Source path: documentation/opengles/glgenrenderbuffers(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgenrenderbuffers(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenRenderbuffers(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenRenderbuffers(_ n: GLsizei, _ renderbuffers: UnsafeMutablePointer<GLuint>!)
-```
-
-# glGenRenderbuffers (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGenRenderbuffers(GLsizei n, GLuint *renderbuffers);
-```
-
-# Document: glGenRenderbuffersOES(_:_:)
-
-Source path: documentation/opengles/glgenrenderbuffersoes(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgenrenderbuffersoes(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenRenderbuffersOES(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenRenderbuffersOES(_ n: GLsizei, _ renderbuffers: UnsafeMutablePointer<GLuint>!)
-```
-
-# glGenRenderbuffersOES (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern GLvoid glGenRenderbuffersOES(GLsizei n, GLuint *renderbuffers);
-```
-
-# Document: glGenSamplers(_:_:)
-
-Source path: documentation/opengles/glgensamplers(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgensamplers(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenSamplers(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenSamplers(_ count: GLsizei, _ samplers: UnsafeMutablePointer<GLuint>!)
-```
-
-# glGenSamplers (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGenSamplers(GLsizei count, GLuint *samplers);
-```
-
-# Document: glGenTextures(_:_:)
-
-Source path: documentation/opengles/glgentextures(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgentextures(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenTextures(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenTextures(_ n: GLsizei, _ textures: UnsafeMutablePointer<GLuint>!)
-```
-
-# glGenTextures (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGenTextures(GLsizei n, GLuint *textures);
-```
-
-# Document: glGenTransformFeedbacks(_:_:)
-
-Source path: documentation/opengles/glgentransformfeedbacks(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgentransformfeedbacks(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenTransformFeedbacks(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenTransformFeedbacks(_ n: GLsizei, _ ids: UnsafeMutablePointer<GLuint>!)
-```
-
-# glGenTransformFeedbacks (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGenTransformFeedbacks(GLsizei n, GLuint *ids);
-```
-
-# Document: glGenVertexArrays(_:_:)
-
-Source path: documentation/opengles/glgenvertexarrays(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgenvertexarrays(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenVertexArrays(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenVertexArrays(_ n: GLsizei, _ arrays: UnsafeMutablePointer<GLuint>!)
-```
-
-# glGenVertexArrays (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGenVertexArrays(GLsizei n, GLuint *arrays);
-```
-
-# Document: glGenVertexArraysOES(_:_:)
-
-Source path: documentation/opengles/glgenvertexarraysoes(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgenvertexarraysoes(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 4.0+ (deprecated in 12.0) · iPadOS 4.0+ (deprecated in 12.0) · Mac Catalyst 4.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGenVertexArraysOES(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 4.0+ (deprecated in 12.0) · iPadOS 4.0+ (deprecated in 12.0) · Mac Catalyst 4.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGenVertexArraysOES(_ n: GLsizei, _ arrays: UnsafeMutablePointer<GLuint>!)
-```
-
-# glGenVertexArraysOES (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 4.0+ (deprecated in 12.0) · iPadOS 4.0+ (deprecated in 12.0) · Mac Catalyst 4.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern GLvoid glGenVertexArraysOES(GLsizei n, GLuint *arrays);
-```
-
-# Document: glGetActiveAttrib(_:_:_:_:_:_:_:)
-
-Source path: documentation/opengles/glgetactiveattrib(_:_:_:_:_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgetactiveattrib(_:_:_:_:_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGetActiveAttrib(\_:\_:\_:\_:\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGetActiveAttrib(_ program: GLuint, _ index: GLuint, _ bufsize: GLsizei, _ length: UnsafeMutablePointer<GLsizei>!, _ size: UnsafeMutablePointer<GLint>!, _ type: UnsafeMutablePointer<GLenum>!, _ name: UnsafeMutablePointer<GLchar>!)
-```
-
-# glGetActiveAttrib (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufsize, GLsizei *length, GLint *size, GLenum *type, GLchar *name);
-```
-
-# Document: glGetActiveUniform(_:_:_:_:_:_:_:)
-
-Source path: documentation/opengles/glgetactiveuniform(_:_:_:_:_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgetactiveuniform(_:_:_:_:_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGetActiveUniform(\_:\_:\_:\_:\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGetActiveUniform(_ program: GLuint, _ index: GLuint, _ bufsize: GLsizei, _ length: UnsafeMutablePointer<GLsizei>!, _ size: UnsafeMutablePointer<GLint>!, _ type: UnsafeMutablePointer<GLenum>!, _ name: UnsafeMutablePointer<GLchar>!)
-```
-
-# glGetActiveUniform (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGetActiveUniform(GLuint program, GLuint index, GLsizei bufsize, GLsizei *length, GLint *size, GLenum *type, GLchar *name);
-```
-
-# Document: glGetActiveUniformBlockiv(_:_:_:_:)
-
-Source path: documentation/opengles/glgetactiveuniformblockiv(_:_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgetactiveuniformblockiv(_:_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGetActiveUniformBlockiv(\_:\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGetActiveUniformBlockiv(_ program: GLuint, _ uniformBlockIndex: GLuint, _ pname: GLenum, _ params: UnsafeMutablePointer<GLint>!)
-```
-
-# glGetActiveUniformBlockiv (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGetActiveUniformBlockiv(GLuint program, GLuint uniformBlockIndex, GLenum pname, GLint *params);
-```
-
-# Document: glGetActiveUniformBlockName(_:_:_:_:_:)
-
-Source path: documentation/opengles/glgetactiveuniformblockname(_:_:_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgetactiveuniformblockname(_:_:_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGetActiveUniformBlockName(\_:\_:\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGetActiveUniformBlockName(_ program: GLuint, _ uniformBlockIndex: GLuint, _ bufSize: GLsizei, _ length: UnsafeMutablePointer<GLsizei>!, _ uniformBlockName: UnsafeMutablePointer<GLchar>!)
-```
-
-# glGetActiveUniformBlockName (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGetActiveUniformBlockName(GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei *length, GLchar *uniformBlockName);
-```
-
-# Document: glGetActiveUniformsiv(_:_:_:_:_:)
-
-Source path: documentation/opengles/glgetactiveuniformsiv(_:_:_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgetactiveuniformsiv(_:_:_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGetActiveUniformsiv(\_:\_:\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGetActiveUniformsiv(_ program: GLuint, _ uniformCount: GLsizei, _ uniformIndices: UnsafePointer<GLuint>!, _ pname: GLenum, _ params: UnsafeMutablePointer<GLint>!)
-```
-
-# glGetActiveUniformsiv (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGetActiveUniformsiv(GLuint program, GLsizei uniformCount, const GLuint *uniformIndices, GLenum pname, GLint *params);
-```
-
-# Document: glGetAttachedShaders(_:_:_:_:)
-
-Source path: documentation/opengles/glgetattachedshaders(_:_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgetattachedshaders(_:_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGetAttachedShaders(\_:\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGetAttachedShaders(_ program: GLuint, _ maxcount: GLsizei, _ count: UnsafeMutablePointer<GLsizei>!, _ shaders: UnsafeMutablePointer<GLuint>!)
-```
-
-# glGetAttachedShaders (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGetAttachedShaders(GLuint program, GLsizei maxcount, GLsizei *count, GLuint *shaders);
-```
-
-# Document: glGetAttribLocation(_:_:)
-
-Source path: documentation/opengles/glgetattriblocation(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgetattriblocation(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGetAttribLocation(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGetAttribLocation(_ program: GLuint, _ name: UnsafePointer<GLchar>!) -> Int32
-```
-
-# glGetAttribLocation (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern int glGetAttribLocation(GLuint program, const GLchar *name);
-```
-
-# Document: glGetBooleanv(_:_:)
-
-Source path: documentation/opengles/glgetbooleanv(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgetbooleanv(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGetBooleanv(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGetBooleanv(_ pname: GLenum, _ params: UnsafeMutablePointer<GLboolean>!)
-```
-
-# glGetBooleanv (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGetBooleanv(GLenum pname, GLboolean *params);
-```
-
-# Document: glGetBufferParameteri64v(_:_:_:)
-
-Source path: documentation/opengles/glgetbufferparameteri64v(_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgetbufferparameteri64v(_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGetBufferParameteri64v(\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGetBufferParameteri64v(_ target: GLenum, _ pname: GLenum, _ params: UnsafeMutablePointer<GLint64>!)
-```
-
-# glGetBufferParameteri64v (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGetBufferParameteri64v(GLenum target, GLenum pname, GLint64 *params);
-```
-
-# Document: glGetBufferParameteriv(_:_:_:)
-
-Source path: documentation/opengles/glgetbufferparameteriv(_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgetbufferparameteriv(_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGetBufferParameteriv(\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGetBufferParameteriv(_ target: GLenum, _ pname: GLenum, _ params: UnsafeMutablePointer<GLint>!)
-```
-
-# glGetBufferParameteriv (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGetBufferParameteriv(GLenum target, GLenum pname, GLint *params);
-```
-
-# Document: glGetBufferPointerv(_:_:_:)
-
-Source path: documentation/opengles/glgetbufferpointerv(_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgetbufferpointerv(_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGetBufferPointerv(\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGetBufferPointerv(_ target: GLenum, _ pname: GLenum, _ params: UnsafeMutablePointer<UnsafeMutableRawPointer?>!)
-```
-
-# glGetBufferPointerv (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGetBufferPointerv(GLenum target, GLenum pname, GLvoid **params);
-```
-
-# Document: glGetBufferPointervOES(_:_:_:)
-
-Source path: documentation/opengles/glgetbufferpointervoes(_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgetbufferpointervoes(_:_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ (deprecated in 12.0)
-
-# glGetBufferPointervOES(\_:\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ (deprecated in 12.0)
-
-## Declaration
-
-```swift
-func glGetBufferPointervOES(_ target: GLenum, _ pname: GLenum, _ params: UnsafeMutablePointer<UnsafeMutableRawPointer?>!)
-```
-
-# glGetBufferPointervOES (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-## Declaration
-
-```objectivec
-extern GLvoid glGetBufferPointervOES(GLenum target, GLenum pname, GLvoid **params);
-```
-
-# Document: glGetClipPlanef(_:_:)
-
-Source path: documentation/opengles/glgetclipplanef(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgetclipplanef(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGetClipPlanef(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGetClipPlanef(_ pname: GLenum, _ equation: UnsafeMutablePointer<GLfloat>!)
-```
-
-# glGetClipPlanef (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGetClipPlanef(GLenum pname, GLfloat *equation);
-```
-
-# Document: glGetClipPlanex(_:_:)
-
-Source path: documentation/opengles/glgetclipplanex(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/opengles/glgetclipplanex(_:_:)
-Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-# glGetClipPlanex(\_:\_:) (Swift)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```swift
-func glGetClipPlanex(_ pname: GLenum, _ eqn: UnsafeMutablePointer<GLfixed>!)
-```
-
-# glGetClipPlanex (Objective-C)
-
-**Framework:** OpenGL ES  
-**Kind:** Function  
-**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
-
-> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
-
-## Declaration
-
-```objectivec
-extern void glGetClipPlanex(GLenum pname, GLfixed eqn[4]);
 ```

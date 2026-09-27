@@ -1,10 +1,1630 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 51
+
+# Document: glFenceSyncAPPLE(_:_:)
+
+Source path: documentation/opengles/glfencesyncapple(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glfencesyncapple(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 6.0+ (deprecated in 12.0) · iPadOS 6.0+ (deprecated in 12.0) · Mac Catalyst 6.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFenceSyncAPPLE(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 6.0+ (deprecated in 12.0) · iPadOS 6.0+ (deprecated in 12.0) · Mac Catalyst 6.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFenceSyncAPPLE(_ condition: GLenum, _ flags: GLbitfield) -> GLsync!
+```
+
+# glFenceSyncAPPLE (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 6.0+ (deprecated in 12.0) · iPadOS 6.0+ (deprecated in 12.0) · Mac Catalyst 6.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern GLsyncglFenceSyncAPPLE(GLenum condition, GLbitfield flags);
+```
+
+# Document: glFinish()
+
+Source path: documentation/opengles/glfinish()
+Canonical documentation: https://developer.apple.com/documentation/opengles/glfinish()
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFinish() (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFinish()
+```
+
+# glFinish (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glFinish();
+```
+
+# Document: GLfixed
+
+Source path: documentation/opengles/glfixed
+Canonical documentation: https://developer.apple.com/documentation/opengles/glfixed
+Description: Framework: OpenGL ES Kind: Type Alias Availability: iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ · visionOS 1.0+
+
+# GLfixed (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Type Alias  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+typealias GLfixed = Int32
+```
+
+# GLfixed (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Type Alias  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
+typedef int32_t GLfixed;
+```
+
+# Document: GLfloat
+
+Source path: documentation/opengles/glfloat
+Canonical documentation: https://developer.apple.com/documentation/opengles/glfloat
+Description: Framework: OpenGL ES Kind: Type Alias Availability: iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ · visionOS 1.0+
+
+# GLfloat (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Type Alias  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+typealias GLfloat = Float
+```
+
+# GLfloat (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Type Alias  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
+typedef float GLfloat;
+```
+
+# Document: glFlush()
+
+Source path: documentation/opengles/glflush()
+Canonical documentation: https://developer.apple.com/documentation/opengles/glflush()
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFlush() (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFlush()
+```
+
+# glFlush (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glFlush();
+```
+
+# Document: glFlushMappedBufferRange(_:_:_:)
+
+Source path: documentation/opengles/glflushmappedbufferrange(_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glflushmappedbufferrange(_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFlushMappedBufferRange(\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFlushMappedBufferRange(_ target: GLenum, _ offset: GLintptr, _ length: GLsizeiptr)
+```
+
+# glFlushMappedBufferRange (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glFlushMappedBufferRange(GLenum target, GLintptr offset, GLsizeiptr length);
+```
+
+# Document: glFlushMappedBufferRangeEXT(_:_:_:)
+
+Source path: documentation/opengles/glflushmappedbufferrangeext(_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glflushmappedbufferrangeext(_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 6.0+ (deprecated in 12.0) · iPadOS 6.0+ (deprecated in 12.0) · Mac Catalyst 6.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFlushMappedBufferRangeEXT(\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 6.0+ (deprecated in 12.0) · iPadOS 6.0+ (deprecated in 12.0) · Mac Catalyst 6.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFlushMappedBufferRangeEXT(_ target: GLenum, _ offset: GLintptr, _ length: GLsizeiptr)
+```
+
+# glFlushMappedBufferRangeEXT (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 6.0+ (deprecated in 12.0) · iPadOS 6.0+ (deprecated in 12.0) · Mac Catalyst 6.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern GLvoid glFlushMappedBufferRangeEXT(GLenum target, GLintptr offset, GLsizeiptr length);
+```
+
+# Document: glFogf(_:_:)
+
+Source path: documentation/opengles/glfogf(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glfogf(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFogf(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFogf(_ pname: GLenum, _ param: GLfloat)
+```
+
+# glFogf (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glFogf(GLenum pname, GLfloat param);
+```
+
+# Document: glFogfv(_:_:)
+
+Source path: documentation/opengles/glfogfv(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glfogfv(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFogfv(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFogfv(_ pname: GLenum, _ params: UnsafePointer<GLfloat>!)
+```
+
+# glFogfv (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glFogfv(GLenum pname, const GLfloat *params);
+```
+
+# Document: glFogx(_:_:)
+
+Source path: documentation/opengles/glfogx(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glfogx(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFogx(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFogx(_ pname: GLenum, _ param: GLfixed)
+```
+
+# glFogx (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glFogx(GLenum pname, GLfixed param);
+```
+
+# Document: glFogxv(_:_:)
+
+Source path: documentation/opengles/glfogxv(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glfogxv(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFogxv(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFogxv(_ pname: GLenum, _ params: UnsafePointer<GLfixed>!)
+```
+
+# glFogxv (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glFogxv(GLenum pname, const GLfixed *params);
+```
+
+# Document: glFramebufferRenderbuffer(_:_:_:_:)
+
+Source path: documentation/opengles/glframebufferrenderbuffer(_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glframebufferrenderbuffer(_:_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFramebufferRenderbuffer(\_:\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFramebufferRenderbuffer(_ target: GLenum, _ attachment: GLenum, _ renderbuffertarget: GLenum, _ renderbuffer: GLuint)
+```
+
+# glFramebufferRenderbuffer (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer);
+```
+
+# Document: glFramebufferRenderbufferOES(_:_:_:_:)
+
+Source path: documentation/opengles/glframebufferrenderbufferoes(_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glframebufferrenderbufferoes(_:_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFramebufferRenderbufferOES(\_:\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFramebufferRenderbufferOES(_ target: GLenum, _ attachment: GLenum, _ renderbuffertarget: GLenum, _ renderbuffer: GLuint)
+```
+
+# glFramebufferRenderbufferOES (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern GLvoid glFramebufferRenderbufferOES(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer);
+```
+
+# Document: glFramebufferTexture2D(_:_:_:_:_:)
+
+Source path: documentation/opengles/glframebuffertexture2d(_:_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glframebuffertexture2d(_:_:_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFramebufferTexture2D(\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFramebufferTexture2D(_ target: GLenum, _ attachment: GLenum, _ textarget: GLenum, _ texture: GLuint, _ level: GLint)
+```
+
+# glFramebufferTexture2D (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
+```
+
+# Document: glFramebufferTexture2DOES(_:_:_:_:_:)
+
+Source path: documentation/opengles/glframebuffertexture2does(_:_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glframebuffertexture2does(_:_:_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFramebufferTexture2DOES(\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFramebufferTexture2DOES(_ target: GLenum, _ attachment: GLenum, _ textarget: GLenum, _ texture: GLuint, _ level: GLint)
+```
+
+# glFramebufferTexture2DOES (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern GLvoid glFramebufferTexture2DOES(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
+```
+
+# Document: glFramebufferTextureLayer(_:_:_:_:_:)
+
+Source path: documentation/opengles/glframebuffertexturelayer(_:_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glframebuffertexturelayer(_:_:_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFramebufferTextureLayer(\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFramebufferTextureLayer(_ target: GLenum, _ attachment: GLenum, _ texture: GLuint, _ level: GLint, _ layer: GLint)
+```
+
+# glFramebufferTextureLayer (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glFramebufferTextureLayer(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer);
+```
+
+# Document: glFrontFace(_:)
+
+Source path: documentation/opengles/glfrontface(_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glfrontface(_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFrontFace(\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFrontFace(_ mode: GLenum)
+```
+
+# glFrontFace (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glFrontFace(GLenum mode);
+```
+
+# Document: glFrustumf(_:_:_:_:_:_:)
+
+Source path: documentation/opengles/glfrustumf(_:_:_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glfrustumf(_:_:_:_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFrustumf(\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFrustumf(_ left: GLfloat, _ right: GLfloat, _ bottom: GLfloat, _ top: GLfloat, _ zNear: GLfloat, _ zFar: GLfloat)
+```
+
+# glFrustumf (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glFrustumf(GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat zNear, GLfloat zFar);
+```
+
+# Document: glFrustumx(_:_:_:_:_:_:)
+
+Source path: documentation/opengles/glfrustumx(_:_:_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glfrustumx(_:_:_:_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glFrustumx(\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glFrustumx(_ left: GLfixed, _ right: GLfixed, _ bottom: GLfixed, _ top: GLfixed, _ zNear: GLfixed, _ zFar: GLfixed)
+```
+
+# glFrustumx (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glFrustumx(GLfixed left, GLfixed right, GLfixed bottom, GLfixed top, GLfixed zNear, GLfixed zFar);
+```
+
+# Document: glGenBuffers(_:_:)
+
+Source path: documentation/opengles/glgenbuffers(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgenbuffers(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenBuffers(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenBuffers(_ n: GLsizei, _ buffers: UnsafeMutablePointer<GLuint>!)
+```
+
+# glGenBuffers (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGenBuffers(GLsizei n, GLuint *buffers);
+```
+
+# Document: glGenerateMipmap(_:)
+
+Source path: documentation/opengles/glgeneratemipmap(_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgeneratemipmap(_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenerateMipmap(\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenerateMipmap(_ target: GLenum)
+```
+
+# glGenerateMipmap (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGenerateMipmap(GLenum target);
+```
+
+# Document: glGenerateMipmapOES(_:)
+
+Source path: documentation/opengles/glgeneratemipmapoes(_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgeneratemipmapoes(_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenerateMipmapOES(\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenerateMipmapOES(_ target: GLenum)
+```
+
+# glGenerateMipmapOES (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern GLvoid glGenerateMipmapOES(GLenum target);
+```
+
+# Document: glGenFramebuffers(_:_:)
+
+Source path: documentation/opengles/glgenframebuffers(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgenframebuffers(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenFramebuffers(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenFramebuffers(_ n: GLsizei, _ framebuffers: UnsafeMutablePointer<GLuint>!)
+```
+
+# glGenFramebuffers (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGenFramebuffers(GLsizei n, GLuint *framebuffers);
+```
+
+# Document: glGenFramebuffersOES(_:_:)
+
+Source path: documentation/opengles/glgenframebuffersoes(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgenframebuffersoes(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenFramebuffersOES(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenFramebuffersOES(_ n: GLsizei, _ framebuffers: UnsafeMutablePointer<GLuint>!)
+```
+
+# glGenFramebuffersOES (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern GLvoid glGenFramebuffersOES(GLsizei n, GLuint *framebuffers);
+```
+
+# Document: glGenProgramPipelinesEXT(_:_:)
+
+Source path: documentation/opengles/glgenprogrampipelinesext(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgenprogrampipelinesext(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 5.0+ (deprecated in 12.0) · iPadOS 5.0+ (deprecated in 12.0) · Mac Catalyst 5.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenProgramPipelinesEXT(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 5.0+ (deprecated in 12.0) · iPadOS 5.0+ (deprecated in 12.0) · Mac Catalyst 5.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenProgramPipelinesEXT(_ n: GLsizei, _ pipelines: UnsafeMutablePointer<GLuint>!)
+```
+
+# glGenProgramPipelinesEXT (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 5.0+ (deprecated in 12.0) · iPadOS 5.0+ (deprecated in 12.0) · Mac Catalyst 5.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern GLvoid glGenProgramPipelinesEXT(GLsizei n, GLuint *pipelines);
+```
+
+# Document: glGenQueries(_:_:)
+
+Source path: documentation/opengles/glgenqueries(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgenqueries(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenQueries(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenQueries(_ n: GLsizei, _ ids: UnsafeMutablePointer<GLuint>!)
+```
+
+# glGenQueries (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGenQueries(GLsizei n, GLuint *ids);
+```
+
+# Document: glGenQueriesEXT(_:_:)
+
+Source path: documentation/opengles/glgenqueriesext(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgenqueriesext(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 5.0+ (deprecated in 12.0) · iPadOS 5.0+ (deprecated in 12.0) · Mac Catalyst 5.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenQueriesEXT(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 5.0+ (deprecated in 12.0) · iPadOS 5.0+ (deprecated in 12.0) · Mac Catalyst 5.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenQueriesEXT(_ n: GLsizei, _ ids: UnsafeMutablePointer<GLuint>!)
+```
+
+# glGenQueriesEXT (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 5.0+ (deprecated in 12.0) · iPadOS 5.0+ (deprecated in 12.0) · Mac Catalyst 5.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern GLvoid glGenQueriesEXT(GLsizei n, GLuint *ids);
+```
+
+# Document: glGenRenderbuffers(_:_:)
+
+Source path: documentation/opengles/glgenrenderbuffers(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgenrenderbuffers(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenRenderbuffers(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenRenderbuffers(_ n: GLsizei, _ renderbuffers: UnsafeMutablePointer<GLuint>!)
+```
+
+# glGenRenderbuffers (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGenRenderbuffers(GLsizei n, GLuint *renderbuffers);
+```
+
+# Document: glGenRenderbuffersOES(_:_:)
+
+Source path: documentation/opengles/glgenrenderbuffersoes(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgenrenderbuffersoes(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenRenderbuffersOES(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenRenderbuffersOES(_ n: GLsizei, _ renderbuffers: UnsafeMutablePointer<GLuint>!)
+```
+
+# glGenRenderbuffersOES (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern GLvoid glGenRenderbuffersOES(GLsizei n, GLuint *renderbuffers);
+```
+
+# Document: glGenSamplers(_:_:)
+
+Source path: documentation/opengles/glgensamplers(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgensamplers(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenSamplers(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenSamplers(_ count: GLsizei, _ samplers: UnsafeMutablePointer<GLuint>!)
+```
+
+# glGenSamplers (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGenSamplers(GLsizei count, GLuint *samplers);
+```
+
+# Document: glGenTextures(_:_:)
+
+Source path: documentation/opengles/glgentextures(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgentextures(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenTextures(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenTextures(_ n: GLsizei, _ textures: UnsafeMutablePointer<GLuint>!)
+```
+
+# glGenTextures (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGenTextures(GLsizei n, GLuint *textures);
+```
+
+# Document: glGenTransformFeedbacks(_:_:)
+
+Source path: documentation/opengles/glgentransformfeedbacks(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgentransformfeedbacks(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenTransformFeedbacks(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenTransformFeedbacks(_ n: GLsizei, _ ids: UnsafeMutablePointer<GLuint>!)
+```
+
+# glGenTransformFeedbacks (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGenTransformFeedbacks(GLsizei n, GLuint *ids);
+```
+
+# Document: glGenVertexArrays(_:_:)
+
+Source path: documentation/opengles/glgenvertexarrays(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgenvertexarrays(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenVertexArrays(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenVertexArrays(_ n: GLsizei, _ arrays: UnsafeMutablePointer<GLuint>!)
+```
+
+# glGenVertexArrays (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGenVertexArrays(GLsizei n, GLuint *arrays);
+```
+
+# Document: glGenVertexArraysOES(_:_:)
+
+Source path: documentation/opengles/glgenvertexarraysoes(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgenvertexarraysoes(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 4.0+ (deprecated in 12.0) · iPadOS 4.0+ (deprecated in 12.0) · Mac Catalyst 4.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGenVertexArraysOES(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 4.0+ (deprecated in 12.0) · iPadOS 4.0+ (deprecated in 12.0) · Mac Catalyst 4.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGenVertexArraysOES(_ n: GLsizei, _ arrays: UnsafeMutablePointer<GLuint>!)
+```
+
+# glGenVertexArraysOES (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 4.0+ (deprecated in 12.0) · iPadOS 4.0+ (deprecated in 12.0) · Mac Catalyst 4.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern GLvoid glGenVertexArraysOES(GLsizei n, GLuint *arrays);
+```
+
+# Document: glGetActiveAttrib(_:_:_:_:_:_:_:)
+
+Source path: documentation/opengles/glgetactiveattrib(_:_:_:_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgetactiveattrib(_:_:_:_:_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGetActiveAttrib(\_:\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGetActiveAttrib(_ program: GLuint, _ index: GLuint, _ bufsize: GLsizei, _ length: UnsafeMutablePointer<GLsizei>!, _ size: UnsafeMutablePointer<GLint>!, _ type: UnsafeMutablePointer<GLenum>!, _ name: UnsafeMutablePointer<GLchar>!)
+```
+
+# glGetActiveAttrib (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufsize, GLsizei *length, GLint *size, GLenum *type, GLchar *name);
+```
+
+# Document: glGetActiveUniform(_:_:_:_:_:_:_:)
+
+Source path: documentation/opengles/glgetactiveuniform(_:_:_:_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgetactiveuniform(_:_:_:_:_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGetActiveUniform(\_:\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGetActiveUniform(_ program: GLuint, _ index: GLuint, _ bufsize: GLsizei, _ length: UnsafeMutablePointer<GLsizei>!, _ size: UnsafeMutablePointer<GLint>!, _ type: UnsafeMutablePointer<GLenum>!, _ name: UnsafeMutablePointer<GLchar>!)
+```
+
+# glGetActiveUniform (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGetActiveUniform(GLuint program, GLuint index, GLsizei bufsize, GLsizei *length, GLint *size, GLenum *type, GLchar *name);
+```
+
+# Document: glGetActiveUniformBlockiv(_:_:_:_:)
+
+Source path: documentation/opengles/glgetactiveuniformblockiv(_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgetactiveuniformblockiv(_:_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGetActiveUniformBlockiv(\_:\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGetActiveUniformBlockiv(_ program: GLuint, _ uniformBlockIndex: GLuint, _ pname: GLenum, _ params: UnsafeMutablePointer<GLint>!)
+```
+
+# glGetActiveUniformBlockiv (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGetActiveUniformBlockiv(GLuint program, GLuint uniformBlockIndex, GLenum pname, GLint *params);
+```
+
+# Document: glGetActiveUniformBlockName(_:_:_:_:_:)
+
+Source path: documentation/opengles/glgetactiveuniformblockname(_:_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgetactiveuniformblockname(_:_:_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGetActiveUniformBlockName(\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGetActiveUniformBlockName(_ program: GLuint, _ uniformBlockIndex: GLuint, _ bufSize: GLsizei, _ length: UnsafeMutablePointer<GLsizei>!, _ uniformBlockName: UnsafeMutablePointer<GLchar>!)
+```
+
+# glGetActiveUniformBlockName (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGetActiveUniformBlockName(GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei *length, GLchar *uniformBlockName);
+```
+
+# Document: glGetActiveUniformsiv(_:_:_:_:_:)
+
+Source path: documentation/opengles/glgetactiveuniformsiv(_:_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgetactiveuniformsiv(_:_:_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGetActiveUniformsiv(\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGetActiveUniformsiv(_ program: GLuint, _ uniformCount: GLsizei, _ uniformIndices: UnsafePointer<GLuint>!, _ pname: GLenum, _ params: UnsafeMutablePointer<GLint>!)
+```
+
+# glGetActiveUniformsiv (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGetActiveUniformsiv(GLuint program, GLsizei uniformCount, const GLuint *uniformIndices, GLenum pname, GLint *params);
+```
+
+# Document: glGetAttachedShaders(_:_:_:_:)
+
+Source path: documentation/opengles/glgetattachedshaders(_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgetattachedshaders(_:_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGetAttachedShaders(\_:\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGetAttachedShaders(_ program: GLuint, _ maxcount: GLsizei, _ count: UnsafeMutablePointer<GLsizei>!, _ shaders: UnsafeMutablePointer<GLuint>!)
+```
+
+# glGetAttachedShaders (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGetAttachedShaders(GLuint program, GLsizei maxcount, GLsizei *count, GLuint *shaders);
+```
+
+# Document: glGetAttribLocation(_:_:)
+
+Source path: documentation/opengles/glgetattriblocation(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgetattriblocation(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGetAttribLocation(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGetAttribLocation(_ program: GLuint, _ name: UnsafePointer<GLchar>!) -> Int32
+```
+
+# glGetAttribLocation (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern int glGetAttribLocation(GLuint program, const GLchar *name);
+```
+
+# Document: glGetBooleanv(_:_:)
+
+Source path: documentation/opengles/glgetbooleanv(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgetbooleanv(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGetBooleanv(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGetBooleanv(_ pname: GLenum, _ params: UnsafeMutablePointer<GLboolean>!)
+```
+
+# glGetBooleanv (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGetBooleanv(GLenum pname, GLboolean *params);
+```
+
+# Document: glGetBufferParameteri64v(_:_:_:)
+
+Source path: documentation/opengles/glgetbufferparameteri64v(_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgetbufferparameteri64v(_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGetBufferParameteri64v(\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGetBufferParameteri64v(_ target: GLenum, _ pname: GLenum, _ params: UnsafeMutablePointer<GLint64>!)
+```
+
+# glGetBufferParameteri64v (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGetBufferParameteri64v(GLenum target, GLenum pname, GLint64 *params);
+```
+
+# Document: glGetBufferParameteriv(_:_:_:)
+
+Source path: documentation/opengles/glgetbufferparameteriv(_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgetbufferparameteriv(_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGetBufferParameteriv(\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGetBufferParameteriv(_ target: GLenum, _ pname: GLenum, _ params: UnsafeMutablePointer<GLint>!)
+```
+
+# glGetBufferParameteriv (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 3.0+ (deprecated in 12.0) · iPadOS 3.0+ (deprecated in 12.0) · Mac Catalyst 3.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGetBufferParameteriv(GLenum target, GLenum pname, GLint *params);
+```
+
+# Document: glGetBufferPointerv(_:_:_:)
+
+Source path: documentation/opengles/glgetbufferpointerv(_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgetbufferpointerv(_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGetBufferPointerv(\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGetBufferPointerv(_ target: GLenum, _ pname: GLenum, _ params: UnsafeMutablePointer<UnsafeMutableRawPointer?>!)
+```
+
+# glGetBufferPointerv (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 7.0+ (deprecated in 12.0) · iPadOS 7.0+ (deprecated in 12.0) · Mac Catalyst 7.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGetBufferPointerv(GLenum target, GLenum pname, GLvoid **params);
+```
+
+# Document: glGetBufferPointervOES(_:_:_:)
+
+Source path: documentation/opengles/glgetbufferpointervoes(_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgetbufferpointervoes(_:_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ (deprecated in 12.0)
+
+# glGetBufferPointervOES(\_:\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · tvOS 9.0+ (deprecated in 12.0)
+
+## Declaration
+
+```swift
+func glGetBufferPointervOES(_ target: GLenum, _ pname: GLenum, _ params: UnsafeMutablePointer<UnsafeMutableRawPointer?>!)
+```
+
+# glGetBufferPointervOES (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+## Declaration
+
+```objectivec
+extern GLvoid glGetBufferPointervOES(GLenum target, GLenum pname, GLvoid **params);
+```
+
+# Document: glGetClipPlanef(_:_:)
+
+Source path: documentation/opengles/glgetclipplanef(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgetclipplanef(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGetClipPlanef(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGetClipPlanef(_ pname: GLenum, _ equation: UnsafeMutablePointer<GLfloat>!)
+```
+
+# glGetClipPlanef (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGetClipPlanef(GLenum pname, GLfloat *equation);
+```
+
+# Document: glGetClipPlanex(_:_:)
+
+Source path: documentation/opengles/glgetclipplanex(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/opengles/glgetclipplanex(_:_:)
+Description: Framework: OpenGL ES Kind: Function Availability: iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+# glGetClipPlanex(\_:\_:) (Swift)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```swift
+func glGetClipPlanex(_ pname: GLenum, _ eqn: UnsafeMutablePointer<GLfixed>!)
+```
+
+# glGetClipPlanex (Objective-C)
+
+**Framework:** OpenGL ES  
+**Kind:** Function  
+**Availability:** iOS 2.0+ (deprecated in 12.0) · iPadOS 2.0+ (deprecated in 12.0) · Mac Catalyst 2.0+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 12.0)
+
+> OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+
+## Declaration
+
+```objectivec
+extern void glGetClipPlanex(GLenum pname, GLfixed eqn[4]);
+```
 
 # Document: glGetError()
 
@@ -195814,1393 +197434,3 @@ var maskedPathRanges: [ClosedRange<CGFloat>] { get }
 - [renderBounds](renderbounds.md): The bounds of the rendered stroke, including the width and line properties of the stroke after applying the transform.
 - [transform](transform.md): The affine transform of the stroke after rendering.
 - [randomSeed](randomseed.md)
-
-# Document: path
-
-Source path: documentation/pencilkit/pkstroke-swift.struct/path
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/path
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# path
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-The B-spline path that describes this stroke.
-
-## Declaration
-
-```swift
-var path: PKStrokePath { get set }
-```
-
-## See Also
-
-### Getting the stroke properties
-
-- [ink](ink.md): The Ink, which is a combination of a tool used to render this stroke.
-- [mask](mask-8g6sx.md): The pretransform mask used to clip the rendering of the stroke.
-- [mask](mask-16kkz.md): The pretransform mask used to clip the rendering of the stroke.
-- [maskedPathRanges](maskedpathranges.md): The range of points in the stroke path reference that intersect the stroke’s mask.
-- [renderBounds](renderbounds.md): The bounds of the rendered stroke, including the width and line properties of the stroke after applying the transform.
-- [transform](transform.md): The affine transform of the stroke after rendering.
-- [randomSeed](randomseed.md)
-
-# Document: randomSeed
-
-Source path: documentation/pencilkit/pkstroke-swift.struct/randomseed
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/randomseed
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · visionOS 1.0+
-
-# randomSeed
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-var randomSeed: UInt32 { get set }
-```
-
-## See Also
-
-### Getting the stroke properties
-
-- [ink](ink.md): The Ink, which is a combination of a tool used to render this stroke.
-- [mask](mask-8g6sx.md): The pretransform mask used to clip the rendering of the stroke.
-- [mask](mask-16kkz.md): The pretransform mask used to clip the rendering of the stroke.
-- [maskedPathRanges](maskedpathranges.md): The range of points in the stroke path reference that intersect the stroke’s mask.
-- [path](path.md): The B-spline path that describes this stroke.
-- [renderBounds](renderbounds.md): The bounds of the rendered stroke, including the width and line properties of the stroke after applying the transform.
-- [transform](transform.md): The affine transform of the stroke after rendering.
-
-# Document: renderBounds
-
-Source path: documentation/pencilkit/pkstroke-swift.struct/renderbounds
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/renderbounds
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# renderBounds
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-The bounds of the rendered stroke, including the width and line properties of the stroke after applying the transform.
-
-## Declaration
-
-```swift
-var renderBounds: CGRect { get }
-```
-
-## See Also
-
-### Getting the stroke properties
-
-- [ink](ink.md): The Ink, which is a combination of a tool used to render this stroke.
-- [mask](mask-8g6sx.md): The pretransform mask used to clip the rendering of the stroke.
-- [mask](mask-16kkz.md): The pretransform mask used to clip the rendering of the stroke.
-- [maskedPathRanges](maskedpathranges.md): The range of points in the stroke path reference that intersect the stroke’s mask.
-- [path](path.md): The B-spline path that describes this stroke.
-- [transform](transform.md): The affine transform of the stroke after rendering.
-- [randomSeed](randomseed.md)
-
-# Document: renderGroupID
-
-Source path: documentation/pencilkit/pkstroke-swift.struct/rendergroupid
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/rendergroupid
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# renderGroupID
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-Strokes with certain inks (such as marker) can composite to look as if they were drawn while the previous stroke with the same ink was still wet. This UUID may be set to a single value for a run of strokes which should be rendered together in this manner.
-
-## Declaration
-
-```swift
-var renderGroupID: UUID? { get set }
-```
-
-## Mentioned In
-
-- [Controlling stroke rendering for animation and editing](../controlling-stroke-rendering-for-animation-and-editing.md)
-
-## See Also
-
-### Configuring rendering
-
-- [renderState](renderstate-swift.property.md): Contains information about the render details (such as particle positioning) of this stroke, which can be useful when manipulating the model in certain ways. For example, this may be set on substrokes returned by `substroke(range:)`. nil uses default rendering.
-- [PKStroke.RenderState](renderstate-swift.struct.md): A value that captures the render-time state of a stroke, such as grain texture position.
-
-# Document: renderState
-
-Source path: documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.property
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.property
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# renderState
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-Contains information about the render details (such as particle positioning) of this stroke, which can be useful when manipulating the model in certain ways. For example, this may be set on substrokes returned by `substroke(range:)`. nil uses default rendering.
-
-## Declaration
-
-```swift
-var renderState: PKStroke.RenderState? { get set }
-```
-
-## Mentioned In
-
-- [Controlling stroke rendering for animation and editing](../controlling-stroke-rendering-for-animation-and-editing.md)
-
-## See Also
-
-### Configuring rendering
-
-- [renderGroupID](rendergroupid.md): Strokes with certain inks (such as marker) can composite to look as if they were drawn while the previous stroke with the same ink was still wet. This UUID may be set to a single value for a run of strokes which should be rendered together in this manner.
-- [PKStroke.RenderState](renderstate-swift.struct.md): A value that captures the render-time state of a stroke, such as grain texture position.
-
-# Document: PKStroke.RenderState
-
-Source path: documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct
-Description: Framework: PencilKit Kind: Structure Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# PKStroke.RenderState
-
-**Framework:** PencilKit  
-**Kind:** Structure  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-A value that captures the render-time state of a stroke, such as grain texture position.
-
-## Declaration
-
-```swift
-struct RenderState
-```
-
-## Mentioned In
-
-- [Controlling stroke rendering for animation and editing](../controlling-stroke-rendering-for-animation-and-editing.md)
-
-<a id="overview"></a>
-
-## Overview
-
-Use `RenderState` to preserve rendering fidelity when you manipulate strokes programmatically. For example, substrokes returned by [substroke(range:)](substroke%28range_%29.md) may include a `renderState` so that the extracted portion renders identically to the corresponding section of the original stroke. A value of `nil` uses default rendering.
-
-The [grainOffset](renderstate-swift.struct/grainoffset.md) property is directly readable and writable. All state, including opaque internal properties, can be persisted by encoding the value using `Codable`.
-
-## Topics
-
-### Creating a render state
-
-- [init(grainOffset:)](renderstate-swift.struct/init%28grainoffset_%29.md): Creates a render state with the specified grain offset.
-
-### Getting the render state
-
-- [grainOffset](renderstate-swift.struct/grainoffset.md): The pre-transform position of the grain texture for strokes with a backing grain texture such as crayon.
-
-### Using reference types
-
-- [PKStrokeRenderStateReference](../pkstrokerenderstatereference.md): An object that captures the render-time state of a stroke, such as grain texture position.
-
-### Initializers
-
-- [init(\_:)](renderstate-swift.struct/init%28__%29.md): Creates a `RenderState` from its Objective-C counterpart `PKStrokeRenderStateReference`.
-
-## Relationships
-
-### Conforms To
-
-- [Decodable](https://developer.apple.com/documentation/swift/decodable)
-- [Encodable](https://developer.apple.com/documentation/swift/encodable)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Configuring rendering
-
-- [renderGroupID](rendergroupid.md): Strokes with certain inks (such as marker) can composite to look as if they were drawn while the previous stroke with the same ink was still wet. This UUID may be set to a single value for a run of strokes which should be rendered together in this manner.
-- [renderState](renderstate-swift.property.md): Contains information about the render details (such as particle positioning) of this stroke, which can be useful when manipulating the model in certain ways. For example, this may be set on substrokes returned by `substroke(range:)`. nil uses default rendering.
-
-# Document: grainOffset
-
-Source path: documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct/grainoffset
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct/grainoffset
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# grainOffset
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-The pre-transform position of the grain texture for strokes with a backing grain texture such as crayon.
-
-## Declaration
-
-```swift
-var grainOffset: CGPoint?
-```
-
-## Mentioned In
-
-- [Controlling stroke rendering for animation and editing](../../controlling-stroke-rendering-for-animation-and-editing.md)
-
-# Document: init(_:)
-
-Source path: documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct/init(_:)
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct/init(_:)
-Description: Framework: PencilKit Kind: Initializer Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# init(\_:)
-
-**Framework:** PencilKit  
-**Kind:** Initializer  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-Creates a `RenderState` from its Objective-C counterpart `PKStrokeRenderStateReference`.
-
-## Declaration
-
-```swift
-init(_ objcValue: PKStrokeRenderStateReference)
-```
-
-## Parameters
-
-- `objcValue`: The Objective-C `PKStrokeRenderStateReference` to convert from.
-
-# Document: init(grainOffset:)
-
-Source path: documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct/init(grainoffset:)
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/renderstate-swift.struct/init(grainoffset:)
-Description: Framework: PencilKit Kind: Initializer Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# init(grainOffset:)
-
-**Framework:** PencilKit  
-**Kind:** Initializer  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-Creates a render state with the specified grain offset.
-
-## Declaration
-
-```swift
-init(grainOffset: CGPoint? = nil)
-```
-
-## Parameters
-
-- `grainOffset`: The grain texture offset. Defaults to nil.
-
-# Document: requiredContentVersion
-
-Source path: documentation/pencilkit/pkstroke-swift.struct/requiredcontentversion
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/requiredcontentversion
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · visionOS 1.0+
-
-# requiredContentVersion
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · visionOS 1.0+
-
-The version of PencilKit necessary to use the stroke.
-
-## Declaration
-
-```swift
-var requiredContentVersion: PKContentVersion { get }
-```
-
-# Document: substroke(range:)
-
-Source path: documentation/pencilkit/pkstroke-swift.struct/substroke(range:)
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/substroke(range:)
-Description: Framework: PencilKit Kind: Instance Method Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# substroke(range:)
-
-**Framework:** PencilKit  
-**Kind:** Instance Method  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-Returns a copy of this stroke containing the control points in the given range.
-
-## Declaration
-
-```swift
-func substroke(range: ClosedRange<CGFloat>) -> PKStroke
-```
-
-## Parameters
-
-- `range`: The range of control points in the receiver to copy to the returned stroke.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new stroke containing only the control points within the specified range.
-
-## Mentioned In
-
-- [Controlling stroke rendering for animation and editing](../controlling-stroke-rendering-for-animation-and-editing.md)
-
-<a id="discussion"></a>
-
-## Discussion
-
-Maintains information for PencilKit rendering to make the copied part of the stroke render the same as the receiver. The returned stroke may have a `renderState` set to maintain this information.
-
-# Document: transform
-
-Source path: documentation/pencilkit/pkstroke-swift.struct/transform
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/transform
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# transform
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-The affine transform of the stroke after rendering.
-
-## Declaration
-
-```swift
-var transform: CGAffineTransform { get set }
-```
-
-## See Also
-
-### Getting the stroke properties
-
-- [ink](ink.md): The Ink, which is a combination of a tool used to render this stroke.
-- [mask](mask-8g6sx.md): The pretransform mask used to clip the rendering of the stroke.
-- [mask](mask-16kkz.md): The pretransform mask used to clip the rendering of the stroke.
-- [maskedPathRanges](maskedpathranges.md): The range of points in the stroke path reference that intersect the stroke’s mask.
-- [path](path.md): The B-spline path that describes this stroke.
-- [renderBounds](renderbounds.md): The bounds of the rendered stroke, including the width and line properties of the stroke after applying the transform.
-- [randomSeed](randomseed.md)
-
-# Document: Protocol implementations
-
-Source path: documentation/pencilkit/pkstrokepath-protocol-implementations
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-protocol-implementations
-Description: Interface languages: Swift, Objective-C
-
-# Protocol implementations
-
-**Interface languages:** Swift, Objective-C
-
-**Framework:** PencilKit
-
-Access the stroke path’s implementations of protocol methods.
-
-# Document: PKStrokePath
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct
-Description: Framework: PencilKit Kind: Structure Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# PKStrokePath
-
-**Framework:** PencilKit  
-**Kind:** Structure  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-A structure that captures the components of a stroke and provides methods to find and interpolate points along the stroke’s path.
-
-## Declaration
-
-```swift
-struct PKStrokePath
-```
-
-## Mentioned In
-
-- [Importing Bézier path data into PencilKit](importing-external-drawing-data-into-pencilkit.md)
-
-## Topics
-
-### Creating a new stroke path
-
-- [init()](pkstrokepath-swift.struct/init%28%29.md): Creates an empty stroke path.
-- [init(controlPoints:creationDate:)](pkstrokepath-swift.struct/init%28controlpoints_creationdate_%29.md): Creates a stroke path with the cubic B-spline control points and a date that you specify.
-- [init(controlPoints:creationDate:id:)](pkstrokepath-swift.struct/init%28controlpoints_creationdate_id_%29.md): Creates a stroke path with the specified cubic B-spline control points and a unique identifier.
-- [init(bezierPath:creationDate:pointProvider:)](pkstrokepath-swift.struct/init%28bezierpath_creationdate_pointprovider_%29.md): Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
-- [PKStrokePath.ConvertedBezierPoint](pkstrokepath-swift.struct/convertedbezierpoint.md): Information about a B-spline control point converted from a Bézier path.
-
-### Identifying the path
-
-- [id](pkstrokepath-swift.struct/id.md): The unique identity of the stroke path.
-
-### Converting to and from Bézier paths
-
-- [bezierRepresentation](pkstrokepath-swift.struct/bezierrepresentation.md): A Bézier path representation of the path’s curve, computed in linear time.
-
-### Getting the stroke path properties
-
-- [creationDate](pkstrokepath-swift.struct/creationdate.md): The creation date and time of this stroke path.
-
-### Accessing and interpolating points
-
-- [interpolatedPoints(in:by:)](pkstrokepath-swift.struct/interpolatedpoints%28in_by_%29.md): Returns the slice on-curve points using the floating point range and stride that you specify.
-- [interpolatedLocation(at:)](pkstrokepath-swift.struct/interpolatedlocation%28at_%29.md): Returns the on-curve point for the floating point parametric value.
-- [interpolatedPoint(at:)](pkstrokepath-swift.struct/interpolatedpoint%28at_%29.md): Returns the on-curve point for the provided floating point parameter.
-- [parametricValue(\_:offsetBy:)](pkstrokepath-swift.struct/parametricvalue%28__offsetby_%29.md)
-
-### Supporting types
-
-- [PKStrokePath.InterpolatedSlice](pkstrokepath-swift.struct/interpolatedslice.md): A struct representing an interpolated slice of stroke points with a specific stride across a range of this stroke data.
-
-### Supporting protocol requirements
-
-- [Protocol implementations](pkstrokepath-protocol-implementations.md): Access the stroke path’s implementations of protocol methods.
-
-### Using reference types
-
-- [PKStrokePathReference](pkstrokepathreference.md): A class that captures the components of a stroke and provides methods to find and interpolate points along the stroke’s path.
-
-### Subscripts
-
-- [subscript(\_:)](pkstrokepath-swift.struct/subscript%28__%29.md): Access the stroke point at the provided index.
-
-### Default Implementations
-
-- [Identifiable Implementations](pkstrokepath-swift.struct/identifiable-implementations.md)
-
-## Relationships
-
-### Conforms To
-
-- [BidirectionalCollection](https://developer.apple.com/documentation/swift/bidirectionalcollection)
-- [Collection](https://developer.apple.com/documentation/swift/collection)
-- [Copyable](https://developer.apple.com/documentation/swift/copyable)
-- [Escapable](https://developer.apple.com/documentation/swift/escapable)
-- [Identifiable](https://developer.apple.com/documentation/swift/identifiable)
-- [RandomAccessCollection](https://developer.apple.com/documentation/swift/randomaccesscollection)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-- [Sequence](https://developer.apple.com/documentation/swift/sequence)
-
-## See Also
-
-### Canvas
-
-- [Drawing with PencilKit](drawing-with-pencilkit.md): Add expressive, low-latency drawing to your app using PencilKit.
-- [Customizing Scribble with Interactions](customizing-scribble-with-interactions.md): Enable writing on a non-text-input view by adding interactions.
-- [Inspecting, Modifying, and Constructing PencilKit Drawings](inspecting-modifying-and-constructing-pencilkit-drawings.md): Score users’ ability to match PencilKit drawings generated from text, by accessing the strokes and points inside PencilKit drawings.
-- [Importing Bézier path data into PencilKit](importing-external-drawing-data-into-pencilkit.md): Convert existing Bézier-based stroke data into PencilKit drawing strokes.
-- [Controlling stroke rendering for animation and editing](controlling-stroke-rendering-for-animation-and-editing.md): Slice, animate, and blend PencilKit strokes in code, while keeping grain texture and wet ink intact.
-- [PKCanvasView](pkcanvasview.md): A view that captures Apple Pencil input and displays the rendered results in an iOS app.
-- [PKDrawing](pkdrawing-swift.struct.md): A structure representing the drawing information captured by a canvas view.
-- [PKStroke](pkstroke-swift.struct.md): A structure that represents the paths, boundaries, and other properties of a stroke drawn on a canvas.
-- [PKStrokePoint](pkstrokepoint-swift.struct.md): A structure that represents the properties of a specific point along a stroke’s path.
-- [PKInk](pkink-swift.struct.md): A structure that represents an ink that specifies its type, color, and width.
-
-# Document: bezierRepresentation
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/bezierrepresentation
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/bezierrepresentation
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# bezierRepresentation
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-A Bézier path representation of the path’s curve, computed in linear time.
-
-## Declaration
-
-```swift
-var bezierRepresentation: CGPath { get }
-```
-
-## Mentioned In
-
-- [Importing Bézier path data into PencilKit](../importing-external-drawing-data-into-pencilkit.md)
-
-# Document: PKStrokePath.ConvertedBezierPoint
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint
-Description: Framework: PencilKit Kind: Structure Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# PKStrokePath.ConvertedBezierPoint
-
-**Framework:** PencilKit  
-**Kind:** Structure  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-Information about a B-spline control point converted from a Bézier path.
-
-## Declaration
-
-```swift
-struct ConvertedBezierPoint
-```
-
-## Mentioned In
-
-- [Importing Bézier path data into PencilKit](../importing-external-drawing-data-into-pencilkit.md)
-
-<a id="overview"></a>
-
-## Overview
-
-`ConvertedBezierPoint` values are passed one at a time to the `pointProvider` closure of [init(bezierPath:creationDate:pointProvider:)](init%28bezierpath_creationdate_pointprovider_%29.md). Use the provided location, index, and segment information to initialize each `PKStrokePoint` with appropriate size, opacity, force, and other drawing properties.
-
-## Topics
-
-### Getting the point data
-
-- [index](convertedbezierpoint/index.md): The index of the point along the path.
-- [pointCount](convertedbezierpoint/pointcount.md): The total number of B-Spline control points in the path.
-- [location](convertedbezierpoint/location.md): The location of the cubic uniform B-Spline control point.
-- [bezierSegmentIndex](convertedbezierpoint/beziersegmentindex.md): The index of the Bézier segment the point originates from, not including `move to` elements.
-
-### Using reference types
-
-- [PKConvertedBezierPointReference](../pkconvertedbezierpointreference.md): An object that provides information about a B-spline control point converted from a Bézier path.
-
-## See Also
-
-### Creating a new stroke path
-
-- [init()](init%28%29.md): Creates an empty stroke path.
-- [init(controlPoints:creationDate:)](init%28controlpoints_creationdate_%29.md): Creates a stroke path with the cubic B-spline control points and a date that you specify.
-- [init(controlPoints:creationDate:id:)](init%28controlpoints_creationdate_id_%29.md): Creates a stroke path with the specified cubic B-spline control points and a unique identifier.
-- [init(bezierPath:creationDate:pointProvider:)](init%28bezierpath_creationdate_pointprovider_%29.md): Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
-
-# Document: bezierSegmentIndex
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/beziersegmentindex
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/beziersegmentindex
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# bezierSegmentIndex
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-The index of the Bézier segment the point originates from, not including `move to` elements.
-
-## Declaration
-
-```swift
-let bezierSegmentIndex: Int
-```
-
-## Mentioned In
-
-- [Importing Bézier path data into PencilKit](../../importing-external-drawing-data-into-pencilkit.md)
-
-## See Also
-
-### Getting the point data
-
-- [index](index.md): The index of the point along the path.
-- [pointCount](pointcount.md): The total number of B-Spline control points in the path.
-- [location](location.md): The location of the cubic uniform B-Spline control point.
-
-# Document: index
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/index
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/index
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# index
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-The index of the point along the path.
-
-## Declaration
-
-```swift
-let index: Int
-```
-
-## Mentioned In
-
-- [Importing Bézier path data into PencilKit](../../importing-external-drawing-data-into-pencilkit.md)
-
-## See Also
-
-### Getting the point data
-
-- [pointCount](pointcount.md): The total number of B-Spline control points in the path.
-- [location](location.md): The location of the cubic uniform B-Spline control point.
-- [bezierSegmentIndex](beziersegmentindex.md): The index of the Bézier segment the point originates from, not including `move to` elements.
-
-# Document: location
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/location
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/location
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# location
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-The location of the cubic uniform B-Spline control point.
-
-## Declaration
-
-```swift
-let location: CGPoint
-```
-
-## Mentioned In
-
-- [Importing Bézier path data into PencilKit](../../importing-external-drawing-data-into-pencilkit.md)
-
-## See Also
-
-### Getting the point data
-
-- [index](index.md): The index of the point along the path.
-- [pointCount](pointcount.md): The total number of B-Spline control points in the path.
-- [bezierSegmentIndex](beziersegmentindex.md): The index of the Bézier segment the point originates from, not including `move to` elements.
-
-# Document: pointCount
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/pointcount
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/convertedbezierpoint/pointcount
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# pointCount
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-The total number of B-Spline control points in the path.
-
-## Declaration
-
-```swift
-let pointCount: Int
-```
-
-## Mentioned In
-
-- [Importing Bézier path data into PencilKit](../../importing-external-drawing-data-into-pencilkit.md)
-
-## See Also
-
-### Getting the point data
-
-- [index](index.md): The index of the point along the path.
-- [location](location.md): The location of the cubic uniform B-Spline control point.
-- [bezierSegmentIndex](beziersegmentindex.md): The index of the Bézier segment the point originates from, not including `move to` elements.
-
-# Document: creationDate
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/creationdate
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/creationdate
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# creationDate
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-The creation date and time of this stroke path.
-
-## Declaration
-
-```swift
-var creationDate: Date { get }
-```
-
-# Document: id
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/id
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/id
-Description: Framework: PencilKit Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# id
-
-**Framework:** PencilKit  
-**Kind:** Instance Property  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-The unique identity of the stroke path.
-
-## Declaration
-
-```swift
-var id: UUID { get }
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-> **Warning**
-
-> Using multiple stroke paths with identical IDs but different control points will result in undefined rendering behavior. Ensure each stroke path has a unique identifier.
-
-# Document: Identifiable Implementations
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/identifiable-implementations
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/identifiable-implementations
-Description: Framework: PencilKit Kind: API Collection
-
-# Identifiable Implementations
-
-**Framework:** PencilKit  
-**Kind:** API Collection
-
-## Topics
-
-### Instance Properties
-
-- [id](id.md): The unique identity of the stroke path.
-
-# Document: init()
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/init()
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/init()
-Description: Framework: PencilKit Kind: Initializer Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# init()
-
-**Framework:** PencilKit  
-**Kind:** Initializer  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-Creates an empty stroke path.
-
-## Declaration
-
-```swift
-init()
-```
-
-## See Also
-
-### Creating a new stroke path
-
-- [init(controlPoints:creationDate:)](init%28controlpoints_creationdate_%29.md): Creates a stroke path with the cubic B-spline control points and a date that you specify.
-- [init(controlPoints:creationDate:id:)](init%28controlpoints_creationdate_id_%29.md): Creates a stroke path with the specified cubic B-spline control points and a unique identifier.
-- [init(bezierPath:creationDate:pointProvider:)](init%28bezierpath_creationdate_pointprovider_%29.md): Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
-- [PKStrokePath.ConvertedBezierPoint](convertedbezierpoint.md): Information about a B-spline control point converted from a Bézier path.
-
-# Document: init(bezierPath:creationDate:pointProvider:)
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/init(bezierpath:creationdate:pointprovider:)
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/init(bezierpath:creationdate:pointprovider:)
-Description: Framework: PencilKit Kind: Initializer Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# init(bezierPath:creationDate:pointProvider:)
-
-**Framework:** PencilKit  
-**Kind:** Initializer  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
-
-## Declaration
-
-```swift
-init(bezierPath: CGPath, creationDate: Date, pointProvider: (PKStrokePath.ConvertedBezierPoint) -> PKStrokePoint)
-```
-
-## Parameters
-
-- `bezierPath`: The Bézier path to convert to a cubic uniform B-Spline
-- `creationDate`: The start time of this path.
-- `pointProvider`: Closure to initialize the `PKStrokePoint`s of the path with specific values.
-
-## Mentioned In
-
-- [Importing Bézier path data into PencilKit](../importing-external-drawing-data-into-pencilkit.md)
-
-<a id="discussion"></a>
-
-## Discussion
-
-The count of control points of the generated spline is not guaranteed to be a specific value except when the provided path is the output of `bezierRepresentation->CGPath`, where it will match the original curve.
-
-The output B-Spline will have continuous curvature and 0 curvature at the endpoints. In cases where the B-Spline cannot fully recreate the Bézier path, it will be an approximation. For example, if the given Bézier path includes `line to` elements, these will produce straight line segments in the resulting B-Spline, but if a `line to` element is adjacent to a `curve to` element, the resulting curve may not match the original.
-
-> **Warning**
-
-> For a Bézier path with multiple subpaths, only the first will be converted.
-
-## See Also
-
-### Creating a new stroke path
-
-- [init()](init%28%29.md): Creates an empty stroke path.
-- [init(controlPoints:creationDate:)](init%28controlpoints_creationdate_%29.md): Creates a stroke path with the cubic B-spline control points and a date that you specify.
-- [init(controlPoints:creationDate:id:)](init%28controlpoints_creationdate_id_%29.md): Creates a stroke path with the specified cubic B-spline control points and a unique identifier.
-- [PKStrokePath.ConvertedBezierPoint](convertedbezierpoint.md): Information about a B-spline control point converted from a Bézier path.
-
-# Document: init(controlPoints:creationDate:)
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/init(controlpoints:creationdate:)
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/init(controlpoints:creationdate:)
-Description: Framework: PencilKit Kind: Initializer Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# init(controlPoints:creationDate:)
-
-**Framework:** PencilKit  
-**Kind:** Initializer  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-Creates a stroke path with the cubic B-spline control points and a date that you specify.
-
-## Declaration
-
-```swift
-init<T>(controlPoints: T, creationDate: Date) where T : Sequence, T.Element == PKStrokePoint
-```
-
-## Parameters
-
-- `controlPoints`: An array of control points for a cubic B-spline.
-- `creationDate`: The creation time of this path. The `timeOffset` of points in this stroke path is relative to this date.
-
-## See Also
-
-### Creating a new stroke path
-
-- [init()](init%28%29.md): Creates an empty stroke path.
-- [init(controlPoints:creationDate:id:)](init%28controlpoints_creationdate_id_%29.md): Creates a stroke path with the specified cubic B-spline control points and a unique identifier.
-- [init(bezierPath:creationDate:pointProvider:)](init%28bezierpath_creationdate_pointprovider_%29.md): Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
-- [PKStrokePath.ConvertedBezierPoint](convertedbezierpoint.md): Information about a B-spline control point converted from a Bézier path.
-
-# Document: init(controlPoints:creationDate:id:)
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/init(controlpoints:creationdate:id:)
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/init(controlpoints:creationdate:id:)
-Description: Framework: PencilKit Kind: Initializer Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# init(controlPoints:creationDate:id:)
-
-**Framework:** PencilKit  
-**Kind:** Initializer  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-Creates a stroke path with the specified cubic B-spline control points and a unique identifier.
-
-## Declaration
-
-```swift
-init<T>(controlPoints: T, creationDate: Date, id: UUID) where T : Sequence, T.Element == PKStrokePoint
-```
-
-## Parameters
-
-- `controlPoints`: An array of control points for a cubic B-spline.
-- `creationDate`: The start time of this path.
-- `id`: The unique identity of the path.
-
-<a id="discussion"></a>
-
-## Discussion
-
-> **Warning**
-
-> Using multiple stroke paths with identical IDs but different control points will result in undefined rendering behavior. Ensure each stroke path has a unique identifier.
-
-## See Also
-
-### Creating a new stroke path
-
-- [init()](init%28%29.md): Creates an empty stroke path.
-- [init(controlPoints:creationDate:)](init%28controlpoints_creationdate_%29.md): Creates a stroke path with the cubic B-spline control points and a date that you specify.
-- [init(bezierPath:creationDate:pointProvider:)](init%28bezierpath_creationdate_pointprovider_%29.md): Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
-- [PKStrokePath.ConvertedBezierPoint](convertedbezierpoint.md): Information about a B-spline control point converted from a Bézier path.
-
-# Document: interpolatedLocation(at:)
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedlocation(at:)
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedlocation(at:)
-Description: Framework: PencilKit Kind: Instance Method Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# interpolatedLocation(at:)
-
-**Framework:** PencilKit  
-**Kind:** Instance Method  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-Returns the on-curve point for the floating point parametric value.
-
-## Declaration
-
-```swift
-func interpolatedLocation(at parametricValue: CGFloat) -> CGPoint
-```
-
-## Parameters
-
-- `parametricValue`: The on-curve location `[0, count-1]` where interpolation occurs.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A [CGPoint](../../corefoundation/cgpoint.md) interpolated from the supplied `parametricValue`.
-
-## See Also
-
-### Accessing and interpolating points
-
-- [interpolatedPoints(in:by:)](interpolatedpoints%28in_by_%29.md): Returns the slice on-curve points using the floating point range and stride that you specify.
-- [interpolatedPoint(at:)](interpolatedpoint%28at_%29.md): Returns the on-curve point for the provided floating point parameter.
-- [parametricValue(\_:offsetBy:)](parametricvalue%28__offsetby_%29.md)
-
-# Document: interpolatedPoint(at:)
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedpoint(at:)
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedpoint(at:)
-Description: Framework: PencilKit Kind: Instance Method Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# interpolatedPoint(at:)
-
-**Framework:** PencilKit  
-**Kind:** Instance Method  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-Returns the on-curve point for the provided floating point parameter.
-
-## Declaration
-
-```swift
-func interpolatedPoint(at parametricValue: CGFloat) -> PKStrokePoint
-```
-
-## Parameters
-
-- `parametricValue`: The on-curve location `[0, count-1]` where interpolation occurs.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A [PKStrokePoint](../pkstrokepoint-swift.struct.md) interpolated from the supplied `parametricValue.`
-
-## See Also
-
-### Accessing and interpolating points
-
-- [interpolatedPoints(in:by:)](interpolatedpoints%28in_by_%29.md): Returns the slice on-curve points using the floating point range and stride that you specify.
-- [interpolatedLocation(at:)](interpolatedlocation%28at_%29.md): Returns the on-curve point for the floating point parametric value.
-- [parametricValue(\_:offsetBy:)](parametricvalue%28__offsetby_%29.md)
-
-# Document: interpolatedPoints(in:by:)
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedpoints(in:by:)
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedpoints(in:by:)
-Description: Framework: PencilKit Kind: Instance Method Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# interpolatedPoints(in:by:)
-
-**Framework:** PencilKit  
-**Kind:** Instance Method  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-Returns the slice on-curve points using the floating point range and stride that you specify.
-
-## Declaration
-
-```swift
-func interpolatedPoints(in range: ClosedRange<CGFloat>? = nil, by stride: PKStrokePath.InterpolatedSlice.Stride) -> PKStrokePath.InterpolatedSlice
-```
-
-## Parameters
-
-- `range`: The floating point range for the points of interest.
-- `stride`: The stride component of the current slice.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An interpolated slice whose points are within the specified `range`.
-
-## See Also
-
-### Accessing and interpolating points
-
-- [interpolatedLocation(at:)](interpolatedlocation%28at_%29.md): Returns the on-curve point for the floating point parametric value.
-- [interpolatedPoint(at:)](interpolatedpoint%28at_%29.md): Returns the on-curve point for the provided floating point parameter.
-- [parametricValue(\_:offsetBy:)](parametricvalue%28__offsetby_%29.md)
-
-# Document: PKStrokePath.InterpolatedSlice
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice
-Description: Framework: PencilKit Kind: Structure Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# PKStrokePath.InterpolatedSlice
-
-**Framework:** PencilKit  
-**Kind:** Structure  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-A struct representing an interpolated slice of stroke points with a specific stride across a range of this stroke data.
-
-## Declaration
-
-```swift
-struct InterpolatedSlice
-```
-
-## Topics
-
-### Traversing slices
-
-- [PKStrokePath.InterpolatedSlice.Stride](interpolatedslice/stride.md): The stride between elements of this slice.
-
-### Supporting protocol requirements
-
-- [Protocol implementations](../interpolatedslice-protocol-implementations.md): Access the interpolated slice’s implementations of protocol methods.
-
-## Relationships
-
-### Conforms To
-
-- [Copyable](https://developer.apple.com/documentation/swift/copyable)
-- [Escapable](https://developer.apple.com/documentation/swift/escapable)
-- [IteratorProtocol](https://developer.apple.com/documentation/swift/iteratorprotocol)
-- [Sequence](https://developer.apple.com/documentation/swift/sequence)
-
-# Document: PKStrokePath.InterpolatedSlice.Stride
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride
-Description: Framework: PencilKit Kind: Enumeration Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# PKStrokePath.InterpolatedSlice.Stride
-
-**Framework:** PencilKit  
-**Kind:** Enumeration  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-The stride between elements of this slice.
-
-## Declaration
-
-```swift
-enum Stride
-```
-
-## Topics
-
-### Stride types
-
-- [PKStrokePath.InterpolatedSlice.Stride.distance(\_:)](stride/distance%28__%29.md): A stride based on a distance between elements you provide.
-- [PKStrokePath.InterpolatedSlice.Stride.parametricStep(\_:)](stride/parametricstep%28__%29.md): A stride based on a parametric step value you provide.
-- [PKStrokePath.InterpolatedSlice.Stride.time(\_:)](stride/time%28__%29.md): A stride based on a time interval in seconds you provide.
-
-# Document: PKStrokePath.InterpolatedSlice.Stride.distance(_:)
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride/distance(_:)
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride/distance(_:)
-Description: Framework: PencilKit Kind: Case Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# PKStrokePath.InterpolatedSlice.Stride.distance(\_:)
-
-**Framework:** PencilKit  
-**Kind:** Case  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-A stride based on a distance between elements you provide.
-
-## Declaration
-
-```swift
-case distance(CGFloat)
-```
-
-## See Also
-
-### Stride types
-
-- [PKStrokePath.InterpolatedSlice.Stride.parametricStep(\_:)](parametricstep%28__%29.md): A stride based on a parametric step value you provide.
-- [PKStrokePath.InterpolatedSlice.Stride.time(\_:)](time%28__%29.md): A stride based on a time interval in seconds you provide.
-
-# Document: PKStrokePath.InterpolatedSlice.Stride.parametricStep(_:)
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride/parametricstep(_:)
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride/parametricstep(_:)
-Description: Framework: PencilKit Kind: Case Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# PKStrokePath.InterpolatedSlice.Stride.parametricStep(\_:)
-
-**Framework:** PencilKit  
-**Kind:** Case  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-A stride based on a parametric step value you provide.
-
-## Declaration
-
-```swift
-case parametricStep(CGFloat)
-```
-
-## See Also
-
-### Stride types
-
-- [PKStrokePath.InterpolatedSlice.Stride.distance(\_:)](distance%28__%29.md): A stride based on a distance between elements you provide.
-- [PKStrokePath.InterpolatedSlice.Stride.time(\_:)](time%28__%29.md): A stride based on a time interval in seconds you provide.
-
-# Document: PKStrokePath.InterpolatedSlice.Stride.time(_:)
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride/time(_:)
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/interpolatedslice/stride/time(_:)
-Description: Framework: PencilKit Kind: Case Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# PKStrokePath.InterpolatedSlice.Stride.time(\_:)
-
-**Framework:** PencilKit  
-**Kind:** Case  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-A stride based on a time interval in seconds you provide.
-
-## Declaration
-
-```swift
-case time(TimeInterval)
-```
-
-## See Also
-
-### Stride types
-
-- [PKStrokePath.InterpolatedSlice.Stride.distance(\_:)](distance%28__%29.md): A stride based on a distance between elements you provide.
-- [PKStrokePath.InterpolatedSlice.Stride.parametricStep(\_:)](parametricstep%28__%29.md): A stride based on a parametric step value you provide.
-
-# Document: parametricValue(_:offsetBy:)
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/parametricvalue(_:offsetby:)
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/parametricvalue(_:offsetby:)
-Description: Framework: PencilKit Kind: Instance Method Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# parametricValue(\_:offsetBy:)
-
-**Framework:** PencilKit  
-**Kind:** Instance Method  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-func parametricValue(_ parametricValue: CGFloat, offsetBy step: PKStrokePath.InterpolatedSlice.Stride) -> CGFloat
-```
-
-## See Also
-
-### Accessing and interpolating points
-
-- [interpolatedPoints(in:by:)](interpolatedpoints%28in_by_%29.md): Returns the slice on-curve points using the floating point range and stride that you specify.
-- [interpolatedLocation(at:)](interpolatedlocation%28at_%29.md): Returns the on-curve point for the floating point parametric value.
-- [interpolatedPoint(at:)](interpolatedpoint%28at_%29.md): Returns the on-curve point for the provided floating point parameter.
-
-# Document: subscript(_:)
-
-Source path: documentation/pencilkit/pkstrokepath-swift.struct/subscript(_:)
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepath-swift.struct/subscript(_:)
-Description: Framework: PencilKit Kind: Instance Subscript Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# subscript(\_:)
-
-**Framework:** PencilKit  
-**Kind:** Instance Subscript  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-Access the stroke point at the provided index.
-
-## Declaration
-
-```swift
-subscript(range: ClosedRange<CGFloat>) -> PKStrokePath { get }
-```
-
-# Document: PKStrokePathReference
-
-Source path: documentation/pencilkit/pkstrokepathreference
-Canonical documentation: https://developer.apple.com/documentation/pencilkit/pkstrokepathreference
-Description: Framework: PencilKit Kind: Class Availability: iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-# PKStrokePathReference (Swift)
-
-**Framework:** PencilKit  
-**Kind:** Class  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-A class that captures the components of a stroke and provides methods to find and interpolate points along the stroke’s path.
-
-## Declaration
-
-```swift
-class PKStrokePathReference
-```
-
-## Topics
-
-### Creating a new stroke path
-
-- [init(controlPoints:creationDate:)](pkstrokepathreference/init%28controlpoints_creationdate_%29.md): Creates a stroke path with the cubic B-spline control points and a date that you specify.
-
-### Getting the stroke path properties
-
-- [count](pkstrokepathreference/count.md): The number of control points in this stroke path.
-- [creationDate](pkstrokepathreference/creationdate.md): The time at which this stroke path starts.
-
-### Accessing and interpolating points
-
-- [enumerateInterpolatedPoints(in:strideByDistance:using:)](pkstrokepathreference/enumerateinterpolatedpoints%28in_stridebydistance_using_%29.md): Deprecated. Executes a given block using each point in a range with a distance step.
-- [enumerateInterpolatedPoints(in:strideByParametricStep:using:)](pkstrokepathreference/enumerateinterpolatedpoints%28in_stridebyparametricstep_using_%29.md): Deprecated. Executes a given block using each point in a range with a parametric step.
-- [enumerateInterpolatedPoints(in:strideByTime:using:)](pkstrokepathreference/enumerateinterpolatedpoints%28in_stridebytime_using_%29.md): Deprecated. Executes a given block using each point in a range with a time step.
-- [interpolatedLocation(at:)](pkstrokepathreference/interpolatedlocation%28at_%29.md): Returns the on-curve point for the floating point parametric value.
-- [interpolatedPoint(at:)](pkstrokepathreference/interpolatedpoint%28at_%29.md): Returns the on-curve point for the provided floating point parameter.
-- [parametricValue(\_:offsetByDistance:)](pkstrokepathreference/parametricvalue%28__offsetbydistance_%29.md): Returns a parametric value on the B-spline that’s a specified distance from the given parametric value.
-- [parametricValue(\_:offsetByTime:)](pkstrokepathreference/parametricvalue%28__offsetbytime_%29.md): Returns a parametric value on the B-spline that’s a specified time from the given parametric value.
-- [point(at:)](pkstrokepathreference/point%28at_%29.md): Returns the B-spline control point at an index point that you provide.
-- [subscript(\_:)](pkstrokepathreference/subscript%28__%29.md): Returns the B-spline control point the location index that you provide.
-
-### Initializers
-
-- [init(bezierPath:creationDate:pointProvider:)](pkstrokepathreference/init%28bezierpath_creationdate_pointprovider_%29.md): Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
-- [init(controlPoints:creationDate:strokePathID:)](pkstrokepathreference/init%28controlpoints_creationdate_strokepathid_%29.md): Creates a stroke path with the specified control points and a unique identifier.
-
-### Instance Properties
-
-- [bezierRepresentation](pkstrokepathreference/bezierrepresentation.md): A Bézier path representation of the path’s curve, computed in linear time.
-- [strokePathID](pkstrokepathreference/strokepathid.md): The unique identity of the stroke path.
-
-### Instance Methods
-
-- [subpath(with:)](pkstrokepathreference/subpath%28with_%29.md): Returns a copy of the path containing the control points in the specified parametric range.
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCopying](../foundation/nscopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-# PKStrokePath (Objective-C)
-
-**Framework:** PencilKit  
-**Kind:** Class  
-**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
-
-A class that captures the components of a stroke and provides methods to find and interpolate points along the stroke’s path.
-
-## Declaration
-
-```objectivec
-@interface PKStrokePath : NSObject
-```
-
-## Topics
-
-### Creating a new stroke path
-
-- [initWithControlPoints:creationDate:](pkstrokepathreference/init%28controlpoints_creationdate_%29.md): Creates a stroke path with the cubic B-spline control points and a date that you specify.
-
-### Getting the stroke path properties
-
-- [count](pkstrokepathreference/count.md): The number of control points in this stroke path.
-- [creationDate](pkstrokepathreference/creationdate.md): The time at which this stroke path starts.
-
-### Accessing and interpolating points
-
-- [enumerateInterpolatedPointsInRange:strideByDistance:usingBlock:](pkstrokepathreference/enumerateinterpolatedpoints%28in_stridebydistance_using_%29.md): Deprecated. Executes a given block using each point in a range with a distance step.
-- [enumerateInterpolatedPointsInRange:strideByParametricStep:usingBlock:](pkstrokepathreference/enumerateinterpolatedpoints%28in_stridebyparametricstep_using_%29.md): Deprecated. Executes a given block using each point in a range with a parametric step.
-- [enumerateInterpolatedPointsInRange:strideByTime:usingBlock:](pkstrokepathreference/enumerateinterpolatedpoints%28in_stridebytime_using_%29.md): Deprecated. Executes a given block using each point in a range with a time step.
-- [interpolatedLocationAt:](pkstrokepathreference/interpolatedlocation%28at_%29.md): Returns the on-curve point for the floating point parametric value.
-- [interpolatedPointAt:](pkstrokepathreference/interpolatedpoint%28at_%29.md): Returns the on-curve point for the provided floating point parameter.
-- [parametricValue:offsetByDistance:](pkstrokepathreference/parametricvalue%28__offsetbydistance_%29.md): Returns a parametric value on the B-spline that’s a specified distance from the given parametric value.
-- [parametricValue:offsetByTime:](pkstrokepathreference/parametricvalue%28__offsetbytime_%29.md): Returns a parametric value on the B-spline that’s a specified time from the given parametric value.
-- [pointAtIndex:](pkstrokepathreference/point%28at_%29.md): Returns the B-spline control point at an index point that you provide.
-- [objectAtIndexedSubscript:](pkstrokepathreference/subscript%28__%29.md): Returns the B-spline control point the location index that you provide.
-
-### Instance Properties
-
-- [bezierRepresentation](pkstrokepathreference/bezierrepresentation.md): A Bézier path representation of the path’s curve, computed in linear time.
-- [strokePathID](pkstrokepathreference/strokepathid.md): The unique identity of the stroke path.
-
-### Instance Methods
-
-- [initWithBezierPath:creationDate:pointProvider:](pkstrokepathreference/init%28bezierpath_creationdate_pointprovider_%29.md): Creates a stroke path recreating the specified Bézier path as a cubic uniform B-Spline.
-- [initWithControlPoints:creationDate:strokePathID:](pkstrokepathreference/init%28controlpoints_creationdate_strokepathid_%29.md): Creates a stroke path with the specified control points and a unique identifier.
-- [subpathWithRange:](pkstrokepathreference/subpath%28with_%29.md): Returns a copy of the path containing the control points in the specified parametric range.
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Conforms To
-
-- [NSCopying](../foundation/nscopying.md)
-
-## See Also
-
-### Canvas
-
-- [Drawing with PencilKit](drawing-with-pencilkit.md): Add expressive, low-latency drawing to your app using PencilKit.
-- [Customizing Scribble with Interactions](customizing-scribble-with-interactions.md): Enable writing on a non-text-input view by adding interactions.
-- [Inspecting, Modifying, and Constructing PencilKit Drawings](inspecting-modifying-and-constructing-pencilkit-drawings.md): Score users’ ability to match PencilKit drawings generated from text, by accessing the strokes and points inside PencilKit drawings.
-- [Importing Bézier path data into PencilKit](importing-external-drawing-data-into-pencilkit.md): Convert existing Bézier-based stroke data into PencilKit drawing strokes.
-- [Controlling stroke rendering for animation and editing](controlling-stroke-rendering-for-animation-and-editing.md): Slice, animate, and blend PencilKit strokes in code, while keeping grain texture and wet ink intact.
-- [PKCanvasView](pkcanvasview.md): A view that captures Apple Pencil input and displays the rendered results in an iOS app.
-- [PKDrawing](pkdrawingreference.md): A data structure that contains the drawing information captured by a canvas view.
-- [PKStroke](pkstrokereference.md): A class that represents the paths, boundaries and other properties of a stroke drawn on a canvas.
-- [PKStrokePoint](pkstrokepointreference.md): A class that represents the properties of a specific point along a stroke’s path.
-- [PKInk](pkinkreference.md): Provides a description of the creation and rendering of marks on a canvas.
-- [PKStrokeRenderState](pkstrokerenderstatereference.md): An object that captures the render-time state of a stroke, such as grain texture position.
-- [PKConvertedBezierPoint](pkconvertedbezierpointreference.md): An object that provides information about a B-spline control point converted from a Bézier path.
-- [PKFloatRange](pkfloatrange.md): A utility class that represents range components of a stroke.
-- [PKInkTypeReed](pkinktypereed.md)

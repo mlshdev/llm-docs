@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/app-details
 
 # App Details
@@ -10,18 +10,26 @@
 
 Fetch app metadata.
 
+<a id="overview"></a>
+
+## Overview
+
+> **Deprecated**
+
+> The Apple Ads Campaign Management API is deprecated and will be sunset on January 26, 2027. Use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api) instead.
+
 ## Topics
 
 ### App Details
 
-- [Get App Details](get-app-details.md): Fetches app metadata.
-- [Get Localized App Details](get-localized-app-details.md): Fetches the localized default product page for an app.
+- [Get App Details](get-app-details.md): Deprecated. Fetches app metadata.
+- [Get Localized App Details](get-localized-app-details.md): Deprecated. Fetches the localized default product page for an app.
 
 ### Response Objects
 
-- [MediaDetail](mediadetail.md): The media detail object.
+- [MediaDetail](mediadetail.md): Deprecated. The media detail object.
 - [MediaDetailResponse](mediadetailresponse.md)
-- [MediaLocaleDetail](medialocaledetail.md): The media locale detail object.
+- [MediaLocaleDetail](medialocaledetail.md): Deprecated. The media locale detail object.
 - [MediaLocaleDetailResponse](medialocaledetailresponse.md)
 
 ## See Also

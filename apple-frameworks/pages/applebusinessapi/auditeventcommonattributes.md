@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/auditeventcommonattributes
 
 # AuditEventCommonAttributes
@@ -7,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Object  
-**Availability:** Apple Business API 2.5+
+**Availability:** Apple Business API 2.6+
 
 The common attributes for all audit events.
 
@@ -38,6 +38,10 @@ object AuditEventCommonAttributes
 
 - [AuditEventAccountAddedAttributes](auditeventaccountaddedattributes.md)
 - [AuditEventAccountDeletedAttributes](auditeventaccountdeletedattributes.md)
+- [AuditEventAccountImageRemovedAttributes](auditeventaccountimageremovedattributes.md)
+- [AuditEventAccountImageReplacedAttributes](auditeventaccountimagereplacedattributes.md)
+- [AuditEventAccountImageSetAttributes](auditeventaccountimagesetattributes.md)
+- [AuditEventAccountPasswordChangedAttributes](auditeventaccountpasswordchangedattributes.md)
 - [AuditEventAccountRoleLocationChangedAttributes](auditeventaccountrolelocationchangedattributes.md)
 - [AuditEventApiAccountCreatedWithKeyAttributes](auditeventapiaccountcreatedwithkeyattributes.md)
 - [AuditEventApiAccountCreatedWithoutKeyAttributes](auditeventapiaccountcreatedwithoutkeyattributes.md)
@@ -46,6 +50,8 @@ object AuditEventCommonAttributes
 - [AuditEventApiAccountKeyRevokedAttributes](auditeventapiaccountkeyrevokedattributes.md)
 - [AuditEventApiAccountNameChangedAttributes](auditeventapiaccountnamechangedattributes.md)
 - [AuditEventApiAccountRoleLocationChangedAttributes](auditeventapiaccountrolelocationchangedattributes.md)
+- [AuditEventAppleServicesSettingsUpdatedAttributes](auditeventappleservicessettingsupdatedattributes.md)
+- [AuditEventBatchPasswordResetInitiatedAttributes](auditeventbatchpasswordresetinitiatedattributes.md)
 - [AuditEventCollectionCreatedAttributes](auditeventcollectioncreatedattributes.md)
 - [AuditEventCollectionDeletedAttributes](auditeventcollectiondeletedattributes.md)
 - [AuditEventCollectionUpdatedAttributes](auditeventcollectionupdatedattributes.md)
@@ -58,10 +64,20 @@ object AuditEventCommonAttributes
 - [AuditEventDeviceRemovedFromOrgAttributes](auditeventdeviceremovedfromorgattributes.md)
 - [AuditEventDeviceUnassignedFromServerAttributes](auditeventdeviceunassignedfromserverattributes.md)
 - [AuditEventDomainAddedAttributes](auditeventdomainaddedattributes.md)
+- [AuditEventDomainFederationDisabledAttributes](auditeventdomainfederationdisabledattributes.md)
+- [AuditEventDomainFederationEnabledAttributes](auditeventdomainfederationenabledattributes.md)
 - [AuditEventDomainRemovedAttributes](auditeventdomainremovedattributes.md)
 - [AuditEventDomainVerifiedAttributes](auditeventdomainverifiedattributes.md)
 - [AuditEventExternalAccountAssociatedAttributes](auditeventexternalaccountassociatedattributes.md)
 - [AuditEventExternalAccountDisassociatedAttributes](auditeventexternalaccountdisassociatedattributes.md)
+- [AuditEventExternalAccountInvitedAttributes](auditeventexternalaccountinvitedattributes.md)
+- [AuditEventIdpAccountSyncDisabledAttributes](auditeventidpaccountsyncdisabledattributes.md)
+- [AuditEventIdpAccountSyncEnabledAttributes](auditeventidpaccountsyncenabledattributes.md)
+- [AuditEventIdpCreatedAttributes](auditeventidpcreatedattributes.md)
+- [AuditEventIdpDeletedAttributes](auditeventidpdeletedattributes.md)
+- [AuditEventIdpUpdatedAttributes](auditeventidpupdatedattributes.md)
+- [AuditEventRoleCreatedAttributes](auditeventrolecreatedattributes.md)
+- [AuditEventRoleUpdatedAttributes](auditeventroleupdatedattributes.md)
 - [AuditEventSubjectHasApplecarePurchaseAddedAttributes](auditeventsubjecthasapplecarepurchaseaddedattributes.md)
 - [AuditEventSubjectHasApplecarePurchaseRemovedAttributes](auditeventsubjecthasapplecarepurchaseremovedattributes.md)
 - [AuditEventSubjectHasIcloudStoragePurchaseAddedAttributes](auditeventsubjecthasicloudstoragepurchaseaddedattributes.md)
@@ -69,3 +85,4 @@ object AuditEventCommonAttributes
 - [AuditEventSubscriptionCreatedAttributes](auditeventsubscriptioncreatedattributes.md)
 - [AuditEventSubscriptionDeletedAttributes](auditeventsubscriptiondeletedattributes.md)
 - [AuditEventSubscriptionUpdatedAttributes](auditeventsubscriptionupdatedattributes.md)
+- [AuditEventTermsAcceptedAttributes](auditeventtermsacceptedattributes.md)

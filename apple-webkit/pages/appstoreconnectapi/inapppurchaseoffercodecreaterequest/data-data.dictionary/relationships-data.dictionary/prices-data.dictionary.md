@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseoffercodecreaterequest/data-data.dictionary/relationships-data.dictionary/prices-data.dictionary
 
 # InAppPurchaseOfferCodeCreateRequest.Data.Relationships.Prices
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 4.2+
 
-The request body you use to create an in-app purchase offer code data relationships prices.
+The request body you use to create an In-App Purchase offer code data relationships prices.
 
 ## Declaration
 
@@ -31,4 +31,4 @@ object InAppPurchaseOfferCodeCreateRequest.Data.Relationships.Prices
 
 ### Dictionaries
 
-- [InAppPurchaseOfferCodeCreateRequest.Data.Relationships.InAppPurchase](inapppurchase-data.dictionary.md): The request body you use to create an in-app purchase offer code for data relationships for an in-app purchase.
+- [InAppPurchaseOfferCodeCreateRequest.Data.Relationships.InAppPurchase](inapppurchase-data.dictionary.md): The request body you use to create an In-App Purchase offer code for data relationships for an In-App Purchase.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/adgroup
 
 # AdGroup
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Object  
-**Availability:** Search Ads 2.0+
+**Availability:** Search Ads 2.0+ (deprecated in 5.2)
 
 The response to ad group requests.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -98,6 +100,6 @@ object AdGroup
 
 ### Ad Group Request and Response Objects
 
-- [AdGroupUpdate](adgroupupdate.md): The list of ad group fields that are updatable.
-- [AdGroupResponse](adgroupresponse.md): A container for the ad group response body.
-- [AdGroupListResponse](adgrouplistresponse.md): The response details of ad group requests.
+- [AdGroupUpdate](adgroupupdate.md): Deprecated. The list of ad group fields that are updatable.
+- [AdGroupResponse](adgroupresponse.md): Deprecated. A container for the ad group response body.
+- [AdGroupListResponse](adgrouplistresponse.md): Deprecated. The response details of ad group requests.

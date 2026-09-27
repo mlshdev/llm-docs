@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/brandsreportingad
 
 # BrandsReportingAd
@@ -32,8 +32,10 @@ object BrandsReportingAd
 - `creationTime` — `date-time`: Timestamp when the ad was created (ISO 8601).
 - `modificationTime` — `date-time`: Timestamp of the ad’s last modification (ISO 8601).
 - `displayStatus` — `string`: System-computed, rolled-up delivery state combining ad, ad group, and campaign conditions.
+  **Allowed values:** `AD_GROUP_ON_HOLD`, `CAMPAIGN_ON_HOLD`, `DELETED`, `LIMITED`, `ON_HOLD`, `PAUSED`, `PROCESSING`, `RUNNING`
 - `creative` — `BrandsReportingCreative`: See [BrandsReportingCreative](brandsreportingcreative.md) for details.
 - `deviceClass` — `string`: Device class groupBy dimension value.
+  **Allowed values:** `IPHONE`, `IPAD`
 - `locationId` — `string`: Location ID groupBy dimension value.
 - `supplyPlacement` — `string`: Supply placement groupBy dimension value.
 

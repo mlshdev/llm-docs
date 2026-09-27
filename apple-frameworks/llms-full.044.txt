@@ -1,10 +1,1539 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 44
+
+# Document: init(rawValue:)
+
+Source path: documentation/matter/mtrdatatypepositiontag/init(rawvalue:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatypepositiontag/init(rawvalue:)
+Description: Framework: Matter Kind: Initializer Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# init(rawValue:)
+
+**Framework:** Matter  
+**Kind:** Initializer  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+init?(rawValue: UInt8)
+```
+
+# Document: MTRDataTypePositionTag.left
+
+Source path: documentation/matter/mtrdatatypepositiontag/left
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatypepositiontag/left
+Description: Framework: Matter Kind: Case Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# MTRDataTypePositionTag.left (Swift)
+
+**Framework:** Matter  
+**Kind:** Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+case left
+```
+
+# MTRDataTypePositionTagLeft (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRDataTypePositionTagLeft
+```
+
+# Document: MTRDataTypePositionTag.middle
+
+Source path: documentation/matter/mtrdatatypepositiontag/middle
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatypepositiontag/middle
+Description: Framework: Matter Kind: Case Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# MTRDataTypePositionTag.middle (Swift)
+
+**Framework:** Matter  
+**Kind:** Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+case middle
+```
+
+# MTRDataTypePositionTagMiddle (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRDataTypePositionTagMiddle
+```
+
+# Document: MTRDataTypePositionTag.right
+
+Source path: documentation/matter/mtrdatatypepositiontag/right
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatypepositiontag/right
+Description: Framework: Matter Kind: Case Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# MTRDataTypePositionTag.right (Swift)
+
+**Framework:** Matter  
+**Kind:** Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+case right
+```
+
+# MTRDataTypePositionTagRight (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRDataTypePositionTagRight
+```
+
+# Document: MTRDataTypePositionTag.row
+
+Source path: documentation/matter/mtrdatatypepositiontag/row
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatypepositiontag/row
+Description: Framework: Matter Kind: Case Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# MTRDataTypePositionTag.row (Swift)
+
+**Framework:** Matter  
+**Kind:** Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+case row
+```
+
+# MTRDataTypePositionTagRow (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRDataTypePositionTagRow
+```
+
+# Document: MTRDataTypePositionTag.top
+
+Source path: documentation/matter/mtrdatatypepositiontag/top
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatypepositiontag/top
+Description: Framework: Matter Kind: Case Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# MTRDataTypePositionTag.top (Swift)
+
+**Framework:** Matter  
+**Kind:** Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+case top
+```
+
+# MTRDataTypePositionTagTop (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRDataTypePositionTagTop
+```
+
+# Document: MTRDataTypeRelativePositionTag
+
+Source path: documentation/matter/mtrdatatyperelativepositiontag
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatyperelativepositiontag
+Description: Framework: Matter Kind: Enumeration Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# MTRDataTypeRelativePositionTag (Swift)
+
+**Framework:** Matter  
+**Kind:** Enumeration  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+enum MTRDataTypeRelativePositionTag
+```
+
+## Topics
+
+### Enumeration Cases
+
+- [MTRDataTypeRelativePositionTag.above](mtrdatatyperelativepositiontag/above.md)
+- [MTRDataTypeRelativePositionTag.around](mtrdatatyperelativepositiontag/around.md)
+- [MTRDataTypeRelativePositionTag.behind](mtrdatatyperelativepositiontag/behind.md)
+- [MTRDataTypeRelativePositionTag.frontOf](mtrdatatyperelativepositiontag/frontof.md)
+- [MTRDataTypeRelativePositionTag.nextTo](mtrdatatyperelativepositiontag/nextto.md)
+- [MTRDataTypeRelativePositionTag.on](mtrdatatyperelativepositiontag/on.md)
+- [MTRDataTypeRelativePositionTag.under](mtrdatatyperelativepositiontag/under.md)
+
+### Initializers
+
+- [init(rawValue:)](mtrdatatyperelativepositiontag/init%28rawvalue_%29.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+# MTRDataTypeRelativePositionTag (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+enum MTRDataTypeRelativePositionTag : uint8_t;
+```
+
+## Topics
+
+### Enumeration Cases
+
+- [MTRDataTypeRelativePositionTagAbove](mtrdatatyperelativepositiontag/above.md)
+- [MTRDataTypeRelativePositionTagAround](mtrdatatyperelativepositiontag/around.md)
+- [MTRDataTypeRelativePositionTagBehind](mtrdatatyperelativepositiontag/behind.md)
+- [MTRDataTypeRelativePositionTagFrontOf](mtrdatatyperelativepositiontag/frontof.md)
+- [MTRDataTypeRelativePositionTagNextTo](mtrdatatyperelativepositiontag/nextto.md)
+- [MTRDataTypeRelativePositionTagOn](mtrdatatyperelativepositiontag/on.md)
+- [MTRDataTypeRelativePositionTagUnder](mtrdatatyperelativepositiontag/under.md)
+
+# Document: MTRDataTypeRelativePositionTag.above
+
+Source path: documentation/matter/mtrdatatyperelativepositiontag/above
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatyperelativepositiontag/above
+Description: Framework: Matter Kind: Case Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# MTRDataTypeRelativePositionTag.above (Swift)
+
+**Framework:** Matter  
+**Kind:** Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+case above
+```
+
+# MTRDataTypeRelativePositionTagAbove (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRDataTypeRelativePositionTagAbove
+```
+
+# Document: MTRDataTypeRelativePositionTag.around
+
+Source path: documentation/matter/mtrdatatyperelativepositiontag/around
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatyperelativepositiontag/around
+Description: Framework: Matter Kind: Case Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# MTRDataTypeRelativePositionTag.around (Swift)
+
+**Framework:** Matter  
+**Kind:** Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+case around
+```
+
+# MTRDataTypeRelativePositionTagAround (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRDataTypeRelativePositionTagAround
+```
+
+# Document: MTRDataTypeRelativePositionTag.behind
+
+Source path: documentation/matter/mtrdatatyperelativepositiontag/behind
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatyperelativepositiontag/behind
+Description: Framework: Matter Kind: Case Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# MTRDataTypeRelativePositionTag.behind (Swift)
+
+**Framework:** Matter  
+**Kind:** Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+case behind
+```
+
+# MTRDataTypeRelativePositionTagBehind (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRDataTypeRelativePositionTagBehind
+```
+
+# Document: MTRDataTypeRelativePositionTag.frontOf
+
+Source path: documentation/matter/mtrdatatyperelativepositiontag/frontof
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatyperelativepositiontag/frontof
+Description: Framework: Matter Kind: Case Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# MTRDataTypeRelativePositionTag.frontOf (Swift)
+
+**Framework:** Matter  
+**Kind:** Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+case frontOf
+```
+
+# MTRDataTypeRelativePositionTagFrontOf (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRDataTypeRelativePositionTagFrontOf
+```
+
+# Document: init(rawValue:)
+
+Source path: documentation/matter/mtrdatatyperelativepositiontag/init(rawvalue:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatyperelativepositiontag/init(rawvalue:)
+Description: Framework: Matter Kind: Initializer Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# init(rawValue:)
+
+**Framework:** Matter  
+**Kind:** Initializer  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+init?(rawValue: UInt8)
+```
+
+# Document: MTRDataTypeRelativePositionTag.nextTo
+
+Source path: documentation/matter/mtrdatatyperelativepositiontag/nextto
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatyperelativepositiontag/nextto
+Description: Framework: Matter Kind: Case Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# MTRDataTypeRelativePositionTag.nextTo (Swift)
+
+**Framework:** Matter  
+**Kind:** Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+case nextTo
+```
+
+# MTRDataTypeRelativePositionTagNextTo (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRDataTypeRelativePositionTagNextTo
+```
+
+# Document: MTRDataTypeRelativePositionTag.on
+
+Source path: documentation/matter/mtrdatatyperelativepositiontag/on
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatyperelativepositiontag/on
+Description: Framework: Matter Kind: Case Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# MTRDataTypeRelativePositionTag.on (Swift)
+
+**Framework:** Matter  
+**Kind:** Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+case on
+```
+
+# MTRDataTypeRelativePositionTagOn (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRDataTypeRelativePositionTagOn
+```
+
+# Document: MTRDataTypeRelativePositionTag.under
+
+Source path: documentation/matter/mtrdatatyperelativepositiontag/under
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdatatyperelativepositiontag/under
+Description: Framework: Matter Kind: Case Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# MTRDataTypeRelativePositionTag.under (Swift)
+
+**Framework:** Matter  
+**Kind:** Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+case under
+```
+
+# MTRDataTypeRelativePositionTagUnder (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRDataTypeRelativePositionTagUnder
+```
+
+# Document: MTRDataVersionKey
+
+Source path: documentation/matter/mtrdataversionkey
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdataversionkey
+Description: Framework: Matter Kind: Global Variable Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# MTRDataVersionKey (Swift)
+
+**Framework:** Matter  
+**Kind:** Global Variable  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+let MTRDataVersionKey: String
+```
+
+# MTRDataVersionKey (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Global Variable  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+extern NSString * const MTRDataVersionKey;
+```
+
+# Document: MTRDescriptorClusterDeviceType
+
+Source path: documentation/matter/mtrdescriptorclusterdevicetype
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdescriptorclusterdevicetype
+Description: Framework: Matter Kind: Class Availability: iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.…
+
+# MTRDescriptorClusterDeviceType (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
+
+> Please use MTRDescriptorClusterDeviceTypeStruct
+
+## Declaration
+
+```swift
+class MTRDescriptorClusterDeviceType
+```
+
+## Topics
+
+### Instance Properties
+
+- [revision](mtrdescriptorclusterdevicetype/revision.md): Deprecated.
+
+## Relationships
+
+### Inherits From
+
+- [MTRDescriptorClusterDeviceTypeStruct](mtrdescriptorclusterdevicetypestruct.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRDescriptorClusterDeviceType (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
+
+> Please use MTRDescriptorClusterDeviceTypeStruct
+
+## Declaration
+
+```objectivec
+@interface MTRDescriptorClusterDeviceType : MTRDescriptorClusterDeviceTypeStruct
+```
+
+## Topics
+
+### Instance Properties
+
+- [revision](mtrdescriptorclusterdevicetype/revision.md): Deprecated.
+
+## Relationships
+
+### Inherits From
+
+- [MTRDescriptorClusterDeviceTypeStruct](mtrdescriptorclusterdevicetypestruct.md)
+
+# Document: revision
+
+Source path: documentation/matter/mtrdescriptorclusterdevicetype/revision
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdescriptorclusterdevicetype/revision
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (depre…
+
+# revision (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
+
+> Please use MTRDescriptorClusterDeviceTypeStruct
+
+## Declaration
+
+```swift
+@NSCopying var revision: NSNumber { get set }
+```
+
+# revision (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
+
+> Please use MTRDescriptorClusterDeviceTypeStruct
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) NSNumber * revision;
+```
+
+# Document: MTRDescriptorClusterDeviceTypeStruct
+
+Source path: documentation/matter/mtrdescriptorclusterdevicetypestruct
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdescriptorclusterdevicetypestruct
+Description: Framework: Matter Kind: Class Availability: iOS 16.2+ · iPadOS 16.2+ · Mac Catalyst 16.2+ · macOS 13.1+ · tvOS 16.2+ · visionOS 1.0+ · watchOS 9.2+
+
+# MTRDescriptorClusterDeviceTypeStruct (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.2+ · iPadOS 16.2+ · Mac Catalyst 16.2+ · macOS 13.1+ · tvOS 16.2+ · visionOS 1.0+ · watchOS 9.2+
+
+## Declaration
+
+```swift
+class MTRDescriptorClusterDeviceTypeStruct
+```
+
+## Topics
+
+### Instance Properties
+
+- [deviceType](mtrdescriptorclusterdevicetypestruct/devicetype.md)
+- [revision](mtrdescriptorclusterdevicetypestruct/revision.md)
+- [type](mtrdescriptorclusterdevicetypestruct/type.md): Deprecated.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRDescriptorClusterDeviceType](mtrdescriptorclusterdevicetype.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRDescriptorClusterDeviceTypeStruct (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.2+ · iPadOS 16.2+ · Mac Catalyst 16.2+ · macOS 13.1+ · tvOS 16.2+ · visionOS 1.0+ · watchOS 9.2+
+
+## Declaration
+
+```objectivec
+@interface MTRDescriptorClusterDeviceTypeStruct : NSObject
+```
+
+## Topics
+
+### Instance Properties
+
+- [deviceType](mtrdescriptorclusterdevicetypestruct/devicetype.md)
+- [revision](mtrdescriptorclusterdevicetypestruct/revision.md)
+- [type](mtrdescriptorclusterdevicetypestruct/type.md): Deprecated.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MTRDescriptorClusterDeviceType](mtrdescriptorclusterdevicetype.md)
+
+### Conforms To
+
+- [NSCopying](../foundation/nscopying.md)
+
+# Document: deviceType
+
+Source path: documentation/matter/mtrdescriptorclusterdevicetypestruct/devicetype
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdescriptorclusterdevicetypestruct/devicetype
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# deviceType (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+@NSCopying var deviceType: NSNumber { get set }
+```
+
+# deviceType (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) NSNumber * deviceType;
+```
+
+# Document: revision
+
+Source path: documentation/matter/mtrdescriptorclusterdevicetypestruct/revision
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdescriptorclusterdevicetypestruct/revision
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.2+ · iPadOS 16.2+ · Mac Catalyst 16.2+ · macOS 13.1+ · tvOS 16.2+ · visionOS 1.0+ · watchOS 9.2+
+
+# revision (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.2+ · iPadOS 16.2+ · Mac Catalyst 16.2+ · macOS 13.1+ · tvOS 16.2+ · visionOS 1.0+ · watchOS 9.2+
+
+## Declaration
+
+```swift
+@NSCopying var revision: NSNumber { get set }
+```
+
+# revision (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.2+ · iPadOS 16.2+ · Mac Catalyst 16.2+ · macOS 13.1+ · tvOS 16.2+ · visionOS 1.0+ · watchOS 9.2+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) NSNumber * revision;
+```
+
+# Document: type
+
+Source path: documentation/matter/mtrdescriptorclusterdevicetypestruct/type
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdescriptorclusterdevicetypestruct/type
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.2+ (deprecated in 16.4) · iPadOS 16.2+ (deprecated in 16.4) · Mac Catalyst 16.2+ (deprecated in 16.4) · macOS 13.1+ (deprecated in 13.3) · tvOS 16.2+ (depre…
+
+# type (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.2+ (deprecated in 16.4) · iPadOS 16.2+ (deprecated in 16.4) · Mac Catalyst 16.2+ (deprecated in 16.4) · macOS 13.1+ (deprecated in 13.3) · tvOS 16.2+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.2+ (deprecated in 9.4)
+
+> Please use deviceType
+
+## Declaration
+
+```swift
+@NSCopying var type: NSNumber { get set }
+```
+
+# type (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.2+ (deprecated in 16.4) · iPadOS 16.2+ (deprecated in 16.4) · Mac Catalyst 16.2+ (deprecated in 16.4) · macOS 13.1+ (deprecated in 13.3) · tvOS 16.2+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.2+ (deprecated in 9.4)
+
+> Please use deviceType
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) NSNumber * type;
+```
+
+# Document: MTRDevice
+
+Source path: documentation/matter/mtrdevice
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice
+Description: Framework: Matter Kind: Class Availability: iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+# MTRDevice (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRDevice
+```
+
+## Topics
+
+### Initializers
+
+- [init(nodeID:controller:)](mtrdevice/init%28nodeid_controller_%29.md)
+- [init(nodeID:deviceController:)](mtrdevice/init%28nodeid_devicecontroller_%29.md): Deprecated.
+
+### Instance Properties
+
+- [deviceCachePrimed](mtrdevice/devicecacheprimed.md)
+- [deviceController](mtrdevice/devicecontroller.md)
+- [estimatedStartTime](mtrdevice/estimatedstarttime.md)
+- [estimatedSubscriptionLatency](mtrdevice/estimatedsubscriptionlatency.md)
+- [state](mtrdevice/state.md)
+- [networkCommissioningFeatures](mtrdevice/networkcommissioningfeatures.md): Network commissioning features supported by the device.
+- [productID](mtrdevice/productid.md): The Product Identifier associated with the device.
+- [vendorID](mtrdevice/vendorid.md): The Vendor Identifier associated with the device.
+
+### Instance Methods
+
+- [downloadLog(of:timeout:queue:completion:)](mtrdevice/downloadlog%28of_timeout_queue_completion_%29.md)
+- [invokeCommand(withEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:queue:completion:)](mtrdevice/invokecommand%28withendpointid_clusterid_commandid_commandfields_expectedvalues_expectedvalueinterval_queue_completion_%29.md)
+- [invokeCommand(withEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:timedInvokeTimeout:clientQueue:completion:)](mtrdevice/invokecommand%28withendpointid_clusterid_commandid_commandfields_expectedvalues_expectedvalueinterval_timedinvoketimeout_clientqueue_completion_%29.md): Deprecated.
+- [invokeCommand(withEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:timedInvokeTimeout:queue:completion:)](mtrdevice/invokecommand%28withendpointid_clusterid_commandid_commandfields_expectedvalues_expectedvalueinterval_timedinvoketimeout_queue_completion_%29.md)
+- [openCommissioningWindow(withDiscriminator:duration:queue:completion:)](mtrdevice/opencommissioningwindow%28withdiscriminator_duration_queue_completion_%29.md)
+- [openCommissioningWindow(withSetupPasscode:discriminator:duration:queue:completion:)](mtrdevice/opencommissioningwindow%28withsetuppasscode_discriminator_duration_queue_completion_%29.md)
+- [readAttribute(withEndpointID:clusterID:attributeID:params:)](mtrdevice/readattribute%28withendpointid_clusterid_attributeid_params_%29.md)
+- [setDelegate(\_:queue:)](mtrdevice/setdelegate%28__queue_%29.md): Deprecated.
+- [writeAttribute(withEndpointID:clusterID:attributeID:value:expectedValueInterval:timedWriteTimeout:)](mtrdevice/writeattribute%28withendpointid_clusterid_attributeid_value_expectedvalueinterval_timedwritetimeout_%29.md)
+- [add(\_:queue:)](mtrdevice/add%28__queue_%29.md): Adds a delegate to receive asynchronous callbacks about the device.
+- [add(\_:queue:interestedPathsForAttributes:interestedPathsForEvents:)](mtrdevice/add%28__queue_interestedpathsforattributes_interestedpathsforevents_%29.md): Adds a delegate to receive asynchronous callbacks about the device, and limit attribute and/or event reports to a specific set of paths.
+- [descriptorClusters()](mtrdevice/descriptorclusters%28%29.md): Read all known attributes from descriptor clusters on all known endpoints.
+- [invokeCommands(\_:queue:completion:)](mtrdevice/invokecommands%28__queue_completion_%29.md): Invoke one or more groups of commands.
+- [readAttributePaths(\_:)](mtrdevice/readattributepaths%28__%29.md): Read the attributes identified by the provided attribute paths. The paths can include wildcards.
+- [remove(\_:)](mtrdevice/remove%28__%29.md): Removes the delegate from receiving callbacks about the device.
+- [wait(forAttributeValues:timeout:queue:completion:)](mtrdevice/wait%28forattributevalues_timeout_queue_completion_%29.md): Sets up the provided completion to be called when any of the following happens:
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRDevice (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRDevice : NSObject
+```
+
+## Topics
+
+### Initializers
+
+- [deviceWithNodeID:controller:](mtrdevice/init%28nodeid_controller_%29.md)
+- [deviceWithNodeID:deviceController:](mtrdevice/init%28nodeid_devicecontroller_%29.md): Deprecated.
+
+### Instance Properties
+
+- [deviceCachePrimed](mtrdevice/devicecacheprimed.md)
+- [deviceController](mtrdevice/devicecontroller.md)
+- [estimatedStartTime](mtrdevice/estimatedstarttime.md)
+- [estimatedSubscriptionLatency](mtrdevice/estimatedsubscriptionlatency.md)
+- [state](mtrdevice/state.md)
+- [nodeID](mtrdevice/nodeid.md)
+- [networkCommissioningFeatures](mtrdevice/networkcommissioningfeatures.md): Network commissioning features supported by the device.
+- [productID](mtrdevice/productid.md): The Product Identifier associated with the device.
+- [vendorID](mtrdevice/vendorid.md): The Vendor Identifier associated with the device.
+
+### Instance Methods
+
+- [downloadLogOfType:timeout:queue:completion:](mtrdevice/downloadlog%28of_timeout_queue_completion_%29.md)
+- [invokeCommandWithEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:queue:completion:](mtrdevice/invokecommand%28withendpointid_clusterid_commandid_commandfields_expectedvalues_expectedvalueinterval_queue_completion_%29.md)
+- [invokeCommandWithEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:timedInvokeTimeout:clientQueue:completion:](mtrdevice/invokecommand%28withendpointid_clusterid_commandid_commandfields_expectedvalues_expectedvalueinterval_timedinvoketimeout_clientqueue_completion_%29.md): Deprecated.
+- [invokeCommandWithEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:timedInvokeTimeout:queue:completion:](mtrdevice/invokecommand%28withendpointid_clusterid_commandid_commandfields_expectedvalues_expectedvalueinterval_timedinvoketimeout_queue_completion_%29.md)
+- [openCommissioningWindowWithDiscriminator:duration:queue:completion:](mtrdevice/opencommissioningwindow%28withdiscriminator_duration_queue_completion_%29.md)
+- [openCommissioningWindowWithSetupPasscode:discriminator:duration:queue:completion:](mtrdevice/opencommissioningwindow%28withsetuppasscode_discriminator_duration_queue_completion_%29.md)
+- [readAttributeWithEndpointID:clusterID:attributeID:params:](mtrdevice/readattribute%28withendpointid_clusterid_attributeid_params_%29.md)
+- [setDelegate:queue:](mtrdevice/setdelegate%28__queue_%29.md): Deprecated.
+- [writeAttributeWithEndpointID:clusterID:attributeID:value:expectedValueInterval:timedWriteTimeout:](mtrdevice/writeattribute%28withendpointid_clusterid_attributeid_value_expectedvalueinterval_timedwritetimeout_%29.md)
+- [addDelegate:queue:](mtrdevice/add%28__queue_%29.md): Adds a delegate to receive asynchronous callbacks about the device.
+- [addDelegate:queue:interestedPathsForAttributes:interestedPathsForEvents:](mtrdevice/add%28__queue_interestedpathsforattributes_interestedpathsforevents_%29.md): Adds a delegate to receive asynchronous callbacks about the device, and limit attribute and/or event reports to a specific set of paths.
+- [descriptorClusters](mtrdevice/descriptorclusters%28%29.md): Read all known attributes from descriptor clusters on all known endpoints.
+- [invokeCommands:queue:completion:](mtrdevice/invokecommands%28__queue_completion_%29.md): Invoke one or more groups of commands.
+- [readAttributePaths:](mtrdevice/readattributepaths%28__%29.md): Read the attributes identified by the provided attribute paths. The paths can include wildcards.
+- [removeDelegate:](mtrdevice/remove%28__%29.md): Removes the delegate from receiving callbacks about the device.
+- [waitForAttributeValues:timeout:queue:completion:](mtrdevice/wait%28forattributevalues_timeout_queue_completion_%29.md): Sets up the provided completion to be called when any of the following happens:
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+# Document: add(_:queue:)
+
+Source path: documentation/matter/mtrdevice/add(_:queue:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/add(_:queue:)
+Description: Framework: Matter Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+# add(\_:queue:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Adds a delegate to receive asynchronous callbacks about the device.
+
+## Declaration
+
+```swift
+func add(_ delegate: any MTRDeviceDelegate, queue: dispatch_queue_t)
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The delegate will be called on the provided queue, for attribute reports, event reports, and device state changes.
+
+MTRDevice holds a weak reference to the delegate object.
+
+# addDelegate:queue: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Adds a delegate to receive asynchronous callbacks about the device.
+
+## Declaration
+
+```objectivec
+- (void) addDelegate:(id<MTRDeviceDelegate>) delegate queue:(dispatch_queue_t) queue;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The delegate will be called on the provided queue, for attribute reports, event reports, and device state changes.
+
+MTRDevice holds a weak reference to the delegate object.
+
+# Document: add(_:queue:interestedPathsForAttributes:interestedPathsForEvents:)
+
+Source path: documentation/matter/mtrdevice/add(_:queue:interestedpathsforattributes:interestedpathsforevents:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/add(_:queue:interestedpathsforattributes:interestedpathsforevents:)
+Description: Framework: Matter Kind: Instance Method Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+# add(\_:queue:interestedPathsForAttributes:interestedPathsForEvents:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Adds a delegate to receive asynchronous callbacks about the device, and limit attribute and/or event reports to a specific set of paths.
+
+## Declaration
+
+```swift
+func add(_ delegate: any MTRDeviceDelegate, queue: dispatch_queue_t, interestedPathsForAttributes: [Any]?, interestedPathsForEvents: [Any]?)
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+interestedPathsForAttributes may contain either MTRClusterPath or MTRAttributePath to specify interested clusters and attributes, or NSNumber for endpoints.
+
+interestedPathsForEvents may contain either MTRClusterPath or MTREventPath to specify interested clusters and events, or NSNumber for endpoints.
+
+For both interested paths arguments, if nil is specified, then no filter will be applied.
+
+Calling addDelegate: again with the same delegate object will update the interested paths for attributes and events for this delegate.
+
+MTRDevice holds a weak reference to the delegate object.
+
+# addDelegate:queue:interestedPathsForAttributes:interestedPathsForEvents: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Adds a delegate to receive asynchronous callbacks about the device, and limit attribute and/or event reports to a specific set of paths.
+
+## Declaration
+
+```objectivec
+- (void) addDelegate:(id<MTRDeviceDelegate>) delegate queue:(dispatch_queue_t) queue interestedPathsForAttributes:(NSArray *) interestedPathsForAttributes interestedPathsForEvents:(NSArray *) interestedPathsForEvents;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+interestedPathsForAttributes may contain either MTRClusterPath or MTRAttributePath to specify interested clusters and attributes, or NSNumber for endpoints.
+
+interestedPathsForEvents may contain either MTRClusterPath or MTREventPath to specify interested clusters and events, or NSNumber for endpoints.
+
+For both interested paths arguments, if nil is specified, then no filter will be applied.
+
+Calling addDelegate: again with the same delegate object will update the interested paths for attributes and events for this delegate.
+
+MTRDevice holds a weak reference to the delegate object.
+
+# Document: descriptorClusters()
+
+Source path: documentation/matter/mtrdevice/descriptorclusters()
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/descriptorclusters()
+Description: Framework: Matter Kind: Instance Method Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# descriptorClusters() (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+Read all known attributes from descriptor clusters on all known endpoints.
+
+## Declaration
+
+```swift
+func descriptorClusters() -> [MTRAttributePath : [String : Any]]
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+A dictionary with the paths of the attributes as keys and the data-values (as described in the documentation for MTRDeviceResponseHandler) as values.
+
+# descriptorClusters (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+Read all known attributes from descriptor clusters on all known endpoints.
+
+## Declaration
+
+```objectivec
+- (NSDictionary<MTRAttributePath *,NSDictionary<NSString *,id> *> *) descriptorClusters;
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+A dictionary with the paths of the attributes as keys and the data-values (as described in the documentation for MTRDeviceResponseHandler) as values.
+
+# Document: deviceCachePrimed
+
+Source path: documentation/matter/mtrdevice/devicecacheprimed
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/devicecacheprimed
+Description: Framework: Matter Kind: Instance Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# deviceCachePrimed (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+var deviceCachePrimed: Bool { get }
+```
+
+# deviceCachePrimed (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+@property (readonly) BOOL deviceCachePrimed;
+```
+
+# Document: deviceController
+
+Source path: documentation/matter/mtrdevice/devicecontroller
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/devicecontroller
+Description: Framework: Matter Kind: Instance Property Availability: iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 17.4+ · visionOS 1.1+ · watchOS 10.4+
+
+# deviceController (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 17.4+ · visionOS 1.1+ · watchOS 10.4+
+
+## Declaration
+
+```swift
+var deviceController: MTRDeviceController? { get }
+```
+
+# deviceController (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 17.4+ · visionOS 1.1+ · watchOS 10.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly, nullable) MTRDeviceController * deviceController;
+```
+
+# Document: downloadLog(of:timeout:queue:completion:)
+
+Source path: documentation/matter/mtrdevice/downloadlog(of:timeout:queue:completion:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/downloadlog(of:timeout:queue:completion:)
+Description: Framework: Matter Kind: Instance Method Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# downloadLog(of:timeout:queue:completion:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+func downloadLog(of type: MTRDiagnosticLogType, timeout: TimeInterval, queue: dispatch_queue_t, completion: @escaping @Sendable (URL?, (any Error)?) -> Void)
+```
+
+```swift
+func downloadLog(of type: MTRDiagnosticLogType, timeout: TimeInterval, queue: dispatch_queue_t) async throws -> URL
+```
+
+# downloadLogOfType:timeout:queue:completion: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+- (void) downloadLogOfType:(MTRDiagnosticLogType) type timeout:(NSTimeInterval) timeout queue:(dispatch_queue_t) queue completion:(void (^)(NSURL *url, NSError *error)) completion;
+```
+
+# Document: estimatedStartTime
+
+Source path: documentation/matter/mtrdevice/estimatedstarttime
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/estimatedstarttime
+Description: Framework: Matter Kind: Instance Property Availability: iOS 16.5+ · iPadOS 16.5+ · Mac Catalyst 16.5+ · macOS 13.4+ · tvOS 16.5+ · visionOS 1.0+ · watchOS 9.5+
+
+# estimatedStartTime (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.5+ · iPadOS 16.5+ · Mac Catalyst 16.5+ · macOS 13.4+ · tvOS 16.5+ · visionOS 1.0+ · watchOS 9.5+
+
+## Declaration
+
+```swift
+var estimatedStartTime: Date? { get }
+```
+
+# estimatedStartTime (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.5+ · iPadOS 16.5+ · Mac Catalyst 16.5+ · macOS 13.4+ · tvOS 16.5+ · visionOS 1.0+ · watchOS 9.5+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly, nullable) NSDate * estimatedStartTime;
+```
+
+# Document: estimatedSubscriptionLatency
+
+Source path: documentation/matter/mtrdevice/estimatedsubscriptionlatency
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/estimatedsubscriptionlatency
+Description: Framework: Matter Kind: Instance Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# estimatedSubscriptionLatency (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+@NSCopying var estimatedSubscriptionLatency: NSNumber? { get }
+```
+
+# estimatedSubscriptionLatency (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, readonly, nullable) NSNumber * estimatedSubscriptionLatency;
+```
+
+# Document: init(nodeID:controller:)
+
+Source path: documentation/matter/mtrdevice/init(nodeid:controller:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/init(nodeid:controller:)
+Description: Framework: Matter Kind: Initializer Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# init(nodeID:controller:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Initializer  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+init(nodeID: NSNumber, controller: MTRDeviceController)
+```
+
+# deviceWithNodeID:controller: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Type Method  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
++ (MTRDevice *) deviceWithNodeID:(NSNumber *) nodeID controller:(MTRDeviceController *) controller;
+```
+
+# Document: init(nodeID:deviceController:)
+
+Source path: documentation/matter/mtrdevice/init(nodeid:devicecontroller:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/init(nodeid:devicecontroller:)
+Description: Framework: Matter Kind: Initializer Availability: iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated…
+
+# init(nodeID:deviceController:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Initializer  
+**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
+
+> Please use deviceWithNodeID:controller:
+
+## Declaration
+
+```swift
+init(nodeID: UInt64, deviceController: MTRDeviceController)
+```
+
+# deviceWithNodeID:deviceController: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Type Method  
+**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
+
+> Please use deviceWithNodeID:controller:
+
+## Declaration
+
+```objectivec
++ (MTRDevice *) deviceWithNodeID:(uint64_t) nodeID deviceController:(MTRDeviceController *) deviceController;
+```
+
+# Document: invokeCommand(withEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:queue:completion:)
+
+Source path: documentation/matter/mtrdevice/invokecommand(withendpointid:clusterid:commandid:commandfields:expectedvalues:expectedvalueinterval:queue:completion:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/invokecommand(withendpointid:clusterid:commandid:commandfields:expectedvalues:expectedvalueinterval:queue:completion:)
+Description: Framework: Matter Kind: Instance Method Availability: iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 17.4+ · visionOS 1.1+ · watchOS 10.4+
+
+# invokeCommand(withEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:queue:completion:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 17.4+ · visionOS 1.1+ · watchOS 10.4+
+
+## Declaration
+
+```swift
+func invokeCommand(withEndpointID endpointID: NSNumber, clusterID: NSNumber, commandID: NSNumber, commandFields: [String : Any]?, expectedValues: [[String : Any]]?, expectedValueInterval: NSNumber?, queue: dispatch_queue_t, completion: @escaping @Sendable ([[String : Any]]?, (any Error)?) -> Void)
+```
+
+```swift
+func invokeCommand(withEndpointID endpointID: NSNumber, clusterID: NSNumber, commandID: NSNumber, commandFields: [String : Any]?, expectedValues: [[String : Any]]?, expectedValueInterval: NSNumber?, queue: dispatch_queue_t) async throws -> [[String : Any]]
+```
+
+# invokeCommandWithEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:queue:completion: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 17.4+ · visionOS 1.1+ · watchOS 10.4+
+
+## Declaration
+
+```objectivec
+- (void) invokeCommandWithEndpointID:(NSNumber *) endpointID clusterID:(NSNumber *) clusterID commandID:(NSNumber *) commandID commandFields:(NSDictionary<NSString *,id> *) commandFields expectedValues:(NSArray<NSDictionary<NSString *,id> *> *) expectedValues expectedValueInterval:(NSNumber *) expectedValueInterval queue:(dispatch_queue_t) queue completion:(MTRDeviceResponseHandler) completion;
+```
+
+# Document: invokeCommand(withEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:timedInvokeTimeout:clientQueue:completion:)
+
+Source path: documentation/matter/mtrdevice/invokecommand(withendpointid:clusterid:commandid:commandfields:expectedvalues:expectedvalueinterval:timedinvoketimeout:clientqueue:completion:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/invokecommand(withendpointid:clusterid:commandid:commandfields:expectedvalues:expectedvalueinterval:timedinvoketimeout:clientqueue:completion:)
+Description: Framework: Matter Kind: Instance Method Availability: iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (depreca…
+
+# invokeCommand(withEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:timedInvokeTimeout:clientQueue:completion:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
+
+> Please use invokeCommandWithEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:timedInvokeTimeout:queue:completion:
+
+## Declaration
+
+```swift
+func invokeCommand(withEndpointID endpointID: NSNumber, clusterID: NSNumber, commandID: NSNumber, commandFields: Any, expectedValues: [[String : Any]]?, expectedValueInterval: NSNumber?, timedInvokeTimeout timeout: NSNumber?, clientQueue queue: dispatch_queue_t, completion: @escaping @Sendable ([[String : Any]]?, (any Error)?) -> Void)
+```
+
+```swift
+func invokeCommand(withEndpointID endpointID: NSNumber, clusterID: NSNumber, commandID: NSNumber, commandFields: Any, expectedValues: [[String : Any]]?, expectedValueInterval: NSNumber?, timedInvokeTimeout timeout: NSNumber?, clientQueue queue: dispatch_queue_t) async throws -> [[String : Any]]
+```
+
+# invokeCommandWithEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:timedInvokeTimeout:clientQueue:completion: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
+
+> Please use invokeCommandWithEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:timedInvokeTimeout:queue:completion:
+
+## Declaration
+
+```objectivec
+- (void) invokeCommandWithEndpointID:(NSNumber *) endpointID clusterID:(NSNumber *) clusterID commandID:(NSNumber *) commandID commandFields:(id) commandFields expectedValues:(NSArray<NSDictionary<NSString *,id> *> *) expectedValues expectedValueInterval:(NSNumber *) expectedValueInterval timedInvokeTimeout:(NSNumber *) timeout clientQueue:(dispatch_queue_t) queue completion:(MTRDeviceResponseHandler) completion;
+```
+
+# Document: invokeCommand(withEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:timedInvokeTimeout:queue:completion:)
+
+Source path: documentation/matter/mtrdevice/invokecommand(withendpointid:clusterid:commandid:commandfields:expectedvalues:expectedvalueinterval:timedinvoketimeout:queue:completion:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/invokecommand(withendpointid:clusterid:commandid:commandfields:expectedvalues:expectedvalueinterval:timedinvoketimeout:queue:completion:)
+Description: Framework: Matter Kind: Instance Method Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+# invokeCommand(withEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:timedInvokeTimeout:queue:completion:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+func invokeCommand(withEndpointID endpointID: NSNumber, clusterID: NSNumber, commandID: NSNumber, commandFields: Any, expectedValues: [[String : Any]]?, expectedValueInterval: NSNumber?, timedInvokeTimeout timeout: NSNumber?, queue: dispatch_queue_t, completion: @escaping @Sendable ([[String : Any]]?, (any Error)?) -> Void)
+```
+
+```swift
+func invokeCommand(withEndpointID endpointID: NSNumber, clusterID: NSNumber, commandID: NSNumber, commandFields: Any, expectedValues: [[String : Any]]?, expectedValueInterval: NSNumber?, timedInvokeTimeout timeout: NSNumber?, queue: dispatch_queue_t) async throws -> [[String : Any]]
+```
+
+# invokeCommandWithEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:timedInvokeTimeout:queue:completion: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+- (void) invokeCommandWithEndpointID:(NSNumber *) endpointID clusterID:(NSNumber *) clusterID commandID:(NSNumber *) commandID commandFields:(id) commandFields expectedValues:(NSArray<NSDictionary<NSString *,id> *> *) expectedValues expectedValueInterval:(NSNumber *) expectedValueInterval timedInvokeTimeout:(NSNumber *) timeout queue:(dispatch_queue_t) queue completion:(MTRDeviceResponseHandler) completion;
+```
+
+# Document: invokeCommands(_:queue:completion:)
+
+Source path: documentation/matter/mtrdevice/invokecommands(_:queue:completion:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/invokecommands(_:queue:completion:)
+Description: Framework: Matter Kind: Instance Method Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# invokeCommands(\_:queue:completion:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+Invoke one or more groups of commands.
+
+## Declaration
+
+```swift
+func invokeCommands(_ commands: [[MTRCommandWithRequiredResponse]], queue: dispatch_queue_t, completion: @escaping @Sendable ([[String : Any]]?, (any Error)?) -> Void)
+```
+
+```swift
+func invokeCommands(_ commands: [[MTRCommandWithRequiredResponse]], queue: dispatch_queue_t) async throws -> [[String : Any]]
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+For any given group, if any command in any preceding group failed, the group will be skipped.  If all commands in all preceding groups succeeded, the commands within the group will be invoked, with no ordering guarantees within that group.
+
+Results from all commands that were invoked will be passed to the provided completion as an array of response-value dictionaries.  Each of these will have the command path of the command (see MTRCommandPathKey) and one of three things:
+
+1. No other fields, indicating that the command invoke returned a succcess status.
+2. A field for MTRErrorKey, indicating that the invoke returned a failure status (which is the value of the field).
+3. A field for MTRDataKey, indicating that the invoke returned a data response.  In this case the data-value representing the response will be the value of this field.
+
+# invokeCommands:queue:completion: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+Invoke one or more groups of commands.
+
+## Declaration
+
+```objectivec
+- (void) invokeCommands:(NSArray<NSArray<MTRCommandWithRequiredResponse *> *> *) commands queue:(dispatch_queue_t) queue completion:(MTRDeviceResponseHandler) completion;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+For any given group, if any command in any preceding group failed, the group will be skipped.  If all commands in all preceding groups succeeded, the commands within the group will be invoked, with no ordering guarantees within that group.
+
+Results from all commands that were invoked will be passed to the provided completion as an array of response-value dictionaries.  Each of these will have the command path of the command (see MTRCommandPathKey) and one of three things:
+
+1. No other fields, indicating that the command invoke returned a succcess status.
+2. A field for MTRErrorKey, indicating that the invoke returned a failure status (which is the value of the field).
+3. A field for MTRDataKey, indicating that the invoke returned a data response.  In this case the data-value representing the response will be the value of this field.
+
+# Document: networkCommissioningFeatures
+
+Source path: documentation/matter/mtrdevice/networkcommissioningfeatures
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/networkcommissioningfeatures
+Description: Framework: Matter Kind: Instance Property Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# networkCommissioningFeatures (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+Network commissioning features supported by the device.
+
+## Declaration
+
+```swift
+var networkCommissioningFeatures: MTRNetworkCommissioningFeature { get }
+```
+
+# networkCommissioningFeatures (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+Network commissioning features supported by the device.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) MTRNetworkCommissioningFeature networkCommissioningFeatures;
+```
+
+# Document: nodeID
+
+Source path: documentation/matter/mtrdevice/nodeid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/nodeid
+Description: Interface language: Objective-C
+
+# nodeID
+
+**Interface language:** Objective-C
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 17.4+ · visionOS 1.1+ · watchOS 10.4+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, readonly) NSNumber * nodeID;
+```
+
+# Document: openCommissioningWindow(withDiscriminator:duration:queue:completion:)
+
+Source path: documentation/matter/mtrdevice/opencommissioningwindow(withdiscriminator:duration:queue:completion:)
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrdevice/opencommissioningwindow(withdiscriminator:duration:queue:completion:)
+Description: Framework: Matter Kind: Instance Method Availability: iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+# openCommissioningWindow(withDiscriminator:duration:queue:completion:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+## Declaration
+
+```swift
+func openCommissioningWindow(withDiscriminator discriminator: NSNumber, duration: NSNumber, queue: dispatch_queue_t, completion: @escaping @Sendable (MTRSetupPayload?, (any Error)?) -> Void)
+```
+
+```swift
+func openCommissioningWindow(withDiscriminator discriminator: NSNumber, duration: NSNumber, queue: dispatch_queue_t) async throws -> MTRSetupPayload
+```
+
+# openCommissioningWindowWithDiscriminator:duration:queue:completion: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+## Declaration
+
+```objectivec
+- (void) openCommissioningWindowWithDiscriminator:(NSNumber *) discriminator duration:(NSNumber *) duration queue:(dispatch_queue_t) queue completion:(MTRDeviceOpenCommissioningWindowHandler) completion;
+```
 
 # Document: openCommissioningWindow(withSetupPasscode:discriminator:duration:queue:completion:)
 
@@ -217155,1736 +218684,6 @@ Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ �
 **Framework:** Matter  
 **Kind:** Instance Property  
 **Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
-```
-
-# Document: MTRUnitTestingClusterTestNestedStructListArgumentRequestParams
-
-Source path: documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams
-Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# MTRUnitTestingClusterTestNestedStructListArgumentRequestParams (Swift)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-class MTRUnitTestingClusterTestNestedStructListArgumentRequestParams
-```
-
-## Topics
-
-### Instance Properties
-
-- [arg1](mtrunittestingclustertestnestedstructlistargumentrequestparams/arg1.md)
-- [serverSideProcessingTimeout](mtrunittestingclustertestnestedstructlistargumentrequestparams/serversideprocessingtimeout.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestnestedstructlistargumentrequestparams/timedinvoketimeoutms.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestNestedStructListArgumentRequestParams](mtrtestclusterclustertestnestedstructlistargumentrequestparams.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCopying](../foundation/nscopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-# MTRUnitTestingClusterTestNestedStructListArgumentRequestParams (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@interface MTRUnitTestingClusterTestNestedStructListArgumentRequestParams : NSObject
-```
-
-## Topics
-
-### Instance Properties
-
-- [arg1](mtrunittestingclustertestnestedstructlistargumentrequestparams/arg1.md)
-- [serverSideProcessingTimeout](mtrunittestingclustertestnestedstructlistargumentrequestparams/serversideprocessingtimeout.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestnestedstructlistargumentrequestparams/timedinvoketimeoutms.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestNestedStructListArgumentRequestParams](mtrtestclusterclustertestnestedstructlistargumentrequestparams.md)
-
-### Conforms To
-
-- [NSCopying](../foundation/nscopying.md)
-
-# Document: arg1
-
-Source path: documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams/arg1
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams/arg1
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# arg1 (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var arg1: MTRUnitTestingClusterNestedStructList { get set }
-```
-
-# arg1 (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy) MTRUnitTestingClusterNestedStructList * arg1;
-```
-
-# Document: serverSideProcessingTimeout
-
-Source path: documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams/serversideprocessingtimeout
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams/serversideprocessingtimeout
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# serverSideProcessingTimeout (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
-```
-
-# serverSideProcessingTimeout (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
-```
-
-# Document: timedInvokeTimeoutMs
-
-Source path: documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams/timedinvoketimeoutms
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnestedstructlistargumentrequestparams/timedinvoketimeoutms
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# timedInvokeTimeoutMs (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
-```
-
-# timedInvokeTimeoutMs (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
-```
-
-# Document: MTRUnitTestingClusterTestNotHandledParams
-
-Source path: documentation/matter/mtrunittestingclustertestnothandledparams
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnothandledparams
-Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# MTRUnitTestingClusterTestNotHandledParams (Swift)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-class MTRUnitTestingClusterTestNotHandledParams
-```
-
-## Topics
-
-### Instance Properties
-
-- [serverSideProcessingTimeout](mtrunittestingclustertestnothandledparams/serversideprocessingtimeout.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestnothandledparams/timedinvoketimeoutms.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestNotHandledParams](mtrtestclusterclustertestnothandledparams.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCopying](../foundation/nscopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-# MTRUnitTestingClusterTestNotHandledParams (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@interface MTRUnitTestingClusterTestNotHandledParams : NSObject
-```
-
-## Topics
-
-### Instance Properties
-
-- [serverSideProcessingTimeout](mtrunittestingclustertestnothandledparams/serversideprocessingtimeout.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestnothandledparams/timedinvoketimeoutms.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestNotHandledParams](mtrtestclusterclustertestnothandledparams.md)
-
-### Conforms To
-
-- [NSCopying](../foundation/nscopying.md)
-
-# Document: serverSideProcessingTimeout
-
-Source path: documentation/matter/mtrunittestingclustertestnothandledparams/serversideprocessingtimeout
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnothandledparams/serversideprocessingtimeout
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# serverSideProcessingTimeout (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
-```
-
-# serverSideProcessingTimeout (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
-```
-
-# Document: timedInvokeTimeoutMs
-
-Source path: documentation/matter/mtrunittestingclustertestnothandledparams/timedinvoketimeoutms
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnothandledparams/timedinvoketimeoutms
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# timedInvokeTimeoutMs (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
-```
-
-# timedInvokeTimeoutMs (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
-```
-
-# Document: MTRUnitTestingClusterTestNullableOptionalRequestParams
-
-Source path: documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams
-Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# MTRUnitTestingClusterTestNullableOptionalRequestParams (Swift)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-class MTRUnitTestingClusterTestNullableOptionalRequestParams
-```
-
-## Topics
-
-### Instance Properties
-
-- [arg1](mtrunittestingclustertestnullableoptionalrequestparams/arg1.md)
-- [serverSideProcessingTimeout](mtrunittestingclustertestnullableoptionalrequestparams/serversideprocessingtimeout.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestnullableoptionalrequestparams/timedinvoketimeoutms.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestNullableOptionalRequestParams](mtrtestclusterclustertestnullableoptionalrequestparams.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCopying](../foundation/nscopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-# MTRUnitTestingClusterTestNullableOptionalRequestParams (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@interface MTRUnitTestingClusterTestNullableOptionalRequestParams : NSObject
-```
-
-## Topics
-
-### Instance Properties
-
-- [arg1](mtrunittestingclustertestnullableoptionalrequestparams/arg1.md)
-- [serverSideProcessingTimeout](mtrunittestingclustertestnullableoptionalrequestparams/serversideprocessingtimeout.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestnullableoptionalrequestparams/timedinvoketimeoutms.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestNullableOptionalRequestParams](mtrtestclusterclustertestnullableoptionalrequestparams.md)
-
-### Conforms To
-
-- [NSCopying](../foundation/nscopying.md)
-
-# Document: arg1
-
-Source path: documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams/arg1
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams/arg1
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# arg1 (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var arg1: NSNumber? { get set }
-```
-
-# arg1 (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy) NSNumber * arg1;
-```
-
-# Document: serverSideProcessingTimeout
-
-Source path: documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams/serversideprocessingtimeout
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams/serversideprocessingtimeout
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# serverSideProcessingTimeout (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
-```
-
-# serverSideProcessingTimeout (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
-```
-
-# Document: timedInvokeTimeoutMs
-
-Source path: documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams/timedinvoketimeoutms
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalrequestparams/timedinvoketimeoutms
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# timedInvokeTimeoutMs (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
-```
-
-# timedInvokeTimeoutMs (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
-```
-
-# Document: MTRUnitTestingClusterTestNullableOptionalResponseParams
-
-Source path: documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams
-Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# MTRUnitTestingClusterTestNullableOptionalResponseParams (Swift)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-class MTRUnitTestingClusterTestNullableOptionalResponseParams
-```
-
-## Topics
-
-### Initializers
-
-- [init(responseValue:)](mtrunittestingclustertestnullableoptionalresponseparams/init%28responsevalue_%29.md)
-
-### Instance Properties
-
-- [originalValue](mtrunittestingclustertestnullableoptionalresponseparams/originalvalue.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestnullableoptionalresponseparams/timedinvoketimeoutms.md): Deprecated.
-- [value](mtrunittestingclustertestnullableoptionalresponseparams/value.md)
-- [wasNull](mtrunittestingclustertestnullableoptionalresponseparams/wasnull.md)
-- [wasPresent](mtrunittestingclustertestnullableoptionalresponseparams/waspresent.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestNullableOptionalResponseParams](mtrtestclusterclustertestnullableoptionalresponseparams.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCopying](../foundation/nscopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-# MTRUnitTestingClusterTestNullableOptionalResponseParams (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@interface MTRUnitTestingClusterTestNullableOptionalResponseParams : NSObject
-```
-
-## Topics
-
-### Initializers
-
-- [initWithResponseValue:error:](mtrunittestingclustertestnullableoptionalresponseparams/init%28responsevalue_%29.md)
-
-### Instance Properties
-
-- [originalValue](mtrunittestingclustertestnullableoptionalresponseparams/originalvalue.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestnullableoptionalresponseparams/timedinvoketimeoutms.md): Deprecated.
-- [value](mtrunittestingclustertestnullableoptionalresponseparams/value.md)
-- [wasNull](mtrunittestingclustertestnullableoptionalresponseparams/wasnull.md)
-- [wasPresent](mtrunittestingclustertestnullableoptionalresponseparams/waspresent.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestNullableOptionalResponseParams](mtrtestclusterclustertestnullableoptionalresponseparams.md)
-
-### Conforms To
-
-- [NSCopying](../foundation/nscopying.md)
-
-# Document: init(responseValue:)
-
-Source path: documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/init(responsevalue:)
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/init(responsevalue:)
-Description: Framework: Matter Kind: Initializer Availability: iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
-
-# init(responseValue:) (Swift)
-
-**Framework:** Matter  
-**Kind:** Initializer  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
-
-## Declaration
-
-```swift
-init(responseValue: [String : Any]) throws
-```
-
-# initWithResponseValue:error: (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Method  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
-
-## Declaration
-
-```objectivec
-- (instancetype) initWithResponseValue:(NSDictionary<NSString *,id> *) responseValue error:(NSError **) error;
-```
-
-# Document: originalValue
-
-Source path: documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/originalvalue
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/originalvalue
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# originalValue (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var originalValue: NSNumber? { get set }
-```
-
-# originalValue (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy) NSNumber * originalValue;
-```
-
-# Document: timedInvokeTimeoutMs
-
-Source path: documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/timedinvoketimeoutms
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/timedinvoketimeoutms
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (depre…
-
-# timedInvokeTimeoutMs (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
-
-> Timed invoke does not make sense for server to client commands
-
-## Declaration
-
-```swift
-@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
-```
-
-# timedInvokeTimeoutMs (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ (deprecated in 16.4) · iPadOS 16.4+ (deprecated in 16.4) · Mac Catalyst 16.4+ (deprecated in 16.4) · macOS 13.3+ (deprecated in 13.3) · tvOS 16.4+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.4+ (deprecated in 9.4)
-
-> Timed invoke does not make sense for server to client commands
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
-```
-
-# Document: value
-
-Source path: documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/value
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/value
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# value (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var value: NSNumber? { get set }
-```
-
-# value (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy) NSNumber * value;
-```
-
-# Document: wasNull
-
-Source path: documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/wasnull
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/wasnull
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# wasNull (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var wasNull: NSNumber? { get set }
-```
-
-# wasNull (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy) NSNumber * wasNull;
-```
-
-# Document: wasPresent
-
-Source path: documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/waspresent
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestnullableoptionalresponseparams/waspresent
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# wasPresent (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var wasPresent: NSNumber { get set }
-```
-
-# wasPresent (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy) NSNumber * wasPresent;
-```
-
-# Document: MTRUnitTestingClusterTestParams
-
-Source path: documentation/matter/mtrunittestingclustertestparams
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestparams
-Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# MTRUnitTestingClusterTestParams (Swift)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-class MTRUnitTestingClusterTestParams
-```
-
-## Topics
-
-### Instance Properties
-
-- [serverSideProcessingTimeout](mtrunittestingclustertestparams/serversideprocessingtimeout.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestparams/timedinvoketimeoutms.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestParams](mtrtestclusterclustertestparams.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCopying](../foundation/nscopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-# MTRUnitTestingClusterTestParams (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@interface MTRUnitTestingClusterTestParams : NSObject
-```
-
-## Topics
-
-### Instance Properties
-
-- [serverSideProcessingTimeout](mtrunittestingclustertestparams/serversideprocessingtimeout.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestparams/timedinvoketimeoutms.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestParams](mtrtestclusterclustertestparams.md)
-
-### Conforms To
-
-- [NSCopying](../foundation/nscopying.md)
-
-# Document: serverSideProcessingTimeout
-
-Source path: documentation/matter/mtrunittestingclustertestparams/serversideprocessingtimeout
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestparams/serversideprocessingtimeout
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# serverSideProcessingTimeout (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
-```
-
-# serverSideProcessingTimeout (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
-```
-
-# Document: timedInvokeTimeoutMs
-
-Source path: documentation/matter/mtrunittestingclustertestparams/timedinvoketimeoutms
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestparams/timedinvoketimeoutms
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# timedInvokeTimeoutMs (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
-```
-
-# timedInvokeTimeoutMs (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
-```
-
-# Document: MTRUnitTestingClusterTestSimpleArgumentRequestParams
-
-Source path: documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams
-Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# MTRUnitTestingClusterTestSimpleArgumentRequestParams (Swift)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-class MTRUnitTestingClusterTestSimpleArgumentRequestParams
-```
-
-## Topics
-
-### Instance Properties
-
-- [arg1](mtrunittestingclustertestsimpleargumentrequestparams/arg1.md)
-- [serverSideProcessingTimeout](mtrunittestingclustertestsimpleargumentrequestparams/serversideprocessingtimeout.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestsimpleargumentrequestparams/timedinvoketimeoutms.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestSimpleArgumentRequestParams](mtrtestclusterclustertestsimpleargumentrequestparams.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCopying](../foundation/nscopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-# MTRUnitTestingClusterTestSimpleArgumentRequestParams (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@interface MTRUnitTestingClusterTestSimpleArgumentRequestParams : NSObject
-```
-
-## Topics
-
-### Instance Properties
-
-- [arg1](mtrunittestingclustertestsimpleargumentrequestparams/arg1.md)
-- [serverSideProcessingTimeout](mtrunittestingclustertestsimpleargumentrequestparams/serversideprocessingtimeout.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestsimpleargumentrequestparams/timedinvoketimeoutms.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestSimpleArgumentRequestParams](mtrtestclusterclustertestsimpleargumentrequestparams.md)
-
-### Conforms To
-
-- [NSCopying](../foundation/nscopying.md)
-
-# Document: arg1
-
-Source path: documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams/arg1
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams/arg1
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# arg1 (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var arg1: NSNumber { get set }
-```
-
-# arg1 (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy) NSNumber * arg1;
-```
-
-# Document: serverSideProcessingTimeout
-
-Source path: documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams/serversideprocessingtimeout
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams/serversideprocessingtimeout
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# serverSideProcessingTimeout (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
-```
-
-# serverSideProcessingTimeout (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
-```
-
-# Document: timedInvokeTimeoutMs
-
-Source path: documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams/timedinvoketimeoutms
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentrequestparams/timedinvoketimeoutms
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# timedInvokeTimeoutMs (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
-```
-
-# timedInvokeTimeoutMs (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
-```
-
-# Document: MTRUnitTestingClusterTestSimpleArgumentResponseParams
-
-Source path: documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams
-Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# MTRUnitTestingClusterTestSimpleArgumentResponseParams (Swift)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-class MTRUnitTestingClusterTestSimpleArgumentResponseParams
-```
-
-## Topics
-
-### Initializers
-
-- [init(responseValue:)](mtrunittestingclustertestsimpleargumentresponseparams/init%28responsevalue_%29.md)
-
-### Instance Properties
-
-- [returnValue](mtrunittestingclustertestsimpleargumentresponseparams/returnvalue.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestsimpleargumentresponseparams/timedinvoketimeoutms.md): Deprecated.
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestSimpleArgumentResponseParams](mtrtestclusterclustertestsimpleargumentresponseparams.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCopying](../foundation/nscopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-# MTRUnitTestingClusterTestSimpleArgumentResponseParams (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@interface MTRUnitTestingClusterTestSimpleArgumentResponseParams : NSObject
-```
-
-## Topics
-
-### Initializers
-
-- [initWithResponseValue:error:](mtrunittestingclustertestsimpleargumentresponseparams/init%28responsevalue_%29.md)
-
-### Instance Properties
-
-- [returnValue](mtrunittestingclustertestsimpleargumentresponseparams/returnvalue.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestsimpleargumentresponseparams/timedinvoketimeoutms.md): Deprecated.
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestSimpleArgumentResponseParams](mtrtestclusterclustertestsimpleargumentresponseparams.md)
-
-### Conforms To
-
-- [NSCopying](../foundation/nscopying.md)
-
-# Document: init(responseValue:)
-
-Source path: documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams/init(responsevalue:)
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams/init(responsevalue:)
-Description: Framework: Matter Kind: Initializer Availability: iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
-
-# init(responseValue:) (Swift)
-
-**Framework:** Matter  
-**Kind:** Initializer  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
-
-## Declaration
-
-```swift
-init(responseValue: [String : Any]) throws
-```
-
-# initWithResponseValue:error: (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Method  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
-
-## Declaration
-
-```objectivec
-- (instancetype) initWithResponseValue:(NSDictionary<NSString *,id> *) responseValue error:(NSError **) error;
-```
-
-# Document: returnValue
-
-Source path: documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams/returnvalue
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams/returnvalue
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# returnValue (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var returnValue: NSNumber { get set }
-```
-
-# returnValue (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy) NSNumber * returnValue;
-```
-
-# Document: timedInvokeTimeoutMs
-
-Source path: documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams/timedinvoketimeoutms
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleargumentresponseparams/timedinvoketimeoutms
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (depre…
-
-# timedInvokeTimeoutMs (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
-
-> Timed invoke does not make sense for server to client commands
-
-## Declaration
-
-```swift
-@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
-```
-
-# timedInvokeTimeoutMs (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ (deprecated in 16.4) · iPadOS 16.4+ (deprecated in 16.4) · Mac Catalyst 16.4+ (deprecated in 16.4) · macOS 13.3+ (deprecated in 13.3) · tvOS 16.4+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.4+ (deprecated in 9.4)
-
-> Timed invoke does not make sense for server to client commands
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
-```
-
-# Document: MTRUnitTestingClusterTestSimpleOptionalArgumentRequestParams
-
-Source path: documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams
-Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# MTRUnitTestingClusterTestSimpleOptionalArgumentRequestParams (Swift)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-class MTRUnitTestingClusterTestSimpleOptionalArgumentRequestParams
-```
-
-## Topics
-
-### Instance Properties
-
-- [arg1](mtrunittestingclustertestsimpleoptionalargumentrequestparams/arg1.md)
-- [serverSideProcessingTimeout](mtrunittestingclustertestsimpleoptionalargumentrequestparams/serversideprocessingtimeout.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestsimpleoptionalargumentrequestparams/timedinvoketimeoutms.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestSimpleOptionalArgumentRequestParams](mtrtestclusterclustertestsimpleoptionalargumentrequestparams.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCopying](../foundation/nscopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-# MTRUnitTestingClusterTestSimpleOptionalArgumentRequestParams (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@interface MTRUnitTestingClusterTestSimpleOptionalArgumentRequestParams : NSObject
-```
-
-## Topics
-
-### Instance Properties
-
-- [arg1](mtrunittestingclustertestsimpleoptionalargumentrequestparams/arg1.md)
-- [serverSideProcessingTimeout](mtrunittestingclustertestsimpleoptionalargumentrequestparams/serversideprocessingtimeout.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestsimpleoptionalargumentrequestparams/timedinvoketimeoutms.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestSimpleOptionalArgumentRequestParams](mtrtestclusterclustertestsimpleoptionalargumentrequestparams.md)
-
-### Conforms To
-
-- [NSCopying](../foundation/nscopying.md)
-
-# Document: arg1
-
-Source path: documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams/arg1
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams/arg1
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# arg1 (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var arg1: NSNumber? { get set }
-```
-
-# arg1 (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy) NSNumber * arg1;
-```
-
-# Document: serverSideProcessingTimeout
-
-Source path: documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams/serversideprocessingtimeout
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams/serversideprocessingtimeout
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# serverSideProcessingTimeout (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
-```
-
-# serverSideProcessingTimeout (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
-```
-
-# Document: timedInvokeTimeoutMs
-
-Source path: documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams/timedinvoketimeoutms
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestsimpleoptionalargumentrequestparams/timedinvoketimeoutms
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# timedInvokeTimeoutMs (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
-```
-
-# timedInvokeTimeoutMs (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
-```
-
-# Document: MTRUnitTestingClusterTestSpecificParams
-
-Source path: documentation/matter/mtrunittestingclustertestspecificparams
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestspecificparams
-Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# MTRUnitTestingClusterTestSpecificParams (Swift)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-class MTRUnitTestingClusterTestSpecificParams
-```
-
-## Topics
-
-### Instance Properties
-
-- [serverSideProcessingTimeout](mtrunittestingclustertestspecificparams/serversideprocessingtimeout.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestspecificparams/timedinvoketimeoutms.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestSpecificParams](mtrtestclusterclustertestspecificparams.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCopying](../foundation/nscopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-# MTRUnitTestingClusterTestSpecificParams (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@interface MTRUnitTestingClusterTestSpecificParams : NSObject
-```
-
-## Topics
-
-### Instance Properties
-
-- [serverSideProcessingTimeout](mtrunittestingclustertestspecificparams/serversideprocessingtimeout.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestspecificparams/timedinvoketimeoutms.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestSpecificParams](mtrtestclusterclustertestspecificparams.md)
-
-### Conforms To
-
-- [NSCopying](../foundation/nscopying.md)
-
-# Document: serverSideProcessingTimeout
-
-Source path: documentation/matter/mtrunittestingclustertestspecificparams/serversideprocessingtimeout
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestspecificparams/serversideprocessingtimeout
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# serverSideProcessingTimeout (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
-```
-
-# serverSideProcessingTimeout (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
-```
-
-# Document: timedInvokeTimeoutMs
-
-Source path: documentation/matter/mtrunittestingclustertestspecificparams/timedinvoketimeoutms
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestspecificparams/timedinvoketimeoutms
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# timedInvokeTimeoutMs (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
-```
-
-# timedInvokeTimeoutMs (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, nullable) NSNumber * timedInvokeTimeoutMs;
-```
-
-# Document: MTRUnitTestingClusterTestSpecificResponseParams
-
-Source path: documentation/matter/mtrunittestingclustertestspecificresponseparams
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestspecificresponseparams
-Description: Framework: Matter Kind: Class Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# MTRUnitTestingClusterTestSpecificResponseParams (Swift)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-class MTRUnitTestingClusterTestSpecificResponseParams
-```
-
-## Topics
-
-### Initializers
-
-- [init(responseValue:)](mtrunittestingclustertestspecificresponseparams/init%28responsevalue_%29.md)
-
-### Instance Properties
-
-- [returnValue](mtrunittestingclustertestspecificresponseparams/returnvalue.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestspecificresponseparams/timedinvoketimeoutms.md): Deprecated.
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestSpecificResponseParams](mtrtestclusterclustertestspecificresponseparams.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCopying](../foundation/nscopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-# MTRUnitTestingClusterTestSpecificResponseParams (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Class  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@interface MTRUnitTestingClusterTestSpecificResponseParams : NSObject
-```
-
-## Topics
-
-### Initializers
-
-- [initWithResponseValue:error:](mtrunittestingclustertestspecificresponseparams/init%28responsevalue_%29.md)
-
-### Instance Properties
-
-- [returnValue](mtrunittestingclustertestspecificresponseparams/returnvalue.md)
-- [timedInvokeTimeoutMs](mtrunittestingclustertestspecificresponseparams/timedinvoketimeoutms.md): Deprecated.
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Inherited By
-
-- [MTRTestClusterClusterTestSpecificResponseParams](mtrtestclusterclustertestspecificresponseparams.md)
-
-### Conforms To
-
-- [NSCopying](../foundation/nscopying.md)
-
-# Document: init(responseValue:)
-
-Source path: documentation/matter/mtrunittestingclustertestspecificresponseparams/init(responsevalue:)
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestspecificresponseparams/init(responsevalue:)
-Description: Framework: Matter Kind: Initializer Availability: iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
-
-# init(responseValue:) (Swift)
-
-**Framework:** Matter  
-**Kind:** Initializer  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
-
-## Declaration
-
-```swift
-init(responseValue: [String : Any]) throws
-```
-
-# initWithResponseValue:error: (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Method  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
-
-## Declaration
-
-```objectivec
-- (instancetype) initWithResponseValue:(NSDictionary<NSString *,id> *) responseValue error:(NSError **) error;
-```
-
-# Document: returnValue
-
-Source path: documentation/matter/mtrunittestingclustertestspecificresponseparams/returnvalue
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestspecificresponseparams/returnvalue
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-# returnValue (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```swift
-@NSCopying var returnValue: NSNumber { get set }
-```
-
-# returnValue (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy) NSNumber * returnValue;
-```
-
-# Document: timedInvokeTimeoutMs
-
-Source path: documentation/matter/mtrunittestingclustertestspecificresponseparams/timedinvoketimeoutms
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrunittestingclustertestspecificresponseparams/timedinvoketimeoutms
-Description: Framework: Matter Kind: Instance Property Availability: iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (depre…
-
-# timedInvokeTimeoutMs (Swift)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
-
-> Timed invoke does not make sense for server to client commands
-
-## Declaration
-
-```swift
-@NSCopying var timedInvokeTimeoutMs: NSNumber? { get set }
-```
-
-# timedInvokeTimeoutMs (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Instance Property  
-**Availability:** iOS 16.4+ (deprecated in 16.4) · iPadOS 16.4+ (deprecated in 16.4) · Mac Catalyst 16.4+ (deprecated in 16.4) · macOS 13.3+ (deprecated in 13.3) · tvOS 16.4+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.4+ (deprecated in 9.4)
-
-> Timed invoke does not make sense for server to client commands
 
 ## Declaration
 

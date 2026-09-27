@@ -1,10 +1,1391 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 54
+
+# Document: CameraRealityCoordinateSpace
+
+Source path: documentation/realitykit/camerarealitycoordinatespace
+Canonical documentation: https://developer.apple.com/documentation/realitykit/camerarealitycoordinatespace
+Description: Framework: RealityKit Kind: Structure Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+
+
+# CameraRealityCoordinateSpace
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+
+
+The coordinate space that represents the scene’s active camera.
+
+## Declaration
+
+```swift
+struct CameraRealityCoordinateSpace
+```
+
+## Topics
+
+### Initializers
+
+- [init()](camerarealitycoordinatespace/init%28%29.md): Creates a camera coordinate space.
+
+## Relationships
+
+### Conforms To
+
+- [RealityCoordinateSpace](realitycoordinatespace.md)
+
+## See Also
+
+### Coordinate space conversions
+
+- [RealityCoordinateSpaceConverting](realitycoordinatespaceconverting.md): A value that can be converted between SwiftUI `CoordinateSpace` and RealityKit `Entity`.
+- [SceneRealityCoordinateSpace](scenerealitycoordinatespace.md): The coordinate space that represents the center of a RealityKit scene.
+- [RealityCoordinateSpace](realitycoordinatespace.md): A 3D coordinate space that exists within a RealityKit hierarchy.
+- [RealityCoordinateSpaceProjecting](realitycoordinatespaceprojecting.md): A protocol for coordinate spaces that can project 2D points to and from 3D.
+
+# Document: init()
+
+Source path: documentation/realitykit/camerarealitycoordinatespace/init()
+Canonical documentation: https://developer.apple.com/documentation/realitykit/camerarealitycoordinatespace/init()
+Description: Framework: RealityKit Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+
+
+# init()
+
+**Framework:** RealityKit  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+
+
+Creates a camera coordinate space.
+
+## Declaration
+
+```swift
+init()
+```
+
+# Document: Capturing photographs for RealityKit Object Capture
+
+Source path: documentation/realitykit/capturing-photographs-for-realitykit-object-capture
+Canonical documentation: https://developer.apple.com/documentation/realitykit/capturing-photographs-for-realitykit-object-capture
+Description: Framework: RealityKit Kind: Article
+
+# Capturing photographs for RealityKit Object Capture
+
+**Framework:** RealityKit  
+**Kind:** Article
+
+Take high-quality images of objects to generate 3D models.
+
+<a id="Overview"></a>
+
+## Overview
+
+In iOS 17 and later, and macOS 12 and later, you can create 3D objects from photographs using a process called *photogrammetry*. You provide RealityKit Object Capture with a series of well-lit photographs taken from many different angles. It analyzes the overlap area between different images to match up landmarks, and then produces a 3D model of the photographed object.
+
+To generate the best 3D representation from the object-creation process, provide RealityKit with high-quality, high-resolution photographs that don’t contain hard shadows or strong highlights.
+
+![An illustration showing a toy robot. There are several cameras at different heights around the robot with dotted blue circular arrows indicating movement.](https://developer.apple.com/images/com.apple.RealityKit/capturing-photographs-for-realitykit-object-capture-1@2x.png)
+
+<a id="Select-an-object-to-photograph"></a>
+
+### Select an object to photograph
+
+Choose objects that are static and won’t bend or deform while you’re taking photos. You can move the object between shots in order to photograph all sides, but a soft, articulated, or bendable object that changes shape when you move it can compromise RealityKit’s ability to match landmarks between different images, which may cause Object Capture to fail or produce low-quality results.
+
+Avoid objects that are very thin in one dimension, highly reflective, transparent, or translucent. Additionally, objects that are a single, solid color or have a very smooth surface may not provide enough data necessary for the object-creation algorithm to construct a 3D shape. You can draw or paint on the surface of an object to add color or texture, then match the original color or texture on the created 3D object with the material inspector in Xcode’s 3D model viewer or the property inspector in Reality Composer.
+
+<a id="Choose-an-approach"></a>
+
+### Choose an approach
+
+You can approach taking photographs for object creation in two ways: Either move the camera around the object, taking photographs from different angles at different heights, or put the object on a turntable and rotate the object while taking pictures. When using a turntable, take pictures in front of a well-lit, solid color background to minimize extraneous image data that can interfere with the object-creation process and use a tripod if available. Standing the object on different sides while photographing it on a turntable captures the entire object with no gaps or holes.
+
+The number of pictures that RealityKit needs in order to create an accurate 3D representation varies depending on the complexity and size of the object, but adjacent shots must have substantial overlap. Position sequential images so they have a 70% overlap or more. Anything less than 50% overlap between neighboring shots, and the object-creation process may fail or result in a low-quality recreation.
+
+![An illustration of a robot, showing the overlapping field of view for two cameras next to each other. The overlap is labeled “Ideal overlap: 70%”.](https://developer.apple.com/images/com.apple.RealityKit/capturing-photographs-for-realitykit-object-capture-2@2x.png)
+
+RealityKit object creation accepts images captured by any digital camera, including the cameras on an iPhone or iPad, a DSLR or mirrorless camera, or even a camera-equipped drone. If your source images contain depth data, RealityKit uses it to calculate the real-world size of the scanned object. RealityKit can also create objects from images without depth data, but you may have to scale the object when placing it into your AR scene. For more information on capturing image depth data, see [Capturing photos with depth](../avfoundation/capturing-photos-with-depth.md).
+
+> **Note**
+
+> RealityKit object creation doesn’t require you to take images in any specific order or name them in a specific way.
+
+<a id="Compose-your-shots"></a>
+
+### Compose your shots
+
+Position the object so it fills as much of the camera’s frame as possible without excluding or cutting off any part. Use an aperture setting narrow enough to maintain a crisp focus. Shoot at the highest resolution your camera supports and use RAW format if possible.
+
+> **Important**
+
+> Shooting with a narrow aperture requires more light but gives your photographs a greater depth of field, increasing the area of the object that’s in focus. If you don’t have enough light to use a narrow aperture, consider increasing your camera’s ISO setting or adding more light.
+
+In low-light situations, cameras with autofocus can have difficulty finding and maintaining focus. Focus manually if there isn’t enough ambient light to get a focus lock, and put your camera on a tripod to make sure you keep it steady. Use a remote trigger, such as the Apple Watch Camera Remote app, to make sure the camera doesn’t move or shake when you press the button to take a photo.
+
+Use diffused lighting if possible. Hard light, such as from an on-camera flash, direct sunlight, or a bare light bulb can cause problems during object creation. This type of lighting casts hard shadows that can confuse the photogrammetry algorithm. Instead, bounce the light off of a reflector, a wall, or the ceiling, or put a diffusing material like a lamp shade or thin white fabric between the light source and the object. You can also use light modifiers or a light tent designed for photographing objects.
+
+When photographing an object outdoors, keep the sun out of your images if possible. Shoot at midday so the sun is high enough in the sky that it won’t be visible in any of your images, or shoot on an overcast day.
+
+<a id="Capture-consistent-images-and-perform-post-processing"></a>
+
+### Capture consistent images and perform post-processing
+
+In order to ensure that RealityKit can match up landmarks between overlapping photographs, keep your camera settings as consistent as possible from shot to shot. If possible, don’t make changes to any camera settings while shooting, including the focal length (zoom), aperture, shutter speed, or ISO.
+
+If your camera offers manual control of any settings, set those values to keep them consistent between shots. When shooting with the camera on an iPhone or iPad, you can lock the exposure and focus settings by long-pressing the image feed view until you see “AE/AF Lock” appear at the top of the screen.
+
+In addition, masking out objects in the background so the image only contains the object you’re capturing removes unnecessary data that can confuse the photogrammetry algorithm.
+
+There may be times when you can’t capture images under ideal conditions, such as when photographing a large object in a crowded public space. Adjust for image shortcomings using an image editor. Modify a photograph’s contrast, brightness, sharpness, or exposure to compensate for problems in the original capture.
+
+For information on using the RealityKit Object Capture APIs, see [Creating 3D objects from photographs](creating-3d-objects-from-photographs.md).
+
+## See Also
+
+### Model creation
+
+- [Creating 3D objects from photographs](creating-3d-objects-from-photographs.md): Construct virtual objects to use in your AR experiences.
+- [Scanning objects using Object Capture](scanning-objects-using-object-capture.md): Implement a full scanning workflow for capturing objects on iOS devices.
+- [Building an object reconstruction app](building-an-object-reconstruction-app.md): Reconstruct objects from user-selected input images by using photogrammetry.
+- [Creating a photogrammetry command-line app](creating-a-photogrammetry-command-line-app.md): Generate 3D objects from images using RealityKit Object Capture.
+- [Using object capture assets in RealityKit](using-object-capture-assets-in-realitykit.md): Create a chess game using RealityKit and assets created using Object Capture.
+- [PhotogrammetrySession](photogrammetrysession.md): Manages the creation of a 3D model from a set of images.
+- [PhotogrammetrySample](photogrammetrysample.md): An object that represents one image and its corresponding metadata.
+- [ObjectCaptureView](objectcaptureview.md): A view that guides a user through capturing images for object capture.
+- [ObjectCaptureSession](objectcapturesession.md): A session object that monitors and controls image capture for photogrammetry.
+- [ObjectCapturePointCloudView](objectcapturepointcloudview.md): Renders the current state of the point cloud from an object capture session.
+
+# Document: ChannelAudioComponent
+
+Source path: documentation/realitykit/channelaudiocomponent
+Canonical documentation: https://developer.apple.com/documentation/realitykit/channelaudiocomponent
+Description: Framework: RealityKit Kind: Structure Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 1.0+
+
+# ChannelAudioComponent
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 1.0+
+
+A component that configures channel-based rendering of sounds from an entity.
+
+## Declaration
+
+```swift
+struct ChannelAudioComponent
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Channel audio sources route the audio resource’s channels directly to the device’s output without any spatialization or reverberation applied. Neither the position nor orientation of the entity is taken into consideration for channel rendering. For example, the left channel is heard from the left, and the right channel is heard from the right, regardless of where the user is oriented.
+
+The channels of multichannel audio resources are panned according to their channel layout, including rear channels.
+
+```swift
+let entity = Entity()
+let resource = try AudioFileResource.load(named: "MyAudioFile")
+entity.channelAudio = ChannelAudioComponent()
+entity.playAudio(resource)
+```
+
+The `ChannelAudioComponent` allows you to set the overall level of all sounds played from the entity with the `gain` property, in relative Decibels, in the range `-.infinity ... .zero` where `-infinity` is silent and `.zero` is nominal.
+
+```swift
+entity.channelAudio?.gain = -10
+```
+
+Channel audio sources are well suited to play back sounds not associated with any visual elements in a scene.
+
+## Topics
+
+### Initializers
+
+- [init(gain:)](channelaudiocomponent/init%28gain_%29.md): Configure the behavior of a channel audio source.
+
+### Instance Properties
+
+- [gain](channelaudiocomponent/gain.md): The overall level for all sounds emitted from an entity. In relative Decibels, in the range `-.infinity ... .zero` where `.zero` is the default.
+
+## Relationships
+
+### Conforms To
+
+- [Component](component.md)
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+
+## See Also
+
+### Audio source components
+
+- [Creating a Spaceship game](creating-a-spaceship-game.md): Build an immersive game using RealityKit audio, simulation, and rendering features.
+- [Playing spatial audio](../visionos/playing-spatial-audio-in-visionos.md): Create and adjust spatial audio in visionOS with RealityKit.
+- [SpatialAudioComponent](spatialaudiocomponent.md): A component that configures how sounds emit from an entity into a person’s environment.
+- [AmbientAudioComponent](ambientaudiocomponent.md): A component that configures the ambient rendering of sounds from an entity.
+
+# Document: gain
+
+Source path: documentation/realitykit/channelaudiocomponent/gain
+Canonical documentation: https://developer.apple.com/documentation/realitykit/channelaudiocomponent/gain
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 1.0+
+
+# gain
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 1.0+
+
+The overall level for all sounds emitted from an entity. In relative Decibels, in the range  `-.infinity ... .zero` where `.zero` is the default.
+
+## Declaration
+
+```swift
+var gain: Audio.Decibel { get set }
+```
+
+# Document: init(gain:)
+
+Source path: documentation/realitykit/channelaudiocomponent/init(gain:)
+Canonical documentation: https://developer.apple.com/documentation/realitykit/channelaudiocomponent/init(gain:)
+Description: Framework: RealityKit Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 1.0+
+
+# init(gain:)
+
+**Framework:** RealityKit  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 1.0+
+
+Configure the behavior of a channel audio source.
+
+## Declaration
+
+```swift
+init(gain: Audio.Decibel = .zero)
+```
+
+## Parameters
+
+- `gain`: The overall level for all sounds emitted from an entity.
+
+# Document: CharacterControllerComponent
+
+Source path: documentation/realitykit/charactercontrollercomponent
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent
+Description: Framework: RealityKit Kind: Structure Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# CharacterControllerComponent
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+A component that manages character movement.
+
+## Declaration
+
+```swift
+struct CharacterControllerComponent
+```
+
+<a id="overview"></a>
+
+## Overview
+
+To use a character controller, add a `CharacterControllerComponent` to your entity to make it a character entity. Use [moveCharacter(by:deltaTime:relativeTo:collisionHandler:)](entity/movecharacter%28by_deltatime_relativeto_collisionhandler_%29.md) to move your character and respond to collisions, or [teleportCharacter(to:relativeTo:)](entity/teleportcharacter%28to_relativeto_%29.md) to place your character instantaneously in 3D space.
+
+> **Note**
+
+> [PhysicsBodyComponent](physicsbodycomponent.md) and [CollisionComponent](collisioncomponent.md) are incompatible with `CharacterControllerComponent`, and RealityKit deactivates them if you add them to the same entity.
+
+<a id="Handle-collision"></a>
+
+## Handle collision
+
+Character entities are capsular, and you can specify their height and radius in the component’s initializer. A character’s capsule shape aligns with its [upVector](charactercontrollercomponent/upvector.md) so that the top and bottom of the capsule pass through that direction vector.
+
+Although characters don’t have a `CollisionComponent`, they can still interact with colliders. The collision handler in `moveCharacter(by:deltaTime:relativeTo:collisionHandler:)` allows you to respond to collisions with solid colliders in your scene.
+
+```swift
+entity.moveCharacter(by: velocity * deltaTime, deltaTime: deltaTime, relativeTo: nil) {
+    event in
+    // Your character collided with `event.hitEntity`.
+}
+```
+
+To handle collisions with colliders that have a [mode](collisioncomponent/mode-swift.property.md) of [CollisionComponent.Mode.trigger](collisioncomponent/mode-swift.enum/trigger.md), subscribe to the [CollisionEvents.Began](collisionevents/began.md) event for your [RealityView](realityview.md). This event doesn’t occur for solid collisions with your character, but RealityKit invokes it when your character enters a trigger. This is useful for collecting coins, claiming checkpoints, activating enemy behavior when your character enters an area, and many other interactions within games.
+
+<a id="Update-your-character"></a>
+
+## Update your character
+
+A common use case for `CharacterControllerComponent` is to control a character in a video game. Video games have update loops where characters and game logic update once each frame, allowing them to respond to player input in real time. `CharacterControllerComponent` works well in such a setup.
+
+To move your character in response to player input, subscribe to [PhysicsSimulationEvents.WillSimulate](physicssimulationevents/willsimulate.md) on [RealityViewContent](realityviewcontent.md) for your scene. The event object contains information like the time delta since the last update, and you can treat this callback as the update loop for your game.
+
+> **Note**
+
+> You can also use [SceneEvents.Update](sceneevents/update.md) to run code for each frame, but avoid using it to control physics-based motion in your scene.
+
+Read the values from [CharacterControllerStateComponent](charactercontrollerstatecomponent.md) to accumulate forces (such as gravity) and to check whether the character is on the ground. RealityKit calculates [isOnGround](charactercontrollerstatecomponent/isonground.md) and  [velocity](charactercontrollerstatecomponent/velocity.md) only after you call `moveCharacter(by:deltaTime:relativeTo:collisionHandler:)`, so it’s a good idea to call this function at each update.
+
+```swift
+let gravity: SIMD3<Float> = [0, -50, 0]
+let jumpSpeed: Float = 10
+content.subscribe(to: PhysicsSimulationEvents.WillSimulate.self, on: playerEntity) {
+    event in
+    let deltaTime: Float = event.deltaTime
+    var velocity: SIMD3<Float> = .zero
+    var isOnGround: Bool = false
+
+    // RealityKit automatically adds `CharacterControllerStateComponent` after moving the character for the first time.
+    if let ccState = playerEntity.components[CharacterControllerStateComponent.self] {
+        velocity = ccState.velocity
+        isOnGround = ccState.isOnGround
+    }
+
+    if !isOnGround {
+        // Gravity is a force, so you need to accumulate it for each frame.
+        velocity += gravity * deltaTime
+    } else if myPlayerInput.jump {
+        // Set the character's velocity directly to launch it in the air when the player jumps.
+        velocity.y = jumpSpeed
+    }
+
+    playerEntity.moveCharacter(by: velocity * deltaTime, deltaTime: deltaTime, relativeTo: nil) {
+        event in
+        print("playerEntity collided with \(event.hitEntity.name)")
+    }
+}
+```
+
+The following video shows a character entity jumping in response to player input:
+
+Video: character_controller_component_jump.mp4
+
+## Topics
+
+### Creating a character controller component
+
+- [init()](charactercontrollercomponent/init%28%29.md): Creates a character controller component using default values.
+- [init(radius:height:skinWidth:slopeLimit:stepLimit:upVector:collisionFilter:)](charactercontrollercomponent/init%28radius_height_skinwidth_slopelimit_steplimit_upvector_collisionfilter_%29.md): Creates a character controller component using specified values.
+
+### Configuring a character
+
+- [height](charactercontrollercomponent/height.md): The capsule height.
+- [radius](charactercontrollercomponent/radius.md): The capsule radius.
+- [skinWidth](charactercontrollercomponent/skinwidth.md): An added tolerance around the character capsule.
+- [slopeLimit](charactercontrollercomponent/slopelimit.md): The slope limit expressed as a limit angle in radians.
+- [stepLimit](charactercontrollercomponent/steplimit.md): The maximum obstacle height that the controller can move over.
+- [upVector](charactercontrollercomponent/upvector.md): The y-axis direction relative to the physics origin.
+
+### Managing character collisions
+
+- [collisionFilter](charactercontrollercomponent/collisionfilter.md): The character’s collision filter.
+
+### Reading default values
+
+- [defaultHeight](charactercontrollercomponent/defaultheight.md): The capsule height value RealityKit applies when you use the default initializer.
+- [defaultRadius](charactercontrollercomponent/defaultradius.md): The capsule default radius RealityKit applies when you use the default initializer.
+- [defaultSkinWidth](charactercontrollercomponent/defaultskinwidth.md): The skin width value RealityKit applies when you use the default initializer.
+- [defaultSlopeLimit](charactercontrollercomponent/defaultslopelimit.md): The slope limit value RealityKit applies when you use the default initializer.
+- [defaultStepLimit](charactercontrollercomponent/defaultsteplimit.md): The step limit value RealityKit applies when you use the default initializer.
+- [defaultUpVector](charactercontrollercomponent/defaultupvector.md): The default up vector RealityKit applies when you use the default initializer.
+
+### Animating a character
+
+- [JointTransforms](jointtransforms.md): A set of animatable transform values for joints that collectively represent a single skeletal pose.
+
+### Handling collisions
+
+- [CharacterControllerComponent.Collision](charactercontrollercomponent/collision.md): A container that holds collision state for the character controller.
+- [CharacterControllerComponent.CollisionFlags](charactercontrollercomponent/collisionflags.md): An option set that specifies which parts of the character capsule have collided with other objects.
+
+## Relationships
+
+### Conforms To
+
+- [Component](component.md)
+
+## See Also
+
+### Character control
+
+- [CharacterControllerComponent.Collision](charactercontrollercomponent/collision.md): A container that holds collision state for the character controller.
+- [CharacterControllerComponent.CollisionFlags](charactercontrollercomponent/collisionflags.md): An option set that specifies which parts of the character capsule have collided with other objects.
+- [CharacterControllerStateComponent](charactercontrollerstatecomponent.md): A component that represents the state of a character controller.
+
+# Document: CharacterControllerComponent.Collision
+
+Source path: documentation/realitykit/charactercontrollercomponent/collision
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision
+Description: Framework: RealityKit Kind: Structure Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# CharacterControllerComponent.Collision
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+A container that holds collision state for the character controller.
+
+## Declaration
+
+```swift
+struct Collision
+```
+
+<a id="overview"></a>
+
+## Overview
+
+All coordinates are in *physics space*, the coordinate system of the physics simulation.
+
+## Topics
+
+### Initializers
+
+- [init(characterEntity:hitEntity:hitPosition:hitNormal:moveDirection:moveDistance:)](collision/init%28characterentity_hitentity_hitposition_hitnormal_movedirection_movedistance_%29.md): Create Collision and initialize all fields.
+
+### Instance Properties
+
+- [characterEntity](collision/characterentity.md): Entity owning the character controller component.
+- [hitEntity](collision/hitentity.md): The entity that was hit by the character controller.
+- [hitNormal](collision/hitnormal.md): Hit normal relative to physics origin. In physics space.
+- [hitPosition](collision/hitposition.md): Hit position relative to physics origin. In physics space.
+- [moveDirection](collision/movedirection.md): Move direction controller was moving (unit vector). In physics space.
+- [moveDistance](collision/movedistance.md): Move distance controller was attempting to move. In physics space.
+
+## See Also
+
+### Character control
+
+- [CharacterControllerComponent](../charactercontrollercomponent.md): A component that manages character movement.
+- [CharacterControllerComponent.CollisionFlags](collisionflags.md): An option set that specifies which parts of the character capsule have collided with other objects.
+- [CharacterControllerStateComponent](../charactercontrollerstatecomponent.md): A component that represents the state of a character controller.
+
+# Document: characterEntity
+
+Source path: documentation/realitykit/charactercontrollercomponent/collision/characterentity
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/characterentity
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# characterEntity
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+Entity owning the character controller component.
+
+## Declaration
+
+```swift
+var characterEntity: Entity
+```
+
+# Document: hitEntity
+
+Source path: documentation/realitykit/charactercontrollercomponent/collision/hitentity
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/hitentity
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# hitEntity
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The entity that was hit by the character controller.
+
+## Declaration
+
+```swift
+var hitEntity: Entity
+```
+
+# Document: hitNormal
+
+Source path: documentation/realitykit/charactercontrollercomponent/collision/hitnormal
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/hitnormal
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# hitNormal
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+Hit normal relative to physics origin. In physics space.
+
+## Declaration
+
+```swift
+var hitNormal: SIMD3<Float>
+```
+
+# Document: hitPosition
+
+Source path: documentation/realitykit/charactercontrollercomponent/collision/hitposition
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/hitposition
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# hitPosition
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+Hit position relative to physics origin. In physics space.
+
+## Declaration
+
+```swift
+var hitPosition: SIMD3<Float>
+```
+
+# Document: init(characterEntity:hitEntity:hitPosition:hitNormal:moveDirection:moveDistance:)
+
+Source path: documentation/realitykit/charactercontrollercomponent/collision/init(characterentity:hitentity:hitposition:hitnormal:movedirection:movedistance:)
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/init(characterentity:hitentity:hitposition:hitnormal:movedirection:movedistance:)
+Description: Framework: RealityKit Kind: Initializer Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# init(characterEntity:hitEntity:hitPosition:hitNormal:moveDirection:moveDistance:)
+
+**Framework:** RealityKit  
+**Kind:** Initializer  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+Create Collision and initialize all fields.
+
+## Declaration
+
+```swift
+init(characterEntity: Entity, hitEntity: Entity, hitPosition: SIMD3<Float>, hitNormal: SIMD3<Float>, moveDirection: SIMD3<Float>, moveDistance: Float)
+```
+
+# Document: moveDirection
+
+Source path: documentation/realitykit/charactercontrollercomponent/collision/movedirection
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/movedirection
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# moveDirection
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+Move direction controller was moving (unit vector). In physics space.
+
+## Declaration
+
+```swift
+var moveDirection: SIMD3<Float>
+```
+
+# Document: moveDistance
+
+Source path: documentation/realitykit/charactercontrollercomponent/collision/movedistance
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collision/movedistance
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# moveDistance
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+Move distance controller was attempting to move. In physics space.
+
+## Declaration
+
+```swift
+var moveDistance: Float
+```
+
+# Document: collisionFilter
+
+Source path: documentation/realitykit/charactercontrollercomponent/collisionfilter
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionfilter
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# collisionFilter
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The character’s collision filter.
+
+## Declaration
+
+```swift
+var collisionFilter: CollisionFilter
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+For more information on using collision filters, see doc://com.apple.documentation/documentation/realitykit/controlling_entity_collisions_in_realitykit.
+
+# Document: CharacterControllerComponent.CollisionFlags
+
+Source path: documentation/realitykit/charactercontrollercomponent/collisionflags
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionflags
+Description: Framework: RealityKit Kind: Structure Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# CharacterControllerComponent.CollisionFlags
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+An option set that specifies which parts of the character capsule have collided with other objects.
+
+## Declaration
+
+```swift
+struct CollisionFlags
+```
+
+## Topics
+
+### Initializers
+
+- [init(rawValue:)](collisionflags/init%28rawvalue_%29.md): Initializes collisions flags from a raw value.
+
+### Instance Properties
+
+- [rawValue](collisionflags/rawvalue.md): The bitmask representation of the option set.
+
+### Type Properties
+
+- [bottom](collisionflags/bottom.md): The bottom of capsule was hit when moving in the down direction.
+- [none](collisionflags/none.md): No collision.
+- [side](collisionflags/side.md): The side of capsule was hit when moving in the direction tangent to the up vector.
+- [top](collisionflags/top.md): The top of capsule was hit when moving in the up direction.
+
+## Relationships
+
+### Conforms To
+
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [ExpressibleByArrayLiteral](https://developer.apple.com/documentation/swift/expressiblebyarrayliteral)
+- [OptionSet](https://developer.apple.com/documentation/swift/optionset)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [SetAlgebra](https://developer.apple.com/documentation/swift/setalgebra)
+
+## See Also
+
+### Character control
+
+- [CharacterControllerComponent](../charactercontrollercomponent.md): A component that manages character movement.
+- [CharacterControllerComponent.Collision](collision.md): A container that holds collision state for the character controller.
+- [CharacterControllerStateComponent](../charactercontrollerstatecomponent.md): A component that represents the state of a character controller.
+
+# Document: bottom
+
+Source path: documentation/realitykit/charactercontrollercomponent/collisionflags/bottom
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionflags/bottom
+Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# bottom
+
+**Framework:** RealityKit  
+**Kind:** Type Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The bottom of capsule was hit when moving in the down direction.
+
+## Declaration
+
+```swift
+static let bottom: CharacterControllerComponent.CollisionFlags
+```
+
+# Document: init(rawValue:)
+
+Source path: documentation/realitykit/charactercontrollercomponent/collisionflags/init(rawvalue:)
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionflags/init(rawvalue:)
+Description: Framework: RealityKit Kind: Initializer Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# init(rawValue:)
+
+**Framework:** RealityKit  
+**Kind:** Initializer  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+Initializes collisions flags from a raw value.
+
+## Declaration
+
+```swift
+init(rawValue: UInt8)
+```
+
+# Document: none
+
+Source path: documentation/realitykit/charactercontrollercomponent/collisionflags/none
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionflags/none
+Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# none
+
+**Framework:** RealityKit  
+**Kind:** Type Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+No collision.
+
+## Declaration
+
+```swift
+static let none: CharacterControllerComponent.CollisionFlags
+```
+
+# Document: rawValue
+
+Source path: documentation/realitykit/charactercontrollercomponent/collisionflags/rawvalue
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionflags/rawvalue
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# rawValue
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The bitmask representation of the option set.
+
+## Declaration
+
+```swift
+let rawValue: UInt8
+```
+
+# Document: side
+
+Source path: documentation/realitykit/charactercontrollercomponent/collisionflags/side
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionflags/side
+Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# side
+
+**Framework:** RealityKit  
+**Kind:** Type Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The side of capsule was hit when moving in the direction tangent to the up vector.
+
+## Declaration
+
+```swift
+static let side: CharacterControllerComponent.CollisionFlags
+```
+
+# Document: top
+
+Source path: documentation/realitykit/charactercontrollercomponent/collisionflags/top
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/collisionflags/top
+Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# top
+
+**Framework:** RealityKit  
+**Kind:** Type Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The top of capsule was hit when moving in the up direction.
+
+## Declaration
+
+```swift
+static let top: CharacterControllerComponent.CollisionFlags
+```
+
+# Document: defaultHeight
+
+Source path: documentation/realitykit/charactercontrollercomponent/defaultheight
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/defaultheight
+Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# defaultHeight
+
+**Framework:** RealityKit  
+**Kind:** Type Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The capsule height value RealityKit applies when you use the default initializer.
+
+## Declaration
+
+```swift
+static let defaultHeight: Float
+```
+
+## See Also
+
+### Reading default values
+
+- [defaultRadius](defaultradius.md): The capsule default radius RealityKit applies when you use the default initializer.
+- [defaultSkinWidth](defaultskinwidth.md): The skin width value RealityKit applies when you use the default initializer.
+- [defaultSlopeLimit](defaultslopelimit.md): The slope limit value RealityKit applies when you use the default initializer.
+- [defaultStepLimit](defaultsteplimit.md): The step limit value RealityKit applies when you use the default initializer.
+- [defaultUpVector](defaultupvector.md): The default up vector RealityKit applies when you use the default initializer.
+
+# Document: defaultRadius
+
+Source path: documentation/realitykit/charactercontrollercomponent/defaultradius
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/defaultradius
+Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# defaultRadius
+
+**Framework:** RealityKit  
+**Kind:** Type Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The capsule default radius RealityKit applies when you use the default initializer.
+
+## Declaration
+
+```swift
+static let defaultRadius: Float
+```
+
+## See Also
+
+### Reading default values
+
+- [defaultHeight](defaultheight.md): The capsule height value RealityKit applies when you use the default initializer.
+- [defaultSkinWidth](defaultskinwidth.md): The skin width value RealityKit applies when you use the default initializer.
+- [defaultSlopeLimit](defaultslopelimit.md): The slope limit value RealityKit applies when you use the default initializer.
+- [defaultStepLimit](defaultsteplimit.md): The step limit value RealityKit applies when you use the default initializer.
+- [defaultUpVector](defaultupvector.md): The default up vector RealityKit applies when you use the default initializer.
+
+# Document: defaultSkinWidth
+
+Source path: documentation/realitykit/charactercontrollercomponent/defaultskinwidth
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/defaultskinwidth
+Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# defaultSkinWidth
+
+**Framework:** RealityKit  
+**Kind:** Type Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The skin width value RealityKit applies when you use the default initializer.
+
+## Declaration
+
+```swift
+static let defaultSkinWidth: Float
+```
+
+## See Also
+
+### Reading default values
+
+- [defaultHeight](defaultheight.md): The capsule height value RealityKit applies when you use the default initializer.
+- [defaultRadius](defaultradius.md): The capsule default radius RealityKit applies when you use the default initializer.
+- [defaultSlopeLimit](defaultslopelimit.md): The slope limit value RealityKit applies when you use the default initializer.
+- [defaultStepLimit](defaultsteplimit.md): The step limit value RealityKit applies when you use the default initializer.
+- [defaultUpVector](defaultupvector.md): The default up vector RealityKit applies when you use the default initializer.
+
+# Document: defaultSlopeLimit
+
+Source path: documentation/realitykit/charactercontrollercomponent/defaultslopelimit
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/defaultslopelimit
+Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# defaultSlopeLimit
+
+**Framework:** RealityKit  
+**Kind:** Type Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The slope limit value RealityKit applies when you use the default initializer.
+
+## Declaration
+
+```swift
+static let defaultSlopeLimit: Float
+```
+
+## See Also
+
+### Reading default values
+
+- [defaultHeight](defaultheight.md): The capsule height value RealityKit applies when you use the default initializer.
+- [defaultRadius](defaultradius.md): The capsule default radius RealityKit applies when you use the default initializer.
+- [defaultSkinWidth](defaultskinwidth.md): The skin width value RealityKit applies when you use the default initializer.
+- [defaultStepLimit](defaultsteplimit.md): The step limit value RealityKit applies when you use the default initializer.
+- [defaultUpVector](defaultupvector.md): The default up vector RealityKit applies when you use the default initializer.
+
+# Document: defaultStepLimit
+
+Source path: documentation/realitykit/charactercontrollercomponent/defaultsteplimit
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/defaultsteplimit
+Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# defaultStepLimit
+
+**Framework:** RealityKit  
+**Kind:** Type Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The step limit value RealityKit applies when you use the default initializer.
+
+## Declaration
+
+```swift
+static let defaultStepLimit: Float
+```
+
+## See Also
+
+### Reading default values
+
+- [defaultHeight](defaultheight.md): The capsule height value RealityKit applies when you use the default initializer.
+- [defaultRadius](defaultradius.md): The capsule default radius RealityKit applies when you use the default initializer.
+- [defaultSkinWidth](defaultskinwidth.md): The skin width value RealityKit applies when you use the default initializer.
+- [defaultSlopeLimit](defaultslopelimit.md): The slope limit value RealityKit applies when you use the default initializer.
+- [defaultUpVector](defaultupvector.md): The default up vector RealityKit applies when you use the default initializer.
+
+# Document: defaultUpVector
+
+Source path: documentation/realitykit/charactercontrollercomponent/defaultupvector
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/defaultupvector
+Description: Framework: RealityKit Kind: Type Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# defaultUpVector
+
+**Framework:** RealityKit  
+**Kind:** Type Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The default up vector RealityKit applies when you use the default initializer.
+
+## Declaration
+
+```swift
+static let defaultUpVector: SIMD3<Float>
+```
+
+## See Also
+
+### Reading default values
+
+- [defaultHeight](defaultheight.md): The capsule height value RealityKit applies when you use the default initializer.
+- [defaultRadius](defaultradius.md): The capsule default radius RealityKit applies when you use the default initializer.
+- [defaultSkinWidth](defaultskinwidth.md): The skin width value RealityKit applies when you use the default initializer.
+- [defaultSlopeLimit](defaultslopelimit.md): The slope limit value RealityKit applies when you use the default initializer.
+- [defaultStepLimit](defaultsteplimit.md): The step limit value RealityKit applies when you use the default initializer.
+
+# Document: height
+
+Source path: documentation/realitykit/charactercontrollercomponent/height
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/height
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# height
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The capsule height.
+
+## Declaration
+
+```swift
+var height: Float
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The capsule height includes radii and should be specified the entity’s coordinate system.
+
+## See Also
+
+### Configuring a character
+
+- [radius](radius.md): The capsule radius.
+- [skinWidth](skinwidth.md): An added tolerance around the character capsule.
+- [slopeLimit](slopelimit.md): The slope limit expressed as a limit angle in radians.
+- [stepLimit](steplimit.md): The maximum obstacle height that the controller can move over.
+- [upVector](upvector.md): The y-axis direction relative to the physics origin.
+
+# Document: init()
+
+Source path: documentation/realitykit/charactercontrollercomponent/init()
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/init()
+Description: Framework: RealityKit Kind: Initializer Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# init()
+
+**Framework:** RealityKit  
+**Kind:** Initializer  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+Creates a character controller component using default values.
+
+## Declaration
+
+```swift
+init()
+```
+
+## See Also
+
+### Creating a character controller component
+
+- [init(radius:height:skinWidth:slopeLimit:stepLimit:upVector:collisionFilter:)](init%28radius_height_skinwidth_slopelimit_steplimit_upvector_collisionfilter_%29.md): Creates a character controller component using specified values.
+
+# Document: init(radius:height:skinWidth:slopeLimit:stepLimit:upVector:collisionFilter:)
+
+Source path: documentation/realitykit/charactercontrollercomponent/init(radius:height:skinwidth:slopelimit:steplimit:upvector:collisionfilter:)
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/init(radius:height:skinwidth:slopelimit:steplimit:upvector:collisionfilter:)
+Description: Framework: RealityKit Kind: Initializer Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# init(radius:height:skinWidth:slopeLimit:stepLimit:upVector:collisionFilter:)
+
+**Framework:** RealityKit  
+**Kind:** Initializer  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+Creates a character controller component using specified values.
+
+## Declaration
+
+```swift
+init(radius: Float, height: Float, skinWidth: Float = defaultSkinWidth, slopeLimit: Float = defaultSlopeLimit, stepLimit: Float = defaultStepLimit, upVector: SIMD3<Float> = defaultUpVector, collisionFilter: CollisionFilter = .default)
+```
+
+## See Also
+
+### Creating a character controller component
+
+- [init()](init%28%29.md): Creates a character controller component using default values.
+
+# Document: radius
+
+Source path: documentation/realitykit/charactercontrollercomponent/radius
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/radius
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# radius
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The capsule radius.
+
+## Declaration
+
+```swift
+var radius: Float
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Specify this value in the entity’s coordinate system.
+
+## See Also
+
+### Configuring a character
+
+- [height](height.md): The capsule height.
+- [skinWidth](skinwidth.md): An added tolerance around the character capsule.
+- [slopeLimit](slopelimit.md): The slope limit expressed as a limit angle in radians.
+- [stepLimit](steplimit.md): The maximum obstacle height that the controller can move over.
+- [upVector](upvector.md): The y-axis direction relative to the physics origin.
+
+# Document: skinWidth
+
+Source path: documentation/realitykit/charactercontrollercomponent/skinwidth
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/skinwidth
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# skinWidth
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+An added tolerance around the character capsule.
+
+## Declaration
+
+```swift
+var skinWidth: Float
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+A small skin, known as the *contact offset*, is maintained around the controller’s volume to avoid rounding and precision issues with collision detection. Specify this value relative to the entity’s coordinate system.
+
+## See Also
+
+### Configuring a character
+
+- [height](height.md): The capsule height.
+- [radius](radius.md): The capsule radius.
+- [slopeLimit](slopelimit.md): The slope limit expressed as a limit angle in radians.
+- [stepLimit](steplimit.md): The maximum obstacle height that the controller can move over.
+- [upVector](upvector.md): The y-axis direction relative to the physics origin.
+
+# Document: slopeLimit
+
+Source path: documentation/realitykit/charactercontrollercomponent/slopelimit
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/slopelimit
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# slopeLimit
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The slope limit expressed as a limit angle in radians.
+
+## Declaration
+
+```swift
+var slopeLimit: Float
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This value represents the maximum slope that the character can move over. RealityKit applies this value to characters that are walking on static objects, but not when walking on kinematic or dynamic objects.
+
+Changing this value after the CharacterControllerComponent has been created and added to Entity has no effect.
+
+## See Also
+
+### Configuring a character
+
+- [height](height.md): The capsule height.
+- [radius](radius.md): The capsule radius.
+- [skinWidth](skinwidth.md): An added tolerance around the character capsule.
+- [stepLimit](steplimit.md): The maximum obstacle height that the controller can move over.
+- [upVector](upvector.md): The y-axis direction relative to the physics origin.
+
+# Document: stepLimit
+
+Source path: documentation/realitykit/charactercontrollercomponent/steplimit
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/steplimit
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# stepLimit
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The maximum obstacle height that the controller can move over.
+
+## Declaration
+
+```swift
+var stepLimit: Float
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Specify this value relative to the entity’s coordinate system.
+
+Changing this value after the CharacterControllerComponent has been created and added to Entity has no effect.
+
+## See Also
+
+### Configuring a character
+
+- [height](height.md): The capsule height.
+- [radius](radius.md): The capsule radius.
+- [skinWidth](skinwidth.md): An added tolerance around the character capsule.
+- [slopeLimit](slopelimit.md): The slope limit expressed as a limit angle in radians.
+- [upVector](upvector.md): The y-axis direction relative to the physics origin.
+
+# Document: upVector
+
+Source path: documentation/realitykit/charactercontrollercomponent/upvector
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollercomponent/upvector
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# upVector
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The y-axis direction relative to the physics origin.
+
+## Declaration
+
+```swift
+var upVector: SIMD3<Float>
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Rotates the object so that the vertical height is along the up vector. Normalize and specify the vector in *physics space*, the coordinate system of the physics simulation.
+
+## See Also
+
+### Configuring a character
+
+- [height](height.md): The capsule height.
+- [radius](radius.md): The capsule radius.
+- [skinWidth](skinwidth.md): An added tolerance around the character capsule.
+- [slopeLimit](slopelimit.md): The slope limit expressed as a limit angle in radians.
+- [stepLimit](steplimit.md): The maximum obstacle height that the controller can move over.
+
+# Document: CharacterControllerStateComponent
+
+Source path: documentation/realitykit/charactercontrollerstatecomponent
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollerstatecomponent
+Description: Framework: RealityKit Kind: Structure Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# CharacterControllerStateComponent
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+A component that represents the state of a character controller.
+
+## Declaration
+
+```swift
+struct CharacterControllerStateComponent
+```
+
+<a id="overview"></a>
+
+## Overview
+
+RealityKit adds this component to an entity when you add a [CharacterControllerComponent](charactercontrollercomponent.md) instance to it. Manually adding this component to an entity that has a character controller component has no effect because it’s redundant.
+
+## Topics
+
+### Creating a state component
+
+- [init()](charactercontrollerstatecomponent/init%28%29.md)
+
+### Accessing character controller state
+
+- [isOnGround](charactercontrollerstatecomponent/isonground.md): A Boolean value that indicates whether the character controller is on the ground.
+- [velocity](charactercontrollerstatecomponent/velocity.md): The linear speed relative to the origin in physics space.
+
+## Relationships
+
+### Conforms To
+
+- [Component](component.md)
+
+## See Also
+
+### Character control
+
+- [CharacterControllerComponent](charactercontrollercomponent.md): A component that manages character movement.
+- [CharacterControllerComponent.Collision](charactercontrollercomponent/collision.md): A container that holds collision state for the character controller.
+- [CharacterControllerComponent.CollisionFlags](charactercontrollercomponent/collisionflags.md): An option set that specifies which parts of the character capsule have collided with other objects.
+
+# Document: init()
+
+Source path: documentation/realitykit/charactercontrollerstatecomponent/init()
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollerstatecomponent/init()
+Description: Framework: RealityKit Kind: Initializer Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# init()
+
+**Framework:** RealityKit  
+**Kind:** Initializer  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+## Declaration
+
+```swift
+init()
+```
+
+# Document: isOnGround
+
+Source path: documentation/realitykit/charactercontrollerstatecomponent/isonground
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollerstatecomponent/isonground
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# isOnGround
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+A Boolean value that indicates whether the character controller is on the ground.
+
+## Declaration
+
+```swift
+let isOnGround: Bool
+```
+
+## See Also
+
+### Accessing character controller state
+
+- [velocity](velocity.md): The linear speed relative to the origin in physics space.
+
+# Document: velocity
+
+Source path: documentation/realitykit/charactercontrollerstatecomponent/velocity
+Canonical documentation: https://developer.apple.com/documentation/realitykit/charactercontrollerstatecomponent/velocity
+Description: Framework: RealityKit Kind: Instance Property Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+# velocity
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The linear speed relative to the origin in physics space.
+
+## Declaration
+
+```swift
+let velocity: SIMD3<Float>
+```
+
+## See Also
+
+### Accessing character controller state
+
+- [isOnGround](isonground.md): A Boolean value that indicates whether the character controller is on the ground.
 
 # Document: Checking the pixel format of a postprocess effect’s output texture
 
@@ -191967,1310 +193348,3 @@ Design your synchronization to handle class and roster updates. When someone rem
 ### Essentials
 
 - [Validating with the Roster API test scope](validating-with-the-roster-api-test-scope.md): Use test data to ensure your integration with the Roster API works correctly.
-
-# Document: Organization
-
-Source path: documentation/rosterapi/organization
-Canonical documentation: https://developer.apple.com/documentation/rosterapi/organization
-Description: Interface language: Data
-
-# Organization
-
-**Interface language:** Data
-
-**Framework:** Roster API  
-**Kind:** Object  
-**Availability:** Roster API 1.0.0+
-
-Information about an Apple School Manager organization.
-
-## Declaration
-
-```
-object Organization
-```
-
-## Properties
-
-- `dateCreated` — `string`: The date the organization object was created in Apple School Manager. The date string is in ISO 8601 format.
-- `dateLastModified` — `string`: The date the organization object was modified in Apple School Manager. The date string is in ISO 8601 format.
-- `domains` — `[Domain]`: A list of `Domains` objects.
-- `id` — `string`: A unique identifier for this organization.
-- `name` — `string`: This organization’s name.
-- `type` — `string`: The organization’s type. This string’s value is `EDUCATION`.
-
-## See Also
-
-### Information about the organization
-
-- [Read the organization](returns-organization-infrmation.md): Returns information about the Apple School Manager organization.
-- [Domain](domain.md): A DNS domain name associated with an Apple School Manager organization.
-
-# Document: List classes
-
-Source path: documentation/rosterapi/returns-a-list-of-classes-for-an-apple-school-manager-organization
-Canonical documentation: https://developer.apple.com/documentation/rosterapi/returns-a-list-of-classes-for-an-apple-school-manager-organization
-Description: Interface language: Data
-
-# List classes
-
-**Interface language:** Data
-
-**Framework:** Roster API  
-**Kind:** Web Service Endpoint  
-**Availability:** Roster API 1.0.0+
-
-List classes in an Apple School Manager organization.
-
-## URL
-
-```http
-GET https://api-school.apple.com/rosterapi/v1/classes
-```
-
-## Query Parameters
-
-- `limit` — `string`: The maximum number of class records to return. The default is 100.
-- `pageToken` — `string`: A token for paging through a large number of results. If the number of records in the organization is greater than the `limit` parameter, pass the token returned in [Classes](classes.md).
-
-## Response Codes
-
-- `200` OK — `Classes`: The request was successful.
-- `401` Unauthorized: The access token was invalid.
-- `403` Forbidden: Access to the list of classes was forbidden.
-- `429`: The client made too many requests. The response includes an `X-Retry-After` header that indicates the number of seconds to wait before making another request.
-- `500` Internal Server Error: The server encountered an internal error.
-
-## Mentioned In
-
-- [Obtaining information about people and classes](obtaining-information-about-people-and-classes.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-<a id="Example"></a>
-
-### Example
-
-**Request**
-
-```
-curl "https://api-school.apple.com/rosterapi/v1/classes?limit=1" \
-    -H "Authorization: Bearer ${ACCESS_TOKEN}"
-
-```
-
-**Response**
-
-```json
-{
-  "classes": [
-    {
-      "id": "1234",
-      "name": "Algebra",
-      "number": "101",
-      "room": "PL-213",
-      "locationId": "LO:1234",
-      "instructorIds": [
-        "1234",
-        "2345"
-      ],
-      "studentIds": [
-        "54321",
-        "54322",
-        "54323"
-      ],
-      "dateCreated": "2021-07-26T11:11:51Z",
-      "dateLastModified": "2021-07-26T11:11:51Z"
-    }
-  ],
-  "moreToFollow": true,
-  "nextPageToken": "3da541559918a808c2402bba5012f6c60b27661c"
-}
-```
-
-## See Also
-
-### Information about classes
-
-- [Read a class](returns-a-specific-class-in-an-apple-school-manager-organization_.md): Read a class from an Apple School Manager organization.
-- [Class](class.md): A class in an Apple School Manager organization.
-- [Classes](classes.md): A list of classes, with a token for pagination.
-
-# Document: List locations
-
-Source path: documentation/rosterapi/returns-a-list-of-locations-for-an-apple-school-manager-organization
-Canonical documentation: https://developer.apple.com/documentation/rosterapi/returns-a-list-of-locations-for-an-apple-school-manager-organization
-Description: Interface language: Data
-
-# List locations
-
-**Interface language:** Data
-
-**Framework:** Roster API  
-**Kind:** Web Service Endpoint  
-**Availability:** Roster API 1.0.0+
-
-Returns a list of locations in an Apple School Manager organization.
-
-## URL
-
-```http
-GET https://api-school.apple.com/rosterapi/v1/locations
-```
-
-## Query Parameters
-
-- `limit` — `string`: The maximum number of locations to return. The default is 100.
-- `pageToken` — `string`: A token for paging through a large number of results. If the number of locations in the organization is greater than the `limit` parameter, pass the token returned in [Locations](locations.md).
-
-## Response Codes
-
-- `200` OK — `Locations`: The request was successful.
-- `401` Unauthorized: The access token was invalid.
-- `403` Forbidden: You don’t have permission to access the locations.
-- `429`: The client made too many requests. The response includes an `X-Retry-After` header that indicates the number of seconds to wait before making another request.
-- `500` Internal Server Error: The server encountered an internal error.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Access to the `locations` resource requires authorization to either the `edu.users.read` or `edu.classes.read` scope.
-
-<a id="Example"></a>
-
-### Example
-
-**Request**
-
-```
-curl "https://api-school.apple.com/rosterapi/v1/locations?limit=1" -H "Authorization: Bearer ${TOKEN}"
-```
-
-**Response**
-
-```json
-{
-  "locations":[{"id":"1234","name":"Example Location","domain":"example.com","timeZone":"PST","dateCreated":"2020-07-06T20:32:00Z","dateLastModified":"2023-04-20T09:49:33.938397143Z"}],
-  "nextPageToken":"XbdJJGHGTqnueAVPfw2XOA",
-  "moreToFollow":true
-}
-```
-
-## See Also
-
-### Information about locations
-
-- [Read a location](returns-a-specific-location-in-an-apple-school-manager-organization.md): Returns a specific location in an Apple School Manager organization.
-- [Location](location.md): A location in an Apple School Manager organization.
-- [Locations](locations.md): A list of locations, with a token for pagination.
-
-# Document: List users
-
-Source path: documentation/rosterapi/returns-a-list-of-users-in-an-apple-school-manager-organization
-Canonical documentation: https://developer.apple.com/documentation/rosterapi/returns-a-list-of-users-in-an-apple-school-manager-organization
-Description: Interface language: Data
-
-# List users
-
-**Interface language:** Data
-
-**Framework:** Roster API  
-**Kind:** Web Service Endpoint  
-**Availability:** Roster API 1.0.0+
-
-List users in an Apple School Manager organization.
-
-## URL
-
-```http
-GET https://api-school.apple.com/rosterapi/v1/users
-```
-
-## Query Parameters
-
-- `limit` — `string`: The maximum amount of user objects to return. The default is 100.
-- `pageToken` — `string`: A token to retrieve the next set of records when the number of users is greater than the `limit` parameter.
-- `role` — `string`: The role of the user in the organization.
-  **Allowed values:** `Student`, `Instructor`, `Staff`
-
-## Response Codes
-
-- `200` OK — `Users`: The request was successful.
-- `401` Unauthorized: The access token was invalid.
-- `403` Forbidden: Access to the requested user was forbidden.
-- `429`: The client made too many requests. The response includes an `X-Retry-After` header that indicates the number of seconds to wait before making another request.
-- `500` Internal Server Error: The server encountered an internal error.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-<a id="Example"></a>
-
-### Example
-
-**Request**
-
-```
-curl "https://api-school.apple.com/rosterapi/v1/users?role=Student&limit=1" \
-    -H "Authorization: Bearer ${ACCESS_TOKEN}"
-```
-
-**Response**
-
-```json
-{
-  "users": [
-    {
-      "id": "1234",
-      "email": "user@example.edu",
-      "givenName": "Finny",
-      "middleName": "Kim",
-      "familyName": "Ho",
-      "grade": "10",
-      "roleLocationMapping": [
-        {
-          "roleName": "Student",
-          "locationId": "LO:1234"
-        }
-      ],
-      "dateCreated": "2022-04-25T16:00:45Z",
-      "dateLastModified": "2022-04-25T16:00:45Z"
-    }
-  ],
-  "moreToFollow": true,
-  "nextPageToken": "3da541559918a808c2402bba5012f6c60b27661c"
-}
-```
-
-## See Also
-
-### Information about users
-
-- [Read a user](returns-a-specific-user-in-an-apple-school-manager-organization.md): Read a user in an Apple School Manager organization.
-- [User](user.md): A user in an Apple School Manager organization.
-- [RoleLocation](rolelocation.md): A mapping between a role assumed by a user in an Apple School Manager organization, and the corresponding location.
-- [List users in a class](returns-a-users-for-an-apple-school-manager-class.md): List users in a class of an Apple School Manager organization.
-- [Users](users.md): A list of users, with a token for pagination.
-
-# Document: Read a class
-
-Source path: documentation/rosterapi/returns-a-specific-class-in-an-apple-school-manager-organization.
-Canonical documentation: https://developer.apple.com/documentation/rosterapi/returns-a-specific-class-in-an-apple-school-manager-organization.
-Description: Interface language: Data
-
-# Read a class
-
-**Interface language:** Data
-
-**Framework:** Roster API  
-**Kind:** Web Service Endpoint  
-**Availability:** Roster API 1.0.0+
-
-Read a class from an Apple School Manager organization.
-
-## URL
-
-```http
-GET https://api-school.apple.com/rosterapi/v1/classes/{classId}
-```
-
-## Path Parameters
-
-- `classId` — `string` (required): The identifier from the class. Use the `id` field from the [Class](class.md) object.
-
-## Response Codes
-
-- `200` OK — `Class`: The request was successful.
-- `401` Unauthorized: The access token was invalid.
-- `403` Forbidden: Access to the requested class was forbidden.
-- `404` Not Found: The server didn’t find a class with the given `classId` in the organization.
-- `429`: The client made too many requests. The response includes an `X-Retry-After` header that indicates the number of seconds to wait before making another request.
-- `500` Internal Server Error: The server encountered an internal error.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-<a id="Example"></a>
-
-### Example
-
-**Request**
-
-```
-curl "https://api-school.apple.com/rosterapi/v1/classes/1234" \
-    -H "Authorization: Bearer ${TOKEN}"
-```
-
-**Response**
-
-```json
-{
-  "id": "1234",
-  "name": "Algebra",
-  "number": "101",
-  "room": "PL-213",
-  "locationId": "LO:1234",
-  "instructorIds": [
-    "1234",
-    "2345"
-  ],
-  "studentIds": [
-    "54321",
-    "54322",
-    "54323"
-  ],
-  "dateCreated": "2021-07-26T11:11:51Z",
-  "dateLastModified”: "2021-07-26T11:11:51Z"
-}
-```
-
-## See Also
-
-### Information about classes
-
-- [Class](class.md): A class in an Apple School Manager organization.
-- [List classes](returns-a-list-of-classes-for-an-apple-school-manager-organization.md): List classes in an Apple School Manager organization.
-- [Classes](classes.md): A list of classes, with a token for pagination.
-
-# Document: Read a location
-
-Source path: documentation/rosterapi/returns-a-specific-location-in-an-apple-school-manager-organization
-Canonical documentation: https://developer.apple.com/documentation/rosterapi/returns-a-specific-location-in-an-apple-school-manager-organization
-Description: Interface language: Data
-
-# Read a location
-
-**Interface language:** Data
-
-**Framework:** Roster API  
-**Kind:** Web Service Endpoint  
-**Availability:** Roster API 1.0.0+
-
-Returns a specific location in an Apple School Manager organization.
-
-## URL
-
-```http
-GET https://api-school.apple.com/rosterapi/v1/locations/{locationId}
-```
-
-## Path Parameters
-
-- `locationId` — `string` (required): The identifier from the class. Use the `id` field from the [Location](location.md) object.
-
-## Response Codes
-
-- `200` OK — `Location`: The request was successful.
-- `401` Unauthorized: The access token was invalid.
-- `403` Forbidden: You don’t have permission to access the requested location.
-- `404` Not Found: The server didn’t find a location with the given `locationId` in the organization.
-- `429`: The client made too many requests. The response includes an `X-Retry-After` header that indicates the number of seconds to wait before making another request.
-- `500` Internal Server Error: The server encountered an internal error.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Access to the `locations` resource requires authorization to either the `edu.users.read` or `edu.classes.read` scope.
-
-<a id="Example"></a>
-
-### Example
-
-**Request**
-
-```
-curl "https://api-school.apple.com/rosterapi/v1/locations/1234" \
-        -H "Authorization: Bearer ${TOKEN}"
-
-```
-
-**Response**
-
-```json
-{
-  "id":"1234",
-  "name":"Example Location",
-  "domain":"example.com",
-  "timeZone":"PST",
-  "dateCreated":"2020-07-06T20:32:00Z",
-  "dateLastModified":"2023-04-20T09:44:49.566949810Z"
-}
-```
-
-## See Also
-
-### Information about locations
-
-- [Location](location.md): A location in an Apple School Manager organization.
-- [List locations](returns-a-list-of-locations-for-an-apple-school-manager-organization.md): Returns a list of locations in an Apple School Manager organization.
-- [Locations](locations.md): A list of locations, with a token for pagination.
-
-# Document: Read a user
-
-Source path: documentation/rosterapi/returns-a-specific-user-in-an-apple-school-manager-organization
-Canonical documentation: https://developer.apple.com/documentation/rosterapi/returns-a-specific-user-in-an-apple-school-manager-organization
-Description: Interface language: Data
-
-# Read a user
-
-**Interface language:** Data
-
-**Framework:** Roster API  
-**Kind:** Web Service Endpoint  
-**Availability:** Roster API 1.0.0+
-
-Read a user in an Apple School Manager organization.
-
-## URL
-
-```http
-GET https://api-school.apple.com/rosterapi/v1/users/{userId}
-```
-
-## Path Parameters
-
-- `userId` — `string` (required): The identifier from the user. Use the `id` field from the [User](user.md) object.
-
-## Response Codes
-
-- `200` OK — `User`: The request was successful.
-- `401` Unauthorized: The access token was invalid.
-- `403` Forbidden: Access to the requested user was forbidden.
-- `404` Not Found: The server didn’t find a user with the given `userId` in the organization.
-- `429`: The client made too many requests. The response includes an `X-Retry-After` header that indicates the number of seconds to wait before making another request.
-- `500` Internal Server Error: The server encountered an internal error.
-
-## Mentioned In
-
-- [Integrating with Roster API and Sign in with Apple](integrating-with-roster-api-and-sign-in-with-apple.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Access to the `users` resource requires authorization to the `edu.users.read` scope.
-
-<a id="Example"></a>
-
-### Example
-
-**Request**
-
-```
-curl "https://api-school.apple.com/rosterapi/v1/users/1234" \
-        -H "Authorization: Bearer ${TOKEN}"
-```
-
-**Response**
-
-```json
-{
-  "id": "1234",
-  "email": "user@example.edu",
-  "givenName": "Finny",
-  "middleName”: "Kim",
-  "familyName": "Ho",
-  "grade": "10",
-  "roleLocationMapping": [
-    {
-      "roleName": "Student",
-      "locationId": "LO:1234"
-    }
-  ],
-  "dateCreated": "2022-04-25T16:00:45Z",
-  "dateLastModified": "2022-04-25T16:00:45Z"
-}
-```
-
-## See Also
-
-### Information about users
-
-- [User](user.md): A user in an Apple School Manager organization.
-- [RoleLocation](rolelocation.md): A mapping between a role assumed by a user in an Apple School Manager organization, and the corresponding location.
-- [List users](returns-a-list-of-users-in-an-apple-school-manager-organization.md): List users in an Apple School Manager organization.
-- [List users in a class](returns-a-users-for-an-apple-school-manager-class.md): List users in a class of an Apple School Manager organization.
-- [Users](users.md): A list of users, with a token for pagination.
-
-# Document: List users in a class
-
-Source path: documentation/rosterapi/returns-a-users-for-an-apple-school-manager-class
-Canonical documentation: https://developer.apple.com/documentation/rosterapi/returns-a-users-for-an-apple-school-manager-class
-Description: Interface language: Data
-
-# List users in a class
-
-**Interface language:** Data
-
-**Framework:** Roster API  
-**Kind:** Web Service Endpoint  
-**Availability:** Roster API 1.0.0+
-
-List users in a class of an Apple School Manager organization.
-
-## URL
-
-```http
-GET https://api-school.apple.com/rosterapi/v1/classes/{classId}/users
-```
-
-## Path Parameters
-
-- `classId` — `string` (required): A unique class identifier. Use an identifier from the `id` field of [Class](class.md).
-
-## Query Parameters
-
-- `limit` — `string`: The maximum number of user records to return. The default limit is 100.
-- `role` — `string`: The role of the user in the class.
-  **Allowed values:** `Student`, `Instructor`
-- `pageToken` — `string`: A token to retrieve the next set of records when the number of users is greater than the `limit` parameter.
-
-## Response Codes
-
-- `200` OK — `Users`: The request was successful.
-- `401` Unauthorized: The access token was invalid.
-- `403` Forbidden: Access to the requested user was forbidden.
-- `404` Not Found: The server didn’t find a class with the given `classId` in the organization.
-- `429`: The client made too many requests. The response includes an `X-Retry-After` header that indicates the number of seconds to wait before making another request.
-- `500` Internal Server Error: The server encountered an internal error.
-
-## Mentioned In
-
-- [Obtaining information about people and classes](obtaining-information-about-people-and-classes.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-<a id="Example"></a>
-
-### Example
-
-**Request**
-
-```
-curl "https://api-school.apple.com/rosterapi/v1/classes/1234/users?role=Student&limit=1" \
-    -H "Authorization: Bearer ${ACCESS_TOKEN}"
-```
-
-**Response**
-
-```json
-{
-  "users": [
-    {
-      "id": "1234",
-      "email": "user@example.edu",
-      "givenName": "Finny",
-      "middleName": "Kim",
-      "familyName": "Ho",
-      "grade": "10",
-      "roleLocationMapping": [
-        {
-          "roleName": "Student",
-          "locationId": "LO:1234"
-        }
-      ],
-      "dateCreated": "2022-04-25T16:00:45Z",
-      "dateLastModified": "2022-04-25T16:00:45Z"
-    }
-  ],
-  "moreToFollow": true,
-  "nextPageToken": "3da541559918a808c2402bba5012f6c60b27661c"
-}
-```
-
-## See Also
-
-### Information about users
-
-- [Read a user](returns-a-specific-user-in-an-apple-school-manager-organization.md): Read a user in an Apple School Manager organization.
-- [User](user.md): A user in an Apple School Manager organization.
-- [RoleLocation](rolelocation.md): A mapping between a role assumed by a user in an Apple School Manager organization, and the corresponding location.
-- [List users](returns-a-list-of-users-in-an-apple-school-manager-organization.md): List users in an Apple School Manager organization.
-- [Users](users.md): A list of users, with a token for pagination.
-
-# Document: Read the organization
-
-Source path: documentation/rosterapi/returns-organization-infrmation
-Canonical documentation: https://developer.apple.com/documentation/rosterapi/returns-organization-infrmation
-Description: Interface language: Data
-
-# Read the organization
-
-**Interface language:** Data
-
-**Framework:** Roster API  
-**Kind:** Web Service Endpoint  
-**Availability:** Roster API 1.0.0+
-
-Returns information about the Apple School Manager organization.
-
-## URL
-
-```http
-GET https://api-school.apple.com/rosterapi/v1/organization
-```
-
-## Response Codes
-
-- `200` OK — `Organization`: The request was successful.
-- `401` Unauthorized: The access token was invalid.
-- `403` Forbidden: You don’t have permission to access the organization information.
-- `404` Not Found: The server didn’t find the organization information.
-- `429`: The client made too many requests. The response includes an `X-Retry-After` header that indicates the number of seconds to wait before making another request.
-- `500` Internal Server Error: The server encountered an internal error.
-
-## Mentioned In
-
-- [Integrating with Roster API and Sign in with Apple](integrating-with-roster-api-and-sign-in-with-apple.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Access to the `organization` resource requires authorization to either the `edu.users.read` or `edu.classes.read` scope.
-
-<a id="Example"></a>
-
-### Example
-
-**Request**
-
-```
-curl "https://api-school.apple.com/rosterapi/v1/organization" -H "Authorization: Bearer ${TOKEN}"
-```
-
-**Response**
-
-```json
-{
-  "id":"1234",
-  "type":"EDUCATION",
-  "name":"Example Organization",
-  "domains":[{"name":"example.com","isVerified":false}],
-  "dateCreated":"2022-10-11T01:53:02Z",
-  "dateLastModified":"2022-10-11T01:53:02Z"
-}
-```
-
-## See Also
-
-### Information about the organization
-
-- [Organization](organization.md): Information about an Apple School Manager organization.
-- [Domain](domain.md): A DNS domain name associated with an Apple School Manager organization.
-
-# Document: RoleLocation
-
-Source path: documentation/rosterapi/rolelocation
-Canonical documentation: https://developer.apple.com/documentation/rosterapi/rolelocation
-Description: Interface language: Data
-
-# RoleLocation
-
-**Interface language:** Data
-
-**Framework:** Roster API  
-**Kind:** Object  
-**Availability:** Roster API 1.0.0+
-
-A mapping between a role assumed by a user in an Apple School Manager organization, and the corresponding location.
-
-## Declaration
-
-```
-object RoleLocation
-```
-
-## Properties
-
-- `locationId` — `string`: The identifier for the location where the [User](user.md) assumes the named role. This may identify a [Location](location.md) in the Apple School Manager organization, which you fetch with [Read a location](returns-a-specific-location-in-an-apple-school-manager-organization.md). Alternatively, it may identify the [Organization](organization.md), which you fetch with [Read the organization](returns-organization-infrmation.md).
-- `roleName` — `string`: The role the [User](user.md) assumes at the identified [Location](location.md). Possible values for this property are `Student`, `Instructor`, and `Staff`.
-
-## See Also
-
-### Information about users
-
-- [Read a user](returns-a-specific-user-in-an-apple-school-manager-organization.md): Read a user in an Apple School Manager organization.
-- [User](user.md): A user in an Apple School Manager organization.
-- [List users](returns-a-list-of-users-in-an-apple-school-manager-organization.md): List users in an Apple School Manager organization.
-- [List users in a class](returns-a-users-for-an-apple-school-manager-class.md): List users in a class of an Apple School Manager organization.
-- [Users](users.md): A list of users, with a token for pagination.
-
-# Document: User
-
-Source path: documentation/rosterapi/user
-Canonical documentation: https://developer.apple.com/documentation/rosterapi/user
-Description: Interface language: Data
-
-# User
-
-**Interface language:** Data
-
-**Framework:** Roster API  
-**Kind:** Object  
-**Availability:** Roster API 1.0.0+
-
-A user in an Apple School Manager organization.
-
-## Declaration
-
-```
-object User
-```
-
-## Properties
-
-- `dateCreated` — `string`: The date the record was created in ASM, formatted in ISO 8601.
-- `dateLastModified` — `string`: The date the user record was last modified in ASM, formatted in ISO 8601.
-- `email` — `email`: The email address of the user. Not all student accounts have an email address.
-- `familyName` — `string`: The user’s last name.
-- `givenName` — `string`: The user’s first name.
-- `grade` — `string`: If the user is a student, the user’s grade.
-- `id` — `string`: A unique identifier for the user. Use it to request information for one user in the [Read a user](returns-a-specific-user-in-an-apple-school-manager-organization.md) endpoint.
-- `middleName` — `string`: The user’s middle name.
-- `roleLocationMapping` — `[RoleLocation]`: A list that maps between the user’s `roles` and the [Location](location.md) for each role.
-- `roles` — `[string]`: A list of roles this user fills in the Apple School Manager organization. Possible values are `Student`, `Instructor`, and `Staff`.
-
-## See Also
-
-### Information about users
-
-- [Read a user](returns-a-specific-user-in-an-apple-school-manager-organization.md): Read a user in an Apple School Manager organization.
-- [RoleLocation](rolelocation.md): A mapping between a role assumed by a user in an Apple School Manager organization, and the corresponding location.
-- [List users](returns-a-list-of-users-in-an-apple-school-manager-organization.md): List users in an Apple School Manager organization.
-- [List users in a class](returns-a-users-for-an-apple-school-manager-class.md): List users in a class of an Apple School Manager organization.
-- [Users](users.md): A list of users, with a token for pagination.
-
-# Document: Users
-
-Source path: documentation/rosterapi/users
-Canonical documentation: https://developer.apple.com/documentation/rosterapi/users
-Description: Interface language: Data
-
-# Users
-
-**Interface language:** Data
-
-**Framework:** Roster API  
-**Kind:** Object  
-**Availability:** Roster API 1.0.0+
-
-A list of users, with a token for pagination.
-
-## Declaration
-
-```
-object Users
-```
-
-## Properties
-
-- `moreToFollow` — `boolean`: A flag that indicates whether there are more users. If `true`, use the `nextPageToken` to request another list from the remaining users.
-- `nextPageToken` — `string`: A token to request additional users, if any. Use this as the `nextPageToken` parameter for the [List users](returns-a-list-of-users-in-an-apple-school-manager-organization.md) request.
-- `users` — `[User]`: A list of [User](user.md) objects.
-
-## See Also
-
-### Information about users
-
-- [Read a user](returns-a-specific-user-in-an-apple-school-manager-organization.md): Read a user in an Apple School Manager organization.
-- [User](user.md): A user in an Apple School Manager organization.
-- [RoleLocation](rolelocation.md): A mapping between a role assumed by a user in an Apple School Manager organization, and the corresponding location.
-- [List users](returns-a-list-of-users-in-an-apple-school-manager-organization.md): List users in an Apple School Manager organization.
-- [List users in a class](returns-a-users-for-an-apple-school-manager-class.md): List users in a class of an Apple School Manager organization.
-
-# Document: Validating with the Roster API test scope
-
-Source path: documentation/rosterapi/validating-with-the-roster-api-test-scope
-Canonical documentation: https://developer.apple.com/documentation/rosterapi/validating-with-the-roster-api-test-scope
-Description: Interface language: Data
-
-# Validating with the Roster API test scope
-
-**Interface language:** Data
-
-**Framework:** Roster API  
-**Kind:** Article
-
-Use test data to ensure your integration with the Roster API works correctly.
-
-<a id="overview"></a>
-
-## Overview
-
-Testing your Roster API integration before deployment is critical to the success of your implementation. The Roster API provides a *test scope* that you use to obtain sample user and class data for testing to ensure your integration is correct.
-
-Use the test scope to generate an access token, then query the various endpoints of the Roster API. When the Roster API receives the request, it responds with test data that represents the dataset and provides all possible states of user and class records.
-
-<a id="Configure-the-test-scope"></a>
-
-### Configure the test scope
-
-From your developer account, select Certificates, Identifiers & Profiles. When performing the steps to select the primary app identifier, choose “Roster API: Test data access” in the Organizational Data Sharing Scopes section.
-
-Ensure the service URL has the test scope configured in the Apple Developer website. The following screenshot shows where to configure the test scope:
-
-![A screenshot showing the Certificates, Identifiers and Profiles page of the Apple developer website.](https://developer.apple.com/images/com.apple.rosterapi/media-4133355@2x.png)
-
-<a id="Test-the-authorization-endpoint"></a>
-
-### Test the authorization endpoint
-
-As explained in the WWDC 2022 session [Discover Sign in with Apple at Work & School](https://developer.apple.com/videos/play/wwdc2022/10053/), you need to generate the grant code to get the access token.
-
-Use the following URL when creating the integration:
-
-```other
-URL: https://appleid.apple.com/auth/oauth2/v2/authorize
-```
-
-Use the following query parameters:
-
-- **`client_id`**: The client identifier
-- **`redirect_uri`**: The redirect URI you configure
-- **`response_type`**: The response type, `code`
-- **`scope`**: The scope of the access, `edu.rosterapi.test.read`
-- **`state`**: The state of the request, `testState`
-
-The URL opens the Apple OAuth consent screen. Enter your developer account credentials.
-
-After successfully logging in, you receive the grant code in the registered redirect URI.
-
-<a id="Generate-the-access-and-refresh-tokens"></a>
-
-### Generate the access and refresh tokens
-
-With your grant code, generate the access and refresh tokens. Create the `POST` request from your server with the following URL:
-
-```other
-https://appleid.apple.com/auth/oauth2/v2/token
-
-```
-
-In the request body, set the following parameters:
-
-- **`client_id`**: The client identifier
-- **`client_secret`**: The client secret
-- **`grant_type`**: The grant type, `authorization_code`
-- **`grant_code`**: The grant code you receive
-- **`redirect_uri`**: The redirect URI you configure
-
-Set the header as follows:
-
-```other
-Content-Type: application/x-www-form-urlencoded
-```
-
-This generates both the access and refresh tokens. You receive a response like the following:
-
-```other
-{
-    "access_token":"a1b054845b71446108514503d37086c7a.0.nwsw.xuSePX9jsQ6IjTq8CqMsdw",
-    "token_type":"Bearer",
-    "expires_in":3600,
-    "refresh_token":"r23b98899c8e6466493f55ab7505d24ae.0.nwsw.WkPIjDsKblacDkVc_khN2g"
-}
-```
-
-Access tokens expire after one hour. If yours expires, you can use the refresh token you receive to create a new access token. For more information, see Handle an expired token, below.
-
-<a id="Perform-a-request"></a>
-
-### Perform a request
-
-After receiving the access token, perform a Roster API request using the test scope. Replace `[ACCESS_TOKEN]` with the token you receive from the previous step.
-
-```other
-curl --request GET \
-  --url 'https://api-school.apple.com/rosterapi/v1/users?limit=2' \
-  --header 'Authorization: Bearer [ACCESS_TOKEN]'
-```
-
-You receive a response like the following:
-
-```other
-{
-  "users": [
-    {
-      "givenName": "given100",
-      "middleName": "middle100",
-      "familyName": "family100",
-      "id": "001385.dmdTSkZEVVdLaXRjS3U2bTNJUUFMNlIzQlNHUTUz.RVB0",
-      "grade": "4",
-      "email": "given100family100@mytestschool.org",
-      "roleLocationMapping": [
-        {
-          "roleName": "Student",
-          "locationId": "LO:1234"
-        }
-      ],
-      "dateCreated": "2020-07-06T20:32:00Z",
-      "dateLastModified": "2022-12-13T19:46:46.404451216Z"
-    },
-    {
-      "givenName": "given101",
-      "middleName": "middle101",
-      "familyName": "family101",
-      "id": "001385.dmdTSkZEVVdLaXRjS3U2bTNJUUVMNlIzQlNHUTUz.RVB0",
-      "roleLocationMapping": [
-        {
-          "roleName": "Student",
-          "locationId": "LO:1234"
-        }
-      ],
-      "dateCreated": "2020-07-06T20:32:00Z",
-      "dateLastModified": "2022-12-13T19:46:46.406289073Z"
-    }
-  ],
-  "nextPageToken": "mOG8EzKsKDOMbs2ruJa5tQ",
-  "moreToFollow": true
-}
-```
-
-<a id="Handle-an-expired-access-token"></a>
-
-### Handle an expired access token
-
-If your access token expires, use the refresh token to generate a new access token.
-
-```other
-URL: https://appleid.apple.com/auth/oauth2/v2/token
-Request Type: POST
-Request Body:
-client_id="Your client ID"
-client_secret="Your Client secret"
-grant_type=refresh_token
-refresh_token="The refresh token received"
-
-Headers:
-Content-Type: application/x-www-form-urlencoded
-```
-
-You receive the following response:
-
-```other
-{
-    "access_token":"a1b054845b71446108514503d37086c7a.0.nwsw.xuSePX9jsQ6IjTq8CqMsdw",
-    "token_type":"Bearer",
-    "expires_in":3600
-}
-```
-
-These steps describe how to fetch sample user and class data for testing the Roster API. Follow the same steps to generate the access and refresh tokens for production. Ensure that the scopes you request for production are for `edu.users.read` and `edu.classes.read`.
-
-## See Also
-
-### Essentials
-
-- [Obtaining information about people and classes](obtaining-information-about-people-and-classes.md): Prepare your app to request organizational information from a server.
-
-# Document: Safari Services
-
-Source path: documentation/safariservices
-Canonical documentation: https://developer.apple.com/documentation/safariservices
-Description: Framework: Safari Services Kind: Framework Availability: iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.0+ · macOS 10.12+ · visionOS 1.0+
-
-# Safari Services (Swift)
-
-**Framework:** Safari Services  
-**Kind:** Framework  
-**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.0+ · macOS 10.12+ · visionOS 1.0+
-
-Enable web views and services in your app.
-
-<a id="overview"></a>
-
-## Overview
-
-Use the Safari Services framework to integrate Safari behaviors into your iOS or macOS app, or to extend the behavior of Safari.
-
-You can:
-
-- Provide a user interface that is almost identical to the user interface that the Safari app provides. Users can browse the web in this view and then return to your app’s content. This view is more consistent with the Safari user interface than implementing your own custom browsing solution and can be done using fewer lines of code. (iOS)
-- Add items to the user’s Safari Reading List. (iOS)
-- Convert your existing Chrome, Firefox, or Edge extensions into a Safari web extension, or create a new Safari web extension that can work in other browsers. (iOS and macOS)
-- Determine from your app whether your content blocker extension is loaded, and if it is, tell it to refresh its contents. (iOS and macOS)
-- Implement Safari app extensions. Determine from your app whether a Safari app extension is loaded. (macOS)
-- Allow the user to share cookies and website data between an app and Safari for a single sign-on (SSO) experience with  [ASWebAuthenticationSession](authenticationservices/aswebauthenticationsession.md).
-
-## Topics
-
-### Safari web extensions
-
-- [Safari web extensions](safariservices/safari-web-extensions.md): Create web extensions that work in Safari and other browsers.
-
-### Content blockers
-
-- [Creating a content blocker](safariservices/creating-a-content-blocker.md): Create a content blocker for Safari in Xcode.
-- [SFContentBlockerManager](safariservices/sfcontentblockermanager.md): A class that your app uses to interact with a content blocker extension.
-- [SFContentBlockerState](safariservices/sfcontentblockerstate.md): The state of a content blocker extension.
-
-### Safari app extensions
-
-- [Safari app extensions](safariservices/safari-app-extensions.md): Learn how Safari app extensions extend the web-browsing experience in Safari by leveraging web technologies and native code.
-- [SFSafariExtension](safariservices/sfsafariextension.md): A proxy for the Safari extension.
-- [SFSafariApplication](safariservices/sfsafariapplication.md): A proxy for the Safari app.
-- [SFSafariWindow](safariservices/sfsafariwindow.md): A proxy for a Safari window.
-- [SFSafariPage](safariservices/sfsafaripage.md): A proxy for a Safari webpage.
-- [SFSafariTab](safariservices/sfsafaritab.md): A proxy for a tab in a Safari window.
-
-### Safari content in your app
-
-- [Importing data exported from Safari](safariservices/importing-data-exported-from-safari.md): Transfer bookmarks, saved passwords, and other information between browsers.
-- [SFSafariViewController](safariservices/sfsafariviewcontroller.md): An object that provides a visible standard interface for browsing the web.
-- [SFAuthenticationSession.CompletionHandler](safariservices/sfauthenticationsession/completionhandler.md): The completion handler for an authentication session when the user cancels or finishes the login.
-- [SFSafariSettings](safariservices/sfsafarisettings.md): A class that provides your app access to several of Safari’s settings options.
-
-### Associated domains
-
-- [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains): Connect your app and a website to provide both a native app and a browser experience.
-- [SFUniversalLink](safariservices/sfuniversallink.md): An object that provides browsers with the ability to discover associations between an app and a website.
-- [Associated Domains Entitlement](bundleresources/entitlements/com.apple.developer.associated-domains.md): The associated domains for specific services, such as shared web credentials, universal links, and App Clips.
-
-### Availability
-
-- [SFSafariServicesAvailable(\_:)](safariservices/sfsafariservicesavailable%28__%29.md): Indicates whether a given version of Safari services is available.
-- [SFSafariServicesVersion](safariservices/sfsafariservicesversion.md): The version of Safari services.
-
-### Safari Reading List
-
-- [SSReadingList](safariservices/ssreadinglist.md): An object for adding items to a user’s Safari Reading List.
-- [SSReadingListErrorDomain](safariservices/ssreadinglisterrordomain.md): The domain for Safari Reading List errors.
-- [SSReadingListError.Code](safariservices/ssreadinglisterror/code.md): Messages that describe a Safari Reading List error.
-- [SSReadingListError](safariservices/ssreadinglisterror.md): A Safari Reading List error.
-
-### Home Screen bookmarks
-
-- [SFAddToHomeScreenActivityItem](safariservices/sfaddtohomescreenactivityitem.md): A protocol that describes a bookmark someone can add to their Home Screen.
-
-### Miscellaneous errors
-
-- [SFError](safariservices/sferror.md): A content blocker or Safari app extension error.
-- [SFError.Code](safariservices/sferror/code.md): Messages that describe a content blocker or Safari app extension error.
-- [SFErrorDomain](safariservices/sferrordomain.md): The domain for content blocker or Safari app extension errors.
-
-### Deprecated
-
-- [Deprecated symbols](safariservices/deprecated-symbols.md): Review unsupported symbols and their replacements.
-
-### Variables
-
-- [SFSafariSettingsErrorDomain](safariservices/sfsafarisettingserrordomain.md)
-
-### Enumerations
-
-- [SFSafariSettingsError](safariservices/sfsafarisettingserror.md)
-
-# Safari Services (Objective-C)
-
-**Framework:** Safari Services  
-**Kind:** Framework  
-**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.0+ · macOS 10.12+ · visionOS 1.0+
-
-Enable web views and services in your app.
-
-<a id="overview"></a>
-
-## Overview
-
-Use the Safari Services framework to integrate Safari behaviors into your iOS or macOS app, or to extend the behavior of Safari.
-
-You can:
-
-- Provide a user interface that is almost identical to the user interface that the Safari app provides. Users can browse the web in this view and then return to your app’s content. This view is more consistent with the Safari user interface than implementing your own custom browsing solution and can be done using fewer lines of code. (iOS)
-- Add items to the user’s Safari Reading List. (iOS)
-- Convert your existing Chrome, Firefox, or Edge extensions into a Safari web extension, or create a new Safari web extension that can work in other browsers. (iOS and macOS)
-- Determine from your app whether your content blocker extension is loaded, and if it is, tell it to refresh its contents. (iOS and macOS)
-- Implement Safari app extensions. Determine from your app whether a Safari app extension is loaded. (macOS)
-- Allow the user to share cookies and website data between an app and Safari for a single sign-on (SSO) experience with  [ASWebAuthenticationSession](authenticationservices/aswebauthenticationsession.md).
-
-## Topics
-
-### Safari web extensions
-
-- [Safari web extensions](safariservices/safari-web-extensions.md): Create web extensions that work in Safari and other browsers.
-
-### Content blockers
-
-- [Creating a content blocker](safariservices/creating-a-content-blocker.md): Create a content blocker for Safari in Xcode.
-- [SFContentBlockerManager](safariservices/sfcontentblockermanager.md): A class that your app uses to interact with a content blocker extension.
-- [SFContentBlockerState](safariservices/sfcontentblockerstate.md): The state of a content blocker extension.
-
-### Safari app extensions
-
-- [Safari app extensions](safariservices/safari-app-extensions.md): Learn how Safari app extensions extend the web-browsing experience in Safari by leveraging web technologies and native code.
-- [SFSafariExtension](safariservices/sfsafariextension.md): A proxy for the Safari extension.
-- [SFSafariApplication](safariservices/sfsafariapplication.md): A proxy for the Safari app.
-- [SFSafariWindow](safariservices/sfsafariwindow.md): A proxy for a Safari window.
-- [SFSafariPage](safariservices/sfsafaripage.md): A proxy for a Safari webpage.
-- [SFSafariTab](safariservices/sfsafaritab.md): A proxy for a tab in a Safari window.
-
-### Safari content in your app
-
-- [Importing data exported from Safari](safariservices/importing-data-exported-from-safari.md): Transfer bookmarks, saved passwords, and other information between browsers.
-- [SFSafariViewController](safariservices/sfsafariviewcontroller.md): An object that provides a visible standard interface for browsing the web.
-- [SFAuthenticationCompletionHandler](safariservices/sfauthenticationsession/completionhandler.md): The completion handler for an authentication session when the user cancels or finishes the login.
-- [SFSafariSettings](safariservices/sfsafarisettings.md): A class that provides your app access to several of Safari’s settings options.
-
-### Associated domains
-
-- [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains): Connect your app and a website to provide both a native app and a browser experience.
-- [SFUniversalLink](safariservices/sfuniversallink.md): An object that provides browsers with the ability to discover associations between an app and a website.
-- [Associated Domains Entitlement](bundleresources/entitlements/com.apple.developer.associated-domains.md): The associated domains for specific services, such as shared web credentials, universal links, and App Clips.
-
-### Availability
-
-- [SFSafariServicesVersion](safariservices/sfsafariservicesversion.md): The version of Safari services.
-
-### Safari Reading List
-
-- [SSReadingList](safariservices/ssreadinglist.md): An object for adding items to a user’s Safari Reading List.
-- [SSReadingListErrorDomain](safariservices/ssreadinglisterrordomain.md): The domain for Safari Reading List errors.
-- [SSReadingListErrorCode](safariservices/ssreadinglisterror/code.md): Messages that describe a Safari Reading List error.
-
-### Home Screen bookmarks
-
-- [SFAddToHomeScreenActivityItem](safariservices/sfaddtohomescreenactivityitem.md): A protocol that describes a bookmark someone can add to their Home Screen.
-
-### Miscellaneous errors
-
-- [SFErrorCode](safariservices/sferror/code.md): Messages that describe a content blocker or Safari app extension error.
-- [SFErrorDomain](safariservices/sferrordomain.md): The domain for content blocker or Safari app extension errors.
-
-### Deprecated
-
-- [Deprecated symbols](safariservices/deprecated-symbols.md): Review unsupported symbols and their replacements.
-
-### Variables
-
-- [SFSafariSettingsErrorDomain](safariservices/sfsafarisettingserrordomain.md)
-
-### Macros
-
-- [SF_AVAILABLE_MAC_SAFARI](safariservices/sf_available_mac_safari.md)
-- [SF_AVAILABLE_MAC_SAFARI_10_0](safariservices/sf_available_mac_safari_10_0.md)
-- [SF_AVAILABLE_MAC_SAFARI_10_1](safariservices/sf_available_mac_safari_10_1.md)
-- [SF_AVAILABLE_MAC_SAFARI_11_0](safariservices/sf_available_mac_safari_11_0.md)
-- [SF_AVAILABLE_MAC_SAFARI_11_1](safariservices/sf_available_mac_safari_11_1.md)
-- [SF_AVAILABLE_MAC_SAFARI_12_0](safariservices/sf_available_mac_safari_12_0.md)
-- [SF_AVAILABLE_MAC_SAFARI_12_1](safariservices/sf_available_mac_safari_12_1.md)
-- [SF_AVAILABLE_MAC_SAFARI_13_0](safariservices/sf_available_mac_safari_13_0.md)
-- [SF_AVAILABLE_MAC_SAFARI_14_0](safariservices/sf_available_mac_safari_14_0.md)
-- [SF_AVAILABLE_MAC_SAFARI_17_0](safariservices/sf_available_mac_safari_17_0.md)
-- [SF_AVAILABLE_MAC_SAFARI_18_4](safariservices/sf_available_mac_safari_18_4.md)
-- [SF_AVAILABLE_MAC_SAFARI_27_0](safariservices/sf_available_mac_safari_27_0.md)
-- [SF_CLASS_AVAILABLE_MAC_SAFARI](safariservices/sf_class_available_mac_safari.md)
-- [SF_CLASS_AVAILABLE_MAC_SAFARI_10_0](safariservices/sf_class_available_mac_safari_10_0.md)
-- [SF_CLASS_AVAILABLE_MAC_SAFARI_10_1](safariservices/sf_class_available_mac_safari_10_1.md)
-- [SF_CLASS_AVAILABLE_MAC_SAFARI_11_0](safariservices/sf_class_available_mac_safari_11_0.md)
-- [SF_CLASS_AVAILABLE_MAC_SAFARI_11_1](safariservices/sf_class_available_mac_safari_11_1.md)
-- [SF_CLASS_AVAILABLE_MAC_SAFARI_12_0](safariservices/sf_class_available_mac_safari_12_0.md)
-- [SF_CLASS_AVAILABLE_MAC_SAFARI_12_1](safariservices/sf_class_available_mac_safari_12_1.md)
-- [SF_CLASS_AVAILABLE_MAC_SAFARI_13_0](safariservices/sf_class_available_mac_safari_13_0.md)
-- [SF_CLASS_AVAILABLE_MAC_SAFARI_14_0](safariservices/sf_class_available_mac_safari_14_0.md)
-- [SF_CLASS_AVAILABLE_MAC_SAFARI_17_0](safariservices/sf_class_available_mac_safari_17_0.md)
-- [SF_CLASS_AVAILABLE_MAC_SAFARI_18_4](safariservices/sf_class_available_mac_safari_18_4.md)
-- [SF_CLASS_AVAILABLE_MAC_SAFARI_27_0](safariservices/sf_class_available_mac_safari_27_0.md)
-- [SF_DEPRECATED_MAC_SAFARI](safariservices/sf_deprecated_mac_safari.md)
-- [SF_DEPRECATED_MAC_SAFARI_10_0_11_0](safariservices/sf_deprecated_mac_safari_10_0_11_0.md)
-- [SF_ENUM_AVAILABLE_MAC_SAFARI](safariservices/sf_enum_available_mac_safari.md)
-- [SF_ENUM_AVAILABLE_MAC_SAFARI_10_0](safariservices/sf_enum_available_mac_safari_10_0.md)
-- [SF_ENUM_AVAILABLE_MAC_SAFARI_10_1](safariservices/sf_enum_available_mac_safari_10_1.md)
-- [SF_ENUM_AVAILABLE_MAC_SAFARI_11_0](safariservices/sf_enum_available_mac_safari_11_0.md)
-- [SF_ENUM_AVAILABLE_MAC_SAFARI_11_1](safariservices/sf_enum_available_mac_safari_11_1.md)
-- [SF_ENUM_AVAILABLE_MAC_SAFARI_12_0](safariservices/sf_enum_available_mac_safari_12_0.md)
-- [SF_ENUM_AVAILABLE_MAC_SAFARI_12_1](safariservices/sf_enum_available_mac_safari_12_1.md)
-- [SF_ENUM_AVAILABLE_MAC_SAFARI_13_0](safariservices/sf_enum_available_mac_safari_13_0.md)
-- [SF_ENUM_AVAILABLE_MAC_SAFARI_14_0](safariservices/sf_enum_available_mac_safari_14_0.md)
-- [SF_ENUM_AVAILABLE_MAC_SAFARI_17_0](safariservices/sf_enum_available_mac_safari_17_0.md)
-- [SF_ENUM_AVAILABLE_MAC_SAFARI_18_4](safariservices/sf_enum_available_mac_safari_18_4.md)
-- [SF_ENUM_AVAILABLE_MAC_SAFARI_27_0](safariservices/sf_enum_available_mac_safari_27_0.md)
-- [SF_EXTERN](safariservices/sf_extern.md)
-
-### Enumerations
-
-- [SFSafariSettingsError](safariservices/sfsafarisettingserror.md)
-
-# Document: Adding a web development tool to Safari Web Inspector
-
-Source path: documentation/safariservices/adding-a-web-development-tool-to-safari-web-inspector
-Canonical documentation: https://developer.apple.com/documentation/safariservices/adding-a-web-development-tool-to-safari-web-inspector
-Description: Interface languages: Swift, Objective-C
-
-# Adding a web development tool to Safari Web Inspector
-
-**Interface languages:** Swift, Objective-C
-
-**Framework:** Safari Services  
-**Kind:** Article
-
-Expand the built-in Safari Web Inspector to include your custom tool, augmenting developers’ options for inspecting, testing, and debugging webpages.
-
-<a id="overview"></a>
-
-## Overview
-
-Safari provides Web Inspector, a set of tools that web developers use to inspect and debug their webpages. These built-in development tools are useful for analyzing basic issues in HTML, CSS, and JavaScript.
-
-In Safari 16 or later, you can create a custom web development tool that can inspect and interact with a webpage in a target window. You design the tool’s user interface to meet to your web development approach and needs.
-
-For example, you may build webpages with a custom web framework or architecture, where the built-in web development tools are not sufficient to see how components interact, how state is managed, or how events are processed. Your tool could provide support that specifically addresses the development needs of that custom web framework or architecture.
-
-You deliver your tool in a Safari web extension. When a user downloads your extension, your tool appears as a new tab in Web Inspector. For more information about creating a new extension, see [Creating a Safari web extension](creating-a-safari-web-extension.md). For more information about packaging an existing web extension that works in another browser, see [Packaging a web extension for Safari](packaging-a-web-extension-for-safari.md). After you create or package the extension, configure your Safari web extension manifest so that Safari adds your tool to Web Inspector, and satisfy requirements for Safari user permissions.
-
-<a id="Add-the-web-development-tool-to-your-extension"></a>
-
-### Add the web development tool to your extension
-
-Add an HTML file to your extension that contains the code for your web development tool and user interface, and add any supporting JavaScript files that contain additional code your web development tool uses. For more information on adding files, see [Updating a Safari web extension](updating-a-safari-web-extension.md).
-
-Then, in your extension’s `manifest.json` file, do the following:
-
-- Add the `devtools_page` key, and specify your tool’s HTML file.
-- Add or update the `permissions` entry to include the `devtools` permission.
-
-```javascript
-{
-    ...
-    "devtools_page": "example_devtool.html",
-    "permissions": "devtools"
-    ...
-}
-```
-
-For more information on development tools’ capabilities and how to build them, see [Extending the developer tools](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools).
-
-<a id="Satisfy-Safari-user-permission-requirements"></a>
-
-### Satisfy Safari user permission requirements
-
-Safari requires user permission for each target page that the user inspects with your development tool. Optimize your development tool approach to support this requirement:
-
-- To tell Safari to add your tool as a tab in Web Inspector, you must create the inspector tab in your extension using `browser.devtools.panel.create()`. Don’t conditionally create the inspector tab after you check permissions; if you do, Safari won’t add a tab for your tool.
-- Let Safari handle permissions with its dialogs; then update your user interface based on permission status.
-
-For more information on requesting permissions in your extension, see [Managing Safari web extension permissions](managing-safari-web-extension-permissions.md).
-
-Install and run your extension. For more information, see [Running your Safari web extension](running-your-safari-web-extension.md). To view your development tool in Safari, choose Develop \> Show Web Inspector. For more information on enabling development tools in Safari, see [Web development tools](https://developer.apple.com/safari/tools/).
-
-## See Also
-
-### Related Documentation
-
-- [Creating a Safari web extension](creating-a-safari-web-extension.md): Build a Safari web extension in Xcode.
-- [Packaging a web extension for Safari](packaging-a-web-extension-for-safari.md): Package your existing extension as a Safari web extension using Xcode’s command-line tool.
-- [Updating a Safari web extension](updating-a-safari-web-extension.md): Add new features and fix bugs in your Safari web extension using Xcode tools.
-- [Managing Safari web extension permissions](managing-safari-web-extension-permissions.md): Respect user privacy by setting appropriate permissions for your Safari web extension.
-- [Running your Safari web extension](running-your-safari-web-extension.md): Install and update your extension in Safari as you make changes in development.
-
-### Adding Web Inspector tools
-
-- [Creating Safari Web Inspector extensions](creating-safari-web-inspector-extensions.md): Learn how to make custom Safari Web Inspector extensions.

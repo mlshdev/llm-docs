@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaselocalizationupdaterequest
 
 # InAppPurchaseLocalizationUpdateRequest
@@ -9,7 +9,7 @@
 **Kind:** Object  
 **Availability:** App Store Connect API 2.0+ (deprecated in 4.4.1)
 
-The request body you use to update an in-app purchase localization update request.
+The request body you use to update an In-App Purchase localization update request.
 
 > This object is deprecated. Use [InAppPurchaseLocalizationV2UpdateRequest](inapppurchaselocalizationv2updaterequest.md) instead.
 
@@ -27,14 +27,14 @@ object InAppPurchaseLocalizationUpdateRequest
 
 ### Objects
 
-- [InAppPurchaseLocalizationUpdateRequest.Data](inapppurchaselocalizationupdaterequest/data-data.dictionary.md): The request body you use to update an in-app purchase localization update request.
+- [InAppPurchaseLocalizationUpdateRequest.Data](inapppurchaselocalizationupdaterequest/data-data.dictionary.md): The request body you use to update an In-App Purchase localization update request.
 
 ## See Also
 
 ### Objects
 
-- [InAppPurchaseContentResponse](inapppurchasecontentresponse.md): A response containing a single hosted content record for an in-app purchase.
-- [InAppPurchaseContent](inapppurchasecontent.md): Hosted downloadable content associated with a non-consumable in-app purchase.
-- [InAppPurchaseLocalizationCreateRequest](inapppurchaselocalizationcreaterequest.md): Deprecated. The request body you use to create an in-app purchase localization.
-- [InAppPurchaseLocalizationsResponse](inapppurchaselocalizationsresponse.md): Deprecated. The response body for endpoints that list localizations for an in-app purchase.
-- [InAppPurchaseLocalization](inapppurchaselocalization.md): Deprecated. The localized display name and description for an in-app purchase shown to customers in a specific language.
+- [InAppPurchaseContentResponse](inapppurchasecontentresponse.md): A response containing a single hosted content record for an In-App Purchase.
+- [InAppPurchaseContent](inapppurchasecontent.md): Hosted downloadable content associated with a non-consumable In-App Purchase.
+- [InAppPurchaseLocalizationCreateRequest](inapppurchaselocalizationcreaterequest.md): Deprecated. The request body you use to create an In-App Purchase localization.
+- [InAppPurchaseLocalizationsResponse](inapppurchaselocalizationsresponse.md): Deprecated. The response body for endpoints that list localizations for an In-App Purchase.
+- [InAppPurchaseLocalization](inapppurchaselocalization.md): Deprecated. The localized display name and description for an In-App Purchase shown to customers in a specific language.

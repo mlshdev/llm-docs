@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/brandsreportingcampaign
 
 # BrandsReportingCampaign
@@ -21,12 +21,14 @@ object BrandsReportingCampaign
 
 - `id` — `int64`: The campaign’s unique identifier.
 - `promotedObject` — `PromotedObject`: See [PromotedObject](promotedobject.md) for details.
-- `promotedObjectType` — `string`: Possible values: `BUSINESS_BRAND`.
+- `promotedObjectType` — `string`: The type of the promoted object.
+  **Allowed values:** `BUSINESS_BRAND`
 - `promotedObjectId` — `string`: The brand ID of the promoted Maps business.
 - `name` — `string`: The campaign name as configured at report time.
 - `status` — `BrandsReportingCampaign.Status`: Possible values: `ENABLED`, `PAUSED`.
 - `deleted` — `boolean`: Whether the campaign has been soft-deleted.
 - `displayStatus` — `string`: System-computed, rolled-up delivery state combining `status` and `systemStatus` into a single label. See [CampaignDisplayStatus](campaigndisplaystatus.md).
+  **Allowed values:** `DELETED`, `LIMITED`, `ON_HOLD`, `PAUSED`, `PROCESSING`, `RUNNING`
 - `modificationTime` — `date-time`: Timestamp of the campaign’s last modification (ISO 8601).
 - `creationTime` — `date-time`: Timestamp when the campaign was created (ISO 8601).
 - `adAccountId` — `int64`: The ad account this campaign belongs to.
@@ -42,6 +44,7 @@ object BrandsReportingCampaign
 - `bidStrategy` — `ReportingBidStrategy`: See [ReportingBidStrategy](reportingbidstrategy.md) for details.
 - `adChannelType` — `BrandsReportingCampaign.AdChannelType`: The advertising channel type for this campaign. Possible values: `SEARCH`, `DISPLAY`.
 - `deviceClass` — `string`: Device class groupBy dimension value.
+  **Allowed values:** `IPHONE`, `IPAD`
 - `locationId` — `string`: Location ID groupBy dimension value.
 - `supplyPlacement` — `string`: Supply placement groupBy dimension value.
 

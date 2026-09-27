@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/applebusinessapi/auditeventcategory
 
 # AuditEventCategory
@@ -7,7 +7,7 @@
 
 **Framework:** Apple Business API  
 **Kind:** Type  
-**Availability:** Apple Business API 2.5+
+**Availability:** Apple Business API 2.6+
 
 Strings that represent audit event categories.
 
@@ -36,3 +36,4 @@ string AuditEventCategory
   - DEVICE_INVENTORY: Device inventory changes.
   - PURCHASING: Purchase-related events.
   - DEVICE_MANAGEMENT: Device management configuration events.
+  - ACCESS_MANAGEMENT: Access and role management events.

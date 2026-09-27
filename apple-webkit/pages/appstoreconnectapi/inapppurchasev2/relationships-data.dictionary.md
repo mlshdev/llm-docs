@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchasev2/relationships-data.dictionary
 
 # InAppPurchaseV2.Relationships
@@ -40,7 +40,7 @@ object InAppPurchaseV2.Relationships
 - [InAppPurchaseV2.Relationships.Images](relationships-data.dictionary/images-data.dictionary.md)
 - [InAppPurchaseV2.Relationships.InAppPurchaseAvailability](relationships-data.dictionary/inapppurchaseavailability-data.dictionary.md)
 - [InAppPurchaseV2.Relationships.InAppPurchaseLocalizations](relationships-data.dictionary/inapppurchaselocalizations-data.dictionary.md)
-- [InAppPurchaseV2.Relationships.OfferCodes](relationships-data.dictionary/offercodes-data.dictionary.md): The data and links that describe the offer codes of the in-app purchase.
+- [InAppPurchaseV2.Relationships.OfferCodes](relationships-data.dictionary/offercodes-data.dictionary.md): The data and links that describe the offer codes of the In-App Purchase.
 - [InAppPurchaseV2.Relationships.PricePoints](relationships-data.dictionary/pricepoints-data.dictionary.md)
 - [InAppPurchaseV2.Relationships.PromotedPurchase](relationships-data.dictionary/promotedpurchase-data.dictionary.md)
 - [InAppPurchaseV2.Relationships.Versions](relationships-data.dictionary/versions-data.dictionary.md)
@@ -49,6 +49,6 @@ object InAppPurchaseV2.Relationships
 
 ### Objects and types
 
-- [InAppPurchaseV2.Attributes](attributes-data.dictionary.md): Attributes that describe an in-app purchase v2 resource.
+- [InAppPurchaseV2.Attributes](attributes-data.dictionary.md): Attributes that describe an In-App Purchase v2 resource.
 - [InAppPurchaseType](../inapppurchasetype.md): A string that represents the type of an In-App Purchase.
 - [InAppPurchaseState](../inapppurchasestate.md): A string that represents the review state of an In-App Purchase.

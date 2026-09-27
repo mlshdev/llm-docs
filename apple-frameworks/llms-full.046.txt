@@ -1,10 +1,792 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 46
+
+# Document: copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:)
+
+Source path: documentation/metal/mtlblitcommandencoder/copy(from:sourceoffset:sourcebytesperrow:sourcebytesperimage:sourcesize:to:destinationslice:destinationlevel:destinationorigin:)
+Canonical documentation: https://developer.apple.com/documentation/metal/mtlblitcommandencoder/copy(from:sourceoffset:sourcebytesperrow:sourcebytesperimage:sourcesize:to:destinationslice:destinationlevel:destinationorigin:)
+Description: Framework: Metal Kind: Instance Method Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+# copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:) (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+Encodes a command to copy image data from a source buffer into a destination texture.
+
+## Declaration
+
+```swift
+func copy(from sourceBuffer: any MTLBuffer, sourceOffset: Int, sourceBytesPerRow: Int, sourceBytesPerImage: Int, sourceSize: MTLSize, to destinationTexture: any MTLTexture, destinationSlice: Int, destinationLevel: Int, destinationOrigin: MTLOrigin)
+```
+
+## Parameters
+
+- `sourceBuffer`: A buffer the command copies data from.
+- `sourceOffset`: A byte offset within `sourceBuffer` that the command copies from, which needs to be a multiple of the destination texture’s pixel size, in bytes.
+- `sourceBytesPerRow`: The number of bytes between adjacent rows of pixels in the source buffer’s memory, which needs to be:
+
+  - A multiple of the source texture’s pixel size, in bytes
+  - Less than or equal to the product of the destination texture’s pixel size, in bytes, and the largest pixel width the destination texture’s type allows
+
+  If `destinationTexture` uses a compressed pixel format, set `sourceBytesPerRow` to the number of bytes between the starts of two row blocks.
+- `sourceBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
+
+  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
+- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy to `destinationTexture`, starting at `destinationOrigin`.
+
+  Assign `1` to each dimension that’s not relevant to `destinationTexture`. For example:
+
+  - If the destination texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
+  - If the destination texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
+
+  If `destinationTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
+- `destinationTexture`: A texture with an [isFramebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data to.
+- `destinationSlice`: A slice within `destinationTexture`.
+
+  For textures that use a combined depth/stencil pixel format, call the [copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:options:)](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md) method instead. Configure that method’s `options` parameter appropriately.
+- `destinationLevel`: A mipmap level within `destinationTexture`.
+- `destinationOrigin`: A location within `destinationTexture` that the command begins copying data to.
+
+  Assign `0` to each dimension that’s not relevant to `destinationTexture`. For example:
+
+  - If the destination texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
+  - If the destination texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
+
+## Mentioned In
+
+- [Copying data to a private resource](../copying-data-to-a-private-resource.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+This method is the equivalent of passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter of [copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:options:)](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
+
+> **Important**
+
+>  If the pixel format of `sourceTexture` is a PVRTC format, use [copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:options:)](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md) instead.
+
+## See Also
+
+### Copying buffer data to a texture
+
+- [copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:options:)](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md): Encodes a command to copy image data from a source buffer into a destination texture.
+
+# copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin: (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+Encodes a command to copy image data from a source buffer into a destination texture.
+
+## Declaration
+
+```objectivec
+- (void) copyFromBuffer:(id<MTLBuffer>) sourceBuffer sourceOffset:(NSUInteger) sourceOffset sourceBytesPerRow:(NSUInteger) sourceBytesPerRow sourceBytesPerImage:(NSUInteger) sourceBytesPerImage sourceSize:(MTLSize) sourceSize toTexture:(id<MTLTexture>) destinationTexture destinationSlice:(NSUInteger) destinationSlice destinationLevel:(NSUInteger) destinationLevel destinationOrigin:(MTLOrigin) destinationOrigin;
+```
+
+## Parameters
+
+- `sourceBuffer`: A buffer the command copies data from.
+- `sourceOffset`: A byte offset within `sourceBuffer` that the command copies from, which needs to be a multiple of the destination texture’s pixel size, in bytes.
+- `sourceBytesPerRow`: The number of bytes between adjacent rows of pixels in the source buffer’s memory, which needs to be:
+
+  - A multiple of the source texture’s pixel size, in bytes
+  - Less than or equal to the product of the destination texture’s pixel size, in bytes, and the largest pixel width the destination texture’s type allows
+
+  If `destinationTexture` uses a compressed pixel format, set `sourceBytesPerRow` to the number of bytes between the starts of two row blocks.
+- `sourceBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
+
+  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
+- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy to `destinationTexture`, starting at `destinationOrigin`.
+
+  Assign `1` to each dimension that’s not relevant to `destinationTexture`. For example:
+
+  - If the destination texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
+  - If the destination texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
+
+  If `destinationTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
+- `destinationTexture`: A texture with an [framebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data to.
+- `destinationSlice`: A slice within `destinationTexture`.
+
+  For textures that use a combined depth/stencil pixel format, call the [copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:options:](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md) method instead. Configure that method’s `options` parameter appropriately.
+- `destinationLevel`: A mipmap level within `destinationTexture`.
+- `destinationOrigin`: A location within `destinationTexture` that the command begins copying data to.
+
+  Assign `0` to each dimension that’s not relevant to `destinationTexture`. For example:
+
+  - If the destination texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
+  - If the destination texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
+
+## Mentioned In
+
+- [Copying data to a private resource](../copying-data-to-a-private-resource.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+This method is the equivalent of passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter of [copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:options:](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
+
+> **Important**
+
+>  If the pixel format of `sourceTexture` is a PVRTC format, use [copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:options:](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md) instead.
+
+## See Also
+
+### Copying buffer data to a texture
+
+- [copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:options:](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_options_%29.md): Encodes a command to copy image data from a source buffer into a destination texture.
+
+# Document: copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:options:)
+
+Source path: documentation/metal/mtlblitcommandencoder/copy(from:sourceoffset:sourcebytesperrow:sourcebytesperimage:sourcesize:to:destinationslice:destinationlevel:destinationorigin:options:)
+Canonical documentation: https://developer.apple.com/documentation/metal/mtlblitcommandencoder/copy(from:sourceoffset:sourcebytesperrow:sourcebytesperimage:sourcesize:to:destinationslice:destinationlevel:destinationorigin:options:)
+Description: Framework: Metal Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:options:) (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Encodes a command to copy image data from a source buffer into a destination texture.
+
+## Declaration
+
+```swift
+func copy(from sourceBuffer: any MTLBuffer, sourceOffset: Int, sourceBytesPerRow: Int, sourceBytesPerImage: Int, sourceSize: MTLSize, to destinationTexture: any MTLTexture, destinationSlice: Int, destinationLevel: Int, destinationOrigin: MTLOrigin, options: MTLBlitOption)
+```
+
+## Parameters
+
+- `sourceBuffer`: A buffer the command copies data from.
+- `sourceOffset`: A byte offset within `sourceBuffer` that the command copies from, which needs to be a multiple of the destination texture’s pixel size, in bytes.
+- `sourceBytesPerRow`: The number of bytes between adjacent rows of pixels in the source buffer’s memory, which needs to be:
+
+  - A multiple of the source texture’s pixel size, in bytes
+  - Less than or equal to the product of the destination texture’s pixel size, in bytes, and the largest pixel width the destination texture’s type allows
+
+  If `destinationTexture` uses a compressed pixel format, set `sourceBytesPerRow` to the number of bytes between the starts of two row blocks.
+- `sourceBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
+
+  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
+- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy to `destinationTexture`, starting at `destinationOrigin`.
+
+  Assign `1` to each dimension that’s not relevant to `destinationTexture`. For example:
+
+  - If the destination texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
+  - If the destination texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
+
+  If `destinationTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
+- `destinationTexture`: A texture with an [isFramebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data to.
+- `destinationSlice`: A slice within `destinationTexture`.
+
+  For textures that use a combined depth/stencil pixel format, configure the `options` parameter appropriately.
+- `destinationLevel`: A mipmap level within `destinationTexture`.
+- `destinationOrigin`: A location within `destinationTexture` that the command begins copying data to.
+
+  Assign `0` to each dimension that’s not relevant to `destinationTexture`. For example:
+
+  - If the destination texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
+  - If the destination texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
+- `options`: An option set that applies to textures with applicable pixel formats, such as combined depth/stencil or PVRTC formats.
+
+  If the texture’s pixel format is a combined depth/stencil format, set `options` to either [depthFromDepthStencil](../mtlblitoption/depthfromdepthstencil.md) or [stencilFromDepthStencil](../mtlblitoption/stencilfromdepthstencil.md), but not both.
+
+  If the texture’s pixel format is a PVRTC format, set `options` to [rowLinearPVRTC](../mtlblitoption/rowlinearpvrtc.md).
+
+<a id="discussion"></a>
+
+## Discussion
+
+Passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter is the equivalent of calling [copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:)](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
+
+## See Also
+
+### Copying buffer data to a texture
+
+- [copy(from:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:)](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_%29.md): Encodes a command to copy image data from a source buffer into a destination texture.
+
+# copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:options: (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Encodes a command to copy image data from a source buffer into a destination texture.
+
+## Declaration
+
+```objectivec
+- (void) copyFromBuffer:(id<MTLBuffer>) sourceBuffer sourceOffset:(NSUInteger) sourceOffset sourceBytesPerRow:(NSUInteger) sourceBytesPerRow sourceBytesPerImage:(NSUInteger) sourceBytesPerImage sourceSize:(MTLSize) sourceSize toTexture:(id<MTLTexture>) destinationTexture destinationSlice:(NSUInteger) destinationSlice destinationLevel:(NSUInteger) destinationLevel destinationOrigin:(MTLOrigin) destinationOrigin options:(MTLBlitOption) options;
+```
+
+## Parameters
+
+- `sourceBuffer`: A buffer the command copies data from.
+- `sourceOffset`: A byte offset within `sourceBuffer` that the command copies from, which needs to be a multiple of the destination texture’s pixel size, in bytes.
+- `sourceBytesPerRow`: The number of bytes between adjacent rows of pixels in the source buffer’s memory, which needs to be:
+
+  - A multiple of the source texture’s pixel size, in bytes
+  - Less than or equal to the product of the destination texture’s pixel size, in bytes, and the largest pixel width the destination texture’s type allows
+
+  If `destinationTexture` uses a compressed pixel format, set `sourceBytesPerRow` to the number of bytes between the starts of two row blocks.
+- `sourceBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
+
+  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
+- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy to `destinationTexture`, starting at `destinationOrigin`.
+
+  Assign `1` to each dimension that’s not relevant to `destinationTexture`. For example:
+
+  - If the destination texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
+  - If the destination texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
+
+  If `destinationTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
+- `destinationTexture`: A texture with an [framebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data to.
+- `destinationSlice`: A slice within `destinationTexture`.
+
+  For textures that use a combined depth/stencil pixel format, configure the `options` parameter appropriately.
+- `destinationLevel`: A mipmap level within `destinationTexture`.
+- `destinationOrigin`: A location within `destinationTexture` that the command begins copying data to.
+
+  Assign `0` to each dimension that’s not relevant to `destinationTexture`. For example:
+
+  - If the destination texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
+  - If the destination texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
+- `options`: An option set that applies to textures with applicable pixel formats, such as combined depth/stencil or PVRTC formats.
+
+  If the texture’s pixel format is a combined depth/stencil format, set `options` to either [MTLBlitOptionDepthFromDepthStencil](../mtlblitoption/depthfromdepthstencil.md) or [MTLBlitOptionStencilFromDepthStencil](../mtlblitoption/stencilfromdepthstencil.md), but not both.
+
+  If the texture’s pixel format is a PVRTC format, set `options` to [MTLBlitOptionRowLinearPVRTC](../mtlblitoption/rowlinearpvrtc.md).
+
+<a id="discussion"></a>
+
+## Discussion
+
+Passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter is the equivalent of calling [copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
+
+## See Also
+
+### Copying buffer data to a texture
+
+- [copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:](copy%28from_sourceoffset_sourcebytesperrow_sourcebytesperimage_sourcesize_to_destinationslice_destinationlevel_destinationorigin_%29.md): Encodes a command to copy image data from a source buffer into a destination texture.
+
+# Document: copy(from:sourceOffset:to:destinationOffset:size:)
+
+Source path: documentation/metal/mtlblitcommandencoder/copy(from:sourceoffset:to:destinationoffset:size:)
+Canonical documentation: https://developer.apple.com/documentation/metal/mtlblitcommandencoder/copy(from:sourceoffset:to:destinationoffset:size:)
+Description: Framework: Metal Kind: Instance Method Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+# copy(from:sourceOffset:to:destinationOffset:size:) (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+Encodes a command that copies data from one buffer into another.
+
+## Declaration
+
+```swift
+func copy(from sourceBuffer: any MTLBuffer, sourceOffset: Int, to destinationBuffer: any MTLBuffer, destinationOffset: Int, size: Int)
+```
+
+## Parameters
+
+- `sourceBuffer`: A buffer the command copies data from.
+- `sourceOffset`: A byte offset within `sourceBuffer` the command copies from. In macOS, `sourceOffset` needs to be a multiple of `4`, but can be any value in iOS and tvOS.
+- `destinationBuffer`: The destination buffer for the copy operation.
+- `destinationOffset`: A byte offset within `destinationBuffer` the command copies to. In macOS, `destinationOffset` needs to be a multiple of `4`, but can be any value in iOS and tvOS.
+- `size`: The number of bytes the command copies from `sourceBuffer` to `destinationBuffer`. In macOS, `size` needs to be a multiple of `4`, but can be any value in iOS and tvOS.
+
+## Mentioned In
+
+- [Copying data to a private resource](../copying-data-to-a-private-resource.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+You can pass the same buffer to the `sourceBuffer` and `destinationBuffer` parameters if `size` is less than the distance between `sourceOffset` and `destinationOffset`.
+
+> **Important**
+
+>  Copying data to overlapping regions within the same buffer may result in unexpected behavior.
+
+# copyFromBuffer:sourceOffset:toBuffer:destinationOffset:size: (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+Encodes a command that copies data from one buffer into another.
+
+## Declaration
+
+```objectivec
+- (void) copyFromBuffer:(id<MTLBuffer>) sourceBuffer sourceOffset:(NSUInteger) sourceOffset toBuffer:(id<MTLBuffer>) destinationBuffer destinationOffset:(NSUInteger) destinationOffset size:(NSUInteger) size;
+```
+
+## Parameters
+
+- `sourceBuffer`: A buffer the command copies data from.
+- `sourceOffset`: A byte offset within `sourceBuffer` the command copies from. In macOS, `sourceOffset` needs to be a multiple of `4`, but can be any value in iOS and tvOS.
+- `destinationBuffer`: The destination buffer for the copy operation.
+- `destinationOffset`: A byte offset within `destinationBuffer` the command copies to. In macOS, `destinationOffset` needs to be a multiple of `4`, but can be any value in iOS and tvOS.
+- `size`: The number of bytes the command copies from `sourceBuffer` to `destinationBuffer`. In macOS, `size` needs to be a multiple of `4`, but can be any value in iOS and tvOS.
+
+## Mentioned In
+
+- [Copying data to a private resource](../copying-data-to-a-private-resource.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+You can pass the same buffer to the `sourceBuffer` and `destinationBuffer` parameters if `size` is less than the distance between `sourceOffset` and `destinationOffset`.
+
+> **Important**
+
+>  Copying data to overlapping regions within the same buffer may result in unexpected behavior.
+
+# Document: copy(from:sourceOrigin:sourceDimensions:sourcePlane:to:destinationOrigin:destinationDimensions:destinationPlane:)
+
+Source path: documentation/metal/mtlblitcommandencoder/copy(from:sourceorigin:sourcedimensions:sourceplane:to:destinationorigin:destinationdimensions:destinationplane:)
+Canonical documentation: https://developer.apple.com/documentation/metal/mtlblitcommandencoder/copy(from:sourceorigin:sourcedimensions:sourceplane:to:destinationorigin:destinationdimensions:destinationplane:)
+Description: Framework: Metal Kind: Instance Method Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+# copy(from:sourceOrigin:sourceDimensions:sourcePlane:to:destinationOrigin:destinationDimensions:destinationPlane:) (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Encodes a command to copy data from a slice of a plane of a tensor into a slice of a plane of another tensor.
+
+## Declaration
+
+```swift
+func copy(from sourceTensor: any MTLTensor, sourceOrigin: MTLTensorExtents, sourceDimensions: MTLTensorExtents, sourcePlane: MTLTensorPlaneType, to destinationTensor: any MTLTensor, destinationOrigin: MTLTensorExtents, destinationDimensions: MTLTensorExtents, destinationPlane: MTLTensorPlaneType)
+```
+
+## Parameters
+
+- `sourceTensor`: A tensor instance the method copies data from.
+- `sourceOrigin`: An array of per-dimension offsets that together locate the first element to copy in `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceDimensions`. Each offset value represents the number of elements from the start of that dimension.
+- `sourceDimensions`: An array of per-dimension sizes that together define the extent of the slice to copy from `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `sourceOrigin`.
+- `sourcePlane`: The plane the method copies data from.
+- `destinationTensor`: A tensor instance the method copies data to.
+- `destinationOrigin`: An array of per-dimension offsets that together locate the first element to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationDimensions`. Each offset value represents the number of elements from the start of that dimension.
+- `destinationDimensions`: An array of per-dimension sizes that together define the extent of the slice to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `destinationOrigin`.
+- `destinationPlane`: The plane the method copies data to.
+
+<a id="discussion"></a>
+
+## Discussion
+
+If `sourceTensor` and `destinationTensor` are not aliasable, this command applies a reshape operation. For auxiliary planes, specify origin and dimensions in plane coordinates by applying the corresponding auxiliary plane’s block factors.
+
+Ensure the first dimension of `sourceOrigin`, `sourceDimensions`, `destinationOrigin`, and `destinationDimensions` is byte aligned.
+
+# copyFromTensor:sourceOrigin:sourceDimensions:sourcePlane:toTensor:destinationOrigin:destinationDimensions:destinationPlane: (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Encodes a command to copy data from a slice of a plane of a tensor into a slice of a plane of another tensor.
+
+## Declaration
+
+```objectivec
+- (void) copyFromTensor:(id<MTLTensor>) sourceTensor sourceOrigin:(MTLTensorExtents *) sourceOrigin sourceDimensions:(MTLTensorExtents *) sourceDimensions sourcePlane:(MTLTensorPlaneType) sourcePlane toTensor:(id<MTLTensor>) destinationTensor destinationOrigin:(MTLTensorExtents *) destinationOrigin destinationDimensions:(MTLTensorExtents *) destinationDimensions destinationPlane:(MTLTensorPlaneType) destinationPlane;
+```
+
+## Parameters
+
+- `sourceTensor`: A tensor instance the method copies data from.
+- `sourceOrigin`: An array of per-dimension offsets that together locate the first element to copy in `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceDimensions`. Each offset value represents the number of elements from the start of that dimension.
+- `sourceDimensions`: An array of per-dimension sizes that together define the extent of the slice to copy from `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `sourceOrigin`.
+- `sourcePlane`: The plane the method copies data from.
+- `destinationTensor`: A tensor instance the method copies data to.
+- `destinationOrigin`: An array of per-dimension offsets that together locate the first element to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationDimensions`. Each offset value represents the number of elements from the start of that dimension.
+- `destinationDimensions`: An array of per-dimension sizes that together define the extent of the slice to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `destinationOrigin`.
+- `destinationPlane`: The plane the method copies data to.
+
+<a id="discussion"></a>
+
+## Discussion
+
+If `sourceTensor` and `destinationTensor` are not aliasable, this command applies a reshape operation. For auxiliary planes, specify origin and dimensions in plane coordinates by applying the corresponding auxiliary plane’s block factors.
+
+Ensure the first dimension of `sourceOrigin`, `sourceDimensions`, `destinationOrigin`, and `destinationDimensions` is byte aligned.
+
+# Document: copy(from:sourceOrigin:sourceDimensions:to:destinationOrigin:destinationDimensions:)
+
+Source path: documentation/metal/mtlblitcommandencoder/copy(from:sourceorigin:sourcedimensions:to:destinationorigin:destinationdimensions:)
+Canonical documentation: https://developer.apple.com/documentation/metal/mtlblitcommandencoder/copy(from:sourceorigin:sourcedimensions:to:destinationorigin:destinationdimensions:)
+Description: Framework: Metal Kind: Instance Method Availability: iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+# copy(from:sourceOrigin:sourceDimensions:to:destinationOrigin:destinationDimensions:) (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Encodes a command to copy data from a slice of the data plane of a tensor into a slice of the data plane of another tensor.
+
+## Declaration
+
+```swift
+func copy(from sourceTensor: any MTLTensor, sourceOrigin: MTLTensorExtents, sourceDimensions: MTLTensorExtents, to destinationTensor: any MTLTensor, destinationOrigin: MTLTensorExtents, destinationDimensions: MTLTensorExtents)
+```
+
+## Parameters
+
+- `sourceTensor`: A tensor instance the method copies data from.
+- `sourceOrigin`: An array of per-dimension offsets that together locate the first element to copy in `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceDimensions`. Each offset value represents the number of elements from the start of that dimension.
+- `sourceDimensions`: An array of per-dimension sizes that together define the extent of the slice to copy from `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `sourceOrigin`.
+- `destinationTensor`: A tensor instance the method copies data to.
+- `destinationOrigin`: An array of per-dimension offsets that together locate the first element to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationDimensions`. Each offset value represents the number of elements from the start of that dimension.
+- `destinationDimensions`: An array of per-dimension sizes that together define the extent of the slice to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `destinationOrigin`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+If `sourceTensor` and `destinationTensor` are not aliasable, this command applies a reshape operation.
+
+Ensure the first dimension of `sourceOrigin`, `sourceDimensions`, `destinationOrigin`, and `destinationDimensions` is byte aligned.
+
+## See Also
+
+### Copying texture data to another texture
+
+- [copy(from:to:)](copy%28from_to_%29.md): Encodes a command that copies data from one texture to another.
+- [copy(from:sourceSlice:sourceLevel:to:destinationSlice:destinationLevel:sliceCount:levelCount:)](copy%28from_sourceslice_sourcelevel_to_destinationslice_destinationlevel_slicecount_levelcount_%29.md): Encodes a command that copies slices of a texture to another texture’s slices.
+- [copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:)](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationslice_destinationlevel_destinationorigin_%29.md): Encodes a command that copies image data from a texture’s slice into another slice.
+
+# copyFromTensor:sourceOrigin:sourceDimensions:toTensor:destinationOrigin:destinationDimensions: (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Encodes a command to copy data from a slice of the data plane of a tensor into a slice of the data plane of another tensor.
+
+## Declaration
+
+```objectivec
+- (void) copyFromTensor:(id<MTLTensor>) sourceTensor sourceOrigin:(MTLTensorExtents *) sourceOrigin sourceDimensions:(MTLTensorExtents *) sourceDimensions toTensor:(id<MTLTensor>) destinationTensor destinationOrigin:(MTLTensorExtents *) destinationOrigin destinationDimensions:(MTLTensorExtents *) destinationDimensions;
+```
+
+## Parameters
+
+- `sourceTensor`: A tensor instance the method copies data from.
+- `sourceOrigin`: An array of per-dimension offsets that together locate the first element to copy in `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceDimensions`. Each offset value represents the number of elements from the start of that dimension.
+- `sourceDimensions`: An array of per-dimension sizes that together define the extent of the slice to copy from `sourceTensor`. Each element in this array corresponds to the dimension at the same index in `sourceOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `sourceOrigin`.
+- `destinationTensor`: A tensor instance the method copies data to.
+- `destinationOrigin`: An array of per-dimension offsets that together locate the first element to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationDimensions`. Each offset value represents the number of elements from the start of that dimension.
+- `destinationDimensions`: An array of per-dimension sizes that together define the extent of the slice to write in `destinationTensor`. Each element in this array corresponds to the dimension at the same index in `destinationOrigin`. Each size value represents the number of elements to include along that dimension, starting from the corresponding offset in `destinationOrigin`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+If `sourceTensor` and `destinationTensor` are not aliasable, this command applies a reshape operation.
+
+Ensure the first dimension of `sourceOrigin`, `sourceDimensions`, `destinationOrigin`, and `destinationDimensions` is byte aligned.
+
+## See Also
+
+### Copying texture data to another texture
+
+- [copyFromTexture:toTexture:](copy%28from_to_%29.md): Encodes a command that copies data from one texture to another.
+- [copyFromTexture:sourceSlice:sourceLevel:toTexture:destinationSlice:destinationLevel:sliceCount:levelCount:](copy%28from_sourceslice_sourcelevel_to_destinationslice_destinationlevel_slicecount_levelcount_%29.md): Encodes a command that copies slices of a texture to another texture’s slices.
+- [copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationslice_destinationlevel_destinationorigin_%29.md): Encodes a command that copies image data from a texture’s slice into another slice.
+
+# Document: copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:)
+
+Source path: documentation/metal/mtlblitcommandencoder/copy(from:sourceslice:sourcelevel:sourceorigin:sourcesize:to:destinationoffset:destinationbytesperrow:destinationbytesperimage:)
+Canonical documentation: https://developer.apple.com/documentation/metal/mtlblitcommandencoder/copy(from:sourceslice:sourcelevel:sourceorigin:sourcesize:to:destinationoffset:destinationbytesperrow:destinationbytesperimage:)
+Description: Framework: Metal Kind: Instance Method Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+# copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:) (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+Encodes a command that copies image data from a texture slice to a buffer.
+
+## Declaration
+
+```swift
+func copy(from sourceTexture: any MTLTexture, sourceSlice: Int, sourceLevel: Int, sourceOrigin: MTLOrigin, sourceSize: MTLSize, to destinationBuffer: any MTLBuffer, destinationOffset: Int, destinationBytesPerRow: Int, destinationBytesPerImage: Int)
+```
+
+## Parameters
+
+- `sourceTexture`: A texture with an [isFramebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data from.
+- `sourceSlice`: A slice within `sourceTexture`.
+
+  For textures that use a combined depth/stencil pixel format, call the [copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:)](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md) method instead. Configure that method’s `options` parameter appropriately.
+- `sourceLevel`: A mipmap level within `sourceTexture`.
+- `sourceOrigin`: A location within `sourceTexture` that the command begins copying data from.
+
+  Assign `0` to each dimension that’s not relevant to `sourceTexture`. For example:
+
+  - If the source texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
+  - If the source texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
+- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy from `sourceTexture`, starting at `sourceOrigin`.
+
+  Assign `1` to each dimension that’s not relevant to `sourceTexture`. For example:
+
+  - If the source texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
+  - If the source texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
+
+  If `sourceTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
+- `destinationBuffer`: A buffer the command copies data to.
+- `destinationOffset`: A byte offset within `destinationBuffer` the command copies to, which needs to be a multiple of the source texture’s pixel size, in bytes.
+- `destinationBytesPerRow`: The number of bytes between adjacent rows of pixels in the destination buffer’s memory, which needs to be:
+
+  - A multiple of the source texture’s pixel size, in bytes
+  - Less than or equal to the product of the source texture’s pixel size, in bytes, and the largest pixel width the source texture’s type allows
+
+  If `sourceTexture` uses a compressed pixel format, set `destinationBytesPerRow` to the number of bytes between the starts of two row blocks.
+- `destinationBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
+
+  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
+
+## Mentioned In
+
+- [Copying data to a private resource](../copying-data-to-a-private-resource.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+This method is the equivalent of passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter of [copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:)](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
+
+> **Important**
+
+>  If the pixel format of `sourceTexture` is a PVRTC format, use [copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:)](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md) instead.
+
+## See Also
+
+### Copying texture data to a buffer
+
+- [copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:)](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md): Encodes a command that copies image data from a texture slice to a buffer, and provides options for special texture formats.
+
+# copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage: (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+Encodes a command that copies image data from a texture slice to a buffer.
+
+## Declaration
+
+```objectivec
+- (void) copyFromTexture:(id<MTLTexture>) sourceTexture sourceSlice:(NSUInteger) sourceSlice sourceLevel:(NSUInteger) sourceLevel sourceOrigin:(MTLOrigin) sourceOrigin sourceSize:(MTLSize) sourceSize toBuffer:(id<MTLBuffer>) destinationBuffer destinationOffset:(NSUInteger) destinationOffset destinationBytesPerRow:(NSUInteger) destinationBytesPerRow destinationBytesPerImage:(NSUInteger) destinationBytesPerImage;
+```
+
+## Parameters
+
+- `sourceTexture`: A texture with an [framebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data from.
+- `sourceSlice`: A slice within `sourceTexture`.
+
+  For textures that use a combined depth/stencil pixel format, call the [copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md) method instead. Configure that method’s `options` parameter appropriately.
+- `sourceLevel`: A mipmap level within `sourceTexture`.
+- `sourceOrigin`: A location within `sourceTexture` that the command begins copying data from.
+
+  Assign `0` to each dimension that’s not relevant to `sourceTexture`. For example:
+
+  - If the source texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
+  - If the source texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
+- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy from `sourceTexture`, starting at `sourceOrigin`.
+
+  Assign `1` to each dimension that’s not relevant to `sourceTexture`. For example:
+
+  - If the source texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
+  - If the source texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
+
+  If `sourceTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
+- `destinationBuffer`: A buffer the command copies data to.
+- `destinationOffset`: A byte offset within `destinationBuffer` the command copies to, which needs to be a multiple of the source texture’s pixel size, in bytes.
+- `destinationBytesPerRow`: The number of bytes between adjacent rows of pixels in the destination buffer’s memory, which needs to be:
+
+  - A multiple of the source texture’s pixel size, in bytes
+  - Less than or equal to the product of the source texture’s pixel size, in bytes, and the largest pixel width the source texture’s type allows
+
+  If `sourceTexture` uses a compressed pixel format, set `destinationBytesPerRow` to the number of bytes between the starts of two row blocks.
+- `destinationBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
+
+  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
+
+## Mentioned In
+
+- [Copying data to a private resource](../copying-data-to-a-private-resource.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+This method is the equivalent of passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter of [copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
+
+> **Important**
+
+>  If the pixel format of `sourceTexture` is a PVRTC format, use [copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md) instead.
+
+## See Also
+
+### Copying texture data to a buffer
+
+- [copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_options_%29.md): Encodes a command that copies image data from a texture slice to a buffer, and provides options for special texture formats.
+
+# Document: copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:)
+
+Source path: documentation/metal/mtlblitcommandencoder/copy(from:sourceslice:sourcelevel:sourceorigin:sourcesize:to:destinationoffset:destinationbytesperrow:destinationbytesperimage:options:)
+Canonical documentation: https://developer.apple.com/documentation/metal/mtlblitcommandencoder/copy(from:sourceslice:sourcelevel:sourceorigin:sourcesize:to:destinationoffset:destinationbytesperrow:destinationbytesperimage:options:)
+Description: Framework: Metal Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:) (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Encodes a command that copies image data from a texture slice to a buffer, and provides options for special texture formats.
+
+## Declaration
+
+```swift
+func copy(from sourceTexture: any MTLTexture, sourceSlice: Int, sourceLevel: Int, sourceOrigin: MTLOrigin, sourceSize: MTLSize, to destinationBuffer: any MTLBuffer, destinationOffset: Int, destinationBytesPerRow: Int, destinationBytesPerImage: Int, options: MTLBlitOption)
+```
+
+## Parameters
+
+- `sourceTexture`: A texture with an [isFramebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data from.
+- `sourceSlice`: A slice within `sourceTexture`.
+
+  For textures that use a combined depth/stencil pixel format, configure the `options` parameter appropriately.
+- `sourceLevel`: A mipmap level within `sourceTexture`.
+- `sourceOrigin`: A location within `sourceTexture` that the command begins copying data from.
+
+  Assign `0` to each dimension that’s not relevant to `sourceTexture`. For example:
+
+  - If the source texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
+  - If the source texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
+- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy from `sourceTexture`, starting at `sourceOrigin`.
+
+  Assign `1` to each dimension that’s not relevant to `sourceTexture`. For example:
+
+  - If the source texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
+  - If the source texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
+
+  If `sourceTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
+- `destinationBuffer`: A buffer the command copies data to.
+- `destinationOffset`: A byte offset within `destinationBuffer` the command copies to, which needs to be a multiple of the source texture’s pixel size, in bytes.
+- `destinationBytesPerRow`: The number of bytes between adjacent rows of pixels in the destination buffer’s memory, which needs to be:
+
+  - A multiple of the source texture’s pixel size, in bytes
+  - Less than or equal to the product of the source texture’s pixel size, in bytes, and the largest pixel width the source texture’s type allows
+
+  If `sourceTexture` uses a compressed pixel format, set `destinationBytesPerRow` to the number of bytes between the starts of two row blocks.
+- `destinationBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
+
+  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
+- `options`: An option set that applies to textures with applicable pixel formats, such as combined depth/stencil or PVRTC formats.
+
+  If the texture’s pixel format is a combined depth/stencil format, set `options` to either [depthFromDepthStencil](../mtlblitoption/depthfromdepthstencil.md) or [stencilFromDepthStencil](../mtlblitoption/stencilfromdepthstencil.md), but not both.
+
+  If the texture’s pixel format is a PVRTC format, set `options` to [rowLinearPVRTC](../mtlblitoption/rowlinearpvrtc.md).
+
+<a id="discussion"></a>
+
+## Discussion
+
+Passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter is the equivalent of calling [copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:)](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
+
+## See Also
+
+### Copying texture data to a buffer
+
+- [copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:)](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_%29.md): Encodes a command that copies image data from a texture slice to a buffer.
+
+# copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options: (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Encodes a command that copies image data from a texture slice to a buffer, and provides options for special texture formats.
+
+## Declaration
+
+```objectivec
+- (void) copyFromTexture:(id<MTLTexture>) sourceTexture sourceSlice:(NSUInteger) sourceSlice sourceLevel:(NSUInteger) sourceLevel sourceOrigin:(MTLOrigin) sourceOrigin sourceSize:(MTLSize) sourceSize toBuffer:(id<MTLBuffer>) destinationBuffer destinationOffset:(NSUInteger) destinationOffset destinationBytesPerRow:(NSUInteger) destinationBytesPerRow destinationBytesPerImage:(NSUInteger) destinationBytesPerImage options:(MTLBlitOption) options;
+```
+
+## Parameters
+
+- `sourceTexture`: A texture with an [framebufferOnly](../mtltexture/isframebufferonly.md) property value of [false](https://developer.apple.com/documentation/swift/false) that the command copies data from.
+- `sourceSlice`: A slice within `sourceTexture`.
+
+  For textures that use a combined depth/stencil pixel format, configure the `options` parameter appropriately.
+- `sourceLevel`: A mipmap level within `sourceTexture`.
+- `sourceOrigin`: A location within `sourceTexture` that the command begins copying data from.
+
+  Assign `0` to each dimension that’s not relevant to `sourceTexture`. For example:
+
+  - If the source texture is a 2D texture, set the origin’s [z](../mtlorigin/z.md) property to `0`.
+  - If the source texture is a 1D texture, set the origin’s [y](../mtlorigin/y.md) and [z](../mtlorigin/z.md) properties to `0`.
+- `sourceSize`: An [MTLSize](../mtlsize.md) instance, which can represent a 3D region, that instructs the command how many pixels to copy from `sourceTexture`, starting at `sourceOrigin`.
+
+  Assign `1` to each dimension that’s not relevant to `sourceTexture`. For example:
+
+  - If the source texture is a 2D texture, set the size’s [depth](../mtlsize/depth.md) property to `1`.
+  - If the source texture is a 1D texture, set the size’s [height](../mtlsize/height.md) and [depth](../mtlsize/depth.md) properties to `1`.
+
+  If `sourceTexture` uses a compressed pixel format, set `sourceSize` to a multiple of the pixel format’s block size. If the block extends outside the bounds of the texture, clamp `sourceSize` to the edge of the texture.
+- `destinationBuffer`: A buffer the command copies data to.
+- `destinationOffset`: A byte offset within `destinationBuffer` the command copies to, which needs to be a multiple of the source texture’s pixel size, in bytes.
+- `destinationBytesPerRow`: The number of bytes between adjacent rows of pixels in the destination buffer’s memory, which needs to be:
+
+  - A multiple of the source texture’s pixel size, in bytes
+  - Less than or equal to the product of the source texture’s pixel size, in bytes, and the largest pixel width the source texture’s type allows
+
+  If `sourceTexture` uses a compressed pixel format, set `destinationBytesPerRow` to the number of bytes between the starts of two row blocks.
+- `destinationBytesPerImage`: The number of bytes between each 2D image of a 3D texture. This value needs to be a multiple of the source texture’s pixel size, in bytes.
+
+  Set this value to `0` for 2D textures, which means `sourceSize.`[depth](../mtlsize/depth.md) is equal to `1`.
+- `options`: An option set that applies to textures with applicable pixel formats, such as combined depth/stencil or PVRTC formats.
+
+  If the texture’s pixel format is a combined depth/stencil format, set `options` to either [MTLBlitOptionDepthFromDepthStencil](../mtlblitoption/depthfromdepthstencil.md) or [MTLBlitOptionStencilFromDepthStencil](../mtlblitoption/stencilfromdepthstencil.md), but not both.
+
+  If the texture’s pixel format is a PVRTC format, set `options` to [MTLBlitOptionRowLinearPVRTC](../mtlblitoption/rowlinearpvrtc.md).
+
+<a id="discussion"></a>
+
+## Discussion
+
+Passing an empty [OptionSet](https://developer.apple.com/documentation/swift/optionset) to the `options` parameter is the equivalent of calling [copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_%29.md). In Swift, pass `[]` to represent an empty option set, and in Objective-C, pass [MTLBlitOptionNone](../mtlblitoption/mtlblitoptionnone.md).
+
+## See Also
+
+### Copying texture data to a buffer
+
+- [copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:](copy%28from_sourceslice_sourcelevel_sourceorigin_sourcesize_to_destinationoffset_destinationbytesperrow_destinationbytesperimage_%29.md): Encodes a command that copies image data from a texture slice to a buffer.
 
 # Document: copy(from:sourceSlice:sourceLevel:sourceOrigin:sourceSize:to:destinationSlice:destinationLevel:destinationOrigin:)
 
@@ -176688,640 +177470,3 @@ The renderer returns this image object to the view controller for further proces
 - [Combining blit and compute operations in a single pass](combining-blit-and-compute-operations-in-a-single-pass.md): Run concurrent blit commands and then a compute dispatch in a single pass with a unified compute encoder.
 - [Creating and sampling textures](creating-and-sampling-textures.md): Load image data into a texture and apply it to a quadrangle.
 - [Streaming large images with Metal sparse textures](streaming-large-images-with-metal-sparse-textures.md): Limit texture memory usage for large textures by loading or unloading image detail on the basis of MIP and tile region.
-
-# Document: Reducing the memory footprint of Metal apps
-
-Source path: documentation/metal/reducing-the-memory-footprint-of-metal-apps
-Canonical documentation: https://developer.apple.com/documentation/metal/reducing-the-memory-footprint-of-metal-apps
-Description: Framework: Metal Kind: Article
-
-# Reducing the memory footprint of Metal apps (Swift)
-
-**Framework:** Metal  
-**Kind:** Article
-
-Learn best practices for using memory efficiently in iOS and tvOS.
-
-<a id="overview"></a>
-
-## Overview
-
-Efficient memory usage is a critical consideration for resource-intensive Metal apps in iOS and tvOS. Create apps so they use as little memory as possible, making more memory available for other apps and system services.
-
-iOS and tvOS monitor your app’s total memory usage at runtime, and if the amount exceeds a predetermined limit, the system terminates your app. This limit varies by device model, so test your app on all supported devices.
-
-<a id="Optimize-memory-usage-in-your-Metal-app"></a>
-
-### Optimize memory usage in your Metal app
-
-Here are some tips to understand how your Metal app is using memory, and best practices to reduce memory usage.
-
-**Measure memory consumption with Xcode 11 and later.** Build your app with the iOS or tvOS SDK, then use Xcode Memory Report to observe your app’s total memory footprint during execution. For more information about Xcode Memory Report, see [Gathering information about memory use](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use).
-
-**Use these tools to gain a deeper understanding of your app’s memory footprint.**
-
-- Take an [Instruments](https://help.apple.com/instruments/mac/current/#//apple_ref/doc/uid/TP40004652-CH19-SW13) trace and look at the Metal Resource Allocations Instrument, which is part of the Metal System Trace template. For more information on working with the Metal Resource Allocations Instrument, see [Delivering Optimized Metal Apps and Games](https://developer.apple.com/videos/play/wwdc2019/606/?time=1726).
-- Capture a GPU trace with [Metal debugger](https://developer.apple.com/documentation/xcode/metal-debugger) and see a visual representation of all of a frame’s GPU resources and a table of properties for each resource with the Memory view. For detailed information about the Memory view, see [Delivering Optimized Metal Apps and Games](https://developer.apple.com/videos/play/wwdc2019/606/?time=1665).
-- Observe and take action on suggestions highlighted in the Memory insights section of the GPU trace summary. For more information on Memory insights, see [Gain insights into your Metal app with Xcode 12](https://developer.apple.com/videos/play/wwdc2020-10605/?time=620).
-- Use the memory graph tool to help identify leaks and abandoned memory. For more information, see [Memory Graph Debugging](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/special_debugging_workflows.html#//apple_ref/doc/uid/TP40015022-CH9-DontLinkElementID_1).
-- Query the amount of memory available to your app at runtime using the [os_proc_available_memory](../os/os_proc_available_memory.md) API to help you identify memory spikes.
-
-**Make your assets as small as possible.** Avoid loading a large resource when a smaller one works. Use compressed texture formats. Load lower-resolution textures when running on memory-constrained devices. Consider reducing the fidelity of 3D models and compressing per-vertex data.
-
-**Simplify memory-intensive special effects.** Some effects, like shadows or motion blur, require large offscreen buffers for temporary image data. Consider lowering the resolution of these image buffers or applying fewer effects when running on memory-constrained devices.
-
-**Avoid loading unused resources.** Xcode can help you identify Metal objects that aren’t in use. Use Metal Debugger to get a GPU trace. Then navigate to the Memory view, and select the Unused filter.
-
-**Designate resources as volatile when possible.** Use [MTLPurgeableState.volatile](mtlpurgeablestate/volatile.md) and [setPurgeableState(\_:)](mtlresource/setpurgeablestate%28__%29.md) for textures and buffers the operating system can safely discard under low-memory conditions, and be subsequently recreated or reloaded by your app as needed. This design means your app keeps a cache of idle resources in memory but doesn’t count them toward the memory limit.
-
-**Use memoryless texture storage for temporary-render targets.** [MTLStorageMode.memoryless](mtlstoragemode/memoryless.md) avoids allocating regular system memory, allowing apps to store the contents of temporary render targets directly in tile memory on the GPU.
-
-**Use Metal resource heaps.** Using [MTLHeap](mtlheap.md), your app can have Multiple Metal resources backed by the same memory allocation. For example, use resource heaps when transient resources are produced and consumed for each frame but aren’t all used together. Those not used together share the same memory, backed by a heap.
-
-<a id="Additional-resources"></a>
-
-### Additional resources
-
-The WWDC video [Gain insights into your Metal app with Xcode 12](https://developer.apple.com/videos/play/wwdc2020/10605/) provides additional information about the latest memory-debugging tools and best practices to help you optimize the memory footprint of your Metal apps and games.
-
-## See Also
-
-### Resource management
-
-- [Setting resource storage modes](setting-resource-storage-modes.md): Set a storage mode that defines the memory location and access permissions of a resource.
-- [Choosing a resource storage mode for Apple GPUs](choosing-a-resource-storage-mode-for-apple-gpus.md): Select an appropriate storage mode for your textures and buffers on Apple GPUs.
-- [Choosing a resource storage mode for Intel and AMD GPUs](choosing-a-resource-storage-mode-for-intel-and-amd-gpus.md): Select an appropriate storage mode for your textures and buffers on AMD and Intel GPUs.
-- [Copying data to a private resource](copying-data-to-a-private-resource.md): Use a blit command encoder to copy buffer or texture data to a private resource.
-- [Synchronizing a managed resource in macOS](synchronizing-a-managed-resource-in-macos.md): Manually synchronize memory for a Metal resource in apps.
-- [Transferring data between connected GPUs](transferring-data-between-connected-gpus.md): Use high-speed connections between GPUs to transfer data quickly.
-
-# Reducing the memory footprint of Metal apps (Objective-C)
-
-**Framework:** Metal  
-**Kind:** Article
-
-Learn best practices for using memory efficiently in iOS and tvOS.
-
-<a id="overview"></a>
-
-## Overview
-
-Efficient memory usage is a critical consideration for resource-intensive Metal apps in iOS and tvOS. Create apps so they use as little memory as possible, making more memory available for other apps and system services.
-
-iOS and tvOS monitor your app’s total memory usage at runtime, and if the amount exceeds a predetermined limit, the system terminates your app. This limit varies by device model, so test your app on all supported devices.
-
-<a id="Optimize-memory-usage-in-your-Metal-app"></a>
-
-### Optimize memory usage in your Metal app
-
-Here are some tips to understand how your Metal app is using memory, and best practices to reduce memory usage.
-
-**Measure memory consumption with Xcode 11 and later.** Build your app with the iOS or tvOS SDK, then use Xcode Memory Report to observe your app’s total memory footprint during execution. For more information about Xcode Memory Report, see [Gathering information about memory use](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use).
-
-**Use these tools to gain a deeper understanding of your app’s memory footprint.**
-
-- Take an [Instruments](https://help.apple.com/instruments/mac/current/#//apple_ref/doc/uid/TP40004652-CH19-SW13) trace and look at the Metal Resource Allocations Instrument, which is part of the Metal System Trace template. For more information on working with the Metal Resource Allocations Instrument, see [Delivering Optimized Metal Apps and Games](https://developer.apple.com/videos/play/wwdc2019/606/?time=1726).
-- Capture a GPU trace with [Metal debugger](https://developer.apple.com/documentation/xcode/metal-debugger) and see a visual representation of all of a frame’s GPU resources and a table of properties for each resource with the Memory view. For detailed information about the Memory view, see [Delivering Optimized Metal Apps and Games](https://developer.apple.com/videos/play/wwdc2019/606/?time=1665).
-- Observe and take action on suggestions highlighted in the Memory insights section of the GPU trace summary. For more information on Memory insights, see [Gain insights into your Metal app with Xcode 12](https://developer.apple.com/videos/play/wwdc2020-10605/?time=620).
-- Use the memory graph tool to help identify leaks and abandoned memory. For more information, see [Memory Graph Debugging](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/special_debugging_workflows.html#//apple_ref/doc/uid/TP40015022-CH9-DontLinkElementID_1).
-- Query the amount of memory available to your app at runtime using the [os_proc_available_memory](../os/os_proc_available_memory.md) API to help you identify memory spikes.
-
-**Make your assets as small as possible.** Avoid loading a large resource when a smaller one works. Use compressed texture formats. Load lower-resolution textures when running on memory-constrained devices. Consider reducing the fidelity of 3D models and compressing per-vertex data.
-
-**Simplify memory-intensive special effects.** Some effects, like shadows or motion blur, require large offscreen buffers for temporary image data. Consider lowering the resolution of these image buffers or applying fewer effects when running on memory-constrained devices.
-
-**Avoid loading unused resources.** Xcode can help you identify Metal objects that aren’t in use. Use Metal Debugger to get a GPU trace. Then navigate to the Memory view, and select the Unused filter.
-
-**Designate resources as volatile when possible.** Use [MTLPurgeableStateVolatile](mtlpurgeablestate/volatile.md) and [setPurgeableState:](mtlresource/setpurgeablestate%28__%29.md) for textures and buffers the operating system can safely discard under low-memory conditions, and be subsequently recreated or reloaded by your app as needed. This design means your app keeps a cache of idle resources in memory but doesn’t count them toward the memory limit.
-
-**Use memoryless texture storage for temporary-render targets.** [MTLStorageModeMemoryless](mtlstoragemode/memoryless.md) avoids allocating regular system memory, allowing apps to store the contents of temporary render targets directly in tile memory on the GPU.
-
-**Use Metal resource heaps.** Using [MTLHeap](mtlheap.md), your app can have Multiple Metal resources backed by the same memory allocation. For example, use resource heaps when transient resources are produced and consumed for each frame but aren’t all used together. Those not used together share the same memory, backed by a heap.
-
-<a id="Additional-resources"></a>
-
-### Additional resources
-
-The WWDC video [Gain insights into your Metal app with Xcode 12](https://developer.apple.com/videos/play/wwdc2020/10605/) provides additional information about the latest memory-debugging tools and best practices to help you optimize the memory footprint of your Metal apps and games.
-
-## See Also
-
-### Resource management
-
-- [Setting resource storage modes](setting-resource-storage-modes.md): Set a storage mode that defines the memory location and access permissions of a resource.
-- [Choosing a resource storage mode for Apple GPUs](choosing-a-resource-storage-mode-for-apple-gpus.md): Select an appropriate storage mode for your textures and buffers on Apple GPUs.
-- [Choosing a resource storage mode for Intel and AMD GPUs](choosing-a-resource-storage-mode-for-intel-and-amd-gpus.md): Select an appropriate storage mode for your textures and buffers on AMD and Intel GPUs.
-- [Copying data to a private resource](copying-data-to-a-private-resource.md): Use a blit command encoder to copy buffer or texture data to a private resource.
-- [Synchronizing a managed resource in macOS](synchronizing-a-managed-resource-in-macos.md): Manually synchronize memory for a Metal resource in apps.
-- [Transferring data between connected GPUs](transferring-data-between-connected-gpus.md): Use high-speed connections between GPUs to transfer data quickly.
-
-# Document: Render pass configuration
-
-Source path: documentation/metal/render-pass-configuration
-Canonical documentation: https://developer.apple.com/documentation/metal/render-pass-configuration
-Description: Framework: Metal Kind: API Collection
-
-# Render pass configuration (Swift)
-
-**Framework:** Metal  
-**Kind:** API Collection
-
-Set a render pass’s pipeline state, attachment actions, viewports, and so on, that affect subsequent drawing commands.
-
-<a id="overview"></a>
-
-## Overview
-
-These methods encode commands that configure the render pass for all subsequent drawing commands. The most important configuration is the pipeline state (see [MTLRenderPipelineState](mtlrenderpipelinestate.md)), which you configure by calling the [setRenderPipelineState(\_:)](mtlrendercommandencoder/setrenderpipelinestate%28__%29.md) method.
-
-## Topics
-
-### Configuring pipeline state
-
-- [setRenderPipelineState(\_:)](mtlrendercommandencoder/setrenderpipelinestate%28__%29.md): Configures the encoder with a render or tile pipeline state that applies to your subsequent draw commands.
-
-### Configuring the actions for attachments
-
-- [setColorStoreAction(\_:index:)](mtlrendercommandencoder/setcolorstoreaction%28__index_%29.md): Configures the store action for a color attachment.
-- [setColorStoreActionOptions(\_:index:)](mtlrendercommandencoder/setcolorstoreactionoptions%28__index_%29.md): Deprecated. Configures the store action options for a color attachment.
-- [setDepthStoreAction(\_:)](mtlrendercommandencoder/setdepthstoreaction%28__%29.md): Configures the store action for the depth attachment.
-- [setDepthStoreActionOptions(\_:)](mtlrendercommandencoder/setdepthstoreactionoptions%28__%29.md): Deprecated. Configures the store action options for the depth attachment.
-- [setStencilStoreAction(\_:)](mtlrendercommandencoder/setstencilstoreaction%28__%29.md): Configures the store action for the stencil attachment.
-- [setStencilStoreActionOptions(\_:)](mtlrendercommandencoder/setstencilstoreactionoptions%28__%29.md): Deprecated. Configures the store action options for the stencil attachment.
-
-### Configuring blend behavior
-
-- [setBlendColor(red:green:blue:alpha:)](mtlrendercommandencoder/setblendcolor%28red_green_blue_alpha_%29.md): Configures each pixel component value, including alpha, for the render pipeline’s constant blend color.
-- [setColorAttachmentMap(\_:)](mtlrendercommandencoder/setcolorattachmentmap%28__%29.md): Sets the mapping from logical shader color output to physical render pass color attachments.
-
-### Configuring rendering behavior
-
-- [setTriangleFillMode(\_:)](mtlrendercommandencoder/settrianglefillmode%28__%29.md): Configures how subsequent draw commands rasterize triangle and triangle strip primitives.
-- [setFrontFacing(\_:)](mtlrendercommandencoder/setfrontfacing%28__%29.md): Configures which face of a primitive, such as a triangle, is the front.
-- [setCullMode(\_:)](mtlrendercommandencoder/setcullmode%28__%29.md): Configures how the render pipeline determines which primitives to remove.
-
-### Configuring depth and stencil behavior
-
-- [setDepthStencilState(\_:)](mtlrendercommandencoder/setdepthstencilstate%28__%29.md): Configures the combined depth and stencil state.
-- [setDepthBias(\_:slopeScale:clamp:)](mtlrendercommandencoder/setdepthbias%28__slopescale_clamp_%29.md): Configures the adjustments a render pass applies to depth values from fragment functions by a scaling factor and bias.
-- [setDepthClipMode(\_:)](mtlrendercommandencoder/setdepthclipmode%28__%29.md): Configures how the render pipeline handles fragments outside the near and far planes of the view frustum.
-- [setDepthTestBounds(\_:)](mtlrendercommandencoder/setdepthtestbounds%28__%29.md): Configures the range for depth bounds testing.
-- [setStencilReferenceValue(\_:)](mtlrendercommandencoder/setstencilreferencevalue%28__%29.md): Configures the same comparison value for front- and back-facing primitives.
-- [setStencilReferenceValues(front:back:)](mtlrendercommandencoder/setstencilreferencevalues%28front_back_%29.md): Configures different comparison values for front- and back-facing primitives.
-
-### Configuring viewport and scissor behavior
-
-- [setViewport(\_:)](mtlrendercommandencoder/setviewport%28__%29.md): Configures the render pipeline with a viewport that applies a transformation and a clipping rectangle.
-- [setViewports(\_:)](mtlrendercommandencoder/setviewports%28__%29.md): Configures the render pipeline with multiple viewports that apply transformations and clipping rectangles.
-- [setScissorRect(\_:)](mtlrendercommandencoder/setscissorrect%28__%29.md): Configures a rectangle for the fragment scissor test.
-- [setScissorRects(\_:)](mtlrendercommandencoder/setscissorrects%28__%29.md): Configures multiple rectangles for the fragment scissor test.
-
-### Configuring visibility testing
-
-- [setVisibilityResultMode(\_:offset:)](mtlrendercommandencoder/setvisibilityresultmode%28__offset_%29.md): Configures which visibility test the GPU runs and the destination for any results it generates.
-
-### Configuring vertex amplification
-
-- [setVertexAmplificationCount(\_:viewMappings:)](mtlrendercommandencoder/setvertexamplificationcount%28__viewmappings_%29.md): Configures the number of output vertices the render pipeline produces for each input vertex, optionally with render target and viewport offsets.
-
-### Configuring tessellation factors
-
-- [setTessellationFactorScale(\_:)](mtlrendercommandencoder/settessellationfactorscale%28__%29.md): Configures the scale factor for per-patch tessellation factors.
-- [setTessellationFactorBuffer(\_:offset:instanceStride:)](mtlrendercommandencoder/settessellationfactorbuffer%28__offset_instancestride_%29.md): Configures the per-patch tessellation factors for any subsequent patch-drawing commands.
-
-### Configuring persistent threadgroup memory
-
-- [setObjectThreadgroupMemoryLength(\_:index:)](mtlrendercommandencoder/setobjectthreadgroupmemorylength%28__index_%29.md): Configures the size of a threadgroup memory buffer for an entry in the object argument table.
-- [setThreadgroupMemoryLength(\_:offset:index:)](mtlrendercommandencoder/setthreadgroupmemorylength%28__offset_index_%29.md): Configures the size of a threadgroup memory buffer for an entry in the fragment or tile shader argument table.
-
-# Render pass configuration (Objective-C)
-
-**Framework:** Metal  
-**Kind:** API Collection
-
-Set a render pass’s pipeline state, attachment actions, viewports, and so on, that affect subsequent drawing commands.
-
-<a id="overview"></a>
-
-## Overview
-
-These methods encode commands that configure the render pass for all subsequent drawing commands. The most important configuration is the pipeline state (see [MTLRenderPipelineState](mtlrenderpipelinestate.md)), which you configure by calling the [setRenderPipelineState:](mtlrendercommandencoder/setrenderpipelinestate%28__%29.md) method.
-
-## Topics
-
-### Configuring pipeline state
-
-- [setRenderPipelineState:](mtlrendercommandencoder/setrenderpipelinestate%28__%29.md): Configures the encoder with a render or tile pipeline state that applies to your subsequent draw commands.
-
-### Configuring the actions for attachments
-
-- [setColorStoreAction:atIndex:](mtlrendercommandencoder/setcolorstoreaction%28__index_%29.md): Configures the store action for a color attachment.
-- [setColorStoreActionOptions:atIndex:](mtlrendercommandencoder/setcolorstoreactionoptions%28__index_%29.md): Deprecated. Configures the store action options for a color attachment.
-- [setDepthStoreAction:](mtlrendercommandencoder/setdepthstoreaction%28__%29.md): Configures the store action for the depth attachment.
-- [setDepthStoreActionOptions:](mtlrendercommandencoder/setdepthstoreactionoptions%28__%29.md): Deprecated. Configures the store action options for the depth attachment.
-- [setStencilStoreAction:](mtlrendercommandencoder/setstencilstoreaction%28__%29.md): Configures the store action for the stencil attachment.
-- [setStencilStoreActionOptions:](mtlrendercommandencoder/setstencilstoreactionoptions%28__%29.md): Deprecated. Configures the store action options for the stencil attachment.
-
-### Configuring blend behavior
-
-- [setBlendColorRed:green:blue:alpha:](mtlrendercommandencoder/setblendcolor%28red_green_blue_alpha_%29.md): Configures each pixel component value, including alpha, for the render pipeline’s constant blend color.
-- [setColorAttachmentMap:](mtlrendercommandencoder/setcolorattachmentmap%28__%29.md): Sets the mapping from logical shader color output to physical render pass color attachments.
-
-### Configuring rendering behavior
-
-- [setTriangleFillMode:](mtlrendercommandencoder/settrianglefillmode%28__%29.md): Configures how subsequent draw commands rasterize triangle and triangle strip primitives.
-- [setFrontFacingWinding:](mtlrendercommandencoder/setfrontfacing%28__%29.md): Configures which face of a primitive, such as a triangle, is the front.
-- [setCullMode:](mtlrendercommandencoder/setcullmode%28__%29.md): Configures how the render pipeline determines which primitives to remove.
-
-### Configuring depth and stencil behavior
-
-- [setDepthStencilState:](mtlrendercommandencoder/setdepthstencilstate%28__%29.md): Configures the combined depth and stencil state.
-- [setDepthBias:slopeScale:clamp:](mtlrendercommandencoder/setdepthbias%28__slopescale_clamp_%29.md): Configures the adjustments a render pass applies to depth values from fragment functions by a scaling factor and bias.
-- [setDepthClipMode:](mtlrendercommandencoder/setdepthclipmode%28__%29.md): Configures how the render pipeline handles fragments outside the near and far planes of the view frustum.
-- [setDepthTestMinBound:maxBound:](mtlrendercommandencoder/setdepthtestminbound_maxbound_.md): Configures the minimum and maximum bounds for depth bounds testing.
-- [setStencilReferenceValue:](mtlrendercommandencoder/setstencilreferencevalue%28__%29.md): Configures the same comparison value for front- and back-facing primitives.
-- [setStencilFrontReferenceValue:backReferenceValue:](mtlrendercommandencoder/setstencilreferencevalues%28front_back_%29.md): Configures different comparison values for front- and back-facing primitives.
-
-### Configuring viewport and scissor behavior
-
-- [setViewport:](mtlrendercommandencoder/setviewport%28__%29.md): Configures the render pipeline with a viewport that applies a transformation and a clipping rectangle.
-- [setViewports:count:](mtlrendercommandencoder/setviewports_count_.md): Configures the render pipeline with multiple viewports that apply transformations and clipping rectangles.
-- [setScissorRect:](mtlrendercommandencoder/setscissorrect%28__%29.md): Configures a rectangle for the fragment scissor test.
-- [setScissorRects:count:](mtlrendercommandencoder/setscissorrects_count_.md): Configures multiple rectangles for the fragment scissor test.
-
-### Configuring visibility testing
-
-- [setVisibilityResultMode:offset:](mtlrendercommandencoder/setvisibilityresultmode%28__offset_%29.md): Configures which visibility test the GPU runs and the destination for any results it generates.
-
-### Configuring vertex amplification
-
-- [setVertexAmplificationCount:viewMappings:](mtlrendercommandencoder/setvertexamplificationcount%28__viewmappings_%29.md): Configures the number of output vertices the render pipeline produces for each input vertex, optionally with render target and viewport offsets.
-
-### Configuring tessellation factors
-
-- [setTessellationFactorScale:](mtlrendercommandencoder/settessellationfactorscale%28__%29.md): Configures the scale factor for per-patch tessellation factors.
-- [setTessellationFactorBuffer:offset:instanceStride:](mtlrendercommandencoder/settessellationfactorbuffer%28__offset_instancestride_%29.md): Configures the per-patch tessellation factors for any subsequent patch-drawing commands.
-
-### Configuring persistent threadgroup memory
-
-- [setObjectThreadgroupMemoryLength:atIndex:](mtlrendercommandencoder/setobjectthreadgroupmemorylength%28__index_%29.md): Configures the size of a threadgroup memory buffer for an entry in the object argument table.
-- [setThreadgroupMemoryLength:offset:atIndex:](mtlrendercommandencoder/setthreadgroupmemorylength%28__offset_index_%29.md): Configures the size of a threadgroup memory buffer for an entry in the fragment or tile shader argument table.
-
-# Document: Render passes
-
-Source path: documentation/metal/render-passes
-Canonical documentation: https://developer.apple.com/documentation/metal/render-passes
-Description: Framework: Metal Kind: API Collection
-
-# Render passes (Swift)
-
-**Framework:** Metal  
-**Kind:** API Collection
-
-Encode a render pass to draw graphics into an image.
-
-<a id="overview"></a>
-
-## Overview
-
-A render pass processes and rasterizes geometry to one or more output attachments using a render pipeline.
-
-Render passes consist of:
-
-- A set of input resources, such as buffers and textures
-- A render pipeline that configures the GPU that does work with the input resources
-- Draw commands
-- Vertex shaders, the GPU core functions that process and transform a scene’s geometry
-- An optional tessellation stage that adds fine details to a scene’s geometry
-- Fragment shaders, the GPU core functions that produce the final color values for each pixel
-- Optional outputs that can include color, depth, and stencil attachments, and their load and store operations
-
-See the [Customizing render pass setup](customizing-render-pass-setup.md) sample for implementation details.
-
-## Topics
-
-### Encoding a render pass
-
-- [MTL4RenderCommandEncoder](mtl4rendercommandencoder.md): Encodes configuration and draw commands for a single render pass into a command buffer.
-- [MTLRenderCommandEncoder](mtlrendercommandencoder.md): Encodes configuration and draw commands for a single render pass into a command buffer.
-- [MTL4RenderEncoderOptions](mtl4renderencoderoptions.md): Custom render pass options you specify at encoder creation time.
-- [MTLTriangleFillMode](mtltrianglefillmode.md): Specifies how to rasterize triangle and triangle strip primitives.
-- [MTLWinding](mtlwinding.md): The vertex winding rule that determines a front-facing primitive.
-- [MTLCullMode](mtlcullmode.md): The mode that determines whether to perform culling and which type of primitive to cull.
-- [MTLPrimitiveType](mtlprimitivetype.md): The geometric primitive type for drawing commands.
-- [MTLIndexType](mtlindextype.md): The index type for an index buffer that references vertices of geometric primitives.
-- [MTLDepthClipMode](mtldepthclipmode.md): The mode that determines how to deal with fragments outside of the near or far planes.
-- [MTLVisibilityResultMode](mtlvisibilityresultmode.md): The mode that determines what, if anything, the GPU writes to the results buffer, after the GPU executes the render pass.
-- [MTLVisibilityResultType](mtlvisibilityresulttype.md): Actions for visibility results between render passes.
-
-### Encoding a render pass in parallel
-
-- [MTLParallelRenderCommandEncoder](mtlparallelrendercommandencoder.md): An instance that splits up a single render pass so that it can be simultaneously encoded from multiple threads.
-- [MTLLoadAction](mtlloadaction.md): Types of actions performed for an attachment at the start of a rendering pass.
-- [MTLStoreAction](mtlstoreaction.md): Types of actions performed for an attachment at the end of a rendering pass.
-- [MTLStoreActionOptions](mtlstoreactionoptions.md): Deprecated. Options that modify a store action.
-
-### Configuring a render command encoder
-
-- [MTL4RenderPassDescriptor](mtl4renderpassdescriptor.md): Describes a render pass.
-- [MTLRenderPassDescriptor](mtlrenderpassdescriptor.md): A group of render targets that hold the results of a render pass.
-- [MTLRenderPassAttachmentDescriptor](mtlrenderpassattachmentdescriptor.md): A render target that serves as the output destination for pixels generated by a render pass.
-- [MTLRenderPassColorAttachmentDescriptorArray](mtlrenderpasscolorattachmentdescriptorarray.md): An array of render pass color attachment descriptor objects.
-- [MTLRenderPassColorAttachmentDescriptor](mtlrenderpasscolorattachmentdescriptor.md): A color render target that serves as the output destination for color pixels generated by a render pass.
-- [MTLClearColor](mtlclearcolor.md): An RGBA value used for a color pixel.
-- [MTLRenderPassDepthAttachmentDescriptor](mtlrenderpassdepthattachmentdescriptor.md): A depth render target that serves as the output destination for depth pixels generated by a render pass.
-- [MTLMultisampleDepthResolveFilter](mtlmultisampledepthresolvefilter.md): Filtering options for controlling an MSAA depth resolve operation.
-- [MTL4RenderPipelineColorAttachmentDescriptorArray](mtl4renderpipelinecolorattachmentdescriptorarray.md): An array of color attachment descriptions for a render pipeline.
-- [MTLTileRenderPipelineColorAttachmentDescriptorArray](mtltilerenderpipelinecolorattachmentdescriptorarray.md): An array of color attachment descriptors for the tile render pipeline.
-- [MTLRenderPassStencilAttachmentDescriptor](mtlrenderpassstencilattachmentdescriptor.md): A stencil render target that serves as the output destination for stencil pixels generated by a render pass.
-- [MTLMultisampleStencilResolveFilter](mtlmultisamplestencilresolvefilter.md): Constants used to control the multisample stencil resolve operation.
-- [MTLRenderPassSampleBufferAttachmentDescriptorArray](mtlrenderpasssamplebufferattachmentdescriptorarray.md): An array of sample buffer attachments for a render pass.
-- [MTLRenderPassSampleBufferAttachmentDescriptor](mtlrenderpasssamplebufferattachmentdescriptor.md): A description of where to store GPU counter information at the start and end of a render pass.
-- [MTLLogicalToPhysicalColorAttachmentMap](mtllogicaltophysicalcolorattachmentmap.md): Allows you to easily specify color attachment remapping from logical to physical indices.
-- [MTLDispatchThreadsIndirectArguments](mtldispatchthreadsindirectarguments.md)
-
-### Render pipeline states
-
-- [MTLRenderPipelineState](mtlrenderpipelinestate.md): An interface that represents a graphics pipeline configuration for a render pass, which the pass applies to the draw commands you encode.
-- [MTL4RenderPipelineDescriptor](mtl4renderpipelinedescriptor.md): Groups together properties to create a render pipeline state object.
-- [MTLRenderPipelineDescriptor](mtlrenderpipelinedescriptor.md): An argument of options you pass to a GPU device to get a render pipeline state.
-- [MTLRenderPipelineFunctionsDescriptor](mtlrenderpipelinefunctionsdescriptor.md): A collection of functions for updating a render pipeline.
-- [MTL4MeshRenderPipelineDescriptor](mtl4meshrenderpipelinedescriptor.md): Groups together properties you use to create a mesh render pipeline state object.
-- [MTLMeshRenderPipelineDescriptor](mtlmeshrenderpipelinedescriptor.md): An object that configures new render pipeline state objects for mesh shading.
-- [MTLPipelineBufferDescriptor](mtlpipelinebufferdescriptor.md): The mutability options for a buffer that a render or compute pipeline uses.
-- [MTLPipelineBufferDescriptorArray](mtlpipelinebufferdescriptorarray.md): An array of pipeline buffer descriptors.
-- [MTL4RenderPipelineColorAttachmentDescriptor](mtl4renderpipelinecolorattachmentdescriptor.md)
-- [MTLRenderPipelineColorAttachmentDescriptor](mtlrenderpipelinecolorattachmentdescriptor.md): A color render target that specifies the color configuration and color operations for a render pipeline.
-- [MTLRenderPipelineColorAttachmentDescriptorArray](mtlrenderpipelinecolorattachmentdescriptorarray.md): An array of render pipeline color attachment descriptor objects.
-- [MTL4TileRenderPipelineDescriptor](mtl4tilerenderpipelinedescriptor.md): Groups together properties you use to create a tile render pipeline state object.
-- [MTLTileRenderPipelineDescriptor](mtltilerenderpipelinedescriptor.md): An object that configures new render pipeline state objects for tile shading.
-- [MTLTileRenderPipelineColorAttachmentDescriptor](mtltilerenderpipelinecolorattachmentdescriptor.md): A description of a tile-shading render pipeline’s color render target.
-- [MTLPipelineOption](mtlpipelineoption.md): Options that determine how Metal prepares the pipeline.
-- [MTL4RenderPipelineBinaryFunctionsDescriptor](mtl4renderpipelinebinaryfunctionsdescriptor.md): Allows you to specify additional binary functions to link to each stage of a render pipeline.
-- [MTL4RenderPipelineDynamicLinkingDescriptor](mtl4renderpipelinedynamiclinkingdescriptor.md): Groups together properties that provide linking properties for render pipelines.
-
-### Dynamic render pipeline states
-
-- [MTLViewport](mtlviewport.md): A 3D rectangular region for the viewport clipping.
-- [MTLScissorRect](mtlscissorrect.md): A rectangle for the scissor fragment test.
-- [MTLVertexAmplificationViewMapping](mtlvertexamplificationviewmapping.md): An offset applied to a render target index and viewport index.
-- [MTLQuadTessellationFactorsHalf](mtlquadtessellationfactorshalf.md): The per-patch tessellation factors for a quad patch.
-- [MTLTriangleTessellationFactorsHalf](mtltriangletessellationfactorshalf.md): The per-patch tessellation factors for a triangle patch.
-
-### Render pass inputs
-
-- [MTLVertexDescriptor](mtlvertexdescriptor.md): An instance that describes how to organize and map data to a vertex function.
-- [MTLVertexAttributeDescriptor](mtlvertexattributedescriptor.md): An object that determines how to store attribute data in memory and map it to the arguments of a vertex function.
-- [MTLVertexAttributeDescriptorArray](mtlvertexattributedescriptorarray.md): An array of vertex attribute descriptor instances.
-- [MTLVertexBufferLayoutDescriptor](mtlvertexbufferlayoutdescriptor.md): An object that configures how a render pipeline fetches data to send to the vertex function.
-- [MTLVertexBufferLayoutDescriptorArray](mtlvertexbufferlayoutdescriptorarray.md): An array of vertex buffer layout descriptor instances.
-- [MTLBufferLayoutStrideDynamic](mtlbufferlayoutstridedynamic.md)
-
-### Render pass outputs
-
-- [MTLDrawable](mtldrawable.md): A displayable resource that can be rendered or written to.
-- [MTLDrawablePresentedHandler](mtldrawablepresentedhandler.md): A block of code invoked after a drawable is presented.
-
-### Depth testing
-
-- [Calculating primitive visibility using depth testing](calculating-primitive-visibility-using-depth-testing.md): Determine which pixels are visible in a scene by using a depth texture.
-- [MTLDepthStencilState](mtldepthstencilstate.md): A depth and stencil state instance that specifies the depth and stencil configuration and operations used in a render pass.
-- [MTLDepthStencilDescriptor](mtldepthstencildescriptor.md): An instance that configures new [MTLDepthStencilState](mtldepthstencilstate.md) instances.
-- [MTLStencilDescriptor](mtlstencildescriptor.md): An object that defines the front-facing or back-facing stencil operations of a depth and stencil state object.
-
-### Rasterization settings
-
-- [Rendering at different rasterization rates](rendering-at-different-rasterization-rates.md): Configure a rasterization rate map to vary rasterization rates depending on the amount of detail needed.
-- [Creating a rasterization rate map](creating-a-rasterization-rate-map.md): Define the rasterization rates for each part of your render target.
-- [Rendering with a rasterization rate map](rendering-with-a-rasterization-rate-map.md): Create offscreen textures to hold intermediate rasterized data.
-- [Scaling variable rasterization rate content](scaling-variable-rasterization-rate-content.md): Use the rate map data to scale the content to fill your destination texture.
-- [MTLRasterizationRateMapDescriptor](mtlrasterizationratemapdescriptor.md): An object that you use to configure new rasterization rate maps.
-- [MTLRasterizationRateMap](mtlrasterizationratemap.md): A compiled read-only instance that determines how to apply variable rasterization rates when rendering.
-- [MTLCoordinate2D](mtlcoordinate2d.md): A coordinate in the viewport.
-- [MTLCoordinate2DMake(\_:\_:)](mtlcoordinate2dmake%28____%29.md): Returns a new 2D point with the specified coordinates.
-
-### Optimizing techniques
-
-- [Specifying drawing and dispatch arguments indirectly](specifying-drawing-and-dispatch-arguments-indirectly.md): Use indirect commands if you don’t know your draw or dispatch call arguments when you encode the command.
-- [Rendering to multiple viewports in a draw command](rendering-to-multiple-viewports-in-a-draw-command.md): Select viewports and their corresponding scissor rectangles in your vertex shader.
-- [Rendering to multiple texture slices in a draw command](rendering-to-multiple-texture-slices-in-a-draw-command.md): Select a destination texture slice in your vertex shader.
-
-### Advanced multisampling
-
-- [Positioning samples programmatically](positioning-samples-programmatically.md): Configure the position of samples when rendering to a multisampled render target.
-- [Storing data a pass makes with custom sample positions for a subsequent pass](storing-data-a-pass-makes-with-custom-sample-positions-for-a-subsequent-pass.md): Inform Metal when your app uses programmable sample positions for its depth render targets or copies MSAA depth data.
-
-### Applying rendering techniques
-
-- [Drawing a triangle with Metal 4](drawing-a-triangle-with-metal-4.md): Render a colorful, rotating 2D triangle by running draw commands with a render pipeline on a GPU.
-- [Customizing render pass setup](customizing-render-pass-setup.md): Render into an offscreen texture by creating a custom render pass.
-- [Setting load and store actions](setting-load-and-store-actions.md): Set actions that define how a render pass loads and stores a render target.
-- [Improving rendering performance with vertex amplification](improving-rendering-performance-with-vertex-amplification.md): Run draw commands that render to different outputs using the same vertex data multiple times.
-
-## See Also
-
-### Command encoders
-
-- [Compute passes](compute-passes.md): Encode a compute pass that runs computations in parallel on a thread grid, processing and manipulating Metal resource data on multiple cores of a GPU.
-- [Machine learning passes](machine-learning-passes.md): Add machine learning model inference to your Metal app’s GPU workflow.
-- [Blit passes](blit-passes.md): Encode a block information transfer pass to adjust and copy data to and from GPU resources, such as buffers and textures.
-- [Indirect command encoding](indirect-command-encoding.md): Store draw commands in Metal buffers and run them at a later time on the GPU, either once or repeatedly.
-- [Ray tracing with acceleration structures](ray-tracing-with-acceleration-structures.md): Build a representation of your scene’s geometry using triangles and bounding volumes to quickly trace rays through the scene.
-
-# Render passes (Objective-C)
-
-**Framework:** Metal  
-**Kind:** API Collection
-
-Encode a render pass to draw graphics into an image.
-
-<a id="overview"></a>
-
-## Overview
-
-A render pass processes and rasterizes geometry to one or more output attachments using a render pipeline.
-
-Render passes consist of:
-
-- A set of input resources, such as buffers and textures
-- A render pipeline that configures the GPU that does work with the input resources
-- Draw commands
-- Vertex shaders, the GPU core functions that process and transform a scene’s geometry
-- An optional tessellation stage that adds fine details to a scene’s geometry
-- Fragment shaders, the GPU core functions that produce the final color values for each pixel
-- Optional outputs that can include color, depth, and stencil attachments, and their load and store operations
-
-See the [Customizing render pass setup](customizing-render-pass-setup.md) sample for implementation details.
-
-## Topics
-
-### Encoding a render pass
-
-- [MTL4RenderCommandEncoder](mtl4rendercommandencoder.md): Encodes configuration and draw commands for a single render pass into a command buffer.
-- [MTLRenderCommandEncoder](mtlrendercommandencoder.md): Encodes configuration and draw commands for a single render pass into a command buffer.
-- [MTL4RenderEncoderOptions](mtl4renderencoderoptions.md): Custom render pass options you specify at encoder creation time.
-- [MTLTriangleFillMode](mtltrianglefillmode.md): Specifies how to rasterize triangle and triangle strip primitives.
-- [MTLWinding](mtlwinding.md): The vertex winding rule that determines a front-facing primitive.
-- [MTLCullMode](mtlcullmode.md): The mode that determines whether to perform culling and which type of primitive to cull.
-- [MTLPrimitiveType](mtlprimitivetype.md): The geometric primitive type for drawing commands.
-- [MTLIndexType](mtlindextype.md): The index type for an index buffer that references vertices of geometric primitives.
-- [MTLDepthClipMode](mtldepthclipmode.md): The mode that determines how to deal with fragments outside of the near or far planes.
-- [MTLVisibilityResultMode](mtlvisibilityresultmode.md): The mode that determines what, if anything, the GPU writes to the results buffer, after the GPU executes the render pass.
-- [MTLVisibilityResultType](mtlvisibilityresulttype.md): Actions for visibility results between render passes.
-
-### Encoding a render pass in parallel
-
-- [MTLParallelRenderCommandEncoder](mtlparallelrendercommandencoder.md): An instance that splits up a single render pass so that it can be simultaneously encoded from multiple threads.
-- [MTLLoadAction](mtlloadaction.md): Types of actions performed for an attachment at the start of a rendering pass.
-- [MTLStoreAction](mtlstoreaction.md): Types of actions performed for an attachment at the end of a rendering pass.
-- [MTLStoreActionOptions](mtlstoreactionoptions.md): Deprecated. Options that modify a store action.
-
-### Configuring a render command encoder
-
-- [MTL4RenderPassDescriptor](mtl4renderpassdescriptor.md): Describes a render pass.
-- [MTLRenderPassDescriptor](mtlrenderpassdescriptor.md): A group of render targets that hold the results of a render pass.
-- [MTLRenderPassAttachmentDescriptor](mtlrenderpassattachmentdescriptor.md): A render target that serves as the output destination for pixels generated by a render pass.
-- [MTLRenderPassColorAttachmentDescriptorArray](mtlrenderpasscolorattachmentdescriptorarray.md): An array of render pass color attachment descriptor objects.
-- [MTLRenderPassColorAttachmentDescriptor](mtlrenderpasscolorattachmentdescriptor.md): A color render target that serves as the output destination for color pixels generated by a render pass.
-- [MTLClearColor](mtlclearcolor.md): An RGBA value used for a color pixel.
-- [MTLRenderPassDepthAttachmentDescriptor](mtlrenderpassdepthattachmentdescriptor.md): A depth render target that serves as the output destination for depth pixels generated by a render pass.
-- [MTLMultisampleDepthResolveFilter](mtlmultisampledepthresolvefilter.md): Filtering options for controlling an MSAA depth resolve operation.
-- [MTL4RenderPipelineColorAttachmentDescriptorArray](mtl4renderpipelinecolorattachmentdescriptorarray.md): An array of color attachment descriptions for a render pipeline.
-- [MTLTileRenderPipelineColorAttachmentDescriptorArray](mtltilerenderpipelinecolorattachmentdescriptorarray.md): An array of color attachment descriptors for the tile render pipeline.
-- [MTLRenderPassStencilAttachmentDescriptor](mtlrenderpassstencilattachmentdescriptor.md): A stencil render target that serves as the output destination for stencil pixels generated by a render pass.
-- [MTLMultisampleStencilResolveFilter](mtlmultisamplestencilresolvefilter.md): Constants used to control the multisample stencil resolve operation.
-- [MTLRenderPassSampleBufferAttachmentDescriptorArray](mtlrenderpasssamplebufferattachmentdescriptorarray.md): An array of sample buffer attachments for a render pass.
-- [MTLRenderPassSampleBufferAttachmentDescriptor](mtlrenderpasssamplebufferattachmentdescriptor.md): A description of where to store GPU counter information at the start and end of a render pass.
-- [MTLLogicalToPhysicalColorAttachmentMap](mtllogicaltophysicalcolorattachmentmap.md): Allows you to easily specify color attachment remapping from logical to physical indices.
-- [MTLDispatchThreadsIndirectArguments](mtldispatchthreadsindirectarguments.md)
-
-### Render pipeline states
-
-- [MTLRenderPipelineState](mtlrenderpipelinestate.md): An interface that represents a graphics pipeline configuration for a render pass, which the pass applies to the draw commands you encode.
-- [MTL4RenderPipelineDescriptor](mtl4renderpipelinedescriptor.md): Groups together properties to create a render pipeline state object.
-- [MTLRenderPipelineDescriptor](mtlrenderpipelinedescriptor.md): An argument of options you pass to a GPU device to get a render pipeline state.
-- [MTLRenderPipelineFunctionsDescriptor](mtlrenderpipelinefunctionsdescriptor.md): A collection of functions for updating a render pipeline.
-- [MTL4MeshRenderPipelineDescriptor](mtl4meshrenderpipelinedescriptor.md): Groups together properties you use to create a mesh render pipeline state object.
-- [MTLMeshRenderPipelineDescriptor](mtlmeshrenderpipelinedescriptor.md): An object that configures new render pipeline state objects for mesh shading.
-- [MTLPipelineBufferDescriptor](mtlpipelinebufferdescriptor.md): The mutability options for a buffer that a render or compute pipeline uses.
-- [MTLPipelineBufferDescriptorArray](mtlpipelinebufferdescriptorarray.md): An array of pipeline buffer descriptors.
-- [MTL4RenderPipelineColorAttachmentDescriptor](mtl4renderpipelinecolorattachmentdescriptor.md)
-- [MTLRenderPipelineColorAttachmentDescriptor](mtlrenderpipelinecolorattachmentdescriptor.md): A color render target that specifies the color configuration and color operations for a render pipeline.
-- [MTLRenderPipelineColorAttachmentDescriptorArray](mtlrenderpipelinecolorattachmentdescriptorarray.md): An array of render pipeline color attachment descriptor objects.
-- [MTL4TileRenderPipelineDescriptor](mtl4tilerenderpipelinedescriptor.md): Groups together properties you use to create a tile render pipeline state object.
-- [MTLTileRenderPipelineDescriptor](mtltilerenderpipelinedescriptor.md): An object that configures new render pipeline state objects for tile shading.
-- [MTLTileRenderPipelineColorAttachmentDescriptor](mtltilerenderpipelinecolorattachmentdescriptor.md): A description of a tile-shading render pipeline’s color render target.
-- [MTLPipelineOption](mtlpipelineoption.md): Options that determine how Metal prepares the pipeline.
-- [MTL4RenderPipelineBinaryFunctionsDescriptor](mtl4renderpipelinebinaryfunctionsdescriptor.md): Allows you to specify additional binary functions to link to each stage of a render pipeline.
-- [MTL4RenderPipelineDynamicLinkingDescriptor](mtl4renderpipelinedynamiclinkingdescriptor.md): Groups together properties that provide linking properties for render pipelines.
-
-### Dynamic render pipeline states
-
-- [MTLViewport](mtlviewport.md): A 3D rectangular region for the viewport clipping.
-- [MTLScissorRect](mtlscissorrect.md): A rectangle for the scissor fragment test.
-- [MTLVertexAmplificationViewMapping](mtlvertexamplificationviewmapping.md): An offset applied to a render target index and viewport index.
-- [MTLQuadTessellationFactorsHalf](mtlquadtessellationfactorshalf.md): The per-patch tessellation factors for a quad patch.
-- [MTLTriangleTessellationFactorsHalf](mtltriangletessellationfactorshalf.md): The per-patch tessellation factors for a triangle patch.
-
-### Render pass inputs
-
-- [MTLVertexDescriptor](mtlvertexdescriptor.md): An instance that describes how to organize and map data to a vertex function.
-- [MTLVertexAttributeDescriptor](mtlvertexattributedescriptor.md): An object that determines how to store attribute data in memory and map it to the arguments of a vertex function.
-- [MTLVertexAttributeDescriptorArray](mtlvertexattributedescriptorarray.md): An array of vertex attribute descriptor instances.
-- [MTLVertexBufferLayoutDescriptor](mtlvertexbufferlayoutdescriptor.md): An object that configures how a render pipeline fetches data to send to the vertex function.
-- [MTLVertexBufferLayoutDescriptorArray](mtlvertexbufferlayoutdescriptorarray.md): An array of vertex buffer layout descriptor instances.
-- [MTLBufferLayoutStrideDynamic](mtlbufferlayoutstridedynamic.md)
-
-### Render pass outputs
-
-- [MTLDrawable](mtldrawable.md): A displayable resource that can be rendered or written to.
-- [MTLDrawablePresentedHandler](mtldrawablepresentedhandler.md): A block of code invoked after a drawable is presented.
-
-### Depth testing
-
-- [Calculating primitive visibility using depth testing](calculating-primitive-visibility-using-depth-testing.md): Determine which pixels are visible in a scene by using a depth texture.
-- [MTLDepthStencilState](mtldepthstencilstate.md): A depth and stencil state instance that specifies the depth and stencil configuration and operations used in a render pass.
-- [MTLDepthStencilDescriptor](mtldepthstencildescriptor.md): An instance that configures new [MTLDepthStencilState](mtldepthstencilstate.md) instances.
-- [MTLStencilDescriptor](mtlstencildescriptor.md): An object that defines the front-facing or back-facing stencil operations of a depth and stencil state object.
-
-### Rasterization settings
-
-- [Rendering at different rasterization rates](rendering-at-different-rasterization-rates.md): Configure a rasterization rate map to vary rasterization rates depending on the amount of detail needed.
-- [Creating a rasterization rate map](creating-a-rasterization-rate-map.md): Define the rasterization rates for each part of your render target.
-- [Rendering with a rasterization rate map](rendering-with-a-rasterization-rate-map.md): Create offscreen textures to hold intermediate rasterized data.
-- [Scaling variable rasterization rate content](scaling-variable-rasterization-rate-content.md): Use the rate map data to scale the content to fill your destination texture.
-- [MTLRasterizationRateMapDescriptor](mtlrasterizationratemapdescriptor.md): An object that you use to configure new rasterization rate maps.
-- [MTLRasterizationRateMap](mtlrasterizationratemap.md): A compiled read-only instance that determines how to apply variable rasterization rates when rendering.
-- [MTLCoordinate2D](mtlcoordinate2d.md): A coordinate in the viewport.
-- [MTLCoordinate2DMake](mtlcoordinate2dmake%28____%29.md): Returns a new 2D point with the specified coordinates.
-
-### Optimizing techniques
-
-- [Specifying drawing and dispatch arguments indirectly](specifying-drawing-and-dispatch-arguments-indirectly.md): Use indirect commands if you don’t know your draw or dispatch call arguments when you encode the command.
-- [Rendering to multiple viewports in a draw command](rendering-to-multiple-viewports-in-a-draw-command.md): Select viewports and their corresponding scissor rectangles in your vertex shader.
-- [Rendering to multiple texture slices in a draw command](rendering-to-multiple-texture-slices-in-a-draw-command.md): Select a destination texture slice in your vertex shader.
-
-### Advanced multisampling
-
-- [Positioning samples programmatically](positioning-samples-programmatically.md): Configure the position of samples when rendering to a multisampled render target.
-- [Storing data a pass makes with custom sample positions for a subsequent pass](storing-data-a-pass-makes-with-custom-sample-positions-for-a-subsequent-pass.md): Inform Metal when your app uses programmable sample positions for its depth render targets or copies MSAA depth data.
-
-### Applying rendering techniques
-
-- [Drawing a triangle with Metal 4](drawing-a-triangle-with-metal-4.md): Render a colorful, rotating 2D triangle by running draw commands with a render pipeline on a GPU.
-- [Customizing render pass setup](customizing-render-pass-setup.md): Render into an offscreen texture by creating a custom render pass.
-- [Setting load and store actions](setting-load-and-store-actions.md): Set actions that define how a render pass loads and stores a render target.
-- [Improving rendering performance with vertex amplification](improving-rendering-performance-with-vertex-amplification.md): Run draw commands that render to different outputs using the same vertex data multiple times.
-
-## See Also
-
-### Command encoders
-
-- [Compute passes](compute-passes.md): Encode a compute pass that runs computations in parallel on a thread grid, processing and manipulating Metal resource data on multiple cores of a GPU.
-- [Machine learning passes](machine-learning-passes.md): Add machine learning model inference to your Metal app’s GPU workflow.
-- [Blit passes](blit-passes.md): Encode a block information transfer pass to adjust and copy data to and from GPU resources, such as buffers and textures.
-- [Indirect command encoding](indirect-command-encoding.md): Store draw commands in Metal buffers and run them at a later time on the GPU, either once or repeatedly.
-- [Ray tracing with acceleration structures](ray-tracing-with-acceleration-structures.md): Build a representation of your scene’s geometry using triangles and bounding volumes to quickly trace rays through the scene.
-
-# Document: Rendering a curve primitive in a ray tracing scene
-
-Source path: documentation/metal/rendering-a-curve-primitive-in-a-ray-tracing-scene
-Canonical documentation: https://developer.apple.com/documentation/metal/rendering-a-curve-primitive-in-a-ray-tracing-scene
-Description: Interface languages: Swift, Objective-C
-
-# Rendering a curve primitive in a ray tracing scene
-
-**Interface languages:** Swift, Objective-C
-
-**Framework:** Metal  
-**Kind:** Sample Code  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · Xcode 26.3+
-
-Implement ray traced rendering using GPU-based parallel processing.
-
-<a id="overview"></a>
-
-## Overview
-
-> **Note**
-
-> This sample code project is associated with WWDC23 session [10128: Your guide to Metal ray tracing](https://developer.apple.com/wwdc23/10128).
-
-<a id="Configure-the-sample-code-project"></a>
-
-### Configure the sample code project
-
-This sample requires the following system and software configuration:
-
-- macOS 14 or later
-- iOS 17 or later
-- Xcode 15 or later
-
-## See Also
-
-### Ray tracing
-
-- [Rendering reflections in real time using ray tracing](rendering-reflections-in-real-time-using-ray-tracing.md): Implement realistic real-time lighting by dynamically generating reflection maps by encoding a ray-tracing compute pass.
-- [Accelerating ray tracing using Metal](accelerating-ray-tracing-using-metal.md): Implement ray-traced rendering using GPU-based parallel processing.
-- [Control the ray tracing process using intersection queries](control-the-ray-tracing-process-using-intersection-queries.md): Explicitly enumerate a ray’s intersections with acceleration structures by creating an intersection query object.
-- [Accelerating ray tracing and motion blur using Metal](accelerating-ray-tracing-and-motion-blur-using-metal.md): Generate ray-traced images with motion blur using GPU-based parallel processing.

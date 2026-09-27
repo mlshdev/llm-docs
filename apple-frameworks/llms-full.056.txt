@@ -1,10 +1,1248 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 56
+
+# Document: Certificates
+
+Source path: documentation/security/certificates
+Canonical documentation: https://developer.apple.com/documentation/security/certificates
+Description: Framework: Security Kind: API Collection
+
+# Certificates (Swift)
+
+**Framework:** Security  
+**Kind:** API Collection
+
+Manage digital certificates.
+
+<a id="overview"></a>
+
+## Overview
+
+A digital certificate is a collection of data used to securely distribute the public half of a public/private key pair. Figure 1 shows the parts of a typical X.509 certificate that make this possible. Along with structural information, the certificate contains name and contact information for both its issuer and its owner (or subject), plus the owner’s public key. A date range indicates when the certificate is valid. Certificate extensions provide additional information and conditions, like acceptable uses for the public key. When assembling the certificate, to vouch for its integrity, the issuer digitally signs it using the issuer’s own identity (private key and certificate).
+
+![Diagram showing the components of an X.509 certificate, including the version and serial number, the subject and issuer, the validity dates, the public key, the signature, and the extensions.](https://developer.apple.com/images/com.apple.security/media-2904073@2x.png)
+
+To evaluate a certificate, you first verify its signature using the specified algorithm and the issuer’s public key, which you obtain from the issuer’s publicly available certificate. A valid signature confirms that the certificate under evaluation, known as the leaf certificate, is unaltered. But in order to trust this result, you must also trust the issuer’s certificate. You use a similar procedure to test this certificate, and the one that guarantees that certificate, and the next, and so on in a chain back to a trusted root authority whose certificate, known as the anchor, which you trust implicitly. The public key included in the leaf certificate is then considered trustworthy. You can be assured that it has come unaltered from the certificate’s owner who controls the corresponding private key. This allows you to securely use the public key to engage in asymmetric cryptography with the certificate’s owner.
+
+For more details about how certificates work, read [Digital Certificates](https://developer.apple.com/library/archive/documentation/Security/Conceptual/cryptoservices/CryptographyConcepts/CryptographyConcepts.html#//apple_ref/doc/uid/TP40011172-CH8-CHDBIGCE) in [Cryptographic Services Guide](https://developer.apple.com/library/archive/documentation/Security/Conceptual/cryptoservices/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011172).
+
+## Topics
+
+### Essentials
+
+- [Getting a Certificate](getting-a-certificate.md): Obtain a certificate from an identity, from DER-encoded data, or from the keychain.
+- [Storing a Certificate in the Keychain](storing-a-certificate-in-the-keychain.md): Store a certificate in the keychain for safekeeping.
+- [SecCertificate](seccertificate.md): An abstract Core Foundation-type object representing an X.509 certificate.
+- [SecCertificateGetTypeID()](seccertificategettypeid%28%29.md): Returns the unique identifier of the opaque type to which a certificate object belongs.
+
+### Import and Export
+
+- [Storing a DER-Encoded X.509 Certificate](storing-a-der-encoded-x-509-certificate.md): Import and export a certificate from a file.
+- [SecCertificateCreateWithData(\_:\_:)](seccertificatecreatewithdata%28____%29.md): Creates a certificate object from a DER representation of a certificate.
+- [SecCertificateCopyData(\_:)](seccertificatecopydata%28__%29.md): Returns a DER representation of a certificate given a certificate object.
+
+### Certificate Components
+
+- [Examining a Certificate](examining-a-certificate.md): Learn how to retrieve properties from a certificate.
+- [SecCertificateCopySubjectSummary(\_:)](seccertificatecopysubjectsummary%28__%29.md): Returns a human-readable summary of a certificate.
+- [SecCertificateCopyCommonName(\_:\_:)](seccertificatecopycommonname%28____%29.md): Retrieves the common name of the subject of a certificate.
+- [SecCertificateCopyEmailAddresses(\_:\_:)](seccertificatecopyemailaddresses%28____%29.md): Retrieves the email addresses for the subject of a certificate.
+- [SecCertificateCopyNormalizedIssuerSequence(\_:)](seccertificatecopynormalizedissuersequence%28__%29.md): Retrieves the normalized issuer sequence from a certificate.
+- [SecCertificateCopyNormalizedSubjectSequence(\_:)](seccertificatecopynormalizedsubjectsequence%28__%29.md): Retrieves the normalized subject sequence from a certificate.
+- [SecCertificateCopySerialNumberData(\_:\_:)](seccertificatecopyserialnumberdata%28____%29.md): Returns the certificate’s serial number.
+- [SecCertificateCopyKey(\_:)](seccertificatecopykey%28__%29.md): Retrieves the public key for a given certificate.
+- [SecCertificateCopyShortDescription(\_:\_:\_:)](seccertificatecopyshortdescription%28______%29.md): Returns a copy of the short description of a certificate.
+- [SecCertificateCopyLongDescription(\_:\_:\_:)](seccertificatecopylongdescription%28______%29.md): Returns a copy of the long description of a certificate.
+
+### Detailed Certificate Information
+
+- [Getting Certificate Values](getting-certificate-values.md): Obtain all the values associated with a certificate.
+- [SecCertificateCopyValues(\_:\_:\_:)](seccertificatecopyvalues%28______%29.md): Creates a dictionary that represents a certificate’s contents.
+- [Certificate OIDs](certificate-oids.md): Use OIDs as keys in the dictionary representing certificate values.
+- [Certificate Property Keys](certificate-property-keys.md): Recognize the dictionary keys that taken together define a certificate property.
+- [Certificate Property Type Values](certificate-property-type-values.md): Recognize the possible certificate property types.
+- [Certificate Item Attribute Constants](certificate-item-attribute-constants.md): Use these four character values to indicate certificate item attributes.
+
+### Certificate Names
+
+- [SecCertificateSetPreferred(\_:\_:\_:)](seccertificatesetpreferred%28______%29.md): Sets the certificate that should be preferred for the specified name and key use.
+- [SecCertificateCopyPreferred(\_:\_:)](seccertificatecopypreferred%28____%29.md): Returns the preferred certificate for the specified name and key usage.
+
+### Legacy Symbols
+
+- [SecCertificateAddToKeychain(\_:\_:)](seccertificateaddtokeychain%28____%29.md): Adds a certificate to a keychain.
+- [SecCertificateCopyNormalizedIssuerContent(\_:\_:)](seccertificatecopynormalizedissuercontent%28____%29.md): Deprecated. Returns a normalized copy of the distinguished name (DN) of the issuer of a certificate.
+- [SecCertificateCopyNormalizedSubjectContent(\_:\_:)](seccertificatecopynormalizedsubjectcontent%28____%29.md): Deprecated. Returns a normalized copy of the distinguished name (DN) of the subject of a certificate.
+- [SecCertificateCopySerialNumber(\_:)](seccertificatecopyserialnumber%28__%29.md): Deprecated. Returns a copy of a certificate’s serial number.
+- [SecCertificateCopyPublicKey(\_:)](seccertificatecopypublickey%28__%29.md): Deprecated. Retrieves the public key from a certificate.
+
+# Certificates (Objective-C)
+
+**Framework:** Security  
+**Kind:** API Collection
+
+Manage digital certificates.
+
+<a id="overview"></a>
+
+## Overview
+
+A digital certificate is a collection of data used to securely distribute the public half of a public/private key pair. Figure 1 shows the parts of a typical X.509 certificate that make this possible. Along with structural information, the certificate contains name and contact information for both its issuer and its owner (or subject), plus the owner’s public key. A date range indicates when the certificate is valid. Certificate extensions provide additional information and conditions, like acceptable uses for the public key. When assembling the certificate, to vouch for its integrity, the issuer digitally signs it using the issuer’s own identity (private key and certificate).
+
+![Diagram showing the components of an X.509 certificate, including the version and serial number, the subject and issuer, the validity dates, the public key, the signature, and the extensions.](https://developer.apple.com/images/com.apple.security/media-2904073@2x.png)
+
+To evaluate a certificate, you first verify its signature using the specified algorithm and the issuer’s public key, which you obtain from the issuer’s publicly available certificate. A valid signature confirms that the certificate under evaluation, known as the leaf certificate, is unaltered. But in order to trust this result, you must also trust the issuer’s certificate. You use a similar procedure to test this certificate, and the one that guarantees that certificate, and the next, and so on in a chain back to a trusted root authority whose certificate, known as the anchor, which you trust implicitly. The public key included in the leaf certificate is then considered trustworthy. You can be assured that it has come unaltered from the certificate’s owner who controls the corresponding private key. This allows you to securely use the public key to engage in asymmetric cryptography with the certificate’s owner.
+
+For more details about how certificates work, read [Digital Certificates](https://developer.apple.com/library/archive/documentation/Security/Conceptual/cryptoservices/CryptographyConcepts/CryptographyConcepts.html#//apple_ref/doc/uid/TP40011172-CH8-CHDBIGCE) in [Cryptographic Services Guide](https://developer.apple.com/library/archive/documentation/Security/Conceptual/cryptoservices/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011172).
+
+## Topics
+
+### Essentials
+
+- [Getting a Certificate](getting-a-certificate.md): Obtain a certificate from an identity, from DER-encoded data, or from the keychain.
+- [Storing a Certificate in the Keychain](storing-a-certificate-in-the-keychain.md): Store a certificate in the keychain for safekeeping.
+- [SecCertificateRef](seccertificate.md): An abstract Core Foundation-type object representing an X.509 certificate.
+- [SecCertificateGetTypeID](seccertificategettypeid%28%29.md): Returns the unique identifier of the opaque type to which a certificate object belongs.
+
+### Import and Export
+
+- [Storing a DER-Encoded X.509 Certificate](storing-a-der-encoded-x-509-certificate.md): Import and export a certificate from a file.
+- [SecCertificateCreateWithData](seccertificatecreatewithdata%28____%29.md): Creates a certificate object from a DER representation of a certificate.
+- [SecCertificateCopyData](seccertificatecopydata%28__%29.md): Returns a DER representation of a certificate given a certificate object.
+
+### Certificate Components
+
+- [Examining a Certificate](examining-a-certificate.md): Learn how to retrieve properties from a certificate.
+- [SecCertificateCopySubjectSummary](seccertificatecopysubjectsummary%28__%29.md): Returns a human-readable summary of a certificate.
+- [SecCertificateCopyCommonName](seccertificatecopycommonname%28____%29.md): Retrieves the common name of the subject of a certificate.
+- [SecCertificateCopyEmailAddresses](seccertificatecopyemailaddresses%28____%29.md): Retrieves the email addresses for the subject of a certificate.
+- [SecCertificateCopyNormalizedIssuerSequence](seccertificatecopynormalizedissuersequence%28__%29.md): Retrieves the normalized issuer sequence from a certificate.
+- [SecCertificateCopyNormalizedSubjectSequence](seccertificatecopynormalizedsubjectsequence%28__%29.md): Retrieves the normalized subject sequence from a certificate.
+- [SecCertificateCopySerialNumberData](seccertificatecopyserialnumberdata%28____%29.md): Returns the certificate’s serial number.
+- [SecCertificateCopyKey](seccertificatecopykey%28__%29.md): Retrieves the public key for a given certificate.
+- [SecCertificateCopyShortDescription](seccertificatecopyshortdescription%28______%29.md): Returns a copy of the short description of a certificate.
+- [SecCertificateCopyLongDescription](seccertificatecopylongdescription%28______%29.md): Returns a copy of the long description of a certificate.
+
+### Detailed Certificate Information
+
+- [Getting Certificate Values](getting-certificate-values.md): Obtain all the values associated with a certificate.
+- [SecCertificateCopyValues](seccertificatecopyvalues%28______%29.md): Creates a dictionary that represents a certificate’s contents.
+- [Certificate OIDs](certificate-oids.md): Use OIDs as keys in the dictionary representing certificate values.
+- [Certificate Property Keys](certificate-property-keys.md): Recognize the dictionary keys that taken together define a certificate property.
+- [Certificate Property Type Values](certificate-property-type-values.md): Recognize the possible certificate property types.
+- [Certificate Item Attribute Constants](certificate-item-attribute-constants.md): Use these four character values to indicate certificate item attributes.
+
+### Certificate Names
+
+- [SecCertificateSetPreferred](seccertificatesetpreferred%28______%29.md): Sets the certificate that should be preferred for the specified name and key use.
+- [SecCertificateCopyPreferred](seccertificatecopypreferred%28____%29.md): Returns the preferred certificate for the specified name and key usage.
+
+### Legacy Symbols
+
+- [OpaqueSecCertificateRef](opaqueseccertificateref.md)
+- [SecCertificateAddToKeychain](seccertificateaddtokeychain%28____%29.md): Adds a certificate to a keychain.
+- [SecCertificateCopyNormalizedIssuerContent](seccertificatecopynormalizedissuercontent%28____%29.md): Deprecated. Returns a normalized copy of the distinguished name (DN) of the issuer of a certificate.
+- [SecCertificateCopyNormalizedSubjectContent](seccertificatecopynormalizedsubjectcontent%28____%29.md): Deprecated. Returns a normalized copy of the distinguished name (DN) of the subject of a certificate.
+- [SecCertificateCreateFromData](seccertificatecreatefromdata.md): Deprecated. Creates a certificate object based on the specified data, type, and encoding.
+- [SecCertificateCopyPreference](seccertificatecopypreference.md): Deprecated. Retrieves the preferred certificate for the specified name and key use.
+- [SecCertificateGetAlgorithmID](seccertificategetalgorithmid.md): Deprecated. Retrieves the algorithm identifier for a certificate.
+- [SecCertificateGetCLHandle](seccertificategetclhandle.md): Deprecated. Retrieves the certificate library handle from a certificate object.
+- [SecCertificateGetData](seccertificategetdata.md): Deprecated. Retrieves the data for a certificate.
+- [SecCertificateGetIssuer](seccertificategetissuer.md): Deprecated. Unsupported.
+- [SecCertificateGetSubject](seccertificategetsubject.md): Deprecated. Unsupported.
+- [SecCertificateGetType](seccertificategettype.md): Deprecated. Retrieves the type of a specified certificate.
+- [SecCertificateSetPreference](seccertificatesetpreference.md): Deprecated. Sets the preferred certificate for a specified name, key use, and date.
+- [SecCertificateCopySerialNumber](seccertificatecopyserialnumber%28__%29.md): Deprecated. Returns a copy of a certificate’s serial number.
+- [SecCertificateCopyPublicKey](seccertificatecopypublickey%28__%29.md): Deprecated. Retrieves the public key from a certificate.
+
+# Document: CMSCertificateChainMode
+
+Source path: documentation/security/cmscertificatechainmode
+Canonical documentation: https://developer.apple.com/documentation/security/cmscertificatechainmode
+Description: Framework: Security Kind: Enumeration Availability: Mac Catalyst 13.0+ · macOS 10.0+
+
+# CMSCertificateChainMode (Swift)
+
+**Framework:** Security  
+**Kind:** Enumeration  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Constants that can be set to specify what certificates to include in a signed message.
+
+## Declaration
+
+```swift
+enum CMSCertificateChainMode
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use these with the [CMSEncoderSetCertificateChainMode(\_:\_:)](cmsencodersetcertificatechainmode%28____%29.md) function.
+
+## Topics
+
+### Constants
+
+- [CMSCertificateChainMode.none](cmscertificatechainmode/none.md): Don’t include any certificates.
+- [CMSCertificateChainMode.signerOnly](cmscertificatechainmode/signeronly.md): Only include signer certificates.
+- [CMSCertificateChainMode.chain](cmscertificatechainmode/chain.md): Include the signer certificate chain up to but not including the root certificate.
+- [CMSCertificateChainMode.chainWithRoot](cmscertificatechainmode/chainwithroot.md): Include the entire signer certificate chain, including the root certificate.
+
+### Enumeration Cases
+
+- [CMSCertificateChainMode.chainWithRootOrFail](cmscertificatechainmode/chainwithrootorfail.md)
+
+### Initializers
+
+- [init(rawValue:)](cmscertificatechainmode/init%28rawvalue_%29.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+# CMSCertificateChainMode (Objective-C)
+
+**Framework:** Security  
+**Kind:** Enumeration  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Constants that can be set to specify what certificates to include in a signed message.
+
+## Declaration
+
+```objectivec
+enum CMSCertificateChainMode : uint32_t;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use these with the [CMSEncoderSetCertificateChainMode](cmsencodersetcertificatechainmode%28____%29.md) function.
+
+## Topics
+
+### Constants
+
+- [kCMSCertificateNone](cmscertificatechainmode/none.md): Don’t include any certificates.
+- [kCMSCertificateSignerOnly](cmscertificatechainmode/signeronly.md): Only include signer certificates.
+- [kCMSCertificateChain](cmscertificatechainmode/chain.md): Include the signer certificate chain up to but not including the root certificate.
+- [kCMSCertificateChainWithRoot](cmscertificatechainmode/chainwithroot.md): Include the entire signer certificate chain, including the root certificate.
+
+### Enumeration Cases
+
+- [kCMSCertificateChainWithRootOrFail](cmscertificatechainmode/chainwithrootorfail.md)
+
+# Document: CMSCertificateChainMode.chain
+
+Source path: documentation/security/cmscertificatechainmode/chain
+Canonical documentation: https://developer.apple.com/documentation/security/cmscertificatechainmode/chain
+Description: Framework: Security Kind: Case Availability: Mac Catalyst 13.0+ · macOS 10.0+
+
+# CMSCertificateChainMode.chain (Swift)
+
+**Framework:** Security  
+**Kind:** Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Include the signer certificate chain up to but not including the root certificate.
+
+## Declaration
+
+```swift
+case chain
+```
+
+# kCMSCertificateChain (Objective-C)
+
+**Framework:** Security  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Include the signer certificate chain up to but not including the root certificate.
+
+## Declaration
+
+```objectivec
+kCMSCertificateChain
+```
+
+# Document: CMSCertificateChainMode.chainWithRoot
+
+Source path: documentation/security/cmscertificatechainmode/chainwithroot
+Canonical documentation: https://developer.apple.com/documentation/security/cmscertificatechainmode/chainwithroot
+Description: Framework: Security Kind: Case Availability: Mac Catalyst 13.0+ · macOS 10.0+
+
+# CMSCertificateChainMode.chainWithRoot (Swift)
+
+**Framework:** Security  
+**Kind:** Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Include the entire signer certificate chain, including the root certificate.
+
+## Declaration
+
+```swift
+case chainWithRoot
+```
+
+# kCMSCertificateChainWithRoot (Objective-C)
+
+**Framework:** Security  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Include the entire signer certificate chain, including the root certificate.
+
+## Declaration
+
+```objectivec
+kCMSCertificateChainWithRoot
+```
+
+# Document: CMSCertificateChainMode.chainWithRootOrFail
+
+Source path: documentation/security/cmscertificatechainmode/chainwithrootorfail
+Canonical documentation: https://developer.apple.com/documentation/security/cmscertificatechainmode/chainwithrootorfail
+Description: Framework: Security Kind: Case Availability: Mac Catalyst 13.0+ · macOS 10.0+
+
+# CMSCertificateChainMode.chainWithRootOrFail (Swift)
+
+**Framework:** Security  
+**Kind:** Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+## Declaration
+
+```swift
+case chainWithRootOrFail
+```
+
+# kCMSCertificateChainWithRootOrFail (Objective-C)
+
+**Framework:** Security  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+## Declaration
+
+```objectivec
+kCMSCertificateChainWithRootOrFail
+```
+
+# Document: init(rawValue:)
+
+Source path: documentation/security/cmscertificatechainmode/init(rawvalue:)
+Canonical documentation: https://developer.apple.com/documentation/security/cmscertificatechainmode/init(rawvalue:)
+Description: Framework: Security Kind: Initializer Availability: Mac Catalyst 13.0+ · macOS 10.0+
+
+# init(rawValue:)
+
+**Framework:** Security  
+**Kind:** Initializer  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+## Declaration
+
+```swift
+init?(rawValue: UInt32)
+```
+
+# Document: CMSCertificateChainMode.none
+
+Source path: documentation/security/cmscertificatechainmode/none
+Canonical documentation: https://developer.apple.com/documentation/security/cmscertificatechainmode/none
+Description: Framework: Security Kind: Case Availability: Mac Catalyst 13.0+ · macOS 10.0+
+
+# CMSCertificateChainMode.none (Swift)
+
+**Framework:** Security  
+**Kind:** Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Don’t include any certificates.
+
+## Declaration
+
+```swift
+case none
+```
+
+# kCMSCertificateNone (Objective-C)
+
+**Framework:** Security  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Don’t include any certificates.
+
+## Declaration
+
+```objectivec
+kCMSCertificateNone
+```
+
+# Document: CMSCertificateChainMode.signerOnly
+
+Source path: documentation/security/cmscertificatechainmode/signeronly
+Canonical documentation: https://developer.apple.com/documentation/security/cmscertificatechainmode/signeronly
+Description: Framework: Security Kind: Case Availability: Mac Catalyst 13.0+ · macOS 10.0+
+
+# CMSCertificateChainMode.signerOnly (Swift)
+
+**Framework:** Security  
+**Kind:** Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Only include signer certificates.
+
+## Declaration
+
+```swift
+case signerOnly
+```
+
+# kCMSCertificateSignerOnly (Objective-C)
+
+**Framework:** Security  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Only include signer certificates.
+
+## Declaration
+
+```objectivec
+kCMSCertificateSignerOnly
+```
+
+# Document: CMSDecoder
+
+Source path: documentation/security/cmsdecoder
+Canonical documentation: https://developer.apple.com/documentation/security/cmsdecoder
+Description: Framework: Security Kind: Class Availability: Mac Catalyst 13.0+ · macOS 10.0+
+
+# CMSDecoder (Swift)
+
+**Framework:** Security  
+**Kind:** Class  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+An opaque reference to a CMS decoder object.
+
+## Declaration
+
+```swift
+class CMSDecoder
+```
+
+<a id="overview"></a>
+
+## Overview
+
+This is object is compatible with Core Foundation and uses standard Core Foundation semantics. Dispose of it with the [CFRelease](../corefoundation/cfrelease.md) function.
+
+## Relationships
+
+### Conforms To
+
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+
+# CMSDecoderRef (Objective-C)
+
+**Framework:** Security  
+**Kind:** Type Alias  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+An opaque reference to a CMS decoder object.
+
+## Declaration
+
+```objectivec
+typedef struct _CMSDecoder * CMSDecoderRef;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+This is object is compatible with Core Foundation and uses standard Core Foundation semantics. Dispose of it with the [CFRelease](../corefoundation/cfrelease.md) function.
+
+# Document: CMSDecoderCopyAllCerts(_:_:)
+
+Source path: documentation/security/cmsdecodercopyallcerts(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/security/cmsdecodercopyallcerts(_:_:)
+Description: Framework: Security Kind: Function Availability: macOS 10.5+
+
+# CMSDecoderCopyAllCerts(\_:\_:) (Swift)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+Obtains an array of all of the certificates in a message.
+
+## Declaration
+
+```swift
+func CMSDecoderCopyAllCerts(_ cmsDecoder: CMSDecoder, _ certsOut: UnsafeMutablePointer<CFArray?>) -> OSStatus
+```
+
+## Parameters
+
+- `cmsDecoder`: The CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `certsOut`: On return, points to an array of `SecCertificateRef` objects. Returns `NULL` if the message does not contain any certificates (the message was encrypted but not signed); this is not considered an error. You must use the `CFRelease` function to free this reference when you are finished using it.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A CMS message can contain arbitrary sets of certificates other than or in addition to those indicating the identity of signers. You can use this function to retrieve such certificates from a message. If the message was signed, it contains signer certificates. You can use the [CMSDecoderGetNumSigners(\_:\_:)](cmsdecodergetnumsigners%28____%29.md) and [CMSDecoderCopySignerCert(\_:\_:\_:)](cmsdecodercopysignercert%28______%29.md) functions to retrieve the certificates for a specific signer.
+
+You cannot call this function until after you have called the [CMSDecoderFinalizeMessage(\_:)](cmsdecoderfinalizemessage%28__%29.md) function.
+
+## See Also
+
+### Related Documentation
+
+- [CMSDecoderCopySignerCert(\_:\_:\_:)](cmsdecodercopysignercert%28______%29.md): Obtains the certificate of the specified signer of a CMS message.
+- [CMSEncoderAddSupportingCerts(\_:\_:)](cmsencoderaddsupportingcerts%28____%29.md): Adds certificates to a message.
+- [CMSDecoderGetNumSigners(\_:\_:)](cmsdecodergetnumsigners%28____%29.md): Obtains the number of signers of a message.
+- [CMSDecoderCreate(\_:)](cmsdecodercreate%28__%29.md): Creates a CMSDecoder reference.
+- [CMSDecoderFinalizeMessage(\_:)](cmsdecoderfinalizemessage%28__%29.md): Indicates that there is no more data to decode.
+
+# CMSDecoderCopyAllCerts (Objective-C)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+Obtains an array of all of the certificates in a message.
+
+## Declaration
+
+```objectivec
+OSStatus CMSDecoderCopyAllCerts(CMSDecoderRef cmsDecoder, CFArrayRef*certsOut);
+```
+
+## Parameters
+
+- `cmsDecoder`: The CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `certsOut`: On return, points to an array of `SecCertificateRef` objects. Returns `NULL` if the message does not contain any certificates (the message was encrypted but not signed); this is not considered an error. You must use the `CFRelease` function to free this reference when you are finished using it.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A CMS message can contain arbitrary sets of certificates other than or in addition to those indicating the identity of signers. You can use this function to retrieve such certificates from a message. If the message was signed, it contains signer certificates. You can use the [CMSDecoderGetNumSigners](cmsdecodergetnumsigners%28____%29.md) and [CMSDecoderCopySignerCert](cmsdecodercopysignercert%28______%29.md) functions to retrieve the certificates for a specific signer.
+
+You cannot call this function until after you have called the [CMSDecoderFinalizeMessage](cmsdecoderfinalizemessage%28__%29.md) function.
+
+## See Also
+
+### Related Documentation
+
+- [CMSDecoderCopySignerCert](cmsdecodercopysignercert%28______%29.md): Obtains the certificate of the specified signer of a CMS message.
+- [CMSEncoderAddSupportingCerts](cmsencoderaddsupportingcerts%28____%29.md): Adds certificates to a message.
+- [CMSDecoderGetNumSigners](cmsdecodergetnumsigners%28____%29.md): Obtains the number of signers of a message.
+- [CMSDecoderCreate](cmsdecodercreate%28__%29.md): Creates a CMSDecoder reference.
+- [CMSDecoderFinalizeMessage](cmsdecoderfinalizemessage%28__%29.md): Indicates that there is no more data to decode.
+
+# Document: CMSDecoderCopyContent(_:_:)
+
+Source path: documentation/security/cmsdecodercopycontent(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/security/cmsdecodercopycontent(_:_:)
+Description: Framework: Security Kind: Function Availability: macOS 10.5+
+
+# CMSDecoderCopyContent(\_:\_:) (Swift)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+Obtains the message content, if any.
+
+## Declaration
+
+```swift
+func CMSDecoderCopyContent(_ cmsDecoder: CMSDecoder, _ contentOut: UnsafeMutablePointer<CFData?>) -> OSStatus
+```
+
+## Parameters
+
+- `cmsDecoder`: The CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `contentOut`: On return, points to the message’s content. Returns `NULL` if the content is detached. You must use the `CFRelease` function to free this reference when you are finished using it.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the message has detached content, you are responsible for retrieving the content. In that case, you use the [CMSDecoderSetDetachedContent(\_:\_:)](cmsdecodersetdetachedcontent%28____%29.md) function to tell the decoder the location of the content.
+
+You cannot call this function until after you have called the `CMSDecoderFinalizeMessage` function.
+
+## See Also
+
+### Related Documentation
+
+- [CMSEncoderSetHasDetachedContent(\_:\_:)](cmsencodersethasdetachedcontent%28____%29.md): Specifies whether the signed data is to be separate from the message.
+- [CMSDecoderSetDetachedContent(\_:\_:)](cmsdecodersetdetachedcontent%28____%29.md): Specifies the message’s detached content, if any.
+- [CMSDecoderCreate(\_:)](cmsdecodercreate%28__%29.md): Creates a CMSDecoder reference.
+- [CMSDecoderFinalizeMessage(\_:)](cmsdecoderfinalizemessage%28__%29.md): Indicates that there is no more data to decode.
+
+# CMSDecoderCopyContent (Objective-C)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+Obtains the message content, if any.
+
+## Declaration
+
+```objectivec
+OSStatus CMSDecoderCopyContent(CMSDecoderRef cmsDecoder, CFDataRef*contentOut);
+```
+
+## Parameters
+
+- `cmsDecoder`: The CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `contentOut`: On return, points to the message’s content. Returns `NULL` if the content is detached. You must use the `CFRelease` function to free this reference when you are finished using it.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the message has detached content, you are responsible for retrieving the content. In that case, you use the [CMSDecoderSetDetachedContent](cmsdecodersetdetachedcontent%28____%29.md) function to tell the decoder the location of the content.
+
+You cannot call this function until after you have called the `CMSDecoderFinalizeMessage` function.
+
+## See Also
+
+### Related Documentation
+
+- [CMSEncoderSetHasDetachedContent](cmsencodersethasdetachedcontent%28____%29.md): Specifies whether the signed data is to be separate from the message.
+- [CMSDecoderSetDetachedContent](cmsdecodersetdetachedcontent%28____%29.md): Specifies the message’s detached content, if any.
+- [CMSDecoderCreate](cmsdecodercreate%28__%29.md): Creates a CMSDecoder reference.
+- [CMSDecoderFinalizeMessage](cmsdecoderfinalizemessage%28__%29.md): Indicates that there is no more data to decode.
+
+# Document: CMSDecoderCopyDetachedContent(_:_:)
+
+Source path: documentation/security/cmsdecodercopydetachedcontent(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/security/cmsdecodercopydetachedcontent(_:_:)
+Description: Framework: Security Kind: Function Availability: macOS 10.5+
+
+# CMSDecoderCopyDetachedContent(\_:\_:) (Swift)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+Obtains the detached content specified with the `CMSDecoderSetDetachedContent` function.
+
+## Declaration
+
+```swift
+func CMSDecoderCopyDetachedContent(_ cmsDecoder: CMSDecoder, _ detachedContentOut: UnsafeMutablePointer<CFData?>) -> OSStatus
+```
+
+## Parameters
+
+- `cmsDecoder`: The CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `detachedContentOut`: On return, points to the data reference specified by an earlier call to the `CMSDecoderSetDetachedContent` function. Returns a NULL data reference if no detached content has been specified. You must use the `CFRelease` function to free this reference when you are finished using it.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md).
+
+## See Also
+
+### Related Documentation
+
+- [CMSDecoderCreate(\_:)](cmsdecodercreate%28__%29.md): Creates a CMSDecoder reference.
+
+# CMSDecoderCopyDetachedContent (Objective-C)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+Obtains the detached content specified with the `CMSDecoderSetDetachedContent` function.
+
+## Declaration
+
+```objectivec
+OSStatus CMSDecoderCopyDetachedContent(CMSDecoderRef cmsDecoder, CFDataRef*detachedContentOut);
+```
+
+## Parameters
+
+- `cmsDecoder`: The CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `detachedContentOut`: On return, points to the data reference specified by an earlier call to the `CMSDecoderSetDetachedContent` function. Returns a NULL data reference if no detached content has been specified. You must use the `CFRelease` function to free this reference when you are finished using it.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md).
+
+## See Also
+
+### Related Documentation
+
+- [CMSDecoderCreate](cmsdecodercreate%28__%29.md): Creates a CMSDecoder reference.
+
+# Document: CMSDecoderCopyEncapsulatedContentType(_:_:)
+
+Source path: documentation/security/cmsdecodercopyencapsulatedcontenttype(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/security/cmsdecodercopyencapsulatedcontenttype(_:_:)
+Description: Framework: Security Kind: Function Availability: macOS 10.5+
+
+# CMSDecoderCopyEncapsulatedContentType(\_:\_:) (Swift)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+Obtains the object identifier for the encapsulated data of a signed message.
+
+## Declaration
+
+```swift
+func CMSDecoderCopyEncapsulatedContentType(_ cmsDecoder: CMSDecoder, _ eContentTypeOut: UnsafeMutablePointer<CFData?>) -> OSStatus
+```
+
+## Parameters
+
+- `cmsDecoder`: The CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `eContentTypeOut`: On return, the object identifier for the encapsulated data in a signed message.  Returns `NULL` if the message was not signed.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+In a signed message, the signed data consists of any type of content (referred to as the *encapsulated content*, because it is encapsulated in the signed data) plus the signature values. The content type of the encapsulated data is indicated by an object identifier. The default value for the OID is `id-data`, which indicates MIME-encoded content.
+
+You cannot call this function until after you have called the `CMSDecoderFinalizeMessage` function.
+
+# CMSDecoderCopyEncapsulatedContentType (Objective-C)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+Obtains the object identifier for the encapsulated data of a signed message.
+
+## Declaration
+
+```objectivec
+OSStatus CMSDecoderCopyEncapsulatedContentType(CMSDecoderRef cmsDecoder, CFDataRef*eContentTypeOut);
+```
+
+## Parameters
+
+- `cmsDecoder`: The CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `eContentTypeOut`: On return, the object identifier for the encapsulated data in a signed message.  Returns `NULL` if the message was not signed.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+In a signed message, the signed data consists of any type of content (referred to as the *encapsulated content*, because it is encapsulated in the signed data) plus the signature values. The content type of the encapsulated data is indicated by an object identifier. The default value for the OID is `id-data`, which indicates MIME-encoded content.
+
+You cannot call this function until after you have called the `CMSDecoderFinalizeMessage` function.
+
+# Document: CMSDecoderCopySignerCert(_:_:_:)
+
+Source path: documentation/security/cmsdecodercopysignercert(_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/security/cmsdecodercopysignercert(_:_:_:)
+Description: Framework: Security Kind: Function Availability: macOS 10.5+
+
+# CMSDecoderCopySignerCert(\_:\_:\_:) (Swift)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+Obtains the certificate of the specified signer of a CMS message.
+
+## Declaration
+
+```swift
+func CMSDecoderCopySignerCert(_ cmsDecoder: CMSDecoder, _ signerIndex: Int, _ signerCertOut: UnsafeMutablePointer<SecCertificate?>) -> OSStatus
+```
+
+## Parameters
+
+- `cmsDecoder`: The CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `signerIndex`: A number indicating which signer’s email address to return. Signer index numbers start with 0. Use the [CMSDecoderGetNumSigners(\_:\_:)](cmsdecodergetnumsigners%28____%29.md) function to determine the total number of signers for a message.
+- `signerCertOut`: On return, points to the certificate of the specified signer.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md). Returns [errSecParam](errsecparam.md) if the CMS message was not signed or if `signerIndex` is greater than the number of signers of the message minus one (signerIndex \> (numSigners – 1)).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You cannot call this function until after you have called the [CMSDecoderFinalizeMessage(\_:)](cmsdecoderfinalizemessage%28__%29.md) function.
+
+## See Also
+
+### Related Documentation
+
+- [CMSDecoderCreate(\_:)](cmsdecodercreate%28__%29.md): Creates a CMSDecoder reference.
+- [CMSDecoderFinalizeMessage(\_:)](cmsdecoderfinalizemessage%28__%29.md): Indicates that there is no more data to decode.
+
+# CMSDecoderCopySignerCert (Objective-C)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+Obtains the certificate of the specified signer of a CMS message.
+
+## Declaration
+
+```objectivec
+OSStatus CMSDecoderCopySignerCert(CMSDecoderRef cmsDecoder, size_t signerIndex, SecCertificateRef*signerCertOut);
+```
+
+## Parameters
+
+- `cmsDecoder`: The CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `signerIndex`: A number indicating which signer’s email address to return. Signer index numbers start with 0. Use the [CMSDecoderGetNumSigners](cmsdecodergetnumsigners%28____%29.md) function to determine the total number of signers for a message.
+- `signerCertOut`: On return, points to the certificate of the specified signer.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md). Returns [errSecParam](errsecparam.md) if the CMS message was not signed or if `signerIndex` is greater than the number of signers of the message minus one (signerIndex \> (numSigners – 1)).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You cannot call this function until after you have called the [CMSDecoderFinalizeMessage](cmsdecoderfinalizemessage%28__%29.md) function.
+
+## See Also
+
+### Related Documentation
+
+- [CMSDecoderCreate](cmsdecodercreate%28__%29.md): Creates a CMSDecoder reference.
+- [CMSDecoderFinalizeMessage](cmsdecoderfinalizemessage%28__%29.md): Indicates that there is no more data to decode.
+
+# Document: CMSDecoderCopySignerEmailAddress(_:_:_:)
+
+Source path: documentation/security/cmsdecodercopysigneremailaddress(_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/security/cmsdecodercopysigneremailaddress(_:_:_:)
+Description: Framework: Security Kind: Function Availability: macOS 10.5+
+
+# CMSDecoderCopySignerEmailAddress(\_:\_:\_:) (Swift)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+Obtains the email address of the specified signer of a CMS message.
+
+## Declaration
+
+```swift
+func CMSDecoderCopySignerEmailAddress(_ cmsDecoder: CMSDecoder, _ signerIndex: Int, _ signerEmailAddressOut: UnsafeMutablePointer<CFString?>) -> OSStatus
+```
+
+## Parameters
+
+- `cmsDecoder`: The CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `signerIndex`: A number indicating which signer’s email address to return. Signer index numbers start with 0. Use the [CMSDecoderGetNumSigners(\_:\_:)](cmsdecodergetnumsigners%28____%29.md) function to determine the total number of signers for a message.
+- `signerEmailAddressOut`: On return, points to the email address of the specified signer.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md). Returns [errSecParam](errsecparam.md) if the CMS message was not signed or if `signerIndex` is greater than the number of signers of the message minus one (`signerIndex > (numSigners – 1)`).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You cannot call this function until after you have called the [CMSDecoderFinalizeMessage(\_:)](cmsdecoderfinalizemessage%28__%29.md) function.
+
+## See Also
+
+### Related Documentation
+
+- [CMSDecoderCreate(\_:)](cmsdecodercreate%28__%29.md): Creates a CMSDecoder reference.
+- [CMSDecoderFinalizeMessage(\_:)](cmsdecoderfinalizemessage%28__%29.md): Indicates that there is no more data to decode.
+
+# CMSDecoderCopySignerEmailAddress (Objective-C)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+Obtains the email address of the specified signer of a CMS message.
+
+## Declaration
+
+```objectivec
+OSStatus CMSDecoderCopySignerEmailAddress(CMSDecoderRef cmsDecoder, size_t signerIndex, CFStringRef*signerEmailAddressOut);
+```
+
+## Parameters
+
+- `cmsDecoder`: The CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `signerIndex`: A number indicating which signer’s email address to return. Signer index numbers start with 0. Use the [CMSDecoderGetNumSigners](cmsdecodergetnumsigners%28____%29.md) function to determine the total number of signers for a message.
+- `signerEmailAddressOut`: On return, points to the email address of the specified signer.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md). Returns [errSecParam](errsecparam.md) if the CMS message was not signed or if `signerIndex` is greater than the number of signers of the message minus one (`signerIndex > (numSigners – 1)`).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You cannot call this function until after you have called the [CMSDecoderFinalizeMessage](cmsdecoderfinalizemessage%28__%29.md) function.
+
+## See Also
+
+### Related Documentation
+
+- [CMSDecoderCreate](cmsdecodercreate%28__%29.md): Creates a CMSDecoder reference.
+- [CMSDecoderFinalizeMessage](cmsdecoderfinalizemessage%28__%29.md): Indicates that there is no more data to decode.
+
+# Document: CMSDecoderCopySignerSigningTime(_:_:_:)
+
+Source path: documentation/security/cmsdecodercopysignersigningtime(_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/security/cmsdecodercopysignersigningtime(_:_:_:)
+Description: Framework: Security Kind: Function Availability: macOS 10.8+
+
+# CMSDecoderCopySignerSigningTime(\_:\_:\_:) (Swift)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.8+
+
+Obtains the signing time of a CMS message, if present.
+
+## Declaration
+
+```swift
+func CMSDecoderCopySignerSigningTime(_ cmsDecoder: CMSDecoder, _ signerIndex: Int, _ signingTime: UnsafeMutablePointer<CFAbsoluteTime>) -> OSStatus
+```
+
+## Parameters
+
+- `cmsDecoder`: A CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `signerIndex`: A number indicating which signer to examine. Signer index numbers start with 0. Use the [CMSDecoderGetNumSigners(\_:\_:)](cmsdecodergetnumsigners%28____%29.md) function to determine the total number of signers for a message.
+- `signingTime`: The address of an absolute time value where the result should be stored.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md). Typically, this function returns [errSecParam](errsecparam.md) if the CMS message was not signed or if `signerIndex` is out of bounds.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The timestamp is an unauthenticated time, although it is part of the signed attributes of the message.
+
+You must call [CMSDecoderFinalizeMessage(\_:)](cmsdecoderfinalizemessage%28__%29.md) before you call this function.
+
+# CMSDecoderCopySignerSigningTime (Objective-C)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.8+
+
+Obtains the signing time of a CMS message, if present.
+
+## Declaration
+
+```objectivec
+OSStatus CMSDecoderCopySignerSigningTime(CMSDecoderRef cmsDecoder, size_t signerIndex, CFAbsoluteTime *signingTime);
+```
+
+## Parameters
+
+- `cmsDecoder`: A CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `signerIndex`: A number indicating which signer to examine. Signer index numbers start with 0. Use the [CMSDecoderGetNumSigners](cmsdecodergetnumsigners%28____%29.md) function to determine the total number of signers for a message.
+- `signingTime`: The address of an absolute time value where the result should be stored.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md). Typically, this function returns [errSecParam](errsecparam.md) if the CMS message was not signed or if `signerIndex` is out of bounds.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The timestamp is an unauthenticated time, although it is part of the signed attributes of the message.
+
+You must call [CMSDecoderFinalizeMessage](cmsdecoderfinalizemessage%28__%29.md) before you call this function.
+
+# Document: CMSDecoderCopySignerStatus(_:_:_:_:_:_:_:)
+
+Source path: documentation/security/cmsdecodercopysignerstatus(_:_:_:_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/security/cmsdecodercopysignerstatus(_:_:_:_:_:_:_:)
+Description: Framework: Security Kind: Function Availability: macOS 10.5+
+
+# CMSDecoderCopySignerStatus(\_:\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+Obtains the status of a CMS message’s signature.
+
+## Declaration
+
+```swift
+func CMSDecoderCopySignerStatus(_ cmsDecoder: CMSDecoder, _ signerIndex: Int, _ policyOrArray: CFTypeRef, _ evaluateSecTrust: Bool, _ signerStatusOut: UnsafeMutablePointer<CMSSignerStatus>?, _ secTrustOut: UnsafeMutablePointer<SecTrust?>?, _ certVerifyResultCodeOut: UnsafeMutablePointer<OSStatus>?) -> OSStatus
+```
+
+## Parameters
+
+- `cmsDecoder`: The [CMSDecoder](cmsdecoder.md) reference returned by the [CMSDecoderCreate(\_:)](cmsdecodercreate%28__%29.md) function.
+- `signerIndex`: A number indicating which signer to examine. Signer index numbers start with 0. Use the [CMSDecoderGetNumSigners(\_:\_:)](cmsdecodergetnumsigners%28____%29.md) function to determine the total number of signers for a message.
+- `policyOrArray`: The trust policy or policies to be used to verify the signer’s certificate. You can specify either a single [SecPolicy](secpolicy.md) instance or a [CFArray](../corefoundation/cfarray.md) of [SecPolicy](secpolicy.md) instances. For more information about policy objects, see [Policies](policies.md).
+- `evaluateSecTrust`: Set to [true](https://developer.apple.com/documentation/swift/true) to cause the decoder to call the [SecTrustEvaluate(\_:\_:)](sectrustevaluate%28____%29.md) function to evaluate the [SecTrust](sectrust.md) instance created for the evaluation of the signer certificate. Set to [false](https://developer.apple.com/documentation/swift/false) if you intend to call the [SecTrustEvaluate(\_:\_:)](sectrustevaluate%28____%29.md) function for the [SecTrust](sectrust.md) instance returned by the `secTrustOut` parameter.
+- `signerStatusOut`: If you specify [true](https://developer.apple.com/documentation/swift/true) for the `evaluateSecTrust` parameter, on return this parameter indicates the status of the signature. See [CMSSignerStatus](cmssignerstatus.md) for possible results. Pass in `NULL` if you don’t want a value returned.
+- `secTrustOut`: On return this parameter points to a [SecTrust](sectrust.md) instance. If you specified [true](https://developer.apple.com/documentation/swift/true) for the `evaluateTrust` parameter, this is the trust instance that was used to verify the signer’s certificate. If you specified [false](https://developer.apple.com/documentation/swift/false) for the `evaluateTrust` parameter, you can call the [SecTrustEvaluate(\_:\_:)](sectrustevaluate%28____%29.md) function to evaluate the [SecTrust](sectrust.md) instance. Pass `NULL` if you do not want this instance returned. You must use the [CFRelease](../corefoundation/cfrelease.md) function to free this reference when you are finished using it.
+- `certVerifyResultCodeOut`: If you specify [true](https://developer.apple.com/documentation/swift/true) for the `evaluateSecTrust` parameter, on return this parameter indicates the result of the certificate verification.  Pass in `NULL` if you don’t want a value returned.
+
+  Some of the most common results returned in this parameter include:
+
+  - **`CSSMERR_TP_INVALID_ANCHOR_CERT`**: The certificate was verified through the certificate chain to a self-signed root certificate that was present in the message, but that root certificate is not a known, trusted root certificate.
+  - **`CSSMERR_TP_NOT_TRUSTED`**: The certificate could not be verified back to a root certificate.
+  - **`CSSMERR_TP_VERIFICATION_FAILURE`**: The root certificate failed verification.
+  - **`CSSMERR_TP_VERIFY_ACTION_FAILED`**: Trust could not be established according to the specified trust policy.
+  - **`CSSMERR_TP_INVALID_CERTIFICATE`**: The signer’s leaf certificate was not valid.
+  - **`CSSMERR_TP_CERT_EXPIRED`**: A certificate in the chain was expired at the time of verification.
+  - **`CSSMERR_TP_CERT_NOT_VALID_YET`**: A certificate in the chain was not yet valid at the time of verification.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md). A result of [errSecSuccess](errsecsuccess.md) indicates only that the function completed successfully; it does not indicate that the signature is verified or the certificates are valid. See the `signerStatusOut` and `certVerifyResultCodeOut` parameters for the verification and certificate validation results.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You cannot call this function until after you have called the [CMSDecoderFinalizeMessage(\_:)](cmsdecoderfinalizemessage%28__%29.md) function. Although the message has been fully decoded when the [CMSDecoderFinalizeMessage(\_:)](cmsdecoderfinalizemessage%28__%29.md) function returns with no error, the signature can’t be validated or certificates verified until this function is called.
+
+A CMS message can be signed by multiple signers; this function returns the status associated with one signer as specified by the `signerIndex` parameter.
+
+If you both pass in [false](https://developer.apple.com/documentation/swift/false) for the `evaluateSecTrust` parameter and `NULL` for the `secTrustOut` parameter, no evaluation of the signer certificate can occur.
+
+## See Also
+
+### Related Documentation
+
+- [SecTrustEvaluate(\_:\_:)](sectrustevaluate%28____%29.md): Deprecated. Evaluates trust for the specified certificate and policies.
+- [CMSDecoderCreate(\_:)](cmsdecodercreate%28__%29.md): Creates a CMSDecoder reference.
+- [CMSDecoderFinalizeMessage(\_:)](cmsdecoderfinalizemessage%28__%29.md): Indicates that there is no more data to decode.
+
+# CMSDecoderCopySignerStatus (Objective-C)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+Obtains the status of a CMS message’s signature.
+
+## Declaration
+
+```objectivec
+OSStatus CMSDecoderCopySignerStatus(CMSDecoderRef cmsDecoder, size_t signerIndex, CFTypeRef policyOrArray, Boolean evaluateSecTrust, CMSSignerStatus *signerStatusOut, SecTrustRef*secTrustOut, OSStatus *certVerifyResultCodeOut);
+```
+
+## Parameters
+
+- `cmsDecoder`: The [CMSDecoderRef](cmsdecoder.md) reference returned by the [CMSDecoderCreate](cmsdecodercreate%28__%29.md) function.
+- `signerIndex`: A number indicating which signer to examine. Signer index numbers start with 0. Use the [CMSDecoderGetNumSigners](cmsdecodergetnumsigners%28____%29.md) function to determine the total number of signers for a message.
+- `policyOrArray`: The trust policy or policies to be used to verify the signer’s certificate. You can specify either a single [SecPolicyRef](secpolicy.md) instance or a [CFArrayRef](../corefoundation/cfarray.md) of [SecPolicyRef](secpolicy.md) instances. For more information about policy objects, see [Policies](policies.md).
+- `evaluateSecTrust`: Set to [true](https://developer.apple.com/documentation/swift/true) to cause the decoder to call the [SecTrustEvaluate](sectrustevaluate%28____%29.md) function to evaluate the [SecTrustRef](sectrust.md) instance created for the evaluation of the signer certificate. Set to [false](https://developer.apple.com/documentation/swift/false) if you intend to call the [SecTrustEvaluate](sectrustevaluate%28____%29.md) function for the [SecTrustRef](sectrust.md) instance returned by the `secTrustOut` parameter.
+- `signerStatusOut`: If you specify [true](https://developer.apple.com/documentation/swift/true) for the `evaluateSecTrust` parameter, on return this parameter indicates the status of the signature. See [CMSSignerStatus](cmssignerstatus.md) for possible results. Pass in `NULL` if you don’t want a value returned.
+- `secTrustOut`: On return this parameter points to a [SecTrustRef](sectrust.md) instance. If you specified [true](https://developer.apple.com/documentation/swift/true) for the `evaluateTrust` parameter, this is the trust instance that was used to verify the signer’s certificate. If you specified [false](https://developer.apple.com/documentation/swift/false) for the `evaluateTrust` parameter, you can call the [SecTrustEvaluate](sectrustevaluate%28____%29.md) function to evaluate the [SecTrustRef](sectrust.md) instance. Pass `NULL` if you do not want this instance returned. You must use the [CFRelease](../corefoundation/cfrelease.md) function to free this reference when you are finished using it.
+- `certVerifyResultCodeOut`: If you specify [true](https://developer.apple.com/documentation/swift/true) for the `evaluateSecTrust` parameter, on return this parameter indicates the result of the certificate verification.  Pass in `NULL` if you don’t want a value returned.
+
+  Some of the most common results returned in this parameter include:
+
+  - **`CSSMERR_TP_INVALID_ANCHOR_CERT`**: The certificate was verified through the certificate chain to a self-signed root certificate that was present in the message, but that root certificate is not a known, trusted root certificate.
+  - **`CSSMERR_TP_NOT_TRUSTED`**: The certificate could not be verified back to a root certificate.
+  - **`CSSMERR_TP_VERIFICATION_FAILURE`**: The root certificate failed verification.
+  - **`CSSMERR_TP_VERIFY_ACTION_FAILED`**: Trust could not be established according to the specified trust policy.
+  - **`CSSMERR_TP_INVALID_CERTIFICATE`**: The signer’s leaf certificate was not valid.
+  - **`CSSMERR_TP_CERT_EXPIRED`**: A certificate in the chain was expired at the time of verification.
+  - **`CSSMERR_TP_CERT_NOT_VALID_YET`**: A certificate in the chain was not yet valid at the time of verification.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md). A result of [errSecSuccess](errsecsuccess.md) indicates only that the function completed successfully; it does not indicate that the signature is verified or the certificates are valid. See the `signerStatusOut` and `certVerifyResultCodeOut` parameters for the verification and certificate validation results.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You cannot call this function until after you have called the [CMSDecoderFinalizeMessage](cmsdecoderfinalizemessage%28__%29.md) function. Although the message has been fully decoded when the [CMSDecoderFinalizeMessage](cmsdecoderfinalizemessage%28__%29.md) function returns with no error, the signature can’t be validated or certificates verified until this function is called.
+
+A CMS message can be signed by multiple signers; this function returns the status associated with one signer as specified by the `signerIndex` parameter.
+
+If you both pass in [false](https://developer.apple.com/documentation/swift/false) for the `evaluateSecTrust` parameter and `NULL` for the `secTrustOut` parameter, no evaluation of the signer certificate can occur.
+
+## See Also
+
+### Related Documentation
+
+- [SecTrustEvaluate](sectrustevaluate%28____%29.md): Deprecated. Evaluates trust for the specified certificate and policies.
+- [CMSDecoderCreate](cmsdecodercreate%28__%29.md): Creates a CMSDecoder reference.
+- [CMSDecoderFinalizeMessage](cmsdecoderfinalizemessage%28__%29.md): Indicates that there is no more data to decode.
+
+# Document: CMSDecoderCopySignerTimestamp(_:_:_:)
+
+Source path: documentation/security/cmsdecodercopysignertimestamp(_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/security/cmsdecodercopysignertimestamp(_:_:_:)
+Description: Framework: Security Kind: Function Availability: macOS 10.8+
+
+# CMSDecoderCopySignerTimestamp(\_:\_:\_:) (Swift)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.8+
+
+Returns the timestamp of a signer of a CMS message, if present.
+
+## Declaration
+
+```swift
+func CMSDecoderCopySignerTimestamp(_ cmsDecoder: CMSDecoder, _ signerIndex: Int, _ timestamp: UnsafeMutablePointer<CFAbsoluteTime>) -> OSStatus
+```
+
+## Parameters
+
+- `cmsDecoder`: A CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `signerIndex`: A number indicating which signer to examine. Signer index numbers start with 0. Use the [CMSDecoderGetNumSigners(\_:\_:)](cmsdecodergetnumsigners%28____%29.md) function to determine the total number of signers for a message.
+- `timestamp`: The address of an absolute time value where the result should be stored.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md). Typically, this function returns [errSecParam](errsecparam.md) if the CMS message was not signed or if `signerIndex` is out of bounds.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This timestamp is an authenticated timestamp provided by a time stamping authority.
+
+You must call [CMSDecoderFinalizeMessage(\_:)](cmsdecoderfinalizemessage%28__%29.md) before you call this function.
+
+# CMSDecoderCopySignerTimestamp (Objective-C)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.8+
+
+Returns the timestamp of a signer of a CMS message, if present.
+
+## Declaration
+
+```objectivec
+OSStatus CMSDecoderCopySignerTimestamp(CMSDecoderRef cmsDecoder, size_t signerIndex, CFAbsoluteTime *timestamp);
+```
+
+## Parameters
+
+- `cmsDecoder`: A CMSDecoder reference returned by the `CMSDecoderCreate` function.
+- `signerIndex`: A number indicating which signer to examine. Signer index numbers start with 0. Use the [CMSDecoderGetNumSigners](cmsdecodergetnumsigners%28____%29.md) function to determine the total number of signers for a message.
+- `timestamp`: The address of an absolute time value where the result should be stored.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md). Typically, this function returns [errSecParam](errsecparam.md) if the CMS message was not signed or if `signerIndex` is out of bounds.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This timestamp is an authenticated timestamp provided by a time stamping authority.
+
+You must call [CMSDecoderFinalizeMessage](cmsdecoderfinalizemessage%28__%29.md) before you call this function.
 
 # Document: CMSDecoderCopySignerTimestampCertificates(_:_:_:)
 
@@ -167756,6 +168994,10 @@ Test your app against the arm64e architecture to ensure that it works seamlessly
 
 ## Overview
 
+> **Important**
+
+> Devices using the Apple A12 or later A-series processor — like the iPhone XS, iPhone XS Max, iPhone XR, and Apple TV 4K (2nd generation) — support the arm64e architecture, as do the Apple Watch Series 4 or later, and Mac and iPads with Apple silicon. To test your adoption, you need to run your app on one of these devices. You can’t test using Simulator.
+
 The arm64e architecture introduces pointer authentication codes (PACs) to detect and guard against unexpected changes to pointers in memory. The addition of pointer authentication is transparent to most apps because the compiler manages the process. In rare cases — for example, if your app manipulates the stack directly, or if you pass pointers between C++ and Objective-C++ — you might have to adjust your code to work with PACs.
 
 Pointer authentication works by offering a special CPU instruction to add a cryptographic signature — or PAC — to unused high-order bits of a pointer before storing the pointer. Another instruction removes and authenticates the signature after reading the pointer back from memory. Any change to the stored value between the write and the read invalidates the signature. The CPU interprets authentication failure as memory corruption and sets a high-order bit in the pointer, making the pointer invalid and causing the app to crash.
@@ -167767,8 +169009,6 @@ Pointer authentication works by offering a special CPU instruction to add a cryp
 You automatically adopt pointer authentication in your app when you build and deploy a binary that targets the arm64e architecture. You can do this starting in Xcode 10.1. To build an arm64e slice, go to your target’s build settings in Xcode and find the Architectures item. Click the current setting and choose Other. In the box that appears, add arm64e.
 
 ![Screenshot of Xcode showing the addition of arm64e to the Architectures item in the Build Settings pane for the iOS app target.](https://developer.apple.com/images/com.apple.security/media-3682831@2x.png)
-
-Devices using the Apple A12 or later A-series processor — like the iPhone XS, iPhone XS Max, iPhone XR, and Apple TV 4K (2nd generation) — support the arm64e architecture, as do the Apple Watch Series 4 or later, and Mac and iPads with Apple silicon. To test your adoption, you have to run your app on one of these devices. You can’t test using the Simulator.
 
 <a id="Recognize-pointer-authentication-failures"></a>
 
@@ -167801,6 +169041,29 @@ More generally, the PAC calculation takes into account the pointer value, one of
 - Return addresses are signed with a key that’s unique per process, using a salt derived from the stack pointer.
 - Function pointers are signed with a key that’s fixed across all processes, allowing sharing of library code between processes.
 - Virtual method table entries are signed with a key that’s shared across all apps, using a salt derived from the method signature.
+
+<a id="Strengthen-return-address-protection-using-ARM64ex1-with-PAuthLR"></a>
+
+#### Strengthen return address protection using ARM64e.x1 with PAuth_LR
+
+The Hardware-Checked Pointer Arithmetic Slice (`arm64e.x1`) extends return address protection using PAuth_LR, a scheme that authenticates the link register (LR) around function calls and returns. As with the pointer authentication described in this article, the compiler manages PAuth_LR automatically, and adopting it requires no changes to your code or the ABI. For more information about `arm64e.x1` and its calling conventions, see [Build settings reference](https://developer.apple.com/documentation/xcode/build-settings-reference).
+
+PAuth_LR is an optional, additive security measure. Existing arm64e code continues to behave as it does today. Adopting PAuth_LR closes off additional classes of return-oriented programming (ROP) attacks that reuse existing stack frames, by making forged or replayed return addresses detectable at authentication time.
+
+Under PAuth_LR, the beginning of function uses the diversifier to sign the LR that incorporates the program counter as well as the stack pointer. As a result, unwinders and other tools that authenticate a saved LR value, rather than only reading it, can’t assume a single fixed authentication scheme. Whether or not a frame’s LR uses this PC-based scheme is based on that frame’s unwind info. Consult the frame’s compact unwind info or DWARF unwind info, whichever it uses, to determine the correct scheme.
+
+This requirement applies only to tooling that authenticates the saved LR, most notably unwinders. Tools that only need the return address’s value, such as crash reporters that symbolicate backtraces, can continue to strip the Pointer Authentication Code (PAC) bits as before.
+
+> **Important**
+
+> Devices with support for `arm64e.x1` include iPhones using the Apple A20 Pro or later A-series processors, Macs using the M6 chips or newer, and Apple Watch with the S11 chip or later. To test your adoption of `arm64e.x1`, you need to run your app on one of these devices. You can’t test using Simulator.
+
+<a id="See-also"></a>
+
+### See also
+
+- [Check for Overflow of Pointer Arithmetic](../bundleresources/entitlements/com.apple.security.hardened-process.checked-allocations.enforce-checked-pointer-arithmetic-overflow.md).
+- [Enabling enhanced security for your app](https://developer.apple.com/documentation/xcode/enabling-enhanced-security-for-your-app)
 
 # Document: Preventing Insecure Network Connections
 
@@ -248230,1416 +249493,3 @@ Create and customize a collaboration view to manage the shared content actions.
 
 - [Adding shared content collaboration to your app](adding-shared-content-collaboration-to-your-app.md): Manage shared content collaboration in your app using CloudKit and iCloud Drive.
 - [Adding custom collaboration to your app](adding-custom-collaboration-to-your-app.md): Integrate your custom collaboration app with Messages.
-
-# Document: Macros
-
-Source path: documentation/sharedwithyou/macros
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/macros
-Description: Framework: Shared with You Kind: API Collection
-
-# Macros (Swift)
-
-**Framework:** Shared with You  
-**Kind:** API Collection
-
-# Macros (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** API Collection
-
-## Topics
-
-### Macros
-
-- [SW_EXTERN](../sharedwithyoucore/sw_extern.md)
-- [SW_HIDDEN](../sharedwithyoucore/sw_hidden.md)
-
-# Document: Making your app content shareable
-
-Source path: documentation/sharedwithyou/making-your-app-content-shareable
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/making-your-app-content-shareable
-Description: Framework: Shared with You Kind: Article
-
-# Making your app content shareable (Swift)
-
-**Framework:** Shared with You  
-**Kind:** Article
-
-Add support for universal links and a Shared with You shelf to support shared content in your app.
-
-<a id="overview"></a>
-
-## Overview
-
-System apps like Safari, News, Music, Photos, and Podcasts use Shared with You to make it easier to share content with friends and family. By adopting universal links and adding a Shared with You shelf to your app, you can also share your content using Messages. When you add views to showcase shared content activity, your app allows people to view Messages conversations that contain your shared content and still stay focused on your app.
-
-Your app can also manage who can view or share your content using the [SWAttributionView](swattributionview.md). This adds a new level of collaboration to your app. You can customize your content’s contextual menu to add even more functionality to shared content.
-
-<a id="Adopt-universal-links"></a>
-
-### Adopt universal links
-
-Your app uses universal links to share content with other apps. When a user activates a universal link, the system launches your app and sends it an [NSUserActivity](../foundation/nsuseractivity.md) object. Query this object to take actions for your shared content.
-
-To support universal links in your app:
-
-1. Create a two-way association between your app and your website and specify the URLs that your app handles. See [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains).
-2. Update your app delegate to respond when it receives an `NSUserActivity` object with the [activityType](../foundation/nsuseractivity/activitytype.md) set to [NSUserActivityTypeBrowsingWeb](../foundation/nsuseractivitytypebrowsingweb.md).
-
-For more information, see [Supporting universal links in your app](https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app).
-
-<a id="Add-Shared-with-You-capability"></a>
-
-### Add Shared with You capability
-
-To add the Shared with You capability in Xcode, follow these steps:
-
-1. Select your project target.
-2. Select the Signing & Capabilities pane.
-3. Click + Capability to bring up the [Capabilities](https://developer.apple.com/documentation/xcode/capabilities) library.
-4. Choose the Shared with You capability.
-
-For more information, see [Adding capabilities to your app](https://developer.apple.com/documentation/xcode/adding-capabilities-to-your-app).
-
-<a id="Add-Shared-with-You-shelf"></a>
-
-### Add Shared with You shelf
-
-Instead of relying on Messages to display shared content activity, you can add a Shared with You shelf to your app. This is a custom view your app creates and manages to display [SWHighlightCenter](swhighlightcenter.md) activity. People can see new content shares and interact with existing ones from your app.
-
-```swift
-// Enumerate Shared with You shelf.
-
-class SharedWithYouViewController: UIViewController, SWHighlightCenterDelegate {
-    let highlightCenter = SWHighlightCenter()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        highlightCenter.delegate = self
-    }
-    
-    func highlightCenterHighlightsDidChange(_ highlightCenter: SWHighlightCenter) {
-        for highlight in highlightCenter.highlights {
-            let highlightURL = highlight.url
-            // Generate a rich preview for this highlight.
-        }
-    }
-}
-```
-
-<a id="Add-an-SWAttributionView-to-your-content"></a>
-
-### Add an SWAttributionView to your content
-
-The [SWAttributionView](swattributionview.md) is the user interface your app customizes to give people a way to interact with [SWHighlight](swhighlight.md) events, like the addition of a new participant or a title change to the shared content. You can adjust the alignment of the content, the width, and the [SWAttributionView.DisplayContext](swattributionview/displaycontext-swift.enum.md) format.
-
-```swift
-// Set the horizontal alignment for an attribution view.
-
-let attributionView = SWAttributionView()
-attributionView.highlight = self.highlightCenter.highlights[index]
-attributionView.preferredMaxLayoutWidth = maximumWidthForView
-attributionView.horizontalAlignment = .leading
-```
-
-You can show the `displayContext` as an [SWAttributionView.DisplayContext.summary](swattributionview/displaycontext-swift.enum/summary.md) or an [SWAttributionView.DisplayContext.detail](swattributionview/displaycontext-swift.enum/detail.md) view. The detail view is ideal if you have more vertical space in your app to provide a larger image of the shared content and more related information.
-
-```swift
-// Set the display context for an attribution view.
-
-let attributionView = SWAttributionView()
-attributionView.highlight = self.highlightCenter.highlights[index]
-attributionView.preferredMaxLayoutWidth = maximumWidthForView
-attributionView.horizontalAlignment = .center
-attributionView.displayContext = .summary
-```
-
-You can also customize the highlight menu text and add additional menu items.
-
-```swift
-// Add Shared with You content menu to your app’s content.
-
-let attributionView = SWAttributionView()
-attributionView.highlight = self.highlightCenter.highlights[index]
-attributionView.menuTitleForHideAction = "Remove Item"
-
-let contextMenuConfig = UIContextMenuConfiguration(identifier: nil,previewProvider: nil) { [weak self] _ in
-        let additionalMenu = attributionView.supplementalMenu
-        // Append additional menu items to your content menu.
-}
-```
-
-## See Also
-
-### Shared content
-
-- [Shared content interactions](shared-content-interactions.md): Use highlights and attribution views to manage participants and trigger events for shared content.
-
-# Making your app content shareable (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** Article
-
-Add support for universal links and a Shared with You shelf to support shared content in your app.
-
-<a id="overview"></a>
-
-## Overview
-
-System apps like Safari, News, Music, Photos, and Podcasts use Shared with You to make it easier to share content with friends and family. By adopting universal links and adding a Shared with You shelf to your app, you can also share your content using Messages. When you add views to showcase shared content activity, your app allows people to view Messages conversations that contain your shared content and still stay focused on your app.
-
-Your app can also manage who can view or share your content using the [SWAttributionView](swattributionview.md). This adds a new level of collaboration to your app. You can customize your content’s contextual menu to add even more functionality to shared content.
-
-<a id="Adopt-universal-links"></a>
-
-### Adopt universal links
-
-Your app uses universal links to share content with other apps. When a user activates a universal link, the system launches your app and sends it an [NSUserActivity](../foundation/nsuseractivity.md) object. Query this object to take actions for your shared content.
-
-To support universal links in your app:
-
-1. Create a two-way association between your app and your website and specify the URLs that your app handles. See [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains).
-2. Update your app delegate to respond when it receives an `NSUserActivity` object with the [activityType](../foundation/nsuseractivity/activitytype.md) set to [NSUserActivityTypeBrowsingWeb](../foundation/nsuseractivitytypebrowsingweb.md).
-
-For more information, see [Supporting universal links in your app](https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app).
-
-<a id="Add-Shared-with-You-capability"></a>
-
-### Add Shared with You capability
-
-To add the Shared with You capability in Xcode, follow these steps:
-
-1. Select your project target.
-2. Select the Signing & Capabilities pane.
-3. Click + Capability to bring up the [Capabilities](https://developer.apple.com/documentation/xcode/capabilities) library.
-4. Choose the Shared with You capability.
-
-For more information, see [Adding capabilities to your app](https://developer.apple.com/documentation/xcode/adding-capabilities-to-your-app).
-
-<a id="Add-Shared-with-You-shelf"></a>
-
-### Add Shared with You shelf
-
-Instead of relying on Messages to display shared content activity, you can add a Shared with You shelf to your app. This is a custom view your app creates and manages to display [SWHighlightCenter](swhighlightcenter.md) activity. People can see new content shares and interact with existing ones from your app.
-
-```swift
-// Enumerate Shared with You shelf.
-
-class SharedWithYouViewController: UIViewController, SWHighlightCenterDelegate {
-    let highlightCenter = SWHighlightCenter()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        highlightCenter.delegate = self
-    }
-    
-    func highlightCenterHighlightsDidChange(_ highlightCenter: SWHighlightCenter) {
-        for highlight in highlightCenter.highlights {
-            let highlightURL = highlight.url
-            // Generate a rich preview for this highlight.
-        }
-    }
-}
-```
-
-<a id="Add-an-SWAttributionView-to-your-content"></a>
-
-### Add an SWAttributionView to your content
-
-The [SWAttributionView](swattributionview.md) is the user interface your app customizes to give people a way to interact with [SWHighlight](swhighlight.md) events, like the addition of a new participant or a title change to the shared content. You can adjust the alignment of the content, the width, and the [SWAttributionViewDisplayContext](swattributionview/displaycontext-swift.enum.md) format.
-
-```swift
-// Set the horizontal alignment for an attribution view.
-
-let attributionView = SWAttributionView()
-attributionView.highlight = self.highlightCenter.highlights[index]
-attributionView.preferredMaxLayoutWidth = maximumWidthForView
-attributionView.horizontalAlignment = .leading
-```
-
-You can show the `displayContext` as an [SWAttributionViewDisplayContextSummary](swattributionview/displaycontext-swift.enum/summary.md) or an [SWAttributionViewDisplayContextDetail](swattributionview/displaycontext-swift.enum/detail.md) view. The detail view is ideal if you have more vertical space in your app to provide a larger image of the shared content and more related information.
-
-```swift
-// Set the display context for an attribution view.
-
-let attributionView = SWAttributionView()
-attributionView.highlight = self.highlightCenter.highlights[index]
-attributionView.preferredMaxLayoutWidth = maximumWidthForView
-attributionView.horizontalAlignment = .center
-attributionView.displayContext = .summary
-```
-
-You can also customize the highlight menu text and add additional menu items.
-
-```swift
-// Add Shared with You content menu to your app’s content.
-
-let attributionView = SWAttributionView()
-attributionView.highlight = self.highlightCenter.highlights[index]
-attributionView.menuTitleForHideAction = "Remove Item"
-
-let contextMenuConfig = UIContextMenuConfiguration(identifier: nil,previewProvider: nil) { [weak self] _ in
-        let additionalMenu = attributionView.supplementalMenu
-        // Append additional menu items to your content menu.
-}
-```
-
-## See Also
-
-### Shared content
-
-- [Shared content interactions](shared-content-interactions.md): Use highlights and attribution views to manage participants and trigger events for shared content.
-
-# Document: NSPasteboardTypeCollaborationMetadata
-
-Source path: documentation/sharedwithyou/nspasteboardtypecollaborationmetadata
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/nspasteboardtypecollaborationmetadata
-Description: Interface language: Objective-C
-
-# NSPasteboardTypeCollaborationMetadata
-
-**Interface language:** Objective-C
-
-**Framework:** Shared with You  
-**Kind:** Global Variable  
-**Availability:** macOS
-
-An object you use for conveying data during a collaboration.
-
-## Declaration
-
-```objectivec
-extern NSPasteboardType const NSPasteboardTypeCollaborationMetadata;
-```
-
-# Document: Shared content interactions
-
-Source path: documentation/sharedwithyou/shared-content-interactions
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/shared-content-interactions
-Description: Framework: Shared with You Kind: API Collection
-
-# Shared content interactions (Swift)
-
-**Framework:** Shared with You  
-**Kind:** API Collection
-
-Use highlights and attribution views to manage participants and trigger events for shared content.
-
-## Topics
-
-### Attributions
-
-- [SWAttributionView](swattributionview.md): A view that displays the sender who shares a highlight and provides related actions.
-
-### Highlights
-
-- [SWHighlight](swhighlight.md): An object that represents a universal link to share by any number of contacts in one or more conversations.
-- [SWHighlightCenter](swhighlightcenter.md): An object that contains a priority-ordered list of universal links to share with the current user.
-
-### Highlight events
-
-- [SWHighlightEvent](swhighlightevent.md): A protocol that defines an activity that the system posts in response to a user action for a highlight.
-- [SWHighlightChangeEvent](swhighlightchangeevent.md): An object that represents change activity for a highlight.
-- [SWHighlightMembershipEvent](swhighlightmembershipevent.md): An object that represents membership activity for a highlight.
-- [SWHighlightMentionEvent](swhighlightmentionevent.md): An object that represents mention activity for a highlight.
-- [SWHighlightPersistenceEvent](swhighlightpersistenceevent.md): An object that represents persistence activity for a highlight.
-
-### Participants
-
-- [SWPerson](../sharedwithyoucore/swperson.md): An object that tracks participants in a collaboration.
-- [SWRemoveParticipantAlert](swremoveparticipantalert.md): An alert that prompts the user to remove a participant from a Messages group.
-
-## See Also
-
-### Shared content
-
-- [Making your app content shareable](making-your-app-content-shareable.md): Add support for universal links and a Shared with You shelf to support shared content in your app.
-
-# Shared content interactions (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** API Collection
-
-Use highlights and attribution views to manage participants and trigger events for shared content.
-
-## Topics
-
-### Attributions
-
-- [SWAttributionView](swattributionview.md): A view that displays the sender who shares a highlight and provides related actions.
-
-### Highlights
-
-- [SWHighlight](swhighlight.md): An object that represents a universal link to share by any number of contacts in one or more conversations.
-- [SWHighlightCenter](swhighlightcenter.md): An object that contains a priority-ordered list of universal links to share with the current user.
-
-### Highlight events
-
-- [SWHighlightEvent](swhighlightevent.md): A protocol that defines an activity that the system posts in response to a user action for a highlight.
-- [SWHighlightChangeEvent](swhighlightchangeevent.md): An object that represents change activity for a highlight.
-- [SWHighlightMembershipEvent](swhighlightmembershipevent.md): An object that represents membership activity for a highlight.
-- [SWHighlightMentionEvent](swhighlightmentionevent.md): An object that represents mention activity for a highlight.
-- [SWHighlightPersistenceEvent](swhighlightpersistenceevent.md): An object that represents persistence activity for a highlight.
-
-### Participants
-
-- [SWPerson](../sharedwithyoucore/swperson.md): An object that tracks participants in a collaboration.
-- [SWRemoveParticipantAlert](swremoveparticipantalert.md): An alert that prompts the user to remove a participant from a Messages group.
-
-### Pasteboard Types
-
-- [NSPasteboardTypeCollaborationMetadata](nspasteboardtypecollaborationmetadata.md): An object you use for conveying data during a collaboration.
-
-## See Also
-
-### Shared content
-
-- [Making your app content shareable](making-your-app-content-shareable.md): Add support for universal links and a Shared with You shelf to support shared content in your app.
-
-# Document: SWAttributionView
-
-Source path: documentation/sharedwithyou/swattributionview
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview
-Description: Framework: Shared with You Kind: Class Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# SWAttributionView (Swift)
-
-**Framework:** Shared with You  
-**Kind:** Class  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-A view that displays the sender who shares a highlight and provides related actions.
-
-## Declaration
-
-```swift
-class SWAttributionView
-```
-
-## Mentioned In
-
-- [Making your app content shareable](making-your-app-content-shareable.md)
-
-<a id="overview"></a>
-
-## Overview
-
-The `SWAttributionView` also allows users to get back to the conversation about the [SWHighlight](swhighlight.md) content, and other related actions using a [highlightMenu](swattributionview/highlightmenu.md).
-
-Place an `SWAttributionView` next to the content represented by its `SWHighlight`. The `SWAttributionView` displays the names and avatars within the provided horizontal space.
-
-You can constrain this view’s width anchor or set its frame width to control the maximum width of its contents after which truncation may occur. Don’t constrain the view’s height, as the height is dependent on the [preferredContentSizeCategory](../uikit/uiapplication/preferredcontentsizecategory.md), and the resulting font size. To provide enough vertical space around this view, reference its [heightAnchor](../uikit/uiview/heightanchor.md) when using Auto Layout, or its [intrinsicContentSize](../uikit/uiview/intrinsiccontentsize.md) when using manual layout.
-
-## Topics
-
-### Customizing highlights
-
-- [backgroundStyle](swattributionview/backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
-- [displayContext](swattributionview/displaycontext-swift.property.md): The context for the content the system displays with this view.
-- [highlight](swattributionview/highlight.md): The highlight you use to display this attribution.
-- [highlightMenu](swattributionview/highlightmenu.md): A menu with a list of system actions specific to this hightlight.
-- [horizontalAlignment](swattributionview/horizontalalignment-swift.property.md): The horizontal alignment of the view.
-- [menuTitleForHideAction](swattributionview/menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
-- [preferredMaxLayoutWidth](swattributionview/preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
-- [supplementalMenu](swattributionview/supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
-
-### Customizing the view
-
-- [SWAttributionView.BackgroundStyle](swattributionview/backgroundstyle-swift.enum.md): The background styling of the attribution view’s contents.
-- [SWAttributionView.DisplayContext](swattributionview/displaycontext-swift.enum.md): The context for the content that influences the ranking of this view’s highlight.
-- [SWAttributionView.HorizontalAlignment](swattributionview/horizontalalignment-swift.enum.md): The horizontal alignment of attribution view’s contents.
-
-## Relationships
-
-### Inherits From
-
-- [NSView](https://developer.apple.com/documentation/appkit/nsview)
-- [UIView](../uikit/uiview.md)
-
-### Conforms To
-
-- [CALayerDelegate](../quartzcore/calayerdelegate.md)
-- [CLBodyIdentifiable](../corelocation/clbodyidentifiable.md)
-- [CMBodyIdentifiable](../coremotion/cmbodyidentifiable.md)
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSAccessibilityElementProtocol](https://developer.apple.com/documentation/appkit/nsaccessibilityelementprotocol)
-- [NSAccessibilityProtocol](https://developer.apple.com/documentation/appkit/nsaccessibilityprotocol)
-- [NSAnimatablePropertyContainer](https://developer.apple.com/documentation/appkit/nsanimatablepropertycontainer)
-- [NSAppearanceCustomization](https://developer.apple.com/documentation/appkit/nsappearancecustomization)
-- [NSCoding](../foundation/nscoding.md)
-- [NSDraggingDestination](https://developer.apple.com/documentation/appkit/nsdraggingdestination)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-- [NSStandardKeyBindingResponding](https://developer.apple.com/documentation/appkit/nsstandardkeybindingresponding)
-- [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
-- [NSUserActivityRestoring](https://developer.apple.com/documentation/appkit/nsuseractivityrestoring)
-- [NSUserInterfaceItemIdentification](https://developer.apple.com/documentation/appkit/nsuserinterfaceitemidentification)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-- [UIAccessibilityIdentification](../uikit/uiaccessibilityidentification.md)
-- [UIActivityItemsConfigurationProviding](../uikit/uiactivityitemsconfigurationproviding.md)
-- [UIAppearance](../uikit/uiappearance.md)
-- [UIAppearanceContainer](../uikit/uiappearancecontainer.md)
-- [UICoordinateSpace](../uikit/uicoordinatespace.md)
-- [UIDynamicItem](../uikit/uidynamicitem.md)
-- [UIFocusEnvironment](../uikit/uifocusenvironment.md)
-- [UIFocusItem](../uikit/uifocusitem.md)
-- [UIFocusItemContainer](../uikit/uifocusitemcontainer.md)
-- [UILargeContentViewerItem](../uikit/uilargecontentvieweritem.md)
-- [UIPasteConfigurationSupporting](../uikit/uipasteconfigurationsupporting.md)
-- [UIPopoverPresentationControllerSourceItem](../uikit/uipopoverpresentationcontrollersourceitem.md)
-- [UIResponderStandardEditActions](../uikit/uiresponderstandardeditactions.md)
-- [UITraitChangeObservable](../uikit/uitraitchangeobservable-67e94.md)
-- [UITraitEnvironment](../uikit/uitraitenvironment.md)
-- [UIUserActivityRestoring](../uikit/uiuseractivityrestoring.md)
-
-# SWAttributionView (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** Class  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-A view that displays the sender who shares a highlight and provides related actions.
-
-## Declaration
-
-```objectivec
-@interface SWAttributionView : UIView
-```
-
-```objectivec
-@interface SWAttributionView : NSView
-```
-
-## Mentioned In
-
-- [Making your app content shareable](making-your-app-content-shareable.md)
-
-<a id="overview"></a>
-
-## Overview
-
-The `SWAttributionView` also allows users to get back to the conversation about the [SWHighlight](swhighlight.md) content, and other related actions using a [highlightMenu](swattributionview/highlightmenu.md).
-
-Place an `SWAttributionView` next to the content represented by its `SWHighlight`. The `SWAttributionView` displays the names and avatars within the provided horizontal space.
-
-You can constrain this view’s width anchor or set its frame width to control the maximum width of its contents after which truncation may occur. Don’t constrain the view’s height, as the height is dependent on the [preferredContentSizeCategory](../uikit/uiapplication/preferredcontentsizecategory.md), and the resulting font size. To provide enough vertical space around this view, reference its [heightAnchor](../uikit/uiview/heightanchor.md) when using Auto Layout, or its [intrinsicContentSize](../uikit/uiview/intrinsiccontentsize.md) when using manual layout.
-
-## Topics
-
-### Customizing highlights
-
-- [backgroundStyle](swattributionview/backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
-- [displayContext](swattributionview/displaycontext-swift.property.md): The context for the content the system displays with this view.
-- [highlight](swattributionview/highlight.md): The highlight you use to display this attribution.
-- [highlightMenu](swattributionview/highlightmenu.md): A menu with a list of system actions specific to this hightlight.
-- [horizontalAlignment](swattributionview/horizontalalignment-swift.property.md): The horizontal alignment of the view.
-- [menuTitleForHideAction](swattributionview/menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
-- [preferredMaxLayoutWidth](swattributionview/preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
-- [supplementalMenu](swattributionview/supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
-- [enablesMarquee](swattributionview/enablesmarquee.md): Automatically enables a marquee effect.
-
-### Customizing the view
-
-- [SWAttributionViewBackgroundStyle](swattributionview/backgroundstyle-swift.enum.md): The background styling of the attribution view’s contents.
-- [SWAttributionViewDisplayContext](swattributionview/displaycontext-swift.enum.md): The context for the content that influences the ranking of this view’s highlight.
-- [SWAttributionViewHorizontalAlignment](swattributionview/horizontalalignment-swift.enum.md): The horizontal alignment of attribution view’s contents.
-
-## Relationships
-
-### Inherits From
-
-- [NSView](https://developer.apple.com/documentation/appkit/nsview)
-- [UIView](../uikit/uiview.md)
-
-# Document: SWAttributionView.BackgroundStyle
-
-Source path: documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum
-Description: Framework: Shared with You Kind: Enumeration Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# SWAttributionView.BackgroundStyle (Swift)
-
-**Framework:** Shared with You  
-**Kind:** Enumeration  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-The background styling of the attribution view’s contents.
-
-## Declaration
-
-```swift
-enum BackgroundStyle
-```
-
-## Topics
-
-### Background styles
-
-- [SWAttributionView.BackgroundStyle.default](backgroundstyle-swift.enum/default.md): The default background style the system chooses.
-- [SWAttributionView.BackgroundStyle.color](backgroundstyle-swift.enum/color.md): A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
-- [SWAttributionView.BackgroundStyle.material](backgroundstyle-swift.enum/material.md): A material background blur for the view’s contents, best when placed over multicolored backgrounds.
-
-### Initializers
-
-- [init(rawValue:)](backgroundstyle-swift.enum/init%28rawvalue_%29.md)
-
-## Relationships
-
-### Conforms To
-
-- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Customizing the view
-
-- [SWAttributionView.DisplayContext](displaycontext-swift.enum.md): The context for the content that influences the ranking of this view’s highlight.
-- [SWAttributionView.HorizontalAlignment](horizontalalignment-swift.enum.md): The horizontal alignment of attribution view’s contents.
-
-# SWAttributionViewBackgroundStyle (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** Enumeration  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-The background styling of the attribution view’s contents.
-
-## Declaration
-
-```objectivec
-enum SWAttributionViewBackgroundStyle : NSInteger;
-```
-
-## Topics
-
-### Background styles
-
-- [SWAttributionViewBackgroundStyleDefault](backgroundstyle-swift.enum/default.md): The default background style the system chooses.
-- [SWAttributionViewBackgroundStyleColor](backgroundstyle-swift.enum/color.md): A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
-- [SWAttributionViewBackgroundStyleMaterial](backgroundstyle-swift.enum/material.md): A material background blur for the view’s contents, best when placed over multicolored backgrounds.
-
-## See Also
-
-### Customizing the view
-
-- [SWAttributionViewDisplayContext](displaycontext-swift.enum.md): The context for the content that influences the ranking of this view’s highlight.
-- [SWAttributionViewHorizontalAlignment](horizontalalignment-swift.enum.md): The horizontal alignment of attribution view’s contents.
-
-# Document: SWAttributionView.BackgroundStyle.color
-
-Source path: documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/color
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/color
-Description: Framework: Shared with You Kind: Case Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# SWAttributionView.BackgroundStyle.color (Swift)
-
-**Framework:** Shared with You  
-**Kind:** Case  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
-
-## Declaration
-
-```swift
-case color
-```
-
-## See Also
-
-### Background styles
-
-- [SWAttributionView.BackgroundStyle.default](default.md): The default background style the system chooses.
-- [SWAttributionView.BackgroundStyle.material](material.md): A material background blur for the view’s contents, best when placed over multicolored backgrounds.
-
-# SWAttributionViewBackgroundStyleColor (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** Enumeration Case  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
-
-## Declaration
-
-```objectivec
-SWAttributionViewBackgroundStyleColor
-```
-
-## See Also
-
-### Background styles
-
-- [SWAttributionViewBackgroundStyleDefault](default.md): The default background style the system chooses.
-- [SWAttributionViewBackgroundStyleMaterial](material.md): A material background blur for the view’s contents, best when placed over multicolored backgrounds.
-
-# Document: SWAttributionView.BackgroundStyle.default
-
-Source path: documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/default
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/default
-Description: Framework: Shared with You Kind: Case Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# SWAttributionView.BackgroundStyle.default (Swift)
-
-**Framework:** Shared with You  
-**Kind:** Case  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-The default background style the system chooses.
-
-## Declaration
-
-```swift
-case `default`
-```
-
-## See Also
-
-### Background styles
-
-- [SWAttributionView.BackgroundStyle.color](color.md): A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
-- [SWAttributionView.BackgroundStyle.material](material.md): A material background blur for the view’s contents, best when placed over multicolored backgrounds.
-
-# SWAttributionViewBackgroundStyleDefault (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** Enumeration Case  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-The default background style the system chooses.
-
-## Declaration
-
-```objectivec
-SWAttributionViewBackgroundStyleDefault
-```
-
-## See Also
-
-### Background styles
-
-- [SWAttributionViewBackgroundStyleColor](color.md): A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
-- [SWAttributionViewBackgroundStyleMaterial](material.md): A material background blur for the view’s contents, best when placed over multicolored backgrounds.
-
-# Document: init(rawValue:)
-
-Source path: documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/init(rawvalue:)
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/init(rawvalue:)
-Description: Framework: Shared with You Kind: Initializer Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# init(rawValue:)
-
-**Framework:** Shared with You  
-**Kind:** Initializer  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-init?(rawValue: Int)
-```
-
-# Document: SWAttributionView.BackgroundStyle.material
-
-Source path: documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/material
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/backgroundstyle-swift.enum/material
-Description: Framework: Shared with You Kind: Case Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# SWAttributionView.BackgroundStyle.material (Swift)
-
-**Framework:** Shared with You  
-**Kind:** Case  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-A material background blur for the view’s contents, best when placed over multicolored backgrounds.
-
-## Declaration
-
-```swift
-case material
-```
-
-## See Also
-
-### Background styles
-
-- [SWAttributionView.BackgroundStyle.default](default.md): The default background style the system chooses.
-- [SWAttributionView.BackgroundStyle.color](color.md): A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
-
-# SWAttributionViewBackgroundStyleMaterial (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** Enumeration Case  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-A material background blur for the view’s contents, best when placed over multicolored backgrounds.
-
-## Declaration
-
-```objectivec
-SWAttributionViewBackgroundStyleMaterial
-```
-
-## See Also
-
-### Background styles
-
-- [SWAttributionViewBackgroundStyleDefault](default.md): The default background style the system chooses.
-- [SWAttributionViewBackgroundStyleColor](color.md): A non-material background color for the view’s contents, best when placed over monochrome backgrounds.
-
-# Document: backgroundStyle
-
-Source path: documentation/sharedwithyou/swattributionview/backgroundstyle-swift.property
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/backgroundstyle-swift.property
-Description: Framework: Shared with You Kind: Instance Property Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# backgroundStyle (Swift)
-
-**Framework:** Shared with You  
-**Kind:** Instance Property  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-The background style of the child view that contains names and avatars.
-
-## Declaration
-
-```swift
-var backgroundStyle: SWAttributionView.BackgroundStyle { get set }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If you don’t specify a background style, the system chooses one automatically. In general, [SWAttributionView.BackgroundStyle.color](backgroundstyle-swift.enum/color.md) looks best on monochrome backgrounds, while [SWAttributionView.BackgroundStyle.material](backgroundstyle-swift.enum/material.md) looks better on colored backgrounds.
-
-## See Also
-
-### Customizing highlights
-
-- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
-- [highlight](highlight.md): The highlight you use to display this attribution.
-- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
-- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
-- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
-- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
-- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
-
-# backgroundStyle (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** Instance Property  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-The background style of the child view that contains names and avatars.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, assign, readwrite) SWAttributionViewBackgroundStyle backgroundStyle;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If you don’t specify a background style, the system chooses one automatically. In general, [SWAttributionViewBackgroundStyleColor](backgroundstyle-swift.enum/color.md) looks best on monochrome backgrounds, while [SWAttributionViewBackgroundStyleMaterial](backgroundstyle-swift.enum/material.md) looks better on colored backgrounds.
-
-## See Also
-
-### Customizing highlights
-
-- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
-- [highlight](highlight.md): The highlight you use to display this attribution.
-- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
-- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
-- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
-- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
-- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
-- [enablesMarquee](enablesmarquee.md): Automatically enables a marquee effect.
-
-# Document: SWAttributionView.DisplayContext
-
-Source path: documentation/sharedwithyou/swattributionview/displaycontext-swift.enum
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/displaycontext-swift.enum
-Description: Framework: Shared with You Kind: Enumeration Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# SWAttributionView.DisplayContext (Swift)
-
-**Framework:** Shared with You  
-**Kind:** Enumeration  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-The context for the content that influences the ranking of this view’s highlight.
-
-## Declaration
-
-```swift
-enum DisplayContext
-```
-
-## Mentioned In
-
-- [Making your app content shareable](../making-your-app-content-shareable.md)
-
-<a id="overview"></a>
-
-## Overview
-
-Set the appropriate display context on [SWAttributionView](../swattributionview.md) before the system adds the view to a window. This informs the system about how the user is consuming the attributed content, and influences future relevancy ranking of the [SWHighlight](../swhighlight.md) for this view.
-
-## Topics
-
-### Context styles
-
-- [SWAttributionView.DisplayContext.summary](displaycontext-swift.enum/summary.md): Indicates that the system is offering the attributed content shown along with this view to the user for consumption.
-- [SWAttributionView.DisplayContext.detail](displaycontext-swift.enum/detail.md): Indicates that the attributed content shown along with this view is being actively consumed by the user.
-
-### Initializers
-
-- [init(rawValue:)](displaycontext-swift.enum/init%28rawvalue_%29.md)
-
-## Relationships
-
-### Conforms To
-
-- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Customizing the view
-
-- [SWAttributionView.BackgroundStyle](backgroundstyle-swift.enum.md): The background styling of the attribution view’s contents.
-- [SWAttributionView.HorizontalAlignment](horizontalalignment-swift.enum.md): The horizontal alignment of attribution view’s contents.
-
-# SWAttributionViewDisplayContext (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** Enumeration  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-The context for the content that influences the ranking of this view’s highlight.
-
-## Declaration
-
-```objectivec
-enum SWAttributionViewDisplayContext : NSInteger;
-```
-
-## Mentioned In
-
-- [Making your app content shareable](../making-your-app-content-shareable.md)
-
-<a id="overview"></a>
-
-## Overview
-
-Set the appropriate display context on [SWAttributionView](../swattributionview.md) before the system adds the view to a window. This informs the system about how the user is consuming the attributed content, and influences future relevancy ranking of the [SWHighlight](../swhighlight.md) for this view.
-
-## Topics
-
-### Context styles
-
-- [SWAttributionViewDisplayContextSummary](displaycontext-swift.enum/summary.md): Indicates that the system is offering the attributed content shown along with this view to the user for consumption.
-- [SWAttributionViewDisplayContextDetail](displaycontext-swift.enum/detail.md): Indicates that the attributed content shown along with this view is being actively consumed by the user.
-
-## See Also
-
-### Customizing the view
-
-- [SWAttributionViewBackgroundStyle](backgroundstyle-swift.enum.md): The background styling of the attribution view’s contents.
-- [SWAttributionViewHorizontalAlignment](horizontalalignment-swift.enum.md): The horizontal alignment of attribution view’s contents.
-
-# Document: SWAttributionView.DisplayContext.detail
-
-Source path: documentation/sharedwithyou/swattributionview/displaycontext-swift.enum/detail
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/displaycontext-swift.enum/detail
-Description: Framework: Shared with You Kind: Case Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# SWAttributionView.DisplayContext.detail (Swift)
-
-**Framework:** Shared with You  
-**Kind:** Case  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-Indicates that the attributed content shown along with this view is being actively consumed by the user.
-
-## Declaration
-
-```swift
-case detail
-```
-
-## Mentioned In
-
-- [Making your app content shareable](../../making-your-app-content-shareable.md)
-
-## See Also
-
-### Context styles
-
-- [SWAttributionView.DisplayContext.summary](summary.md): Indicates that the system is offering the attributed content shown along with this view to the user for consumption.
-
-# SWAttributionViewDisplayContextDetail (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** Enumeration Case  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-Indicates that the attributed content shown along with this view is being actively consumed by the user.
-
-## Declaration
-
-```objectivec
-SWAttributionViewDisplayContextDetail
-```
-
-## Mentioned In
-
-- [Making your app content shareable](../../making-your-app-content-shareable.md)
-
-## See Also
-
-### Context styles
-
-- [SWAttributionViewDisplayContextSummary](summary.md): Indicates that the system is offering the attributed content shown along with this view to the user for consumption.
-
-# Document: init(rawValue:)
-
-Source path: documentation/sharedwithyou/swattributionview/displaycontext-swift.enum/init(rawvalue:)
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/displaycontext-swift.enum/init(rawvalue:)
-Description: Framework: Shared with You Kind: Initializer Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# init(rawValue:)
-
-**Framework:** Shared with You  
-**Kind:** Initializer  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-init?(rawValue: Int)
-```
-
-# Document: SWAttributionView.DisplayContext.summary
-
-Source path: documentation/sharedwithyou/swattributionview/displaycontext-swift.enum/summary
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/displaycontext-swift.enum/summary
-Description: Framework: Shared with You Kind: Case Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# SWAttributionView.DisplayContext.summary (Swift)
-
-**Framework:** Shared with You  
-**Kind:** Case  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-Indicates that the system is offering the attributed content shown along with this view to the user for consumption.
-
-## Declaration
-
-```swift
-case summary
-```
-
-## Mentioned In
-
-- [Making your app content shareable](../../making-your-app-content-shareable.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The is the default value for [displayContext](../displaycontext-swift.property.md).
-
-## See Also
-
-### Context styles
-
-- [SWAttributionView.DisplayContext.detail](detail.md): Indicates that the attributed content shown along with this view is being actively consumed by the user.
-
-# SWAttributionViewDisplayContextSummary (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** Enumeration Case  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-Indicates that the system is offering the attributed content shown along with this view to the user for consumption.
-
-## Declaration
-
-```objectivec
-SWAttributionViewDisplayContextSummary
-```
-
-## Mentioned In
-
-- [Making your app content shareable](../../making-your-app-content-shareable.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The is the default value for [displayContext](../displaycontext-swift.property.md).
-
-## See Also
-
-### Context styles
-
-- [SWAttributionViewDisplayContextDetail](detail.md): Indicates that the attributed content shown along with this view is being actively consumed by the user.
-
-# Document: displayContext
-
-Source path: documentation/sharedwithyou/swattributionview/displaycontext-swift.property
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/displaycontext-swift.property
-Description: Framework: Shared with You Kind: Instance Property Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# displayContext (Swift)
-
-**Framework:** Shared with You  
-**Kind:** Instance Property  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-The context for the content the system displays with this view.
-
-## Declaration
-
-```swift
-var displayContext: SWAttributionView.DisplayContext { get set }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Set the `displayContext` prior to adding this view to your view hierarchy.
-
-## See Also
-
-### Customizing highlights
-
-- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
-- [highlight](highlight.md): The highlight you use to display this attribution.
-- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
-- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
-- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
-- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
-- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
-
-# displayContext (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** Instance Property  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-The context for the content the system displays with this view.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, assign, readwrite) SWAttributionViewDisplayContext displayContext;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Set the `displayContext` prior to adding this view to your view hierarchy.
-
-## See Also
-
-### Customizing highlights
-
-- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
-- [highlight](highlight.md): The highlight you use to display this attribution.
-- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
-- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
-- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
-- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
-- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
-- [enablesMarquee](enablesmarquee.md): Automatically enables a marquee effect.
-
-# Document: enablesMarquee
-
-Source path: documentation/sharedwithyou/swattributionview/enablesmarquee
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/enablesmarquee
-Description: Interface language: Objective-C
-
-# enablesMarquee
-
-**Interface language:** Objective-C
-
-**Framework:** Shared with You  
-**Kind:** Instance Property
-
-Automatically enables a marquee effect.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, assign, readwrite) BOOL enablesMarquee;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Automatically enables a marquee effect if the text contents extend past the bounds of the view.
-
-## See Also
-
-### Customizing highlights
-
-- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
-- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
-- [highlight](highlight.md): The highlight you use to display this attribution.
-- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
-- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
-- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
-- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
-- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
-
-# Document: highlight
-
-Source path: documentation/sharedwithyou/swattributionview/highlight
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/highlight
-Description: Framework: Shared with You Kind: Instance Property Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# highlight (Swift)
-
-**Framework:** Shared with You  
-**Kind:** Instance Property  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-The highlight you use to display this attribution.
-
-## Declaration
-
-```swift
-var highlight: SWHighlight? { get set }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When your app sets this property to a new `highlight`, the system reloads the contents of the view.
-
-## See Also
-
-### Customizing highlights
-
-- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
-- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
-- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
-- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
-- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
-- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
-- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
-
-# highlight (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** Instance Property  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-The highlight you use to display this attribution.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, strong, readwrite, nullable) SWHighlight * highlight;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When your app sets this property to a new `highlight`, the system reloads the contents of the view.
-
-## See Also
-
-### Customizing highlights
-
-- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
-- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
-- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
-- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
-- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
-- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
-- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
-- [enablesMarquee](enablesmarquee.md): Automatically enables a marquee effect.
-
-# Document: highlightMenu
-
-Source path: documentation/sharedwithyou/swattributionview/highlightmenu
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/highlightmenu
-Description: Framework: Shared with You Kind: Instance Property Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# highlightMenu (Swift)
-
-**Framework:** Shared with You  
-**Kind:** Instance Property  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-A menu with a list of system actions specific to this hightlight.
-
-## Declaration
-
-```swift
-var highlightMenu: UIMenu { get }
-```
-
-```swift
-var highlightMenu: NSMenu { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this menu to augment an existing menu that the system attaches to the content represented by this [SWAttributionView](../swattributionview.md). This menu allows the user to reply to or hide the highlight. Your app needs to add this `hightlightMenu` inline with, and at the end of, the menu elements it augments.
-
-## See Also
-
-### Customizing highlights
-
-- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
-- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
-- [highlight](highlight.md): The highlight you use to display this attribution.
-- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
-- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
-- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
-- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
-
-# highlightMenu (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** Instance Property  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-A menu with a list of system actions specific to this hightlight.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, strong, readonly) UIMenu * highlightMenu;
-```
-
-```objectivec
-@property (nonatomic, strong, readonly) NSMenu * highlightMenu;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this menu to augment an existing menu that the system attaches to the content represented by this [SWAttributionView](../swattributionview.md). This menu allows the user to reply to or hide the highlight. Your app needs to add this `hightlightMenu` inline with, and at the end of, the menu elements it augments.
-
-## See Also
-
-### Customizing highlights
-
-- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
-- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
-- [highlight](highlight.md): The highlight you use to display this attribution.
-- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
-- [menuTitleForHideAction](menutitleforhideaction.md): A localized string the system uses as a custom title for the hide menu item.
-- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
-- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
-- [enablesMarquee](enablesmarquee.md): Automatically enables a marquee effect.
-
-# Document: SWAttributionView.HorizontalAlignment
-
-Source path: documentation/sharedwithyou/swattributionview/horizontalalignment-swift.enum
-Canonical documentation: https://developer.apple.com/documentation/sharedwithyou/swattributionview/horizontalalignment-swift.enum
-Description: Framework: Shared with You Kind: Enumeration Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# SWAttributionView.HorizontalAlignment (Swift)
-
-**Framework:** Shared with You  
-**Kind:** Enumeration  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-The horizontal alignment of attribution view’s contents.
-
-## Declaration
-
-```swift
-enum HorizontalAlignment
-```
-
-## Topics
-
-### Horizontal alignments
-
-- [SWAttributionView.HorizontalAlignment.default](horizontalalignment-swift.enum/default.md): Allows the system to choose the horizontal alignment.
-- [SWAttributionView.HorizontalAlignment.leading](horizontalalignment-swift.enum/leading.md): Aligns horizontally with the leading edge of the view.
-- [SWAttributionView.HorizontalAlignment.center](horizontalalignment-swift.enum/center.md): Aligns horizontally with the center of the view.
-- [SWAttributionView.HorizontalAlignment.trailing](horizontalalignment-swift.enum/trailing.md): Aligns horizontally with the trailing edge of the view.
-
-### Initializers
-
-- [init(rawValue:)](horizontalalignment-swift.enum/init%28rawvalue_%29.md)
-
-## Relationships
-
-### Conforms To
-
-- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Customizing the view
-
-- [SWAttributionView.BackgroundStyle](backgroundstyle-swift.enum.md): The background styling of the attribution view’s contents.
-- [SWAttributionView.DisplayContext](displaycontext-swift.enum.md): The context for the content that influences the ranking of this view’s highlight.
-
-# SWAttributionViewHorizontalAlignment (Objective-C)
-
-**Framework:** Shared with You  
-**Kind:** Enumeration  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-The horizontal alignment of attribution view’s contents.
-
-## Declaration
-
-```objectivec
-enum SWAttributionViewHorizontalAlignment : NSInteger;
-```
-
-## Topics
-
-### Horizontal alignments
-
-- [SWAttributionViewHorizontalAlignmentDefault](horizontalalignment-swift.enum/default.md): Allows the system to choose the horizontal alignment.
-- [SWAttributionViewHorizontalAlignmentLeading](horizontalalignment-swift.enum/leading.md): Aligns horizontally with the leading edge of the view.
-- [SWAttributionViewHorizontalAlignmentCenter](horizontalalignment-swift.enum/center.md): Aligns horizontally with the center of the view.
-- [SWAttributionViewHorizontalAlignmentTrailing](horizontalalignment-swift.enum/trailing.md): Aligns horizontally with the trailing edge of the view.
-
-## See Also
-
-### Customizing the view
-
-- [SWAttributionViewBackgroundStyle](backgroundstyle-swift.enum.md): The background styling of the attribution view’s contents.
-- [SWAttributionViewDisplayContext](displaycontext-swift.enum.md): The context for the content that influences the ranking of this view’s highlight.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/queryresponse
 
 # QueryResponse
@@ -46,7 +46,7 @@ This wrapper is the base type for all query responses. Specific entity query res
   "pagination": {
     "totalCount": 1,
     "offset": 0,
-    "pageSize": 20
+    "pageSize": 1
   }
 }
 ```

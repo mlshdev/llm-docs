@@ -1,0 +1,34 @@
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/gamecenterscoremoderation/attributes-data.dictionary
+
+# GameCenterScoreModeration.Attributes
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 4.5+
+
+The attributes that describe a Game Center score moderation.
+
+## Declaration
+
+```
+object GameCenterScoreModeration.Attributes
+```
+
+## Properties
+
+- `blocked` — `boolean`: A Boolean value that indicates whether the score is blocked from the leaderboard.
+- `challengeIds` — `[string]`: The identifiers of the challenges the score completes.
+- `context` — `number`: A developer-defined 64-bit value the game stores with the score, as a string. This value doesn’t affect ranking.
+- `preReleased` — `boolean`: A Boolean value that indicates whether the player submitted the score to a prerelease version of the game.
+- `rank` — `number`: The rank of the score on the leaderboard, as a string representation of a 64-bit integer.
+- `score` — `number`: The score value the player submitted to the leaderboard, as a string representation of a 64-bit integer.
+- `submittedDate` — `date-time`: The date and time when the player submitted the score.
+
+## See Also
+
+### Objects
+
+- [GameCenterScoreModeration.Relationships](relationships-data.dictionary.md): The relationships between a Game Center score moderation and other resources.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/sirikit/adding-user-interactivity-with-siri-shortcuts-and-the-shortcuts-app
 
 # Adding User Interactivity with Siri Shortcuts and the Shortcuts App

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-6a8f7b178c0a; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-d0d1b2f13e0d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/iad/adclient_deprecated_tvos_90_145_obsoleted_180
 
 # ADCLIENT_DEPRECATED_TVOS_90_145_OBSOLETED_180

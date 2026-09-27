@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/post-v1-reviewsubmissionitems
 
 # Create a Review Submission Item
@@ -37,7 +37,7 @@ Type: `ReviewSubmissionItemCreateRequest`
 
 - [App Store Connect API 4.2 release notes](app-store-connect-api-4-2-release-notes.md)
 - [App Store Connect API 4.4.1 release notes](app-store-connect-api-4-4-1-release-notes.md)
-- [Managing in-app purchases](managing-in-app-purchases.md)
+- [Managing In-App Purchases](managing-in-app-purchases.md)
 - [Submitting subscriptions and subscription groups for App Review](submitting-subscriptions-and-subscription-groups-for-app-review.md)
 
 ## See Also

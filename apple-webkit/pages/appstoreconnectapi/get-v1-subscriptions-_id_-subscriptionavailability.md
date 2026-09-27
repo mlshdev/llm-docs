@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-subscriptions-_id_-subscriptionavailability
 
 # Read information about the availability of a subscription
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 2.4+
+**Availability:** App Store Connect API 2.4+ (deprecated in 4.4)
 
 Get information about the territory availability for a subscription.
+
+> This endpoint is deprecated.
 
 ## URL
 
@@ -19,7 +21,7 @@ GET https://api.appstoreconnect.apple.com/v1/subscriptions/{id}/subscriptionAvai
 
 ## Path Parameters
 
-- `id` — `string` (required): An opaque resource ID that uniquely identifies the resource. Obtain the in-app purchase resource ID from the [List all subscriptions for a subscription group](get-v1-subscriptiongroups-_id_-subscriptions.md) response.
+- `id` — `string` (required): An opaque resource ID that uniquely identifies the resource. Obtain the In-App Purchase resource ID from the [List all subscriptions for a subscription group](get-v1-subscriptiongroups-_id_-subscriptions.md) response.
 
 ## Query Parameters
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/bundleresources/security-entitlements
 
 # Security entitlements (Swift)
@@ -80,6 +80,11 @@ Key-value pairs that grant an executable access to secure resources, or enable h
 - [com.apple.security.hardened-process.checked-allocations.soft-mode](entitlements/com.apple.security.hardened-process.checked-allocations.soft-mode.md): A Boolean value that indicates whether to log memory-tagging faults as a simulated crash, instead of terminating the process.
 - [com.apple.security.hardened-process.checked-allocations.enable-pure-data](entitlements/com.apple.security.hardened-process.checked-allocations.enable-pure-data.md): A Boolean value that indicates whether to tag memory that contains only data.
 - [com.apple.security.hardened-process.checked-allocations.no-tagged-receive](entitlements/com.apple.security.hardened-process.checked-allocations.no-tagged-receive.md): A Boolean value that indicates whether to prevent receiving tagged memory from other processes.
+- [Check for Overflow of Pointer Arithmetic](entitlements/com.apple.security.hardened-process.checked-allocations.enforce-checked-pointer-arithmetic-overflow.md): A Boolean value that enables checking pointers for arithmetic overflow.
+
+### Hardware Checked pointer arithmetic
+
+- [Check for Overflow of Pointer Arithmetic](entitlements/com.apple.security.hardened-process.checked-allocations.enforce-checked-pointer-arithmetic-overflow.md): A Boolean value that enables checking pointers for arithmetic overflow.
 
 ### Application groups
 
@@ -173,6 +178,11 @@ Key-value pairs that grant an executable access to secure resources, or enable h
 - [com.apple.security.hardened-process.checked-allocations.soft-mode](entitlements/com.apple.security.hardened-process.checked-allocations.soft-mode.md): A Boolean value that indicates whether to log memory-tagging faults as a simulated crash, instead of terminating the process.
 - [com.apple.security.hardened-process.checked-allocations.enable-pure-data](entitlements/com.apple.security.hardened-process.checked-allocations.enable-pure-data.md): A Boolean value that indicates whether to tag memory that contains only data.
 - [com.apple.security.hardened-process.checked-allocations.no-tagged-receive](entitlements/com.apple.security.hardened-process.checked-allocations.no-tagged-receive.md): A Boolean value that indicates whether to prevent receiving tagged memory from other processes.
+- [Check for Overflow of Pointer Arithmetic](entitlements/com.apple.security.hardened-process.checked-allocations.enforce-checked-pointer-arithmetic-overflow.md): A Boolean value that enables checking pointers for arithmetic overflow.
+
+### Hardware Checked pointer arithmetic
+
+- [Check for Overflow of Pointer Arithmetic](entitlements/com.apple.security.hardened-process.checked-allocations.enforce-checked-pointer-arithmetic-overflow.md): A Boolean value that enables checking pointers for arithmetic overflow.
 
 ### Application groups
 

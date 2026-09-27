@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/campaigncountryorregionsservingstatereasons
 
 # CampaignCountryOrRegionsServingStateReasons
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Type  
-**Availability:** Search Ads 4.0+
+**Availability:** Search Ads 4.0+ (deprecated in 5.2)
 
 Reasons that displays when a campaign can’t run.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -44,11 +46,11 @@ string CampaignCountryOrRegionsServingStateReasons
 
 ### Data Types
 
-- [AdChannelType](adchanneltype.md): The channel type of an ad in a campaign.
-- [BillingEventType](billingeventtype.md): The type of billing event for a campaign.
-- [CampaignDisplayStatus](campaigndisplaystatus.md): The status of the campaign.
-- [CampaignServingStateReasons](campaignservingstatereasons.md): Reasons the system provides when a campaign can’t run.
-- [CampaignServingStatus](campaignservingstatus.md): The status of the campaign.
-- [CampaignStatus](campaignstatus.md): The status of the campaign.
-- [PaymentModel](paymentmodel.md): The payment model that you set.
-- [SupplySource](supplysource.md): The ad placements for a campaign.
+- [AdChannelType](adchanneltype.md): Deprecated. The channel type of an ad in a campaign.
+- [BillingEventType](billingeventtype.md): Deprecated. The type of billing event for a campaign.
+- [CampaignDisplayStatus](campaigndisplaystatus.md): Deprecated. The status of the campaign.
+- [CampaignServingStateReasons](campaignservingstatereasons.md): Deprecated. Reasons the system provides when a campaign can’t run.
+- [CampaignServingStatus](campaignservingstatus.md): Deprecated. The status of the campaign.
+- [CampaignStatus](campaignstatus.md): Deprecated. The status of the campaign.
+- [PaymentModel](paymentmodel.md): Deprecated. The payment model that you set.
+- [SupplySource](supplysource.md): Deprecated. The ad placements for a campaign.

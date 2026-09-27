@@ -1,10 +1,647 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 47
+
+# Document: Reducing the memory footprint of Metal apps
+
+Source path: documentation/metal/reducing-the-memory-footprint-of-metal-apps
+Canonical documentation: https://developer.apple.com/documentation/metal/reducing-the-memory-footprint-of-metal-apps
+Description: Framework: Metal Kind: Article
+
+# Reducing the memory footprint of Metal apps (Swift)
+
+**Framework:** Metal  
+**Kind:** Article
+
+Learn best practices for using memory efficiently in iOS and tvOS.
+
+<a id="overview"></a>
+
+## Overview
+
+Efficient memory usage is a critical consideration for resource-intensive Metal apps in iOS and tvOS. Create apps so they use as little memory as possible, making more memory available for other apps and system services.
+
+iOS and tvOS monitor your app’s total memory usage at runtime, and if the amount exceeds a predetermined limit, the system terminates your app. This limit varies by device model, so test your app on all supported devices.
+
+<a id="Optimize-memory-usage-in-your-Metal-app"></a>
+
+### Optimize memory usage in your Metal app
+
+Here are some tips to understand how your Metal app is using memory, and best practices to reduce memory usage.
+
+**Measure memory consumption with Xcode 11 and later.** Build your app with the iOS or tvOS SDK, then use Xcode Memory Report to observe your app’s total memory footprint during execution. For more information about Xcode Memory Report, see [Gathering information about memory use](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use).
+
+**Use these tools to gain a deeper understanding of your app’s memory footprint.**
+
+- Take an [Instruments](https://help.apple.com/instruments/mac/current/#//apple_ref/doc/uid/TP40004652-CH19-SW13) trace and look at the Metal Resource Allocations Instrument, which is part of the Metal System Trace template. For more information on working with the Metal Resource Allocations Instrument, see [Delivering Optimized Metal Apps and Games](https://developer.apple.com/videos/play/wwdc2019/606/?time=1726).
+- Capture a GPU trace with [Metal debugger](https://developer.apple.com/documentation/xcode/metal-debugger) and see a visual representation of all of a frame’s GPU resources and a table of properties for each resource with the Memory view. For detailed information about the Memory view, see [Delivering Optimized Metal Apps and Games](https://developer.apple.com/videos/play/wwdc2019/606/?time=1665).
+- Observe and take action on suggestions highlighted in the Memory insights section of the GPU trace summary. For more information on Memory insights, see [Gain insights into your Metal app with Xcode 12](https://developer.apple.com/videos/play/wwdc2020-10605/?time=620).
+- Use the memory graph tool to help identify leaks and abandoned memory. For more information, see [Memory Graph Debugging](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/special_debugging_workflows.html#//apple_ref/doc/uid/TP40015022-CH9-DontLinkElementID_1).
+- Query the amount of memory available to your app at runtime using the [os_proc_available_memory](../os/os_proc_available_memory.md) API to help you identify memory spikes.
+
+**Make your assets as small as possible.** Avoid loading a large resource when a smaller one works. Use compressed texture formats. Load lower-resolution textures when running on memory-constrained devices. Consider reducing the fidelity of 3D models and compressing per-vertex data.
+
+**Simplify memory-intensive special effects.** Some effects, like shadows or motion blur, require large offscreen buffers for temporary image data. Consider lowering the resolution of these image buffers or applying fewer effects when running on memory-constrained devices.
+
+**Avoid loading unused resources.** Xcode can help you identify Metal objects that aren’t in use. Use Metal Debugger to get a GPU trace. Then navigate to the Memory view, and select the Unused filter.
+
+**Designate resources as volatile when possible.** Use [MTLPurgeableState.volatile](mtlpurgeablestate/volatile.md) and [setPurgeableState(\_:)](mtlresource/setpurgeablestate%28__%29.md) for textures and buffers the operating system can safely discard under low-memory conditions, and be subsequently recreated or reloaded by your app as needed. This design means your app keeps a cache of idle resources in memory but doesn’t count them toward the memory limit.
+
+**Use memoryless texture storage for temporary-render targets.** [MTLStorageMode.memoryless](mtlstoragemode/memoryless.md) avoids allocating regular system memory, allowing apps to store the contents of temporary render targets directly in tile memory on the GPU.
+
+**Use Metal resource heaps.** Using [MTLHeap](mtlheap.md), your app can have Multiple Metal resources backed by the same memory allocation. For example, use resource heaps when transient resources are produced and consumed for each frame but aren’t all used together. Those not used together share the same memory, backed by a heap.
+
+<a id="Additional-resources"></a>
+
+### Additional resources
+
+The WWDC video [Gain insights into your Metal app with Xcode 12](https://developer.apple.com/videos/play/wwdc2020/10605/) provides additional information about the latest memory-debugging tools and best practices to help you optimize the memory footprint of your Metal apps and games.
+
+## See Also
+
+### Resource management
+
+- [Setting resource storage modes](setting-resource-storage-modes.md): Set a storage mode that defines the memory location and access permissions of a resource.
+- [Choosing a resource storage mode for Apple GPUs](choosing-a-resource-storage-mode-for-apple-gpus.md): Select an appropriate storage mode for your textures and buffers on Apple GPUs.
+- [Choosing a resource storage mode for Intel and AMD GPUs](choosing-a-resource-storage-mode-for-intel-and-amd-gpus.md): Select an appropriate storage mode for your textures and buffers on AMD and Intel GPUs.
+- [Copying data to a private resource](copying-data-to-a-private-resource.md): Use a blit command encoder to copy buffer or texture data to a private resource.
+- [Synchronizing a managed resource in macOS](synchronizing-a-managed-resource-in-macos.md): Manually synchronize memory for a Metal resource in apps.
+- [Transferring data between connected GPUs](transferring-data-between-connected-gpus.md): Use high-speed connections between GPUs to transfer data quickly.
+
+# Reducing the memory footprint of Metal apps (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Article
+
+Learn best practices for using memory efficiently in iOS and tvOS.
+
+<a id="overview"></a>
+
+## Overview
+
+Efficient memory usage is a critical consideration for resource-intensive Metal apps in iOS and tvOS. Create apps so they use as little memory as possible, making more memory available for other apps and system services.
+
+iOS and tvOS monitor your app’s total memory usage at runtime, and if the amount exceeds a predetermined limit, the system terminates your app. This limit varies by device model, so test your app on all supported devices.
+
+<a id="Optimize-memory-usage-in-your-Metal-app"></a>
+
+### Optimize memory usage in your Metal app
+
+Here are some tips to understand how your Metal app is using memory, and best practices to reduce memory usage.
+
+**Measure memory consumption with Xcode 11 and later.** Build your app with the iOS or tvOS SDK, then use Xcode Memory Report to observe your app’s total memory footprint during execution. For more information about Xcode Memory Report, see [Gathering information about memory use](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use).
+
+**Use these tools to gain a deeper understanding of your app’s memory footprint.**
+
+- Take an [Instruments](https://help.apple.com/instruments/mac/current/#//apple_ref/doc/uid/TP40004652-CH19-SW13) trace and look at the Metal Resource Allocations Instrument, which is part of the Metal System Trace template. For more information on working with the Metal Resource Allocations Instrument, see [Delivering Optimized Metal Apps and Games](https://developer.apple.com/videos/play/wwdc2019/606/?time=1726).
+- Capture a GPU trace with [Metal debugger](https://developer.apple.com/documentation/xcode/metal-debugger) and see a visual representation of all of a frame’s GPU resources and a table of properties for each resource with the Memory view. For detailed information about the Memory view, see [Delivering Optimized Metal Apps and Games](https://developer.apple.com/videos/play/wwdc2019/606/?time=1665).
+- Observe and take action on suggestions highlighted in the Memory insights section of the GPU trace summary. For more information on Memory insights, see [Gain insights into your Metal app with Xcode 12](https://developer.apple.com/videos/play/wwdc2020-10605/?time=620).
+- Use the memory graph tool to help identify leaks and abandoned memory. For more information, see [Memory Graph Debugging](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/special_debugging_workflows.html#//apple_ref/doc/uid/TP40015022-CH9-DontLinkElementID_1).
+- Query the amount of memory available to your app at runtime using the [os_proc_available_memory](../os/os_proc_available_memory.md) API to help you identify memory spikes.
+
+**Make your assets as small as possible.** Avoid loading a large resource when a smaller one works. Use compressed texture formats. Load lower-resolution textures when running on memory-constrained devices. Consider reducing the fidelity of 3D models and compressing per-vertex data.
+
+**Simplify memory-intensive special effects.** Some effects, like shadows or motion blur, require large offscreen buffers for temporary image data. Consider lowering the resolution of these image buffers or applying fewer effects when running on memory-constrained devices.
+
+**Avoid loading unused resources.** Xcode can help you identify Metal objects that aren’t in use. Use Metal Debugger to get a GPU trace. Then navigate to the Memory view, and select the Unused filter.
+
+**Designate resources as volatile when possible.** Use [MTLPurgeableStateVolatile](mtlpurgeablestate/volatile.md) and [setPurgeableState:](mtlresource/setpurgeablestate%28__%29.md) for textures and buffers the operating system can safely discard under low-memory conditions, and be subsequently recreated or reloaded by your app as needed. This design means your app keeps a cache of idle resources in memory but doesn’t count them toward the memory limit.
+
+**Use memoryless texture storage for temporary-render targets.** [MTLStorageModeMemoryless](mtlstoragemode/memoryless.md) avoids allocating regular system memory, allowing apps to store the contents of temporary render targets directly in tile memory on the GPU.
+
+**Use Metal resource heaps.** Using [MTLHeap](mtlheap.md), your app can have Multiple Metal resources backed by the same memory allocation. For example, use resource heaps when transient resources are produced and consumed for each frame but aren’t all used together. Those not used together share the same memory, backed by a heap.
+
+<a id="Additional-resources"></a>
+
+### Additional resources
+
+The WWDC video [Gain insights into your Metal app with Xcode 12](https://developer.apple.com/videos/play/wwdc2020/10605/) provides additional information about the latest memory-debugging tools and best practices to help you optimize the memory footprint of your Metal apps and games.
+
+## See Also
+
+### Resource management
+
+- [Setting resource storage modes](setting-resource-storage-modes.md): Set a storage mode that defines the memory location and access permissions of a resource.
+- [Choosing a resource storage mode for Apple GPUs](choosing-a-resource-storage-mode-for-apple-gpus.md): Select an appropriate storage mode for your textures and buffers on Apple GPUs.
+- [Choosing a resource storage mode for Intel and AMD GPUs](choosing-a-resource-storage-mode-for-intel-and-amd-gpus.md): Select an appropriate storage mode for your textures and buffers on AMD and Intel GPUs.
+- [Copying data to a private resource](copying-data-to-a-private-resource.md): Use a blit command encoder to copy buffer or texture data to a private resource.
+- [Synchronizing a managed resource in macOS](synchronizing-a-managed-resource-in-macos.md): Manually synchronize memory for a Metal resource in apps.
+- [Transferring data between connected GPUs](transferring-data-between-connected-gpus.md): Use high-speed connections between GPUs to transfer data quickly.
+
+# Document: Render pass configuration
+
+Source path: documentation/metal/render-pass-configuration
+Canonical documentation: https://developer.apple.com/documentation/metal/render-pass-configuration
+Description: Framework: Metal Kind: API Collection
+
+# Render pass configuration (Swift)
+
+**Framework:** Metal  
+**Kind:** API Collection
+
+Set a render pass’s pipeline state, attachment actions, viewports, and so on, that affect subsequent drawing commands.
+
+<a id="overview"></a>
+
+## Overview
+
+These methods encode commands that configure the render pass for all subsequent drawing commands. The most important configuration is the pipeline state (see [MTLRenderPipelineState](mtlrenderpipelinestate.md)), which you configure by calling the [setRenderPipelineState(\_:)](mtlrendercommandencoder/setrenderpipelinestate%28__%29.md) method.
+
+## Topics
+
+### Configuring pipeline state
+
+- [setRenderPipelineState(\_:)](mtlrendercommandencoder/setrenderpipelinestate%28__%29.md): Configures the encoder with a render or tile pipeline state that applies to your subsequent draw commands.
+
+### Configuring the actions for attachments
+
+- [setColorStoreAction(\_:index:)](mtlrendercommandencoder/setcolorstoreaction%28__index_%29.md): Configures the store action for a color attachment.
+- [setColorStoreActionOptions(\_:index:)](mtlrendercommandencoder/setcolorstoreactionoptions%28__index_%29.md): Deprecated. Configures the store action options for a color attachment.
+- [setDepthStoreAction(\_:)](mtlrendercommandencoder/setdepthstoreaction%28__%29.md): Configures the store action for the depth attachment.
+- [setDepthStoreActionOptions(\_:)](mtlrendercommandencoder/setdepthstoreactionoptions%28__%29.md): Deprecated. Configures the store action options for the depth attachment.
+- [setStencilStoreAction(\_:)](mtlrendercommandencoder/setstencilstoreaction%28__%29.md): Configures the store action for the stencil attachment.
+- [setStencilStoreActionOptions(\_:)](mtlrendercommandencoder/setstencilstoreactionoptions%28__%29.md): Deprecated. Configures the store action options for the stencil attachment.
+
+### Configuring blend behavior
+
+- [setBlendColor(red:green:blue:alpha:)](mtlrendercommandencoder/setblendcolor%28red_green_blue_alpha_%29.md): Configures each pixel component value, including alpha, for the render pipeline’s constant blend color.
+- [setColorAttachmentMap(\_:)](mtlrendercommandencoder/setcolorattachmentmap%28__%29.md): Sets the mapping from logical shader color output to physical render pass color attachments.
+
+### Configuring rendering behavior
+
+- [setTriangleFillMode(\_:)](mtlrendercommandencoder/settrianglefillmode%28__%29.md): Configures how subsequent draw commands rasterize triangle and triangle strip primitives.
+- [setFrontFacing(\_:)](mtlrendercommandencoder/setfrontfacing%28__%29.md): Configures which face of a primitive, such as a triangle, is the front.
+- [setCullMode(\_:)](mtlrendercommandencoder/setcullmode%28__%29.md): Configures how the render pipeline determines which primitives to remove.
+
+### Configuring depth and stencil behavior
+
+- [setDepthStencilState(\_:)](mtlrendercommandencoder/setdepthstencilstate%28__%29.md): Configures the combined depth and stencil state.
+- [setDepthBias(\_:slopeScale:clamp:)](mtlrendercommandencoder/setdepthbias%28__slopescale_clamp_%29.md): Configures the adjustments a render pass applies to depth values from fragment functions by a scaling factor and bias.
+- [setDepthClipMode(\_:)](mtlrendercommandencoder/setdepthclipmode%28__%29.md): Configures how the render pipeline handles fragments outside the near and far planes of the view frustum.
+- [setDepthTestBounds(\_:)](mtlrendercommandencoder/setdepthtestbounds%28__%29.md): Configures the range for depth bounds testing.
+- [setStencilReferenceValue(\_:)](mtlrendercommandencoder/setstencilreferencevalue%28__%29.md): Configures the same comparison value for front- and back-facing primitives.
+- [setStencilReferenceValues(front:back:)](mtlrendercommandencoder/setstencilreferencevalues%28front_back_%29.md): Configures different comparison values for front- and back-facing primitives.
+
+### Configuring viewport and scissor behavior
+
+- [setViewport(\_:)](mtlrendercommandencoder/setviewport%28__%29.md): Configures the render pipeline with a viewport that applies a transformation and a clipping rectangle.
+- [setViewports(\_:)](mtlrendercommandencoder/setviewports%28__%29.md): Configures the render pipeline with multiple viewports that apply transformations and clipping rectangles.
+- [setScissorRect(\_:)](mtlrendercommandencoder/setscissorrect%28__%29.md): Configures a rectangle for the fragment scissor test.
+- [setScissorRects(\_:)](mtlrendercommandencoder/setscissorrects%28__%29.md): Configures multiple rectangles for the fragment scissor test.
+
+### Configuring visibility testing
+
+- [setVisibilityResultMode(\_:offset:)](mtlrendercommandencoder/setvisibilityresultmode%28__offset_%29.md): Configures which visibility test the GPU runs and the destination for any results it generates.
+
+### Configuring vertex amplification
+
+- [setVertexAmplificationCount(\_:viewMappings:)](mtlrendercommandencoder/setvertexamplificationcount%28__viewmappings_%29.md): Configures the number of output vertices the render pipeline produces for each input vertex, optionally with render target and viewport offsets.
+
+### Configuring tessellation factors
+
+- [setTessellationFactorScale(\_:)](mtlrendercommandencoder/settessellationfactorscale%28__%29.md): Configures the scale factor for per-patch tessellation factors.
+- [setTessellationFactorBuffer(\_:offset:instanceStride:)](mtlrendercommandencoder/settessellationfactorbuffer%28__offset_instancestride_%29.md): Configures the per-patch tessellation factors for any subsequent patch-drawing commands.
+
+### Configuring persistent threadgroup memory
+
+- [setObjectThreadgroupMemoryLength(\_:index:)](mtlrendercommandencoder/setobjectthreadgroupmemorylength%28__index_%29.md): Configures the size of a threadgroup memory buffer for an entry in the object argument table.
+- [setThreadgroupMemoryLength(\_:offset:index:)](mtlrendercommandencoder/setthreadgroupmemorylength%28__offset_index_%29.md): Configures the size of a threadgroup memory buffer for an entry in the fragment or tile shader argument table.
+
+# Render pass configuration (Objective-C)
+
+**Framework:** Metal  
+**Kind:** API Collection
+
+Set a render pass’s pipeline state, attachment actions, viewports, and so on, that affect subsequent drawing commands.
+
+<a id="overview"></a>
+
+## Overview
+
+These methods encode commands that configure the render pass for all subsequent drawing commands. The most important configuration is the pipeline state (see [MTLRenderPipelineState](mtlrenderpipelinestate.md)), which you configure by calling the [setRenderPipelineState:](mtlrendercommandencoder/setrenderpipelinestate%28__%29.md) method.
+
+## Topics
+
+### Configuring pipeline state
+
+- [setRenderPipelineState:](mtlrendercommandencoder/setrenderpipelinestate%28__%29.md): Configures the encoder with a render or tile pipeline state that applies to your subsequent draw commands.
+
+### Configuring the actions for attachments
+
+- [setColorStoreAction:atIndex:](mtlrendercommandencoder/setcolorstoreaction%28__index_%29.md): Configures the store action for a color attachment.
+- [setColorStoreActionOptions:atIndex:](mtlrendercommandencoder/setcolorstoreactionoptions%28__index_%29.md): Deprecated. Configures the store action options for a color attachment.
+- [setDepthStoreAction:](mtlrendercommandencoder/setdepthstoreaction%28__%29.md): Configures the store action for the depth attachment.
+- [setDepthStoreActionOptions:](mtlrendercommandencoder/setdepthstoreactionoptions%28__%29.md): Deprecated. Configures the store action options for the depth attachment.
+- [setStencilStoreAction:](mtlrendercommandencoder/setstencilstoreaction%28__%29.md): Configures the store action for the stencil attachment.
+- [setStencilStoreActionOptions:](mtlrendercommandencoder/setstencilstoreactionoptions%28__%29.md): Deprecated. Configures the store action options for the stencil attachment.
+
+### Configuring blend behavior
+
+- [setBlendColorRed:green:blue:alpha:](mtlrendercommandencoder/setblendcolor%28red_green_blue_alpha_%29.md): Configures each pixel component value, including alpha, for the render pipeline’s constant blend color.
+- [setColorAttachmentMap:](mtlrendercommandencoder/setcolorattachmentmap%28__%29.md): Sets the mapping from logical shader color output to physical render pass color attachments.
+
+### Configuring rendering behavior
+
+- [setTriangleFillMode:](mtlrendercommandencoder/settrianglefillmode%28__%29.md): Configures how subsequent draw commands rasterize triangle and triangle strip primitives.
+- [setFrontFacingWinding:](mtlrendercommandencoder/setfrontfacing%28__%29.md): Configures which face of a primitive, such as a triangle, is the front.
+- [setCullMode:](mtlrendercommandencoder/setcullmode%28__%29.md): Configures how the render pipeline determines which primitives to remove.
+
+### Configuring depth and stencil behavior
+
+- [setDepthStencilState:](mtlrendercommandencoder/setdepthstencilstate%28__%29.md): Configures the combined depth and stencil state.
+- [setDepthBias:slopeScale:clamp:](mtlrendercommandencoder/setdepthbias%28__slopescale_clamp_%29.md): Configures the adjustments a render pass applies to depth values from fragment functions by a scaling factor and bias.
+- [setDepthClipMode:](mtlrendercommandencoder/setdepthclipmode%28__%29.md): Configures how the render pipeline handles fragments outside the near and far planes of the view frustum.
+- [setDepthTestMinBound:maxBound:](mtlrendercommandencoder/setdepthtestminbound_maxbound_.md): Configures the minimum and maximum bounds for depth bounds testing.
+- [setStencilReferenceValue:](mtlrendercommandencoder/setstencilreferencevalue%28__%29.md): Configures the same comparison value for front- and back-facing primitives.
+- [setStencilFrontReferenceValue:backReferenceValue:](mtlrendercommandencoder/setstencilreferencevalues%28front_back_%29.md): Configures different comparison values for front- and back-facing primitives.
+
+### Configuring viewport and scissor behavior
+
+- [setViewport:](mtlrendercommandencoder/setviewport%28__%29.md): Configures the render pipeline with a viewport that applies a transformation and a clipping rectangle.
+- [setViewports:count:](mtlrendercommandencoder/setviewports_count_.md): Configures the render pipeline with multiple viewports that apply transformations and clipping rectangles.
+- [setScissorRect:](mtlrendercommandencoder/setscissorrect%28__%29.md): Configures a rectangle for the fragment scissor test.
+- [setScissorRects:count:](mtlrendercommandencoder/setscissorrects_count_.md): Configures multiple rectangles for the fragment scissor test.
+
+### Configuring visibility testing
+
+- [setVisibilityResultMode:offset:](mtlrendercommandencoder/setvisibilityresultmode%28__offset_%29.md): Configures which visibility test the GPU runs and the destination for any results it generates.
+
+### Configuring vertex amplification
+
+- [setVertexAmplificationCount:viewMappings:](mtlrendercommandencoder/setvertexamplificationcount%28__viewmappings_%29.md): Configures the number of output vertices the render pipeline produces for each input vertex, optionally with render target and viewport offsets.
+
+### Configuring tessellation factors
+
+- [setTessellationFactorScale:](mtlrendercommandencoder/settessellationfactorscale%28__%29.md): Configures the scale factor for per-patch tessellation factors.
+- [setTessellationFactorBuffer:offset:instanceStride:](mtlrendercommandencoder/settessellationfactorbuffer%28__offset_instancestride_%29.md): Configures the per-patch tessellation factors for any subsequent patch-drawing commands.
+
+### Configuring persistent threadgroup memory
+
+- [setObjectThreadgroupMemoryLength:atIndex:](mtlrendercommandencoder/setobjectthreadgroupmemorylength%28__index_%29.md): Configures the size of a threadgroup memory buffer for an entry in the object argument table.
+- [setThreadgroupMemoryLength:offset:atIndex:](mtlrendercommandencoder/setthreadgroupmemorylength%28__offset_index_%29.md): Configures the size of a threadgroup memory buffer for an entry in the fragment or tile shader argument table.
+
+# Document: Render passes
+
+Source path: documentation/metal/render-passes
+Canonical documentation: https://developer.apple.com/documentation/metal/render-passes
+Description: Framework: Metal Kind: API Collection
+
+# Render passes (Swift)
+
+**Framework:** Metal  
+**Kind:** API Collection
+
+Encode a render pass to draw graphics into an image.
+
+<a id="overview"></a>
+
+## Overview
+
+A render pass processes and rasterizes geometry to one or more output attachments using a render pipeline.
+
+Render passes consist of:
+
+- A set of input resources, such as buffers and textures
+- A render pipeline that configures the GPU that does work with the input resources
+- Draw commands
+- Vertex shaders, the GPU core functions that process and transform a scene’s geometry
+- An optional tessellation stage that adds fine details to a scene’s geometry
+- Fragment shaders, the GPU core functions that produce the final color values for each pixel
+- Optional outputs that can include color, depth, and stencil attachments, and their load and store operations
+
+See the [Customizing render pass setup](customizing-render-pass-setup.md) sample for implementation details.
+
+## Topics
+
+### Encoding a render pass
+
+- [MTL4RenderCommandEncoder](mtl4rendercommandencoder.md): Encodes configuration and draw commands for a single render pass into a command buffer.
+- [MTLRenderCommandEncoder](mtlrendercommandencoder.md): Encodes configuration and draw commands for a single render pass into a command buffer.
+- [MTL4RenderEncoderOptions](mtl4renderencoderoptions.md): Custom render pass options you specify at encoder creation time.
+- [MTLTriangleFillMode](mtltrianglefillmode.md): Specifies how to rasterize triangle and triangle strip primitives.
+- [MTLWinding](mtlwinding.md): The vertex winding rule that determines a front-facing primitive.
+- [MTLCullMode](mtlcullmode.md): The mode that determines whether to perform culling and which type of primitive to cull.
+- [MTLPrimitiveType](mtlprimitivetype.md): The geometric primitive type for drawing commands.
+- [MTLIndexType](mtlindextype.md): The index type for an index buffer that references vertices of geometric primitives.
+- [MTLDepthClipMode](mtldepthclipmode.md): The mode that determines how to deal with fragments outside of the near or far planes.
+- [MTLVisibilityResultMode](mtlvisibilityresultmode.md): The mode that determines what, if anything, the GPU writes to the results buffer, after the GPU executes the render pass.
+- [MTLVisibilityResultType](mtlvisibilityresulttype.md): Actions for visibility results between render passes.
+
+### Encoding a render pass in parallel
+
+- [MTLParallelRenderCommandEncoder](mtlparallelrendercommandencoder.md): An instance that splits up a single render pass so that it can be simultaneously encoded from multiple threads.
+- [MTLLoadAction](mtlloadaction.md): Types of actions performed for an attachment at the start of a rendering pass.
+- [MTLStoreAction](mtlstoreaction.md): Types of actions performed for an attachment at the end of a rendering pass.
+- [MTLStoreActionOptions](mtlstoreactionoptions.md): Deprecated. Options that modify a store action.
+
+### Configuring a render command encoder
+
+- [MTL4RenderPassDescriptor](mtl4renderpassdescriptor.md): Describes a render pass.
+- [MTLRenderPassDescriptor](mtlrenderpassdescriptor.md): A group of render targets that hold the results of a render pass.
+- [MTLRenderPassAttachmentDescriptor](mtlrenderpassattachmentdescriptor.md): A render target that serves as the output destination for pixels generated by a render pass.
+- [MTLRenderPassColorAttachmentDescriptorArray](mtlrenderpasscolorattachmentdescriptorarray.md): An array of render pass color attachment descriptor objects.
+- [MTLRenderPassColorAttachmentDescriptor](mtlrenderpasscolorattachmentdescriptor.md): A color render target that serves as the output destination for color pixels generated by a render pass.
+- [MTLClearColor](mtlclearcolor.md): An RGBA value used for a color pixel.
+- [MTLRenderPassDepthAttachmentDescriptor](mtlrenderpassdepthattachmentdescriptor.md): A depth render target that serves as the output destination for depth pixels generated by a render pass.
+- [MTLMultisampleDepthResolveFilter](mtlmultisampledepthresolvefilter.md): Filtering options for controlling an MSAA depth resolve operation.
+- [MTL4RenderPipelineColorAttachmentDescriptorArray](mtl4renderpipelinecolorattachmentdescriptorarray.md): An array of color attachment descriptions for a render pipeline.
+- [MTLTileRenderPipelineColorAttachmentDescriptorArray](mtltilerenderpipelinecolorattachmentdescriptorarray.md): An array of color attachment descriptors for the tile render pipeline.
+- [MTLRenderPassStencilAttachmentDescriptor](mtlrenderpassstencilattachmentdescriptor.md): A stencil render target that serves as the output destination for stencil pixels generated by a render pass.
+- [MTLMultisampleStencilResolveFilter](mtlmultisamplestencilresolvefilter.md): Constants used to control the multisample stencil resolve operation.
+- [MTLRenderPassSampleBufferAttachmentDescriptorArray](mtlrenderpasssamplebufferattachmentdescriptorarray.md): An array of sample buffer attachments for a render pass.
+- [MTLRenderPassSampleBufferAttachmentDescriptor](mtlrenderpasssamplebufferattachmentdescriptor.md): A description of where to store GPU counter information at the start and end of a render pass.
+- [MTLLogicalToPhysicalColorAttachmentMap](mtllogicaltophysicalcolorattachmentmap.md): Allows you to easily specify color attachment remapping from logical to physical indices.
+- [MTLDispatchThreadsIndirectArguments](mtldispatchthreadsindirectarguments.md)
+
+### Render pipeline states
+
+- [MTLRenderPipelineState](mtlrenderpipelinestate.md): An interface that represents a graphics pipeline configuration for a render pass, which the pass applies to the draw commands you encode.
+- [MTL4RenderPipelineDescriptor](mtl4renderpipelinedescriptor.md): Groups together properties to create a render pipeline state object.
+- [MTLRenderPipelineDescriptor](mtlrenderpipelinedescriptor.md): An argument of options you pass to a GPU device to get a render pipeline state.
+- [MTLRenderPipelineFunctionsDescriptor](mtlrenderpipelinefunctionsdescriptor.md): A collection of functions for updating a render pipeline.
+- [MTL4MeshRenderPipelineDescriptor](mtl4meshrenderpipelinedescriptor.md): Groups together properties you use to create a mesh render pipeline state object.
+- [MTLMeshRenderPipelineDescriptor](mtlmeshrenderpipelinedescriptor.md): An object that configures new render pipeline state objects for mesh shading.
+- [MTLPipelineBufferDescriptor](mtlpipelinebufferdescriptor.md): The mutability options for a buffer that a render or compute pipeline uses.
+- [MTLPipelineBufferDescriptorArray](mtlpipelinebufferdescriptorarray.md): An array of pipeline buffer descriptors.
+- [MTL4RenderPipelineColorAttachmentDescriptor](mtl4renderpipelinecolorattachmentdescriptor.md)
+- [MTLRenderPipelineColorAttachmentDescriptor](mtlrenderpipelinecolorattachmentdescriptor.md): A color render target that specifies the color configuration and color operations for a render pipeline.
+- [MTLRenderPipelineColorAttachmentDescriptorArray](mtlrenderpipelinecolorattachmentdescriptorarray.md): An array of render pipeline color attachment descriptor objects.
+- [MTL4TileRenderPipelineDescriptor](mtl4tilerenderpipelinedescriptor.md): Groups together properties you use to create a tile render pipeline state object.
+- [MTLTileRenderPipelineDescriptor](mtltilerenderpipelinedescriptor.md): An object that configures new render pipeline state objects for tile shading.
+- [MTLTileRenderPipelineColorAttachmentDescriptor](mtltilerenderpipelinecolorattachmentdescriptor.md): A description of a tile-shading render pipeline’s color render target.
+- [MTLPipelineOption](mtlpipelineoption.md): Options that determine how Metal prepares the pipeline.
+- [MTL4RenderPipelineBinaryFunctionsDescriptor](mtl4renderpipelinebinaryfunctionsdescriptor.md): Allows you to specify additional binary functions to link to each stage of a render pipeline.
+- [MTL4RenderPipelineDynamicLinkingDescriptor](mtl4renderpipelinedynamiclinkingdescriptor.md): Groups together properties that provide linking properties for render pipelines.
+
+### Dynamic render pipeline states
+
+- [MTLViewport](mtlviewport.md): A 3D rectangular region for the viewport clipping.
+- [MTLScissorRect](mtlscissorrect.md): A rectangle for the scissor fragment test.
+- [MTLVertexAmplificationViewMapping](mtlvertexamplificationviewmapping.md): An offset applied to a render target index and viewport index.
+- [MTLQuadTessellationFactorsHalf](mtlquadtessellationfactorshalf.md): The per-patch tessellation factors for a quad patch.
+- [MTLTriangleTessellationFactorsHalf](mtltriangletessellationfactorshalf.md): The per-patch tessellation factors for a triangle patch.
+
+### Render pass inputs
+
+- [MTLVertexDescriptor](mtlvertexdescriptor.md): An instance that describes how to organize and map data to a vertex function.
+- [MTLVertexAttributeDescriptor](mtlvertexattributedescriptor.md): An object that determines how to store attribute data in memory and map it to the arguments of a vertex function.
+- [MTLVertexAttributeDescriptorArray](mtlvertexattributedescriptorarray.md): An array of vertex attribute descriptor instances.
+- [MTLVertexBufferLayoutDescriptor](mtlvertexbufferlayoutdescriptor.md): An object that configures how a render pipeline fetches data to send to the vertex function.
+- [MTLVertexBufferLayoutDescriptorArray](mtlvertexbufferlayoutdescriptorarray.md): An array of vertex buffer layout descriptor instances.
+- [MTLBufferLayoutStrideDynamic](mtlbufferlayoutstridedynamic.md)
+
+### Render pass outputs
+
+- [MTLDrawable](mtldrawable.md): A displayable resource that can be rendered or written to.
+- [MTLDrawablePresentedHandler](mtldrawablepresentedhandler.md): A block of code invoked after a drawable is presented.
+
+### Depth testing
+
+- [Calculating primitive visibility using depth testing](calculating-primitive-visibility-using-depth-testing.md): Determine which pixels are visible in a scene by using a depth texture.
+- [MTLDepthStencilState](mtldepthstencilstate.md): A depth and stencil state instance that specifies the depth and stencil configuration and operations used in a render pass.
+- [MTLDepthStencilDescriptor](mtldepthstencildescriptor.md): An instance that configures new [MTLDepthStencilState](mtldepthstencilstate.md) instances.
+- [MTLStencilDescriptor](mtlstencildescriptor.md): An object that defines the front-facing or back-facing stencil operations of a depth and stencil state object.
+
+### Rasterization settings
+
+- [Rendering at different rasterization rates](rendering-at-different-rasterization-rates.md): Configure a rasterization rate map to vary rasterization rates depending on the amount of detail needed.
+- [Creating a rasterization rate map](creating-a-rasterization-rate-map.md): Define the rasterization rates for each part of your render target.
+- [Rendering with a rasterization rate map](rendering-with-a-rasterization-rate-map.md): Create offscreen textures to hold intermediate rasterized data.
+- [Scaling variable rasterization rate content](scaling-variable-rasterization-rate-content.md): Use the rate map data to scale the content to fill your destination texture.
+- [MTLRasterizationRateMapDescriptor](mtlrasterizationratemapdescriptor.md): An object that you use to configure new rasterization rate maps.
+- [MTLRasterizationRateMap](mtlrasterizationratemap.md): A compiled read-only instance that determines how to apply variable rasterization rates when rendering.
+- [MTLCoordinate2D](mtlcoordinate2d.md): A coordinate in the viewport.
+- [MTLCoordinate2DMake(\_:\_:)](mtlcoordinate2dmake%28____%29.md): Returns a new 2D point with the specified coordinates.
+
+### Optimizing techniques
+
+- [Specifying drawing and dispatch arguments indirectly](specifying-drawing-and-dispatch-arguments-indirectly.md): Use indirect commands if you don’t know your draw or dispatch call arguments when you encode the command.
+- [Rendering to multiple viewports in a draw command](rendering-to-multiple-viewports-in-a-draw-command.md): Select viewports and their corresponding scissor rectangles in your vertex shader.
+- [Rendering to multiple texture slices in a draw command](rendering-to-multiple-texture-slices-in-a-draw-command.md): Select a destination texture slice in your vertex shader.
+
+### Advanced multisampling
+
+- [Positioning samples programmatically](positioning-samples-programmatically.md): Configure the position of samples when rendering to a multisampled render target.
+- [Storing data a pass makes with custom sample positions for a subsequent pass](storing-data-a-pass-makes-with-custom-sample-positions-for-a-subsequent-pass.md): Inform Metal when your app uses programmable sample positions for its depth render targets or copies MSAA depth data.
+
+### Applying rendering techniques
+
+- [Drawing a triangle with Metal 4](drawing-a-triangle-with-metal-4.md): Render a colorful, rotating 2D triangle by running draw commands with a render pipeline on a GPU.
+- [Customizing render pass setup](customizing-render-pass-setup.md): Render into an offscreen texture by creating a custom render pass.
+- [Setting load and store actions](setting-load-and-store-actions.md): Set actions that define how a render pass loads and stores a render target.
+- [Improving rendering performance with vertex amplification](improving-rendering-performance-with-vertex-amplification.md): Run draw commands that render to different outputs using the same vertex data multiple times.
+
+## See Also
+
+### Command encoders
+
+- [Compute passes](compute-passes.md): Encode a compute pass that runs computations in parallel on a thread grid, processing and manipulating Metal resource data on multiple cores of a GPU.
+- [Machine learning passes](machine-learning-passes.md): Add machine learning model inference to your Metal app’s GPU workflow.
+- [Blit passes](blit-passes.md): Encode a block information transfer pass to adjust and copy data to and from GPU resources, such as buffers and textures.
+- [Indirect command encoding](indirect-command-encoding.md): Store draw commands in Metal buffers and run them at a later time on the GPU, either once or repeatedly.
+- [Ray tracing with acceleration structures](ray-tracing-with-acceleration-structures.md): Build a representation of your scene’s geometry using triangles and bounding volumes to quickly trace rays through the scene.
+
+# Render passes (Objective-C)
+
+**Framework:** Metal  
+**Kind:** API Collection
+
+Encode a render pass to draw graphics into an image.
+
+<a id="overview"></a>
+
+## Overview
+
+A render pass processes and rasterizes geometry to one or more output attachments using a render pipeline.
+
+Render passes consist of:
+
+- A set of input resources, such as buffers and textures
+- A render pipeline that configures the GPU that does work with the input resources
+- Draw commands
+- Vertex shaders, the GPU core functions that process and transform a scene’s geometry
+- An optional tessellation stage that adds fine details to a scene’s geometry
+- Fragment shaders, the GPU core functions that produce the final color values for each pixel
+- Optional outputs that can include color, depth, and stencil attachments, and their load and store operations
+
+See the [Customizing render pass setup](customizing-render-pass-setup.md) sample for implementation details.
+
+## Topics
+
+### Encoding a render pass
+
+- [MTL4RenderCommandEncoder](mtl4rendercommandencoder.md): Encodes configuration and draw commands for a single render pass into a command buffer.
+- [MTLRenderCommandEncoder](mtlrendercommandencoder.md): Encodes configuration and draw commands for a single render pass into a command buffer.
+- [MTL4RenderEncoderOptions](mtl4renderencoderoptions.md): Custom render pass options you specify at encoder creation time.
+- [MTLTriangleFillMode](mtltrianglefillmode.md): Specifies how to rasterize triangle and triangle strip primitives.
+- [MTLWinding](mtlwinding.md): The vertex winding rule that determines a front-facing primitive.
+- [MTLCullMode](mtlcullmode.md): The mode that determines whether to perform culling and which type of primitive to cull.
+- [MTLPrimitiveType](mtlprimitivetype.md): The geometric primitive type for drawing commands.
+- [MTLIndexType](mtlindextype.md): The index type for an index buffer that references vertices of geometric primitives.
+- [MTLDepthClipMode](mtldepthclipmode.md): The mode that determines how to deal with fragments outside of the near or far planes.
+- [MTLVisibilityResultMode](mtlvisibilityresultmode.md): The mode that determines what, if anything, the GPU writes to the results buffer, after the GPU executes the render pass.
+- [MTLVisibilityResultType](mtlvisibilityresulttype.md): Actions for visibility results between render passes.
+
+### Encoding a render pass in parallel
+
+- [MTLParallelRenderCommandEncoder](mtlparallelrendercommandencoder.md): An instance that splits up a single render pass so that it can be simultaneously encoded from multiple threads.
+- [MTLLoadAction](mtlloadaction.md): Types of actions performed for an attachment at the start of a rendering pass.
+- [MTLStoreAction](mtlstoreaction.md): Types of actions performed for an attachment at the end of a rendering pass.
+- [MTLStoreActionOptions](mtlstoreactionoptions.md): Deprecated. Options that modify a store action.
+
+### Configuring a render command encoder
+
+- [MTL4RenderPassDescriptor](mtl4renderpassdescriptor.md): Describes a render pass.
+- [MTLRenderPassDescriptor](mtlrenderpassdescriptor.md): A group of render targets that hold the results of a render pass.
+- [MTLRenderPassAttachmentDescriptor](mtlrenderpassattachmentdescriptor.md): A render target that serves as the output destination for pixels generated by a render pass.
+- [MTLRenderPassColorAttachmentDescriptorArray](mtlrenderpasscolorattachmentdescriptorarray.md): An array of render pass color attachment descriptor objects.
+- [MTLRenderPassColorAttachmentDescriptor](mtlrenderpasscolorattachmentdescriptor.md): A color render target that serves as the output destination for color pixels generated by a render pass.
+- [MTLClearColor](mtlclearcolor.md): An RGBA value used for a color pixel.
+- [MTLRenderPassDepthAttachmentDescriptor](mtlrenderpassdepthattachmentdescriptor.md): A depth render target that serves as the output destination for depth pixels generated by a render pass.
+- [MTLMultisampleDepthResolveFilter](mtlmultisampledepthresolvefilter.md): Filtering options for controlling an MSAA depth resolve operation.
+- [MTL4RenderPipelineColorAttachmentDescriptorArray](mtl4renderpipelinecolorattachmentdescriptorarray.md): An array of color attachment descriptions for a render pipeline.
+- [MTLTileRenderPipelineColorAttachmentDescriptorArray](mtltilerenderpipelinecolorattachmentdescriptorarray.md): An array of color attachment descriptors for the tile render pipeline.
+- [MTLRenderPassStencilAttachmentDescriptor](mtlrenderpassstencilattachmentdescriptor.md): A stencil render target that serves as the output destination for stencil pixels generated by a render pass.
+- [MTLMultisampleStencilResolveFilter](mtlmultisamplestencilresolvefilter.md): Constants used to control the multisample stencil resolve operation.
+- [MTLRenderPassSampleBufferAttachmentDescriptorArray](mtlrenderpasssamplebufferattachmentdescriptorarray.md): An array of sample buffer attachments for a render pass.
+- [MTLRenderPassSampleBufferAttachmentDescriptor](mtlrenderpasssamplebufferattachmentdescriptor.md): A description of where to store GPU counter information at the start and end of a render pass.
+- [MTLLogicalToPhysicalColorAttachmentMap](mtllogicaltophysicalcolorattachmentmap.md): Allows you to easily specify color attachment remapping from logical to physical indices.
+- [MTLDispatchThreadsIndirectArguments](mtldispatchthreadsindirectarguments.md)
+
+### Render pipeline states
+
+- [MTLRenderPipelineState](mtlrenderpipelinestate.md): An interface that represents a graphics pipeline configuration for a render pass, which the pass applies to the draw commands you encode.
+- [MTL4RenderPipelineDescriptor](mtl4renderpipelinedescriptor.md): Groups together properties to create a render pipeline state object.
+- [MTLRenderPipelineDescriptor](mtlrenderpipelinedescriptor.md): An argument of options you pass to a GPU device to get a render pipeline state.
+- [MTLRenderPipelineFunctionsDescriptor](mtlrenderpipelinefunctionsdescriptor.md): A collection of functions for updating a render pipeline.
+- [MTL4MeshRenderPipelineDescriptor](mtl4meshrenderpipelinedescriptor.md): Groups together properties you use to create a mesh render pipeline state object.
+- [MTLMeshRenderPipelineDescriptor](mtlmeshrenderpipelinedescriptor.md): An object that configures new render pipeline state objects for mesh shading.
+- [MTLPipelineBufferDescriptor](mtlpipelinebufferdescriptor.md): The mutability options for a buffer that a render or compute pipeline uses.
+- [MTLPipelineBufferDescriptorArray](mtlpipelinebufferdescriptorarray.md): An array of pipeline buffer descriptors.
+- [MTL4RenderPipelineColorAttachmentDescriptor](mtl4renderpipelinecolorattachmentdescriptor.md)
+- [MTLRenderPipelineColorAttachmentDescriptor](mtlrenderpipelinecolorattachmentdescriptor.md): A color render target that specifies the color configuration and color operations for a render pipeline.
+- [MTLRenderPipelineColorAttachmentDescriptorArray](mtlrenderpipelinecolorattachmentdescriptorarray.md): An array of render pipeline color attachment descriptor objects.
+- [MTL4TileRenderPipelineDescriptor](mtl4tilerenderpipelinedescriptor.md): Groups together properties you use to create a tile render pipeline state object.
+- [MTLTileRenderPipelineDescriptor](mtltilerenderpipelinedescriptor.md): An object that configures new render pipeline state objects for tile shading.
+- [MTLTileRenderPipelineColorAttachmentDescriptor](mtltilerenderpipelinecolorattachmentdescriptor.md): A description of a tile-shading render pipeline’s color render target.
+- [MTLPipelineOption](mtlpipelineoption.md): Options that determine how Metal prepares the pipeline.
+- [MTL4RenderPipelineBinaryFunctionsDescriptor](mtl4renderpipelinebinaryfunctionsdescriptor.md): Allows you to specify additional binary functions to link to each stage of a render pipeline.
+- [MTL4RenderPipelineDynamicLinkingDescriptor](mtl4renderpipelinedynamiclinkingdescriptor.md): Groups together properties that provide linking properties for render pipelines.
+
+### Dynamic render pipeline states
+
+- [MTLViewport](mtlviewport.md): A 3D rectangular region for the viewport clipping.
+- [MTLScissorRect](mtlscissorrect.md): A rectangle for the scissor fragment test.
+- [MTLVertexAmplificationViewMapping](mtlvertexamplificationviewmapping.md): An offset applied to a render target index and viewport index.
+- [MTLQuadTessellationFactorsHalf](mtlquadtessellationfactorshalf.md): The per-patch tessellation factors for a quad patch.
+- [MTLTriangleTessellationFactorsHalf](mtltriangletessellationfactorshalf.md): The per-patch tessellation factors for a triangle patch.
+
+### Render pass inputs
+
+- [MTLVertexDescriptor](mtlvertexdescriptor.md): An instance that describes how to organize and map data to a vertex function.
+- [MTLVertexAttributeDescriptor](mtlvertexattributedescriptor.md): An object that determines how to store attribute data in memory and map it to the arguments of a vertex function.
+- [MTLVertexAttributeDescriptorArray](mtlvertexattributedescriptorarray.md): An array of vertex attribute descriptor instances.
+- [MTLVertexBufferLayoutDescriptor](mtlvertexbufferlayoutdescriptor.md): An object that configures how a render pipeline fetches data to send to the vertex function.
+- [MTLVertexBufferLayoutDescriptorArray](mtlvertexbufferlayoutdescriptorarray.md): An array of vertex buffer layout descriptor instances.
+- [MTLBufferLayoutStrideDynamic](mtlbufferlayoutstridedynamic.md)
+
+### Render pass outputs
+
+- [MTLDrawable](mtldrawable.md): A displayable resource that can be rendered or written to.
+- [MTLDrawablePresentedHandler](mtldrawablepresentedhandler.md): A block of code invoked after a drawable is presented.
+
+### Depth testing
+
+- [Calculating primitive visibility using depth testing](calculating-primitive-visibility-using-depth-testing.md): Determine which pixels are visible in a scene by using a depth texture.
+- [MTLDepthStencilState](mtldepthstencilstate.md): A depth and stencil state instance that specifies the depth and stencil configuration and operations used in a render pass.
+- [MTLDepthStencilDescriptor](mtldepthstencildescriptor.md): An instance that configures new [MTLDepthStencilState](mtldepthstencilstate.md) instances.
+- [MTLStencilDescriptor](mtlstencildescriptor.md): An object that defines the front-facing or back-facing stencil operations of a depth and stencil state object.
+
+### Rasterization settings
+
+- [Rendering at different rasterization rates](rendering-at-different-rasterization-rates.md): Configure a rasterization rate map to vary rasterization rates depending on the amount of detail needed.
+- [Creating a rasterization rate map](creating-a-rasterization-rate-map.md): Define the rasterization rates for each part of your render target.
+- [Rendering with a rasterization rate map](rendering-with-a-rasterization-rate-map.md): Create offscreen textures to hold intermediate rasterized data.
+- [Scaling variable rasterization rate content](scaling-variable-rasterization-rate-content.md): Use the rate map data to scale the content to fill your destination texture.
+- [MTLRasterizationRateMapDescriptor](mtlrasterizationratemapdescriptor.md): An object that you use to configure new rasterization rate maps.
+- [MTLRasterizationRateMap](mtlrasterizationratemap.md): A compiled read-only instance that determines how to apply variable rasterization rates when rendering.
+- [MTLCoordinate2D](mtlcoordinate2d.md): A coordinate in the viewport.
+- [MTLCoordinate2DMake](mtlcoordinate2dmake%28____%29.md): Returns a new 2D point with the specified coordinates.
+
+### Optimizing techniques
+
+- [Specifying drawing and dispatch arguments indirectly](specifying-drawing-and-dispatch-arguments-indirectly.md): Use indirect commands if you don’t know your draw or dispatch call arguments when you encode the command.
+- [Rendering to multiple viewports in a draw command](rendering-to-multiple-viewports-in-a-draw-command.md): Select viewports and their corresponding scissor rectangles in your vertex shader.
+- [Rendering to multiple texture slices in a draw command](rendering-to-multiple-texture-slices-in-a-draw-command.md): Select a destination texture slice in your vertex shader.
+
+### Advanced multisampling
+
+- [Positioning samples programmatically](positioning-samples-programmatically.md): Configure the position of samples when rendering to a multisampled render target.
+- [Storing data a pass makes with custom sample positions for a subsequent pass](storing-data-a-pass-makes-with-custom-sample-positions-for-a-subsequent-pass.md): Inform Metal when your app uses programmable sample positions for its depth render targets or copies MSAA depth data.
+
+### Applying rendering techniques
+
+- [Drawing a triangle with Metal 4](drawing-a-triangle-with-metal-4.md): Render a colorful, rotating 2D triangle by running draw commands with a render pipeline on a GPU.
+- [Customizing render pass setup](customizing-render-pass-setup.md): Render into an offscreen texture by creating a custom render pass.
+- [Setting load and store actions](setting-load-and-store-actions.md): Set actions that define how a render pass loads and stores a render target.
+- [Improving rendering performance with vertex amplification](improving-rendering-performance-with-vertex-amplification.md): Run draw commands that render to different outputs using the same vertex data multiple times.
+
+## See Also
+
+### Command encoders
+
+- [Compute passes](compute-passes.md): Encode a compute pass that runs computations in parallel on a thread grid, processing and manipulating Metal resource data on multiple cores of a GPU.
+- [Machine learning passes](machine-learning-passes.md): Add machine learning model inference to your Metal app’s GPU workflow.
+- [Blit passes](blit-passes.md): Encode a block information transfer pass to adjust and copy data to and from GPU resources, such as buffers and textures.
+- [Indirect command encoding](indirect-command-encoding.md): Store draw commands in Metal buffers and run them at a later time on the GPU, either once or repeatedly.
+- [Ray tracing with acceleration structures](ray-tracing-with-acceleration-structures.md): Build a representation of your scene’s geometry using triangles and bounding volumes to quickly trace rays through the scene.
+
+# Document: Rendering a curve primitive in a ray tracing scene
+
+Source path: documentation/metal/rendering-a-curve-primitive-in-a-ray-tracing-scene
+Canonical documentation: https://developer.apple.com/documentation/metal/rendering-a-curve-primitive-in-a-ray-tracing-scene
+Description: Interface languages: Swift, Objective-C
+
+# Rendering a curve primitive in a ray tracing scene
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Metal  
+**Kind:** Sample Code  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · Xcode 26.3+
+
+Implement ray traced rendering using GPU-based parallel processing.
+
+<a id="overview"></a>
+
+## Overview
+
+> **Note**
+
+> This sample code project is associated with WWDC23 session [10128: Your guide to Metal ray tracing](https://developer.apple.com/wwdc23/10128).
+
+<a id="Configure-the-sample-code-project"></a>
+
+### Configure the sample code project
+
+This sample requires the following system and software configuration:
+
+- macOS 14 or later
+- iOS 17 or later
+- Xcode 15 or later
+
+## See Also
+
+### Ray tracing
+
+- [Rendering reflections in real time using ray tracing](rendering-reflections-in-real-time-using-ray-tracing.md): Implement realistic real-time lighting by dynamically generating reflection maps by encoding a ray-tracing compute pass.
+- [Accelerating ray tracing using Metal](accelerating-ray-tracing-using-metal.md): Implement ray-traced rendering using GPU-based parallel processing.
+- [Control the ray tracing process using intersection queries](control-the-ray-tracing-process-using-intersection-queries.md): Explicitly enumerate a ray’s intersections with acceleration structures by creating an intersection query object.
+- [Accelerating ray tracing and motion blur using Metal](accelerating-ray-tracing-and-motion-blur-using-metal.md): Generate ray-traced images with motion blur using GPU-based parallel processing.
 
 # Document: Rendering a scene with deferred lighting in C++
 
@@ -187605,1281 +188242,4 @@ Description: Framework: Metal Performance Shaders Kind: Initializer Availability
 
 ```swift
 init?(rawValue: UInt)
-```
-
-# Document: MPSTemporaryImage
-
-Source path: documentation/metalperformanceshaders/mpstemporaryimage
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage
-Description: Framework: Metal Performance Shaders Kind: Class Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-# MPSTemporaryImage (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Class  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-A texture for use in convolutional neural networks that stores transient data to be used and discarded promptly.
-
-## Declaration
-
-```swift
-class MPSTemporaryImage
-```
-
-<a id="overview"></a>
-
-## Overview
-
-[MPSTemporaryImage](mpstemporaryimage.md) objects can provide a profound reduction in the aggregate texture memory and associated CPU-side allocation cost in your app. Metal Performance Shaders achieves this by automatically identifying [MPSTemporaryImage](mpstemporaryimage.md) objects that do not overlap in time over the course of a [MTLCommandBuffer](../metal/mtlcommandbuffer.md) object’s lifetime and can therefore reuse the same memory. [MPSTemporaryImage](mpstemporaryimage.md) objects leverage an internal cache of preallocated reusable memory to hold pixel data to avoid typical memory allocation performance penalties common to ordinary [MPSImage](mpsimage.md) and [MTLTexture](../metal/mtltexture.md) objects.
-
-To avoid data corruption due to aliasing, [MPSTemporaryImage](mpstemporaryimage.md) objects impose some important restrictions:
-
-- The underlying texture storage mode is [MTLStorageMode.private](../metal/mtlstoragemode/private.md). You cannot, for example, use the [getBytes(\_:bytesPerRow:from:mipmapLevel:)](../metal/mtltexture/getbytes%28__bytesperrow_from_mipmaplevel_%29.md) or [replace(region:mipmapLevel:withBytes:bytesPerRow:)](../metal/mtltexture/replace%28region_mipmaplevel_withbytes_bytesperrow_%29.md) methods with them. Temporary images are strictly read and written by the GPU.
-- The temporary image may be used only on a single [MTLCommandBuffer](../metal/mtlcommandbuffer.md) object. This limits the chronology to a single linear time stream.
-- The [readCount](mpstemporaryimage/readcount.md) property must be managed correctly.
-- Temporary images must also adhere to the general pixel format restrictions for [MPSImage](mpsimage.md) objects.
-
-Since temporary images can only be used with a single command buffer, and can not be used off the GPU, they generally should not be kept around past the completion of their associated command buffer. The lifetime of a temporary image is typically expected to be extremely short, perhaps spanning only a few lines of code.
-
-To keep the lifetime of the underlying texture allocation as short as possible, the texture is not allocated until the first time the [MPSTemporaryImage](mpstemporaryimage.md) object is used by an [MPSCNNKernel](mpscnnkernel.md) object or until the first time the [texture](mpsimage/texture.md) property is read. The [readCount](mpstemporaryimage/readcount.md) property serves to limit the lifetime of the texture on deallocation.
-
-You may use the [texture](mpsimage/texture.md) property with the `encode` methods of an [MPSUnaryImageKernel](mpsunaryimagekernel.md) subclass, if `featureChannels<=4` and the texture conforms to the requirements of the given kernel. In such cases, the [readCount](mpstemporaryimage/readcount.md) property is not modified, since the enclosing object is not available. There is no locking mechanism provided to prevent a [MTLTexture](../metal/mtltexture.md) object returned from the [texture](mpsimage/texture.md) property from becoming invalid when the value of the [readCount](mpstemporaryimage/readcount.md) property reaches 0.
-
-[MPSTemporaryImage](mpstemporaryimage.md) objects can otherwise be used wherever [MPSImage](mpsimage.md) objects are used.
-
-<a id="The-MPSTemporaryImage-Class"></a>
-
-### The MPSTemporaryImage Class
-
-The [MPSTemporaryImage](mpstemporaryimage.md) class extends the [MPSImage](mpsimage.md) class to provide advanced caching of unused memory, in order to increase performance and reduce memory footprint. [MPSTemporaryImage](mpstemporaryimage.md) objects are intended as fast GPU-only storage for intermediate image data needed only transiently within a single [MTLCommandBuffer](../metal/mtlcommandbuffer.md) object. They accelerate the common case of image data which is created only to be consumed and destroyed immediately by the next operation(s) encoded in a command buffer. [MPSTemporaryImage](mpstemporaryimage.md) objects provide a convenient and simple way to save memory by automatically aliasing other [MPSTemporaryImage](mpstemporaryimage.md) objects in the same command buffer. Because they alias (i.e., share texel storage with) other textures in the same command buffer, the valid lifetime of the data in an [MPSTemporaryImage](mpstemporaryimage.md) object is extremely short, limited to a portion of a the command buffer itself.
-
-You can not read or write data to an [MPSTemporaryImage](mpstemporaryimage.md) using the CPU, or use the data in other [MTLCommandBuffer](../metal/mtlcommandbuffer.md) objects. Use regular [MPSImage](mpsimage.md) objects for more persistent storage.
-
-## Topics
-
-### Initializers
-
-- [init(commandBuffer:imageDescriptor:)](mpstemporaryimage/init%28commandbuffer_imagedescriptor_%29.md): Initializes a temporary image for use on a command buffer.
-- [MPSImageDescriptor](mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](mpsimage.md).
-- [init(commandBuffer:textureDescriptor:)](mpstemporaryimage/init%28commandbuffer_texturedescriptor_%29.md): Low-level interface for creating a temporary image using a texture descriptor.
-- [MTLTextureDescriptor](../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
-- [init(commandBuffer:textureDescriptor:featureChannels:)](mpstemporaryimage/init%28commandbuffer_texturedescriptor_featurechannels_%29.md)
-
-### Methods
-
-- [prefetchStorage(with:imageDescriptorList:)](mpstemporaryimage/prefetchstorage%28with_imagedescriptorlist_%29.md): A method that helps the framework decide which allocations to make ahead of time.
-
-### Methods to Get an Image Allocator
-
-- [defaultAllocator()](mpstemporaryimage/defaultallocator%28%29.md)
-- [MPSImageAllocator](mpsimageallocator.md)
-
-### Properties
-
-- [readCount](mpstemporaryimage/readcount.md): The number of times a temporary image may be read by a CNN kernel before its contents become undefined.
-
-## Relationships
-
-### Inherits From
-
-- [MPSImage](mpsimage.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-## See Also
-
-### Neural Networks
-
-- [Training a Neural Network with Metal Performance Shaders](training-a-neural-network-with-metal-performance-shaders.md): Use an MPS neural network graph to train a simple neural network digit classifier.
-- [MPSImage](mpsimage.md): A texture that may have more than four channels for use in convolutional neural networks.
-- [Objects that Simplify the Creation of Neural Networks](objects-that-simplify-the-creation-of-neural-networks.md): Simplify the creation of neural networks using networks of filter, image, and state nodes.
-- [Convolutional Neural Network Kernels](convolutional-neural-network-kernels.md): Build neural networks with layers.
-- [Recurrent Neural Networks](recurrent-neural-networks.md): Create recurrent neural networks.
-
-# MPSTemporaryImage (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Class  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-A texture for use in convolutional neural networks that stores transient data to be used and discarded promptly.
-
-## Declaration
-
-```objectivec
-@interface MPSTemporaryImage : MPSImage
-```
-
-<a id="overview"></a>
-
-## Overview
-
-[MPSTemporaryImage](mpstemporaryimage.md) objects can provide a profound reduction in the aggregate texture memory and associated CPU-side allocation cost in your app. Metal Performance Shaders achieves this by automatically identifying [MPSTemporaryImage](mpstemporaryimage.md) objects that do not overlap in time over the course of a [MTLCommandBuffer](../metal/mtlcommandbuffer.md) object’s lifetime and can therefore reuse the same memory. [MPSTemporaryImage](mpstemporaryimage.md) objects leverage an internal cache of preallocated reusable memory to hold pixel data to avoid typical memory allocation performance penalties common to ordinary [MPSImage](mpsimage.md) and [MTLTexture](../metal/mtltexture.md) objects.
-
-To avoid data corruption due to aliasing, [MPSTemporaryImage](mpstemporaryimage.md) objects impose some important restrictions:
-
-- The underlying texture storage mode is [MTLStorageModePrivate](../metal/mtlstoragemode/private.md). You cannot, for example, use the [getBytes:bytesPerRow:fromRegion:mipmapLevel:](../metal/mtltexture/getbytes%28__bytesperrow_from_mipmaplevel_%29.md) or [replaceRegion:mipmapLevel:withBytes:bytesPerRow:](../metal/mtltexture/replace%28region_mipmaplevel_withbytes_bytesperrow_%29.md) methods with them. Temporary images are strictly read and written by the GPU.
-- The temporary image may be used only on a single [MTLCommandBuffer](../metal/mtlcommandbuffer.md) object. This limits the chronology to a single linear time stream.
-- The [readCount](mpstemporaryimage/readcount.md) property must be managed correctly.
-- Temporary images must also adhere to the general pixel format restrictions for [MPSImage](mpsimage.md) objects.
-
-Since temporary images can only be used with a single command buffer, and can not be used off the GPU, they generally should not be kept around past the completion of their associated command buffer. The lifetime of a temporary image is typically expected to be extremely short, perhaps spanning only a few lines of code.
-
-To keep the lifetime of the underlying texture allocation as short as possible, the texture is not allocated until the first time the [MPSTemporaryImage](mpstemporaryimage.md) object is used by an [MPSCNNKernel](mpscnnkernel.md) object or until the first time the [texture](mpsimage/texture.md) property is read. The [readCount](mpstemporaryimage/readcount.md) property serves to limit the lifetime of the texture on deallocation.
-
-You may use the [texture](mpsimage/texture.md) property with the `encode` methods of an [MPSUnaryImageKernel](mpsunaryimagekernel.md) subclass, if `featureChannels<=4` and the texture conforms to the requirements of the given kernel. In such cases, the [readCount](mpstemporaryimage/readcount.md) property is not modified, since the enclosing object is not available. There is no locking mechanism provided to prevent a [MTLTexture](../metal/mtltexture.md) object returned from the [texture](mpsimage/texture.md) property from becoming invalid when the value of the [readCount](mpstemporaryimage/readcount.md) property reaches 0.
-
-[MPSTemporaryImage](mpstemporaryimage.md) objects can otherwise be used wherever [MPSImage](mpsimage.md) objects are used.
-
-<a id="The-MPSTemporaryImage-Class"></a>
-
-### The MPSTemporaryImage Class
-
-The [MPSTemporaryImage](mpstemporaryimage.md) class extends the [MPSImage](mpsimage.md) class to provide advanced caching of unused memory, in order to increase performance and reduce memory footprint. [MPSTemporaryImage](mpstemporaryimage.md) objects are intended as fast GPU-only storage for intermediate image data needed only transiently within a single [MTLCommandBuffer](../metal/mtlcommandbuffer.md) object. They accelerate the common case of image data which is created only to be consumed and destroyed immediately by the next operation(s) encoded in a command buffer. [MPSTemporaryImage](mpstemporaryimage.md) objects provide a convenient and simple way to save memory by automatically aliasing other [MPSTemporaryImage](mpstemporaryimage.md) objects in the same command buffer. Because they alias (i.e., share texel storage with) other textures in the same command buffer, the valid lifetime of the data in an [MPSTemporaryImage](mpstemporaryimage.md) object is extremely short, limited to a portion of a the command buffer itself.
-
-You can not read or write data to an [MPSTemporaryImage](mpstemporaryimage.md) using the CPU, or use the data in other [MTLCommandBuffer](../metal/mtlcommandbuffer.md) objects. Use regular [MPSImage](mpsimage.md) objects for more persistent storage.
-
-## Topics
-
-### Initializers
-
-- [temporaryImageWithCommandBuffer:imageDescriptor:](mpstemporaryimage/init%28commandbuffer_imagedescriptor_%29.md): Initializes a temporary image for use on a command buffer.
-- [MPSImageDescriptor](mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](mpsimage.md).
-- [temporaryImageWithCommandBuffer:textureDescriptor:](mpstemporaryimage/init%28commandbuffer_texturedescriptor_%29.md): Low-level interface for creating a temporary image using a texture descriptor.
-- [MTLTextureDescriptor](../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
-- [temporaryImageWithCommandBuffer:textureDescriptor:featureChannels:](mpstemporaryimage/init%28commandbuffer_texturedescriptor_featurechannels_%29.md)
-
-### Methods
-
-- [prefetchStorageWithCommandBuffer:imageDescriptorList:](mpstemporaryimage/prefetchstorage%28with_imagedescriptorlist_%29.md): A method that helps the framework decide which allocations to make ahead of time.
-
-### Methods to Get an Image Allocator
-
-- [defaultAllocator](mpstemporaryimage/defaultallocator%28%29.md)
-- [MPSImageAllocator](mpsimageallocator.md)
-
-### Properties
-
-- [readCount](mpstemporaryimage/readcount.md): The number of times a temporary image may be read by a CNN kernel before its contents become undefined.
-
-## Relationships
-
-### Inherits From
-
-- [MPSImage](mpsimage.md)
-
-## See Also
-
-### Neural Networks
-
-- [Training a Neural Network with Metal Performance Shaders](training-a-neural-network-with-metal-performance-shaders.md): Use an MPS neural network graph to train a simple neural network digit classifier.
-- [MPSImage](mpsimage.md): A texture that may have more than four channels for use in convolutional neural networks.
-- [Objects that Simplify the Creation of Neural Networks](objects-that-simplify-the-creation-of-neural-networks.md): Simplify the creation of neural networks using networks of filter, image, and state nodes.
-- [Convolutional Neural Network Kernels](convolutional-neural-network-kernels.md): Build neural networks with layers.
-- [Recurrent Neural Networks](recurrent-neural-networks.md): Create recurrent neural networks.
-
-# Document: defaultAllocator()
-
-Source path: documentation/metalperformanceshaders/mpstemporaryimage/defaultallocator()
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage/defaultallocator()
-Description: Framework: Metal Performance Shaders Kind: Type Method Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-# defaultAllocator() (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-class func defaultAllocator() -> any MPSImageAllocator
-```
-
-## See Also
-
-### Methods to Get an Image Allocator
-
-- [MPSImageAllocator](../mpsimageallocator.md)
-
-# defaultAllocator (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-+ (id<MPSImageAllocator>) defaultAllocator;
-```
-
-## See Also
-
-### Methods to Get an Image Allocator
-
-- [MPSImageAllocator](../mpsimageallocator.md)
-
-# Document: init(commandBuffer:imageDescriptor:)
-
-Source path: documentation/metalperformanceshaders/mpstemporaryimage/init(commandbuffer:imagedescriptor:)
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage/init(commandbuffer:imagedescriptor:)
-Description: Framework: Metal Performance Shaders Kind: Initializer Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-# init(commandBuffer:imageDescriptor:) (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Initializer  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-Initializes a temporary image for use on a command buffer.
-
-## Declaration
-
-```swift
-convenience init(commandBuffer: any MTLCommandBuffer, imageDescriptor: MPSImageDescriptor)
-```
-
-## Parameters
-
-- `commandBuffer`: The command buffer on which the temporary image will be exclusively used.
-- `imageDescriptor`: An image descriptor that describes the image to create.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A valid [MPSTemporaryImage](../mpstemporaryimage.md) object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The temporary image will be released when the command buffer is committed. The underlying texture will become invalid before this time due to the action of the [readCount](readcount.md) property.
-
-## See Also
-
-### Initializers
-
-- [MPSImageDescriptor](../mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](../mpsimage.md).
-- [init(commandBuffer:textureDescriptor:)](init%28commandbuffer_texturedescriptor_%29.md): Low-level interface for creating a temporary image using a texture descriptor.
-- [MTLTextureDescriptor](../../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
-- [init(commandBuffer:textureDescriptor:featureChannels:)](init%28commandbuffer_texturedescriptor_featurechannels_%29.md)
-
-# temporaryImageWithCommandBuffer:imageDescriptor: (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-Initializes a temporary image for use on a command buffer.
-
-## Declaration
-
-```objectivec
-+ (instancetype) temporaryImageWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer imageDescriptor:(const MPSImageDescriptor *) imageDescriptor;
-```
-
-## Parameters
-
-- `commandBuffer`: The command buffer on which the temporary image will be exclusively used.
-- `imageDescriptor`: An image descriptor that describes the image to create.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A valid [MPSTemporaryImage](../mpstemporaryimage.md) object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The temporary image will be released when the command buffer is committed. The underlying texture will become invalid before this time due to the action of the [readCount](readcount.md) property.
-
-## See Also
-
-### Initializers
-
-- [MPSImageDescriptor](../mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](../mpsimage.md).
-- [temporaryImageWithCommandBuffer:textureDescriptor:](init%28commandbuffer_texturedescriptor_%29.md): Low-level interface for creating a temporary image using a texture descriptor.
-- [MTLTextureDescriptor](../../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
-- [temporaryImageWithCommandBuffer:textureDescriptor:featureChannels:](init%28commandbuffer_texturedescriptor_featurechannels_%29.md)
-
-# Document: init(commandBuffer:textureDescriptor:)
-
-Source path: documentation/metalperformanceshaders/mpstemporaryimage/init(commandbuffer:texturedescriptor:)
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage/init(commandbuffer:texturedescriptor:)
-Description: Framework: Metal Performance Shaders Kind: Initializer Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-# init(commandBuffer:textureDescriptor:) (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Initializer  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-Low-level interface for creating a temporary image using a texture descriptor.
-
-## Declaration
-
-```swift
-convenience init(commandBuffer: any MTLCommandBuffer, textureDescriptor: MTLTextureDescriptor)
-```
-
-## Parameters
-
-- `commandBuffer`: The command buffer on which the temporary image will be exclusively used.
-- `textureDescriptor`: A texture descriptor that describes the temporary image texture to create.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A valid [MPSTemporaryImage](../mpstemporaryimage.md) object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The temporary image will be released when the command buffer is committed. The underlying texture will become invalid before this time due to the action of the [readCount](readcount.md) property.
-
-This function provides access to pixel formats not typically covered by the [init(commandBuffer:imageDescriptor:)](init%28commandbuffer_imagedescriptor_%29.md) method. The feature channels will be inferred from the pixel format without changing the width. The following restrictions apply:
-
-- The texture type must be [MTLTextureType.type2D](../../metal/mtltexturetype/type2d.md) or [MTLTextureType.type2DArray](../../metal/mtltexturetype/type2darray.md).
-- The texture usage must contain at least one of [shaderRead](../../metal/mtltextureusage/shaderread.md) or [shaderWrite](../../metal/mtltextureusage/shaderwrite.md).
-- The storage mode must be [MTLStorageMode.private](../../metal/mtlstoragemode/private.md).
-- The depth must be 1.
-
-## See Also
-
-### Initializers
-
-- [init(commandBuffer:imageDescriptor:)](init%28commandbuffer_imagedescriptor_%29.md): Initializes a temporary image for use on a command buffer.
-- [MPSImageDescriptor](../mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](../mpsimage.md).
-- [MTLTextureDescriptor](../../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
-- [init(commandBuffer:textureDescriptor:featureChannels:)](init%28commandbuffer_texturedescriptor_featurechannels_%29.md)
-
-# temporaryImageWithCommandBuffer:textureDescriptor: (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-Low-level interface for creating a temporary image using a texture descriptor.
-
-## Declaration
-
-```objectivec
-+ (instancetype) temporaryImageWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer textureDescriptor:(const MTLTextureDescriptor *) textureDescriptor;
-```
-
-## Parameters
-
-- `commandBuffer`: The command buffer on which the temporary image will be exclusively used.
-- `textureDescriptor`: A texture descriptor that describes the temporary image texture to create.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A valid [MPSTemporaryImage](../mpstemporaryimage.md) object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The temporary image will be released when the command buffer is committed. The underlying texture will become invalid before this time due to the action of the [readCount](readcount.md) property.
-
-This function provides access to pixel formats not typically covered by the [temporaryImageWithCommandBuffer:imageDescriptor:](init%28commandbuffer_imagedescriptor_%29.md) method. The feature channels will be inferred from the pixel format without changing the width. The following restrictions apply:
-
-- The texture type must be [MTLTextureType2D](../../metal/mtltexturetype/type2d.md) or [MTLTextureType2DArray](../../metal/mtltexturetype/type2darray.md).
-- The texture usage must contain at least one of [MTLTextureUsageShaderRead](../../metal/mtltextureusage/shaderread.md) or [MTLTextureUsageShaderWrite](../../metal/mtltextureusage/shaderwrite.md).
-- The storage mode must be [MTLStorageModePrivate](../../metal/mtlstoragemode/private.md).
-- The depth must be 1.
-
-## See Also
-
-### Initializers
-
-- [temporaryImageWithCommandBuffer:imageDescriptor:](init%28commandbuffer_imagedescriptor_%29.md): Initializes a temporary image for use on a command buffer.
-- [MPSImageDescriptor](../mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](../mpsimage.md).
-- [MTLTextureDescriptor](../../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
-- [temporaryImageWithCommandBuffer:textureDescriptor:featureChannels:](init%28commandbuffer_texturedescriptor_featurechannels_%29.md)
-
-# Document: init(commandBuffer:textureDescriptor:featureChannels:)
-
-Source path: documentation/metalperformanceshaders/mpstemporaryimage/init(commandbuffer:texturedescriptor:featurechannels:)
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage/init(commandbuffer:texturedescriptor:featurechannels:)
-Description: Framework: Metal Performance Shaders Kind: Initializer Availability: iOS 11.3+ · iPadOS 11.3+ · Mac Catalyst 13.0+ · macOS 10.13.4+ · tvOS 11.3+ · visionOS 1.0+
-
-# init(commandBuffer:textureDescriptor:featureChannels:) (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Initializer  
-**Availability:** iOS 11.3+ · iPadOS 11.3+ · Mac Catalyst 13.0+ · macOS 10.13.4+ · tvOS 11.3+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-convenience init(commandBuffer: any MTLCommandBuffer, textureDescriptor: MTLTextureDescriptor, featureChannels: Int)
-```
-
-## See Also
-
-### Initializers
-
-- [init(commandBuffer:imageDescriptor:)](init%28commandbuffer_imagedescriptor_%29.md): Initializes a temporary image for use on a command buffer.
-- [MPSImageDescriptor](../mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](../mpsimage.md).
-- [init(commandBuffer:textureDescriptor:)](init%28commandbuffer_texturedescriptor_%29.md): Low-level interface for creating a temporary image using a texture descriptor.
-- [MTLTextureDescriptor](../../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
-
-# temporaryImageWithCommandBuffer:textureDescriptor:featureChannels: (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 11.3+ · iPadOS 11.3+ · Mac Catalyst 13.0+ · macOS 10.13.4+ · tvOS 11.3+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-+ (instancetype) temporaryImageWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer textureDescriptor:(const MTLTextureDescriptor *) textureDescriptor featureChannels:(NSUInteger) featureChannels;
-```
-
-## See Also
-
-### Initializers
-
-- [temporaryImageWithCommandBuffer:imageDescriptor:](init%28commandbuffer_imagedescriptor_%29.md): Initializes a temporary image for use on a command buffer.
-- [MPSImageDescriptor](../mpsimagedescriptor.md): A description of the attributes used to create an [MPSImage](../mpsimage.md).
-- [temporaryImageWithCommandBuffer:textureDescriptor:](init%28commandbuffer_texturedescriptor_%29.md): Low-level interface for creating a temporary image using a texture descriptor.
-- [MTLTextureDescriptor](../../metal/mtltexturedescriptor.md): An instance that you use to configure new Metal texture instances.
-
-# Document: prefetchStorage(with:imageDescriptorList:)
-
-Source path: documentation/metalperformanceshaders/mpstemporaryimage/prefetchstorage(with:imagedescriptorlist:)
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage/prefetchstorage(with:imagedescriptorlist:)
-Description: Framework: Metal Performance Shaders Kind: Type Method Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-# prefetchStorage(with:imageDescriptorList:) (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-A method that helps the framework decide which allocations to make ahead of time.
-
-## Declaration
-
-```swift
-class func prefetchStorage(with commandBuffer: any MTLCommandBuffer, imageDescriptorList descriptorList: [MPSImageDescriptor])
-```
-
-## Parameters
-
-- `commandBuffer`: The command buffer on which the temporary images will be exclusively used.
-- `descriptorList`: An array of image descriptors that describe the temporary images that will be created.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The texture cache that underlies the temporary images can automatically allocate new storage as needed, whenever you create new temporary images. However, sometimes a more global view of what you plan to make is useful for maximizing memory reuse to get the most efficient operation. Calling this class method provides a hint to the texture cache about what the list of temporary images will be.
-
-> **Note**
-
->  Calling this method is purely a performance and memory optimization; it is never *necessary* to call this method.
-
-# prefetchStorageWithCommandBuffer:imageDescriptorList: (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-A method that helps the framework decide which allocations to make ahead of time.
-
-## Declaration
-
-```objectivec
-+ (void) prefetchStorageWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer imageDescriptorList:(NSArray<MPSImageDescriptor *> *) descriptorList;
-```
-
-## Parameters
-
-- `commandBuffer`: The command buffer on which the temporary images will be exclusively used.
-- `descriptorList`: An array of image descriptors that describe the temporary images that will be created.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The texture cache that underlies the temporary images can automatically allocate new storage as needed, whenever you create new temporary images. However, sometimes a more global view of what you plan to make is useful for maximizing memory reuse to get the most efficient operation. Calling this class method provides a hint to the texture cache about what the list of temporary images will be.
-
-> **Note**
-
->  Calling this method is purely a performance and memory optimization; it is never *necessary* to call this method.
-
-# Document: readCount
-
-Source path: documentation/metalperformanceshaders/mpstemporaryimage/readcount
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage/readcount
-Description: Framework: Metal Performance Shaders Kind: Instance Property Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-# readCount (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Instance Property  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-The number of times a temporary image may be read by a CNN kernel before its contents become undefined.
-
-## Declaration
-
-```swift
-var readCount: Int { get set }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Temporary images must release their underlying textures for reuse immediately after last use. In order to facilitate *prompt* and convenient memory recycling, each time a [MPSTemporaryImage](../mpstemporaryimage.md) object is read by an `encode` method of an [MPSCNNKernel](../mpscnnkernel.md) object, the value of its [readCount](readcount.md) property is automatically decremented. When the value of [readCount](readcount.md) reaches 0, the underlying texture is automatically made available and reusable to the framework for its own needs (and for other [MPSTemporaryImage](../mpstemporaryimage.md) objects prior to return from the `encode` method). The contents of the underlying texture become undefined at this time.
-
-By default, the value of [readCount](readcount.md) is initialized to 1, indicating a temporary image that may be overwritten any number of times, but read only once.
-
-You may change the value of [readCount](readcount.md) as desired to allow [MPSCNNKernel](../mpscnnkernel.md) objects to read the [MPSTemporaryImage](../mpstemporaryimage.md) object additional times. However, it is an error to change the value of [readCount](readcount.md) once it reaches 0 (it is also an error to read or write to a temporary image with a [readCount](readcount.md) value of 0). You may set the value of  [readCount](readcount.md) to 0 yourself to cause the underlying texture to be returned to the framework. Writing to a temporary image does not adjust the value of [readCount](readcount.md).
-
-The Metal API Validation layer will assert if a temporary image is deallocated with a non-zero [readCount](readcount.md) value to help identify cases when resources are not returned promptly.
-
-# readCount (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Instance Property  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
-
-The number of times a temporary image may be read by a CNN kernel before its contents become undefined.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readwrite) NSUInteger readCount;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Temporary images must release their underlying textures for reuse immediately after last use. In order to facilitate *prompt* and convenient memory recycling, each time a [MPSTemporaryImage](../mpstemporaryimage.md) object is read by an `encode` method of an [MPSCNNKernel](../mpscnnkernel.md) object, the value of its [readCount](readcount.md) property is automatically decremented. When the value of [readCount](readcount.md) reaches 0, the underlying texture is automatically made available and reusable to the framework for its own needs (and for other [MPSTemporaryImage](../mpstemporaryimage.md) objects prior to return from the `encode` method). The contents of the underlying texture become undefined at this time.
-
-By default, the value of [readCount](readcount.md) is initialized to 1, indicating a temporary image that may be overwritten any number of times, but read only once.
-
-You may change the value of [readCount](readcount.md) as desired to allow [MPSCNNKernel](../mpscnnkernel.md) objects to read the [MPSTemporaryImage](../mpstemporaryimage.md) object additional times. However, it is an error to change the value of [readCount](readcount.md) once it reaches 0 (it is also an error to read or write to a temporary image with a [readCount](readcount.md) value of 0). You may set the value of  [readCount](readcount.md) to 0 yourself to cause the underlying texture to be returned to the framework. Writing to a temporary image does not adjust the value of [readCount](readcount.md).
-
-The Metal API Validation layer will assert if a temporary image is deallocated with a non-zero [readCount](readcount.md) value to help identify cases when resources are not returned promptly.
-
-# Document: MPSTemporaryMatrix
-
-Source path: documentation/metalperformanceshaders/mpstemporarymatrix
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporarymatrix
-Description: Framework: Metal Performance Shaders Kind: Class Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-# MPSTemporaryMatrix (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Class  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-A matrix allocated on GPU private memory.
-
-## Declaration
-
-```swift
-class MPSTemporaryMatrix
-```
-
-## Topics
-
-### Initializers
-
-- [init(commandBuffer:matrixDescriptor:)](mpstemporarymatrix/init%28commandbuffer_matrixdescriptor_%29.md)
-
-### Instance Properties
-
-- [readCount](mpstemporarymatrix/readcount.md)
-
-### Type Methods
-
-- [prefetchStorage(with:matrixDescriptorList:)](mpstemporarymatrix/prefetchstorage%28with_matrixdescriptorlist_%29.md)
-
-## Relationships
-
-### Inherits From
-
-- [MPSMatrix](mpsmatrix.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-## See Also
-
-### Matrices
-
-- [MPSMatrix](mpsmatrix.md): A 2D array of data that stores the data’s values.
-- [MPSMatrixDescriptor](mpsmatrixdescriptor.md): A description of attributes used to create an MPS matrix.
-
-# MPSTemporaryMatrix (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Class  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-A matrix allocated on GPU private memory.
-
-## Declaration
-
-```objectivec
-@interface MPSTemporaryMatrix : MPSMatrix
-```
-
-## Topics
-
-### Initializers
-
-- [temporaryMatrixWithCommandBuffer:matrixDescriptor:](mpstemporarymatrix/init%28commandbuffer_matrixdescriptor_%29.md)
-
-### Instance Properties
-
-- [readCount](mpstemporarymatrix/readcount.md)
-
-### Type Methods
-
-- [prefetchStorageWithCommandBuffer:matrixDescriptorList:](mpstemporarymatrix/prefetchstorage%28with_matrixdescriptorlist_%29.md)
-
-## Relationships
-
-### Inherits From
-
-- [MPSMatrix](mpsmatrix.md)
-
-## See Also
-
-### Matrices
-
-- [MPSMatrix](mpsmatrix.md): A 2D array of data that stores the data’s values.
-- [MPSMatrixDescriptor](mpsmatrixdescriptor.md): A description of attributes used to create an MPS matrix.
-
-# Document: init(commandBuffer:matrixDescriptor:)
-
-Source path: documentation/metalperformanceshaders/mpstemporarymatrix/init(commandbuffer:matrixdescriptor:)
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporarymatrix/init(commandbuffer:matrixdescriptor:)
-Description: Framework: Metal Performance Shaders Kind: Initializer Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-# init(commandBuffer:matrixDescriptor:) (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Initializer  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-convenience init(commandBuffer: any MTLCommandBuffer, matrixDescriptor: MPSMatrixDescriptor)
-```
-
-# temporaryMatrixWithCommandBuffer:matrixDescriptor: (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-+ (instancetype) temporaryMatrixWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer matrixDescriptor:(MPSMatrixDescriptor *) matrixDescriptor;
-```
-
-# Document: prefetchStorage(with:matrixDescriptorList:)
-
-Source path: documentation/metalperformanceshaders/mpstemporarymatrix/prefetchstorage(with:matrixdescriptorlist:)
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporarymatrix/prefetchstorage(with:matrixdescriptorlist:)
-Description: Framework: Metal Performance Shaders Kind: Type Method Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-# prefetchStorage(with:matrixDescriptorList:) (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-class func prefetchStorage(with commandBuffer: any MTLCommandBuffer, matrixDescriptorList descriptorList: [MPSMatrixDescriptor])
-```
-
-# prefetchStorageWithCommandBuffer:matrixDescriptorList: (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-+ (void) prefetchStorageWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer matrixDescriptorList:(NSArray<MPSMatrixDescriptor *> *) descriptorList;
-```
-
-# Document: readCount
-
-Source path: documentation/metalperformanceshaders/mpstemporarymatrix/readcount
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporarymatrix/readcount
-Description: Framework: Metal Performance Shaders Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-# readCount (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Instance Property  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-var readCount: Int { get set }
-```
-
-# readCount (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Instance Property  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readwrite) NSUInteger readCount;
-```
-
-# Document: MPSTemporaryNDArray
-
-Source path: documentation/metalperformanceshaders/mpstemporaryndarray
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryndarray
-Description: Framework: Metal Performance Shaders Kind: Class Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
-
-# MPSTemporaryNDArray (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Class  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-class MPSTemporaryNDArray
-```
-
-## Topics
-
-### Initializers
-
-- [init(commandBuffer:descriptor:)](mpstemporaryndarray/init%28commandbuffer_descriptor_%29.md)
-
-### Instance Properties
-
-- [readCount](mpstemporaryndarray/readcount.md)
-
-### Type Methods
-
-- [defaultAllocator()](mpstemporaryndarray/defaultallocator%28%29.md)
-
-## Relationships
-
-### Inherits From
-
-- [MPSNDArray](mpsndarray.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-# MPSTemporaryNDArray (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Class  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-@interface MPSTemporaryNDArray : MPSNDArray
-```
-
-## Topics
-
-### Instance Properties
-
-- [readCount](mpstemporaryndarray/readcount.md)
-
-### Type Methods
-
-- [defaultAllocator](mpstemporaryndarray/defaultallocator%28%29.md)
-- [temporaryNDArrayWithCommandBuffer:descriptor:](mpstemporaryndarray/init%28commandbuffer_descriptor_%29.md)
-
-## Relationships
-
-### Inherits From
-
-- [MPSNDArray](mpsndarray.md)
-
-# Document: defaultAllocator()
-
-Source path: documentation/metalperformanceshaders/mpstemporaryndarray/defaultallocator()
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryndarray/defaultallocator()
-Description: Framework: Metal Performance Shaders Kind: Type Method Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
-
-# defaultAllocator() (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-class func defaultAllocator() -> any MPSNDArrayAllocator
-```
-
-# defaultAllocator (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-+ (id<MPSNDArrayAllocator>) defaultAllocator;
-```
-
-# Document: init(commandBuffer:descriptor:)
-
-Source path: documentation/metalperformanceshaders/mpstemporaryndarray/init(commandbuffer:descriptor:)
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryndarray/init(commandbuffer:descriptor:)
-Description: Framework: Metal Performance Shaders Kind: Initializer Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
-
-# init(commandBuffer:descriptor:) (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Initializer  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-convenience init(commandBuffer: any MTLCommandBuffer, descriptor: MPSNDArrayDescriptor)
-```
-
-# temporaryNDArrayWithCommandBuffer:descriptor: (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-+ (instancetype) temporaryNDArrayWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer descriptor:(MPSNDArrayDescriptor *) descriptor;
-```
-
-# Document: readCount
-
-Source path: documentation/metalperformanceshaders/mpstemporaryndarray/readcount
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryndarray/readcount
-Description: Framework: Metal Performance Shaders Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
-
-# readCount (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Instance Property  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-var readCount: Int { get set }
-```
-
-# readCount (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Instance Property  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readwrite) NSUInteger readCount;
-```
-
-# Document: MPSTemporaryVector
-
-Source path: documentation/metalperformanceshaders/mpstemporaryvector
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryvector
-Description: Framework: Metal Performance Shaders Kind: Class Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-# MPSTemporaryVector (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Class  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-A vector allocated on GPU private memory.
-
-## Declaration
-
-```swift
-class MPSTemporaryVector
-```
-
-## Topics
-
-### Initializers
-
-- [init(commandBuffer:descriptor:)](mpstemporaryvector/init%28commandbuffer_descriptor_%29.md)
-
-### Instance Properties
-
-- [readCount](mpstemporaryvector/readcount.md)
-
-### Type Methods
-
-- [prefetchStorage(with:descriptorList:)](mpstemporaryvector/prefetchstorage%28with_descriptorlist_%29.md)
-
-## Relationships
-
-### Inherits From
-
-- [MPSVector](mpsvector.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-## See Also
-
-### Vectors
-
-- [MPSVector](mpsvector.md): A 1D array of data that stores the data’s values.
-- [MPSVectorDescriptor](mpsvectordescriptor.md): A description of the length and data type of a vector.
-
-# MPSTemporaryVector (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Class  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-A vector allocated on GPU private memory.
-
-## Declaration
-
-```objectivec
-@interface MPSTemporaryVector : MPSVector
-```
-
-## Topics
-
-### Instance Properties
-
-- [readCount](mpstemporaryvector/readcount.md)
-
-### Type Methods
-
-- [temporaryVectorWithCommandBuffer:descriptor:](mpstemporaryvector/init%28commandbuffer_descriptor_%29.md)
-- [prefetchStorageWithCommandBuffer:descriptorList:](mpstemporaryvector/prefetchstorage%28with_descriptorlist_%29.md)
-
-## Relationships
-
-### Inherits From
-
-- [MPSVector](mpsvector.md)
-
-## See Also
-
-### Vectors
-
-- [MPSVector](mpsvector.md): A 1D array of data that stores the data’s values.
-- [MPSVectorDescriptor](mpsvectordescriptor.md): A description of the length and data type of a vector.
-
-# Document: init(commandBuffer:descriptor:)
-
-Source path: documentation/metalperformanceshaders/mpstemporaryvector/init(commandbuffer:descriptor:)
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryvector/init(commandbuffer:descriptor:)
-Description: Framework: Metal Performance Shaders Kind: Initializer Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-# init(commandBuffer:descriptor:) (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Initializer  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-convenience init(commandBuffer: any MTLCommandBuffer, descriptor: MPSVectorDescriptor)
-```
-
-# temporaryVectorWithCommandBuffer:descriptor: (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-+ (instancetype) temporaryVectorWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer descriptor:(MPSVectorDescriptor *) descriptor;
-```
-
-# Document: prefetchStorage(with:descriptorList:)
-
-Source path: documentation/metalperformanceshaders/mpstemporaryvector/prefetchstorage(with:descriptorlist:)
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryvector/prefetchstorage(with:descriptorlist:)
-Description: Framework: Metal Performance Shaders Kind: Type Method Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-# prefetchStorage(with:descriptorList:) (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-class func prefetchStorage(with commandBuffer: any MTLCommandBuffer, descriptorList: [MPSVectorDescriptor])
-```
-
-# prefetchStorageWithCommandBuffer:descriptorList: (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Type Method  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-+ (void) prefetchStorageWithCommandBuffer:(id<MTLCommandBuffer>) commandBuffer descriptorList:(NSArray<MPSVectorDescriptor *> *) descriptorList;
-```
-
-# Document: readCount
-
-Source path: documentation/metalperformanceshaders/mpstemporaryvector/readcount
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryvector/readcount
-Description: Framework: Metal Performance Shaders Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-# readCount (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Instance Property  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-var readCount: Int { get set }
-```
-
-# readCount (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Instance Property  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readwrite) NSUInteger readCount;
-```
-
-# Document: MPSTextureLinkingConstantIndex
-
-Source path: documentation/metalperformanceshaders/mpstexturelinkingconstantindex
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstexturelinkingconstantindex
-Description: Framework: Metal Performance Shaders Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# MPSTextureLinkingConstantIndex (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var MPSTextureLinkingConstantIndex: Int32 { get }
-```
-
-# MPSTextureLinkingConstantIndex (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Macro  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-#define MPSTextureLinkingConstantIndex
-```
-
-# Document: MPSTransformType
-
-Source path: documentation/metalperformanceshaders/mpstransformtype
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstransformtype
-Description: Framework: Metal Performance Shaders Kind: Enumeration Availability: iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.0+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+
-
-# MPSTransformType (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Enumeration  
-**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.0+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+
-
-Constants that indicate instance transformation types.
-
-## Declaration
-
-```swift
-enum MPSTransformType
-```
-
-## Topics
-
-### Enumeration Cases
-
-- [MPSTransformType.float4x4](mpstransformtype/float4x4.md)
-- [MPSTransformType.identity](mpstransformtype/identity.md)
-
-### Initializers
-
-- [init(rawValue:)](mpstransformtype/init%28rawvalue_%29.md)
-
-## Relationships
-
-### Conforms To
-
-- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Enumerations
-
-- [MPSAccelerationStructureStatus](mpsaccelerationstructurestatus.md): Deprecated. Constants that indicate an acceleration structure build state.
-- [MPSAccelerationStructureUsage](mpsaccelerationstructureusage.md): Deprecated. Options that describe how an acceleration structure will be used.
-- [MPSAliasingStrategy](mpsaliasingstrategy.md)
-- [MPSBoundingBoxIntersectionTestType](mpsboundingboxintersectiontesttype.md): Deprecated. Options for the intersection test type for a ray intersector bounding box.
-- [MPSCNNBatchNormalizationFlags](mpscnnbatchnormalizationflags.md): Options that define how statistics are calculated during batch normalization.
-- [MPSCNNConvolutionGradientOption](mpscnnconvolutiongradientoption.md): Options that control which gradient to compute during backward propagation.
-- [MPSCNNConvolutionWeightsLayout](mpscnnconvolutionweightslayout.md)
-- [MPSCNNLossType](mpscnnlosstype.md): Constants that indicate supported loss filter types.
-- [MPSCNNReductionType](mpscnnreductiontype.md): Constants that indicate supported reduction types.
-- [MPSCNNWeightsQuantizationType](mpscnnweightsquantizationtype.md): Options that specify the type of quantization used to generate unsigned integer weights.
-- [MPSCustomKernelIndex](mpscustomkernelindex.md)
-- [MPSDeviceCapsValues](mpsdevicecapsvalues.md)
-- [MPSDeviceOptions](mpsdeviceoptions.md)
-- [MPSFloatDataTypeBit](mpsfloatdatatypebit.md)
-- [MPSFloatDataTypeShift](mpsfloatdatatypeshift.md)
-
-# MPSTransformType (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Enumeration  
-**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.0+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+
-
-Constants that indicate instance transformation types.
-
-## Declaration
-
-```objectivec
-enum MPSTransformType : NSUInteger;
-```
-
-## Topics
-
-### Enumeration Cases
-
-- [MPSTransformTypeFloat4x4](mpstransformtype/float4x4.md)
-- [MPSTransformTypeIdentity](mpstransformtype/identity.md)
-
-## See Also
-
-### Enumerations
-
-- [MPSAccelerationStructureStatus](mpsaccelerationstructurestatus.md): Deprecated. Constants that indicate an acceleration structure build state.
-- [MPSAccelerationStructureUsage](mpsaccelerationstructureusage.md): Deprecated. Options that describe how an acceleration structure will be used.
-- [MPSAliasingStrategy](mpsaliasingstrategy.md)
-- [MPSBoundingBoxIntersectionTestType](mpsboundingboxintersectiontesttype.md): Deprecated. Options for the intersection test type for a ray intersector bounding box.
-- [MPSCNNBatchNormalizationFlags](mpscnnbatchnormalizationflags.md): Options that define how statistics are calculated during batch normalization.
-- [MPSCNNConvolutionGradientOption](mpscnnconvolutiongradientoption.md): Options that control which gradient to compute during backward propagation.
-- [MPSCNNConvolutionWeightsLayout](mpscnnconvolutionweightslayout.md)
-- [MPSCNNLossType](mpscnnlosstype.md): Constants that indicate supported loss filter types.
-- [MPSCNNReductionType](mpscnnreductiontype.md): Constants that indicate supported reduction types.
-- [MPSCNNWeightsQuantizationType](mpscnnweightsquantizationtype.md): Options that specify the type of quantization used to generate unsigned integer weights.
-- [MPSCustomKernelIndex](mpscustomkernelindex.md)
-- [MPSDeviceCapsValues](mpsdevicecapsvalues.md)
-- [MPSDeviceOptions](mpsdeviceoptions.md)
-- [MPSFloatDataTypeBit](mpsfloatdatatypebit.md)
-- [MPSFloatDataTypeShift](mpsfloatdatatypeshift.md)
-
-# Document: MPSTransformType.float4x4
-
-Source path: documentation/metalperformanceshaders/mpstransformtype/float4x4
-Canonical documentation: https://developer.apple.com/documentation/metalperformanceshaders/mpstransformtype/float4x4
-Description: Framework: Metal Performance Shaders Kind: Case Availability: iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.0+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+
-
-# MPSTransformType.float4x4 (Swift)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Case  
-**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.0+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+
-
-## Declaration
-
-```swift
-case float4x4
-```
-
-# MPSTransformTypeFloat4x4 (Objective-C)
-
-**Framework:** Metal Performance Shaders  
-**Kind:** Enumeration Case  
-**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.0+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+
-
-## Declaration
-
-```objectivec
-MPSTransformTypeFloat4x4
 ```

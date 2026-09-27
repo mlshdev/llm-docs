@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaseavailabilitycreaterequest/data-data.dictionary/relationships-data.dictionary
 
 # InAppPurchaseAvailabilityCreateRequest.Data.Relationships
@@ -33,4 +33,4 @@ object InAppPurchaseAvailabilityCreateRequest.Data.Relationships
 
 ### Objects
 
-- [InAppPurchaseAvailabilityCreateRequest.Data.Attributes](attributes-data.dictionary.md): Attributes that describe an in-app purchase availability create request resource.
+- [InAppPurchaseAvailabilityCreateRequest.Data.Attributes](attributes-data.dictionary.md): Attributes that describe an In-App Purchase availability create request resource.

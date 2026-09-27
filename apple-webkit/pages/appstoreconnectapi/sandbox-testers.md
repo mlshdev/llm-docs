@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/sandbox-testers
 
 # Sandbox Testers
@@ -14,7 +14,7 @@ Manage sandbox testers on your App Store Connect team.
 
 ## Overview
 
-The `sandboxTesters` resource represents a Sandbox Apple Account, which is an account you use to test your app in the sandbox environment. Using this resource you can read and modify Sandbox Apple Accounts and their data. Use App Store Connect to create or delete Sandbox Apple Account. For more information, see [Create Sandbox Apple Accounts](https://developer.apple.com/help/app-store-connect/test-in-app-purchases/create-sandbox-apple-ids). For more information about testing in-app purchase in the sandbox environment, see [Overview of testing in sandbox](https://developer.apple.com/help/app-store-connect/test-in-app-purchases/overview-of-testing-in-sandbox).
+The `sandboxTesters` resource represents a Sandbox Apple Account, which is an account you use to test your app in the sandbox environment. Using this resource you can read and modify Sandbox Apple Accounts and their data. Use App Store Connect to create or delete Sandbox Apple Account. For more information, see [Create Sandbox Apple Accounts](https://developer.apple.com/help/app-store-connect/test-in-app-purchases/create-sandbox-apple-ids). For more information about testing In-App Purchase in the sandbox environment, see [Overview of testing in sandbox](https://developer.apple.com/help/app-store-connect/test-in-app-purchases/overview-of-testing-in-sandbox).
 
 ## Topics
 
@@ -28,11 +28,11 @@ The `sandboxTesters` resource represents a Sandbox Apple Account, which is an ac
 
 - [SandboxTesterV2Response](sandboxtesterv2response.md): The response body for endpoints that read or modify a single sandbox Apple ID for testing.
 - [SandboxTesterV2UpdateRequest](sandboxtesterv2updaterequest.md): The request body you use to update a sandbox tester v2update request.
-- [SandboxTestersClearPurchaseHistoryRequestV2](sandboxtestersclearpurchasehistoryrequestv2.md): A batch request to reset the in-app purchase and subscription history for one or more sandbox Apple IDs.
+- [SandboxTestersClearPurchaseHistoryRequestV2](sandboxtestersclearpurchasehistoryrequestv2.md): A batch request to reset the In-App Purchase and subscription history for one or more sandbox Apple IDs.
 - [SandboxTestersClearPurchaseHistoryRequestV2CreateRequest](sandboxtestersclearpurchasehistoryrequestv2createrequest.md): The request body you use to create a request to clear sandbox tester purchase history.
 - [SandboxTestersClearPurchaseHistoryRequestV2Response](sandboxtestersclearpurchasehistoryrequestv2response.md): A response confirming that the purchase history for sandbox testers was cleared.
 - [SandboxTestersV2Response](sandboxtestersv2response.md): The response body for endpoints that list sandbox Apple IDs used for testing.
-- [SandboxTesterV2](sandboxtesterv2.md): A sandbox Apple ID you use to test in-app purchases and subscriptions in the Xcode sandbox environment.
+- [SandboxTesterV2](sandboxtesterv2.md): A sandbox Apple ID you use to test In-App Purchases and subscriptions in the Xcode sandbox environment.
 
 ## See Also
 

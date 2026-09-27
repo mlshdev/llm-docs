@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/game-center-leaderboard-versions
 
 # Game Center leaderboard versions
@@ -37,3 +37,4 @@ Manage versions for your Game Center leaderboards.
 - [Game Center leaderboard localizations](game-center-leaderboard-localizations.md): Manage localizations for Game Center leaderboards.
 - [Game Center leaderboard releases](game-center-leaderboard-releases.md): Read, create, and delete Game Center leaderboards releases.
 - [Game Center leaderboards scores](game-center-leaderboards-scores.md): Create and modify Game Center leaderboards scores.
+- [Game Center score moderations](game-center-score-moderations.md): Review and moderate scores players submit to your app’s leaderboards.

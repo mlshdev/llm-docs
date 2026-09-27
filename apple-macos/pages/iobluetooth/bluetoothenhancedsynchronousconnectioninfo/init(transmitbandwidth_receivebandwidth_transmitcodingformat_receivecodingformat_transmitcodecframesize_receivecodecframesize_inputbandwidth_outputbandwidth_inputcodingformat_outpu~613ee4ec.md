@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/iobluetooth/bluetoothenhancedsynchronousconnectioninfo/init(transmitbandwidth:receivebandwidth:transmitcodingformat:receivecodingformat:transmitcodecframesize:receivecodecframesize:inputbandwidth:outputbandwidth:inputcodingformat:outputcodingformat:inputcodeddatasize:outputcodeddatasize:inputpc-5g3ma
 
 # init(transmitBandWidth:receiveBandWidth:transmitCodingFormat:receiveCodingFormat:transmitCodecFrameSize:receiveCodecFrameSize:inputBandwidth:outputBandwidth:inputCodingFormat:outputCodingFormat:inputCodedDataSize:outputCodedDataSize:inputPCMDataFormat:outputPCMDataFormat:inputPCMSampelPayloadMSBPosition:outputPCMSampelPayloadMSBPosition:inputDataPath:outputDataPath:inputTransportUnitSize:outputTransportUnitSize:maxLatency:voiceSetting:retransmissionEffort:packetType:)

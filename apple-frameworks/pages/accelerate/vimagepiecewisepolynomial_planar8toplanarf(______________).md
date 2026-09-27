@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accelerate/vimagepiecewisepolynomial_planar8toplanarf(_:_:_:_:_:_:_:)
 
 # vImagePiecewisePolynomial_Planar8toPlanarF(\_:\_:\_:\_:\_:\_:\_:) (Swift)

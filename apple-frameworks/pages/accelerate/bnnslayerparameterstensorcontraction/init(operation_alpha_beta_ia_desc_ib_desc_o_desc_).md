@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accelerate/bnnslayerparameterstensorcontraction/init(operation:alpha:beta:ia_desc:ib_desc:o_desc:)
 
 # init(operation:alpha:beta:iA_desc:iB_desc:o_desc:)

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/mediaappasset
 
 # MediaAppAsset
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Object  
-**Availability:** Search Ads 4.0+
+**Availability:** Search Ads 4.0+ (deprecated in 5.2)
 
 The asset details of app preview or app screenshots.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -39,12 +41,12 @@ object MediaAppAsset
 
 ### Creative Request and Response Objects
 
-- [AppPreviewDevicesMappingResponse](apppreviewdevicesmappingresponse.md): The app preview device mapping response to display name and size mapping requests.
-- [Creative](creative.md): The creative object.
-- [CreativeLocalization](creativelocalization.md): The localized creative metadata.
-- [CreativeLocalizationWithAssets](creativelocalizationwithassets.md): The localized creative metadata with app preview.
-- [CustomProductPageCreative](customproductpagecreative.md): The creative details of a product page.
-- [CreativeResponse](creativeresponse.md): The response details of a creative request.
-- [CreativeListResponse](creativelistresponse.md): A container for response details of a creative request.
+- [AppPreviewDevicesMappingResponse](apppreviewdevicesmappingresponse.md): Deprecated. The app preview device mapping response to display name and size mapping requests.
+- [Creative](creative.md): Deprecated. The creative object.
+- [CreativeLocalization](creativelocalization.md): Deprecated. The localized creative metadata.
+- [CreativeLocalizationWithAssets](creativelocalizationwithassets.md): Deprecated. The localized creative metadata with app preview.
+- [CustomProductPageCreative](customproductpagecreative.md): Deprecated. The creative details of a product page.
+- [CreativeResponse](creativeresponse.md): Deprecated. The response details of a creative request.
+- [CreativeListResponse](creativelistresponse.md): Deprecated. A container for response details of a creative request.
 - [DefaultProductPageCreative](defaultproductpagecreative.md): The default product page object.
-- [MediaAppAssetsDetail](mediaappassetsdetail.md): The app asset details of a device.
+- [MediaAppAssetsDetail](mediaappassetsdetail.md): Deprecated. The app asset details of a device.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-apps-_id_-promotedpurchases
 
 # List all promoted purchases for an app
@@ -9,7 +9,7 @@
 **Kind:** Web Service Endpoint  
 **Availability:** App Store Connect API 2.0+
 
-Get a list of promoted in-app purchases, including promoted auto-renewable subscriptions, for an app.
+Get a list of promoted In-App Purchases, including promoted auto-renewable subscriptions, for an app.
 
 ## URL
 
@@ -23,12 +23,12 @@ GET https://api.appstoreconnect.apple.com/v1/apps/{id}/promotedPurchases
 
 ## Query Parameters
 
-- `fields[inAppPurchases]` — `[string]`: Additional fields to include for each in-app purchase resource returned by the response.
+- `fields[inAppPurchases]` — `[string]`: Additional fields to include for each In-App Purchase resource returned by the response.
   **Allowed values:** `name`, `productId`, `inAppPurchaseType`, `state`, `reviewNote`, `familySharable`, `contentHosting`, `inAppPurchaseLocalizations`, `pricePoints`, `content`, `appStoreReviewScreenshot`, `promotedPurchase`, `iapPriceSchedule`, `inAppPurchaseAvailability`, `images`, `offerCodes`, `versions`
 - `fields[promotedPurchases]` — `[string]`: Additional fields to include for each promoted purchase resource returned by the response.
   **Allowed values:** `visibleForAllUsers`, `enabled`, `state`, `inAppPurchaseV2`, `subscription`
 - `fields[subscriptions]` — `[string]`: Additional fields to include for each subscription resource returned by the response.
-  **Allowed values:** `name`, `productId`, `familySharable`, `state`, `subscriptionPeriod`, `reviewNote`, `groupLevel`, `subscriptionLocalizations`, `appStoreReviewScreenshot`, `group`, `introductoryOffers`, `promotionalOffers`, `offerCodes`, `prices`, `pricePoints`, `promotedPurchase`, `subscriptionAvailability`, `winBackOffers`, `images`, `planAvailabilities`, `versions`
+  **Allowed values:** `name`, `productId`, `familySharable`, `state`, `subscriptionPeriod`, `reviewNote`, `groupLevel`, `multiSeatStatus`, `marketSettings`, `subscriptionLocalizations`, `appStoreReviewScreenshot`, `group`, `introductoryOffers`, `promotionalOffers`, `offerCodes`, `prices`, `pricePoints`, `promotedPurchase`, `subscriptionAvailability`, `winBackOffers`, `images`, `planAvailabilities`, `versions`
 - `include` — `[string]`: The relationship data to include in the response.
   **Allowed values:** `inAppPurchaseV2`, `subscription`
 - `limit` — `integer`: The maximum number of promoted purchase resources to return.
@@ -46,7 +46,7 @@ GET https://api.appstoreconnect.apple.com/v1/apps/{id}/promotedPurchases
 ## Mentioned In
 
 - [Managing auto-renewable subscriptions](managing-auto-renewable-subscriptions.md)
-- [Managing in-app purchases](managing-in-app-purchases.md)
+- [Managing In-App Purchases](managing-in-app-purchases.md)
 
 <a id="Discussion"></a>
 
@@ -122,7 +122,7 @@ https://api.appstoreconnect.apple.com/v1/apps/1000001234/promotedPurchases
 
 ## See Also
 
-### Getting in-app purchase information
+### Getting In-App Purchase information
 
-- [Read in-app purchase information](get-v1-inapppurchases-_id_.md): Deprecated. Get information about an in-app purchase.
-- [List all in-app purchases for an app v1](get-v1-apps-_id_-inapppurchases.md): Deprecated. List the in-app purchases that are available for your app.
+- [Read In-App Purchase information](get-v1-inapppurchases-_id_.md): Deprecated. Get information about an In-App Purchase.
+- [List all In-App Purchases for an app v1](get-v1-apps-_id_-inapppurchases.md): Deprecated. List the In-App Purchases that are available for your app.

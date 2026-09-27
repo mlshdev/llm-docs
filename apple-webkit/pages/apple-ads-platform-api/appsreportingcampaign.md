@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/appsreportingcampaign
 
 # AppsReportingCampaign
@@ -21,12 +21,14 @@ object AppsReportingCampaign
 
 - `id` — `int64`: The campaign’s unique identifier.
 - `promotedObject` — `PromotedObject`: See [PromotedObject](promotedobject.md) for details.
-- `promotedObjectType` — `string`: Always `APPSTORE_APP` for Apple Ads campaigns.
+- `promotedObjectType` — `string`: The type of the promoted object.
+  **Allowed values:** `APPSTORE_APP`
 - `promotedObjectId` — `string`: The Adam ID of the promoted App Store app.
 - `name` — `string`: The campaign name as configured at report time.
 - `status` — `AppsReportingCampaign.Status`: Possible values: `ENABLED`, `PAUSED`.
 - `deleted` — `boolean`: Whether the campaign has been soft-deleted.
 - `displayStatus` — `string`: System-computed, rolled-up delivery state combining `status` and `systemStatus` into a single label. See [CampaignDisplayStatus](campaigndisplaystatus.md).
+  **Allowed values:** `DELETED`, `LIMITED`, `ON_HOLD`, `PAUSED`, `PROCESSING`, `RUNNING`
 - `modificationTime` — `date-time`: Timestamp of the campaign’s last modification (ISO 8601).
 - `creationTime` — `date-time`: Timestamp when the campaign was created (ISO 8601).
 - `adAccountId` — `int64`: The ad account this campaign belongs to.
@@ -43,6 +45,7 @@ object AppsReportingCampaign
 - `adChannelType` — `AppsReportingCampaign.AdChannelType`: The advertising channel type for this campaign. Possible values: `SEARCH`, `DISPLAY`.
 - `countryOrRegion` — `string`: Country or region groupBy dimension value.
 - `deviceClass` — `string`: Device class groupBy dimension value.
+  **Allowed values:** `IPHONE`, `IPAD`
 - `gender` — `string`: Gender groupBy dimension value.
 - `ageRange` — `string`: Age range groupBy dimension value.
 - `locality` — `string`: Locality groupBy dimension value.

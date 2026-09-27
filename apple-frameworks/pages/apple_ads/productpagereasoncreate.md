@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/productpagereasoncreate
 
 # ProductPageReasonCreate
@@ -53,14 +53,14 @@ Descriptions of reason codes include the following:
 
 ### Product Page Request and Response Objects
 
-- [LocaleInfo](localeinfo.md): The supported languages and language codes.
-- [CountryOrRegion](countryorregion.md): The supported locales of a product page.
-- [CountriesOrRegionsListResponse](countriesorregionslistresponse.md): A container for product page responses.
-- [MediaAppVideoAsset](mediaappvideoasset.md): The app preview or screenshot asset detail.
-- [ProductPageLocaleDetail](productpagelocaledetail.md): The product page locale metadata on App Store Connect.
-- [ProductPageDetail](productpagedetail.md): The product page metadata.
-- [ProductPageDetailWithAssets](productpagedetailwithassets.md): The product page asset metadata.
-- [ProductPageLocaleDetailListResponse](productpagelocaledetaillistresponse.md): A container for product page responses.
-- [ProductPageDetailResponse](productpagedetailresponse.md): A container for product page responses.
-- [ProductPageDetailWithAssetInfoResponse](productpagedetailwithassetinforesponse.md): A container for product page responses.
-- [ProductPageDetailListResponse](productpagedetaillistresponse.md): A container for product page responses.
+- [LocaleInfo](localeinfo.md): Deprecated. The supported languages and language codes.
+- [CountryOrRegion](countryorregion.md): Deprecated. The supported locales of a product page.
+- [CountriesOrRegionsListResponse](countriesorregionslistresponse.md): Deprecated. A container for product page responses.
+- [MediaAppVideoAsset](mediaappvideoasset.md): Deprecated. The app preview or screenshot asset detail.
+- [ProductPageLocaleDetail](productpagelocaledetail.md): Deprecated. The product page locale metadata on App Store Connect.
+- [ProductPageDetail](productpagedetail.md): Deprecated. The product page metadata.
+- [ProductPageDetailWithAssets](productpagedetailwithassets.md): Deprecated. The product page asset metadata.
+- [ProductPageLocaleDetailListResponse](productpagelocaledetaillistresponse.md): Deprecated. A container for product page responses.
+- [ProductPageDetailResponse](productpagedetailresponse.md): Deprecated. A container for product page responses.
+- [ProductPageDetailWithAssetInfoResponse](productpagedetailwithassetinforesponse.md): Deprecated. A container for product page responses.
+- [ProductPageDetailListResponse](productpagedetaillistresponse.md): Deprecated. A container for product page responses.

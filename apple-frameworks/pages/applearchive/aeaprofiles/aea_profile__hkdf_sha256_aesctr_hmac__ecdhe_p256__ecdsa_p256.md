@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/applearchive/aeaprofiles/aea_profile__hkdf_sha256_aesctr_hmac__ecdhe_p256__ecdsa_p256
 
 # AEA_PROFILE\__HKDF_SHA256_AESCTR_HMAC\__ECDHE_P256\__ECDSA_P256

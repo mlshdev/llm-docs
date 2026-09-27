@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/reportingsearchterm
 
 # ReportingSearchTerm
@@ -23,11 +23,13 @@ object ReportingSearchTerm
 - `adAccountId` — `int64`: The identifier of the ad account that owns the search term.
 - `searchTermText` — `string`: The actual user-entered query string.
 - `searchTermSource` — `string`: Indicates whether the search term came from a direct user search or an auto-match source.
+  **Allowed values:** `AUTO`, `TARGETED`
 - `keyword` — `ReportingKeyword`: See [ReportingKeyword](reportingkeyword.md) for details.
 - `adGroupId` — `int64`: The identifier of the ad group that owns the search term.
 - `adGroup` — `ReportingAdGroupMin`: See [ReportingAdGroupMin](reportingadgroupmin.md) for details.
 - `countryOrRegion` — `string`: Country or region groupBy dimension value.
 - `deviceClass` — `string`: Device class groupBy dimension value.
+  **Allowed values:** `IPHONE`, `IPAD`
 
 <a id="Discussion"></a>
 
@@ -46,7 +48,7 @@ Search term reports exclusively require the ORTZ timezone. UTC isn’t supported
   "campaignId": 123456789,
   "adAccountId": 987654321,
   "searchTermText": "awayfinder travel app",
-  "searchTermSource": "SEARCH",
+  "searchTermSource": "AUTO",
   "keyword": {
     "id": 555666777,
     "campaignId": 123456789,

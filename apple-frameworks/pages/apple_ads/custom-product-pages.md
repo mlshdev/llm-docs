@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/custom-product-pages
 
 # Custom Product Pages
@@ -13,6 +13,10 @@ View Custom Product Page details.
 <a id="overview"></a>
 
 ## Overview
+
+> **Deprecated**
+
+> The Apple Ads Campaign Management API is deprecated and will be sunset on January 26, 2027. Use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api) instead.
 
 In iOS 15 and later, you can use [custom product pages](https://developer.apple.com/app-store/product-page/) that you build in [App Store Connect](https://appstoreconnect.apple.com) to create ad variations in the Apple Search Ads Campaign Management API to promote your apps.
 
@@ -34,25 +38,25 @@ To create a custom product page ad, use the following workflow:
 
 ### Product Page Endpoints
 
-- [Get Product Pages](get-product-pages.md): Fetches metadata of all your custom product pages.
-- [Get Product Pages by Identifier](get-product-pages-by-identifier.md): Fetches metadata for a specific product page.
-- [Get Product Page Locales](get-product-page-locales.md): Fetches product page locales by identifier.
-- [Get Supported Countries or Regions](get-supported-countries-or-regions.md): Fetches supported languages and language codes.
-- [Get App Preview Device Sizes](get-app-preview-device-sizes.md): Fetches supported app preview device-size mappings.
+- [Get Product Pages](get-product-pages.md): Deprecated. Fetches metadata of all your custom product pages.
+- [Get Product Pages by Identifier](get-product-pages-by-identifier.md): Deprecated. Fetches metadata for a specific product page.
+- [Get Product Page Locales](get-product-page-locales.md): Deprecated. Fetches product page locales by identifier.
+- [Get Supported Countries or Regions](get-supported-countries-or-regions.md): Deprecated. Fetches supported languages and language codes.
+- [Get App Preview Device Sizes](get-app-preview-device-sizes.md): Deprecated. Fetches supported app preview device-size mappings.
 
 ### Product Page Request and Response Objects
 
-- [LocaleInfo](localeinfo.md): The supported languages and language codes.
-- [CountryOrRegion](countryorregion.md): The supported locales of a product page.
-- [CountriesOrRegionsListResponse](countriesorregionslistresponse.md): A container for product page responses.
-- [MediaAppVideoAsset](mediaappvideoasset.md): The app preview or screenshot asset detail.
-- [ProductPageLocaleDetail](productpagelocaledetail.md): The product page locale metadata on App Store Connect.
-- [ProductPageDetail](productpagedetail.md): The product page metadata.
-- [ProductPageDetailWithAssets](productpagedetailwithassets.md): The product page asset metadata.
-- [ProductPageLocaleDetailListResponse](productpagelocaledetaillistresponse.md): A container for product page responses.
-- [ProductPageDetailResponse](productpagedetailresponse.md): A container for product page responses.
-- [ProductPageDetailWithAssetInfoResponse](productpagedetailwithassetinforesponse.md): A container for product page responses.
-- [ProductPageDetailListResponse](productpagedetaillistresponse.md): A container for product page responses.
+- [LocaleInfo](localeinfo.md): Deprecated. The supported languages and language codes.
+- [CountryOrRegion](countryorregion.md): Deprecated. The supported locales of a product page.
+- [CountriesOrRegionsListResponse](countriesorregionslistresponse.md): Deprecated. A container for product page responses.
+- [MediaAppVideoAsset](mediaappvideoasset.md): Deprecated. The app preview or screenshot asset detail.
+- [ProductPageLocaleDetail](productpagelocaledetail.md): Deprecated. The product page locale metadata on App Store Connect.
+- [ProductPageDetail](productpagedetail.md): Deprecated. The product page metadata.
+- [ProductPageDetailWithAssets](productpagedetailwithassets.md): Deprecated. The product page asset metadata.
+- [ProductPageLocaleDetailListResponse](productpagelocaledetaillistresponse.md): Deprecated. A container for product page responses.
+- [ProductPageDetailResponse](productpagedetailresponse.md): Deprecated. A container for product page responses.
+- [ProductPageDetailWithAssetInfoResponse](productpagedetailwithassetinforesponse.md): Deprecated. A container for product page responses.
+- [ProductPageDetailListResponse](productpagedetaillistresponse.md): Deprecated. A container for product page responses.
 - [ProductPageReasonCreate](productpagereasoncreate.md): The ad creative rejection reason based on a product page.
 
 ## See Also

@@ -1,15 +1,15 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
-  "generatorDigest": "034397747f427292c319b4e82e9b1cb2e8adce6c31635ef7b3f7592eb076bb54",
+  "generatorDigest": "c54d2498a828148e36b8e195c831e4787be42562b2d7e56602c99776d6d23f79",
   "project": "apple-swift",
   "title": "Apple Swift",
   "homepage": "https://developer.apple.com/documentation/swift",
   "catalog": "swift",
-  "tag": "snapshot-5915b24a1311",
-  "snapshotDigest": "5915b24a13116058563ec2085adb7610a331e7e4aea596f8d2f1f1b39a6e0f1c",
-  "contentDigest": "8b137be1ef278f1d522a4d88c557c8c07b458d20c03cd9e5596b61253f263486",
-  "capturedAt": "2026-09-16T18:21:42.073Z",
+  "tag": "snapshot-3cd4d1098779",
+  "snapshotDigest": "3cd4d1098779f6b6fc16e524bcbb296cd3ca44b5de1a8f9d83171d61b7b63adb",
+  "contentDigest": "cb3ffbf838cd5f0be6ae77f16fdae59481730abbd878246936617c12df1785d3",
+  "capturedAt": "2026-09-27T18:07:09.584Z",
   "documentCount": 19694,
   "indexComplete": false,
   "corpusVolumes": [
@@ -17,39 +17,39 @@
       "name": "llms-full.txt",
       "byteLength": 983,
       "documentCount": 0,
-      "sha256": "f343ac0cc22eff59e50cbe704f4a5d2e393120bfd5d5fa3144afbdffd8c2881d"
+      "sha256": "8c878c463baecf6befe6af182dae0629ec3e43e33d89dfa0444472281745a9e3"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8387777,
+      "byteLength": 8387751,
       "documentCount": 5204,
-      "sha256": "d69b1826b07efdf1247132f59562b0f562cd63ef7632df2c1677b41e5404e11d"
+      "sha256": "afbf66903e3dbf163ac93af8a245335b825963031d357774766fdbdc1f7117db"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 8388151,
-      "documentCount": 5549,
-      "sha256": "4df8c5bb01416c6f0a61960cae57d56c42451cc6628f91eae7e81b9f50c6ff77"
+      "byteLength": 8388442,
+      "documentCount": 5550,
+      "sha256": "12ff8711473e6b0f6205f7616763f875fbcd4bc9ff31fbc431edf7c81d15152a"
     },
     {
       "name": "llms-full.003.txt",
-      "byteLength": 8387928,
-      "documentCount": 6811,
-      "sha256": "b8564b0162da46a05b43f6db4aa4704b3aa41e26b2c5cd8711776af40086b2fe"
+      "byteLength": 8387692,
+      "documentCount": 6810,
+      "sha256": "a31ec20a626c1595953a5cb67f25cb6932fae6f526f49d707d29952d1dfc53b9"
     },
     {
       "name": "llms-full.004.txt",
-      "byteLength": 3265480,
+      "byteLength": 3265330,
       "documentCount": 2130,
-      "sha256": "4cdc91e3d84eb3c071bd56e534dc0e7a8e03613f854c6026833c23a17fd467ce"
+      "sha256": "94ba95650118502625638514af426c56086490756ffd9dcf7541858d8ce11f93"
     }
   ],
-  "outputDigest": "7745b786450b165649bbe27c23692be91db76bb1d9adb8fe87f7e7a9a70149f8",
+  "outputDigest": "d89d76ec7ca5aedb0b53fd618cd5ac435eeb9a615a8a07401656992210758d83",
   "notes": [
     "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
-    "6 frameworks in this catalog, captured at 2026-09-16T18:21:42.073Z.",
+    "6 frameworks in this catalog, captured at 2026-09-27T18:07:09.584Z.",
     "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
-    "Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.",
+    "Weekly reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive weekly check.",
     "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."
   ]
 }

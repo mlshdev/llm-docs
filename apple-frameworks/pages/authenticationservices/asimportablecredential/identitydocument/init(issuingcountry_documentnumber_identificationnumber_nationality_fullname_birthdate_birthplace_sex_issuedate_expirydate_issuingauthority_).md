@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/authenticationservices/asimportablecredential/identitydocument/init(issuingcountry:documentnumber:identificationnumber:nationality:fullname:birthdate:birthplace:sex:issuedate:expirydate:issuingauthority:)
 
 # init(issuingCountry:documentNumber:identificationNumber:nationality:fullName:birthDate:birthPlace:sex:issueDate:expiryDate:issuingAuthority:)

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-subscriptionpricepoints-_id_-adjustedequalizations
 
 # List adjusted equalizations for a subscription price point
@@ -26,7 +26,7 @@ GET https://api.appstoreconnect.apple.com/v1/subscriptionPricePoints/{id}/adjust
 - `filter[territory]` — `[string]`: Filter the returned subscription price points by territory.
 - `filter[subscription]` — `[string]`: Filter the returned subscription price points by subscription.
 - `filter[upfrontPricePointId]` — `[string]`: Filter the returned subscription price points by upfront price point ID.
-- `filter[planType]` — `[string]`: Filter the returned subscription price points by plan type.
+- `filter[planType]` — `[string]` (required): Filter the returned subscription price points by plan type.
 - `fields[subscriptionPricePoints]` — `[string]`: Additional fields to include for each subscription price point resource returned by the response.
   **Allowed values:** `customerPrice`, `proceeds`, `proceedsYear2`, `territory`, `equalizations`, `adjustedEqualizations`
 - `fields[territories]` — `[string]`: Additional fields to include for each territory resource returned by the response.

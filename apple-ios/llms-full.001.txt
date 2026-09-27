@@ -1,9 +1,9 @@
-# Apple iOS and iPadOS snapshot-6a8f7b178c0a: full documentation
+# Apple iOS and iPadOS snapshot-d0d1b2f13e0d: full documentation
 
 Source: https://developer.apple.com/ios/
-Catalog snapshot: 6a8f7b178c0a4a818fcf6807848b91d84ce5b7ebf4360d1e5a64f101b6da66de
-Content digest: 316c0df8708ef0a335d681b88668361f39778065c0705c8c1aeea8adfdab1067
-Captured at: 2026-09-19T05:14:28.746Z
+Catalog snapshot: d0d1b2f13e0dda7c6d6bed81d67f484e5f0b9662600743bf08baa771840f0378
+Content digest: 389660c763e1ce396dda974d54f5268621a1de23bcebb625192122aebc78e52e
+Captured at: 2026-09-27T18:07:09.630Z
 Volume 1
 
 # Document: Accessory Live Activities
@@ -132936,6 +132936,8 @@ You don’t create scenes directly. Instead, you specify the name of the appropr
 - [Hashable](https://developer.apple.com/documentation/swift/hashable)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](https://developer.apple.com/documentation/uikit/uiactivityitemsconfigurationproviding)
 - [UIPasteConfigurationSupporting](https://developer.apple.com/documentation/uikit/uipasteconfigurationsupporting)
 - [UIResponderStandardEditActions](https://developer.apple.com/documentation/uikit/uiresponderstandardeditactions)

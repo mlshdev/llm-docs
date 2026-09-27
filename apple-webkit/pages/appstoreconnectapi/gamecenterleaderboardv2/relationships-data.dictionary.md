@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/gamecenterleaderboardv2/relationships-data.dictionary
 
 # GameCenterLeaderboardV2.Relationships
@@ -24,6 +24,7 @@ object GameCenterLeaderboardV2.Relationships
 - `gameCenterDetail` — `GameCenterLeaderboardV2.Relationships.GameCenterDetail`:
 - `gameCenterGroup` — `GameCenterLeaderboardV2.Relationships.GameCenterGroup`:
 - `gameCenterLeaderboardSets` — `GameCenterLeaderboardV2.Relationships.GameCenterLeaderboardSets`:
+- `gameCenterScoreModerations` — `GameCenterLeaderboardV2.Relationships.GameCenterScoreModerations`:
 - `versions` — `GameCenterLeaderboardV2.Relationships.Versions`:
 
 <a id="overview"></a>
@@ -35,6 +36,7 @@ object GameCenterLeaderboardV2.Relationships
 - gameCenterDetail:
 - gameCenterGroup:
 - gameCenterLeaderboardSets:
+- gameCenterScoreModerations:
 - versions:
 
 ## Topics
@@ -46,6 +48,7 @@ object GameCenterLeaderboardV2.Relationships
 - [GameCenterLeaderboardV2.Relationships.GameCenterDetail](relationships-data.dictionary/gamecenterdetail-data.dictionary.md): The data that describes the Game Center detail of the Game Center leaderboard v2.
 - [GameCenterLeaderboardV2.Relationships.GameCenterGroup](relationships-data.dictionary/gamecentergroup-data.dictionary.md): The data that describes the Game Center group of the Game Center leaderboard v2.
 - [GameCenterLeaderboardV2.Relationships.GameCenterLeaderboardSets](relationships-data.dictionary/gamecenterleaderboardsets-data.dictionary.md): The data that describes the Game Center leaderboard sets of the Game Center leaderboard v2.
+- [GameCenterLeaderboardV2.Relationships.GameCenterScoreModerations](relationships-data.dictionary/gamecenterscoremoderations-data.dictionary.md): The links to the score moderations related to the Game Center leaderboard v2.
 - [GameCenterLeaderboardV2.Relationships.Versions](relationships-data.dictionary/versions-data.dictionary.md): The data and links that describe the versions of the Game Center leaderboard v2.
 
 ## See Also

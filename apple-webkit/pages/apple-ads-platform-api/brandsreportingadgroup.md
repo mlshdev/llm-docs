@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/brandsreportingadgroup
 
 # BrandsReportingAdGroup
@@ -32,6 +32,7 @@ object BrandsReportingAdGroup
 - `automatedKeywordsRequired` — `boolean`: Whether automated keywords are required for this ad group.
 - `pricingModel` — `BrandsReportingAdGroup.PricingModel`: Possible values: `CPA`, `CPM`, `CPT`.
 - `displayStatus` — `string`: System-computed, rolled-up delivery state combining ad group and campaign conditions.
+  **Allowed values:** `CAMPAIGN_ON_HOLD`, `DELETED`, `LIMITED`, `ON_HOLD`, `PAUSED`, `PROCESSING`, `RUNNING`
 - `modificationTime` — `date-time`: Timestamp of the ad group’s last modification (ISO 8601).
 - `creationTime` — `date-time`: Timestamp when the ad group was created (ISO 8601).
 - `startTime` — `date-time`: Ad group start time.
@@ -40,6 +41,7 @@ object BrandsReportingAdGroup
 - `bidStrategy` — `ReportingBidStrategy`: See [ReportingBidStrategy](reportingbidstrategy.md) for details.
 - `targeting` — `BrandsTargetingProjection`: See [BrandsTargetingProjection](brandstargetingprojection.md) for details.
 - `deviceClass` — `string`: Device class groupBy dimension value.
+  **Allowed values:** `IPHONE`, `IPAD`
 - `locationId` — `string`: Location ID groupBy dimension value.
 - `supplyPlacement` — `string`: Supply placement groupBy dimension value.
 

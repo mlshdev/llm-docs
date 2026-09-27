@@ -1,10 +1,1343 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 62
+
+# Document: title
+
+Source path: documentation/uikit/uialertaction/title
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertaction/title
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+# title (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+The title of the action’s button.
+
+## Declaration
+
+```swift
+var title: String? { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property is set to the value you specified in the [init(title:style:handler:)](init%28title_style_handler_%29.md) method.
+
+## See Also
+
+### Getting the action’s attributes
+
+- [style](style-swift.property.md): The style that applies to the action’s button.
+- [isEnabled](isenabled.md): A Boolean value indicating whether the action is currently enabled.
+
+# title (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+The title of the action’s button.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly, nullable) NSString * title;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property is set to the value you specified in the [actionWithTitle:style:handler:](init%28title_style_handler_%29.md) method.
+
+## See Also
+
+### Getting the action’s attributes
+
+- [style](style-swift.property.md): The style that applies to the action’s button.
+- [enabled](isenabled.md): A Boolean value indicating whether the action is currently enabled.
+
+# Document: UIAlertController
+
+Source path: documentation/uikit/uialertcontroller
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller
+Description: Framework: UIKit Kind: Class Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+# UIAlertController (Swift)
+
+**Framework:** UIKit  
+**Kind:** Class  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+An object that displays an alert message.
+
+## Declaration
+
+```swift
+@MainActor class UIAlertController
+```
+
+## Mentioned In
+
+- [Getting the user’s attention with alerts and action sheets](getting-the-user-s-attention-with-alerts-and-action-sheets.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Use this class to configure alerts and action sheets with the message that you want to display and the actions from which to choose. After configuring the alert controller with the actions and style you want, present it using the [present(\_:animated:completion:)](uiviewcontroller/present%28__animated_completion_%29.md) method. UIKit displays alerts and action sheets modally over your app’s content.
+
+In addition to displaying a message to a user, you can associate actions with your alert controller to give people a way to respond. For each action you add using the [addAction(\_:)](uialertcontroller/addaction%28__%29.md) method, the alert controller configures a button with the action details. When a person taps that action, the alert controller executes the block you provided when creating the action object. The following code shows how to configure an alert with a single action.
+
+**Swift**
+
+```swift
+let alert = UIAlertController(title: "My Alert", message: "This is an alert.", preferredStyle: .alert) 
+alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in 
+NSLog("The \"OK\" alert occured.")
+}))
+self.present(alert, animated: true, completion: nil)
+```
+
+**Objective-C**
+
+```objc
+UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"My Alert"
+                               message:@"This is an alert."
+                               preferredStyle:UIAlertControllerStyleAlert];
+ 
+UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+   handler:^(UIAlertAction * action) {}];
+ 
+[alert addAction:defaultAction];
+[self presentViewController:alert animated:YES completion:nil];
+```
+
+When configuring an alert with the [UIAlertController.Style.alert](uialertcontroller/style/alert.md) style, you can also add text fields to the alert interface. The alert controller lets you provide a block for configuring your text fields prior to display. The alert controller maintains a reference to each text field so that you can access its value later.
+
+> **Important**
+
+>  The [UIAlertController](uialertcontroller.md) class is intended to be used as-is and doesn’t support subclassing. The view hierarchy for this class is private and must not be modified.
+
+## Topics
+
+### Creating an alert controller
+
+- [init(title:message:preferredStyle:)](uialertcontroller/init%28title_message_preferredstyle_%29.md): Creates and returns a view controller for displaying an alert.
+
+### Configuring the alert
+
+- [title](uialertcontroller/title.md): The title of the alert.
+- [message](uialertcontroller/message.md): Descriptive text that provides more details about the reason for the alert.
+- [preferredStyle](uialertcontroller/preferredstyle.md): The style of the alert controller.
+- [UIAlertController.Style](uialertcontroller/style.md): Constants indicating the type of alert to display.
+
+### Configuring the user actions
+
+- [addAction(\_:)](uialertcontroller/addaction%28__%29.md): Attaches an action object to the alert or action sheet.
+- [actions](uialertcontroller/actions.md): The actions that the user can take in response to the alert or action sheet.
+- [preferredAction](uialertcontroller/preferredaction.md): The preferred action for the user to take from an alert.
+
+### Configuring text fields
+
+- [addTextField(configurationHandler:)](uialertcontroller/addtextfield%28configurationhandler_%29.md): Adds a text field to an alert.
+- [textFields](uialertcontroller/textfields.md): The array of text fields displayed by the alert.
+
+### Configuring alert severity
+
+- [severity](uialertcontroller/severity.md): Indicates the severity of the alert.
+- [UIAlertControllerSeverity](uialertcontrollerseverity.md): Constants for specifying the severity of an alert in apps built with Mac Catalyst.
+
+## Relationships
+
+### Inherits From
+
+- [UIViewController](uiviewcontroller.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCoding](../foundation/nscoding.md)
+- [NSExtensionRequestHandling](../foundation/nsextensionrequesthandling.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [UIActivityItemsConfigurationProviding](uiactivityitemsconfigurationproviding.md)
+- [UIAppearanceContainer](uiappearancecontainer.md)
+- [UIContentContainer](uicontentcontainer.md)
+- [UIFocusEnvironment](uifocusenvironment.md)
+- [UIPasteConfigurationSupporting](uipasteconfigurationsupporting.md)
+- [UIResponderStandardEditActions](uiresponderstandardeditactions.md)
+- [UISpringLoadedInteractionSupporting](uispringloadedinteractionsupporting.md)
+- [UIStateRestoring](uistaterestoring.md)
+- [UITraitChangeObservable](uitraitchangeobservable-67e94.md)
+- [UITraitEnvironment](uitraitenvironment.md)
+- [UIUserActivityRestoring](uiuseractivityrestoring.md)
+
+## See Also
+
+### Alerts
+
+- [Getting the user’s attention with alerts and action sheets](getting-the-user-s-attention-with-alerts-and-action-sheets.md): Present important information to a person or prompt them about an important choice.
+- [UIAlertAction](uialertaction.md): An action that can be taken when the user taps a button in an alert.
+
+# UIAlertController (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Class  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+An object that displays an alert message.
+
+## Declaration
+
+```objectivec
+@interface UIAlertController : UIViewController
+```
+
+## Mentioned In
+
+- [Getting the user’s attention with alerts and action sheets](getting-the-user-s-attention-with-alerts-and-action-sheets.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Use this class to configure alerts and action sheets with the message that you want to display and the actions from which to choose. After configuring the alert controller with the actions and style you want, present it using the [presentViewController:animated:completion:](uiviewcontroller/present%28__animated_completion_%29.md) method. UIKit displays alerts and action sheets modally over your app’s content.
+
+In addition to displaying a message to a user, you can associate actions with your alert controller to give people a way to respond. For each action you add using the [addAction:](uialertcontroller/addaction%28__%29.md) method, the alert controller configures a button with the action details. When a person taps that action, the alert controller executes the block you provided when creating the action object. The following code shows how to configure an alert with a single action.
+
+**Swift**
+
+```swift
+let alert = UIAlertController(title: "My Alert", message: "This is an alert.", preferredStyle: .alert) 
+alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in 
+NSLog("The \"OK\" alert occured.")
+}))
+self.present(alert, animated: true, completion: nil)
+```
+
+**Objective-C**
+
+```objc
+UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"My Alert"
+                               message:@"This is an alert."
+                               preferredStyle:UIAlertControllerStyleAlert];
+ 
+UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+   handler:^(UIAlertAction * action) {}];
+ 
+[alert addAction:defaultAction];
+[self presentViewController:alert animated:YES completion:nil];
+```
+
+When configuring an alert with the [UIAlertControllerStyleAlert](uialertcontroller/style/alert.md) style, you can also add text fields to the alert interface. The alert controller lets you provide a block for configuring your text fields prior to display. The alert controller maintains a reference to each text field so that you can access its value later.
+
+> **Important**
+
+>  The [UIAlertController](uialertcontroller.md) class is intended to be used as-is and doesn’t support subclassing. The view hierarchy for this class is private and must not be modified.
+
+## Topics
+
+### Creating an alert controller
+
+- [alertControllerWithTitle:message:preferredStyle:](uialertcontroller/init%28title_message_preferredstyle_%29.md): Creates and returns a view controller for displaying an alert.
+
+### Configuring the alert
+
+- [title](uialertcontroller/title.md): The title of the alert.
+- [message](uialertcontroller/message.md): Descriptive text that provides more details about the reason for the alert.
+- [preferredStyle](uialertcontroller/preferredstyle.md): The style of the alert controller.
+- [UIAlertControllerStyle](uialertcontroller/style.md): Constants indicating the type of alert to display.
+
+### Configuring the user actions
+
+- [addAction:](uialertcontroller/addaction%28__%29.md): Attaches an action object to the alert or action sheet.
+- [actions](uialertcontroller/actions.md): The actions that the user can take in response to the alert or action sheet.
+- [preferredAction](uialertcontroller/preferredaction.md): The preferred action for the user to take from an alert.
+
+### Configuring text fields
+
+- [addTextFieldWithConfigurationHandler:](uialertcontroller/addtextfield%28configurationhandler_%29.md): Adds a text field to an alert.
+- [textFields](uialertcontroller/textfields.md): The array of text fields displayed by the alert.
+
+### Configuring alert severity
+
+- [severity](uialertcontroller/severity.md): Indicates the severity of the alert.
+- [UIAlertControllerSeverity](uialertcontrollerseverity.md): Constants for specifying the severity of an alert in apps built with Mac Catalyst.
+
+## Relationships
+
+### Inherits From
+
+- [UIViewController](uiviewcontroller.md)
+
+### Conforms To
+
+- [UISpringLoadedInteractionSupporting](uispringloadedinteractionsupporting.md)
+
+## See Also
+
+### Alerts
+
+- [Getting the user’s attention with alerts and action sheets](getting-the-user-s-attention-with-alerts-and-action-sheets.md): Present important information to a person or prompt them about an important choice.
+- [UIAlertAction](uialertaction.md): An action that can be taken when the user taps a button in an alert.
+
+# Document: actions
+
+Source path: documentation/uikit/uialertcontroller/actions
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller/actions
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+# actions (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+The actions that the user can take in response to the alert or action sheet.
+
+## Declaration
+
+```swift
+var actions: [UIAlertAction] { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The actions are in the order in which you added them to the alert controller. This order also corresponds to the order in which they’re displayed in the alert or action sheet. The second action in the array is displayed below the first, the third is displayed below the second, and so on.
+
+## See Also
+
+### Configuring the user actions
+
+- [addAction(\_:)](addaction%28__%29.md): Attaches an action object to the alert or action sheet.
+- [preferredAction](preferredaction.md): The preferred action for the user to take from an alert.
+
+# actions (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+The actions that the user can take in response to the alert or action sheet.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) NSArray<UIAlertAction *> * actions;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The actions are in the order in which you added them to the alert controller. This order also corresponds to the order in which they’re displayed in the alert or action sheet. The second action in the array is displayed below the first, the third is displayed below the second, and so on.
+
+## See Also
+
+### Configuring the user actions
+
+- [addAction:](addaction%28__%29.md): Attaches an action object to the alert or action sheet.
+- [preferredAction](preferredaction.md): The preferred action for the user to take from an alert.
+
+# Document: addAction(_:)
+
+Source path: documentation/uikit/uialertcontroller/addaction(_:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller/addaction(_:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+# addAction(\_:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Attaches an action object to the alert or action sheet.
+
+## Declaration
+
+```swift
+func addAction(_ action: UIAlertAction)
+```
+
+## Parameters
+
+- `action`: The action object to display as part of the alert. Actions are displayed as buttons in the alert. The action object provides the button text and the action to be performed when that button is tapped.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If your alert has multiple actions, the order in which you add those actions determines their order in the resulting alert or action sheet.
+
+## See Also
+
+### Configuring the user actions
+
+- [actions](actions.md): The actions that the user can take in response to the alert or action sheet.
+- [preferredAction](preferredaction.md): The preferred action for the user to take from an alert.
+
+# addAction: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Attaches an action object to the alert or action sheet.
+
+## Declaration
+
+```objectivec
+- (void) addAction:(UIAlertAction *) action;
+```
+
+## Parameters
+
+- `action`: The action object to display as part of the alert. Actions are displayed as buttons in the alert. The action object provides the button text and the action to be performed when that button is tapped.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If your alert has multiple actions, the order in which you add those actions determines their order in the resulting alert or action sheet.
+
+## See Also
+
+### Configuring the user actions
+
+- [actions](actions.md): The actions that the user can take in response to the alert or action sheet.
+- [preferredAction](preferredaction.md): The preferred action for the user to take from an alert.
+
+# Document: addTextField(configurationHandler:)
+
+Source path: documentation/uikit/uialertcontroller/addtextfield(configurationhandler:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller/addtextfield(configurationhandler:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+# addTextField(configurationHandler:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Adds a text field to an alert.
+
+## Declaration
+
+```swift
+func addTextField(configurationHandler: ((UITextField) -> Void)? = nil)
+```
+
+## Parameters
+
+- `configurationHandler`: A block for configuring the text field prior to displaying the alert. This block has no return value and takes a single parameter corresponding to the text field object. Use that parameter to change the text field properties.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Calling this method adds an editable text field to the alert. You can call this method more than once to add additional text fields. The text fields are stacked in the resulting alert.
+
+You can add a text field only if the [preferredStyle](preferredstyle.md) property is set to [UIAlertController.Style.alert](style/alert.md).
+
+## See Also
+
+### Configuring text fields
+
+- [textFields](textfields.md): The array of text fields displayed by the alert.
+
+# addTextFieldWithConfigurationHandler: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Adds a text field to an alert.
+
+## Declaration
+
+```objectivec
+- (void) addTextFieldWithConfigurationHandler:(void (^)(UITextField *textField)) configurationHandler;
+```
+
+## Parameters
+
+- `configurationHandler`: A block for configuring the text field prior to displaying the alert. This block has no return value and takes a single parameter corresponding to the text field object. Use that parameter to change the text field properties.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Calling this method adds an editable text field to the alert. You can call this method more than once to add additional text fields. The text fields are stacked in the resulting alert.
+
+You can add a text field only if the [preferredStyle](preferredstyle.md) property is set to [UIAlertControllerStyleAlert](style/alert.md).
+
+## See Also
+
+### Configuring text fields
+
+- [textFields](textfields.md): The array of text fields displayed by the alert.
+
+# Document: init(title:message:preferredStyle:)
+
+Source path: documentation/uikit/uialertcontroller/init(title:message:preferredstyle:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller/init(title:message:preferredstyle:)
+Description: Framework: UIKit Kind: Initializer Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+# init(title:message:preferredStyle:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Initializer  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Creates and returns a view controller for displaying an alert.
+
+## Declaration
+
+```swift
+convenience init(title: String?, message: String?, preferredStyle: UIAlertController.Style)
+```
+
+## Parameters
+
+- `title`: The title of the alert. Use this string to get people’s attention and communicate the reason for the alert.
+- `message`: Descriptive text that provides additional details about the reason for the alert.
+- `preferredStyle`: The style to use when presenting the alert controller. Use this parameter to configure the alert controller as an action sheet or as a modal alert.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized alert controller object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+After creating the alert controller, configure any actions that you want people to be able to perform by calling the [addAction(\_:)](addaction%28__%29.md) method one or more times. When specifying a preferred style of [UIAlertController.Style.alert](style/alert.md), you may also configure one or more text fields to display in addition to the actions.
+
+# alertControllerWithTitle:message:preferredStyle: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Type Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Creates and returns a view controller for displaying an alert.
+
+## Declaration
+
+```objectivec
++ (instancetype) alertControllerWithTitle:(NSString *) title message:(NSString *) message preferredStyle:(UIAlertControllerStyle) preferredStyle;
+```
+
+## Parameters
+
+- `title`: The title of the alert. Use this string to get people’s attention and communicate the reason for the alert.
+- `message`: Descriptive text that provides additional details about the reason for the alert.
+- `preferredStyle`: The style to use when presenting the alert controller. Use this parameter to configure the alert controller as an action sheet or as a modal alert.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized alert controller object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+After creating the alert controller, configure any actions that you want people to be able to perform by calling the [addAction:](addaction%28__%29.md) method one or more times. When specifying a preferred style of [UIAlertControllerStyleAlert](style/alert.md), you may also configure one or more text fields to display in addition to the actions.
+
+# Document: message
+
+Source path: documentation/uikit/uialertcontroller/message
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller/message
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+# message (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Descriptive text that provides more details about the reason for the alert.
+
+## Declaration
+
+```swift
+var message: String? { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The message string is displayed below the title string and is less prominent. Use this string to provide additional context about the reason for the alert or about the actions that the user might take.
+
+## See Also
+
+### Configuring the alert
+
+- [title](title.md): The title of the alert.
+- [preferredStyle](preferredstyle.md): The style of the alert controller.
+- [UIAlertController.Style](style.md): Constants indicating the type of alert to display.
+
+# message (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Descriptive text that provides more details about the reason for the alert.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSString * message;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The message string is displayed below the title string and is less prominent. Use this string to provide additional context about the reason for the alert or about the actions that the user might take.
+
+## See Also
+
+### Configuring the alert
+
+- [title](title.md): The title of the alert.
+- [preferredStyle](preferredstyle.md): The style of the alert controller.
+- [UIAlertControllerStyle](style.md): Constants indicating the type of alert to display.
+
+# Document: preferredAction
+
+Source path: documentation/uikit/uialertcontroller/preferredaction
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller/preferredaction
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · tvOS 9.0+ · visionOS 1.0+
+
+# preferredAction (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · tvOS 9.0+ · visionOS 1.0+
+
+The preferred action for the user to take from an alert.
+
+## Declaration
+
+```swift
+var preferredAction: UIAlertAction? { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The preferred action is relevant for the [UIAlertController.Style.alert](style/alert.md) style only; it isn’t used by action sheets. When you specify a preferred action, the alert controller highlights the text of that action to give it emphasis. (If the alert also contains a cancel button, the preferred action receives the highlighting instead of the cancel button.) If the iOS device is connected to a physical keyboard, pressing the Return key triggers the preferred action.
+
+The action object you assign to this property must have already been added to the alert controller’s list of actions. Assigning an object to this property before adding it with the [addAction(\_:)](addaction%28__%29.md) method is a programmer error.
+
+The default value of this property is `nil`.
+
+## See Also
+
+### Configuring the user actions
+
+- [addAction(\_:)](addaction%28__%29.md): Attaches an action object to the alert or action sheet.
+- [actions](actions.md): The actions that the user can take in response to the alert or action sheet.
+
+# preferredAction (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · tvOS 9.0+ · visionOS 1.0+
+
+The preferred action for the user to take from an alert.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, strong, nullable) UIAlertAction * preferredAction;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The preferred action is relevant for the [UIAlertControllerStyleAlert](style/alert.md) style only; it isn’t used by action sheets. When you specify a preferred action, the alert controller highlights the text of that action to give it emphasis. (If the alert also contains a cancel button, the preferred action receives the highlighting instead of the cancel button.) If the iOS device is connected to a physical keyboard, pressing the Return key triggers the preferred action.
+
+The action object you assign to this property must have already been added to the alert controller’s list of actions. Assigning an object to this property before adding it with the [addAction:](addaction%28__%29.md) method is a programmer error.
+
+The default value of this property is `nil`.
+
+## See Also
+
+### Configuring the user actions
+
+- [addAction:](addaction%28__%29.md): Attaches an action object to the alert or action sheet.
+- [actions](actions.md): The actions that the user can take in response to the alert or action sheet.
+
+# Document: preferredStyle
+
+Source path: documentation/uikit/uialertcontroller/preferredstyle
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller/preferredstyle
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+# preferredStyle (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+The style of the alert controller.
+
+## Declaration
+
+```swift
+var preferredStyle: UIAlertController.Style { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this property is set to the value you specified in the [init(title:message:preferredStyle:)](init%28title_message_preferredstyle_%29.md) method. This value determines how the alert is displayed onscreen.
+
+## See Also
+
+### Configuring the alert
+
+- [title](title.md): The title of the alert.
+- [message](message.md): Descriptive text that provides more details about the reason for the alert.
+- [UIAlertController.Style](style.md): Constants indicating the type of alert to display.
+
+# preferredStyle (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+The style of the alert controller.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) UIAlertControllerStyle preferredStyle;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this property is set to the value you specified in the [alertControllerWithTitle:message:preferredStyle:](init%28title_message_preferredstyle_%29.md) method. This value determines how the alert is displayed onscreen.
+
+## See Also
+
+### Configuring the alert
+
+- [title](title.md): The title of the alert.
+- [message](message.md): Descriptive text that provides more details about the reason for the alert.
+- [UIAlertControllerStyle](style.md): Constants indicating the type of alert to display.
+
+# Document: severity
+
+Source path: documentation/uikit/uialertcontroller/severity
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller/severity
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# severity (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Indicates the severity of the alert.
+
+## Declaration
+
+```swift
+var severity: UIAlertControllerSeverity { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+See the [UIAlertControllerSeverity](../uialertcontrollerseverity.md) enumeration for the list of alert severity constants.
+
+## See Also
+
+### Configuring alert severity
+
+- [UIAlertControllerSeverity](../uialertcontrollerseverity.md): Constants for specifying the severity of an alert in apps built with Mac Catalyst.
+
+# severity (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Indicates the severity of the alert.
+
+## Declaration
+
+```objectivec
+@property (nonatomic) UIAlertControllerSeverity severity;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+See the [UIAlertControllerSeverity](../uialertcontrollerseverity.md) enumeration for the list of alert severity constants.
+
+## See Also
+
+### Configuring alert severity
+
+- [UIAlertControllerSeverity](../uialertcontrollerseverity.md): Constants for specifying the severity of an alert in apps built with Mac Catalyst.
+
+# Document: UIAlertController.Style
+
+Source path: documentation/uikit/uialertcontroller/style
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller/style
+Description: Framework: UIKit Kind: Enumeration Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+# UIAlertController.Style (Swift)
+
+**Framework:** UIKit  
+**Kind:** Enumeration  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Constants indicating the type of alert to display.
+
+## Declaration
+
+```swift
+enum Style
+```
+
+## Topics
+
+### Constants
+
+- [UIAlertController.Style.actionSheet](style/actionsheet.md): An action sheet displayed by the view controller that presented it.
+- [UIAlertController.Style.alert](style/alert.md): An alert displayed modally for the app.
+
+### Initializers
+
+- [init(rawValue:)](style/init%28rawvalue_%29.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Configuring the alert
+
+- [title](title.md): The title of the alert.
+- [message](message.md): Descriptive text that provides more details about the reason for the alert.
+- [preferredStyle](preferredstyle.md): The style of the alert controller.
+
+# UIAlertControllerStyle (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Constants indicating the type of alert to display.
+
+## Declaration
+
+```objectivec
+enum UIAlertControllerStyle : NSInteger;
+```
+
+## Topics
+
+### Constants
+
+- [UIAlertControllerStyleActionSheet](style/actionsheet.md): An action sheet displayed by the view controller that presented it.
+- [UIAlertControllerStyleAlert](style/alert.md): An alert displayed modally for the app.
+
+## See Also
+
+### Configuring the alert
+
+- [title](title.md): The title of the alert.
+- [message](message.md): Descriptive text that provides more details about the reason for the alert.
+- [preferredStyle](preferredstyle.md): The style of the alert controller.
+
+# Document: UIAlertController.Style.actionSheet
+
+Source path: documentation/uikit/uialertcontroller/style/actionsheet
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller/style/actionsheet
+Description: Framework: UIKit Kind: Case Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+# UIAlertController.Style.actionSheet (Swift)
+
+**Framework:** UIKit  
+**Kind:** Case  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+An action sheet displayed by the view controller that presented it.
+
+## Declaration
+
+```swift
+case actionSheet
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use an action sheet to present the user with a set of alternatives for how to proceed with a given task. You can also use this style to prompt the user to confirm a potentially dangerous action. This alert style isn’t supported by tvOS; use [UIAlertController.Style.alert](alert.md) instead.
+
+## See Also
+
+### Constants
+
+- [UIAlertController.Style.alert](alert.md): An alert displayed modally for the app.
+
+# UIAlertControllerStyleActionSheet (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+An action sheet displayed by the view controller that presented it.
+
+## Declaration
+
+```objectivec
+UIAlertControllerStyleActionSheet
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use an action sheet to present the user with a set of alternatives for how to proceed with a given task. You can also use this style to prompt the user to confirm a potentially dangerous action. This alert style isn’t supported by tvOS; use [UIAlertControllerStyleAlert](alert.md) instead.
+
+## See Also
+
+### Constants
+
+- [UIAlertControllerStyleAlert](alert.md): An alert displayed modally for the app.
+
+# Document: UIAlertController.Style.alert
+
+Source path: documentation/uikit/uialertcontroller/style/alert
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller/style/alert
+Description: Framework: UIKit Kind: Case Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+# UIAlertController.Style.alert (Swift)
+
+**Framework:** UIKit  
+**Kind:** Case  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+An alert displayed modally for the app.
+
+## Declaration
+
+```swift
+case alert
+```
+
+## See Also
+
+### Constants
+
+- [UIAlertController.Style.actionSheet](actionsheet.md): An action sheet displayed by the view controller that presented it.
+
+# UIAlertControllerStyleAlert (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+An alert displayed modally for the app.
+
+## Declaration
+
+```objectivec
+UIAlertControllerStyleAlert
+```
+
+## See Also
+
+### Constants
+
+- [UIAlertControllerStyleActionSheet](actionsheet.md): An action sheet displayed by the view controller that presented it.
+
+# Document: init(rawValue:)
+
+Source path: documentation/uikit/uialertcontroller/style/init(rawvalue:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller/style/init(rawvalue:)
+Description: Framework: UIKit Kind: Initializer Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+# init(rawValue:)
+
+**Framework:** UIKit  
+**Kind:** Initializer  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+## Declaration
+
+```swift
+init?(rawValue: Int)
+```
+
+# Document: textFields
+
+Source path: documentation/uikit/uialertcontroller/textfields
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller/textfields
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+# textFields (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+The array of text fields displayed by the alert.
+
+## Declaration
+
+```swift
+var textFields: [UITextField]? { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this property to access the text fields displayed by the alert. The text fields are in the order in which you added them to the alert controller. This order also corresponds to the order in which they are displayed in the alert.
+
+## See Also
+
+### Configuring text fields
+
+- [addTextField(configurationHandler:)](addtextfield%28configurationhandler_%29.md): Adds a text field to an alert.
+
+# textFields (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+The array of text fields displayed by the alert.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly, nullable) NSArray<UITextField *> * textFields;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this property to access the text fields displayed by the alert. The text fields are in the order in which you added them to the alert controller. This order also corresponds to the order in which they are displayed in the alert.
+
+## See Also
+
+### Configuring text fields
+
+- [addTextFieldWithConfigurationHandler:](addtextfield%28configurationhandler_%29.md): Adds a text field to an alert.
+
+# Document: title
+
+Source path: documentation/uikit/uialertcontroller/title
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontroller/title
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+# title (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+The title of the alert.
+
+## Declaration
+
+```swift
+var title: String? { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The title string is displayed prominently in the alert or action sheet. You should use this string to get the user’s attention and communicate the reason for displaying the alert.
+
+## See Also
+
+### Configuring the alert
+
+- [message](message.md): Descriptive text that provides more details about the reason for the alert.
+- [preferredStyle](preferredstyle.md): The style of the alert controller.
+- [UIAlertController.Style](style.md): Constants indicating the type of alert to display.
+
+# title (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+The title of the alert.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSString * title;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The title string is displayed prominently in the alert or action sheet. You should use this string to get the user’s attention and communicate the reason for displaying the alert.
+
+## See Also
+
+### Configuring the alert
+
+- [message](message.md): Descriptive text that provides more details about the reason for the alert.
+- [preferredStyle](preferredstyle.md): The style of the alert controller.
+- [UIAlertControllerStyle](style.md): Constants indicating the type of alert to display.
+
+# Document: UIAlertControllerSeverity
+
+Source path: documentation/uikit/uialertcontrollerseverity
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontrollerseverity
+Description: Framework: UIKit Kind: Enumeration Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# UIAlertControllerSeverity (Swift)
+
+**Framework:** UIKit  
+**Kind:** Enumeration  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Constants for specifying the severity of an alert in apps built with Mac Catalyst.
+
+## Declaration
+
+```swift
+enum UIAlertControllerSeverity
+```
+
+<a id="overview"></a>
+
+## Overview
+
+This enumeration defines the severity options used by the [severity](uialertcontroller/severity.md) property of [UIAlertController](uialertcontroller.md). In apps built with Mac Catalyst, the severity determines the style of the presented alert. A [UIAlertControllerSeverity.critical](uialertcontrollerseverity/critical.md) alert appears with a caution icon, and an alert with a [UIAlertControllerSeverity.default](uialertcontrollerseverity/default.md) severity doesn’t. UIKit ignores the alert severity on iOS.
+
+You should only use the [UIAlertControllerSeverity.critical](uialertcontrollerseverity/critical.md) severity if an alert truly requires special attention from the user. For more information, see the [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/macos/windows-and-views/alerts/) on alerts.
+
+## Topics
+
+### Constants
+
+- [UIAlertControllerSeverity.critical](uialertcontrollerseverity/critical.md): Indicates that the system should present the alert using the critical, or caution, style.
+- [UIAlertControllerSeverity.default](uialertcontrollerseverity/default.md): Indicates that the system should present the alert using the standard alert style.
+
+### Initializers
+
+- [init(rawValue:)](uialertcontrollerseverity/init%28rawvalue_%29.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Configuring alert severity
+
+- [severity](uialertcontroller/severity.md): Indicates the severity of the alert.
+
+# UIAlertControllerSeverity (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Constants for specifying the severity of an alert in apps built with Mac Catalyst.
+
+## Declaration
+
+```objectivec
+enum UIAlertControllerSeverity : NSInteger;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+This enumeration defines the severity options used by the [severity](uialertcontroller/severity.md) property of [UIAlertController](uialertcontroller.md). In apps built with Mac Catalyst, the severity determines the style of the presented alert. A [UIAlertControllerSeverityCritical](uialertcontrollerseverity/critical.md) alert appears with a caution icon, and an alert with a [UIAlertControllerSeverityDefault](uialertcontrollerseverity/default.md) severity doesn’t. UIKit ignores the alert severity on iOS.
+
+You should only use the [UIAlertControllerSeverityCritical](uialertcontrollerseverity/critical.md) severity if an alert truly requires special attention from the user. For more information, see the [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/macos/windows-and-views/alerts/) on alerts.
+
+## Topics
+
+### Constants
+
+- [UIAlertControllerSeverityCritical](uialertcontrollerseverity/critical.md): Indicates that the system should present the alert using the critical, or caution, style.
+- [UIAlertControllerSeverityDefault](uialertcontrollerseverity/default.md): Indicates that the system should present the alert using the standard alert style.
+
+## See Also
+
+### Configuring alert severity
+
+- [severity](uialertcontroller/severity.md): Indicates the severity of the alert.
+
+# Document: UIAlertControllerSeverity.critical
+
+Source path: documentation/uikit/uialertcontrollerseverity/critical
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontrollerseverity/critical
+Description: Framework: UIKit Kind: Case Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# UIAlertControllerSeverity.critical (Swift)
+
+**Framework:** UIKit  
+**Kind:** Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Indicates that the system should present the alert using the critical, or caution, style.
+
+## Declaration
+
+```swift
+case critical
+```
+
+## See Also
+
+### Constants
+
+- [UIAlertControllerSeverity.default](default.md): Indicates that the system should present the alert using the standard alert style.
+
+# UIAlertControllerSeverityCritical (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Indicates that the system should present the alert using the critical, or caution, style.
+
+## Declaration
+
+```objectivec
+UIAlertControllerSeverityCritical
+```
+
+## See Also
+
+### Constants
+
+- [UIAlertControllerSeverityDefault](default.md): Indicates that the system should present the alert using the standard alert style.
+
+# Document: UIAlertControllerSeverity.default
+
+Source path: documentation/uikit/uialertcontrollerseverity/default
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontrollerseverity/default
+Description: Framework: UIKit Kind: Case Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# UIAlertControllerSeverity.default (Swift)
+
+**Framework:** UIKit  
+**Kind:** Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Indicates that the system should present the alert using the standard alert style.
+
+## Declaration
+
+```swift
+case `default`
+```
+
+## See Also
+
+### Constants
+
+- [UIAlertControllerSeverity.critical](critical.md): Indicates that the system should present the alert using the critical, or caution, style.
+
+# UIAlertControllerSeverityDefault (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Indicates that the system should present the alert using the standard alert style.
+
+## Declaration
+
+```objectivec
+UIAlertControllerSeverityDefault
+```
+
+## See Also
+
+### Constants
+
+- [UIAlertControllerSeverityCritical](critical.md): Indicates that the system should present the alert using the critical, or caution, style.
+
+# Document: init(rawValue:)
+
+Source path: documentation/uikit/uialertcontrollerseverity/init(rawvalue:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uialertcontrollerseverity/init(rawvalue:)
+Description: Framework: UIKit Kind: Initializer Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# init(rawValue:)
+
+**Framework:** UIKit  
+**Kind:** Initializer  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+init?(rawValue: Int)
+```
 
 # Document: UIAlertView
 
@@ -168337,1094 +169670,3 @@ This method is called when the user chooses to open a document, which could occu
 ### Opening files
 
 - [documentInteractionController:didEndSendingToApplication:](documentinteractioncontroller%28__didendsendingtoapplication_%29.md): Called when a document interaction controller’s document has been handed off to the specified application.
-
-# Document: documentInteractionControllerDidDismissOpenInMenu(_:)
-
-Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerdiddismissopeninmenu(_:)
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerdiddismissopeninmenu(_:)
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-# documentInteractionControllerDidDismissOpenInMenu(\_:) (Swift)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller has dismissed its Open In menu.
-
-## Declaration
-
-```swift
-optional func documentInteractionControllerDidDismissOpenInMenu(_ controller: UIDocumentInteractionController)
-```
-
-## Parameters
-
-- `controller`: The document interaction controller that dismissed its menu.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-You can use this method to remove any additional views or content you placed underneath the Open In menu in your [documentInteractionControllerWillPresentOpenInMenu(\_:)](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md) method.
-
-## See Also
-
-### Presenting the user interface
-
-- [documentInteractionControllerWillBeginPreview(\_:)](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
-- [documentInteractionControllerDidEndPreview(\_:)](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
-- [documentInteractionControllerWillPresentOptionsMenu(\_:)](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
-- [documentInteractionControllerDidDismissOptionsMenu(\_:)](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
-- [documentInteractionControllerWillPresentOpenInMenu(\_:)](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
-
-# documentInteractionControllerDidDismissOpenInMenu: (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller has dismissed its Open In menu.
-
-## Declaration
-
-```objectivec
-- (void) documentInteractionControllerDidDismissOpenInMenu:(UIDocumentInteractionController *) controller;
-```
-
-## Parameters
-
-- `controller`: The document interaction controller that dismissed its menu.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-You can use this method to remove any additional views or content you placed underneath the Open In menu in your [documentInteractionControllerWillPresentOpenInMenu:](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md) method.
-
-## See Also
-
-### Presenting the user interface
-
-- [documentInteractionControllerWillBeginPreview:](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
-- [documentInteractionControllerDidEndPreview:](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
-- [documentInteractionControllerWillPresentOptionsMenu:](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
-- [documentInteractionControllerDidDismissOptionsMenu:](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
-- [documentInteractionControllerWillPresentOpenInMenu:](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
-
-# Document: documentInteractionControllerDidDismissOptionsMenu(_:)
-
-Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerdiddismissoptionsmenu(_:)
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerdiddismissoptionsmenu(_:)
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-# documentInteractionControllerDidDismissOptionsMenu(\_:) (Swift)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller has dismissed its options menu.
-
-## Declaration
-
-```swift
-optional func documentInteractionControllerDidDismissOptionsMenu(_ controller: UIDocumentInteractionController)
-```
-
-## Parameters
-
-- `controller`: The document interaction controller that dismissed its options menu.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-You can use this method to remove any additional views or content you placed underneath the options menu in your [documentInteractionControllerWillPresentOptionsMenu(\_:)](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md) method.
-
-## See Also
-
-### Presenting the user interface
-
-- [documentInteractionControllerWillBeginPreview(\_:)](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
-- [documentInteractionControllerDidEndPreview(\_:)](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
-- [documentInteractionControllerWillPresentOptionsMenu(\_:)](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
-- [documentInteractionControllerWillPresentOpenInMenu(\_:)](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
-- [documentInteractionControllerDidDismissOpenInMenu(\_:)](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
-
-# documentInteractionControllerDidDismissOptionsMenu: (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller has dismissed its options menu.
-
-## Declaration
-
-```objectivec
-- (void) documentInteractionControllerDidDismissOptionsMenu:(UIDocumentInteractionController *) controller;
-```
-
-## Parameters
-
-- `controller`: The document interaction controller that dismissed its options menu.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-You can use this method to remove any additional views or content you placed underneath the options menu in your [documentInteractionControllerWillPresentOptionsMenu:](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md) method.
-
-## See Also
-
-### Presenting the user interface
-
-- [documentInteractionControllerWillBeginPreview:](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
-- [documentInteractionControllerDidEndPreview:](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
-- [documentInteractionControllerWillPresentOptionsMenu:](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
-- [documentInteractionControllerWillPresentOpenInMenu:](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
-- [documentInteractionControllerDidDismissOpenInMenu:](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
-
-# Document: documentInteractionControllerDidEndPreview(_:)
-
-Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerdidendpreview(_:)
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerdidendpreview(_:)
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-# documentInteractionControllerDidEndPreview(\_:) (Swift)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller has dismissed its document preview.
-
-## Declaration
-
-```swift
-optional func documentInteractionControllerDidEndPreview(_ controller: UIDocumentInteractionController)
-```
-
-## Parameters
-
-- `controller`: The document interaction controller that dismissed its document preview.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This method is called after the view containing the document preview has been removed from the application’s key window. You can use this notification to remove any interface elements you set up behind the preview elements.
-
-## See Also
-
-### Presenting the user interface
-
-- [documentInteractionControllerWillBeginPreview(\_:)](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
-- [documentInteractionControllerWillPresentOptionsMenu(\_:)](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
-- [documentInteractionControllerDidDismissOptionsMenu(\_:)](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
-- [documentInteractionControllerWillPresentOpenInMenu(\_:)](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
-- [documentInteractionControllerDidDismissOpenInMenu(\_:)](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
-
-# documentInteractionControllerDidEndPreview: (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller has dismissed its document preview.
-
-## Declaration
-
-```objectivec
-- (void) documentInteractionControllerDidEndPreview:(UIDocumentInteractionController *) controller;
-```
-
-## Parameters
-
-- `controller`: The document interaction controller that dismissed its document preview.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This method is called after the view containing the document preview has been removed from the application’s key window. You can use this notification to remove any interface elements you set up behind the preview elements.
-
-## See Also
-
-### Presenting the user interface
-
-- [documentInteractionControllerWillBeginPreview:](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
-- [documentInteractionControllerWillPresentOptionsMenu:](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
-- [documentInteractionControllerDidDismissOptionsMenu:](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
-- [documentInteractionControllerWillPresentOpenInMenu:](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
-- [documentInteractionControllerDidDismissOpenInMenu:](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
-
-# Document: documentInteractionControllerRectForPreview(_:)
-
-Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerrectforpreview(_:)
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerrectforpreview(_:)
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-# documentInteractionControllerRectForPreview(\_:) (Swift)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller needs the rectangle to use as the starting point for animating the display of a document preview.
-
-## Declaration
-
-```swift
-optional func documentInteractionControllerRectForPreview(_ controller: UIDocumentInteractionController) -> CGRect
-```
-
-## Parameters
-
-- `controller`: The document interaction controller requesting the starting rectangle.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A rectangle in the coordinate system of the view returned by the [documentInteractionControllerViewForPreview(\_:)](documentinteractioncontrollerviewforpreview%28__%29.md) method.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If you do not implement the [documentInteractionControllerViewForPreview(\_:)](documentinteractioncontrollerviewforpreview%28__%29.md) method, or if you do implement it but return a `nil` value, this method is not called. If you do not implement this method, the starting rectangle is assumed to be the bounds of the view returned by the [documentInteractionControllerViewForPreview(\_:)](documentinteractioncontrollerviewforpreview%28__%29.md) method.
-
-## See Also
-
-### Configuring the parent view controller
-
-- [documentInteractionControllerViewControllerForPreview(\_:)](documentinteractioncontrollerviewcontrollerforpreview%28__%29.md): Called when a document interaction controller needs a view controller for presenting a document preview.
-- [documentInteractionControllerViewForPreview(\_:)](documentinteractioncontrollerviewforpreview%28__%29.md): Called when a document interaction controller needs the starting point for animating the display of a document preview.
-
-# documentInteractionControllerRectForPreview: (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller needs the rectangle to use as the starting point for animating the display of a document preview.
-
-## Declaration
-
-```objectivec
-- (CGRect) documentInteractionControllerRectForPreview:(UIDocumentInteractionController *) controller;
-```
-
-## Parameters
-
-- `controller`: The document interaction controller requesting the starting rectangle.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A rectangle in the coordinate system of the view returned by the [documentInteractionControllerViewForPreview:](documentinteractioncontrollerviewforpreview%28__%29.md) method.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If you do not implement the [documentInteractionControllerViewForPreview:](documentinteractioncontrollerviewforpreview%28__%29.md) method, or if you do implement it but return a `nil` value, this method is not called. If you do not implement this method, the starting rectangle is assumed to be the bounds of the view returned by the [documentInteractionControllerViewForPreview:](documentinteractioncontrollerviewforpreview%28__%29.md) method.
-
-## See Also
-
-### Configuring the parent view controller
-
-- [documentInteractionControllerViewControllerForPreview:](documentinteractioncontrollerviewcontrollerforpreview%28__%29.md): Called when a document interaction controller needs a view controller for presenting a document preview.
-- [documentInteractionControllerViewForPreview:](documentinteractioncontrollerviewforpreview%28__%29.md): Called when a document interaction controller needs the starting point for animating the display of a document preview.
-
-# Document: documentInteractionControllerViewControllerForPreview(_:)
-
-Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerviewcontrollerforpreview(_:)
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerviewcontrollerforpreview(_:)
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-# documentInteractionControllerViewControllerForPreview(\_:) (Swift)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller needs a view controller for presenting a document preview.
-
-## Declaration
-
-```swift
-@MainActor optional func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController
-```
-
-## Parameters
-
-- `controller`: The document interaction controller requesting the parent view controller.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The view controller to use when presenting the document preview. The return value must not be `nil`.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Although technically optional, this method is required if your application attempts to display a preview for a document. The view controller returned by this method is used as the parent for the document preview.
-
-If you return a navigation controller from this method, the document interaction controller is pushed onto the navigation stack using the standard navigation controller animations. If you return any other type of view controller, the document interaction controller is displayed modally, in which case, the view controller you return must be capable of presenting a modal view controller.
-
-## See Also
-
-### Configuring the parent view controller
-
-- [documentInteractionControllerViewForPreview(\_:)](documentinteractioncontrollerviewforpreview%28__%29.md): Called when a document interaction controller needs the starting point for animating the display of a document preview.
-- [documentInteractionControllerRectForPreview(\_:)](documentinteractioncontrollerrectforpreview%28__%29.md): Called when a document interaction controller needs the rectangle to use as the starting point for animating the display of a document preview.
-
-# documentInteractionControllerViewControllerForPreview: (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller needs a view controller for presenting a document preview.
-
-## Declaration
-
-```objectivec
-- (UIViewController *) documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *) controller;
-```
-
-## Parameters
-
-- `controller`: The document interaction controller requesting the parent view controller.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The view controller to use when presenting the document preview. The return value must not be `nil`.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Although technically optional, this method is required if your application attempts to display a preview for a document. The view controller returned by this method is used as the parent for the document preview.
-
-If you return a navigation controller from this method, the document interaction controller is pushed onto the navigation stack using the standard navigation controller animations. If you return any other type of view controller, the document interaction controller is displayed modally, in which case, the view controller you return must be capable of presenting a modal view controller.
-
-## See Also
-
-### Configuring the parent view controller
-
-- [documentInteractionControllerViewForPreview:](documentinteractioncontrollerviewforpreview%28__%29.md): Called when a document interaction controller needs the starting point for animating the display of a document preview.
-- [documentInteractionControllerRectForPreview:](documentinteractioncontrollerrectforpreview%28__%29.md): Called when a document interaction controller needs the rectangle to use as the starting point for animating the display of a document preview.
-
-# Document: documentInteractionControllerViewForPreview(_:)
-
-Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerviewforpreview(_:)
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerviewforpreview(_:)
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-# documentInteractionControllerViewForPreview(\_:) (Swift)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller needs the starting point for animating the display of a document preview.
-
-## Declaration
-
-```swift
-optional func documentInteractionControllerViewForPreview(_ controller: UIDocumentInteractionController) -> UIView?
-```
-
-## Parameters
-
-- `controller`: The document interaction controller requesting the starting view.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The view to use as the starting point for the animation or `nil` if you want the document preview to fade into place.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-By default, the starting rectangle for the animation is set to the bounds of the returned view. To specify a different starting rectangle, you must also override the [documentInteractionControllerRectForPreview(\_:)](documentinteractioncontrollerrectforpreview%28__%29.md) method.
-
-## See Also
-
-### Configuring the parent view controller
-
-- [documentInteractionControllerViewControllerForPreview(\_:)](documentinteractioncontrollerviewcontrollerforpreview%28__%29.md): Called when a document interaction controller needs a view controller for presenting a document preview.
-- [documentInteractionControllerRectForPreview(\_:)](documentinteractioncontrollerrectforpreview%28__%29.md): Called when a document interaction controller needs the rectangle to use as the starting point for animating the display of a document preview.
-
-# documentInteractionControllerViewForPreview: (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller needs the starting point for animating the display of a document preview.
-
-## Declaration
-
-```objectivec
-- (UIView *) documentInteractionControllerViewForPreview:(UIDocumentInteractionController *) controller;
-```
-
-## Parameters
-
-- `controller`: The document interaction controller requesting the starting view.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The view to use as the starting point for the animation or `nil` if you want the document preview to fade into place.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-By default, the starting rectangle for the animation is set to the bounds of the returned view. To specify a different starting rectangle, you must also override the [documentInteractionControllerRectForPreview:](documentinteractioncontrollerrectforpreview%28__%29.md) method.
-
-## See Also
-
-### Configuring the parent view controller
-
-- [documentInteractionControllerViewControllerForPreview:](documentinteractioncontrollerviewcontrollerforpreview%28__%29.md): Called when a document interaction controller needs a view controller for presenting a document preview.
-- [documentInteractionControllerRectForPreview:](documentinteractioncontrollerrectforpreview%28__%29.md): Called when a document interaction controller needs the rectangle to use as the starting point for animating the display of a document preview.
-
-# Document: documentInteractionControllerWillBeginPreview(_:)
-
-Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerwillbeginpreview(_:)
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerwillbeginpreview(_:)
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-# documentInteractionControllerWillBeginPreview(\_:) (Swift)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller is about to display a preview for its document.
-
-## Declaration
-
-```swift
-optional func documentInteractionControllerWillBeginPreview(_ controller: UIDocumentInteractionController)
-```
-
-## Parameters
-
-- `controller`: The document interaction controller that is about to preview its document.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This method is called shortly before the view containing the document preview is presented modally. You can use this notification to set up any additional interface elements behind the preview elements.
-
-## See Also
-
-### Presenting the user interface
-
-- [documentInteractionControllerDidEndPreview(\_:)](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
-- [documentInteractionControllerWillPresentOptionsMenu(\_:)](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
-- [documentInteractionControllerDidDismissOptionsMenu(\_:)](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
-- [documentInteractionControllerWillPresentOpenInMenu(\_:)](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
-- [documentInteractionControllerDidDismissOpenInMenu(\_:)](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
-
-# documentInteractionControllerWillBeginPreview: (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller is about to display a preview for its document.
-
-## Declaration
-
-```objectivec
-- (void) documentInteractionControllerWillBeginPreview:(UIDocumentInteractionController *) controller;
-```
-
-## Parameters
-
-- `controller`: The document interaction controller that is about to preview its document.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This method is called shortly before the view containing the document preview is presented modally. You can use this notification to set up any additional interface elements behind the preview elements.
-
-## See Also
-
-### Presenting the user interface
-
-- [documentInteractionControllerDidEndPreview:](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
-- [documentInteractionControllerWillPresentOptionsMenu:](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
-- [documentInteractionControllerDidDismissOptionsMenu:](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
-- [documentInteractionControllerWillPresentOpenInMenu:](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
-- [documentInteractionControllerDidDismissOpenInMenu:](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
-
-# Document: documentInteractionControllerWillPresentOpenInMenu(_:)
-
-Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerwillpresentopeninmenu(_:)
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerwillpresentopeninmenu(_:)
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-# documentInteractionControllerWillPresentOpenInMenu(\_:) (Swift)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller is about to display an Open In menu.
-
-## Declaration
-
-```swift
-optional func documentInteractionControllerWillPresentOpenInMenu(_ controller: UIDocumentInteractionController)
-```
-
-## Parameters
-
-- `controller`: The document interaction controller that is about to display a menu.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The Open In menu is used to select an application for opening the current file. You can use this method to update your user interface in response to displaying the menu.
-
-## See Also
-
-### Presenting the user interface
-
-- [documentInteractionControllerWillBeginPreview(\_:)](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
-- [documentInteractionControllerDidEndPreview(\_:)](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
-- [documentInteractionControllerWillPresentOptionsMenu(\_:)](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
-- [documentInteractionControllerDidDismissOptionsMenu(\_:)](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
-- [documentInteractionControllerDidDismissOpenInMenu(\_:)](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
-
-# documentInteractionControllerWillPresentOpenInMenu: (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller is about to display an Open In menu.
-
-## Declaration
-
-```objectivec
-- (void) documentInteractionControllerWillPresentOpenInMenu:(UIDocumentInteractionController *) controller;
-```
-
-## Parameters
-
-- `controller`: The document interaction controller that is about to display a menu.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The Open In menu is used to select an application for opening the current file. You can use this method to update your user interface in response to displaying the menu.
-
-## See Also
-
-### Presenting the user interface
-
-- [documentInteractionControllerWillBeginPreview:](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
-- [documentInteractionControllerDidEndPreview:](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
-- [documentInteractionControllerWillPresentOptionsMenu:](documentinteractioncontrollerwillpresentoptionsmenu%28__%29.md): Called when a document interaction controller is about to display an options menu.
-- [documentInteractionControllerDidDismissOptionsMenu:](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
-- [documentInteractionControllerDidDismissOpenInMenu:](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
-
-# Document: documentInteractionControllerWillPresentOptionsMenu(_:)
-
-Source path: documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerwillpresentoptionsmenu(_:)
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentinteractioncontrollerdelegate/documentinteractioncontrollerwillpresentoptionsmenu(_:)
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-# documentInteractionControllerWillPresentOptionsMenu(\_:) (Swift)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller is about to display an options menu.
-
-## Declaration
-
-```swift
-optional func documentInteractionControllerWillPresentOptionsMenu(_ controller: UIDocumentInteractionController)
-```
-
-## Parameters
-
-- `controller`: The document interaction controller that is about to display an options menu.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The options menu is used to present the user with options for previewing the document, opening it in an application, or copying its contents. You can use this method to update your user interface in response to displaying the menu.
-
-## See Also
-
-### Presenting the user interface
-
-- [documentInteractionControllerWillBeginPreview(\_:)](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
-- [documentInteractionControllerDidEndPreview(\_:)](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
-- [documentInteractionControllerDidDismissOptionsMenu(\_:)](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
-- [documentInteractionControllerWillPresentOpenInMenu(\_:)](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
-- [documentInteractionControllerDidDismissOpenInMenu(\_:)](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
-
-# documentInteractionControllerWillPresentOptionsMenu: (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-Called when a document interaction controller is about to display an options menu.
-
-## Declaration
-
-```objectivec
-- (void) documentInteractionControllerWillPresentOptionsMenu:(UIDocumentInteractionController *) controller;
-```
-
-## Parameters
-
-- `controller`: The document interaction controller that is about to display an options menu.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The options menu is used to present the user with options for previewing the document, opening it in an application, or copying its contents. You can use this method to update your user interface in response to displaying the menu.
-
-## See Also
-
-### Presenting the user interface
-
-- [documentInteractionControllerWillBeginPreview:](documentinteractioncontrollerwillbeginpreview%28__%29.md): Called when a document interaction controller is about to display a preview for its document.
-- [documentInteractionControllerDidEndPreview:](documentinteractioncontrollerdidendpreview%28__%29.md): Called when a document interaction controller has dismissed its document preview.
-- [documentInteractionControllerDidDismissOptionsMenu:](documentinteractioncontrollerdiddismissoptionsmenu%28__%29.md): Called when a document interaction controller has dismissed its options menu.
-- [documentInteractionControllerWillPresentOpenInMenu:](documentinteractioncontrollerwillpresentopeninmenu%28__%29.md): Called when a document interaction controller is about to display an Open In menu.
-- [documentInteractionControllerDidDismissOpenInMenu:](documentinteractioncontrollerdiddismissopeninmenu%28__%29.md): Called when a document interaction controller has dismissed its Open In menu.
-
-# Document: UIDocumentMenuDelegate
-
-Source path: documentation/uikit/uidocumentmenudelegate
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentmenudelegate
-Description: Framework: UIKit Kind: Protocol Availability: iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-# UIDocumentMenuDelegate (Swift)
-
-**Framework:** UIKit  
-**Kind:** Protocol  
-**Availability:** iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-A set of methods that you must implement to track user interactions with a document menu view controller.
-
-> For more information, see [UIDocumentMenuViewController](uidocumentmenuviewcontroller.md).
-
-## Declaration
-
-```swift
-@MainActor protocol UIDocumentMenuDelegate : NSObjectProtocol
-```
-
-<a id="overview"></a>
-
-## Overview
-
-The document menu calls the methods of this protocol when the user selects a document picker or dismisses the menu. If the user selects a document picker, set the picker’s delegate and present it.
-
-## Topics
-
-### Responding to user actions
-
-- [documentMenu(\_:didPickDocumentPicker:)](uidocumentmenudelegate/documentmenu%28__didpickdocumentpicker_%29.md): Deprecated. Tells the delegate that the user has selected a document picker from the menu.
-- [documentMenuWasCancelled(\_:)](uidocumentmenudelegate/documentmenuwascancelled%28__%29.md): Deprecated. Tells the delegate that the user dismissed the document menu.
-
-## Relationships
-
-### Inherits From
-
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-## See Also
-
-### Getting the user-selected document picker
-
-- [delegate](uidocumentmenuviewcontroller/delegate.md): Deprecated. The document menu’s delegate.
-
-# UIDocumentMenuDelegate (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Protocol  
-**Availability:** iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-A set of methods that you must implement to track user interactions with a document menu view controller.
-
-> For more information, see [UIDocumentMenuViewController](uidocumentmenuviewcontroller.md).
-
-## Declaration
-
-```objectivec
-@protocol UIDocumentMenuDelegate <NSObject>
-```
-
-<a id="overview"></a>
-
-## Overview
-
-The document menu calls the methods of this protocol when the user selects a document picker or dismisses the menu. If the user selects a document picker, set the picker’s delegate and present it.
-
-## Topics
-
-### Responding to user actions
-
-- [documentMenu:didPickDocumentPicker:](uidocumentmenudelegate/documentmenu%28__didpickdocumentpicker_%29.md): Deprecated. Tells the delegate that the user has selected a document picker from the menu.
-- [documentMenuWasCancelled:](uidocumentmenudelegate/documentmenuwascancelled%28__%29.md): Deprecated. Tells the delegate that the user dismissed the document menu.
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobjectprotocol.md)
-
-## See Also
-
-### Getting the user-selected document picker
-
-- [delegate](uidocumentmenuviewcontroller/delegate.md): Deprecated. The document menu’s delegate.
-
-# Document: documentMenu(_:didPickDocumentPicker:)
-
-Source path: documentation/uikit/uidocumentmenudelegate/documentmenu(_:didpickdocumentpicker:)
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentmenudelegate/documentmenu(_:didpickdocumentpicker:)
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-# documentMenu(\_:didPickDocumentPicker:) (Swift)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-Tells the delegate that the user has selected a document picker from the menu.
-
-> For more information, see [UIDocumentMenuViewController](../uidocumentmenuviewcontroller.md).
-
-## Declaration
-
-```swift
-func documentMenu(_ documentMenu: UIDocumentMenuViewController, didPickDocumentPicker documentPicker: UIDocumentPickerViewController)
-```
-
-## Parameters
-
-- `documentMenu`: The document menu object that called this method.
-- `documentPicker`: The document picker that the user selected.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The document menu calls this method when the user selects a document picker. Set the document picker’s delegate, and then present it.
-
-## See Also
-
-### Responding to user actions
-
-- [documentMenuWasCancelled(\_:)](documentmenuwascancelled%28__%29.md): Deprecated. Tells the delegate that the user dismissed the document menu.
-
-# documentMenu:didPickDocumentPicker: (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-Tells the delegate that the user has selected a document picker from the menu.
-
-> For more information, see [UIDocumentMenuViewController](../uidocumentmenuviewcontroller.md).
-
-## Declaration
-
-```objectivec
-- (void) documentMenu:(UIDocumentMenuViewController *) documentMenu didPickDocumentPicker:(UIDocumentPickerViewController *) documentPicker;
-```
-
-## Parameters
-
-- `documentMenu`: The document menu object that called this method.
-- `documentPicker`: The document picker that the user selected.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The document menu calls this method when the user selects a document picker. Set the document picker’s delegate, and then present it.
-
-## See Also
-
-### Responding to user actions
-
-- [documentMenuWasCancelled:](documentmenuwascancelled%28__%29.md): Deprecated. Tells the delegate that the user dismissed the document menu.
-
-# Document: documentMenuWasCancelled(_:)
-
-Source path: documentation/uikit/uidocumentmenudelegate/documentmenuwascancelled(_:)
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentmenudelegate/documentmenuwascancelled(_:)
-Description: Framework: UIKit Kind: Instance Method Availability: iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-# documentMenuWasCancelled(\_:) (Swift)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-Tells the delegate that the user dismissed the document menu.
-
-> For more information, see [UIDocumentMenuViewController](../uidocumentmenuviewcontroller.md).
-
-## Declaration
-
-```swift
-optional func documentMenuWasCancelled(_ documentMenu: UIDocumentMenuViewController)
-```
-
-## Parameters
-
-- `documentMenu`: The document menu object that called this method.
-
-## See Also
-
-### Responding to user actions
-
-- [documentMenu(\_:didPickDocumentPicker:)](documentmenu%28__didpickdocumentpicker_%29.md): Deprecated. Tells the delegate that the user has selected a document picker from the menu.
-
-# documentMenuWasCancelled: (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Instance Method  
-**Availability:** iOS 8.0+ (deprecated in 13.0) · iPadOS 8.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-Tells the delegate that the user dismissed the document menu.
-
-> For more information, see [UIDocumentMenuViewController](../uidocumentmenuviewcontroller.md).
-
-## Declaration
-
-```objectivec
-- (void) documentMenuWasCancelled:(UIDocumentMenuViewController *) documentMenu;
-```
-
-## Parameters
-
-- `documentMenu`: The document menu object that called this method.
-
-## See Also
-
-### Responding to user actions
-
-- [documentMenu:didPickDocumentPicker:](documentmenu%28__didpickdocumentpicker_%29.md): Deprecated. Tells the delegate that the user has selected a document picker from the menu.
-
-# Document: UIDocumentMenuOrder
-
-Source path: documentation/uikit/uidocumentmenuorder
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentmenuorder
-Description: Framework: UIKit Kind: Enumeration Availability: iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-# UIDocumentMenuOrder (Swift)
-
-**Framework:** UIKit  
-**Kind:** Enumeration  
-**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-The insertion point for custom menu items.
-
-## Declaration
-
-```swift
-enum UIDocumentMenuOrder
-```
-
-## Topics
-
-### Constants
-
-- [UIDocumentMenuOrder.first](uidocumentmenuorder/first.md): Deprecated. The top item in the document menu.
-- [UIDocumentMenuOrder.last](uidocumentmenuorder/last.md): Deprecated. The bottom item in the document menu.
-
-### Initializers
-
-- [init(rawValue:)](uidocumentmenuorder/init%28rawvalue_%29.md): Deprecated.
-
-## Relationships
-
-### Conforms To
-
-- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Configuring a document menu
-
-- [addOption(withTitle:image:order:handler:)](uidocumentmenuviewcontroller/addoption%28withtitle_image_order_handler_%29.md): Deprecated. Adds a custom menu item to the list of document pickers.
-
-# UIDocumentMenuOrder (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Enumeration  
-**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-The insertion point for custom menu items.
-
-## Declaration
-
-```objectivec
-enum UIDocumentMenuOrder : NSUInteger;
-```
-
-## Topics
-
-### Constants
-
-- [UIDocumentMenuOrderFirst](uidocumentmenuorder/first.md): Deprecated. The top item in the document menu.
-- [UIDocumentMenuOrderLast](uidocumentmenuorder/last.md): Deprecated. The bottom item in the document menu.
-
-## See Also
-
-### Configuring a document menu
-
-- [addOptionWithTitle:image:order:handler:](uidocumentmenuviewcontroller/addoption%28withtitle_image_order_handler_%29.md): Deprecated. Adds a custom menu item to the list of document pickers.
-
-# Document: UIDocumentMenuOrder.first
-
-Source path: documentation/uikit/uidocumentmenuorder/first
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentmenuorder/first
-Description: Framework: UIKit Kind: Case Availability: iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-# UIDocumentMenuOrder.first (Swift)
-
-**Framework:** UIKit  
-**Kind:** Case  
-**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-The top item in the document menu.
-
-## Declaration
-
-```swift
-case first
-```
-
-## See Also
-
-### Constants
-
-- [UIDocumentMenuOrder.last](last.md): Deprecated. The bottom item in the document menu.
-
-# UIDocumentMenuOrderFirst (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Enumeration Case  
-**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-The top item in the document menu.
-
-## Declaration
-
-```objectivec
-UIDocumentMenuOrderFirst
-```
-
-## See Also
-
-### Constants
-
-- [UIDocumentMenuOrderLast](last.md): Deprecated. The bottom item in the document menu.
-
-# Document: init(rawValue:)
-
-Source path: documentation/uikit/uidocumentmenuorder/init(rawvalue:)
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentmenuorder/init(rawvalue:)
-Description: Framework: UIKit Kind: Initializer Availability: iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-# init(rawValue:)
-
-**Framework:** UIKit  
-**Kind:** Initializer  
-**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-## Declaration
-
-```swift
-init?(rawValue: UInt)
-```
-
-# Document: UIDocumentMenuOrder.last
-
-Source path: documentation/uikit/uidocumentmenuorder/last
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentmenuorder/last
-Description: Framework: UIKit Kind: Case Availability: iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-# UIDocumentMenuOrder.last (Swift)
-
-**Framework:** UIKit  
-**Kind:** Case  
-**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-The bottom item in the document menu.
-
-## Declaration
-
-```swift
-case last
-```
-
-## See Also
-
-### Constants
-
-- [UIDocumentMenuOrder.first](first.md): Deprecated. The top item in the document menu.
-
-# UIDocumentMenuOrderLast (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Enumeration Case  
-**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
-
-The bottom item in the document menu.
-
-## Declaration
-
-```objectivec
-UIDocumentMenuOrderLast
-```
-
-## See Also
-
-### Constants
-
-- [UIDocumentMenuOrderFirst](first.md): Deprecated. The top item in the document menu.

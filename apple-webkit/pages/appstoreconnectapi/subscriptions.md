@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/subscriptions
 
 # Subscriptions
@@ -88,8 +88,8 @@ Create, modify, and delete auto-renewable subscriptions for your app.
 - [SubscriptionOfferCodeResponse](subscriptionoffercoderesponse.md): The response body for endpoints that create, read, or modify a single subscription offer code.
 - [SubscriptionOfferCodesResponse](subscriptionoffercodesresponse.md): The response body for endpoints that list offer codes for a subscription.
 - [SubscriptionOfferCode](subscriptionoffercode.md): A promotional code that gives customers a discounted or free subscription for a specified duration and eligibility group.
-- [PromotedPurchaseResponse](promotedpurchaseresponse.md): The response body for endpoints that read or modify a promoted in-app purchase or subscription.
-- [PromotedPurchase](promotedpurchase.md): An in-app purchase or subscription configured to appear on the app’s App Store product page.
+- [PromotedPurchaseResponse](promotedpurchaseresponse.md): The response body for endpoints that read or modify a promoted In-App Purchase or subscription.
+- [PromotedPurchase](promotedpurchase.md): An In-App Purchase or subscription configured to appear on the app’s App Store product page.
 - [SubscriptionPricePointsResponse](subscriptionpricepointsresponse.md): The response body for endpoints that list available price points for a subscription.
 - [SubscriptionPricesResponse](subscriptionpricesresponse.md): The response body for endpoints that list scheduled prices for a subscription.
 - [SubscriptionPrice](subscriptionprice.md): A configured price for an auto-renewable subscription in a specific App Store territory.
@@ -116,6 +116,7 @@ Create, modify, and delete auto-renewable subscriptions for your app.
 - [Working with subscription versions](working-with-subscription-versions.md): Manage draft versions of an auto-renewable subscription’s localized metadata and review images before submitting for App Review.
 - [Configuring subscription prices across territories](configuring-subscription-prices-across-territories.md): Set plan types and equalized prices for an auto-renewable subscription with the App Store Connect API.
 - [Querying adjusted subscription price equalizations](querying-adjusted-subscription-price-equalizations.md): Compare a subscription price point against the equalized price points that Apple recommends across territories, adjusted for local pricing rules.
+- [Configuring multi-seat subscriptions for organizations](configuring-multi-seat-subscriptions-for-organizations.md): Control whether organizations can purchase an auto-renewable subscription for multiple people, and which markets offer it.
 - [Subscription Versions](subscription-versions.md): Create and read draft versions of an auto-renewable subscription, with their localized metadata and review images.
 - [Subscription Localizations](subscription-localizations.md): Create, modify, and delete localized metadata for auto-renewable subscriptions.
 - [Subscription localizations (v1)](subscription-localizations-v1.md): Deprecated. Create, modify, and delete localized metadata for auto-renewable subscriptions.

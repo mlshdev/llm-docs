@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/get-all-impression-share-reports
 
 # Get All Impression Share Reports
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Web Service Endpoint  
-**Availability:** Search Ads 5.0+
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 Fetches all Impression Share reports containing metrics and metadata.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## URL
 
@@ -165,5 +167,5 @@ HTTP GET https://api.searchads.apple.com/api/v5/custom-reports
 
 ### Impression Share Report Endpoints
 
-- [Impression Share Report](impression-share-report.md): Obtain a report ID.
-- [Get a Single Impression Share Report](get-a-single-impression-share-report.md): Fetches a single Impression Share report containing metrics and metadata.
+- [Impression Share Report](impression-share-report.md): Deprecated. Obtain a report ID.
+- [Get a Single Impression Share Report](get-a-single-impression-share-report.md): Deprecated. Fetches a single Impression Share report containing metrics and metadata.

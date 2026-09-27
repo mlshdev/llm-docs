@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Swift snapshot-3cd4d1098779; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swift/sequence-and-collection-protocols
 
 # Sequence and Collection Protocols
@@ -12,6 +12,7 @@ Write generic code that works with any collection, or build your own collection 
 
 ### First Steps
 
+- [IteratorProtocol](iteratorprotocol.md): A type that supplies the values of a sequence one at a time.
 - [Sequence](sequence.md): A type that provides sequential, iterated access to its elements.
 - [Collection](collection.md): A sequence whose elements can be traversed multiple times, nondestructively, and accessed by an indexed subscript.
 
@@ -25,9 +26,9 @@ Write generic code that works with any collection, or build your own collection 
 - [MutableCollection](mutablecollection.md): A collection that supports subscript assignment.
 - [RangeReplaceableCollection](rangereplaceablecollection.md): A collection that supports replacement of an arbitrary subrange of elements with the elements of another collection.
 
-### Manual Iteration
+### Borrowing Iteration
 
-- [IteratorProtocol](iteratorprotocol.md): A type that supplies the values of a sequence one at a time.
+- [Iterable](iterable.md): A type that provides sequential, borrowing access to its elements.
 - [BorrowingIteratorProtocol](borrowingiteratorprotocol.md): A type that provides borrowed access to the values of a borrowing sequence.
 - [BorrowingIteratorAdapter](borrowingiteratoradapter.md)
 

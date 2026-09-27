@@ -1,9 +1,9 @@
-# Apple iOS and iPadOS snapshot-6a8f7b178c0a: full documentation
+# Apple iOS and iPadOS snapshot-d0d1b2f13e0d: full documentation
 
 Source: https://developer.apple.com/ios/
-Catalog snapshot: 6a8f7b178c0a4a818fcf6807848b91d84ce5b7ebf4360d1e5a64f101b6da66de
-Content digest: 316c0df8708ef0a335d681b88668361f39778065c0705c8c1aeea8adfdab1067
-Captured at: 2026-09-19T05:14:28.746Z
+Catalog snapshot: d0d1b2f13e0dda7c6d6bed81d67f484e5f0b9662600743bf08baa771840f0378
+Content digest: 389660c763e1ce396dda974d54f5268621a1de23bcebb625192122aebc78e52e
+Captured at: 2026-09-27T18:07:09.630Z
 Volume 2
 
 # Document: ENStatus.disabled
@@ -12782,7 +12782,7 @@ When writing your report, please include the full version number in the title an
 
 ### iOS & iPadOS 27
 
-- [iOS & iPadOS 27.2 Beta Release Notes](ios-ipados-release-notes/ios-ipados-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 27.2 Beta 2 Release Notes](ios-ipados-release-notes/ios-ipados-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [iOS & iPadOS 27 Release Notes](ios-ipados-release-notes/ios-ipados-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### iOS & iPadOS 26
@@ -25874,15 +25874,15 @@ The iOS & iPadOS 27 SDK provides support to develop apps for iPhone and iPad run
 
 ### iOS & iPadOS 27
 
-- [iOS & iPadOS 27.2 Beta Release Notes](ios-ipados-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 27.2 Beta 2 Release Notes](ios-ipados-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
-# Document: iOS & iPadOS 27.2 Beta Release Notes
+# Document: iOS & iPadOS 27.2 Beta 2 Release Notes
 
 Source path: documentation/ios-ipados-release-notes/ios-ipados-27_2-release-notes
 Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27_2-release-notes
 Description: Kind: Article
 
-# iOS & iPadOS 27.2 Beta Release Notes
+# iOS & iPadOS 27.2 Beta 2 Release Notes
 
 **Kind:** Article
 
@@ -25892,7 +25892,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The iOS & iPadOS 27.2 SDK provides support to develop apps for iPhone and iPad running iOS & iPadOS 27.2 beta. The SDK comes bundled with Xcode 27.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
+The iOS & iPadOS 27.2 SDK provides support to develop apps for iPhone and iPad running iOS & iPadOS 27.2 beta 2. The SDK comes bundled with Xcode 27.2. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
 
 <a id="App-Tracking-Transparency"></a>
 

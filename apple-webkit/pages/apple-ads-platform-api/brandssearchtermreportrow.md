@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/brandssearchtermreportrow
 
 # BrandsSearchTermReportRow
@@ -174,7 +174,7 @@ Like all search term reports, `brands` search term reports require the ORTZ time
     "campaignId": 555666777,
     "adAccountId": 123456789,
     "searchTermText": "AwayFinder",
-    "searchTermSource": "SEARCH",
+    "searchTermSource": "TARGETED",
     "keyword": {
       "locationId": "555666777",
       "matchType": "PHRASE"

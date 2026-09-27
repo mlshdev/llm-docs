@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Swift snapshot-3cd4d1098779; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swift/task/hasactivecancellationshield
 
 # hasActiveCancellationShield
@@ -34,3 +34,10 @@ Cancellation shields are not automatically inherited by child tasks; each child 
 > **See Also**
 
 > [hasActiveCancellationShield](../unsafecurrenttask/hasactivecancellationshield.md)
+
+## See Also
+
+### Shielding Tasks from Cancellation
+
+- [withTaskCancellationShield(operation:)](../withtaskcancellationshield%28operation_%29-2lzl8.md): Enters a scope in which a task cancellation shield is active.
+- [withTaskCancellationShield(operation:)](../withtaskcancellationshield%28operation_%29-8zlgh.md): Enters a scope in which a task cancellation shield is active.

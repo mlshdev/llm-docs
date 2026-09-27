@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/subscription-price-points-and-subscription-prices
 
 # Subscription price points and subscription prices
@@ -39,6 +39,7 @@ Manage scheduled price changes for auto-renewable subscriptions and get price po
 - [Working with subscription versions](working-with-subscription-versions.md): Manage draft versions of an auto-renewable subscription’s localized metadata and review images before submitting for App Review.
 - [Configuring subscription prices across territories](configuring-subscription-prices-across-territories.md): Set plan types and equalized prices for an auto-renewable subscription with the App Store Connect API.
 - [Querying adjusted subscription price equalizations](querying-adjusted-subscription-price-equalizations.md): Compare a subscription price point against the equalized price points that Apple recommends across territories, adjusted for local pricing rules.
+- [Configuring multi-seat subscriptions for organizations](configuring-multi-seat-subscriptions-for-organizations.md): Control whether organizations can purchase an auto-renewable subscription for multiple people, and which markets offer it.
 - [Subscription Versions](subscription-versions.md): Create and read draft versions of an auto-renewable subscription, with their localized metadata and review images.
 - [Subscriptions](subscriptions.md): Create, modify, and delete auto-renewable subscriptions for your app.
 - [Subscription Localizations](subscription-localizations.md): Create, modify, and delete localized metadata for auto-renewable subscriptions.

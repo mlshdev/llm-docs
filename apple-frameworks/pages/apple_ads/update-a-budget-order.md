@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/update-a-budget-order
 
 # Update a Budget Order
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Web Service Endpoint  
-**Availability:** Search Ads 5.0+
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 Updates an existing budget order.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## URL
 
@@ -114,6 +116,6 @@ HTTP PUT  https://api.searchads.apple.com/api/v5/budgetorders/{boid}
 
 ### Budget Order Endpoints
 
-- [Create a Budget Order](create-a-budget-order.md): Creates a budget order in the context of your org ID.
-- [Get a Budget Order](get-a-budget-order.md): Fetches a specific budget order using a budget order identifier.
-- [Get all Budget Orders](get-all-budget-orders.md): Fetches all assigned budget orders for an organization.
+- [Create a Budget Order](create-a-budget-order.md): Deprecated. Creates a budget order in the context of your org ID.
+- [Get a Budget Order](get-a-budget-order.md): Deprecated. Fetches a specific budget order using a budget order identifier.
+- [Get all Budget Orders](get-all-budget-orders.md): Deprecated. Fetches all assigned budget orders for an organization.

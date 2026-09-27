@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/fskit/fskit_api_introduced_v1_deprecated_v3_with_replacement
 
 # FSKIT_API_INTRODUCED_V1_DEPRECATED_V3_WITH_REPLACEMENT

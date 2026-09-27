@@ -1,10 +1,1550 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 65
+
+# Document: textDraggableView(_:dragPreviewForLiftingItem:session:)
+
+Source path: documentation/uikit/uitextdragdelegate/textdraggableview(_:dragpreviewforliftingitem:session:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragdelegate/textdraggableview(_:dragpreviewforliftingitem:session:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# textDraggableView(\_:dragPreviewForLiftingItem:session:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Asks the delegate for the preview to show during the lift animation that happens when a user begins to drag an item from a text view.
+
+## Declaration
+
+```swift
+optional func textDraggableView(_ textDraggableView: any UIView & UITextDraggable, dragPreviewForLiftingItem item: UIDragItem, session: any UIDragSession) -> UITargetedDragPreview?
+```
+
+## Parameters
+
+- `textDraggableView`: The text view where the drag activity was started.
+- `item`: The drag item that is being lifted.
+- `session`: The drag session of the current drag activity.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A targeted drag preview to show during the lift animation, or `nil` to show the default preview.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You implement this method when you want to show a nondefault preview during the lift animation. If you return `nil`, the system shows default preview.
+
+> **Note**
+
+>  This method is not called when the [suggestedItems](../uitextdragrequest/suggesteditems.md) array for the text drag request contains the drag item.
+
+# textDraggableView:dragPreviewForLiftingItem:session: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Asks the delegate for the preview to show during the lift animation that happens when a user begins to drag an item from a text view.
+
+## Declaration
+
+```objectivec
+- (UITargetedDragPreview *) textDraggableView:(UIView<UITextDraggable> *) textDraggableView dragPreviewForLiftingItem:(UIDragItem *) item session:(id<UIDragSession>) session;
+```
+
+## Parameters
+
+- `textDraggableView`: The text view where the drag activity was started.
+- `item`: The drag item that is being lifted.
+- `session`: The drag session of the current drag activity.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A targeted drag preview to show during the lift animation, or `nil` to show the default preview.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You implement this method when you want to show a nondefault preview during the lift animation. If you return `nil`, the system shows default preview.
+
+> **Note**
+
+>  This method is not called when the [suggestedItems](../uitextdragrequest/suggesteditems.md) array for the text drag request contains the drag item.
+
+# Document: textDraggableView(_:dragSessionDidEnd:with:)
+
+Source path: documentation/uikit/uitextdragdelegate/textdraggableview(_:dragsessiondidend:with:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragdelegate/textdraggableview(_:dragsessiondidend:with:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# textDraggableView(\_:dragSessionDidEnd:with:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Tells the delegate that the drag session has ended.
+
+## Declaration
+
+```swift
+optional func textDraggableView(_ textDraggableView: any UIView & UITextDraggable, dragSessionDidEnd session: any UIDragSession, with operation: UIDropOperation)
+```
+
+## Parameters
+
+- `textDraggableView`: The text view where the drag activity was started.
+- `session`: The drag session of the current drag activity.
+- `operation`: The operation that occurred during the drop activity.
+
+## See Also
+
+### Handling drag session notifications
+
+- [textDraggableView(\_:dragSessionWillBegin:)](textdraggableview%28__dragsessionwillbegin_%29.md): Tells the delegate that the text has been lifted out of the text view and the user is beginning to drag the text.
+
+# textDraggableView:dragSessionDidEnd:withOperation: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Tells the delegate that the drag session has ended.
+
+## Declaration
+
+```objectivec
+- (void) textDraggableView:(UIView<UITextDraggable> *) textDraggableView dragSessionDidEnd:(id<UIDragSession>) session withOperation:(UIDropOperation) operation;
+```
+
+## Parameters
+
+- `textDraggableView`: The text view where the drag activity was started.
+- `session`: The drag session of the current drag activity.
+- `operation`: The operation that occurred during the drop activity.
+
+## See Also
+
+### Handling drag session notifications
+
+- [textDraggableView:dragSessionWillBegin:](textdraggableview%28__dragsessionwillbegin_%29.md): Tells the delegate that the text has been lifted out of the text view and the user is beginning to drag the text.
+
+# Document: textDraggableView(_:dragSessionWillBegin:)
+
+Source path: documentation/uikit/uitextdragdelegate/textdraggableview(_:dragsessionwillbegin:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragdelegate/textdraggableview(_:dragsessionwillbegin:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# textDraggableView(\_:dragSessionWillBegin:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Tells the delegate that the text has been lifted out of the text view and the user is beginning to drag the text.
+
+## Declaration
+
+```swift
+optional func textDraggableView(_ textDraggableView: any UIView & UITextDraggable, dragSessionWillBegin session: any UIDragSession)
+```
+
+## Parameters
+
+- `textDraggableView`: The text view where the drag activity was started.
+- `session`: The drag session of the current drag activity.
+
+## See Also
+
+### Handling drag session notifications
+
+- [textDraggableView(\_:dragSessionDidEnd:with:)](textdraggableview%28__dragsessiondidend_with_%29.md): Tells the delegate that the drag session has ended.
+
+# textDraggableView:dragSessionWillBegin: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Tells the delegate that the text has been lifted out of the text view and the user is beginning to drag the text.
+
+## Declaration
+
+```objectivec
+- (void) textDraggableView:(UIView<UITextDraggable> *) textDraggableView dragSessionWillBegin:(id<UIDragSession>) session;
+```
+
+## Parameters
+
+- `textDraggableView`: The text view where the drag activity was started.
+- `session`: The drag session of the current drag activity.
+
+## See Also
+
+### Handling drag session notifications
+
+- [textDraggableView:dragSessionDidEnd:withOperation:](textdraggableview%28__dragsessiondidend_with_%29.md): Tells the delegate that the drag session has ended.
+
+# Document: textDraggableView(_:itemsForDrag:)
+
+Source path: documentation/uikit/uitextdragdelegate/textdraggableview(_:itemsfordrag:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragdelegate/textdraggableview(_:itemsfordrag:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# textDraggableView(\_:itemsForDrag:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Asks the delegate for custom drag items from a text view.
+
+## Declaration
+
+```swift
+optional func textDraggableView(_ textDraggableView: any UIView & UITextDraggable, itemsForDrag dragRequest: any UITextDragRequest) -> [UIDragItem]
+```
+
+## Parameters
+
+- `textDraggableView`: The text view where the drag activity was started.
+- `dragRequest`: The current drag request.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An array of drag items that represent the items to drag.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You implement this method when you need to provide custom drag items. The drag request gives you the text range of the text that is included in the drag activity. It also gives you the default drag items, which you can add to or change. If you return an empty array, the drag operation does not happen.
+
+> **Note**
+
+>  This method may be called more than once. For instance, it is called each time the user adds more drag items to the session. You can detect additional calls to this method by checking the [existingItems](../uitextdragrequest/existingitems.md) property on the drag request.
+
+# textDraggableView:itemsForDrag: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Asks the delegate for custom drag items from a text view.
+
+## Declaration
+
+```objectivec
+- (NSArray<UIDragItem *> *) textDraggableView:(UIView<UITextDraggable> *) textDraggableView itemsForDrag:(id<UITextDragRequest>) dragRequest;
+```
+
+## Parameters
+
+- `textDraggableView`: The text view where the drag activity was started.
+- `dragRequest`: The current drag request.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An array of drag items that represent the items to drag.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You implement this method when you need to provide custom drag items. The drag request gives you the text range of the text that is included in the drag activity. It also gives you the default drag items, which you can add to or change. If you return an empty array, the drag operation does not happen.
+
+> **Note**
+
+>  This method may be called more than once. For instance, it is called each time the user adds more drag items to the session. You can detect additional calls to this method by checking the [existingItems](../uitextdragrequest/existingitems.md) property on the drag request.
+
+# Document: textDraggableView(_:willAnimateLiftWith:session:)
+
+Source path: documentation/uikit/uitextdragdelegate/textdraggableview(_:willanimateliftwith:session:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragdelegate/textdraggableview(_:willanimateliftwith:session:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# textDraggableView(\_:willAnimateLiftWith:session:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Tells the delegate when the lift animation is about to begin, and gives you a chance to animate additional changes alongside the system animation.
+
+## Declaration
+
+```swift
+optional func textDraggableView(_ textDraggableView: any UIView & UITextDraggable, willAnimateLiftWith animator: any UIDragAnimating, session: any UIDragSession)
+```
+
+## Parameters
+
+- `textDraggableView`: The text view where the drag activity was started.
+- `animator`: The animator that you use when adding animations.
+- `session`: The drag session of the current drag activity.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You implement this delegate method when you want to add animations that happen alongside the system animation during the lift activity. To add such an animation, use the animator’s [addAnimations(\_:)](../uidraganimating/addanimations%28__%29.md) method. To add an animation that happens after the system animation has ended, use the animator’s [addCompletion(\_:)](../uidraganimating/addcompletion%28__%29.md) method.
+
+# textDraggableView:willAnimateLiftWithAnimator:session: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Tells the delegate when the lift animation is about to begin, and gives you a chance to animate additional changes alongside the system animation.
+
+## Declaration
+
+```objectivec
+- (void) textDraggableView:(UIView<UITextDraggable> *) textDraggableView willAnimateLiftWithAnimator:(id<UIDragAnimating>) animator session:(id<UIDragSession>) session;
+```
+
+## Parameters
+
+- `textDraggableView`: The text view where the drag activity was started.
+- `animator`: The animator that you use when adding animations.
+- `session`: The drag session of the current drag activity.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You implement this delegate method when you want to add animations that happen alongside the system animation during the lift activity. To add such an animation, use the animator’s [addAnimations:](../uidraganimating/addanimations%28__%29.md) method. To add an animation that happens after the system animation has ended, use the animator’s [addCompletion:](../uidraganimating/addcompletion%28__%29.md) method.
+
+# Document: UITextDraggable
+
+Source path: documentation/uikit/uitextdraggable
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdraggable
+Description: Framework: UIKit Kind: Protocol Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# UITextDraggable (Swift)
+
+**Framework:** UIKit  
+**Kind:** Protocol  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The interface that determines if a text view is a drag source.
+
+## Declaration
+
+```swift
+@MainActor protocol UITextDraggable : UITextInput
+```
+
+## Topics
+
+### Checking the text drag activity status
+
+- [isTextDragActive](uitextdraggable/istextdragactive.md): A Boolean value indicating whether at least one drag session for the text view is active.
+
+### Managing the text drag interaction
+
+- [textDragInteraction](uitextdraggable/textdraginteraction.md): The drag interaction object added by UIKit to the text view.
+
+### Setting the text drag delegate
+
+- [textDragDelegate](uitextdraggable/textdragdelegate.md): A text drag delegate object for customizing the drag source behavior of a text view.
+
+### Setting the text drag options
+
+- [textDragOptions](uitextdraggable/textdragoptions.md): The options for the text drag operation.
+
+## Relationships
+
+### Inherits From
+
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [UIKeyInput](uikeyinput.md)
+- [UITextInput](uitextinput.md)
+- [UITextInputTraits](uitextinputtraits.md)
+
+### Conforming Types
+
+- [UISearchTextField](uisearchtextfield.md)
+- [UITextField](uitextfield.md)
+- [UITextView](uitextview.md)
+
+## See Also
+
+### Text view additions
+
+- [UITextDragDelegate](uitextdragdelegate.md): The interface for customizing the behavior of a drag activity for a text view.
+- [UITextDropDelegate](uitextdropdelegate.md): The interface for configuring a text view’s drop behavior.
+- [UITextDragOptions](uitextdragoptions.md): A set of options that determine the behavior of a draggable text view.
+- [UITextDroppable](uitextdroppable.md): The interface that determines if a text view is a drop destination.
+- [UITextDropEditability](uitextdropeditability.md): The text-drop editability styles for noneditable text views.
+
+# UITextDraggable (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Protocol  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The interface that determines if a text view is a drag source.
+
+## Declaration
+
+```objectivec
+@protocol UITextDraggable <UITextInput>
+```
+
+## Topics
+
+### Checking the text drag activity status
+
+- [textDragActive](uitextdraggable/istextdragactive.md): A Boolean value indicating whether at least one drag session for the text view is active.
+
+### Managing the text drag interaction
+
+- [textDragInteraction](uitextdraggable/textdraginteraction.md): The drag interaction object added by UIKit to the text view.
+
+### Setting the text drag delegate
+
+- [textDragDelegate](uitextdraggable/textdragdelegate.md): A text drag delegate object for customizing the drag source behavior of a text view.
+
+### Setting the text drag options
+
+- [textDragOptions](uitextdraggable/textdragoptions.md): The options for the text drag operation.
+
+## Relationships
+
+### Inherits From
+
+- [UITextInput](uitextinput.md)
+
+### Conforming Types
+
+- [UITextField](uitextfield.md)
+- [UITextView](uitextview.md)
+
+## See Also
+
+### Text view additions
+
+- [UITextDragDelegate](uitextdragdelegate.md): The interface for customizing the behavior of a drag activity for a text view.
+- [UITextDropDelegate](uitextdropdelegate.md): The interface for configuring a text view’s drop behavior.
+- [UITextDragOptions](uitextdragoptions.md): A set of options that determine the behavior of a draggable text view.
+- [UITextDroppable](uitextdroppable.md): The interface that determines if a text view is a drop destination.
+- [UITextDropEditability](uitextdropeditability.md): The text-drop editability styles for noneditable text views.
+
+# Document: isTextDragActive
+
+Source path: documentation/uikit/uitextdraggable/istextdragactive
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdraggable/istextdragactive
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# isTextDragActive (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A Boolean value indicating whether at least one drag session for the text view is active.
+
+## Declaration
+
+```swift
+var isTextDragActive: Bool { get }
+```
+
+# textDragActive (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A Boolean value indicating whether at least one drag session for the text view is active.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly, getter=isTextDragActive) BOOL textDragActive;
+```
+
+# Document: textDragDelegate
+
+Source path: documentation/uikit/uitextdraggable/textdragdelegate
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdraggable/textdragdelegate
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# textDragDelegate (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A text drag delegate object for customizing the drag source behavior of a text view.
+
+## Declaration
+
+```swift
+weak var textDragDelegate: (any UITextDragDelegate)? { get set }
+```
+
+# textDragDelegate (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A text drag delegate object for customizing the drag source behavior of a text view.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, weak, nullable) id<UITextDragDelegate> textDragDelegate;
+```
+
+# Document: textDragInteraction
+
+Source path: documentation/uikit/uitextdraggable/textdraginteraction
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdraggable/textdraginteraction
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# textDragInteraction (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The drag interaction object added by UIKit to the text view.
+
+## Declaration
+
+```swift
+var textDragInteraction: UIDragInteraction? { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You can set the text drag interaction’s [isEnabled](../uidraginteraction/isenabled.md) property to [false](https://developer.apple.com/documentation/swift/false) if you need to explicitly turn off drag interactions for a UIKit-provided text view.
+
+# textDragInteraction (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The drag interaction object added by UIKit to the text view.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly, nullable) UIDragInteraction * textDragInteraction;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You can set the text drag interaction’s [enabled](../uidraginteraction/isenabled.md) property to [false](https://developer.apple.com/documentation/swift/false) if you need to explicitly turn off drag interactions for a UIKit-provided text view.
+
+# Document: textDragOptions
+
+Source path: documentation/uikit/uitextdraggable/textdragoptions
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdraggable/textdragoptions
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# textDragOptions (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The options for the text drag operation.
+
+## Declaration
+
+```swift
+var textDragOptions: UITextDragOptions { get set }
+```
+
+# textDragOptions (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The options for the text drag operation.
+
+## Declaration
+
+```objectivec
+@property (nonatomic) UITextDragOptions textDragOptions;
+```
+
+# Document: UITextDragOptions
+
+Source path: documentation/uikit/uitextdragoptions
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragoptions
+Description: Framework: UIKit Kind: Structure Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# UITextDragOptions (Swift)
+
+**Framework:** UIKit  
+**Kind:** Structure  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A set of options that determine the behavior of a draggable text view.
+
+## Declaration
+
+```swift
+struct UITextDragOptions
+```
+
+## Topics
+
+### Text drag options
+
+- [stripTextColorFromPreviews](uitextdragoptions/striptextcolorfrompreviews.md): Strips the foreground and background colors for a system-provided text drag preview.
+
+### Initializers
+
+- [init(rawValue:)](uitextdragoptions/init%28rawvalue_%29.md): Creates a text-drag options structure with the specified raw value.
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [ExpressibleByArrayLiteral](https://developer.apple.com/documentation/swift/expressiblebyarrayliteral)
+- [OptionSet](https://developer.apple.com/documentation/swift/optionset)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [SetAlgebra](https://developer.apple.com/documentation/swift/setalgebra)
+
+## See Also
+
+### Text view additions
+
+- [UITextDragDelegate](uitextdragdelegate.md): The interface for customizing the behavior of a drag activity for a text view.
+- [UITextDropDelegate](uitextdropdelegate.md): The interface for configuring a text view’s drop behavior.
+- [UITextDraggable](uitextdraggable.md): The interface that determines if a text view is a drag source.
+- [UITextDroppable](uitextdroppable.md): The interface that determines if a text view is a drop destination.
+- [UITextDropEditability](uitextdropeditability.md): The text-drop editability styles for noneditable text views.
+
+# UITextDragOptions (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A set of options that determine the behavior of a draggable text view.
+
+## Declaration
+
+```objectivec
+enum UITextDragOptions : NSInteger;
+```
+
+## Topics
+
+### Text drag options
+
+- [UITextDragOptionsNone](uitextdragoptions/uitextdragoptionsnone.md): Indicates no text drag options.
+- [UITextDragOptionStripTextColorFromPreviews](uitextdragoptions/striptextcolorfrompreviews.md): Strips the foreground and background colors for a system-provided text drag preview.
+
+## See Also
+
+### Text view additions
+
+- [UITextDragDelegate](uitextdragdelegate.md): The interface for customizing the behavior of a drag activity for a text view.
+- [UITextDropDelegate](uitextdropdelegate.md): The interface for configuring a text view’s drop behavior.
+- [UITextDraggable](uitextdraggable.md): The interface that determines if a text view is a drag source.
+- [UITextDroppable](uitextdroppable.md): The interface that determines if a text view is a drop destination.
+- [UITextDropEditability](uitextdropeditability.md): The text-drop editability styles for noneditable text views.
+
+# Document: init(rawValue:)
+
+Source path: documentation/uikit/uitextdragoptions/init(rawvalue:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragoptions/init(rawvalue:)
+Description: Framework: UIKit Kind: Initializer Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# init(rawValue:)
+
+**Framework:** UIKit  
+**Kind:** Initializer  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Creates a text-drag options structure with the specified raw value.
+
+## Declaration
+
+```swift
+init(rawValue: Int)
+```
+
+# Document: stripTextColorFromPreviews
+
+Source path: documentation/uikit/uitextdragoptions/striptextcolorfrompreviews
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragoptions/striptextcolorfrompreviews
+Description: Framework: UIKit Kind: Type Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# stripTextColorFromPreviews (Swift)
+
+**Framework:** UIKit  
+**Kind:** Type Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Strips the foreground and background colors for a system-provided text drag preview.
+
+## Declaration
+
+```swift
+static var stripTextColorFromPreviews: UITextDragOptions { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the system creates a preview for a text drag operation, the preview keeps the foreground and background text colors. Using the [stripTextColorFromPreviews](striptextcolorfrompreviews.md) option strips away those colors, leaving the preview with black text on a clear background. This option changes only the preview, not the view used to create the preview. Also, this option doesn’t affect any images included in the preview.
+
+# UITextDragOptionStripTextColorFromPreviews (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Strips the foreground and background colors for a system-provided text drag preview.
+
+## Declaration
+
+```objectivec
+UITextDragOptionStripTextColorFromPreviews
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the system creates a preview for a text drag operation, the preview keeps the foreground and background text colors. Using the [UITextDragOptionStripTextColorFromPreviews](striptextcolorfrompreviews.md) option strips away those colors, leaving the preview with black text on a clear background. This option changes only the preview, not the view used to create the preview. Also, this option doesn’t affect any images included in the preview.
+
+## See Also
+
+### Text drag options
+
+- [UITextDragOptionsNone](uitextdragoptionsnone.md): Indicates no text drag options.
+
+# Document: UITextDragOptionsNone
+
+Source path: documentation/uikit/uitextdragoptions/uitextdragoptionsnone
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragoptions/uitextdragoptionsnone
+Description: Interface language: Objective-C
+
+# UITextDragOptionsNone
+
+**Interface language:** Objective-C
+
+**Framework:** UIKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Indicates no text drag options.
+
+## Declaration
+
+```objectivec
+UITextDragOptionsNone
+```
+
+## See Also
+
+### Text drag options
+
+- [UITextDragOptionStripTextColorFromPreviews](striptextcolorfrompreviews.md): Strips the foreground and background colors for a system-provided text drag preview.
+
+# Document: UITextDragPreviewRenderer
+
+Source path: documentation/uikit/uitextdragpreviewrenderer
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragpreviewrenderer
+Description: Framework: UIKit Kind: Class Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# UITextDragPreviewRenderer (Swift)
+
+**Framework:** UIKit  
+**Kind:** Class  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Renders previews of text dragged by the user.
+
+## Declaration
+
+```swift
+@MainActor class UITextDragPreviewRenderer
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use this class to provide custom previews of dragged text that follows user interface guidelines and handles right-to-left text. You provide the layout manager and the range to render the preview.
+
+Subclasses may override the [adjust(firstLineRect:bodyRect:lastLineRect:textOrigin:)](uitextdragpreviewrenderer/adjust%28firstlinerect_bodyrect_lastlinerect_textorigin_%29.md) method to modify the detected rectangles as needed during the drag operation.
+
+## Topics
+
+### Initializing a text drag preview renderer
+
+- [init(layoutManager:range:)](uitextdragpreviewrenderer/init%28layoutmanager_range_%29.md): Initializes and returns a text drag preview renderer with the specified layout managers and range to render the text drag preview.
+- [init(layoutManager:range:unifyRects:)](uitextdragpreviewrenderer/init%28layoutmanager_range_unifyrects_%29.md): Returns an initialized renderer of a text drag preview with the specified layout manager, range, and rectangle detection behavior.
+
+### Getting and setting bounding rectangles
+
+- [bodyRect](uitextdragpreviewrenderer/bodyrect.md): The bounding rectangle of the text in the middle of the drag preview.
+- [firstLineRect](uitextdragpreviewrenderer/firstlinerect.md): The bounding rectangle of the first line of text in the drag preview.
+- [lastLineRect](uitextdragpreviewrenderer/lastlinerect.md): The bounding rectangle of the last line of text in the drag preview.
+- [adjust(firstLineRect:bodyRect:lastLineRect:textOrigin:)](uitextdragpreviewrenderer/adjust%28firstlinerect_bodyrect_lastlinerect_textorigin_%29.md): Adjusts the size and origin of the bounding rectangles during a text drag operation.
+
+### Getting the preview image
+
+- [image](uitextdragpreviewrenderer/image.md): The image of the text drag preview that’s rendered by the layout manager.
+
+### Getting the layout manager
+
+- [layoutManager](uitextdragpreviewrenderer/layoutmanager.md): The layout manager that renders the text drag preview.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+
+## See Also
+
+### Drag content
+
+- [UITextDragRequest](uitextdragrequest.md): The interface for describing the attributes of a drag activity originating in a text view.
+
+# UITextDragPreviewRenderer (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Class  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Renders previews of text dragged by the user.
+
+## Declaration
+
+```objectivec
+@interface UITextDragPreviewRenderer : NSObject
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use this class to provide custom previews of dragged text that follows user interface guidelines and handles right-to-left text. You provide the layout manager and the range to render the preview.
+
+Subclasses may override the [adjustFirstLineRect:bodyRect:lastLineRect:textOrigin:](uitextdragpreviewrenderer/adjust%28firstlinerect_bodyrect_lastlinerect_textorigin_%29.md) method to modify the detected rectangles as needed during the drag operation.
+
+## Topics
+
+### Initializing a text drag preview renderer
+
+- [initWithLayoutManager:range:](uitextdragpreviewrenderer/init%28layoutmanager_range_%29.md): Initializes and returns a text drag preview renderer with the specified layout managers and range to render the text drag preview.
+- [initWithLayoutManager:range:unifyRects:](uitextdragpreviewrenderer/init%28layoutmanager_range_unifyrects_%29.md): Returns an initialized renderer of a text drag preview with the specified layout manager, range, and rectangle detection behavior.
+
+### Getting and setting bounding rectangles
+
+- [bodyRect](uitextdragpreviewrenderer/bodyrect.md): The bounding rectangle of the text in the middle of the drag preview.
+- [firstLineRect](uitextdragpreviewrenderer/firstlinerect.md): The bounding rectangle of the first line of text in the drag preview.
+- [lastLineRect](uitextdragpreviewrenderer/lastlinerect.md): The bounding rectangle of the last line of text in the drag preview.
+- [adjustFirstLineRect:bodyRect:lastLineRect:textOrigin:](uitextdragpreviewrenderer/adjust%28firstlinerect_bodyrect_lastlinerect_textorigin_%29.md): Adjusts the size and origin of the bounding rectangles during a text drag operation.
+
+### Getting the preview image
+
+- [image](uitextdragpreviewrenderer/image.md): The image of the text drag preview that’s rendered by the layout manager.
+
+### Getting the layout manager
+
+- [layoutManager](uitextdragpreviewrenderer/layoutmanager.md): The layout manager that renders the text drag preview.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+## See Also
+
+### Drag content
+
+- [UITextDragRequest](uitextdragrequest.md): The interface for describing the attributes of a drag activity originating in a text view.
+
+# Document: adjust(firstLineRect:bodyRect:lastLineRect:textOrigin:)
+
+Source path: documentation/uikit/uitextdragpreviewrenderer/adjust(firstlinerect:bodyrect:lastlinerect:textorigin:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragpreviewrenderer/adjust(firstlinerect:bodyrect:lastlinerect:textorigin:)
+Description: Framework: UIKit Kind: Instance Method Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# adjust(firstLineRect:bodyRect:lastLineRect:textOrigin:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Adjusts the size and origin of the bounding rectangles during a text drag operation.
+
+## Declaration
+
+```swift
+func adjust(firstLineRect: UnsafeMutablePointer<CGRect>, bodyRect: UnsafeMutablePointer<CGRect>, lastLineRect: UnsafeMutablePointer<CGRect>, textOrigin origin: CGPoint)
+```
+
+## Parameters
+
+- `firstLineRect`: The bounding rectangle for the first line of text in the drag preview.
+- `bodyRect`: The bounding rectangle for the text in the middle of the drag preview that doesn’t include the first and last line.
+- `lastLineRect`: The bounding rectangle for the last line of text in the drag preview.
+- `origin`: The origin of the text preview.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method does nothing by default. Subclasses may override this method to change the rectangle calculations; for example, in order to enlarge the rectangles by a few points. If you adjust the rectangles, the drag preview changes accordingly.
+
+## See Also
+
+### Getting and setting bounding rectangles
+
+- [bodyRect](bodyrect.md): The bounding rectangle of the text in the middle of the drag preview.
+- [firstLineRect](firstlinerect.md): The bounding rectangle of the first line of text in the drag preview.
+- [lastLineRect](lastlinerect.md): The bounding rectangle of the last line of text in the drag preview.
+
+# adjustFirstLineRect:bodyRect:lastLineRect:textOrigin: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Adjusts the size and origin of the bounding rectangles during a text drag operation.
+
+## Declaration
+
+```objectivec
+- (void) adjustFirstLineRect:(CGRect *) firstLineRect bodyRect:(CGRect *) bodyRect lastLineRect:(CGRect *) lastLineRect textOrigin:(CGPoint) origin;
+```
+
+## Parameters
+
+- `firstLineRect`: The bounding rectangle for the first line of text in the drag preview.
+- `bodyRect`: The bounding rectangle for the text in the middle of the drag preview that doesn’t include the first and last line.
+- `lastLineRect`: The bounding rectangle for the last line of text in the drag preview.
+- `origin`: The origin of the text preview.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method does nothing by default. Subclasses may override this method to change the rectangle calculations; for example, in order to enlarge the rectangles by a few points. If you adjust the rectangles, the drag preview changes accordingly.
+
+## See Also
+
+### Getting and setting bounding rectangles
+
+- [bodyRect](bodyrect.md): The bounding rectangle of the text in the middle of the drag preview.
+- [firstLineRect](firstlinerect.md): The bounding rectangle of the first line of text in the drag preview.
+- [lastLineRect](lastlinerect.md): The bounding rectangle of the last line of text in the drag preview.
+
+# Document: bodyRect
+
+Source path: documentation/uikit/uitextdragpreviewrenderer/bodyrect
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragpreviewrenderer/bodyrect
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# bodyRect (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The bounding rectangle of the text in the middle of the drag preview.
+
+## Declaration
+
+```swift
+var bodyRect: CGRect { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The body rectangle contains the full lines of text in the middle of the drag preview that doesn’t include the first line and last line. This property can be a zero rectangle. The initial value is also not calculated until the first time it’s used.
+
+## See Also
+
+### Getting and setting bounding rectangles
+
+- [firstLineRect](firstlinerect.md): The bounding rectangle of the first line of text in the drag preview.
+- [lastLineRect](lastlinerect.md): The bounding rectangle of the last line of text in the drag preview.
+- [adjust(firstLineRect:bodyRect:lastLineRect:textOrigin:)](adjust%28firstlinerect_bodyrect_lastlinerect_textorigin_%29.md): Adjusts the size and origin of the bounding rectangles during a text drag operation.
+
+# bodyRect (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The bounding rectangle of the text in the middle of the drag preview.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) CGRect bodyRect;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The body rectangle contains the full lines of text in the middle of the drag preview that doesn’t include the first line and last line. This property can be a zero rectangle. The initial value is also not calculated until the first time it’s used.
+
+## See Also
+
+### Getting and setting bounding rectangles
+
+- [firstLineRect](firstlinerect.md): The bounding rectangle of the first line of text in the drag preview.
+- [lastLineRect](lastlinerect.md): The bounding rectangle of the last line of text in the drag preview.
+- [adjustFirstLineRect:bodyRect:lastLineRect:textOrigin:](adjust%28firstlinerect_bodyrect_lastlinerect_textorigin_%29.md): Adjusts the size and origin of the bounding rectangles during a text drag operation.
+
+# Document: firstLineRect
+
+Source path: documentation/uikit/uitextdragpreviewrenderer/firstlinerect
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragpreviewrenderer/firstlinerect
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# firstLineRect (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The bounding rectangle of the first line of text in the drag preview.
+
+## Declaration
+
+```swift
+var firstLineRect: CGRect { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The first line rectangle contains the first line of text in the drag preview that may be a partial line. This property can be a zero rectangle. The initial value is also not calculated until the first time it’s used.
+
+## See Also
+
+### Getting and setting bounding rectangles
+
+- [bodyRect](bodyrect.md): The bounding rectangle of the text in the middle of the drag preview.
+- [lastLineRect](lastlinerect.md): The bounding rectangle of the last line of text in the drag preview.
+- [adjust(firstLineRect:bodyRect:lastLineRect:textOrigin:)](adjust%28firstlinerect_bodyrect_lastlinerect_textorigin_%29.md): Adjusts the size and origin of the bounding rectangles during a text drag operation.
+
+# firstLineRect (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The bounding rectangle of the first line of text in the drag preview.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) CGRect firstLineRect;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The first line rectangle contains the first line of text in the drag preview that may be a partial line. This property can be a zero rectangle. The initial value is also not calculated until the first time it’s used.
+
+## See Also
+
+### Getting and setting bounding rectangles
+
+- [bodyRect](bodyrect.md): The bounding rectangle of the text in the middle of the drag preview.
+- [lastLineRect](lastlinerect.md): The bounding rectangle of the last line of text in the drag preview.
+- [adjustFirstLineRect:bodyRect:lastLineRect:textOrigin:](adjust%28firstlinerect_bodyrect_lastlinerect_textorigin_%29.md): Adjusts the size and origin of the bounding rectangles during a text drag operation.
+
+# Document: image
+
+Source path: documentation/uikit/uitextdragpreviewrenderer/image
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragpreviewrenderer/image
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# image (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The image of the text drag preview that’s rendered by the layout manager.
+
+## Declaration
+
+```swift
+var image: UIImage { get }
+```
+
+# image (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The image of the text drag preview that’s rendered by the layout manager.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) UIImage * image;
+```
+
+# Document: init(layoutManager:range:)
+
+Source path: documentation/uikit/uitextdragpreviewrenderer/init(layoutmanager:range:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragpreviewrenderer/init(layoutmanager:range:)
+Description: Framework: UIKit Kind: Initializer Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# init(layoutManager:range:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Initializer  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Initializes and returns a text drag preview renderer with the specified layout managers and range to render the text drag preview.
+
+## Declaration
+
+```swift
+convenience init(layoutManager: NSLayoutManager, range: NSRange)
+```
+
+## Parameters
+
+- `layoutManager`: The layout manager that renders the text drag preview.
+- `range`: The range to render the text drag preview.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A renderer of a text drag preview using the specified layout manager and range.
+
+## See Also
+
+### Initializing a text drag preview renderer
+
+- [init(layoutManager:range:unifyRects:)](init%28layoutmanager_range_unifyrects_%29.md): Returns an initialized renderer of a text drag preview with the specified layout manager, range, and rectangle detection behavior.
+
+# initWithLayoutManager:range: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Initializes and returns a text drag preview renderer with the specified layout managers and range to render the text drag preview.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithLayoutManager:(NSLayoutManager *) layoutManager range:(NSRange) range;
+```
+
+## Parameters
+
+- `layoutManager`: The layout manager that renders the text drag preview.
+- `range`: The range to render the text drag preview.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A renderer of a text drag preview using the specified layout manager and range.
+
+## See Also
+
+### Initializing a text drag preview renderer
+
+- [initWithLayoutManager:range:unifyRects:](init%28layoutmanager_range_unifyrects_%29.md): Returns an initialized renderer of a text drag preview with the specified layout manager, range, and rectangle detection behavior.
+
+# Document: init(layoutManager:range:unifyRects:)
+
+Source path: documentation/uikit/uitextdragpreviewrenderer/init(layoutmanager:range:unifyrects:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragpreviewrenderer/init(layoutmanager:range:unifyrects:)
+Description: Framework: UIKit Kind: Initializer Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# init(layoutManager:range:unifyRects:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Initializer  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Returns an initialized renderer of a text drag preview with the specified layout manager, range, and rectangle detection behavior.
+
+## Declaration
+
+```swift
+init(layoutManager: NSLayoutManager, range: NSRange, unifyRects: Bool)
+```
+
+## Parameters
+
+- `layoutManager`: The layout manager that renders the preview.
+- `range`: The range to render the preview.
+- `unifyRects`: A Boolean value that indicates whether the vertical position and height of the detection rectangles adjust to touch each other. If `true`, the [firstLineRect](firstlinerect.md), [bodyRect](bodyrect.md), and [lastLineRect](lastlinerect.md) properties adjust; otherwise, they don’t. The default value is `true`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A renderer of a text drag preview using the specified layout manager, range, and detection behavior.
+
+## See Also
+
+### Initializing a text drag preview renderer
+
+- [init(layoutManager:range:)](init%28layoutmanager_range_%29.md): Initializes and returns a text drag preview renderer with the specified layout managers and range to render the text drag preview.
+
+# initWithLayoutManager:range:unifyRects: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Returns an initialized renderer of a text drag preview with the specified layout manager, range, and rectangle detection behavior.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithLayoutManager:(NSLayoutManager *) layoutManager range:(NSRange) range unifyRects:(BOOL) unifyRects;
+```
+
+## Parameters
+
+- `layoutManager`: The layout manager that renders the preview.
+- `range`: The range to render the preview.
+- `unifyRects`: A Boolean value that indicates whether the vertical position and height of the detection rectangles adjust to touch each other. If `true`, the [firstLineRect](firstlinerect.md), [bodyRect](bodyrect.md), and [lastLineRect](lastlinerect.md) properties adjust; otherwise, they don’t. The default value is `true`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A renderer of a text drag preview using the specified layout manager, range, and detection behavior.
+
+## See Also
+
+### Initializing a text drag preview renderer
+
+- [initWithLayoutManager:range:](init%28layoutmanager_range_%29.md): Initializes and returns a text drag preview renderer with the specified layout managers and range to render the text drag preview.
+
+# Document: lastLineRect
+
+Source path: documentation/uikit/uitextdragpreviewrenderer/lastlinerect
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragpreviewrenderer/lastlinerect
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# lastLineRect (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The bounding rectangle of the last line of text in the drag preview.
+
+## Declaration
+
+```swift
+var lastLineRect: CGRect { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The last line rectangle contains the last line of text in the drag preview that may be a partial line. This property can be a zero rectangle. The initial value is also not calculated until the first time it’s used.
+
+## See Also
+
+### Getting and setting bounding rectangles
+
+- [bodyRect](bodyrect.md): The bounding rectangle of the text in the middle of the drag preview.
+- [firstLineRect](firstlinerect.md): The bounding rectangle of the first line of text in the drag preview.
+- [adjust(firstLineRect:bodyRect:lastLineRect:textOrigin:)](adjust%28firstlinerect_bodyrect_lastlinerect_textorigin_%29.md): Adjusts the size and origin of the bounding rectangles during a text drag operation.
+
+# lastLineRect (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The bounding rectangle of the last line of text in the drag preview.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) CGRect lastLineRect;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The last line rectangle contains the last line of text in the drag preview that may be a partial line. This property can be a zero rectangle. The initial value is also not calculated until the first time it’s used.
+
+## See Also
+
+### Getting and setting bounding rectangles
+
+- [bodyRect](bodyrect.md): The bounding rectangle of the text in the middle of the drag preview.
+- [firstLineRect](firstlinerect.md): The bounding rectangle of the first line of text in the drag preview.
+- [adjustFirstLineRect:bodyRect:lastLineRect:textOrigin:](adjust%28firstlinerect_bodyrect_lastlinerect_textorigin_%29.md): Adjusts the size and origin of the bounding rectangles during a text drag operation.
+
+# Document: layoutManager
+
+Source path: documentation/uikit/uitextdragpreviewrenderer/layoutmanager
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragpreviewrenderer/layoutmanager
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# layoutManager (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The layout manager that renders the text drag preview.
+
+## Declaration
+
+```swift
+var layoutManager: NSLayoutManager { get }
+```
+
+# layoutManager (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The layout manager that renders the text drag preview.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) NSLayoutManager * layoutManager;
+```
+
+# Document: UITextDragRequest
+
+Source path: documentation/uikit/uitextdragrequest
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragrequest
+Description: Framework: UIKit Kind: Protocol Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# UITextDragRequest (Swift)
+
+**Framework:** UIKit  
+**Kind:** Protocol  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The interface for describing the attributes of a drag activity originating in a text view.
+
+## Declaration
+
+```swift
+@MainActor protocol UITextDragRequest : NSObjectProtocol
+```
+
+## Topics
+
+### Getting the drag items
+
+- [existingItems](uitextdragrequest/existingitems.md): The array of drag items present in a drag session.
+- [suggestedItems](uitextdragrequest/suggesteditems.md): An array of drag items that the system provides when the text drag delegate doesn’t provide custom drag items.
+
+### Getting information about the text
+
+- [dragRange](uitextdragrequest/dragrange.md): A range of text associated with a drag item in an active drag session that originated in a text view.
+- [isSelected](uitextdragrequest/isselected.md): A Boolean value indicating whether text is selected for dragging.
+
+### Getting the drag session
+
+- [dragSession](uitextdragrequest/dragsession.md): The active drag session.
+
+## Relationships
+
+### Inherits From
+
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Drag content
+
+- [UITextDragPreviewRenderer](uitextdragpreviewrenderer.md): Renders previews of text dragged by the user.
+
+# UITextDragRequest (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Protocol  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The interface for describing the attributes of a drag activity originating in a text view.
+
+## Declaration
+
+```objectivec
+@protocol UITextDragRequest <NSObject>
+```
+
+## Topics
+
+### Getting the drag items
+
+- [existingItems](uitextdragrequest/existingitems.md): The array of drag items present in a drag session.
+- [suggestedItems](uitextdragrequest/suggesteditems.md): An array of drag items that the system provides when the text drag delegate doesn’t provide custom drag items.
+
+### Getting information about the text
+
+- [dragRange](uitextdragrequest/dragrange.md): A range of text associated with a drag item in an active drag session that originated in a text view.
+- [selected](uitextdragrequest/isselected.md): A Boolean value indicating whether text is selected for dragging.
+
+### Getting the drag session
+
+- [dragSession](uitextdragrequest/dragsession.md): The active drag session.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Drag content
+
+- [UITextDragPreviewRenderer](uitextdragpreviewrenderer.md): Renders previews of text dragged by the user.
+
+# Document: dragRange
+
+Source path: documentation/uikit/uitextdragrequest/dragrange
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragrequest/dragrange
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# dragRange (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A range of text associated with a drag item in an active drag session that originated in a text view.
+
+## Declaration
+
+```swift
+var dragRange: UITextRange { get }
+```
+
+## See Also
+
+### Getting information about the text
+
+- [isSelected](isselected.md): A Boolean value indicating whether text is selected for dragging.
+
+# dragRange (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A range of text associated with a drag item in an active drag session that originated in a text view.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) UITextRange * dragRange;
+```
+
+## See Also
+
+### Getting information about the text
+
+- [selected](isselected.md): A Boolean value indicating whether text is selected for dragging.
+
+# Document: dragSession
+
+Source path: documentation/uikit/uitextdragrequest/dragsession
+Canonical documentation: https://developer.apple.com/documentation/uikit/uitextdragrequest/dragsession
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# dragSession (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The active drag session.
+
+## Declaration
+
+```swift
+var dragSession: any UIDragSession { get }
+```
+
+# dragSession (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The active drag session.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) id<UIDragSession> dragSession;
+```
 
 # Document: existingItems
 
@@ -174737,1706 +176277,3 @@ uint16_t wHubDelay;
 - [bHubControllerCurrent](bhubcontrollercurrent.md)
 - [bHubDecodeLatency](bhubdecodelatency.md)
 - [deviceRemovable](deviceremovable.md)
-
-# Document: IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor
-
-Source path: documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor
-Description: Interface language: Objective-C
-
-# IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Structure  
-**Availability:** DriverKit 19.0+
-
-The descriptor for a SuperSpeedPlus Isochronous USB Endpoint Companion.
-
-## Declaration
-
-```objectivec
-struct IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor;
-```
-
-<a id="overview"></a>
-
-## Overview
-
-See USB 3.1 9.6.8: SuperSpeedPlus Isochronous Endpoint Companion in the USB Specification at [http://www.usb.org](http://www.usb.org).
-
-## Topics
-
-### Accessing the Descriptor Properties
-
-- [bLength](iousbsuperspeedplusisochronousendpointcompaniondescriptor/blength.md)
-- [bDescriptorType](iousbsuperspeedplusisochronousendpointcompaniondescriptor/bdescriptortype.md)
-- [wReserved](iousbsuperspeedplusisochronousendpointcompaniondescriptor/wreserved.md)
-- [dwBytesPerInterval](iousbsuperspeedplusisochronousendpointcompaniondescriptor/dwbytesperinterval.md)
-
-## See Also
-
-### Endpoint Descriptors
-
-- [IOUSBEndpointDescriptor](iousbendpointdescriptor.md): The structure for storing an endpoint descriptor.
-- [IOUSBSuperSpeedEndpointCompanionDescriptor](iousbsuperspeedendpointcompaniondescriptor.md): The descriptor for a SuperSpeed USB Endpoint Companion.
-- [tIOUSBEndpointType](tiousbendpointtype.md): Constants describing the types of endpoints.
-- [Endpoint Attributes](endpoint_attributes-enum.md): Constants for endpoint attributes.
-- [SuperSpeed USB Endpoint Descriptor Options](superspeed_usb_endpoint_descript-enum.md): Constants for super-speed endpoint attributes.
-- [tIOUSBEndpointDirection](tiousbendpointdirection.md): The direction of data transfers on an endpoint.
-- [tIOUSBEndpointSynchronizationType](tiousbendpointsynchronizationtype.md): Constants for the endpoint synchronization types.
-- [tIOUSBEndpointUsageType](tiousbendpointusagetype.md): Constants for the endpoint usage types.
-- [tIOUSBLanguageID](tiousblanguageid.md): Constants for the USB language identifiers.
-
-# Document: bDescriptorType
-
-Source path: documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/bdescriptortype
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/bdescriptortype
-Description: Interface language: Objective-C
-
-# bDescriptorType
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Instance Property  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-uint8_t bDescriptorType;
-```
-
-## See Also
-
-### Accessing the Descriptor Properties
-
-- [bLength](blength.md)
-- [wReserved](wreserved.md)
-- [dwBytesPerInterval](dwbytesperinterval.md)
-
-# Document: bLength
-
-Source path: documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/blength
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/blength
-Description: Interface language: Objective-C
-
-# bLength
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Instance Property  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-uint8_t bLength;
-```
-
-## See Also
-
-### Accessing the Descriptor Properties
-
-- [bDescriptorType](bdescriptortype.md)
-- [wReserved](wreserved.md)
-- [dwBytesPerInterval](dwbytesperinterval.md)
-
-# Document: dwBytesPerInterval
-
-Source path: documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/dwbytesperinterval
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/dwbytesperinterval
-Description: Interface language: Objective-C
-
-# dwBytesPerInterval
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Instance Property  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-uint32_t dwBytesPerInterval;
-```
-
-## See Also
-
-### Accessing the Descriptor Properties
-
-- [bLength](blength.md)
-- [bDescriptorType](bdescriptortype.md)
-- [wReserved](wreserved.md)
-
-# Document: wReserved
-
-Source path: documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/wreserved
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbsuperspeedplusisochronousendpointcompaniondescriptor/wreserved
-Description: Interface language: Objective-C
-
-# wReserved
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Instance Property  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-uint16_t wReserved;
-```
-
-## See Also
-
-### Accessing the Descriptor Properties
-
-- [bLength](blength.md)
-- [bDescriptorType](bdescriptortype.md)
-- [dwBytesPerInterval](dwbytesperinterval.md)
-
-# Document: kAppleCurrentExtra
-
-Source path: documentation/usbdriverkit/kapplecurrentextra
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kapplecurrentextra
-Description: Interface language: Objective-C
-
-# kAppleCurrentExtra
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-#define kAppleCurrentExtra
-```
-
-## See Also
-
-### Macros
-
-- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
-- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
-- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
-- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
-- [iokit_usb_codemask](iokit_usb_codemask.md)
-- [iokit_usbhost_err](iokit_usbhost_err.md)
-- [iokit_usbhost_group](iokit_usbhost_group.md)
-- [iokit_usbhost_msg](iokit_usbhost_msg.md)
-- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
-- [iokit_usblegacy_group](iokit_usblegacy_group.md)
-- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
-- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
-- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
-- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
-- [kIOUSB20BitrateFull](kiousb20bitratefull.md)
-
-# Document: kAppleCurrentExtraInSleep
-
-Source path: documentation/usbdriverkit/kapplecurrentextrainsleep
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kapplecurrentextrainsleep
-Description: Interface language: Objective-C
-
-# kAppleCurrentExtraInSleep
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-#define kAppleCurrentExtraInSleep
-```
-
-## See Also
-
-### Macros
-
-- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
-- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
-- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
-- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
-- [iokit_usb_codemask](iokit_usb_codemask.md)
-- [iokit_usbhost_err](iokit_usbhost_err.md)
-- [iokit_usbhost_group](iokit_usbhost_group.md)
-- [iokit_usbhost_msg](iokit_usbhost_msg.md)
-- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
-- [iokit_usblegacy_group](iokit_usblegacy_group.md)
-- [kAppleCurrentExtra](kapplecurrentextra.md)
-- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
-- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
-- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
-- [kIOUSB20BitrateFull](kiousb20bitratefull.md)
-
-# Document: kAppleExternalConnectorBitmap
-
-Source path: documentation/usbdriverkit/kappleexternalconnectorbitmap
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kappleexternalconnectorbitmap
-Description: Interface language: Objective-C
-
-# kAppleExternalConnectorBitmap
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-#define kAppleExternalConnectorBitmap
-```
-
-## See Also
-
-### Macros
-
-- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
-- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
-- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
-- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
-- [iokit_usb_codemask](iokit_usb_codemask.md)
-- [iokit_usbhost_err](iokit_usbhost_err.md)
-- [iokit_usbhost_group](iokit_usbhost_group.md)
-- [iokit_usbhost_msg](iokit_usbhost_msg.md)
-- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
-- [iokit_usblegacy_group](iokit_usblegacy_group.md)
-- [kAppleCurrentExtra](kapplecurrentextra.md)
-- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
-- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
-- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
-- [kIOUSB20BitrateFull](kiousb20bitratefull.md)
-
-# Document: kAppleMaxPortCurrent
-
-Source path: documentation/usbdriverkit/kapplemaxportcurrent
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kapplemaxportcurrent
-Description: Interface language: Objective-C
-
-# kAppleMaxPortCurrent
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-#define kAppleMaxPortCurrent
-```
-
-## See Also
-
-### Macros
-
-- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
-- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
-- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
-- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
-- [iokit_usb_codemask](iokit_usb_codemask.md)
-- [iokit_usbhost_err](iokit_usbhost_err.md)
-- [iokit_usbhost_group](iokit_usbhost_group.md)
-- [iokit_usbhost_msg](iokit_usbhost_msg.md)
-- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
-- [iokit_usblegacy_group](iokit_usblegacy_group.md)
-- [kAppleCurrentExtra](kapplecurrentextra.md)
-- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
-- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
-- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
-- [kIOUSB20BitrateFull](kiousb20bitratefull.md)
-
-# Document: kAppleMaxPortCurrentInSleep
-
-Source path: documentation/usbdriverkit/kapplemaxportcurrentinsleep
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kapplemaxportcurrentinsleep
-Description: Interface language: Objective-C
-
-# kAppleMaxPortCurrentInSleep
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-#define kAppleMaxPortCurrentInSleep
-```
-
-## See Also
-
-### Macros
-
-- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
-- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
-- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
-- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
-- [iokit_usb_codemask](iokit_usb_codemask.md)
-- [iokit_usbhost_err](iokit_usbhost_err.md)
-- [iokit_usbhost_group](iokit_usbhost_group.md)
-- [iokit_usbhost_msg](iokit_usbhost_msg.md)
-- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
-- [iokit_usblegacy_group](iokit_usblegacy_group.md)
-- [kAppleCurrentExtra](kapplecurrentextra.md)
-- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
-- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
-- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
-- [kIOUSB20BitrateFull](kiousb20bitratefull.md)
-
-# Document: kIOUSB20BitrateFull
-
-Source path: documentation/usbdriverkit/kiousb20bitratefull
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousb20bitratefull
-Description: Interface language: Objective-C
-
-# kIOUSB20BitrateFull
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-#define kIOUSB20BitrateFull
-```
-
-## See Also
-
-### Macros
-
-- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
-- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
-- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
-- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
-- [iokit_usb_codemask](iokit_usb_codemask.md)
-- [iokit_usbhost_err](iokit_usbhost_err.md)
-- [iokit_usbhost_group](iokit_usbhost_group.md)
-- [iokit_usbhost_msg](iokit_usbhost_msg.md)
-- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
-- [iokit_usblegacy_group](iokit_usblegacy_group.md)
-- [kAppleCurrentExtra](kapplecurrentextra.md)
-- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
-- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
-- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
-- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
-
-# Document: kIOUSB20BitrateHigh
-
-Source path: documentation/usbdriverkit/kiousb20bitratehigh
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousb20bitratehigh
-Description: Interface language: Objective-C
-
-# kIOUSB20BitrateHigh
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-#define kIOUSB20BitrateHigh
-```
-
-## See Also
-
-### Macros
-
-- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
-- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
-- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
-- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
-- [iokit_usb_codemask](iokit_usb_codemask.md)
-- [iokit_usbhost_err](iokit_usbhost_err.md)
-- [iokit_usbhost_group](iokit_usbhost_group.md)
-- [iokit_usbhost_msg](iokit_usbhost_msg.md)
-- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
-- [iokit_usblegacy_group](iokit_usblegacy_group.md)
-- [kAppleCurrentExtra](kapplecurrentextra.md)
-- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
-- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
-- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
-- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
-
-# Document: kIOUSB20BitrateLow
-
-Source path: documentation/usbdriverkit/kiousb20bitratelow
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousb20bitratelow
-Description: Interface language: Objective-C
-
-# kIOUSB20BitrateLow
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-#define kIOUSB20BitrateLow
-```
-
-## See Also
-
-### Macros
-
-- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
-- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
-- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
-- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
-- [iokit_usb_codemask](iokit_usb_codemask.md)
-- [iokit_usbhost_err](iokit_usbhost_err.md)
-- [iokit_usbhost_group](iokit_usbhost_group.md)
-- [iokit_usbhost_msg](iokit_usbhost_msg.md)
-- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
-- [iokit_usblegacy_group](iokit_usblegacy_group.md)
-- [kAppleCurrentExtra](kapplecurrentextra.md)
-- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
-- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
-- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
-- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
-
-# Document: kIOUSB30Bitrate10Gbps
-
-Source path: documentation/usbdriverkit/kiousb30bitrate10gbps
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousb30bitrate10gbps
-Description: Interface language: Objective-C
-
-# kIOUSB30Bitrate10Gbps
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-#define kIOUSB30Bitrate10Gbps
-```
-
-## See Also
-
-### Bitrate Constants
-
-- [kIOUSB30Bitrate5Gbps](kiousb30bitrate5gbps.md)
-- [kIOUSB32Bitrate20Gbps](kiousb32bitrate20gbps.md)
-
-# Document: kIOUSB30Bitrate5Gbps
-
-Source path: documentation/usbdriverkit/kiousb30bitrate5gbps
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousb30bitrate5gbps
-Description: Interface language: Objective-C
-
-# kIOUSB30Bitrate5Gbps
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-#define kIOUSB30Bitrate5Gbps
-```
-
-## See Also
-
-### Bitrate Constants
-
-- [kIOUSB30Bitrate10Gbps](kiousb30bitrate10gbps.md)
-- [kIOUSB32Bitrate20Gbps](kiousb32bitrate20gbps.md)
-
-# Document: kIOUSB30RetimerDepthLimit
-
-Source path: documentation/usbdriverkit/kiousb30retimerdepthlimit
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousb30retimerdepthlimit
-Description: Interface language: Objective-C
-
-# kIOUSB30RetimerDepthLimit
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSB30RetimerDepthLimit
-```
-
-# Document: kIOUSB32Bitrate20Gbps
-
-Source path: documentation/usbdriverkit/kiousb32bitrate20gbps
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousb32bitrate20gbps
-Description: Interface language: Objective-C
-
-# kIOUSB32Bitrate20Gbps
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-#define kIOUSB32Bitrate20Gbps
-```
-
-## See Also
-
-### Bitrate Constants
-
-- [kIOUSB30Bitrate5Gbps](kiousb30bitrate5gbps.md)
-- [kIOUSB30Bitrate10Gbps](kiousb30bitrate10gbps.md)
-
-# Document: kIOUSBAppleVendorID
-
-Source path: documentation/usbdriverkit/kiousbapplevendorid
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbapplevendorid
-Description: Interface language: Objective-C
-
-# kIOUSBAppleVendorID
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBAppleVendorID
-```
-
-# Document: kIOUSBBillboardEntitlement
-
-Source path: documentation/usbdriverkit/kiousbbillboardentitlement
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbbillboardentitlement
-Description: Interface language: Objective-C
-
-# kIOUSBBillboardEntitlement
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-#define kIOUSBBillboardEntitlement
-```
-
-## See Also
-
-### Macros
-
-- [IOUSBHostFamilyBit](iousbhostfamilybit.md)
-- [IOUSBHostFamilyBitRange](iousbhostfamilybitrange.md)
-- [IOUSBHostFamilyBitRange64](iousbhostfamilybitrange64.md)
-- [IOUSBHostFamilyBitRangePhase](iousbhostfamilybitrangephase.md)
-- [iokit_usb_codemask](iokit_usb_codemask.md)
-- [iokit_usbhost_err](iokit_usbhost_err.md)
-- [iokit_usbhost_group](iokit_usbhost_group.md)
-- [iokit_usbhost_msg](iokit_usbhost_msg.md)
-- [iokit_usblegacy_err_msg](iokit_usblegacy_err_msg.md)
-- [iokit_usblegacy_group](iokit_usblegacy_group.md)
-- [kAppleCurrentExtra](kapplecurrentextra.md)
-- [kAppleCurrentExtraInSleep](kapplecurrentextrainsleep.md)
-- [kAppleExternalConnectorBitmap](kappleexternalconnectorbitmap.md)
-- [kAppleMaxPortCurrent](kapplemaxportcurrent.md)
-- [kAppleMaxPortCurrentInSleep](kapplemaxportcurrentinsleep.md)
-
-# Document: kIOUSBConfigurationDescriptorAttributeRemoteWakeCapable
-
-Source path: documentation/usbdriverkit/kiousbconfigurationdescriptorattributeremotewakecapable
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbconfigurationdescriptorattributeremotewakecapable
-Description: Interface language: Objective-C
-
-# kIOUSBConfigurationDescriptorAttributeRemoteWakeCapable
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBConfigurationDescriptorAttributeRemoteWakeCapable
-```
-
-## See Also
-
-### Getting the Settings
-
-- [kIOUSBConfigurationDescriptorAttributeSelfPowered](kiousbconfigurationdescriptorattributeselfpowered.md)
-
-# Document: kIOUSBConfigurationDescriptorAttributeSelfPowered
-
-Source path: documentation/usbdriverkit/kiousbconfigurationdescriptorattributeselfpowered
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbconfigurationdescriptorattributeselfpowered
-Description: Interface language: Objective-C
-
-# kIOUSBConfigurationDescriptorAttributeSelfPowered
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBConfigurationDescriptorAttributeSelfPowered
-```
-
-## See Also
-
-### Getting the Settings
-
-- [kIOUSBConfigurationDescriptorAttributeRemoteWakeCapable](kiousbconfigurationdescriptorattributeremotewakecapable.md)
-
-# Document: kIOUSBDeviceFeatureSelectorLTMEnable
-
-Source path: documentation/usbdriverkit/kiousbdevicefeatureselectorltmenable
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicefeatureselectorltmenable
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceFeatureSelectorLTMEnable
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceFeatureSelectorLTMEnable
-```
-
-## See Also
-
-### Getting the Selector Types
-
-- [kIOUSBDeviceFeatureSelectorRemoteWakeup](kiousbdevicefeatureselectorremotewakeup.md)
-- [kIOUSBDeviceFeatureSelectorTestMode](kiousbdevicefeatureselectortestmode.md)
-- [kIOUSBDeviceFeatureSelectorU1Enable](kiousbdevicefeatureselectoru1enable.md)
-- [kIOUSBDeviceFeatureSelectorU2Enable](kiousbdevicefeatureselectoru2enable.md)
-- [kIOUSBInterfaceFeatureSelectorSuspend](kiousbinterfacefeatureselectorsuspend.md)
-- [IOUSBEndpointFeatureSelectorStall](iousbendpointfeatureselectorstall.md)
-
-# Document: kIOUSBDeviceFeatureSelectorRemoteWakeup
-
-Source path: documentation/usbdriverkit/kiousbdevicefeatureselectorremotewakeup
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicefeatureselectorremotewakeup
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceFeatureSelectorRemoteWakeup
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceFeatureSelectorRemoteWakeup
-```
-
-## See Also
-
-### Getting the Selector Types
-
-- [kIOUSBDeviceFeatureSelectorTestMode](kiousbdevicefeatureselectortestmode.md)
-- [kIOUSBDeviceFeatureSelectorU1Enable](kiousbdevicefeatureselectoru1enable.md)
-- [kIOUSBDeviceFeatureSelectorU2Enable](kiousbdevicefeatureselectoru2enable.md)
-- [kIOUSBDeviceFeatureSelectorLTMEnable](kiousbdevicefeatureselectorltmenable.md)
-- [kIOUSBInterfaceFeatureSelectorSuspend](kiousbinterfacefeatureselectorsuspend.md)
-- [IOUSBEndpointFeatureSelectorStall](iousbendpointfeatureselectorstall.md)
-
-# Document: kIOUSBDeviceFeatureSelectorTestMode
-
-Source path: documentation/usbdriverkit/kiousbdevicefeatureselectortestmode
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicefeatureselectortestmode
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceFeatureSelectorTestMode
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceFeatureSelectorTestMode
-```
-
-## See Also
-
-### Getting the Selector Types
-
-- [kIOUSBDeviceFeatureSelectorRemoteWakeup](kiousbdevicefeatureselectorremotewakeup.md)
-- [kIOUSBDeviceFeatureSelectorU1Enable](kiousbdevicefeatureselectoru1enable.md)
-- [kIOUSBDeviceFeatureSelectorU2Enable](kiousbdevicefeatureselectoru2enable.md)
-- [kIOUSBDeviceFeatureSelectorLTMEnable](kiousbdevicefeatureselectorltmenable.md)
-- [kIOUSBInterfaceFeatureSelectorSuspend](kiousbinterfacefeatureselectorsuspend.md)
-- [IOUSBEndpointFeatureSelectorStall](iousbendpointfeatureselectorstall.md)
-
-# Document: kIOUSBDeviceFeatureSelectorU1Enable
-
-Source path: documentation/usbdriverkit/kiousbdevicefeatureselectoru1enable
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicefeatureselectoru1enable
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceFeatureSelectorU1Enable
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceFeatureSelectorU1Enable
-```
-
-## See Also
-
-### Getting the Selector Types
-
-- [kIOUSBDeviceFeatureSelectorRemoteWakeup](kiousbdevicefeatureselectorremotewakeup.md)
-- [kIOUSBDeviceFeatureSelectorTestMode](kiousbdevicefeatureselectortestmode.md)
-- [kIOUSBDeviceFeatureSelectorU2Enable](kiousbdevicefeatureselectoru2enable.md)
-- [kIOUSBDeviceFeatureSelectorLTMEnable](kiousbdevicefeatureselectorltmenable.md)
-- [kIOUSBInterfaceFeatureSelectorSuspend](kiousbinterfacefeatureselectorsuspend.md)
-- [IOUSBEndpointFeatureSelectorStall](iousbendpointfeatureselectorstall.md)
-
-# Document: kIOUSBDeviceFeatureSelectorU2Enable
-
-Source path: documentation/usbdriverkit/kiousbdevicefeatureselectoru2enable
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicefeatureselectoru2enable
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceFeatureSelectorU2Enable
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceFeatureSelectorU2Enable
-```
-
-## See Also
-
-### Getting the Selector Types
-
-- [kIOUSBDeviceFeatureSelectorRemoteWakeup](kiousbdevicefeatureselectorremotewakeup.md)
-- [kIOUSBDeviceFeatureSelectorTestMode](kiousbdevicefeatureselectortestmode.md)
-- [kIOUSBDeviceFeatureSelectorU1Enable](kiousbdevicefeatureselectoru1enable.md)
-- [kIOUSBDeviceFeatureSelectorLTMEnable](kiousbdevicefeatureselectorltmenable.md)
-- [kIOUSBInterfaceFeatureSelectorSuspend](kiousbinterfacefeatureselectorsuspend.md)
-- [IOUSBEndpointFeatureSelectorStall](iousbendpointfeatureselectorstall.md)
-
-# Document: kIOUSBDeviceRequestClearFeature
-
-Source path: documentation/usbdriverkit/kiousbdevicerequestclearfeature
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestclearfeature
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceRequestClearFeature
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceRequestClearFeature
-```
-
-## See Also
-
-### Getting the Request Types
-
-- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
-- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
-- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
-- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
-- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
-- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
-- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
-- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
-- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
-- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
-- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
-- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
-- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
-
-# Document: kIOUSBDeviceRequestGetConfiguration
-
-Source path: documentation/usbdriverkit/kiousbdevicerequestgetconfiguration
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestgetconfiguration
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceRequestGetConfiguration
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceRequestGetConfiguration
-```
-
-## See Also
-
-### Getting the Request Types
-
-- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
-- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
-- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
-- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
-- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
-- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
-- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
-- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
-- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
-- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
-- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
-- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
-- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
-
-# Document: kIOUSBDeviceRequestGetDescriptor
-
-Source path: documentation/usbdriverkit/kiousbdevicerequestgetdescriptor
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestgetdescriptor
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceRequestGetDescriptor
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceRequestGetDescriptor
-```
-
-## See Also
-
-### Getting the Request Types
-
-- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
-- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
-- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
-- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
-- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
-- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
-- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
-- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
-- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
-- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
-- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
-- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
-- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
-
-# Document: kIOUSBDeviceRequestGetInterface
-
-Source path: documentation/usbdriverkit/kiousbdevicerequestgetinterface
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestgetinterface
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceRequestGetInterface
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceRequestGetInterface
-```
-
-## See Also
-
-### Getting the Request Types
-
-- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
-- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
-- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
-- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
-- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
-- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
-- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
-- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
-- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
-- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
-- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
-- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
-- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
-
-# Document: kIOUSBDeviceRequestGetState
-
-Source path: documentation/usbdriverkit/kiousbdevicerequestgetstate
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestgetstate
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceRequestGetState
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceRequestGetState
-```
-
-## See Also
-
-### Getting the Request Types
-
-- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
-- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
-- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
-- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
-- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
-- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
-- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
-- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
-- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
-- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
-- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
-- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
-- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
-
-# Document: kIOUSBDeviceRequestGetStatus
-
-Source path: documentation/usbdriverkit/kiousbdevicerequestgetstatus
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestgetstatus
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceRequestGetStatus
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceRequestGetStatus
-```
-
-## See Also
-
-### Getting the Request Types
-
-- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
-- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
-- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
-- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
-- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
-- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
-- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
-- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
-- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
-- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
-- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
-- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
-- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
-
-# Document: kIOUSBDeviceRequestSetAddress
-
-Source path: documentation/usbdriverkit/kiousbdevicerequestsetaddress
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsetaddress
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceRequestSetAddress
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceRequestSetAddress
-```
-
-## See Also
-
-### Getting the Request Types
-
-- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
-- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
-- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
-- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
-- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
-- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
-- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
-- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
-- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
-- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
-- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
-- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
-- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
-
-# Document: kIOUSBDeviceRequestSetConfiguration
-
-Source path: documentation/usbdriverkit/kiousbdevicerequestsetconfiguration
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsetconfiguration
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceRequestSetConfiguration
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceRequestSetConfiguration
-```
-
-## See Also
-
-### Getting the Request Types
-
-- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
-- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
-- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
-- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
-- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
-- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
-- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
-- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
-- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
-- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
-- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
-- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
-- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
-
-# Document: kIOUSBDeviceRequestSetDescriptor
-
-Source path: documentation/usbdriverkit/kiousbdevicerequestsetdescriptor
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsetdescriptor
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceRequestSetDescriptor
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceRequestSetDescriptor
-```
-
-## See Also
-
-### Getting the Request Types
-
-- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
-- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
-- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
-- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
-- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
-- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
-- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
-- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
-- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
-- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
-- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
-- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
-- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
-
-# Document: kIOUSBDeviceRequestSetFeature
-
-Source path: documentation/usbdriverkit/kiousbdevicerequestsetfeature
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsetfeature
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceRequestSetFeature
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceRequestSetFeature
-```
-
-## See Also
-
-### Getting the Request Types
-
-- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
-- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
-- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
-- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
-- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
-- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
-- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
-- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
-- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
-- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
-- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
-- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
-- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
-
-# Document: kIOUSBDeviceRequestSetInterface
-
-Source path: documentation/usbdriverkit/kiousbdevicerequestsetinterface
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsetinterface
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceRequestSetInterface
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceRequestSetInterface
-```
-
-## See Also
-
-### Getting the Request Types
-
-- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
-- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
-- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
-- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
-- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
-- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
-- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
-- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
-- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
-- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
-- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
-- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
-- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
-
-# Document: kIOUSBDeviceRequestSetIsochronousDelay
-
-Source path: documentation/usbdriverkit/kiousbdevicerequestsetisochronousdelay
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsetisochronousdelay
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceRequestSetIsochronousDelay
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceRequestSetIsochronousDelay
-```
-
-## See Also
-
-### Getting the Request Types
-
-- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
-- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
-- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
-- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
-- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
-- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
-- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
-- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
-- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
-- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
-- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
-- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
-- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
-
-# Document: kIOUSBDeviceRequestSetSel
-
-Source path: documentation/usbdriverkit/kiousbdevicerequestsetsel
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsetsel
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceRequestSetSel
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceRequestSetSel
-```
-
-## See Also
-
-### Getting the Request Types
-
-- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
-- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
-- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
-- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
-- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
-- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
-- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
-- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
-- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
-- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
-- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
-- [kIOUSBDeviceRequestSynchFrame](kiousbdevicerequestsynchframe.md)
-- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
-
-# Document: kIOUSBDeviceRequestSynchFrame
-
-Source path: documentation/usbdriverkit/kiousbdevicerequestsynchframe
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicerequestsynchframe
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceRequestSynchFrame
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceRequestSynchFrame
-```
-
-## See Also
-
-### Getting the Request Types
-
-- [kIOUSBDeviceRequestGetStatus](kiousbdevicerequestgetstatus.md)
-- [kIOUSBDeviceRequestClearFeature](kiousbdevicerequestclearfeature.md)
-- [kIOUSBDeviceRequestGetState](kiousbdevicerequestgetstate.md)
-- [kIOUSBDeviceRequestSetFeature](kiousbdevicerequestsetfeature.md)
-- [kIOUSBDeviceRequestSetAddress](kiousbdevicerequestsetaddress.md)
-- [kIOUSBDeviceRequestGetDescriptor](kiousbdevicerequestgetdescriptor.md)
-- [kIOUSBDeviceRequestSetDescriptor](kiousbdevicerequestsetdescriptor.md)
-- [kIOUSBDeviceRequestGetConfiguration](kiousbdevicerequestgetconfiguration.md)
-- [kIOUSBDeviceRequestSetConfiguration](kiousbdevicerequestsetconfiguration.md)
-- [kIOUSBDeviceRequestGetInterface](kiousbdevicerequestgetinterface.md)
-- [kIOUSBDeviceRequestSetInterface](kiousbdevicerequestsetinterface.md)
-- [kIOUSBDeviceRequestSetSel](kiousbdevicerequestsetsel.md)
-- [kIOUSBDeviceRequestSetIsochronousDelay](kiousbdevicerequestsetisochronousdelay.md)
-
-# Document: kIOUSBDeviceStatusLTMEnable
-
-Source path: documentation/usbdriverkit/kiousbdevicestatusltmenable
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicestatusltmenable
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceStatusLTMEnable
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceStatusLTMEnable
-```
-
-## See Also
-
-### Getting the Options
-
-- [kIOUSBDeviceStatusSelfPowered](kiousbdevicestatusselfpowered.md)
-- [kIOUSBDeviceStatusRemoteWakeEnable](kiousbdevicestatusremotewakeenable.md)
-- [kIOUSBDeviceStatusU1Enable](kiousbdevicestatusu1enable.md)
-- [kIOUSBDeviceStatusU2Enable](kiousbdevicestatusu2enable.md)
-- [kIOUSBInterfaceStatusRemoteWakeCapable](kiousbinterfacestatusremotewakecapable.md)
-- [kIOUSBInterfaceStatusRemoteWakeEnable](kiousbinterfacestatusremotewakeenable.md)
-- [IOUSBEndpointStatusHalt](iousbendpointstatushalt.md)
-
-# Document: kIOUSBDeviceStatusRemoteWakeEnable
-
-Source path: documentation/usbdriverkit/kiousbdevicestatusremotewakeenable
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicestatusremotewakeenable
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceStatusRemoteWakeEnable
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceStatusRemoteWakeEnable
-```
-
-## See Also
-
-### Getting the Options
-
-- [kIOUSBDeviceStatusSelfPowered](kiousbdevicestatusselfpowered.md)
-- [kIOUSBDeviceStatusU1Enable](kiousbdevicestatusu1enable.md)
-- [kIOUSBDeviceStatusU2Enable](kiousbdevicestatusu2enable.md)
-- [kIOUSBDeviceStatusLTMEnable](kiousbdevicestatusltmenable.md)
-- [kIOUSBInterfaceStatusRemoteWakeCapable](kiousbinterfacestatusremotewakecapable.md)
-- [kIOUSBInterfaceStatusRemoteWakeEnable](kiousbinterfacestatusremotewakeenable.md)
-- [IOUSBEndpointStatusHalt](iousbendpointstatushalt.md)
-
-# Document: kIOUSBDeviceStatusSelfPowered
-
-Source path: documentation/usbdriverkit/kiousbdevicestatusselfpowered
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicestatusselfpowered
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceStatusSelfPowered
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceStatusSelfPowered
-```
-
-## See Also
-
-### Getting the Options
-
-- [kIOUSBDeviceStatusRemoteWakeEnable](kiousbdevicestatusremotewakeenable.md)
-- [kIOUSBDeviceStatusU1Enable](kiousbdevicestatusu1enable.md)
-- [kIOUSBDeviceStatusU2Enable](kiousbdevicestatusu2enable.md)
-- [kIOUSBDeviceStatusLTMEnable](kiousbdevicestatusltmenable.md)
-- [kIOUSBInterfaceStatusRemoteWakeCapable](kiousbinterfacestatusremotewakecapable.md)
-- [kIOUSBInterfaceStatusRemoteWakeEnable](kiousbinterfacestatusremotewakeenable.md)
-- [IOUSBEndpointStatusHalt](iousbendpointstatushalt.md)
-
-# Document: kIOUSBDeviceStatusU1Enable
-
-Source path: documentation/usbdriverkit/kiousbdevicestatusu1enable
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicestatusu1enable
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceStatusU1Enable
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceStatusU1Enable
-```
-
-## See Also
-
-### Getting the Options
-
-- [kIOUSBDeviceStatusSelfPowered](kiousbdevicestatusselfpowered.md)
-- [kIOUSBDeviceStatusRemoteWakeEnable](kiousbdevicestatusremotewakeenable.md)
-- [kIOUSBDeviceStatusU2Enable](kiousbdevicestatusu2enable.md)
-- [kIOUSBDeviceStatusLTMEnable](kiousbdevicestatusltmenable.md)
-- [kIOUSBInterfaceStatusRemoteWakeCapable](kiousbinterfacestatusremotewakecapable.md)
-- [kIOUSBInterfaceStatusRemoteWakeEnable](kiousbinterfacestatusremotewakeenable.md)
-- [IOUSBEndpointStatusHalt](iousbendpointstatushalt.md)
-
-# Document: kIOUSBDeviceStatusU2Enable
-
-Source path: documentation/usbdriverkit/kiousbdevicestatusu2enable
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbdevicestatusu2enable
-Description: Interface language: Objective-C
-
-# kIOUSBDeviceStatusU2Enable
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBDeviceStatusU2Enable
-```
-
-## See Also
-
-### Getting the Options
-
-- [kIOUSBDeviceStatusSelfPowered](kiousbdevicestatusselfpowered.md)
-- [kIOUSBDeviceStatusRemoteWakeEnable](kiousbdevicestatusremotewakeenable.md)
-- [kIOUSBDeviceStatusU1Enable](kiousbdevicestatusu1enable.md)
-- [kIOUSBDeviceStatusLTMEnable](kiousbdevicestatusltmenable.md)
-- [kIOUSBInterfaceStatusRemoteWakeCapable](kiousbinterfacestatusremotewakecapable.md)
-- [kIOUSBInterfaceStatusRemoteWakeEnable](kiousbinterfacestatusremotewakeenable.md)
-- [IOUSBEndpointStatusHalt](iousbendpointstatushalt.md)
-
-# Document: kIOUSBEndpointDescriptorDirection
-
-Source path: documentation/usbdriverkit/kiousbendpointdescriptordirection
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbendpointdescriptordirection
-Description: Interface language: Objective-C
-
-# kIOUSBEndpointDescriptorDirection
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBEndpointDescriptorDirection
-```
-
-## See Also
-
-### Getting the Options
-
-- [kIOUSBEndpointDescriptorNumber](kiousbendpointdescriptornumber.md)
-- [kIOUSBEndpointDescriptorNumberPhase](kiousbendpointdescriptornumberphase.md)
-- [kIOUSBEndpointDescriptorEndpointAddressReserved](kiousbendpointdescriptorendpointaddressreserved.md)
-- [kIOUSBEndpointDescriptorDirectionPhase](kiousbendpointdescriptordirectionphase.md)
-- [kIOUSBEndpointDescriptorDirectionOut](kiousbendpointdescriptordirectionout.md)
-- [kIOUSBEndpointDescriptorDirectionIn](kiousbendpointdescriptordirectionin.md)
-- [kIOUSBEndpointDescriptorTransferType](kiousbendpointdescriptortransfertype.md)
-- [kIOUSBEndpointDescriptorTransferTypePhase](kiousbendpointdescriptortransfertypephase.md)
-- [kIOUSBEndpointDescriptorTransferTypeControl](kiousbendpointdescriptortransfertypecontrol.md)
-- [kIOUSBEndpointDescriptorTransferTypeIsochronous](kiousbendpointdescriptortransfertypeisochronous.md)
-- [kIOUSBEndpointDescriptorTransferTypeBulk](kiousbendpointdescriptortransfertypebulk.md)
-- [kIOUSBEndpointDescriptorTransferTypeInterrupt](kiousbendpointdescriptortransfertypeinterrupt.md)
-- [kIOUSBEndpointDescriptorSynchronizationType](kiousbendpointdescriptorsynchronizationtype.md)
-- [kIOUSBEndpointDescriptorSynchronizationTypePhase](kiousbendpointdescriptorsynchronizationtypephase.md)
-- [kIOUSBEndpointDescriptorSynchronizationTypeNone](kiousbendpointdescriptorsynchronizationtypenone.md)
-
-# Document: kIOUSBEndpointDescriptorDirectionIn
-
-Source path: documentation/usbdriverkit/kiousbendpointdescriptordirectionin
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbendpointdescriptordirectionin
-Description: Interface language: Objective-C
-
-# kIOUSBEndpointDescriptorDirectionIn
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBEndpointDescriptorDirectionIn
-```
-
-## See Also
-
-### Getting the Options
-
-- [kIOUSBEndpointDescriptorNumber](kiousbendpointdescriptornumber.md)
-- [kIOUSBEndpointDescriptorNumberPhase](kiousbendpointdescriptornumberphase.md)
-- [kIOUSBEndpointDescriptorEndpointAddressReserved](kiousbendpointdescriptorendpointaddressreserved.md)
-- [kIOUSBEndpointDescriptorDirection](kiousbendpointdescriptordirection.md)
-- [kIOUSBEndpointDescriptorDirectionPhase](kiousbendpointdescriptordirectionphase.md)
-- [kIOUSBEndpointDescriptorDirectionOut](kiousbendpointdescriptordirectionout.md)
-- [kIOUSBEndpointDescriptorTransferType](kiousbendpointdescriptortransfertype.md)
-- [kIOUSBEndpointDescriptorTransferTypePhase](kiousbendpointdescriptortransfertypephase.md)
-- [kIOUSBEndpointDescriptorTransferTypeControl](kiousbendpointdescriptortransfertypecontrol.md)
-- [kIOUSBEndpointDescriptorTransferTypeIsochronous](kiousbendpointdescriptortransfertypeisochronous.md)
-- [kIOUSBEndpointDescriptorTransferTypeBulk](kiousbendpointdescriptortransfertypebulk.md)
-- [kIOUSBEndpointDescriptorTransferTypeInterrupt](kiousbendpointdescriptortransfertypeinterrupt.md)
-- [kIOUSBEndpointDescriptorSynchronizationType](kiousbendpointdescriptorsynchronizationtype.md)
-- [kIOUSBEndpointDescriptorSynchronizationTypePhase](kiousbendpointdescriptorsynchronizationtypephase.md)
-- [kIOUSBEndpointDescriptorSynchronizationTypeNone](kiousbendpointdescriptorsynchronizationtypenone.md)
-
-# Document: kIOUSBEndpointDescriptorDirectionOut
-
-Source path: documentation/usbdriverkit/kiousbendpointdescriptordirectionout
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbendpointdescriptordirectionout
-Description: Interface language: Objective-C
-
-# kIOUSBEndpointDescriptorDirectionOut
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBEndpointDescriptorDirectionOut
-```
-
-## See Also
-
-### Getting the Options
-
-- [kIOUSBEndpointDescriptorNumber](kiousbendpointdescriptornumber.md)
-- [kIOUSBEndpointDescriptorNumberPhase](kiousbendpointdescriptornumberphase.md)
-- [kIOUSBEndpointDescriptorEndpointAddressReserved](kiousbendpointdescriptorendpointaddressreserved.md)
-- [kIOUSBEndpointDescriptorDirection](kiousbendpointdescriptordirection.md)
-- [kIOUSBEndpointDescriptorDirectionPhase](kiousbendpointdescriptordirectionphase.md)
-- [kIOUSBEndpointDescriptorDirectionIn](kiousbendpointdescriptordirectionin.md)
-- [kIOUSBEndpointDescriptorTransferType](kiousbendpointdescriptortransfertype.md)
-- [kIOUSBEndpointDescriptorTransferTypePhase](kiousbendpointdescriptortransfertypephase.md)
-- [kIOUSBEndpointDescriptorTransferTypeControl](kiousbendpointdescriptortransfertypecontrol.md)
-- [kIOUSBEndpointDescriptorTransferTypeIsochronous](kiousbendpointdescriptortransfertypeisochronous.md)
-- [kIOUSBEndpointDescriptorTransferTypeBulk](kiousbendpointdescriptortransfertypebulk.md)
-- [kIOUSBEndpointDescriptorTransferTypeInterrupt](kiousbendpointdescriptortransfertypeinterrupt.md)
-- [kIOUSBEndpointDescriptorSynchronizationType](kiousbendpointdescriptorsynchronizationtype.md)
-- [kIOUSBEndpointDescriptorSynchronizationTypePhase](kiousbendpointdescriptorsynchronizationtypephase.md)
-- [kIOUSBEndpointDescriptorSynchronizationTypeNone](kiousbendpointdescriptorsynchronizationtypenone.md)
-
-# Document: kIOUSBEndpointDescriptorDirectionPhase
-
-Source path: documentation/usbdriverkit/kiousbendpointdescriptordirectionphase
-Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/kiousbendpointdescriptordirectionphase
-Description: Interface language: Objective-C
-
-# kIOUSBEndpointDescriptorDirectionPhase
-
-**Interface language:** Objective-C
-
-**Framework:** USBDriverKit  
-**Kind:** Enumeration Case  
-**Availability:** DriverKit 19.0+
-
-## Declaration
-
-```objectivec
-kIOUSBEndpointDescriptorDirectionPhase
-```
-
-## See Also
-
-### Getting the Options
-
-- [kIOUSBEndpointDescriptorNumber](kiousbendpointdescriptornumber.md)
-- [kIOUSBEndpointDescriptorNumberPhase](kiousbendpointdescriptornumberphase.md)
-- [kIOUSBEndpointDescriptorEndpointAddressReserved](kiousbendpointdescriptorendpointaddressreserved.md)
-- [kIOUSBEndpointDescriptorDirection](kiousbendpointdescriptordirection.md)
-- [kIOUSBEndpointDescriptorDirectionOut](kiousbendpointdescriptordirectionout.md)
-- [kIOUSBEndpointDescriptorDirectionIn](kiousbendpointdescriptordirectionin.md)
-- [kIOUSBEndpointDescriptorTransferType](kiousbendpointdescriptortransfertype.md)
-- [kIOUSBEndpointDescriptorTransferTypePhase](kiousbendpointdescriptortransfertypephase.md)
-- [kIOUSBEndpointDescriptorTransferTypeControl](kiousbendpointdescriptortransfertypecontrol.md)
-- [kIOUSBEndpointDescriptorTransferTypeIsochronous](kiousbendpointdescriptortransfertypeisochronous.md)
-- [kIOUSBEndpointDescriptorTransferTypeBulk](kiousbendpointdescriptortransfertypebulk.md)
-- [kIOUSBEndpointDescriptorTransferTypeInterrupt](kiousbendpointdescriptortransfertypeinterrupt.md)
-- [kIOUSBEndpointDescriptorSynchronizationType](kiousbendpointdescriptorsynchronizationtype.md)
-- [kIOUSBEndpointDescriptorSynchronizationTypePhase](kiousbendpointdescriptorsynchronizationtypephase.md)
-- [kIOUSBEndpointDescriptorSynchronizationTypeNone](kiousbendpointdescriptorsynchronizationtypenone.md)

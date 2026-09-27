@@ -1,10 +1,1486 @@
-# Apple cross-platform frameworks snapshot-c3455ae26d89: full documentation
+# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72
-Content digest: 0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160
-Captured at: 2026-09-19T05:14:28.876Z
+Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
+Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
+Captured at: 2026-09-27T18:07:10.128Z
 Volume 58
+
+# Document: simd_short_sat
+
+Source path: documentation/simd/simd_short_sat-3mmpp
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-3mmpp
+Description: Interface language: Objective-C
+
+# simd_short_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a new vector from the specified vector of 64-bit, floating point elements.
+
+## Declaration
+
+```objectivec
+static simd_short2 simd_short_sat(simd_double2 __x);
+```
+
+## See Also
+
+### Functions to Perform Saturating Conversion From Vectors of Other Types
+
+- [simd_short_sat](simd_short_sat-3md2f.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mn6v.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-3m83r.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mi6f.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-3mg4b.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mqaj.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-3mfdp.md): Returns a new vector from the specified vector of 64-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mpct.md): Returns a new vector from the specified vector of 64-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-3mm1h.md): Returns a new vector from the specified vector of 32-bit, floating point elements.
+
+# Document: simd_short_sat
+
+Source path: documentation/simd/simd_short_sat-3mn6v
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-3mn6v
+Description: Interface language: Objective-C
+
+# simd_short_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
+
+## Declaration
+
+```objectivec
+static simd_short2 simd_short_sat(simd_uchar2 __x);
+```
+
+## See Also
+
+### Functions to Perform Saturating Conversion From Vectors of Other Types
+
+- [simd_short_sat](simd_short_sat-3md2f.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3m83r.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mi6f.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-3mg4b.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mqaj.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-3mfdp.md): Returns a new vector from the specified vector of 64-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mpct.md): Returns a new vector from the specified vector of 64-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-3mm1h.md): Returns a new vector from the specified vector of 32-bit, floating point elements.
+- [simd_short_sat](simd_short_sat-3mmpp.md): Returns a new vector from the specified vector of 64-bit, floating point elements.
+
+# Document: simd_short_sat
+
+Source path: documentation/simd/simd_short_sat-3mpct
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-3mpct
+Description: Interface language: Objective-C
+
+# simd_short_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a new vector from the specified vector of 64-bit, unsigned integer elements.
+
+## Declaration
+
+```objectivec
+static simd_short2 simd_short_sat(simd_ulong2 __x);
+```
+
+## See Also
+
+### Functions to Perform Saturating Conversion From Vectors of Other Types
+
+- [simd_short_sat](simd_short_sat-3md2f.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mn6v.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-3m83r.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mi6f.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-3mg4b.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mqaj.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-3mfdp.md): Returns a new vector from the specified vector of 64-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mm1h.md): Returns a new vector from the specified vector of 32-bit, floating point elements.
+- [simd_short_sat](simd_short_sat-3mmpp.md): Returns a new vector from the specified vector of 64-bit, floating point elements.
+
+# Document: simd_short_sat
+
+Source path: documentation/simd/simd_short_sat-3mqaj
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-3mqaj
+Description: Interface language: Objective-C
+
+# simd_short_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
+
+## Declaration
+
+```objectivec
+static simd_short2 simd_short_sat(simd_uint2 __x);
+```
+
+## See Also
+
+### Functions to Perform Saturating Conversion From Vectors of Other Types
+
+- [simd_short_sat](simd_short_sat-3md2f.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mn6v.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-3m83r.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mi6f.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-3mg4b.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mfdp.md): Returns a new vector from the specified vector of 64-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-3mpct.md): Returns a new vector from the specified vector of 64-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-3mm1h.md): Returns a new vector from the specified vector of 32-bit, floating point elements.
+- [simd_short_sat](simd_short_sat-3mmpp.md): Returns a new vector from the specified vector of 64-bit, floating point elements.
+
+# Document: simd_short_sat
+
+Source path: documentation/simd/simd_short_sat-3mqel
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-3mqel
+Description: Interface language: Objective-C
+
+# simd_short_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+## Declaration
+
+```objectivec
+static simd_short2 simd_short_sat(simd_half2 __x);
+```
+
+# Document: simd_short_sat
+
+Source path: documentation/simd/simd_short_sat-54l40
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-54l40
+Description: Interface language: Objective-C
+
+# simd_short_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a new vector from the specified vector of 16-bit, signed integer elements.
+
+## Declaration
+
+```objectivec
+static simd_short16 simd_short_sat(simd_short16 __x);
+```
+
+## See Also
+
+### Functions to Perform Saturating Conversion From Vectors of Other Types
+
+- [simd_short_sat](simd_short_sat-54q0w.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-55000.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54uxs.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54rx4.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-551w8.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54yg4.md): Returns a new vector from the specified vector of 32-bit, floating-point elements.
+
+# Document: simd_short_sat
+
+Source path: documentation/simd/simd_short_sat-54q0w
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-54q0w
+Description: Interface language: Objective-C
+
+# simd_short_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a new vector from the specified vector of 8-bit, signed integer elements.
+
+## Declaration
+
+```objectivec
+static simd_short16 simd_short_sat(simd_char16 __x);
+```
+
+## See Also
+
+### Functions to Perform Saturating Conversion From Vectors of Other Types
+
+- [simd_short_sat](simd_short_sat-55000.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54l40.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-54uxs.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54rx4.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-551w8.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54yg4.md): Returns a new vector from the specified vector of 32-bit, floating-point elements.
+
+# Document: simd_short_sat
+
+Source path: documentation/simd/simd_short_sat-54rx4
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-54rx4
+Description: Interface language: Objective-C
+
+# simd_short_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a new vector from the specified vector of 32-bit, signed integer elements.
+
+## Declaration
+
+```objectivec
+static simd_short16 simd_short_sat(simd_int16 __x);
+```
+
+## See Also
+
+### Functions to Perform Saturating Conversion From Vectors of Other Types
+
+- [simd_short_sat](simd_short_sat-54q0w.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-55000.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54l40.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-54uxs.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-551w8.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54yg4.md): Returns a new vector from the specified vector of 32-bit, floating-point elements.
+
+# Document: simd_short_sat
+
+Source path: documentation/simd/simd_short_sat-54uxs
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-54uxs
+Description: Interface language: Objective-C
+
+# simd_short_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
+
+## Declaration
+
+```objectivec
+static simd_short16 simd_short_sat(simd_ushort16 __x);
+```
+
+## See Also
+
+### Functions to Perform Saturating Conversion From Vectors of Other Types
+
+- [simd_short_sat](simd_short_sat-54q0w.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-55000.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54l40.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-54rx4.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-551w8.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54yg4.md): Returns a new vector from the specified vector of 32-bit, floating-point elements.
+
+# Document: simd_short_sat
+
+Source path: documentation/simd/simd_short_sat-54yg4
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-54yg4
+Description: Interface language: Objective-C
+
+# simd_short_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a new vector from the specified vector of 32-bit, floating-point elements.
+
+## Declaration
+
+```objectivec
+static simd_short16 simd_short_sat(simd_float16 __x);
+```
+
+## See Also
+
+### Functions to Perform Saturating Conversion From Vectors of Other Types
+
+- [simd_short_sat](simd_short_sat-54q0w.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-55000.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54l40.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-54uxs.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54rx4.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-551w8.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
+
+# Document: simd_short_sat
+
+Source path: documentation/simd/simd_short_sat-55000
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-55000
+Description: Interface language: Objective-C
+
+# simd_short_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
+
+## Declaration
+
+```objectivec
+static simd_short16 simd_short_sat(simd_uchar16 __x);
+```
+
+## See Also
+
+### Functions to Perform Saturating Conversion From Vectors of Other Types
+
+- [simd_short_sat](simd_short_sat-54q0w.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-54l40.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-54uxs.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54rx4.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-551w8.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54yg4.md): Returns a new vector from the specified vector of 32-bit, floating-point elements.
+
+# Document: simd_short_sat
+
+Source path: documentation/simd/simd_short_sat-551gs
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-551gs
+Description: Interface language: Objective-C
+
+# simd_short_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+## Declaration
+
+```objectivec
+static simd_short16 simd_short_sat(simd_half16 __x);
+```
+
+# Document: simd_short_sat
+
+Source path: documentation/simd/simd_short_sat-551w8
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_short_sat-551w8
+Description: Interface language: Objective-C
+
+# simd_short_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
+
+## Declaration
+
+```objectivec
+static simd_short16 simd_short_sat(simd_uint16 __x);
+```
+
+## See Also
+
+### Functions to Perform Saturating Conversion From Vectors of Other Types
+
+- [simd_short_sat](simd_short_sat-54q0w.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-55000.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54l40.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-54uxs.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
+- [simd_short_sat](simd_short_sat-54rx4.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
+- [simd_short_sat](simd_short_sat-54yg4.md): Returns a new vector from the specified vector of 32-bit, floating-point elements.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-6goju
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-6goju
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_double3) -> simd_double3
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-8db3x.md): Returns the absolute value of each element in a vector.
+- [abs(\_:)](abs%28__%29-8miv.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-2jao.md): Returns each element in a vector clamped to a specified range.
+- [clamp(\_:min:max:)](clamp%28__min_max_%29-5otf7.md): Returns each element in a vector clamped to a specified range.
+- [clamp(\_:min:max:)](clamp%28__min_max_%29-6m2so.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-4v2cb.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract(\_:)](simd_fract%28__%29-47n4w.md): Returns the fractional part of each element in a vector.
+- [fract(\_:)](fract%28__%29-swov.md): Returns the fractional part of each element in a vector.
+- [sign(\_:)](sign%28__%29-2qtea.md): Returns the sign of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-2gbx7.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+- [step(\_:edge:)](step%28__edge_%29-4azct.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_double3 simd_sign(simd_double3 x);
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs](simd_abs%28__%29-8db3x.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-2jao.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal](simd_equal%28____%29-4v2cb.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract](simd_fract%28__%29-47n4w.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-2gbx7.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-6gp3q
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-6gp3q
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_float3) -> simd_float3
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-8dafp.md): Returns the absolute value of each element in a vector.
+- [abs(\_:)](abs%28__%29-6lc19.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-5szev.md): Returns each element in a vector clamped to a specified range.
+- [clamp(\_:min:max:)](clamp%28__min_max_%29-3esdw.md): Returns each element in a vector clamped to a specified range.
+- [clamp(\_:min:max:)](clamp%28__min_max_%29-9eeiz.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-6i7q4.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [fract(\_:)](fract%28__%29-3rsxo.md): Returns the fractional part of each element in a vector.
+- [simd_fract(\_:)](simd_fract%28__%29-47mh4.md): Returns the fractional part of each element in a vector.
+- [sign(\_:)](sign%28__%29-9p5uo.md): Returns the sign of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-9ygnw.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+- [step(\_:edge:)](step%28__edge_%29-48vbr.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_float3 simd_sign(simd_float3 x);
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs](simd_abs%28__%29-8dafp.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-5szev.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal](simd_equal%28____%29-6i7q4.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract](simd_fract%28__%29-47mh4.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-9ygnw.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-6gppu
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-6gppu
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_half3) -> simd_half3
+```
+
+## See Also
+
+### Common functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-8derx.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-2h8ov.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-9k8m9.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract(\_:)](simd_fract%28__%29-47quw.md): Returns the fractional part of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-8w7e.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_half3 simd_sign(simd_half3 x);
+```
+
+## See Also
+
+### Common functions
+
+- [simd_abs](simd_abs%28__%29-8derx.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-2h8ov.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal](simd_equal%28____%29-9k8m9.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract](simd_fract%28__%29-47quw.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-8w7e.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-6jld1
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-6jld1
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_float2) -> simd_float2
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-886vq.md): Returns the absolute value of each element in a vector.
+- [abs(\_:)](abs%28__%29-6ckob.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-9b6uf.md): Returns each element in a vector clamped to a specified range.
+- [clamp(\_:min:max:)](clamp%28__min_max_%29-5rthg.md): Returns each element in a vector clamped to a specified range.
+- [clamp(\_:min:max:)](clamp%28__min_max_%29-3oo0f.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-9z8e8.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract(\_:)](simd_fract%28__%29-42ipv.md): Returns the fractional part of each element in a vector.
+- [fract(\_:)](fract%28__%29-7rplw.md): Returns the fractional part of each element in a vector.
+- [sign(\_:)](sign%28__%29-2e6do.md): Returns the sign of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-9xjdc.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+- [step(\_:edge:)](step%28__edge_%29-1pthr.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_float2 simd_sign(simd_float2 x);
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs](simd_abs%28__%29-886vq.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-9b6uf.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal](simd_equal%28____%29-9z8e8.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract](simd_fract%28__%29-42ipv.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-9xjdc.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-6jlx9
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-6jlx9
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_double2) -> simd_double2
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-8869e.md): Returns the absolute value of each element in a vector.
+- [abs(\_:)](abs%28__%29-1p8t7.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-6puwa.md): Returns each element in a vector clamped to a specified range.
+- [clamp(\_:min:max:)](clamp%28__min_max_%29-7n2jv.md): Returns each element in a vector clamped to a specified range.
+- [clamp(\_:min:max:)](clamp%28__min_max_%29-6d1s7.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-vmn4.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract(\_:)](simd_fract%28__%29-42i3r.md): Returns the fractional part of each element in a vector.
+- [fract(\_:)](fract%28__%29-2gjrn.md): Returns the fractional part of each element in a vector.
+- [sign(\_:)](sign%28__%29-5fczz.md): Returns the sign of each element in a vector.
+- [step(\_:edge:)](step%28__edge_%29-2qauk.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+- [simd_step(\_:\_:)](simd_step%28____%29-8jlf2.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_double2 simd_sign(simd_double2 x);
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs](simd_abs%28__%29-8869e.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-6puwa.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal](simd_equal%28____%29-vmn4.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract](simd_fract%28__%29-42i3r.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-8jlf2.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-6jn8t
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-6jn8t
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_half2) -> simd_half2
+```
+
+## See Also
+
+### Common functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-889zu.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-8crce.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-6mu96.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract(\_:)](simd_fract%28__%29-42lx3.md): Returns the fractional part of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-4dqzp.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_half2 simd_sign(simd_half2 x);
+```
+
+## See Also
+
+### Common functions
+
+- [simd_abs](simd_abs%28__%29-889zu.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-8crce.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal](simd_equal%28____%29-6mu96.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract](simd_fract%28__%29-42lx3.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-4dqzp.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-74z7b
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-74z7b
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_double4) -> simd_double4
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-81rjc.md): Returns the absolute value of each element in a vector.
+- [abs(\_:)](abs%28__%29-63bb7.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-8skia.md): Returns each element in a vector clamped to a specified range.
+- [clamp(\_:min:max:)](clamp%28__min_max_%29-3iua3.md): Returns each element in a vector clamped to a specified range.
+- [clamp(\_:min:max:)](clamp%28__min_max_%29-51jkt.md): Returns each element in a vector clamped to a specified range.
+- [simd_fract(\_:)](simd_fract%28__%29-3w3dh.md): Returns the fractional part of each element in a vector.
+- [fract(\_:)](fract%28__%29-8mowg.md): Returns the fractional part of each element in a vector.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-6lpka.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [sign(\_:)](sign%28__%29-86tur.md): Returns the sign of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-6nrf4.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+- [step(\_:edge:)](step%28__edge_%29-641e1.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_double4 simd_sign(simd_double4 x);
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs](simd_abs%28__%29-81rjc.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-8skia.md): Returns each element in a vector clamped to a specified range.
+- [simd_fract](simd_fract%28__%29-3w3dh.md): Returns the fractional part of each element in a vector.
+- [simd_equal](simd_equal%28____%29-6lpka.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_step](simd_step%28____%29-6nrf4.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-74zwz
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-74zwz
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_float4) -> simd_float4
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-81qo8.md): Returns the absolute value of each element in a vector.
+- [abs(\_:)](abs%28__%29-1fzhv.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-6vmhh.md): Returns each element in a vector clamped to a specified range.
+- [clamp(\_:min:max:)](clamp%28__min_max_%29-46ay6.md): Returns each element in a vector clamped to a specified range.
+- [clamp(\_:min:max:)](clamp%28__min_max_%29-19q7w.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-6sa26.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract(\_:)](simd_fract%28__%29-3w2rh.md): Returns the fractional part of each element in a vector.
+- [fract(\_:)](fract%28__%29-9s3df.md): Returns the fractional part of each element in a vector.
+- [sign(\_:)](sign%28__%29-167c1.md): Returns the sign of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-1fxwh.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+- [step(\_:edge:)](step%28__edge_%29-8we4c.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_float4 simd_sign(simd_float4 x);
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs](simd_abs%28__%29-81qo8.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-6vmhh.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal](simd_equal%28____%29-6sa26.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract](simd_fract%28__%29-3w2rh.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-1fxwh.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-7533b
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-7533b
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_half4) -> simd_half4
+```
+
+## See Also
+
+### Common functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-81q3k.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-2vvpa.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-6nuuw.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract(\_:)](simd_fract%28__%29-3w251.md): Returns the fractional part of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-4knqw.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_half4 simd_sign(simd_half4 x);
+```
+
+## See Also
+
+### Common functions
+
+- [simd_abs](simd_abs%28__%29-81q3k.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-2vvpa.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal](simd_equal%28____%29-6nuuw.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract](simd_fract%28__%29-3w251.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-4knqw.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-7hb8r
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-7hb8r
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_double8) -> simd_double8
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-7p0dw.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-q88m.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-8pk1m.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract(\_:)](simd_fract%28__%29-3jcfd.md): Returns the fractional part of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-1vckv.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_double8 simd_sign(simd_double8 x);
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs](simd_abs%28__%29-7p0dw.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-q88m.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal](simd_equal%28____%29-8pk1m.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract](simd_fract%28__%29-3jcfd.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-1vckv.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-7hbzz
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-7hbzz
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_float8) -> simd_float8
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-7ozws.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-14mzm.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-7of37.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract(\_:)](simd_fract%28__%29-3jbrt.md): Returns the fractional part of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-96e50.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_float8 simd_sign(simd_float8 x);
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs](simd_abs%28__%29-7ozws.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-14mzm.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal](simd_equal%28____%29-7of37.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract](simd_fract%28__%29-3jbrt.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-96e50.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-7hck3
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-7hck3
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_half8) -> simd_half8
+```
+
+## See Also
+
+### Common functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-7p1mc.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-7a090.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-8nejo.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract(\_:)](simd_fract%28__%29-3jdnl.md): Returns the fractional part of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-5v3vi.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_half8 simd_sign(simd_half8 x);
+```
+
+## See Also
+
+### Common functions
+
+- [simd_abs](simd_abs%28__%29-7p1mc.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-7a090.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal](simd_equal%28____%29-8nejo.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract](simd_fract%28__%29-3jdnl.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-5v3vi.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-9365i
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-9365i
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: Float16) -> Float16
+```
+
+## See Also
+
+### Common functions
+
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-c4d6.md): Returns each element in a vector clamped to a specified range.
+- [simd_fract(\_:)](simd_fract%28__%29-1wwew.md): Returns the fractional part of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-u24h.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static _Float16 simd_sign(_Float16 x);
+```
+
+## See Also
+
+### Common functions
+
+- [simd_clamp](simd_clamp%28______%29-c4d6.md): Returns each element in a vector clamped to a specified range.
+- [simd_fract](simd_fract%28__%29-1wwew.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-u24h.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-937ee
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-937ee
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: Double) -> Double
+```
+
+## See Also
+
+### Common Functions
+
+- [step(\_:edge:)](step%28__edge_%29-382a5.md)
+- [simd_step(\_:\_:)](simd_step%28____%29-8mpre.md)
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-1ktlk.md): Returns each element in a vector clamped to a specified range.
+- [simd_fract(\_:)](simd_fract%28__%29-1wsn4.md): Returns the fractional part of each element in a vector.
+- [sign(\_:)](sign%28__%29-iwmp.md): Returns the sign of each element in a vector.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static double simd_sign(double x);
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_step](simd_step%28____%29-8mpre.md)
+- [simd_clamp](simd_clamp%28______%29-1ktlk.md): Returns each element in a vector clamped to a specified range.
+- [simd_fract](simd_fract%28__%29-1wsn4.md): Returns the fractional part of each element in a vector.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-9380i
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-9380i
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: Float) -> Float
+```
+
+## See Also
+
+### Common Functions
+
+- [step(\_:edge:)](step%28__edge_%29-7md5f.md): Returns zero for each element in a vector less than a specified edge; one otherwise.
+- [simd_step(\_:\_:)](simd_step%28____%29-7127e.md): Returns zero for each element in a vector less than a specified edge; one otherwise.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-8f4ck.md): Returns each element in a vector clamped to a specified range.
+- [simd_fract(\_:)](simd_fract%28__%29-1ws2w.md): Returns the fractional part of each element in a vector.
+- [sign(\_:)](sign%28__%29-iw0p.md): Returns the sign of each element in a vector.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static float simd_sign(float x);
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_step](simd_step%28____%29-7127e.md): Returns zero for each element in a vector less than a specified edge; one otherwise.
+- [simd_clamp](simd_clamp%28______%29-8f4ck.md): Returns each element in a vector clamped to a specified range.
+- [simd_fract](simd_fract%28__%29-1ws2w.md): Returns the fractional part of each element in a vector.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-9r24j
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-9r24j
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_half32) -> simd_half32
+```
+
+## See Also
+
+### Common functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-2byol.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-868pk.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-5620v.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract(\_:)](simd_fract%28__%29-4zj0y.md): Returns the fractional part of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-2kbac.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_half32 simd_sign(simd_half32 x);
+```
+
+## See Also
+
+### Common functions
+
+- [simd_abs](simd_abs%28__%29-2byol.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-868pk.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal](simd_equal%28____%29-5620v.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract](simd_fract%28__%29-4zj0y.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-2kbac.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-tc2v
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-tc2v
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_float16) -> simd_float16
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-47h6g.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-92son.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-376kl.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract(\_:)](simd_fract%28__%29-6v1ix.md): Returns the fractional part of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-14cn0.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_float16 simd_sign(simd_float16 x);
+```
+
+## See Also
+
+### Common Functions
+
+- [simd_abs](simd_abs%28__%29-47h6g.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-92son.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal](simd_equal%28____%29-376kl.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract](simd_fract%28__%29-6v1ix.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-14cn0.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_sign(_:)
+
+Source path: documentation/simd/simd_sign(_:)-tcn7
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_sign(_:)-tcn7
+Description: Framework: simd Kind: Function
+
+# simd_sign(\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```swift
+func simd_sign(_ x: simd_half16) -> simd_half16
+```
+
+## See Also
+
+### Common functions
+
+- [simd_abs(\_:)](simd_abs%28__%29-47hrc.md): Returns the absolute value of each element in a vector.
+- [simd_clamp(\_:\_:\_:)](simd_clamp%28______%29-5xcny.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal(\_:\_:)](simd_equal%28____%29-9ijsx.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract(\_:)](simd_fract%28__%29-6v27d.md): Returns the fractional part of each element in a vector.
+- [simd_step(\_:\_:)](simd_step%28____%29-7ryeb.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# simd_sign (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns the sign of each element in a vector.
+
+## Declaration
+
+```objectivec
+static simd_half16 simd_sign(simd_half16 x);
+```
+
+## See Also
+
+### Common functions
+
+- [simd_abs](simd_abs%28__%29-47hrc.md): Returns the absolute value of each element in a vector.
+- [simd_clamp](simd_clamp%28______%29-5xcny.md): Returns each element in a vector clamped to a specified range.
+- [simd_equal](simd_equal%28____%29-9ijsx.md): Returns true if every element in a vector is exactly equal to the corresponding element in a second vector, and otherwise returns false.
+- [simd_fract](simd_fract%28__%29-6v27d.md): Returns the fractional part of each element in a vector.
+- [simd_step](simd_step%28____%29-7ryeb.md): Returns zero for each element in a vector less than a specified edge, and otherwise returns one.
+
+# Document: simd_slerp(_:_:_:)
+
+Source path: documentation/simd/simd_slerp(_:_:_:)-65dt5
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_slerp(_:_:_:)-65dt5
+Description: Framework: simd Kind: Function
+
+# simd_slerp(\_:\_:\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a spherical linearly interpolated value along the shortest arc between two quaternions.
+
+## Declaration
+
+```swift
+func simd_slerp(_ q0: simd_quatd, _ q1: simd_quatd, _ t: Double) -> simd_quatd
+```
+
+## See Also
+
+### Applying geometric operations to quaternions
+
+- [simd_act(\_:\_:)](simd_act%28____%29-47h09.md): Returns a vector rotated by a quaternion.
+- [act(\_:)](simd_quatd/act%28__%29.md): Returns the specified vector rotated by the quaternion.
+- [simd_angle(\_:)](simd_angle%28__%29-zuvx.md): Returns the angle by which a quaternion rotates.
+- [simd_axis(\_:)](simd_axis%28__%29-56wf4.md): Returns the normalized axis about which the action of the specified quaternion rotates.
+- [simd_bezier(\_:\_:\_:\_:\_:)](simd_bezier%28__________%29-556xd.md): Returns the spherical cubic Bezier interpolation between quaternions.
+- [simd_conjugate(\_:)](simd_conjugate%28__%29-98awl.md): Returns the conjugate of a quaternion.
+- [simd_imag(\_:)](simd_imag%28__%29-2c7fz.md): Returns the imaginary (vector) part of a quaternion.
+- [simd_negate(\_:)](simd_negate%28__%29-3ysgu.md): Returns the negation of a quaternion.
+- [simd_real(\_:)](simd_real%28__%29-75t5f.md): Returns the real (scalar) part of a quaternion.
+- [simd_slerp_longest(\_:\_:\_:)](simd_slerp_longest%28______%29-8hbz2.md): Returns a spherical linearly interpolated value along the longest arc between two quaternions.
+- [simd_spline(\_:\_:\_:\_:\_:)](simd_spline%28__________%29-19wbg.md): Returns an interpolated value between two quaternions along a spherical cubic spline.
+- [simd_dot(\_:\_:)](simd_dot%28____%29-2bnqp.md): Returns the dot product of two quaternions.
+- [dot(\_:\_:)](dot%28____%29-438xp.md)
+- [simd_length(\_:)](simd_length%28__%29-52o29.md): Returns the length of a quaternion.
+- [simd_normalize(\_:)](simd_normalize%28__%29-ud11.md): Returns a quaternion pointing in the same direction as the supplied quaternion with a length of 1.
+
+# simd_slerp (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a spherical linearly interpolated value along the shortest arc between two quaternions.
+
+## Declaration
+
+```objectivec
+static simd_quatd simd_slerp(simd_quatd q0, simd_quatd q1, double t);
+```
+
+## See Also
+
+### Applying geometric operations to quaternions
+
+- [simd_act](simd_act%28____%29-47h09.md): Returns a vector rotated by a quaternion.
+- [simd_angle](simd_angle%28__%29-zuvx.md): Returns the angle by which a quaternion rotates.
+- [simd_axis](simd_axis%28__%29-56wf4.md): Returns the normalized axis about which the action of the specified quaternion rotates.
+- [simd_bezier](simd_bezier%28__________%29-556xd.md): Returns the spherical cubic Bezier interpolation between quaternions.
+- [simd_conjugate](simd_conjugate%28__%29-98awl.md): Returns the conjugate of a quaternion.
+- [simd_imag](simd_imag%28__%29-2c7fz.md): Returns the imaginary (vector) part of a quaternion.
+- [simd_negate](simd_negate%28__%29-3ysgu.md): Returns the negation of a quaternion.
+- [simd_real](simd_real%28__%29-75t5f.md): Returns the real (scalar) part of a quaternion.
+- [simd_slerp_longest](simd_slerp_longest%28______%29-8hbz2.md): Returns a spherical linearly interpolated value along the longest arc between two quaternions.
+- [simd_spline](simd_spline%28__________%29-19wbg.md): Returns an interpolated value between two quaternions along a spherical cubic spline.
+- [simd_dot](simd_dot%28____%29-2bnqp.md): Returns the dot product of two quaternions.
+- [simd_length](simd_length%28__%29-52o29.md): Returns the length of a quaternion.
+- [simd_normalize](simd_normalize%28__%29-ud11.md): Returns a quaternion pointing in the same direction as the supplied quaternion with a length of 1.
+
+# Document: simd_slerp(_:_:_:)
+
+Source path: documentation/simd/simd_slerp(_:_:_:)-7vayy
+Canonical documentation: https://developer.apple.com/documentation/simd/simd_slerp(_:_:_:)-7vayy
+Description: Framework: simd Kind: Function
+
+# simd_slerp(\_:\_:\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+## Declaration
+
+```swift
+func simd_slerp(_ q0: simd_quath, _ q1: simd_quath, _ t: Float16) -> simd_quath
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Spherical linear interpolation along the shortest arc between quaternions `q0` and `q1`.
+
+# simd_slerp (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+## Declaration
+
+```objectivec
+static simd_quath simd_slerp(simd_quath q0, simd_quath q1, _Float16 t);
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Spherical linear interpolation along the shortest arc between quaternions `q0` and `q1`.
 
 # Document: simd_slerp(_:_:_:)
 
@@ -190146,6 +191622,8 @@ Set the values that make a node unique to a shader.
 - [NSStandardKeyBindingResponding](https://developer.apple.com/documentation/appkit/nsstandardkeybindingresponding)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
 - [NSUserActivityRestoring](https://developer.apple.com/documentation/appkit/nsuseractivityrestoring)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](../uikit/uiactivityitemsconfigurationproviding.md)
 - [UICoordinateSpace](../uikit/uicoordinatespace.md)
 - [UIFocusEnvironment](../uikit/uifocusenvironment.md)
@@ -194461,1452 +195939,3 @@ Removes a list of children from the receiving node.
 - [removeFromParent](removefromparent%28%29.md): Removes the receiving node from its parent.
 - [removeAllChildren](removeallchildren%28%29.md): Removes all of the node’s children.
 - [inParentHierarchy:](inparenthierarchy%28__%29.md): Returns a Boolean value that indicates whether the node is a descendant of the target node.
-
-# Document: removeFromParent()
-
-Source path: documentation/spritekit/sknode/removefromparent()
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/removefromparent()
-Description: Framework: SpriteKit Kind: Instance Method Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# removeFromParent() (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Removes the receiving node from its parent.
-
-## Declaration
-
-```swift
-func removeFromParent()
-```
-
-## Mentioned In
-
-- [Accessing and Modifying the Node Tree](../accessing-and-modifying-the-node-tree.md)
-- [Maximizing Node Drawing Performance](../maximizing-node-drawing-performance.md)
-
-## See Also
-
-### Modifying the Node Tree
-
-- [Accessing and Modifying the Node Tree](../accessing-and-modifying-the-node-tree.md): See the objects and functions you use to control the node tree’s composition.
-- [addChild(\_:)](addchild%28__%29.md): Adds a node to the end of the receiver’s list of child nodes.
-- [insertChild(\_:at:)](insertchild%28__at_%29.md): Inserts a node into a specific position in the receiver’s list of child nodes.
-- [isEqual(to:)](isequal%28to_%29.md): Compares the parameter node to the receiving node.
-- [move(toParent:)](move%28toparent_%29.md): Moves the node to a new parent node in the scene.
-- [removeAllChildren()](removeallchildren%28%29.md): Removes all of the node’s children.
-- [removeChildren(in:)](removechildren%28in_%29.md): Removes a list of children from the receiving node.
-- [inParentHierarchy(\_:)](inparenthierarchy%28__%29.md): Returns a Boolean value that indicates whether the node is a descendant of the target node.
-
-# removeFromParent (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Removes the receiving node from its parent.
-
-## Declaration
-
-```objectivec
-- (void) removeFromParent;
-```
-
-## Mentioned In
-
-- [Accessing and Modifying the Node Tree](../accessing-and-modifying-the-node-tree.md)
-- [Maximizing Node Drawing Performance](../maximizing-node-drawing-performance.md)
-
-## See Also
-
-### Modifying the Node Tree
-
-- [Accessing and Modifying the Node Tree](../accessing-and-modifying-the-node-tree.md): See the objects and functions you use to control the node tree’s composition.
-- [addChild:](addchild%28__%29.md): Adds a node to the end of the receiver’s list of child nodes.
-- [insertChild:atIndex:](insertchild%28__at_%29.md): Inserts a node into a specific position in the receiver’s list of child nodes.
-- [isEqualToNode:](isequal%28to_%29.md): Compares the parameter node to the receiving node.
-- [moveToParent:](move%28toparent_%29.md): Moves the node to a new parent node in the scene.
-- [removeAllChildren](removeallchildren%28%29.md): Removes all of the node’s children.
-- [removeChildrenInArray:](removechildren%28in_%29.md): Removes a list of children from the receiving node.
-- [inParentHierarchy:](inparenthierarchy%28__%29.md): Returns a Boolean value that indicates whether the node is a descendant of the target node.
-
-# Document: run(_:)
-
-Source path: documentation/spritekit/sknode/run(_:)
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/run(_:)
-Description: Framework: SpriteKit Kind: Instance Method Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# run(\_:) (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Adds an action to the list of actions executed by the node.
-
-## Declaration
-
-```swift
-func run(_ action: SKAction)
-```
-
-## Parameters
-
-- `action`: The action to perform.
-
-## Mentioned In
-
-- [Getting Started with Actions](../getting-started-with-actions.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The new action is processed the next time the scene’s animation loop is processed.
-
-## See Also
-
-### Running Actions
-
-- [Getting Started with Actions](../getting-started-with-actions.md): Create, configure, and run actions in SpriteKit.
-- [run(\_:completion:)](run%28__completion_%29.md): Adds an action to the list of actions executed by the node and schedules the argument block to be run upon completion of the action.
-- [run(\_:withKey:)](run%28__withkey_%29.md): Adds an identifiable action to the list of actions executed by the node.
-- [speed](speed.md): A speed modifier applied to all actions executed by a node and its descendants.
-- [isPaused](ispaused.md): A Boolean value that determines whether actions on the node and its descendants are processed.
-- [action(forKey:)](action%28forkey_%29.md): Returns an action associated with a specific key.
-- [hasActions()](hasactions%28%29.md): Returns a Boolean value that indicates whether the node is executing actions.
-- [removeAllActions()](removeallactions%28%29.md): Ends and removes all actions from the node.
-- [removeAction(forKey:)](removeaction%28forkey_%29.md): Removes an action associated with a specific key.
-
-# runAction: (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Adds an action to the list of actions executed by the node.
-
-## Declaration
-
-```objectivec
-- (void) runAction:(SKAction *) action;
-```
-
-## Parameters
-
-- `action`: The action to perform.
-
-## Mentioned In
-
-- [Getting Started with Actions](../getting-started-with-actions.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The new action is processed the next time the scene’s animation loop is processed.
-
-## See Also
-
-### Running Actions
-
-- [Getting Started with Actions](../getting-started-with-actions.md): Create, configure, and run actions in SpriteKit.
-- [runAction:completion:](run%28__completion_%29.md): Adds an action to the list of actions executed by the node and schedules the argument block to be run upon completion of the action.
-- [runAction:withKey:](run%28__withkey_%29.md): Adds an identifiable action to the list of actions executed by the node.
-- [speed](speed.md): A speed modifier applied to all actions executed by a node and its descendants.
-- [paused](ispaused.md): A Boolean value that determines whether actions on the node and its descendants are processed.
-- [actionForKey:](action%28forkey_%29.md): Returns an action associated with a specific key.
-- [hasActions](hasactions%28%29.md): Returns a Boolean value that indicates whether the node is executing actions.
-- [removeAllActions](removeallactions%28%29.md): Ends and removes all actions from the node.
-- [removeActionForKey:](removeaction%28forkey_%29.md): Removes an action associated with a specific key.
-
-# Document: run(_:completion:)
-
-Source path: documentation/spritekit/sknode/run(_:completion:)
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/run(_:completion:)
-Description: Framework: SpriteKit Kind: Instance Method Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# run(\_:completion:) (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Adds an action to the list of actions executed by the node and schedules the argument block to be run upon completion of the action.
-
-## Declaration
-
-```swift
-func run(_ action: SKAction, completion block: @escaping () -> Void)
-```
-
-```swift
-func run(_ action: SKAction) async
-```
-
-```swift
-func run(_ action: SKAction, completion block: @escaping @Sendable () -> Void)
-```
-
-## Parameters
-
-- `action`: The action to perform.
-- `block`: A completion block called when the action completes.
-
-## Mentioned In
-
-- [Getting Started with Actions](../getting-started-with-actions.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-> **Important**
-
->  You can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:
->
-> ```swift
-> func run(_ action: SKAction) async
-> ```
->
-> For information about concurrency and asynchronous code in Swift, see [Calling Objective-C APIs Asynchronously](https://developer.apple.com/documentation/swift/calling-objective-c-apis-asynchronously).
-
-## See Also
-
-### Running Actions
-
-- [Getting Started with Actions](../getting-started-with-actions.md): Create, configure, and run actions in SpriteKit.
-- [run(\_:)](run%28__%29.md): Adds an action to the list of actions executed by the node.
-- [run(\_:withKey:)](run%28__withkey_%29.md): Adds an identifiable action to the list of actions executed by the node.
-- [speed](speed.md): A speed modifier applied to all actions executed by a node and its descendants.
-- [isPaused](ispaused.md): A Boolean value that determines whether actions on the node and its descendants are processed.
-- [action(forKey:)](action%28forkey_%29.md): Returns an action associated with a specific key.
-- [hasActions()](hasactions%28%29.md): Returns a Boolean value that indicates whether the node is executing actions.
-- [removeAllActions()](removeallactions%28%29.md): Ends and removes all actions from the node.
-- [removeAction(forKey:)](removeaction%28forkey_%29.md): Removes an action associated with a specific key.
-
-# runAction:completion: (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Adds an action to the list of actions executed by the node and schedules the argument block to be run upon completion of the action.
-
-## Declaration
-
-```objectivec
-- (void) runAction:(SKAction *) action completion:(void (^)()) block;
-```
-
-## Parameters
-
-- `action`: The action to perform.
-- `block`: A completion block called when the action completes.
-
-## Mentioned In
-
-- [Getting Started with Actions](../getting-started-with-actions.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-> **Important**
-
->  You can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:
->
-> ```swift
-> func run(_ action: SKAction) async
-> ```
->
-> For information about concurrency and asynchronous code in Swift, see [Calling Objective-C APIs Asynchronously](https://developer.apple.com/documentation/swift/calling-objective-c-apis-asynchronously).
-
-## See Also
-
-### Running Actions
-
-- [Getting Started with Actions](../getting-started-with-actions.md): Create, configure, and run actions in SpriteKit.
-- [runAction:](run%28__%29.md): Adds an action to the list of actions executed by the node.
-- [runAction:withKey:](run%28__withkey_%29.md): Adds an identifiable action to the list of actions executed by the node.
-- [speed](speed.md): A speed modifier applied to all actions executed by a node and its descendants.
-- [paused](ispaused.md): A Boolean value that determines whether actions on the node and its descendants are processed.
-- [actionForKey:](action%28forkey_%29.md): Returns an action associated with a specific key.
-- [hasActions](hasactions%28%29.md): Returns a Boolean value that indicates whether the node is executing actions.
-- [removeAllActions](removeallactions%28%29.md): Ends and removes all actions from the node.
-- [removeActionForKey:](removeaction%28forkey_%29.md): Removes an action associated with a specific key.
-
-# Document: run(_:withKey:)
-
-Source path: documentation/spritekit/sknode/run(_:withkey:)
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/run(_:withkey:)
-Description: Framework: SpriteKit Kind: Instance Method Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# run(\_:withKey:) (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Adds an identifiable action to the list of actions executed by the node.
-
-## Declaration
-
-```swift
-func run(_ action: SKAction, withKey key: String)
-```
-
-## Parameters
-
-- `action`: The action to perform.
-- `key`: A unique key used to identify the action.
-
-## Mentioned In
-
-- [Controlling Actions Precisely by Using Names](../controlling-actions-precisely-by-using-names.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This method is identical to [run(\_:)](run%28__%29.md), but the action is stored so that it can be retrieved later. If an action using the same key is already running, it is removed before the new action is added.
-
-## See Also
-
-### Running Actions
-
-- [Getting Started with Actions](../getting-started-with-actions.md): Create, configure, and run actions in SpriteKit.
-- [run(\_:)](run%28__%29.md): Adds an action to the list of actions executed by the node.
-- [run(\_:completion:)](run%28__completion_%29.md): Adds an action to the list of actions executed by the node and schedules the argument block to be run upon completion of the action.
-- [speed](speed.md): A speed modifier applied to all actions executed by a node and its descendants.
-- [isPaused](ispaused.md): A Boolean value that determines whether actions on the node and its descendants are processed.
-- [action(forKey:)](action%28forkey_%29.md): Returns an action associated with a specific key.
-- [hasActions()](hasactions%28%29.md): Returns a Boolean value that indicates whether the node is executing actions.
-- [removeAllActions()](removeallactions%28%29.md): Ends and removes all actions from the node.
-- [removeAction(forKey:)](removeaction%28forkey_%29.md): Removes an action associated with a specific key.
-
-# runAction:withKey: (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Adds an identifiable action to the list of actions executed by the node.
-
-## Declaration
-
-```objectivec
-- (void) runAction:(SKAction *) action withKey:(NSString *) key;
-```
-
-## Parameters
-
-- `action`: The action to perform.
-- `key`: A unique key used to identify the action.
-
-## Mentioned In
-
-- [Controlling Actions Precisely by Using Names](../controlling-actions-precisely-by-using-names.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This method is identical to [runAction:](run%28__%29.md), but the action is stored so that it can be retrieved later. If an action using the same key is already running, it is removed before the new action is added.
-
-## See Also
-
-### Running Actions
-
-- [Getting Started with Actions](../getting-started-with-actions.md): Create, configure, and run actions in SpriteKit.
-- [runAction:](run%28__%29.md): Adds an action to the list of actions executed by the node.
-- [runAction:completion:](run%28__completion_%29.md): Adds an action to the list of actions executed by the node and schedules the argument block to be run upon completion of the action.
-- [speed](speed.md): A speed modifier applied to all actions executed by a node and its descendants.
-- [paused](ispaused.md): A Boolean value that determines whether actions on the node and its descendants are processed.
-- [actionForKey:](action%28forkey_%29.md): Returns an action associated with a specific key.
-- [hasActions](hasactions%28%29.md): Returns a Boolean value that indicates whether the node is executing actions.
-- [removeAllActions](removeallactions%28%29.md): Ends and removes all actions from the node.
-- [removeActionForKey:](removeaction%28forkey_%29.md): Removes an action associated with a specific key.
-
-# Document: scene
-
-Source path: documentation/spritekit/sknode/scene
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/scene
-Description: Framework: SpriteKit Kind: Instance Property Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# scene (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Property  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-The scene node that contains this node.
-
-## Declaration
-
-```swift
-var scene: SKScene? { get }
-```
-
-## Mentioned In
-
-- [Accessing and Modifying the Node Tree](../accessing-and-modifying-the-node-tree.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If the node is not embedded in a scene, the value is `nil`.
-
-## See Also
-
-### Accessing Related Nodes
-
-- [About SpriteKit Coordinate Systems](../about-spritekit-coordinate-systems.md): Learn how a node conforms to its coordinate systems.
-- [parent](parent.md): The node’s parent node.
-- [children](children.md): The node’s children.
-
-# scene (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Property  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-The scene node that contains this node.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readonly, nullable) SKScene * scene;
-```
-
-## Mentioned In
-
-- [Accessing and Modifying the Node Tree](../accessing-and-modifying-the-node-tree.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If the node is not embedded in a scene, the value is `nil`.
-
-## See Also
-
-### Accessing Related Nodes
-
-- [About SpriteKit Coordinate Systems](../about-spritekit-coordinate-systems.md): Learn how a node conforms to its coordinate systems.
-- [parent](parent.md): The node’s parent node.
-- [children](children.md): The node’s children.
-
-# Document: setScale(_:)
-
-Source path: documentation/spritekit/sknode/setscale(_:)
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/setscale(_:)
-Description: Framework: SpriteKit Kind: Instance Method Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# setScale(\_:) (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Sets the [xScale](xscale.md) and [yScale](yscale.md) properties of the node.
-
-## Declaration
-
-```swift
-func setScale(_ scale: CGFloat)
-```
-
-## Parameters
-
-- `scale`: The new value to use for the node’s [xScale](xscale.md) and [yScale](yscale.md) properties.
-
-## See Also
-
-### Scaling and Rotating
-
-- [zRotation](zrotation.md): The Euler rotation about the z axis (in radians).
-- [xScale](xscale.md): A scaling factor that multiplies the width of a node and its children.
-- [yScale](yscale.md): A scaling factor that multiplies the height of a node and its children.
-
-# setScale: (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Sets the [xScale](xscale.md) and [yScale](yscale.md) properties of the node.
-
-## Declaration
-
-```objectivec
-- (void) setScale:(CGFloat) scale;
-```
-
-## Parameters
-
-- `scale`: The new value to use for the node’s [xScale](xscale.md) and [yScale](yscale.md) properties.
-
-## See Also
-
-### Scaling and Rotating
-
-- [zRotation](zrotation.md): The Euler rotation about the z axis (in radians).
-- [xScale](xscale.md): A scaling factor that multiplies the width of a node and its children.
-- [yScale](yscale.md): A scaling factor that multiplies the height of a node and its children.
-
-# Document: setValue(_:forAttribute:)
-
-Source path: documentation/spritekit/sknode/setvalue(_:forattribute:)
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/setvalue(_:forattribute:)
-Description: Framework: SpriteKit Kind: Instance Method Availability: iOS 10.0+ (deprecated in 10.0) · iPadOS 10.0+ (deprecated in 10.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.12+ (deprecated in 10.12) · tvOS 10.0+ (de…
-
-# setValue(\_:forAttribute:) (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS 10.0+ (deprecated in 10.0) · iPadOS 10.0+ (deprecated in 10.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.12+ (deprecated in 10.12) · tvOS 10.0+ (deprecated in 10.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.0+ (deprecated in 3.0)
-
-Sets an attribute value for an attached shader
-
-> Attributes are only available to node classes supporting [SKShader](../skshader.md), such as [SKSpriteNode](../skspritenode.md), [SKEffectNode](../skeffectnode.md) and [SKShapeNode](../skshapenode.md).
-
-## Declaration
-
-```swift
-func setValue(_ value: SKAttributeValue, forAttribute key: String)
-```
-
-## Parameters
-
-- `value`: An attribute value object containing the scalar or vector value to set in the attached shader.
-- `key`: The attribute name.
-
-## See Also
-
-### Setting a Node’s Unique Attributes for a Shader
-
-- [attributeValues](attributevalues.md): Deprecated. The values of each attribute associated with the node’s attached shader.
-- [value(forAttributeNamed:)](value%28forattributenamed_%29.md): Deprecated. The value of a shader attribute.
-
-# setValue:forAttributeNamed: (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS 10.0+ (deprecated in 10.0) · iPadOS 10.0+ (deprecated in 10.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.12+ (deprecated in 10.12) · tvOS 10.0+ (deprecated in 10.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.0+ (deprecated in 3.0)
-
-Sets an attribute value for an attached shader
-
-> Attributes are only available to node classes supporting [SKShader](../skshader.md), such as [SKSpriteNode](../skspritenode.md), [SKEffectNode](../skeffectnode.md) and [SKShapeNode](../skshapenode.md).
-
-## Declaration
-
-```objectivec
-- (void) setValue:(SKAttributeValue *) value forAttributeNamed:(NSString *) key;
-```
-
-## Parameters
-
-- `value`: An attribute value object containing the scalar or vector value to set in the attached shader.
-- `key`: The attribute name.
-
-## See Also
-
-### Setting a Node’s Unique Attributes for a Shader
-
-- [attributeValues](attributevalues.md): Deprecated. The values of each attribute associated with the node’s attached shader.
-- [valueForAttributeNamed:](value%28forattributenamed_%29.md): Deprecated. The value of a shader attribute.
-
-# Document: speed
-
-Source path: documentation/spritekit/sknode/speed
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/speed
-Description: Framework: SpriteKit Kind: Instance Property Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# speed (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Property  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-A speed modifier applied to all actions executed by a node and its descendants.
-
-## Declaration
-
-```swift
-var speed: CGFloat { get set }
-```
-
-## Mentioned In
-
-- [About Node Property Propagation](../about-node-property-propagation.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The default value is `1.0`, which means that all actions run at their normal speed. If you set a different speed, time appears to run faster or slower for all actions executed on the node and its descendants. For example, if you set a speed value of `2.0`, actions run twice as fast.
-
-## See Also
-
-### Running Actions
-
-- [Getting Started with Actions](../getting-started-with-actions.md): Create, configure, and run actions in SpriteKit.
-- [run(\_:)](run%28__%29.md): Adds an action to the list of actions executed by the node.
-- [run(\_:completion:)](run%28__completion_%29.md): Adds an action to the list of actions executed by the node and schedules the argument block to be run upon completion of the action.
-- [run(\_:withKey:)](run%28__withkey_%29.md): Adds an identifiable action to the list of actions executed by the node.
-- [isPaused](ispaused.md): A Boolean value that determines whether actions on the node and its descendants are processed.
-- [action(forKey:)](action%28forkey_%29.md): Returns an action associated with a specific key.
-- [hasActions()](hasactions%28%29.md): Returns a Boolean value that indicates whether the node is executing actions.
-- [removeAllActions()](removeallactions%28%29.md): Ends and removes all actions from the node.
-- [removeAction(forKey:)](removeaction%28forkey_%29.md): Removes an action associated with a specific key.
-
-# speed (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Property  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-A speed modifier applied to all actions executed by a node and its descendants.
-
-## Declaration
-
-```objectivec
-@property (nonatomic) CGFloat speed;
-```
-
-## Mentioned In
-
-- [About Node Property Propagation](../about-node-property-propagation.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The default value is `1.0`, which means that all actions run at their normal speed. If you set a different speed, time appears to run faster or slower for all actions executed on the node and its descendants. For example, if you set a speed value of `2.0`, actions run twice as fast.
-
-## See Also
-
-### Running Actions
-
-- [Getting Started with Actions](../getting-started-with-actions.md): Create, configure, and run actions in SpriteKit.
-- [runAction:](run%28__%29.md): Adds an action to the list of actions executed by the node.
-- [runAction:completion:](run%28__completion_%29.md): Adds an action to the list of actions executed by the node and schedules the argument block to be run upon completion of the action.
-- [runAction:withKey:](run%28__withkey_%29.md): Adds an identifiable action to the list of actions executed by the node.
-- [paused](ispaused.md): A Boolean value that determines whether actions on the node and its descendants are processed.
-- [actionForKey:](action%28forkey_%29.md): Returns an action associated with a specific key.
-- [hasActions](hasactions%28%29.md): Returns a Boolean value that indicates whether the node is executing actions.
-- [removeAllActions](removeallactions%28%29.md): Ends and removes all actions from the node.
-- [removeActionForKey:](removeaction%28forkey_%29.md): Removes an action associated with a specific key.
-
-# Document: subscript(_:)
-
-Source path: documentation/spritekit/sknode/subscript(_:)
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/subscript(_:)
-Description: Framework: SpriteKit Kind: Instance Subscript Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# subscript(\_:) (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Subscript  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Returns an array of nodes that match the name parameter.
-
-## Declaration
-
-```swift
-subscript(name: String) -> [SKNode] { get }
-```
-
-## Parameters
-
-- `name`: The name to search for. This may be either the literal name of the node or a customized search string. See `Searching the Node Tree`.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An array of `SKNode` objects that match the name. If no matching nodes are found, an empty array is returned.
-
-## Mentioned In
-
-- [Searching the Node Tree](../searching-the-node-tree.md)
-
-## See Also
-
-### Accessing Nodes by Name
-
-- [Searching the Node Tree](../searching-the-node-tree.md): Access nodes by name to avoid needing an instance variable.
-- [name](name.md): The node’s assignable name.
-- [childNode(withName:)](childnode%28withname_%29.md): Searches the children of the receiving node for a node with a specific name.
-- [enumerateChildNodes(withName:using:)](enumeratechildnodes%28withname_using_%29.md): Searches the children of the receiving node to perform processing for nodes that share a name.
-
-# objectForKeyedSubscript: (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
-
-Returns an array of nodes that match the name parameter.
-
-## Declaration
-
-```objectivec
-- (NSArray<SKNode *> *) objectForKeyedSubscript:(NSString *) name;
-```
-
-## Parameters
-
-- `name`: The name to search for. This may be either the literal name of the node or a customized search string. See `Searching the Node Tree`.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An array of `SKNode` objects that match the name. If no matching nodes are found, an empty array is returned.
-
-## Mentioned In
-
-- [Searching the Node Tree](../searching-the-node-tree.md)
-
-## See Also
-
-### Accessing Nodes by Name
-
-- [Searching the Node Tree](../searching-the-node-tree.md): Access nodes by name to avoid needing an instance variable.
-- [name](name.md): The node’s assignable name.
-- [childNodeWithName:](childnode%28withname_%29.md): Searches the children of the receiving node for a node with a specific name.
-- [enumerateChildNodesWithName:usingBlock:](enumeratechildnodes%28withname_using_%29.md): Searches the children of the receiving node to perform processing for nodes that share a name.
-
-# Document: userData
-
-Source path: documentation/spritekit/sknode/userdata
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/userdata
-Description: Framework: SpriteKit Kind: Instance Property Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# userData (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Property  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-A dictionary containing arbitrary data.
-
-## Declaration
-
-```swift
-var userData: NSMutableDictionary? { get set }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-You use this property to store your own data in a node. For example, you might store game-specific data about each node to use inside your game logic. This can be a useful alternative to creating your own node subclasses to hold game data.
-
-SpriteKit does not do anything with the data stored in the node. However, the data is archived when the node is archived.
-
-# userData (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Property  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-A dictionary containing arbitrary data.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, retain, nullable) NSMutableDictionary * userData;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-You use this property to store your own data in a node. For example, you might store game-specific data about each node to use inside your game logic. This can be a useful alternative to creating your own node subclasses to hold game data.
-
-SpriteKit does not do anything with the data stored in the node. However, the data is archived when the node is archived.
-
-# Document: value(forAttributeNamed:)
-
-Source path: documentation/spritekit/sknode/value(forattributenamed:)
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/value(forattributenamed:)
-Description: Framework: SpriteKit Kind: Instance Method Availability: iOS 10.0+ (deprecated in 10.0) · iPadOS 10.0+ (deprecated in 10.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.12+ (deprecated in 10.12) · tvOS 10.0+ (de…
-
-# value(forAttributeNamed:) (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS 10.0+ (deprecated in 10.0) · iPadOS 10.0+ (deprecated in 10.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.12+ (deprecated in 10.12) · tvOS 10.0+ (deprecated in 10.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.0+ (deprecated in 3.0)
-
-The value of a shader attribute.
-
-> Attributes are only available to node classes supporting [SKShader](../skshader.md), such as [SKSpriteNode](../skspritenode.md), [SKEffectNode](../skeffectnode.md) and [SKShapeNode](../skshapenode.md).
-
-## Declaration
-
-```swift
-func value(forAttributeNamed key: String) -> SKAttributeValue?
-```
-
-## Parameters
-
-- `key`: The attribute name.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An attribute value object containing the scalar or vector value or `nil` if no such attribute exists.
-
-## See Also
-
-### Setting a Node’s Unique Attributes for a Shader
-
-- [attributeValues](attributevalues.md): Deprecated. The values of each attribute associated with the node’s attached shader.
-- [setValue(\_:forAttribute:)](setvalue%28__forattribute_%29.md): Deprecated. Sets an attribute value for an attached shader
-
-# valueForAttributeNamed: (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Method  
-**Availability:** iOS 10.0+ (deprecated in 10.0) · iPadOS 10.0+ (deprecated in 10.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.12+ (deprecated in 10.12) · tvOS 10.0+ (deprecated in 10.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.0+ (deprecated in 3.0)
-
-The value of a shader attribute.
-
-> Attributes are only available to node classes supporting [SKShader](../skshader.md), such as [SKSpriteNode](../skspritenode.md), [SKEffectNode](../skeffectnode.md) and [SKShapeNode](../skshapenode.md).
-
-## Declaration
-
-```objectivec
-- (SKAttributeValue *) valueForAttributeNamed:(NSString *) key;
-```
-
-## Parameters
-
-- `key`: The attribute name.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An attribute value object containing the scalar or vector value or `nil` if no such attribute exists.
-
-## See Also
-
-### Setting a Node’s Unique Attributes for a Shader
-
-- [attributeValues](attributevalues.md): Deprecated. The values of each attribute associated with the node’s attached shader.
-- [setValue:forAttributeNamed:](setvalue%28__forattribute_%29.md): Deprecated. Sets an attribute value for an attached shader
-
-# Document: xScale
-
-Source path: documentation/spritekit/sknode/xscale
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/xscale
-Description: Framework: SpriteKit Kind: Instance Property Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# xScale (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Property  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-A scaling factor that multiplies the width of a node and its children.
-
-## Declaration
-
-```swift
-var xScale: CGFloat { get set }
-```
-
-## Mentioned In
-
-- [Getting Started with a Camera](../getting-started-with-a-camera.md)
-- [Resizing a Sprite in Nine Parts](../resizing-a-sprite-in-nine-parts.md)
-- [About Node Property Propagation](../about-node-property-propagation.md)
-- [Getting Started with Nodes](../getting-started-with-nodes.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The [xScale](xscale.md) property scales the width of the node and all of its descendants. The scale value affects how a node’s frame is calculated, its hit test area, how it is drawn, and other similar characteristics. The default value is `1.0`.
-
-## See Also
-
-### Scaling and Rotating
-
-- [zRotation](zrotation.md): The Euler rotation about the z axis (in radians).
-- [setScale(\_:)](setscale%28__%29.md): Sets the [xScale](xscale.md) and [yScale](yscale.md) properties of the node.
-- [yScale](yscale.md): A scaling factor that multiplies the height of a node and its children.
-
-# xScale (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Property  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-A scaling factor that multiplies the width of a node and its children.
-
-## Declaration
-
-```objectivec
-@property (nonatomic) CGFloat xScale;
-```
-
-## Mentioned In
-
-- [Getting Started with a Camera](../getting-started-with-a-camera.md)
-- [Resizing a Sprite in Nine Parts](../resizing-a-sprite-in-nine-parts.md)
-- [About Node Property Propagation](../about-node-property-propagation.md)
-- [Getting Started with Nodes](../getting-started-with-nodes.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The [xScale](xscale.md) property scales the width of the node and all of its descendants. The scale value affects how a node’s frame is calculated, its hit test area, how it is drawn, and other similar characteristics. The default value is `1.0`.
-
-## See Also
-
-### Scaling and Rotating
-
-- [zRotation](zrotation.md): The Euler rotation about the z axis (in radians).
-- [setScale:](setscale%28__%29.md): Sets the [xScale](xscale.md) and [yScale](yscale.md) properties of the node.
-- [yScale](yscale.md): A scaling factor that multiplies the height of a node and its children.
-
-# Document: yScale
-
-Source path: documentation/spritekit/sknode/yscale
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/yscale
-Description: Framework: SpriteKit Kind: Instance Property Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# yScale (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Property  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-A scaling factor that multiplies the height of a node and its children.
-
-## Declaration
-
-```swift
-var yScale: CGFloat { get set }
-```
-
-## Mentioned In
-
-- [Getting Started with a Camera](../getting-started-with-a-camera.md)
-- [Resizing a Sprite in Nine Parts](../resizing-a-sprite-in-nine-parts.md)
-- [About Node Property Propagation](../about-node-property-propagation.md)
-- [Getting Started with Nodes](../getting-started-with-nodes.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The [yScale](yscale.md) property scales the height of the node and all of its descendants. The scale value affects how a node’s frame is calculated, its hit test area, how it is drawn, and other similar characteristics. The default value is `1.0`.
-
-## See Also
-
-### Scaling and Rotating
-
-- [zRotation](zrotation.md): The Euler rotation about the z axis (in radians).
-- [setScale(\_:)](setscale%28__%29.md): Sets the [xScale](xscale.md) and [yScale](yscale.md) properties of the node.
-- [xScale](xscale.md): A scaling factor that multiplies the width of a node and its children.
-
-# yScale (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Property  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-A scaling factor that multiplies the height of a node and its children.
-
-## Declaration
-
-```objectivec
-@property (nonatomic) CGFloat yScale;
-```
-
-## Mentioned In
-
-- [Getting Started with a Camera](../getting-started-with-a-camera.md)
-- [Resizing a Sprite in Nine Parts](../resizing-a-sprite-in-nine-parts.md)
-- [About Node Property Propagation](../about-node-property-propagation.md)
-- [Getting Started with Nodes](../getting-started-with-nodes.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The [yScale](yscale.md) property scales the height of the node and all of its descendants. The scale value affects how a node’s frame is calculated, its hit test area, how it is drawn, and other similar characteristics. The default value is `1.0`.
-
-## See Also
-
-### Scaling and Rotating
-
-- [zRotation](zrotation.md): The Euler rotation about the z axis (in radians).
-- [setScale:](setscale%28__%29.md): Sets the [xScale](xscale.md) and [yScale](yscale.md) properties of the node.
-- [xScale](xscale.md): A scaling factor that multiplies the width of a node and its children.
-
-# Document: zPosition
-
-Source path: documentation/spritekit/sknode/zposition
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/zposition
-Description: Framework: SpriteKit Kind: Instance Property Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# zPosition (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Property  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-The height of the node relative to its parent.
-
-## Declaration
-
-```swift
-var zPosition: CGFloat { get set }
-```
-
-## Mentioned In
-
-- [About Node Drawing Order](../about-node-drawing-order.md)
-- [About Node Property Propagation](../about-node-property-propagation.md)
-- [Controlling User Interaction on Nodes](../controlling-user-interaction-on-nodes.md)
-- [Getting Started with Nodes](../getting-started-with-nodes.md)
-- [Maximizing Node Drawing Performance](../maximizing-node-drawing-performance.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The default value is `0.0`. The positive z axis is projected toward the viewer so that nodes with larger z-position values are closer to the viewer. When a node tree is rendered, the height of each node (in absolute coordinates) is calculated and then all nodes in the tree are rendered from smallest z-position value to largest z-position value. If multiple nodes share the same z-position, those nodes are sorted so that parent nodes are drawn before their children, and siblings are rendered in the order that they appear in their parent’s [children](children.md) array. Hit-testing is processed in the opposite order.
-
-The [SKView](../skview.md) class’s [ignoresSiblingOrder](../skview/ignoressiblingorder.md) property controls whether node sorting is enabled for nodes at the same z-position.
-
-> **Important**
-
->  Descendants of an effect node or a crop node are not rendered with other nodes in the same tree. An effect node ([SKEffectNode](../skeffectnode.md)) renders its children into a private framebuffer as a separate node tree, then the composited image is rendered into the tree that contains the effect node. A crop node ([SKCropNode](../skcropnode.md)) works similarly; it renders the mask separately, then uses the mask to render its actual descendants into the tree that contains the crop node.
-
-<a id="Using-a-Nodes-Depth-to-Add-Effects"></a>
-
-### Using a Node’s Depth to Add Effects
-
-SpriteKit uses the [zPosition](zposition.md) value only to determine the hit testing and drawing order. You can also the z position to implement your own game effects. For example, you might use the height of a node to determine how it is rendered or how it moves onscreen. In this way, you can simulate fog or parallax effects. SpriteKit does not create these effects for you. Usually, you implement them by processing the scene immediately before it is rendered.
-
-## See Also
-
-### Configuring Draw Order
-
-- [About Node Drawing Order](../about-node-drawing-order.md): Understand how SpriteKit layers your scene’s nodes from top to bottom.
-
-# zPosition (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Property  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-The height of the node relative to its parent.
-
-## Declaration
-
-```objectivec
-@property (nonatomic) CGFloat zPosition;
-```
-
-## Mentioned In
-
-- [About Node Drawing Order](../about-node-drawing-order.md)
-- [About Node Property Propagation](../about-node-property-propagation.md)
-- [Controlling User Interaction on Nodes](../controlling-user-interaction-on-nodes.md)
-- [Getting Started with Nodes](../getting-started-with-nodes.md)
-- [Maximizing Node Drawing Performance](../maximizing-node-drawing-performance.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The default value is `0.0`. The positive z axis is projected toward the viewer so that nodes with larger z-position values are closer to the viewer. When a node tree is rendered, the height of each node (in absolute coordinates) is calculated and then all nodes in the tree are rendered from smallest z-position value to largest z-position value. If multiple nodes share the same z-position, those nodes are sorted so that parent nodes are drawn before their children, and siblings are rendered in the order that they appear in their parent’s [children](children.md) array. Hit-testing is processed in the opposite order.
-
-The [SKView](../skview.md) class’s [ignoresSiblingOrder](../skview/ignoressiblingorder.md) property controls whether node sorting is enabled for nodes at the same z-position.
-
-> **Important**
-
->  Descendants of an effect node or a crop node are not rendered with other nodes in the same tree. An effect node ([SKEffectNode](../skeffectnode.md)) renders its children into a private framebuffer as a separate node tree, then the composited image is rendered into the tree that contains the effect node. A crop node ([SKCropNode](../skcropnode.md)) works similarly; it renders the mask separately, then uses the mask to render its actual descendants into the tree that contains the crop node.
-
-<a id="Using-a-Nodes-Depth-to-Add-Effects"></a>
-
-### Using a Node’s Depth to Add Effects
-
-SpriteKit uses the [zPosition](zposition.md) value only to determine the hit testing and drawing order. You can also the z position to implement your own game effects. For example, you might use the height of a node to determine how it is rendered or how it moves onscreen. In this way, you can simulate fog or parallax effects. SpriteKit does not create these effects for you. Usually, you implement them by processing the scene immediately before it is rendered.
-
-## See Also
-
-### Configuring Draw Order
-
-- [About Node Drawing Order](../about-node-drawing-order.md): Understand how SpriteKit layers your scene’s nodes from top to bottom.
-
-# Document: zRotation
-
-Source path: documentation/spritekit/sknode/zrotation
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode/zrotation
-Description: Framework: SpriteKit Kind: Instance Property Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# zRotation (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Property  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-The Euler rotation about the z axis (in radians).
-
-## Declaration
-
-```swift
-var zRotation: CGFloat { get set }
-```
-
-## Mentioned In
-
-- [About Node Property Propagation](../about-node-property-propagation.md)
-- [About SpriteKit Coordinate Systems](../about-spritekit-coordinate-systems.md)
-- [Getting Started with a Camera](../getting-started-with-a-camera.md)
-- [Getting Started with Nodes](../getting-started-with-nodes.md)
-- [Making Physics Bodies Move](../making-physics-bodies-move.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The default value is `0.0`, which indicates no rotation. A positive value indicates a counterclockwise rotation. When the coordinate system is rotated, it affects the node and its descendants. The rotation affects the node’s [frame](frame.md) property, hit testing, rendering, and other similar characteristics.
-
-## See Also
-
-### Scaling and Rotating
-
-- [setScale(\_:)](setscale%28__%29.md): Sets the [xScale](xscale.md) and [yScale](yscale.md) properties of the node.
-- [xScale](xscale.md): A scaling factor that multiplies the width of a node and its children.
-- [yScale](yscale.md): A scaling factor that multiplies the height of a node and its children.
-
-# zRotation (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Instance Property  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-The Euler rotation about the z axis (in radians).
-
-## Declaration
-
-```objectivec
-@property (nonatomic) CGFloat zRotation;
-```
-
-## Mentioned In
-
-- [About Node Property Propagation](../about-node-property-propagation.md)
-- [About SpriteKit Coordinate Systems](../about-spritekit-coordinate-systems.md)
-- [Getting Started with a Camera](../getting-started-with-a-camera.md)
-- [Getting Started with Nodes](../getting-started-with-nodes.md)
-- [Making Physics Bodies Move](../making-physics-bodies-move.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The default value is `0.0`, which indicates no rotation. A positive value indicates a counterclockwise rotation. When the coordinate system is rotated, it affects the node and its descendants. The rotation affects the node’s [frame](frame.md) property, hit testing, rendering, and other similar characteristics.
-
-## See Also
-
-### Scaling and Rotating
-
-- [setScale:](setscale%28__%29.md): Sets the [xScale](xscale.md) and [yScale](yscale.md) properties of the node.
-- [xScale](xscale.md): A scaling factor that multiplies the width of a node and its children.
-- [yScale](yscale.md): A scaling factor that multiplies the height of a node and its children.
-
-# Document: SKNodeFocusBehavior
-
-Source path: documentation/spritekit/sknodefocusbehavior
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknodefocusbehavior
-Description: Framework: SpriteKit Kind: Enumeration Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 9.0+
-
-# SKNodeFocusBehavior (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Enumeration  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 9.0+
-
-Options for the focusable states of a SpriteKit node.
-
-## Declaration
-
-```swift
-enum SKNodeFocusBehavior
-```
-
-## Topics
-
-### Enumeration Cases
-
-- [SKNodeFocusBehavior.none](sknodefocusbehavior/none.md): Node is not focusable.
-- [SKNodeFocusBehavior.occluding](sknodefocusbehavior/occluding.md): Node is not focusable and prevents nodes that it visually obscures from becoming focusable.
-- [SKNodeFocusBehavior.focusable](sknodefocusbehavior/focusable.md): Node is focusable and prevents nodes that it visually obscures from becoming focusable.
-
-### Initializers
-
-- [init(rawValue:)](sknodefocusbehavior/init%28rawvalue_%29.md)
-
-## Relationships
-
-### Conforms To
-
-- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Enumerations
-
-- [SKActionTimingMode](skactiontimingmode.md): The modes that an action can use to adjust the apparent timing of the action.
-- [SKAttributeType](skattributetype.md): Options that specify an attribute’s data type.
-- [SKBlendMode](skblendmode.md): The modes that describe how the source and destination pixel colors are used to calculate the new destination color.
-- [SKInterpolationMode](skinterpolationmode.md): The modes used to interpolate between keyframes in the sequence.
-- [SKLabelHorizontalAlignmentMode](sklabelhorizontalalignmentmode.md): Options for aligning text horizontally.
-- [SKLabelVerticalAlignmentMode](sklabelverticalalignmentmode.md): Options for aligning text vertically.
-- [SKParticleRenderOrder](skparticlerenderorder.md): The order to use when the emitter’s particles are rendered.
-- [SKRepeatMode](skrepeatmode.md): The modes used to determine how the sequence repeats.
-- [SKSceneScaleMode](skscenescalemode.md): The modes that determine how the scene’s area is mapped to the view that presents it.
-- [SKTextureFilteringMode](sktexturefilteringmode.md): Texture filtering modes to use when the texture is drawn in a size other than its native size.
-- [SKTileAdjacencyMask](sktileadjacencymask.md): An enumeration defining how neighboring tiles are automatically placed next to each other.
-- [SKTileDefinitionRotation](sktiledefinitionrotation.md): The allowed rotations for a given tile.
-- [SKTileSetType](sktilesettype.md): An enumeration defining how tiles are arranged.
-- [SKTransitionDirection](sktransitiondirection.md): For some transitions, the direction in which the transition is performed.
-- [SKUniformType](skuniformtype.md): An enumerated type to identify the type of a uniform object.
-
-# SKNodeFocusBehavior (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Enumeration  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 9.0+
-
-Options for the focusable states of a SpriteKit node.
-
-## Declaration
-
-```objectivec
-enum SKNodeFocusBehavior : NSInteger;
-```
-
-## Topics
-
-### Enumeration Cases
-
-- [SKNodeFocusBehaviorNone](sknodefocusbehavior/none.md): Node is not focusable.
-- [SKNodeFocusBehaviorOccluding](sknodefocusbehavior/occluding.md): Node is not focusable and prevents nodes that it visually obscures from becoming focusable.
-- [SKNodeFocusBehaviorFocusable](sknodefocusbehavior/focusable.md): Node is focusable and prevents nodes that it visually obscures from becoming focusable.
-
-## See Also
-
-### Enumerations
-
-- [SKActionTimingMode](skactiontimingmode.md): The modes that an action can use to adjust the apparent timing of the action.
-- [SKAttributeType](skattributetype.md): Options that specify an attribute’s data type.
-- [SKBlendMode](skblendmode.md): The modes that describe how the source and destination pixel colors are used to calculate the new destination color.
-- [SKInterpolationMode](skinterpolationmode.md): The modes used to interpolate between keyframes in the sequence.
-- [SKLabelHorizontalAlignmentMode](sklabelhorizontalalignmentmode.md): Options for aligning text horizontally.
-- [SKLabelVerticalAlignmentMode](sklabelverticalalignmentmode.md): Options for aligning text vertically.
-- [SKParticleRenderOrder](skparticlerenderorder.md): The order to use when the emitter’s particles are rendered.
-- [SKRepeatMode](skrepeatmode.md): The modes used to determine how the sequence repeats.
-- [SKSceneScaleMode](skscenescalemode.md): The modes that determine how the scene’s area is mapped to the view that presents it.
-- [SKTextureFilteringMode](sktexturefilteringmode.md): Texture filtering modes to use when the texture is drawn in a size other than its native size.
-- [SKTileAdjacencyMask](sktileadjacencymask.md): An enumeration defining how neighboring tiles are automatically placed next to each other.
-- [SKTileDefinitionRotation](sktiledefinitionrotation.md): The allowed rotations for a given tile.
-- [SKTileSetType](sktilesettype.md): An enumeration defining how tiles are arranged.
-- [SKTransitionDirection](sktransitiondirection.md): For some transitions, the direction in which the transition is performed.
-- [SKUniformType](skuniformtype.md): An enumerated type to identify the type of a uniform object.
-
-# Document: SKNodeFocusBehavior.focusable
-
-Source path: documentation/spritekit/sknodefocusbehavior/focusable
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknodefocusbehavior/focusable
-Description: Framework: SpriteKit Kind: Case Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 9.0+
-
-# SKNodeFocusBehavior.focusable (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Case  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 9.0+
-
-Node is focusable and prevents nodes that it visually obscures from becoming focusable.
-
-## Declaration
-
-```swift
-case focusable
-```
-
-## See Also
-
-### Enumeration Cases
-
-- [SKNodeFocusBehavior.none](none.md): Node is not focusable.
-- [SKNodeFocusBehavior.occluding](occluding.md): Node is not focusable and prevents nodes that it visually obscures from becoming focusable.
-
-# SKNodeFocusBehaviorFocusable (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Enumeration Case  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 9.0+
-
-Node is focusable and prevents nodes that it visually obscures from becoming focusable.
-
-## Declaration
-
-```objectivec
-SKNodeFocusBehaviorFocusable
-```
-
-## See Also
-
-### Enumeration Cases
-
-- [SKNodeFocusBehaviorNone](none.md): Node is not focusable.
-- [SKNodeFocusBehaviorOccluding](occluding.md): Node is not focusable and prevents nodes that it visually obscures from becoming focusable.
-
-# Document: init(rawValue:)
-
-Source path: documentation/spritekit/sknodefocusbehavior/init(rawvalue:)
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknodefocusbehavior/init(rawvalue:)
-Description: Framework: SpriteKit Kind: Initializer Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 9.0+
-
-# init(rawValue:)
-
-**Framework:** SpriteKit  
-**Kind:** Initializer  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 9.0+
-
-## Declaration
-
-```swift
-init?(rawValue: Int)
-```
-
-# Document: SKNodeFocusBehavior.none
-
-Source path: documentation/spritekit/sknodefocusbehavior/none
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknodefocusbehavior/none
-Description: Framework: SpriteKit Kind: Case Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 9.0+
-
-# SKNodeFocusBehavior.none (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Case  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 9.0+
-
-Node is not focusable.
-
-## Declaration
-
-```swift
-case none
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This behavior is the default for a node.
-
-## See Also
-
-### Enumeration Cases
-
-- [SKNodeFocusBehavior.occluding](occluding.md): Node is not focusable and prevents nodes that it visually obscures from becoming focusable.
-- [SKNodeFocusBehavior.focusable](focusable.md): Node is focusable and prevents nodes that it visually obscures from becoming focusable.
-
-# SKNodeFocusBehaviorNone (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Enumeration Case  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 9.0+
-
-Node is not focusable.
-
-## Declaration
-
-```objectivec
-SKNodeFocusBehaviorNone
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This behavior is the default for a node.
-
-## See Also
-
-### Enumeration Cases
-
-- [SKNodeFocusBehaviorOccluding](occluding.md): Node is not focusable and prevents nodes that it visually obscures from becoming focusable.
-- [SKNodeFocusBehaviorFocusable](focusable.md): Node is focusable and prevents nodes that it visually obscures from becoming focusable.
-
-# Document: SKNodeFocusBehavior.occluding
-
-Source path: documentation/spritekit/sknodefocusbehavior/occluding
-Canonical documentation: https://developer.apple.com/documentation/spritekit/sknodefocusbehavior/occluding
-Description: Framework: SpriteKit Kind: Case Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 9.0+
-
-# SKNodeFocusBehavior.occluding (Swift)
-
-**Framework:** SpriteKit  
-**Kind:** Case  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 9.0+
-
-Node is not focusable and prevents nodes that it visually obscures from becoming focusable.
-
-## Declaration
-
-```swift
-case occluding
-```
-
-## See Also
-
-### Enumeration Cases
-
-- [SKNodeFocusBehavior.none](none.md): Node is not focusable.
-- [SKNodeFocusBehavior.focusable](focusable.md): Node is focusable and prevents nodes that it visually obscures from becoming focusable.
-
-# SKNodeFocusBehaviorOccluding (Objective-C)
-
-**Framework:** SpriteKit  
-**Kind:** Enumeration Case  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 9.0+
-
-Node is not focusable and prevents nodes that it visually obscures from becoming focusable.
-
-## Declaration
-
-```objectivec
-SKNodeFocusBehaviorOccluding
-```
-
-## See Also
-
-### Enumeration Cases
-
-- [SKNodeFocusBehaviorNone](none.md): Node is not focusable.
-- [SKNodeFocusBehaviorFocusable](focusable.md): Node is focusable and prevents nodes that it visually obscures from becoming focusable.

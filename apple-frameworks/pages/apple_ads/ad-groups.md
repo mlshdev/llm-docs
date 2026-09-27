@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/ad-groups
 
 # Ad Groups
@@ -8,11 +8,15 @@
 **Framework:** Apple Ads  
 **Kind:** API Collection
 
-Create and manage ad groups.
-
 <a id="overview"></a>
 
 ## Overview
+
+> **Deprecated**
+
+> The Apple Ads Campaign Management API is deprecated and will be sunset on January 26, 2027. Use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api) instead.
+
+Create and manage ad groups.
 
 An ad group is a collection of criteria that defines who sees your ad in App Store search results. A basic ad group includes a `startTime`, `endTime`, and `dailyBudgetAmount`. You can add bid amounts, [TargetingDimensions](targetingdimensions.md), and [Targeting Keywords and Negative Keywords](targeting-keywords-and-negative-keywords.md). Use the [Search for Geolocations](search-for-geolocations.md) endpoint to find localities to use for targeting dimensions within ad groups.
 
@@ -63,51 +67,51 @@ For reports with a Maximize Conversions bidding strategy, see campaign and ad gr
 
 ### Ad Group Endpoints
 
-- [Create an Ad Group](create-an-ad-group.md): Creates an ad group as part of a campaign.
-- [Find Ad Groups](find-ad-groups.md): Fetches ad groups within a campaign.
-- [Find Ad Groups (org-level)](find-ad-groups-%28org-level%29.md): Fetches ad groups within an organization.
-- [Get an Ad Group](get-an-ad-group.md): Fetches a specific ad group with a campaign and ad group identifier.
-- [Get all Ad Groups](get-all-ad-groups.md): Fetches all ad groups with a campaign identifier.
-- [Update an Ad Group](update-an-ad-group.md): Updates an ad group with an ad group identifier.
-- [Delete an Ad Group](delete-an-ad-group.md): Deletes an ad group with a campaign and ad group identifier.
+- [Create an Ad Group](create-an-ad-group.md): Deprecated. Creates an ad group as part of a campaign.
+- [Find Ad Groups](find-ad-groups.md): Deprecated. Fetches ad groups within a campaign.
+- [Find Ad Groups (org-level)](find-ad-groups-%28org-level%29.md): Deprecated. Fetches ad groups within an organization.
+- [Get an Ad Group](get-an-ad-group.md): Deprecated. Fetches a specific ad group with a campaign and ad group identifier.
+- [Get all Ad Groups](get-all-ad-groups.md): Deprecated. Fetches all ad groups with a campaign identifier.
+- [Update an Ad Group](update-an-ad-group.md): Deprecated. Updates an ad group with an ad group identifier.
+- [Delete an Ad Group](delete-an-ad-group.md): Deprecated. Deletes an ad group with a campaign and ad group identifier.
 
 ### Ad Group Request and Response Objects
 
-- [AdGroup](adgroup.md): The response to ad group requests.
-- [AdGroupUpdate](adgroupupdate.md): The list of ad group fields that are updatable.
-- [AdGroupResponse](adgroupresponse.md): A container for the ad group response body.
-- [AdGroupListResponse](adgrouplistresponse.md): The response details of ad group requests.
+- [AdGroup](adgroup.md): Deprecated. The response to ad group requests.
+- [AdGroupUpdate](adgroupupdate.md): Deprecated. The list of ad group fields that are updatable.
+- [AdGroupResponse](adgroupresponse.md): Deprecated. A container for the ad group response body.
+- [AdGroupListResponse](adgrouplistresponse.md): Deprecated. The response details of ad group requests.
 
 ### Audience Refinement
 
-- [TargetingDimensions](targetingdimensions.md): The optional criteria to use with ad groups to narrow the audience that views your ads.
-- [AppCategoryCriteria](appcategorycriteria.md): The defined target audience by app category.
-- [AppDownloaderCriteria](appdownloadercriteria.md): The defined targeted audience according to app downloads.
-- [AdminAreaCriteria](adminareacriteria.md): The defined targeted audience by administrative area.
-- [CountryCriteria](countrycriteria.md): The defined targeted audience by country or region.
-- [LocalityCriteria](localitycriteria.md): The defined targeted audience by locality.
-- [AgeCriteria](agecriteria.md): The defined targeted audience to include using the age demographic.
-- [AgeRange](agerange.md): The defined target audience to include using the age-range demographic.
-- [DaypartCriteria](daypartcriteria.md): The defined targeted audience to include for a specific time of day.
-- [DaypartDetail](daypartdetail.md): The defined targeted audience to include by a specific time of day.
-- [DeviceClassCriteria](deviceclasscriteria.md): The defined targeted audience to include by device type.
-- [GenderCriteria](gendercriteria.md): The defined targeted audience to include using the gender demographic.
+- [TargetingDimensions](targetingdimensions.md): Deprecated. The optional criteria to use with ad groups to narrow the audience that views your ads.
+- [AppCategoryCriteria](appcategorycriteria.md): Deprecated. The defined target audience by app category.
+- [AppDownloaderCriteria](appdownloadercriteria.md): Deprecated. The defined targeted audience according to app downloads.
+- [AdminAreaCriteria](adminareacriteria.md): Deprecated. The defined targeted audience by administrative area.
+- [CountryCriteria](countrycriteria.md): Deprecated. The defined targeted audience by country or region.
+- [LocalityCriteria](localitycriteria.md): Deprecated. The defined targeted audience by locality.
+- [AgeCriteria](agecriteria.md): Deprecated. The defined targeted audience to include using the age demographic.
+- [AgeRange](agerange.md): Deprecated. The defined target audience to include using the age-range demographic.
+- [DaypartCriteria](daypartcriteria.md): Deprecated. The defined targeted audience to include for a specific time of day.
+- [DaypartDetail](daypartdetail.md): Deprecated. The defined targeted audience to include by a specific time of day.
+- [DeviceClassCriteria](deviceclasscriteria.md): Deprecated. The defined targeted audience to include by device type.
+- [GenderCriteria](gendercriteria.md): Deprecated. The defined targeted audience to include using the gender demographic.
 
 ### Data Types
 
-- [AdGroupDisplayStatus](adgroupdisplaystatus.md): The status of the ad group.
-- [AdGroupServingStateReasons](adgroupservingstatereasons.md): A list of reasons that displays when an ad group isn’t running.
-- [AdGroupServingStatus](adgroupservingstatus.md): The status of whether the ad group is serving.
-- [AdGroupStatus](adgroupstatus.md): The status of whether the ad group is enabled or not.
-- [DeviceClass](deviceclass.md): The defined targeted audience to include by device type.
-- [Gender](gender.md): The defined targeted audience in a campaign.
-- [PricingModel](pricingmodel.md): The type of pricing model for a bid.
+- [AdGroupDisplayStatus](adgroupdisplaystatus.md): Deprecated. The status of the ad group.
+- [AdGroupServingStateReasons](adgroupservingstatereasons.md): Deprecated. A list of reasons that displays when an ad group isn’t running.
+- [AdGroupServingStatus](adgroupservingstatus.md): Deprecated. The status of whether the ad group is serving.
+- [AdGroupStatus](adgroupstatus.md): Deprecated. The status of whether the ad group is enabled or not.
+- [DeviceClass](deviceclass.md): Deprecated. The defined targeted audience to include by device type.
+- [Gender](gender.md): Deprecated. The defined targeted audience in a campaign.
+- [PricingModel](pricingmodel.md): Deprecated. The type of pricing model for a bid.
 
 ## See Also
 
 ### Campaigns
 
 - [Campaigns](campaigns.md): Create and manage Apple Ads campaigns.
-- [Budget Orders](budget-orders.md): Manage your budgets.
+- [Budget Orders](budget-orders.md)
 - [Targeting Keywords and Negative Keywords](targeting-keywords-and-negative-keywords.md): Apply relevant words or phrases that make your campaigns findable.
 - [Search Geolocations](search-geolocations.md): Search for apps and geocriteria for your campaigns.

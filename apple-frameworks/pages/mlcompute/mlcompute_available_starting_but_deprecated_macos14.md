@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/mlcompute/mlcompute_available_starting_but_deprecated_macos14
 
 # MLCOMPUTE_AVAILABLE_STARTING_BUT_DEPRECATED_MACOS14

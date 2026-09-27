@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/apps-reports-objects
 
 # Apps Data Objects
@@ -33,7 +33,7 @@ The five Apps reporting entities each have a dedicated endpoint.
 
 Every Apps report request uses [AppsReportingRequest](appsreportingrequest.md) as its body. Every Apps report request must include a `campaignId` filter. Brands report requests don’t have this requirement. Each response row follows the same three-part shape:
 
-- `metadata`: entity attributes (name, status, identifiers) plus any `groupBy` dimension value (`deviceClass`, `ageRange`, `gender`, `countryCode`, `adminArea`, `locality`, `storefront`, or `countryOrRegion`, with entity-level restrictions) applied to that row. Entity-specific metadata schemas define the fields available for each entity, including [AppsReportingCampaign](appsreportingcampaign.md), [AppsReportingAdGroup](appsreportingadgroup.md), [AppsReportingAd](appsreportingad.md), [ReportingKeyword](reportingkeyword.md), and [ReportingSearchTerm](reportingsearchterm.md). Ad metadata nests creative details in an [AppsReportingCreative](appsreportingcreative.md) object rather than a flat creative ID.
+- `metadata`: entity attributes (name, status, identifiers) plus any `groupBy` dimension value (`deviceClass`, `ageRange`, `gender`, `countryCode`, `adminArea`, `locality`, or `countryOrRegion`, with entity-level restrictions) applied to that row. Entity-specific metadata schemas define the fields available for each entity, including [AppsReportingCampaign](appsreportingcampaign.md), [AppsReportingAdGroup](appsreportingadgroup.md), [AppsReportingAd](appsreportingad.md), [ReportingKeyword](reportingkeyword.md), and [ReportingSearchTerm](reportingsearchterm.md). Ad metadata nests creative details in an [AppsReportingCreative](appsreportingcreative.md) object rather than a flat creative ID.
 - `totalMetrics`: aggregate [AppsMetrics](appsmetrics.md) (or entity variant, for example, [AppsAdGroupMetrics](appsadgroupmetrics.md)) values for the row over the full requested date range.
 - `granularMetrics`: an array of pure metrics objects, one per period in the requested `granularity`, with no dimension fields of their own. Only present when `granularity` is specified in the request.
 
@@ -69,8 +69,8 @@ For a side-by-side comparison of Apps and Brands reporting differences (groupBy 
 - [AppsSearchTermReportSummary](appssearchtermreportsummary.md): The grand-total metrics aggregated across all rows in an Apps search term report.
 - [AppsSearchTermResultContainer](appssearchtermresultcontainer.md): Wraps the array of Apps search term report rows along with a grand-total summary.
 - [AppsMetrics](appsmetrics.md): Metrics for apps promoted object type.
-- [AppsCampaignMetrics](appscampaignmetrics.md): Campaign-level metrics for apps, inheriting all properties from `AppsMetrics`.
-- [AppsAdGroupMetrics](appsadgroupmetrics.md): Ad group-level metrics for apps, inheriting all properties from `AppsMetrics`.
+- [AppsCampaignMetrics](appscampaignmetrics.md): Campaign-level performance metrics for apps.
+- [AppsAdGroupMetrics](appsadgroupmetrics.md): Ad group-level performance metrics for apps.
 - [AppsOptions](appsoptions.md): Reporting options for apps promoted object type reports.
 - [AppsTargetingProjection](appstargetingprojection.md): Targeting projection for apps campaigns.
 

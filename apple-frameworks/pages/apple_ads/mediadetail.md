@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/mediadetail
 
 # MediaDetail
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Object  
-**Availability:** Search Ads 5.2+
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 The media detail object.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -42,5 +44,5 @@ object MediaDetail
 ### Response Objects
 
 - [MediaDetailResponse](mediadetailresponse.md)
-- [MediaLocaleDetail](medialocaledetail.md): The media locale detail object.
+- [MediaLocaleDetail](medialocaledetail.md): Deprecated. The media locale detail object.
 - [MediaLocaleDetailResponse](medialocaledetailresponse.md)

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/coreai/inspecting-debugging-and-profiling-core-ai-models
 
 # Inspecting, debugging, and profiling Core AI models
@@ -29,7 +29,7 @@ For project setup, the Xcode model viewer, and how to load a model in your app, 
 
 Core AI Debugger is a standalone macOS app that you download from the [Apple Developer website](https://developer.apple.com/core-ai-debugger/) for working directly with `.aimodel` files. You can inspect a model’s operation graph, step through the source that produced each operation, and run the model against a connected device or your Mac.
 
-The debugger also allows you to compare pairs of a model’s output against a reference run, helping you confirm whether a converted or optimized model still produces the results you expect.
+The debugger also allows you to compare pairs of a model’s output against a reference run, helping you confirm whether a converted or optimized model still produces the results you expect. This comparison tells you whether conversion or optimization changed the model’s output, not whether the model performs your task well; for that, evaluate the model’s quality on your own data with the [Evaluations](../evaluations.md) framework.
 
 See [Inspecting Core AI models with Core AI Debugger](inspecting-core-ai-models-with-core-ai-debugger.md) for inspection and execution, and [Validating inference correctness against a reference run](validating-inference-correctness-against-a-reference-run.md) for comparing a model against a reference run.
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/delete-a-targeting-keyword
 
 # Delete a Targeting Keyword
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Web Service Endpoint  
-**Availability:** Search Ads 5.0+
+**Availability:** Search Ads 5.0+ (deprecated in 5.2)
 
 Deletes a targeting keyword in an ad group.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## URL
 
@@ -64,9 +66,9 @@ DELETE https://api.searchads.apple.com/api/v5/campaigns/{campaignId}/adgroups/{a
 
 ### Ad Group Targeting Keywords Endpoints
 
-- [Create Targeting Keywords](create-targeting-keywords.md): Creates targeting keywords in ad groups.
-- [Find Targeting Keywords in a Campaign](find-targeting-keywords-in-a-campaign.md): Fetches targeting keywords in a campaign’s ad groups.
-- [Get a Targeting Keyword in an Ad Group](get-a-targeting-keyword-in-an-ad-group.md): Fetches a specific targeting keyword in an ad group.
-- [Get All Targeting Keywords in an Ad Group](get-all-targeting-keywords-in-an-ad-group.md): Fetches all targeting keywords in ad groups.
-- [Update Targeting Keywords](update-targeting-keywords.md): Updates targeting keywords in ad groups.
-- [Delete Targeting Keywords](delete-targeting-keywords.md): Deletes targeting keywords from ad groups.
+- [Create Targeting Keywords](create-targeting-keywords.md): Deprecated. Creates targeting keywords in ad groups.
+- [Find Targeting Keywords in a Campaign](find-targeting-keywords-in-a-campaign.md): Deprecated. Fetches targeting keywords in a campaign’s ad groups.
+- [Get a Targeting Keyword in an Ad Group](get-a-targeting-keyword-in-an-ad-group.md): Deprecated. Fetches a specific targeting keyword in an ad group.
+- [Get All Targeting Keywords in an Ad Group](get-all-targeting-keywords-in-an-ad-group.md): Deprecated. Fetches all targeting keywords in ad groups.
+- [Update Targeting Keywords](update-targeting-keywords.md): Deprecated. Updates targeting keywords in ad groups.
+- [Delete Targeting Keywords](delete-targeting-keywords.md): Deprecated. Deletes targeting keywords from ad groups.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentview
 
 # TVMediaItemContentView (Swift)
@@ -66,8 +66,6 @@ override func updateConfiguration(using state: UICellConfigurationState) {
 - [Hashable](https://developer.apple.com/documentation/swift/hashable)
 - [NSCoding](../foundation/nscoding.md)
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIAccessibilityIdentification](../uikit/uiaccessibilityidentification.md)
 - [UIActivityItemsConfigurationProviding](../uikit/uiactivityitemsconfigurationproviding.md)
 - [UIAppearance](../uikit/uiappearance.md)

@@ -1,7 +1,7 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/post-v1-inapppurchasesubmissions
 
-# Create a review submission for an in-app purchase
+# Create a review submission for an In-App Purchase
 
 **Interface language:** Data
 
@@ -9,7 +9,7 @@
 **Kind:** Web Service Endpoint  
 **Availability:** App Store Connect API 2.0+ (deprecated in 4.4.1)
 
-Create an in-app purchase submission for review.
+Create an In-App Purchase submission for review.
 
 > This endpoint is deprecated. Use the review submissions workflow at [Review submissions](review-submissions.md) instead.
 
@@ -37,4 +37,4 @@ Type: `InAppPurchaseSubmissionCreateRequest`
 
 ## Mentioned In
 
-- [Managing in-app purchases](managing-in-app-purchases.md)
+- [Managing In-App Purchases](managing-in-app-purchases.md)

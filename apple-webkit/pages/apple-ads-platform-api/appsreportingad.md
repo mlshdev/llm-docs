@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/appsreportingad
 
 # AppsReportingAd
@@ -32,9 +32,11 @@ object AppsReportingAd
 - `creationTime` — `date-time`: Timestamp when the ad was created (ISO 8601).
 - `modificationTime` — `date-time`: Timestamp of the ad’s last modification (ISO 8601).
 - `displayStatus` — `string`: System-computed, rolled-up delivery state combining ad, ad group, and campaign conditions.
+  **Allowed values:** `AD_GROUP_ON_HOLD`, `CAMPAIGN_ON_HOLD`, `DELETED`, `LIMITED`, `ON_HOLD`, `PAUSED`, `PROCESSING`, `RUNNING`
 - `creative` — `AppsReportingCreative`: See [AppsReportingCreative](appsreportingcreative.md) for details.
 - `countryOrRegion` — `string`: Country or region groupBy dimension value, populated when `countryOrRegion` is specified in the request’s `groupBy`.
 - `deviceClass` — `string`: Device class groupBy dimension value, populated when `deviceClass` is specified in the request’s `groupBy`.
+  **Allowed values:** `IPHONE`, `IPAD`
 
 <a id="Discussion"></a>
 

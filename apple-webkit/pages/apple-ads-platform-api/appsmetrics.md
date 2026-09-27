@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/appsmetrics
 
 # AppsMetrics
@@ -19,7 +19,7 @@ object AppsMetrics
 
 ## Properties
 
-- `date` — `date`: Report date in YYYY-MM-DD format.
+- `date` — `string`: Report date. Uses YYYY-MM-DD for DAILY, WEEKLY, and MONTHLY granularity, or YYYY-MM-DD HH (hour in 24-hour time) for HOURLY granularity.
 - `localSpend` — `Money`: Total spend in the reporting period. See [Money](money.md).
 - `impressions` — `int64`: Total ad impressions.
 - `taps` — `int64`: Total ad taps.

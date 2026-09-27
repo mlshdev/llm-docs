@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/patch-v1-backgroundassetuploadfiles-_id_
 
 # Commit an Uploaded Asset Pack to a Background Asset Version
@@ -40,6 +40,7 @@ Type: `BackgroundAssetUploadFileUpdateRequest`
 
 ## Mentioned In
 
+- [Understanding webhook events](webhook-events.md)
 - [App Store Connect API 4.1 release notes](app-store-connect-api-4-1-release-notes.md)
 - [Uploading and versioning Apple hosted background assets](managing-apple-hosted-background-assets.md)
 

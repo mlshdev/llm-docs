@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/patch-v1-gamecenterleaderboards-_id_-relationships-groupleaderboard
 
 # Edit the Relationship Between a Leaderboard and a Group Leaderboard
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 3.0+
+**Availability:** App Store Connect API 3.0+ (deprecated in 3.7)
 
 Modify the group leadboard to which a leaderboard belongs.
+
+> This endpoint is deprecated.
 
 ## URL
 

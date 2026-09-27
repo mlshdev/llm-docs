@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/recommendationbidstrategy
 
 # RecommendationBidStrategy
@@ -20,6 +20,7 @@ object RecommendationBidStrategy
 ## Properties
 
 - `bidStrategyType` — `string`: The type of bid strategy. See [BidStrategyType](bidstrategytype.md) for allowed values.
+  **Allowed values:** `MANUAL_CPT`, `MAX_CONVERSIONS`, `MANUAL_CPM`, `MAX_ENGAGEMENTS`
 - `bidStrategyGoal` — `string`: The goal of the bid strategy. See [BidStrategyGoal](bidstrategygoal.md) for allowed values.
 - `bidAmount` — `RecommendationMoney`: The bid amount associated with the strategy. See [Money](recommendationmoney.md).
 

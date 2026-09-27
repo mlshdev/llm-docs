@@ -1,13 +1,13 @@
-# Apple iOS and iPadOS snapshot-6a8f7b178c0a
+# Apple iOS and iPadOS snapshot-d0d1b2f13e0d
 
-> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/ios/](https://developer.apple.com/ios/) and pinned to catalog snapshot `6a8f7b178c0a4a818fcf6807848b91d84ce5b7ebf4360d1e5a64f101b6da66de` captured at 2026-09-19T05:14:28.746Z.
+> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/ios/](https://developer.apple.com/ios/) and pinned to catalog snapshot `d0d1b2f13e0dda7c6d6bed81d67f484e5f0b9662600743bf08baa771840f0378` captured at 2026-09-27T18:07:09.630Z.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Apple iOS and iPadOS snapshot-6a8f7b178c0a.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple iOS and iPadOS snapshot-d0d1b2f13e0d.
 - [Provenance manifest](manifest.json): Snapshot digest, capture time, document count, and generation notes.
 - Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.
-- 46 frameworks in this catalog, captured at 2026-09-19T05:14:28.746Z.
+- 46 frameworks in this catalog, captured at 2026-09-27T18:07:09.630Z.
 - Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.
-- Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.
+- Weekly reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive weekly check.
 - Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream.
 
 ## Frameworks
@@ -81,13 +81,13 @@ These frameworks are available on iOS but are published by another project in th
 - [Apple CryptoKit](../apple-frameworks/pages/cryptokit.md): 705 pages.
 - [Audio Toolbox](../apple-frameworks/pages/audiotoolbox.md): 3731 pages.
 - [Audio Unit](../apple-frameworks/pages/audiounit.md): 2 pages.
-- [Authentication Services](../apple-frameworks/pages/authenticationservices.md): 1452 pages.
+- [Authentication Services](../apple-frameworks/pages/authenticationservices.md): 1453 pages.
 - [Automatic Assessment Configuration](../apple-frameworks/pages/automaticassessmentconfiguration.md): 156 pages.
 - [Background Assets](../apple-frameworks/pages/backgroundassets.md): 245 pages.
 - [Background Tasks](../apple-frameworks/pages/backgroundtasks.md): 64 pages.
 - [BrowserEngineCore](../apple-webkit/pages/browserenginecore.md): 30 pages.
 - [BrowserEngineKit](../apple-webkit/pages/browserenginekit.md): 471 pages.
-- [Bundle Resources](../apple-frameworks/pages/bundleresources.md): 911 pages.
+- [Bundle Resources](../apple-frameworks/pages/bundleresources.md): 912 pages.
 - [CFNetwork](../apple-frameworks/pages/cfnetwork.md): 419 pages.
 - [CallKit](../apple-frameworks/pages/callkit.md): 284 pages.
 - [Cinematic](../apple-frameworks/pages/cinematic.md): 400 pages.

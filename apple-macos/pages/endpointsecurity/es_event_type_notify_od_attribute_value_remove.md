@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-dddbaaa5d689; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/endpointsecurity/es_event_type_notify_od_attribute_value_remove
 
 # ES_EVENT_TYPE_NOTIFY_OD_ATTRIBUTE_VALUE_REMOVE (Swift)

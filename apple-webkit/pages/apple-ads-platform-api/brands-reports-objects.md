@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/brands-reports-objects
 
 # Brands Data Objects
@@ -73,8 +73,8 @@ For a side-by-side comparison of Brands and Apps reporting differences (groupBy 
 - [BrandsSearchTermReportSummary](brandssearchtermreportsummary.md): The grand-total metrics aggregated across all rows in a Brands search term report.
 - [BrandsSearchTermResultContainer](brandssearchtermresultcontainer.md): Wraps the array of Brands search term report rows along with a grand-total summary.
 - [BrandsMetrics](brandsmetrics.md): Metrics for brands promoted object type.
-- [BrandsCampaignMetrics](brandscampaignmetrics.md): Campaign-level metrics for brands, inheriting all properties from `BrandsMetrics`.
-- [BrandsAdGroupMetrics](brandsadgroupmetrics.md): Ad group-level metrics for brands, inheriting all properties from `BrandsMetrics`.
+- [BrandsCampaignMetrics](brandscampaignmetrics.md): Campaign-level performance metrics for brands.
+- [BrandsAdGroupMetrics](brandsadgroupmetrics.md): Ad group-level performance metrics for brands.
 - [BrandsOptions](brandsoptions.md): Reports options for brands promoted object campaigns.
 - [BrandsTargetingProjection](brandstargetingprojection.md): Targeting projection for brands ad groups and campaigns.
 

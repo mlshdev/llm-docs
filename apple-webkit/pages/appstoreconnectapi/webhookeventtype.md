@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/webhookeventtype
 
 # WebhookEventType
@@ -9,7 +9,7 @@
 **Kind:** Type  
 **Availability:** App Store Connect API 4.0+
 
-A string that represents the the event types for a webhook notification.
+A string that represents the event types for a webhook notification.
 
 ## Declaration
 
@@ -19,12 +19,12 @@ string WebhookEventType
 
 ## Possible Values
 
+- `APP_STORE_VERSION_APP_VERSION_STATE_UPDATED`:
 - `BETA_FEEDBACK_CRASH_SUBMISSION_CREATED`:
 - `BETA_FEEDBACK_SCREENSHOT_SUBMISSION_CREATED`:
 - `ALTERNATIVE_DISTRIBUTION_PACKAGE_VERSION_CREATED`:
 - `ALTERNATIVE_DISTRIBUTION_PACKAGE_AVAILABLE_UPDATED`:
 - `ALTERNATIVE_DISTRIBUTION_TERRITORY_AVAILABILITY_UPDATED`:
-- `APP_STORE_VERSION_APP_VERSION_STATE_UPDATED`:
 - `BACKGROUND_ASSET_VERSION_APP_STORE_RELEASE_STATE_UPDATED`:
 - `BACKGROUND_ASSET_VERSION_EXTERNAL_BETA_RELEASE_STATE_UPDATED`:
 - `BACKGROUND_ASSET_VERSION_INTERNAL_BETA_RELEASE_CREATED`:

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-c3455ae26d89; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple_ads/eligibilityrecordlistresponse
 
 # EligibilityRecordListResponse
@@ -7,9 +7,11 @@
 
 **Framework:** Apple Ads  
 **Kind:** Object  
-**Availability:** Search Ads 4.10+
+**Availability:** Search Ads 4.10+ (deprecated in 5.2)
 
 The response details to an app eligibility request.
+
+> Apple Ads Campaign Management API is deprecated. Instead, use the [Apple Ads Platform API](https://developer.apple.com/documentation/apple-ads-platform-api).
 
 ## Declaration
 
@@ -26,4 +28,4 @@ object EligibilityRecordListResponse
 
 ### App Eligibility Request and Response Objects
 
-- [EligibilityRecord](eligibilityrecord.md): App eligibility parameters that an API response returns.
+- [EligibilityRecord](eligibilityrecord.md): Deprecated. App eligibility parameters that an API response returns.

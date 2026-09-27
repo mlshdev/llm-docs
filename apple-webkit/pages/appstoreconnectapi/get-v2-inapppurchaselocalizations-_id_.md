@@ -1,7 +1,7 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v2-inapppurchaselocalizations-_id_
 
-# Read in-app purchase localization information
+# Read In-App Purchase localization information
 
 **Interface language:** Data
 
@@ -9,7 +9,7 @@
 **Kind:** Web Service Endpoint  
 **Availability:** App Store Connect API 4.4.1+
 
-Get the display name and description for a specific locale of an in-app purchase configured with the v2 API.
+Get the display name and description for a specific locale of an In-App Purchase configured with the v2 API.
 
 ## URL
 
@@ -40,7 +40,7 @@ GET https://api.appstoreconnect.apple.com/v2/inAppPurchaseLocalizations/{id}
 
 ### Endpoints
 
-- [List localizations for an in-app purchase version](get-v1-inapppurchaseversions-_id_-localizations.md): List the localized display names and descriptions captured in a draft version of an in-app purchase.
-- [Create an in-app purchase localization](post-v2-inapppurchaselocalizations.md): Create a localized display name and description for an in-app purchase configured with the v2 API.
-- [Modify an in-app purchase localization](patch-v2-inapppurchaselocalizations-_id_.md): Update the display name and description for a specific locale of an in-app purchase configured with the v2 API.
-- [Delete an in-app purchase localization](delete-v2-inapppurchaselocalizations-_id_.md): Delete a localized display name and description for an in-app purchase configured with the v2 API.
+- [List localizations for an In-App Purchase version](get-v1-inapppurchaseversions-_id_-localizations.md): List the localized display names and descriptions captured in a draft version of an In-App Purchase.
+- [Create an In-App Purchase localization](post-v2-inapppurchaselocalizations.md): Create a localized display name and description for an In-App Purchase configured with the v2 API.
+- [Modify an In-App Purchase localization](patch-v2-inapppurchaselocalizations-_id_.md): Update the display name and description for a specific locale of an In-App Purchase configured with the v2 API.
+- [Delete an In-App Purchase localization](delete-v2-inapppurchaselocalizations-_id_.md): Delete a localized display name and description for an In-App Purchase configured with the v2 API.

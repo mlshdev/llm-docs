@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Swift snapshot-5915b24a1311; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Swift snapshot-3cd4d1098779; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swift
 
 # Swift
@@ -94,7 +94,3 @@ Swift is developed in the open. To learn more about the open source Swift projec
 
 - [Mixing Languages in an Xcode project](swift/mixinglanguagesinanxcodeproject.md): Use C++ APIs in Swift – and Swift APIs in C++ – in a single framework target, and consume the framework’s APIs in a separate app target.
 - [Calling APIs Across Language Boundaries](swift/callingapisacrosslanguageboundaries.md): Use a variety of C++ APIs in Swift – and vice-versa – across multiple targets and frameworks in an Xcode project.
-
-### Protocols
-
-- [Iterable](swift/iterable.md): A type that provides sequential, borrowing access to its elements.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-a0a4b8d281c3; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-apps-_id_-relationships-apptags
 
 # List app tags IDs
@@ -40,5 +40,5 @@ GET https://api.appstoreconnect.apple.com/v1/apps/{id}/relationships/appTags
 ### Reading app tag information
 
 - [List App Tags](get-v1-apps-_id_-apptags.md): List all app tags for a specific app.
-- [List territory IDs for an app tag](get-v1-apptags-_id_-relationships-territories.md): List territory IDs for an app tag.
-- [List Territories for an App Tag](get-v1-apptags-_id_-territories.md): List territory availability for a specific app tag.
+- [List territory IDs for an app tag](get-v1-apptags-_id_-relationships-territories.md): Deprecated. List territory IDs for an app tag.
+- [List Territories for an App Tag](get-v1-apptags-_id_-territories.md): Deprecated. List territory availability for a specific app tag.
