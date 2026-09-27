@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/_index.md](https://github.com/docker/docs/blob/938f943d945d222a29f8615cadf03ff536f895a8/content/_index.md)
+> Pinned source for Docker main: [content/_index.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/content/_index.md)
 
 # Home
 
@@ -16,6 +16,14 @@ reference material for everyday development and operations tasks.
 
 - [Reference](https://docs.docker.com/reference/): Browse CLI, API, and file format documentation.
 
+- [Run sandboxes on Docker-managed cloud infrastructure](https://docs.docker.com/ai/sandboxes/cloud/) (Docker Sandboxes, 2026-09-24): Create and manage cloud sandboxes with the sbx CLI, including cloud-specific credentials, network policies, lifecycle controls, and transfers between local and cloud environments.
+
+- [Manage cloud sandboxes with the API and TypeScript SDK](https://docs.docker.com/ai/sandboxes-api/) (Docker Sandboxes, 2026-09-24): Create cloud sandboxes, run commands, transfer files, and manage images, snapshots, volumes, and secrets from applications and automated workflows.
+
+- [Compose sandbox environments with kits v3](https://docs.docker.com/ai/sandboxes/customize/) (Docker Sandboxes, 2026-09-24): Build sandbox environments from workload and mixin kits, combine them into reusable kit sets, and publish the result as a container image.
+
+- [Give coding agents guidance with Docker Skills](https://docs.docker.com/ai/skills/) (Docker Skills, 2026-09-24): Install Docker's official open-source skills in compatible coding agents to give them guidance for Dockerfiles, Compose applications, and other Docker tasks.
+
 - [Share agent skills read-only by default](https://docs.docker.com/ai/sandboxes/workflows/agent-skills/#shared-store-behavior) (Docker Sandboxes, 2026-09-15): Sandboxes created with version 0.43.0 mount shared agent skills read-only by default. Choose read-only, read-write, or no access when creating a sandbox.
 
 - [Run agents without mounting host files](https://docs.docker.com/ai/sandboxes/usage/#choose-a-workspace) (Docker Sandboxes, 2026-09-07): Create a sandbox without a host workspace mount. Keep agent files inside the sandbox across stops and restarts, and copy files between the sandbox and host when needed.
@@ -23,18 +31,6 @@ reference material for everyday development and operations tasks.
 - [Install and update shared skills from Git repositories](https://docs.docker.com/ai/sandboxes/workflows/agent-skills/) (Docker Sandboxes, 2026-09-07): Install agent skills from Git repositories into a persistent store shared across sandboxes, and update or remove them with sbx skills.
 
 - [Use Docker Build Cloud with standard Buildx](https://docs.docker.com/build/builders/drivers/cloud/) (Docker Build Cloud, 2026-09-03): Buildx 0.37.0 includes the cloud driver, so you can connect to Docker Build Cloud from the standard Buildx CLI plugin without installing a separate client.
-
-- [Join Docker Verified Publisher through self-service plans](https://docs.docker.com/subscription-billing/plans/docker-verified-publisher/) (Docker Verified Publisher, 2026-08-20): Apply for DVP Starter or Growth, complete checkout after approval, and manage publisher analytics, consuming domains, and billing.
-
-- [Sign and enforce trusted sandbox kits](https://docs.docker.com/ai/sandboxes/customize/kits-v2/#sign-and-verify-kits) (Docker Sandboxes, 2026-08-20): Sign kits with cosign-compatible Sigstore signatures, verify keyless or key-based signatures, and reject kits outside a trusted-signer policy.
-
-- [Define reproducible sandbox environments](https://docs.docker.com/ai/sandboxes/configuration/environment-files/) (Docker Sandboxes, 2026-08-19): Capture an agent, workspaces, kits, credentials, ports, and resources in a shareable sbxenv.yaml file and manage it with sbx env.
-
-- [Resolve sandbox secrets from external sources](https://docs.docker.com/ai/sandboxes/configuration/credentials/#use-a-dynamic-secret-source) (Docker Sandboxes, 2026-08-19): Keep references to 1Password, AWS Secrets Manager, or host commands in the secret store and resolve credentials on the host when the proxy needs them.
-
-- [Run GPU workloads in sandboxes](https://docs.docker.com/ai/sandboxes/configuration/gpu-passthrough/) (Docker Sandboxes, 2026-08-19): Pass an NVIDIA GPU through to a sandbox on supported Linux hosts for GPU-accelerated agent workloads.
-
-- [Query DHI VEX data with the GraphQL API](https://docs.docker.com/dhi/tools/api/) (Docker Hardened Images, 2026-08-17): Build automation or dashboards that query image packages, CVEs, VEX statements, and suppressed vulnerabilities by digest.
 
 ## Common questions
 

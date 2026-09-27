@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/migration/examples/dotnet.md](https://github.com/docker/docs/blob/938f943d945d222a29f8615cadf03ff536f895a8/content/manuals/dhi/migration/examples/dotnet.md)
+> Pinned source for Docker main: [content/manuals/dhi/migration/examples/dotnet.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/dhi/migration/examples/dotnet.md)
 
 This example shows how to migrate a .NET application to Docker Hardened Images.
 

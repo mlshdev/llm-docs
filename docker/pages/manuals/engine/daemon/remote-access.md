@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/daemon/remote-access.md](https://github.com/docker/docs/blob/938f943d945d222a29f8615cadf03ff536f895a8/content/manuals/engine/daemon/remote-access.md)
+> Pinned source for Docker main: [content/manuals/engine/daemon/remote-access.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/engine/daemon/remote-access.md)
 
 # Configure remote access for Docker daemon
 
@@ -62,6 +62,11 @@ and the `daemon.json` file causes a conflict that prevents Docker from starting.
    ```
 
 ### Configuring remote access with `daemon.json`
+
+> \[!IMPORTANT]
+>
+> Setting `hosts` in the `daemon.json` isn't supported on Docker Desktop for
+> Windows or Docker Desktop for Mac.
 
 1. Set the `hosts` array in the `/etc/docker/daemon.json` to connect to the Unix
    socket and an IP address, as follows:

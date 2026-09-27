@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/cache/backends/local.md](https://github.com/docker/docs/blob/938f943d945d222a29f8615cadf03ff536f895a8/content/manuals/build/cache/backends/local.md)
+> Pinned source for Docker main: [content/manuals/build/cache/backends/local.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/build/cache/backends/local.md)
 
 # Local cache
 
@@ -8,6 +8,11 @@ in a directory on your filesystem, using an
 for the underlying directory structure. Local cache is a good choice if you're
 just testing, or if you want the flexibility to self-manage a shared storage
 solution.
+
+This cache storage backend works with the default `docker` driver only when the
+[containerd image store](https://docs.docker.com/desktop/features/containerd/) is enabled. If
+the containerd image store isn't enabled, use a different driver. See
+[Build drivers](https://docs.docker.com/build/builders/drivers/) for more information.
 
 ## Synopsis
 

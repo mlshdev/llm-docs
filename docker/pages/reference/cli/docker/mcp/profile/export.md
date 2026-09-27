@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/mcp/docker_mcp_profile_export.yaml](https://github.com/docker/docs/blob/938f943d945d222a29f8615cadf03ff536f895a8/data/cli/mcp/docker_mcp_profile_export.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp_profile_export.yaml](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/data/cli/mcp/docker_mcp_profile_export.yaml)
 
 # docker mcp profile export
 

@@ -29,14 +29,14 @@
 - [discord.py-self v2.1.0](discord-py-self/llms.txt): [full corpus](discord-py-self/llms-full.txt), [manifest](discord-py-self/manifest.json)
 - [discord.py v2.7.1](discord-py/llms.txt): [full corpus](discord-py/llms-full.txt), [manifest](discord-py/manifest.json)
 - [Qdrant master](qdrant/llms.txt): [full corpus](qdrant/llms-full.txt), [manifest](qdrant/manifest.json)
-- [Apple Swift snapshot-3cd4d1098779](apple-swift/llms.txt): [full corpus](apple-swift/llms-full.txt), [manifest](apple-swift/manifest.json)
+- [Apple Swift snapshot-5915b24a1311](apple-swift/llms.txt): [full corpus](apple-swift/llms-full.txt), [manifest](apple-swift/manifest.json)
 - [Apple SwiftUI snapshot-8b55d19a707e](apple-swiftui/llms.txt): [full corpus](apple-swiftui/llms-full.txt), [manifest](apple-swiftui/manifest.json)
-- [Apple WebKit and Safari snapshot-33695ec62253](apple-webkit/llms.txt): [full corpus](apple-webkit/llms-full.txt), [manifest](apple-webkit/manifest.json)
+- [Apple WebKit and Safari snapshot-a0a4b8d281c3](apple-webkit/llms.txt): [full corpus](apple-webkit/llms-full.txt), [manifest](apple-webkit/manifest.json)
 - [Apple Xcode and developer tools snapshot-d045c48ba442](apple-xcode/llms.txt): [full corpus](apple-xcode/llms-full.txt), [manifest](apple-xcode/manifest.json)
-- [Apple iOS and iPadOS snapshot-d0d1b2f13e0d](apple-ios/llms.txt): [full corpus](apple-ios/llms-full.txt), [manifest](apple-ios/manifest.json)
-- [Apple macOS snapshot-0513df389cc7](apple-macos/llms.txt): [full corpus](apple-macos/llms-full.txt), [manifest](apple-macos/manifest.json)
-- [Apple watchOS snapshot-a3a5c01bb2da](apple-watchos/llms.txt): [full corpus](apple-watchos/llms-full.txt), [manifest](apple-watchos/manifest.json)
-- [Apple cross-platform frameworks snapshot-df12c7e37114](apple-frameworks/llms.txt): [full corpus](apple-frameworks/llms-full.txt), [manifest](apple-frameworks/manifest.json)
+- [Apple iOS and iPadOS snapshot-6a8f7b178c0a](apple-ios/llms.txt): [full corpus](apple-ios/llms-full.txt), [manifest](apple-ios/manifest.json)
+- [Apple macOS snapshot-dddbaaa5d689](apple-macos/llms.txt): [full corpus](apple-macos/llms-full.txt), [manifest](apple-macos/manifest.json)
+- [Apple watchOS snapshot-4bff84466040](apple-watchos/llms.txt): [full corpus](apple-watchos/llms-full.txt), [manifest](apple-watchos/manifest.json)
+- [Apple cross-platform frameworks snapshot-c3455ae26d89](apple-frameworks/llms.txt): [full corpus](apple-frameworks/llms-full.txt), [manifest](apple-frameworks/manifest.json)
 
 ## Update policy
 

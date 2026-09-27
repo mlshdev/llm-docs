@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `938f943d945d222a29f8615cadf03ff536f895a8`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `4e9a5751518ed8223a8dcde53693badddd72604f`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -135,7 +135,7 @@
 
 ## Index.Md
 
-- [Home](pages/index.md): Docker Documentation helps you learn Docker, install Docker products, and find reference material for everyday development and operations tasks. (3927 bytes)
+- [Home](pages/index.md): Docker Documentation helps you learn Docker, install Docker products, and find reference material for everyday development and operations tasks. (3367 bytes)
 - [Manuals](pages/manuals/index.md): This section contains user guides on how to install, set up, configure, and use Docker products. (3674 bytes)
 
 ## Accounts
@@ -477,10 +477,10 @@
 - [BuildKit](pages/manuals/build/buildkit/index.md): BuildKit is the builder backend used by Docker. BuildKit provides improved functionality and improves your builds' performance over the legacy builder used in earlier versions of Docker. It also introduces support for h… (8766 bytes)
 - [buildkitd.toml](pages/manuals/build/buildkit/toml-configuration.md): The TOML file used to configure the buildkitd daemon settings has a short list of global settings followed by a series of sections for specific areas of daemon configuration. (9492 bytes)
 - [Azure Blob Storage cache](pages/manuals/build/cache/backends/azblob.md): Azure blob requirements (2330 bytes)
-- [GitHub Actions cache](pages/manuals/build/cache/backends/gha.md): GitHub Actions cache requirements (8438 bytes)
+- [GitHub Actions cache](pages/manuals/build/cache/backends/gha.md): GitHub Actions cache requirements (8532 bytes)
 - [Cache storage backends](pages/manuals/build/cache/backends/index.md): To ensure fast builds, BuildKit automatically caches the build result in its own internal cache. Additionally, BuildKit also supports exporting build cache to an external location, making it possible to import in future… (7453 bytes)
 - [Inline cache](pages/manuals/build/cache/backends/inline.md): The inline cache storage backend is the simplest way to get an external cache and is easy to get started using if you're already building and pushing an image. (1836 bytes)
-- [Local cache](pages/manuals/build/cache/backends/local.md): The local cache store is a simple cache option that stores your cache as files in a directory on your filesystem, using an OCI image layout for the underlying directory structure. Local cache is a good choice if you're… (5868 bytes)
+- [Local cache](pages/manuals/build/cache/backends/local.md): The local cache store is a simple cache option that stores your cache as files in a directory on your filesystem, using an OCI image layout for the underlying directory structure. Local cache is a good choice if you're… (6200 bytes)
 - [Registry cache](pages/manuals/build/cache/backends/registry.md): The registry cache storage can be thought of as an extension to the inline cache. Unlike the inline cache, the registry cache is entirely separate from the image, which allows for more flexible usage - registry-backed c… (4490 bytes)
 - [Amazon S3 cache](pages/manuals/build/cache/backends/s3.md): Amazon S3 cache requirements (4185 bytes)
 - [Build garbage collection](pages/manuals/build/cache/garbage-collection.md): While docker builder prune or docker buildx prune commands run at once, Garbage Collection (GC) runs periodically and follows an ordered list of prune policies. The BuildKit daemon clears the build cache when the cache… (12649 bytes)
@@ -779,7 +779,7 @@
 - [Read the daemon logs](pages/manuals/engine/daemon/logs.md): The daemon logs may help you diagnose problems. The logs may be saved in one of a few locations, depending on the operating system configuration and the logging subsystem used: (5314 bytes)
 - [Collect Docker metrics with Prometheus](pages/manuals/engine/daemon/prometheus.md): Prometheus is an open-source systems monitoring and alerting toolkit. You can configure Docker as a Prometheus target. (5949 bytes)
 - [Daemon proxy configuration](pages/manuals/engine/daemon/proxy.md): If your organization uses a proxy server to connect to the internet, you may need to configure the Docker daemon to use the proxy server. The daemon uses a proxy server to access images stored on Docker Hub and other re… (8140 bytes)
-- [Configure remote access for Docker daemon](pages/manuals/engine/daemon/remote-access.md): By default, the Docker daemon listens for connections on a Unix socket to accept requests from local clients. You can configure Docker to accept requests from remote clients by configuring it to listen on an IP address… (4217 bytes)
+- [Configure remote access for Docker daemon](pages/manuals/engine/daemon/remote-access.md): By default, the Docker daemon listens for connections on a Unix socket to accept requests from local clients. You can configure Docker to accept requests from remote clients by configuring it to listen on an IP address… (4350 bytes)
 - [Start the daemon](pages/manuals/engine/daemon/start.md): This page shows how to start the daemon, either manually or using OS utilities. (1522 bytes)
 - [Troubleshooting the Docker daemon](pages/manuals/engine/daemon/troubleshoot.md): This page describes how to troubleshoot and debug the daemon if you run into issues. (17789 bytes)
 - [Deprecated Docker Engine features](pages/manuals/engine/deprecated.md): This page provides an overview of features that are deprecated in Engine. Changes in packaging, and supported (Linux) distributions are not included. To learn about end of support for Linux distributions, refer to the r… (66090 bytes)
@@ -1057,7 +1057,7 @@
 - [Organization access tokens](pages/manuals/security/access-tokens/organization-access-tokens.md): OATs requirements (10804 bytes)
 - [Personal access tokens](pages/manuals/security/access-tokens/personal-access-tokens.md): PATs requirements (5181 bytes)
 - [Enable two-factor authentication for your Docker account](pages/manuals/security/authentication/2fa/index.md): 2FA requirements (2646 bytes)
-- [Recover your Docker account](pages/manuals/security/authentication/2fa/recover-hub-account.md): 2FA requirements (1350 bytes)
+- [Recover your Docker account](pages/manuals/security/authentication/2fa/recover-hub-account.md): 2FA requirements (1266 bytes)
 - [Authentication](pages/manuals/security/authentication/index.md): Authentication in Docker Home is how users and workloads prove who they are before they access Docker products. (2105 bytes)
 - [Create and manage OIDC connections](pages/manuals/security/authentication/oidc-connections/create-manage.md): OIDC connections requirements (3268 bytes)
 - [OIDC connections overview](pages/manuals/security/authentication/oidc-connections/index.md): OIDC connections requirements (1525 bytes)

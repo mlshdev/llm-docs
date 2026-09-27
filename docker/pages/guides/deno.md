@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/deno.md](https://github.com/docker/docs/blob/938f943d945d222a29f8615cadf03ff536f895a8/content/guides/deno.md)
+> Pinned source for Docker main: [content/guides/deno.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/content/guides/deno.md)
 
 The Deno getting started guide teaches you how to create a containerized Deno application using Docker.
 
