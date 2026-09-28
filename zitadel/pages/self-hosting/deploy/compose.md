@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.1: [apps/docs/content/self-hosting/deploy/compose.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/self-hosting/deploy/compose.mdx)
+> Pinned source for ZITADEL v4.19.2: [apps/docs/content/self-hosting/deploy/compose.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/self-hosting/deploy/compose.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/deploy/compose
 
 This guide takes you from zero to a running ZITADEL instance in minutes and then shows you how to harden it for a homelab or semi-production deployment.
@@ -81,12 +81,15 @@ Set `LETSENCRYPT_EMAIL` in `.env` to receive certificate expiry notifications.
 ZITADEL_MASTERKEY=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 32)
 echo "ZITADEL_MASTERKEY=$ZITADEL_MASTERKEY" >> .env
 
+# Generate the Login UI session cookie secret (at least 32 characters)
+echo "LOGIN_SESSION_COOKIE_SECRET=$(openssl rand -base64 32)" >> .env
+
 # Set strong database passwords
 echo "POSTGRES_ADMIN_PASSWORD=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 32)" >> .env
 echo "POSTGRES_ZITADEL_PASSWORD=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 32)" >> .env
 ```
 
-The commands above cover the masterkey and the database passwords. The **initial admin user** (`zitadel-admin`) has a password too, defaulting to `Password1!`. To set your own before the first start, add it to `.env`:
+The commands above cover the masterkey, the session cookie secret and the database passwords. The **initial admin user** (`zitadel-admin`) has a password too, defaulting to `Password1!`. To set your own before the first start, add it to `.env`:
 
 ```dotenv
 ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORD=MyInitialPassw0rd!

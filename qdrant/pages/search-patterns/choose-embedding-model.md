@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-patterns/choose-embedding-model.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/search-patterns/choose-embedding-model.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-patterns/choose-embedding-model.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/search-patterns/choose-embedding-model.md)
 > Canonical documentation: https://qdrant.tech/documentation/search-patterns/choose-embedding-model/
 
 # How to Choose an Embedding Model: Evaluation & Tradeoffs
@@ -33,14 +33,14 @@ model that can properly embed text across different languages. If you use Open S
 documented on Hugging Face Hub. For example, the popular in demos `all-MiniLM-L6-v2` was trained on English data only,
 so it's not a good choice if you have data in other languages.
 
-[![all-MiniLM-L6-v2 on Hugging Face Hub](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/articles_data/how-to-choose-an-embedding-model/hf-model-card.png)](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
+[![all-MiniLM-L6-v2 on Hugging Face Hub](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/how-to-choose-an-embedding-model/hf-model-card.png)](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
 
 However, it's not only about the language, but also about how the model treats the input data. Surprisingly, this is
 often overlooked. Text embedding models use a specific tokenizer to chunk the input data into pieces, and then [start
 all the Transformer magic with assigning each token a specific input vector
 representation](https://qdrant.tech/articles/late-interaction-models/#understanding-embedding-models).
 
-![An example of tokenization with WordPiece tokenizer](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/articles_data/how-to-choose-an-embedding-model/tokenization-example.png)
+![An example of tokenization with WordPiece tokenizer](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/how-to-choose-an-embedding-model/tokenization-example.png)
 
 One of the effects of such inner workings is that the model can only understand what its tokenizer was trained on ([yes,
 tokenizers are also trainable components](https://huggingface.co/learn/llm-course/chapter2/4#tokenizers)). As a result,
@@ -48,7 +48,7 @@ any characters it hasn't seen during the training will be replaced with a specia
 media data, then you might be surprised that two contradicting sentences are actually perfect matches in your search,
 as presented in the following example:
 
-![Tokenization: The weather today is so 🌧️ vs The weather today is so 🌞](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/articles_data/how-to-choose-an-embedding-model/tokenization-contradictions.png)
+![Tokenization: The weather today is so 🌧️ vs The weather today is so 🌞](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/how-to-choose-an-embedding-model/tokenization-contradictions.png)
 
 The same may go for accented letters, different alphabets, etc., that dominate in your target language. However, in that
 case, you shouldn't be using such a model in the first place, as it does not support your language either way.
@@ -65,7 +65,7 @@ might be slightly harder, but companies like [OpenAI](https://github.com/openai/
 In the worst case, you can just modify some of the suspected tokens and see how the model reacts in terms of the
 similarity between the original and modified text.
 
-![Creating vectors for accented and non-accented letters](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/articles_data/how-to-choose-an-embedding-model/accented-letters.png)
+![Creating vectors for accented and non-accented letters](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/how-to-choose-an-embedding-model/accented-letters.png)
 
 If the created representations are really far from each other in the vector space, it may indicate that some
 non-supported characters are replaced with `UNK` tokens and thus the model can't properly embed the input data.
@@ -211,7 +211,7 @@ might lean towards self-hosted options, while those who prefer to avoid dealing 
 might prefer API-based solutions. Who knows? Maybe your project does not require the highest precision possible, and a
 smaller model will do the job just fine.
 
-![Fast, precise, cheap - pick two](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/articles_data/how-to-choose-an-embedding-model/pyramid.png)
+![Fast, precise, cheap - pick two](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/how-to-choose-an-embedding-model/pyramid.png)
 
 Remember that this doesn't have to be a one-time decision. As your application evolves, you might need to revisit your
 choice of the embedding model. Qdrant's architecture makes it relatively easy to migrate to a different model if needed.
@@ -233,7 +233,7 @@ a distant location. Moreover, some of the cloud providers will charge you for th
 the latency, but also about the cost. Finally, running an embedding model on-premises requires some expertise and
 resources, and if you want to focus on your core business, you might prefer to avoid that.
 
-![Architecture diagram with Qdrant Cloud Inference](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/articles_data/how-to-choose-an-embedding-model/cloud-inference-diagram.jpg)
+![Architecture diagram with Qdrant Cloud Inference](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/how-to-choose-an-embedding-model/cloud-inference-diagram.jpg)
 
 **Qdrant's Cloud Inference** solves these problems by allowing you to run the embedding model next to the cluster where
 your vector database is running. It's a perfect solution for those who want not to worry about the model inference and

@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.1: [apps/docs/content/self-hosting/manage/configure/configure.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/self-hosting/manage/configure/configure.mdx)
+> Pinned source for ZITADEL v4.19.2: [apps/docs/content/self-hosting/manage/configure/configure.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/self-hosting/manage/configure/configure.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/manage/configure/configure
 
 This guide assumes you are familiar with [running ZITADEL using the least amount of configuration possible](https://zitadel.com/docs/self-hosting/deploy/overview).
@@ -568,6 +568,11 @@ Projections:
   Customizations:
     custom_texts:
       BulkLimit: 400
+    # The sessions projection processes the highest event volume.
+    # A higher bulk limit amortizes the fixed cost per batch over more events,
+    # which shortens catch-up after the projection fell behind.
+    sessions:
+      BulkLimit: 1000 # ZITADEL_PROJECTIONS_CUSTOMIZATIONS_SESSIONS_BULKLIMIT
     project_grant_fields:
       TransactionDuration: 0s
       BulkLimit: 2000

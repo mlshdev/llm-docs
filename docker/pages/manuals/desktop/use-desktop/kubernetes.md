@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/use-desktop/kubernetes.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/desktop/use-desktop/kubernetes.md)
+> Pinned source for Docker main: [content/manuals/desktop/use-desktop/kubernetes.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/use-desktop/kubernetes.md)
 
 # Explore the Kubernetes view
 
@@ -7,8 +7,6 @@ Docker Desktop includes a standalone Kubernetes server and client, as well as Do
 The Kubernetes server runs as a single or multi-node cluster, within Docker containers. This lightweight setup helps you explore Kubernetes features, test workloads, and work with container orchestration in parallel with other Docker features.
 
 ## Enable Kubernetes
-
-With Docker Desktop version 4.51 and later, you can manage Kubernetes directly from the **Kubernetes** view in the Docker Desktop Dashboard.
 
 1. Open the Docker Desktop Dashboard and select the **Kubernetes** view.
 2. Select **Create cluster**.
@@ -143,7 +141,7 @@ factors, including the version of Kubernetes being used. The tags vary for each 
 
 > \[!NOTE]
 >
-> In Docker Desktop versions 4.44 or later you can run `docker desktop kubernetes images list` to list Kubernetes images used by the currently installed version of Docker Desktop.
+> You can run `docker desktop kubernetes images list` to list Kubernetes images used by the currently installed version of Docker Desktop.
 > For more information, see the [Docker Desktop CLI](https://docs.docker.com/reference/cli/docker/desktop/kubernetes/images/).
 
 To accommodate scenarios where access to Docker Hub is not allowed, admins can
@@ -172,29 +170,13 @@ The recommended approach to set this up is the following:
 
 1. Start Kubernetes using the desired cluster provisioning method: `kubeadm` or `kind`.
 2. After Kubernetes has started, use either:
-   - (Docker Desktop version 4.44 or later) `docker desktop kubernetes images list` to list the image tags that will be pulled by the current Docker Desktop installation
+   - `docker desktop kubernetes images list` to list the image tags that will be pulled by the current Docker Desktop installation
    - `docker ps` to view the container images used by Docker Desktop for the Kubernetes control plane
 3. Clone or mirror those images (with matching tags) to your custom registry.
 4. Stop the Kubernetes cluster.
 5. Configure the `KubernetesImagesRepository` setting to point to your custom registry.
 6. Restart Docker Desktop.
 7. Verify that the Kubernetes cluster is using the custom registry images using the `docker ps` command.
-
-> \[!NOTE]
->
-> The `KubernetesImagesRepository` setting only applies to control plane images used by Docker Desktop
-> to set up the Kubernetes cluster. It has no effect on other Kubernetes pods.
-
-> \[!NOTE]
->
-> In Docker Desktop versions 4.43 or earlier, when using `KubernetesImagesRepository` and [Enhanced Container Isolation (ECI)](https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/)
-> is enabled, add the following images to the [ECI Docker socket mount image list](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/configure-json-file/#enhanced-container-isolation):
->
-> `[imagesRepository]/desktop-cloud-provider-kind:`
-> `[imagesRepository]/desktop-containerd-registry-mirror:`
->
-> These containers mount the Docker socket, so you must add the images to the ECI images list. If not,
-> ECI will block the mount and Kubernetes won't start.
 
 ## Troubleshooting
 

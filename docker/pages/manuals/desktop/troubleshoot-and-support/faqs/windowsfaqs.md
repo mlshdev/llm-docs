@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/faqs/windowsfaqs.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/desktop/troubleshoot-and-support/faqs/windowsfaqs.md)
+> Pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/faqs/windowsfaqs.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/troubleshoot-and-support/faqs/windowsfaqs.md)
 
 # FAQs for Docker Desktop for Windows
 
@@ -48,7 +48,7 @@ in `~/.docker/certs.d/<MyRegistry>:<Port>/client.cert` and
 
 When the Docker Desktop application starts, it copies the
 `~/.docker/certs.d` folder on your Windows system to the `/etc/docker/certs.d`
-directory on Moby (the Docker Desktop virtual machine running on Hyper-V).
+directory inside the Docker Desktop Linux VM.
 
 You need to restart Docker Desktop after making any changes to the keychain
 or to the `~/.docker/certs.d` directory in order for the changes to take effect.

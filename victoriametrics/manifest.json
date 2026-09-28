@@ -6,21 +6,21 @@
   "title": "VictoriaMetrics",
   "homepage": "https://docs.victoriametrics.com/",
   "repository": "VictoriaMetrics/VictoriaMetrics",
-  "tag": "v1.152.0",
-  "releaseId": 387088407,
-  "releasePublishedAt": "2026-09-14T10:36:37Z",
-  "sourceCommit": "540b91da031aa8b7d53d3784693bb451e2be980a",
+  "tag": "v1.153.0",
+  "releaseId": 396722068,
+  "releasePublishedAt": "2026-09-28T08:49:46Z",
+  "sourceCommit": "3acd30be3427c5a63aa75b498af929daf2633480",
   "documentCount": 115,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 5440462,
+      "byteLength": 5504695,
       "documentCount": 115,
-      "sha256": "2b86801024787215c7aedcd17c339a7394bbc6e3b94eeb636cf10e9a40f76cf8"
+      "sha256": "4ab869f91285e0505189a23233e07f87f2ff55a8d6a913f77c81f51ce7934b16"
     }
   ],
-  "outputDigest": "73e34e84f2f22cc0ef0c5054f8914941b7557bc29a854a3b0b928c026f6e6e40",
+  "outputDigest": "55c486ae7b78842c4540d0c3195f4aa70dd43302885ecc2c2df39d29bacc821e",
   "notes": [
     "Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.",
     "Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.",

@@ -1,11 +1,11 @@
-> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/integrate/login-ui/oidc-standard.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/integrate/login-ui/oidc-standard.mdx)
+> Pinned source for ZITADEL v4.19.2: [apps/docs/content/guides/integrate/login-ui/oidc-standard.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/guides/integrate/login-ui/oidc-standard.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login-ui/oidc-standard
 
 To build your own login ui for your own application it is not necessary to have the OIDC standard included or any additional work that has to be done.
 However, it might make sense, if you want to connect your login to different applications especially if they are not in your control and they rely on the standard.
 
 The following flow shows you the different components you need to enable OIDC for your login.
-![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/login-ui/oidc-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/guides/login-ui/oidc-flow.png)
 
 1. Your application makes an authorization request to your login UI
 2. The login UI proxies the request to the ZITADEL API.

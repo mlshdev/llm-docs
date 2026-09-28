@@ -1,9 +1,9 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/data-management/fluvio.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/data-management/fluvio.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/data-management/fluvio.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/data-management/fluvio.md)
 > Canonical documentation: https://qdrant.tech/documentation/data-management/fluvio/
 
 # InfinyOn Fluvio
 
-![Fluvio Logo](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/data-management/fluvio/fluvio-logo.png)
+![Fluvio Logo](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/data-management/fluvio/fluvio-logo.png)
 
 [InfinyOn Fluvio](https://www.fluvio.io/) is an open-source platform written in Rust for high speed, real-time data processing. It is cloud native, designed to work with any infrastructure type, from bare metal hardware to containerized platforms.
 

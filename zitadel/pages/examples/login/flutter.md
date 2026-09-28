@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.1: [apps/docs/content/examples/login/flutter.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/examples/login/flutter.mdx)
+> Pinned source for ZITADEL v4.19.2: [apps/docs/content/examples/login/flutter.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/examples/login/flutter.mdx)
 > Canonical documentation: https://zitadel.com/docs/examples/login/flutter
 
 # Flutter Web App
@@ -15,7 +15,7 @@ Before we can start building our application, we have to do a few setup steps in
 You will need to provide some information about your app. We recommend creating a new app to start from scratch. Navigate to your Project, then add a new application at the top of the page.
 Select **Native** application type and continue.
 
-![Create app in management console](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/flutter/nativeapp.png)
+![Create app in management console](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/flutter/nativeapp.png)
 
 ### Redirect URIs
 
@@ -153,10 +153,10 @@ Our Android and iOS Application opens ZITADEL's login within a custom tab, on We
 
 If everything works out correctly, your applications should look like this:
 
-![Unauthenticated](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/flutter/not-authed.png)
+![Unauthenticated](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/flutter/not-authed.png)
 
-![Flutter Authenticated](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/flutter/authed.png)
+![Flutter Authenticated](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/flutter/authed.png)
 
-![Unauthenticated](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/flutter/web-not-authed.png)
+![Unauthenticated](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/flutter/web-not-authed.png)
 
-![Flutter Authenticated](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/flutter/web-authed.png)
+![Flutter Authenticated](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/flutter/web-authed.png)

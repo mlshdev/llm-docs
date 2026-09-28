@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/use-desktop/builds.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/desktop/use-desktop/builds.md)
+> Pinned source for Docker main: [content/manuals/desktop/use-desktop/builds.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/use-desktop/builds.md)
 
 # Explore the Builds view in Docker Desktop
 
@@ -22,6 +22,8 @@ Open the **Builds** view from the Docker Dashboard to access:
 - **Active builds**: Builds currently in progress
 
 Only builds from active, running builders are listed. Builds from removed or stopped builders are not shown.
+
+If Gordon is available, build history rows can offer AI-suggested questions, such as "Why did this build fail?"
 
 ### Builder settings
 
@@ -132,7 +134,7 @@ and view it in [Jaeger](https://www.jaegertracing.io/):
 3. Navigate to the **Build results** section, open the actions menu and select **Download as Jaeger format**.
 
    <video controls>
-     <source src="https://raw.githubusercontent.com/docker/docs/4e9a5751518ed8223a8dcde53693badddd72604f/static/assets/video/build-jaeger-export.mp4" type="video/mp4" />
+     <source src="https://raw.githubusercontent.com/docker/docs/f22c0e6595ca1996d2a6559cadcf2596499e6c11/static/assets/video/build-jaeger-export.mp4" type="video/mp4" />
    </video>
 
 4. Go to <http://localhost:16686> in your browser to open Jaeger UI.
@@ -141,7 +143,7 @@ and view it in [Jaeger](https://www.jaegertracing.io/):
 
 Now you can analyze the build trace using the Jaeger UI:
 
-![Jaeger UI screenshot](https://raw.githubusercontent.com/docker/docs/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/desktop/images/build-ui-jaeger-screenshot.png "Screenshot of a build trace in the Jaeger UI")
+![Jaeger UI screenshot](https://raw.githubusercontent.com/docker/docs/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/images/build-ui-jaeger-screenshot.png "Screenshot of a build trace in the Jaeger UI")
 
 ### Dockerfile source and errors
 

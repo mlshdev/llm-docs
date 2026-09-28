@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/d97584959417519597a24c8fdd13dc4b9af1a876/doc/general.texi)
+> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/291f96f7929f5837dc900adef3720025516e8584/doc/general.texi)
 
 # External libraries
 
@@ -1334,6 +1334,7 @@ following image formats are supported:
 - ADPCM Nintendo THP   |       |   X
 - ADPCM Playstation       |       |   X
 - ADPCM QT IMA            |   X   |   X
+- ADPCM Rhetorex          |       |   X
 - ADPCM Sanyo             |       |   X
 - ADPCM SEGA CRI ADX      |   X   |   X
   \|  Used in Sega Dreamcast games.

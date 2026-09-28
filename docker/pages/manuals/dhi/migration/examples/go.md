@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/migration/examples/go.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/dhi/migration/examples/go.md)
+> Pinned source for Docker main: [content/manuals/dhi/migration/examples/go.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/dhi/migration/examples/go.md)
 
 This example shows how to migrate a Go application to Docker Hardened Images.
 

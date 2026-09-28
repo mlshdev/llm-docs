@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.152.0: [docs/anomaly-detection/components/monitoring.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/components/monitoring.md)
+> Pinned source for VictoriaMetrics v1.153.0: [docs/anomaly-detection/components/monitoring.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/components/monitoring.md)
 
 There are 2 models to monitor VictoriaMetrics Anomaly Detection behavior - [push](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#push-model) and [pull](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#pull-model). Parameters for each of them should be specified in the config file, `monitoring` section.
 
@@ -218,7 +218,7 @@ Label names [description](#labelnames)
 
 <span style="white-space: nowrap;">`vmanomaly_reader_responses`</span> (named `vmanomaly_reader_response_count` *(deprecated since vmanomaly v1.17.0)*) </td> <td>
 
-`Counter` </td> <td>The count of responses received from VictoriaMetrics `url` for the `query_key` query, categorized by `code`, within the specified scheduler `scheduler_alias`, in the `vmanomaly` service running in `preset` mode.</td> <td>
+`Counter` </td> <td>The count of request outcomes from VictoriaMetrics `url` for the `query_key` query, categorized by `code` (HTTP status or `ssl_error`, `connection_error`, `timeout`, `io_error`), within the specified scheduler `scheduler_alias`, in the `vmanomaly` service running in `preset` mode.</td> <td>
 
 `url`, `query_key`, `code`, `scheduler_alias`, `preset` </td> </tr> <tr> <td>
 
@@ -357,7 +357,7 @@ Label names [description](#labelnames)
 
 <span style="white-space: nowrap;">`vmanomaly_writer_responses`</span> (named `vmanomaly_writer_response_count` *(deprecated since vmanomaly v1.17.0)*) </td> <td>
 
-`Counter` </td> <td>The count of response codes received from VictoriaMetrics `url` for the `query_key` query, categorized by `code`, within the specified scheduler `scheduler_alias`, in the `vmanomaly` service running in `preset` mode.
+`Counter` </td> <td>The count of final write-batch outcomes after retries to VictoriaMetrics `url` for the `query_key` query, categorized by `code` (HTTP status or `ssl_error`, `connection_error`, `timeout`, `io_error`), within the specified scheduler `scheduler_alias`, in the `vmanomaly` service running in `preset` mode.
 
 </td>
             <td>

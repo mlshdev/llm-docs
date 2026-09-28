@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/troubleshoot/_index.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/desktop/troubleshoot-and-support/troubleshoot/_index.md)
+> Pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/troubleshoot/_index.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/troubleshoot-and-support/troubleshoot/_index.md)
 
 # Troubleshoot Docker Desktop
 
@@ -8,7 +8,7 @@ This page contains information on how to diagnose and troubleshoot Docker Deskto
 
 To navigate to **Troubleshoot** either:
 
-- Select the Docker menu Docker menu ![whale menu](https://raw.githubusercontent.com/docker/docs/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/desktop/images/whale-x.svg) and then **Troubleshoot**.
+- Select the Docker menu Docker menu ![whale menu](https://raw.githubusercontent.com/docker/docs/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/images/whale-x.svg) and then **Troubleshoot**.
 - Select the **question mark** icon near the top-right corner of the Docker Desktop Dashboard.
 
 The **Troubleshoot** menu contains the following options:
@@ -19,13 +19,12 @@ The **Troubleshoot** menu contains the following options:
 
 - **Reset Kubernetes cluster**. Select to delete all stacks and Kubernetes resources. For more information, see [Kubernetes](https://docs.docker.com/desktop/settings-and-maintenance/settings/#kubernetes).
 
-- **Clean up data**. This option resets all Docker data without a
-  reset to factory defaults. Selecting this option results in the loss of existing settings.
+- **Clean up data**. A disk image reset destroys all Docker containers and images local to the machine, preserving all settings.
 
 - **Reset to factory defaults**: Choose this option to reset all options on
   Docker Desktop to their initial state, the same as when Docker Desktop was first installed.
 
-If you are a Mac or Linux user, you also have the option to **Uninstall** Docker Desktop from your system.
+If you are a Mac user, you also have the option to **Uninstall** Docker Desktop from your system.
 
 ## Diagnose
 
@@ -178,6 +177,4 @@ to learn how to view the Docker Daemon logs.
 ## Further resources
 
 - View specific [troubleshoot topics](https://docs.docker.com/desktop/troubleshoot-and-support/troubleshoot/topics/).
-- View information on [known issues](https://docs.docker.com/desktop/troubleshoot-and-support/troubleshoot/known-issues/)
-- [Fix "Docker.app is damaged" on macOS](https://docs.docker.com/desktop/troubleshoot-and-support/troubleshoot/mac-damaged-dialog/) - Resolve macOS installation issues
 - [Get support for Docker products](https://docs.docker.com/support/)

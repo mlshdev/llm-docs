@@ -1,6 +1,6 @@
 # Qdrant master
 
-> Documentation generated from the latest `master` branch commit of [qdrant/landing_page](https://github.com/qdrant/landing_page) and pinned to immutable source commit `c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab`.
+> Documentation generated from the latest `master` branch commit of [qdrant/landing_page](https://github.com/qdrant/landing_page) and pinned to immutable source commit `524630eaca5eb800de91fe4e74d35f8abd6304b2`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Qdrant master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -8,7 +8,7 @@
 - Hugo code-snippet and include shortcodes are expanded from pinned headless Markdown, while figures, accordions, and interactive islands are reduced to their authored static Markdown content without executing Hugo or JavaScript.
 - Published documentation links resolve to https://qdrant.tech; repository assets resolve to immutable raw URLs at the pinned commit.
 - The upstream documentation repository declares no license, so LICENSE.upstream records a copyright notice rather than a license grant.
-- Quarantined sources (9): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
+- Quarantined sources (10): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
 
 ## Documentation
 
@@ -171,7 +171,6 @@
 - [Hybrid Search](pages/search/text-search/hybrid-search.md): Combine dense and sparse vectors in Qdrant for hybrid search that handles both semantic queries and keyword lookups in a single request. (11520 bytes)
 - [Search](pages/search/search.md): Run similarity search in Qdrant to find points whose vectors are nearest to a query in the configured vector space. (86802 bytes)
 - [Filtering](pages/search/filtering.md): Combine vector similarity with payload filters in Qdrant to enforce business rules and refine search results. (82353 bytes)
-- [Hybrid Queries](pages/search/hybrid-queries.md): Combine dense, sparse, and multivector queries in Qdrant with hybrid search, weighted RRF tuning, DBSF, and multi-stage rescoring with Formula Query. (55714 bytes)
 - [Explore](pages/search/explore.md): Explore Qdrant data beyond similarity search with recommendation, discovery, and dissimilar-vector search APIs. (49204 bytes)
 - [Search Relevance](pages/search/search-relevance.md): Tune Qdrant search relevance with custom scoring, payload-based ranking, and business-aware result ordering. (48031 bytes)
 - [Low-Latency Search](pages/search/low-latency-search.md): Tune Qdrant for low-latency vector search with quantization, HNSW indexing, sharding, and replica routing strategies. (11871 bytes)
@@ -247,7 +246,7 @@
 - [Synchronize with a Server](pages/edge/edge-synchronization-guide.md): Combine mutable and immutable Qdrant Edge Shards with a server to offload indexing, back up data, and synchronize edge devices. (14915 bytes)
 - [Reading Data](pages/edge/edge-api/reading-data.md): Read from a Qdrant Edge Shard with query, scroll, retrieve, count, and facet. (10301 bytes)
 - [Snapshots](pages/edge/edge-api/snapshots.md): Move data between a Qdrant Edge Shard and a server collection with snapshot methods. (3044 bytes)
-- [Qdrant Edge](pages/edge/index.md): Embed Qdrant Edge for in-process vector search on robots, kiosks, and mobile devices with low-latency local retrieval. (4491 bytes)
+- [Qdrant Edge](pages/edge/index.md): Embed Qdrant Edge for in-process vector search on robots, kiosks, and mobile devices with low-latency local retrieval. (4624 bytes)
 
 ## Build Prototypes
 
@@ -267,7 +266,7 @@
 
 ## Hybrid Cloud
 
-- [Setup Hybrid Cloud](pages/hybrid-cloud/hybrid-cloud-setup.md): Set up a Qdrant Hybrid Cloud Environment by installing the Operator and Cloud Agent into your own Kubernetes cluster. (13813 bytes)
+- [Setup Hybrid Cloud](pages/hybrid-cloud/hybrid-cloud-setup.md): Set up a Qdrant Hybrid Cloud Environment by installing the Operator and Cloud Agent into your own Kubernetes cluster. (14046 bytes)
 - [Create a Cluster](pages/hybrid-cloud/hybrid-cloud-cluster-creation.md): Create a Qdrant cluster in Hybrid Cloud with Kubernetes scheduling controls, node selectors, and secret-based API key authentication. (10369 bytes)
 - [Configure, Scale & Update Clusters](pages/hybrid-cloud/configure-scale-upgrade.md): Configure, scale, reshard, and upgrade Qdrant Hybrid Cloud clusters with automatic shard rebalancing across your Kubernetes nodes. (1460 bytes)
 - [Configure the Qdrant Operator](pages/hybrid-cloud/operator-configuration.md): Tune the Qdrant Operator in Hybrid Cloud with options for scheduling, security, ingress, networking, and snapshot management. (9563 bytes)

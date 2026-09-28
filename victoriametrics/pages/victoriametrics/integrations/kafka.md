@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.152.0: [docs/victoriametrics/integrations/kafka.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/integrations/kafka.md)
+> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/integrations/kafka.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/integrations/kafka.md)
 
 > This integration is supported only in [Enterprise version](https://docs.victoriametrics.com/victoriametrics/enterprise/) of vmagent.
 
@@ -209,3 +209,5 @@ Two types of auth are supported:
     -remoteWrite.tlsCertFile=/opt/cert.pem \
     -remoteWrite.tlsKeyFile=/opt/key.pem
 ```
+
+kafka client periodically checks the content of the provided TLS certificates and reloads the clients if the certificate content changes.

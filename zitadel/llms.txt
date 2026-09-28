@@ -1,12 +1,13 @@
-# ZITADEL v4.19.1
+# ZITADEL v4.19.2
 
-> Documentation generated from the latest stable release of [zitadel/zitadel](https://github.com/zitadel/zitadel) and pinned to immutable source commit `76959769b9020fe96e45d9ee78ed079fdd6ad0e8`.
+> Documentation generated from the latest stable release of [zitadel/zitadel](https://github.com/zitadel/zitadel) and pinned to immutable source commit `2c37c4176ad51c3db0354122e06af53a88d30d4e`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for ZITADEL v4.19.1.
+- [Full documentation](llms-full.txt): Complete normalized corpus for ZITADEL v4.19.2.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages come from the Fumadocs content tree in apps/docs/content; underscore-prefixed partials are inlined into the pages that import them.
 - Interactive elements the site renders from JavaScript - framework pickers, benchmark charts, permission and PII tables, and React partials such as the quick start console walkthroughs - are omitted because they carry no static prose.
 - Cross-references keep their published form on https://zitadel.com/docs; images and imported sample files point at the pinned commit on GitHub.
+- Quarantined sources (1): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
 
 ## API reference
 
@@ -58,7 +59,7 @@
 - [Scopes in ZITADEL](pages/apis/openidoauth/scopes.md): ZITADEL supports the usage of scopes as way of requesting information from the instance and also instruct ZITADEL to do certain operations. (9390 bytes)
 - [SAML Endpoints in ZITADEL](pages/apis/saml/endpoints.md): The SAML Metadata is located within the issuer domain. This would give us ${CUSTOMDOMAIN}/saml/v2/metadata. (4909 bytes)
 - [SCIM v2.0 (Preview)](pages/apis/scim2.md): The Zitadel SCIM v2 service provider interface enables integration of identity and access management (instance) systems with Zitadel, following the System for Cross-domain Identity Management (SCIM) v2.0 specification.… (23089 bytes)
-- [GRPC Status Codes in ZITADEL](pages/apis/statuscodes.md): Normalized source from apps/docs/content/apis/statuscodes.mdx. (4228 bytes)
+- [GRPC Status Codes in ZITADEL](pages/apis/statuscodes.md): For stable v2 APIs, services import zitadel/error/v2/error.proto so reflection-aware clients can resolve zitadel.error.v2.ErrorDetail. (5169 bytes)
 - [APIs V2 (Generally Available)](pages/apis/v2.md): The v2 APIs are the recommended way to interact with ZITADEL resources. They are resource-based, automatically scope results to the caller's permissions, and replace the context-specific v1 APIs over time. (663 bytes)
 
 ## Concepts
@@ -161,7 +162,7 @@
 - [Handle External Logins in a Custom Login UI](pages/guides/integrate/login-ui/external-login.md): The prerequisite for adding an external login (social and enterprise) to your user account is a registered identity provider on your ZITADEL instance or the organization of the user. If you haven’t added a provider yet,… (7817 bytes)
 - [Maintain and Deploy a Customized ZITADEL Login UI](pages/guides/integrate/login-ui/fork-and-deploy-login-app.md): The ZITADEL Login UI is an MIT-licensed Next.js application maintained in the ZITADEL monorepo. You can customize and deploy it independently, but your fork becomes an application that your team must build, test, secure… (16419 bytes)
 - [Build your own Login UI](pages/guides/integrate/login-ui.md): Normalized source from apps/docs/content/guides/integrate/login-ui/index.mdx. (1082 bytes)
-- [Login App](pages/guides/integrate/login-ui/login-app.md): To replace the old embedded Login built with Golang and to showcase the use of our session and OIDC APIs, we've created the new Login app. (8310 bytes)
+- [Login App](pages/guides/integrate/login-ui/login-app.md): To replace the old embedded Login built with Golang and to showcase the use of our session and OIDC APIs, we've created the new Login app. (8305 bytes)
 - [Logging Out via a Custom Login UI](pages/guides/integrate/login-ui/logout.md): When your user is done using your application and clicks on the logout button, you have to send a request to the terminate session endpoint. Terminate Session Documentation (1481 bytes)
 - [Multi-Factor Authentication (MFA) in a Custom Login UI](pages/guides/integrate/login-ui/mfa.md): Multi-factor authentication (MFA) is a multi-step account authentication which requires to user to enter more than only the password. It is highly recommended to use MFA or Passkeys to make your user accounts more secur… (24547 bytes)
 - [OpenID Connect (OIDC) in Custom Login UI](pages/guides/integrate/login-ui/oidc-standard.md): To build your own login ui for your own application it is not necessary to have the OIDC standard included or any additional work that has to be done. However, it might make sense, if you want to connect your login to d… (6828 bytes)
@@ -174,7 +175,7 @@
 - [Onboard B2B customers using organizations](pages/guides/integrate/onboarding/b2b.md): In this guide we will explain how you can create and set up new organizations in ZITADEL to help you with your onboarding flows. Creating a new organization is the best choice for multi-tenancy use cases that require se… (15845 bytes)
 - [Onboard Users](pages/guides/integrate/onboarding/end-users.md): End Users have three different possibilities on how to login with ZITADEL. (11359 bytes)
 - [Onboard Customers and Users](pages/guides/integrate/onboarding.md): Normalized source from apps/docs/content/guides/integrate/onboarding/index.mdx. (144 bytes)
-- [Retrieve User Roles in ZITADEL](pages/guides/integrate/retrieve-user-roles.md): This guide explains all the possible ways of retrieving user roles across different organizations and projects using ZITADEL's APIs. (19959 bytes)
+- [Retrieve User Roles in ZITADEL](pages/guides/integrate/retrieve-user-roles.md): This guide explains all the possible ways of retrieving user roles across different organizations and projects using ZITADEL's APIs. (20165 bytes)
 - [SCIM Provisioning from Okta](pages/guides/integrate/scim-okta-guide.md): This guide provides step-by-step instructions to configure SCIM provisioning from Okta into ZITADEL. (4667 bytes)
 - [Authenticate service accounts and client applications](pages/guides/integrate/service-accounts/authenticate-service-accounts.md): This guide explains ZITADEL service accounts and their role in facilitating secure machine-to-machine communication within your applications. (9261 bytes)
 - [OAuth Client Credentials for Service Accounts](pages/guides/integrate/service-accounts/client-credentials.md): This guide demonstrates how developers can leverage Client Credential authentication to secure communication between service accounts and client applications within ZITADEL. (5950 bytes)
@@ -201,9 +202,9 @@
 - [Get Events from ZITADEL](pages/guides/integrate/zitadel-apis/event-api.md): ZITADEL leverages the power of eventsourcing, meaning every action and change within the system generates a corresponding event that is stored in the database. To provide you with greater flexibility and access to these… (6238 bytes)
 - [Integrate ZITADEL APIs into a .NET Application](pages/guides/integrate/zitadel-apis/example-zitadel-api-with-dot-net.md): This integration guide shows you how to integrate ZITADEL into your .NET application. It demonstrates how to fetch some data from the ZITADEL management API. (6601 bytes)
 - [Integrate ZITADEL APIs into a Go Application](pages/guides/integrate/zitadel-apis/example-zitadel-api-with-go.md): This integration guide shows you how to integrate ZITADEL into your Go application. It demonstrates how to fetch some data from the ZITADEL management API. (3833 bytes)
-- [ZITADEL Cloud Egress IP Addresses](pages/guides/manage/cloud/egress.md): When configuring your firewall or network security groups, you may need to allow traffic from ZITADEL Cloud to your internal infrastructure. (2374 bytes)
+- [ZITADEL Cloud Egress IP Addresses](pages/guides/manage/cloud/egress.md): When configuring your firewall or network security groups, you may need to allow traffic from ZITADEL Cloud to your internal infrastructure. (2410 bytes)
 - [Overview](pages/guides/manage/cloud/overview.md): Normalized source from apps/docs/content/guides/manage/cloud/overview/index.mdx. (327 bytes)
-- [ZITADEL Support](pages/guides/manage/cloud/support.md): We always recommend first having a look at our documentation, discord chat and GitHub repository. You can also ask our AI assistant for help before contacting Support. (1941 bytes)
+- [ZITADEL Support](pages/guides/manage/cloud/support.md): We always recommend first having a look at our documentation, discord chat and GitHub repository. You can also ask our AI assistant for help before contacting Support. (2895 bytes)
 - [Actions](pages/guides/manage/console/actions-overview.md): An Identity and Access Management system is a highly interactive environment. ZITADEL includes a powerful feature called Actions, which allows you to programmatically react to specific events within the system. (4943 bytes)
 - [Hardening instance administrators](pages/guides/manage/console/administrator-hardening.md): Instance administrators (IAM roles) can manage resources across every organization on an instance. Organization administrators (ORG roles) manage users, projects, and policies within a single organization. When both kin… (24203 bytes)
 - [ZITADEL Administrators](pages/guides/manage/console/administrators.md): Administrators are users or service accounts who have permission to manage resources within ZITADEL. (9312 bytes)
@@ -245,7 +246,7 @@
 
 ## Overview
 
-- [ZITADEL Documentation](pages/index.md): ZITADEL is the Identity Infrastructure for Developers. (2341 bytes)
+- [ZITADEL Documentation](pages/index.md): ZITADEL is the Identity Infrastructure for Developers. (2340 bytes)
 
 ## Legal
 
@@ -306,7 +307,7 @@
 
 ## Self-hosting
 
-- [Set up ZITADEL with Docker Compose](pages/self-hosting/deploy/compose.md): This guide takes you from zero to a running ZITADEL instance in minutes and then shows you how to harden it for a homelab or semi-production deployment. (8918 bytes)
+- [Set up ZITADEL with Docker Compose](pages/self-hosting/deploy/compose.md): This guide takes you from zero to a running ZITADEL instance in minutes and then shows you how to harden it for a homelab or semi-production deployment. (9087 bytes)
 - [Developing ZITADEL with Dev Containers](pages/self-hosting/deploy/devcontainer.md): Dev containers provide a convenient way to set up a development environment for ZITADEL with all the necessary dependencies pre-configured. This allows you to start contributing or working on ZITADEL locally with minima… (2064 bytes)
 - [Caching](pages/self-hosting/deploy/kubernetes/caching.md): This guide explains how to connect Zitadel caches to Redis or Valkey on Kubernetes. (2634 bytes)
 - [Configuration](pages/self-hosting/deploy/kubernetes/configuration.md): This guide covers the major configuration options for the Zitadel Helm chart. For a complete list of options, see the values.yaml in the chart repository. (8302 bytes)
@@ -324,12 +325,12 @@
 - [Caches](pages/self-hosting/manage/cache.md): ZITADEL supports the use of a caches to speed up the lookup of frequently needed objects. As opposed to HTTP caches which might reside between ZITADEL and end-user applications, the cache build into ZITADEL uses active… (13852 bytes)
 - [Mirror data from cockroach to postgres](pages/self-hosting/manage/cli/mirror.md): The mirror command allows you to do database to database migrations. This functionality is useful to copy data from one database to another. (10577 bytes)
 - [ZITADEL Command Line Interface](pages/self-hosting/manage/cli/overview.md): This documentation serves as your guide to interacting with Zitadel through the command line interface (CLI). The Zitadel CLI empowers you to manage various aspects of your Zitadel system efficiently from your terminal. (1799 bytes)
-- [Self-Hosted ZITADEL Configuration: Runtime Settings & Environment Variables](pages/self-hosting/manage/configure/configure.md): This guide assumes you are familiar with running ZITADEL using the least amount of configuration possible. (164211 bytes)
+- [Self-Hosted ZITADEL Configuration: Runtime Settings & Environment Variables](pages/self-hosting/manage/configure/configure.md): This guide assumes you are familiar with running ZITADEL using the least amount of configuration possible. (164512 bytes)
 - [Configure ZITADEL](pages/self-hosting/manage/configure.md): Detailed configuration options for ZITADEL. (135 bytes)
 - [External ZITADEL Access](pages/self-hosting/manage/custom-domain.md): Also, ZITADEL has the concept of virtual instances. It uses a requests Host header to determine which virtual instance to use. This is useful for multi-tenancy and resource sharing, for example in SaaS scenarios. For mo… (3016 bytes)
 - [Database](pages/self-hosting/manage/database.md): PostgreSQL is the default database for ZITADEL due to its reliability, robustness, and adherence to SQL standards. It is well-suited for handling the complex data requirements of an identity management system. (5940 bytes)
 - [HTTP/2 Support in ZITADEL](pages/self-hosting/manage/http2.md): ZITADEL follows a strict API first approach and makes heavy use of the modern API framework called gRPC. Besides gRPC all APIs are also available in an openapi Rest fashion as well as in gRPC-web for compatibility towar… (1087 bytes)
-- [Connect your Self-Hosted Login UI to Zitadel](pages/self-hosting/manage/login-client.md): To enable your self-hosted Login UI to connect to the Zitadel API, it needs a token for a user with the IAM\LOGIN\CLIENT role. Place that service account in a dedicated organization for instance administrators and follo… (2975 bytes)
+- [Connect your Self-Hosted Login UI to Zitadel](pages/self-hosting/manage/login-client.md): To enable your self-hosted Login UI to connect to the Zitadel API, it needs a token for a user with the IAM\LOGIN\CLIENT role. Place that service account in a dedicated organization for instance administrators and follo… (5141 bytes)
 - [Metrics](pages/self-hosting/manage/metrics/overview.md): ZITADEL exposes operational and performance metrics to support monitoring, alerting, and capacity planning. (2594 bytes)
 - [Prometheus](pages/self-hosting/manage/metrics/prometheus.md): This page shows platform-agnostic ways to scrape ZITADEL metrics using: (14371 bytes)
 - [ZITADEL Production Setup](pages/self-hosting/manage/production.md): As soon as you successfully deployed ZITADEL as a proof of concept using one of our deployment guides, you are ready to configure ZITADEL for production usage. (12219 bytes)

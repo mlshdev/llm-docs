@@ -1,7 +1,7 @@
-> Pinned source for ZITADEL v4.19.1: [apps/docs/content/sdk-examples/client-libraries/java.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/sdk-examples/client-libraries/java.mdx)
+> Pinned source for ZITADEL v4.19.2: [apps/docs/content/sdk-examples/client-libraries/java.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/sdk-examples/client-libraries/java.mdx)
 > Canonical documentation: https://zitadel.com/docs/sdk-examples/client-libraries/java
 
-![java logo](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/tech/java.svg)
+![java logo](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/tech/java.svg)
 
 This guide covers the official Zitadel Management API Client for the JVM (Java 11+), which allows you to programmatically manage resources in your Zitadel instance.
 

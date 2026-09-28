@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.152.0: [docs/victoriametrics/data-ingestion/vmagent.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/data-ingestion/vmagent.md)
+> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/data-ingestion/vmagent.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/data-ingestion/vmagent.md)
 
 vmagent can receive data via the same protocols as VictoriaMetrics Single or Cluster versions,
 as well as scrape Prometheus endpoints. In other words,
@@ -28,6 +28,25 @@ Please note, `-remoteWrite.url` cmd-line flag can be specified multiple times wi
 vmagent will [replicate](https://docs.victoriametrics.com/victoriametrics/vmagent/#replication-and-high-availability) data to each
 specified destination. In addition, it is possible to configure [metrics sharding](https://docs.victoriametrics.com/victoriametrics/vmagent/#sharding-among-remote-storages)
 across `-remoteWrite.url` destinations.
+
+## Remote write directly to vmstorage
+
+`vmagent` can write data directly to `vmstorage` nodes via Prometheus Remote Write v1 protocol.
+This requires starting every target `vmstorage` node with `-enableIngestionAPI` and using the
+[cluster URL format](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#url-format):
+
+```sh
+/path/to/vmagent \
+  -remoteWrite.url=http://<vmstorage-1>:8482/insert/<tenant_id>/prometheus/api/v1/write \
+  -remoteWrite.url=http://<vmstorage-2>:8482/insert/<tenant_id>/prometheus/api/v1/write \
+  -remoteWrite.url=http://<vmstorage-3>:8482/insert/<tenant_id>/prometheus/api/v1/write \
+  -remoteWrite.shardByURL \
+  -remoteWrite.shardByURLReplicas=2
+```
+
+In this setup, `vmagent` behaves like `vminsert` running with `-replicationFactor=2` and `-disableReroutingOnUnavailable`.
+`vmagent` maintains a separate [persistent queue](https://docs.victoriametrics.com/victoriametrics/vmagent/#on-disk-persistence)
+for each `vmstorage` node and doesn't reroute data to other nodes. This helps mitigate [re-routing](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#slowness-based-re-routing) issues when some `vmstorage` nodes respond slowly or become unavailable.
 
 ## Remote write with basic authentication
 

@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/security.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/security.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/security.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/security.md)
 > Canonical documentation: https://qdrant.tech/documentation/security/
 
 # Security & Access Control

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.152.0: [docs/anomaly-detection/components/scheduler.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/components/scheduler.md)
+> Pinned source for VictoriaMetrics v1.153.0: [docs/anomaly-detection/components/scheduler.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/components/scheduler.md)
 
 Scheduler defines how often to run and make inferences, as well as what timerange to use to train the model.
 Is specified in `scheduler` section of a config for VictoriaMetrics Anomaly Detection.
@@ -106,7 +106,7 @@ Specifies when to initiate the first `fit_every` call. Accepts either an ISO 860
 
 `America/New_York` </td> <td>
 
-Defines the local timezone for the `start_from` parameter, if specified. Defaults to `UTC` if no timezone is provided. </td> </tr> <tr> <td>
+Defines the scheduler timezone, including `start_from` values without an explicit offset. ISO values with an explicit offset retain their instant. Defaults to `UTC`. *(available from vmanomaly v1.30.6)* Periodic interval triggers explicitly use this timezone instead of the container local timezone. </td> </tr> <tr> <td>
 
 <span style="white-space: nowrap;">`scatter_infer_jobs` *(available from vmanomaly v1.29.7)*</span> </td> <td>bool, <span style="white-space: nowrap;">Optional</span></td> <td>
 

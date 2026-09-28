@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/test-before-push.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/build/ci/github-actions/test-before-push.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/test-before-push.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/build/ci/github-actions/test-before-push.md)
 
 # Test before push with GitHub Actions
 

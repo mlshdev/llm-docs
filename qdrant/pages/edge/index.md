@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/edge/_index.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/edge/_index.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/edge/_index.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/edge/_index.md)
 > Canonical documentation: https://qdrant.tech/documentation/edge/
 
 > **Note**
@@ -15,7 +15,9 @@ Unlike Qdrant Server, which uses a client-server architecture, Qdrant Edge runs 
 
 Qdrant Edge is built around the concept of an **Edge Shard**: a self-contained storage unit that can operate independently. Each Edge Shard manages its own data, including vector and payload storage, and can perform local search and retrieval operations.
 
-![Qdrant Edge Shards operate on edge devices](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/edge/qdrant-edge.png)
+![Qdrant Edge Shards operate on edge devices](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/edge/qdrant-edge.png)
+
+*Ingest and query run inside the application process on the device. A Qdrant server is optional, for backups and heavier indexing.*
 
 To work with a Qdrant Edge Shard, use the [Python Bindings for Qdrant Edge](https://pypi.org/project/qdrant-edge-py/) package or the [`qdrant-edge` Rust crate](https://crates.io/crates/qdrant-edge). Both expose an `EdgeShard` type with methods to manage data, query it, and restore snapshots. To learn more about the available methods, refer to the [Edge API](https://qdrant.tech/documentation/edge/edge-api/) page.
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/local/index.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/_vendor/github.com/docker/docker-agent/docs/providers/local/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/local/index.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/_vendor/github.com/docker/docker-agent/docs/providers/local/index.md)
 
 *Run Docker Agent with locally hosted models for privacy, offline use, or cost savings.*
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/use-desktop/resource-saver.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/desktop/use-desktop/resource-saver.md)
+> Pinned source for Docker main: [content/manuals/desktop/use-desktop/resource-saver.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/use-desktop/resource-saver.md)
 
 # Docker Desktop's Resource Saver mode
 
@@ -11,16 +11,18 @@ With Resource Saver mode, Docker Desktop uses minimal system resources when it's
 allowing you to save battery life on your laptop and improve your multi-tasking
 experience.
 
+> \[!NOTE]
+>
+> If you have any WSL integration enabled, Docker Desktop treats that as ongoing activity and won't enter Resource Saver mode, even after the idle timer would otherwise have elapsed.
+
 ## Configure Resource Saver
 
 Resource Saver is enabled by default but can be disabled by navigating to the **Resources** tab, in **Settings**. You can also configure the idle
 timer as shown below.
 
-![Resource Saver Settings](https://raw.githubusercontent.com/docker/docs/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/desktop/images/resource-saver-settings.webp)
-
 If the values available aren't sufficient for your
 needs, you can reconfigure it to any value, as long as the value is larger than 30 seconds, by
-changing `autoPauseTimeoutSeconds` in the Docker Desktop `settings-store.json` file (or `settings.json` for Docker Desktop versions 4.34 and earlier):
+changing `autoPauseTimeoutSeconds` in the Docker Desktop `settings-store.json` file:
 
 - Mac: `~/Library/Group Containers/group.com.docker/settings-store.json`
 - Windows: `C:\Users\[USERNAME]\AppData\Roaming\Docker\settings-store.json`
@@ -45,7 +47,7 @@ When Docker Desktop enters Resource Saver mode:
 
 ## Resource Saver mode versus Pause
 
-Resource Saver has higher precedence than the older [Pause](https://docs.docker.com/desktop/use-desktop/pause/) feature,
+Resource Saver has higher precedence than the older Pause feature,
 meaning that while Docker Desktop is in Resource Saver mode, manually pausing
 Docker Desktop is not possible (nor does it make sense since Resource Saver
 actually stops the Docker Desktop Linux VM). In general, we recommend keeping
@@ -62,8 +64,7 @@ the WSL Linux VM is not owned by Docker Desktop). As a result, Resource Saver
 reduces CPU utilization on WSL, but it does not reduce Docker's memory
 utilization.
 
-To reduce memory utilization on WSL, we instead recommend that
-users enable WSL's `autoMemoryReclaim` feature as described in the
+To reduce memory utilization on WSL, enable WSL's `autoMemoryReclaim` feature as described in the
 [Docker  Desktop WSL docs](https://docs.docker.com/desktop/features/wsl/). Finally, since Docker Desktop does not
 stop the Linux VM on WSL, exit from Resource Saver mode is immediate (there's
 no exit delay).

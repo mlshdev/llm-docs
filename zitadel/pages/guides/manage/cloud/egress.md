@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/manage/cloud/egress.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/manage/cloud/egress.mdx)
+> Pinned source for ZITADEL v4.19.2: [apps/docs/content/guides/manage/cloud/egress.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/guides/manage/cloud/egress.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/cloud/egress
 
 When configuring your firewall or network security groups, you may need to allow traffic **from** ZITADEL Cloud to your internal infrastructure.
@@ -9,9 +9,9 @@ This page lists the static Egress (outgoing) IP addresses used by ZITADEL Cloud 
 
 You need to allowlist these IP addresses if you use features where ZITADEL initiates a connection to your systems. This is commonly required for the following scenarios:
 
-### [Identity Providers & Federation](https://zitadel.com/docs/guides/integrate/identity-providers/introduction)
+### Identity Providers & Federation
 
-If you are federating an external Identity Provider (IdP) that sits behind a firewall:
+If you are federating an [external Identity Provider (IdP)](https://zitadel.com/docs/guides/integrate/identity-providers/introduction) that sits behind a firewall:
 
 - **LDAP / Active Directory:** When ZITADEL connects to your LDAP server (typically port `636` for LDAPS).
 - **OIDC / OAuth:** When ZITADEL connects to your IdP for:
@@ -21,7 +21,9 @@ If you are federating an external Identity Provider (IdP) that sits behind a fir
   - **Keys:** Fetching signing keys from the `jwks_uri`.
 - **SAML:** If ZITADEL needs to fetch the `metadata.xml` or artifact resolution services from an internal SAML IdP.
 
-### [Notification Providers](https://zitadel.com/docs/guides/manage/customize/notification-providers)
+### Notification Providers
+
+For custom [Notification Providers](https://zitadel.com/docs/guides/manage/customize/notification-providers):
 
 - [**SMTP:**](https://zitadel.com/docs/guides/manage/customize/notification-providers#smtp-providers) If you configured a custom SMTP sender pointing to your own mail server.
 - [**Webhook / HTTP provider:**](https://zitadel.com/docs/guides/manage/customize/notification-providers#webhook-http-provider) If you use a custom gateway for SMS or Emails.

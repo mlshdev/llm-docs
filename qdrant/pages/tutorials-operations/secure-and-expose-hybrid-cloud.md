@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/secure-and-expose-hybrid-cloud.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/tutorials-operations/secure-and-expose-hybrid-cloud.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/secure-and-expose-hybrid-cloud.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/tutorials-operations/secure-and-expose-hybrid-cloud.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-operations/secure-and-expose-hybrid-cloud/
 
 # Securing and Exposing a Hybrid Cloud Cluster
@@ -52,7 +52,7 @@ kubectl create secret generic qdrant-api-key \
 >
 > You won't be able to apply the API key configuration change directly with <code>kubectl</code>: the Qdrant Operator reconciles this resource continuously, and it will revert the patch. You should use the Cloud UI to apply the change.
 
-![Qdrant Cloud UI page showing how to set up the API key based on the Kubernetes secret we just created](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/tutorials/secure-and-expose-hybrid-cloud/api-key-config.png)
+![Qdrant Cloud UI page showing how to set up the API key based on the Kubernetes secret we just created](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/tutorials/secure-and-expose-hybrid-cloud/api-key-config.png)
 
 In the Cluster Detail page, go to **Configuration → API Keys** and create a Management API Key (or a Read-Only API Key, depending on your needs), referencing the `qdrant-api-key` secret and its `api-key` key, per [Authentication to your Qdrant Clusters](https://qdrant.tech/documentation/hybrid-cloud/hybrid-cloud-cluster-creation/#authentication-to-your-qdrant-clusters). Save, then confirm the config was patched:
 
@@ -92,7 +92,7 @@ kubectl create secret tls qdrant-tls \
 
 As with the API key, reference this secret through the Cloud Console rather than patching the CR directly: **Configuration → TLS**, secret `qdrant-tls`, keys `tls.crt` / `tls.key`, per [Configuring TLS](https://qdrant.tech/documentation/hybrid-cloud/hybrid-cloud-cluster-creation/#configuring-tls).
 
-![Qdrant Cloud UI page showing how to set up TLS based on the Kubernetes TLS secret we just created](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/tutorials/secure-and-expose-hybrid-cloud/tls-config.png)
+![Qdrant Cloud UI page showing how to set up TLS based on the Kubernetes TLS secret we just created](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/tutorials/secure-and-expose-hybrid-cloud/tls-config.png)
 
 ### Verify
 
@@ -173,7 +173,7 @@ Traefik needs two pieces of configuration to reach an HTTPS backend: which proto
 | traefik.ingress.kubernetes.io/service.serversscheme    | https                                                      |
 | traefik.ingress.kubernetes.io/service.serverstransport | `<your-namespace>-qdrant-insecure-transport@kubernetescrd` |
 
-![Traefik-related service annotations](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/tutorials/secure-and-expose-hybrid-cloud/service-annotations.png)
+![Traefik-related service annotations](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/tutorials/secure-and-expose-hybrid-cloud/service-annotations.png)
 
 The `serverstransport` value has to follow Traefik's `<namespace>-<name>@kubernetescrd` format, so it changes with the namespace you created the `ServersTransport` in. Print the exact value for your setup with:
 

@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffprobe.texi](https://github.com/FFmpeg/FFmpeg/blob/d97584959417519597a24c8fdd13dc4b9af1a876/doc/ffprobe.texi)
+> Pinned source for FFmpeg master: [doc/ffprobe.texi](https://github.com/FFmpeg/FFmpeg/blob/291f96f7929f5837dc900adef3720025516e8584/doc/ffprobe.texi)
 
 # Synopsis
 

@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/d97584959417519597a24c8fdd13dc4b9af1a876/doc/ffmpeg-formats.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/291f96f7929f5837dc900adef3720025516e8584/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -5035,9 +5035,21 @@ Ogg container muxer.
   situations, giving a small seek granularity at the cost of additional container
   overhead.
 - -serial\_offset *value*
-  Serial value from which to set the streams serial number.
-  Setting it to different and sufficiently large values ensures that the produced
-  ogg files can be safely chained.
+  Serial number of the first stream in bitexact mode, the others following
+  consecutively.
+  Chained links need distinct serial numbers, which disjoint ranges of values
+  guarantee.
+  The default of -1 derives each serial number from the stream's headers
+  instead.
+  This makes links with different headers or tags unlikely to share a serial
+  number, without ruling it out.
+  Links with identical headers and tags always share one, which separately muxed
+  outputs avoid with explicit offsets.
+
+A link the muxer starts itself on new stream metadata keeps the offset of the
+link before it.
+With an explicit offset it then reuses its serial number.
+With the default it does so when its headers and tags are unchanged.
 
 ## pdv
 

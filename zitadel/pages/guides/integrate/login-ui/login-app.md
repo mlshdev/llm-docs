@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/integrate/login-ui/login-app.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/integrate/login-ui/login-app.mdx)
+> Pinned source for ZITADEL v4.19.2: [apps/docs/content/guides/integrate/login-ui/login-app.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/guides/integrate/login-ui/login-app.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login-ui/login-app
 
 To replace the old embedded Login built with Golang and to showcase the use of our session and OIDC APIs, we've created the new [Login app](https://github.com/zitadel/zitadel/blob/main/CONTRIBUTING.md#contribute-to-login).
@@ -29,7 +29,7 @@ The cookie consists of an id and a token and is bound to a session which is upda
 
 The following illustration shows the architecture of the Login app and a potential authentication code flow starting from an application which implements the OIDC specification respectively.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/typescript-login-architecture.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/typescript-login-architecture.png)
 
 *Note that the illustration is just a representation of the architecture and may not specify actual endpoints.*
 
@@ -127,7 +127,7 @@ When setting up the new Login app for OIDC, ensure it meets the following requir
 - The OIDC Proxy sets `x-zitadel-public-host` which is the host, your Login app is deployed to `ex. login.example.com`.
 - The OIDC Proxy sets `x-zitadel-instance-host` which is the host of your instance `ex. test-hdujwl.zitadel.cloud`.
 
-You can review an example implementation of a middleware [here](https://github.com/zitadel/zitadel/blob/main/apps/login/src/middleware.ts).
+You can review an example implementation of a middleware [here](https://github.com/zitadel/zitadel/blob/main/apps/login/src/proxy.ts).
 
 #### Deploy to Vercel
 
@@ -143,4 +143,4 @@ If you want to enforce users to have their email verified, you can set the optio
 By default, verification codes are not automatically submitted on page load. This protects against enterprise email link scanners that pre-fetch URLs and could inadvertently consume one-time codes before users click them.
 If you want to enable automatic code submission (e.g. for a smoother UX when link scanners are not a concern), set `NEXT_PUBLIC_AUTO_SUBMIT_CODE` to `true`.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/deploy-to-vercel.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/deploy-to-vercel.png)

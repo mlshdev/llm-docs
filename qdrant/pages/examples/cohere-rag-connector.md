@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/cohere-rag-connector.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/examples/cohere-rag-connector.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/cohere-rag-connector.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/examples/cohere-rag-connector.md)
 > Canonical documentation: https://qdrant.tech/documentation/examples/cohere-rag-connector/
 
 # Implement custom connector for Cohere RAG
@@ -15,7 +15,7 @@ search over your data is a typical case.
 Cohere RAG has lots of interesting features, such as inline citations, which help you to refer to the specific parts of
 the documents used to generate the response.
 
-![Cohere RAG citations](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/tutorials/cohere-rag-connector/cohere-rag-citations.png)
+![Cohere RAG citations](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/tutorials/cohere-rag-connector/cohere-rag-citations.png)
 
 *Source: <https://docs.cohere.com/docs/retrieval-augmented-generation-rag>*
 
@@ -220,7 +220,7 @@ uvicorn main:app
 FastAPI exposes an interactive documentation at `http://localhost:8000/docs`, where we can test our endpoint. The
 `/search` endpoint is available there.
 
-![FastAPI documentation](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/tutorials/cohere-rag-connector/fastapi-openapi.png)
+![FastAPI documentation](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/tutorials/cohere-rag-connector/fastapi-openapi.png)
 
 We can interact with it and check the documents that will be returned for a specific query. For example, we want to know
 recall what we are supposed to do regarding the infrastructure for your projects.

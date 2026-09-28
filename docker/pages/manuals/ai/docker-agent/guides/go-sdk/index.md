@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/guides/go-sdk/index.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/_vendor/github.com/docker/docker-agent/docs/guides/go-sdk/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/guides/go-sdk/index.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/_vendor/github.com/docker/docker-agent/docs/guides/go-sdk/index.md)
 
 *Use Docker Agent as a Go library to embed AI agents in your applications.*
 

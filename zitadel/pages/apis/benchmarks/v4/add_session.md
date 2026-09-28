@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.1: [apps/docs/content/apis/benchmarks/v4/add_session/index.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/apis/benchmarks/v4/add_session/index.mdx)
+> Pinned source for ZITADEL v4.19.2: [apps/docs/content/apis/benchmarks/v4/add_session/index.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/apis/benchmarks/v4/add_session/index.mdx)
 > Canonical documentation: https://zitadel.com/docs/apis/benchmarks/v4/add_session
 
 Benchmark results of v4 release of Zitadel.

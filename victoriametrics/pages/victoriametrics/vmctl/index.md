@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.152.0: [docs/victoriametrics/vmctl/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/vmctl/_index.md)
+> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/vmctl/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/vmctl/_index.md)
 
 VictoriaMetrics command-line tool (**vmctl**) provides the following migration modes:
 
@@ -31,9 +31,9 @@ vmctl command-line tool is available as:
 Download and unpack vmctl:
 
 ```sh
-wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.151.0/vmutils-darwin-arm64-v1.151.0.tar.gz
+wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.152.0/vmutils-darwin-arm64-v1.152.0.tar.gz
 
-tar xzf vmutils-darwin-arm64-v1.151.0.tar.gz
+tar xzf vmutils-darwin-arm64-v1.152.0.tar.gz
 ```
 
 Once binary is unpacked, see the full list of supported modes by running the following command:

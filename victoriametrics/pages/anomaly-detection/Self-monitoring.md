@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.152.0: [docs/anomaly-detection/Self-monitoring.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/Self-monitoring.md)
+> Pinned source for VictoriaMetrics v1.153.0: [docs/anomaly-detection/Self-monitoring.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/Self-monitoring.md)
 
 ## What is Self-Monitoring
 
@@ -11,8 +11,6 @@ Self-monitoring metrics are available in both the [push](https://docs.victoriame
 > For the detailed overview of self-monitoring metrics that are produced by `vmanomaly` and how to enable their tracking for push/pull models, please refer to [monitoring](https://docs.victoriametrics.com/anomaly-detection/components/monitoring/) section docs.
 
 The self-monitoring assets of `vmanomaly` include Grafana dashboard and accompanying alerting rules.
-
-*(available from vmanomaly v1.30.5)* For AI-assisted investigations, see [AI Copilot metrics](https://docs.victoriametrics.com/anomaly-detection/components/monitoring/#ai-copilot-metrics): request representation size, reported input/output tokens, response finish reasons and local context-budget refusals. These counters use bounded labels and are exposed when Copilot budgeting initializes. Existing dashboards may need additional panels to display them.
 
 ## Grafana Dashboard
 
@@ -32,13 +30,13 @@ The Grafana Dashboard is helpful for:
 
 > Use the **top-level dashboard filters** to refine metrics by job, instance, or specific components for more focused monitoring. The time range filter, along with `job` and `instance` filters, is applied across all components. All other filters apply to all dashboard sections except "Instance Overview." Hover over the (i) icon for detailed filter descriptions.
 
-![vmanomaly-dashboard-1-filters](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/vmanomaly-dashboard-1-filters.webp)
+![vmanomaly-dashboard-1-filters](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/vmanomaly-dashboard-1-filters.webp)
 
 The Grafana Dashboard for `vmanomaly` is organized into various panels that offer insights into different components and their operational metrics. The main sections are as follows:
 
 ### Instance Overview
 
-![vmanomaly-dashboard-2-instance-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/vmanomaly-dashboard-2-instance-overview.webp)
+![vmanomaly-dashboard-2-instance-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/vmanomaly-dashboard-2-instance-overview.webp)
 
 This panel provides general information about the state at individual `instance` level, including metrics such as uptime, restarts, errors, license expiration, and overall status. It serves as a critical starting point for assessing the health of the anomaly detection service. If any issues are identified with a particular instance — such as a low success rate, a high number of skipped or erroneous runs, or increased resource consumption — you can drill down further by using the dashboard filter `instance={{instance}}` for more detailed analysis.
 
@@ -60,7 +58,7 @@ This global panel holds statistics related to models, filtered by the dashboard 
 - Counts of successful, skipped, or erroneous model runs.
 - Average timings for different model stages.
 
-![vmanomaly-dashboard-3-global-panel-models](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/vmanomaly-dashboard-3-global-panel-models.webp)
+![vmanomaly-dashboard-3-global-panel-models](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/vmanomaly-dashboard-3-global-panel-models.webp)
 
 **Healthy scenario**:
 
@@ -74,7 +72,7 @@ This global panel holds statistics related to models, filtered by the dashboard 
 
 This global panel holds statistics related to I/O operations and data processing, filtered by the dashboard settings.
 
-![vmanomaly-dashboard-3-global-panel-io](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/vmanomaly-dashboard-3-global-panel-io.webp)
+![vmanomaly-dashboard-3-global-panel-io](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/vmanomaly-dashboard-3-global-panel-io.webp)
 
 **Healthy scenario**:
 
@@ -85,7 +83,7 @@ This global panel holds statistics related to I/O operations and data processing
 
 This global panel holds latency statistics (reads, writes, response processing by stages), filtered by the dashboard settings.
 
-![vmanomaly-dashboard-3-global-panel-latency](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/vmanomaly-dashboard-3-global-panel-latency.webp)
+![vmanomaly-dashboard-3-global-panel-latency](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/vmanomaly-dashboard-3-global-panel-latency.webp)
 
 **Healthy scenario**:
 
@@ -96,17 +94,21 @@ This global panel holds latency statistics (reads, writes, response processing b
 
 This global panel holds resource utilization (CPU, RAM, File Descriptors) on both an overall and per-`instance` level, filtered by the dashboard settings.
 
-![vmanomaly-dashboard-3-global-panel-resources](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/vmanomaly-dashboard-3-global-panel-resources.webp)
+![vmanomaly-dashboard-3-global-panel-resources](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/vmanomaly-dashboard-3-global-panel-resources.webp)
 
 **Healthy scenario**:
 
 - **Timeseries graphs**: Should appear stable over time, without significant spikes or drops. An absence of upward trends (e.g., trends in RAM usage may indicate a [high churn rate](https://docs.victoriametrics.com/victoriametrics/faq/#what-is-high-churn-rate) in your input data).
 
+### AI Copilot usage
+
+Revision 10 of [dashboard 22337](https://grafana.com/grafana/dashboards/22337) adds fleet availability and per-instance [AI Copilot metrics](https://docs.victoriametrics.com/anomaly-detection/components/monitoring/#ai-copilot-metrics), including tokens, estimated cost and unpriced responses. Only job and instance filters apply. Missing telemetry remains **Unknown**; initialized status reflects startup, not live provider health. Estimated costs exclude unpriced responses and tool/server compute.
+
 ### Model Statistics
 
 These panels contain repeated blocks for each unique `model_alias` (a distinct entity defined in the `models` [configuration section](https://docs.victoriametrics.com/anomaly-detection/components/models/)), filtered according to the current dashboard settings. They provide information on the number of unique entities (such as queries, schedulers, and instances) that a particular `model_alias` interacts with, as well as the count of active model instances available for inferring new data.
 
-![vmanomaly-dashboard-4-model-sections](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/vmanomaly-dashboard-4-model-sections.webp)
+![vmanomaly-dashboard-4-model-sections](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/vmanomaly-dashboard-4-model-sections.webp)
 
 **Healthy scenario**:
 
@@ -126,9 +128,9 @@ The alerting rules are provided in a YAML file called [`alerts-vmanomaly.yml`](h
 
 ### Using the Alerting Rules
 
-These alerting rules complements the [dashboard](#grafana-dashboard) to monitor the health of `vmanomaly`. Each alert has annotations to help understand the issue and guide troubleshooting efforts. Below are the key alerts included, grouped into 2 sections:
+These alerting rules use MetricsQL and are intended for vmalert with a VictoriaMetrics datasource. Adjust the job selector and thresholds to your deployment. They complement the [dashboard](#grafana-dashboard) to monitor the health of `vmanomaly`. Each alert has annotations to help understand the issue and guide troubleshooting efforts. Below are the key alerts included, grouped into 2 sections:
 
-![firing-alerts-groups](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/firing-alerts-groups.webp)
+![firing-alerts-groups](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/firing-alerts-groups.webp)
 
 `vmanomaly-health` alerting group:
 
@@ -138,11 +140,11 @@ These alerting rules complements the [dashboard](#grafana-dashboard) to monitor 
 - **`FrequentSchedulerRestarts`**: *(available from vmanomaly v1.30.0)* Warns when an individual scheduler has more than two restart attempts within 15 minutes. A single successful self-heal does not alert, while repeated attempts indicate a flapping scheduler or dependency.
 - **`ProcessNearFDLimits`**: Alerts when the number of available file descriptors falls below 100, which could lead to severe degradation if the limit is exhausted.
 - **`TooHighCPUUsage`**: Alerts when CPU usage exceeds 90% for a continuous 5-minute period, indicating possible resource exhaustion and the need to adjust resource allocation or load.
-- **`TooHighMemoryUsage`**: Alerts when RAM usage exceeds 85% for a continuous 5-minute period and the need to adjust resource allocation or load.
-- **`NoSelfMonitoringMetrics`**: Alerts when vmanomaly up time metric has not been seen in Victoriametrics for 15 minutes, indicating the service is down or unable to push metrics to Victoriametrics.
+- **`TooHighMemoryUsage`**: Alerts when the minimum RAM usage over 10 minutes exceeds 85% of available memory and this condition holds for another 5 minutes.
+- **`NoSelfMonitoringMetrics`**: Alerts after roughly 20 minutes without a self-monitoring sample (15-minute lag plus a 5-minute hold). Instances remain detectable only within the 24-hour lookback. With the default `push_frequency: 15m`, raise the lag threshold (e.g. to 1200 seconds) or shorten the push interval (e.g. to 10 minutes) to allow for jitter.
 - **`LastConfigReloadFailed`**: Alerts if the last configuration [reload](https://docs.victoriametrics.com/anomaly-detection/components/#hot-reload) failed, which could indicate issues with the configuration or the service's ability to apply changes.
 
-![firing-alerts-example-too-many-restarts](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/firing-alerts-example-too-many-restarts.webp)
+![firing-alerts-example-too-many-restarts](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/firing-alerts-example-too-many-restarts.webp)
 
 `vmanomaly-issues` alerting group:
 
@@ -151,4 +153,4 @@ These alerting rules complements the [dashboard](#grafana-dashboard) to monitor 
 - **`HighReadErrorRate`**: Alerts when the error rate for read operations exceeds 5% in a 5-minute window, suggesting issues with the data source, server constraints, or network.
 - **`HighWriteErrorRate`**: Alerts when the error rate for write operations exceeds 5% in a 5-minute window, indicating issues with data writing, potential server-side violations, or network problems.
 
-![firing-alerts-example-skipped-runs](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/firing-alerts-example-skipped-runs.webp)
+![firing-alerts-example-skipped-runs](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/firing-alerts-example-skipped-runs.webp)

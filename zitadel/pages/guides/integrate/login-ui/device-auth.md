@@ -1,11 +1,11 @@
-> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/integrate/login-ui/device-auth.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/integrate/login-ui/device-auth.mdx)
+> Pinned source for ZITADEL v4.19.2: [apps/docs/content/guides/integrate/login-ui/device-auth.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/guides/integrate/login-ui/device-auth.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login-ui/device-auth
 
 In case one of your applications requires the [OAuth2 Device Authorization Grant](https://zitadel.com/docs/guides/integrate/login/oidc/device-authorization) this guide will show you how to implement
 this in your application as well as the custom login UI.
 
 The following flow shows you the different components you need to enable OAuth2 Device Authorization Grant for your login.
-![](https://raw.githubusercontent.com/zitadel/zitadel/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/public/img/guides/login-ui/device-auth-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/guides/login-ui/device-auth-flow.png)
 
 1. Your application makes a device authorization request to your login UI
 2. The login UI proxies the request to ZITADEL.

@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.1: [apps/docs/content/self-hosting/manage/tuning.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/self-hosting/manage/tuning.mdx)
+> Pinned source for ZITADEL v4.19.2: [apps/docs/content/self-hosting/manage/tuning.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/self-hosting/manage/tuning.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/manage/tuning
 
 With [ZITADEL being event sourced](https://zitadel.com/docs/concepts/eventstore/overview), a lot of the performance throughput depends on how the events table is accessed.

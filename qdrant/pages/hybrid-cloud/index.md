@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/hybrid-cloud/_index.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/hybrid-cloud/_index.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/hybrid-cloud/_index.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/hybrid-cloud/_index.md)
 > Canonical documentation: https://qdrant.tech/documentation/hybrid-cloud/
 
 # Qdrant Hybrid Cloud
@@ -44,7 +44,7 @@ After the initial onboarding, the lifecycle of these components will be controll
 
 You don't need to expose your Kubernetes Cluster to the Qdrant Cloud platform, you don't need to open any ports for incoming traffic, and you don't need to provide any Kubernetes or cloud provider credentials to the Qdrant Cloud platform.
 
-![hybrid-cloud-architecture](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/blog/hybrid-cloud/hybrid-cloud-architecture.png)
+![hybrid-cloud-architecture](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/blog/hybrid-cloud/hybrid-cloud-architecture.png)
 
 ## Getting Access to Hybrid Cloud
 

@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/secure-qdrant.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/tutorials-operations/secure-qdrant.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/secure-qdrant.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/tutorials-operations/secure-qdrant.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-operations/secure-qdrant/
 
 # Secure a Self-Hosted Qdrant Instance
@@ -680,7 +680,7 @@ Generate a JWT in the Web UI:
 4. For `other_collection`, select **Read** only.
 5. Copy the generated JWT Token.
 
-![](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/tutorials/secure-qdrant/generate-jwt.png)
+![](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/tutorials/secure-qdrant/generate-jwt.png)
 
   <figcaption>
     Generating a JWT token with the desired access levels using the Web UI.

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.152.0: [docs/anomaly-detection/QuickStart.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/QuickStart.md)
+> Pinned source for VictoriaMetrics v1.153.0: [docs/anomaly-detection/QuickStart.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/QuickStart.md)
 
 For a broader overview please visit the [navigation page](https://docs.victoriametrics.com/anomaly-detection/).
 
@@ -120,12 +120,32 @@ groups:
 >
 > On affected hosts, add `-e OPENSSL_armcap=0` to `docker run`, or add `- OPENSSL_armcap=0` under the service's Docker Compose `environment`, matching the list syntax used below. This disables ARM cryptographic acceleration, so apply it only as a temporary workaround on affected hosts.
 
+### Experimental hardened image
+
+*(available from vmanomaly v1.30.6)* An experimental [Docker Hardened Images](https://www.docker.com/products/hardened-images/)-based variant is available on Docker Hub and Quay for `linux/amd64` and `linux/arm64`:
+
+```text
+victoriametrics/vmanomaly:v1.30.7-dhi
+victoriametrics/vmanomaly:v1.30.7-enterprise-dhi
+quay.io/victoriametrics/vmanomaly:v1.30.7-dhi
+quay.io/victoriametrics/vmanomaly:v1.30.7-enterprise-dhi
+```
+
+These are aliases of the same application image and have the same license requirements. The `-enterprise-dhi` ordering supports Helm's `image.variant: dhi` when enterprise mode is enabled, `image.tag` is empty, and the chart appVersion matches the desired release. With an older chart, set `image.tag: v1.30.7-enterprise-dhi` explicitly. Standard `v1.30.7`, `v1.30.7-enterprise` and `latest` tags retain their existing base image.
+
+> \[!WARNING]
+> The hardened image runs as a non-root user and contains no runtime shell or package manager. Ensure mounted configuration and license files are readable and state directories are writable by the container user; shell-based entrypoint overrides and `docker exec ... sh` are unavailable.
+
+The hardened image defaults process-local time to UTC. Configure `schedulers.<alias>.tz` for scheduling and reader/query `tz` for model calendar features; both default to UTC.
+
+### Run with Docker
+
 Below are the steps to get `vmanomaly` up and running inside a Docker container:
 
 1. Pull Docker image:
 
 ```sh
-docker pull victoriametrics/vmanomaly:v1.30.5
+docker pull victoriametrics/vmanomaly:v1.30.7
 ```
 
 2. Create the license file with your license key.
@@ -145,7 +165,7 @@ docker run -it \
     -v ./license:/license \
     -v ./config.yaml:/config.yaml \
     -p 8490:8490 \
-    victoriametrics/vmanomaly:v1.30.5 \
+    victoriametrics/vmanomaly:v1.30.7 \
     /config.yaml \
     --licenseFile=/license \
     --loggerLevel=INFO \
@@ -162,7 +182,7 @@ docker run -it \
     -e VMANOMALY_DATA_DUMPS_DIR=/tmp/vmanomaly/data \
     -e VMANOMALY_MODEL_DUMPS_DIR=/tmp/vmanomaly/models \
     -p 8490:8490 \
-    victoriametrics/vmanomaly:v1.30.5 \
+    victoriametrics/vmanomaly:v1.30.7 \
     /config.yaml \
     --licenseFile=/license \
     --loggerLevel=INFO \
@@ -175,7 +195,7 @@ services:
   # ...
   vmanomaly:
     container_name: vmanomaly
-    image: victoriametrics/vmanomaly:v1.30.5
+    image: victoriametrics/vmanomaly:v1.30.7
     # ...
     restart: always
     volumes:
@@ -308,7 +328,7 @@ writer:
 
 *(available from vmanomaly v1.26.0)* `vmanomaly`'s built-in web UI supports prototyping and interactive generation of `vmanomaly` and `vmalert` configuration files. See the [UI documentation](https://docs.victoriametrics.com/anomaly-detection/ui/) for instructions and examples. For optional AI-assisted workflows, use the [UI Copilot](https://docs.victoriametrics.com/anomaly-detection/ui/#ai-assistance), connect the [vmanomaly MCP server](https://docs.victoriametrics.com/ai-tools/#vmanomaly-mcp-server), or follow the published [agent skills](https://docs.victoriametrics.com/ai-tools/#agent-skills).
 
-![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/vmanomaly-ui-overview.webp)
+![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/vmanomaly-ui-overview.webp)
 
 > \[!TIP]
 > Public playgrounds with pre-configured `vmanomaly` instances and VictoriaMetrics/VictoriaLogs/VictoriaTraces datasources are available for interactive experimenting without the need to set up your own instance or getting an enterprise license. You can find them in the [UI documentation](https://docs.victoriametrics.com/anomaly-detection/ui/#playgrounds) or access them directly via the links - [metrics](https://play-vmanomaly.victoriametrics.com/metrics/), [logs](https://play-vmanomaly.victoriametrics.com/logs/), [traces](https://play-vmanomaly.victoriametrics.com/traces/) - or embedded versions in the collapsible blocks.

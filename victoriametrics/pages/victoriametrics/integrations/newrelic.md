@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.152.0: [docs/victoriametrics/integrations/newrelic.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/integrations/newrelic.md)
+> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/integrations/newrelic.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/integrations/newrelic.md)
 
 VictoriaMetrics components like **vmagent**, **vminsert** or **single-node** can receive data from
 [NewRelic infrastructure agent](https://docs.newrelic.com/docs/infrastructure/install-infrastructure-agent)

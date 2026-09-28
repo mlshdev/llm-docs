@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/production-operations/bulk-data-import.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/production-operations/bulk-data-import.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/production-operations/bulk-data-import.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/production-operations/bulk-data-import.md)
 > Canonical documentation: https://qdrant.tech/documentation/production-operations/bulk-data-import/
 
 # Bulk Uploading Data to Qdrant
@@ -35,7 +35,7 @@ Memory usage can become one of the first bottlenecks during a large upload. Dens
 
 A safer approach is to store dense vectors directly on-disk when the collection is created. This allows incoming vector data to use memmap storage from the beginning, instead of relying on background optimization to move vectors from memory to disk later.
 
-![Diagram: with on\_disk=True, incoming dense vectors use memmap storage on disk from the start, avoiding the RAM pressure of the default in-memory path.](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/option1-memory.png)
+![Diagram: with on\_disk=True, incoming dense vectors use memmap storage on disk from the start, avoiding the RAM pressure of the default in-memory path.](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/option1-memory.png)
 
 In Python, you can configure this with `on_disk=True` inside `VectorParams`:
 
@@ -62,7 +62,7 @@ Use payload indexes before uploading points when you already know which fields w
 
 If those indexes are created after a large dataset has already been uploaded, filtered search will fall back to slower query-time strategies until the HNSW graph is rebuilt. Rebuilding the graph after the fact is resource-intensive and can take a long time.
 
-![Diagram: creating the payload index before uploading makes filtered search fast immediately, while indexing after upload forces a slow query-time fallback and an expensive HNSW graph rebuild.](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/option2-payload-index.png)
+![Diagram: creating the payload index before uploading makes filtered search fast immediately, while indexing after upload forces a slow query-time fallback and an expensive HNSW graph rebuild.](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/option2-payload-index.png)
 
 Create the payload index before uploading:
 
@@ -86,7 +86,7 @@ Storing original vectors on-disk can help reduce memory pressure during large up
 
 Quantization can help balance this tradeoff. Instead of keeping full-size dense vectors in memory, Qdrant can keep a compressed version available while the original vectors remain on-disk.
 
-![Diagram: original full-size vectors stay on disk while a compressed copy is kept in RAM, so search stays fast with lower memory use.](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/option3-quantization.png)
+![Diagram: original full-size vectors stay on disk while a compressed copy is kept in RAM, so search stays fast with lower memory use.](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/option3-quantization.png)
 
 In Python, configure TurboQuant when creating the collection. The `bits` parameter sets the compression level: `BITS4` (the default) stays closest to full precision, while `BITS1` gives the most compression.
 
@@ -117,7 +117,7 @@ client.create_collection(
 
 For large sparse vector workloads, one option is to store the sparse vector index on-disk. This can help reduce memory usage when the sparse index becomes large.
 
-![Diagram: keeping the sparse index in memory grows memory pressure, while storing it on disk lowers memory use at the cost of some search latency.](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/option4-sparse-ondisk.png)
+![Diagram: keeping the sparse index in memory grows memory pressure, while storing it on disk lowers memory use at the cost of some search latency.](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/option4-sparse-ondisk.png)
 
 Enable on-disk storage for the sparse index:
 
@@ -153,7 +153,7 @@ Uploading points one at a time can add unnecessary overhead. Each request has to
 
 A better approach is to upload points in batches. Batching allows Qdrant to process groups of points together instead of handling every point as a separate request.
 
-![Diagram: uploading one point per request creates high overhead, while grouping points into batches of 64-256 is far faster.](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/option5-batching.png)
+![Diagram: uploading one point per request creates high overhead, while grouping points into batches of 64-256 is far faster.](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/option5-batching.png)
 
 Set a batch size when uploading points:
 
@@ -177,7 +177,7 @@ A single upload stream may not fully use the available write capacity of your Qd
 
 Parallel uploads allow several workers to upload different parts of the dataset at the same time. This keeps Qdrant's write pipeline active, especially when the collection has multiple shards.
 
-![Diagram: a single upload worker underuses write capacity, while multiple parallel workers feed the write pipeline for higher throughput.](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/option6-parallel.png)
+![Diagram: a single upload worker underuses write capacity, while multiple parallel workers feed the write pipeline for higher throughput.](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/option6-parallel.png)
 
 Note: Parallelism gains are not always linear; in some configurations, 2 workers may perform similarly to 1 before improvements appear at higher counts.
 
@@ -202,7 +202,7 @@ client.upload_points(
 
 For larger uploads, sharding can help Qdrant process writes in parallel. A collection can be created with more than one shard, and each shard has its own write path. With multiple shards, Qdrant distributes ingestion work across independent write paths.
 
-![Diagram: a single shard limits ingestion parallelism, while multiple shards give independent write paths for distributed ingestion.](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/option7-sharding.png)
+![Diagram: a single shard limits ingestion parallelism, while multiple shards give independent write paths for distributed ingestion.](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/option7-sharding.png)
 
 Set the shard count when creating the collection:
 
@@ -224,7 +224,7 @@ client.create_collection(
 
 ## Choosing the Right Mix
 
-![Decision tree for choosing the right bulk upload strategy: dense, sparse, or hybrid vectors, with memory, quantization, and sharding options](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/choosing-the-right-mix.png)
+![Decision tree for choosing the right bulk upload strategy: dense, sparse, or hybrid vectors, with memory, quantization, and sharding options](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/bulk-uploads-in-qdrant/choosing-the-right-mix.png)
 
 Still deciding exactly what to configure for your workload? [Qdrant's Agent Skills](https://qdrant.tech/documentation/agentic-tools/skills/) provide hands-on, scenario-based guidance that walks you through the specific settings for your situation.
 

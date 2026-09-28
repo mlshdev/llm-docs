@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `4e9a5751518ed8223a8dcde53693badddd72604f`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `f22c0e6595ca1996d2a6559cadcf2596499e6c11`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -608,9 +608,9 @@
 - [Docker Desktop WSL 2 backend on Windows](pages/manuals/desktop/features/wsl/index.md): Windows Subsystem for Linux (WSL) 2 is a full Linux kernel built by Microsoft that lets Linux distributions run without managing virtual machines. With Docker Desktop running on WSL 2, users can leverage Linux workspace… (6110 bytes)
 - [Develop with Docker Desktop using WSL 2 on Windows](pages/manuals/desktop/features/wsl/use-wsl.md): The following section describes how to start developing your applications using Docker and WSL 2. (1379 bytes)
 - [Docker Desktop](pages/manuals/desktop/index.md): Docker Desktop is a one-click-install application for your Mac, Linux, or Windows environment that lets you build, share, and run containerized applications and microservices. (3185 bytes)
-- [Docker Desktop release notes](pages/manuals/desktop/release-notes.md): This page contains information about the new features, improvements, known issues, and bug fixes in Docker Desktop releases. (346927 bytes)
-- [How to back up and restore your Docker Desktop data](pages/manuals/desktop/settings-and-maintenance/backup-and-restore.md): Use this procedure to back up and restore your images and container data. This is useful if you want to reset your VM disk or to move your Docker environment to a new computer, or recover from a failed Docker Desktop up… (4685 bytes)
-- [Change your Docker Desktop settings](pages/manuals/desktop/settings-and-maintenance/settings.md): Customize Docker Desktop behavior and optimize performance and resource usage with Docker Desktop's settings. (51873 bytes)
+- [Docker Desktop release notes](pages/manuals/desktop/release-notes.md): This page contains information about the new features, improvements, known issues, and bug fixes in Docker Desktop releases. (351976 bytes)
+- [How to back up and restore your Docker Desktop data](pages/manuals/desktop/settings-and-maintenance/backup-and-restore.md): Use this procedure to back up and restore your images and container data. This is useful if you want to reset your VM disk or to move your Docker environment to a new computer, or recover from a failed Docker Desktop up… (5350 bytes)
+- [Change your Docker Desktop settings](pages/manuals/desktop/settings-and-maintenance/settings.md): Customize Docker Desktop behavior and optimize performance and resource usage with Docker Desktop's settings. (53889 bytes)
 - [Allowlist for Docker Desktop](pages/manuals/desktop/setup/allow-list.md): Allow list requirements (2156 bytes)
 - [Install Docker Desktop on Arch-based distributions](pages/manuals/desktop/setup/install/linux/archlinux.md): Docker Desktop Archlinux requirements (5026 bytes)
 - [Install Docker Desktop on Debian](pages/manuals/desktop/setup/install/linux/debian.md): This page contains information on how to install, launch, and upgrade Docker Desktop on a Debian distribution. (6611 bytes)
@@ -618,32 +618,29 @@
 - [Install Docker Desktop on Linux](pages/manuals/desktop/setup/install/linux/index.md): This page contains information about general system requirements, supported platforms, and instructions on how to install Docker Desktop for Linux. (9891 bytes)
 - [Install Docker Desktop on RHEL](pages/manuals/desktop/setup/install/linux/rhel.md): This page contains information on how to install, launch and upgrade Docker Desktop on a Red Hat Enterprise Linux (RHEL) distribution. (7804 bytes)
 - [Install Docker Desktop on Ubuntu](pages/manuals/desktop/setup/install/linux/ubuntu.md): This page contains information on how to install, launch and upgrade Docker Desktop on an Ubuntu distribution. (6652 bytes)
-- [Install Docker Desktop on Mac](pages/manuals/desktop/setup/install/mac-install.md): This page provides download links, system requirements, and step-by-step installation instructions for Docker Desktop on Mac. (10920 bytes)
+- [Install Docker Desktop on Mac](pages/manuals/desktop/setup/install/mac-install.md): This page provides download links, system requirements, and step-by-step installation instructions for Docker Desktop on Mac. (10803 bytes)
 - [Understand permission requirements for Docker Desktop on Mac](pages/manuals/desktop/setup/install/mac-permission-requirements.md): This page contains information about the permission requirements for running and installing Docker Desktop on Mac. (7889 bytes)
 - [Install Docker Desktop on Windows](pages/manuals/desktop/setup/install/windows-install.md): This page provides download links, system requirements, and step-by-step installation instructions for Docker Desktop on Windows. (24686 bytes)
 - [Understand permission requirements for Windows](pages/manuals/desktop/setup/install/windows-permission-requirements.md): This page contains information about the permission requirements for running and installing Docker Desktop on Windows, the functionality of the privileged helper process com.docker.service, and the reasoning behind this… (9736 bytes)
 - [Sign in to Docker Desktop](pages/manuals/desktop/setup/sign-in.md): Docker recommends signing in with the Sign in option in the top-right corner of the Docker Dashboard. (2905 bytes)
 - [Run Docker Desktop for Windows in a VM or VDI environment](pages/manuals/desktop/setup/vm-vdi.md): Docker recommends running Docker Desktop natively on Mac, Linux, or Windows. However, Docker Desktop for Windows can run inside a virtual desktop provided the virtual desktop is properly configured. (5976 bytes)
 - [General FAQs for Desktop](pages/manuals/desktop/troubleshoot-and-support/faqs/general.md): Yes, you can use Docker Desktop offline. However, you cannot access features that require an active internet connection. Additionally, any functionality that requires you to sign in won't work while using Docker Desktop… (5570 bytes)
-- [FAQs for Docker Desktop for Linux](pages/manuals/desktop/troubleshoot-and-support/faqs/linuxfaqs.md): Docker Desktop for Linux runs a Virtual Machine (VM) for the following reasons: (10134 bytes)
-- [FAQs for Docker Desktop for Mac](pages/manuals/desktop/troubleshoot-and-support/faqs/macfaqs.md): HyperKit is a legacy hypervisor built on top of Hypervisor.framework in macOS. Previous versions of Docker Desktop for Mac used HyperKit to run the Linux VM. (7889 bytes)
+- [FAQs for Docker Desktop for Linux](pages/manuals/desktop/troubleshoot-and-support/faqs/linuxfaqs.md): Docker Desktop for Linux runs a Virtual Machine (VM) for the following reasons: (7624 bytes)
+- [FAQs for Docker Desktop for Mac](pages/manuals/desktop/troubleshoot-and-support/faqs/macfaqs.md): HyperKit is a legacy hypervisor built on top of Hypervisor.framework in macOS. Previous versions of Docker Desktop for Mac used HyperKit to run the Linux VM. (7495 bytes)
 - [FAQs on Docker Desktop releases](pages/manuals/desktop/troubleshoot-and-support/faqs/releases.md): New releases are available every week, unless there are critical fixes that need to be released sooner. (956 bytes)
-- [FAQs for Docker Desktop for Windows](pages/manuals/desktop/troubleshoot-and-support/faqs/windowsfaqs.md): Yes, you can run VirtualBox along with Docker Desktop if you have enabled the Windows Hypervisor Platform feature on your machine. (3725 bytes)
+- [FAQs for Docker Desktop for Windows](pages/manuals/desktop/troubleshoot-and-support/faqs/windowsfaqs.md): Yes, you can run VirtualBox along with Docker Desktop if you have enabled the Windows Hypervisor Platform feature on your machine. (3696 bytes)
 - [Give feedback](pages/manuals/desktop/troubleshoot-and-support/feedback.md): There are many ways you can provide feedback on Docker Desktop or Docker Desktop features. (1215 bytes)
-- [Troubleshoot Docker Desktop](pages/manuals/desktop/troubleshoot-and-support/troubleshoot/index.md): This page contains information on how to diagnose and troubleshoot Docker Desktop, and how to check the logs. (7737 bytes)
-- [Known issues](pages/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues.md): For Mac with Intel chip (3310 bytes)
-- [Fix "Docker.app is damaged and can't be opened" on macOS](pages/manuals/desktop/troubleshoot-and-support/troubleshoot/mac-damaged-dialog.md): macOS shows the following dialog when you try to open Docker Desktop: (2870 bytes)
-- [Troubleshoot topics for Docker Desktop](pages/manuals/desktop/troubleshoot-and-support/troubleshoot/topics.md): When attempting to pull from a registry using docker run, you may encounter the following error: (20820 bytes)
+- [Troubleshoot Docker Desktop](pages/manuals/desktop/troubleshoot-and-support/troubleshoot/index.md): This page contains information on how to diagnose and troubleshoot Docker Desktop, and how to check the logs. (7408 bytes)
+- [Troubleshoot topics for Docker Desktop](pages/manuals/desktop/troubleshoot-and-support/troubleshoot/topics.md): When attempting to pull from a registry using docker run, you may encounter the following error: (21797 bytes)
 - [Uninstall Docker Desktop](pages/manuals/desktop/uninstall.md): Windows (6560 bytes)
-- [Explore the Builds view in Docker Desktop](pages/manuals/desktop/use-desktop/builds.md): The Builds view provides an interactive interface for inspecting build history, monitoring active builds, and managing builders directly in Docker Desktop. (9624 bytes)
-- [Explore the Containers view in Docker Desktop](pages/manuals/desktop/use-desktop/container.md): The Containers view lists all running and stopped containers and applications. It provides a clean interface to manage the lifecycle of your containers, interact with running applications, and inspect Docker objects—inc… (4530 bytes)
-- [Explore the Images view in Docker Desktop](pages/manuals/desktop/use-desktop/images.md): The Images view displays a list of your Docker images and allows you to run an image as a container, pull the latest version of an image from Docker Hub, and inspect images. It also displays a summary of image vulnerabi… (4922 bytes)
-- [Explore Docker Desktop](pages/manuals/desktop/use-desktop/index.md): When you open Docker Desktop, the Docker Desktop Dashboard displays. (4558 bytes)
-- [Explore the Kubernetes view](pages/manuals/desktop/use-desktop/kubernetes.md): Docker Desktop includes a standalone Kubernetes server and client, as well as Docker CLI integration, enabling local Kubernetes development and testing directly on your machine. (10883 bytes)
+- [Explore the Builds view in Docker Desktop](pages/manuals/desktop/use-desktop/builds.md): The Builds view provides an interactive interface for inspecting build history, monitoring active builds, and managing builders directly in Docker Desktop. (9737 bytes)
+- [Explore the Containers view in Docker Desktop](pages/manuals/desktop/use-desktop/container.md): The Containers view lists all running and stopped containers and applications. It provides a clean interface to manage the lifecycle of your containers, interact with running applications, and inspect Docker objects—inc… (5779 bytes)
+- [Explore the Images view in Docker Desktop](pages/manuals/desktop/use-desktop/images.md): The Images view displays a list of your Docker images and allows you to run an image as a container, pull the latest version of an image from Docker Hub, and inspect images. It also displays a summary of image vulnerabi… (5009 bytes)
+- [Explore Docker Desktop](pages/manuals/desktop/use-desktop/index.md): When you open Docker Desktop, the Docker Desktop Dashboard is the first thing you see. (2527 bytes)
+- [Explore the Kubernetes view](pages/manuals/desktop/use-desktop/kubernetes.md): Docker Desktop includes a standalone Kubernetes server and client, as well as Docker CLI integration, enabling local Kubernetes development and testing directly on your machine. (9743 bytes)
 - [Explore the Logs view in Docker Desktop](pages/manuals/desktop/use-desktop/logs.md): Desktop logs requirements (3038 bytes)
-- [Pause Docker Desktop](pages/manuals/desktop/use-desktop/pause.md): Pausing Docker Desktop temporarily suspends the Linux VM running Docker Engine. This saves the current state of all containers in memory and freezes all running processes, significantly reducing CPU and memory usage whi… (941 bytes)
-- [Docker Desktop's Resource Saver mode](pages/manuals/desktop/use-desktop/resource-saver.md): Resource Saver mode significantly reduces Docker Desktop's CPU and memory utilization on the host by 2 GBs or more, by automatically stopping the Docker Desktop Linux VM when no containers are running for a period of ti… (3646 bytes)
-- [Explore the Volumes view in Docker Desktop](pages/manuals/desktop/use-desktop/volumes.md): The Volumes view in Docker Desktop lets you create, inspect, delete, clone, empty, export, and import Docker volumes. You can also browse files and folders in volumes and see which containers are using them. (9893 bytes)
+- [Docker Desktop's Resource Saver mode](pages/manuals/desktop/use-desktop/resource-saver.md): Resource Saver mode significantly reduces Docker Desktop's CPU and memory utilization on the host by 2 GBs or more, by automatically stopping the Docker Desktop Linux VM when no containers are running for a period of ti… (3515 bytes)
+- [Explore the Volumes view in Docker Desktop](pages/manuals/desktop/use-desktop/volumes.md): The Volumes view in Docker Desktop lets you create, inspect, delete, clone, empty, export, and import Docker volumes. You can also browse files and folders in volumes and see which containers are using them. (10116 bytes)
 
 ## Dhi
 
@@ -1010,7 +1007,7 @@
 
 ## Platform Release Notes.Md
 
-- [Release notes for Docker Home, the Admin Console, billing, security, and subscription features](pages/manuals/platform-release-notes.md): This page provides details on new features, enhancements, known issues, and bug fixes across Docker Home, the Admin Console, billing, security, and subscription functionalities. (3828 bytes)
+- [Accounts and admin release notes](pages/manuals/platform-release-notes.md): This page lists new features, enhancements, known issues, and bug fixes for Docker accounts and admin features, including Docker Home, billing, security, and subscriptions. (3836 bytes)
 
 ## Release Lifecycle.Md
 
@@ -1104,7 +1101,7 @@
 
 ## Support
 
-- [Get support for Docker products](pages/manuals/support/index.md): Docker offers multiple support channels depending on your subscription level and needs. (5425 bytes)
+- [Get support for Docker products](pages/manuals/support/index.md): Docker offers multiple support channels depending on your subscription level and needs. (5511 bytes)
 
 ## Testcontainers.Md
 

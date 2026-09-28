@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.1: [apps/docs/content/guides/migrate/users.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/guides/migrate/users.mdx)
+> Pinned source for ZITADEL v4.19.2: [apps/docs/content/guides/migrate/users.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/guides/migrate/users.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/migrate/users
 
 Migrating users from an existing system, while minimizing impact on said users, can be a challenging task.

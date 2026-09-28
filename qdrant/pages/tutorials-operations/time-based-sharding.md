@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/time-based-sharding.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/tutorials-operations/time-based-sharding.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/time-based-sharding.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/tutorials-operations/time-based-sharding.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-operations/time-based-sharding/
 
 # Time-Based Sharding in Qdrant
@@ -9,7 +9,7 @@ Storing everything in Qdrant collection with default sharding can lead to expens
 
 For example, with daily shards, today's data is stored in today's shard, yesterday's data in yesterday's shard, and so on. Queries can target specific shards (today's shard, for example) or multiple shards to cover a date range.
 
-![Time-based sharding across daily shards](https://raw.githubusercontent.com/qdrant/landing_page/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/static/documentation/tutorials/time-based-sharding/time-based-sharding.png)
+![Time-based sharding across daily shards](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/tutorials/time-based-sharding/time-based-sharding.png)
 
 *Time-based sharding routes data to shards based on timestamp. All writes go to the newest shard, while queries can target one or more shards. Older shards can be pruned in the background without affecting performance.*
 

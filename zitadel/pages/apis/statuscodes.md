@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.1: [apps/docs/content/apis/statuscodes.mdx](https://github.com/zitadel/zitadel/blob/76959769b9020fe96e45d9ee78ed079fdd6ad0e8/apps/docs/content/apis/statuscodes.mdx)
+> Pinned source for ZITADEL v4.19.2: [apps/docs/content/apis/statuscodes.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/apis/statuscodes.mdx)
 > Canonical documentation: https://zitadel.com/docs/apis/statuscodes
 
 | GRPC Number | GRPC Code            | HTTP Status Code | HTTP Status Text    | Description                                                                                                                                                                                                                 |
@@ -15,3 +15,16 @@
 | 13          | INTERNAL             | 500              | Internal            | Internal errors. This means that some invariants expected by the underlying system have been broken. This error code is reserved for serious errors.                                                                        |
 | 14          | UNAVAILABLE          | 503              | Service Unavailable | The service is currently unavailable.                                                                                                                                                                                       |
 | 16          | UNAUTHENTICATED      | 401              | Unauthorized        | The request does not have valid authentication credentials for the operation.                                                                                                                                               |
+
+## Error details and slugs
+
+For stable `v2` APIs, services import `zitadel/error/v2/error.proto` so reflection-aware clients can resolve `zitadel.error.v2.ErrorDetail`.
+
+When present, inspect `ErrorDetail.slug` first for programmatic handling. Slugs are stable machine-readable identifiers such as `user.already_exists`.
+
+Use `ErrorDetail.message` for developer diagnostics, not end-user text. Prefer mapping slugs to your own localized messages in clients.
+
+This slug-based handling is currently relevant for backend/domain paths that run with relational-storage-backed logic.
+Do not assume it for `v1`, `v2beta`, or `v3alpha` APIs or when using a v2 endpoint without having the relational storage feature enabled.
+
+For a searchable catalog of every `details[].id` ZITADEL can return — grouped by subsystem and cause, with why each one happens and an example response — see the [Error Reference](https://zitadel.com/docs/apis/errors).

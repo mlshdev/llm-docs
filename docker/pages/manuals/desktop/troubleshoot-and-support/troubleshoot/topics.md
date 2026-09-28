@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/troubleshoot/topics.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/desktop/troubleshoot-and-support/troubleshoot/topics.md)
+> Pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/troubleshoot/topics.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/troubleshoot-and-support/troubleshoot/topics.md)
 
 # Troubleshoot topics for Docker Desktop
 
@@ -110,47 +110,13 @@ To discover the identity of this software, either:
 Then, decide whether to shut the other process down, or to use a different port in your
 Docker app.
 
-## Topics for Linux and Mac
-
-### Docker Desktop fails to start on Mac or Linux platforms
-
-#### Error message
-
-Docker fails to start due to Unix domain socket path length limitations:
-
-```console
-[vpnkit-bridge][F] listen unix <HOME>/Library/Containers/com.docker.docker/Data/http-proxy-control.sock: bind: invalid argument
-```
-
-```console
-[com.docker.backend][E] listen(vsock:4099) failed: listen unix <HOME>/Library/Containers/com.docker.docker/Data/vms/0/00000002.00001003: bind: invalid argument
-```
-
-#### Cause
-
-On Mac and Linux, Docker Desktop creates Unix domain sockets used for inter-process communication. These sockets are created under the user's home directory.
-
-Unix domain sockets have a maximum path length:
-
-- 104 characters on Mac
-- 108 characters on Linux
-
-If your home directory path is too long, Docker Desktop fails to create necessary sockets.
-
-#### Solution
-
-Ensure your username is short enough to keep paths within the allowed limit:
-
-- Mac: Username should be ≤ 33 characters
-- Linux: Username should be ≤ 55 characters
-
 ## Topics for Mac
 
 ### Upgrade requires administrator privileges
 
 #### Cause
 
-On macOS, users without administrator privileges cannot perform in-app upgrades from the Docker Desktop Dashboard.
+On Mac, users without administrator privileges cannot perform in-app upgrades from the Docker Desktop Dashboard.
 
 #### Solution
 
@@ -209,6 +175,49 @@ Check that:
 See also, [Hypervisor Framework
 Reference](https://developer.apple.com/library/mac/documentation/DriversKernelHardware/Reference/Hypervisor/)
 in the Apple documentation, and Docker Desktop [Mac system requirements](https://docs.docker.com/desktop/setup/install/mac-install/#system-requirements).
+
+### Docker.app is damaged and can't be opened
+
+#### Cause
+
+This issue occurs due to a non-atomic copy during a drag/drop installation. When you drag and drop `Docker.app` from a DMG file while another application, like VS Code, is invoking the Docker CLI through symlinks, the copy operation may be interrupted, leaving the app in a partially copied state that Gatekeeper marks as "damaged".
+
+#### Solution
+
+1. Quit third-party software
+
+   Close any applications that might call Docker in the background:
+
+   - Visual Studio Code and other IDEs
+   - Terminal applications
+   - Agent apps or development tools
+   - Any scripts or processes that use the Docker CLI
+
+2. Remove any partial installation:
+
+   1. Move `/Applications/Docker.app` to Trash and empty Trash.
+   2. If you used a DMG installer, eject and re-mount the Docker DMG.
+
+3. Reinstall Docker Desktop
+
+   Follow the instructions in the [Mac installation guide](https://docs.docker.com/desktop/setup/install/mac-install/) to reinstall Docker Desktop.
+
+If you continue to see the "damaged" dialog after following the recovery steps:
+
+1. Gather diagnostics using the terminal. Follow the instructions in [Diagnose from the terminal](https://docs.docker.com/desktop/troubleshoot-and-support/troubleshoot/#diagnose-from-the-terminal).
+
+- Note down the your diagnostics ID displayed in the terminal after running diagnostics.
+
+1. Get help:
+   - If you have a paid Docker subscription, [contact support](https://docs.docker.com/support/) and include your diagnostics ID
+   - For community users, [open an issue on GitHub](https://github.com/docker/desktop-feedback) and include your diagnostics ID
+
+To avoid this issue in the future:
+
+- If your organization allows, update Docker Desktop via the in-app update flow
+- Always quit applications that use Docker before installing Docker Desktop via the DMG installer drag-and-drop approach
+- In managed environments, use PKG installations over DMG drag-and-drop
+- Keep installer volumes mounted until installation is complete
 
 ## Topics for Windows
 
@@ -369,7 +378,7 @@ Your machine must have the following features for Docker Desktop to function cor
    Note that many Windows devices already have virtualization enabled, so this may not apply.
 4. Hypervisor enabled at Windows startup
 
-![WSL 2 enabled](https://raw.githubusercontent.com/docker/docs/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/desktop/images/wsl2-enabled.png)
+![WSL 2 enabled](https://raw.githubusercontent.com/docker/docs/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/images/wsl2-enabled.png)
 
 It must be possible to run WSL 2 commands without error, for example:
 
@@ -396,7 +405,7 @@ On Windows 10 Pro or Enterprise, you can also use Hyper-V with the following fea
    Note that many Windows devices already have virtualization enabled, so this may not apply.
 3. Hypervisor enabled at Windows startup
 
-![Hyper-V on Windows features](https://raw.githubusercontent.com/docker/docs/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/desktop/images/hyperv-enabled.png)
+![Hyper-V on Windows features](https://raw.githubusercontent.com/docker/docs/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/images/hyperv-enabled.png)
 
 Docker Desktop requires Hyper-V as well as the Hyper-V Module for Windows
 PowerShell to be installed and enabled. The Docker Desktop installer enables
@@ -414,7 +423,7 @@ In the subsequent screen, verify that Hyper-V is enabled.
 In addition to [Hyper-V](#hyper-v) or [WSL 2](https://docs.docker.com/desktop/features/wsl/), virtualization must be turned on. Check the
 Performance tab on the Task Manager. Alternatively, you can type `systeminfo` into your terminal. If you see `Hyper-V Requirements: A hypervisor has been detected. Features required for Hyper-V will not be displayed`, then virtualization is enabled.
 
-![Task Manager](https://raw.githubusercontent.com/docker/docs/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/desktop/images/virtualization-enabled.png)
+![Task Manager](https://raw.githubusercontent.com/docker/docs/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/images/virtualization-enabled.png)
 
 If you manually uninstall Hyper-V, WSL 2 or turn off virtualization,
 Docker Desktop cannot start.

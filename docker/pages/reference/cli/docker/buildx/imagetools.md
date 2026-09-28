@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/buildx/docker_buildx_imagetools.yaml](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/data/cli/buildx/docker_buildx_imagetools.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_imagetools.yaml](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/data/cli/buildx/docker_buildx_imagetools.yaml)
 
 # docker buildx imagetools
 

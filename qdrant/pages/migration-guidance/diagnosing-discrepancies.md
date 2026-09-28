@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/migration-guidance/diagnosing-discrepancies.md](https://github.com/qdrant/landing_page/blob/c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab/qdrant-landing/content/documentation/migration-guidance/diagnosing-discrepancies.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/migration-guidance/diagnosing-discrepancies.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/migration-guidance/diagnosing-discrepancies.md)
 > Canonical documentation: https://qdrant.tech/documentation/migration-guidance/diagnosing-discrepancies/
 
 # Diagnosing Discrepancies

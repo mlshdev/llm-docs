@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.152.0: [docs/victoriametrics/CONTRIBUTING.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/CONTRIBUTING.md)
+> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/CONTRIBUTING.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/CONTRIBUTING.md)
 
 If you like VictoriaMetrics and want to contribute, then it would be great:
 
@@ -75,18 +75,23 @@ See a good example of a [pull request](https://github.com/VictoriaMetrics/Victor
 
 ## AI policy
 
-You are free to use any AI tools when working on a contribution, on code,
-documentation, issues, or anything else. You do not need to disclose whether or
-how you used them.
+You are free to use AI tools for any part of your contribution, such as writing
+code, documentation, or tests, or investigating an issue. You do not need to
+disclose it. With or without AI, you are the author, and you are responsible for
+what you submit.
 
-With or without the help of AI, you are responsible for the changes you submit.
-Take the effort to understand the code base and every change in your pull request,
-and clean up any AI slop before sending it. Do not use AI to automate your
-responses to maintainers.
+For code and documentation changes, this means understanding the code base and
+every change in your pull request, and cleaning up any AI slop before sending it.
+We review changes on their quality, regardless of how they were produced.
 
-We review contributions on their quality, regardless of how they were produced. A
-pull request or issue that looks like unreviewed AI output, with low-quality or
-broken changes, may be closed without a detailed review or triage.
+For communication, this means writing issues, pull request descriptions, and
+comments in your own voice. You ran into the problem or proposed the change, so
+you should be able to explain it in your own words. Do not paste AI-generated
+text into them. Using AI to fix grammar or translate your own text is fine.
+
+Pull requests and issues that look like unreviewed AI output may be closed
+without a detailed review or triage, and comments that look AI-generated may be
+hidden.
 
 ## Merging Pull Request
 

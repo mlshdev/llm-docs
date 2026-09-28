@@ -8,20 +8,20 @@
   "repository": "qdrant/landing_page",
   "tag": "master",
   "branch": "master",
-  "sourceCommittedAt": "2026-09-25T22:38:58Z",
-  "documentationDigest": "0a1d9e0e2817bbcd5c02d26363b60b70504f201e8f94003c5199959c4a707add",
-  "sourceCommit": "c4f0b9c4dacc9c9891a20a539ae4bf231ba260ab",
-  "documentCount": 331,
+  "sourceCommittedAt": "2026-09-28T14:19:18Z",
+  "documentationDigest": "eec1e4351f0c86209b7acf914b023dfacd9cd2e8ed87b8f02a8b4140db4ad3cf",
+  "sourceCommit": "524630eaca5eb800de91fe4e74d35f8abd6304b2",
+  "documentCount": 330,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 4078137,
-      "documentCount": 331,
-      "sha256": "49bddf41353b9ae5f1f2e23fb11ac9d1dbf5a0537bcedb5bf89808bfde3acf0a"
+      "byteLength": 4022276,
+      "documentCount": 330,
+      "sha256": "2ee7aa2aba17a20a9840e70296d8ea8815541e6489d64b5cf8d5922911876932"
     }
   ],
-  "outputDigest": "55874acfb9091b08cbe3292c1056bad8758a86d6b57ec4a2546faa20b9ef5dbf",
+  "outputDigest": "048d5d28391fec9f2cfd8faabf7706a4ee187612eca0390c69ee86c346f0d531",
   "quarantined": [
     {
       "sourcePath": "qdrant-landing/content/documentation/agentic-tools/_index.md",
@@ -58,6 +58,10 @@
     {
       "sourcePath": "qdrant-landing/content/documentation/search-tuning/when-your-collection-outgrows-ram.md",
       "reason": "Unresolved qdrant source syntax \"{{< c\""
+    },
+    {
+      "sourcePath": "qdrant-landing/content/documentation/search/hybrid-queries.md",
+      "reason": "Qdrant code-snippet path /documentation/headless/snippets/query-points/hybrid-rrf/ has no Markdown snippets in qdrant-landing/content/documentation/search/hybrid-queries.md"
     }
   ],
   "notes": [

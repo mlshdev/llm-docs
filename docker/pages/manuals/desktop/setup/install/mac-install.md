@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/install/mac-install.md](https://github.com/docker/docs/blob/4e9a5751518ed8223a8dcde53693badddd72604f/content/manuals/desktop/setup/install/mac-install.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/install/mac-install.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/setup/install/mac-install.md)
 
 # Install Docker Desktop on Mac
 
@@ -27,7 +27,7 @@ This page provides download links, system requirements, and step-by-step install
 
 - At least 4 GB of RAM.
 
-- For the best experience, it's recommended that you install Rosetta 2. Rosetta 2 is no longer strictly required, however there are a few optional command line tools that still require Rosetta 2 when using Darwin/AMD64. See [Known issues](https://docs.docker.com/desktop/troubleshoot-and-support/troubleshoot/known-issues/). To install Rosetta 2 manually from the command line, run the following command:
+- For the best experience, it's recommended that you install Rosetta 2. Rosetta 2 is no longer strictly required, however there are a few optional command line tools that still require Rosetta 2 when using Darwin/AMD64. To install Rosetta 2 manually from the command line, run the following command:
 
   ```console
   $ softwareupdate --install-rosetta
@@ -51,7 +51,7 @@ This page provides download links, system requirements, and step-by-step install
 >
 > - Keep the installer volume mounted until the installation completes.
 >
-> If you encounter a "Docker.app is damaged" dialog, see [Fix "Docker.app is damaged" on macOS](https://docs.docker.com/desktop/troubleshoot-and-support/troubleshoot/mac-damaged-dialog/).
+> If you encounter a "Docker.app is damaged" dialog, see [Fix "Docker.app is damaged" on macOS](https://docs.docker.com/desktop/troubleshoot-and-support/troubleshoot/topics/).
 
 ## Install and run Docker Desktop on Mac
 
