@@ -1,8 +1,8 @@
-# ZITADEL v4.19.2
+# ZITADEL v4.19.3
 
-> Documentation generated from the latest stable release of [zitadel/zitadel](https://github.com/zitadel/zitadel) and pinned to immutable source commit `2c37c4176ad51c3db0354122e06af53a88d30d4e`.
+> Documentation generated from the latest stable release of [zitadel/zitadel](https://github.com/zitadel/zitadel) and pinned to immutable source commit `2c6acd8c033319be6d73ad484ed5c8e0743afd6d`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for ZITADEL v4.19.2.
+- [Full documentation](llms-full.txt): Complete normalized corpus for ZITADEL v4.19.3.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages come from the Fumadocs content tree in apps/docs/content; underscore-prefixed partials are inlined into the pages that import them.
 - Interactive elements the site renders from JavaScript - framework pickers, benchmark charts, permission and PII tables, and React partials such as the quick start console walkthroughs - are omitted because they carry no static prose.

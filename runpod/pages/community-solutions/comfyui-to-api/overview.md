@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [community-solutions/comfyui-to-api/overview.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/community-solutions/comfyui-to-api/overview.mdx)
+> Pinned source for Runpod main: [community-solutions/comfyui-to-api/overview.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/community-solutions/comfyui-to-api/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/community-solutions/comfyui-to-api/overview
 
 # ComfyUI-to-API

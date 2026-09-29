@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/templates/manage-templates.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/pods/templates/manage-templates.mdx)
+> Pinned source for Runpod main: [pods/templates/manage-templates.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/pods/templates/manage-templates.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/templates/manage-templates
 
 # Manage Pod templates

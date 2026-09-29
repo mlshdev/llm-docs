@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/admin-user-management.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/guides/admin-user-management.md)
+> Pinned source for Docker main: [content/guides/admin-user-management.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/guides/admin-user-management.md)
 
 # Mastering user and access management
 
@@ -181,5 +181,5 @@ Now that you've mastered user and access management in Docker, you can:
 
 - Review your [activity logs](https://docs.docker.com/accounts/organization/activity-logs/) regularly to maintain security awareness
 - Check your [Insights dashboard](https://docs.docker.com/accounts/organization/insights/) to identify opportunities for optimization
-- Explore [advanced security features](https://docs.docker.com/enterprise/security/hardened-desktop/) to further enhance your Docker environment
+- Explore [advanced security features](https://docs.docker.com/desktop/enterprise/hardened-desktop/) to further enhance your Docker environment
 - Share best practices with your team to ensure consistent adoption of security policies

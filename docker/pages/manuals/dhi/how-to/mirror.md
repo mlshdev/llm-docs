@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/how-to/mirror.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/dhi/how-to/mirror.md)
+> Pinned source for Docker main: [content/manuals/dhi/how-to/mirror.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/dhi/how-to/mirror.md)
 
 **Docker Hardened Images requirements**
 
@@ -70,7 +70,7 @@ and lets you customize them for your environment:
    - To mirror an image repository, select **Use this image** > **Mirror
      repository**, and then follow the on-screen instructions. If you have the ELS add-on, you can also
      select **Enable support for end-of-life versions**.
-   - To mirror a Helm chart repository, select **Get Helm chart**, and then follow the on-screen instructions.
+   - To mirror a Helm chart repository, select **Use this chart**, and then follow the on-screen instructions.
 
 It may take a few minutes for all the tags to finish mirroring.
 

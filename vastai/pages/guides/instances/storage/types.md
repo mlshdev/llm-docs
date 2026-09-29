@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/storage/types.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/guides/instances/storage/types.mdx)
+> Pinned source for Vast.ai main: [guides/instances/storage/types.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/guides/instances/storage/types.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/storage/types
 
 # Storage Types

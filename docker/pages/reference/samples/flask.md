@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/samples/flask.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/reference/samples/flask.md)
+> Pinned source for Docker main: [content/reference/samples/flask.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/reference/samples/flask.md)
 
 # Flask samples
 

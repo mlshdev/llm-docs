@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/install/mac-install.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/setup/install/mac-install.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/install/mac-install.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/setup/install/mac-install.md)
 
 # Install Docker Desktop on Mac
 
@@ -47,7 +47,7 @@ This page provides download links, system requirements, and step-by-step install
 >
 > - Quit tools that might call Docker in the background (Visual Studio Code, terminals, agent apps).
 >
-> - If you manage fleets or install via MDM, use the [**PKG installer**](https://docs.docker.com/enterprise/enterprise-deployment/pkg-install-and-configure/).
+> - If you manage fleets or install via MDM, use the [**PKG installer**](https://docs.docker.com/desktop/enterprise/enterprise-deployment/pkg-install-and-configure/).
 >
 > - Keep the installer volume mounted until the installation completes.
 >
@@ -113,7 +113,7 @@ The `install` command accepts the following flags:
 
 - `--allowed-org=<org name>`: Requires the user to sign in and be part of the specified Docker Hub organization when running the application
 - `--user=<username>`: Performs the privileged configurations once during installation. This removes the need for the user to grant root privileges on first run. For more information, see [Privileged helper permission requirements](https://docs.docker.com/desktop/setup/install/mac-permission-requirements/#permission-requirements). To find the username, enter `ls /Users` in the CLI.
-- `--admin-settings`: Automatically creates an `admin-settings.json` file which is used by administrators to control certain Docker Desktop settings on client machines within their organization. For more information, see [Settings Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/).
+- `--admin-settings`: Automatically creates an `admin-settings.json` file which is used by administrators to control certain Docker Desktop settings on client machines within their organization. For more information, see [Settings Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/).
   - It must be used together with the `--allowed-org=<org name>` flag.
   - For example: `--allowed-org=<org name> --admin-settings="{'configurationFileVersion': 2, 'enhancedContainerIsolation': {'value': true, 'locked': false}}"`
 
@@ -140,7 +140,7 @@ $ sudo /Applications/Docker.app/Contents/MacOS/install --user testuser --proxy-h
 
 > \[!TIP]
 >
-> As an IT administrator, you can use endpoint management (MDM) software to identify the number of Docker Desktop instances and their versions within your environment. This can provide accurate license reporting, help ensure your machines use the latest version of Docker Desktop, and enable you to [enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/).
+> As an IT administrator, you can use endpoint management (MDM) software to identify the number of Docker Desktop instances and their versions within your environment. This can provide accurate license reporting, help ensure your machines use the latest version of Docker Desktop, and enable you to [enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
 >
 > - [Intune](https://learn.microsoft.com/en-us/mem/intune/apps/app-discovered-apps)
 > - [Jamf](https://docs.jamf.com/10.25.0/jamf-pro/administrator-guide/Application_Usage.html)

@@ -1,10 +1,10 @@
-> Pinned source for Podman v6.1.2: [docs/tutorials/qemu-remote-tutorial.md](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/tutorials/qemu-remote-tutorial.md)
+> Pinned source for Podman v6.1.3: [docs/tutorials/qemu-remote-tutorial.md](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/tutorials/qemu-remote-tutorial.md)
 
 # Podman-remote client for Windows with QEMU VM
 
 ***
 
-***NOTE:*** For running Podman on Windows, refer to the [Podman for Windows](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/tutorials/podman-for-windows.md) guide, which uses the recommended approach of a Podman-managed Linux backend. For Mac, see the [Podman installation instructions](https://podman.io/getting-started/installation). This guide covers the advanced usage of Podman with a custom Linux VM.
+***NOTE:*** For running Podman on Windows, refer to the [Podman for Windows](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/tutorials/podman-for-windows.md) guide, which uses the recommended approach of a Podman-managed Linux backend. For Mac, see the [Podman installation instructions](https://podman.io/getting-started/installation). This guide covers the advanced usage of Podman with a custom Linux VM.
 
 ***
 

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /api/v0/webhooks/{id}/rotate-secret](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/api-reference/openapi.yaml%23post%20/api/v0/webhooks/%7Bid%7D/rotate-secret)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /api/v0/webhooks/{id}/rotate-secret](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/api-reference/openapi.yaml%23post%20/api/v0/webhooks/%7Bid%7D/rotate-secret)
 > Canonical documentation: https://docs.vast.ai/api-reference/notifications/rotate-notification-webhook-secret
 
 # rotate notification webhook secret

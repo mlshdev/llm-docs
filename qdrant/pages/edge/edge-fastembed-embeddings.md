@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/edge/edge-fastembed-embeddings.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/edge/edge-fastembed-embeddings.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/edge/edge-fastembed-embeddings.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/edge/edge-fastembed-embeddings.md)
 > Canonical documentation: https://qdrant.tech/documentation/edge/edge-fastembed-embeddings/
 
 # On-Device Embeddings with Qdrant Edge and FastEmbed

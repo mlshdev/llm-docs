@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.2: [apps/docs/content/guides/integrate/login-ui/logout.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/guides/integrate/login-ui/logout.mdx)
+> Pinned source for ZITADEL v4.19.3: [apps/docs/content/guides/integrate/login-ui/logout.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/guides/integrate/login-ui/logout.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login-ui/logout
 
 When your user is done using your application and clicks on the logout button, you have to send a request to the terminate session endpoint.

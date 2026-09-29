@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/search-relevance.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/search/search-relevance.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/search-relevance.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/search/search-relevance.md)
 > Canonical documentation: https://qdrant.tech/documentation/search/search-relevance/
 
 # Search Relevance
@@ -338,7 +338,7 @@ Decay functions enable you to modify the score based on how far a value is from 
 | `scale`    | 1.0     | The value at which the decay function will be equal to `midpoint`. This is in terms of `x` units. For example, if `x` is in meters, `scale` of 5000 means 5km. Must be a non-zero positive number. |
 | `midpoint` | 0.5     | Output is `midpoint` when `x` equals `target` ± `scale`. Must be in the range (0.0, 1.0), exclusive.                                                                                               |
 
-![Decay functions.](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/docs/decay-function.png)
+![Decay functions.](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/docs/decay-function.png)
 
 The [formula for each decay function](https://www.desmos.com/calculator/idv5hknwb1) is as follows:
 

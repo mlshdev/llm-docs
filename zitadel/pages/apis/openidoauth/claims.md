@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.2: [apps/docs/content/apis/openidoauth/claims.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/apis/openidoauth/claims.mdx)
+> Pinned source for ZITADEL v4.19.3: [apps/docs/content/apis/openidoauth/claims.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/apis/openidoauth/claims.mdx)
 > Canonical documentation: https://zitadel.com/docs/apis/openidoauth/claims
 
 ZITADEL asserts claims on different places according to the corresponding specifications or project and applications settings.

@@ -1,11 +1,11 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/cluster-scaling.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/cloud/cluster-scaling.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud/cluster-scaling.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/cloud/cluster-scaling.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud/cluster-scaling/
 
 # Scaling Qdrant Cloud Clusters
 
 The amount of data is always growing and at some point you might need to change the capacity of your cluster. You can easily scale your Qdrant cluster up or down from the Cluster detail page in the Qdrant Cloud console.
 
-![Cluster Scaling](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/cloud/cluster-scaling.png)
+![Cluster Scaling](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/cloud/cluster-scaling.png)
 
 ## Vertical Scaling
 

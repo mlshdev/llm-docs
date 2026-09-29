@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/visualizations/dashboards/share-dashboards-panels/_index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/visualizations/dashboards/share-dashboards-panels/_index.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/visualizations/dashboards/share-dashboards-panels/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/visualizations/dashboards/share-dashboards-panels/_index.md)
 
 # Share dashboards and panels
 
@@ -19,7 +19,7 @@ You must have an authorized viewer permission to see an image rendered by a dire
 >
 > Anonymous access permission is not available in Grafana Cloud. This feature is only supported for Grafana Enterprise and Grafana Open Source.
 
-## Share dashboards {#share-a-dashboard}
+## Share dashboards
 
 You can share dashboards in the following ways:
 
@@ -54,7 +54,7 @@ To share a customized, direct link to your dashboard within your organization, f
 
 #### Quick-share an internal link
 
-Once you've customized an internal link, you can share it quickly by following these steps:
+After you've customized an internal link, you can share it quickly by following these steps:
 
 1. Click **Dashboards** in the main menu.
 2. Click the dashboard you want to share.
@@ -122,9 +122,9 @@ To share your dashboard with anyone as a snapshot, follow these steps:
 
 8. Click the **X** at the top-right corner to close the share drawer.
 
-#### Delete a snapshot
+#### Delete a dashboard snapshot
 
-To delete existing snapshots, follow these steps:
+To delete dashboard snapshots, follow these steps:
 
 1. Navigate to **Dashboards > Snapshots** in the main menu.
 
@@ -236,6 +236,12 @@ To publish a dashboard to the community catalog, follow these steps:
 4. Upload the Classic JSON file you exported from Grafana.
 5. Fill in the required metadata fields, then click **Save and Publish**.
 
+> **Note**
+>
+> After you select **Save and Publish**, it might take several hours for the public dashboard page to become available.
+> During this time, the dashboard link might generate a 404 error.
+> If the dashboard is still unavailable the following day, contact Grafana Support.
+
 ### Metadata updates for published dashboards
 
 After you've published a dashboard, the catalog shows a **Submit** button instead of **Save and Publish**.
@@ -247,7 +253,7 @@ You can share a panels in the following ways:
 
 - [Internally with a link](#share-an-internal-link)
 - [As an embed](#share-an-embed)
-- As a snapshot
+- [As a snapshot](#share-a-snapshot)
 
 > **Note**
 >
@@ -352,7 +358,7 @@ Here's an example of what the HTML code might look like:
 
 The result is an interactive Grafana visualization embedded in an iframe.
 
-### Share a snapshot {#panel-snapshot}
+### Share a snapshot
 
 A panel snapshot shares an interactive panel publicly while removing sensitive data such as queries and panel links, leaving only visible metrics and series names. Anyone with the link can access the snapshot.
 
@@ -386,9 +392,9 @@ To share your panel with anyone as a snapshot, follow these steps:
 
 7. Click the **X** at the top-right corner to close the share drawer.
 
-#### Delete a snapshot
+#### Delete a panel snapshot
 
-To delete existing snapshots, follow these steps:
+To delete panel snapshots, follow these steps:
 
 1. Navigate to **Dashboards > Snapshots** in the main menu.
 

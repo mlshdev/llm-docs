@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [examples/text-generation/glm-47-flash.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/examples/text-generation/glm-47-flash.mdx)
+> Pinned source for Vast.ai main: [examples/text-generation/glm-47-flash.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/examples/text-generation/glm-47-flash.mdx)
 > Canonical documentation: https://docs.vast.ai/examples/text-generation/glm-47-flash
 
 # GLM-4.7-Flash

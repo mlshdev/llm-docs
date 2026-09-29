@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/qwen-image-lora.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/public-endpoints/models/qwen-image-lora.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/qwen-image-lora.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/public-endpoints/models/qwen-image-lora.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/qwen-image-lora
 
 # Qwen Image LoRA

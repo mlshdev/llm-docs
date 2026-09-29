@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/datasources/azure-monitor/query-editor/index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/datasources/azure-monitor/query-editor/index.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/datasources/azure-monitor/query-editor/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/datasources/azure-monitor/query-editor/index.md)
 
 # Azure Monitor query editor
 
@@ -193,6 +193,16 @@ Basic Logs queries have the following restrictions:
 - **KQL limitations:** Some KQL operators aren't supported. Refer to the [Azure documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/basic-logs-query?tabs=portal-1#limitations) for a full list of limitations.
 
 You can also augment queries by using [template variables](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/template-variables/).
+
+### Logs result row limit
+
+When a Logs query uses the **Logs** result format, Grafana truncates the results to 30,000 rows to prevent the browser tab from crashing, because the logs visualization renders every row at once. When truncation happens, Grafana returns the first 30,000 rows along with a notice that the limit was reached.
+
+To remove this limit, enable the `azureMonitorDisableLogLimit` [feature toggle](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/feature-toggles/) in your Grafana configuration.
+
+> **Caution**
+>
+> Disabling the row limit can degrade browser performance for very large result sets. Prefer aggregating with `summarize` or narrowing the time range to reduce the number of rows returned.
 
 ### Logs query examples
 

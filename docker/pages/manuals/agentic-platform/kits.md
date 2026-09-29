@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/agentic-platform/kits.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/agentic-platform/kits.md)
+> Pinned source for Docker main: [content/manuals/agentic-platform/kits.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/agentic-platform/kits.md)
 
 # Kits
 
@@ -12,13 +12,16 @@ Sandboxes CLI. The **Kits** page provides the command to copy.
 
 ## Browse and run a kit
 
-The catalog includes kits curated by Docker and community kits published on
-Docker Hub. Curated kits include agents such as Claude Code, Codex, Antigravity,
+Kits curated by Docker include agents such as Claude Code, Codex, Antigravity,
 and Hermes, as well as a Shell kit for working without a pre-installed agent.
 
+Use the format badge to identify [v2 kits](https://docs.docker.com/ai/sandboxes/customize/kits-v2/)
+or [v3 kits](https://docs.docker.com/ai/sandboxes/customize/).
+When available, Docker Hub details include the publisher, pull and star counts,
+last update, architectures, and a security attestations indicator.
+
 1. Open **Kits** in the Console.
-2. Search by name or description. Use **Curated kits** or **Community kits** to
-   filter the catalog, or **All kits** to see both.
+2. Search by name or description.
 3. Select **Run** on a kit to open the sandbox launcher with that kit selected.
 4. Review its credentials, network policies, tools, compute size, and
    timer, then select **Run** in the launcher to create the sandbox.

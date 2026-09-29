@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/_index.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/_index.md)
+> Pinned source for Docker main: [content/manuals/_index.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/_index.md)
 
 # Manuals
 
@@ -48,10 +48,3 @@ Manage Docker accounts, administration, subscriptions, billing, and security.
 - [FAQs](https://docs.docker.com/faqs/): Frequently asked questions about Docker accounts, organizations, companies, subscriptions, billing, and security.
 - [Support](https://docs.docker.com/support/): Support options for paid subscriptions and community resources.
 - [Release notes](https://docs.docker.com/platform-release-notes/): Features, bug fixes, and breaking changes for Docker Home, billing, security, and subscriptions.
-
-## Enterprise
-
-Targeted at IT administrators with help on deploying Docker Desktop at scale with configuration guidance on security related features.
-
-- [Deploy Docker Desktop](https://docs.docker.com/enterprise/enterprise-deployment/): Deploy Docker Desktop at scale within your company
-- [Hardened Docker Desktop](https://docs.docker.com/enterprise/security/hardened-desktop/): Security features that strengthen developer environments.

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/datasources/azure-monitor/template-variables/index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/datasources/azure-monitor/template-variables/index.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/datasources/azure-monitor/template-variables/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/datasources/azure-monitor/template-variables/index.md)
 
 # Azure Monitor template variables
 
@@ -21,11 +21,11 @@ To create a template variable for Azure Monitor:
 2. Click the **Add new element** icon (blue plus sign).
 3. Click **Variable**.
 4. Select **Query** as the variable type.
-5. Enter a **Name** for your variable (e.g., `subscription`, `resourceGroup`, `resource`).
+5. Enter a **Name** for your variable (for example, `subscription`, `resourceGroup`, or `resource`).
 6. Select an option in the **Display** drop-down list to control where on the dashboard the variable is displayed.
 7. Click **Open variable editor** to open the **Query Variable** dialog box.
 8. In the **Data source** drop-down list, select your Azure Monitor data source.
-9. In the **Query Type** drop-down list, select the appropriate query type (see [Available query types](#available-query-types)).
+9. In the **Query Type** drop-down list, select the appropriate query type (refer to [Available query types](#available-query-types)).
 10. Configure any additional fields required by the selected query type.
 11. Click **Preview** to preview the variable values.
 12. Click **Close** to close the query variable editor dialog box.

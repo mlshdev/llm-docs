@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/as-code/observability-as-code/provision-resources/_index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/as-code/observability-as-code/provision-resources/_index.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/as-code/observability-as-code/provision-resources/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/as-code/observability-as-code/provision-resources/_index.md)
 
 # On-prem file provisioning
 
@@ -11,7 +11,9 @@
 On-prem local file provisioning allows you to add resources that are stored in your local file system to your Grafana instance. You can
 configure how to save your dashboards' JSON and other files from your local file system into a single or multiple folders in a different repository, with up to 10 connections.
 
-To set it up, refer to [Set up file provisioning](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/file-path-setup).
+You can set it up [using the UI](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/file-path-setup#set-up-file-provisioning-using-the-ui) or [as code](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/file-path-setup#set-up-file-provisioning-as-code) with the Grafana CLI. Refer to [Set up file provisioning](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/file-path-setup) for details.
+
+File provisioning uses the same `Repository` resource as Git Sync, with the repository `type` set to `local`.
 
 ## How it works
 

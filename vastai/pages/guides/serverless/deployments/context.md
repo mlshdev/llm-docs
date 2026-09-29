@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/deployments/context.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/guides/serverless/deployments/context.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/deployments/context.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/guides/serverless/deployments/context.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/deployments/context
 
 # @context Classes

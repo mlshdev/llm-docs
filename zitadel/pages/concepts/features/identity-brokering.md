@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.2: [apps/docs/content/concepts/features/identity-brokering.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/concepts/features/identity-brokering.mdx)
+> Pinned source for ZITADEL v4.19.3: [apps/docs/content/concepts/features/identity-brokering.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/concepts/features/identity-brokering.mdx)
 > Canonical documentation: https://zitadel.com/docs/concepts/features/identity-brokering
 
 Link social logins and external identity providers with your identity management platform allowing users to log in with their preferred identity provider.
@@ -26,7 +26,7 @@ Federated identity management is an arrangement that is made between two or more
 For example, if Google is configured as an identity provider in your organization, the user will get the option to use his Google Account on the Login Screen of ZITADEL.
 Because Google is registered as a trusted identity provider, the user will be able to log in with the Google account after the user is linked with an existing ZITADEL account (if the user is already registered) or a new one with the claims provided by Google.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/concepts/features/identity-brokering.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/concepts/features/identity-brokering.png)
 
 The schema is a very simplified version, but shows the essential steps for identity brokering
 
@@ -57,7 +57,7 @@ Using an identity provider with strong multitenancy capabilities such as ZITADEL
 [Domain discovery](https://zitadel.com/docs/guides/solution-scenarios/domain-discovery) ensures that users are redirected to their external identity provider based on their email-address or username.
 [Administrators](https://zitadel.com/docs/concepts/structure/administrators) can configure Organization Domains that are used for domain-based redirection to an external IdP.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/concepts/features/domain-discovery.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/concepts/features/domain-discovery.png)
 
 ## Simplify identity brokering with ZITADEL templates
 

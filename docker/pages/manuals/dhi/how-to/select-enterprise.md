@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/how-to/select-enterprise.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/dhi/how-to/select-enterprise.md)
+> Pinned source for Docker main: [content/manuals/dhi/how-to/select-enterprise.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/dhi/how-to/select-enterprise.md)
 
 # Get started with DHI Select and Enterprise
 
@@ -42,7 +42,7 @@ can use either interface.
    `node`, or `golang`). For this example, search for `python`.
 
    To search for an image with a compliance variant (FIPS or STIG), select
-   **Filter by** and select the relevant compliance option.
+   **Compliance** and select the relevant compliance option.
 
 5. Select the Python repository to view its details.
 

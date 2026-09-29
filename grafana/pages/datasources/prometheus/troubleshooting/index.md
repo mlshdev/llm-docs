@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/datasources/prometheus/troubleshooting/index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/datasources/prometheus/troubleshooting/index.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/datasources/prometheus/troubleshooting/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/datasources/prometheus/troubleshooting/index.md)
 
 # Troubleshoot Prometheus data source issues
 
@@ -173,7 +173,7 @@ General steps:
 
 ### LBAC not restricting data on non-Mimir backends
 
-**Symptom:** You've enabled `teamHttpHeadersMimir` and configured Team LBAC rules, but users can still see all metrics regardless of their team assignments.
+**Symptom:** You've configured Team LBAC rules, but users can still see all metrics regardless of their team assignments.
 
 **Cause:** Label-Based Access Control (LBAC) for the Prometheus data source only works when the backend is **Grafana Cloud Metrics (Mimir)** or **Grafana Enterprise Metrics (GEM)**. It doesn't work with Google Managed Prometheus, self-managed Prometheus, Thanos, or other Prometheus-compatible endpoints. The LBAC enforcement relies on Mimir-specific HTTP headers (`X-Scope-OrgID` and team-scoped label matchers) that other backends ignore.
 

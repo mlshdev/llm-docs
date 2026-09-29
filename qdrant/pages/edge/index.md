@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/edge/_index.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/edge/_index.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/edge/_index.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/edge/_index.md)
 > Canonical documentation: https://qdrant.tech/documentation/edge/
 
 > **Note**
@@ -15,7 +15,7 @@ Unlike Qdrant Server, which uses a client-server architecture, Qdrant Edge runs 
 
 Qdrant Edge is built around the concept of an **Edge Shard**: a self-contained storage unit that can operate independently. Each Edge Shard manages its own data, including vector and payload storage, and can perform local search and retrieval operations.
 
-![Qdrant Edge Shards operate on edge devices](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/edge/qdrant-edge.png)
+![Qdrant Edge Shards operate on edge devices](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/edge/qdrant-edge.png)
 
 *Ingest and query run inside the application process on the device. A Qdrant server is optional, for backups and heavier indexing.*
 

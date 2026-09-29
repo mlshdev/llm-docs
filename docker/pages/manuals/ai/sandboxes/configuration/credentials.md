@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/ai/sandboxes/configuration/credentials.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/ai/sandboxes/configuration/credentials.md)
 
 # Manage credentials
 
@@ -154,6 +154,17 @@ $ sbx secret set github --command 'gh auth token'
 `sbx` runs the command through the host shell and trims its output. The command
 text is stored and replayed by the daemon. Don't embed a secret directly in the
 command because the text can appear in shell history and process listings.
+
+Secret commands run from a fresh temporary directory on the host during
+verification and refresh. Relative paths such as `./credential-helper` resolve
+from that temporary directory. This applies to both
+`sbx secret set --command` and `sbx secret set-custom --command`.
+
+Store helpers and any code or configuration they load outside writable
+sandbox mounts. Run a helper by name from an absolute directory on the host's
+`PATH`, use its absolute path, or explicitly change to its private directory
+in the command. Keep the host's temporary directory outside writable sandbox
+mounts as well.
 
 By default, `sbx` verifies the source when you register it and reports an error
 without exposing the resolver's standard error. Use `--no-verify` to store a

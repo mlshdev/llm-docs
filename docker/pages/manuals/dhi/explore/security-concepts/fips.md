@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/fips.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/dhi/explore/security-concepts/fips.md)
+> Pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/fips.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/dhi/explore/security-concepts/fips.md)
 
 # FIPS
 
@@ -68,7 +68,7 @@ in the Docker Hardened Images catalog.
 
 To find DHI repositories with FIPS image variants, [search the catalog](https://docs.docker.com/dhi/how-to/search-evaluate/) and:
 
-- Use the **FIPS** filter on the catalog page
+- Use the **Compliance** filter on the catalog page and select **FIPS**
 - Look for **FIPS** compliant on individual image listings
 
 These indicators help you quickly locate repositories that support FIPS-based

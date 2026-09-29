@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/release-notes.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/docker-hub/release-notes.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/release-notes.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/docker-hub/release-notes.md)
 
 # Docker Hub release notes
 
@@ -37,7 +37,7 @@ known issues for each Docker Hub release.
   Most users are unaffected. You may need to take action if your environment
   uses an egress firewall with a domain allowlist, a TLS inspection proxy, or a
   managed CA trust store. See the [Docker Desktop
-  allowlist](https://docs.docker.com/desktop/setup/allow-list/) for updated domain
+  allowlist](https://docs.docker.com/desktop/enterprise/allow-list/) for updated domain
   requirements. If you see TLS errors, ensure your trust store includes the
   [Amazon Trust Services Root CAs](https://www.amazontrust.com/repository/). If
   you're a paid subscriber, you can [contact Docker
@@ -131,7 +131,7 @@ known issues for each Docker Hub release.
 
 ### Bug fixes and enhancements
 
-- In Docker Hub, you can now download a [registry.json](https://docs.docker.com/enterprise/security/enforce-sign-in/) file or copy the commands to create a registry.json file to enforce sign-in for your organization.
+- In Docker Hub, you can now download a [registry.json](https://docs.docker.com/desktop/enterprise/enforce-sign-in/) file or copy the commands to create a registry.json file to enforce sign-in for your organization.
 
 ## 2022-09-19
 
@@ -161,7 +161,7 @@ known issues for each Docker Hub release.
 
 ### New
 
-- [Registry Access Management](https://docs.docker.com/enterprise/security/hardened-desktop/registry-access-management/) is now available for all Docker Business subscriptions. When enabled, your users can access specific registries in Docker Hub.
+- [Registry Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/registry-access-management/) is now available for all Docker Business subscriptions. When enabled, your users can access specific registries in Docker Hub.
 
 ## 2022-05-03
 

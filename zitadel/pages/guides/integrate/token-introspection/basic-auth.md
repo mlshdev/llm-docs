@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.2: [apps/docs/content/guides/integrate/token-introspection/basic-auth.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/guides/integrate/token-introspection/basic-auth.mdx)
+> Pinned source for ZITADEL v4.19.3: [apps/docs/content/guides/integrate/token-introspection/basic-auth.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/guides/integrate/token-introspection/basic-auth.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/token-introspection/basic-auth
 
 This is a guide on how to secure your API using [Basic Authentication](https://zitadel.com/docs/apis/openidoauth/authn-methods#client-secret-basic).
@@ -7,31 +7,31 @@ This is a guide on how to secure your API using [Basic Authentication](https://z
 
 1. Go to your project and click on the **New** button as shown below.
 
-![Register the API](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/guides/integrate/token-introspection-basic-auth-1.png)
+![Register the API](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/guides/integrate/token-introspection-basic-auth-1.png)
 
 2. Give a name to your application (Test API 2 is the name given below) and select type **API**.
 
-![Register the API](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/guides/integrate/token-introspection-basic-auth-2.png)
+![Register the API](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/guides/integrate/token-introspection-basic-auth-2.png)
 
 3. Select **Basic** as the authentication method and click **Continue**.
 
-![Register the API](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/guides/integrate/token-introspection-basic-auth-3.png)
+![Register the API](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/guides/integrate/token-introspection-basic-auth-3.png)
 
 4. Now review your settings and click **Create**.
 
-![Register the API](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/guides/integrate/token-introspection-basic-auth-4.png)
+![Register the API](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/guides/integrate/token-introspection-basic-auth-4.png)
 
 5. You will now see the API’s **Client ID** and the **Client Secret**. Copy them and click **Close**.
 
-![Register the API](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/guides/integrate/token-introspection-basic-auth-5.png)
+![Register the API](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/guides/integrate/token-introspection-basic-auth-5.png)
 
 6. When you click **URLs** on the left, you will see the relevant OIDC URLs. Note down the **issuer** URL, **token\_endpoint** and **introspection\_endpoint**.
 
-![Register the API](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/guides/integrate/token-introspection-basic-auth-6.png)
+![Register the API](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/guides/integrate/token-introspection-basic-auth-6.png)
 
 7. Also note down the **Project ID** of your project.
 
-![Register the API](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/guides/integrate/token-introspection-basic-auth-7.png)
+![Register the API](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/guides/integrate/token-introspection-basic-auth-7.png)
 
 ## Token introspection
 

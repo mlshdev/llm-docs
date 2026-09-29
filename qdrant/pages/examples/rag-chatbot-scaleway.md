@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/rag-chatbot-scaleway.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/examples/rag-chatbot-scaleway.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/rag-chatbot-scaleway.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/examples/rag-chatbot-scaleway.md)
 > Canonical documentation: https://qdrant.tech/documentation/examples/rag-chatbot-scaleway/
 
 # Blog-Reading Chatbot with GPT-4o
@@ -21,7 +21,7 @@ A notebook for this tutorial is available on [GitHub](https://github.com/qdrant/
 - **LLM:** GPT-4o, developed by OpenAI is utilized as the generator for producing answers.
 - **Framework:** [LangChain](https://www.langchain.com/) for extensive RAG capabilities.
 
-![Architecture diagram](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/examples/rag-chatbot-scaleway/architecture-diagram.png)
+![Architecture diagram](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/examples/rag-chatbot-scaleway/architecture-diagram.png)
 
 > LangChain [supports a wide range of LLMs](https://python.langchain.com/docs/integrations/chat/), and GPT-4o is used as the main generator in this tutorial. You can easily swap it out for your preferred model that might be launched on your premises to complete the fully private setup. For the sake of simplicity, we used the OpenAI APIs, but LangChain makes the transition seamless.
 

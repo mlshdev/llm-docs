@@ -6,21 +6,21 @@
   "title": "Grafana",
   "homepage": "https://grafana.com/docs/grafana/latest/",
   "repository": "grafana/grafana",
-  "tag": "v13.2.2",
-  "releaseId": 389120530,
-  "releasePublishedAt": "2026-09-15T12:21:32Z",
-  "sourceCommit": "3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e",
-  "documentCount": 677,
+  "tag": "v13.2.3",
+  "releaseId": 398975197,
+  "releasePublishedAt": "2026-09-29T09:02:18Z",
+  "sourceCommit": "6193dc03311b631b9727b560d24369e683dc396e",
+  "documentCount": 679,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 8198820,
-      "documentCount": 677,
-      "sha256": "097d3b82066e8c60411489236b84a4f9a7ecbd26b2c2e59b6f1db0e889a21746"
+      "byteLength": 8261504,
+      "documentCount": 679,
+      "sha256": "b249cfa77cb634651c3f4c9881ea588399b093ed5ab1ea725855bb27e0039953"
     }
   ],
-  "outputDigest": "7cf10cd0002c80a00704ae1d76cbe39d899fe267d275ee58a216a3932100eef1",
+  "outputDigest": "c04ec15014c9ce68244887ef4952be9f47da76e034de3a6be6eaacd4e254f25c",
   "notes": [
     "Page order, sections, and cross-references follow the Hugo weights of docs/sources at the release tag, resolved against https://grafana.com/docs/grafana/v13.2/.",
     "Shared fragments referenced by `docs/shared` and `shared-snippet` are inlined into the pages that render them and are not published separately.",

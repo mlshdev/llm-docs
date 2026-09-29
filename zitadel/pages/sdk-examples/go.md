@@ -1,7 +1,7 @@
-> Pinned source for ZITADEL v4.19.2: [apps/docs/content/sdk-examples/go.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/sdk-examples/go.mdx)
+> Pinned source for ZITADEL v4.19.3: [apps/docs/content/sdk-examples/go.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/sdk-examples/go.mdx)
 > Canonical documentation: https://zitadel.com/docs/sdk-examples/go
 
-![go logo](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/tech/golang.svg)
+![go logo](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/tech/golang.svg)
 
 [Go](https://go.dev/) is an open-source, compiled programming language that is known for its simplicity, efficiency, and concurrency capabilities.
 Get started integrating authentication to your Go Application by checking out our [zitadel-go](https://github.com/zitadel/zitadel-go) SDK.
@@ -86,8 +86,8 @@ After completing the Step-By-Step Guide you will have:
 
 [Web APP Step-By-Step Guide](https://zitadel.com/docs/examples/login/go)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/go/app-home.png)
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/go/app-profile.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/go/app-home.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/go/app-profile.png)
 
 #### API Application Guide
 

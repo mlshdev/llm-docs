@@ -1,14 +1,14 @@
-# Apple container 1.4.1: full documentation
+# Apple container 1.5.0: full documentation
 
 Source repository: https://github.com/apple/container
-Release tag: 1.4.1
-Source commit: 9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d
+Release tag: 1.5.0
+Source commit: d265d669ecae041bf338cb3b39c4118316d138f0
 
 # Document: Building the project
 
 Source path: BUILDING.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/BUILDING.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/BUILDING.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/BUILDING.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/BUILDING.md
 Description: To build the container project, you need:
 
 # Building the project
@@ -211,8 +211,8 @@ Run `make pre-commit` to install a pre-commit hook that ensures that your change
 # Document: container
 
 Source path: README.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/README.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/README.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/README.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/README.md
 Description: container is a tool that you can use to create and run Linux containers as lightweight virtual machines on your Mac. It's written in Swift, and optimized for Apple silicon.
 
 # container
@@ -223,13 +223,13 @@ The tool consumes and produces [OCI-compatible container images](https://github.
 
 `container` uses the [Containerization](https://github.com/apple/containerization) Swift package for low-level container, image, and process management.
 
-![introductory movie showing some basic commands](https://raw.githubusercontent.com/apple/container/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/assets/landing-movie.gif)
+![introductory movie showing some basic commands](https://raw.githubusercontent.com/apple/container/d265d669ecae041bf338cb3b39c4118316d138f0/docs/assets/landing-movie.gif)
 
 ## Get started
 
 ### Requirements
 
-You need a Mac with Apple silicon to run `container`. To build it, see the [BUILDING](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/BUILDING.md) document.
+You need a Mac with Apple silicon to run `container`. To build it, see the [BUILDING](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/BUILDING.md) document.
 
 `container` is supported on macOS 26, since it takes advantage of new features and enhancements to virtualization and networking in this release. We do not support older versions of macOS and the `container` maintainers typically will not address issues that cannot be reproduced on macOS 26.
 
@@ -252,7 +252,7 @@ container run --rm alpine echo hello
 ```
 
 This pulls the `alpine` image, runs it in a lightweight Linux VM, prints `hello`, and
-removes the container when it exits. See the [tutorial](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/start-here.md)
+removes the container when it exits. See the [tutorial](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/tutorials/start-here.md)
 for a fuller walkthrough that builds and publishes an image of your own.
 
 ### Upgrade or downgrade
@@ -300,11 +300,11 @@ To retain your user data so that it is available should you reinstall later, run
 
 ## Next steps
 
-- Take [a guided tour of `container`](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/start-here.md) by building, running, and publishing a simple web server image.
-- Learn how to [use various `container` features](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/how-to.md).
-- Read a brief description and [technical overview](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/technical-overview.md) of `container`.
-- Browse the [full command reference](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/command-reference.md).
-- [Build and run](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/BUILDING.md) `container` on your own development system.
+- Take [a guided tour of `container`](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/tutorials/start-here.md) by building, running, and publishing a simple web server image.
+- Learn how to [use various `container` features](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/how-to.md).
+- Read a brief description and [technical overview](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/technical-overview.md) of `container`.
+- Browse the [full command reference](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/command-reference.md).
+- [Build and run](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/BUILDING.md) `container` on your own development system.
 - View the project [API documentation](https://apple.github.io/container/documentation/).
 
 ## Contributing
@@ -313,14 +313,21 @@ Contributions to `container` are welcome and encouraged. Please see our [main co
 
 ## Project Status
 
-The container project is currently under active development. Its stability, both for consuming the project as a Swift package and the `container` tool, is only guaranteed within patch versions, such as between 0.1.1 and 0.1.2. Minor version releases may include breaking changes until we reach a 1.0.0 release.
+The container project is under active development. Its release versions are product versions, not semantic versions.
+
+The `container` CLI compatibility generally preserves backward compatibility within a major release (not breaking existing scripts), however, there may be the odd case where breaking compatibility may be necessary. **Note:** Features marked *experimental* (for example, the `k8s` subcommand) may change and do not guarantee backward compatibility.
+
+The `container-apiserver` XPC API compatibility preserves forward and backward compatibility within a major version.
+Other non-public XPC helpers do not guarantee CLI or API compatibility across different versions.
+
+The `container` application data provides forward compatibility only, guaranteed within one major version. Upgrading to a newer major version may require a specific upgrade path.
 
 
 # Document: How to file effective bug reports
 
 Source path: docs/bug-report-how-to.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/bug-report-how-to.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/bug-report-how-to.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/bug-report-how-to.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/bug-report-how-to.md
 Description: This guide helps you collect the essential information needed to file effective bug reports. Providing complete and accurate information helps maintainers reproduce and fix issues faster.
 
 # How to file effective bug reports
@@ -454,7 +461,7 @@ For Container CLI issues, run commands with verbose output:
 container --debug <command>
 ```
 
-You can also use the `container logs` command to get logs from running containers. See the [container logs](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/command-reference.md#container-logs) documentation for full details.
+You can also use the `container logs` command to get logs from running containers. See the [container logs](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/command-reference.md#container-logs) documentation for full details.
 
 ```bash
 container logs <container-id>
@@ -462,7 +469,7 @@ container logs <container-id>
 
 ### System logs
 
-For system-level container issues, use the built-in system logs command. See the [container system logs](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/command-reference.md#container-system-logs) documentation for full details.
+For system-level container issues, use the built-in system logs command. See the [container system logs](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/command-reference.md#container-system-logs) documentation for full details.
 
 ```bash
 container system logs
@@ -493,8 +500,8 @@ container system logs
 # Document: Container CLI Command Reference
 
 Source path: docs/command-reference.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/command-reference.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/command-reference.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/command-reference.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/command-reference.md
 Description: Command availability may vary depending on your macOS version.
 
 # Container CLI Command Reference
@@ -555,6 +562,7 @@ container run [<options>] <image> [<arguments> ...]
 - `--init`: Run an init process inside the container that forwards signals and reaps processes
 - `--init-image <image>`: Use a custom init image instead of the default. This allows customizing boot-time behavior before the OCI container starts, such as running VM-level daemons, configuring eBPF filters, or debugging the init process.
 - `-k, --kernel <path>`: Set a custom kernel path
+- `--kernel-arg <arg>`: Append a raw boot argument to the kernel command line (repeatable).
 - `-l, --label <label>`: Add a key=value label to the container
 - `--masked-path <path>`: **Experimental.** Hide a path inside the container, in addition to the runtime defaults (or `NONE` to clear prior values and the defaults)
 - `--mount <mount>`: Add a mount to the container (format: type=<>,source=<>,target=<>,readonly)
@@ -578,20 +586,7 @@ container run [<options>] <image> [<arguments> ...]
 
 **Registry Options**
 
-- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https, auto) (default: auto)
-
-  - **Behavior of `auto`**
-
-    When `auto` is selected, the target registry is considered **internal/local** if the registry host matches any of these criteria:
-
-    - The host is a loopback address (e.g., `localhost`, `127.*`)
-    - The host is within the `RFC1918` private IP ranges:
-      - `10.*.*.*`
-      - `192.168.*.*`
-      - `172.16.*.*` through `172.31.*.*`
-    - The host ends with the machine's default container DNS domain (as defined in `DNSConfig.defaultDomain`, located [here](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/Sources/ContainerPersistence/ContainerSystemConfig.swift))
-
-    For internal/local registries, the client uses **HTTP**. Otherwise, it uses **HTTPS**.
+- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https) (default: https)
 
 **Progress Options**
 
@@ -732,6 +727,7 @@ container create [<options>] <image> [<arguments> ...]
 - `--init`: Run an init process inside the container that forwards signals and reaps processes
 - `--init-image <image>`: Use a custom init image instead of the default. This allows customizing boot-time behavior before the OCI container starts, such as running VM-level daemons, configuring eBPF filters, or debugging the init process.
 - `-k, --kernel <path>`: Set a custom kernel path
+- `--kernel-arg <arg>`: Append a raw boot argument to the kernel command line (repeatable).
 - `-l, --label <label>`: Add a key=value label to the container
 - `--masked-path <path>`: **Experimental.** Hide a path inside the container, in addition to the runtime defaults (or `NONE` to clear prior values and the defaults)
 - `--mount <mount>`: Add a mount to the container (format: type=<>,source=<>,target=<>,readonly)
@@ -755,7 +751,7 @@ container create [<options>] <image> [<arguments> ...]
 
 **Registry Options**
 
-- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https, auto) (default: auto)
+- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https) (default: https)
 
 **Image Fetch Options**
 
@@ -1091,7 +1087,7 @@ container image pull [--scheme <scheme>] [--progress <type>] [--max-concurrent-d
 
 **Options**
 
-- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https, auto) (default: auto)
+- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https) (default: https)
 - `--progress <type>`: Progress type (format: auto|none|ansi|plain|color) (default: auto)
 - `--max-concurrent-downloads <max-concurrent-downloads>`: Maximum number of concurrent downloads (default: 3)
 - `-a, --arch <arch>`: Limit the pull to the specified architecture
@@ -1114,7 +1110,7 @@ container image push [--scheme <scheme>] [--progress <type>] [--arch <arch>] [--
 
 **Options**
 
-- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https, auto) (default: auto)
+- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https) (default: https)
 - `--progress <type>`: Progress type (format: auto|none|ansi|plain|color) (default: auto)
 - `-a, --arch <arch>`: Limit the push to the specified architecture
 - `--os <os>`: Limit the push to the specified OS
@@ -1438,7 +1434,7 @@ container volume create --opt journal=journal --opt size=10g myvolume
 
 Using `-v /path` or `--mount type=volume,dst=/path` without a source auto-creates a
 named volume for you, tagged with the `com.apple.container.resource.anonymous` label.
-See [Mounts and volumes](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/volumes.md#anonymous-volumes) for how to find and clean
+See [Mounts and volumes](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/volumes.md#anonymous-volumes) for how to find and clean
 these up.
 
 ### `container volume delete (rm)`
@@ -1539,7 +1535,7 @@ container registry login [--scheme <scheme>] [--password-stdin] [--username <use
 
 **Options**
 
-- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https, auto) (default: auto)
+- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https) (default: https)
 - `--password-stdin`: Take the password from stdin
 - `-u, --username <username>`: Registry user name
 
@@ -1613,7 +1609,7 @@ container machine create [<options>] <image>
 
 **Registry Options**
 
-- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https, auto) (default: auto)
+- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https) (default: https)
 
 **Progress Options**
 
@@ -2106,18 +2102,19 @@ container system property list --format json
 
 ### `container k8s create`
 
-Creates and starts a local Kubernetes cluster. Pulls the node image if needed, runs `kubeadm init`, installs the kindnet CNI, and merges the cluster credentials into `~/.kube/config`.
+Creates and starts a local Kubernetes cluster. Pulls the node image if needed, runs `kubeadm init`, installs a CNI (default: bundled kindnet), and merges the cluster credentials into `~/.kube/config`.
 
 **Usage**
 
 ```bash
-container k8s create [--name <name>] [--node-image <image>] [--rm] [<resource options>] [--debug]
+container k8s create [--name <name>] [--node-image <image>] [--cni <path>] [--rm] [<resource options>] [--debug]
 ```
 
 **Options**
 
 - `--name <name>`: Cluster name (default: `k8s-dev`)
 - `--node-image <image>`: Node image reference (default: `docker.io/kindest/node:v1.35.5`)
+- `--cni <path>`: Optional path to a CNI manifest to apply. If not provided, the bundled kindnet CNI is used.
 - `--rm`: Remove the cluster container after it stops
 
 **Resource Options**
@@ -2127,7 +2124,7 @@ container k8s create [--name <name>] [--node-image <image>] [--rm] [<resource op
 
 **Registry Options**
 
-- `--scheme <scheme>`: Scheme for the container registry (values: http, https, auto; default: auto)
+- `--scheme <scheme>`: Scheme for the container registry (values: http, https; default: https)
 
 **Image Fetch Options**
 
@@ -2144,30 +2141,9 @@ container k8s create --name my-cluster --cpus 4 --memory 8g
 
 # create a cluster that removes itself when stopped
 container k8s create --name temp-cluster --rm
-```
 
-### `container k8s start`
-
-Starts a stopped Kubernetes cluster and refreshes its entry in `~/.kube/config` (the container IP can change between starts).
-
-**Usage**
-
-```bash
-container k8s start [--name <name>] [--debug]
-```
-
-**Options**
-
-- `--name <name>`: Cluster name (default: `k8s-dev`)
-
-**Examples**
-
-```bash
-# start the default cluster
-container k8s start
-
-# start a named cluster
-container k8s start --name my-cluster
+# create a cluster using a custom CNI manifest instead of the bundled kindnet
+container k8s create --cni ./my-cni.yaml
 ```
 
 ### `container k8s delete (rm)`
@@ -2246,7 +2222,7 @@ container k8s load-image --platform linux/amd64 my-app:latest
 
 ### `container k8s write-config`
 
-Fetches the current kubeconfig from a running cluster and merges its context into a kubeconfig file. Use this to refresh credentials after a cluster restart or to write to an alternate config file.
+Fetches the current kubeconfig from a running cluster and merges its context into a kubeconfig file. Use this to write to an alternate config file.
 
 **Usage**
 
@@ -2273,8 +2249,8 @@ container k8s write-config --name my-cluster --kubeconfig ~/.kube/my-cluster.kub
 # Document: Inspecting containers and images
 
 Source path: docs/container-inspection.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-inspection.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-inspection.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/container-inspection.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/container-inspection.md
 Description: Get detailed, machine-readable information about your containers and images.
 
 # Inspecting containers and images
@@ -2347,15 +2323,15 @@ Use the `list` command with the `--format` option to display information for all
 ]
 </pre>
 
-See [Networking](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/networking.md) for how to publish ports, reach the host from a
+See [Networking](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/networking.md) for how to publish ports, reach the host from a
 container, set a custom MAC address, and create isolated networks.
 
 
 # Document: Container machine
 
 Source path: docs/container-machine.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-machine.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-machine.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/container-machine.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/container-machine.md
 Description: Container machine provides a highly integrated Linux environment that works seamlessly on your Mac. Container machines are fast, lightweight and persistent. They are based on standard OCI images that can be built and sh…
 
 # Container machine
@@ -2512,8 +2488,8 @@ By default, `container` runs a built-in setup script on first boot to provision 
 # Document: config.toml reference
 
 Source path: docs/container-system-config.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-system-config.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-system-config.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/container-system-config.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/container-system-config.md
 Description: For a guided walk-through on setting default values, see Container system config tutorial.
 
 # `config.toml` reference
@@ -2523,9 +2499,9 @@ Description: For a guided walk-through on setting default values, see Container 
 >
 > Example: [release 0.4.1 tag](https://github.com/apple/container/tree/0.4.1)
 
-For a guided walk-through on setting default values, see [Container system config tutorial](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/container-system-config-tutorial.md).
+For a guided walk-through on setting default values, see [Container system config tutorial](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/tutorials/container-system-config-tutorial.md).
 
-Source of truth: [`Sources/ContainerPersistence/ContainerSystemConfig.swift`](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/Sources/ContainerPersistence/ContainerSystemConfig.swift).
+Source of truth: [`Sources/ContainerPersistence/ContainerSystemConfig.swift`](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/Sources/ContainerPersistence/ContainerSystemConfig.swift).
 
 ## Viewing your configuration
 
@@ -2613,11 +2589,11 @@ Defaults applied when `container run` / `container create` is invoked without `-
 
 | Key      | Type      | Default | Description                                                                                                                                                                                                                                                                                                                                                                      |
 | -------- | --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `domain` | `String?` | unset   | Local DNS domain appended to container hostnames (e.g. `"test"` makes `my-web-server` resolvable as `my-web-server.test`). When unset, no domain is appended. See [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/networking.md#set-up-dns-based-container-names) for the full walkthrough. |
+| `domain` | `String?` | unset   | Local DNS domain appended to container hostnames (e.g. `"test"` makes `my-web-server` resolvable as `my-web-server.test`). When unset, no domain is appended. See [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/networking.md#set-up-dns-based-container-names) for the full walkthrough. |
 
 ## `[kernel]`
 
-Guest kernel used when launching container VMs. Defaults change per release as kernels are bumped — check the [source](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/Sources/ContainerPersistence/ContainerSystemConfig.swift) for current values.
+Guest kernel used when launching container VMs. Defaults change per release as kernels are bumped — check the [source](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/Sources/ContainerPersistence/ContainerSystemConfig.swift) for current values.
 
 | Key          | Type     | Default                                                                                                          | Description                                                                                            |
 | ------------ | -------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -2673,7 +2649,7 @@ All units are **binary** (powers of 1024), even when written with `kb`/`mb`/`gb`
 
 A bare integer (e.g. `"2048"`) parses as bytes.
 
-Source: [`Sources/ContainerPersistence/Measurement+Parse.swift`](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/Sources/ContainerPersistence/Measurement%2BParse.swift).
+Source: [`Sources/ContainerPersistence/Measurement+Parse.swift`](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/Sources/ContainerPersistence/Measurement%2BParse.swift).
 
 ### `CIDRv4` / `CIDRv6`
 
@@ -2683,8 +2659,8 @@ Quoted string. IPv4 example: `"192.168.100.0/24"`. IPv6 example: `"fd00:abcd::/6
 # Document: Host integration
 
 Source path: docs/host-integration.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/host-integration.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/host-integration.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/host-integration.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/host-integration.md
 Description: Bridge your container and your Mac: forward your SSH agent in, or reach a host service from inside a container.
 
 # Host integration
@@ -2774,15 +2750,15 @@ hello
 ```
 
 This uses the same underlying DNS mechanism described in [Networking: Set up DNS-based
-container names](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/networking.md#set-up-dns-based-container-names), just with
+container names](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/networking.md#set-up-dns-based-container-names), just with
 `--localhost` pointing the domain at a host address instead of a container.
 
 
 # Document: How-to
 
 Source path: docs/how-to.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/how-to.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/how-to.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/how-to.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/how-to.md
 Description: container has a lot of surface area beyond the basic tutorial. Each topic below has its own guide — pick the one that matches what you're trying to do.
 
 # How-to
@@ -2792,30 +2768,30 @@ Description: container has a lot of surface area beyond the basic tutorial. Each
 >
 > Example: [release 0.4.1 tag](https://github.com/apple/container/tree/0.4.1)
 
-`container` has a lot of surface area beyond the [basic tutorial](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/start-here.md). Each topic below has its own guide — pick the one that matches what you're trying to do.
+`container` has a lot of surface area beyond the [basic tutorial](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/tutorials/start-here.md). Each topic below has its own guide — pick the one that matches what you're trying to do.
 
 ## Topics
 
-- [Resource usage](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/resource-usage.md) — CPU and memory limits for containers and builds, overcommitting resources, monitoring usage with `container stats`, and reclaiming disk space.
-- [Mounts and volumes](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/volumes.md) — bind-mount host directories, create named volumes, and mount temporary tmpfs storage.
-- [Networking](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/networking.md) — DNS-based container names, container-to-container connectivity, port forwarding, custom MAC addresses, and isolated networks.
-- [Host integration](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/host-integration.md) — forward your SSH agent into a container, and reach a service running on your Mac from inside a container.
-- [Resource limits (ulimits)](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/ulimits.md) — per-process limits like open-file and process-count limits.
-- [Runtime configuration](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/runtime-configuration.md) — Linux capabilities, masked and read-only paths, nested virtualization, and customizing the container's init process.
-- [Multiplatform images](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/multiplatform-images.md) — build, run, and publish images that support both Apple silicon and x86-64.
-- [Inspecting containers and images](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-inspection.md) — machine-readable `inspect` and `list` output for scripting.
-- [Logs](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/logs.md) — container output, VM boot logs, and the `container` system's own logs.
-- [`config.toml` reference](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-system-config.md) — every configuration key, its default, and how to view your merged configuration.
-- [Container machines](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-machine.md) — persistent Linux environments built from OCI images, with your home directory mounted in and the filesystem surviving stop/start.
-- [Kubernetes clusters](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/kubernetes.md) — run local single-node Kubernetes clusters for development and testing, load your own images, and test deployments before production.
-- [Shell completions](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/shell-completions.md) — generate and install completion scripts for `zsh`, `bash`, and `fish`.
+- [Resource usage](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/resource-usage.md) — CPU and memory limits for containers and builds, overcommitting resources, monitoring usage with `container stats`, and reclaiming disk space.
+- [Mounts and volumes](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/volumes.md) — bind-mount host directories, create named volumes, and mount temporary tmpfs storage.
+- [Networking](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/networking.md) — DNS-based container names, container-to-container connectivity, port forwarding, custom MAC addresses, and isolated networks.
+- [Host integration](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/host-integration.md) — forward your SSH agent into a container, and reach a service running on your Mac from inside a container.
+- [Resource limits (ulimits)](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/ulimits.md) — per-process limits like open-file and process-count limits.
+- [Runtime configuration](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/runtime-configuration.md) — Linux capabilities, masked and read-only paths, nested virtualization, and customizing the container's init process.
+- [Multiplatform images](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/multiplatform-images.md) — build, run, and publish images that support both Apple silicon and x86-64.
+- [Inspecting containers and images](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/container-inspection.md) — machine-readable `inspect` and `list` output for scripting.
+- [Logs](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/logs.md) — container output, VM boot logs, and the `container` system's own logs.
+- [`config.toml` reference](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/container-system-config.md) — every configuration key, its default, and how to view your merged configuration.
+- [Container machines](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/container-machine.md) — persistent Linux environments built from OCI images, with your home directory mounted in and the filesystem surviving stop/start.
+- [Kubernetes clusters](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/kubernetes.md) — run local single-node Kubernetes clusters for development and testing, load your own images, and test deployments before production.
+- [Shell completions](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/shell-completions.md) — generate and install completion scripts for `zsh`, `bash`, and `fish`.
 
 
 # Document: Kubernetes clusters
 
 Source path: docs/kubernetes.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/kubernetes.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/kubernetes.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/kubernetes.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/kubernetes.md
 Description: Kubernetes is an open-source orchestration platform for automating deployment, scaling, and management of containerized workloads across clusters of machines. With container, you can run local Kubernetes clusters for de…
 
 # Kubernetes clusters
@@ -2967,7 +2943,42 @@ container k8s load-image --platform linux/amd64 my-app:latest
 By default, clusters use `kindest/node:v1.35.5`, a Kubernetes-in-Docker image optimized for local development. You can use a different node image when creating a cluster:
 
 ```bash
-container k8s create --node-image docker.io/kindest/node:v1.34.4
+container k8s create --node-image docker.io/kindest/node:v1.34.11
+```
+
+## Custom CNI
+
+By default, clusters install the bundled kindnet CNI for pod networking. Use `--cni` to apply a different CNI manifest instead:
+
+```bash
+container k8s create --name my-cluster --cni ./my-cni.yaml
+```
+
+The manifest must be a plain Kubernetes YAML file (the same shape `kubectl apply -f` expects), not a Helm chart.
+
+### Example: Cilium
+
+Cilium is distributed as a Helm chart, so render a plain manifest from it first:
+
+```bash
+helm repo add cilium https://helm.cilium.io/
+helm repo update
+helm template cilium cilium/cilium --version 1.20.1 --namespace kube-system --set ipam.mode=kubernetes > cilium.yaml
+```
+
+`--set ipam.mode=kubernetes` avoids a CIDR conflict: the chart's default (`cluster-pool`, `10.0.0.0/8`) overlaps kubeadm's pod subnet and service CIDR on these clusters.
+
+Then create the cluster with that manifest:
+
+```bash
+container k8s create --name cilium-demo --cni ./cilium.yaml
+```
+
+Verify Cilium came up:
+
+```bash
+kubectl --context cilium-demo get pods -n kube-system
+kubectl --context cilium-demo get nodes -o wide
 ```
 
 ## Cluster cleanup
@@ -2982,6 +2993,15 @@ To have a cluster automatically remove itself when stopped, create it with `--rm
 
 ```bash
 container k8s create --name temp-cluster --rm
+```
+
+### Recovering a stopped cluster
+
+If a cluster's control plane node stops (for example, after `container stop`), delete and re-create the cluster:
+
+```bash
+container k8s delete --name my-cluster
+container k8s create --name my-cluster
 ```
 
 ## Common workflows
@@ -3022,15 +3042,15 @@ container k8s load-image --name feature-payments my-service:feature-payments
 
 ## See also
 
-- [Command reference](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/command-reference.md#kubernetes-cluster-management) — full details of all `container k8s` subcommands
-- [Container machines](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-machine.md) — persistent Linux environments for general-purpose development
+- [Command reference](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/command-reference.md#kubernetes-cluster-management) — full details of all `container k8s` subcommands
+- [Container machines](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/container-machine.md) — persistent Linux environments for general-purpose development
 
 
 # Document: Logs
 
 Source path: docs/logs.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/logs.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/logs.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/logs.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/logs.md
 Description: View output from your containerized applications, VM boot logs, and the container system's own logs.
 
 # Logs
@@ -3097,15 +3117,15 @@ The `container system logs` command allows you to look at the log messages that 
 %
 </pre>
 
-See [bug report how-to](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/bug-report-how-to.md) for gathering logs when filing an
+See [bug report how-to](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/bug-report-how-to.md) for gathering logs when filing an
 issue.
 
 
 # Document: Multiplatform images
 
 Source path: docs/multiplatform-images.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/multiplatform-images.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/multiplatform-images.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/multiplatform-images.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/multiplatform-images.md
 Description: Build, run, and publish container images that support both Apple silicon and x86-64.
 
 # Multiplatform images
@@ -3114,7 +3134,7 @@ Build, run, and publish container images that support both Apple silicon and x86
 
 ## Build and run a multiplatform image
 
-Using the [project from the tutorial example](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/start-here.md#set-up-a-simple-project), you can create an image to use both on Apple silicon Macs and on x86-64 servers.
+Using the [project from the tutorial example](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/tutorials/start-here.md#set-up-a-simple-project), you can create an image to use both on Apple silicon Macs and on x86-64 servers.
 
 When building the image, just add `--arch` options that direct the builder to create an image supporting both the `arm64` and `amd64` architectures:
 
@@ -3148,8 +3168,8 @@ container image push registry.example.com/fido/web-test:latest
 # Document: Networking
 
 Source path: docs/networking.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/networking.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/networking.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/networking.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/networking.md
 Description: Learn how container networks containers with one another, with the host, and with external systems.
 
 # Networking
@@ -3200,7 +3220,7 @@ Enter your administrator password when prompted. This writes a resolver file to
 `/etc/resolver/` that tells macOS: for any `*.test` query, ask `127.0.0.1` instead of
 your normal DNS server.
 
-Both steps are needed. See [`[dns]` reference](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-system-config.md#dns) for the
+Both steps are needed. See [`[dns]` reference](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/container-system-config.md#dns) for the
 config-key-level detail.
 
 With both steps done, confirm it end-to-end from your Mac:
@@ -3210,7 +3230,7 @@ With both steps done, confirm it end-to-end from your Mac:
 % curl http://my-web-server.test:8000
 ```
 
-See [Host integration](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/host-integration.md) for the reverse direction — reaching a
+See [Host integration](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/host-integration.md) for the reverse direction — reaching a
 service running on your Mac from inside a container.
 
 ## Container-to-container networking
@@ -3378,8 +3398,8 @@ These settings apply to networks created without explicit `--subnet` or `--subne
 # Document: Resource usage
 
 Source path: docs/resource-usage.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/resource-usage.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/resource-usage.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/resource-usage.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/resource-usage.md
 Description: Configure CPU, memory, and disk resources for your containers and builds, monitor usage while they run, and reclaim disk space afterward.
 
 # Resource usage
@@ -3395,7 +3415,7 @@ Since the containers created by `container` are lightweight virtual machines, co
 container run --rm --cpus 8 --memory 32g big
 ```
 
-See [Resource limits (ulimits)](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/ulimits.md) for per-process resource limits like open-file and process-count limits.
+See [Resource limits (ulimits)](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/ulimits.md) for per-process resource limits like open-file and process-count limits.
 
 ## Configure memory and CPUs for large builds
 
@@ -3541,15 +3561,15 @@ container builder stop
 container builder delete
 ```
 
-See [Mounts and volumes](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/volumes.md) for bind mounts, named volumes, and tmpfs
+See [Mounts and volumes](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/volumes.md) for bind mounts, named volumes, and tmpfs
 mounts.
 
 
 # Document: Runtime configuration
 
 Source path: docs/runtime-configuration.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/runtime-configuration.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/runtime-configuration.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/runtime-configuration.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/runtime-configuration.md
 Description: Configure what runs inside and around your container's init process: Linux capabilities, path masking, nested virtualization, and the init process itself.
 
 # Runtime configuration
@@ -3729,7 +3749,7 @@ CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o wrapper wrapper.go
 
 Use the `vminit` image tag corresponding to the `scVersion` value in the project `Package.swift` file.
 
-Or, use `vminit:latest` if you have a local `containerization` project in [edit mode](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/BUILDING.md#develop-using-a-local-copy-of-containerization).
+Or, use `vminit:latest` if you have a local `containerization` project in [edit mode](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/BUILDING.md#develop-using-a-local-copy-of-containerization).
 
 ```dockerfile
 FROM ghcr.io/apple/containerization/vminit:0.34.0 AS base
@@ -3760,14 +3780,14 @@ Check the VM boot logs to confirm your custom init code executed:
 [    0.129230] custom-init: === CUSTOM INIT IMAGE RUNNING ===
 ```
 
-See [Logs](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/logs.md) for more on viewing container and VM boot logs.
+See [Logs](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/logs.md) for more on viewing container and VM boot logs.
 
 
 # Document: Shell completions
 
 Source path: docs/shell-completions.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/shell-completions.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/shell-completions.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/shell-completions.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/shell-completions.md
 Description: Generate and install completion scripts for zsh, bash, and fish.
 
 # Shell completions
@@ -3779,7 +3799,7 @@ Generate and install completion scripts for `zsh`, `bash`, and `fish`.
 The `container --generate-completion-script [zsh|bash|fish]` command generates completion scripts for the provided shell. Below is a detailed guide on how to install the completion scripts.
 
 > \[!NOTE]
-> See the [swift-argument-parser documentation](https://apple.github.io/swift-argument-parser/documentation/argumentparser/installingcompletionscripts/#Installing-Zsh-Completions) for more information about generating and installing shell completion scripts.
+> See the [swift-argument-parser documentation](https://github.com/apple/swift-argument-parser/blob/main/Sources/ArgumentParser/Documentation.docc/Articles/InstallingCompletionScripts.md#installing-zsh-completions) for more information about generating and installing shell completion scripts.
 
 ## Installing `zsh` completions
 
@@ -3848,8 +3868,8 @@ container --generate-completion-script fish > ~/.config/fish/completions/contain
 # Document: Technical Overview
 
 Source path: docs/technical-overview.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/technical-overview.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/technical-overview.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/technical-overview.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/technical-overview.md
 Description: A brief description and technical overview of container.
 
 # Technical Overview
@@ -3904,7 +3924,7 @@ When `container-apiserver` starts, it launches an XPC helper `container-core-ima
 
 ## What limitations does `container` have today?
 
-With the initial release of `container`, you get basic facilities for building and running containers, but many common containerization features remain to be implemented. Consider [contributing](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/CONTRIBUTING.md) new features and bug fixes to `container` and the Containerization projects!
+With the initial release of `container`, you get basic facilities for building and running containers, but many common containerization features remain to be implemented. Consider [contributing](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/CONTRIBUTING.md) new features and bug fixes to `container` and the Containerization projects!
 
 ### Releasing container memory to macOS
 
@@ -3934,8 +3954,8 @@ Normally, vmnet creates the container network using the CIDR address 192.168.64.
 # Document: Customize container default configuration values
 
 Source path: docs/tutorials/container-system-config-tutorial.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/container-system-config-tutorial.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/container-system-config-tutorial.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/tutorials/container-system-config-tutorial.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/tutorials/container-system-config-tutorial.md
 Description: Take a guided tour of setting configurations for container CLI commands and services.
 
 # Customize `container` default configuration values
@@ -3954,7 +3974,7 @@ The `container` service loads values from these TOML files at startup, with firs
 1. Your user file at `~/.config/container/config.toml`.
 2. An optional file shipped with the `container` package install at `<installRoot>/etc/container/config.toml`.
 
-Any key absent from both files falls back to a hardcoded default. For the full schema and defaults, see the [`config.toml` reference](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-system-config.md).
+Any key absent from both files falls back to a hardcoded default. For the full schema and defaults, see the [`config.toml` reference](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/container-system-config.md).
 
 ## Create a custom user TOML configuration file
 
@@ -3984,7 +4004,7 @@ memory = "4g"
 domain = "test"
 ```
 
-Each top-level table maps directly to a section of [ContainerSystemConfig](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-system-config.md).
+Each top-level table maps directly to a section of [ContainerSystemConfig](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/container-system-config.md).
 
 ### Restart the `container` service
 
@@ -4005,7 +4025,7 @@ sudo container system dns create test
 ```
 
 Enter your administrator password when prompted. See [Networking: Set up DNS-based
-container names](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/networking.md#set-up-dns-based-container-names) for what this step
+container names](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/networking.md#set-up-dns-based-container-names) for what this step
 does.
 
 ### Verify the values are loaded
@@ -4051,8 +4071,8 @@ container system property list --format json
 # Document: Tutorial
 
 Source path: docs/tutorials/start-here.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/start-here.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/start-here.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/tutorials/start-here.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/tutorials/start-here.md
 Description: Take a guided tour of container by building, running, and publishing a simple web server image.
 
 # Tutorial
@@ -4162,7 +4182,7 @@ Use the `--help` flag to see which abbreviations exist.
 
 ### Set up a local DNS domain (optional)
 
-`container` includes an embedded DNS service that simplifies access to your containerized applications. For what each step does, see [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/networking.md#set-up-dns-based-container-names); the short version, to set up a domain named `test`:
+`container` includes an embedded DNS service that simplifies access to your containerized applications. For what each step does, see [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/networking.md#set-up-dns-based-container-names); the short version, to set up a domain named `test`:
 
 Set `domain = "test"` under `[dns]` in `~/.config/container/config.toml`, then restart the service:
 
@@ -4179,7 +4199,7 @@ sudo container system dns create test
 
 Enter your administrator password when prompted. The first command requires administrator privileges to create a file containing the domain configuration under the `/etc/resolver` directory, and to tell the macOS DNS resolver to reload its configuration files.
 
-See [Customize `container` default configuration values](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/container-system-config-tutorial.md) for instructions on how to set the default domain name that the `container` service uses for container name resolution on the host. With the default domain set to `test`, if you use `--name my-web-server` to start a container, queries to `my-web-server.test` will respond with that container's IP address.
+See [Customize `container` default configuration values](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/tutorials/container-system-config-tutorial.md) for instructions on how to set the default domain name that the `container` service uses for container name resolution on the host. With the default domain set to `test`, if you use `--name my-web-server` to start a container, queries to `my-web-server.test` will respond with that container's IP address.
 
 ## Build an image
 
@@ -4290,7 +4310,7 @@ my-web-server   0.23%   12.45 MiB / 1.00 GiB  856.00 KiB / 1.2 KiB 2.10 MiB / 51
 > \[!NOTE]
 > Without the `--no-stream` flag, `container stats` continuously updates the display in real-time, similar to the `top` command. Press Ctrl+C to exit the live view.
 
-See [Resource usage](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/resource-usage.md) for what each metric means, setting
+See [Resource usage](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/resource-usage.md) for what each metric means, setting
 CPU/memory limits, and reclaiming disk space.
 
 ### Run other commands in the container
@@ -4326,7 +4346,7 @@ Your web server is accessible from other containers as well as from your host. L
 > \[!NOTE]
 > Container relies on the new features and enhancements present in macOS 26.
 > As a result, the functionality of accessing the web server from another container will not work on macOS 15.
-> See [https://github.com/apple/container/blob/main/docs/technical-overview.md#macos-15-limitations](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/technical-overview.md#macos-15-limitations) for more details.
+> See [https://github.com/apple/container/blob/main/docs/technical-overview.md#macos-15-limitations](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/technical-overview.md#macos-15-limitations) for more details.
 
 ```bash
 container run -it --rm web-test curl http://192.168.64.3
@@ -4426,8 +4446,8 @@ container system stop
 # Document: Resource limits (ulimits)
 
 Source path: docs/ulimits.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/ulimits.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/ulimits.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/ulimits.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/ulimits.md
 Description: Set per-process resource limits for your containers.
 
 # Resource limits (ulimits)
@@ -4514,8 +4534,8 @@ cpu time                   (seconds, -t) 60
 # Document: Mounts and volumes
 
 Source path: docs/volumes.md
-Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/volumes.md
-Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/volumes.md
+Pinned source: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/volumes.md
+Canonical documentation: https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/volumes.md
 Description: Share data from your host with containers, create named volumes with better performance and lifecycle guarantees than bind mounts, and mount temporary, memory-backed storage with tmpfs.
 
 # Mounts and volumes
@@ -4690,7 +4710,7 @@ tmpfs on /sys/firmware type tmpfs (ro,nosuid,nodev,noexec,relatime)
 ```
 
 The last two entries are runtime defaults, present in every container. See
-[Runtime configuration](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/runtime-configuration.md#mask-and-protect-paths-inside-a-container)
+[Runtime configuration](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/runtime-configuration.md#mask-and-protect-paths-inside-a-container)
 for what mounts `/sys/firmware` read-only.
 
 Mount a `tmpfs` filesystem with a 512 MiB size limit using `--mount`:

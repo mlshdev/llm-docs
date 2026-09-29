@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/features/synchronized-file-sharing.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/features/synchronized-file-sharing.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/synchronized-file-sharing.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/features/synchronized-file-sharing.md)
 
 # Synchronized file shares
 

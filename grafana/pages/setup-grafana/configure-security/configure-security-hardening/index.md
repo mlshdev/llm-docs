@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/setup-grafana/configure-security/configure-security-hardening/index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/setup-grafana/configure-security/configure-security-hardening/index.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/setup-grafana/configure-security/configure-security-hardening/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/setup-grafana/configure-security/configure-security-hardening/index.md)
 
 # Configure security hardening
 
@@ -78,7 +78,7 @@ content_security_policy = true
 # Set the Content Security Policy template that is used when the Content-Security-Policy header is added to your requests.
 # $NONCE in the template includes a random nonce.
 # $ROOT_PATH is server.root_url without the protocol.
-content_security_policy_template = """script-src 'self' 'unsafe-eval' 'unsafe-inline' 'strict-dynamic' $NONCE;object-src 'none';font-src 'self';style-src 'self' 'unsafe-inline' blob:;img-src * data:;base-uri 'self';connect-src 'self' grafana.com ws://$ROOT_PATH wss://$ROOT_PATH;manifest-src 'self';media-src 'none';form-action 'self';"""
+content_security_policy_template = """script-src 'self' 'unsafe-eval' 'unsafe-inline' 'strict-dynamic' $NONCE;object-src 'none';font-src 'self';style-src 'self' 'unsafe-inline' blob:;img-src * data: blob:;base-uri 'self';connect-src 'self' grafana.com ws://$ROOT_PATH wss://$ROOT_PATH;manifest-src 'self';media-src 'none';form-action 'self';"""
 ```
 
 ### Enable trusted types

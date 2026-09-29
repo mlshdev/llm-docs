@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/send-data/databricks.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/send-data/databricks.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/send-data/databricks.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/send-data/databricks.md)
 > Canonical documentation: https://qdrant.tech/documentation/send-data/databricks/
 
 # Ingest Databricks Data into Qdrant
@@ -21,7 +21,7 @@ In this example, we will demonstrate how to vectorize a dataset with dense and s
   - Click on `Install New` at the top-right to open the library installation modal.
   - Search for `io.qdrant:spark:VERSION` in the Maven packages and click on `Install`.
 
-![Install the library](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/examples/databricks/library-install.png)
+![Install the library](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/examples/databricks/library-install.png)
 
 - Create a new **[Databricks notebook](https://docs.databricks.com/en/notebooks/index.html)** on your cluster to begin working with your data and libraries.
 

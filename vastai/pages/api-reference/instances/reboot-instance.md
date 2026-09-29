@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/instances/reboot/{id}](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/api-reference/openapi.yaml%23put%20/api/v0/instances/reboot/%7Bid%7D)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/instances/reboot/{id}](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/api-reference/openapi.yaml%23put%20/api/v0/instances/reboot/%7Bid%7D)
 > Canonical documentation: https://docs.vast.ai/api-reference/instances/reboot-instance
 
 # reboot instance

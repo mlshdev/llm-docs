@@ -6,21 +6,21 @@
   "title": "Apple container",
   "homepage": "https://github.com/apple/container",
   "repository": "apple/container",
-  "tag": "1.4.1",
-  "releaseId": 385155129,
-  "releasePublishedAt": "2026-09-09T01:28:43Z",
-  "sourceCommit": "9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d",
+  "tag": "1.5.0",
+  "releaseId": 398771198,
+  "releasePublishedAt": "2026-09-29T02:33:21Z",
+  "sourceCommit": "d265d669ecae041bf338cb3b39c4118316d138f0",
   "documentCount": 21,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 181463,
+      "byteLength": 182546,
       "documentCount": 21,
-      "sha256": "cca9433eb4f968669cf201ccccf7a6002a56d7bc8af986c6e579fb8c95dee791"
+      "sha256": "6e35d2420cfe87c3cbbba0e4acfafcf601283dabc0a60af4ba597561f4911741"
     }
   ],
-  "outputDigest": "06a495ece00ceb87b52e4662ed7a99d442ff492203f541e904dc84bd737ab37a",
+  "outputDigest": "af48539079eca90b7b2b84f66b3b240bee6a65a4b8babe3b92d2d3b7ca21fd65",
   "notes": [
     "Release-authored Markdown includes the repository guide, build instructions, user guides, tutorials, and checked-in CLI command reference.",
     "Relative links, source references, and assets resolve against the immutable release commit."

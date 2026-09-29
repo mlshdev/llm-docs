@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/datasets.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/datasets.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/datasets.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/datasets.md)
 > Canonical documentation: https://qdrant.tech/documentation/datasets/
 
 # Common Datasets in Snapshot Format
@@ -24,7 +24,7 @@ using the Qdrant CLI upon startup or through the API.
 
 ## Qdrant on Hugging Face
 
-[![HuggingFace](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/content/images/hf-logo-with-title.svg)](https://huggingface.co/Qdrant)
+[![HuggingFace](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/content/images/hf-logo-with-title.svg)](https://huggingface.co/Qdrant)
 
 [Hugging Face](https://huggingface.co/) provides a platform for sharing and using ML models and
 datasets. [Qdrant](https://huggingface.co/Qdrant) is one of the organizations there! We aim to

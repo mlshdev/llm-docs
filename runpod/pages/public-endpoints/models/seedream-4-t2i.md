@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/seedream-4-t2i.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/public-endpoints/models/seedream-4-t2i.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/seedream-4-t2i.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/public-endpoints/models/seedream-4-t2i.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/seedream-4-t2i
 
 # Seedream 4.0 T2I

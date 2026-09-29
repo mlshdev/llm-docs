@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/admin-set-up.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/guides/admin-set-up.md)
+> Pinned source for Docker main: [content/guides/admin-set-up.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/guides/admin-set-up.md)
 
 # Set up your company for success with Docker
 
@@ -42,7 +42,7 @@ This guide covers the following Docker features:
   repositories. Your organization was created with your subscription and is
   managed by one or more owners. Users signed into the organization are
   assigned seats based on the purchased subscription.
-- [Enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/):
+- [Enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/):
   By default, Docker Desktop doesn't require sign-in. You can configure
   settings to enforce this and ensure your developers sign in to your
   Docker organization.
@@ -128,7 +128,7 @@ If you suspect your company has multiple Docker organizations:
 
 ### Gather requirements
 
-[Settings Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/) lets you preset numerous configuration parameters for Docker Desktop.
+[Settings Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/) lets you preset numerous configuration parameters for Docker Desktop.
 
 Work with the following stakeholders to establish your company's baseline
 configuration:
@@ -140,11 +140,11 @@ configuration:
 Review these areas together:
 
 - Security features and
-  [enforcing sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/)
+  [enforcing sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/)
   for Docker Desktop users
 - Additional Docker products included in your subscriptions
 
-To view the parameters that can be preset, see [Configure Settings Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/configure-json-file/#step-two-configure-the-settings-you-want-to-lock-in).
+To view the parameters that can be preset, see [Configure Settings Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/configure-json-file/#step-two-configure-the-settings-you-want-to-lock-in).
 
 ### Optional: Meet with the Docker Implementation team
 
@@ -158,11 +158,11 @@ To schedule a meeting, email <successteam@docker.com>.
 ### Send finalized settings files to the MDM team
 
 After reaching an agreement with the relevant teams about your baseline and
-security configurations as outlined in the previous section, configure Settings Management either via [Docker Home](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/configure-admin-console/) or with an
-[`admin-settings.json` file](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/configure-json-file/).
+security configurations as outlined in the previous section, configure Settings Management either via [Docker Home](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/configure-admin-console/) or with an
+[`admin-settings.json` file](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/configure-json-file/).
 
 Once the file is ready, collaborate with your MDM team to deploy your chosen
-settings, along with your chosen method for [enforcing sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/).
+settings, along with your chosen method for [enforcing sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
 
 > \[!IMPORTANT]
 >
@@ -247,7 +247,7 @@ SSO and SCIM setup.
 > Communicate with your users before proceeding, as this step will impact all
 > existing users signing into your Docker organization.
 
-If you plan to use [Registry Access Management (RAM)](https://docs.docker.com/enterprise/security/hardened-desktop/registry-access-management/) and/or [Image Access Management (IAM)](https://docs.docker.com/enterprise/security/hardened-desktop/image-access-management/):
+If you plan to use [Registry Access Management (RAM)](https://docs.docker.com/desktop/enterprise/hardened-desktop/registry-access-management/) and/or [Image Access Management (IAM)](https://docs.docker.com/desktop/enterprise/hardened-desktop/image-access-management/):
 
 1. Ensure your test developer signs in to Docker Desktop using their
    organization credentials
@@ -313,4 +313,4 @@ To continue optimizing your Docker environment:
 
 - Review your [organization's usage data](https://docs.docker.com/accounts/organization/insights/) to track adoption
 - Monitor [Docker Scout findings](https://docs.docker.com/scout/explore/analysis/) for security insights
-- Explore [additional security features](https://docs.docker.com/enterprise/security/hardened-desktop/) to enhance your configuration
+- Explore [additional security features](https://docs.docker.com/desktop/enterprise/hardened-desktop/) to enhance your configuration

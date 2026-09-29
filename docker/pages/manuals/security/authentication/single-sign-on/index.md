@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/_index.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/security/authentication/single-sign-on/_index.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/_index.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/security/authentication/single-sign-on/_index.md)
 
 # Single sign-on overview
 
@@ -22,7 +22,7 @@ by signing in to Docker Hub or Docker Desktop.
 The following diagram illustrates how SSO operates and is managed between
 Docker Hub, Docker Desktop, and your IdP.
 
-![SSO architecture](https://raw.githubusercontent.com/docker/docs/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/security/authentication/single-sign-on/images/SSO.png)
+![SSO architecture](https://raw.githubusercontent.com/docker/docs/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/security/authentication/single-sign-on/images/SSO.png)
 
 ## Set up SSO
 
@@ -33,7 +33,7 @@ To configure SSO in Docker, follow these steps:
 3. Link Docker to your identity provider.
 4. Test your SSO connection.
 5. Provision users in Docker.
-6. Optional. [Enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/).
+6. Optional. [Enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
 7. [Manage your SSO configuration](https://docs.docker.com/security/authentication/single-sign-on/manage/).
 
 Once configuration is complete, users can sign in to Docker services using

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/manage-products.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/accounts/organization/manage/manage-products.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/manage-products.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/accounts/organization/manage/manage-products.md)
 
 # Manage usage and access for Docker products
 
@@ -22,7 +22,7 @@ use the following procedures to control access for all members.
 
 To manage Docker Desktop access:
 
-1. [Enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/).
+1. [Enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
 2. Manage members [manually](https://docs.docker.com/accounts/organization/manage/members/) or use
    [provisioning](https://docs.docker.com/security/provisioning/).
 
@@ -36,9 +36,9 @@ To manage Docker Hub access:
 1. Sign in to [Docker Home](https://app.docker.com/) and select your
    organization, then select **Docker Desktop**.
 2. Select **Registry Access** to configure
-   [Registry Access Management](https://docs.docker.com/enterprise/security/hardened-desktop/registry-access-management/).
+   [Registry Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/registry-access-management/).
 3. Select **Image Access** to control
-   [Image Access Management](https://docs.docker.com/enterprise/security/hardened-desktop/image-access-management/).
+   [Image Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/image-access-management/).
 
 ### Docker Build Cloud access
 
@@ -69,7 +69,7 @@ To manage Docker Scout access:
    [repository settings](https://docs.docker.com/scout/explore/dashboard/#repository-settings).
 4. To manage access to Docker Scout for use on local images with Docker
    Desktop, use
-   [Settings Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/)
+   [Settings Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/)
    and set `sbomIndexing` to `false` to disable, or to `true` to enable.
 
 ### Testcontainers Cloud access
@@ -95,7 +95,7 @@ To manage access to Testcontainers Cloud:
 > subscribe.
 
 To manage Docker Offload access for your organization, use [Settings
-Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/):
+Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/):
 
 1. Sign in to [Docker Home](https://app.docker.com/), then select **Docker
    Desktop**.
@@ -120,7 +120,7 @@ Management](https://docs.docker.com/enterprise/security/hardened-desktop/setting
 4. Select **Save**.
 
 For more details on Settings Management, see the [Settings
-reference](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/settings-reference/#enable-docker-offload).
+reference](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/settings-reference/#enable-docker-offload).
 
 ## Monitor product usage for your organization
 

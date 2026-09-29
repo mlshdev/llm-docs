@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.4.1: [README.md](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/README.md)
+> Pinned source for Apple container 1.5.0: [README.md](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/README.md)
 
 # container
 
@@ -8,13 +8,13 @@ The tool consumes and produces [OCI-compatible container images](https://github.
 
 `container` uses the [Containerization](https://github.com/apple/containerization) Swift package for low-level container, image, and process management.
 
-![introductory movie showing some basic commands](https://raw.githubusercontent.com/apple/container/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/assets/landing-movie.gif)
+![introductory movie showing some basic commands](https://raw.githubusercontent.com/apple/container/d265d669ecae041bf338cb3b39c4118316d138f0/docs/assets/landing-movie.gif)
 
 ## Get started
 
 ### Requirements
 
-You need a Mac with Apple silicon to run `container`. To build it, see the [BUILDING](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/BUILDING.md) document.
+You need a Mac with Apple silicon to run `container`. To build it, see the [BUILDING](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/BUILDING.md) document.
 
 `container` is supported on macOS 26, since it takes advantage of new features and enhancements to virtualization and networking in this release. We do not support older versions of macOS and the `container` maintainers typically will not address issues that cannot be reproduced on macOS 26.
 
@@ -37,7 +37,7 @@ container run --rm alpine echo hello
 ```
 
 This pulls the `alpine` image, runs it in a lightweight Linux VM, prints `hello`, and
-removes the container when it exits. See the [tutorial](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/start-here.md)
+removes the container when it exits. See the [tutorial](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/tutorials/start-here.md)
 for a fuller walkthrough that builds and publishes an image of your own.
 
 ### Upgrade or downgrade
@@ -85,11 +85,11 @@ To retain your user data so that it is available should you reinstall later, run
 
 ## Next steps
 
-- Take [a guided tour of `container`](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/start-here.md) by building, running, and publishing a simple web server image.
-- Learn how to [use various `container` features](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/how-to.md).
-- Read a brief description and [technical overview](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/technical-overview.md) of `container`.
-- Browse the [full command reference](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/command-reference.md).
-- [Build and run](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/BUILDING.md) `container` on your own development system.
+- Take [a guided tour of `container`](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/tutorials/start-here.md) by building, running, and publishing a simple web server image.
+- Learn how to [use various `container` features](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/how-to.md).
+- Read a brief description and [technical overview](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/technical-overview.md) of `container`.
+- Browse the [full command reference](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/command-reference.md).
+- [Build and run](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/BUILDING.md) `container` on your own development system.
 - View the project [API documentation](https://apple.github.io/container/documentation/).
 
 ## Contributing
@@ -98,4 +98,11 @@ Contributions to `container` are welcome and encouraged. Please see our [main co
 
 ## Project Status
 
-The container project is currently under active development. Its stability, both for consuming the project as a Swift package and the `container` tool, is only guaranteed within patch versions, such as between 0.1.1 and 0.1.2. Minor version releases may include breaking changes until we reach a 1.0.0 release.
+The container project is under active development. Its release versions are product versions, not semantic versions.
+
+The `container` CLI compatibility generally preserves backward compatibility within a major release (not breaking existing scripts), however, there may be the odd case where breaking compatibility may be necessary. **Note:** Features marked *experimental* (for example, the `k8s` subcommand) may change and do not guarantee backward compatibility.
+
+The `container-apiserver` XPC API compatibility preserves forward and backward compatibility within a major version.
+Other non-public XPC helpers do not guarantee CLI or API compatibility across different versions.
+
+The `container` application data provides forward compatibility only, guaranteed within one major version. Upgrading to a newer major version may require a specific upgrade path.

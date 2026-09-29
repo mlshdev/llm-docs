@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/setup/onboard.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/accounts/organization/setup/onboard.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/setup/onboard.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/accounts/organization/setup/onboard.md)
 
 # Onboard your organization
 
@@ -130,7 +130,7 @@ automatically via SSO and SCIM. See the following for more details:
   >
   > Enforcing single sign-on (SSO) and enforcing Docker Desktop sign in
   > are different features. For more details, see
-  > [Enforcing sign-in versus enforcing single sign-on (SSO)](https://docs.docker.com/enterprise/security/enforce-sign-in/#enforcing-sign-in-versus-enforcing-single-sign-on-sso).
+  > [Enforcing sign-in versus enforcing single sign-on (SSO)](https://docs.docker.com/desktop/enterprise/enforce-sign-in/#enforcing-sign-in-versus-enforcing-single-sign-on-sso).
 
 - [Configure SCIM](https://docs.docker.com/security/provisioning/scim/) to
   automatically provision, add, and de-provision members to Docker through
@@ -142,28 +142,28 @@ By default, members of your organization can use Docker Desktop without signing
 in. When users don’t sign in as a member of your organization, they don’t
 receive the
 [benefits of your organization’s subscription](https://www.docker.com/pricing?ref=Docs\&refAction=DocsAdminOnboard)
-and they can circumvent [Docker’s security features](https://docs.docker.com/enterprise/security/hardened-desktop/).
+and they can circumvent [Docker’s security features](https://docs.docker.com/desktop/enterprise/hardened-desktop/).
 
 There are multiple ways you can enforce sign-in, depending on your organization's
 Docker configuration:
 
-- [Registry key method (Windows only)](https://docs.docker.com/enterprise/security/enforce-sign-in/methods/#registry-key-method-windows-only)
-- [`.plist` method (Mac only)](https://docs.docker.com/enterprise/security/enforce-sign-in/methods/#plist-method-mac-only)
-- [`registry.json` method (All)](https://docs.docker.com/enterprise/security/enforce-sign-in/methods/#registryjson-method-all)
+- [Registry key method (Windows only)](https://docs.docker.com/desktop/enterprise/enforce-sign-in/methods/#registry-key-method-windows-only)
+- [`.plist` method (Mac only)](https://docs.docker.com/desktop/enterprise/enforce-sign-in/methods/#plist-method-mac-only)
+- [`registry.json` method (All)](https://docs.docker.com/desktop/enterprise/enforce-sign-in/methods/#registryjson-method-all)
 
 ### Step six: Manage Docker Desktop security
 
 Docker offers the following security features to manage your organization's
 security posture:
 
-- [Image Access Management](https://docs.docker.com/enterprise/security/hardened-desktop/image-access-management/): Control which types of images your developers can pull from Docker Hub.
-- [Registry Access Management](https://docs.docker.com/enterprise/security/hardened-desktop/registry-access-management/): Define which registries your developers can access.
-- [Settings management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/): Set and control Docker Desktop settings for your users.
+- [Image Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/image-access-management/): Control which types of images your developers can pull from Docker Hub.
+- [Registry Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/registry-access-management/): Define which registries your developers can access.
+- [Settings management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/): Set and control Docker Desktop settings for your users.
 
 ## Next steps
 
 - [Manage Docker products](https://docs.docker.com/accounts/organization/manage/manage-products/) to configure access and view usage.
-- Configure [Hardened Docker Desktop](https://docs.docker.com/enterprise/security/hardened-desktop/) to improve your organization’s security posture for containerized development.
+- Configure [Hardened Docker Desktop](https://docs.docker.com/desktop/enterprise/hardened-desktop/) to improve your organization’s security posture for containerized development.
 - [Manage your domains](https://docs.docker.com/security/provisioning/domain-management/) to ensure that all Docker users in your domain are part of your organization.
 
 Your Docker subscription provides many more additional features. To learn more,

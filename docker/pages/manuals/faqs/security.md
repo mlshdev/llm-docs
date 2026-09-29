@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/faqs/security.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/faqs/security.md)
+> Pinned source for Docker main: [content/manuals/faqs/security.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/faqs/security.md)
 
 # Security FAQs
 
@@ -148,7 +148,7 @@ These are separate features you can use independently or together:
 - Enforcing SSO ensures users sign in using SSO credentials instead of their Docker ID, enabling better credential management.
 - Enforcing sign-in to Docker Desktop ensures users always sign in to accounts that are members of your organization, so security settings and subscription benefits are always applied.
 
-For more details, see [Enforce sign-in for Desktop](https://docs.docker.com/enterprise/security/enforce-sign-in/#enforcing-sign-in-versus-enforcing-single-sign-on-sso).
+For more details, see [Enforce sign-in for Desktop](https://docs.docker.com/desktop/enterprise/enforce-sign-in/#enforcing-sign-in-versus-enforcing-single-sign-on-sso).
 
 ## Domain
 

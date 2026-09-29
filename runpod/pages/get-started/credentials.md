@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started/credentials.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/get-started/credentials.mdx)
+> Pinned source for Runpod main: [get-started/credentials.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/get-started/credentials.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started/credentials
 
 # Manage credentials

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/whatsnew/whats-new-in-v11-4.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/whatsnew/whats-new-in-v11-4.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/whatsnew/whats-new-in-v11-4.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/whatsnew/whats-new-in-v11-4.md)
 
 # What’s new in Grafana v11.4
 

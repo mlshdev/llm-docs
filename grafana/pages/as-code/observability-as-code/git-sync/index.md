@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/as-code/observability-as-code/git-sync/_index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/as-code/observability-as-code/git-sync/_index.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/as-code/observability-as-code/git-sync/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/as-code/observability-as-code/git-sync/_index.md)
 
 # Introduction to Git Sync
 
@@ -12,7 +12,9 @@ Git Sync in Grafana lets you synchronize your resources so you can store your da
 
 Git Sync allows you to connect external resources with your Grafana instance. After setup, all synchronized resources live in Git under the provisioned folder, and you can continue to have non-provisioned resources outside that folder.
 
-Git Sync is bidirectional. You can modify provisioned resources both from the Grafana UI or from the synced repository, and changes will be reflected in both places.
+Git Sync is bidirectional, so you can modify provisioned resources both from the Grafana UI or from the synced repository, and changes will be reflected in both places.
+
+![Git Sync architecture](https://grafana.com/static/img/docs/ascode/gitsync-architecture.png)
 
 Git Sync is available for any Git provider through a Pure Git repository type, and has specific enhanced integrations for GitHub, GitHub Enterprise, GitLab and Bitbucket. Refer to [Usage and performance limitations](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/usage-limits) for further details, including usage tiers.
 

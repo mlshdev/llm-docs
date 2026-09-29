@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-evaluation/pipeline-output-quality.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/search-evaluation/pipeline-output-quality.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-evaluation/pipeline-output-quality.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/search-evaluation/pipeline-output-quality.md)
 > Canonical documentation: https://qdrant.tech/documentation/search-evaluation/pipeline-output-quality/
 
 # Evaluating Pipeline Output Quality

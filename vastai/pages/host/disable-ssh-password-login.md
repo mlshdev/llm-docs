@@ -1,9 +1,17 @@
-> Pinned source for Vast.ai main: [host/disable-ssh-password-login.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/host/disable-ssh-password-login.mdx)
+> Pinned source for Vast.ai main: [host/disable-ssh-password-login.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/host/disable-ssh-password-login.mdx)
 > Canonical documentation: https://docs.vast.ai/host/disable-ssh-password-login
 
 # Disable SSH Password Login
 
 Turn off SSH password login to protect your machine.
+
+> **Danger**
+>
+> Before you start: [schedule a maintenance window](https://docs.vast.ai/host/set-maintenance-window) at least **48 hours** in advance.
+>
+> You are responsible for the maintenance and any resulting interruption. Work performed outside the scheduled maintenance window may be treated as an **operational failure**.
+>
+> If you are unsure whether this operation could cause data loss, stop here.
 
 Turn off SSH password login to protect your machine. A machine with it enabled
 will not pass verification.

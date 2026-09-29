@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.2: [docs/CODE_STRUCTURE.md](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/CODE_STRUCTURE.md)
+> Pinned source for Podman v6.1.3: [docs/CODE_STRUCTURE.md](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/CODE_STRUCTURE.md)
 
 # Podman Codebase structure
 
@@ -27,7 +27,7 @@ Description about important directories in our repository.
 ### docs/
 
 - Sphinx based documentation for Podman that is build on [Read the Docs](https://readthedocs.com/) and hosted at [docs.podman.io](https://docs.podman.io/).
-- More information is found in [README.md](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/README.md).
+- More information is found in [README.md](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/README.md).
 
 ### libpod/ (only works on linux and freebsd)
 
@@ -83,7 +83,7 @@ Description about important directories in our repository.
 
 ### test/
 
-- Various tests suites, see the test [README.md](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/test/README.md) for more details.
+- Various tests suites, see the test [README.md](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/test/README.md) for more details.
 - These run on linux only.
 
 ### vendor/

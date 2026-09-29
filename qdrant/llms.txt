@@ -1,6 +1,6 @@
 # Qdrant master
 
-> Documentation generated from the latest `master` branch commit of [qdrant/landing_page](https://github.com/qdrant/landing_page) and pinned to immutable source commit `524630eaca5eb800de91fe4e74d35f8abd6304b2`.
+> Documentation generated from the latest `master` branch commit of [qdrant/landing_page](https://github.com/qdrant/landing_page) and pinned to immutable source commit `d4766874cd35da264650dc005969a130267dc721`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Qdrant master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -37,7 +37,7 @@
 - [Billing & Payments](pages/cloud-pricing-payments.md): Understand Qdrant Cloud pricing based on CPU, memory, and storage, and pay by credit card or AWS, GCP, or Azure Marketplace. (5432 bytes)
 - [Premium Tier](pages/cloud-premium.md): Upgrade to Qdrant Cloud Premium for 24/7 support, higher uptime SLAs, SSO, VPC private links, and customer-managed encryption keys. (1615 bytes)
 - [Support](pages/support.md): Open Qdrant Cloud support tickets through the JSM portal with severity levels and request types matched to your issue. (3458 bytes)
-- [Overview](pages/tutorials-lp-overview.md): Browse Qdrant tutorials covering basics, search engineering, retrieval quality, operations, migrations, and integrations. (12466 bytes)
+- [Overview](pages/tutorials-lp-overview.md): Browse Qdrant tutorials covering basics, search engineering, retrieval quality, operations, migrations, and integrations. (13609 bytes)
 - [Practice Datasets](pages/datasets.md): Skip the embedding step with ready-made Qdrant snapshots of public datasets you can import and explore right away. (10595 bytes)
 
 ## Data Management
@@ -424,7 +424,7 @@
 
 ## Search Patterns
 
-- [How to Choose an Embedding Model: Evaluation & Tradeoffs](pages/search-patterns/choose-embedding-model.md): There is no one-size-fits-all solution when it comes to embedding models. Learn how to choose the right one for your use case. (16821 bytes)
+- [How to Choose an Embedding Model: Evaluation & Tradeoffs](pages/search-patterns/choose-embedding-model.md): There is no one-size-fits-all solution when it comes to embedding models. Learn how to choose the right one for your use case. (19382 bytes)
 - [Query Decomposition for Multi-Hop Questions](pages/search-patterns/query-decomposition.md): Answer multi-hop questions by retrieving in steps: an LLM asks each follow-up sub-question, then fuse the per-hop results with RRF. (6059 bytes)
 - [A Complete Guide to Filtering in Vector Search](pages/search-patterns/vector-search-filtering.md): Apply payload filters, build payload indexes, and combine conditions to narrow Qdrant search results to the right data. (38565 bytes)
 - [Search Patterns](pages/search-patterns/index.md): Choose embedding models, plan query decomposition, and apply payload filters to build search around your data and application needs. (18 bytes)
@@ -443,7 +443,7 @@
 - [Securing and Exposing a Hybrid Cloud Cluster](pages/tutorials-operations/secure-and-expose-hybrid-cloud.md): Authentication and TLS management for Qdrant Hybrid Cloud clusters (10773 bytes)
 - [GPU-Accelerated HNSW Indexing](pages/tutorials-operations/gpu-accelerated-hnsw-indexing.md): Speed up HNSW index builds with GPU acceleration on Qdrant Cloud, and measure the effect on indexing time, query latency, and cost. (23096 bytes)
 - [Secure a Self-Hosted Qdrant Instance](pages/tutorials-operations/secure-qdrant.md): Harden a self-hosted Qdrant deployment with TLS, an Admin API key, a Read-Only key, and Granular Access Control. (23462 bytes)
-- [Operations & Scale](pages/tutorials-operations/index.md): Production operations tutorials for Qdrant: snapshots, migrations, sharding, and large-scale indexing for high-volume workloads. (4002 bytes)
+- [Operations & Scale](pages/tutorials-operations/index.md): Production operations tutorials for Qdrant: snapshots, migrations, sharding, and large-scale indexing for high-volume workloads. (5145 bytes)
 
 ## Tutorials & Examples
 
@@ -452,7 +452,7 @@
 ## Search Tuning
 
 - [Hybrid Search in Qdrant](pages/search-tuning/hybrid-search.md): Run dense and sparse retrieval together: the queries each one gets wrong, what the second index costs, and how to tell if it helped. (11950 bytes)
-- [What to Check Before Tuning a Qdrant Collection](pages/search-tuning/before-tuning-a-qdrant-collection.md): Seven collection settings that degrade retrieval without an error, the order to try changes in, and how many labeled queries a gain needs. (22794 bytes)
+- [What to Check Before Tuning a Qdrant Collection](pages/search-tuning/before-tuning-a-qdrant-collection.md): Seven collection settings that degrade retrieval without an error, the order to try changes in, and how many labeled queries a gain needs. (23316 bytes)
 - [Search Tuning](pages/search-tuning/index.md): Tune candidate depth, fusion, reranking, and memory against your search goals, following the complete retrieval tuning series. (16 bytes)
 - [When Is a Reranker Worth It?](pages/search-tuning/when-a-reranker-is-worth-it.md): Rerank 10 candidates, compare with your tuned first stage on held-out queries, and raise the count only after the win holds. (18061 bytes)
 

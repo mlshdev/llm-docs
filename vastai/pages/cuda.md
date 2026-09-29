@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cuda.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/cuda.mdx)
+> Pinned source for Vast.ai main: [cuda.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/cuda.mdx)
 > Canonical documentation: https://docs.vast.ai/cuda
 
 # CUDA

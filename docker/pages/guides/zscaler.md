@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/zscaler.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/guides/zscaler.md)
+> Pinned source for Docker main: [content/guides/zscaler.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/guides/zscaler.md)
 
 # Using Docker with Zscaler
 
@@ -39,7 +39,7 @@ necessary.
 
 If you are not using Zscaler as a system-level proxy, manually configure proxy
 settings in Docker Desktop. Set up proxy settings for all clients in the
-organization using [Settings Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/),
+organization using [Settings Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/),
 or edit proxy configuration in the Docker Desktop GUI under [**Settings > Resources > Proxies**](https://docs.docker.com/desktop/settings-and-maintenance/settings/#proxies).
 
 ## Install root certificates in Docker images

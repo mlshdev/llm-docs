@@ -1,9 +1,9 @@
-> Pinned source for Runpod main: [serverless/storage/overview.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/serverless/storage/overview.mdx)
+> Pinned source for Runpod main: [serverless/storage/overview.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/serverless/storage/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/storage/overview
 
 # Storage options
 
-Storage options for Serverless workers: container disks, network volumes, global volumes, and S3-compatible storage.
+Storage options for Serverless workers: container disks, network volumes, and S3-compatible storage.
 
 ## Storage types
 
@@ -14,7 +14,6 @@ Temporary storage that exists only while a worker is running. Data is lost when 
 All data saved by a worker's [handler function](https://docs.runpod.io/serverless/workers/handler-functions) is stored in the container disk by default. To persist data beyond the current worker session, use one of the following:
 
 - A network volume.
-- A global volume.
 - S3-compatible storage.
 
 ### Network volume
@@ -22,12 +21,6 @@ All data saved by a worker's [handler function](https://docs.runpod.io/serverles
 Persistent storage that can be attached to multiple workers. Ideal for sharing datasets, storing large models, and preserving data beyond individual worker sessions. Available in Standard and [High-Performance](https://docs.runpod.io/storage/high-performance-storage) tiers.
 
 See [Network volumes for Serverless](https://docs.runpod.io/storage/network-volumes#network-volumes-for-serverless).
-
-### Global volume
-
-Persistent, region-independent storage backed by object storage. Unlike a network volume, a global volume isn't tied to a data center, so attaching one doesn't restrict where your workers run. Best for read-heavy workloads such as loading model weights at startup. Available on GPU endpoints, and mutually exclusive with a network volume on the same endpoint.
-
-See [Global volumes for Serverless](https://docs.runpod.io/storage/globalvolume/overview).
 
 ### S3-compatible storage
 
@@ -37,18 +30,18 @@ See [S3-compatible storage](https://docs.runpod.io/serverless/endpoints/send-req
 
 ## Comparison
 
-| Feature         | Container Disk           | Network Volume               | Global Volume                                                                        | S3-Compatible Storage        |
-| --------------- | ------------------------ | ---------------------------- | ------------------------------------------------------------------------------------ | ---------------------------- |
-| **Persistence** | Temporary (lost on stop) | Permanent                    | Permanent                                                                            | Permanent (external)         |
-| **Sharing**     | Not shareable            | Multi-worker                 | Multi-worker (any region)                                                            | Via S3 credentials           |
-| **Speed**       | Fastest (local)          | Fast (networked NVMe)        | Varies (object storage)                                                              | Varies by provider           |
-| **Cost**        | Included in worker cost  | $0.05-$0.07/GB/month         | Storage + [request costs](https://docs.runpod.io/storage/globalvolume#request-costs) | Varies by provider           |
-| **Best for**    | Temporary processing     | Multi-worker sharing, models | Read-heavy inference, models                                                         | Large files, external access |
-| **Data center** | Follows worker           | Pins endpoint to one region  | No region constraint                                                                 | External                     |
+| Feature         | Container Disk           | Network Volume               | S3-Compatible Storage        |
+| --------------- | ------------------------ | ---------------------------- | ---------------------------- |
+| **Persistence** | Temporary (lost on stop) | Permanent                    | Permanent (external)         |
+| **Sharing**     | Not shareable            | Multi-worker                 | Via S3 credentials           |
+| **Speed**       | Fastest (local)          | Fast (networked NVMe)        | Varies by provider           |
+| **Cost**        | Included in worker cost  | $0.05-$0.07/GB/month         | Varies by provider           |
+| **Best for**    | Temporary processing     | Multi-worker sharing, models | Large files, external access |
+| **Data center** | Follows worker           | Pins endpoint to one region  | External                     |
 
 ## Behavior notes
 
-- **Data isolation**: Workers don't share data unless you attach a network volume or a global volume.
-- **Mount path**: Network volumes and global volumes both mount at `/runpod-volume`.
+- **Data isolation**: Workers don't share data unless you attach a network volume.
+- **Mount path**: Network volumes mount at `/runpod-volume`.
 - **Caching**: Docker images cache locally on container disk, but loading large models into GPU memory still impacts cold start times. See [Reducing worker startup times](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#reducing-worker-startup-times).
-- **Location constraints**: Network volumes constrain deployments to the volume's data center, which may impact GPU availability. Global volumes have no data center, so they don't restrict where workers run.
+- **Location constraints**: Network volumes constrain deployments to the volume's data center, which may impact GPU availability.

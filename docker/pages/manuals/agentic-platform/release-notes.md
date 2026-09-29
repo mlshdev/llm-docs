@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/agentic-platform/release-notes.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/agentic-platform/release-notes.md)
+> Pinned source for Docker main: [content/manuals/agentic-platform/release-notes.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/agentic-platform/release-notes.md)
 
 # Docker Agentic Platform release notes
 
@@ -7,9 +7,9 @@
 This marks the experimental public release of Docker Agentic Platform.
 Features and behavior may change. To begin, [activate your subscription](https://docs.docker.com/agentic-platform/signup/).
 
-- Added a **Kits** catalog with search, curated and community filters, and links
-  to Docker Hub. Selecting **Run** opens the sandbox launcher with the kit
-  selected.
+- Added a **Kits** catalog with search, kit format badges, Docker Hub details
+  when available, and links to Docker Hub. Selecting **Run** opens the sandbox
+  launcher with the kit selected.
 - Added public kit references in the launcher. Both the kit and its base image
   must be public.
 - Added Hermes and Antigravity as curated kits. Hermes uses Anthropic or

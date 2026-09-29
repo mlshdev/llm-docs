@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/settings-feedback.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/extensions/settings-feedback.md)
+> Pinned source for Docker main: [content/manuals/extensions/settings-feedback.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/extensions/settings-feedback.md)
 
 # Settings and feedback for Docker Extensions
 
@@ -21,7 +21,7 @@ Docker Extensions is switched off by default. To change your settings:
 > - `~/Library/Group Containers/group.com.docker/settings-store.json` on Mac
 > - `C:\Users\[USERNAME]\AppData\Roaming\Docker\settings-store.json` on Windows
 >
-> This can also be done with [Hardened Docker Desktop](https://docs.docker.com/enterprise/security/hardened-desktop/)
+> This can also be done with [Hardened Docker Desktop](https://docs.docker.com/desktop/enterprise/hardened-desktop/)
 
 ### Turn on or turn off extensions not available in the Marketplace
 

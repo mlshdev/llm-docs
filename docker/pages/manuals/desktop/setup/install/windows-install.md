@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/install/windows-install.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/setup/install/windows-install.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/install/windows-install.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/setup/install/windows-install.md)
 
 > **Docker Desktop terms**
 >
@@ -184,7 +184,7 @@ $ net localgroup docker-users <user> /add
 >
 > Membership in `docker-users` grants access to the Docker daemon socket, which is equivalent to granting administrative privileges on the host. Only add users who require access to Windows containers or Hyper-V VM management. For Linux containers using the WSL 2 backend, this group membership is not required. See [Protect the Docker daemon socket](https://docs.docker.com/engine/security/protect-access/) for more information.
 
-If you're deploying via MDM (such as Intune) and the `docker-users` group isn't populated automatically, see [Why isn't the `docker-users` group populated when the MSI is installed with Intune or another MDM solution?](https://docs.docker.com/enterprise/enterprise-deployment/faq/#why-isnt-the-docker-users-group-populated-when-the-msi-is-installed-with-intune-or-another-mdm-solution).
+If you're deploying via MDM (such as Intune) and the `docker-users` group isn't populated automatically, see [Why isn't the `docker-users` group populated when the MSI is installed with Intune or another MDM solution?](https://docs.docker.com/desktop/enterprise/enterprise-deployment/faq/#why-isnt-the-docker-users-group-populated-when-the-msi-is-installed-with-intune-or-another-mdm-solution).
 
 See the [Installer flags](#installer-flags) section to see what flags the `install` command accepts.
 
@@ -198,7 +198,7 @@ Docker Desktop does not start automatically after installation. To start Docker 
 
 1. Search for Docker, and select **Docker Desktop** in the search results.
 
-2. The Docker menu (![whale menu](https://raw.githubusercontent.com/docker/docs/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/setup/install/images/whale-x.svg)) displays the Docker Subscription Service Agreement.
+2. The Docker menu (![whale menu](https://raw.githubusercontent.com/docker/docs/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/setup/install/images/whale-x.svg)) displays the Docker Subscription Service Agreement.
 
    Here’s a summary of the key points:
 
@@ -215,7 +215,7 @@ Docker Desktop does not start automatically after installation. To start Docker 
 
 > \[!TIP]
 >
-> As an IT administrator, you can use endpoint management (MDM) software to identify the number of Docker Desktop instances and their versions within your environment. This can provide accurate license reporting, help ensure your machines use the latest version of Docker Desktop, and enable you to [enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/).
+> As an IT administrator, you can use endpoint management (MDM) software to identify the number of Docker Desktop instances and their versions within your environment. This can provide accurate license reporting, help ensure your machines use the latest version of Docker Desktop, and enable you to [enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
 >
 > - [Intune](https://learn.microsoft.com/en-us/mem/intune/apps/app-discovered-apps)
 > - [Jamf](https://docs.jamf.com/10.25.0/jamf-pro/administrator-guide/Application_Usage.html)
@@ -279,7 +279,7 @@ If Microsoft Store access is blocked due to security policies:
 #### Security and access control
 
 - `--allowed-org=<org name>`: Requires the user to sign in and be part of the specified Docker Hub organization when running the application
-- `--admin-settings`: Automatically creates an `admin-settings.json` file which is used by admins to control certain Docker Desktop settings on client machines within their organization. For more information, see [Settings Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/).
+- `--admin-settings`: Automatically creates an `admin-settings.json` file which is used by admins to control certain Docker Desktop settings on client machines within their organization. For more information, see [Settings Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/).
   - It must be used together with the `--allowed-org=<org name>` flag.
   - For example:`--allowed-org=<org name> --admin-settings="{'configurationFileVersion': 2, 'enhancedContainerIsolation': {'value': true, 'locked': false}}"`
 - `--no-windows-containers`: Disables the Windows containers integration. This can improve security. For more information, see [Windows containers](https://docs.docker.com/desktop/setup/install/windows-permission-requirements/#windows-containers).

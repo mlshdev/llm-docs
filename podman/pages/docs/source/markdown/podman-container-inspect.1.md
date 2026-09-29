@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.2: [docs/source/markdown/podman-container-inspect.1.md.in](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-container-inspect.1.md.in)
+> Pinned source for Podman v6.1.3: [docs/source/markdown/podman-container-inspect.1.md.in](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman-container-inspect.1.md.in)
 
 # podman-container-inspect
 
@@ -342,7 +342,7 @@ $ podman container inspect --latest --format {{.EffectiveCaps}}
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman.1.md)**, **[podman-container(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-container.1.md)**, **[podman-inspect(1)](https://github.com/podman-container-tools/podman/blob/04f3aa430e6df81bea059978bc5bafbc846ba3e7/docs/source/markdown/podman-inspect.1.md.in)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman.1.md)**, **[podman-container(1)](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman-container.1.md)**, **[podman-inspect(1)](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman-inspect.1.md.in)**
 
 ## HISTORY
 

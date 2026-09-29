@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.4.1: [BUILDING.md](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/BUILDING.md)
+> Pinned source for Apple container 1.5.0: [BUILDING.md](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/BUILDING.md)
 
 # Building the project
 

@@ -1,9 +1,9 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/data-management/redpanda.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/data-management/redpanda.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/data-management/redpanda.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/data-management/redpanda.md)
 > Canonical documentation: https://qdrant.tech/documentation/data-management/redpanda/
 
 # Redpanda Connect
 
-![Redpanda Cover](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/data-management/redpanda/redpanda-cover.png)
+![Redpanda Cover](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/data-management/redpanda/redpanda-cover.png)
 
 [Redpanda Connect](https://www.redpanda.com/connect) is a declarative data-agnostic streaming service designed for efficient, stateless processing steps. It offers transaction-based resiliency with back pressure, ensuring at-least-once delivery when connecting to at-least-once sources with sinks, without the need to persist messages during transit.
 

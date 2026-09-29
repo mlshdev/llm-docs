@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/tutorials/admin-set-up.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/get-started/tutorials/admin-set-up.md)
+> Pinned source for Docker main: [content/get-started/tutorials/admin-set-up.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/get-started/tutorials/admin-set-up.md)
 
 # Roll out Docker to a pilot group
 
@@ -16,7 +16,7 @@ You need:
 - A Docker Business subscription
 - Owner access to a Docker organization
 - A [verified company domain](https://docs.docker.com/security/authentication/single-sign-on/connect/#step-1-add-a-domain)
-- [Enforced Docker Desktop sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/)
+- [Enforced Docker Desktop sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/)
 - One pilot user with Docker Desktop installed
 
 ## Invite the pilot user
@@ -76,7 +76,7 @@ Continue with these guides when you're ready to expand the deployment:
   full deployment handbook
 - [Manage organization members](https://docs.docker.com/accounts/organization/manage/members/)
   for roles, teams, and bulk invitations
-- [Configure Settings Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/configure-admin-console/)
+- [Configure Settings Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/configure-admin-console/)
   for additional policies and deployment controls
 - [Set up SSO and provisioning](https://docs.docker.com/security/authentication/single-sign-on/)
   for centralized identity management

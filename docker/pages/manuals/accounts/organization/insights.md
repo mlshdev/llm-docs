@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/insights.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/accounts/organization/insights.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/insights.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/accounts/organization/insights.md)
 
 # Insights
 
@@ -28,7 +28,7 @@ Key benefits include:
 To use Insights, you must meet the following requirements:
 
 - [Docker Business subscription](https://www.docker.com/pricing?ref=Docs\&refAction=DocsAdminInsights)
-- Administrators must [enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/)
+- Administrators must [enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/)
   for users
 - Your Account Executive must turn on Insights for your organization
 
@@ -57,12 +57,12 @@ counts.
 
 The chart contains the following data:
 
-| Data                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| :--------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active user                  | The number of users who have actively used Docker Desktop and either signed in with a Docker account that has a license in your organization or signed in to a Docker account with an email address from a domain associated with your organization. <br><br>Users who don’t sign in to an account associated with your organization are not represented in the data. To ensure users sign in with an account associated with your organization, you can [enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/). |
-| Total organization members   | The number of users who have used Docker Desktop, regardless of their Insights activity.                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Users opted out of analytics | The number of users who are members of your organization that have opted out of sending analytics. <br><br>When users opt out of sending analytics, you won't see any of their data in Insights. To ensure that the data includes all users, you can use [Settings Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/) to set `analyticsEnabled` for all your users.                                                                                                                           |
-| Active users (graph)         | The view over time for total active users.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Data                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| :--------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Active user                  | The number of users who have actively used Docker Desktop and either signed in with a Docker account that has a license in your organization or signed in to a Docker account with an email address from a domain associated with your organization. <br><br>Users who don’t sign in to an account associated with your organization are not represented in the data. To ensure users sign in with an account associated with your organization, you can [enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/). |
+| Total organization members   | The number of users who have used Docker Desktop, regardless of their Insights activity.                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Users opted out of analytics | The number of users who are members of your organization that have opted out of sending analytics. <br><br>When users opt out of sending analytics, you won't see any of their data in Insights. To ensure that the data includes all users, you can use [Settings Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/) to set `analyticsEnabled` for all your users.                                                                                                                           |
+| Active users (graph)         | The view over time for total active users.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 ### Builds
 
@@ -173,7 +173,7 @@ A Docker Desktop user export file contains the following data points:
   installed
 - Last Seen Date: The last date the user used the Docker Desktop application
 - Opted Out Analytics: Whether the user has opted out of the
-  [Send usage statistics](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/settings-reference/#send-usage-statistics) setting in Docker Desktop
+  [Send usage statistics](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/settings-reference/#send-usage-statistics) setting in Docker Desktop
 
 ## Troubleshoot Insights
 
@@ -191,7 +191,7 @@ solutions to resolve common problems:
   If users have opted out of sending usage statistics for Docker Desktop, then
   their usage data will not be a part of Insights. To manage the setting at
   scale for all your users, you can use [Settings
-  Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/) and turn on the
+  Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/) and turn on the
   `analyticsEnabled` setting.
 
 - Ensure users use Docker Desktop and aren't using the standalone
@@ -207,4 +207,4 @@ solutions to resolve common problems:
   Users who don’t sign in to an account associated with your organization are
   not represented in the data. To ensure users sign in with an account
   associated with your organization, you can [enforce
-  sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/).
+  sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).

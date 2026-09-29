@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/administration/data-source-management/teamlbac/_index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/administration/data-source-management/teamlbac/_index.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/administration/data-source-management/teamlbac/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/administration/data-source-management/teamlbac/_index.md)
 
 # Label Based Access Control (LBAC) for data sources
 
@@ -59,7 +59,7 @@ This flexibility allows teams to use the same data source for multiple use cases
 
 ## Before you begin
 
-To be able to use LBAC for data sources metrics, you need to enable the feature toggle `teamHttpHeadersMimir` on your Grafana instance.
+LBAC for data sources metrics requires the backend to be Grafana Cloud Metrics (Mimir) or Grafana Enterprise Metrics (GEM). No feature toggle is required.
 
 ## Limitations
 

@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.4.1: [docs/kubernetes.md](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/kubernetes.md)
+> Pinned source for Apple container 1.5.0: [docs/kubernetes.md](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/kubernetes.md)
 
 # Kubernetes clusters
 
@@ -149,7 +149,42 @@ container k8s load-image --platform linux/amd64 my-app:latest
 By default, clusters use `kindest/node:v1.35.5`, a Kubernetes-in-Docker image optimized for local development. You can use a different node image when creating a cluster:
 
 ```bash
-container k8s create --node-image docker.io/kindest/node:v1.34.4
+container k8s create --node-image docker.io/kindest/node:v1.34.11
+```
+
+## Custom CNI
+
+By default, clusters install the bundled kindnet CNI for pod networking. Use `--cni` to apply a different CNI manifest instead:
+
+```bash
+container k8s create --name my-cluster --cni ./my-cni.yaml
+```
+
+The manifest must be a plain Kubernetes YAML file (the same shape `kubectl apply -f` expects), not a Helm chart.
+
+### Example: Cilium
+
+Cilium is distributed as a Helm chart, so render a plain manifest from it first:
+
+```bash
+helm repo add cilium https://helm.cilium.io/
+helm repo update
+helm template cilium cilium/cilium --version 1.20.1 --namespace kube-system --set ipam.mode=kubernetes > cilium.yaml
+```
+
+`--set ipam.mode=kubernetes` avoids a CIDR conflict: the chart's default (`cluster-pool`, `10.0.0.0/8`) overlaps kubeadm's pod subnet and service CIDR on these clusters.
+
+Then create the cluster with that manifest:
+
+```bash
+container k8s create --name cilium-demo --cni ./cilium.yaml
+```
+
+Verify Cilium came up:
+
+```bash
+kubectl --context cilium-demo get pods -n kube-system
+kubectl --context cilium-demo get nodes -o wide
 ```
 
 ## Cluster cleanup
@@ -164,6 +199,15 @@ To have a cluster automatically remove itself when stopped, create it with `--rm
 
 ```bash
 container k8s create --name temp-cluster --rm
+```
+
+### Recovering a stopped cluster
+
+If a cluster's control plane node stops (for example, after `container stop`), delete and re-create the cluster:
+
+```bash
+container k8s delete --name my-cluster
+container k8s create --name my-cluster
 ```
 
 ## Common workflows
@@ -204,5 +248,5 @@ container k8s load-image --name feature-payments my-service:feature-payments
 
 ## See also
 
-- [Command reference](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/command-reference.md#kubernetes-cluster-management) — full details of all `container k8s` subcommands
-- [Container machines](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-machine.md) — persistent Linux environments for general-purpose development
+- [Command reference](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/command-reference.md#kubernetes-cluster-management) — full details of all `container k8s` subcommands
+- [Container machines](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/container-machine.md) — persistent Linux environments for general-purpose development

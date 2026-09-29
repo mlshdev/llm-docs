@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/mcp/docker_mcp_catalog_server_add.yaml](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/data/cli/mcp/docker_mcp_catalog_server_add.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp_catalog_server_add.yaml](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/data/cli/mcp/docker_mcp_catalog_server_add.yaml)
 
 # docker mcp catalog server add
 

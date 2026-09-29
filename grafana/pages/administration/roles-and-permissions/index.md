@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/administration/roles-and-permissions/_index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/administration/roles-and-permissions/_index.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/administration/roles-and-permissions/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/administration/roles-and-permissions/_index.md)
 
 # Roles and permissions
 
@@ -138,7 +138,7 @@ While Grafana OSS includes a robust set of permissions and settings that you can
 
 By default, a user can query any data source in an organization, even if the data source is not linked to the user's dashboards.
 
-Data source permissions enable you to restrict data source query permissions to specific **Users**, **Service Accounts**, and **Teams**. For more information about assigning data source permissions, refer to [Data source permissions](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#data-source-permissions/).
+Data source permissions enable you to restrict data source query permissions to specific **Users**, **Service Accounts**, **Teams**, and basic roles (**Viewer**, **Editor**, and **Admin**). For more information about assigning data source permissions, refer to [Data source permissions](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#data-source-permissions/).
 
 ### Role-based access control
 

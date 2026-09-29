@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/as-code/infrastructure-as-code/terraform/_index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/as-code/infrastructure-as-code/terraform/_index.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/as-code/infrastructure-as-code/terraform/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/as-code/infrastructure-as-code/terraform/_index.md)
 
 # Grafana Terraform provider
 
@@ -15,3 +15,4 @@ The following guides help you get started using Terraform to manage your Grafana
 - [Manage Knowledge Graph in Grafana Cloud using Terraform](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/): Learn how to create and manage notification alerts, suppressed assertions, custom model rules, log, trace, and profile configurations, threshold configurations, and Prometheus rules in Grafana Cloud Knowledge Graph using Terraform.
 - [Install plugins in Grafana Cloud using Terraform](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-plugins/): Learn how to install plugins in Grafana Cloud using Terraform.
 - [Manage saved queries using Terraform](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/manage-saved-queries/): Learn how to create and import saved queries, also known as the query library, using Terraform.
+- [Use Terraform to provision secure values](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-secrets-management/): Learn how to create, rotate, and manage secure values in Grafana Secrets Management using Terraform.

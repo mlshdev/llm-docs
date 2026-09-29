@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/as-code/observability-as-code/provision-resources/file-path-setup.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/as-code/observability-as-code/provision-resources/file-path-setup.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/as-code/observability-as-code/provision-resources/file-path-setup.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/as-code/observability-as-code/provision-resources/file-path-setup.md)
 
 # Set up file provisioning
 
@@ -10,15 +10,20 @@
 
 Use local file provisioning to include in your Grafana instance resources that you store in your local file system.
 
-The local path mount is referred to as a `repository`.
+The local path mount is referred to as a `repository`. File provisioning uses the same `Repository` resource as [Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/), with the repository `type` set to `local` and a `path` that points to a directory on the Grafana server's file system.
 
 Using the local path lets you also use it with a tool like `fuse`, allowing you to mount S3 buckets as local paths. You can also use tools like `restic` to automatically back up your dashboards to your preferred backup storage solution.
 
-To set up file sync with local with local files, you need to:
+You can set up file provisioning in two ways:
 
-1. Configure permitted paths in Grafana configuration file (first time set up).
-2. Set the local path.
-3. Choose what content to sync with Grafana.
+- [Using the UI](#set-up-file-provisioning-using-the-ui) through **Administration** > **Provisioning**.
+- [As code](#set-up-file-provisioning-as-code) with `gcx`, the Grafana CLI, so you can manage the configuration in a GitOps-style workflow.
+
+Both approaches require you to first [configure the permitted paths](#configure-permitted-paths) in the Grafana configuration file.
+
+> **Note**
+>
+> The UI refers to this feature as *file provisioning* and to the storage location as *local storage*. In the `Repository` resource, the corresponding repository `type` value is `local` and the path is set in `spec.local.path`.
 
 ## New file provisioning capabilities
 
@@ -33,9 +38,10 @@ Local file provisioning using **Administration** > **Provisioning** will eventua
 To set up file provisioning, you need:
 
 - Administration rights in your Grafana organization.
-- A local directory to store your dashboards. If you want to use a GitHub repository, refer to [Set up Git Sync](https://grafana.com/docs/grafana/v13.2/observability-as-code/provision-resources/file-path-setup/).
+- A local directory to store your dashboards. If you want to use a GitHub repository, refer to [Set up Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/).
 - To update the `permitted_provisioning_paths` section of `custom.ini`.
-- To understand the limitations of local file provisioning. Refer to [How it works](https://grafana.com/docs/grafana/v13.2/observability-as-code/provision-resources#how-it-works) for more details.
+- To understand the limitations of local file provisioning. Refer to [How it works](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources#how-it-works) for more details.
+- To set up file provisioning as code, you also need `gcx` configured with your Grafana instance details. Refer to the [Grafana CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/) for setup instructions.
 
 ## Configure permitted paths
 
@@ -50,7 +56,7 @@ The default paths is `devenv/dev-dashboards` and `conf/provisioning` in your `gr
 The path must behave as a standard file directory on the system of choice.
 Any subdirectories are automatically included.
 
-The values that you enter for the `permitted_provisioning_paths` become the base paths for those entered when you enter a local path in the **Connect to local storage** wizard.
+The values that you enter for the `permitted_provisioning_paths` become the base paths for those entered when you enter a local path in the **Connect to local storage** wizard or in the `spec.local.path` field of a `Repository` resource.
 
 1. Open your Grafana configuration file, either `grafana.ini` or `custom.ini`. For file location based on operating system, refer to [Configuration file location](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
 
@@ -64,7 +70,7 @@ The values that you enter for the `permitted_provisioning_paths` become the base
 
 3. Save the changes to the file and start Grafana.
 
-## Set up file-based provisioning
+## Set up file provisioning using the UI
 
 To use file-based provisioning, you need the file path to the `grafana` folder where your dashboards are stored in the repository.
 
@@ -72,7 +78,7 @@ To start setting up file-based provisioning:
 
 1. Log in to your Grafana server with an account that has the Grafana Admin flag set.
 2. Select **Administration** in the left-side menu and then **Provisioning**.
-3. Select [Configure file provisioning](#set-up-file-based-provisioning).
+3. Select [Configure file provisioning](#set-up-file-provisioning-using-the-ui).
 
 ### Connect to local storage
 
@@ -133,6 +139,112 @@ If you wish, you can make any files synchronized as as **Read only** so no chang
 Any resources made outside of Grafana and saved to the local repository will be reflected in Grafana.
 
 Select **Finish**.
+
+## Set up file provisioning as code
+
+Because file provisioning is managed as code using the same `Repository` Custom Resource Definition (CRD) as Git Sync, you can define it in a YAML file and push it to Grafana with `gcx`. This approach enables automated, GitOps-style workflows for managing file provisioning instead of using the Grafana UI.
+
+To set up file provisioning as code with `gcx`, follow these steps:
+
+1. [Create the repository resource](#create-the-repository-resource).
+2. [Push the resource to Grafana](#push-the-resource-to-grafana).
+3. [Manage the repository resource](#manage-the-repository-resource).
+4. [Verify your dashboards in Grafana](#verify-your-dashboards-in-grafana).
+
+### Create the repository resource
+
+Create a `repository.yaml` file defining your file provisioning configuration. Set the repository `type` to `local` and use `spec.local.path` for the directory that holds your dashboards.
+
+```yaml
+apiVersion: provisioning.grafana.app/v0alpha1
+kind: Repository
+metadata:
+  name: '<REPOSITORY_NAME>'
+spec:
+  title: '<REPOSITORY_TITLE>'
+  type: local
+  local:
+    path: '<LOCAL_PATH>'
+  sync:
+    enabled: true
+    intervalSeconds: 60
+    target: folder
+  workflows:
+    - write
+```
+
+Replace the placeholders with your values:
+
+- *`<REPOSITORY_NAME>`*: Unique identifier for this repository resource
+- *`<REPOSITORY_TITLE>`*: Human-readable name displayed in the Grafana UI
+- *`<LOCAL_PATH>`*: Path to the directory that holds your dashboards. It must begin with one of the configured `permitted_provisioning_paths`, for example `grafana/`.
+
+> **Note**
+>
+> File provisioning supports two sync targets: `target: folder` (the default) creates a folder named after the repository and places synced resources inside it, while `target: folderless` places synced resources at the top level without creating a wrapper folder. Refer to [Sync targets](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/key-concepts/#sync-targets) for details.
+
+### Configuration parameters
+
+The following configuration parameters are available:
+
+| Field                       | Description                                                                    |
+| --------------------------- | ------------------------------------------------------------------------------ |
+| `metadata.name`             | Unique identifier for this repository resource                                 |
+| `spec.title`                | Human-readable name displayed in the Grafana UI                                |
+| `spec.type`                 | Repository type. Set to `local` for file provisioning                          |
+| `spec.local.path`           | Path to the directory that holds your dashboards, within a permitted path      |
+| `spec.sync.enabled`         | Enable synchronization (true/false)                                            |
+| `spec.sync.intervalSeconds` | Sync interval in seconds                                                       |
+| `spec.sync.target`          | Where to place synced dashboards (`folder` or `folderless`)                    |
+| `spec.workflows`            | Enabled workflows: `write` (direct changes). Leave empty for a read-only mount |
+
+### Push the resource to Grafana
+
+Before pushing any resources, configure `gcx` with your Grafana instance details. Refer to the [Grafana CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/) for setup instructions.
+
+Push the repository configuration:
+
+```sh
+gcx resources push --path <DIRECTORY>
+```
+
+The `--path` parameter has to point to the directory containing your `repository.yaml` file.
+
+After pushing, Grafana will:
+
+1. Create the repository resource
+2. Read the dashboards from the configured local path
+3. Begin syncing at the configured interval
+
+### Manage the repository resource
+
+Use the following commands to manage file provisioning repositories.
+
+To list all repositories:
+
+```sh
+gcx resources get repositories
+```
+
+To get details for a specific repository:
+
+```sh
+gcx resources get repository/<REPOSITORY_NAME>
+gcx resources get repository/<REPOSITORY_NAME> -o json
+gcx resources get repository/<REPOSITORY_NAME> -o yaml
+```
+
+To update a repository:
+
+```sh
+gcx resources edit repository/<REPOSITORY_NAME>
+```
+
+To delete a repository:
+
+```sh
+gcx resources delete repository/<REPOSITORY_NAME>
+```
 
 ## Verify your dashboards in Grafana
 

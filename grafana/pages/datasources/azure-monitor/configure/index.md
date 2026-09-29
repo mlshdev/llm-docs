@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/datasources/azure-monitor/configure/index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/datasources/azure-monitor/configure/index.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/datasources/azure-monitor/configure/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/datasources/azure-monitor/configure/index.md)
 
 # Configure the Azure Monitor data source
 
@@ -509,7 +509,7 @@ Because requests to the Batch API are sent to the `metrics.monitor.azure.com` da
 
 > **Note**
 >
-> The Metrics Batch API has a free monthly allowance, after which additional calls incur costs. See [Azure Monitor pricing](https://azure.microsoft.com/en-us/pricing/details/monitor/) for current rates.
+> The Metrics Batch API has a free monthly allowance, after which additional calls incur costs. Refer to [Azure Monitor pricing](https://azure.microsoft.com/en-us/pricing/details/monitor/) for current rates.
 
 ### Private data source connect (Grafana Cloud only)
 
@@ -609,7 +609,7 @@ provider "grafana" {
   auth = "<YOUR_SERVICE_ACCOUNT_TOKEN>"
 }
 
-# For self-hosted Grafana
+# For self-managed Grafana
 # provider "grafana" {
 #   url  = "http://localhost:3000"
 #   auth = "<API_KEY_OR_SERVICE_ACCOUNT_TOKEN>"

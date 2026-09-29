@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/usage/manage.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/docker-hub/usage/manage.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/usage/manage.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/docker-hub/usage/manage.md)
 
 # Best practices for optimizing Docker Hub usage
 
@@ -36,7 +36,7 @@ both individuals and organizations:
    following:
 
    - Routinely [view Docker Hub usage](https://hub.docker.com/usage) to monitor usage.
-   - [Enforce sign-in](https://docs.docker.com/security/for-admins/enforce-sign-in/) to ensure that you
+   - [Enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/) to ensure that you
      can monitor the usage of your users and users receive higher usage limits.
    - Look for duplicate user accounts in Docker and remove accounts from your organization
      as needed.

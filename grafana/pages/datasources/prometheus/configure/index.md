@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/datasources/prometheus/configure/_index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/datasources/prometheus/configure/_index.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/datasources/prometheus/configure/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/datasources/prometheus/configure/_index.md)
 
 # Configure the Prometheus data source
 
@@ -133,7 +133,7 @@ Pass along additional information and metadata about the request or response.
 
 > **Note**
 >
-> Team-based Label-Based Access Control (LBAC) for the Prometheus data source requires the backend to be **Grafana Cloud Metrics (Mimir)** or **Grafana Enterprise Metrics (GEM)**. LBAC doesn't work with external Prometheus-compatible endpoints such as Google Managed Prometheus, self-managed Prometheus, or Thanos, even if you enable the `teamHttpHeadersMimir` setting. The LBAC enforcement relies on Mimir-specific HTTP headers that other backends don't support.
+> Team-based Label-Based Access Control (LBAC) for the Prometheus data source requires the backend to be **Grafana Cloud Metrics (Mimir)** or **Grafana Enterprise Metrics (GEM)**. LBAC doesn't work with external Prometheus-compatible endpoints such as Google Managed Prometheus, self-managed Prometheus, or Thanos. The LBAC enforcement relies on Mimir-specific HTTP headers that other backends don't support.
 
 - **Cache level** - Sets the browser caching level for editor queries. Options: `Low`, `Medium`, `High`, or `None`. Higher cache settings are recommended for high-cardinality data sources.
 - **Incremental querying (beta)** - Toggle on to enable incremental querying. Instead of always requesting fresh data from the Prometheus instance, Grafana caches query results and only fetches new records. This helps reduce database and network load.

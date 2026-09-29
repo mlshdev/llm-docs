@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.2: [apps/docs/content/self-hosting/deploy/kubernetes/uninstalling.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/self-hosting/deploy/kubernetes/uninstalling.mdx)
+> Pinned source for ZITADEL v4.19.3: [apps/docs/content/self-hosting/deploy/kubernetes/uninstalling.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/self-hosting/deploy/kubernetes/uninstalling.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/deploy/kubernetes/uninstalling
 
 This guide covers how to remove Zitadel from your Kubernetes cluster.

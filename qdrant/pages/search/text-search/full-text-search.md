@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/text-search/full-text-search.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/search/text-search/full-text-search.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/text-search/full-text-search.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/search/text-search/full-text-search.md)
 > Canonical documentation: https://qdrant.tech/documentation/search/text-search/full-text-search/
 
 # Full-Text Search
@@ -696,7 +696,7 @@ When designing a multi-representation collection (combining short fields like ti
 
 Before BM25 can score a text, Qdrant breaks it down into individual tokens (words) and applies several normalization steps to them. This ensures that searches can match variations of words. For query tokens to match the indexed tokens, the query text must go through the same steps.
 
-![Text processing can break down a sentence like "The quick brown fox" into the tokens "quick", "brown", and "fox".](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/docs/text-processing.png)
+![Text processing can break down a sentence like "The quick brown fox" into the tokens "quick", "brown", and "fox".](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/docs/text-processing.png)
 
 *Text processing turns a sentence into tokens. By default, BM25 lowercases tokens, removes English stopwords, and applies English stemming.*
 

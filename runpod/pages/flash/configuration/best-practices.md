@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/configuration/best-practices.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/flash/configuration/best-practices.mdx)
+> Pinned source for Runpod main: [flash/configuration/best-practices.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/flash/configuration/best-practices.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/configuration/best-practices
 
 # Configuration best practices

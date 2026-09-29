@@ -1,6 +1,6 @@
-> Pinned source for Docker main: [content/manuals/security/_index.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/security/_index.md)
+> Pinned source for Docker main: [content/manuals/security/_index.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/security/_index.md)
 
-# Security
+# Secure Docker accounts and organizations
 
 Security helps individual users and organization owners secure their
 accounts, manage access, and control membership. You configure these

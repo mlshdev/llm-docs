@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/settings-and-maintenance/settings.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/settings-and-maintenance/settings.md)
+> Pinned source for Docker main: [content/manuals/desktop/settings-and-maintenance/settings.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/settings-and-maintenance/settings.md)
 
 # Change your Docker Desktop settings
 
@@ -6,7 +6,7 @@ Customize Docker Desktop behavior and optimize performance and resource usage wi
 
 To open **Settings** either:
 
-- Select the Docker menu ![whale menu](https://raw.githubusercontent.com/docker/docs/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/images/whale-x.svg) and then **Settings**
+- Select the Docker menu ![whale menu](https://raw.githubusercontent.com/docker/docs/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/images/whale-x.svg) and then **Settings**
 - Select the **Settings** icon from the Docker Desktop Dashboard.
 
 You can also locate the `settings-store.json` file at:
@@ -15,7 +15,7 @@ You can also locate the `settings-store.json` file at:
 - Windows: `C:\Users\[USERNAME]\AppData\Roaming\Docker\settings-store.json`
 - Linux: `~/.docker/desktop/settings-store.json`
 
-For information on enforcing settings at an organization level, see [Settings Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/settings-reference/).
+For information on enforcing settings at an organization level, see [Settings Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/settings-reference/).
 
 ## General
 
@@ -39,7 +39,7 @@ Configure startup behavior, UI appearance, terminal preferences, and feature def
 | **Choose file sharing implementation for your containers** (Available with the Apple Virtualization framework VMM)   | Choose whether you want to share files using **VirtioFS**, or **gRPC FUSE**                                                                                                                                                                                                                                                                                                                                                                 | **VirtioFS**             | Mac                            | Use VirtioFS for speedy file sharing. VirtioFS has reduced the time taken to complete filesystem operations by [up to 98%](https://github.com/docker/roadmap/issues/7#issuecomment-1044452206). It is the only file sharing implementation supported by Docker VMM.                                                                            |
 | **Use Rosetta for x86\_64/amd64 emulation on Apple Silicon** (Available with the Apple Virtualization framework VMM) | Accelerate x86/AMD64 binary emulation on Apple Silicon.                                                                                                                                                                                                                                                                                                                                                                                     | Disabled                 | Mac                            |                                                                                                                                                                                                                                                                                                                                                |
 | **Send usage statistics**                                                                                            | Send diagnostics, crash reports, and usage data to Docker to improve and troubleshoot the application. Docker may periodically prompt you for more information.                                                                                                                                                                                                                                                                             | Enabled                  | All                            |                                                                                                                                                                                                                                                                                                                                                |
-| **Use Enhanced Container Isolation**                                                                                 | Prevent containers from breaching the Linux VM. For more information, see [Enhanced Container Isolation](https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/).                                                                                                                                                                                                                                       | Disabled                 | All                            | Must be signed in and have a Docker Business subscription.                                                                                                                                                                                                                                                                                     |
+| **Use Enhanced Container Isolation**                                                                                 | Prevent containers from breaching the Linux VM. For more information, see [Enhanced Container Isolation](https://docs.docker.com/desktop/enterprise/hardened-desktop/enhanced-container-isolation/).                                                                                                                                                                                                                                        | Disabled                 | All                            | Must be signed in and have a Docker Business subscription.                                                                                                                                                                                                                                                                                     |
 | **Show CLI hints**                                                                                                   | Display helpful CLI suggestions in terminal.                                                                                                                                                                                                                                                                                                                                                                                                | Enabled                  | All                            | Improves discoverability                                                                                                                                                                                                                                                                                                                       |
 | **Enable Docker Scout image analysis**                                                                               | Show a **Start analysis** button when inspecting an image, which analyzes the image with Docker Scout.                                                                                                                                                                                                                                                                                                                                      | Enabled                  | All                            |                                                                                                                                                                                                                                                                                                                                                |
 | **Enable background SBOM indexing**                                                                                  | Automatically analyze images that you build or pull.                                                                                                                                                                                                                                                                                                                                                                                        | Disabled                 | All                            |                                                                                                                                                                                                                                                                                                                                                |
@@ -109,7 +109,7 @@ For more information, see [Volume mounting requires file sharing for any project
 Docker Desktop supports HTTP/HTTPS and SOCKS5 proxies. SOCKS5 requires a Business subscription.
 
 To prevent developers from accidentally changing the proxy settings, see
-[Settings Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/#what-features-can-i-configure-with-settings-management).
+[Settings Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/#what-features-can-i-configure-with-settings-management).
 
 #### Docker Desktop proxy
 
@@ -130,7 +130,7 @@ DNS convention), configure a static PAC URL or proxy address instead.
 
 > \[!NOTE]
 >
-> If you use a PAC file hosted on a web server, add the MIME type `application/x-ns-proxy-autoconfig` for the `.pac` extension. Without this, the PAC file may not parse correctly. See [Hardened Docker Desktop](https://docs.docker.com/enterprise/security/hardened-desktop/air-gapped-containers/#proxy-auto-configuration-files).
+> If you use a PAC file hosted on a web server, add the MIME type `application/x-ns-proxy-autoconfig` for the `.pac` extension. Without this, the PAC file may not parse correctly. See [Hardened Docker Desktop](https://docs.docker.com/desktop/enterprise/hardened-desktop/air-gapped-containers/#proxy-auto-configuration-files).
 
 #### Containers proxy
 
@@ -152,10 +152,10 @@ Used for `docker image pull` (always enforced - all `docker pull` and Compose pu
 When you run Windows containers, enable **Use proxy for Windows Docker daemon**
 to let the Windows Docker daemon connect to Docker Desktop's internal proxy.
 This allows Windows containers to use the configured Docker Desktop proxy, and
-it is required if you want [Registry Access Management](https://docs.docker.com/enterprise/security/hardened-desktop/registry-access-management/)
+it is required if you want [Registry Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/registry-access-management/)
 restrictions to apply to Windows image operations. Administrators can manage
 the same behavior with
-[**Override Windows "dockerd" port**](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/settings-reference/#override-windows-dockerd-port).
+[**Override Windows "dockerd" port**](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/settings-reference/#override-windows-dockerd-port).
 
 #### Proxy authentication
 

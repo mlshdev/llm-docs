@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cli/reference/attach-ssh.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/cli/reference/attach-ssh.mdx)
+> Pinned source for Vast.ai main: [cli/reference/attach-ssh.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/cli/reference/attach-ssh.mdx)
 > Canonical documentation: https://docs.vast.ai/cli/reference/attach-ssh
 
 # vastai attach ssh

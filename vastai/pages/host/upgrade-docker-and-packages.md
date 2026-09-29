@@ -1,9 +1,17 @@
-> Pinned source for Vast.ai main: [host/upgrade-docker-and-packages.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/host/upgrade-docker-and-packages.mdx)
+> Pinned source for Vast.ai main: [host/upgrade-docker-and-packages.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/host/upgrade-docker-and-packages.mdx)
 > Canonical documentation: https://docs.vast.ai/host/upgrade-docker-and-packages
 
 # Upgrade Docker and System Packages
 
 Safely upgrade Docker, containerd, the NVIDIA stack, and other system packages on a Vast.ai host machine without disrupting clients.
+
+> **Danger**
+>
+> Before you start: [schedule a maintenance window](https://docs.vast.ai/host/set-maintenance-window) at least **48 hours** in advance.
+>
+> You are responsible for the maintenance and any resulting interruption. Work performed outside the scheduled maintenance window may be treated as an **operational failure**.
+>
+> If you are unsure whether this operation could cause data loss, stop here.
 
 Keep Docker, containerd, the NVIDIA driver and the rest of the system current on
 your host machine. Verification requires a currently supported NVIDIA driver;
@@ -32,10 +40,7 @@ and Docker at once.
 >
 > The Docker restart in step 5 and the reboot in step 7 stop every instance on
 > the machine, running or stopped. Do not go past this step until both checks
-> below show the machine has no instances at all. Wait until all rental
-> contracts have ended, or schedule the window with
-> [`vastai schedule maintenance`](https://docs.vast.ai/host/cli/schedule-maint) so renters are
-> notified and can save their work.
+> below show the machine has no instances at all.
 
 List every container, including stopped ones:
 

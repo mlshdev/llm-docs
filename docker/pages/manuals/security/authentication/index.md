@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/_index.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/security/authentication/_index.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/_index.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/security/authentication/_index.md)
 
 # Authentication
 
@@ -21,7 +21,7 @@ SSO requires a Docker Business subscription. OIDC connections require a
 Docker Team or Business subscription.
 
 To require Docker Desktop users to sign in as organization members, see
-[Enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/).
+[Enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
 Enforce sign-in is configured in Enterprise, not in this section.
 
 ## Next steps

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/provisioning/domain-management.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/security/provisioning/domain-management.md)
+> Pinned source for Docker main: [content/manuals/security/provisioning/domain-management.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/security/provisioning/domain-management.md)
 
 # Add and manage domains
 
@@ -81,7 +81,7 @@ Domain audit can't identify:
 - Users who authenticate using an account that doesn't have an
   email address associated with one of your verified domains
 
-To prevent unidentifiable users from accessing Docker Desktop, [enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/).
+To prevent unidentifiable users from accessing Docker Desktop, [enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
 
 ### Run a domain audit
 

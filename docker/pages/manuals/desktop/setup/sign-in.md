@@ -1,10 +1,10 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/sign-in.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/setup/sign-in.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/sign-in.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/setup/sign-in.md)
 
 # Sign in to Docker Desktop
 
 Docker recommends signing in with the **Sign in** option in the top-right corner of the Docker Dashboard.
 
-In large enterprises where admin access is restricted, administrators can [enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/).
+In large enterprises where admin access is restricted, administrators can [enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
 
 > \[!TIP]
 >
@@ -16,7 +16,7 @@ In large enterprises where admin access is restricted, administrators can [enfor
 
 - Increase your pull rate limit compared to anonymous users. See [Usage and limits](https://docs.docker.com/docker-hub/usage/).
 
-- Enhance your organization’s security posture for containerized development with [Hardened Desktop](https://docs.docker.com/enterprise/security/hardened-desktop/).
+- Enhance your organization’s security posture for containerized development with [Hardened Desktop](https://docs.docker.com/desktop/enterprise/hardened-desktop/).
 
 > \[!NOTE]
 >

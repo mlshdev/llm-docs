@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/globalvolume/globalvolume-pods.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/storage/globalvolume/globalvolume-pods.mdx)
+> Pinned source for Runpod main: [storage/globalvolume/globalvolume-pods.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/storage/globalvolume/globalvolume-pods.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/globalvolume/globalvolume-pods
 
 # Global volumes for Pods
@@ -46,10 +46,9 @@ ls /workspace-global
 
 - **One volume of each type per Pod:** Each Pod supports a maximum of one global volume and one network volume at a time.
 
-For shared limitations that apply to both Pods and Serverless, see [Global volumes — Limitations](https://docs.runpod.io/storage/globalvolume#limitations).
+For more limitations that apply to Pods, see [Global volumes — Limitations](https://docs.runpod.io/storage/globalvolume#limitations).
 
 ## Next steps
 
 - [Migrate data from a network volume](https://docs.runpod.io/storage/globalvolume#migrate-data-from-a-network-volume)
-- [Global volumes for Serverless](https://docs.runpod.io/storage/globalvolume-serverless)
-- [Deploy a Pod](https://docs.runpod.io/pods/manage-pods)
+  - [Deploy a Pod](https://docs.runpod.io/pods/manage-pods)

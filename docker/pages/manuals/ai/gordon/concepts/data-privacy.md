@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/gordon/concepts/data-privacy.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/ai/gordon/concepts/data-privacy.md)
+> Pinned source for Docker main: [content/manuals/ai/gordon/concepts/data-privacy.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/ai/gordon/concepts/data-privacy.md)
 
 # Data privacy and Gordon
 
@@ -94,7 +94,7 @@ For Business subscriptions, administrators can enable or disable Gordon for
 their organization using Settings Management. Review your organization's data
 handling requirements before enabling Gordon.
 
-See [Settings Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/)
+See [Settings Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/)
 for configuration details.
 
 ## Disabling Gordon
@@ -111,7 +111,7 @@ Individual users:
 Business organizations:
 
 Administrators can disable Gordon for the entire organization using Settings
-Management. See [Settings Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/)
+Management. See [Settings Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/)
 for details.
 
 ## Questions about privacy

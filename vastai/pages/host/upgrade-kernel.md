@@ -1,9 +1,17 @@
-> Pinned source for Vast.ai main: [host/upgrade-kernel.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/host/upgrade-kernel.mdx)
+> Pinned source for Vast.ai main: [host/upgrade-kernel.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/host/upgrade-kernel.mdx)
 > Canonical documentation: https://docs.vast.ai/host/upgrade-kernel
 
 # Upgrade the Kernel
 
 Check whether your host machine's kernel is up to date, install the update, and confirm the machine came back online.
+
+> **Danger**
+>
+> Before you start: [schedule a maintenance window](https://docs.vast.ai/host/set-maintenance-window) at least **48 hours** in advance.
+>
+> You are responsible for the maintenance and any resulting interruption. Work performed outside the scheduled maintenance window may be treated as an **operational failure**.
+>
+> If you are unsure whether this operation could cause data loss, stop here.
 
 Ubuntu releases kernel updates regularly. Installing them is part of normal
 upkeep on a host machine, and it is one of the
@@ -28,11 +36,7 @@ The steps are the same on Ubuntu Server 22.04 and 24.04.
 >
 > A kernel upgrade only takes effect after a reboot, and a reboot stops every
 > running instance on the machine. Instances are not destroyed, but the workloads
-> inside them are interrupted. Do not start until you have a maintenance
-> window. Wait until all active rental contracts have ended, or schedule the
-> window with
-> [`vastai schedule maintenance`](https://docs.vast.ai/host/cli/schedule-maint) so renters are
-> notified and can save their work.
+> inside them are interrupted.
 
 ***
 

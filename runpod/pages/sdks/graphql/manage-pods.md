@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdks/graphql/manage-pods.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/sdks/graphql/manage-pods.mdx)
+> Pinned source for Runpod main: [sdks/graphql/manage-pods.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/sdks/graphql/manage-pods.mdx)
 > Canonical documentation: https://docs.runpod.io/sdks/graphql/manage-pods
 
 # Manage Pods

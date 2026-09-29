@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/vm-vdi.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/desktop/setup/vm-vdi.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/vm-vdi.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/setup/vm-vdi.md)
 
 # Run Docker Desktop for Windows in a VM or VDI environment
 
@@ -87,4 +87,4 @@ For WSL 2-related issues, contact Nutanix support. For Docker Desktop-specific i
 
 ## Additional resources
 
-- [Docker Desktop on Microsoft Dev Box](https://docs.docker.com/enterprise/enterprise-deployment/dev-box/)
+- [Docker Desktop on Microsoft Dev Box](https://docs.docker.com/desktop/enterprise/enterprise-deployment/dev-box/)

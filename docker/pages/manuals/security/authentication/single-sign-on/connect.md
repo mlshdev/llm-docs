@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/connect.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/security/authentication/single-sign-on/connect.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/connect.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/security/authentication/single-sign-on/connect.md)
 
 # Set up single sign-on
 
@@ -227,6 +227,6 @@ Docker Hub. If you want to use 2FA, you must enable 2FA through your IdP.
 ## Next steps
 
 - [Provision users](https://docs.docker.com/security/provisioning/).
-- [Enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/).
+- [Enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
 - [Create personal access tokens](https://docs.docker.com/security/access-tokens/personal-access-tokens/).
 - [Troubleshoot SSO](https://docs.docker.com/security/authentication/single-sign-on/troubleshoot-sso/) issues.

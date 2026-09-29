@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/faqs/platform.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/faqs/platform.md)
+> Pinned source for Docker main: [content/manuals/faqs/platform.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/faqs/platform.md)
 
 # Platform FAQs
 
@@ -53,7 +53,7 @@ Security vetting for extensions isn't implemented. Extensions aren't covered as 
 
 ### Can I prevent users from pushing images to Docker Hub private repositories?
 
-No direct setting exists to disable private repositories. However, [Registry Access Management](https://docs.docker.com/enterprise/security/hardened-desktop/registry-access-management/) lets administrators control which registries developers can access through Docker Desktop via Docker Home.
+No direct setting exists to disable private repositories. However, [Registry Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/registry-access-management/) lets administrators control which registries developers can access through Docker Desktop via Docker Home.
 
 ## Docker Desktop
 
@@ -96,7 +96,7 @@ No. Host file sharing uses a user-space file server (running in `com.docker.back
 
 Docker Desktop doesn't have a built-in mechanism for this, but you can use process-level firewalls on the host. Apply rules to the `com.docker.vpnkit` user-space process to control where it can connect (DNS allowlists, packet filters) and which ports/protocols it can use.
 
-For enterprise environments, consider [Air-gapped containers](https://docs.docker.com/enterprise/security/hardened-desktop/air-gapped-containers/) which provide network access controls for containers.
+For enterprise environments, consider [Air-gapped containers](https://docs.docker.com/desktop/enterprise/hardened-desktop/air-gapped-containers/) which provide network access controls for containers.
 
 #### Can I apply firewall rules to container network traffic?
 

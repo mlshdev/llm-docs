@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/stig.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/dhi/explore/security-concepts/stig.md)
+> Pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/stig.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/dhi/explore/security-concepts/stig.md)
 
 # STIG
 
@@ -60,10 +60,10 @@ the Docker Hardened Images catalog.
 To find DHI repositories with STIG image variants, [explore
 images](https://docs.docker.com/dhi/tools/hub/#images-page) and:
 
-- Use the **STIG** filter on the catalog page
+- Use the **Compliance** filter on the catalog page and select **STIG**
 - Look for **STIG** labels on individual image listings
 
-To find a STIG image variant within a repository, go to the **Tags** tab in the
+To find a STIG image variant within a repository, go to the **Images** tab in the
 repository, and find images labeled with **STIG** in the **Compliance** column.
 
 ## Use a STIG variant

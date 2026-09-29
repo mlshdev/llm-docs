@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/datacenter-status.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/host/datacenter-status.mdx)
+> Pinned source for Vast.ai main: [host/datacenter-status.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/host/datacenter-status.mdx)
 > Canonical documentation: https://docs.vast.ai/host/datacenter-status
 
 # Datacenter Status

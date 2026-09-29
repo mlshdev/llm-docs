@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cli/reference/start-instance.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/cli/reference/start-instance.mdx)
+> Pinned source for Vast.ai main: [cli/reference/start-instance.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/cli/reference/start-instance.mdx)
 > Canonical documentation: https://docs.vast.ai/cli/reference/start-instance
 
 # vastai start instance

@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/multi-representation-search.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/tutorials-search-engineering/multi-representation-search.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/multi-representation-search.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/tutorials-search-engineering/multi-representation-search.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-search-engineering/multi-representation-search/
 
 # Multi-Representation Search Across Titles, Abstracts, and Chunks
@@ -165,7 +165,7 @@ client.upload_points(collection_name="arxiv_multi_repr", points=points, batch_si
 
 After the upload completes, opening any point in the Qdrant Cloud UI shows all four named vectors attached to one chunk. `dense_chunk` carries the chunk's own embedding, while `dense_title`, `dense_abstract`, and `sparse_title` are the same across every chunk of this paper.
 
-![A point in the arxiv\_multi\_repr collection showing all four named vectors](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/documentation/tutorials/multi-representation-search/point.png)
+![A point in the arxiv\_multi\_repr collection showing all four named vectors](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/tutorials/multi-representation-search/point.png)
 
 ## Retrieval
 

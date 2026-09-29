@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cli/reference/remove-member.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/cli/reference/remove-member.mdx)
+> Pinned source for Vast.ai main: [cli/reference/remove-member.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/cli/reference/remove-member.mdx)
 > Canonical documentation: https://docs.vast.ai/cli/reference/remove-member
 
 # vastai remove member

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/administration/data-source-management/_index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/administration/data-source-management/_index.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/administration/data-source-management/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/administration/data-source-management/_index.md)
 
 # Data source management
 
@@ -10,7 +10,7 @@ For links to data source-specific documentation, see [Data sources](https://graf
 
 ## Data source permissions
 
-You can configure data source permissions to allow or deny certain users the ability to query, edit, or administrate a data source. Each data source’s configuration includes a Permissions tab where you can restrict data source permissions to specific users, service accounts, teams, or roles.
+You can configure data source permissions to allow or deny certain users the ability to query, edit, or administrate a data source. Each data source's configuration includes a Permissions tab where you can restrict data source permissions to specific users, service accounts, teams, or basic roles.
 
 - The `query` permission allows users to query the data source.
 - The `edit` permission allows users to query the data source, edit the data source’s configuration and delete the data source.
@@ -22,20 +22,22 @@ You can configure data source permissions to allow or deny certain users the abi
 
 By default, data sources in an organization can be queried by any user in that organization. For example, a user with the `Viewer` role can issue any possible query to a data source, not just queries that exist on dashboards to which they have access. Additionally, by default, data sources can be edited by the user who created the data source, as well as users with the `Admin` role.
 
-### Assign data source permissions to users, service accounts, teams, or roles
+### Assign data source permissions to users, service accounts, teams, or basic roles
 
-You can assign data source permissions to users, service accounts, teams, and roles which will allow access to query, edit, or administrate the data source.
+You can assign data source permissions to users, service accounts, teams, and basic roles. These permissions allow access to query, edit, or administrate the data source.
+
+The **Role** option on the Permissions tab is limited to the basic roles **Viewer**, **Editor**, and **Admin**. Custom roles and fixed RBAC roles don't appear in this list. To grant access to users who have custom or fixed roles, assign the permission to the user, service account, or team. You can also grant `datasources:query` through [role-based access control](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/).
 
 1. Click **Connections** in the left-side menu.
 2. Under Your connections, click **Data sources**.
 3. Select the data source to which you want to assign permissions.
 4. On the Permissions tab, click **Add a permission**.
 5. Select **User**, **Service Account**, **Team**, or **Role**.
-6. Select the entity for which you want to modify permissions.
+6. Select the entity for which you want to modify permissions. If you selected **Role**, choose a basic organization role: **Viewer**, **Editor**, or **Admin**.
 7. Select the **Query**, **Edit**, or **Admin** permission.
 8. Click **Save**.
 
-### Edit data source permissions for users, service accounts, teams, or roles
+### Edit data source permissions for users, service accounts, teams, or basic roles
 
 1. Click **Connections** in the left-side menu.
 2. Under Your connections, click **Data sources**.
@@ -43,13 +45,39 @@ You can assign data source permissions to users, service accounts, teams, and ro
 4. On the Permissions tab, find the **User**, **Service Account**, **Team**, or **Role** permission you want to update.
 5. Select a different option in the **Permission** dropdown.
 
-### Remove data source permissions for users, service accounts, teams, or roles
+### Remove data source permissions for users, service accounts, teams, or basic roles
 
 1. Click **Connections** in the left-side menu.
 2. Under Your connections, click **Data sources**.
 3. Select the data source from which you want to remove permissions.
 4. On the Permissions tab, find the **User**, **Service Account**, **Team**, or **Role** permission you want to remove.
 5. Click the **X** next to the permission.
+
+## Provisioned data sources
+
+Data sources added through [provisioning](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources), and Grafana-managed data sources on Grafana Cloud, are read-only in the UI. You can't change their configuration from the data source settings page, regardless of your data source permissions. This is separate from [data source permissions](#data-source-permissions): no permission level makes a provisioned data source editable in the UI. A read-only data source's settings page shows only a **Test** button instead of **Save & test**.
+
+To change a provisioned data source, use the method that matches how it's managed:
+
+- **Self-managed Grafana:** Edit the data source's provisioning file, then restart Grafana or reload provisioning. For more information, refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+- **Grafana Cloud managed data source:** Open a support ticket from the Grafana Cloud Portal to request changes.
+
+### Create an editable copy of a provisioned data source
+
+If you need a data source you can edit in the UI, add another data source manually that connects to the same backend, then manage it independently of the provisioned data source:
+
+1. Click **Connections** in the left-side menu.
+2. Click **Add new connection**.
+3. Select the same data source type as the provisioned data source.
+4. Enter the same connection settings as the provisioned data source so both point at the same backend. The exact settings depend on the data source type. For a URL-based data source, use the same **URL**.
+5. Configure authentication. For a Grafana Cloud-hosted backend, use basic authentication with your Grafana Cloud user ID as the user name and a Cloud Access Policy token as the password. The token's access policy must include the scope required to query the backend.
+6. Click **Save & test**.
+
+After you create the copy, update your dashboards, panels, and alert rules to query the new data source. Existing queries continue to use the provisioned data source until you point them at the copy.
+
+> **Note**
+>
+> The copy is independent of the provisioned data source. Later changes to the provisioned data source, such as credential rotations or URL updates, don't propagate to your copy. Update the copy manually if the backend configuration changes.
 
 ## Query and resource caching
 

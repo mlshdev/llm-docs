@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.2: [docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code.md)
+> Pinned source for Grafana v13.2.3: [docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code.md)
 
 # Set up Git Sync as code
 
@@ -9,6 +9,8 @@ For more information, refer to the following documents:
 - [Repository resource](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/key-concepts#git-sync-repository-resource) and [Connection resource](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/key-concepts#git-sync-repository-resource) overview
 - [Dashboard CRD Format](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/export-resources/)
 - [Grafana CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/)
+
+To provision resources from a local file system as code instead of a Git repository, refer to [Set up file provisioning as code](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/file-path-setup#set-up-file-provisioning-as-code).
 
 ## Set up Git Sync as code with the Grafana CLI
 

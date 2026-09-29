@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/reference/faq/security.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/guides/reference/faq/security.mdx)
+> Pinned source for Vast.ai main: [guides/reference/faq/security.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/guides/reference/faq/security.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/reference/faq/security
 
 # Security FAQ

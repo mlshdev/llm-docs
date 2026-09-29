@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/how-to/customize.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/dhi/how-to/customize.md)
+> Pinned source for Docker main: [content/manuals/dhi/how-to/customize.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/dhi/how-to/customize.md)
 
 **Docker Hardened Images requirements**
 
@@ -11,8 +11,9 @@ add OCI artifacts (such as custom certificates or additional tools), and
 configure settings. For charts, this lets you customize the image references.
 
 Your customizations stay secure automatically. When the base Docker Hardened
-Image or chart receives a security patch or your OCI artifacts are updated,
-Docker automatically rebuilds your customizations in the background. This
+Image or chart receives a security patch, your OCI artifacts are updated, or a
+[hardened system package](https://docs.docker.com/dhi/how-to/hardened-packages/) you added is updated, Docker
+automatically rebuilds your customizations in the background. This
 ensures continuous compliance and protection by default, with no manual work
 required. The rebuilt artifacts are signed and attested to the same SLSA Build
 Level 3 standard as the base images and charts, ensuring a secure and verifiable

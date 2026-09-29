@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [linux-virtual-desktop.mdx](https://github.com/vast-ai/docs/blob/f9a51524095d083230a1da1c2e38e736ded25582/linux-virtual-desktop.mdx)
+> Pinned source for Vast.ai main: [linux-virtual-desktop.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/linux-virtual-desktop.mdx)
 > Canonical documentation: https://docs.vast.ai/linux-virtual-desktop
 
 # Linux Virtual Desktop

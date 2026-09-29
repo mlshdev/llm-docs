@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.4.1: [docs/shell-completions.md](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/shell-completions.md)
+> Pinned source for Apple container 1.5.0: [docs/shell-completions.md](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/shell-completions.md)
 
 # Shell completions
 
@@ -9,7 +9,7 @@ Generate and install completion scripts for `zsh`, `bash`, and `fish`.
 The `container --generate-completion-script [zsh|bash|fish]` command generates completion scripts for the provided shell. Below is a detailed guide on how to install the completion scripts.
 
 > \[!NOTE]
-> See the [swift-argument-parser documentation](https://apple.github.io/swift-argument-parser/documentation/argumentparser/installingcompletionscripts/#Installing-Zsh-Completions) for more information about generating and installing shell completion scripts.
+> See the [swift-argument-parser documentation](https://github.com/apple/swift-argument-parser/blob/main/Sources/ArgumentParser/Documentation.docc/Articles/InstallingCompletionScripts.md#installing-zsh-completions) for more information about generating and installing shell completion scripts.
 
 ## Installing `zsh` completions
 

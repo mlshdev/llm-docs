@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/control-what-a-sandbox-can-reach.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/ai/sandboxes-api/cookbook/control-what-a-sandbox-can-reach.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/control-what-a-sandbox-can-reach.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/ai/sandboxes-api/cookbook/control-what-a-sandbox-can-reach.md)
 
 # Control what a sandbox can reach
 

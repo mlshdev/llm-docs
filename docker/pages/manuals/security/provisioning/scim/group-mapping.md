@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/provisioning/scim/group-mapping.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/security/provisioning/scim/group-mapping.md)
+> Pinned source for Docker main: [content/manuals/security/provisioning/scim/group-mapping.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/security/provisioning/scim/group-mapping.md)
 
 # Group mapping
 
@@ -179,4 +179,4 @@ Once complete, a user who signs in to Docker through SSO is automatically added 
 ## Next steps
 
 - [Assign roles](https://docs.docker.com/security/roles-and-permissions/core-roles/) to members of your org.
-- [Enforce sign in](https://docs.docker.com/enterprise/security/enforce-sign-in/), if needed.
+- [Enforce sign in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/), if needed.

@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.2: [apps/docs/content/apis/benchmarks/index.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/apis/benchmarks/index.mdx)
+> Pinned source for ZITADEL v4.19.3: [apps/docs/content/apis/benchmarks/index.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/apis/benchmarks/index.mdx)
 > Canonical documentation: https://zitadel.com/docs/apis/benchmarks
 
 Benchmarks are crucial to understand if ZITADEL fulfills your expected workload and what resources it needs to do so.
@@ -93,7 +93,7 @@ Scaling no longer improves iterations / second, or some kind of critical error o
 
 This flowchart shows the procedure after running a test.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/public/img/benchmark/Flowchart.svg)
+![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/benchmark/Flowchart.svg)
 
 ## Baseline
 

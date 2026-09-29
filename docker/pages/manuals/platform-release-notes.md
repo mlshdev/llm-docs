@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/platform-release-notes.md)
+> Pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/platform-release-notes.md)
 
 # Accounts and admin release notes
 
@@ -12,7 +12,7 @@ and subscriptions.
 
 - Administrators can now control whether organization members can push content
   to their personal namespaces on Docker Hub with
-  [namespace access control](https://docs.docker.com/enterprise/security/hardened-desktop/namespace-access/).
+  [namespace access control](https://docs.docker.com/desktop/enterprise/hardened-desktop/namespace-access/).
 - Administrators can now prevent creating public repositories within
   organization namespaces using the
   [Disable public repositories](https://docs.docker.com/docker-hub/settings/#disable-creation-of-public-repos)
@@ -23,7 +23,7 @@ and subscriptions.
 ### New
 
 - Administrators can now use an allow list with
-  [Image Access Management](https://docs.docker.com/enterprise/security/hardened-desktop/image-access-management/)
+  [Image Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/image-access-management/)
   to approve specific repositories that bypass image access controls.
 
 ## 2025-01-30
@@ -48,22 +48,22 @@ and subscriptions.
 
 - Administrators can now:
   - Enforce sign-in with
-    [configuration profiles](https://docs.docker.com/enterprise/security/enforce-sign-in/methods/#configuration-profiles-method-mac-only)
+    [configuration profiles](https://docs.docker.com/desktop/enterprise/enforce-sign-in/methods/#configuration-profiles-method-mac-only)
     (Early Access).
   - Enforce sign-in for more than one organization at a time (Early Access).
   - Deploy Docker Desktop for Mac in bulk with the
-    [PKG installer](https://docs.docker.com/enterprise/enterprise-deployment/pkg-install-and-configure/)
+    [PKG installer](https://docs.docker.com/desktop/enterprise/enterprise-deployment/pkg-install-and-configure/)
     (Early Access).
-  - [Use Desktop Settings Management via the Docker Admin Console](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/configure-admin-console/)
+  - [Use Desktop Settings Management via the Docker Admin Console](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/configure-admin-console/)
     (Early Access).
 
 ### Bug fixes and enhancements
 
 - Enhanced Container Isolation (ECI) has been improved to:
   - Permit administrators to
-    [turn off Docker socket mount restrictions](https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/config/#allowing-all-containers-to-mount-the-docker-socket).
+    [turn off Docker socket mount restrictions](https://docs.docker.com/desktop/enterprise/hardened-desktop/enhanced-container-isolation/config/#allowing-all-containers-to-mount-the-docker-socket).
   - Support wildcard tags when using the
-    [`allowedDerivedImages` setting](https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/config/#docker-socket-mount-permissions-for-derived-images).
+    [`allowedDerivedImages` setting](https://docs.docker.com/desktop/enterprise/hardened-desktop/enhanced-container-isolation/config/#docker-socket-mount-permissions-for-derived-images).
 
 ## 2024-11-11
 
@@ -86,10 +86,10 @@ and subscriptions.
 ### New
 
 - Deploying Docker Desktop via the
-  [MSI installer](https://docs.docker.com/enterprise/enterprise-deployment/msi-install-and-configure/)
+  [MSI installer](https://docs.docker.com/desktop/enterprise/enterprise-deployment/msi-install-and-configure/)
   is now generally available.
 - Two new methods to
-  [enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/)
+  [enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/)
   (Windows registry key and `.plist` file) are now generally available.
 
 ## 2024-08-24

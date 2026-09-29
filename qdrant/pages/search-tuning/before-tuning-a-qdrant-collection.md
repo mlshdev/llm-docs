@@ -1,17 +1,17 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-tuning/before-tuning-a-qdrant-collection.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/search-tuning/before-tuning-a-qdrant-collection.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-tuning/before-tuning-a-qdrant-collection.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/search-tuning/before-tuning-a-qdrant-collection.md)
 > Canonical documentation: https://qdrant.tech/documentation/search-tuning/before-tuning-a-qdrant-collection/
 
 # What to Check Before Tuning a Qdrant Collection
 
 Before you change a setting, decide what better retrieval means for your workload. The right document at rank one, more candidates for a reranker, lower latency, and a smaller memory footprint each favor different settings, so pick your goal first. If your labeled queries can't detect the improvement you're chasing, you won't be able to tell whether a change helped.
 
-Some settings are there to verify correctness, not to tune performance. If a vector is unindexed, a sparse vector is missing the IDF modifier, or the BM25 average length is wrong, the results are invalid. Any benchmark or comparison you run after that will reflect a broken setup. This article shows you how to check each setting and what the correct state looks like.
+Some settings are there to verify your setup, not to tune performance. A sparse vector missing the IDF modifier or a wrong BM25 average length degrades ranking without an error, so any benchmark you run on top of it measures a configuration error. Unindexed vectors are different: Qdrant searches them with an exact scan, which returns valid results, but latency is higher and graph settings such as `hnsw_ef` have no effect until the index exists. This article shows you how to check each setting and what the expected state looks like.
 
 ## The Retrieval Pipeline You Are Tuning
 
 Every query first retrieves candidates, then ranks them. In dense-only search, one vector search does both. Hybrid search adds a sparse prefetch for exact terms, then fusion combines the dense and sparse candidate lists. A reranker, if present, scores the top candidates again.
 
-![Pipeline diagram: a dense prefetch with limit and hnsw\_ef settings and a sparse prefetch with limit and Modifier.IDF settings both feed a fusion stage with RRF k, weights, and DBSF settings, followed by an optional reranker with candidate count and model settings.](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/before-tuning-a-qdrant-collection/retrieval-pipeline.svg)
+![Pipeline diagram: a dense prefetch with limit and hnsw\_ef settings and a sparse prefetch with limit and Modifier.IDF settings both feed a fusion stage with RRF k, weights, and DBSF settings, followed by an optional reranker with candidate count and model settings.](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/before-tuning-a-qdrant-collection/retrieval-pipeline.svg)
 
 *The hybrid pipeline and the settings each stage owns. Dense-only search uses the dense prefetch path on its own, so `limit` and `hnsw_ef` are its only settings here.*
 
@@ -19,7 +19,7 @@ If you run dense-only search and exact keywords are missing from results, hybrid
 
 Before you tune:
 
-1. Check that vectors are indexed and that every field used in a filter has a payload index. [Collection details](https://qdrant.tech/documentation/manage-data/collections/#collection-info) and [payload indexing](https://qdrant.tech/documentation/manage-data/indexing/#payload-index) show what to inspect.
+1. Check that indexing has caught up with your data and that every field used in a filter has a payload index. [Collection details](https://qdrant.tech/documentation/manage-data/collections/#collection-info) and [payload indexing](https://qdrant.tech/documentation/manage-data/indexing/#payload-index) show what to inspect.
 2. Build a labeled query set and choose a metric that matches the product experience. A labeled query pairs a real user query with the documents that should be returned. [Measuring retrieval relevance](https://qdrant.tech/documentation/search-evaluation/retrieval-relevance/) walks through the setup.
 
 ## The Symptom Tells You Where to Start
@@ -48,13 +48,13 @@ Qdrant's API and algorithm mechanics carry across collections. The result of a p
 
 ## Silent Settings Can Break Quality
 
-Check the stages you run before tuning anything else. Each prerequisite has a correct state for a given collection and can fail without an error. Fix them before you benchmark or compare settings, otherwise you are measuring a configuration error, not a trade-off.
+Check the stages you run before tuning anything else. Each prerequisite has an expected state for a given collection and can drift from it without an error. Fix them before you benchmark or compare settings, otherwise you are measuring a configuration error or an unfinished index, not a trade-off.
 
 ### Dense Search and Indexing
 
-**[Vectors are indexed](https://qdrant.tech/documentation/manage-data/collections/#collection-info)** Call `GET /collections/{collection_name}` and compare `indexed_vectors_count` with `points_count`. In a dense-only collection, the counts should match once indexing is complete. In a hybrid collection, where each point has one dense and one sparse vector, `indexed_vectors_count` should be twice `points_count`, because Qdrant counts each vector separately.
+**[Vectors are indexed](https://qdrant.tech/documentation/manage-data/collections/#collection-info)** Call `GET /collections/{collection_name}` and compare `indexed_vectors_count` with `points_count`. Both are approximate, and their relation depends on the configuration: Qdrant counts each named vector separately, so a collection with one dense and one sparse vector per point can report up to twice `points_count`. Treat the comparison as a rough signal, not an equality test. A count that stays well below what you expect after ingestion settles, or a `status` other than `green`, is what to investigate.
 
-If the indexed count is lower, indexing may still be running, may have stopped, or some segments may be smaller than the default `indexing_threshold` of 10,000 KB. See the [indexing optimizer documentation](https://qdrant.tech/documentation/ops-optimization/optimizer/#indexing-optimizer). Qdrant builds an HNSW graph only after a segment reaches `indexing_threshold`. Before then, it searches the segment without HNSW, so changing `hnsw_ef` has no effect.
+If the indexed count is lower, indexing may still be running, may have stopped, or some segments may be smaller than the default `indexing_threshold` of 10,000 KB. See the [indexing optimizer documentation](https://qdrant.tech/documentation/ops-optimization/optimizer/#indexing-optimizer). Qdrant builds an HNSW graph only after a segment reaches `indexing_threshold`. Before then, it searches the segment with an exact scan. The results are still correct, but they cost more time per query, and changing `hnsw_ef` has no effect. Wait for indexing to finish before you measure latency or tune graph settings.
 
 **[full\_scan\_threshold](https://qdrant.tech/documentation/manage-data/indexing/#vector-index)** Dense and sparse vectors have separate thresholds in different units, so a value copied between them lands nowhere near the intended size. The dense threshold counts kilobytes of vectors in a segment, 10,000 by default. It sends a search to an exact scan instead of the graph when the segment holds fewer vectors than that, or when a filter matches fewer points than that.
 

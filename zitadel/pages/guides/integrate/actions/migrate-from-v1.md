@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.2: [apps/docs/content/guides/integrate/actions/migrate-from-v1.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/guides/integrate/actions/migrate-from-v1.mdx)
+> Pinned source for ZITADEL v4.19.3: [apps/docs/content/guides/integrate/actions/migrate-from-v1.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/guides/integrate/actions/migrate-from-v1.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/actions/migrate-from-v1
 
 This guide helps existing users understand the shift from Actions V1 (Embedded) to V2 (Webhook), and provides guidance for new users on how to work with Actions V2.

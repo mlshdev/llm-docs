@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/faqs/accounts.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/faqs/accounts.md)
+> Pinned source for Docker main: [content/manuals/faqs/accounts.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/faqs/accounts.md)
 
 # Account FAQs
 
@@ -63,12 +63,12 @@ assign them to a team during the invite process.
 ### Can I force my organization's members to authenticate before using Docker Desktop and are there any benefits?
 
 Yes. You can
-[enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/).
+[enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
 
 Some benefits of enforcing sign-in are:
 
 - Ensures users receive the benefits of your subscription.
-- Ensures security features like [Image Access Management](https://docs.docker.com/enterprise/security/hardened-desktop/image-access-management/) and [Registry Access Management](https://docs.docker.com/enterprise/security/hardened-desktop/registry-access-management/) are applied.
+- Ensures security features like [Image Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/image-access-management/) and [Registry Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/registry-access-management/) are applied.
 - Ensures you gain insights into users' activity.
 
 ### Can I convert my personal Docker ID to an organization account?

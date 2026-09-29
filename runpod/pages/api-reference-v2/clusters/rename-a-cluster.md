@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/clusters/rename-a-cluster.mdx](https://github.com/runpod/docs/blob/28a1e156d785d50592385acab35e9b5f11b603d0/api-reference-v2/clusters/rename-a-cluster.mdx)
+> Pinned source for Runpod main: [api-reference-v2/clusters/rename-a-cluster.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/api-reference-v2/clusters/rename-a-cluster.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/clusters/rename-a-cluster
 
 # Rename A Cluster

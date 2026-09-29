@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/usage.md](https://github.com/docker/docs/blob/f22c0e6595ca1996d2a6559cadcf2596499e6c11/content/manuals/ai/sandboxes/cloud/usage.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/usage.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/ai/sandboxes/cloud/usage.md)
 
 # Use cloud sandboxes
 
@@ -284,6 +284,24 @@ Cloud sandboxes also support sandbox kits and `--kit` mixins. See
 [Kits](https://docs.docker.com/ai/sandboxes/customize/) for customization and
 [Local and cloud differences](https://docs.docker.com/ai/sandboxes/cloud/local-vs-cloud/) for host-dependent features.
 Configure [cloud credentials](https://docs.docker.com/ai/sandboxes/cloud/credentials/) before adapting a local kit.
+
+Use `--kit-arg` or `--kit-args-file` with `sbx --cloud create` to pass
+arguments to kits supplied with `--kit`.
+For example, configure a v2 mixin that declares a `version` argument:
+
+```console
+$ sbx --cloud create --name cloud-tools claude \
+    --kit docker.io/<NAMESPACE>/company-cli:1.0.0 \
+    --kit-arg company-cli.version=1.2
+```
+
+Replace the kit reference and argument with those from your kit's
+documentation. The `company-cli` prefix targets the kit by its repository
+name. Built-in agents such as `claude` require v2 mixins.
+
+To load arguments from a file, pass `--kit-args-file <FILE>` with one
+`name=value` entry per line, such as `company-cli.version=1.2`. Values passed
+with `--kit-arg` override values from the file.
 
 To declare reusable cloud configuration in a file, see
 [Use a cloud environment](https://docs.docker.com/ai/sandboxes/configuration/environment-files/#use-a-cloud-environment).

@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.2: [apps/docs/content/apis/benchmarks/v2.70.0/oidc_session/index.mdx](https://github.com/zitadel/zitadel/blob/2c37c4176ad51c3db0354122e06af53a88d30d4e/apps/docs/content/apis/benchmarks/v2.70.0/oidc_session/index.mdx)
+> Pinned source for ZITADEL v4.19.3: [apps/docs/content/apis/benchmarks/v2.70.0/oidc_session/index.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/apis/benchmarks/v2.70.0/oidc_session/index.mdx)
 > Canonical documentation: https://zitadel.com/docs/apis/benchmarks/v2.70.0/oidc_session
 
 The test implements [Support for (OIDC) Standard in a Custom Login UI flow](https://zitadel.com/docs/guides/integrate/login-ui/oidc-standard).

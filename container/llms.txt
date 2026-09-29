@@ -1,8 +1,8 @@
-# Apple container 1.4.1
+# Apple container 1.5.0
 
-> Documentation generated from the latest stable release of [apple/container](https://github.com/apple/container) and pinned to immutable source commit `9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d`.
+> Documentation generated from the latest stable release of [apple/container](https://github.com/apple/container) and pinned to immutable source commit `d265d669ecae041bf338cb3b39c4118316d138f0`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Apple container 1.4.1.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple container 1.5.0.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Release-authored Markdown includes the repository guide, build instructions, user guides, tutorials, and checked-in CLI command reference.
 - Relative links, source references, and assets resolve against the immutable release commit.
@@ -13,7 +13,7 @@
 
 ## Getting started
 
-- [container](pages/index.md): container is a tool that you can use to create and run Linux containers as lightweight virtual machines on your Mac. It's written in Swift, and optimized for Apple silicon. (4822 bytes)
+- [container](pages/index.md): container is a tool that you can use to create and run Linux containers as lightweight virtual machines on your Mac. It's written in Swift, and optimized for Apple silicon. (5373 bytes)
 
 ## Support
 
@@ -21,7 +21,7 @@
 
 ## Command reference
 
-- [Container CLI Command Reference](pages/command-reference.md): Command availability may vary depending on your macOS version. (53970 bytes)
+- [Container CLI Command Reference](pages/command-reference.md): Command availability may vary depending on your macOS version. (53174 bytes)
 
 ## Guides
 
@@ -30,13 +30,13 @@
 - [config.toml reference](pages/container-system-config.md): For a guided walk-through on setting default values, see Container system config tutorial. (11098 bytes)
 - [Host integration](pages/host-integration.md): Bridge your container and your Mac: forward your SSH agent in, or reach a host service from inside a container. (3724 bytes)
 - [How-to](pages/how-to.md): container has a lot of surface area beyond the basic tutorial. Each topic below has its own guide — pick the one that matches what you're trying to do. (3622 bytes)
-- [Kubernetes clusters](pages/kubernetes.md): Kubernetes is an open-source orchestration platform for automating deployment, scaling, and management of containerized workloads across clusters of machines. With container, you can run local Kubernetes clusters for de… (5657 bytes)
+- [Kubernetes clusters](pages/kubernetes.md): Kubernetes is an open-source orchestration platform for automating deployment, scaling, and management of containerized workloads across clusters of machines. With container, you can run local Kubernetes clusters for de… (6950 bytes)
 - [Logs](pages/logs.md): View output from your containerized applications, VM boot logs, and the container system's own logs. (4050 bytes)
 - [Multiplatform images](pages/multiplatform-images.md): Build, run, and publish container images that support both Apple silicon and x86-64. (1598 bytes)
 - [Networking](pages/networking.md): Learn how container networks containers with one another, with the host, and with external systems. (8234 bytes)
 - [Resource usage](pages/resource-usage.md): Configure CPU, memory, and disk resources for your containers and builds, monitor usage while they run, and reclaim disk space afterward. (6212 bytes)
 - [Runtime configuration](pages/runtime-configuration.md): Configure what runs inside and around your container's init process: Linux capabilities, path masking, nested virtualization, and the init process itself. (7976 bytes)
-- [Shell completions](pages/shell-completions.md): Generate and install completion scripts for zsh, bash, and fish. (2930 bytes)
+- [Shell completions](pages/shell-completions.md): Generate and install completion scripts for zsh, bash, and fish. (2965 bytes)
 - [Resource limits (ulimits)](pages/ulimits.md): Set per-process resource limits for your containers. (3321 bytes)
 - [Mounts and volumes](pages/volumes.md): Share data from your host with containers, create named volumes with better performance and lifecycle guarantees than bind mounts, and mount temporary, memory-backed storage with tmpfs. (10309 bytes)
 

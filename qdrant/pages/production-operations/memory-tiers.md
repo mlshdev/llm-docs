@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/production-operations/memory-tiers.md](https://github.com/qdrant/landing_page/blob/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/content/documentation/production-operations/memory-tiers.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/production-operations/memory-tiers.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/production-operations/memory-tiers.md)
 > Canonical documentation: https://qdrant.tech/documentation/production-operations/memory-tiers/
 
 # Memory Tiers in Qdrant: What to Use and When
@@ -17,7 +17,7 @@ RAM is fast and expensive, disk is slow and cheap, and a growing collection outg
 
 Not every structure supports every tier: dense vectors and payloads can't be pinned, and sparse vector structures follow their own rules. For the full breakdown, see the [memory tiers documentation](https://qdrant.tech/documentation/ops-configuration/memory-tiers/).
 
-![Qdrant's three memory tiers, pinned, cached, and cold, and how each relates to RAM and disk](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/memory-tiers-in-qdrant-what-to-use-and-when/visuals/memory-tiers-visual.png)
+![Qdrant's three memory tiers, pinned, cached, and cold, and how each relates to RAM and disk](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/memory-tiers-in-qdrant-what-to-use-and-when/visuals/memory-tiers-visual.png)
 
 Quantization is one of the main tools that makes the cold and pinned tiers practical at real scale. Compressing vectors to int8 or lower shrinks them enough to fit a small, fixed amount of RAM. A search can then score most candidates against that compressed copy instead of paging in the full-precision ones. Rescoring is on by default only for binary quantization and low-precision TurboQuant.
 
@@ -31,7 +31,7 @@ Tiers and quantization combine into a handful of configurations that cover most 
 - **Full Cold, With Quantization.** The cold tier, plus a compressed copy that's also left cold, matching Qdrant's own default for that combination. Lower disk-read cost than the unquantized cold tier, since most candidates score against the small compressed copy instead.
 - **Pinned Quantized Vectors.** Dense vectors kept cold, but the compressed copy explicitly pinned in RAM. This is the configuration Qdrant's optimization docs recommend for high-speed search with a low memory footprint, and the one to reach for once RAM headroom becomes the binding constraint.
 
-![Tradeoffs, on paper, for the five memory configurations covered in this article](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/memory-tiers-in-qdrant-what-to-use-and-when/visuals/tradeoffs-on-paper.png)
+![Tradeoffs, on paper, for the five memory configurations covered in this article](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/memory-tiers-in-qdrant-what-to-use-and-when/visuals/tradeoffs-on-paper.png)
 
 Four of these five configurations leave their memory cost up to the OS: how much of that expected footprint actually stays resident depends on what else is competing for RAM. Only pinning turns that footprint into a fixed reservation instead.
 
@@ -39,7 +39,7 @@ Four of these five configurations leave their memory cost up to the OS: how much
 
 Pin the compressed copy once a collection is large enough that RAM becomes the binding constraint, not just raw speed. That fixed reservation is what keeps pinning safe as a collection keeps growing, well past the point where the other configurations start running out of memory headroom.
 
-![A latency-versus-memory scatter with an "efficient corner" of fast, low-memory configurations shaded; the pinned configuration sits in that corner, matching the fastest configuration's speed with far less memory](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/memory-tiers-in-qdrant-what-to-use-and-when/visuals/efficiency-corner-mechanism.png)
+![A latency-versus-memory scatter with an "efficient corner" of fast, low-memory configurations shaded; the pinned configuration sits in that corner, matching the fastest configuration's speed with far less memory](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/memory-tiers-in-qdrant-what-to-use-and-when/visuals/efficiency-corner-mechanism.png)
 
 Pinning tends to land in that efficient corner: it matches the fastest configuration's search speed while using a fraction of its memory footprint. The configurations that leave their footprint up to the OS spike toward the cluster's memory ceiling as a collection grows, while the pinned one's footprint barely moves.
 
@@ -55,7 +55,7 @@ If disk footpring matters more than just raw speed, consider adding quantization
 
 Giving the search a small compressed copy to score against, instead of paging full-precision vectors in from a cold file, removes most of the tail-latency risk even before anything gets pinned.
 
-![A disk page holding a handful of full-precision vectors next to one holding many compressed vectors; a query's per-hop read cost stays low and even with the compressed copy, but spikes sharply on an uncached, unquantized page miss](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/memory-tiers-in-qdrant-what-to-use-and-when/visuals/cold-tier-page-fault-mechanism.png)
+![A disk page holding a handful of full-precision vectors next to one holding many compressed vectors; a query's per-hop read cost stays low and even with the compressed copy, but spikes sharply on an uncached, unquantized page miss](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/memory-tiers-in-qdrant-what-to-use-and-when/visuals/cold-tier-page-fault-mechanism.png)
 
 A disk page holds only a handful of full-precision vectors, so most candidates a traversal touches need their own read. A compressed copy packs many more vectors onto the same page, so one read serves far more of the candidates a query needs.
 
@@ -71,7 +71,7 @@ Don't cache a compressed copy alongside full-precision vectors unless RAM has ro
 
 Caching the full-precision vectors alone is fast and simple as long as RAM has room for it. The risk shows up once the working set stops fitting: a configuration that performed close to the fastest option at a smaller scale can fall to nearly the worst as its resident data approaches the cluster's memory budget.
 
-![Two RAM budget tracks: caching the full-precision vectors alone leaves headroom, while also caching the compressed copy pushes the resident working set past the cluster's RAM budget](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/memory-tiers-in-qdrant-what-to-use-and-when/visuals/double-in-ram-copy.png)
+![Two RAM budget tracks: caching the full-precision vectors alone leaves headroom, while also caching the compressed copy pushes the resident working set past the cluster's RAM budget](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/memory-tiers-in-qdrant-what-to-use-and-when/visuals/double-in-ram-copy.png)
 
 The failure isn't the tier logic breaking, but the cluster running out of memory to keep that much data warm at once: a sizing problem rather than a caching one, but the cached tier is uniquely exposed to it.
 
@@ -87,7 +87,7 @@ Test [HNSW inline storage](https://qdrant.tech/documentation/ops-optimization/op
 
 That second cost scales with edge count and vector size, not point count, so it can grow far faster than the collection does.
 
-![A standard HNSW graph stores a link per edge; inline storage attaches a compressed vector copy to every edge instead, so on-disk graph size grows with edge count, not just point count, and the gap between the two widens as a collection scales](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/memory-tiers-in-qdrant-what-to-use-and-when/visuals/hnsw-storage-blowup.png)
+![A standard HNSW graph stores a link per edge; inline storage attaches a compressed vector copy to every edge instead, so on-disk graph size grows with edge count, not just point count, and the gap between the two widens as a collection scales](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/memory-tiers-in-qdrant-what-to-use-and-when/visuals/hnsw-storage-blowup.png)
 
 Combining inline storage with quantization can push on-disk graph size to many times larger than the same graph without inline storage. Dense, high-dimensional graphs push the per-edge cost further than sparse, low-dimensional ones, so treat any single multiplier you measure as workload-specific rather than universal. A smaller compressed vector size shrinks it: fewer bytes per edge means less extra disk, though it won't remove the problem entirely.
 
@@ -99,7 +99,7 @@ Combining inline storage with quantization can push on-disk graph size to many t
 
 Size each configuration against how much of the cluster's RAM its working set occupies right now, not how many points the collection holds or the headroom you had at initial setup. A single configuration can look fine, fail, and recover again, purely because the ratio between dataset size and available RAM shifts underneath it.
 
-![Working set as a percentage of cluster RAM against collection scale: a caching configuration's line climbs toward a 100% ceiling, spikes into a danger zone, then drops back to a safe margin once the cluster's RAM budget grows](https://raw.githubusercontent.com/qdrant/landing_page/524630eaca5eb800de91fe4e74d35f8abd6304b2/qdrant-landing/static/articles_data/memory-tiers-in-qdrant-what-to-use-and-when/visuals/ram-ceiling-mechanism.png)
+![Working set as a percentage of cluster RAM against collection scale: a caching configuration's line climbs toward a 100% ceiling, spikes into a danger zone, then drops back to a safe margin once the cluster's RAM budget grows](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/memory-tiers-in-qdrant-what-to-use-and-when/visuals/ram-ceiling-mechanism.png)
 
 A story built only on point count, where more data always means a worse tail, doesn't hold up: a caching configuration that looks competitive at a smaller scale can fall apart at a bigger one, once its working set comes near the cluster's entire memory budget, then look fine again as soon as the cluster's own RAM budget grows to match.
 
