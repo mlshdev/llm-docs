@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/291f96f7929f5837dc900adef3720025516e8584/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/5a54fcf75e0245111075b1c31593ba1919c25306/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -15194,6 +15194,79 @@ sort -n MAP_FILE
 
 # Use INPUT, OUTPUT and the MAP_FILE from above to compare the corresponding frames in INPUT and OUTPUT via SSIM
 ffmpeg -i INPUT -i OUTPUT -filter_complex '[0:v]fsync=file=MAP_FILE[ref];[1:v][ref]ssim' -f null -
+```
+
+## gainmap
+
+Compute an HDR gain map from two renditions of the same image, as defined by
+ISO 21496-1.
+
+The first input is the base rendition (typically SDR), and the second input
+is the alternate rendition (typically HDR). Both must have the same
+dimensions. Outputs a gain map, as either `gbrpf32` or `grayf32`
+depending on the chosen `mode`.
+
+- mode
+  Controls what quantity the gain map is computed against.
+
+The accepted values are:
+
+- rgb
+  One gain map channel per component.
+
+- luma
+  A single gain map channel, computed from the luma.
+
+- maxrgb
+  A single gain map channel, computed from `max(R, G, B)`.
+
+Default is `rgb`.
+
+- colorspace
+  Chooses which colorspace to compute the gain map in.
+
+The accepted values are:
+
+- base
+  The base rendition's colorspace.
+
+- alternate
+  The alternate rendition's colorspace.
+
+Default is `base`.
+
+- min
+
+- max
+  Bounds on the encoded gain (log2). If unspecified, these will be
+  measured from the frame.
+
+- gamma
+  Encoding gamma of the resulting gain map. If unspecified, this will be
+  optimized for the frame in question. Setting this to `1.0` will produce
+  a linear gain map, which may be more efficient in some applications.
+
+- base\_offset
+
+- alt\_offset
+  Offset to prevent numerical instability near zero. Both default to `1/64`.
+
+- base\_nits
+
+- alt\_nits
+  Override the reference luminance of the input, in nits. If unspecified, uses
+  the values from the input metadata.
+
+The `gainmap` filter also supports the framesync options.
+
+### Examples
+
+-
+
+Compute a gain map between an SDR and an HDR version of the same image:
+
+```text
+ffmpeg -i $sdr -i $hdr -filter_complex "[0:v][1:v]gainmap" $out
 ```
 
 ## gblur
@@ -34247,6 +34320,7 @@ Possible values are:
 - DYNAMIC\_HDR\_VIVID
 - AMBIENT\_VIEWING\_ENVIRONMENT
 - VIDEO\_HINT
+- GAIN\_MAP\_PARAMS
 
 ## spectrumsynth
 

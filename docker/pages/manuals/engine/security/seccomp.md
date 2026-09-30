@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/security/seccomp.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/engine/security/seccomp.md)
+> Pinned source for Docker main: [content/manuals/engine/security/seccomp.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/engine/security/seccomp.md)
 
 # Seccomp security profiles for Docker
 

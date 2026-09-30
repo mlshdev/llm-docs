@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/_index.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/security/authentication/single-sign-on/_index.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/_index.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/security/authentication/single-sign-on/_index.md)
 
 # Single sign-on overview
 
@@ -19,10 +19,10 @@ Instead of signing in with a Docker username and password, users are redirected
 to your IdP’s sign-in page. Users must initiate the SSO authentication process
 by signing in to Docker Hub or Docker Desktop.
 
-The following diagram illustrates how SSO operates and is managed between
-Docker Hub, Docker Desktop, and your IdP.
+The following diagram illustrates how SSO operates and is managed between Docker
+Hub, Docker Desktop, and your IdP.
 
-![SSO architecture](https://raw.githubusercontent.com/docker/docs/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/security/authentication/single-sign-on/images/SSO.png)
+![SSO architecture](https://raw.githubusercontent.com/docker/docs/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/security/authentication/single-sign-on/images/SSO.png)
 
 ## Set up SSO
 
@@ -33,21 +33,23 @@ To configure SSO in Docker, follow these steps:
 3. Link Docker to your identity provider.
 4. Test your SSO connection.
 5. Provision users in Docker.
-6. Optional. [Enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
+6. Optional.
+   [Enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
 7. [Manage your SSO configuration](https://docs.docker.com/security/authentication/single-sign-on/manage/).
 
-Once configuration is complete, users can sign in to Docker services using
-their company email address. After signing in, users are added to your company,
+Once configuration is complete, users can sign in to Docker services using their
+company email address. After signing in, users are added to your company,
 assigned to an organization, and added to a team.
 
 > \[!IMPORTANT]
 >
-> When SSO is enforced, CLI password-based sign-in is no longer supported.
-> Use a personal access token (PAT) for CLI access. For more information, see the
+> When SSO is enforced, CLI password-based sign-in is no longer supported. Use a
+> personal access token (PAT) for CLI access. For more information, see the
 > [security announcement](https://docs.docker.com/security/security-announcements/#deprecation-of-password-logins-on-cli-when-sso-enforced).
 
 ## Next steps
 
 - Start [configuring SSO](https://docs.docker.com/security/authentication/single-sign-on/connect/).
 - Read the [FAQs](https://docs.docker.com/faqs/security/).
-- [Troubleshoot](https://docs.docker.com/security/authentication/single-sign-on/troubleshoot-sso/) SSO issues.
+- [Troubleshoot](https://docs.docker.com/security/authentication/single-sign-on/troubleshoot-sso/)
+  SSO issues.

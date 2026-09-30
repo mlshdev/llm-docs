@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/features/wasm.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/features/wasm.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/wasm.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/desktop/features/wasm.md)
 
 # Wasm workloads
 
@@ -28,9 +28,8 @@ then pre-existing images and containers will be inaccessible.
 
 1. Navigate to **Settings** in Docker Desktop.
 2. In the **General** tab, check **Use containerd for pulling and storing images**.
-3. Go to **Features in development** and check the **Enable Wasm** option.
+3. Go to **Beta features** and check the **Enable Wasm** option.
 4. Select **Apply** to save the settings.
-5. In the confirmation dialog, select **Install** to install the Wasm runtimes.
 
 Docker Desktop downloads and installs the following runtimes:
 
@@ -192,7 +191,7 @@ store](https://docs.docker.com/desktop/features/containerd/), an error similar t
 docker: Error response from daemon: Unknown runtime specified io.containerd.wasmedge.v1.
 ```
 
-[Turn on the containerd feature](https://docs.docker.com/desktop/features/containerd/#enable-the-containerd-image-store)
+[Turn on the containerd feature](https://docs.docker.com/desktop/features/containerd/#switch-image-stores)
 in Docker Desktop settings and try again.
 
 ### Failed to start shim: failed to resolve runtime path

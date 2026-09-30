@@ -1,10 +1,14 @@
-> Pinned source for Docker main: [content/manuals/desktop/features/gpu.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/features/gpu.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/gpu.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/desktop/features/gpu.md)
 
 # GPU support in Docker Desktop for Windows
 
 > \[!NOTE]
 >
-> GPU support in Docker Desktop is only available on Windows with the WSL2 backend.
+> This page covers GPU passthrough to Linux containers using `--gpus`, which is
+> only available on Windows with the WSL 2 backend. Other forms of GPU
+> acceleration in Docker Desktop, such as GPU-accelerated inference in
+> [Docker Model Runner](https://docs.docker.com/ai/model-runner/), are available on
+> other platforms.
 
 Docker Desktop for Windows supports NVIDIA GPU Paravirtualization (GPU-PV) on NVIDIA GPUs, allowing containers to access GPU resources for compute-intensive workloads like AI, machine learning, or video processing.
 

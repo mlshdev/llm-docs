@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-lp-overview.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/tutorials-lp-overview.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-lp-overview.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/tutorials-lp-overview.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-lp-overview/
 
 # Qdrant Tutorial Repository
@@ -57,8 +57,8 @@
 | [Scaling and Monitoring Hybrid Cloud](https://qdrant.tech/documentation/tutorials-operations/scaling-and-monitoring-pods/)             | Resize CPU, memory, and disk, and know what to monitor first.                                                          | Kubernetes | 25m  | Intermediate |
 | [Securing and Exposing a Hybrid Cloud Cluster](https://qdrant.tech/documentation/tutorials-operations/secure-and-expose-hybrid-cloud/) | Set up API key authentication, database-level TLS, and TLS-terminating ingress on a self-managed Hybrid Cloud cluster. | Kubernetes | 25m  | Intermediate |
 | [Qdrant Cloud Prometheus Monitoring](https://qdrant.tech/documentation/ops-monitoring/managed-cloud-prometheus/)                       | Observability with Prometheus and Grafana.                                                                             | Prometheus | 30m  | Intermediate |
-| [Self-Hosted Prometheus Monitoring](https://qdrant.tech/documentation/ops-monitoring/hybrid-cloud-prometheus/)                         | Observability for hybrid/private cloud setups.                                                                         | Prometheus | 30m  | Intermediate |
-| [Monitoring Hybrid/Private Cloud with Datadog](https://qdrant.tech/documentation/ops-monitoring/hybrid-cloud-datadog/)                 | Observability for hybrid/private cloud setups with Datadog.                                                            | Datadog    | 20m  | Intermediate |
+| [Monitoring with Grafana and Prometheus](https://qdrant.tech/documentation/ops-monitoring/hybrid-cloud-prometheus/)                    | Observability for hybrid/private cloud setups.                                                                         | Prometheus | 30m  | Intermediate |
+| [Monitoring with Datadog](https://qdrant.tech/documentation/ops-monitoring/hybrid-cloud-datadog/)                                      | Observability for hybrid/private cloud setups with Datadog.                                                            | Datadog    | 20m  | Intermediate |
 
 ***
 

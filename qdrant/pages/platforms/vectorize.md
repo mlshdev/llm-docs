@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/platforms/vectorize.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/platforms/vectorize.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/platforms/vectorize.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/platforms/vectorize.md)
 > Canonical documentation: https://qdrant.tech/documentation/platforms/vectorize/
 
 # Vectorize.io
@@ -26,19 +26,19 @@ Vectorize pipelines natively integrate with Qdrant by converting unstructured da
 >
 > Don't include a port number in the host value.
 
-![Vectorize connection](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/platforms/vectorize/vectorize-connection.png)
+![Vectorize connection](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/platforms/vectorize/vectorize-connection.png)
 
 - You can now select this Qdrant instance when setting up a [RAG pipeline](https://docs.vectorize.io/rag-pipelines/creating). Enter the name of the collection to use. It'll be created automatically if it doesn't exist.
 
-![Vectorize collection](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/platforms/vectorize/vectorize-collection.png)
+![Vectorize collection](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/platforms/vectorize/vectorize-collection.png)
 
 - Select an embeddings provider.
 
-![Vectorize Embeddings](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/platforms/vectorize/vectorize-embeddings.png)
+![Vectorize Embeddings](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/platforms/vectorize/vectorize-embeddings.png)
 
 - Select a source from which to ingest data.
 
-![Vectorize Sources](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/platforms/vectorize/vectorize-sources.png)
+![Vectorize Sources](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/platforms/vectorize/vectorize-sources.png)
 
 Your Vectorize pipeline powered by Qdrant should now be up and ready to be scheduled and monitored.
 

@@ -8,38 +8,38 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-29T15:12:35Z",
-  "documentationDigest": "9c34102b216652470b09d6ab93ed87933f39781fe381dabb98753b71c4e7c592",
-  "sourceCommit": "de3bdf51fc36c6bc64a8ead92834fdfd58da6454",
-  "documentCount": 1695,
+  "sourceCommittedAt": "2026-09-30T18:02:29Z",
+  "documentationDigest": "b64de18857321beac47d44e01f8216ce2ebbc037a69ffaefc90c713390bb33a8",
+  "sourceCommit": "e169d1082ba3fa27684fe5a67d8109a788aa84a9",
+  "documentCount": 1694,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
       "byteLength": 687,
       "documentCount": 0,
-      "sha256": "22fbe8badc47dd01ff032d7441a51eeb2169931c2fa1c83106e7fb83ca4a1249"
+      "sha256": "015edc89868295e8ad897599e1045f3bd92e977d622d21a83bd7501ab445c71e"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8317778,
-      "documentCount": 830,
-      "sha256": "250c0b8786de33ed88feb8ba4bb383a99553db2ebe6a149e50f101e199176475"
+      "byteLength": 8330907,
+      "documentCount": 829,
+      "sha256": "c86e965b6f7143fa76efa34ea33c0948bc97174aba9a33aa63e8c9221ee8c1f1"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 7935220,
+      "byteLength": 7944135,
       "documentCount": 205,
-      "sha256": "ddc3277fda76d23ae75ba501d91c5b8a0219637d7d649901b5eca8ead1b9f5b9"
+      "sha256": "2d241c879c7ad302c8ea31d8cb0551b7c82fbfacd4ac6f7cd82c5fc0b704edc2"
     },
     {
       "name": "llms-full.003.txt",
       "byteLength": 7177366,
       "documentCount": 660,
-      "sha256": "a8da482943acb8f0c437a6dc038bdb8283562c459f430e3b2a2d5c670b9f4fea"
+      "sha256": "7ac96839f9be12aa6abc04c7bcf44c652e0a15514b3975c2e1d7b3e45dd74b82"
     }
   ],
-  "outputDigest": "fdf595d5030778a4ffb67ad9d2bbe362e62a747bccf5011b3f2b46edd48064e3",
+  "outputDigest": "a06963ff156b57f469d4903d3dc6a6807e6e13a215ad30889c29aafdec1ca3ee",
   "quarantined": [
     {
       "sourcePath": "content/manuals/ai/sandboxes-api/cookbook/_index.md",

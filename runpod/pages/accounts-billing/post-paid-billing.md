@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [accounts-billing/post-paid-billing.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/accounts-billing/post-paid-billing.mdx)
+> Pinned source for Runpod main: [accounts-billing/post-paid-billing.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/accounts-billing/post-paid-billing.mdx)
 > Canonical documentation: https://docs.runpod.io/accounts-billing/post-paid-billing
 
 # Post-paid billing

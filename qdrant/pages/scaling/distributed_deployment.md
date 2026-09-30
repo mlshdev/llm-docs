@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/scaling/distributed_deployment.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/scaling/distributed_deployment.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/scaling/distributed_deployment.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/scaling/distributed_deployment.md)
 > Canonical documentation: https://qdrant.tech/documentation/scaling/distributed_deployment/
 
 # Distributed Deployment
@@ -747,7 +747,7 @@ Now you can target the operations to specific shard(s) by specifying the `shard_
 
 Another use case for user-defined sharding is time-based sharding, where you route points to a specific shard (or shards) based on timestamp. This enables efficient querying of recent data and efficient data lifecycle management by deleting old shards once they pass a certain age. See the [Time-Based Sharding](https://qdrant.tech/documentation/tutorials-operations/time-based-sharding/) tutorial for more details.
 
-![Time-based sharding across daily shards](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/tutorials/time-based-sharding/time-based-sharding.png)
+![Time-based sharding across daily shards](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/tutorials/time-based-sharding/time-based-sharding.png)
 
 *One shard per day: writes go to the newest shard, and a query's shard key selector decides how many of them it reads from.*
 

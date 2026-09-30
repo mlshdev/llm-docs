@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/features/desktop-cli.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/features/desktop-cli.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/desktop-cli.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/desktop/features/desktop-cli.md)
 
 # Use the Docker Desktop CLI
 
@@ -17,20 +17,20 @@ docker desktop COMMAND [OPTIONS]
 
 ## Commands
 
-| Command      | Description                                                                                                                 |
-| :----------- | :-------------------------------------------------------------------------------------------------------------------------- |
-| `start`      | Starts Docker Desktop                                                                                                       |
-| `stop`       | Stops Docker Desktop                                                                                                        |
-| `restart`    | Restarts Docker Desktop                                                                                                     |
-| `status`     | Displays whether Docker Desktop is running or stopped.                                                                      |
-| `engine ls`  | Lists available engines (Windows only)                                                                                      |
-| `engine use` | Switch between Linux and Windows containers (Windows only)                                                                  |
-| `update`     | Manage Docker Desktop updates.                                                                                              |
-| `logs`       | Print log entries                                                                                                           |
-| `disable`    | Disable a feature                                                                                                           |
-| `enable`     | Enable a feature                                                                                                            |
-| `version`    | Show the Docker Desktop CLI plugin version information                                                                      |
-| `kubernetes` | List Kubernetes images used by Docker Desktop or restart the cluster. Available with Docker Desktop version 4.44 and later. |
-| `diagnose`   | Diagnose Docker Desktop and upload the diagnostics. Available with Docker Desktop 4.60 and later.                           |
+| Command      | Description                                                |
+| :----------- | :--------------------------------------------------------- |
+| `start`      | Starts Docker Desktop                                      |
+| `stop`       | Stops Docker Desktop                                       |
+| `restart`    | Restarts Docker Desktop                                    |
+| `status`     | Displays whether Docker Desktop is running or stopped      |
+| `engine ls`  | Lists available engines (Windows only)                     |
+| `engine use` | Switch between Linux and Windows containers (Windows only) |
+| `update`     | Manage Docker Desktop updates                              |
+| `logs`       | Print log entries                                          |
+| `disable`    | Disable a feature                                          |
+| `enable`     | Enable a feature                                           |
+| `version`    | Show the Docker Desktop CLI plugin version information     |
+| `kubernetes` | Manage Kubernetes                                          |
+| `diagnose`   | Diagnose Docker Desktop and upload the diagnostics.        |
 
 For more details on each command, see the [Docker Desktop CLI reference](https://docs.docker.com/reference/cli/docker/desktop/).

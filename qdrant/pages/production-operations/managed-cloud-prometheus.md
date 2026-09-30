@@ -1,5 +1,5 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/ops-monitoring/managed-cloud-prometheus.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/ops-monitoring/managed-cloud-prometheus.md)
-> Canonical documentation: https://qdrant.tech/documentation/ops-monitoring/managed-cloud-prometheus/
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/production-operations/managed-cloud-prometheus.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/production-operations/managed-cloud-prometheus.md)
+> Canonical documentation: https://qdrant.tech/documentation/production-operations/managed-cloud-prometheus/
 
 # Monitoring Managed Cloud with Prometheus and Grafana
 
@@ -8,6 +8,23 @@ This tutorial will guide you through the process of setting up Prometheus and Gr
 ## Prerequisites
 
 This tutorial assumes that you already have a Kubernetes cluster running where you want to deploy your monitoring stack, and a Qdrant database created in Qdrant Managed Cloud. You should also have `kubectl` and `helm` configured to interact with your cluster.
+
+## Cluster metrics versus node metrics
+
+Qdrant Managed Cloud exposes two Prometheus-compatible endpoints, and they answer different questions:
+
+- `/metrics` reports on a single Qdrant node: collection counts, point and vector counts, API response times, and process-level memory such as `memory_resident_bytes`. Each node only reports on itself, so scrape every node individually if you want a full picture. For the full list of node metrics, see [Monitoring & Telemetry](https://qdrant.tech/documentation/ops-monitoring/monitoring/#node-metrics-metrics).
+- `/sys_metrics` is a Managed Cloud-only endpoint. It reports on the cluster as a whole, aggregating the same database metrics from every node plus infrastructure telemetry such as container CPU and memory usage, disk usage, and load balancer traffic. Query it once against the cluster's main endpoint. You don't need to scrape it per node, and doing so returns the same cluster-wide data each time. See [Cluster System Metrics](https://qdrant.tech/documentation/cloud/cluster-monitoring/#cluster-system-metrics-sys_metrics) for the full list.
+
+The `ScrapeConfig` in this tutorial targets `/sys_metrics`, so a single scrape job covers the whole cluster.
+
+To confirm your scrape config is working, query a metric that only `/sys_metrics` exposes, such as container memory usage per pod, in the Prometheus UI or with `curl`:
+
+```promql
+container_memory_working_set_bytes{job="prometheus"}
+```
+
+If the scrape target in this tutorial is configured correctly, this returns one time series per pod in your cluster, each with a `pod` label and a byte value. Compare it against the node-level equivalent, `memory_resident_bytes` from `/metrics`, to see the difference between container-level and process-level memory reporting.
 
 ## Step 1: Install Prometheus and Grafana
 

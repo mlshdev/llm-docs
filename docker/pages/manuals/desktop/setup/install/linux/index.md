@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/install/linux/_index.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/setup/install/linux/_index.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/install/linux/_index.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/desktop/setup/install/linux/_index.md)
 
 # Install Docker Desktop on Linux
 
@@ -129,7 +129,7 @@ To install Docker Desktop successfully, your Linux host must meet the following 
   - For many Linux distributions, the GNOME environment does not support tray icons. To add support for tray icons, you need to install a GNOME extension. For example, [AppIndicator](https://extensions.gnome.org/extension/615/appindicator-support/).
 - At least 4 GB of RAM.
 - Enable configuring ID mapping in user namespaces, see [File sharing](https://docs.docker.com/desktop/troubleshoot-and-support/faqs/linuxfaqs/#how-do-i-enable-file-sharing). Note that for Docker Desktop version 4.35 and later, this is not required anymore.
-- Recommended: [Initialize `pass`](https://docs.docker.com/desktop/setup/sign-in/#credentials-management-for-linux-users) for credentials management.
+- [Initialize `pass`](#signing-in-with-docker-desktop-for-linux) for credentials management.
 
 Docker Desktop for Linux runs a Virtual Machine (VM). For more information on why, see [Why Docker Desktop for Linux runs a VM](https://docs.docker.com/desktop/troubleshoot-and-support/faqs/linuxfaqs/#why-does-docker-desktop-for-linux-run-a-vm).
 
@@ -186,6 +186,53 @@ $ sudo usermod -aG kvm $USER
 ```
 
 Sign out and sign back in so that your group membership is re-evaluated.
+
+## Signing in with Docker Desktop for Linux
+
+Docker Desktop for Linux relies on [`pass`](https://www.passwordstore.org/) to store credentials in GPG-encrypted files.
+Before signing in to Docker Desktop with your [Docker ID](https://docs.docker.com/accounts/individual/create-account/), you must initialize `pass`.
+Docker Desktop displays a warning if `pass` is not configured.
+
+1. Generate a GPG key. You can initialize pass by using a gpg key. To generate a gpg key, run:
+
+   ```console
+   $ gpg --generate-key
+   ```
+2. Enter your name and email once prompted.
+
+   Once confirmed, GPG creates a key pair. Look for the `pub` line that contains your GPG ID, for example:
+
+   ```text
+   ...
+   pubrsa3072 2022-03-31 [SC] [expires: 2024-03-30]
+    3ABCD1234EF56G78
+   uid          Molly <molly@example.com>
+   ```
+3. Copy the GPG ID and use it to initialize `pass`. For example
+
+   ```console
+   $ pass init 3ABCD1234EF56G78
+   ```
+
+   You should see output similar to:
+
+   ```text
+   mkdir: created directory '/home/molly/.password-store/'
+   Password store initialized for <generated_gpg-id_public_key>
+   ```
+
+Once you initialize `pass`, you can sign in and pull your private images.
+When Docker CLI or Docker Desktop use credentials, a user prompt may pop up for the password you set during the GPG key generation.
+
+```console
+$ docker pull molly/privateimage
+Using default tag: latest
+latest: Pulling from molly/privateimage
+3b9cc81c3203: Pull complete 
+Digest: sha256:3c6b73ce467f04d4897d7a7439782721fd28ec9bf62ea2ad9e81a5fb7fb3ff96
+Status: Downloaded newer image for molly/privateimage:latest
+docker.io/molly/privateimage:latest
+```
 
 ## Using Docker SDKs with Docker Desktop
 

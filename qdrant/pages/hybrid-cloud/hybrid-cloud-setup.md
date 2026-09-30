@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/hybrid-cloud/hybrid-cloud-setup.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/hybrid-cloud/hybrid-cloud-setup.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/hybrid-cloud/hybrid-cloud-setup.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/hybrid-cloud/hybrid-cloud-setup.md)
 > Canonical documentation: https://qdrant.tech/documentation/hybrid-cloud/hybrid-cloud-setup/
 
 # Creating a Hybrid Cloud Environment
@@ -47,20 +47,20 @@ You will need to have access to the Kubernetes cluster with `kubectl` and `helm`
    - **Environment Name:** A name for the Hybrid Cloud Environment
    - **Kubernetes Namespace:** The Kubernetes namespace for the services (like agent and operator). Once you select a namespace, you can't change it.
 
-![Create Hybrid Cloud Environment](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/cloud/hybrid_cloud_env_create.png)
+![Create Hybrid Cloud Environment](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/cloud/hybrid_cloud_env_create.png)
 
 4. (Optional) Configure any of the following settings if needed:
 
    - Node selectors and tolerations for the operator, agent, cluster-manager and monitoring stack.
    - Control Plane Labels that will be added to all Kubernetes resources of the Hybrid Cloud control-plane components.
-     ![Create Hybrid Cloud Environment - Connection Scheduling](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/cloud/Hcloud_connection_scheduling_2.png)
+     ![Create Hybrid Cloud Environment - Connection Scheduling](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/cloud/Hcloud_connection_scheduling_2.png)
    - If you use a proxy to connect from your infrastructure to the Qdrant Cloud API, you can specify the proxy URL, credentials and certificates.
-     ![Create Hybrid Cloud Environment - Advanced Configuration](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/cloud/hybrid_cloud_advanced_configuration.png)
+     ![Create Hybrid Cloud Environment - Advanced Configuration](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/cloud/hybrid_cloud_advanced_configuration.png)
    - Container registry URL for Qdrant services (like Agent, Operator, Cluster-manager and monitoring stack) images. The default is <https://registry.cloud.qdrant.io/qdrant/>.
    - Helm chart repository URL for the Qdrant services. The default is oci://registry.cloud.qdrant.io/qdrant-charts.
    - An optional secret with credentials to access your own container registry.
    - Custom cluster domain, if your Kubernetes cluster uses a non-default cluster domain (something other than `cluster.local`), so that in-cluster service addresses resolve correctly. Leave empty to use the default `cluster.local`.
-     ![Create Hybrid Cloud Environment - Custom Registries](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/cloud/Hcloud_connection_custom_registries.png)
+     ![Create Hybrid Cloud Environment - Custom Registries](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/cloud/Hcloud_connection_custom_registries.png)
 
 5. Once complete, click the **Save and Generate Installation Command** button to proceed (see next section).
 
@@ -192,7 +192,7 @@ If you need to rotate the secrets to pull container images and charts from the Q
 
 If you don't run the installation command, the secrets will not be updated and the communication between your Hybrid Cloud Environment and the Qdrant Cloud API will not work.
 
-![Rotate Hybrid Cloud Secrets](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/cloud/hybrid_cloud_rotate_secrets.png)
+![Rotate Hybrid Cloud Secrets](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/cloud/hybrid_cloud_rotate_secrets.png)
 
 ## Deleting a Hybrid Cloud Environment
 

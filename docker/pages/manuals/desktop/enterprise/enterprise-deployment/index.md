@@ -1,8 +1,10 @@
-> Pinned source for Docker main: [content/manuals/desktop/enterprise/enterprise-deployment/_index.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/enterprise/enterprise-deployment/_index.md)
+> Pinned source for Docker main: [content/manuals/desktop/enterprise/enterprise-deployment/_index.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/desktop/enterprise/enterprise-deployment/_index.md)
 
 # Deploy Docker Desktop
 
-Docker Desktop supports scalable deployment options tailored for enterprise IT environments. Whether you're rolling out Docker across hundreds of developer workstations or enforcing consistent configuration through MDM solutions like Intune or Jamf, this section provides everything you need to install, configure, and manage Docker Desktop in a secure, repeatable way. Learn how to use MSI and PKG installers, configure default settings, control updates, and ensure compliance with your organization's policies—across Windows, macOS, and Linux systems.
+Docker Desktop supports scalable deployment options tailored for enterprise IT environments. Whether you're rolling out Docker across hundreds of developer workstations or enforcing consistent configuration through MDM solutions, this section provides everything you need to install, configure, and manage Docker Desktop in a secure, repeatable way.
+
+Learn how to use MSI and PKG installers, configure default settings, control updates, and ensure compliance with your organization's policies—across Windows, Mac, and Linux systems.
 
 - [MSI installer](https://docs.docker.com/desktop/enterprise/enterprise-deployment/msi-install-and-configure/): Learn how to install Docker Desktop with the MSI installer.
 - [PKG installer](https://docs.docker.com/desktop/enterprise/enterprise-deployment/pkg-install-and-configure/): Learn how to install Docker Desktop with the PKG installer.

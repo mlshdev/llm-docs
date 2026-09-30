@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/agentic-rag-camelai-discord.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/tutorials-build-essentials/agentic-rag-camelai-discord.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/agentic-rag-camelai-discord.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/tutorials-build-essentials/agentic-rag-camelai-discord.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-build-essentials/agentic-rag-camelai-discord/
 
 # Qdrant Agentic RAG Discord Bot with CAMEL-AI and OpenAI
@@ -33,7 +33,7 @@ Below is a high-level look at our Agentic RAG workflow:
 
 Below is the architecture diagram representing the workflow and interactions of the chatbot:
 
-![Architecture Diagram](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/examples/agentic-rag-camelai-discord/diagram_discord_bot.png)
+![Architecture Diagram](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/examples/agentic-rag-camelai-discord/diagram_discord_bot.png)
 
 The workflow starts by **scraping, chunking, and upserting** content from URLs using the `vector_retriever.process()` method, which generates embeddings with the **OpenAI embedding instance**. These embeddings, along with their metadata, are then indexed and stored in **Qdrant** via the `QdrantStorage` class.
 
@@ -315,7 +315,7 @@ discord_q_bot.run()
 
 3. Start chatting with the bot in your Discord server. It will retrieve context from Qdrant and provide relevant answers based on your queries.
 
-![agentic-rag-discord-bot-what-is-quantization](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/examples/agentic-rag-camelai-discord/example.png)
+![agentic-rag-discord-bot-what-is-quantization](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/examples/agentic-rag-camelai-discord/example.png)
 
 ***
 

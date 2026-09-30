@@ -1,11 +1,11 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/ops-configuration/memory-tiers.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/ops-configuration/memory-tiers.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/ops-configuration/memory-tiers.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/ops-configuration/memory-tiers.md)
 > Canonical documentation: https://qdrant.tech/documentation/ops-configuration/memory-tiers/
 
 # Memory Tiers
 
 Qdrant persists all collection data to disk. For faster search, you can also load individual structures into RAM, but keeping everything in memory isn't always cost-effective. The per-structure `memory` parameter controls how each structure is cached in RAM: pinned permanently, warmed into a disk cache at startup, or left on disk until first accessed.
 
-This page covers how to configure memory tiers, the different placement tiers available, and how to optimize for disk-based retrieval.
+This page covers how to configure memory tiers, the different placement tiers available, and how to optimize for disk-based retrieval. For guidance on what to choose to fit your RAM and disk budget, see [Memory Tiers: What to Use and When](https://qdrant.tech/documentation/production-operations/memory-tiers/).
 
 ## Configuring Memory Tiers
 

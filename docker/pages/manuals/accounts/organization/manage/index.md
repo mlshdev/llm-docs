@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/_index.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/accounts/organization/manage/_index.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/_index.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/accounts/organization/manage/_index.md)
 
 # Manage your organization
 
@@ -18,13 +18,13 @@ must be assigned the
 Seats and licenses both control access, but they apply to different kinds of
 plans. The following table summarizes the difference.
 
-| Entitlement | What it grants                                          | Applies to                                       | Managed from |
-| ----------- | ------------------------------------------------------- | ------------------------------------------------ | ------------ |
-| Seat        | Membership in your Docker Team or Business subscription | Docker Core subscription                         | Billing      |
-| License     | Access to a specific product or add-on                  | AI Governance, Docker Offload, and other add-ons | Members      |
+| Entitlement | What it grants                                          | Applies to                                       | Managed from                 |
+| ----------- | ------------------------------------------------------- | ------------------------------------------------ | ---------------------------- |
+| Seat        | Membership in your Docker Team or Business subscription | Docker Core subscription                         | Billing                      |
+| License     | Access to a specific product or add-on                  | AI Governance, Docker Offload, and other add-ons | Licenses, Teams, and Members |
 
 For details, see [Seats](https://docs.docker.com/accounts/organization/manage/manage-seats/)
-and [License assignment](https://docs.docker.com/accounts/organization/manage/manage-licenses/).
+and [Manage licenses](https://docs.docker.com/accounts/organization/manage/manage-licenses/).
 
 ## Next steps
 
@@ -32,10 +32,10 @@ Explore the following sections to manage your organization.
 
 - [Members](https://docs.docker.com/accounts/organization/manage/members/): Invite, manage, and assign roles to your organization members.
 - [Teams](https://docs.docker.com/accounts/organization/manage/manage-a-team/): Create teams and manage repository access for groups of members.
+- [Products](https://docs.docker.com/accounts/organization/manage/manage-products/): Manage access and view usage for Docker products across your organization.
+- [Licenses](https://docs.docker.com/accounts/organization/manage/manage-licenses/): View your license inventory and assign licenses to teams or individual members.
 - [Seats](https://docs.docker.com/accounts/organization/manage/manage-seats/): Add or remove seats for Docker Team and Business subscriptions.
-- [Licenses](https://docs.docker.com/accounts/organization/manage/manage-licenses/): Assign and revoke product licenses for organization members.
-- [Product access and usage](https://docs.docker.com/accounts/organization/manage/manage-products/): Manage access and view usage for Docker products across your organization.
-- [Change information](https://docs.docker.com/accounts/organization/manage/general-settings/): Update your organization's general information and settings.
-- [Deactivate](https://docs.docker.com/accounts/organization/manage/deactivate-account/): Deactivate an organization after completing the required steps.
+- [Information](https://docs.docker.com/accounts/organization/manage/general-settings/): Update your organization's general information and settings.
+- [Deactivation](https://docs.docker.com/accounts/organization/manage/deactivate-account/): Deactivate an organization after completing the required steps.
 - [Security](https://docs.docker.com/security/): Configure single sign-on, provisioning, and access management.
 - [Billing](https://docs.docker.com/subscription-billing/): Manage payment methods and view billing history.

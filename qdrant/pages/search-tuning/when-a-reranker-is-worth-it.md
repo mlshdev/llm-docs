@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-tuning/when-a-reranker-is-worth-it.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/search-tuning/when-a-reranker-is-worth-it.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-tuning/when-a-reranker-is-worth-it.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/search-tuning/when-a-reranker-is-worth-it.md)
 > Canonical documentation: https://qdrant.tech/documentation/search-tuning/when-a-reranker-is-worth-it/
 
 # When Is a Reranker Worth It?
@@ -114,7 +114,7 @@ If you find a mismatch, swap in a model whose window and training data fit your 
 
 Start with 10 candidates, and confirm on your labeled queries that the reranker beats tuned fusion before you change the count. Every configuration that trailed tuned fusion at 10 candidates still trailed it at 200, so a deeper list does not rescue a reranker that loses at 10. `nDCG@10` grades the same top 10 results at every count, so the count changes only what the reranker gets to choose from.
 
-![Five small line charts, one per dataset, showing the best nDCG@10 change over tuned fusion at candidate counts 10, 25, 50, 100, and 200. SciFact, CodeSearchNet, and DBPedia-entity stay above the zero line, WANDS stays below it at every count, and ArguAna peaks at 25 then falls to zero by 200.](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/when-a-reranker-is-worth-it/reranker-gain-by-candidate-count.png)
+![Five small line charts, one per dataset, showing the best nDCG@10 change over tuned fusion at candidate counts 10, 25, 50, 100, and 200. SciFact, CodeSearchNet, and DBPedia-entity stay above the zero line, WANDS stays below it at every count, and ArguAna peaks at 25 then falls to zero by 200.](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/when-a-reranker-is-worth-it/reranker-gain-by-candidate-count.png)
 
 *The best nDCG\@10 change over tuned fusion among the four models, by candidate count. A line above zero is a reranker win; WANDS never crosses it.*
 

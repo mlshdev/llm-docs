@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/features/containerd.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/features/containerd.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/containerd.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/desktop/features/containerd.md)
 
 # containerd image store
 
@@ -47,8 +47,7 @@ requirements.
 
 ## Switch image stores
 
-The containerd image store is enabled by default in Docker Desktop version 4.34
-and later. To switch between image stores:
+The containerd image store is enabled by default. To switch between image stores:
 
 1. Navigate to **Settings** in Docker Desktop.
 2. In the **General** tab, check or clear the **Use containerd for pulling and storing images** option.

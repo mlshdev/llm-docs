@@ -1,11 +1,11 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-patterns/vector-search-filtering.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/search-patterns/vector-search-filtering.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-patterns/vector-search-filtering.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/search-patterns/vector-search-filtering.md)
 > Canonical documentation: https://qdrant.tech/documentation/search-patterns/vector-search-filtering/
 
 # A Complete Guide to Filtering in Vector Search
 
 Imagine you sell computer hardware. To help shoppers easily find products on your website, you need to have a **user-friendly [search engine](https://qdrant.tech)**.
 
-![vector-search-ecommerce](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/vector-search-filtering/vector-search-ecommerce.png)
+![vector-search-ecommerce](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/vector-search-filtering/vector-search-ecommerce.png)
 
 If you’re selling computers and have extensive data on laptops, desktops, and accessories, your search feature should guide customers to the exact device they want - or at least a **very similar** match.
 
@@ -79,7 +79,7 @@ Most people use default settings and build vector search apps that aren't proper
 
 The easiest way to reach that "Hello World" moment is to [**try filtering in a live cluster**](https://qdrant.tech/documentation/cloud-quickstart/). Our interactive tutorial will show you how to create a cluster, add data and try some filtering clauses.
 
-![qdrant-filtering-tutorial](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/vector-search-filtering/qdrant-filtering-tutorial.png)
+![qdrant-filtering-tutorial](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/vector-search-filtering/qdrant-filtering-tutorial.png)
 
 ## Qdrant's approach to filtering
 
@@ -91,13 +91,13 @@ By default, Qdrant connects all your data points within the [**vector index**](h
 How can we bridge this gap?
 
 **Figure 1:** How Qdrant maintains a filterable vector index.
-![filterable-vector-index](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/vector-search-filtering/filterable-vector-index.png)
+![filterable-vector-index](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/vector-search-filtering/filterable-vector-index.png)
 
 [**Filterable vector index**](https://qdrant.tech/documentation/manage-data/indexing/): This technique builds additional links **(orange)** between leftover data points. The filtered points which stay behind are now traversible once again. Qdrant uses special category-based methods to connect these data points.
 
 ### Qdrant's approach vs traditional filtering methods
 
-![stepping-lens](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/vector-search-filtering/stepping-lens.png)
+![stepping-lens](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/vector-search-filtering/stepping-lens.png)
 
 The filterable vector index is Qdrant's solves pre and post-filtering problems by adding specialized links to the search graph. It aims to maintain the speed advantages of vector search while allowing for precise filtering, addressing the inefficiencies that can occur when applying filters after the vector search.
 
@@ -111,7 +111,7 @@ However, Qdrant still benefits from pre-filtering **under certain conditions**. 
 
 **Figure 2:** On the user side, this is how filtering looks. We start with five products with different prices. First, the $1000 price **filter** is applied, narrowing down the selection of laptops. Then, a vector search finds the relevant **results** within this filtered set.
 
-![pre-filtering-vector-search](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/vector-search-filtering/pre-filtering.png)
+![pre-filtering-vector-search](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/vector-search-filtering/pre-filtering.png)
 
 In conclusion, pre-filtering is efficient in specific cases when you use small datasets with low cardinality metadata. However, pre-filtering should not be used over large datasets as it breaks too many links in the HNSW graph, causing lower accuracy.
 
@@ -123,7 +123,7 @@ In post-filtering, a search engine first looks for similar vectors and retrieves
 
 **Figure 3:** In the same example, we have five laptops. First, the vector search finds the top two relevant **results**, but they may not meet the price match. When the $1000 price **filter** is applied, other potential results are discarded.
 
-![post-filtering-vector-search](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/vector-search-filtering/post-filtering.png)
+![post-filtering-vector-search](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/vector-search-filtering/post-filtering.png)
 
 The system will waste computational resources by first finding similar vectors and then discarding many that don't meet the filter criteria. You're also limited to filtering only from the initial set of [vector search](https://qdrant.tech/advanced-search/) results. If your desired items aren't in this initial set, you won't find them, even if they exist in the database.
 
@@ -260,7 +260,7 @@ The response contains a batch of points that match the criteria and a reference 
 
 ## Advanced filtering example: dinosaur diets
 
-![advanced-payload-filtering](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/vector-search-filtering/advanced-payload-filtering.png)
+![advanced-payload-filtering](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/vector-search-filtering/advanced-payload-filtering.png)
 
 We can also use nested filtering to query arrays of objects within the payload. In this example, we have two points. They each represent a dinosaur with a list of food preferences (diet) that indicate what type of food they like or dislike:
 
@@ -562,7 +562,7 @@ You can use filters to retrieve data points without knowing their `id`. You can 
 
 ## Filtering with the payload index
 
-![vector-search-filtering-vector-search](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/vector-search-filtering/scanning-lens.png)
+![vector-search-filtering-vector-search](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/vector-search-filtering/scanning-lens.png)
 
 When you start working with Qdrant, your data is by default organized in a vector index.
 In addition to this, we recommend adding a secondary data structure - **the payload index**.
@@ -571,7 +571,7 @@ Just how the vector index organizes vectors, the payload index will structure yo
 
 **Figure 4:** The payload index is an additional data structure that supports vector search. A payload index (in green) organizes candidate results by cardinality, so that semantic search (in red) can traverse the vector index quickly.
 
-![payload-index-vector-search](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/vector-search-filtering/payload-index-vector-search.png)
+![payload-index-vector-search](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/vector-search-filtering/payload-index-vector-search.png)
 
 On its own, semantic searching over terabytes of data can take up lots of RAM. [**Filtering**](https://qdrant.tech/documentation/search/filtering/) and [**Indexing**](https://qdrant.tech/documentation/manage-data/indexing/) are two easy strategies to reduce your compute usage and still get the best results. Remember, this is only a guide. For an exhaustive list of filtering options, you should read the [filtering documentation](https://qdrant.tech/documentation/search/filtering/).
 
@@ -601,7 +601,7 @@ Once you mark a field indexable, **you don't need to do anything else**. Qdrant 
 
 #### Why should you index metadata?
 
-![payload-index-filtering](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/vector-search-filtering/payload-index-filtering.png)
+![payload-index-filtering](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/vector-search-filtering/payload-index-filtering.png)
 
 The payload index acts as a secondary data structure that speeds up retrieval. Whenever you run vector search with a filter, Qdrant will consult a payload index - if there is one.
 
@@ -692,7 +692,7 @@ Read more about setting up [tenant defragmentation](https://qdrant.tech/document
 
 ## Key takeaways in filtering and indexing
 
-![best-practices](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/vector-search-filtering/best-practices.png)
+![best-practices](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/vector-search-filtering/best-practices.png)
 
 ### Filtering with float-point (decimal) numbers
 
@@ -751,4 +751,4 @@ The easiest way to reach that "Hello World" moment is to [**try filtering in a l
 
 **It's all in your free cluster!**
 
-[![qdrant-hybrid-cloud](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/docs/homepage/cloud-cta.png)](https://qdrant.to/cloud)
+[![qdrant-hybrid-cloud](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/docs/homepage/cloud-cta.png)](https://qdrant.to/cloud)

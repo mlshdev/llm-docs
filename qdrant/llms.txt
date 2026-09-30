@@ -1,6 +1,6 @@
 # Qdrant master
 
-> Documentation generated from the latest `master` branch commit of [qdrant/landing_page](https://github.com/qdrant/landing_page) and pinned to immutable source commit `d4766874cd35da264650dc005969a130267dc721`.
+> Documentation generated from the latest `master` branch commit of [qdrant/landing_page](https://github.com/qdrant/landing_page) and pinned to immutable source commit `92777a17ee8cb058f24532fc801c49a765035a70`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Qdrant master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -8,7 +8,7 @@
 - Hugo code-snippet and include shortcodes are expanded from pinned headless Markdown, while figures, accordions, and interactive islands are reduced to their authored static Markdown content without executing Hugo or JavaScript.
 - Published documentation links resolve to https://qdrant.tech; repository assets resolve to immutable raw URLs at the pinned commit.
 - The upstream documentation repository declares no license, so LICENSE.upstream records a copyright notice rather than a license grant.
-- Quarantined sources (10): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
+- Quarantined sources (12): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
 
 ## Documentation
 
@@ -172,7 +172,7 @@
 - [Search](pages/search/search.md): Run similarity search in Qdrant to find points whose vectors are nearest to a query in the configured vector space. (86802 bytes)
 - [Filtering](pages/search/filtering.md): Combine vector similarity with payload filters in Qdrant to enforce business rules and refine search results. (82353 bytes)
 - [Explore](pages/search/explore.md): Explore Qdrant data beyond similarity search with recommendation, discovery, and dissimilar-vector search APIs. (49204 bytes)
-- [Search Relevance](pages/search/search-relevance.md): Tune Qdrant search relevance with custom scoring, payload-based ranking, and business-aware result ordering. (48031 bytes)
+- [Search Relevance](pages/search/search-relevance.md): Tune Qdrant search relevance with custom scoring, payload-based ranking, and business-aware result ordering. (48165 bytes)
 - [Low-Latency Search](pages/search/low-latency-search.md): Tune Qdrant for low-latency vector search with quantization, HNSW indexing, sharding, and replica routing strategies. (11871 bytes)
 - [Text Search](pages/search/text-search/index.md): Combine semantic vector search with lexical text features in Qdrant, including BM25 and full-text payload filters. (15882 bytes)
 - [Search](pages/search/index.md): Run similarity, hybrid, and multimodal search in Qdrant with filters, multi-stage pipelines, and relevance tuning. (1668 bytes)
@@ -187,7 +187,6 @@
 - [Multi-Representation Search](pages/tutorials-search-engineering/multi-representation-search.md): Combine title, summary, and chunk vectors in one retrieval pipeline, then compare the effect of each representation. (17111 bytes)
 - [Branch-Aware Search](pages/tutorials-search-engineering/branch-aware-search.md): Scope search to a version-controlled branch in Qdrant so a query returns that branch's live view, inherited from its ancestors. (26141 bytes)
 - [Indexing Payloads of Random Shape](pages/tutorials-search-engineering/index-dynamic-payloads.md): Index open-ended payloads whose keys are data in Qdrant, using a nested filter over a fixed key-value array instead of one index per key. (11188 bytes)
-- [Compressed Multivector Search](pages/tutorials-search-engineering/turbo4-multivector-search.md): Combine the turbo4 datatype with multivector late interaction to cut on-disk vector size at a bounded recall cost. (10380 bytes)
 - [Deterministic Collection Slicing](pages/tutorials-search-engineering/slicing-filter.md): Split a Qdrant collection into disjoint, deterministic subsets with the slice filter for parallel scroll and reproducible sampling. (11844 bytes)
 - [Static Embeddings](pages/tutorials-search-engineering/static-embeddings.md): Use static embeddings in Qdrant for fast, low-resource semantic search with minimal quality trade-offs versus transformer models. (8919 bytes)
 - [Search Engineering](pages/tutorials-search-engineering/index.md): Search engineering tutorials for Qdrant: hybrid search, reranking, multivectors, late interaction, and retrieval quality evaluation. (3623 bytes)
@@ -317,7 +316,7 @@
 - [Configuration](pages/ops-configuration/configuration.md): Customize Qdrant with config files and environment variables to control storage, networking, performance tuning, and feature flags. (21831 bytes)
 - [Resource Quotas](pages/ops-configuration/quotas.md): Cap node memory and disk usage cluster-wide so a full node stops taking writes before it destabilizes the cluster. (8912 bytes)
 - [Administration](pages/ops-configuration/administration.md): Administer a running Qdrant instance with runtime tools for recovery mode, strict mode, and limiting expensive query patterns. (66682 bytes)
-- [Memory Tiers](pages/ops-configuration/memory-tiers.md): Control how vectors, indexes, quantized data, and payloads are cached in RAM: pinned, warmed into a disk cache, or left on disk. (20069 bytes)
+- [Memory Tiers](pages/ops-configuration/memory-tiers.md): Control how vectors, indexes, quantized data, and payloads are cached in RAM: pinned, warmed into a disk cache, or left on disk. (20246 bytes)
 - [Usage Statistics](pages/ops-configuration/usage-statistics.md): Understand and control the anonymized usage statistics collected by the Qdrant open-source container, including how to opt out. (4119 bytes)
 - [Running with GPU](pages/ops-configuration/running-with-GPU.md): Accelerate Qdrant vector indexing with GPU support using dedicated Docker images for NVIDIA and AMD hardware via the Vulkan API. (7781 bytes)
 - [Configuration](pages/ops-configuration/index.md): Configure and administer Qdrant with guides on config files, environment variables, runtime administration, telemetry, and GPU support. (1681 bytes)
@@ -379,16 +378,16 @@
 
 - [Memory Usage](pages/ops-monitoring/memory-usage.md): Inspect disk space, RAM, and OS page cache usage for a Qdrant collection across the cluster, broken down by component. (3750 bytes)
 - [Slow Request Log](pages/ops-monitoring/slow-request-log.md): Identify the slowest queries in your Qdrant deployment with the built-in slow request log, which records the slowest unique operations on each node since startup. (3384 bytes)
-- [Managed Cloud Prometheus Monitoring](pages/ops-monitoring/managed-cloud-prometheus.md): Monitor Qdrant Managed Cloud clusters with Prometheus and Grafana running in your own Kubernetes environment for full visibility. (3387 bytes)
-- [Self-Hosted Prometheus Monitoring](pages/ops-monitoring/hybrid-cloud-prometheus.md): Monitor Qdrant Hybrid Cloud and Private Cloud deployments by deploying Prometheus and Grafana into your Kubernetes cluster. (3817 bytes)
-- [Monitoring with Datadog](pages/ops-monitoring/hybrid-cloud-datadog.md): Monitor Qdrant Hybrid Cloud and Private Cloud deployments by setting up the Datadog Operator and Agent in your Kubernetes cluster. (4394 bytes)
-- [Monitoring & Telemetry](pages/ops-monitoring/index.md): Monitor Qdrant deployments with built-in metrics endpoints, Prometheus and Grafana integrations, and built-in tools for diagnosing memory usage and slow requests. (1893 bytes)
+- [Monitoring with Grafana and Prometheus](pages/ops-monitoring/hybrid-cloud-prometheus.md): Monitor Qdrant Hybrid Cloud and Private Cloud deployments by deploying Prometheus and Grafana into your Kubernetes cluster. (6028 bytes)
+- [Monitoring with Datadog](pages/ops-monitoring/hybrid-cloud-datadog.md): Monitor Qdrant Hybrid Cloud and Private Cloud deployments by setting up the Datadog Operator and Agent in your Kubernetes cluster. (7247 bytes)
+- [Monitoring & Telemetry](pages/ops-monitoring/index.md): Monitor Qdrant deployments with built-in metrics endpoints, Prometheus and Grafana integrations, and built-in tools for diagnosing memory usage and slow requests. (1803 bytes)
 
 ## Production & Operations
 
 - [Memory Tiers in Qdrant: What to Use and When](pages/production-operations/memory-tiers.md): A guide to choosing a Qdrant memory tier layout as your collection grows. (12900 bytes)
 - [Bulk Uploading Data to Qdrant](pages/production-operations/bulk-data-import.md): Plan bulk uploads in Qdrant at scale: batching, parallelization, sharding, payload indexes, quantization, and on-disk storage. (14382 bytes)
 - [How to Implement Multitenancy and Custom Sharding in Qdrant](pages/production-operations/multitenant-search.md): Explore how Qdrant's multitenancy and custom sharding streamline machine-learning operations, enhancing scalability and data security. (11697 bytes)
+- [Managed Cloud Prometheus Monitoring](pages/production-operations/managed-cloud-prometheus.md): Monitor Qdrant Managed Cloud clusters with Prometheus and Grafana running in your own Kubernetes environment for full visibility. (5164 bytes)
 - [Production & Operations](pages/production-operations/index.md): Plan multitenancy, bulk uploads, and memory placement as your Qdrant application and vector collection grow. (26 bytes)
 
 ## Agentic Tools
@@ -437,17 +436,16 @@
 - [Migrate to a New Embedding Model](pages/tutorials-operations/embedding-model-migration.md): Migrate a Qdrant collection to a new embedding model with zero downtime using a blue-green dual-collection strategy. (50145 bytes)
 - [Incremental Embedding Updates](pages/tutorials-operations/incremental-embedding-updates.md): Sync embeddings with raw text data that changes over time. (69778 bytes)
 - [Prevent Unoptimized Usage](pages/tutorials-operations/prevent-unoptimized-usage.md): Defer visibility of unindexed points to stop bulk uploads from slowing down search. (13004 bytes)
-- [Blue-Green Cluster Deployment](pages/tutorials-operations/blue-green-deployment.md): Deploy changes to Qdrant with zero production risk using a blue-green cluster strategy: build and test on a new cluster, then switch traffic over. (9111 bytes)
+- [Blue-Green Cluster Deployment](pages/tutorials-operations/blue-green-deployment.md): Deploy changes to Qdrant with zero production risk using a blue-green cluster strategy: build and test on a new cluster, then switch traffic over. (11342 bytes)
 - [Time-Based Sharding](pages/tutorials-operations/time-based-sharding.md): Implement time-based sharding in Qdrant to route fast-moving data by timestamp and prune old shards without expensive re-indexing. (44921 bytes)
 - [Large-Scale Search](pages/tutorials-operations/large-scale-search.md): Index and search hundreds of millions of vectors in Qdrant cost-efficiently with minimal hardware and tuned configuration. (17190 bytes)
 - [Securing and Exposing a Hybrid Cloud Cluster](pages/tutorials-operations/secure-and-expose-hybrid-cloud.md): Authentication and TLS management for Qdrant Hybrid Cloud clusters (10773 bytes)
-- [GPU-Accelerated HNSW Indexing](pages/tutorials-operations/gpu-accelerated-hnsw-indexing.md): Speed up HNSW index builds with GPU acceleration on Qdrant Cloud, and measure the effect on indexing time, query latency, and cost. (23096 bytes)
 - [Secure a Self-Hosted Qdrant Instance](pages/tutorials-operations/secure-qdrant.md): Harden a self-hosted Qdrant deployment with TLS, an Admin API key, a Read-Only key, and Granular Access Control. (23462 bytes)
 - [Operations & Scale](pages/tutorials-operations/index.md): Production operations tutorials for Qdrant: snapshots, migrations, sharding, and large-scale indexing for high-volume workloads. (5145 bytes)
 
 ## Tutorials & Examples
 
-- [Tutorials & Examples](pages/tutorials-and-examples/index.md): Step-by-step Qdrant tutorials and examples covering hybrid search, RAG, ingestion, and Qdrant Cloud workflows for developers. (859 bytes)
+- [Tutorials & Examples](pages/tutorials-and-examples/index.md): Step-by-step Qdrant tutorials and examples covering hybrid search, RAG, ingestion, and Qdrant Cloud workflows for developers. (871 bytes)
 
 ## Search Tuning
 

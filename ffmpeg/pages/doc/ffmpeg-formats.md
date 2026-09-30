@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/291f96f7929f5837dc900adef3720025516e8584/doc/ffmpeg-formats.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/5a54fcf75e0245111075b1c31593ba1919c25306/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -4431,6 +4431,29 @@ passthrough first with `tmux set -g allow-passthrough on`, then add
 
 ```text
 ffmpeg -re -i input.mp4 -f iterm2 -display_height 40 -tmux 1 -
+```
+
+## jpeg\_mpf
+
+JPEG Multi-Picture Format muxer.
+
+Stores multiple JPEG images in a single file using the CIPA DC-007 MP
+extensions. The first input stream is always the primary image. Every other
+stream must be specified by a stream group describing what it is; see the
+`-stream_group` option of the `ffmpeg` tool.
+
+Note: Currently, the only implemented type of stream group is `gain_map`,
+which may be used to store a gain map for JPEG Ultra HDR.
+
+### Examples
+
+Encode an SDR tone-mapped image and an HDR gain map computed from it:
+
+```text
+ffmpeg -i input-hdr.png -filter_complex
+"[0:v] scale=out_transfer=srgb:out_primaries=bt709,split [base][sdr];
+[base][0:v] gainmap [gain]" -map "[sdr]" -map "[gain]" -c:v mjpeg
+-stream_group type=gain_map:st=0:st=1:el_index=1 -f jpeg_mpf output.jpg
 ```
 
 ## ivf

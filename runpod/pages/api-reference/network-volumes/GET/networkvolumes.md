@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference/network-volumes/GET/networkvolumes.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/api-reference/network-volumes/GET/networkvolumes.mdx)
+> Pinned source for Runpod main: [api-reference/network-volumes/GET/networkvolumes.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/api-reference/network-volumes/GET/networkvolumes.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference/network-volumes/GET/networkvolumes
 
 # List network volumes

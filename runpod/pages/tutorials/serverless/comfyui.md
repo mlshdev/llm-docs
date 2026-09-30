@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/serverless/comfyui.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/tutorials/serverless/comfyui.mdx)
+> Pinned source for Runpod main: [tutorials/serverless/comfyui.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/tutorials/serverless/comfyui.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/serverless/comfyui
 
 # Deploy ComfyUI on Serverless

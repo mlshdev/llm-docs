@@ -8,20 +8,20 @@
   "repository": "qdrant/landing_page",
   "tag": "master",
   "branch": "master",
-  "sourceCommittedAt": "2026-09-29T17:05:07Z",
-  "documentationDigest": "44d2bface57f106c94a0a5385bdebe59519f95ade0b7e27cfb33f86098ffa63d",
-  "sourceCommit": "d4766874cd35da264650dc005969a130267dc721",
-  "documentCount": 330,
+  "sourceCommittedAt": "2026-09-30T17:36:58Z",
+  "documentationDigest": "50a392c65dff7ea47016e940a4443fe18021107de03e9a8f1cbeb6e8ab562f2c",
+  "sourceCommit": "92777a17ee8cb058f24532fc801c49a765035a70",
+  "documentCount": 328,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 4027645,
-      "documentCount": 330,
-      "sha256": "5db7a54cc954a8c2eb7ac217e021e8d3eb7369bf680f9909a4761c20b735f271"
+      "byteLength": 4002311,
+      "documentCount": 328,
+      "sha256": "4e4880b0c54a4a5213967193f49f335ccb12d8b1e6f7f3dfe12785d29275c08f"
     }
   ],
-  "outputDigest": "8464bd299192bba7d0a1bf87ccd15bff80d29ee0e62ca7b294ac2a092c09d5f9",
+  "outputDigest": "a1e07ad0803ac75c6541ebb4c00fa62a8ed7bdbd46d09eb3a2c85d825fc5c5f1",
   "quarantined": [
     {
       "sourcePath": "qdrant-landing/content/documentation/agentic-tools/_index.md",
@@ -62,6 +62,14 @@
     {
       "sourcePath": "qdrant-landing/content/documentation/search/hybrid-queries.md",
       "reason": "Qdrant code-snippet path /documentation/headless/snippets/query-points/hybrid-rrf/ has no Markdown snippets in qdrant-landing/content/documentation/search/hybrid-queries.md"
+    },
+    {
+      "sourcePath": "qdrant-landing/content/documentation/tutorials-operations/gpu-accelerated-hnsw-indexing.md",
+      "reason": "Unresolved qdrant source syntax \"{{< c\""
+    },
+    {
+      "sourcePath": "qdrant-landing/content/documentation/tutorials-search-engineering/turbo4-multivector-search.md",
+      "reason": "Unresolved qdrant source syntax \"{{< c\""
     }
   ],
   "notes": [

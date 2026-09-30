@@ -1,28 +1,17 @@
-> Pinned source for Docker main: [content/manuals/desktop/enterprise/unassociated-machines/_index.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/enterprise/unassociated-machines/_index.md)
+> Pinned source for Docker main: [content/manuals/desktop/enterprise/unassociated-machines/_index.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/desktop/enterprise/unassociated-machines/_index.md)
 
 # Manage unassociated machines
 
 **Unassociated machines requirements**
 
 - For: Administrators
+- Subscription: Team, Business
 
-Docker administrators can identify, view, and manage Docker Desktop machines
-that are likely associated with their organization but aren't currently linked
+Organization owners can identify, view, and manage Docker Desktop machines
+that are likely associated with their organization, based on usage, but aren't currently linked
 to user accounts. This self-service capability helps you understand Docker
 Desktop usage across your organization and streamline user onboarding without
 IT involvement.
-
-## Prerequisites
-
-- Docker Business or Team subscription
-- Organization owner access to your Docker organization
-
-## About unassociated machines
-
-Unassociated machines are Docker Desktop instances that Docker has identified
-as likely belonging to your organization based on usage patterns, but the users
-are not signed in to Docker Desktop with an account that is part of your
-organization.
 
 ## How Docker identifies unassociated machines
 
@@ -60,7 +49,7 @@ You can:
 
 ## Enable sign-in enforcement for unassociated machines
 
-> \[!NOTE]
+> \[!IMPORTANT]
 >
 > Sign-in enforcement for unassociated machines is different from
 > the [organization-level sign-in enforcement](https://docs.docker.com/desktop/enterprise/enforce-sign-in/)
@@ -81,12 +70,7 @@ You can enable sign-in enforcement using two methods:
 - For all unassociated machines in your organization
 - For individual unassociated machines
 
-> \[!IMPORTANT]
->
-> Sign-in enforcement only takes effect after Docker Desktop is restarted.
-> Users can continue using Docker Desktop until their next restart.
-
-### Enable sign-in enforcement for all unassociated machines
+### Enable for all unassociated machines
 
 To enable sign-in enforcement for all unassociated machines:
 
@@ -95,19 +79,19 @@ To enable sign-in enforcement for all unassociated machines:
 3. Turn on the **Enforce sign-in** toggle.
 4. In the pop-up modal, select **Require sign-in** to confirm.
 
-The **Sign-in required** status will update for all unassociated machines to
+The **Sign-in required** status updates all unassociated machines to
 **Yes**.
+
+Sign-in enforcement only takes effect after Docker Desktop is restarted.
+Users can continue using Docker Desktop until their next restart.
 
 > \[!NOTE]
 >
 > When you enable sign-in enforcement for all unassociated machines, any new
-> machines detected in the future will automatically have sign-in enforcement
-> enabled. Sign-in enforcement requires Docker Desktop version 4.41 or later.
-> Users with older versions will not be prompted to sign in and can continue
-> using Docker Desktop normally until they update. Their status shows
-> as **Pending** until they update to version 4.41 or later.
+> machines detected in the future automatically have sign-in enforcement
+> enabled.
 
-### Enable sign-in enforcement for individual unassociated machines
+### Enable for individual unassociated machines
 
 To enable sign-in enforcement for individual unassociated machines:
 
@@ -117,26 +101,17 @@ To enable sign-in enforcement for individual unassociated machines:
 4. Select the **Actions** menu and choose **Turn on sign-in enforcement**.
 5. In the pop-up modal, select **Require sign-in** to confirm.
 
-The **Sign-in required** status will update for the individual machine to
+The **Sign-in required** status updates for the individual machine to
 **Yes**.
 
-> \[!NOTE]
->
-> Sign-in enforcement requires Docker Desktop version 4.41 or later. Users
-> with older versions will not be prompted to sign in and can continue using
-> Docker Desktop normally until they update. Their status shows as **Pending**
-> until they update to version 4.41 or later.
-
-### What happens when users sign in
+### What happens sign-in is enforced
 
 After you enable sign-in enforcement:
 
-1. Users must restart Docker Desktop. Enforcement only takes effect after
-   restart.
-2. When users open Docker Desktop, they see a sign-in prompt. They must sign
-   in to continue using Docker Desktop.
-3. User email addresses appear in the **Unassociated** list.
-4. You can add users to your organization.
+- When users open Docker Desktop, they see a sign-in prompt. They must sign
+  in to continue using Docker Desktop.
+- User email addresses appear in the **Unassociated** list.
+- You can add users to your organization.
 
 Users can continue using Docker Desktop immediately after signing in, even
 before being added to your organization.
@@ -163,7 +138,7 @@ organization in two ways:
 > \[!NOTE]
 >
 > If you add users and do not have enough seats in your organization, a
-> pop-up will appear prompting you to **Get more seats**.
+> pop-up appears prompting you to **Get more seats**.
 
 ### Add individual users
 
@@ -191,7 +166,7 @@ organization in two ways:
 3. Turn off the **Enforce sign-in** toggle.
 4. In the pop-up modal, select **Turn off sign-in requirement** to confirm.
 
-The **Sign-in required** status will update for all unassociated machines to
+The **Sign-in required** status updates for all unassociated machines to
 **No**.
 
 ### Disable for specific unassociated machines
@@ -202,5 +177,5 @@ The **Sign-in required** status will update for all unassociated machines to
 4. Select the **Actions** menu and choose **Turn off sign-in enforcement**.
 5. In the pop-up modal, select **Turn off sign-in requirement** to confirm.
 
-The **Sign-in required** status will update for the individual machine to
+The **Sign-in required** status updates for the individual machine to
 **No**.

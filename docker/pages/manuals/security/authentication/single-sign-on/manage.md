@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/manage.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/security/authentication/single-sign-on/manage.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/manage.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/security/authentication/single-sign-on/manage.md)
 
 # Manage SSO domains and connections
 
@@ -7,9 +7,8 @@
 - Subscription: Business
 - For: Administrators
 
-This page covers how to manage single sign-on (SSO) after initial setup,
-including managing domains, connections, users, and provisioning
-settings.
+After you set up single sign-on (SSO), you can add or remove domains, edit or
+delete connections, and change how users are provisioned.
 
 ## Manage domains
 
@@ -26,31 +25,34 @@ To add a domain to an existing SSO connection:
 5. In the **Domains** section, select **Add domain**.
 6. Enter the domain you want to add to the connection.
 7. Select **Next** to confirm or change the connected organizations.
-8. Select **Next** to confirm or change the default organization and
-   team provisioning selections.
+8. Select **Next** to confirm or change the default organization and team
+   provisioning selections.
 9. Review the connection details and select **Update connection**.
 
 ### Remove a domain from an SSO connection
 
 > \[!IMPORTANT]
 >
-> If you use multiple identity providers with the same domain, you must remove the domain from each SSO connection individually.
+> If you use multiple identity providers with the same domain, you must remove
+> the domain from each SSO connection individually.
 
-1. Sign in to [Docker Home](https://app.docker.com) and select your company or organization from the top-left account drop-down.
+1. Sign in to [Docker Home](https://app.docker.com) and select your company or
+   organization from the top-left account drop-down.
 2. Select **Identity & auth**, then **SSO and SCIM**.
-3. In the **SSO connections** table, select the **Actions** menu for your connection, then
-   **Edit connection**.
+3. In the **SSO connections** table, select the **Actions** menu for your
+   connection, then **Edit connection**.
 4. Select **Next** to navigate to the domains section.
-5. In the **Domain** section, select the **X** icon next to the domain
-   you want to remove.
+5. In the **Domain** section, select the **X** icon next to the domain you want
+   to remove.
 6. Select **Next** to confirm or change the connected organizations.
-7. Select **Next** to confirm or change the default organization and
-   team provisioning selections.
+7. Select **Next** to confirm or change the default organization and team
+   provisioning selections.
 8. Review the connection details and select **Update connection**.
 
 > \[!NOTE]
 >
-> When you re-add a domain, Docker assigns a new TXT record value. You must complete domain verification again with the new TXT record.
+> When you re-add a domain, Docker assigns a new TXT record value. You must
+> complete domain verification again with the new TXT record.
 
 ## Manage SSO connections
 
@@ -58,7 +60,8 @@ To add a domain to an existing SSO connection:
 
 To view all configured SSO connections:
 
-1. Sign in to [Docker Home](https://app.docker.com) and select your company or organization from the top-left account drop-down.
+1. Sign in to [Docker Home](https://app.docker.com) and select your company or
+   organization from the top-left account drop-down.
 2. Select **Identity & auth**, then **SSO and SCIM**.
 3. View all configured connections in the **SSO connections** table.
 
@@ -66,30 +69,34 @@ To view all configured SSO connections:
 
 To modify an existing SSO connection:
 
-1. Sign in to [Docker Home](https://app.docker.com) and select your company or organization from the top-left account drop-down.
+1. Sign in to [Docker Home](https://app.docker.com) and select your company or
+   organization from the top-left account drop-down.
 2. Select **Identity & auth**, then **SSO and SCIM**.
-3. In the **SSO connections** table, select the **Actions** menu for your connection, then
-   **Edit connection**.
+3. In the **SSO connections** table, select the **Actions** menu for your
+   connection, then **Edit connection**.
 4. Follow the on-screen instructions to modify your connection settings.
 
 ### Delete a connection
 
 To remove an SSO connection:
 
-1. Sign in to [Docker Home](https://app.docker.com) and select your company or organization from the top-left account drop-down.
+1. Sign in to [Docker Home](https://app.docker.com) and select your company or
+   organization from the top-left account drop-down.
 2. Select **Identity & auth**, then **SSO and SCIM**.
-3. In the **SSO connections** table, select the **Actions** menu for your connection, then
-   **Delete connection**.
+3. In the **SSO connections** table, select the **Actions** menu for your
+   connection, then **Delete connection**.
 4. Follow the on-screen instructions to confirm the deletion.
 
 > \[!WARNING]
 >
-> Deleting an SSO connection removes access for all users who authenticate through
-> that connection.
+> Deleting an SSO connection removes access for all users who authenticate
+> through that connection.
 
 ## Manage users and provisioning
 
-Docker automatically provisions users through Just-in-Time (JIT) provisioning when they sign in via SSO. You can also manually manage users and configure different provisioning methods.
+Docker automatically provisions users through Just-in-Time (JIT) provisioning
+when they sign in via SSO. You can also manually manage users and configure
+different provisioning methods.
 
 ### How provisioning works
 
@@ -98,32 +105,35 @@ Docker supports the following provisioning methods:
 - JIT provisioning (default): Users are automatically added to your organization
   when they sign in via SSO
 - SCIM provisioning: Sync users and groups from your identity provider to Docker
-- Group mapping: Sync user groups from your identity provider with teams in your Docker organization
+- Group mapping: Sync user groups from your identity provider with teams in your
+  Docker organization
 - Manual provisioning: Turn off automatic provisioning and manually invite users
 
-For more information on provisioning methods, see [Provision users](https://docs.docker.com/security/provisioning/).
+For more information on provisioning methods, see
+[Provision users](https://docs.docker.com/security/provisioning/).
 
 ### Add guest users
 
 To invite users who don't authenticate through your identity provider:
 
-1. Sign in to [Docker Home](https://app.docker.com/) and select
-   your organization.
+1. Sign in to [Docker Home](https://app.docker.com/) and select your
+   organization.
 2. Select **Members**.
 3. Select **Invite**.
 4. Follow the on-screen instructions to invite the user.
 
-The user receives an email invitation and can create a Docker account or sign
-in with their existing account.
+The user receives an email invitation and can create a Docker account or sign in
+with their existing account.
 
 ### Remove users
 
 To remove a user from your organization:
 
-1. Sign in to [Docker Home](https://app.docker.com/) and select
-   your organization.
+1. Sign in to [Docker Home](https://app.docker.com/) and select your
+   organization.
 2. Select **Members**.
-3. Find the user you want to remove and select the **Actions** menu next to their name.
+3. Find the user you want to remove and select the **Actions** menu next to
+   their name.
 4. Select **Remove** and confirm the removal.
 
 The user loses access to your organization immediately upon removal.

@@ -1,3 +1,3 @@
-> Pinned source for Docker main: [content/reference/samples/ai-ml.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/reference/samples/ai-ml.md)
+> Pinned source for Docker main: [content/reference/samples/ai-ml.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/reference/samples/ai-ml.md)
 
 # AI/ML samples

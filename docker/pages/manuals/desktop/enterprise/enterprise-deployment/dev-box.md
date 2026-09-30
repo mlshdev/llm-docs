@@ -1,6 +1,12 @@
-> Pinned source for Docker main: [content/manuals/desktop/enterprise/enterprise-deployment/dev-box.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/enterprise/enterprise-deployment/dev-box.md)
+> Pinned source for Docker main: [content/manuals/desktop/enterprise/enterprise-deployment/dev-box.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/desktop/enterprise/enterprise-deployment/dev-box.md)
 
 # Dev Box
+
+> \[!IMPORTANT]
+>
+> Microsoft has announced the retirement of Microsoft Dev Box. The service entered its closing-down period on 14 September 2026 and retires fully at 17:00 UTC on 18 September 2028. Microsoft recommends transitioning to Windows 365 or another solution. See the [Microsoft Dev Box retirement guide](https://learn.microsoft.com/en-us/azure/dev-box/dev-box-retirement-guide).
+>
+> To deploy Docker Desktop on Windows 365 Cloud PCs or other managed Windows machines, use the [MSI installer](https://docs.docker.com/desktop/enterprise/enterprise-deployment/msi-install-and-configure/) with [Intune](https://docs.docker.com/desktop/enterprise/enterprise-deployment/use-intune/).
 
 Docker Desktop is available as a pre-configured image in the Microsoft Azure Marketplace for use with Microsoft Dev Box, allowing developers to quickly set up consistent development environments in the cloud.
 

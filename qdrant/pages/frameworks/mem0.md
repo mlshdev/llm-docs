@@ -1,7 +1,7 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/frameworks/mem0.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/frameworks/mem0.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/frameworks/mem0.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/frameworks/mem0.md)
 > Canonical documentation: https://qdrant.tech/documentation/frameworks/mem0/
 
-![Mem0 Logo](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/documentation/frameworks/mem0/mem0-banner.png)
+![Mem0 Logo](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/frameworks/mem0/mem0-banner.png)
 
 [Mem0](https://mem0.ai) is a self-improving memory layer for LLM applications, enabling personalized AI experiences that save costs and delight users. Mem0 remembers user preferences, adapts to individual needs, and continuously improves over time, ideal for chatbots and AI systems.
 

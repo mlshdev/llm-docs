@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/extensions/publish.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/extensions/extensions-sdk/extensions/publish.md)
+> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/extensions/publish.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/extensions/extensions-sdk/extensions/publish.md)
 
 # Publish in the Marketplace
 

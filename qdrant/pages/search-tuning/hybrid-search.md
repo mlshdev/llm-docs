@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-tuning/hybrid-search.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/search-tuning/hybrid-search.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-tuning/hybrid-search.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/search-tuning/hybrid-search.md)
 > Canonical documentation: https://qdrant.tech/documentation/search-tuning/hybrid-search/
 
 # Hybrid Search in Qdrant
@@ -34,7 +34,7 @@ In Qdrant, a prefetch runs a search and passes its candidates to the main query.
 
 Dense similarity and BM25 scores use different scales. Dense similarity is bounded, while BM25's magnitude depends on how many query terms match and how rare they are in the corpus. A fixed weight on the raw scores may balance one query but let BM25 dominate another. No single raw-score weight preserves the same balance across both.
 
-![Two scatterplots compare candidate scores for Query A and Query B on identical axes. Dense similarity spans 0.6 to 0.9 in both panels. Query A's relevant and non-relevant documents have BM25 scores below 20, while Query B's documents spread from roughly 20 to 80.](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/hybrid-search/linear-combination.png)
+![Two scatterplots compare candidate scores for Query A and Query B on identical axes. Dense similarity spans 0.6 to 0.9 in both panels. Query A's relevant and non-relevant documents have BM25 scores below 20, while Query B's documents spread from roughly 20 to 80.](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/hybrid-search/linear-combination.png)
 
 *The dense scale stays similar, but the BM25 scale shifts across queries.*
 
@@ -52,7 +52,7 @@ Fusion only reorders. It works on the union of what the two prefetches returned,
 
 If a relevant document falls below a prefetch cutoff, increasing one or both prefetch limits can expose it to fusion. A larger limit adds retrieval work, and it does not help if the retrievers still miss the document at greater depth. [Candidate depth](https://qdrant.tech/documentation/search-tuning/candidate-depth/) explains how to test the limits, and the [hybrid query documentation](https://qdrant.tech/documentation/search/hybrid-queries/) covers how prefetches feed fusion.
 
-![A collection drawn as a field of documents with two overlapping oval regions over it. Documents inside the left oval are red and labeled dense prefetch, documents inside the right oval are blue and labeled sparse prefetch, documents in the overlap are dark, and roughly a third of the documents sit outside both ovals in pale grey. A note reading candidate union passed to fusion points into the retrieved region.](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/hybrid-search/candidate-boundary.png)
+![A collection drawn as a field of documents with two overlapping oval regions over it. Documents inside the left oval are red and labeled dense prefetch, documents inside the right oval are blue and labeled sparse prefetch, documents in the overlap are dark, and roughly a third of the documents sit outside both ovals in pale grey. A note reading candidate union passed to fusion points into the retrieved region.](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/hybrid-search/candidate-boundary.png)
 
 *The pale documents were never retrieved. If the right answer is one of them, no fusion method reaches it.*
 
@@ -119,7 +119,7 @@ results = client.query_points(
 
 Across five public datasets, default RRF beat the stronger individual retriever on four.
 
-![A grouped bar chart of nDCG@10 across five datasets, with three bars per dataset for dense only, sparse only, and both fused. SciFact reads 0.6239, 0.6886, and 0.7175. ArguAna reads 0.4905, 0.4224, and 0.5216. WANDS reads 0.6921, 0.7098, and 0.7254. CodeSearchNet reads 0.6299, 0.5126, and 0.6555. DBPedia-entity reads 0.4677, 0.3857, and 0.4638, the one dataset where the fused bar sits below the dense bar.](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/hybrid-search/fusion-vs-single.png)
+![A grouped bar chart of nDCG@10 across five datasets, with three bars per dataset for dense only, sparse only, and both fused. SciFact reads 0.6239, 0.6886, and 0.7175. ArguAna reads 0.4905, 0.4224, and 0.5216. WANDS reads 0.6921, 0.7098, and 0.7254. CodeSearchNet reads 0.6299, 0.5126, and 0.6555. DBPedia-entity reads 0.4677, 0.3857, and 0.4638, the one dataset where the fused bar sits below the dense bar.](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/hybrid-search/fusion-vs-single.png)
 
 *DBPedia-entity is the exception: fusion scores lower than dense retrieval.*
 

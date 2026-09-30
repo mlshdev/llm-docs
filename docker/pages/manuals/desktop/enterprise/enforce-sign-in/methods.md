@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/enterprise/enforce-sign-in/methods.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/desktop/enterprise/enforce-sign-in/methods.md)
+> Pinned source for Docker main: [content/manuals/desktop/enterprise/enforce-sign-in/methods.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/desktop/enterprise/enforce-sign-in/methods.md)
 
 **Enforce sign-in requirements**
 
@@ -40,6 +40,16 @@ To configure the registry key method manually:
 4. Restart Docker Desktop.
 5. Verify the **Sign in required!** prompt appears in Docker Desktop.
 
+You can also create this key at install time with the MSI installer's
+`ALLOWEDORG` property, which accepts multiple organizations separated by
+semicolons:
+
+```powershell
+msiexec /i "DockerDesktop.msi" /quiet /norestart ALLOWEDORG="myorg1;myorg2"
+```
+
+For more information, see [MSI installer](https://docs.docker.com/desktop/enterprise/enterprise-deployment/msi-install-and-configure/#configuration-options).
+
 **Group Policy deployment**
 
 Deploy the registry key across your organization using Group Policy:
@@ -73,7 +83,15 @@ The payload is a dictionary of key-values. Docker Desktop supports the following
 - `overrideProxyPAC`: Sets the file path where the PAC file is located. It has precedence over the remote PAC file on the selected proxy.
 - `overrideProxyEmbeddedPAC`: Sets the content of an in-memory PAC file. It has precedence over `overrideProxyPAC`.
 
-Overriding at least one of the proxy settings via Configuration profiles will automatically lock the settings as they're managed by Mac.
+> \[!IMPORTANT]
+>
+> `allowedOrgs` must be a `<string>`, not an `<array>`. Docker Desktop only reads
+> string values from a configuration profile, so an array is silently ignored and
+> no enforcement happens. This differs from the
+> [`.plist` method](#mac-plist-file-method), which does use an array.
+
+Setting at least one of the proxy keys puts Docker Desktop's proxy into manual
+mode and locks the proxy settings, so developers can't change them.
 
 1. Create a file named `docker.mobileconfig` and include the following content:
    ```xml
@@ -166,7 +184,7 @@ Some MDM solutions let you specify the payload as a plain dictionary of key-valu
    ```
 3. Set file permissions to prevent editing by non-administrator users.
 4. Restart Docker Desktop.
-5. Verify the `Sign in required!` prompt appears in Docker Desktop.
+5. Verify the **Sign in using your work email address** prompt appears in Docker Desktop.
 
 **Shell script deployment**
 
@@ -194,11 +212,11 @@ The registry.json method works across all platforms and offers flexible deployme
 
 ### File locations
 
-Create the `registry.json` file (UTF-8 without BOM) at the appropriate location:
+Create the `registry.json` file (UTF-8) at the appropriate location:
 
 | Platform | Location                                                       |
 | -------- | -------------------------------------------------------------- |
-| Windows  | `/ProgramData/DockerDesktop/registry.json`                     |
+| Windows  | `%ProgramData%\DockerDesktop\registry.json`                    |
 | Mac      | `/Library/Application Support/com.docker.docker/registry.json` |
 | Linux    | `/usr/share/docker-desktop/registry/registry.json`             |
 
@@ -216,12 +234,10 @@ Create the `registry.json` file (UTF-8 without BOM) at the appropriate location:
    ```
 4. Set file permissions to prevent user editing.
 5. Restart Docker Desktop.
-6. Verify the `Sign in required!` prompt appears in Docker Desktop.
+6. Verify the **Sign in using your work email address** prompt appears in Docker Desktop.
 
-> \[!TIP]
->
-> If users have issues starting Docker Desktop after enforcing sign-in,
-> they may need to update to the latest version.
+If users have issues starting Docker Desktop after enforcing sign-in,
+they may need to update to the latest version.
 
 **Command line setup**
 
@@ -251,6 +267,10 @@ Create the registry.json file during Docker Desktop installation:
 
 #### Windows
 
+`--allowed-org` is a flag on the EXE installer. If you deploy with the MSI
+installer, use the `ALLOWEDORG` property instead, which creates the
+[registry key](#windows-registry-key-method).
+
 ```shell
 # PowerShell
 Start-Process '.\Docker Desktop Installer.exe' -Wait 'install --allowed-org=myorg'
@@ -259,9 +279,16 @@ Start-Process '.\Docker Desktop Installer.exe' -Wait 'install --allowed-org=myor
 "Docker Desktop Installer.exe" install --allowed-org=myorg1
 ```
 
-> \[!NOTE]
+The `--allowed-org` flag accepts only one organization. To enforce sign-in for multiple organizations on Mac, configure the `registry.json` file after installation.
+
+> \[!IMPORTANT]
 >
-> The `--allowed-org` flag accepts only one organization. To enforce sign-in for multiple organizations on Mac, configure the `registry.json` file after installation.
+> With Docker Desktop version 4.83 and later, `--allowed-org` can't be combined
+> with `--user`, and it can't be used for a Microsoft Store installation. Both
+> are per-user installations and the installer rejects the combination. This
+> matters because the Windows installer selects a per-user installation by
+> default from version 4.83. For per-user installations, configure the
+> `registry.json` file after installation.
 
 #### Mac
 
@@ -271,25 +298,56 @@ sudo /Volumes/Docker/Docker.app/Contents/MacOS/install --allowed-org=myorg
 sudo hdiutil detach /Volumes/Docker
 ```
 
-> \[!NOTE]
->
-> The `--allowed-org` flag accepts only one organization. To enforce sign-in for multiple organizations on Mac, configure the `registry.json` file after installation.
+The `--allowed-org` flag accepts only one organization. To enforce sign-in for multiple organizations on Mac, configure the `registry.json` file after installation.
 
 ## Method precedence
 
-When multiple configuration methods exist on the same system, Docker Desktop uses this precedence order:
+When more than one configuration method exists on the same machine, Docker
+Desktop evaluates them in order and stops at the first one that's configured.
+The order depends on the platform.
 
-1. Registry key (Windows only)
-2. Configuration profiles (Mac only)
-3. plist file (Mac only)
-4. registry.json file
+| Platform | Precedence order                                                                                 |
+| :------- | :----------------------------------------------------------------------------------------------- |
+| Windows  | 1. Registry key<br>2. `registry.json`<br>3. `admin-settings.json`                                |
+| Mac      | 1. Configuration profile<br>2. `desktop.plist`<br>3. `registry.json`<br>4. `admin-settings.json` |
+| Linux    | 1. `registry.json`<br>2. `admin-settings.json`                                                   |
+
+Lower-precedence methods are not consulted once a higher one applies. For
+example, on a Mac with both a configuration profile and a `registry.json` file,
+only the organizations in the configuration profile are enforced.
+
+## Settings Management and sign-in enforcement
+
+Deploying an `admin-settings.json` file enforces sign-in on its own, even if the
+file contains no organization list. Users who aren't on a Docker Business
+subscription see the sign-in prompt, and the Docker Engine is held until they
+sign in.
+
+This differs from the four methods above in two ways:
+
+- It doesn't restrict sign-in to particular organizations, so any Docker account
+  satisfies it. Combine it with one of the methods above if you need organization
+  membership enforced.
+- It's the lowest-precedence method, so any of the methods above overrides it.
+
+If you use [Settings Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/), account for this when planning your rollout: developers who are signed out will be prompted to sign in as soon as the file reaches their machine and Docker Desktop restarts.
 
 ## Troubleshoot sign-in enforcement
 
 If sign-in enforcement doesn't work:
 
 - Verify file locations and permissions
-- Check that organization names use lowercase letters
-- Restart Docker Desktop or reboot the system
+- Check that organization names use lowercase letters and match your Docker Hub
+  organization name exactly. Matching is case-sensitive, so a mismatch signs out
+  every user
+- Check for stray whitespace in the value. In the Windows registry key, put each
+  organization on its own line rather than separating them with spaces or commas
+- Check whether a higher-precedence method is in effect. See
+  [Method precedence](#method-precedence)
+- Restart Docker Desktop or reboot the system. Docker Desktop doesn't pick up new
+  configuration while running
 - Confirm users are members of the specified organizations
 - Update Docker Desktop to the latest version
+
+If enforcement works but developers report that the Docker CLI stopped working,
+that's expected. See [Impact on the Docker CLI](https://docs.docker.com/desktop/enterprise/enforce-sign-in/#impact-on-the-docker-cli).

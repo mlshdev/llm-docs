@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/bulk-migrate.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/docker-hub/repos/manage/hub-images/bulk-migrate.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/bulk-migrate.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/docker-hub/repos/manage/hub-images/bulk-migrate.md)
 
 This guide shows you how to migrate Docker images in bulk between Docker Hub
 organizations or namespaces. Whether you're consolidating repositories, changing

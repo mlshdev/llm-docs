@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-serverless.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/runpodctl/reference/runpodctl-serverless.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-serverless.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/runpodctl/reference/runpodctl-serverless.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-serverless
 
 # serverless

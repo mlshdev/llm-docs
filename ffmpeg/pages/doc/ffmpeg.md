@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg.texi](https://github.com/FFmpeg/FFmpeg/blob/291f96f7929f5837dc900adef3720025516e8584/doc/ffmpeg.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg.texi](https://github.com/FFmpeg/FFmpeg/blob/5a54fcf75e0245111075b1c31593ba1919c25306/doc/ffmpeg.texi)
 
 # Synopsis
 
@@ -1729,6 +1729,20 @@ The Album loudness information, as defined in ITU-1770-4.
 A key=value string string describing the mix where "key" is a string conforming to BCP-47
 that specifies the language for the "value" string. "key" must be the same as the ones in
 all sub-mix element's *annotations*s
+
+- gain\_map
+  Groups together a base *stream* with a gain map, which together form a
+  pair of renditions (e.g. HDR and SDR) as per ISO 21496-1.
+
+For this group *type*, the following options are available
+
+```
+- el_index
+```
+
+Index of the gain map stream within the group. Defaults to 0.
+\- video\_size
+Size of the final image for presentation.
 
 E.g. to create an scalable 5.1 IAMF file from several WAV input files
 

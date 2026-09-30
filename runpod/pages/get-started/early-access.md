@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started/early-access.mdx](https://github.com/runpod/docs/blob/9e01115256339ad17308ac8022447b7aadcf9cf6/get-started/early-access.mdx)
+> Pinned source for Runpod main: [get-started/early-access.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/get-started/early-access.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started/early-access
 
 # Early access features

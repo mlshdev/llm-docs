@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/members.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/manuals/accounts/organization/manage/members.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/members.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/accounts/organization/manage/members.md)
 
 # Invite and manage organization members
 
@@ -18,7 +18,13 @@ permissions for each role.
 You can also select one or more product licenses for an invitee. Docker
 assigns available licenses when they accept. Unlike a seat, licenses aren't
 deducted from your organization's available licenses until the invitee
-accepts. See [Licenses and invites][licenses-and-invites].
+accepts. See [Invitations][license-invitations].
+
+The **Members** page is where you assign or revoke a license for one member,
+using the **action menu** on their row or the **Bulk actions** menu. To assign
+a license to a whole team, or to view how many licenses your organization has,
+use the **Teams** and **Licenses** views. See
+[Manage licenses][manage-licenses].
 
 **Email or username**
 
@@ -243,7 +249,9 @@ After you invite and manage members, explore these related topics:
 
 [roles-permissions]: /manuals/security/roles-and-permissions/_index.md
 
-[licenses-and-invites]: /manuals/accounts/organization/manage/manage-licenses.md#licenses-and-invites
+[license-invitations]: /manuals/accounts/organization/manage/manage-licenses.md#invitations
+
+[manage-licenses]: /manuals/accounts/organization/manage/manage-licenses.md
 
 [bulk-invites]: /reference/api/hub/latest/operations/postV2InvitesBulk/
 

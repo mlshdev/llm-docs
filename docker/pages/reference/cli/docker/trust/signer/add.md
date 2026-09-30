@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/engine/docker_trust_signer_add.yaml](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/data/cli/engine/docker_trust_signer_add.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_trust_signer_add.yaml](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/data/cli/engine/docker_trust_signer_add.yaml)
 
 # docker trust signer add
 

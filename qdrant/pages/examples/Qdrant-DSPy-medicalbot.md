@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/Qdrant-DSPy-medicalbot.md](https://github.com/qdrant/landing_page/blob/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/content/documentation/examples/Qdrant-DSPy-medicalbot.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/Qdrant-DSPy-medicalbot.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/examples/Qdrant-DSPy-medicalbot.md)
 > Canonical documentation: https://qdrant.tech/documentation/examples/Qdrant-DSPy-medicalbot/
 
 # Building a Chain-of-Thought Medical Chatbot with Qdrant and DSPy
@@ -19,7 +19,7 @@ To build a robust and trustworthy medical chatbot, we will combine the following
 - [**Qdrant Cloud**](https://qdrant.tech/cloud/): Qdrant is a high-performance vector search engine for storing and retrieving large collections of embeddings. In this project, we will use it to enable fast and accurate search across millions of medical documents, supporting dense and multi-vector (ColBERT) retrieval for context-aware answers.
 - [**Stanford DSPy**](https://qdrant.tech/documentation/frameworks/dspy/)**:** DSPy is the AI framework we will use to obtain the final answer. It allows the medical bot to retrieve the relevant information and reason step-by-step to produce accurate and explainable answers.
 
-![medicalbot flow chart](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/Qdrant-DSPy-medicalbot/medicalbot.png)
+![medicalbot flow chart](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/Qdrant-DSPy-medicalbot/medicalbot.png)
 
 ## Dataset Preparation and Indexing
 
@@ -196,7 +196,7 @@ By combining this guardrail with specialty and year filtering, we ensure that th
 - Answers questions from recent medical literature.
 - Doesn’t make up answers by grounding its answers in the provided literature.
 
-![medicalbot demo](https://raw.githubusercontent.com/qdrant/landing_page/d4766874cd35da264650dc005969a130267dc721/qdrant-landing/static/articles_data/Qdrant-DSPy-medicalbot/medicaldemo.png)
+![medicalbot demo](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/Qdrant-DSPy-medicalbot/medicaldemo.png)
 
 ## Conclusion
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/claude-code-sandbox-model-runner.md](https://github.com/docker/docs/blob/de3bdf51fc36c6bc64a8ead92834fdfd58da6454/content/guides/claude-code-sandbox-model-runner.md)
+> Pinned source for Docker main: [content/guides/claude-code-sandbox-model-runner.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/guides/claude-code-sandbox-model-runner.md)
 
 # Run Claude Code in a Docker Sandbox with Docker Model Runner
 
