@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/lab-creating-ai-product-reviewer.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/guides/lab-creating-ai-product-reviewer.md)
+> Pinned source for Docker main: [content/guides/lab-creating-ai-product-reviewer.md](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/content/guides/lab-creating-ai-product-reviewer.md)
 
 # Lab: Building an AI Product Reviewer
 

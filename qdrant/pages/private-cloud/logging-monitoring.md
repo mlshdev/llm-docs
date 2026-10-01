@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/private-cloud/logging-monitoring.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/private-cloud/logging-monitoring.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/private-cloud/logging-monitoring.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/private-cloud/logging-monitoring.md)
 > Canonical documentation: https://qdrant.tech/documentation/private-cloud/logging-monitoring/
 
 # Configuring Logging & Monitoring in Qdrant Private Cloud
@@ -61,4 +61,4 @@ If you want to integrate Qdrant metrics into your own monitoring system, configu
 
 If you scrape the above metrics into your own monitoring system, and you are using Grafana, you can use our [Grafana dashboard](https://github.com/qdrant/qdrant-cloud-grafana-dashboard) to visualize these metrics.
 
-![Grafana dashboard](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/cloud/cloud-grafana-dashboard.png)
+![Grafana dashboard](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/cloud/cloud-grafana-dashboard.png)

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/troubleshooting-alerts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/troubleshooting-alerts.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/troubleshooting-alerts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/troubleshooting-alerts.mdx)
 > Canonical documentation: https://trigger.dev/docs/troubleshooting-alerts
 
 # Alerts
@@ -10,21 +10,60 @@ We support receiving alerts for the following events:
 - Run fails
 - Deployment fails
 - Deployment succeeds
+- A new error group appears, regresses, or is unignored
+
+The first three are created from the **Alerts** page. The fourth — an **Error group** alert — is created from the **Errors** page instead, but appears in the same Alerts table once created. It behaves quite differently from a run failure alert; see [Error group alerts](#error-group-alerts) below.
+
+> **Note**
+>
+> If you want to be told about **every** run that fails, choose a **run fails** alert. An Error group
+> alert will not do this — it deliberately stays quiet once it has alerted on a given error.
 
 ## How to setup alerts
 
 1. Click on "Alerts" in the left hand side menu, then click on "New alert" to open the new alert modal.
-   ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/images/troubleshooting-alerts-blank.png)
+   ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/troubleshooting-alerts-blank.png)
 2. Choose to be notified by email, Slack notification or webhook whenever:
 
    - a run fails
    - a deployment fails
    - a deployment succeeds
 
-     ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/images/troubleshooting-alerts-modal.png)
+     ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/troubleshooting-alerts-modal.png)
 3. Click on the triple dot menu on the right side of the table row and select "Disable" or "Delete".
 
-   ![Disable and delete alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/images/troubleshooting-alerts-disable-delete.png)
+   ![Disable and delete alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/troubleshooting-alerts-disable-delete.png)
+
+## Error group alerts
+
+Error group alerts are **issue-based**, not run-based. They are created from the **Errors** page in the dashboard (the "Configure alerts…" button), not from the New alert modal on the Alerts page. Once created they show up in the Alerts table alongside your other alerts, labelled "Error group".
+
+An error group is one distinct error — the same error from many runs is a single group, with a status of **Unresolved**, **Resolved** or **Ignored** that you set from the Errors page.
+
+### When an error group alert fires
+
+The alert only fires when a group's status *changes* in one of these three ways:
+
+| Trigger    | Meaning                                                                        |
+| :--------- | :----------------------------------------------------------------------------- |
+| New issue  | The error has been seen for the first time.                                    |
+| Regression | The group was marked **Resolved**, and the error has occurred again since.     |
+| Unignored  | The group was **Ignored**, and the ignore condition you set has been breached. |
+
+### Why it goes quiet
+
+This is the part that surprises people, so it is worth stating plainly:
+
+**An Unresolved error group does not alert.** After an error group alert fires, the group is set to Unresolved, and it stays silent no matter how many more times that error occurs. It will only alert again once you mark it **Resolved** (and it then recurs) or **Ignored** (and the ignore condition is breached).
+
+This is intentional — one persistently broken task should not flood your Slack channel with a message per failed run. But it means an Error group alert is not a substitute for a run failure alert. If a task has been failing in production for days and you have had no notification, check whether the only alert you have configured is an Error group alert whose group is sitting at Unresolved.
+
+### Which alert type should I use?
+
+- **"Tell me about every run that fails"** → a **run fails** alert, from the Alerts page. It fires for every run that fails once its retries are exhausted.
+- **"Tell me when something new breaks"** → an **Error group** alert, from the Errors page.
+
+The two are complementary, and many teams want both.
 
 ## Alert webhooks
 
@@ -57,6 +96,10 @@ export async function action({ request }: ActionFunctionArgs) {
       }
       case "alert.deployment.failed": {
         console.log("[Webhook Internal Test] Deployment failed alert webhook received", { event });
+        break;
+      }
+      case "alert.error": {
+        console.log("[Webhook Internal Test] Error group alert webhook received", { event });
         break;
       }
       default: {
@@ -103,7 +146,7 @@ The version of the webhook payload format
 
 **Property (type: string)**
 
-The type of alert webhook. One of: `alert.run.failed`, `alert.deployment.success`, or `alert.deployment.failed`
+The type of alert webhook. One of: `alert.run.failed`, `alert.deployment.success`, `alert.deployment.failed`, or `alert.error`
 
 ### Run Failed Alert
 
@@ -372,3 +415,83 @@ Project slug
 **Property (type: string)**
 
 Project name
+
+### Error Group Alert
+
+This webhook is sent for an [error group alert](#error-group-alerts). The payload is available on the `object` property:
+
+**Property (type: string)**
+
+Why the alert fired. One of: `new_issue`, `regression`, `unignored`
+
+**Property (type: string)**
+
+Identifier for the error group
+
+**Property (type: string)**
+
+Error type
+
+**Property (type: string)**
+
+Error message
+
+**Property (type: string)**
+
+Sample stack trace, if available
+
+**Property (type: string)**
+
+When the error was first seen
+
+**Property (type: string)**
+
+When the error was last seen
+
+**Property (type: number)**
+
+Number of occurrences
+
+**Property (type: string)**
+
+Task the error occurred in
+
+**Property (type: string)**
+
+Environment ID
+
+**Property (type: string)**
+
+Environment name
+
+**Property (type: string)**
+
+Organization ID
+
+**Property (type: string)**
+
+Organization slug
+
+**Property (type: string)**
+
+Organization name
+
+**Property (type: string)**
+
+Project ID
+
+**Property (type: string)**
+
+Project reference
+
+**Property (type: string)**
+
+Project slug
+
+**Property (type: string)**
+
+Project name
+
+**Property (type: string)**
+
+URL to view the error in the dashboard

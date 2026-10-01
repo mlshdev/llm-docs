@@ -1,7 +1,7 @@
-> Pinned source for ZITADEL v4.19.3: [apps/docs/content/sdk-examples/java.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/sdk-examples/java.mdx)
+> Pinned source for ZITADEL v4.19.4: [apps/docs/content/sdk-examples/java.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/sdk-examples/java.mdx)
 > Canonical documentation: https://zitadel.com/docs/sdk-examples/java
 
-![java logo](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/tech/java.svg)
+![java logo](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/tech/java.svg)
 
 [Java](https://www.java.com/) is a general-purpose programming language designed for object-oriented programming.
 [Spring Security](https://spring.io/projects/spring-security/) is used to protect your applications from unauthorized access, protect sensitive data, and enforce access control policies.
@@ -83,7 +83,7 @@ After completing the Step-By-Step Guide, you will have:
 5. Correct setup for your application in ZITADEL
 
 [Web APP Step-By-Step Guide](https://zitadel.com/docs/examples/login/java-spring)
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/java-spring/app-profile.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/java-spring/app-profile.png)
 
 #### API Application Guide
 

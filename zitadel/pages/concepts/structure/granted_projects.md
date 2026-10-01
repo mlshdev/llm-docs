@@ -1,9 +1,9 @@
-> Pinned source for ZITADEL v4.19.3: [apps/docs/content/concepts/structure/granted_projects.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/concepts/structure/granted_projects.mdx)
+> Pinned source for ZITADEL v4.19.4: [apps/docs/content/concepts/structure/granted_projects.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/concepts/structure/granted_projects.mdx)
 > Canonical documentation: https://zitadel.com/docs/concepts/structure/granted_projects
 
 ## Granted Project
 
-![Project Grant](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/concepts/objects/project_grants.png)
+![Project Grant](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/concepts/objects/project_grants.png)
 
 With ZITADEL you can grant selected roles within your project to an organization. The receiving organization can then create role assignments for their users on their own (self-service).
 

@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.3: [apps/docs/content/self-hosting/deploy/kubernetes/configuration.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/self-hosting/deploy/kubernetes/configuration.mdx)
+> Pinned source for ZITADEL v4.19.4: [apps/docs/content/self-hosting/deploy/kubernetes/configuration.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/self-hosting/deploy/kubernetes/configuration.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/deploy/kubernetes/configuration
 
 This guide covers the major configuration options for the Zitadel Helm chart. For a complete list of options, see the [values.yaml](https://github.com/zitadel/zitadel-charts/blob/main/charts/zitadel/values.yaml) in the chart repository.

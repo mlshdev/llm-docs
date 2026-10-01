@@ -1,20 +1,20 @@
-# VictoriaLogs v1.52.0: full documentation
+# VictoriaLogs v1.53.0: full documentation
 
 Source repository: https://github.com/VictoriaMetrics/VictoriaLogs
-Release tag: v1.52.0
-Source commit: 46a54c976fa3d404396050e8a5ee6c5b0320efc5
+Release tag: v1.53.0
+Source commit: 915d91904bf7f5be66ab00f88947ae7fc1431acc
 
 # Document: VictoriaLogs
 
 Source path: docs/victorialogs/_index.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/_index.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/_index.md
 Description: VictoriaLogs is open source user-friendly database for logs from VictoriaMetrics.
 
 VictoriaLogs is [open source](https://github.com/VictoriaMetrics/VictoriaLogs/) user-friendly database for logs
 from [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics/).
 
-![README-components.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/README-components.webp)
+![README-components.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/README-components.webp)
 
 - **Articles**: [Design, Benchmarks, Comparisons...](https://docs.victoriametrics.com/victorialogs/articles/).
 - **Available**: [Binary releases](https://github.com/VictoriaMetrics/Victorialogs/releases/latest), Docker images on [Docker Hub](https://hub.docker.com/r/victoriametrics/victoria-logs/) and [Quay](https://quay.io/repository/victoriametrics/victoria-logs), [Source code](https://github.com/VictoriaMetrics/VictoriaLogs).
@@ -69,7 +69,7 @@ See [quick start docs](https://docs.victoriametrics.com/victorialogs/quickstart/
 
 If you want playing with VictoriaLogs web UI and [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/) query language,
 then go to [VictoriaLogs demo playground](https://play-vmlogs.victoriametrics.com/) and
-to [Grafana plugin playground for VictoriaLogs](https://play-grafana.victoriametrics.com/d/be5zidev72m80f/k8s-logs-via-victorialogs).
+to [Grafana plugin playground for VictoriaLogs](https://play-grafana.victoriametrics.com/d/lajgcmm/victorialogs-explorer-for-kubernetes-logs).
 
 ## Tuning
 
@@ -257,7 +257,7 @@ at April 18, 2025 UTC. This allows flexible data management.
 
 For example, old per-day data is automatically and quickly deleted according to the provided [retention policy](https://docs.victoriametrics.com/victorialogs/#retention) by removing the corresponding per-day subdirectory (partition).
 
-VictoriaLogs supports the following HTTP API endpoints at `victoria-logs:9428` address for managing partitions:
+VictoriaLogs supports the following HTTP API endpoints at `victoria-logs:9428` address for managing partitions. All of them must be called with the `POST` method:
 
 - `/internal/partition/attach?name=YYYYMMDD` - attaches the partition directory with the given name `YYYYMMDD` to VictoriaLogs,
   so it becomes visible for querying and can be used for data ingestion.
@@ -328,11 +328,11 @@ It is recommended leaving the following amounts of spare resource for smooth wor
 VictoriaLogs can log new [log streams](https://docs.victoriametrics.com/victorialogs/keyconcepts/#stream-fields) during [data ingestion](https://docs.victoriametrics.com/victorialogs/data-ingestion/).
 This is useful during the debugging of high cardinality or churn rate issues for the ingested log streams.
 This functionality can be enabled either on a permanent basis via `-logNewStreams` command-line flag or temporarily for the given number of seconds
-by sending HTTP request to `http://victoria-logs:9428/internal/log_new_streams?seconds=secs`. For example, the following command enables temporary logging
+by sending a `POST` HTTP request to `http://victoria-logs:9428/internal/log_new_streams?seconds=secs`. For example, the following command enables temporary logging
 of new log streams for 10 seconds:
 
 ```
-curl http://victoria-logs:9428/internal/log_new_streams?seconds=10
+curl -X POST http://victoria-logs:9428/internal/log_new_streams?seconds=10
 ```
 
 This endpoint can be protected with the `-logNewStreamsAuthKey` command-line flag.
@@ -346,7 +346,7 @@ VictoriaLogs performs data compactions in background in order to keep good perfo
 These compactions (merges) are performed independently on per-day partitions.
 This means that compactions are stopped for per-day partitions if no new data is ingested into these partitions.
 Sometimes it is necessary to trigger compactions for old partitions. In this case forced compaction may be initiated on the specified per-day partition
-by sending request to `/internal/force_merge?partition_prefix=YYYYMMDD`,
+by sending a `POST` request to `/internal/force_merge?partition_prefix=YYYYMMDD`,
 where `YYYYMMDD` is per-day partition name. For example, `http://victoria-logs:9428/internal/force_merge?partition_prefix=20240921` would initiate forced
 merge for September 21, 2024 partition. The call to `/internal/force_merge` returns immediately, while the corresponding forced merge continues running in background.
 
@@ -361,7 +361,7 @@ See [these docs](https://docs.victoriametrics.com/victorialogs/security-and-lb/#
 
 VictoriaLogs puts the recently [ingested logs](https://docs.victoriametrics.com/victorialogs/data-ingestion/) into in-memory buffers,
 which aren't available for [querying](https://docs.victoriametrics.com/victorialogs/querying/) for up to a second.
-If you need querying logs immediately after their ingestion, then the `/internal/force_flush` HTTP endpoint must be requested
+If you need querying logs immediately after their ingestion, then the `/internal/force_flush` HTTP endpoint must be requested with the `POST` method
 before querying. This endpoint converts in-memory buffers with the recently ingested logs into searchable [data blocks](https://victoriametrics.com/blog/victorialogs-internals-columnar-storage-on-disk/#41-logs-are-grouped-into-blocks-by-stream-and-by-time).
 
 It isn't recommended requesting the `/internal/force_flush` HTTP endpoint on a regular basis, since this increases CPU usage
@@ -380,15 +380,15 @@ because of [GDPR compliance](https://en.wikipedia.org/wiki/General_Data_Protecti
 VictoriaLogs enables HTTP API for deleting logs if `-delete.enable` command-line flag is passed to it.
 The following HTTP endpoints are exposed at `http://victoria-logs:9428/` in this case:
 
-- `/delete/run_task?filter=<logsql_filter>` - starts an asynchronous task for deletion of the logs matching the given `<logsql_filter>`.
+- `POST /delete/run_task?filter=<logsql_filter>` - starts an asynchronous task for deletion of the logs matching the given `<logsql_filter>`.
   The `<logsql_filter>` may contain arbitrary [LogsQL filter](https://docs.victoriametrics.com/victorialogs/logsql/#filters).
-  For example, request to `http://victoria-logs:9428/delete/run_task?filter={app=nginx}` starts a task for deleting all the logs with
+  For example, a `POST` request to `http://victoria-logs:9428/delete/run_task?filter={app=nginx}` starts a task for deleting all the logs with
   `{app="nginx"}` [log stream field](https://docs.victoriametrics.com/victorialogs/keyconcepts/#stream-fields).
   When calling this endpoint via `curl`, make sure to URL-encode the `{...}` filter (aka [percent-encoding](https://en.wikipedia.org/wiki/Percent-encoding)),
   otherwise `curl` may strip the curly braces and the filter will fail to parse. For example, `{app=nginx}` becomes `%7Bapp%3Dnginx%7D`, so the full request is:
 
   ```bash
-  curl 'http://victoria-logs:9428/delete/run_task?filter=%7Bapp%3Dnginx%7D'
+  curl -X POST 'http://victoria-logs:9428/delete/run_task?filter=%7Bapp%3Dnginx%7D'
   ```
 
   This endpoint returns `{"task_id":"<id>"}` response, where `<id>` is an unique id of the deletion task, which can be used
@@ -406,13 +406,29 @@ The following HTTP endpoints are exposed at `http://victoria-logs:9428/` in this
   - `filter` - the [LogsQL filter](https://docs.victoriametrics.com/victorialogs/logsql/#filters) passed to `/delete/run_task?filter=...`.
   - `start_time` - the start time of the deletion task.
 
-The logs scheduled for the deletion via `/delete/run_task` endpoint main remain visible until the deletion task is complete.
-The deletion task is complete when the `/delete/active_task` endpoint stops returning it.
+The logs scheduled for the deletion via `/delete/run_task` endpoint may remain visible until the deletion task is complete.
+The deletion task is complete when the `/delete/active_tasks` endpoint stops returning it.
+
+After deleting some logs from a [log stream](https://docs.victoriametrics.com/victorialogs/keyconcepts/#stream-fields),
+the stream may contain empty logs with only `_time`, `_stream` and `_stream_id` fields.
+These empty logs are shown in queries that use only a [stream filter](https://docs.victoriametrics.com/victorialogs/logsql/#stream-filter), such as `{app="nginx"}`.
+Add `-_msg:""` to hide them, for example `{app="nginx"} -_msg:""`.
+
+The `/delete/*` endpoints can be additionally protected with an `authKey` by passing the `-deleteAuthKey` *(available from v1.53.0)* command-line flag.
+When it is set, every request to `/delete/*` must pass the matching `authKey` query arg, which overrides `-httpAuth.*`. For example:
+
+```bash
+curl -X POST 'http://victoria-logs:9428/delete/run_task?filter=%7Bapp%3Dnginx%7D&authKey=top-secret'
+```
 
 If the deletion API must be enabled in [cluster version of VictoriaLogs](https://docs.victoriametrics.com/victorialogs/cluster/),
 then `-delete.enable` command-line flag must be passed to `vlselect` nodes (this enables the deletion API at `vlselect` nodes),
 while `-internaldelete.enable` command-line flag must be passed to `vlstorage` nodes (this enables internal cluster API
-for receiving deletion requests from `vlselect` nodes).
+for receiving deletion requests from `vlselect` nodes). The `-deleteAuthKey` command-line flag, if used, must be passed to `vlselect` nodes as well.
+
+In [multi-level cluster setup](https://docs.victoriametrics.com/victorialogs/cluster/#multi-level-cluster-setup) the lower-level `vlselect` nodes
+receive deletion requests from the top-level `vlselect` nodes, so `-internaldelete.enable` command-line flag must be passed to them as well,
+while `-delete.enable` and `-deleteAuthKey` command-line flags must be passed to the top-level `vlselect` nodes only.
 
 ## High Availability
 
@@ -436,7 +452,7 @@ The setup consists of the following components:
 - **[vmauth](https://docs.victoriametrics.com/victoriametrics/vmauth/#load-balancing)**: query logs via `vmauth` - it balances incoming queries among available VictoriaLogs instances,
   and automatically re-routes requests to healthy backends if some of the instances are temporarily unavailable.
 
-![VictoriaLogs Single-Node Instance High-Availability schema](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/ha-victorialogs-single-node.webp)
+![VictoriaLogs Single-Node Instance High-Availability schema](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/ha-victorialogs-single-node.webp)
 
 Here are the working examples of HA configuration for VictoriaLogs using Docker Compose:
 
@@ -457,7 +473,7 @@ The following steps must be performed to make a backup of the given `YYYYMMDD` p
 2. To backup the created snapshot with [`rsync`](https://en.wikipedia.org/wiki/Rsync):
 
    ```sh
-   rsync -avh --progress --delete <path-to-snapshot> <username>@<host>:<path-to-backup>/YYYYMMDD
+   rsync -avh --progress --delete <path-to-snapshot>/ <username>@<host>:<path-to-backup>/YYYYMMDD
    ```
 
    The `--delete` option is required in the command above in order to ensures that the backup contains the full copy of the original data without superfluous files.
@@ -612,6 +628,8 @@ is set to vmalert url. For example, the following command instructs proxying `ht
 This allows accessing [vmalert web UI](https://docs.victoriametrics.com/victoriametrics/vmalert/#web) via VictoriaLogs
 at the `/select/vmalert/*` paths.
 
+> Currently, Grafana Alerting UI cannot display datasource-managed rules through the VictoriaLogs datasource plugin, even when `-vmalert.proxyURL` is configured. This is because Grafana currently supports datasource-managed rules only for the `Prometheus` and `Loki` datasource types. See [this issue](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/59#issuecomment-2694191642) for details.
+
 ## List of command-line flags
 
 Pass `-help` to VictoriaLogs in order to see the list of supported command-line flags with their description:
@@ -645,6 +663,10 @@ See the docs at https://docs.victoriametrics.com/victorialogs/
      Default number of parallel data readers to use for executing every query; higher number of readers may help increasing query performance on high-latency storage such as NFS or S3 at the cost of higher RAM usage; see https://docs.victoriametrics.com/victorialogs/logsql/#parallel_readers-query-option (default 2x CPU cores)
   -delete.enable
      Whether to enable /delete/* HTTP endpoints; see https://docs.victoriametrics.com/victorialogs/#how-to-delete-logs
+  -deleteAuthKey value
+     authKey, which must be passed in query string to /delete/* . It overrides -httpAuth.* . See https://docs.victoriametrics.com/victorialogs/#how-to-delete-logs
+     Flag value can be read from the given file when using -deleteAuthKey=file:///abs/path/to/file or -deleteAuthKey=file://./relative/path/to/file.
+     Flag value can be read from the given http/https url when using -deleteAuthKey=http://host/path or -deleteAuthKey=https://host/path
   -elasticsearch.version string
      Elasticsearch version to report to client (default "8.9.0")
   -enableTCP6
@@ -707,7 +729,7 @@ See the docs at https://docs.victoriametrics.com/victorialogs/
   -httpAuth.username string
      Username for HTTP server's Basic Auth. The authentication is disabled if empty. See also -httpAuth.password
   -httpListenAddr array
-     TCP address to listen for incoming http requests. See also -httpListenAddr.useProxyProtocol
+     Addresses to listen for incoming http requests. Use unix:/path/to/socket to listen on Unix domain socket. Note that -tls and -httpListenAddr.useProxyProtocol cannot be used with Unix sockets
      Supports an array of values separated by comma or specified via multiple flags.
      Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
   -httpListenAddr.useProxyProtocol array
@@ -722,6 +744,8 @@ See the docs at https://docs.victoriametrics.com/victorialogs/
      Whether to disable both /insert/* and /internal/insert HTTP endpoints. Useful for dedicated vlselect nodes. See also -internalinsert.disable. See https://docs.victoriametrics.com/victorialogs/cluster/#security
   -insert.disableCompression
      Whether to disable compression when sending the ingested data to -storageNode nodes. Disabled compression reduces CPU usage at the cost of higher network usage
+  -insert.drainTimeout duration
+     The maximum duration for draining the in-memory buffered logs to -storageNode nodes on graceful shutdown; the logs, which cannot be drained within this duration, are dropped (default 5s)
   -insert.maxFieldsPerLine int
      The maximum number of log fields per line, which can be read by /insert/* handlers; see https://docs.victoriametrics.com/victorialogs/faq/#how-many-fields-a-single-log-entry-may-contain (default 1000)
   -insert.maxLineSizeBytes size
@@ -854,7 +878,7 @@ See the docs at https://docs.victoriametrics.com/victorialogs/
   -search.logSlowQueryDuration duration
      Log queries with execution time exceeding this value. Zero disables slow query logging (default 5s)
   -search.maxConcurrentRequests int
-     The maximum number of concurrent search requests. It shouldn't be high, since a single request can saturate all the CPU cores, while many concurrently executed requests may require high amounts of memory. See also -search.maxQueueDuration (default vlselect.getDefaultMaxConcurrentRequests())
+     The maximum number of concurrent search requests. It shouldn't be high, since a single request can saturate all the CPU cores, while many concurrently executed requests may require high amounts of memory. See also -search.maxQueueDuration (default 2x CPU cores when there are 4 or fewer; otherwise CPU cores, capped at 16)
   -search.maxQueryDuration duration
      The maximum duration for query execution. It can be overridden to a smaller value on a per-query basis via 'timeout' query arg (default 30s)
   -search.maxQueryLen size
@@ -1155,8 +1179,8 @@ These flags are available only in [VictoriaLogs enterprise](https://docs.victori
 # Document: Quick Start
 
 Source path: docs/victorialogs/QuickStart.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/QuickStart.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/QuickStart.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/QuickStart.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/QuickStart.md
 Description: It is recommended to read README and Key Concepts before you start working with VictoriaLogs.
 
 It is recommended to read [README](https://docs.victoriametrics.com/victorialogs/)
@@ -1199,8 +1223,8 @@ and unpack it. It contains a single `victoria-logs-prod` binary.
 For example, on Linux with `amd64` architecture:
 
 ```sh
-curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.51.0/victoria-logs-linux-amd64-v1.51.0.tar.gz
-tar xzf victoria-logs-linux-amd64-v1.51.0.tar.gz
+curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.52.0/victoria-logs-linux-amd64-v1.52.0.tar.gz
+tar xzf victoria-logs-linux-amd64-v1.52.0.tar.gz
 ```
 
 The binary is self-contained and requires no installation - it is ready to run as is.
@@ -1259,7 +1283,7 @@ Enter a query in the input field and press `Enter`. For example:
 
 The `*` query should return the three log lines ingested at the previous step, grouped by log stream:
 
-![vmui with query results](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/quick-start-vmui.webp)
+![vmui with query results](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/quick-start-vmui.webp)
 
 Queries are written in [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/) - a simple yet powerful
 query language for logs. The same queries can also be executed via the
@@ -1322,8 +1346,8 @@ Just download the archive for the needed operating system and architecture, unpa
 For example, the following commands download VictoriaLogs archive for Linux/amd64, unpack and run it:
 
 ```sh
-curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.51.0/victoria-logs-linux-amd64-v1.51.0.tar.gz
-tar xzf victoria-logs-linux-amd64-v1.51.0.tar.gz
+curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.52.0/victoria-logs-linux-amd64-v1.52.0.tar.gz
+tar xzf victoria-logs-linux-amd64-v1.52.0.tar.gz
 ./victoria-logs-prod -storageDataPath=victoria-logs-data
 ```
 
@@ -1346,7 +1370,7 @@ Here is the command to run VictoriaLogs in a Docker container:
 
 ```sh
 docker run --rm -it -p 9428:9428 -v ./victoria-logs-data:/victoria-logs-data \
-  docker.io/victoriametrics/victoria-logs:v1.51.0 -storageDataPath=victoria-logs-data
+  docker.io/victoriametrics/victoria-logs:v1.52.0 -storageDataPath=victoria-logs-data
 ```
 
 See also:
@@ -1471,8 +1495,8 @@ You can use the [VictoriaLogs single](https://docs.victoriametrics.com/helm/vict
 # Document: Key Concepts
 
 Source path: docs/victorialogs/keyConcepts.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/keyConcepts.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/keyConcepts.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/keyConcepts.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/keyConcepts.md
 Description: VictoriaLogs works with both structured and unstructured logs. Every log entry must contain at least the log message field. An arbitrary number of additional key=value fields can be added to the log entry. See an overvi…
 
 ## Data model
@@ -1750,8 +1774,9 @@ VictoriaLogs works perfectly with such fields unless they are associated with [l
 - Increased disk read/write I/O
 
 VictoriaLogs exposes `vl_streams_created_total` [metric](https://docs.victoriametrics.com/victorialogs/metrics/#vl_streams_created_total),
-which shows the number of created streams since the last VictoriaLogs restart. If this metric grows at a rapid rate
-over a long period of time, then there is a high chance of high-cardinality issues mentioned above.
+which shows the number of log streams registered in daily partitions since the last VictoriaLogs restart. The same stream
+is counted again when it is registered in another daily partition. If this metric increases much faster than expected outside the normal
+creation of daily partitions, then there is a high chance of high-cardinality issues mentioned above.
 VictoriaLogs can log all the newly registered streams - see [these docs](https://docs.victoriametrics.com/victorialogs/#logging-new-streams).
 This can help narrow down and eliminate high-cardinality fields from [log streams](https://docs.victoriametrics.com/victorialogs/keyconcepts/#stream-fields).
 
@@ -1769,8 +1794,8 @@ See [LogsQL docs](https://docs.victoriametrics.com/victorialogs/logsql/) for mor
 # Document: VictoriaLogs Cluster
 
 Source path: docs/victorialogs/cluster.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/cluster.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/cluster.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/cluster.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/cluster.md
 Description: Cluster mode in VictoriaLogs provides horizontal scaling to many nodes when single-node VictoriaLogs reaches vertical scalability limits of a single host. If you have the ability to run a single-node VictoriaLogs on a h…
 
 Cluster mode in VictoriaLogs provides horizontal scaling to many nodes when [single-node VictoriaLogs](https://docs.victoriametrics.com/victorialogs/)
@@ -1836,7 +1861,7 @@ All the VictoriaLogs cluster components are horizontally scalable and can be dep
 Communication between `vlinsert` / `vlselect` and `vlstorage` is done via HTTP over the port specified by the `-httpListenAddr` flag (`9428` by default):
 
 - `vlinsert` sends data to the `/internal/insert` HTTP endpoint at `vlstorage`.
-- `vlselect` sends queries to `/internal/select/*` HTTP endponts at `vlstorage`.
+- `vlselect` sends queries to `/internal/select/*` HTTP endpoints at `vlstorage`.
 
 This HTTP-based communication model allows using reverse proxies for authorization, routing, and encryption between components.
 
@@ -1877,7 +1902,7 @@ while queries return full responses from the remaining AZ. When the AZ becomes a
 can be used for querying full responses. This HA scheme can be built with the help of [vlagent](https://docs.victoriametrics.com/victorialogs/vlagent/)
 for data replication and buffering, and [vmauth](https://docs.victoriametrics.com/victoriametrics/vmauth/) for data querying:
 
-![cluster-ha.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/cluster-ha.webp)
+![cluster-ha.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/cluster-ha.webp)
 
 - [vlagent](https://docs.victoriametrics.com/victorialogs/vlagent/) receives and replicates logs to two VictoriaLogs clusters.
   If one cluster becomes unavailable, then the `vlagent` continues sending logs to the remaining healthy cluster. It also buffers logs that cannot be delivered to the unavailable cluster.
@@ -2061,8 +2086,8 @@ If you want running VictoriaLogs cluster in Kubernetes, then please read [these 
 Download and unpack the latest VictoriaLogs release:
 
 ```sh
-curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.51.0/victoria-logs-linux-amd64-v1.51.0.tar.gz
-tar xzf victoria-logs-linux-amd64-v1.51.0.tar.gz
+curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.52.0/victoria-logs-linux-amd64-v1.52.0.tar.gz
+tar xzf victoria-logs-linux-amd64-v1.52.0.tar.gz
 ```
 
 Start the first [`vlstorage` node](https://docs.victoriametrics.com/victorialogs/cluster/#architecture), which accepts incoming requests at the port `9491`
@@ -2090,7 +2115,7 @@ them evenly across the two `vlstorage` nodes started above. The `-select.disable
 ```
 
 Start the `vlselect` node, which serves [HTTP querying APIs](https://docs.victoriametrics.com/victorialogs/querying/) at the port `9471` and requests the needed data
-from `vlstorage` nodes started above. The `-insert.disable` command-line flag disables acceping insert requests at the started `vlselect` node:
+from `vlstorage` nodes started above. The `-insert.disable` command-line flag disables accepting insert requests at the started `vlselect` node:
 
 ```sh
 ./victoria-logs-prod -httpListenAddr=:9471 -storageNode=localhost:9491,localhost:9492 -insert.disable &
@@ -2173,8 +2198,8 @@ tuning them without the real need. See [the list of supported command-line flags
 # Document: vlagent
 
 Source path: docs/victorialogs/vlagent.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vlagent.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vlagent.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/vlagent.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/vlagent.md
 Description: vlagent is an agent for collecting logs from various sources and storing them in VictoriaLogs.
 
 `vlagent` is an agent for collecting logs from various sources and storing them in [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/).
@@ -2291,6 +2316,9 @@ Override with `-kubernetesCollector.timeField=field1,field2`.
 
 If none of the `_time` fields are present, `vlagent` uses the timestamp written by the container runtime.
 This is usually accurate to within a millisecond.
+
+`vlagent` also adds the `output_stream` field to every collected log entry.
+It contains the name of the stream the container wrote the log line to: `stdout` or `stderr`.
 
 ### Stream fields
 
@@ -2473,7 +2501,7 @@ spec:
       serviceAccountName: vlagent
       containers:
         - name: vlagent
-          image: victoriametrics/vlagent:v1.51.0
+          image: victoriametrics/vlagent:v1.52.0
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -2514,7 +2542,7 @@ See also: [How to exclude vlagent's own logs from collection](https://docs.victo
 `vlagent` can collect text-based logs directly from files on disk using the `-fileCollector.glob` flag.
 This is useful for collecting logs from applications that write to log files, such as nginx, Redis, ClickHouse.
 
-### Quick start
+### Quick start for file collector
 
 The following command starts `vlagent` to collect logs from the `/path/to/file` file
 and to send the collected logs to a VictoriaLogs instance at `victoria-logs:9428`:
@@ -3287,7 +3315,7 @@ See the docs at https://docs.victoriametrics.com/victorialogs/vlagent/ .
   -httpAuth.username string
      Username for HTTP server's Basic Auth. The authentication is disabled if empty. See also -httpAuth.password
   -httpListenAddr array
-     TCP address to listen for incoming http requests. Set this flag to empty value in order to disable listening on any port. This mode may be useful for running multiple vlagent instances on the same server. Note that /targets and /metrics pages aren't available if -httpListenAddr=''. See also -tls and -httpListenAddr.useProxyProtocol
+     Addresses to listen for incoming http requests. Set this flag to empty value in order to disable listening on any port. This mode may be useful for running multiple vlagent instances on the same server. Note that /targets and /metrics pages aren't available if -httpListenAddr=''. Use unix:/path/to/socket to listen on Unix domain socket. Note that -tls and -httpListenAddr.useProxyProtocol cannot be used with Unix sockets
      Supports an array of values separated by comma or specified via multiple flags.
      Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
   -httpListenAddr.useProxyProtocol array
@@ -3450,6 +3478,10 @@ See the docs at https://docs.victoriametrics.com/victorialogs/vlagent/ .
      Optional basic auth username to use for the corresponding -remoteWrite.url
      Supports an array of values separated by comma or specified via multiple flags.
      Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
+  -remoteWrite.basicAuth.usernameFile array
+     Optional path to basic auth username to use for the corresponding -remoteWrite.url. The file is re-read every second
+     Supports an array of values separated by comma or specified via multiple flags.
+     Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
   -remoteWrite.bearerToken array
      Optional bearer auth token to use for the corresponding -remoteWrite.url
      Supports an array of values separated by comma or specified via multiple flags.
@@ -3549,7 +3581,7 @@ See the docs at https://docs.victoriametrics.com/victorialogs/vlagent/ .
      Supports an array of values separated by comma or specified via multiple flags.
      Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
   -remoteWrite.tmpDataPath string
-     Path to directory for storing pending data, which isn't sent to the configured -remoteWrite.url . if this flag isn't set, then pending data is stored in the vlagent-remotewrite-data subdirectory under the -tmpDataPath directory; see also -remoteWrite.maxDiskUsagePerURL
+     Path to directory for storing pending data, which isn't sent to the configured -remoteWrite.url. If this flag isn't set, then pending data is stored in the vlagent-remotewrite-data subdirectory under the -tmpDataPath directory; see also -remoteWrite.maxDiskUsagePerURL
   -remoteWrite.url array
      Remote storage URL to write data to. Example url: http://<victorialogs-host>:9428/insert/native. Pass multiple -remoteWrite.url options in order to replicate the collected data to multiple remote storage systems. See also -remoteWrite.maxDiskUsagePerURL and -remoteWrite.format
      Supports an array of values separated by comma or specified via multiple flags.
@@ -3780,8 +3812,8 @@ These flags are available only in [VictoriaLogs enterprise](https://docs.victori
 # Document: Data Ingestion
 
 Source path: docs/victorialogs/data-ingestion/_index.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/_index.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/_index.md
 Description: VictoriaLogs and vlagent can accept logs from the following log collectors:
 
 [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) and [vlagent](https://docs.victoriametrics.com/victorialogs/vlagent/)
@@ -4095,7 +4127,7 @@ additionally to [HTTP query args](https://docs.victoriametrics.com/victorialogs/
 
 - `VL-Decolorize-Fields` - an optional comma-separated list of [log fields](https://docs.victoriametrics.com/victorialogs/keyconcepts/#data-model)
   where ANSI color codes must be removed during data ingestion. The list may contain field name prefixes ending with `*` such as `some-prefix*`.
-  In this case ANS color codes are removed from all the log fields starting with `some-prefix`.
+  In this case ANSI color codes are removed from all the log fields starting with `some-prefix`.
 
 - `VL-Extra-Fields` - an optional comma-separated list of [log fields](https://docs.victoriametrics.com/victorialogs/keyconcepts/#data-model),
   which must be added to all the ingested logs. The format of every `extra_fields` entry is `field_name=field_value`.
@@ -4155,17 +4187,18 @@ VictoriaLogs exposes various [metrics](https://docs.victoriametrics.com/victoria
     in this case. Instead, they are logged, so they can be investigated later.
     The [`vl_rows_dropped_total`](https://docs.victoriametrics.com/victorialogs/metrics/#vl_rows_dropped_total) metric is incremented for each logged row.
   - By passing `-logIngestedRows` command-line flag to VictoriaLogs. In this case it logs all the ingested data, so it can be investigated later.
-- [`vl_streams_created_total`](https://docs.victoriametrics.com/victorialogs/metrics/#vl_streams_created_total) - the number of created [log streams](https://docs.victoriametrics.com/victorialogs/keyconcepts/#stream-fields)
-  since the last VictoriaLogs restart. If this metric grows rapidly during extended periods of time, then this may lead
-  to [high cardinality issues](https://docs.victoriametrics.com/victorialogs/keyconcepts/#high-cardinality).
+- [`vl_streams_created_total`](https://docs.victoriametrics.com/victorialogs/metrics/#vl_streams_created_total) - the number of [log streams](https://docs.victoriametrics.com/victorialogs/keyconcepts/#stream-fields)
+  registered in daily partitions since the last VictoriaLogs restart. The same stream is counted again when it is registered
+  in another daily partition. If this metric increases much faster than expected outside the normal creation of daily partitions, it may indicate
+  [high cardinality issues](https://docs.victoriametrics.com/victorialogs/keyconcepts/#high-cardinality).
   The newly created log streams can be inspected in logs - see [these docs](https://docs.victoriametrics.com/victorialogs/#logging-new-streams).
 
 
 # Document: Filebeat Setup
 
 Source path: docs/victorialogs/data-ingestion/Filebeat.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Filebeat.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Filebeat.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Filebeat.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Filebeat.md
 Description: Tested with filebeat 8.15.1+.
 
 *Tested with filebeat [8.15.1+](https://www.elastic.co/guide/en/beats/libbeat/8.17/release-notes-8.15.1.html).*
@@ -4285,8 +4318,8 @@ See also:
 # Document: Fluentbit Setup
 
 Source path: docs/victorialogs/data-ingestion/Fluentbit.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Fluentbit.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Fluentbit.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Fluentbit.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Fluentbit.md
 Description: Specify http output section in the fluentbit.conf for sending the collected logs to VictoriaLogs:
 
 ## HTTP
@@ -4383,8 +4416,8 @@ See also:
 # Document: Fluentd Setup
 
 Source path: docs/victorialogs/data-ingestion/Fluentd.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Fluentd.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Fluentd.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Fluentd.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Fluentd.md
 Description: Specify HTTP output section in the fluentd.conf for sending the collected logs to VictoriaLogs:
 
 ## HTTP
@@ -4466,8 +4499,8 @@ See also:
 # Document: Logstash Setup
 
 Source path: docs/victorialogs/data-ingestion/Logstash.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Logstash.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Logstash.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Logstash.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Logstash.md
 Description: VictoriaLogs supports given below Logstash outputs:
 
 VictoriaLogs supports given below Logstash outputs:
@@ -4596,8 +4629,8 @@ See also:
 # Document: OpenTelemetry Setup
 
 Source path: docs/victorialogs/data-ingestion/opentelemetry.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/opentelemetry.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/opentelemetry.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/opentelemetry.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/opentelemetry.md
 Description: VictoriaLogs supports both client open-telemetry SDK and collector.
 
 VictoriaLogs supports both client open-telemetry [SDK](https://opentelemetry.io/docs/languages/) and [collector](https://opentelemetry.io/docs/collector/).
@@ -4704,8 +4737,8 @@ See also:
 # Document: Promtail Setup
 
 Source path: docs/victorialogs/data-ingestion/Promtail.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Promtail.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Promtail.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Promtail.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Promtail.md
 Description: Promtail, Grafana Agent and Grafana Alloy are default log collectors for Grafana Loki. They can be configured to send the collected logs to VictoriaLogs according to the following docs.
 
 [Promtail](https://grafana.com/docs/loki/latest/clients/promtail/), [Grafana Agent](https://grafana.com/docs/agent/latest/)
@@ -4817,8 +4850,8 @@ See also [data ingestion troubleshooting](https://docs.victoriametrics.com/victo
 # Document: DataDog Agent Setup
 
 Source path: docs/victorialogs/data-ingestion/DataDogAgent.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/DataDogAgent.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/DataDogAgent.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/DataDogAgent.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/DataDogAgent.md
 Description: To start ingesting logs from DataDog agent please specify a custom URL instead of default one for sending collected logs to VictoriaLogs:
 
 To start ingesting logs from DataDog agent please specify a custom URL instead of default one for sending collected logs to [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/):
@@ -4874,8 +4907,8 @@ See also:
 # Document: Telegraf Setup
 
 Source path: docs/victorialogs/data-ingestion/Telegraf.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Telegraf.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Telegraf.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Telegraf.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Telegraf.md
 Description: VictoriaLogs supports given below Telegraf outputs:
 
 VictoriaLogs supports given below Telegraf outputs:
@@ -4964,8 +4997,8 @@ See also:
 # Document: Journald Setup
 
 Source path: docs/victorialogs/data-ingestion/Journald.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Journald.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Journald.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Journald.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Journald.md
 Description: On a client site which should already have journald please install additionally systemd-journal-upload and edit /etc/systemd/journal-upload.conf and set URL to VictoriaLogs endpoint:
 
 On a client site which should already have journald please install additionally [systemd-journal-upload](https://www.freedesktop.org/software/systemd/man/latest/systemd-journal-upload.service.html) and edit `/etc/systemd/journal-upload.conf` and set `URL` to VictoriaLogs endpoint:
@@ -5052,8 +5085,8 @@ See also:
 # Document: Syslog Setup
 
 Source path: docs/victorialogs/data-ingestion/syslog.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/syslog.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/syslog.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/syslog.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/syslog.md
 Description: VictoriaLogs can accept logs in Syslog formats at the specified TCP, UDP or Unix socket addresses via -syslog.listenAddr.tcp, -syslog.listenAddr.udp and -syslog.listenAddr.unix command-line flags. VictoriaLogs listens f…
 
 [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) can accept logs in [Syslog formats](https://en.wikipedia.org/wiki/Syslog) at the specified TCP, UDP or Unix socket addresses
@@ -5344,8 +5377,8 @@ plus it accepts TLS-encrypted syslog messages via TCP port 6514 and stores them 
 # Document: OpenShift
 
 Source path: docs/victorialogs/data-ingestion/openshift.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/openshift.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/openshift.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/openshift.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/openshift.md
 Description: VictoriaLogs supports two options for ingestion logs using OpenShift native cluster logging operator:
 
 VictoriaLogs supports two options for ingestion logs using OpenShift native cluster logging operator:
@@ -5407,11 +5440,11 @@ See also:
 # Document: Splunk Setup
 
 Source path: docs/victorialogs/data-ingestion/Splunk.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Splunk.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Splunk.md
-Description: VictoriaLogs accpets logs via Splunk HEC API at /insert/splunk/services/collector/event or /insert/splunk/services/collector/event/1.0 HTTP paths. Additionally paths without /insert/splunk/ prefix are supported to simpl…
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Splunk.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Splunk.md
+Description: VictoriaLogs accepts logs via Splunk HEC API at /insert/splunk/services/collector/event or /insert/splunk/services/collector/event/1.0 HTTP paths. Additionally paths without /insert/splunk/ prefix are supported to simpl…
 
-VictoriaLogs accpets logs via [Splunk HEC API](https://help.splunk.com/en/splunk-enterprise/get-started/get-data-in/9.0/get-data-with-http-event-collector/set-up-and-use-http-event-collector-in-splunk-web) at `/insert/splunk/services/collector/event` or `/insert/splunk/services/collector/event/1.0` HTTP paths.
+VictoriaLogs accepts logs via [Splunk HEC API](https://help.splunk.com/en/splunk-enterprise/get-started/get-data-in/9.0/get-data-with-http-event-collector/set-up-and-use-http-event-collector-in-splunk-web) at `/insert/splunk/services/collector/event` or `/insert/splunk/services/collector/event/1.0` HTTP paths.
 Additionally paths without `/insert/splunk/` prefix are supported to simplify integration.
 
 ## Collect docker logs using Splunk driver
@@ -5483,8 +5516,8 @@ See also:
 # Document: Vector Setup
 
 Source path: docs/victorialogs/data-ingestion/Vector.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Vector.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Vector.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Vector.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Vector.md
 Description: VictoriaLogs can accept logs from Vector via the following protocols:
 
 VictoriaLogs can accept logs from [Vector](https://vector.dev/) via the following protocols:
@@ -5654,8 +5687,8 @@ See also:
 # Document: Querying
 
 Source path: docs/victorialogs/querying/_index.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/querying/_index.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/querying/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/querying/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/querying/_index.md
 Description: VictoriaLogs can be queried with LogsQL via the following ways:
 
 [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) can be queried with [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/)
@@ -5746,7 +5779,7 @@ By default the `/select/logsql/query` returns all the log entries matching the g
 
 - By adding [`_time` filter](https://docs.victoriametrics.com/victorialogs/logsql/#time-filter). The time range for the query can be specified via optional
   `start` and `end` query args formatted according to [these docs](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#timestamp-formats).
-  The `end` arg is exclusive; HTTP time ranges use `[start, end)`.
+  The `end` arg is exclusive, so the `[start ... end)` time range is matched.
 
 - By adding more specific [filters](https://docs.victoriametrics.com/victorialogs/logsql/#filters) to the query, which select lower number of logs.
 
@@ -5915,7 +5948,7 @@ The returned timestamps are aligned to the `<step>` at the given timezone `<offs
 
 The `<start>` and `<end>` args can contain values in [any supported format](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#timestamp-formats).
 If `<start>` is missing, then it equals to the minimum timestamp across logs stored in VictoriaLogs.
-If `<end>` is missing, then it equals to the maximum timestamp across logs stored in VictoriaLogs.
+If `<end>` is missing, then it equals to the maximum timestamp + 1ns across logs stored in VictoriaLogs.
 
 The `<step>` and `<offset>` args can contain values in [the format specified here](https://docs.victoriametrics.com/victorialogs/logsql/#duration-values).
 
@@ -6034,7 +6067,7 @@ by the given [`<query>`](https://docs.victoriametrics.com/victorialogs/logsql/) 
 
 The `<start>` and `<end>` args can contain values in [any supported format](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#timestamp-formats).
 If `<start>` is missing, then it equals to the minimum timestamp across logs stored in VictoriaLogs.
-If `<end>` is missing, then it equals to the maximum timestamp across logs stored in VictoriaLogs.
+If `<end>` is missing, then it equals to the maximum timestamp + 1ns across logs stored in VictoriaLogs.
 
 For example, the following command returns the most frequent values per each field seen in the logs with the `error` [word](https://docs.victoriametrics.com/victorialogs/logsql/#word)
 over the last hour:
@@ -6132,6 +6165,12 @@ in the format compatible with [Prometheus querying API](https://prometheus.io/do
 The `<t>` arg can contain values in [any supported format](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#timestamp-formats).
 If `<t>` is missing, then it equals to the current time.
 
+The time range for the calculated stats can be additionally limited via optional `start` and `end` query args formatted according to
+[these docs](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#timestamp-formats). The `end` arg is exclusive,
+so the `[start ... end)` time range is matched.
+If `start` is missing, then it equals to the minimum timestamp across logs stored in VictoriaLogs.
+If `end` is missing, then it equals to the maximum timestamp + 1ns across logs stored in VictoriaLogs.
+
 The `<query>` must contain [`stats` pipe](https://docs.victoriametrics.com/victorialogs/logsql/#stats-pipe). The calculated stats is converted into metrics
 with labels from `by(...)` clause of the `| stats by(...)` pipe.
 
@@ -6210,7 +6249,7 @@ See also:
 ### Querying log range stats
 
 VictoriaLogs provides `/select/logsql/stats_query_range?query=<query>&start=<start>&end=<end>&step=<step>&offset=<offset>` HTTP endpoint, which returns log stats
-for the given [`query`](https://docs.victoriametrics.com/victorialogs/logsql/) on the given `[start ... end)` time range with the given `step` interval
+for the given [`query`](https://docs.victoriametrics.com/victorialogs/logsql/) on the given `[<start> ... <end>)` time range with the given `step` interval
 and the given optional timezone offset specified in the `<offset>`.
 The stats is returned in the format compatible with [Prometheus querying API](https://prometheus.io/docs/prometheus/latest/querying/api/#range-queries).
 
@@ -6218,7 +6257,7 @@ The returned timestamps are aligned to the `<step>` at the given timezone `<offs
 
 The `<start>` and `<end>` args can contain values in [any supported format](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#timestamp-formats).
 If `<start>` is missing, then it equals to the minimum timestamp across logs stored in VictoriaLogs.
-If `<end>` is missing, then it equals to the maximum timestamp across logs stored in VictoriaLogs.
+If `<end>` is missing, then it equals to the maximum timestamp + 1ns across logs stored in VictoriaLogs.
 
 The `<step>` and `<offset>` args can contain values in [the format specified here](https://docs.victoriametrics.com/victorialogs/logsql/#duration-values).
 
@@ -6333,7 +6372,7 @@ The response also contains the number of log results per every `_stream_id`.
 
 The `<start>` and `<end>` args can contain values in [any supported format](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#timestamp-formats).
 If `<start>` is missing, then it equals to the minimum timestamp across logs stored in VictoriaLogs.
-If `<end>` is missing, then it equals to the maximum timestamp across logs stored in VictoriaLogs.
+If `<end>` is missing, then it equals to the maximum timestamp + 1ns across logs stored in VictoriaLogs.
 
 For example, the following command returns `_stream_id` values across logs with the `error` [word](https://docs.victoriametrics.com/victorialogs/logsql/#word)
 for the last 5 minutes:
@@ -6398,7 +6437,7 @@ The response also contains the number of log results per every `_stream`.
 
 The `<start>` and `<end>` args can contain values in [any supported format](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#timestamp-formats).
 If `<start>` is missing, then it equals to the minimum timestamp across logs stored in VictoriaLogs.
-If `<end>` is missing, then it equals to the maximum timestamp across logs stored in VictoriaLogs.
+If `<end>` is missing, then it equals to the maximum timestamp + 1ns across logs stored in VictoriaLogs.
 
 For example, the following command returns streams across logs with the `error` [word](https://docs.victoriametrics.com/victorialogs/logsql/#word)
 for the last 5 minutes:
@@ -6464,7 +6503,7 @@ The response also contains the number of log results per every field name.
 
 The `<start>` and `<end>` args can contain values in [any supported format](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#timestamp-formats).
 If `<start>` is missing, then it equals to the minimum timestamp across logs stored in VictoriaLogs.
-If `<end>` is missing, then it equals to the maximum timestamp across logs stored in VictoriaLogs.
+If `<end>` is missing, then it equals to the maximum timestamp + 1ns across logs stored in VictoriaLogs.
 
 For example, the following command returns stream field names across logs with the `error` [word](https://docs.victoriametrics.com/victorialogs/logsql/#word)
 for the last 5 minutes:
@@ -6528,7 +6567,7 @@ The response also contains the number of log results per every field value.
 
 The `<start>` and `<end>` args can contain values in [any supported format](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#timestamp-formats).
 If `<start>` is missing, then it equals to the minimum timestamp across logs stored in VictoriaLogs.
-If `<end>` is missing, then it equals to the maximum timestamp across logs stored in VictoriaLogs.
+If `<end>` is missing, then it equals to the maximum timestamp + 1ns across logs stored in VictoriaLogs.
 
 For example, the following command returns values for the stream field `host` across logs with the `error` [word](https://docs.victoriametrics.com/victorialogs/logsql/#word)
 for the last 5 minutes:
@@ -6585,7 +6624,7 @@ See also:
 ### Querying tenants
 
 VictoriaLogs provides `/select/tenant_ids?start=<start>&end=<end>` endpoint, which returns [tenant ids](https://docs.victoriametrics.com/victorialogs/#multitenancy)
-for the ingested logs on the given `[start ... end)` time range.
+for the ingested logs on the given `[<start> ... <end>)` time range.
 
 This endpoint must be called with empty `AccountID` request header for security reasons - this prevents from unauthorized calls for this endpoint
 from clients who have access to the specified `AccountID` tenant. This can be enforced at `vmauth` side
@@ -6610,7 +6649,7 @@ The response also contains the number of log results per every field name.
 
 The `<start>` and `<end>` args can contain values in [any supported format](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#timestamp-formats).
 If `<start>` is missing, then it equals to the minimum timestamp across logs stored in VictoriaLogs.
-If `<end>` is missing, then it equals to the maximum timestamp across logs stored in VictoriaLogs.
+If `<end>` is missing, then it equals to the maximum timestamp + 1ns across logs stored in VictoriaLogs.
 
 For example, the following command returns field names across logs with the `error` [word](https://docs.victoriametrics.com/victorialogs/logsql/#word)
 for the last 5 minutes:
@@ -6674,7 +6713,7 @@ The response also contains the number of log results per every field value.
 
 The `<start>` and `<end>` args can contain values in [any supported format](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#timestamp-formats).
 If `<start>` is missing, then it equals to the minimum timestamp across logs stored in VictoriaLogs.
-If `<end>` is missing, then it equals to the maximum timestamp across logs stored in VictoriaLogs.
+If `<end>` is missing, then it equals to the maximum timestamp + 1ns across logs stored in VictoriaLogs.
 
 For example, the following command returns unique values for `host` [field](https://docs.victoriametrics.com/victorialogs/keyconcepts/#data-model)
 across logs with the `error` [word](https://docs.victoriametrics.com/victorialogs/logsql/#word) for the last 5 minutes:
@@ -6845,7 +6884,7 @@ in order to build Web UI into a js bundle and embed it into VictoriaLogs executa
 ## Visualization in Grafana
 
 [VictoriaLogs Grafana datasource](https://docs.victoriametrics.com/victorialogs/integrations/grafana/) allows you to query and visualize VictoriaLogs data in Grafana.
-Try [playground for VictoriaLogs Grafana datasource](https://play-grafana.victoriametrics.com/d/be5zidev72m80f/k8s-logs-via-victorialogs).
+Try [playground for VictoriaLogs Grafana datasource](https://play-grafana.victoriametrics.com/d/lajgcmm/victorialogs-explorer-for-kubernetes-logs).
 
 ## Command-line
 
@@ -6989,8 +7028,8 @@ See also:
 # Document: vlogscli
 
 Source path: docs/victorialogs/querying/vlogscli.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/querying/vlogscli.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/querying/vlogscli.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/querying/vlogscli.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/querying/vlogscli.md
 Description: vlogsqcli is an interactive command-line tool for querying VictoriaLogs. It has the following features:
 
 `vlogsqcli` is an **interactive** command-line tool for querying [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/).
@@ -7012,8 +7051,8 @@ or from docker images at [Docker Hub](https://hub.docker.com/r/victoriametrics/v
 ### Running `vlogscli` from release binary
 
 ```sh
-curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.51.0/vlutils-linux-amd64-v1.51.0.tar.gz
-tar xzf vlutils-linux-amd64-v1.51.0.tar.gz
+curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.52.0/vlutils-linux-amd64-v1.52.0.tar.gz
+tar xzf vlutils-linux-amd64-v1.52.0.tar.gz
 ./vlogscli-prod
 ```
 
@@ -7323,8 +7362,8 @@ This will build `vlogscli-prod` executable inside the `bin` folder.
 # Document: LogsQL
 
 Source path: docs/victorialogs/logsql.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logsql.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logsql.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/logsql.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/logsql.md
 Description: LogsQL is a simple yet powerful query language for VictoriaLogs. See examples, LogsQL tutorial, how to convert Loki queries to VictoriaLogs queries and SQL to LogsQL conversion guide.
 
 LogsQL is a simple yet powerful query language for [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/).
@@ -13278,8 +13317,8 @@ If you find a slow filter or pipe, try these ideas:
 # Document: Alerting with Logs
 
 Source path: docs/victorialogs/vmalert.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vmalert.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vmalert.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/vmalert.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/vmalert.md
 Description: vmalert integrates with VictoriaLogs via stats APIs /select/logsql/statsquery and /select/logsql/statsqueryrange. These endpoints return log stats in a format compatible with the Prometheus querying API. This allows usi…
 
 [vmalert](https://docs.victoriametrics.com/victoriametrics/vmalert/) integrates with VictoriaLogs via stats APIs [`/select/logsql/stats_query`](https://docs.victoriametrics.com/victorialogs/querying/#querying-log-stats)
@@ -13310,7 +13349,7 @@ Each `-rule` file may contain an arbitrary number of [groups](https://docs.victo
 See examples in the [Groups](https://docs.victoriametrics.com/victorialogs/vmalert/#groups) section. See the full list of configuration flags and their descriptions in the [Configuration](https://docs.victoriametrics.com/victorialogs/vmalert/#configuration) section.
 
 With the configuration example above, vmalert will perform the following interactions:
-![vmalert](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vmalert_victorialogs.webp)
+![vmalert](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/vmalert_victorialogs.webp)
 
 1. Rules listed in the `-rule` file are executed against the VictoriaLogs service configured via `-datasource.url`.
 2. Triggered alerting notifications are sent to the [Alertmanager](https://github.com/prometheus/alertmanager) service configured via `-notifier.url`.
@@ -13696,12 +13735,16 @@ Please refer to [How to use multitenancy in rules](https://docs.victoriametrics.
           url_prefix: "http://victorialogs:9428"
 ```
 
+### How to display rules in Grafana Alerting UI?
+
+Currently, Grafana Alerting UI cannot display datasource-managed rules through the VictoriaLogs datasource plugin, even when `-vmalert.proxyURL` is configured. This is because Grafana currently supports datasource-managed rules only for the `Prometheus` and `Loki` datasource types. See [this issue](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/59#issuecomment-2694191642) for details.
+
 
 # Document: Security and Load Balancing
 
 Source path: docs/victorialogs/security-and-lb.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/security-and-lb.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/security-and-lb.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/security-and-lb.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/security-and-lb.md
 Description: All the VictoriaLogs components must run inside a protected trusted network. Requests from the Internet must be properly authorized before being proxied to VictoriaLogs components. It is recommended using vmauth for the…
 
 ## Security on untrusted networks
@@ -13726,7 +13769,7 @@ This document contains the following configuration examples for `vmauth`:
 - [How to set up authorization for search queries](https://docs.victoriametrics.com/victorialogs/security-and-lb/#search-authorization)
 - [How to set up authorization for data ingestion](https://docs.victoriametrics.com/victorialogs/security-and-lb/#write-authorization)
 - [Routing search requests among multiple VictoriaLogs clusters](https://docs.victoriametrics.com/victorialogs/security-and-lb/#cluster-routing)
-- [Auhtorizing per-tenant search queries](https://docs.victoriametrics.com/victorialogs/security-and-lb/#tenant-based-request-proxying)
+- [Authorizing per-tenant search queries](https://docs.victoriametrics.com/victorialogs/security-and-lb/#tenant-based-request-proxying)
 - [Authorizing per-tenant data ingestion requests](https://docs.victoriametrics.com/victorialogs/security-and-lb/#tenant-based-proxying-of-data-ingestion-requests)
 - [Proxying requests to the given tenants](https://docs.victoriametrics.com/victorialogs/security-and-lb/#proxying-requests-to-the-given-tenants)
 - [Sending data to the specified tenant](https://docs.victoriametrics.com/victorialogs/security-and-lb/#tenant-assignment)
@@ -14023,7 +14066,7 @@ See [these docs](https://docs.victoriametrics.com/victoriametrics/vmauth/#load-b
 
 Enumerate all the `vlinsert` instances in the cluster under the `url_prefix` option above in order to spread load among them.
 
-Note that `vmauth` doesn't replicate data amont the backends specified in the `url_prefix` - it spreads (load balances) incoming requests among the configured backends.
+Note that `vmauth` doesn't replicate data among the backends specified in the `url_prefix` - it spreads (load balances) incoming requests among the configured backends.
 Use [vlagent](https://docs.victoriametrics.com/victorialogs/vlagent/) for replicating the data to multiple VictoriaLogs instances or multiple VictoriaLogs clusters.
 
 See also [how to set up authorization for search queries at VitoriaLogs](https://docs.victoriametrics.com/victorialogs/security-and-lb/#search-authorization).
@@ -14060,7 +14103,7 @@ users:
 
 Below is a diagram of this configuration:
 
-![security-and-lb-tenants.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/security-and-lb-tenants.webp)
+![security-and-lb-tenants.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/security-and-lb-tenants.webp)
 
 See [how to override http request headers before proxying the requests to backends](https://docs.victoriametrics.com/victoriametrics/vmauth/#modifying-http-headers).
 
@@ -14133,7 +14176,7 @@ according to [these docs](https://docs.victoriametrics.com/victorialogs/security
 want exposing individual VictoriaLogs components to untrusted networks such as Internet, then secure access to them via Basic Auth according to the docs below.
 
 All the VictoriaLogs components support request authentication via [Basic Auth](https://en.wikipedia.org/wiki/Basic_access_authentication)
-for the HTTP requests received at TCP address specified via `-httpListenAddr` command-line flag.
+for the HTTP requests received at the address specified via `-httpListenAddr` command-line flag.
 
 Specify the needed username and password via `-httpAuth.username` and `-httpAuth.password` command-line flags in order to enable Basic Auth in any VictoriaLogs component.
 
@@ -14197,8 +14240,12 @@ This may be needed if the corresponding VictoriaLogs components are exposed to u
   Use `-forceMergeAuthKey` [command-line flag](https://docs.victoriametrics.com/victorialogs/#list-of-command-line-flags).
 - [`/internal/partition/*`](https://docs.victoriametrics.com/victorialogs/#partitions-lifecycle) - manages partition lifecycle operations.
   Use `-partitionManageAuthKey` [command-line flag](https://docs.victoriametrics.com/victorialogs/#list-of-command-line-flags).
+- [`/delete/*`](https://docs.victoriametrics.com/victorialogs/#how-to-delete-logs) - deletes the ingested logs.
+  Use `-deleteAuthKey` [command-line flag](https://docs.victoriametrics.com/victorialogs/#list-of-command-line-flags).
 
 These endpoints can be accessed by specifying `authKey` query arg with the value matching the corresponding `-*AuthKey` command-line flag.
+If the `-*AuthKey` flag is set, then the endpoint accepts only the `authKey` and ignores the `-httpAuth.*` credentials.
+Otherwise it is protected with the `-httpAuth.*` credentials like all the other endpoints.
 
 For example, if VictoriaLogs is started with the `-metricsAuthKey=top-secret` command-line flag, then the `/metrics` endpoint can be accessed with the following command:
 
@@ -14209,6 +14256,24 @@ curl 'http://victoria-logs:9428/metrics?authKey=top-secret'
 Enable HTTPS on the VictoriaLogs components which accept `authKey` in order to prevent from stealing the `authKey` by attackers
 who listen for the requests over untrusted networks such as the Internet.
 See [how to enable TLS](https://docs.victoriametrics.com/victorialogs/security-and-lb/#enabling-tls-on-the-server).
+
+## Unix domain socket
+
+Pass `-httpListenAddr=unix:/path/to/socket` command-line flag to VictoriaLogs component in order to accept HTTP requests
+over a Unix domain socket instead of a TCP address. This limits access to the component to the processes running on the same host, such as a reverse proxy:
+
+```sh
+./victoria-logs -httpListenAddr=unix:/run/victoria-logs/victoria-logs.sock
+```
+
+The directory for the socket file must exist and be writable by the VictoriaLogs component,
+for example, via `RuntimeDirectory=victoria-logs` in the systemd unit.
+
+The socket file permissions are determined by the [umask](https://en.wikipedia.org/wiki/Umask) of the process.
+With the default systemd umask `0022`, only the owner of the socket file can connect to it.
+Set `UMask=0007` in the systemd unit and add other users to the group of the socket file in order to grant them access.
+
+`-httpListenAddr` can be specified multiple times in order to accept requests at both TCP addresses and Unix domain sockets.
 
 ## TLS/SSL
 
@@ -14344,8 +14409,8 @@ To update certificates:
 # Document: FAQ
 
 Source path: docs/victorialogs/FAQ.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/FAQ.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/FAQ.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/FAQ.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/FAQ.md
 Description: Yes. VictoriaLogs is ready for production use starting from v1.0.0.
 
 ## Is VictoriaLogs ready for production use?
@@ -14758,8 +14823,8 @@ Then you can extrapolate the needed compute resources for the full production wo
 # Document: Integrations
 
 Source path: docs/victorialogs/integrations/_index.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/_index.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/_index.md
 Description: VictoriaLogs integrates with many popular monitoring solutions as remote storage or datasource:
 
 VictoriaLogs integrates with many popular monitoring solutions as remote storage or datasource:
@@ -14767,6 +14832,7 @@ VictoriaLogs integrates with many popular monitoring solutions as remote storage
 - [Grafana](https://docs.victoriametrics.com/victorialogs/integrations/grafana/)
 - [Perses](https://docs.victoriametrics.com/victorialogs/integrations/perses/)
 - [Bindplane](https://docs.victoriametrics.com/victorialogs/integrations/bindplane/)
+- [Logchef](https://docs.victoriametrics.com/victorialogs/integrations/logchef/)
 
 If you think that community will benefit from new integrations, open a [feature request on GitHub](https://github.com/VictoriaMetrics/VictoriaLogs/issues).
 
@@ -14776,13 +14842,13 @@ See also integrations with [metrics collectors](https://docs.victoriametrics.com
 # Document: Perses
 
 Source path: docs/victorialogs/integrations/perses.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/perses.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/perses.md
 Description: Starting with Perses v0.53.0-beta.2 release introduces first-class integration with VictoriaLogs.
 
 Starting with [Perses](https://perses.dev/) [v0.53.0-beta.2](https://github.com/perses/perses/releases/tag/v0.53.0-beta.2) release introduces first-class integration with VictoriaLogs.
 
-![Overview VictoriaLogs Perses integration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses-overview.webp)
+![Overview VictoriaLogs Perses integration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/perses-overview.webp)
 
 # Plugins setup
 
@@ -14793,7 +14859,7 @@ Starting with [Perses](https://perses.dev/) [v0.53.0-beta.2](https://github.com/
 - Choose `Proxy` or `Direct access` depending on the public availability of your VictoriaLogs instance.
 - Click `Save` to submit.
 
-![VictoriaLogs datasource plugin configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses-datasource.webp)
+![VictoriaLogs datasource plugin configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/perses-datasource.webp)
 
 ## Variables plugin
 
@@ -14806,7 +14872,7 @@ Starting with [Perses](https://perses.dev/) [v0.53.0-beta.2](https://github.com/
 - Type a name of field to extract values for into `Field Name` field.
 - Click `Save` to submit.
 
-![VictoriaLogs variables plugin configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses-variable.webp)
+![VictoriaLogs variables plugin configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/perses-variable.webp)
 
 # Create panels
 
@@ -14819,7 +14885,7 @@ Starting with [Perses](https://perses.dev/) [v0.53.0-beta.2](https://github.com/
 - Select the VictoriaLogs datasource you created above from the `VictoriaLogs Datasource` dropdown.
 - Type a valid [LogsQL query](https://docs.victoriametrics.com/victorialogs/logsql/) in `LogsQL Query` field, it may reference a variable defined in variables plugin section using `${var-name}` expression or with specific formats like `${var:pipe}` for regex filters or `${var:csv}` for comma-separated values.
 
-![Build Logs panel using VictoriaLogs plugin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses-logs-panel.webp)
+![Build Logs panel using VictoriaLogs plugin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/perses-logs-panel.webp)
 
 ## Time Series Panel
 
@@ -14831,14 +14897,14 @@ Starting with [Perses](https://perses.dev/) [v0.53.0-beta.2](https://github.com/
 - Type a valid [LogsQL stats query](https://docs.victoriametrics.com/victorialogs/logsql/#stats) you want to build a graph for in `LogsQL Query` field. Query may reference a variable defined in variables plugin section using `${var-name}` expression or with specific formats like `${var:pipe}` for regex filters or `${var:csv}` for comma-separated values.
 - Click `Add` to save a panel.
 
-![Build Time Series panel using VictoriaLogs plugin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses-time-panel.webp)
+![Build Time Series panel using VictoriaLogs plugin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/perses-time-panel.webp)
 
 
 # Document: Bindplane
 
 Source path: docs/victorialogs/integrations/bindplane.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/bindplane.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/bindplane.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/bindplane.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/bindplane.md
 Description: VictoriaLogs integrates with Bindplane via the Bindplane application.
 
 VictoriaLogs integrates with [Bindplane](https://docs.bindplane.com/) via the [Bindplane application](https://app.bindplane.com/).
@@ -14851,7 +14917,7 @@ VictoriaLogs integrates with [Bindplane](https://docs.bindplane.com/) via the [B
 4. Configure hostname, port, and headers.
 5. Name the destination and click on Save.
 
-![Bindplane Library view with Add Destination option for VictoriaLogs](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/bindplane-library.webp)
+![Bindplane Library view with Add Destination option for VictoriaLogs](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/bindplane-library.webp)
 
 ## Add a configuration
 
@@ -14860,22 +14926,88 @@ VictoriaLogs integrates with [Bindplane](https://docs.bindplane.com/) via the [B
 3. Add your telemetry sources such as OTLP, file logs, or cloud services.
 4. Select the destination.
 
-![Bindplane Configurations page for creating a new configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/bindplane-configurations.webp)
+![Bindplane Configurations page for creating a new configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/bindplane-configurations.webp)
 
 After that Bindplane will start sending logs to VictoriaLogs, and you can query them with LogsQL.
 
-![VictoriaLogs pipelines or log view showing data received from Bindplane](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/bindplane-pipelines.webp)
+![VictoriaLogs pipelines or log view showing data received from Bindplane](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/bindplane-pipelines.webp)
 
 You can check the global view in the Library to view the resource type, component type and configurations.
 
 For VictoriaMetrics with Bindplane integration, check [this page](https://docs.victoriametrics.com/victoriametrics/integrations/bindplane/).
 
 
+# Document: Logchef
+
+Source path: docs/victorialogs/integrations/logchef.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/logchef.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/logchef.md
+Description: Logchef is a query and UI layer that connects directly to an existing VictoriaLogs deployment. It does not ingest, copy, or move logs. Your existing log shipper continues to send data to VictoriaLogs.
+
+[Logchef](https://github.com/mr-karan/logchef) is a query and UI layer that connects directly to an existing VictoriaLogs deployment. It does not ingest, copy, or move logs. Your existing log shipper continues to send data to VictoriaLogs.
+
+## Before you begin
+
+Use Logchef v2.0.2 or later. You need a reachable VictoriaLogs base URL and credentials if your deployment requires them. See the [Logchef quickstart](https://logchef.app/getting-started/quickstart/) to deploy Logchef, or try the [Logchef demo](https://demo.logchef.app).
+
+Logchef sends queries to VictoriaLogs using [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/). If your VictoriaLogs deployment uses tenants, review the [VictoriaLogs multitenancy documentation](https://docs.victoriametrics.com/victorialogs/#multitenancy).
+
+## Add a VictoriaLogs source
+
+As a global admin:
+
+1. Open **Sources**, select **Add Source**, and choose **VictoriaLogs**.
+2. Enter the VictoriaLogs **Base URL**.
+3. Select an authentication method: **No Auth**, **Basic Auth**, or **Bearer Token**.
+4. If you use VictoriaLogs multitenancy, enter **Account ID** and **Project ID** together. Both are required and must be numeric unsigned 32-bit integer values. Logchef sends them as `AccountID` and `ProjectID` request headers.
+5. Optionally set an **Immutable Scope Query** to constrain the source.
+6. Set **Timestamp Field** to `_time`. Set **Severity Field** to the field in your dataset that contains severity, such as `level`.
+7. Validate the source, then save it.
+8. Assign the saved source to the team that should access it.
+
+The base URL must be reachable from the Logchef process. If Logchef and VictoriaLogs run in different Docker containers, use the VictoriaLogs service name or another container-reachable address. Do not use `localhost` to refer to a different container.
+
+An immutable scope and tenant settings apply server-side to every query, histogram, field-values lookup, live tail, and alert evaluation issued through Logchef. For example, a scope can restrict a source to `kubernetes.namespace:="prod"`. Direct access to VictoriaLogs is outside Logchef's team and scope controls.
+
+For detailed source configuration, see the [Logchef VictoriaLogs tutorial](https://logchef.app/tutorials/victorialogs/).
+
+## Choose a query mode
+
+Use LogchefQL for straightforward filters that use the same syntax across supported backends:
+
+```text
+level="error" and service="api"
+```
+
+Use native LogsQL for VictoriaLogs-specific syntax and pipes:
+
+```logsql
+level:="error" service:="api" | fields _time, _msg, service, level
+```
+
+Logchef sends the selected time range to VictoriaLogs as `start` and `end` parameters. Use native LogsQL when you need its full query language. See the [LogsQL reference](https://docs.victoriametrics.com/victorialogs/logsql/) for syntax and pipe operators.
+
+## Explore and operate on logs
+
+With a VictoriaLogs source, Logchef provides field discovery, histograms, result views, saved queries and collections, dashboards, alerts, live tail, CLI/MCP access, and team access. Immutable scope and tenant settings continue to apply server-side for these source operations.
+
+![Logchef dashboard with log monitoring panels](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/logchef-dashboard.webp)
+
+For explorer histograms and dashboard stat, time-series, and breakdown panels, use filter expressions. Pipes are ignored for these histograms and panels, so their counts may differ from the results of the full query. Table queries can use full native LogsQL pipes.
+
+## Limitations
+
+The following Logchef features are ClickHouse-only and are not available for VictoriaLogs sources:
+
+- Surrounding-log context
+- Full-result export or download
+
+
 # Document: Metrics of VictoriaLogs
 
 Source path: docs/victorialogs/metrics.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/metrics.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/metrics.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/metrics.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/metrics.md
 Description: This document provides a comprehensive reference for all metrics exposed by VictoriaLogs at the http://localhost:9428/metrics endpoint. These metrics follow the Prometheus exposition format and can be used for monitorin…
 
 This document provides a comprehensive reference for all metrics exposed by VictoriaLogs at the `http://localhost:9428/metrics` endpoint.
@@ -15180,6 +15312,12 @@ These metrics follow the Prometheus exposition format and can be used for monito
 
 **Description:** The number of log entries processed during query execution. This counts all the rows that pass initial filtering for further query processing. High values suggest queries are scanning many rows and may need more narrow [time filters](https://docs.victoriametrics.com/victorialogs/logsql/#time-filter) or [log stream filters](https://docs.victoriametrics.com/victorialogs/logsql/#stream-filter). See also [`vl_storage_per_query_processed_blocks`](https://docs.victoriametrics.com/victorialogs/metrics/#vl_storage_per_query_processed_blocks).
 
+### vl\_storage\_per\_query\_found\_rows
+
+**Type:** Histogram
+
+**Description:** The number of logs found per query. If it is much lower than [`vl_storage_per_query_processed_rows`](https://docs.victoriametrics.com/victorialogs/metrics/#vl_storage_per_query_processed_rows), queries scan many logs to find a few of them, so they may need more narrow [time filters](https://docs.victoriametrics.com/victorialogs/logsql/#time-filter) or [log stream filters](https://docs.victoriametrics.com/victorialogs/logsql/#stream-filter).
+
 ### vl\_storage\_per\_query\_read\_values
 
 **Type:** Histogram
@@ -15197,6 +15335,12 @@ These metrics follow the Prometheus exposition format and can be used for monito
 **Type:** Histogram
 
 **Description:** Uncompressed bytes processed when reading field values during query execution. See also [`vl_storage_per_query_values_read_bytes`](https://docs.victoriametrics.com/victorialogs/metrics/#vl_storage_per_query_values_read_bytes) and [`vl_storage_per_query_read_values`](https://docs.victoriametrics.com/victorialogs/metrics/#vl_storage_per_query_read_values).
+
+### vl\_slow\_queries\_total
+
+**Type:** Counter
+
+**Description:** The number of queries logged as slow because they took longer than `-search.logSlowQueryDuration` including the time spent waiting in the queue. In [cluster](https://docs.victoriametrics.com/victorialogs/cluster/) `vlstorage` nodes expose this metric too, which helps finding the slow node.
 
 ## Concurrency and Resource Metrics
 
@@ -15242,7 +15386,7 @@ These metrics follow the Prometheus exposition format and can be used for monito
 
 **Type:** Counter
 
-**Description:** New unique combinations of stream fields first encountered during log ingestion. Only counts streams not previously seen since startup, shows growth in stream cardinality and high-cardinality detection.
+**Description:** The number of log streams registered in daily partitions since the last VictoriaLogs restart. The same stream is counted again when it is registered in another daily partition. If this metric increases much faster than expected outside the normal creation of daily partitions, it may indicate high cardinality.
 
 ### vl\_indexdb\_rows
 
@@ -15405,8 +15549,8 @@ VictoriaLogs provides official Grafana dashboards that utilize these metrics:
 # Document: Metrics of vlagent
 
 Source path: docs/victorialogs/vlagent-metrics.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vlagent-metrics.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vlagent-metrics.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/vlagent-metrics.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/vlagent-metrics.md
 Description: This document provides a comprehensive reference for all metrics exposed by vlagent at the http://localhost:9429/metrics endpoint. These metrics follow the Prometheus exposition format and can be used for monitoring, al…
 
 This document provides a comprehensive reference for all metrics exposed by `vlagent` at the `http://localhost:9429/metrics` endpoint.
@@ -15481,9 +15625,9 @@ These metrics follow the Prometheus exposition format and can be used for monito
 
 **Labels:**
 
-- `reason`: `debug`, `too_many_fields`, `too_big_timestamp`, `too_small_timestamp`, `invalid_cri_line`
+- `reason`: `debug`, `too_many_fields`, `too_big_timestamp`, `too_small_timestamp`, `invalid_cri_line`, `incomplete_line`
 
-**Description:** Log entries rejected for specific reasons. `debug` counts entries processed with `debug=1` (parsed but not stored). `too_many_fields` counts entries exceeding `-insert.maxFieldsPerLine`. `too_small_timestamp` counts entries older than `-retentionPeriod`. `too_big_timestamp` counts entries newer than `-futureRetention`. `invalid_cri_line` counts entries that fail to parse as CRI-compatible log lines in the [Kubernetes Collector](https://docs.victoriametrics.com/victorialogs/vlagent/#collect-kubernetes-pod-logs) mode.
+**Description:** Log entries rejected for specific reasons. `debug` counts entries processed with `debug=1` (parsed but not stored). `too_many_fields` counts entries exceeding `-insert.maxFieldsPerLine`. `too_small_timestamp` counts entries older than `-retentionPeriod`. `too_big_timestamp` counts entries newer than `-futureRetention`. `invalid_cri_line` counts entries that fail to parse as CRI-compatible log lines in the [Kubernetes Collector](https://docs.victoriametrics.com/victorialogs/vlagent/#collect-kubernetes-pod-logs) mode. `incomplete_line` counts incomplete last lines (without a trailing newline) dropped when a log file is rotated or deleted in the [Kubernetes Collector](https://docs.victoriametrics.com/victorialogs/vlagent/#collect-kubernetes-pod-logs) and [File Collector](https://docs.victoriametrics.com/victorialogs/vlagent/#collect-logs-from-files) modes.
 
 ### vl\_insert\_flush\_duration\_seconds
 
@@ -15712,8 +15856,8 @@ VictoriaLogs provides official Grafana dashboards that utilize these metrics:
 # Document: LogsQL Examples
 
 Source path: docs/victorialogs/logsql-examples.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logsql-examples.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logsql-examples.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/logsql-examples.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/logsql-examples.md
 Description: Run the following query:
 
 ## How to select recently ingested logs?
@@ -16198,8 +16342,8 @@ the duration since the last seen log entry with the `ERROR` word.
 # Document: How To Convert Loki Queries to VictoriaLogs Queries
 
 Source path: docs/victorialogs/logql-to-logsql.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logql-to-logsql.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logql-to-logsql.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/logql-to-logsql.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/logql-to-logsql.md
 Description: Loki provides LogQL query language, while VictoriaLogs provides LogsQL query language. Both languages are optimized for querying logs. The docs below show how to convert typical LogQL queries to LogsQL queries.
 
 Loki provides [LogQL](https://grafana.com/docs/loki/latest/query/) query language, while VictoriaLogs provides [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/)
@@ -16504,8 +16648,8 @@ These calculations can be replaced with [`math` pipe](https://docs.victoriametri
 # Document: SQL to LogsQL Tutorial
 
 Source path: docs/victorialogs/sql-to-logsql.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/sql-to-logsql.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/sql-to-logsql.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/sql-to-logsql.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/sql-to-logsql.md
 Description: This is a tutorial for the migration from SQL to LogsQL. It is expected that you are familiar with SQL and know how to execute queries at VictoriaLogs.
 
 This is a tutorial for the migration from SQL to [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/).
@@ -16616,14 +16760,14 @@ It is equivalent to the longer LogsQL query:
 
 [LogsQL pipes](https://docs.victoriametrics.com/victorialogs/logsql/#pipes) support much wider functionality compared to SQL,
 so spend some time reading [pipe docs](https://docs.victoriametrics.com/victorialogs/logsql/) and playing with them
-at [VictoriaLogs demo playground](https://play-vmlogs.victoriametrics.com/) or at [the playground for Grafana datasource for VictoriaLogs](https://play-grafana.victoriametrics.com/d/be5zidev72m80f/k8s-logs-via-victorialogs).
+at [VictoriaLogs demo playground](https://play-vmlogs.victoriametrics.com/) or at [the playground for Grafana datasource for VictoriaLogs](https://play-grafana.victoriametrics.com/d/lajgcmm/victorialogs-explorer-for-kubernetes-logs).
 
 
 # Document: Articles
 
 Source path: docs/victorialogs/Articles.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Articles.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Articles.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/Articles.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/Articles.md
 Description: Benchmarking and Comparisons:
 
 ## Third-party articles and slides
@@ -16682,6 +16826,7 @@ AI and Automation:
 Comparisons and Technical Explanations:
 
 - [Why VictoriaLogs is a better alternative to Grafana Loki?](https://itnext.io/why-victorialogs-is-a-better-alternative-to-grafana-loki-7e941567c4d5)
+- [Benchmarking Kubernetes Log Collectors: vlagent, Vector, Fluent Bit, OpenTelemetry Collector, and more](https://victoriametrics.com/blog/log-collectors-benchmark-2026/)
 - [How do open source solutions for logs work](https://itnext.io/how-do-open-source-solutions-for-logs-work-elasticsearch-loki-and-victorialogs-9f7097ecbc2f)
 - [VictoriaLogs Basics: What You Need to Know, with Examples & Visuals](https://victoriametrics.com/blog/victorialogs-architecture-basics/)
 - [VictoriaLogs Practical Ingestion Guide for Message, Time and Streams](https://victoriametrics.com/blog/victorialogs-concepts-message-time-stream/)
@@ -16701,8 +16846,8 @@ Tech Talks and Presentations:
 # Document: Release Process Guidance for VictoriaLogs
 
 Source path: docs/victorialogs/Release-Guide.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Release-Guide.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Release-Guide.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/Release-Guide.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/Release-Guide.md
 Description: Make sure you have GNU version of utilities zip, tar, sha256sum. To install them run the following commands:
 
 ## Pre-reqs
@@ -16864,8 +17009,8 @@ Once updated, run the following commands:
 # Document: CHANGELOG
 
 Source path: docs/victorialogs/CHANGELOG.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/CHANGELOG.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/CHANGELOG.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/CHANGELOG.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/CHANGELOG.md
 Description: The following tip changes can be tested by building VictoriaLogs components from the latest commit of VictoriaLogs repository according to the following docs:
 
 The following `tip` changes can be tested by building VictoriaLogs components from the latest commit of [VictoriaLogs](https://github.com/VictoriaMetrics/VictoriaLogs/) repository
@@ -16876,6 +17021,110 @@ according to the following docs:
 
 ## tip
 
+## [v1.53.0](https://github.com/VictoriaMetrics/VictoriaLogs/releases/tag/v1.53.0)
+
+Released at 2026-10-01
+
+**Update note 1:** the `/internal/force_merge`, `/internal/force_flush`, `/internal/log_new_streams` and `/internal/partition/*` HTTP endpoints now require the `POST` method for security reasons, in order to prevent GET-based [SSRF](https://en.wikipedia.org/wiki/Server-side_request_forgery) attacks. Update any scripts or automation calling these endpoints via `GET` to use `POST`. See [#1635](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1635).
+
+**Update note 2:** requests to `/select/vmalert/-/reload` and other `/select/vmalert/*` paths ending with `/config` or `/reload` now require the `-httpAuth.*` credentials for security reasons. Previously, such requests were proxied to vmalert without checking the credentials. Add the credentials to any scripts calling these paths. See [VictoriaMetrics#11548](https://github.com/VictoriaMetrics/VictoriaMetrics/pull/11548).
+
+- SECURITY: upgrade Go builder from Go1.26.5 to Go1.27.1. See [the list of issues addressed in Go1.26.6](https://github.com/golang/go/issues?q=milestone%3AGo1.26.6%20label%3ACherryPickApproved), [Go1.27 release notes](https://go.dev/doc/go1.27) and [the list of issues addressed in Go1.27.1](https://github.com/golang/go/issues?q=milestone%3AGo1.27.1%20label%3ACherryPickApproved).
+
+- SECURITY: [deletion API](https://docs.victoriametrics.com/victorialogs/#how-to-delete-logs): restrict the `/delete/run_task` endpoint to the `POST` method only in order to prevent some [SSRF](https://en.wikipedia.org/wiki/Server-side_request_forgery)-based log deletion attacks. See [#1635](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1635).
+
+- FEATURE: support for accepting HTTP requests over Unix domain socket via `-httpListenAddr=unix:/path/to/socket` command-line flag. The socket file permissions are determined by the umask of the process. See [these docs](https://docs.victoriametrics.com/victorialogs/security-and-lb/#unix-domain-socket) and [#1618](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1618).
+
+- FEATURE: [deletion API](https://docs.victoriametrics.com/victorialogs/#how-to-delete-logs): add the `-deleteAuthKey` command-line flag for protecting the `/delete/*` endpoints with a dedicated `authKey`. This allows restricting who can delete logs independently of `-httpAuth.*`. See [#1749](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1749).
+
+- FEATURE: [cluster version](https://docs.victoriametrics.com/victorialogs/cluster/): apply `-search.logSlowQueryDuration` to `vlstorage` nodes too, so slow queries are logged, along with the `waitDuration`, by the `vlstorage` node which executed them and not only by the coordinating `vlselect` node. See [#1712](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1712). Thanks to @shraddhaag for [the pull request #1740](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1740).
+
+- FEATURE: [cluster version](https://docs.victoriametrics.com/victorialogs/cluster/): optimize queries, which return the limited number of log entries with the biggest timestamps on the selected time range. [Web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui) usually executes such queries. See [#1602](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1602).
+
+- FEATURE: [dashboards/cluster](https://grafana.com/grafana/dashboards/23274), [dashboards/single](https://grafana.com/grafana/dashboards/22084), and [dashboards/vlagent](https://grafana.com/grafana/dashboards/24513): add `Fsync avg duration` panel to the Troubleshooting section of the single-node, cluster, and vlagent dashboards. This panel shows average `fsync` latency to help identify slow storage persistence. See [VictoriaMetrics#10432](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/10432).
+
+- FEATURE: [dashboards/cluster](https://grafana.com/grafana/dashboards/23274) and [dashboards/single](https://grafana.com/grafana/dashboards/22084): add `Compression ratio` time series panel to the `Storage` section of the single-node dashboard and to the `vlstorage` section of the cluster dashboard. It shows how the compression ratio changes over time, so it is easy to see how changes such as new stream fields or log parsing at ingestion affect the needed disk space. See [#1738](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1738).
+
+- FEATURE: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): add an option to customize the favicon color. This makes it easier to distinguish between different installations opened in multiple browser tabs. See [#1634](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1634).
+
+- FEATURE: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): improve field action usability in the expanded log entry view by removing the rarely used Copy action, exposing Exclude for quick access and moving action icons closer to field values. See [#1663](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1663).
+
+- FEATURE: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): add a `Back` action to the Hits chart for restoring the previous time range after zooming or panning the chart. See [#1535](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1535).
+
+- FEATURE: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): persist the Hits chart visibility preference in browser local storage. See [#1559](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1559).
+
+- FEATURE: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): show the selected time zone UTC offset next to the date/time controls and allow opening time zone settings from it.
+
+- FEATURE: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): hide the `Stacked` toggle on the Hits chart when `Group by` is set to `none`. See [#1629](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1629).
+
+- FEATURE: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): visually distinguish stream fields in expanded log entries and active filters, and automatically use [stream filters](https://docs.victoriametrics.com/victorialogs/logsql/#stream-filter) for include and exclude actions on stream fields. See [#1607](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1607).
+
+- FEATURE: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): improve the `Stream fields` sidebar with search across field names and loaded values, sorting by hits or name, selected items pinned to the top, and an `Any value` option inside expanded fields. See [#1236](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1236).
+
+- FEATURE: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): move auto-refresh settings from the header to the Execute button dropdown. See [#11343](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/11343).
+
+- FEATURE: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): add incremental loading for slow hits queries, showing progress and allowing users to narrow the time range before loading completes. See [#1645](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1645).
+
+- FEATURE: [querying](https://docs.victoriametrics.com/victorialogs/querying/): add `waitDuration` to the slow query log line emitted according to `-search.logSlowQueryDuration`, so it is easy to tell whether a slow query spent its time waiting for a free concurrency slot or actually executing. See [#1683](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1683).
+
+- FEATURE: [docs/integrations](https://docs.victoriametrics.com/victorialogs/integrations/): add [integration with Logchef](https://docs.victoriametrics.com/victorialogs/integrations/logchef/), a query and UI layer that uses VictoriaLogs as datasource.
+
+- FEATURE: [Kubernetes Collector](https://docs.victoriametrics.com/victorialogs/vlagent/#collect-kubernetes-pod-logs): add a new field `output_stream` that indicates whether CRI log lines are from stdout or stderr, allowing logs to be quickly filtered by output stream at query time. See [#1790](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1790)
+
+- FEATURE: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): prefix each displayed field value with its field name in the Group view, so multi-field rows stay readable. The `_msg` field is shown without a prefix. See [#1632](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1632).
+
+- BUGFIX: hide values passed to `-pushmetrics.header` in startup logs, `/metrics` and `/flags`, since they can contain sensitive HTTP headers such as `Authorization`. See [VictoriaMetrics#11545](https://github.com/VictoriaMetrics/VictoriaMetrics/pull/11545).
+
+- BUGFIX: [security](https://docs.victoriametrics.com/victorialogs/security-and-lb/): make the `-deleteAuthKey`, `-logNewStreamsAuthKey` and `-partitionManageAuthKey` command-line flags override `-httpAuth.*` as documented. Previously, requests to `/delete/*`, `/internal/log_new_streams` and `/internal/partition/*` had to pass both the `authKey` and the `-httpAuth.*` credentials. See [#1764](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1764).
+
+- BUGFIX: [Loki data ingestion](https://docs.victoriametrics.com/victorialogs/data-ingestion/promtail/): properly ignore structured metadata with empty values in protobuf requests. Previously, valid requests containing structured metadata with empty values were rejected. See [#1757](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1757).
+
+- BUGFIX: [metrics](https://docs.victoriametrics.com/victorialogs/metrics/): prevent `vl_streams_created_total` from decreasing when an old daily partition is removed. The metric now increases until restart, so Prometheus [`increase()`](https://docs.victoriametrics.com/metricsql/#increase) no longer reports false spikes after old partitions are deleted. See [#1461](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1461).
+
+- BUGFIX: [syslog data ingestion](https://docs.victoriametrics.com/victorialogs/data-ingestion/syslog/) and [`unpack_syslog` pipe](https://docs.victoriametrics.com/victorialogs/logsql/#unpack_syslog-pipe): prevent a panic when an incomplete RFC5424 structured data parameter ends immediately after `=`. This could occur both when ingesting syslog messages and when parsing already stored messages with `unpack_syslog`. See [#1786](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1786).
+
+- BUGFIX: [syslog data ingestion](https://docs.victoriametrics.com/victorialogs/data-ingestion/syslog/): rename the misspelled `vl_udp_reqests_total` metric to [`vl_udp_requests_total`](https://docs.victoriametrics.com/victorialogs/metrics/#vl_udp_requests_total), so it matches the docs.
+
+- BUGFIX: [cluster version (vlinsert)](https://docs.victoriametrics.com/victorialogs/cluster/): now drains buffered logs to `vlstorage` nodes on graceful shutdown instead of dropping them, bounded by the new `-insert.drainTimeout` command-line flag (default `5s`). See [#1572](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1572).
+
+- BUGFIX: [cluster version](https://docs.victoriametrics.com/victorialogs/cluster/): evenly spread rerouted data across available `vlstorage` nodes. Previously, healthy nodes adjacent to unavailable nodes in the `-storageNode` list could receive much more data, resulting in uneven resource usage. See [#1548](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1548).
+
+- BUGFIX: [cluster version](https://docs.victoriametrics.com/victorialogs/cluster/): properly cancel queries already running on `vlstorage` when the corresponding query is canceled or times out on `vlselect`. Previously, `vlstorage` could fail to detect the disconnected `vlselect`, causing these queries to continue running and waste CPU and disk IO. See [#1672](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1672).
+
+- BUGFIX: [data ingestion](https://docs.victoriametrics.com/victorialogs/data-ingestion/) and [querying](https://docs.victoriametrics.com/victorialogs/querying/): properly handle logs containing duplicate [stream field](https://docs.victoriametrics.com/victorialogs/keyconcepts/#stream-fields) names. Previously, [v1.52.0](https://github.com/VictoriaMetrics/VictoriaLogs/releases/tag/v1.52.0) could panic when ingesting such logs in single-node VictoriaLogs, drop them during ingestion in VictoriaLogs cluster, or panic when querying such data written by earlier releases. See [#1603](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1603) and [#1604](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1604).
+
+- BUGFIX: [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/): fix [`week_range[Sun,Sun]` filter](https://docs.victoriametrics.com/victorialogs/logsql/#week-range-filter) when it is used inside the [`filter` pipe](https://docs.victoriametrics.com/victorialogs/logsql/#filter-pipe). Previously, it could fail to match rows on Sunday. See [#1335](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1335).
+
+- BUGFIX: [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/): properly execute queries returning the last `N` logs (such as queries ending with [`| sort by (_time desc) limit N`](https://docs.victoriametrics.com/victorialogs/logsql/#sort-pipe)) when they contain pipes writing to the `_time` field, such as `math ... as _time`, `replace (...) at _time` or `extract "<_time>"`. Previously such queries could fail with the `missing _time field in the query results` error or return logs in the wrong order when they were executed on wide time ranges. See [#1727](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1727).
+
+- BUGFIX: [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/): fix [`sort by (_time) limit N`](https://docs.victoriametrics.com/victorialogs/logsql/#sort-pipe) returning logs out of order when the query pipeline included pipes like [`unpack_json`](https://docs.victoriametrics.com/victorialogs/logsql/#unpack_json-pipe) that overwrite `_time`. See [#1360](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1360).
+
+- BUGFIX: [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/): fix a crash when the [`math` pipe](https://docs.victoriametrics.com/victorialogs/logsql/#math-pipe) contains a quoted constant such as `"2025-01-01T00:00:00Z"`, and the query is executed with the `limit` query arg (the web UI always sets it) or via [live tailing](https://docs.victoriametrics.com/victorialogs/querying/#live-tailing).
+
+- BUGFIX: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): prevent long group-by values from overflowing group headers. See [#1663](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1663).
+
+- BUGFIX: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): render only inline Markdown links with explicit `http` or `https` destinations, such as `[text](https://example.com)`, as clickable links in log messages. Bare URLs, autolinks, reference-style links, links using other schemes, and images are rendered as plain text. See [#1470](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1470).
+
+- BUGFIX: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): prevent manually entered time ranges from shifting after Apply when using non-UTC time zones.
+
+- BUGFIX: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): fix bar chart tap, pan, and pinch-to-zoom interactions on mobile devices.
+
+- BUGFIX: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): fix the `Table` view to show all logs when `All` is selected for `Rows per page`. Previously, the table showed no rows in this case. See [#1661](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1661).
+
+- BUGFIX: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): show a dash placeholder for a log entry that has none of the selected display fields in the Group view, instead of dumping the whole entry. See [#1653](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1653).
+
+- BUGFIX: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): display the systemd-compatible `notice`, `crit`, `alert`, and `emerg` log level labels instead of collapsing them into `info` and `fatal`. See [#1543](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1543).
+
+- BUGFIX: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): keep the query autocomplete details panel open when interacting with it, so documentation links open and description text remains selectable. See [#1810](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1810).
+
+- BUGFIX: [File Collector](https://docs.victoriametrics.com/victorialogs/vlagent/#collect-logs-from-files): ignore permission denied error when trying to find a rotated log file from previous runs during startup. Previously, `vlagent` failed with non-zero error code if it couldn't open a file in the same directory as log file. See [#1796](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1796).
+
+- BUGFIX: [File Collector](https://docs.victoriametrics.com/victorialogs/vlagent/#collect-logs-from-files): properly set the `file` field for logs collected from multiple files matching the same `-fileCollector.glob` when `-fileCollector.extraFields` is set. Previously, depending on the number of extra fields, logs from one file could be stored with the `file` field and the log stream of another file. See [#1818](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1818).
+
+- BUGFIX: [File Collector](https://docs.victoriametrics.com/victorialogs/vlagent/#collect-logs-from-files): incomplete last log lines are no longer joined with the first line of the rotated file. They are dropped with a warning instead. This matches the behavior of other log collectors. See [#1819](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1819).
+
+- BUGFIX: [File Collector](https://docs.victoriametrics.com/victorialogs/vlagent/#collect-logs-from-files): drop the incomplete last log line with a warning when the log file is deleted. Previously, `vlagent` treated this case as a bug and panicked. See [#1552](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1552).
+
 ## [v1.52.0](https://github.com/VictoriaMetrics/VictoriaLogs/releases/tag/v1.52.0)
 
 Released at 2026-07-16
@@ -16883,6 +17132,8 @@ Released at 2026-07-16
 **Update note 1:** the base Docker image has been changed from [Alpine](https://www.alpinelinux.org/) to [distroless](https://github.com/googlecontainertools/distroless) in order to reduce an attack surface (The `distroless` base image doesn't contain any executables contrary to the Alpine base image). For debugging VictoriaLogs containers in Kubernetes it is recommended to use [`kubectl debug`](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_debug/).
 
 **Update note 2:** VictoriaLogs no longer provides a Docker image for the `linux/386` platform because the `distroless` base image [doesn't support this platform](https://github.com/GoogleContainerTools/distroless/issues/881). Executable files for `linux/386` platform are still published at [the VictoriaLogs releases page](https://github.com/VictoriaMetrics/VictoriaLogs/releases).
+
+**Update note 3:** [VictoriaLogs cluster](https://docs.victoriametrics.com/victorialogs/cluster/) users upgrading from versions v1.38.0 through v1.50.0 should first upgrade all `vlstorage` nodes to [v1.51.1](https://github.com/VictoriaMetrics/VictoriaLogs/releases/tag/v1.51.1), then upgrade all `vlselect` nodes to v1.51.1, and only then continue upgrading the cluster to v1.52.0. This avoids query downtime caused by incompatible internal protocol versions.
 
 - SECURITY: upgrade Go builder from Go1.26.4 to Go1.26.5. See [the list of issues addressed in Go1.26.5](https://github.com/golang/go/issues?q=milestone%3AGo1.26.5%20label%3ACherryPickApproved).
 
@@ -16940,6 +17191,14 @@ Released at 2026-07-16
 
 - BUGFIX: [web UI](https://docs.victoriametrics.com/victorialogs/querying/#web-ui): fix filters sidebar opening on mobile. See [#1537](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1537).
 
+## [v1.51.1](https://github.com/VictoriaMetrics/VictoriaLogs/releases/tag/v1.51.1)
+
+Released at 2026-08-18
+
+- SECURITY: upgrade Go builder from Go1.26.4 to Go1.26.6. See [the list of issues addressed in Go1.26.5](https://github.com/golang/go/issues?q=milestone%3AGo1.26.5%20label%3ACherryPickApproved) and [the list of issues addressed in Go1.26.6](https://github.com/golang/go/issues?q=milestone%3AGo1.26.6%20label%3ACherryPickApproved).
+
+- BUGFIX: [cluster version](https://docs.victoriametrics.com/victorialogs/cluster/): allow `vlstorage` v1.51.1 to accept requests from `vlselect` versions v1.38.0 through v1.51.0. This allows upgrading `vlstorage` nodes from older versions to v1.51.1 while `vlselect` nodes remain on the corresponding older version, and then upgrading the `vlselect` nodes to v1.51.1, without query downtime caused by an internal protocol mismatch. Starting from v1.52.0, `vlstorage` no longer accepts requests from `vlselect` v1.50.0 or earlier. See [#1665](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1665).
+
 ## [v1.51.0](https://github.com/VictoriaMetrics/VictoriaLogs/releases/tag/v1.51.0)
 
 Released at 2026-06-17
@@ -16947,6 +17206,8 @@ Released at 2026-06-17
 **Update Note 1:** [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/): disallow using [`filter` pipes](https://docs.victoriametrics.com/victorialogs/logsql/#filter-pipe) without the `filter` prefix if the filter doesn't start with `field_name:` prefix. For example, `foo | bar` is disallowed now. It must be rewritten to one of the following equivalents: `foo bar`, `foo | "bar"`, `foo | _msg:bar` or `foo | filter bar`. This reduces the chances of incorrectly written queries like in the [#1454](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1454). However, this may be a breaking change if you have queries that filter without the `filter` prefix, such as `... | !foo`, `... | {host="x"}`, `... | >5` or `... | =foo` - these now fail with `unexpected pipe` and must add the `filter` prefix (e.g. `... | filter !foo`).
 
 **Update Note 2:** [cluster version](https://docs.victoriametrics.com/victorialogs/cluster/): this release bumps the internal `vlselect` and `vlstorage` protocol version (see the queries-longer-than-10MB fix in [#1462](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1462)). A version mismatch between `vlselect` and `vlstorage` fails the request, so queries are expected to fail during a rolling upgrade while the cluster runs mixed versions. All the cluster components must be upgraded to this release or newer.
+
+**Update Note 3:** [VictoriaLogs cluster](https://docs.victoriametrics.com/victorialogs/cluster/) users upgrading from versions v1.38.0 through v1.50.0 should upgrade to [v1.51.1](https://github.com/VictoriaMetrics/VictoriaLogs/releases/tag/v1.51.1) instead of this release. Upgrade all `vlstorage` nodes first, and then upgrade all `vlselect` nodes. This avoids query downtime caused by incompatible internal protocol versions.
 
 - SECURITY: upgrade Go builder from Go1.26.2 to Go1.26.4. See [the list of issues addressed in Go1.26.3](https://github.com/golang/go/issues?q=milestone%3AGo1.26.3%20label%3ACherryPickApproved) and [the list of issues addressed in Go1.26.4](https://github.com/golang/go/issues?q=milestone%3AGo1.26.4%20label%3ACherryPickApproved).
 
@@ -17081,7 +17342,7 @@ Released at 2026-04-03
 
 - FEATURE: [data ingestion](https://docs.victoriametrics.com/victorialogs/data-ingestion/): verify the [`_stream` field](https://docs.victoriametrics.com/victorialogs/keyconcepts/#stream-fields) correctness when ingesting data via [native and internal protocols](https://docs.victoriametrics.com/victorialogs/vlagent/#multitenancy) (`native` protocol is used by [`vlagent`](https://docs.victoriametrics.com/victorialogs/vlagent/) for sending the data to VictoriaLogs, while `internal` protocol is used by `vlinsert` for sending the data to `vlstorage` in [VictoriaLogs cluster](https://docs.victoriametrics.com/victorialogs/cluster/) ). See [#38](https://github.com/VictoriaMetrics/VictoriaLogs/issues/38).
 
-- FEATURE: [data ingestion](https://docs.victoriametrics.com/victorialogs/data-ingestion/): introduce `/insert/multitenant/native` endpoint for accepting logs with mixed tenants from `vlagent` according to [these docs](https://docs.victoriametrics.com/victorialogs/vlagent/#multitenancy). Previously `vlagent` was using `/internal/insert` endpoint for sending logs with mixed tenants. It is recommended using `/insert/multitenant/native` endpoint instead, since `/internal/insert` endpoint is intended for internal communcations between `vlinsert` and `vlstorage` in [cluster mode](https://docs.victoriametrics.com/victorialogs/cluster/). See [#1189](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1189).
+- FEATURE: [data ingestion](https://docs.victoriametrics.com/victorialogs/data-ingestion/): introduce `/insert/multitenant/native` endpoint for accepting logs with mixed tenants from `vlagent` according to [these docs](https://docs.victoriametrics.com/victorialogs/vlagent/#multitenancy). Previously `vlagent` was using `/internal/insert` endpoint for sending logs with mixed tenants. It is recommended using `/insert/multitenant/native` endpoint instead, since `/internal/insert` endpoint is intended for internal communications between `vlinsert` and `vlstorage` in [cluster mode](https://docs.victoriametrics.com/victorialogs/cluster/). See [#1189](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1189).
 
 - FEATURE: [`/select/logsql/query` HTTP endpoint](https://docs.victoriametrics.com/victorialogs/querying/#querying-logs): allow returning results in CSV format for arbitrary query without any restrictions according to [these docs](https://docs.victoriametrics.com/victorialogs/querying/#querying-logs-in-csv-format). See See [#1143](https://github.com/VictoriaMetrics/VictoriaLogs/issues/1143).
 
@@ -19092,8 +19353,8 @@ Initial release
 # Document: Roadmap
 
 Source path: docs/victorialogs/Roadmap.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Roadmap.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Roadmap.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/Roadmap.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/Roadmap.md
 Description: Normalized source from docs/victorialogs/Roadmap.md.
 
 - [ ] Store data on object storage such as S3, GCS or Minio (issue [#48](https://github.com/VictoriaMetrics/VictoriaLogs/issues/48), PR [#1155](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1155)).
@@ -19111,8 +19372,8 @@ Description: Normalized source from docs/victorialogs/Roadmap.md.
 # Document: Grafana Datasource
 
 Source path: docs/victorialogs/victorialogs-datasource.md
-Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/victorialogs-datasource.md
-Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/victorialogs-datasource.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/victorialogs-datasource.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/victorialogs-datasource.md
 Description: Moved to victorialogs/integrations/grafana.
 
 ## VictoriaLogs datasource for Grafana

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/database-connections.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/database-connections.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/database-connections.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/database-connections.mdx)
 > Canonical documentation: https://trigger.dev/docs/database-connections
 
 # Database connections
@@ -67,7 +67,7 @@ Set the pool small. A task usually runs its queries in sequence, so one connecti
 | Drizzle (node-postgres)                                                                                                                 | 10 (the underlying `pg` pool)   |
 | [MongoDB driver](https://www.mongodb.com/docs/drivers/node/current/connect/connection-options/connection-pools/)                        | 100 (`maxPoolSize`)             |
 
-Keep `concurrent runs × pool size` under your provider's connection limit, and cap how many runs execute at once with [concurrency limits](https://trigger.dev/docs/queue-concurrency) so runs queue instead of overrunning the database. Direct connection limits for common Postgres providers:
+Keep `concurrent runs × pool size` under your provider's connection limit, and cap how many runs execute at once with [concurrency limits](https://trigger.dev/docs/concurrency) so runs queue instead of overrunning the database. Direct connection limits for common Postgres providers:
 
 | Provider                                                                                           | Direct connection limit                                                     |
 | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
@@ -194,7 +194,7 @@ export const myChat = chat.agent({
 
 ## Troubleshooting
 
-`too many connections` or connection refused: `concurrent runs × pool size` is over your provider's limit. Lower the pool size, cap [concurrency](https://trigger.dev/docs/queue-concurrency), or connect through a pooler.
+`too many connections` or connection refused: `concurrent runs × pool size` is over your provider's limit. Lower the pool size, cap [concurrency](https://trigger.dev/docs/concurrency), or connect through a pooler.
 
 The worker crashes right after resuming from a wait: an idle connection that closed during the suspend emitted an unhandled `error` event. Attach `pool.on("error", ...)` on a `pg` pool (node-postgres or Drizzle); Prisma and the MongoDB driver handle this internally.
 
@@ -205,6 +205,6 @@ When a task waits, the runtime can [checkpoint](https://trigger.dev/docs/how-it-
 ## See also
 
 - [Wait](https://trigger.dev/docs/wait) for the primitives that trigger a checkpoint.
-- [Concurrency and queues](https://trigger.dev/docs/queue-concurrency) to cap how many runs execute at once.
+- [Concurrency](https://trigger.dev/docs/concurrency) to cap how many runs execute at once.
 - [Lifecycle functions](https://trigger.dev/docs/tasks/overview#onwait-and-onresume-functions) for global `tasks.onWait` and `tasks.onResume`.
 - [Chat agent lifecycle hooks](https://trigger.dev/docs/ai-chat/lifecycle-hooks) for `onChatSuspend` and `onChatResume`.

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/guides/examples/react-email.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/guides/examples/react-email.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/guides/examples/react-email.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/guides/examples/react-email.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/examples/react-email
 
 # Send emails using React Email
@@ -102,7 +102,7 @@ export const sendEmail = task({
 ## The email
 
 This example email should look like this:
-![React Email](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/images/react-email.png)
+![React Email](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/react-email.png)
 
 This is just a simple implementation, you can customize the email to be as complex as you want. Check out the [React email templates](https://react.email/templates) for more inspiration.
 
@@ -133,7 +133,7 @@ We recommend using our [Cursor rules](https://trigger.dev/changelog/cursor-rules
 
 #### The generated email template
 
-![Cursor](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/images/react-email-welcome.png)
+![Cursor](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/react-email-welcome.png)
 
 #### The generated code
 

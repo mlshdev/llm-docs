@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-basics/reranking-hybrid-search.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/tutorials-basics/reranking-hybrid-search.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-basics/reranking-hybrid-search.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/tutorials-basics/reranking-hybrid-search.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-basics/reranking-hybrid-search/
 
 # Qdrant Hybrid Search with Reranking
@@ -20,7 +20,7 @@ Let's start by breaking down the architecture:
 
 ### Ingestion Stage
 
-![Processing dense, sparse, and late interaction embeddings in Qdrant](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/examples/reranking-hybrid-search/image3.png)
+![Processing dense, sparse, and late interaction embeddings in Qdrant](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/examples/reranking-hybrid-search/image3.png)
 
 You'll start by ingesting a CSV file containing information about science fiction books. Each row is a **document**, corresponding to a book, with fields for the title, author, and description. Each book description will be processed to generate three types of embeddings:
 
@@ -32,7 +32,7 @@ The data, including all the embeddings, is stored in Qdrant, a **vector search e
 
 ### Retrieval Stage
 
-![Query retrieval and reranking process in Qdrant](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/examples/reranking-hybrid-search/image2.png)
+![Query retrieval and reranking process in Qdrant](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/examples/reranking-hybrid-search/image2.png)
 
 When a user submits a **query**, it is, just like documents, transformed into each of the types of embeddings: dense for semantic search, sparse for keyword search, and late interaction for precise reranking.
 

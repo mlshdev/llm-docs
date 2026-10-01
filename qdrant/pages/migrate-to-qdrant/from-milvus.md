@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/migrate-to-qdrant/from-milvus.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/migrate-to-qdrant/from-milvus.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/migrate-to-qdrant/from-milvus.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/migrate-to-qdrant/from-milvus.md)
 > Canonical documentation: https://qdrant.tech/documentation/migrate-to-qdrant/from-milvus/
 
 # Migrate from Milvus to Qdrant
@@ -16,9 +16,9 @@
 | Collection           | Collection                           | One-to-one mapping                                               |
 | Partition            | Payload field or separate collection | Use `--milvus.partitions` to specify which partitions to migrate |
 | Schema fields        | Payload                              | Non-vector fields become payload                                 |
-| `COSINE`             | `Cosine`                             | Direct mapping                                                   |
-| `L2`                 | `Euclid`                             | Direct mapping                                                   |
-| `IP` (inner product) | `Dot`                                | Direct mapping                                                   |
+| `COSINE`             | `Cosine`                             | The tool creates `Cosine` by default                             |
+| `L2`                 | `Euclid`                             | Not detected. Set `--qdrant.distance-metric` explicitly          |
+| `IP` (inner product) | `Dot`                                | Not detected. Set `--qdrant.distance-metric` explicitly          |
 | Dynamic fields       | Payload                              | JSON-typed dynamic fields are preserved                          |
 
 ## Run the Migration
@@ -61,9 +61,9 @@ docker run --net=host --rm -it registry.cloud.qdrant.io/library/qdrant-migration
 
 ### Qdrant-Side Options
 
-| Flag                       | Default | Description                                                                     |
-| :------------------------- | :------ | :------------------------------------------------------------------------------ |
-| `--qdrant.distance-metric` | —       | Distance metric per vector field (map format, e.g., `field1:cosine,field2:dot`) |
+| Flag                       | Default  | Description                                                                                                                                                            |
+| :------------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--qdrant.distance-metric` | `cosine` | Distance metric per vector field (map format, e.g., `field1:euclid,field2:dot`). The tool does not read the metric from Milvus, so set it for every `L2` or `IP` field |
 
 ## Gotchas
 

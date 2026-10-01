@@ -23,10 +23,10 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "e169d1082ba3fa27684fe5a67d8109a788aa84a9",
-      "sourceCommittedAt": "2026-09-30T18:02:29Z",
-      "observedCommit": "e169d1082ba3fa27684fe5a67d8109a788aa84a9",
-      "documentationDigest": "b64de18857321beac47d44e01f8216ce2ebbc037a69ffaefc90c713390bb33a8"
+      "sourceCommit": "4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3",
+      "sourceCommittedAt": "2026-10-01T14:13:34Z",
+      "observedCommit": "4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3",
+      "documentationDigest": "3940432a30498f7b6aee9252a38f5f23e927cffa72534dfcad1ac2fabc6724bf"
     },
     "container": {
       "tag": "1.5.0",
@@ -55,10 +55,10 @@
       "sourceCommit": "3acd30be3427c5a63aa75b498af929daf2633480"
     },
     "victorialogs": {
-      "tag": "v1.52.0",
-      "releaseId": 354834060,
-      "releasePublishedAt": "2026-07-16T02:38:16Z",
-      "sourceCommit": "46a54c976fa3d404396050e8a5ee6c5b0320efc5"
+      "tag": "v1.53.0",
+      "releaseId": 400890976,
+      "releasePublishedAt": "2026-10-01T11:20:01Z",
+      "sourceCommit": "915d91904bf7f5be66ab00f88947ae7fc1431acc"
     },
     "victoriametrics-datasource": {
       "tag": "v0.26.1",
@@ -79,18 +79,18 @@
       "sourceCommit": "1c2c6af816c60586dcc6b58c9fd92d5c0bd66c4f"
     },
     "zitadel": {
-      "tag": "v4.19.3",
-      "releaseId": 399321678,
-      "releasePublishedAt": "2026-09-29T16:16:47Z",
-      "sourceCommit": "2c6acd8c033319be6d73ad484ed5c8e0743afd6d"
+      "tag": "v4.19.4",
+      "releaseId": 400973620,
+      "releasePublishedAt": "2026-10-01T13:03:38Z",
+      "sourceCommit": "101343ad87aef7b0eea7c3522d519308e0ea9547"
     },
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "5a54fcf75e0245111075b1c31593ba1919c25306",
-      "sourceCommittedAt": "2026-09-30T07:00:51Z",
-      "observedCommit": "5a54fcf75e0245111075b1c31593ba1919c25306",
-      "documentationDigest": "5022ec3979d1db6969620b53f0e0c24787a0a72244df7f19c58d437a951b4c13"
+      "sourceCommit": "65a38704627691bff121a874dffc209aae239e20",
+      "sourceCommittedAt": "2026-10-01T15:47:45Z",
+      "observedCommit": "65a38704627691bff121a874dffc209aae239e20",
+      "documentationDigest": "05e0a0d2d572dfbfd797dbfe3dc8b3ebc0054c61a94f5eddccbe44a252fc6a24"
     },
     "yt-dlp": {
       "tag": "2026.08.19",
@@ -113,10 +113,10 @@
       "sourceCommit": "744846f844374847c902b5e7fd59b4342a51ef99"
     },
     "trigger-dev": {
-      "tag": "v4.6.4",
-      "releaseId": 393972896,
-      "releasePublishedAt": "2026-09-22T17:27:49Z",
-      "sourceCommit": "51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7"
+      "tag": "v4.7.0",
+      "releaseId": 401133272,
+      "releasePublishedAt": "2026-10-01T16:04:26Z",
+      "sourceCommit": "f049c346c80844a3932156f476ec516023bb7f4d"
     },
     "aria2": {
       "tag": "release-1.37.0",
@@ -159,10 +159,10 @@
     "qdrant": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "92777a17ee8cb058f24532fc801c49a765035a70",
-      "sourceCommittedAt": "2026-09-30T17:36:58Z",
-      "observedCommit": "92777a17ee8cb058f24532fc801c49a765035a70",
-      "documentationDigest": "50a392c65dff7ea47016e940a4443fe18021107de03e9a8f1cbeb6e8ab562f2c"
+      "sourceCommit": "e3215d0e9b9a11b0b6af719307e7eed92e3c436f",
+      "sourceCommittedAt": "2026-10-01T14:59:26Z",
+      "observedCommit": "e3215d0e9b9a11b0b6af719307e7eed92e3c436f",
+      "documentationDigest": "2481179f77625e2d0052d402a0f257a54176c69fd0af7f3cb4e67ce71ddd6b90"
     },
     "apple-swift": {
       "tag": "snapshot-5915b24a1311",

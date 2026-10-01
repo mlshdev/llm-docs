@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.3: [apps/docs/content/guides/solution-scenarios/b2c.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/guides/solution-scenarios/b2c.mdx)
+> Pinned source for ZITADEL v4.19.4: [apps/docs/content/guides/solution-scenarios/b2c.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/guides/solution-scenarios/b2c.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/solution-scenarios/b2c
 
 ## Business to Consumer
@@ -72,7 +72,7 @@ We'd appreciate if you could contribute to our repo with translations of your la
 
 > Note that your management console design changes to your design too
 
-![branding in management console](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/guides/branding.jpeg)
+![branding in management console](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/guides/branding.jpeg)
 
 ### Projects and applications
 

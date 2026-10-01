@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/_index.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/ai/sandboxes/customize/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/_index.md](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/content/manuals/ai/sandboxes/customize/_index.md)
 
 # Kits
 
@@ -77,6 +77,14 @@ combined environment.
 
 If the set includes a workload, you run the published kit with `sbx run`.
 If it contains only mixins, you add it to a workload with `--kit`.
+
+To share a combination without publishing another kit, list the workload and
+mixins in a [sandbox environment file](https://docs.docker.com/ai/sandboxes/configuration/environment-files/).
+Docker Sandboxes composes those kits when it creates the sandbox. An environment
+file can also configure the workspace and host resources. Choose a set when you
+want one published reference with a fixed list of components; the set records
+their image digests when you build it. You can also use a set in an environment
+file.
 
 See [Use kits](https://docs.docker.com/ai/sandboxes/customize/use-kits/) for how to run kits
 and add mixins. To customize and publish your own combination, see

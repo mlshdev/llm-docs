@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/dhi/docker_dhi_mirror_start.yaml](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/data/cli/dhi/docker_dhi_mirror_start.yaml)
+> Pinned source for Docker main: [data/cli/dhi/docker_dhi_mirror_start.yaml](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/data/cli/dhi/docker_dhi_mirror_start.yaml)
 
 # docker dhi mirror start
 

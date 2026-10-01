@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/github-actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/github-actions.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/github-actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/github-actions.mdx)
 > Canonical documentation: https://trigger.dev/docs/github-actions
 
 # CI / GitHub Actions
@@ -83,7 +83,7 @@ If you already have a GitHub action file, you can just add the final step "🚀 
 
 ### Pinning runs to the deployment you just built
 
-The `--external-id ${{ github.sha }}` above tags the deployment with the commit it was built from. That is the first half of [version skew protection](https://trigger.dev/docs/deployment/version-skew-protection): to complete it, give your running application the **same value** so it sends that id when it triggers.
+The `--external-id ${{ github.sha }}` above tags the deployment with the commit it was built from. That is the first half of [version skew protection](https://trigger.dev/docs/deployment/atomic-deployment): to complete it, give your running application the **same value** so it sends that id when it triggers.
 
 ```bash
 # In your application's runtime environment, for the release built from this commit
@@ -103,7 +103,7 @@ Every task triggered by that release is then pinned to the deployment built from
 > `paths:` filter to this workflow, `${{ github.sha }}` stops being a safe id: commits that don't
 > touch your tasks never produce a deployment carrying that SHA, so every run from those releases
 > expires. See [when nothing ever
-> lands](https://trigger.dev/docs/deployment/version-skew-protection#when-nothing-ever-lands).
+> lands](https://trigger.dev/docs/deployment/atomic-deployment#when-nothing-ever-lands).
 
 ## Preview branches
 
@@ -150,7 +150,7 @@ deployment sends.
    Tokens"](https://cloud.trigger.dev/account/tokens) tab.
 2. Click on 'Settings' -> 'Secrets and variables' -> 'Actions' -> 'New repository secret'
 3. Add the name `TRIGGER_ACCESS_TOKEN` and the value of your access token. ![Add TRIGGER\_ACCESS\_TOKEN
-   in GitHub](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/images/github-access-token.png)
+   in GitHub](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/github-access-token.png)
 
 ## CLI Version pinning
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/individual/_index.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/accounts/individual/_index.md)
+> Pinned source for Docker main: [content/manuals/accounts/individual/_index.md](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/content/manuals/accounts/individual/_index.md)
 
 # Docker individual accounts
 
@@ -29,6 +29,6 @@ Docker also ties a verified email to the account.
 - [Set up your account](https://docs.docker.com/accounts/individual/create-account/): Get started with Docker and create an account.
 - [Manage account](https://docs.docker.com/accounts/individual/manage-account/): Learn how to manage the settings for your account.
 - [Personal access tokens](https://docs.docker.com/security/access-tokens/): Learn how to create and manage access tokens for your account.
-- [Set up two-factor authentication](https://docs.docker.com/security/2fa/): Add an extra layer of authentication to your Docker account.
+- [Set up two-factor authentication](https://docs.docker.com/security/authentication/2fa/manage/): Add an extra layer of authentication to your Docker account.
 - [Organization accounts](https://docs.docker.com/accounts/organization/): Learn how to create and manage Docker organizations.
 - [Account FAQs](https://docs.docker.com/faqs/accounts/): Explore frequently asked questions about Docker accounts.

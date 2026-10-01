@@ -1,9 +1,9 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/ai-chat/quick-start.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/ai-chat/quick-start.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/ai-chat/quick-start.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/ai-chat/quick-start.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/quick-start
 
 # Quick Start
 
-Get a working AI agent in 3 steps — define an agent, generate a token, and wire up the frontend.
+Define an agent, authorize chat sessions on your server, and stream responses into a React frontend.
 
 These steps assume you already have a Trigger.dev project with the SDK installed and the CLI authenticated — if you don't, follow [Manual setup](https://trigger.dev/docs/manual-setup) (or `npx trigger.dev@latest init` in an existing project) first. You should be able to run `pnpm exec trigger dev` from your project root before continuing.
 
@@ -20,9 +20,6 @@ The chat surface works with Vercel AI SDK **v5, v6, or v7**; install whichever m
 
    export const myChat = chat.agent({
      id: "my-chat",
-     // `streamText` here is the SDK's, not the one from `ai`: it carries
-     // compaction, steering, background injection, the system prompt and
-     // telemetry, so none of them have to be wired up by hand.
      run: async ({ messages, signal, streamText }) => {
        return streamText({
          model: anthropic("claude-sonnet-4-5"),
@@ -36,10 +33,9 @@ The chat surface works with Vercel AI SDK **v5, v6, or v7**; install whichever m
 
    > **Note**
    >
-   > Take `streamText` from `run`'s argument rather than importing it from `ai`. The
-   > imported one drives no `prepareStep`, so compaction, mid-turn steering and
-   > background injection never run, and nothing reports it. Spreading
-   > `chat.toStreamTextOptions()` into the imported one does the same job by hand.
+   > The `streamText` passed to `run` connects compaction, steering, background
+   > injection, and telemetry. If you use an imported `streamText` from `ai`,
+   > spread `chat.toStreamTextOptions()` into its options to connect those features.
 
    > **Tip**
    >
@@ -51,15 +47,18 @@ The chat surface works with Vercel AI SDK **v5, v6, or v7**; install whichever m
 
    import { auth } from "@trigger.dev/sdk";
    import { chat } from "@trigger.dev/sdk/ai";
+   import { requireChatOwner } from "@/lib/chat-access";
 
-   // Creates the Session row + triggers the first run, returns the
-   // session PAT. Idempotent on (env, chatId) so concurrent calls
-   // converge to the same session.
-   export const startChatSession = chat.createStartSessionAction("my-chat");
+   const startSession = chat.createStartSessionAction("my-chat");
 
-   // Pure mint — fresh session-scoped PAT for an existing session.
-   // The transport calls this on 401/403 to refresh.
+   export async function startChatSession({ chatId }: { chatId: string }) {
+     await requireChatOwner(chatId);
+     return startSession({ chatId });
+   }
+
+   // The transport calls this on 401/403 to refresh the session token.
    export async function mintChatAccessToken(chatId: string) {
+     await requireChatOwner(chatId);
      return auth.createPublicToken({
        scopes: {
          read: { sessions: chatId },
@@ -70,7 +69,9 @@ The chat surface works with Vercel AI SDK **v5, v6, or v7**; install whichever m
    }
    ```
 
-   The browser never holds your environment's secret key — both helpers run on your server, where customer-side authorization (per-user, per-plan, etc.) lives alongside any DB writes you want to pair with session creation.
+   `requireChatOwner` is your application helper: authenticate the request, load the chat by ID and owner, and throw if it doesn't belong to that user. Create the chat record on your server before rendering the frontend, and pass its ID into `Chat`. Check ownership in both actions, including token refresh.
+
+   Set `TRIGGER_SECRET_KEY` and your model provider key in the server and worker environments. Keep both keys out of the browser.
 3. Use the `useTriggerChatTransport` hook from `@trigger.dev/sdk/chat/react` to create a memoized transport instance, then pass it to `useChat`. Wire both server actions into the transport's `accessToken` and `startSession` callbacks.
 
    The example below uses the Next.js `@/*` path alias for imports from `@/trigger/chat` and `@/app/actions`. If you're not using Next.js (or haven't configured the alias), swap them for relative imports.
@@ -84,15 +85,14 @@ The chat surface works with Vercel AI SDK **v5, v6, or v7**; install whichever m
    import type { myChat } from "@/trigger/chat";
    import { mintChatAccessToken, startChatSession } from "@/app/actions";
 
-   export function Chat() {
+   export function Chat({ chatId }: { chatId: string }) {
      const transport = useTriggerChatTransport<typeof myChat>({
        task: "my-chat",
        accessToken: ({ chatId }) => mintChatAccessToken(chatId),
-       startSession: ({ chatId, clientData }) =>
-     startChatSession({ chatId, clientData }),
+       startSession: ({ chatId }) => startChatSession({ chatId }),
      });
 
-     const { messages, sendMessage, stop, status } = useChat({ transport });
+     const { messages, sendMessage, stop, status, error } = useChat({ id: chatId, transport });
      const [input, setInput] = useState("");
 
      return (
@@ -105,6 +105,8 @@ The chat surface works with Vercel AI SDK **v5, v6, or v7**; install whichever m
              )}
            </div>
          ))}
+
+         {error && <p role="alert">{error.message}</p>}
 
          <form
            onSubmit={(e) => {
@@ -120,7 +122,7 @@ The chat surface works with Vercel AI SDK **v5, v6, or v7**; install whichever m
              onChange={(e) => setInput(e.target.value)}
              placeholder="Type a message..."
            />
-           <button type="submit" disabled={status === "streaming"}>
+           <button type="submit" disabled={status === "streaming" || status === "submitted"}>
              Send
            </button>
            {status === "streaming" && (
@@ -133,6 +135,10 @@ The chat surface works with Vercel AI SDK **v5, v6, or v7**; install whichever m
      );
    }
    ```
+
+## Try it
+
+Run your frontend and `pnpm exec trigger dev`, then send a message. You should see an assistant response stream into the page and a run in your project's dashboard. If session creation fails, check ownership and the server's `TRIGGER_SECRET_KEY`. If the run starts but the model fails, check the worker's provider key and run logs.
 
 ## Next steps
 

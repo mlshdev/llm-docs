@@ -2,10 +2,10 @@
 
 Source repository: https://github.com/docker/docs
 Tracked branch: main
-Source commit: e169d1082ba3fa27684fe5a67d8109a788aa84a9
+Source commit: 4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3
 
 This corpus is published as 3 retrieval-sized volumes. Read the volumes in order for the complete corpus.
 
-- [Volume 1](llms-full.001.txt): 829 documents, 8330907 bytes, SHA-256 `c86e965b6f7143fa76efa34ea33c0948bc97174aba9a33aa63e8c9221ee8c1f1`.
-- [Volume 2](llms-full.002.txt): 205 documents, 7944135 bytes, SHA-256 `2d241c879c7ad302c8ea31d8cb0551b7c82fbfacd4ac6f7cd82c5fc0b704edc2`.
-- [Volume 3](llms-full.003.txt): 660 documents, 7177366 bytes, SHA-256 `7ac96839f9be12aa6abc04c7bcf44c652e0a15514b3975c2e1d7b3e45dd74b82`.
+- [Volume 1](llms-full.001.txt): 829 documents, 8353029 bytes, SHA-256 `a7037bcf7cb1872aeb0fb628e5f349fce9401f92a50c0629a874bb7416636b14`.
+- [Volume 2](llms-full.002.txt): 206 documents, 7948248 bytes, SHA-256 `bd7d2cdddb3f72da9fb15e44e256e8b68a609fdef63b2b9dc18b82e46bbd5eff`.
+- [Volume 3](llms-full.003.txt): 660 documents, 7177366 bytes, SHA-256 `23a630b5a926bcf73960455f34e4e9aa2609ca2814da33bfc00e8345bb51b6b2`.

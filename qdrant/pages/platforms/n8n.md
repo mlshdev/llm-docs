@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/platforms/n8n.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/platforms/n8n.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/platforms/n8n.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/platforms/n8n.md)
 > Canonical documentation: https://qdrant.tech/documentation/platforms/n8n/
 
 # N8N
@@ -16,11 +16,11 @@
 
 - Select and install the official Qdrant node from the list of nodes in your workflow editor.
 
-![Qdrant n8n node](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/frameworks/n8n/node.png)
+![Qdrant n8n node](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/frameworks/n8n/node.png)
 
 - Once installed, you can create a connection to Qdrant using your [credentials](https://qdrant.tech/documentation/cloud/authentication/).
 
-![Qdrant Credentials](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/frameworks/n8n/credentials.png)
+![Qdrant Credentials](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/frameworks/n8n/credentials.png)
 
 ## Operations
 

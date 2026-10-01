@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/concepts.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/ai/sandboxes/governance/concepts.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/concepts.md](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/content/manuals/ai/sandboxes/governance/concepts.md)
 
 # Policy concepts
 
@@ -37,6 +37,19 @@ Rules are grouped by domain. Network and filesystem rules in a policy must
 share the same domain, either `network` or `filesystem`. MCP policies use Cedar
 statements written in the `MCP` namespace instead of the network and filesystem
 rule format.
+
+An organization network policy can also require approval, which turns every
+allow in that policy into a request the developer must confirm before access is
+granted. Approval is set on the policy rather than on individual rules, so it
+applies to all of the policy's allow rules at once. Without organization
+governance, a request with no matching allow or deny rule also asks for
+approval. See
+[Approval-required access](https://docs.docker.com/ai/sandboxes/governance/access-controls/network/#approval-required-access).
+
+Network approval is separate from the MCP `@requireApproval` annotation. An MCP
+approval confirms a single call within the session and creates no rule, while
+an approved network destination stays allowed until you remove the rule. See
+[MCP access policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/mcp/).
 
 ### Limits
 
@@ -106,26 +119,37 @@ A network rule matches a destination host on its own. An HTTP rule is a network
 rule that also names an HTTP method and URL path, so a policy can allow reads
 from an API without allowing writes to it.
 
-An HTTP rule names one or more methods, a destination, and a path pattern:
+An HTTP rule names one or more methods, a destination, and path patterns. What
+each part accepts depends on where you configure the rule:
 
-| Part        | Accepts                                     |
-| ----------- | ------------------------------------------- |
-| Method      | One or more HTTP methods, or every method   |
-| Destination | A host, with an optional port               |
-| Path        | An absolute path pattern, such as `/api/**` |
+| Part        | Organization policy                | Local policy                  |
+| ----------- | ---------------------------------- | ----------------------------- |
+| Method      | One or more listed methods         | `ANY`, or one or more methods |
+| Destination | A host or IP address               | A host                        |
+| Path        | One or more absolute path patterns | One absolute path pattern     |
 
-A CIDR range isn't a valid HTTP destination. Use a network rule to cover one.
+A destination can include a port, and a path pattern looks like `/api/**`.
 
-A rule that names no method matches every method. For the methods you can
-select individually, see
-[HTTP method and path rules](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/#http-method-and-path-rules).
+A local rule doesn't accept an IP address or a CIDR range. Use a plain network
+rule for those destinations. To cover a second path in a local policy, add a
+second rule.
+
+Every rule applies to at least one method. On the CLI, `--method ANY` covers
+every HTTP method. In the composer, a rule with no methods selected covers
+every method the composer lists. For the methods you can select individually, see
+[Add a network rule](https://docs.docker.com/ai/sandboxes/governance/access-controls/organization/#add-a-network-rule) for an
+organization policy and
+[HTTP method and path rules](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/#http-method-and-path-rules)
+for a local one.
 
 Path patterns follow the same wildcard rules as filesystem paths, where `*`
 matches within one path segment and `**` matches any depth. A pattern without a
 wildcard matches that path exactly, so `/repos` matches `/repos` and nothing
-below it. A pattern must start with `/` and be canonical, so it can't contain a
-query string, a fragment, percent-encoding, control characters, repeated or
-trailing slashes, or dot segments such as `.` and `..`.
+below it. Every pattern must start with `/` and can't contain a query string, a
+fragment, or a `..` segment. A local rule's path must also be canonical, so it
+can't contain percent-encoding, control characters, repeated or trailing
+slashes, or a `.` segment. For the full list, see
+[HTTP method and path rules](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/#http-method-and-path-rules).
 
 HTTP requests are evaluated against both layers. A network rule sets the
 baseline for a host, and HTTP rules adjust individual methods and paths within
@@ -239,6 +263,13 @@ team-scoped policy, which makes org-wide deny rules useful as guardrails.
 Local and kit-defined allow rules take no part in this evaluation. Deny rules
 from those sources do still apply. See [Precedence](#precedence).
 
+A request that an approval-required policy allows produces a third outcome.
+Rather than being allowed outright, it's held back until the developer confirms
+the destination, and the confirmation governs later requests to it. This holds
+even when another policy allows the same request without requiring approval. A
+matching deny still wins, so a denied destination is blocked without asking.
+See [Approval-required access](https://docs.docker.com/ai/sandboxes/governance/access-controls/network/#approval-required-access).
+
 ## Precedence
 
 What applies depends on whether your organization has governance enabled:
@@ -271,6 +302,13 @@ top of organization policy is always a network deny. `sbx policy ls` hides
 inactive rules by default. See
 [Monitoring](https://docs.docker.com/ai/sandboxes/governance/monitor-and-enforce/monitoring/#showing-inactive-rules) for how
 to list them.
+
+A local deny takes precedence over an organization approval requirement as
+well, so the request is blocked and no approval is requested. Rules that a
+developer gains by approving a request are the one exception to local allow
+rules being inactive, because they record an answer to the organization's own
+approval requirement rather than granting new access. See
+[Approval-required access](https://docs.docker.com/ai/sandboxes/governance/access-controls/network/#approval-required-access).
 
 When organization governance is active, a user's organization policies are
 evaluated together, as described in [Rule evaluation](#rule-evaluation).

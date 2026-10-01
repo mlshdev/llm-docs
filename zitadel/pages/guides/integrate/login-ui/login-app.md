@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.3: [apps/docs/content/guides/integrate/login-ui/login-app.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/guides/integrate/login-ui/login-app.mdx)
+> Pinned source for ZITADEL v4.19.4: [apps/docs/content/guides/integrate/login-ui/login-app.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/guides/integrate/login-ui/login-app.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login-ui/login-app
 
 To replace the old embedded Login built with Golang and to showcase the use of our session and OIDC APIs, we've created the new [Login app](https://github.com/zitadel/zitadel/blob/main/CONTRIBUTING.md#contribute-to-login).
@@ -29,7 +29,7 @@ The cookie consists of an id and a token and is bound to a session which is upda
 
 The following illustration shows the architecture of the Login app and a potential authentication code flow starting from an application which implements the OIDC specification respectively.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/typescript-login-architecture.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/typescript-login-architecture.png)
 
 *Note that the illustration is just a representation of the architecture and may not specify actual endpoints.*
 
@@ -143,4 +143,4 @@ If you want to enforce users to have their email verified, you can set the optio
 By default, verification codes are not automatically submitted on page load. This protects against enterprise email link scanners that pre-fetch URLs and could inadvertently consume one-time codes before users click them.
 If you want to enable automatic code submission (e.g. for a smoother UX when link scanners are not a concern), set `NEXT_PUBLIC_AUTO_SUBMIT_CODE` to `true`.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/deploy-to-vercel.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/deploy-to-vercel.png)

@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-2.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-2.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-2.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/tutorials-build-essentials/video-anomaly-edge-part-2.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-build-essentials/video-anomaly-edge-part-2/
 
 # Video Anomaly Detection: Edge-to-Cloud Pipeline
@@ -44,7 +44,7 @@ Why can't we just run a single shard on the edge? Two reasons: (1) Building an H
 
 ### The Solution: Mutable + Immutable Shards
 
-![Edge shards: mutable shard for live writes with brute-force search, immutable shard with HNSW index synced from cloud, merged and ranked for top-k results](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/video-anomaly-edge/edge-shards.png)
+![Edge shards: mutable shard for live writes with brute-force search, immutable shard with HNSW index synced from cloud, merged and ranked for top-k results](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/articles_data/video-anomaly-edge/edge-shards.png)
 
 The edge collection uses two `EdgeShard` instances:
 
@@ -59,18 +59,19 @@ from qdrant_edge import (
     Distance as EdgeDistance,
     EdgeConfig,
     EdgeShard,
+    EdgeVectorParams,
     FieldCondition,
     Filter,
     Point,
     Query,
     RangeFloat,
+    ScrollRequest,
     SearchRequest,
     UpdateOperation,
-    VectorDataConfig,
 )
 
 SHARD_CONFIG = EdgeConfig(
-    vector_data=VectorDataConfig(
+    vectors=EdgeVectorParams(
         size=EDGE_EMBEDDING_DIM,
         distance=EdgeDistance.Cosine,
     )
@@ -84,16 +85,19 @@ class EdgeDetector:
 
         self._mutable_dir.mkdir(parents=True, exist_ok=True)
 
-        # Mutable shard: created fresh with config
-        self._mutable_shard = EdgeShard(str(self._mutable_dir), SHARD_CONFIG)
+        # Mutable shard: created with config on first run, loaded on restart
+        if (self._mutable_dir / "edge_config.json").exists():
+            self._mutable_shard = EdgeShard.load(str(self._mutable_dir))
+        else:
+            self._mutable_shard = EdgeShard.create(str(self._mutable_dir), SHARD_CONFIG)
 
         # Immutable shard: loaded from snapshot (None until first sync)
         self._immutable_shard: Optional[EdgeShard] = None
         if self._immutable_dir.exists():
-            self._immutable_shard = EdgeShard(str(self._immutable_dir), None)
+            self._immutable_shard = EdgeShard.load(str(self._immutable_dir))
 ```
 
-Note the asymmetry: the mutable shard is created with a config (it needs to know vector dimensions and distance). The immutable shard is opened with `None` because its config was baked in when the snapshot was created on the server.
+Note the asymmetry: the mutable shard is created with a config (it needs to know vector dimensions and distance) and reloaded from its persisted `edge_config.json` on restart. The immutable shard is always loaded without a config because its config was baked in when the snapshot was created on the server.
 
 ### Query Path
 
@@ -176,7 +180,7 @@ The two-tier architecture only works *because* the edge is imperfect and the clo
 
 ## Edge-to-Cloud Escalation
 
-![Escalation pipeline: edge tier drops 85% of footage, escalates 15% to cloud tier where ensemble scoring achieves 95% recall](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/video-anomaly-edge/escalation-pipeline.png)
+![Escalation pipeline: edge tier drops 85% of footage, escalates 15% to cloud tier where ensemble scoring achieves 95% recall](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/articles_data/video-anomaly-edge/escalation-pipeline.png)
 
 When an edge device scores a clip above the escalation threshold, it sends the clip to the cloud for re-analysis. Here's where Twelve Labs and Qdrant work together for the final verdict.
 
@@ -247,7 +251,7 @@ async def handle_escalation(request: EscalationRequest) -> EscalationResult:
 
 ### Ensemble Scoring
 
-![Ensemble scoring: 70% cloud VSS score combined with 30% edge score for final anomaly determination](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/video-anomaly-edge/ensemble-score.png)
+![Ensemble scoring: 70% cloud VSS score combined with 30% edge score for final anomaly determination](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/articles_data/video-anomaly-edge/ensemble-score.png)
 
 The ensemble weighting reflects the accuracy differential between tiers:
 
@@ -314,7 +318,7 @@ def sync_from_server(self, full: bool = False) -> None:
                 f.write(chunk)
 
         EdgeShard.unpack_snapshot(str(snapshot_path), str(self._immutable_dir))
-        self._immutable_shard = EdgeShard(str(self._immutable_dir), None)
+        self._immutable_shard = EdgeShard.load(str(self._immutable_dir))
     else:
         # Incremental: send current manifest, get only changed segments
         manifest = self._immutable_shard.snapshot_manifest()
@@ -344,7 +348,7 @@ After syncing, points that were already uploaded to the cloud are purged from th
 
 ### Offline Resilience
 
-![Shard sync: cloud baseline syncs to edge immutable shard via incremental snapshot transfer, with offline buffer persisting escalations to disk when cloud is unreachable](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/video-anomaly-edge/shard-sync.png)
+![Shard sync: cloud baseline syncs to edge immutable shard via incremental snapshot transfer, with offline buffer persisting escalations to disk when cloud is unreachable](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/articles_data/video-anomaly-edge/shard-sync.png)
 
 If the cloud is unreachable, escalation data is persisted to disk as JSON files:
 
@@ -433,7 +437,15 @@ Caps the mutable shard at `RETENTION_MAX_POINTS`. Unsynced points with anomaly s
 
 ```python
 def _evict_by_score_priority(self) -> None:
-    all_points = list(self._mutable_shard.scroll(with_payload=True, with_vectors=False))
+    all_points = []
+    offset = None
+    while True:
+        records, offset = self._mutable_shard.scroll(
+            ScrollRequest(offset=offset, limit=256, with_payload=True, with_vector=False)
+        )
+        all_points.extend(records)
+        if offset is None:
+            break
     if len(all_points) <= RETENTION_MAX_POINTS:
         return
 

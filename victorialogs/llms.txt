@@ -1,8 +1,8 @@
-# VictoriaLogs v1.52.0
+# VictoriaLogs v1.53.0
 
-> Documentation generated from the latest stable release of [VictoriaMetrics/VictoriaLogs](https://github.com/VictoriaMetrics/VictoriaLogs) and pinned to immutable source commit `46a54c976fa3d404396050e8a5ee6c5b0320efc5`.
+> Documentation generated from the latest stable release of [VictoriaMetrics/VictoriaLogs](https://github.com/VictoriaMetrics/VictoriaLogs) and pinned to immutable source commit `915d91904bf7f5be66ab00f88947ae7fc1431acc`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaLogs v1.52.0.
+- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaLogs v1.53.0.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.
 - Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.
@@ -10,12 +10,12 @@
 
 ## VictoriaLogs
 
-- [VictoriaLogs](pages/victorialogs/index.md): VictoriaLogs is open source user-friendly database for logs from VictoriaMetrics. (100870 bytes)
+- [VictoriaLogs](pages/victorialogs/index.md): VictoriaLogs is open source user-friendly database for logs from VictoriaMetrics. (103581 bytes)
 - [Quick Start](pages/victorialogs/QuickStart.md): It is recommended to read README and Key Concepts before you start working with VictoriaLogs. (16157 bytes)
-- [Key Concepts](pages/victorialogs/keyConcepts.md): VictoriaLogs works with both structured and unstructured logs. Every log entry must contain at least the log message field. An arbitrary number of additional key=value fields can be added to the log entry. See an overvi… (15339 bytes)
-- [VictoriaLogs Cluster](pages/victorialogs/cluster.md): Cluster mode in VictoriaLogs provides horizontal scaling to many nodes when single-node VictoriaLogs reaches vertical scalability limits of a single host. If you have the ability to run a single-node VictoriaLogs on a h… (29642 bytes)
-- [vlagent](pages/victorialogs/vlagent.md): vlagent is an agent for collecting logs from various sources and storing them in VictoriaLogs. (106591 bytes)
-- [Data Ingestion](pages/victorialogs/data-ingestion/index.md): VictoriaLogs and vlagent can accept logs from the following log collectors: (26747 bytes)
+- [Key Concepts](pages/victorialogs/keyConcepts.md): VictoriaLogs works with both structured and unstructured logs. Every log entry must contain at least the log message field. An arbitrary number of additional key=value fields can be added to the log entry. See an overvi… (15484 bytes)
+- [VictoriaLogs Cluster](pages/victorialogs/cluster.md): Cluster mode in VictoriaLogs provides horizontal scaling to many nodes when single-node VictoriaLogs reaches vertical scalability limits of a single host. If you have the ability to run a single-node VictoriaLogs on a h… (29644 bytes)
+- [vlagent](pages/victorialogs/vlagent.md): vlagent is an agent for collecting logs from various sources and storing them in VictoriaLogs. (107228 bytes)
+- [Data Ingestion](pages/victorialogs/data-ingestion/index.md): VictoriaLogs and vlagent can accept logs from the following log collectors: (26888 bytes)
 - [Filebeat Setup](pages/victorialogs/data-ingestion/Filebeat.md): Tested with filebeat 8.15.1+. (4814 bytes)
 - [Fluentbit Setup](pages/victorialogs/data-ingestion/Fluentbit.md): Specify http output section in the fluentbit.conf for sending the collected logs to VictoriaLogs: (3619 bytes)
 - [Fluentd Setup](pages/victorialogs/data-ingestion/Fluentd.md): Specify HTTP output section in the fluentd.conf for sending the collected logs to VictoriaLogs: (3429 bytes)
@@ -27,24 +27,25 @@
 - [Journald Setup](pages/victorialogs/data-ingestion/Journald.md): On a client site which should already have journald please install additionally systemd-journal-upload and edit /etc/systemd/journal-upload.conf and set URL to VictoriaLogs endpoint: (4825 bytes)
 - [Syslog Setup](pages/victorialogs/data-ingestion/syslog.md): VictoriaLogs can accept logs in Syslog formats at the specified TCP, UDP or Unix socket addresses via -syslog.listenAddr.tcp, -syslog.listenAddr.udp and -syslog.listenAddr.unix command-line flags. VictoriaLogs listens f… (17559 bytes)
 - [OpenShift](pages/victorialogs/data-ingestion/openshift.md): VictoriaLogs supports two options for ingestion logs using OpenShift native cluster logging operator: (2097 bytes)
-- [Splunk Setup](pages/victorialogs/data-ingestion/Splunk.md): VictoriaLogs accpets logs via Splunk HEC API at /insert/splunk/services/collector/event or /insert/splunk/services/collector/event/1.0 HTTP paths. Additionally paths without /insert/splunk/ prefix are supported to simpl… (3667 bytes)
+- [Splunk Setup](pages/victorialogs/data-ingestion/Splunk.md): VictoriaLogs accepts logs via Splunk HEC API at /insert/splunk/services/collector/event or /insert/splunk/services/collector/event/1.0 HTTP paths. Additionally paths without /insert/splunk/ prefix are supported to simpl… (3667 bytes)
 - [Vector Setup](pages/victorialogs/data-ingestion/Vector.md): VictoriaLogs can accept logs from Vector via the following protocols: (6093 bytes)
-- [Querying](pages/victorialogs/querying/index.md): VictoriaLogs can be queried with LogsQL via the following ways: (73502 bytes)
+- [Querying](pages/victorialogs/querying/index.md): VictoriaLogs can be queried with LogsQL via the following ways: (74109 bytes)
 - [vlogscli](pages/victorialogs/querying/vlogscli.md): vlogsqcli is an interactive command-line tool for querying VictoriaLogs. It has the following features: (20910 bytes)
 - [LogsQL](pages/victorialogs/logsql.md): LogsQL is a simple yet powerful query language for VictoriaLogs. See examples, LogsQL tutorial, how to convert Loki queries to VictoriaLogs queries and SQL to LogsQL conversion guide. (344499 bytes)
-- [Alerting with Logs](pages/victorialogs/vmalert.md): vmalert integrates with VictoriaLogs via stats APIs /select/logsql/statsquery and /select/logsql/statsqueryrange. These endpoints return log stats in a format compatible with the Prometheus querying API. This allows usi… (23419 bytes)
-- [Security and Load Balancing](pages/victorialogs/security-and-lb.md): All the VictoriaLogs components must run inside a protected trusted network. Requests from the Internet must be properly authorized before being proxied to VictoriaLogs components. It is recommended using vmauth for the… (33363 bytes)
+- [Alerting with Logs](pages/victorialogs/vmalert.md): vmalert integrates with VictoriaLogs via stats APIs /select/logsql/statsquery and /select/logsql/statsqueryrange. These endpoints return log stats in a format compatible with the Prometheus querying API. This allows usi… (23880 bytes)
+- [Security and Load Balancing](pages/victorialogs/security-and-lb.md): All the VictoriaLogs components must run inside a protected trusted network. Requests from the Internet must be properly authorized before being proxied to VictoriaLogs components. It is recommended using vmauth for the… (34806 bytes)
 - [FAQ](pages/victorialogs/FAQ.md): Yes. VictoriaLogs is ready for production use starting from v1.0.0. (23910 bytes)
-- [Integrations](pages/victorialogs/integrations/index.md): VictoriaLogs integrates with many popular monitoring solutions as remote storage or datasource: (612 bytes)
+- [Integrations](pages/victorialogs/integrations/index.md): VictoriaLogs integrates with many popular monitoring solutions as remote storage or datasource: (693 bytes)
 - [Perses](pages/victorialogs/integrations/perses.md): Starting with Perses v0.53.0-beta.2 release introduces first-class integration with VictoriaLogs. (3774 bytes)
 - [Bindplane](pages/victorialogs/integrations/bindplane.md): VictoriaLogs integrates with Bindplane via the Bindplane application. (1662 bytes)
-- [Metrics of VictoriaLogs](pages/victorialogs/metrics.md): This document provides a comprehensive reference for all metrics exposed by VictoriaLogs at the http://localhost:9428/metrics endpoint. These metrics follow the Prometheus exposition format and can be used for monitorin… (22440 bytes)
-- [Metrics of vlagent](pages/victorialogs/vlagent-metrics.md): This document provides a comprehensive reference for all metrics exposed by vlagent at the http://localhost:9429/metrics endpoint. These metrics follow the Prometheus exposition format and can be used for monitoring, al… (10995 bytes)
+- [Logchef](pages/victorialogs/integrations/logchef.md): Logchef is a query and UI layer that connects directly to an existing VictoriaLogs deployment. It does not ingest, copy, or move logs. Your existing log shipper continues to send data to VictoriaLogs. (3807 bytes)
+- [Metrics of VictoriaLogs](pages/victorialogs/metrics.md): This document provides a comprehensive reference for all metrics exposed by VictoriaLogs at the http://localhost:9428/metrics endpoint. These metrics follow the Prometheus exposition format and can be used for monitorin… (23432 bytes)
+- [Metrics of vlagent](pages/victorialogs/vlagent-metrics.md): This document provides a comprehensive reference for all metrics exposed by vlagent at the http://localhost:9429/metrics endpoint. These metrics follow the Prometheus exposition format and can be used for monitoring, al… (11358 bytes)
 - [LogsQL Examples](pages/victorialogs/logsql-examples.md): Run the following query: (26618 bytes)
 - [How To Convert Loki Queries to VictoriaLogs Queries](pages/victorialogs/logql-to-logsql.md): Loki provides LogQL query language, while VictoriaLogs provides LogsQL query language. Both languages are optimized for querying logs. The docs below show how to convert typical LogQL queries to LogsQL queries. (20236 bytes)
-- [SQL to LogsQL Tutorial](pages/victorialogs/sql-to-logsql.md): This is a tutorial for the migration from SQL to LogsQL. It is expected that you are familiar with SQL and know how to execute queries at VictoriaLogs. (7707 bytes)
-- [Articles](pages/victorialogs/Articles.md): Benchmarking and Comparisons: (6333 bytes)
+- [SQL to LogsQL Tutorial](pages/victorialogs/sql-to-logsql.md): This is a tutorial for the migration from SQL to LogsQL. It is expected that you are familiar with SQL and know how to execute queries at VictoriaLogs. (7716 bytes)
+- [Articles](pages/victorialogs/Articles.md): Benchmarking and Comparisons: (6505 bytes)
 - [Release Process Guidance for VictoriaLogs](pages/victorialogs/Release-Guide.md): Make sure you have GNU version of utilities zip, tar, sha256sum. To install them run the following commands: (8306 bytes)
-- [CHANGELOG](pages/victorialogs/CHANGELOG.md): The following tip changes can be tested by building VictoriaLogs components from the latest commit of VictoriaLogs repository according to the following docs: (304602 bytes)
+- [CHANGELOG](pages/victorialogs/CHANGELOG.md): The following tip changes can be tested by building VictoriaLogs components from the latest commit of VictoriaLogs repository according to the following docs: (324883 bytes)
 - [Roadmap](pages/victorialogs/Roadmap.md): Normalized source from docs/victorialogs/Roadmap.md. (1846 bytes)
 - [Grafana Datasource](pages/victorialogs/victorialogs-datasource.md): Moved to victorialogs/integrations/grafana. (2875 bytes)

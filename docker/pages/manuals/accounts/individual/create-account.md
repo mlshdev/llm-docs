@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/individual/create-account.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/accounts/individual/create-account.md)
+> Pinned source for Docker main: [content/manuals/accounts/individual/create-account.md](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/content/manuals/accounts/individual/create-account.md)
 
 # Create a Docker account
 
@@ -71,4 +71,4 @@ basis:
 ## Next steps
 
 - [Manage a Docker account](https://docs.docker.com/accounts/individual/manage-account/)
-- [Enable two-factor authentication](https://docs.docker.com/security/authentication/2fa/)
+- [Enable two-factor authentication](https://docs.docker.com/security/authentication/2fa/manage/)

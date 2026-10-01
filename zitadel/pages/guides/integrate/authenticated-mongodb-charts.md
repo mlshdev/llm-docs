@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.3: [apps/docs/content/guides/integrate/authenticated-mongodb-charts.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/guides/integrate/authenticated-mongodb-charts.mdx)
+> Pinned source for ZITADEL v4.19.4: [apps/docs/content/guides/integrate/authenticated-mongodb-charts.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/guides/integrate/authenticated-mongodb-charts.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/authenticated-mongodb-charts
 
 This integration guide shows how you can embed authenticated MongoDB Charts in your web application using ZITADEL as authentication provider.
@@ -18,7 +18,7 @@ You will need to provide some information about your app. We recommend creating 
 
 Your application settings should now look similar to this:
 
-![Create app in management console](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/integrations/mongodb-charts-app-create-light.png)
+![Create app in management console](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/integrations/mongodb-charts-app-create-light.png)
 
 ## Setup Custom JWT Provider for MongoDB Charts
 
@@ -33,7 +33,7 @@ Configure the following values:
 
 Your settings should look similar to this:
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/integrations/mongodb-charts-auth-provider-light.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/integrations/mongodb-charts-auth-provider-light.png)
 
 ## Embedding your Chart
 

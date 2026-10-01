@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-pricing-payments.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/cloud-pricing-payments.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/cloud-pricing-payments.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/cloud-pricing-payments.md)
 > Canonical documentation: https://qdrant.tech/documentation/cloud-pricing-payments/
 
 # Qdrant Cloud Billing & Payments
@@ -20,7 +20,7 @@ Note: If you choose to pay for your Qdrant Cloud clusters through a cloud provid
 
 If you wish to deploy Qdrant database clusters into your own environment from Qdrant Cloud then we recommend our [Hybrid Cloud](https://qdrant.tech/documentation/hybrid-cloud/) solution.
 
-![Payment Options](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/cloud/payment-options.png)
+![Payment Options](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/cloud/payment-options.png)
 
 ### Credit Card
 

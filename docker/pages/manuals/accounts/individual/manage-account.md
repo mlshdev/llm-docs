@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/individual/manage-account.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/accounts/individual/manage-account.md)
+> Pinned source for Docker main: [content/manuals/accounts/individual/manage-account.md](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/content/manuals/accounts/individual/manage-account.md)
 
 # Manage a Docker account
 
@@ -69,7 +69,7 @@ To update your two-factor authentication (2FA) settings:
 3. Select **2FA**.
 
 For more information, see
-[Enable two-factor authentication](https://docs.docker.com/security/authentication/2fa/).
+[Enable two-factor authentication](https://docs.docker.com/security/authentication/2fa/manage/).
 
 ## Manage personal access tokens
 
@@ -119,4 +119,4 @@ For information on deactivating your account, see
 
 - [Docker individual accounts overview](https://docs.docker.com/accounts/individual/)
 - [Create a Docker account](https://docs.docker.com/accounts/individual/create-account/)
-- [Enable two-factor authentication](https://docs.docker.com/security/authentication/2fa/)
+- [Enable two-factor authentication](https://docs.docker.com/security/authentication/2fa/manage/)

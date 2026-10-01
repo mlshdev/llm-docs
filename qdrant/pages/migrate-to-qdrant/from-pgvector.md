@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/migrate-to-qdrant/from-pgvector.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/migrate-to-qdrant/from-pgvector.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/migrate-to-qdrant/from-pgvector.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/migrate-to-qdrant/from-pgvector.md)
 > Canonical documentation: https://qdrant.tech/documentation/migrate-to-qdrant/from-pgvector/
 
 # Migrate from pgvector to Qdrant
@@ -10,15 +10,15 @@
 
 ## Concept Mapping
 
-| pgvector            | Qdrant     | Notes                                                                      |
-| :------------------ | :--------- | :------------------------------------------------------------------------- |
-| Table               | Collection | One-to-one mapping                                                         |
-| Row                 | Point      | Each row becomes a point                                                   |
-| `vector` column     | Vector     | Mapped automatically                                                       |
-| Other columns       | Payload    | All non-vector columns become payload fields                               |
-| `vector_cosine_ops` | `Cosine`   | pgvector returns distance (1 - similarity); Qdrant returns similarity      |
-| `vector_l2_ops`     | `Euclid`   | Direct mapping                                                             |
-| `vector_ip_ops`     | `Dot`      | pgvector uses negative inner product for ordering; scores will be inverted |
+| pgvector            | Qdrant     | Notes                                                                                                                               |
+| :------------------ | :--------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| Table               | Collection | One-to-one mapping                                                                                                                  |
+| Row                 | Point      | Each row becomes a point                                                                                                            |
+| `vector` column     | Vector     | Mapped automatically                                                                                                                |
+| Other columns       | Payload    | All non-vector columns become payload fields                                                                                        |
+| `vector_cosine_ops` | `Cosine`   | The tool creates `Cosine` by default. pgvector returns distance (1 - similarity); Qdrant returns similarity                         |
+| `vector_l2_ops`     | `Euclid`   | Not detected. Set `--qdrant.distance-metric` explicitly                                                                             |
+| `vector_ip_ops`     | `Dot`      | Not detected. Set `--qdrant.distance-metric` explicitly. pgvector uses negative inner product for ordering; scores will be inverted |
 
 ## Run the Migration
 
@@ -49,19 +49,19 @@ docker run --net=host --rm -it registry.cloud.qdrant.io/library/qdrant-migration
 
 ### All pgvector-Specific Flags
 
-| Flag                      | Required | Description                                       |
-| :------------------------ | :------- | :------------------------------------------------ |
-| `--pg.url`                | Yes      | Postgres connection string                        |
-| `--pg.table`              | Yes      | Table name to migrate                             |
-| `--pg.key-column`         | Yes      | Column to use as point ID                         |
-| `--pg.columns`            | No       | Comma-separated columns to migrate (default: all) |
-| `--migration.num-workers` | No       | Parallel workers (default: number of CPU cores)   |
+| Flag                      | Required | Description                                                                    |
+| :------------------------ | :------- | :----------------------------------------------------------------------------- |
+| `--pg.url`                | Yes      | Postgres connection string                                                     |
+| `--pg.table`              | Yes      | Table name to migrate                                                          |
+| `--pg.key-column`         | Yes      | Column to use as point ID                                                      |
+| `--pg.columns`            | No       | Comma-separated columns to migrate (default: all). Must include the key column |
+| `--migration.num-workers` | No       | Parallel workers (default: number of CPU cores)                                |
 
 ### Qdrant-Side Options
 
-| Flag                       | Default  | Description                                   |
-| :------------------------- | :------- | :-------------------------------------------- |
-| `--qdrant.distance-metric` | `cosine` | Distance metric per vector field (map format) |
+| Flag                       | Default  | Description                                                                                                                                                 |
+| :------------------------- | :------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--qdrant.distance-metric` | `cosine` | Distance metric per vector field (map format, e.g., `embedding:euclid`). The tool does not read the operator class, so set it for every `L2` or `IP` column |
 
 ## Gotchas
 

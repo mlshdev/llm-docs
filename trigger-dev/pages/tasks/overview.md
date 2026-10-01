@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/tasks/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/tasks/overview.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/tasks/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/tasks/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/tasks/overview
 
 # Tasks: Overview
@@ -105,16 +105,14 @@ For more information read [the retrying guide](https://trigger.dev/docs/errors-r
 
 It's also worth mentioning that you can [retry a block of code](https://trigger.dev/docs/errors-retrying) inside your tasks as well.
 
-### `queue` options
+### `queue` and `concurrency` options
 
-Queues allow you to control the concurrency of your tasks. This allows you to have one-at-a-time execution and parallel executions. There are also more advanced techniques like having different concurrencies for different sets of your users. For more information read [the concurrency & queues guide](https://trigger.dev/docs/queue-concurrency).
+Queues control the order your runs execute in, and concurrency limits control how many execute at once: one-at-a-time execution, parallel executions, and more advanced techniques like separate concurrency for different sets of your users. For more information read the [Queues](https://trigger.dev/docs/queues) and [Concurrency](https://trigger.dev/docs/concurrency) guides.
 
 ```ts /trigger/one-at-a-time.ts
 export const oneAtATime = task({
   id: "one-at-a-time",
-  queue: {
-    concurrencyLimit: 1,
-  },
+  concurrency: { total: 1 },
   run: async (payload: any, { ctx }) => {
     //...
   },
@@ -211,7 +209,7 @@ tasks.onStartAttempt(({ ctx, payload, task }) => {
 
 ## Lifecycle functions
 
-![Lifecycle functions](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/images/lifecycle-functions.png)
+![Lifecycle functions](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/lifecycle-functions.png)
 
 ### `middleware` and `locals` functions
 

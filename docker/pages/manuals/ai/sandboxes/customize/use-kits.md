@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/use-kits.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/ai/sandboxes/customize/use-kits.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/use-kits.md](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/content/manuals/ai/sandboxes/customize/use-kits.md)
 
 # Use kits
 
@@ -134,6 +134,11 @@ feature, Docker Sandboxes can reject the combination.
 
 To publish your combination as one reference, see
 [Compose a kit set](https://docs.docker.com/ai/sandboxes/customize/author/kit-sets/).
+To keep the kits separate in a shared sandbox configuration, list them in a
+[sandbox environment file](https://docs.docker.com/ai/sandboxes/configuration/environment-files/).
+Give each published kit its own image repository name. Different tags of the
+same repository have the same kit name, and Docker Sandboxes rejects duplicate
+names in a composition.
 
 ### Change a sandbox's mixins
 

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/vlagent.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vlagent.md)
+> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/vlagent.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/vlagent.md)
 
 `vlagent` is an agent for collecting logs from various sources and storing them in [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/).
 
@@ -114,6 +114,9 @@ Override with `-kubernetesCollector.timeField=field1,field2`.
 
 If none of the `_time` fields are present, `vlagent` uses the timestamp written by the container runtime.
 This is usually accurate to within a millisecond.
+
+`vlagent` also adds the `output_stream` field to every collected log entry.
+It contains the name of the stream the container wrote the log line to: `stdout` or `stderr`.
 
 ### Stream fields
 
@@ -296,7 +299,7 @@ spec:
       serviceAccountName: vlagent
       containers:
         - name: vlagent
-          image: victoriametrics/vlagent:v1.51.0
+          image: victoriametrics/vlagent:v1.52.0
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -337,7 +340,7 @@ See also: [How to exclude vlagent's own logs from collection](https://docs.victo
 `vlagent` can collect text-based logs directly from files on disk using the `-fileCollector.glob` flag.
 This is useful for collecting logs from applications that write to log files, such as nginx, Redis, ClickHouse.
 
-### Quick start
+### Quick start for file collector
 
 The following command starts `vlagent` to collect logs from the `/path/to/file` file
 and to send the collected logs to a VictoriaLogs instance at `victoria-logs:9428`:
@@ -1110,7 +1113,7 @@ See the docs at https://docs.victoriametrics.com/victorialogs/vlagent/ .
   -httpAuth.username string
      Username for HTTP server's Basic Auth. The authentication is disabled if empty. See also -httpAuth.password
   -httpListenAddr array
-     TCP address to listen for incoming http requests. Set this flag to empty value in order to disable listening on any port. This mode may be useful for running multiple vlagent instances on the same server. Note that /targets and /metrics pages aren't available if -httpListenAddr=''. See also -tls and -httpListenAddr.useProxyProtocol
+     Addresses to listen for incoming http requests. Set this flag to empty value in order to disable listening on any port. This mode may be useful for running multiple vlagent instances on the same server. Note that /targets and /metrics pages aren't available if -httpListenAddr=''. Use unix:/path/to/socket to listen on Unix domain socket. Note that -tls and -httpListenAddr.useProxyProtocol cannot be used with Unix sockets
      Supports an array of values separated by comma or specified via multiple flags.
      Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
   -httpListenAddr.useProxyProtocol array
@@ -1273,6 +1276,10 @@ See the docs at https://docs.victoriametrics.com/victorialogs/vlagent/ .
      Optional basic auth username to use for the corresponding -remoteWrite.url
      Supports an array of values separated by comma or specified via multiple flags.
      Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
+  -remoteWrite.basicAuth.usernameFile array
+     Optional path to basic auth username to use for the corresponding -remoteWrite.url. The file is re-read every second
+     Supports an array of values separated by comma or specified via multiple flags.
+     Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
   -remoteWrite.bearerToken array
      Optional bearer auth token to use for the corresponding -remoteWrite.url
      Supports an array of values separated by comma or specified via multiple flags.
@@ -1372,7 +1379,7 @@ See the docs at https://docs.victoriametrics.com/victorialogs/vlagent/ .
      Supports an array of values separated by comma or specified via multiple flags.
      Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
   -remoteWrite.tmpDataPath string
-     Path to directory for storing pending data, which isn't sent to the configured -remoteWrite.url . if this flag isn't set, then pending data is stored in the vlagent-remotewrite-data subdirectory under the -tmpDataPath directory; see also -remoteWrite.maxDiskUsagePerURL
+     Path to directory for storing pending data, which isn't sent to the configured -remoteWrite.url. If this flag isn't set, then pending data is stored in the vlagent-remotewrite-data subdirectory under the -tmpDataPath directory; see also -remoteWrite.maxDiskUsagePerURL
   -remoteWrite.url array
      Remote storage URL to write data to. Example url: http://<victorialogs-host>:9428/insert/native. Pass multiple -remoteWrite.url options in order to replicate the collected data to multiple remote storage systems. See also -remoteWrite.maxDiskUsagePerURL and -remoteWrite.format
      Supports an array of values separated by comma or specified via multiple flags.

@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.3: [apps/docs/content/guides/manage/customize/texts.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/guides/manage/customize/texts.mdx)
+> Pinned source for ZITADEL v4.19.4: [apps/docs/content/guides/manage/customize/texts.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/guides/manage/customize/texts.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/customize/texts
 
 You are able to customize the texts used from ZITADEL. This is possibly on the instance or organization level.
@@ -14,7 +14,7 @@ You can now change all the texts from a message.
 As soon as you click into an input field you will see some attribute chips below the field.
 These are the parameters you can include on this specific message.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/console_message_texts.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/console_message_texts.png)
 
 ## Login Texts
 
@@ -22,7 +22,7 @@ Like the message texts you are also able to change the texts on the login interf
 First choose the screen and the language you like to edit.
 You will see the default texts in the input field, and you can overwrite them by typing into the box.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/console_login_texts.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/console_login_texts.png)
 
 ## Reset to default
 
@@ -69,4 +69,4 @@ Also, the instances OIDC discovery endpoint will only list the allowed languages
 
 All language settings are also configurable in the management consoles *Languages* default settings.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/guides/console/languages.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/guides/console/languages.png)

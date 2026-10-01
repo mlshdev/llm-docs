@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/integrations/bindplane.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/bindplane.md)
+> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/integrations/bindplane.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/bindplane.md)
 
 VictoriaLogs integrates with [Bindplane](https://docs.bindplane.com/) via the [Bindplane application](https://app.bindplane.com/).
 
@@ -10,7 +10,7 @@ VictoriaLogs integrates with [Bindplane](https://docs.bindplane.com/) via the [B
 4. Configure hostname, port, and headers.
 5. Name the destination and click on Save.
 
-![Bindplane Library view with Add Destination option for VictoriaLogs](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/bindplane-library.webp)
+![Bindplane Library view with Add Destination option for VictoriaLogs](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/bindplane-library.webp)
 
 ## Add a configuration
 
@@ -19,11 +19,11 @@ VictoriaLogs integrates with [Bindplane](https://docs.bindplane.com/) via the [B
 3. Add your telemetry sources such as OTLP, file logs, or cloud services.
 4. Select the destination.
 
-![Bindplane Configurations page for creating a new configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/bindplane-configurations.webp)
+![Bindplane Configurations page for creating a new configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/bindplane-configurations.webp)
 
 After that Bindplane will start sending logs to VictoriaLogs, and you can query them with LogsQL.
 
-![VictoriaLogs pipelines or log view showing data received from Bindplane](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/bindplane-pipelines.webp)
+![VictoriaLogs pipelines or log view showing data received from Bindplane](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/bindplane-pipelines.webp)
 
 You can check the global view in the Library to view the resource type, component type and configurations.
 

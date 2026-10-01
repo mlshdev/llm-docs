@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/writing-tasks-introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/writing-tasks-introduction.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/writing-tasks-introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/writing-tasks-introduction.mdx)
 > Canonical documentation: https://trigger.dev/docs/writing-tasks-introduction
 
 # Writing tasks: Overview
@@ -14,7 +14,8 @@ Before digging deeper into the details of writing tasks, you should read the [fu
 | [Logging](https://trigger.dev/docs/logging)                          | View and send logs and traces from your tasks.                                                      |
 | [Errors & retrying](https://trigger.dev/docs/errors-retrying)        | How to deal with errors and write reliable tasks.                                                   |
 | [Wait](https://trigger.dev/docs/wait)                                | Wait for periods of time or for external events to occur before continuing.                         |
-| [Concurrency & Queues](https://trigger.dev/docs/queue-concurrency)   | Configure what you want to happen when there is more than one run at a time.                        |
+| [Queues](https://trigger.dev/docs/queues)                            | Control the order your runs execute in.                                                             |
+| [Concurrency](https://trigger.dev/docs/concurrency)                  | Limit how many runs execute at once: per task, per tenant, or shared across tasks.                  |
 | [Realtime notifications](https://trigger.dev/docs/realtime/overview) | Send realtime notifications from your task that you can subscribe to from your backend or frontend. |
 | [Versioning](https://trigger.dev/docs/versioning)                    | How versioning works.                                                                               |
 | [Machines](https://trigger.dev/docs/machines)                        | Configure the CPU and RAM of the machine your task runs on                                          |

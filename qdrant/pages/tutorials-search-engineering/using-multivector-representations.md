@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/using-multivector-representations.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/tutorials-search-engineering/using-multivector-representations.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/using-multivector-representations.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/tutorials-search-engineering/using-multivector-representations.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-search-engineering/using-multivector-representations/
 
 # Multivector Representations for Reranking in Qdrant
@@ -16,7 +16,7 @@ In most vector engines, each document is represented by a single vector - an app
 
 Multivector representations offer a more fine-grained alternative where a single document is represented using multiple vectors, often at the token or phrase level. This enables more precise matching between specific query terms and relevant parts of the document. Matching is especially effective in Late Interaction models like [ColBERT](https://qdrant.tech/documentation/fastembed/fastembed-colbert/), which retain token-level embeddings and perform interaction during query time leading to relevance scoring.
 
-![Multivector Representations](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/advanced-tutorials/multivectors.png)
+![Multivector Representations](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/advanced-tutorials/multivectors.png)
 
 As you will see later in the tutorial, Qdrant supports multivectors and thus late interaction models natively.
 
@@ -46,7 +46,7 @@ However, because multivectors are typically used in the reranking stage (after a
 
 Instead, they can be stored as multi-vector fields (without HNSW indexing) and used at query-time for reranking, which reduces resource overhead and improves performance.
 
-For more on this, check out Qdrant's detailed breakdown in our [Scaling PDF Retrieval with Qdrant tutorial](https://qdrant.tech/documentation/advanced-tutorials/pdf-retrieval-at-scale/#math-behind-the-scaling).
+For more on this, check out Qdrant's detailed breakdown in our [Scaling PDF Retrieval with Qdrant tutorial](https://qdrant.tech/documentation/tutorials-search-engineering/pdf-retrieval-at-scale/#math-behind-the-scaling).
 
 With Qdrant, you have full control of how indexing works. You can disable indexing by setting the HNSW `m` parameter to `0`:
 
@@ -88,7 +88,7 @@ Let's demonstrate how to effectively use multivectors using [FastEmbed](https://
 Install FastEmbed and Qdrant:
 
 ```bash
-pip install qdrant-client[fastembed]>=1.14.2
+pip install "qdrant-client[fastembed]>=1.14.2"
 ```
 
 ## Step-by-Step: ColBERT + Qdrant Setup

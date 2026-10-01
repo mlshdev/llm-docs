@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/guides/examples/dall-e3-generate-image.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/guides/examples/dall-e3-generate-image.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/guides/examples/dall-e3-generate-image.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/guides/examples/dall-e3-generate-image.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/examples/dall-e3-generate-image
 
 # Generate an image using DALL·E 3

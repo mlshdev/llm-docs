@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/setup/convert-account.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/accounts/organization/setup/convert-account.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/setup/convert-account.md](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/content/manuals/accounts/organization/setup/convert-account.md)
 
 # Convert an account into an organization
 
@@ -52,10 +52,6 @@ an organization:
   added to the organization.
 - The user account that you add as the first owner will have full
   administrative access to configure and manage the organization.
-- To transfer a user's personal access tokens (PATs) to your converted
-  organization, you must designate the user as an organization owner. This will
-  ensure any PATs associated with the user's account are transferred to the
-  organization owner.
 
 ## Convert an account into an organization
 
@@ -76,3 +72,10 @@ an organization:
    case-sensitive.
 6. Select **Confirm**. The new owner receives a notification email. Use that
    owner account to sign in and manage the new organization.
+
+> \[!TIP]
+>
+> After you convert an account, existing personal access tokens from that
+> account no longer work. Sign in as the new owner and create an
+> [organization access token (OAT)](https://docs.docker.com/security/access-tokens/organization-access-tokens/)
+> for the converted organization.

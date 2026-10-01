@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.3: [apps/docs/content/guides/integrate/actions/testing-function-manipulation.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/guides/integrate/actions/testing-function-manipulation.mdx)
+> Pinned source for ZITADEL v4.19.4: [apps/docs/content/guides/integrate/actions/testing-function-manipulation.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/guides/integrate/actions/testing-function-manipulation.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/actions/testing-function-manipulation
 
 This guide shows you how to leverage the ZITADEL actions feature to enhance different functions in your ZITADEL instance.

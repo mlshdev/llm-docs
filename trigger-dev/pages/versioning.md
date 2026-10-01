@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/versioning.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/versioning.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/versioning.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/versioning.mdx)
 > Canonical documentation: https://trigger.dev/docs/versioning
 
 # Versioning
@@ -49,7 +49,7 @@ So a task run will continue running on the version it was locked to. We do this 
 
 Every deployment creates a new version of all tasks for that environment.
 
-Because your application and your tasks deploy separately, a release of your app can briefly trigger tasks that belong to a different version. [Version skew protection](https://trigger.dev/docs/deployment/version-skew-protection) pins each run to the deployment built from the same commit, once your app sends the id it was deployed with.
+Because your application and your tasks deploy separately, a release of your app can briefly trigger tasks that belong to a different version. [Version skew protection](https://trigger.dev/docs/deployment/atomic-deployment) pins each run to the deployment built from the same commit, once your app sends the id it was deployed with.
 
 ## Retries and reattempts
 

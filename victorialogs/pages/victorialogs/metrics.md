@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/metrics.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/metrics.md)
+> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/metrics.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/metrics.md)
 
 This document provides a comprehensive reference for all metrics exposed by VictoriaLogs at the `http://localhost:9428/metrics` endpoint.
 These metrics follow the Prometheus exposition format and can be used for monitoring, alerting, and performance analysis.
@@ -302,6 +302,12 @@ These metrics follow the Prometheus exposition format and can be used for monito
 
 **Description:** The number of log entries processed during query execution. This counts all the rows that pass initial filtering for further query processing. High values suggest queries are scanning many rows and may need more narrow [time filters](https://docs.victoriametrics.com/victorialogs/logsql/#time-filter) or [log stream filters](https://docs.victoriametrics.com/victorialogs/logsql/#stream-filter). See also [`vl_storage_per_query_processed_blocks`](https://docs.victoriametrics.com/victorialogs/metrics/#vl_storage_per_query_processed_blocks).
 
+### vl\_storage\_per\_query\_found\_rows
+
+**Type:** Histogram
+
+**Description:** The number of logs found per query. If it is much lower than [`vl_storage_per_query_processed_rows`](https://docs.victoriametrics.com/victorialogs/metrics/#vl_storage_per_query_processed_rows), queries scan many logs to find a few of them, so they may need more narrow [time filters](https://docs.victoriametrics.com/victorialogs/logsql/#time-filter) or [log stream filters](https://docs.victoriametrics.com/victorialogs/logsql/#stream-filter).
+
 ### vl\_storage\_per\_query\_read\_values
 
 **Type:** Histogram
@@ -319,6 +325,12 @@ These metrics follow the Prometheus exposition format and can be used for monito
 **Type:** Histogram
 
 **Description:** Uncompressed bytes processed when reading field values during query execution. See also [`vl_storage_per_query_values_read_bytes`](https://docs.victoriametrics.com/victorialogs/metrics/#vl_storage_per_query_values_read_bytes) and [`vl_storage_per_query_read_values`](https://docs.victoriametrics.com/victorialogs/metrics/#vl_storage_per_query_read_values).
+
+### vl\_slow\_queries\_total
+
+**Type:** Counter
+
+**Description:** The number of queries logged as slow because they took longer than `-search.logSlowQueryDuration` including the time spent waiting in the queue. In [cluster](https://docs.victoriametrics.com/victorialogs/cluster/) `vlstorage` nodes expose this metric too, which helps finding the slow node.
 
 ## Concurrency and Resource Metrics
 
@@ -364,7 +376,7 @@ These metrics follow the Prometheus exposition format and can be used for monito
 
 **Type:** Counter
 
-**Description:** New unique combinations of stream fields first encountered during log ingestion. Only counts streams not previously seen since startup, shows growth in stream cardinality and high-cardinality detection.
+**Description:** The number of log streams registered in daily partitions since the last VictoriaLogs restart. The same stream is counted again when it is registered in another daily partition. If this metric increases much faster than expected outside the normal creation of daily partitions, it may indicate high cardinality.
 
 ### vl\_indexdb\_rows
 

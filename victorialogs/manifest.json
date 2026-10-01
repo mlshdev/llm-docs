@@ -6,21 +6,21 @@
   "title": "VictoriaLogs",
   "homepage": "https://docs.victoriametrics.com/victorialogs/",
   "repository": "VictoriaMetrics/VictoriaLogs",
-  "tag": "v1.52.0",
-  "releaseId": 354834060,
-  "releasePublishedAt": "2026-07-16T02:38:16Z",
-  "sourceCommit": "46a54c976fa3d404396050e8a5ee6c5b0320efc5",
-  "documentCount": 38,
+  "tag": "v1.53.0",
+  "releaseId": 400890976,
+  "releasePublishedAt": "2026-10-01T11:20:01Z",
+  "sourceCommit": "915d91904bf7f5be66ab00f88947ae7fc1431acc",
+  "documentCount": 39,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 1319628,
-      "documentCount": 38,
-      "sha256": "34662b81a60d4fe988dccd0d3b870b28e0e0d00a7f422abda8fcddde0fa23999"
+      "byteLength": 1352085,
+      "documentCount": 39,
+      "sha256": "93912d883a20b42014ca9a0bd7be9c90ef483ca3caa2242a3b062f4034642d95"
     }
   ],
-  "outputDigest": "fe95080ba5079c205b12f0961cfbab9664bf54d3a51e9f5503d798de25162952",
+  "outputDigest": "1b25a69a578d213c121bedcca1553c16348a41d72765c7ae75c014d993fff392",
   "notes": [
     "Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.",
     "Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.",

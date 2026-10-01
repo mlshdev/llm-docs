@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/ai-chat/patterns/version-upgrades.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/ai-chat/patterns/version-upgrades.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/ai-chat/patterns/version-upgrades.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/ai-chat/patterns/version-upgrades.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/patterns/version-upgrades
 
 # Version upgrades
@@ -12,7 +12,7 @@ Chat agent runs are pinned to the worker version they started on. When you deplo
 > **Note**
 >
 > If your sessions are pinned by [version skew
-> protection](https://trigger.dev/docs/deployment/version-skew-protection#chat-sessions), you do not need this page to move a
+> protection](https://trigger.dev/docs/deployment/atomic-deployment#chat-sessions), you do not need this page to move a
 > conversation onto a new deployment. A pinned session follows its pin on its own: when the stored
 > `externalDeploymentId` stops naming the deployment a run is on, the agent hands over at the next
 > turn boundary. Set [`versionSkew: "hold"`](#staying-put) to turn that off for one agent.
@@ -33,7 +33,7 @@ The new run lives on the **same Session** as the old one. `chatId` is the durabl
 
 ### What "the latest deployment" means
 
-The handoff clears the session's [external deployment id](https://trigger.dev/docs/deployment/version-skew-protection#chat-sessions) so the new run can land on the current version — re-applying the pin the agent just rejected would make the upgrade impossible. The cleared pin is persisted on the session, so the next continuation doesn't fall back to it either.
+The handoff clears the session's [external deployment id](https://trigger.dev/docs/deployment/atomic-deployment#chat-sessions) so the new run can land on the current version — re-applying the pin the agent just rejected would make the upgrade impossible. The cleared pin is persisted on the session, so the next continuation doesn't fall back to it either.
 
 To move to a specific deployment rather than to whatever is current, name it:
 
@@ -223,7 +223,7 @@ Two cases never hand over automatically, whatever `versionSkew` says:
 > turn boundary — never mid-turn. If the pin names a deployment that hasn't landed yet, the successor
 > parks: your messages stay durable, and the transport emits `run-pending-version` with
 > `source: "upgrade"` so you can say so in the UI. See [parked
-> chats](https://trigger.dev/docs/deployment/version-skew-protection#chat-sessions).
+> chats](https://trigger.dev/docs/deployment/atomic-deployment#chat-sessions).
 
 ## Custom agents
 
@@ -256,7 +256,7 @@ Both are graceful exits. [`onRecoveryBoot`](https://trigger.dev/docs/ai-chat/pat
 
 ## See also
 
-- [Version skew protection](https://trigger.dev/docs/deployment/version-skew-protection#chat-sessions) — pin a session to the deployment matching the app build that started it
+- [Version skew protection](https://trigger.dev/docs/deployment/atomic-deployment#chat-sessions) — pin a session to the deployment matching the app build that started it
 - [Lifecycle hooks](https://trigger.dev/docs/ai-chat/lifecycle-hooks) — where `onTurnStart` and `onChatResume` fit in the turn cycle
 - [Recovery boot](https://trigger.dev/docs/ai-chat/patterns/recovery-boot) — the sibling hook for mid-stream interruptions (does NOT fire on `requestUpgrade`)
 - [Database persistence](https://trigger.dev/docs/ai-chat/patterns/database-persistence) — how continuations interact with session state

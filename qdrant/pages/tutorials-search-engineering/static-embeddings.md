@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/static-embeddings.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/tutorials-search-engineering/static-embeddings.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/static-embeddings.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/tutorials-search-engineering/static-embeddings.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-search-engineering/static-embeddings/
 
 # Static Embeddings in Practice
@@ -20,7 +20,7 @@ quality of the older methods, such as word2vec or GloVe, which could only create
 word. As a result, the word "bank" would have identical representation in the context of "river bank" and "financial
 institution".
 
-![Static embeddings](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/tutorials/static-embeddings/financial-river-bank.png)
+![Static embeddings](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/tutorials/static-embeddings/financial-river-bank.png)
 
 Transformer-based models would represent the word "bank" differently in each of the contexts. However, transformers come
 with a cost. They are computationally expensive and usually require a lot of memory, although the embeddings models

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/ai-chat/testing.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/ai-chat/testing.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/ai-chat/testing.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/ai-chat/testing.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/testing
 
 # Testing
@@ -74,11 +74,11 @@ describe("myChatAgent", () => {
 });
 ```
 
-The agent reads the mock model from `clientData`:
+This test-only agent reads the mock model from `clientData`. Keep this injection point in your test fixture; select production models on the server.
 
 ```ts trigger/my-chat.ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText, type LanguageModel } from "ai";
+import { stepCountIs, type LanguageModel } from "ai";
 import { z } from "zod";
 
 type ClientData = { model: LanguageModel };
@@ -91,7 +91,7 @@ export const myChatAgent = chat
   })
   .agent({
     id: "my-chat",
-    run: async ({ messages, clientData, signal }) => {
+    run: async ({ messages, clientData, signal, streamText }) => {
       return streamText({
         model: clientData?.model ?? "openai/gpt-4o-mini",
         messages,
@@ -160,7 +160,7 @@ export const agent = chat
   .withClientData({ schema: z.custom<ClientData>() })
   .agent({
     id: "agent",
-    run: async ({ messages, clientData, signal }) => {
+    run: async ({ messages, clientData, signal, streamText }) => {
       return streamText({
         model: clientData?.model ?? anthropic("claude-haiku-4-5"),
         messages,
@@ -678,3 +678,15 @@ await runInMockTaskContext(
 - **Single agent per process.** The resource catalog is process-global; tests within a file are sequential by default. If you parallelize across files, vitest runs each file in its own worker, which avoids registry collisions.
 - **Time-sensitive hooks.** `onTurnComplete` runs *after* the `turn-complete` chunk is written, so `sendMessage()` resolves before that hook finishes. Add a brief `await new Promise((r) => setTimeout(r, 20))` if you need to assert on hook side-effects.
 - **No real LLM.** The harness does not call providers — you must inject `MockLanguageModelV3` (or another mock) yourself.
+
+## Check the deployed behavior
+
+The harness checks your agent logic without a running platform. Also exercise the transport against a development or staging environment with a real model:
+
+- Send a message, reload during a tool call, and check that the conversation resumes without duplicate message IDs.
+- Send a pending message during a slow tool. Test both injection and deferral to the next turn.
+- Interrupt the model stream after some text arrives. Check the error, partial transcript, and a successful next turn.
+- Stop a resumed response and check `stopped` in `onTurnComplete`.
+- Try reading a chat and minting its token as another user. Both requests should fail before calling the SDK.
+
+For custom storage, test against your actual adapter. Include pagination boundaries, repeated saves, partial responses, and branch isolation. Development workers don't exercise deployed-worker checkpoint and restore; verify that separately if your application relies on it.

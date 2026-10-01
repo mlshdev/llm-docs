@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.3: [apps/docs/content/self-hosting/manage/cache.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/self-hosting/manage/cache.mdx)
+> Pinned source for ZITADEL v4.19.4: [apps/docs/content/self-hosting/manage/cache.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/self-hosting/manage/cache.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/manage/cache
 
 ZITADEL supports the use of a caches to speed up the lookup of frequently needed objects. As opposed to HTTP caches which might reside between ZITADEL and end-user applications, the cache build into ZITADEL uses active invalidation when an object gets updated. Another difference is that HTTP caches only cache the result of a complete request and the built-in cache stores objects needed for the internal business logic. For example, each request made to ZITADEL needs to retrieve and set [instance](https://zitadel.com/docs/concepts/structure/instance) information in middleware.

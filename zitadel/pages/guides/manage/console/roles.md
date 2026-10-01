@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.3: [apps/docs/content/guides/manage/console/roles.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/guides/manage/console/roles.mdx)
+> Pinned source for ZITADEL v4.19.4: [apps/docs/content/guides/manage/console/roles.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/guides/manage/console/roles.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/console/roles
 
 > **Terminology update**
@@ -20,7 +20,7 @@ and
 - Display Name: Accountant
 - Group: Administration
 
-![Add roles](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/guides/console/addrole.png)
+![Add roles](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/guides/console/addrole.png)
 
 The **Key** is used for coding (can then, for example, be requested in the ID Token).
 
@@ -28,7 +28,7 @@ The **Display Name** is just for you to remember its use case
 
 The **Group** is to make it easier to assign multiple roles at once.
 
-![Roles](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/guides/console/roles.png)
+![Roles](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/guides/console/roles.png)
 
 > The role client is for another application of the project `POS`, as all possible roles from your POS applications are defined in your project.
 
@@ -39,13 +39,13 @@ A role assignment combines a user of your organization with one or multiple role
 
 > You can also add users of other organizations. Click on the hint below the username field to create an [external user role assignment](https://zitadel.com/docs/concepts/features/external-user-grant).
 
-![Auth users](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/guides/console/authusers.png)
+![Auth users](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/guides/console/authusers.png)
 
 If you want to test your application with your own user, navigate to the **Role Assignments** section under your project and click on **new**.
 
 Type your username, hit "Continue," select the roles you want your user to have, and save. If you want to add all roles of the Administration group, you can click on the group to select all.
 
-![RoleAssignments](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/guides/console/authorization.png)
+![RoleAssignments](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/guides/console/authorization.png)
 
 Now you can retrieve those roles in your application. ZITADEL has [multiple settings](https://zitadel.com/docs/guides/manage/console/projects-overview#project-settings) for you to access them more easily. Navigate to the **General** section of your project for more settings.
 

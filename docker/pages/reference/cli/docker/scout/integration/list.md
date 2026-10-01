@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/scout/docker_scout_integration_list.yaml](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/data/cli/scout/docker_scout_integration_list.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_integration_list.yaml](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/data/cli/scout/docker_scout_integration_list.yaml)
 
 # docker scout integration list
 

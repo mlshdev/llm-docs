@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/keyConcepts.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/keyConcepts.md)
+> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/keyConcepts.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/keyConcepts.md)
 
 ## Data model
 
@@ -275,8 +275,9 @@ VictoriaLogs works perfectly with such fields unless they are associated with [l
 - Increased disk read/write I/O
 
 VictoriaLogs exposes `vl_streams_created_total` [metric](https://docs.victoriametrics.com/victorialogs/metrics/#vl_streams_created_total),
-which shows the number of created streams since the last VictoriaLogs restart. If this metric grows at a rapid rate
-over a long period of time, then there is a high chance of high-cardinality issues mentioned above.
+which shows the number of log streams registered in daily partitions since the last VictoriaLogs restart. The same stream
+is counted again when it is registered in another daily partition. If this metric increases much faster than expected outside the normal
+creation of daily partitions, then there is a high chance of high-cardinality issues mentioned above.
 VictoriaLogs can log all the newly registered streams - see [these docs](https://docs.victoriametrics.com/victorialogs/#logging-new-streams).
 This can help narrow down and eliminate high-cardinality fields from [log streams](https://docs.victoriametrics.com/victorialogs/keyconcepts/#stream-fields).
 

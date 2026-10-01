@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.3: [apps/docs/content/guides/integrate/login-ui/external-login.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/guides/integrate/login-ui/external-login.mdx)
+> Pinned source for ZITADEL v4.19.4: [apps/docs/content/guides/integrate/login-ui/external-login.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/guides/integrate/login-ui/external-login.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login-ui/external-login
 
 ## Flow
@@ -6,7 +6,7 @@
 The prerequisite for adding an external login (social and enterprise) to your user account is a registered identity provider on your ZITADEL instance or the organization of the user.
 If you haven’t added a provider yet, have a look at the following guide first: [Identity Providers](https://zitadel.com/docs/guides/integrate/identity-providers/introduction)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/guides/login-ui/external-login-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/guides/login-ui/external-login-flow.png)
 
 ## Start the Provider Flow
 

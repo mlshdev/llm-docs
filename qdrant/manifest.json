@@ -8,20 +8,20 @@
   "repository": "qdrant/landing_page",
   "tag": "master",
   "branch": "master",
-  "sourceCommittedAt": "2026-09-30T17:36:58Z",
-  "documentationDigest": "50a392c65dff7ea47016e940a4443fe18021107de03e9a8f1cbeb6e8ab562f2c",
-  "sourceCommit": "92777a17ee8cb058f24532fc801c49a765035a70",
-  "documentCount": 328,
+  "sourceCommittedAt": "2026-10-01T14:59:26Z",
+  "documentationDigest": "2481179f77625e2d0052d402a0f257a54176c69fd0af7f3cb4e67ce71ddd6b90",
+  "sourceCommit": "e3215d0e9b9a11b0b6af719307e7eed92e3c436f",
+  "documentCount": 327,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 4002311,
-      "documentCount": 328,
-      "sha256": "4e4880b0c54a4a5213967193f49f335ccb12d8b1e6f7f3dfe12785d29275c08f"
+      "byteLength": 3986805,
+      "documentCount": 327,
+      "sha256": "ea2bc29435b2175a1edd108afd13eb1e1ef9fee9da95f893f7284caa10caea25"
     }
   ],
-  "outputDigest": "a1e07ad0803ac75c6541ebb4c00fa62a8ed7bdbd46d09eb3a2c85d825fc5c5f1",
+  "outputDigest": "1e0646948e6746cd73e19bbe9d22a23cde97dd7d057d483800a72f9f0c85f5d1",
   "quarantined": [
     {
       "sourcePath": "qdrant-landing/content/documentation/agentic-tools/_index.md",
@@ -53,6 +53,10 @@
     },
     {
       "sourcePath": "qdrant-landing/content/documentation/search-tuning/how-to-tune-hybrid-search.md",
+      "reason": "Unresolved qdrant source syntax \"{{< c\""
+    },
+    {
+      "sourcePath": "qdrant-landing/content/documentation/search-tuning/hybrid-search.md",
       "reason": "Unresolved qdrant source syntax \"{{< c\""
     },
     {

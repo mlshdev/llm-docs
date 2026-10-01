@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/introduction.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/introduction.mdx)
 > Canonical documentation: https://trigger.dev/docs/introduction
 
 # Trigger.dev docs
@@ -47,7 +47,7 @@ Build durable, multi-turn agents with the [chat agent](https://trigger.dev/docs/
 
 ## Scale and scheduling
 
-Set how many runs of a task execute at once, globally or per tenant, with [queues and concurrency](https://trigger.dev/docs/queue-concurrency). Run a task on a [cron schedule](https://trigger.dev/docs/tasks/scheduled) with timezone support, choose the CPU and memory each task runs on with [machines](https://trigger.dev/docs/machines), and control what happens when a task throws with [errors and retries](https://trigger.dev/docs/errors-retrying).
+Set how many runs of a task execute at once, globally or per tenant, with [concurrency](https://trigger.dev/docs/concurrency) and [queues](https://trigger.dev/docs/queues). Run a task on a [cron schedule](https://trigger.dev/docs/tasks/scheduled) with timezone support, choose the CPU and memory each task runs on with [machines](https://trigger.dev/docs/machines), and control what happens when a task throws with [errors and retries](https://trigger.dev/docs/errors-retrying).
 
 ## Self-hosting
 

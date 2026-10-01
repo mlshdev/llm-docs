@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/time-based-sharding.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/tutorials-operations/time-based-sharding.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-operations/time-based-sharding.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/tutorials-operations/time-based-sharding.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-operations/time-based-sharding/
 
 # Time-Based Sharding in Qdrant
@@ -9,7 +9,7 @@ Storing everything in Qdrant collection with default sharding can lead to expens
 
 For example, with daily shards, today's data is stored in today's shard, yesterday's data in yesterday's shard, and so on. Queries can target specific shards (today's shard, for example) or multiple shards to cover a date range.
 
-![Time-based sharding across daily shards](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/tutorials/time-based-sharding/time-based-sharding.png)
+![Time-based sharding across daily shards](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/tutorials/time-based-sharding/time-based-sharding.png)
 
 *Time-based sharding routes data to shards based on timestamp. All writes go to the newest shard, while queries can target one or more shards. Older shards can be pruned in the background without affecting performance.*
 
@@ -263,7 +263,9 @@ import uuid
 csv_url = 'https://raw.githubusercontent.com/qdrant/examples/refs/heads/master/time-based-sharding/social-media-posts.csv'
 
 # Retrieve a list of existing shard keys in the collection
-existing_shard_keys = list(client.list_shard_keys(collection_name=collection_name).shard_keys)
+existing_shard_keys = [
+    key.key for key in client.list_shard_keys(collection_name=collection_name).shard_keys or []
+]
 
 dense_model = "sentence-transformers/all-MiniLM-L6-v2"
 batch_size = 100

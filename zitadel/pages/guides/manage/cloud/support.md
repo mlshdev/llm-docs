@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.3: [apps/docs/content/guides/manage/cloud/support.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/guides/manage/cloud/support.mdx)
+> Pinned source for ZITADEL v4.19.4: [apps/docs/content/guides/manage/cloud/support.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/guides/manage/cloud/support.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/cloud/support
 
 > **Note**
@@ -9,9 +9,9 @@
 
 We always recommend first having a look at our [documentation](https://zitadel.com/docs), [discord chat](https://zitadel.com/chat) and [GitHub repository](https://github.com/zitadel/zitadel). You can also ask our AI assistant for help before contacting Support.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/manuals/portal/customer_portal_general_support.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/manuals/portal/customer_portal_general_support.png)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/manuals/portal/customer_portal_general_support_inkeep.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/manuals/portal/customer_portal_general_support_inkeep.png)
 
 ## Support Request
 
@@ -26,9 +26,9 @@ Create a new support request with the following information:
 - Affected Instance (Only for cloud instances)
 - Database Version (Only for self-hosted instances)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/manuals/portal/customer_portal_support.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/manuals/portal/customer_portal_support.png)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/manuals/portal/customer_portal_support_2.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/manuals/portal/customer_portal_support_2.png)
 
 After submitting the form, you will receive a confirmation email, and our team will be in touch with you shortly.
 
@@ -44,7 +44,7 @@ Support access is disabled by default. When enabled, it creates a dedicated Iden
 2. Select the instance that requires support.
 3. Turn on the **Support access** toggle.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/public/img/manuals/portal/customer_portal_support_3.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/manuals/portal/customer_portal_support_3.png)
 
 > **Warning**
 >

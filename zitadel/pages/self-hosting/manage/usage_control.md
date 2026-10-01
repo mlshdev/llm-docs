@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.3: [apps/docs/content/self-hosting/manage/usage_control.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/self-hosting/manage/usage_control.mdx)
+> Pinned source for ZITADEL v4.19.4: [apps/docs/content/self-hosting/manage/usage_control.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/self-hosting/manage/usage_control.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/manage/usage_control
 
 If you have a self-hosted ZITADEL environment, you can limit the usage of your [instances](https://zitadel.com/docs/concepts/structure/instance).

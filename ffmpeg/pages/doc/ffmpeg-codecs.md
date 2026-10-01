@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/5a54fcf75e0245111075b1c31593ba1919c25306/doc/ffmpeg-codecs.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/65a38704627691bff121a874dffc209aae239e20/doc/ffmpeg-codecs.texi)
 
 # Description
 
@@ -2598,6 +2598,12 @@ The following options are supported by the libmp3lame wrapper. The
 - cutoff (*--lowpass*)
   Set lowpass cutoff frequency. If unspecified, the encoder dynamically
   adjusts the cutoff.
+
+- strict (*--strictly-enforce-ISO*)
+  Enable LAME's strict ISO buffer constraints when set to `strict` or
+  `very`. Other values leave LAME's default buffer constraints unchanged.
+  This can improve compatibility with some decoders, at the cost of reduced
+  bit reservoir usage.
 
 - reservoir
   Enable use of bit reservoir when set to 1. Default value is 1. LAME

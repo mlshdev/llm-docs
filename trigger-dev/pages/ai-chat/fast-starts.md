@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/ai-chat/fast-starts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/ai-chat/fast-starts.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/ai-chat/fast-starts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/ai-chat/fast-starts.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/fast-starts
 
 # Fast starts
@@ -712,7 +712,7 @@ chat.startHeadStart<TTools>({
 
 `completion` resolves once the head start finishes; `await` it or hand it to `waitUntil`. It rejects if the warm step or the dispatch fails.
 
-`pendingVersion` is `true` when the agent run is parked waiting for the deployment carrying the session's [external deployment id](https://trigger.dev/docs/deployment/version-skew-protection#chat-sessions). Step 1 still runs in your process and still reaches the browser, so pass the flag to the destination page if you want it to say a deploy is in progress rather than appear to stall on step 2.
+`pendingVersion` is `true` when the agent run is parked waiting for the deployment carrying the session's [external deployment id](https://trigger.dev/docs/deployment/atomic-deployment#chat-sessions). Step 1 still runs in your process and still reaches the browser, so pass the flag to the destination page if you want it to say a deploy is in progress rather than appear to stall on step 2.
 
 ### Limitations
 

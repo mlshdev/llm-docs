@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/search-relevance.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/search/search-relevance.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search/search-relevance.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/search/search-relevance.md)
 > Canonical documentation: https://qdrant.tech/documentation/search/search-relevance/
 
 # Search Relevance
@@ -338,7 +338,7 @@ Decay functions enable you to modify the score based on how far a value is from 
 | `scale`    | 1.0     | The value at which the decay function will be equal to `midpoint`. This is in terms of `x` units. For example, if `x` is in meters, `scale` of 5000 means 5km. Must be a non-zero positive number. |
 | `midpoint` | 0.5     | Output is `midpoint` when `x` equals `target` ± `scale`. Must be in the range (0.0, 1.0), exclusive.                                                                                               |
 
-![Decay functions.](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/docs/decay-function.png)
+![Decay functions.](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/docs/decay-function.png)
 
 *Each decay function maps `x` to a score in the range of 0 to 1. `target`, `scale` and `midpoint` determine the shape of the curve.*
 

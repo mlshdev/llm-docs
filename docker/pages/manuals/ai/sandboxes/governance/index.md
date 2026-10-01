@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/_index.md](https://github.com/docker/docs/blob/e169d1082ba3fa27684fe5a67d8109a788aa84a9/content/manuals/ai/sandboxes/governance/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/_index.md](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/content/manuals/ai/sandboxes/governance/_index.md)
 
 # Governance
 
@@ -48,8 +48,7 @@ MCP policy basics, evaluation, and precedence.
 - [Organization policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/organization/): centrally manage
   sandbox policies across your organization.
 - [Network access policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/network/): control outbound network
-  access from sandboxes. A local policy rule can match a host, or an HTTP
-  method and path.
+  access from sandboxes, by host or by HTTP method and path.
 - [Filesystem access policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/filesystem/): control which
   host paths sandboxes can mount as workspaces.
 - [MCP access policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/mcp/): control MCP server registration,

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/management/envvars/list.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/management/envvars/list.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/management/envvars/list.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/management/envvars/list.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/envvars/list
 
 # List Env Vars

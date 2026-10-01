@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/troubleshooting.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/troubleshooting.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/troubleshooting.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/troubleshooting.mdx)
 > Canonical documentation: https://trigger.dev/docs/troubleshooting
 
 # Common problems
@@ -166,6 +166,18 @@ You need to be on at least these minor versions:
 | 22      | 22.0+   |
 
 ## Runtime issues
+
+### Runs stuck in "Pending version"
+
+A run sits in **Pending version** when the version deployed to that environment doesn't contain the run's task, or doesn't contain the queue it was triggered on. The run isn't lost: unless it's pinned to a specific deployment (see the last cause below), it starts automatically once a version containing both is deployed.
+
+Usually one of:
+
+- **The task isn't in the deployed version.** It was renamed or removed, or the deploy adding it hasn't landed yet. Check the Tasks page for that environment.
+- **The queue doesn't exist in the deployed version.** Overriding `queue` at trigger time only works if a deployed task declares that queue — see [Queues](https://trigger.dev/docs/queues).
+- **You triggered into the wrong organization, project or environment.** Check the secret key you triggered with belongs to the same place you deployed to.
+- **A later deploy removed or renamed the task or queue while the run was waiting.** Most likely with `delay`. Pin the run to a version to avoid this: `trigger(payload, { delay: "1h", version: "20260227.2" })`. See [version locking](https://trigger.dev/docs/deployment/overview#version-locking).
+- **The run is pinned to an external deployment id that hasn't arrived.** This is [version skew protection](https://trigger.dev/docs/deployment/atomic-deployment#waiting-and-expiry), and it behaves differently: only a deployment carrying the matching id releases the run, and it expires after 1 hour if none does.
 
 ### `Environment variable not found:`
 

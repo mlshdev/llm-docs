@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/platforms/buildship.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/platforms/buildship.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/platforms/buildship.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/platforms/buildship.md)
 > Canonical documentation: https://qdrant.tech/documentation/platforms/buildship/
 
 # BuildShip
@@ -20,19 +20,19 @@ The Qdrant integration includes the following nodes with extensibility if requir
 
 ### Add Point
 
-![Add Point](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/frameworks/buildship/add.png)
+![Add Point](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/frameworks/buildship/add.png)
 
 ### Retrieve Points
 
-![Retrieve Points](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/frameworks/buildship/get.png)
+![Retrieve Points](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/frameworks/buildship/get.png)
 
 ### Delete Points
 
-![Delete Points](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/frameworks/buildship/delete.png)
+![Delete Points](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/frameworks/buildship/delete.png)
 
 ### Search Points
 
-![Search Points](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/frameworks/buildship/search.png)
+![Search Points](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/frameworks/buildship/search.png)
 
 ## Further Reading
 

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/vmalert.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vmalert.md)
+> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/vmalert.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/vmalert.md)
 
 [vmalert](https://docs.victoriametrics.com/victoriametrics/vmalert/) integrates with VictoriaLogs via stats APIs [`/select/logsql/stats_query`](https://docs.victoriametrics.com/victorialogs/querying/#querying-log-stats)
 and [`/select/logsql/stats_query_range`](https://docs.victoriametrics.com/victorialogs/querying/#querying-log-range-stats).
@@ -28,7 +28,7 @@ Each `-rule` file may contain an arbitrary number of [groups](https://docs.victo
 See examples in the [Groups](https://docs.victoriametrics.com/victorialogs/vmalert/#groups) section. See the full list of configuration flags and their descriptions in the [Configuration](https://docs.victoriametrics.com/victorialogs/vmalert/#configuration) section.
 
 With the configuration example above, vmalert will perform the following interactions:
-![vmalert](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vmalert_victorialogs.webp)
+![vmalert](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/vmalert_victorialogs.webp)
 
 1. Rules listed in the `-rule` file are executed against the VictoriaLogs service configured via `-datasource.url`.
 2. Triggered alerting notifications are sent to the [Alertmanager](https://github.com/prometheus/alertmanager) service configured via `-notifier.url`.
@@ -413,3 +413,7 @@ Please refer to [How to use multitenancy in rules](https://docs.victoriametrics.
           - "/select/logsql/.*"
           url_prefix: "http://victorialogs:9428"
 ```
+
+### How to display rules in Grafana Alerting UI?
+
+Currently, Grafana Alerting UI cannot display datasource-managed rules through the VictoriaLogs datasource plugin, even when `-vmalert.proxyURL` is configured. This is because Grafana currently supports datasource-managed rules only for the `Prometheus` and `Loki` datasource types. See [this issue](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/59#issuecomment-2694191642) for details.

@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/5a54fcf75e0245111075b1c31593ba1919c25306/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/65a38704627691bff121a874dffc209aae239e20/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -14728,6 +14728,10 @@ It accepts the following parameters:
   A '|'-separated list of color range names, such as
   "alpha\_modes=straight|premultiplied".
 
+- chroma\_locations
+  A '|'-separated list of chroma sample location names, such as
+  "chroma\_locations=left|topleft".
+
 ### Examples
 
 -
@@ -17192,9 +17196,12 @@ fail negotiation otherwise. Disabled by default.
 - color\_trc
 - range
 - chroma\_location
-  Configure the colorspace that output frames will be delivered in. The default
-  value of `auto` outputs frames in the same format as the input frames,
-  leading to no change. For any other value, conversion will be performed.
+  Configure the colorspace that output frames will be delivered in. For any value
+  other than the default `auto`, conversion will be performed. With
+  `auto`, `color_primaries` and `color_trc` keep the values of
+  the input frames, while `colorspace`, `range` and
+  `chroma_location` use the values negotiated with the filtergraph, which
+  are those of the input unless a following filter requires others.
 
 See the setparams filter for a list of possible values.
 
@@ -17649,7 +17656,10 @@ attempting to squeeze the maximum performance at the cost of quality.
 
 ### Commands
 
-This filter supports almost all of the above options as commands.
+This filter supports almost all of the above options as commands. The
+options negotiated with the filtergraph, `format`, `colorspace`,
+`range`, `chroma_location` and `alpha_mode`, are fixed
+once the filtergraph is configured and can not be changed with commands.
 
 ### Examples
 
@@ -21820,8 +21830,12 @@ range depends on the pixel format. Possible values:
 - in\_chroma\_loc
 
 - out\_chroma\_loc
-  Set in/output chroma sample location. If not specified, center-sited chroma
-  is used by default. Possible values:
+  Set in/output chroma sample location. If `in_chroma_loc` is not
+  specified, the chroma location tagged on the input frame is used, and untagged
+  input is assumed to be sited like the output, so it is tagged but not converted.
+  If `out_chroma_loc` is not specified, the output is converted to the
+  chroma location negotiated with the rest of the filtergraph, or keeps the input
+  location if none was negotiated. Possible values:
 
   - auto, unknown
   - left
@@ -25062,6 +25076,8 @@ The filter accepts the following options:
 
 - codec
   Use specified codec instead of snow.
+
+<a id="v360"></a>
 
 ## v360
 
@@ -29847,6 +29863,117 @@ Can assume the following values:
   - landscape
     Preserve landscape geometry (when *width* >= *height*).
 
+<a id="v360vulkan"></a>
+
+## v360\_vulkan
+
+Convert 360 videos between various formats.
+Supported formats (projections) are subset of v360 filter,
+that are most popular 360-degree video formats.
+
+The filter accepts subset of v360 options:
+
+- input
+- output
+  Set format of the input/output video.
+
+  - e
+
+  - equirect
+    Equirectangular projection.
+
+  - eac
+    Equi-Angular Cubemap. (Output only)
+
+**FIXME**: current output doesn't contain padding.
+
+- flat
+  Regular video.
+
+- dfisheye
+  Dual fisheye.
+
+- sg
+  Stereographic format.
+
+- fisheye
+  Fisheye projection.
+
+- gopromax
+  GoPro Max .360 format. (Input only)
+
+A .360 video file contains two video streams (front and rear);
+with this input projection the filter takes two inputs and combines
+them into a single stream. See the `overlap` option.
+
+- w
+
+- h
+  Set the output video resolution.
+  See v360 options.
+
+- yaw
+
+- pitch
+
+- roll
+
+- rorder
+  Set rotation for the output video.
+  See v360 options.
+
+- h\_fov
+
+- v\_fov
+  Set output horizontal/vertical field of view.
+  See v360 options.
+
+- ih\_fov
+
+- iv\_fov
+  Set input horizontal/vertical field of view.
+  See v360 options.
+
+- overlap
+  Set number of overlapped pixels on input .360 video.
+  Only used with `input=gopromax`.
+
+The GoPro Max .360 video contains overlapped area
+(See <https://gopro.com/news/max-tech-specs-stitching-resolution>).
+The filter blends overlapped images in these two areas.
+
+The number of pixels of overlapped areas depends on the video resolution.
+In most cases, the value is automatically calculated based on input video size,
+but it may be changed on GoPro Max2 or future models.
+The option is to adjust for unknown video resolutions.
+
+### Examples
+
+Special notes exist to use with `input=gopromax`.
+
+The GoPro Max .360 video file contains two video streams,
+and the stream number must be specified.
+The stream number (e.g., `[0:5]`) depends on the model and shooting mode.
+Please check actual stream number with `ffprobe` command.
+
+-
+
+Convert GoPro Max (8bit color depth) .360 to Equirectangular projection.
+GoPro Max uses obsolete yuvj420p pixel format, thus convert the format to yuv420p before this filter.
+
+```text
+ffmpeg -init_hw_device vulkan -i INPUT.360 -filter_complex "[0:0]format=yuv420p,hwupload[vf],[0:5]format=yuv420p,hwupload[vr], [vf][vr]v360_vulkan=input=gopromax:output=e, hwdownload,format=yuv420p" OUTPUT.mkv
+```
+
+-
+
+Convert GoPro Max2 (10bit color depth) .360 to Dual fisheye projection.
+GoPro Max2 uses yuv420p10le pixel format.
+
+```text
+ffmpeg -init_hw_device vulkan -i INPUT.360 -filter_complex "[0:0]hwupload[vf],[0:4]hwupload[vr], [vf][vr]v360_vulkan=input=gopromax:output=dfisheye, hwdownload,format=yuv420p10le" OUTPUT.mkv
+```
+
 # QSV Video Filters
 
 Below is a description of the currently available QSV video filters.
@@ -29979,6 +30106,13 @@ It accepts the following parameters:
   A string representing the alpha mode of the buffered video frames.
   It may be a number corresponding to an alpha mode, or an alpha mode
   name.
+
+- chroma\_location
+  A string representing the chroma sample location of the buffered video
+  frames. It may be a number corresponding to a chroma sample location, or a
+  chroma sample location name. When it is not set, the filtergraph chooses the
+  chroma sample location of the output. Frames without a chroma sample location
+  are tagged with the one negotiated for the output.
 
 - pixel\_aspect, sar
   The sample (pixel) aspect ratio of the input video.
@@ -30455,7 +30589,7 @@ Generate several gradients.
 - c0, c1, c2, c3, c4, c5, c6, c7
   Set 8 colors. Default values for colors is to pick random one.
 
-- x0, y0, y0, y1
+- x0, y0, x1, y1
   Set gradient line source and destination points. If negative or out of range, random ones
   are picked.
 

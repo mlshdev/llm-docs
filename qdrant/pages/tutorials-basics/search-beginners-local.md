@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-basics/search-beginners-local.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/tutorials-basics/search-beginners-local.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-basics/search-beginners-local.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/tutorials-basics/search-beginners-local.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-basics/search-beginners-local/
 
 # Build a Semantic Search Engine in 5 Minutes
@@ -41,7 +41,7 @@ pip install -U qdrant-client
 
 > **Note**
 >
-> This tutorial requires qdrant-client version 1.7.1 or higher.
+> This tutorial requires qdrant-client version 1.10 or higher.
 
 ### Import the Models
 
@@ -167,7 +167,7 @@ client.create_collection(
 )
 ```
 
-- The `vector_size` parameter defines the size of the vectors for a specific collection. If their size is different, it is impossible to calculate the distance between them. 384 is the encoder output dimensionality. You can also use model.get\_sentence\_embedding\_dimension() to get the dimensionality of the model you are using.
+- The `size` parameter defines the size of the vectors for a specific collection. If their size is different, it is impossible to calculate the distance between them. 384 is the encoder output dimensionality. You can also use model.get\_sentence\_embedding\_dimension() to get the dimensionality of the model you are using.
 
 - The `distance` parameter lets you specify the function used to measure the distance between two points.
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/management/envvars/update.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/management/envvars/update.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/management/envvars/update.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/management/envvars/update.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/envvars/update
 
 # Update Env Var
@@ -24,7 +24,7 @@ Update a specific environment variable for a specific project and environment.
 
 - Media type: `application/json`
   - Schema (object)
-    - `value` (required; string)
+    - `value` (required; string): The value to store. An empty string is valid and is stored as-is, not treated as a deletion.
       - Example: `slack_123456`
 
 **Responses**

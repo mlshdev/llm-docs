@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.3: [apps/docs/content/guides/manage/production-checklist.mdx](https://github.com/zitadel/zitadel/blob/2c6acd8c033319be6d73ad484ed5c8e0743afd6d/apps/docs/content/guides/manage/production-checklist.mdx)
+> Pinned source for ZITADEL v4.19.4: [apps/docs/content/guides/manage/production-checklist.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/guides/manage/production-checklist.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/production-checklist
 
 This checklist is specifically designed for teams deploying on **ZITADEL Cloud**.

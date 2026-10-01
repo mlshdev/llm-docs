@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/reports.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/reports.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/reports.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/reports.mdx)
 > Canonical documentation: https://trigger.dev/docs/reports
 
 # Project health report
@@ -148,7 +148,7 @@ An unknown report key returns `404` with the list of available keys.
 - [MCP tools](https://trigger.dev/docs/mcp-tools)
 
   Every tool the MCP server exposes, including `get_report`.
-- [Concurrency & queues](https://trigger.dev/docs/queue-concurrency)
+- [Concurrency](https://trigger.dev/docs/concurrency)
 
   Configure the concurrency limits the Flow verdict checks against.
 - [Query your data](https://trigger.dev/docs/observability/query)

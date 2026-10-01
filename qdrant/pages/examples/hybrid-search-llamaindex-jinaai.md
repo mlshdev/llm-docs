@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/hybrid-search-llamaindex-jinaai.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/examples/hybrid-search-llamaindex-jinaai.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/examples/hybrid-search-llamaindex-jinaai.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/examples/hybrid-search-llamaindex-jinaai.md)
 > Canonical documentation: https://qdrant.tech/documentation/examples/hybrid-search-llamaindex-jinaai/
 
 # Chat With Product PDF Manuals Using Hybrid Search
@@ -20,7 +20,7 @@ We'll cover the essential steps required to build your system, including data in
 - **Framework:** [LlamaIndex](https://www.llamaindex.ai/) for extended RAG functionality and [Hybrid Search support](https://docs.llamaindex.ai/en/stable/examples/vector_stores/qdrant_hybrid/).
 - **Parser:** [LlamaParse](https://github.com/run-llama/llama_parse) as a way to parse complex documents with embedded objects such as tables and figures.
 
-![Architecture diagram](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/examples/hybrid-search-llamaindex-jinaai/architecture-diagram.png)
+![Architecture diagram](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/examples/hybrid-search-llamaindex-jinaai/architecture-diagram.png)
 
 ### Procedure
 

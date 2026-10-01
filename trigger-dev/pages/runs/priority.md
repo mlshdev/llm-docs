@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/runs/priority.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/runs/priority.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/runs/priority.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/runs/priority.mdx)
 > Canonical documentation: https://trigger.dev/docs/runs/priority
 
 # Priority
@@ -12,7 +12,7 @@ You can set a priority when you trigger a run. This allows you to prioritize som
 
 The value for priority is a time offset in seconds that determines the order of dequeuing.
 
-![Priority runs](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/images/priority-runs.png)
+![Priority runs](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/priority-runs.png)
 
 If you specify a priority of `10` the run will dequeue before runs that were triggered with no priority 8 seconds ago, like in this example:
 
@@ -30,4 +30,5 @@ If you passed a value of `3600` the run would dequeue before runs that were trig
 
 > **Note**
 >
-> Setting a high priority will not allow you to beat runs from other organizations. It will only affect the order of your own runs.
+> Setting a high priority will not allow you to beat runs from other organizations. It will only
+> affect the order of your own runs.

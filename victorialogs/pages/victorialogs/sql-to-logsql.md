@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/sql-to-logsql.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/sql-to-logsql.md)
+> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/sql-to-logsql.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/sql-to-logsql.md)
 
 This is a tutorial for the migration from SQL to [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/).
 It is expected that you are familiar with SQL and know [how to execute queries at VictoriaLogs](https://docs.victoriametrics.com/victorialogs/querying/).
@@ -108,4 +108,4 @@ It is equivalent to the longer LogsQL query:
 
 [LogsQL pipes](https://docs.victoriametrics.com/victorialogs/logsql/#pipes) support much wider functionality compared to SQL,
 so spend some time reading [pipe docs](https://docs.victoriametrics.com/victorialogs/logsql/) and playing with them
-at [VictoriaLogs demo playground](https://play-vmlogs.victoriametrics.com/) or at [the playground for Grafana datasource for VictoriaLogs](https://play-grafana.victoriametrics.com/d/be5zidev72m80f/k8s-logs-via-victorialogs).
+at [VictoriaLogs demo playground](https://play-vmlogs.victoriametrics.com/) or at [the playground for Grafana datasource for VictoriaLogs](https://play-grafana.victoriametrics.com/d/lajgcmm/victorialogs-explorer-for-kubernetes-logs).

@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/embeddings/fusion-embedding-2.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/embeddings/fusion-embedding-2.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/embeddings/fusion-embedding-2.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/embeddings/fusion-embedding-2.md)
 > Canonical documentation: https://qdrant.tech/documentation/embeddings/fusion-embedding-2/
 
 # Fusion Embedding 2

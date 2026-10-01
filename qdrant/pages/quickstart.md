@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/quickstart.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/quickstart.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/quickstart.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/quickstart.md)
 > Canonical documentation: https://qdrant.tech/documentation/quickstart/
 
 # How to Get Started with Qdrant Locally
@@ -108,7 +108,7 @@ await client.createCollection("test_collection", {
 ```
 
 ```rust
-use qdrant_client::qdrant::{CreateCollectionBuilder, VectorParamsBuilder};
+use qdrant_client::qdrant::{CreateCollectionBuilder, Distance, VectorParamsBuilder};
 
 client
     .create_collection(
@@ -143,10 +143,10 @@ import (
 )
 
 client.CreateCollection(context.Background(), &qdrant.CreateCollection{
-	CollectionName: "{collection_name}",
+	CollectionName: "test_collection",
 	VectorsConfig: qdrant.NewVectorsConfig(&qdrant.VectorParams{
 		Size:     4,
-		Distance: qdrant.Distance_Cosine,
+		Distance: qdrant.Distance_Dot,
 	}),
 })
 ```
@@ -392,6 +392,7 @@ let search_result = client
     .query(
         QueryPointsBuilder::new("test_collection")
             .query(vec![0.2, 0.1, 0.9, 0.7])
+            .limit(3)
     )
     .await?;
 
@@ -420,7 +421,7 @@ System.out.println(searchResult);
 var searchResult = await client.QueryAsync(
     collectionName: "test_collection",
     query: new float[] { 0.2f, 0.1f, 0.9f, 0.7f },
-    limit: 3,
+    limit: 3
 );
 
 Console.WriteLine(searchResult);
@@ -437,6 +438,7 @@ import (
 searchResult, err := client.Query(context.Background(), &qdrant.QueryPoints{
 	CollectionName: "test_collection",
 	Query:          qdrant.NewQuery(0.2, 0.1, 0.9, 0.7),
+	Limit:          qdrant.PtrOf(uint64(3)),
 })
 if err != nil {
 	panic(err)
@@ -528,7 +530,10 @@ dbg!(search_result);
 ```
 
 ```java
+import io.qdrant.client.grpc.Common.Filter;
+
 import static io.qdrant.client.ConditionFactory.matchKeyword;
+import static io.qdrant.client.WithPayloadSelectorFactory.enable;
 
 List<ScoredPoint> searchResult =
     client.queryAsync(QueryPoints.newBuilder()

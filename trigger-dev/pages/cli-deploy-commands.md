@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/cli-deploy-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/cli-deploy-commands.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/cli-deploy-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/cli-deploy-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-deploy-commands
 
 # CLI deploy command
@@ -90,7 +90,7 @@ Turn off syncing environment variables with the Trigger.dev instance.
 
 Attach your own identifier to this deployment — a commit SHA, release tag or CI run id, up to 128
 characters. Your app can then send the same id when triggering, and runs are pinned to this
-deployment. See [version skew protection](https://trigger.dev/docs/deployment/version-skew-protection).
+deployment. See [version skew protection](https://trigger.dev/docs/deployment/atomic-deployment).
 
 Repeating an id that is already deployed doesn't build again: the CLI reports the existing version,
 sets the same outputs, and exits successfully. Repeating an id that has a build in flight is an

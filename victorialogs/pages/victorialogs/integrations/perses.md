@@ -1,8 +1,8 @@
-> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/integrations/perses.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses.md)
+> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/integrations/perses.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/perses.md)
 
 Starting with [Perses](https://perses.dev/) [v0.53.0-beta.2](https://github.com/perses/perses/releases/tag/v0.53.0-beta.2) release introduces first-class integration with VictoriaLogs.
 
-![Overview VictoriaLogs Perses integration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses-overview.webp)
+![Overview VictoriaLogs Perses integration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/perses-overview.webp)
 
 # Plugins setup
 
@@ -13,7 +13,7 @@ Starting with [Perses](https://perses.dev/) [v0.53.0-beta.2](https://github.com/
 - Choose `Proxy` or `Direct access` depending on the public availability of your VictoriaLogs instance.
 - Click `Save` to submit.
 
-![VictoriaLogs datasource plugin configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses-datasource.webp)
+![VictoriaLogs datasource plugin configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/perses-datasource.webp)
 
 ## Variables plugin
 
@@ -26,7 +26,7 @@ Starting with [Perses](https://perses.dev/) [v0.53.0-beta.2](https://github.com/
 - Type a name of field to extract values for into `Field Name` field.
 - Click `Save` to submit.
 
-![VictoriaLogs variables plugin configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses-variable.webp)
+![VictoriaLogs variables plugin configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/perses-variable.webp)
 
 # Create panels
 
@@ -39,7 +39,7 @@ Starting with [Perses](https://perses.dev/) [v0.53.0-beta.2](https://github.com/
 - Select the VictoriaLogs datasource you created above from the `VictoriaLogs Datasource` dropdown.
 - Type a valid [LogsQL query](https://docs.victoriametrics.com/victorialogs/logsql/) in `LogsQL Query` field, it may reference a variable defined in variables plugin section using `${var-name}` expression or with specific formats like `${var:pipe}` for regex filters or `${var:csv}` for comma-separated values.
 
-![Build Logs panel using VictoriaLogs plugin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses-logs-panel.webp)
+![Build Logs panel using VictoriaLogs plugin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/perses-logs-panel.webp)
 
 ## Time Series Panel
 
@@ -51,4 +51,4 @@ Starting with [Perses](https://perses.dev/) [v0.53.0-beta.2](https://github.com/
 - Type a valid [LogsQL stats query](https://docs.victoriametrics.com/victorialogs/logsql/#stats) you want to build a graph for in `LogsQL Query` field. Query may reference a variable defined in variables plugin section using `${var-name}` expression or with specific formats like `${var:pipe}` for regex filters or `${var:csv}` for comma-separated values.
 - Click `Add` to save a panel.
 
-![Build Time Series panel using VictoriaLogs plugin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses-time-panel.webp)
+![Build Time Series panel using VictoriaLogs plugin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/perses-time-panel.webp)

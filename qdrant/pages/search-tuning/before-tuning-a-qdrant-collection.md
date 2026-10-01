@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-tuning/before-tuning-a-qdrant-collection.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/search-tuning/before-tuning-a-qdrant-collection.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/search-tuning/before-tuning-a-qdrant-collection.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/search-tuning/before-tuning-a-qdrant-collection.md)
 > Canonical documentation: https://qdrant.tech/documentation/search-tuning/before-tuning-a-qdrant-collection/
 
 # What to Check Before Tuning a Qdrant Collection
@@ -11,7 +11,7 @@ Some settings are there to verify your setup, not to tune performance. A sparse 
 
 Every query first retrieves candidates, then ranks them. In dense-only search, one vector search does both. Hybrid search adds a sparse prefetch for exact terms, then fusion combines the dense and sparse candidate lists. A reranker, if present, scores the top candidates again.
 
-![Pipeline diagram: a dense prefetch with limit and hnsw\_ef settings and a sparse prefetch with limit and Modifier.IDF settings both feed a fusion stage with RRF k, weights, and DBSF settings, followed by an optional reranker with candidate count and model settings.](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/articles_data/before-tuning-a-qdrant-collection/retrieval-pipeline.svg)
+![Pipeline diagram: a dense prefetch with limit and hnsw\_ef settings and a sparse prefetch with limit and Modifier.IDF settings both feed a fusion stage with RRF k, weights, and DBSF settings, followed by an optional reranker with candidate count and model settings.](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/articles_data/before-tuning-a-qdrant-collection/retrieval-pipeline.svg)
 
 *The hybrid pipeline and the settings each stage owns. Dense-only search uses the dense prefetch path on its own, so `limit` and `hnsw_ef` are its only settings here.*
 

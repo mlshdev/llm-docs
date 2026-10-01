@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/github-integration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/github-integration.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/github-integration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/github-integration.mdx)
 > Canonical documentation: https://trigger.dev/docs/github-integration
 
 # GitHub integration
@@ -32,7 +32,7 @@ This eliminates the need to manually run the `trigger.dev deploy` command or set
 
 Our GitHub integration uses branch tracking to determine when and where to deploy your code.
 
-![Trigger.dev project git settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/deployment/git-settings.png)
+![Trigger.dev project git settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/deployment/git-settings.png)
 
 ### Production and staging branches
 
@@ -61,7 +61,7 @@ The name of the preview branch matches the branch name of the pull request.
 
 ## Version skew protection
 
-Every deployment the GitHub integration creates is tagged with the commit SHA it was built from. That is the deploy half of [version skew protection](https://trigger.dev/docs/deployment/version-skew-protection) — you get it for free.
+Every deployment the GitHub integration creates is tagged with the commit SHA it was built from. That is the deploy half of [version skew protection](https://trigger.dev/docs/deployment/atomic-deployment) — you get it for free.
 
 To complete it, give your running application the same value. Unlike the Vercel integration, we have no access to wherever your app is hosted, so this half is yours to set:
 
@@ -69,7 +69,7 @@ To complete it, give your running application the same value. Unlike the Vercel 
 TRIGGER_EXTERNAL_DEPLOYMENT_ID=<the-commit-sha-this-release-was-built-from>
 ```
 
-If your host already exposes the commit SHA at runtime, set `TRIGGER_AUTOMATIC_SKEW_VERSION_PROTECTION=1` instead and the SDK will find it — see the [platform table](https://trigger.dev/docs/deployment/version-skew-protection#hosting-platforms).
+If your host already exposes the commit SHA at runtime, set `TRIGGER_AUTOMATIC_SKEW_VERSION_PROTECTION=1` instead and the SDK will find it — see the [platform table](https://trigger.dev/docs/deployment/atomic-deployment#hosting-platforms).
 
 ## Disconnecting a repository
 
@@ -79,7 +79,7 @@ You can disconnect a repository at any time from your project git settings. This
 
 To add or remove repository access for the Trigger.dev GitHub app, follow the link in the `Connect GitHub repository` modal:
 
-![Trigger.dev prompt to connect a GitHub repository](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/deployment/connect-repo.png)
+![Trigger.dev prompt to connect a GitHub repository](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/deployment/connect-repo.png)
 
 Alternatively, you can follow these steps on GitHub:
 

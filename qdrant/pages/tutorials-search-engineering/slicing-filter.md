@@ -1,4 +1,4 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/slicing-filter.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/tutorials-search-engineering/slicing-filter.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/tutorials-search-engineering/slicing-filter.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/tutorials-search-engineering/slicing-filter.md)
 > Canonical documentation: https://qdrant.tech/documentation/tutorials-search-engineering/slicing-filter/
 
 # Deterministic Collection Slicing
@@ -14,7 +14,7 @@ Qdrant assigns every point to one slice by hashing its ID. For a fixed `total`, 
 
 This tutorial covers three uses: parallel `scroll` across workers, reproducible sampling for evaluation, and stratified sampling by combining `slice` with a payload filter.
 
-![The slicing mechanism: run an unsorted collection through a hashing function which assigns each point, based on its ID and the total number of requested slices, to the appropriate slice](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/tutorials/slicing-filter/slicing-mechanism.png)
+![The slicing mechanism: run an unsorted collection through a hashing function which assigns each point, based on its ID and the total number of requested slices, to the appropriate slice](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/tutorials/slicing-filter/slicing-mechanism.png)
 
 ## Setup
 

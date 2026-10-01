@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.4: [docs/management/queues/retrieve.mdx](https://github.com/triggerdotdev/trigger.dev/blob/51e29f4b13c04ca4f2ac161bfeb839f10b4e81b7/docs/management/queues/retrieve.mdx)
+> Pinned source for Trigger.dev v4.7.0: [docs/management/queues/retrieve.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/management/queues/retrieve.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/queues/retrieve
 
 # Retrieve Queue
@@ -28,15 +28,17 @@ Get a queue by its ID, or by type and name.
         - Example: `my-task-id`
       - `type` (required; string; enum: `task`, `custom`): The type of queue: - `task`: Created automatically for each task - `custom`: Created explicitly in your code using `queue()`
         - Example: `task`
+      - `version` (required; string; enum: `V1`, `V2`): Discriminates the shape: - `V1`: the queue carries its own `concurrencyLimit` (applied per key when runs pass a `concurrencyKey`, to the whole queue when they don't) and its `concurrency` override state - `V2`: the queue is only the line runs wait in; concurrency is declared with the task `concurrency` option and managed through the concurrency-limits endpoints. `concurrencyLimit` is always null and `concurrency` is absent.
+        - Example: `V1`
       - `running` (required; integer): The number of runs currently executing
         - Example: `5`
       - `queued` (required; integer): The number of runs currently queued
         - Example: `10`
       - `paused` (required; boolean): Whether the queue is paused. When paused, no new runs will start.
         - Example: `false`
-      - `concurrencyLimit` (integer; nullable): The current concurrency limit of the queue
+      - `concurrencyLimit` (integer; nullable): The queue's own concurrency limit. Meaningful on V1 queues; always null on V2 queues.
         - Example: `10`
-      - `concurrency` (object): Detailed concurrency information
+      - `concurrency` (object): Detailed concurrency information. V1 queues only.
         - `current` (integer; nullable): The effective/current concurrency limit
           - Example: `10`
         - `base` (integer; nullable): The base concurrency limit defined in code

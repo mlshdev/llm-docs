@@ -1,7 +1,7 @@
-> Pinned source for Qdrant master: [qdrant-landing/content/documentation/observability/datadog.md](https://github.com/qdrant/landing_page/blob/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/content/documentation/observability/datadog.md)
+> Pinned source for Qdrant master: [qdrant-landing/content/documentation/observability/datadog.md](https://github.com/qdrant/landing_page/blob/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/content/documentation/observability/datadog.md)
 > Canonical documentation: https://qdrant.tech/documentation/observability/datadog/
 
-![Datadog Cover](https://raw.githubusercontent.com/qdrant/landing_page/92777a17ee8cb058f24532fc801c49a765035a70/qdrant-landing/static/documentation/observability/datadog/datadog-cover.jpg)
+![Datadog Cover](https://raw.githubusercontent.com/qdrant/landing_page/e3215d0e9b9a11b0b6af719307e7eed92e3c436f/qdrant-landing/static/documentation/observability/datadog/datadog-cover.jpg)
 
 [Datadog](https://www.datadoghq.com/) is a cloud-based monitoring and analytics platform that offers real-time monitoring of servers, databases, and numerous other tools and services. It provides visibility into the performance of applications and enables businesses to detect issues before they affect users.
 
