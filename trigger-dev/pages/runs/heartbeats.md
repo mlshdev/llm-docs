@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.0: [docs/runs/heartbeats.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/runs/heartbeats.mdx)
+> Pinned source for Trigger.dev v4.7.2: [docs/runs/heartbeats.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/runs/heartbeats.mdx)
 > Canonical documentation: https://trigger.dev/docs/runs/heartbeats
 
 # Heartbeats

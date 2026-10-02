@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.0: [docs/guides/ai-agents/chat-agent.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/guides/ai-agents/chat-agent.mdx)
+> Pinned source for Trigger.dev v4.7.2: [docs/guides/ai-agents/chat-agent.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/guides/ai-agents/chat-agent.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/ai-agents/chat-agent
 
 # Build a chat agent

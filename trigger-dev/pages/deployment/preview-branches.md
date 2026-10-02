@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.0: [docs/deployment/preview-branches.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/deployment/preview-branches.mdx)
+> Pinned source for Trigger.dev v4.7.2: [docs/deployment/preview-branches.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/deployment/preview-branches.mdx)
 > Canonical documentation: https://trigger.dev/docs/deployment/preview-branches
 
 # Preview branches
@@ -9,7 +9,7 @@ Create isolated environments for each branch of your code, allowing you to test 
 
 The preview environment is special – you create branches from it. The branches you create live under the preview environment and have all the features you're used to from other environments (like staging or production). That means you can trigger runs, have schedules, test them, use Realtime, etc.
 
-![Preview environment and branches](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/deployment/preview-environment-branches.png)
+![Preview environment and branches](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/deployment/preview-environment-branches.png)
 
 We recommend you automatically create a preview branch for each git branch when a Pull Request is opened and then archive it automatically when the PR is merged/closed.
 
@@ -125,12 +125,12 @@ jobs:
       - name: Deploy preview branch
         run: npx trigger.dev@latest deploy --env preview
         env:
-          TRIGGER_ACCESS_TOKEN: ${{ secrets.TRIGGER_ACCESS_TOKEN }}
+          TRIGGER_ACCESS_TOKEN: ${{ secrets.TRIGGER_PREVIEW_ACCESS_TOKEN }}
 ```
 
 For this workflow to work, you need to set the following secrets in your GitHub repository:
 
-- `TRIGGER_ACCESS_TOKEN`: A Trigger.dev personal access token (they start with `tr_pat_`). [Learn how to create one and set it in GitHub](https://trigger.dev/docs/github-actions#creating-a-personal-access-token).
+- `TRIGGER_PREVIEW_ACCESS_TOKEN`: A Trigger.dev API key for the Preview environment with **Deploy only** access. [Create a deployment API key and add it to GitHub](https://trigger.dev/docs/github-actions#create-a-deployment-api-key).
 
 Notice that the deploy command has `--env preview` at the end. We automatically detect the preview branch from the GitHub actions env var.
 
@@ -166,18 +166,18 @@ Again we will try auto-detect the current branch. But you can specify the branch
 
 From the "Preview branches" page you can create a branch:
 
-![Preview branches page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/deployment/preview-branches.png)
-![Create preview branch](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/deployment/preview-branches-new.png)
+![Preview branches page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/deployment/preview-branches.png)
+![Create preview branch](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/deployment/preview-branches-new.png)
 
 You can also archive a branch:
 
-![Archive preview branch](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/deployment/preview-branches-archive.png)
+![Archive preview branch](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/deployment/preview-branches-archive.png)
 
 ## Environment variables
 
 You can set environment variables for "Preview" and they will get applied to all branches (existing and new). You can also set environment variables for a specific branch. If they are set for both then the branch-specific variables will take precedence.
 
-![Environment variables](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/deployment/preview-environment-variables.png)
+![Environment variables](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/deployment/preview-environment-variables.png)
 
 These can be set manually in the dashboard, or automatically at deploy time using the [syncEnvVars()](https://trigger.dev/docs/config/extensions/syncEnvVars) or [syncVercelEnvVars()](https://trigger.dev/docs/config/extensions/syncEnvVars#syncvercelenvvars) build extensions.
 

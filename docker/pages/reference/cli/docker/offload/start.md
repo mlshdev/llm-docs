@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/offload/docker_offload_start.yaml](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/data/cli/offload/docker_offload_start.yaml)
+> Pinned source for Docker main: [data/cli/offload/docker_offload_start.yaml](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/data/cli/offload/docker_offload_start.yaml)
 
 # docker offload start
 

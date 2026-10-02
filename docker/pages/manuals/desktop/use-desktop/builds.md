@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/use-desktop/builds.md](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/content/manuals/desktop/use-desktop/builds.md)
+> Pinned source for Docker main: [content/manuals/desktop/use-desktop/builds.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/desktop/use-desktop/builds.md)
 
 # Explore the Builds view in Docker Desktop
 
@@ -134,7 +134,7 @@ and view it in [Jaeger](https://www.jaegertracing.io/):
 3. Navigate to the **Build results** section, open the actions menu and select **Download as Jaeger format**.
 
    <video controls>
-     <source src="https://raw.githubusercontent.com/docker/docs/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/static/assets/video/build-jaeger-export.mp4" type="video/mp4" />
+     <source src="https://raw.githubusercontent.com/docker/docs/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/static/assets/video/build-jaeger-export.mp4" type="video/mp4" />
    </video>
 
 4. Go to <http://localhost:16686> in your browser to open Jaeger UI.
@@ -143,7 +143,7 @@ and view it in [Jaeger](https://www.jaegertracing.io/):
 
 Now you can analyze the build trace using the Jaeger UI:
 
-![Jaeger UI screenshot](https://raw.githubusercontent.com/docker/docs/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/content/manuals/desktop/images/build-ui-jaeger-screenshot.png "Screenshot of a build trace in the Jaeger UI")
+![Jaeger UI screenshot](https://raw.githubusercontent.com/docker/docs/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/desktop/images/build-ui-jaeger-screenshot.png "Screenshot of a build trace in the Jaeger UI")
 
 ### Dockerfile source and errors
 

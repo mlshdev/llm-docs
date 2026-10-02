@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.0: [docs/self-hosting/kubernetes.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/self-hosting/kubernetes.mdx)
+> Pinned source for Trigger.dev v4.7.2: [docs/self-hosting/kubernetes.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/self-hosting/kubernetes.mdx)
 > Canonical documentation: https://trigger.dev/docs/self-hosting/kubernetes
 
 # Kubernetes
@@ -37,7 +37,13 @@ flowchart TD
   workers --> reg
 ```
 
-Each component maps to a top-level key in `values.yaml`: `webapp`, `supervisor`, `postgres`, `redis`, `electric`, `clickhouse`, `s3` (object storage), `s2`, and `registry`. The datastores default to `deploy: true` and run in-cluster; set `deploy: false` with an `external` block to bring your own. The registry is the exception - it defaults to `deploy: false`, so you point it at an external one. Webapp settings live under `webapp`, supervisor settings under `supervisor.config`, and each service takes `extraEnvVars` for anything else.
+Each component maps to a top-level key in `values.yaml`: `webapp`, `supervisor`, `postgres`, `redis`, `clickhouse`, `s3` (object storage), `s2`, and `registry`. The datastores default to `deploy: true` and run in-cluster; set `deploy: false` with an `external` block to bring your own. The registry is the exception - it defaults to `deploy: false`, so you point it at an external one. Webapp settings live under `webapp`, supervisor settings under `supervisor.config`, and each service takes `extraEnvVars` for anything else.
+
+Realtime run subscriptions use the native backend with the configured PostgreSQL, Redis, and ClickHouse services. The chart sets `REALTIME_BACKEND_NATIVE_ENABLED=1` and `REALTIME_BACKEND_DEFAULT=native`; no Electric service is required. These settings are separate from the S2-backed realtime streams configuration.
+
+> **Warning**
+>
+> Before upgrading from a chart that deploys Electric, unset the global `realtimeBackend` feature flag and any organization overrides, or set them to `native`. Both take precedence over the environment default. Values of `electric` or `shadow` still select the Electric backend, which this chart no longer deploys.
 
 ## Requirements
 
@@ -91,7 +97,7 @@ Bundled datastores let you run the whole stack with a single command and no exte
      --create-namespace
    ```
 
-   The chart deploys the webapp, supervisor, and bundled Postgres, Redis, Electric, ClickHouse, MinIO, and s2-lite. The registry is not deployed by default - configure an external one before deploying tasks.
+   The chart deploys the webapp, supervisor, and bundled Postgres, Redis, ClickHouse, MinIO, and s2-lite. The registry is not deployed by default - configure an external one before deploying tasks.
 2. ```bash
    kubectl port-forward svc/trigger-webapp 3040:3030 -n trigger
    ```
@@ -515,7 +521,11 @@ With external datastores, secrets, registry, and authentication in place, you ha
 
 ### Upgrading
 
-`helm upgrade` is safe to run as-is. Your generated secrets, data volumes, and the bundled ClickHouse are preserved and migrated automatically, so a normal upgrade needs no preparation. A few situations need one manual step first — expand any that apply to you.
+Your generated secrets, data volumes, and the bundled ClickHouse are preserved and migrated automatically. Before running `helm upgrade`, complete any prerequisites below that apply to your installation.
+
+Unset the global `realtimeBackend` feature flag and any organization overrides, or set them to `native`, before upgrading. Organization overrides take precedence over the global flag, and the global flag takes precedence over `REALTIME_BACKEND_DEFAULT`.
+
+The chart enables native realtime and removes the Electric service. A remaining `electric` or `shadow` flag value directs run subscriptions to that removed service and breaks realtime updates.
 
 With `secrets.existingSecret` set, the chart reads every key from your Secret and generates none, so any key the app needs must already be present there.
 

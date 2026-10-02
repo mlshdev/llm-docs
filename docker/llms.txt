@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `1cb9a4d2c65d712da863e30cd3a1319ddeea3298`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -149,7 +149,7 @@
 - [Docker individual accounts](pages/manuals/accounts/individual/index.md): A Docker account is how Docker identifies you. Use it to access products like Docker Hub and Docker Desktop, manage settings, and join organizations. (1780 bytes)
 - [Manage a Docker account](pages/manuals/accounts/individual/manage-account.md): You can manage your Docker account in Docker Home, including administrative and security settings. (4360 bytes)
 - [Activity logs](pages/manuals/accounts/organization/activity-logs.md): Activity logs requirements (11038 bytes)
-- [Organization accounts](pages/manuals/accounts/organization/index.md): Organization and company owners can manage members, control access, and enforce security across their Docker environments. You perform these tasks in Docker Home, which provides centralized observability, access managem… (2742 bytes)
+- [Organization accounts](pages/manuals/accounts/organization/index.md): A Docker organization is a collection of teams and repositories that you manage in Docker Home. Organization and company owners manage members, assign access, and enforce security. (2380 bytes)
 - [Insights](pages/manuals/accounts/organization/insights.md): Insights requirements (17373 bytes)
 - [Deactivate an organization](pages/manuals/accounts/organization/manage/deactivate-account.md): General admin requirements (1836 bytes)
 - [Change general organization information](pages/manuals/accounts/organization/manage/general-settings.md): Learn how to update your organization information. (1225 bytes)
@@ -159,10 +159,10 @@
 - [Manage usage and access for Docker products](pages/manuals/accounts/organization/manage/manage-products.md): Admin orgs requirements (7719 bytes)
 - [Manage subscription seats](pages/manuals/accounts/organization/manage/manage-seats.md): You can add or remove seats from your Docker Team or Business subscription at any time to accommodate team changes. When you add seats mid-billing cycle, you're charged a prorated amount for the additional seats. (1966 bytes)
 - [Invite and manage organization members](pages/manuals/accounts/organization/manage/members.md): Learn how to invite and manage members for your organization in Docker Home. (10118 bytes)
-- [Convert an account into an organization](pages/manuals/accounts/organization/setup/convert-account.md): Admin orgs requirements (3927 bytes)
-- [Set up your organization](pages/manuals/accounts/organization/setup/index.md): Before you manage members and access, set up your Docker organization. You can create an organization, onboard and secure it, or convert an existing user account into an organization. (1630 bytes)
-- [Onboard your organization](pages/manuals/accounts/organization/setup/onboard.md): Admin orgs requirements (8652 bytes)
-- [Create your organization](pages/manuals/accounts/organization/setup/orgs.md): Admin orgs requirements (3886 bytes)
+- [Convert a Docker account to an organization](pages/manuals/accounts/organization/setup/convert-account.md): Admin orgs requirements (5018 bytes)
+- [Set up a Docker organization](pages/manuals/accounts/organization/setup/index.md): An organization groups members and teams under one namespace and one subscription. Anyone with a Docker ID can create an organization or convert an individual account into one. (2203 bytes)
+- [Onboard a Docker organization](pages/manuals/accounts/organization/setup/onboard.md): Admin orgs requirements (7119 bytes)
+- [Create a Docker organization](pages/manuals/accounts/organization/setup/orgs.md): Admin orgs requirements (3334 bytes)
 
 ## Agentic Platform
 
@@ -588,10 +588,10 @@
 - [Enforce sign-in for Docker Desktop](pages/manuals/desktop/enterprise/enforce-sign-in/index.md): Enforce sign-in requirements (6671 bytes)
 - [Configure sign-in enforcement](pages/manuals/desktop/enterprise/enforce-sign-in/methods.md): Enforce sign-in requirements (14608 bytes)
 - [Dev Box](pages/manuals/desktop/enterprise/enterprise-deployment/dev-box.md): Docker Desktop is available as a pre-configured image in the Microsoft Azure Marketplace for use with Microsoft Dev Box, allowing developers to quickly set up consistent development environments in the cloud. (3075 bytes)
-- [Enterprise deployment FAQs](pages/manuals/desktop/enterprise/enterprise-deployment/faq.md): Common questions about installing Docker Desktop using the MSI installer. (6864 bytes)
+- [Enterprise deployment FAQs](pages/manuals/desktop/enterprise/enterprise-deployment/faq.md): Common questions about installing Docker Desktop using the MSI installer. (6763 bytes)
 - [Deploy Docker Desktop](pages/manuals/desktop/enterprise/enterprise-deployment/index.md): Docker Desktop supports scalable deployment options tailored for enterprise IT environments. Whether you're rolling out Docker across hundreds of developer workstations or enforcing consistent configuration through MDM… (1741 bytes)
 - [Install Docker Desktop from the Microsoft Store on Windows](pages/manuals/desktop/enterprise/enterprise-deployment/ms-store.md): You can deploy Docker Desktop for Windows through the Microsoft app store. (2410 bytes)
-- [MSI installer](pages/manuals/desktop/enterprise/enterprise-deployment/msi-install-and-configure.md): MSI installer requirements (19683 bytes)
+- [MSI installer](pages/manuals/desktop/enterprise/enterprise-deployment/msi-install-and-configure.md): MSI installer requirements (19614 bytes)
 - [PKG installer](pages/manuals/desktop/enterprise/enterprise-deployment/pkg-install-and-configure.md): PKG installer requirements (2687 bytes)
 - [Deploy with Intune](pages/manuals/desktop/enterprise/enterprise-deployment/use-intune.md): Intune requirements (2195 bytes)
 - [Deploy with Jamf Pro](pages/manuals/desktop/enterprise/enterprise-deployment/use-jamf-pro.md): Jamf Pro requirements (1108 bytes)
@@ -984,7 +984,7 @@
 
 ## Faqs
 
-- [Account FAQs](pages/manuals/faqs/accounts.md): A Docker ID is a username for your Docker account that lets you access Docker products. To create a Docker ID you need one of the following: (6324 bytes)
+- [Account FAQs](pages/manuals/faqs/accounts.md): A Docker ID is a username for your Docker account that lets you access Docker products. To create a Docker ID you need one of the following: (7226 bytes)
 - [FAQs](pages/manuals/faqs/index.md): Answers to common questions about Docker accounts, organizations, companies, subscriptions, billing, and security. (688 bytes)
 - [Platform FAQs](pages/manuals/faqs/platform.md): If you've discovered a security vulnerability in Docker, report it responsibly to so Docker can quickly address it. (6792 bytes)
 - [Security FAQs](pages/manuals/faqs/security.md): Docker supports Service Provider Initiated (SP-initiated) SSO flow. Users must sign in to Docker Hub or Docker Desktop to initiate the SSO authentication process. (11006 bytes)

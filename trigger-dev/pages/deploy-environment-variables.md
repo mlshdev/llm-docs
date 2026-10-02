@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.0: [docs/deploy-environment-variables.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/deploy-environment-variables.mdx)
+> Pinned source for Trigger.dev v4.7.2: [docs/deploy-environment-variables.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/deploy-environment-variables.mdx)
 > Canonical documentation: https://trigger.dev/docs/deploy-environment-variables
 
 # Environment Variables
@@ -14,9 +14,9 @@ We deploy your tasks and scale them up and down when they are triggered. So any 
 ### Setting environment variables
 
 1. In the sidebar select the "Environment Variables" page, then press the "New environment variable"
-   button. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/environment-variables-page.jpg)
+   button. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/images/environment-variables-page.jpg)
 2. You can add values for your local dev environment, staging and prod. ![Environment variables
-   page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/environment-variables-panel.jpg)
+   page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/images/environment-variables-panel.jpg)
 
 > **Note**
 >
@@ -42,8 +42,8 @@ You can edit an environment variable's values. You cannot edit the key name, you
 > string (your task sees the variable set to `""`), which is different from deleting the variable
 > (where your task does not see it at all).
 
-1. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/environment-variables-actions.png)
-2. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/environment-variables-edit-popover.png)
+1. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/images/environment-variables-actions.png)
+2. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/images/environment-variables-edit-popover.png)
 
 ### Deleting environment variables
 
@@ -52,9 +52,9 @@ You can edit an environment variable's values. You cannot edit the key name, you
 > Environment variables are fetched and injected before a runs begins. So if you delete one you can
 > cause runs to fail that are expecting variables to be set.
 
-1. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/environment-variables-actions.png)
+1. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/images/environment-variables-actions.png)
 2. This will immediately delete the variable. ![Environment variables
-   page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/environment-variables-delete-popover.png)
+   page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/images/environment-variables-delete-popover.png)
 
 ## Local development
 

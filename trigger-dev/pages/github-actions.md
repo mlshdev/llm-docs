@@ -1,11 +1,11 @@
-> Pinned source for Trigger.dev v4.7.0: [docs/github-actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/github-actions.mdx)
+> Pinned source for Trigger.dev v4.7.2: [docs/github-actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/github-actions.mdx)
 > Canonical documentation: https://trigger.dev/docs/github-actions
 
 # CI / GitHub Actions
 
-You can easily deploy your tasks with GitHub actions and other CI environments.
+Deploy your tasks from GitHub Actions and other CI environments using an environment API key.
 
-The instructions below are specific to GitHub Actions, but the same concepts can be used with other CI systems.
+The instructions below are specific to GitHub Actions, but the same concepts apply to other CI systems. Use an environment API key rather than a Personal Access Token so deployments are not tied to an individual team member's account or permissions.
 
 > **Tip**
 >
@@ -74,7 +74,7 @@ jobs:
 
       - name: 🚀 Deploy Trigger.dev
         env:
-          TRIGGER_ACCESS_TOKEN: ${{ secrets.TRIGGER_ACCESS_TOKEN }}
+          TRIGGER_ACCESS_TOKEN: ${{ secrets.TRIGGER_STAGING_ACCESS_TOKEN }}
         run: |
           npx trigger.dev@latest deploy --env staging --external-id ${{ github.sha }}
 ```
@@ -133,7 +133,7 @@ jobs:
       - name: Deploy preview branch
         run: npx trigger.dev@latest deploy --env preview --external-id ${{ github.event.pull_request.head.sha }}
         env:
-          TRIGGER_ACCESS_TOKEN: ${{ secrets.TRIGGER_ACCESS_TOKEN }}
+          TRIGGER_ACCESS_TOKEN: ${{ secrets.TRIGGER_PREVIEW_ACCESS_TOKEN }}
 ```
 
 On `pull_request`, `github.sha` is the merge commit GitHub creates for the PR, not the commit your
@@ -144,13 +144,20 @@ deployment sends.
 >
 > **Include `closed`** in the `pull_request.types` list. Without it, preview branches won't be archived when PRs are merged or closed, and you may hit the limit on active preview branches. See [Preview branches](https://trigger.dev/docs/deployment/preview-branches#preview-branches-with-github-actions-recommended) for more details.
 
-## Creating a Personal Access Token
+## Create a deployment API key
 
-1. Go to your profile page and click on the ["Personal Access
-   Tokens"](https://cloud.trigger.dev/account/tokens) tab.
-2. Click on 'Settings' -> 'Secrets and variables' -> 'Actions' -> 'New repository secret'
-3. Add the name `TRIGGER_ACCESS_TOKEN` and the value of your access token. ![Add TRIGGER\_ACCESS\_TOKEN
-   in GitHub](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/images/github-access-token.png)
+Create a separate API key for each environment that your CI workflows deploy to. The key remains valid when team membership or permissions change.
+
+1. Select the project and target environment, then open [**API keys**](https://cloud.trigger.dev/_/apikeys).
+2. Click **New API key**, give the key a name that identifies the workflow, and choose **Deploy
+   only** access.
+3. Create the key and copy its value. Trigger.dev shows the complete value only once.
+4. Open the repository's **Settings**, then select **Secrets and variables** → **Actions** → **New
+   repository secret**. Add the name `TRIGGER_ACCESS_TOKEN` and paste the API key as its value.
+
+   ![Add TRIGGER\_ACCESS\_TOKEN in GitHub](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/images/github-access-token.png)
+
+The API key must belong to the environment targeted by the deploy command. If the repository deploys to multiple environments, store each environment's key in a separate GitHub secret and map the appropriate secret to `TRIGGER_ACCESS_TOKEN` in each workflow.
 
 ## CLI Version pinning
 
@@ -164,7 +171,7 @@ Tip: add the `trigger.dev` CLI to your `devDependencies` and the deploy command 
     "deploy:trigger": "trigger deploy --env staging"
   },
   "devDependencies": {
-    "trigger.dev": "4.0.2"
+    "trigger.dev": "4.7.0"
   }
 }
 ```

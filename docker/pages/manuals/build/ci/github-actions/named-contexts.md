@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/named-contexts.md](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/content/manuals/build/ci/github-actions/named-contexts.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/named-contexts.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/build/ci/github-actions/named-contexts.md)
 
 You can define [additional build contexts](https://docs.docker.com/reference/cli/docker/buildx/build/#build-context),
 and access them in your Dockerfile with `FROM name` or `--from=name`. When

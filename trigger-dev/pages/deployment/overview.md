@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.0: [docs/deployment/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/deployment/overview.mdx)
+> Pinned source for Trigger.dev v4.7.2: [docs/deployment/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/deployment/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/deployment/overview
 
 # Deployment
@@ -55,7 +55,7 @@ Trigger.dev (3.3.16)
 
 Now if you visit your Trigger.dev dashboard you should see the new version deployed:
 
-![Trigger.dev dashboard showing the latest version deployed](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/deployment/my-first-deployment.png)
+![Trigger.dev dashboard showing the latest version deployed](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/deployment/my-first-deployment.png)
 
 > **Note**
 >
@@ -140,7 +140,7 @@ npx trigger.dev deploy --skip-promotion
 
 This will create a new deployment version but not promote it to the current version:
 
-![Trigger.dev dashboard showing the latest version deployed but not promoted](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/deployment/skip-promotion.png)
+![Trigger.dev dashboard showing the latest version deployed but not promoted](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/deployment/skip-promotion.png)
 
 This allows you to deploy and test a new version without affecting new task runs. When you want to promote the version, you can do so from the CLI:
 
@@ -150,7 +150,7 @@ npx trigger.dev promote 20250228.1
 
 Or from the dashboard:
 
-![Trigger.dev dashboard showing the promote button](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/deployment/promote-button.png)
+![Trigger.dev dashboard showing the promote button](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/deployment/promote-button.png)
 
 To keep your app and tasks in sync without coordinating promotion at all, see [atomic deployments](https://trigger.dev/docs/deployment/atomic-deployment).
 
@@ -169,7 +169,7 @@ npx trigger.dev deploy --env staging
 
 This will create an entirely new version of your tasks for the `staging` environment, with a new version number and an independent current version:
 
-![Trigger.dev dashboard showing the staging environment](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/f049c346c80844a3932156f476ec516023bb7f4d/docs/deployment/staging-deploy.png)
+![Trigger.dev dashboard showing the staging environment](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/deployment/staging-deploy.png)
 
 To trigger tasks against Staging, create a named key in the Staging environment with **Trigger only** access and set it as `TRIGGER_SECRET_KEY`:
 

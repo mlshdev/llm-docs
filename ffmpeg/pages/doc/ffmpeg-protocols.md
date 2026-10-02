@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/65a38704627691bff121a874dffc209aae239e20/doc/ffmpeg-protocols.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/98e92563a3b60dbf6d370fd3491d7f896398e4c1/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -1717,6 +1717,10 @@ The accepted options are:
 
 - cache\_dir
   Path to the directory where cache files are stored. This option is required.
+
+- metadata\_dir
+  Path to the directory where metadata files are stored. Optional. If not
+  specified, metadata is stored in the same directory as the cache file.
 
 - block\_shift
   Shift factor (log2) of the block size used for internal reads/writes. Defaults

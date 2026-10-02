@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/faqs/accounts.md](https://github.com/docker/docs/blob/4d3cbcd0f78327cfc6ec5f357e3af512fcbe53f3/content/manuals/faqs/accounts.md)
+> Pinned source for Docker main: [content/manuals/faqs/accounts.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/faqs/accounts.md)
 
 # Account FAQs
 
@@ -39,12 +39,17 @@ Docker ID for you.
 
 ### What's an organization name or namespace?
 
-The organization name, sometimes referred to as the organization namespace or
-the organization ID, is the unique identifier of a Docker organization. The
-organization name can't be the same as an existing Docker ID.
+The organization namespace and the organization name are different.
 
-For more information, see
-[Organization accounts](https://docs.docker.com/accounts/organization/).
+The namespace is the permanent identifier for the organization. Image names
+use it as the first part, as in `namespace/image:tag`. You can't change it,
+and it can't match an existing Docker ID.
+
+The organization name is the public name of the organization. You can change
+it.
+
+For the fields you set when you create an organization, see
+[Create a Docker organization](https://docs.docker.com/accounts/organization/setup/orgs/).
 
 ### How can I see how many active users are in my organization?
 
@@ -53,7 +58,8 @@ find out how many users have Docker Desktop installed. If your organization
 doesn't use this software, you can run an internal survey
 to find out who is using Docker Desktop.
 
-For more information, see [Identify your Docker users and their Docker accounts](https://docs.docker.com/accounts/organization/setup/onboard/#step-one-identify-your-docker-users).
+For more information, see
+[Identify your Docker users and their Docker accounts](https://docs.docker.com/accounts/organization/setup/onboard/#step-one-identify-your-docker-users).
 
 ### Do users need to authenticate with Docker before an owner can add them to an organization?
 
@@ -68,7 +74,11 @@ Yes. You can
 Some benefits of enforcing sign-in are:
 
 - Ensures users receive the benefits of your subscription.
-- Ensures security features like [Image Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/image-access-management/) and [Registry Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/registry-access-management/) are applied.
+- Ensures security features like
+  [Image Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/image-access-management/)
+  and
+  [Registry Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/registry-access-management/)
+  are applied.
 - Ensures you gain insights into users' activity.
 
 ### Can I convert my personal Docker ID to an organization account?
@@ -79,6 +89,20 @@ revert it to a personal user account.
 
 For prerequisites and instructions, see
 [Convert an account into an organization](https://docs.docker.com/accounts/organization/setup/convert-account/).
+
+### Can I convert an individual account that uses single sign-on?
+
+No. **Convert** shows "Your account uses single sign-on. Contact your
+administrator to manage these settings."
+
+### Why can't I sign in after converting my account to an organization?
+
+Converting signs you out and removes your email address from every Docker
+account, so you can no longer sign in with it. Sign in with the Docker ID you
+named as the owner and select the organization in Docker Home. If you named
+someone else as the owner, sign up again and ask that owner to invite you. See
+[Convert a Docker account to an organization](https://docs.docker.com/accounts/organization/setup/convert-account/#conversion)
+for the full explanation.
 
 ### Do organization invitees take up seats?
 

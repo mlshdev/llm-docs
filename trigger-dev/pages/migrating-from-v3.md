@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.0: [docs/migrating-from-v3.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/migrating-from-v3.mdx)
+> Pinned source for Trigger.dev v4.7.2: [docs/migrating-from-v3.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/migrating-from-v3.mdx)
 > Canonical documentation: https://trigger.dev/docs/migrating-from-v3
 
 # Migrating from v3
@@ -34,15 +34,15 @@ What's new in v4, how to migrate, and breaking changes.
 
 ## Node.js support
 
-Trigger.dev runs your tasks on specific Node.js versions:
+Trigger.dev runs your deployed tasks on one of these runtimes:
 
-- Node.js `21.7.3` (default)
-- Node.js `22.16.0` (`node-22`)
-- Node.js `24.18.0` (`node-24`)
-- Node.js `26.4.0` (`node-26`)
-- Bun `1.3.3` (`bun`)
+- Node.js `node` — the default, tracks the current Node.js LTS (today `24.18.0`)
+- Node.js `node-22` — `22.16.0`
+- Node.js `node-24` — `24.18.0`
+- Node.js `node-26` — `26.4.0`
+- Bun `bun` — `1.3.3`
 
-You can change the runtime by setting the `runtime` field in your `trigger.config.ts` file.
+If you don't set a `runtime`, or you set `runtime: "node"`, your tasks run on the current Node.js LTS. That version moves forward as new LTS releases land, so set an explicit version — for example `runtime: "node-24"` — if you need it to stay fixed.
 
 ```ts
 import { defineConfig } from "@trigger.dev/sdk";

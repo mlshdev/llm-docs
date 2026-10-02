@@ -1,8 +1,8 @@
-# Trigger.dev v4.7.0
+# Trigger.dev v4.7.2
 
-> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `f049c346c80844a3932156f476ec516023bb7f4d`.
+> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `28f424096e7c82e99e23cfa0c15068565ad98e90`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.7.0.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.7.2.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow the navigation declared in docs/docs.json at the immutable release tag; snippets are inlined into the pages that import them rather than published separately.
 - API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.
@@ -13,11 +13,11 @@
 
 - [Trigger.dev docs](pages/introduction.md): Build and run durable AI agents and workflows in TypeScript. Long-running tasks with retries, queues, observability, and elastic scaling. Open source and self-hostable. (6544 bytes)
 - [Quick start: add Trigger.dev to your project](pages/quick-start.md): Set up Trigger.dev in your existing project in under 3 minutes. Install the SDK, create your first background task, and trigger it from your code. (6285 bytes)
-- [Manual setup](pages/manual-setup.md): How to manually setup Trigger.dev in your project. (13973 bytes)
+- [Manual setup](pages/manual-setup.md): How to manually setup Trigger.dev in your project. (13987 bytes)
 - [Video walkthrough](pages/video-walkthrough.md): Go from zero to a working task in your Next.js app in 10 minutes. (1246 bytes)
 - [How Trigger.dev works](pages/how-it-works.md): Understand how Trigger.dev works and how it can help you. (18114 bytes)
 - [Limits](pages/limits.md): There are some hard and soft limits that you might hit. (12590 bytes)
-- [Migrating from v3](pages/migrating-from-v3.md): What's new in v4, how to migrate, and breaking changes. (21511 bytes)
+- [Migrating from v3](pages/migrating-from-v3.md): What's new in v4, how to migrate, and breaking changes. (21740 bytes)
 
 ## Fundamentals
 
@@ -112,7 +112,7 @@
 
 ## Configuration
 
-- [The trigger.config.ts file](pages/config/config-file.md): This file is used to configure your project and how it's built. (21238 bytes)
+- [The trigger.config.ts file](pages/config/config-file.md): This file is used to configure your project and how it's built. (21665 bytes)
 - [Build extensions](pages/config/extensions/overview.md): Customize how your project is built and deployed to Trigger.dev with build extensions (4375 bytes)
 - [Prisma](pages/config/extensions/prismaExtension.md): Use the prismaExtension build extension to use Prisma with Trigger.dev (22827 bytes)
 - [Python](pages/config/extensions/pythonExtension.md): Use the python build extension to add support for executing Python scripts in your project (5523 bytes)
@@ -133,8 +133,8 @@
 
 - [Deployment](pages/deployment/overview.md): Learn how to deploy your tasks to Trigger.dev. (11038 bytes)
 - [Environment Variables](pages/deploy-environment-variables.md): Any environment variables used in your tasks need to be added so the deployed code will run successfully. (17484 bytes)
-- [CI / GitHub Actions](pages/github-actions.md): You can easily deploy your tasks with GitHub actions and other CI environments. (8027 bytes)
-- [Preview branches](pages/deployment/preview-branches.md): Create isolated environments for each branch of your code, allowing you to test changes before merging to production. You can create preview branches manually or automatically from your git branches. (9337 bytes)
+- [CI / GitHub Actions](pages/github-actions.md): Deploy your tasks from GitHub Actions and other CI environments using an environment API key. (8821 bytes)
+- [Preview branches](pages/deployment/preview-branches.md): Create isolated environments for each branch of your code, allowing you to test changes before merging to production. You can create preview branches manually or automatically from your git branches. (9366 bytes)
 - [Development branches](pages/deployment/dev-branches.md): Run multiple local dev sessions in isolation by giving each one its own development branch. Use branches to keep parallel work (in separate worktrees, directories, or agents) from clashing. (2437 bytes)
 - [Atomic deployments](pages/deployment/atomic-deployment.md): Keep your app and your tasks in sync with version skew protection: pin every run to the deployment built for the release of your app that triggered it. (32500 bytes)
 - [GitHub integration](pages/github-integration.md): Automatically deploy your tasks on every push to your GitHub repository. (6542 bytes)
@@ -211,9 +211,9 @@
 
 - [Self-hosting overview](pages/self-hosting/overview.md): You can self-host Trigger.dev on your own infrastructure. (5913 bytes)
 - [Docker compose](pages/self-hosting/docker.md): You can self-host Trigger.dev on your own infrastructure using Docker. (18552 bytes)
-- [Kubernetes](pages/self-hosting/kubernetes.md): Deploy Trigger.dev to Kubernetes with our official Helm chart - one command for evaluation, external datastores for production. (23990 bytes)
+- [Kubernetes](pages/self-hosting/kubernetes.md): Deploy Trigger.dev to Kubernetes with our official Helm chart - one command for evaluation, external datastores for production. (25006 bytes)
 - [Security & vulnerability reporting](pages/self-hosting/security.md): How to report security issues in Trigger.dev, our response targets, and how self-hosters receive security notices. (3641 bytes)
-- [Webapp](pages/self-hosting/env/webapp.md): Environment variables for the webapp container. (69254 bytes)
+- [Webapp](pages/self-hosting/env/webapp.md): Environment variables for the webapp container. (70338 bytes)
 - [Supervisor](pages/self-hosting/env/supervisor.md): Environment variables for the supervisor container. (9420 bytes)
 
 ## Open source

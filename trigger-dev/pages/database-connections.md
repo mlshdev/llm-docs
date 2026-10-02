@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.0: [docs/database-connections.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/database-connections.mdx)
+> Pinned source for Trigger.dev v4.7.2: [docs/database-connections.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/database-connections.mdx)
 > Canonical documentation: https://trigger.dev/docs/database-connections
 
 # Database connections

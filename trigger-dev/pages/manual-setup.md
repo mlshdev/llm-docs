@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.0: [docs/manual-setup.mdx](https://github.com/triggerdotdev/trigger.dev/blob/f049c346c80844a3932156f476ec516023bb7f4d/docs/manual-setup.mdx)
+> Pinned source for Trigger.dev v4.7.2: [docs/manual-setup.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/manual-setup.mdx)
 > Canonical documentation: https://trigger.dev/docs/manual-setup
 
 # Manual setup
@@ -166,7 +166,7 @@ export default defineConfig({
 
 ### Using the Bun runtime
 
-By default, Trigger.dev will use the Node.js runtime. If you're using Bun, you can specify the runtime:
+By default, Trigger.dev runs your tasks on the current Node.js LTS. If you're using Bun, you can specify the runtime:
 
 ```typescript
 import { defineConfig } from "@trigger.dev/sdk";
