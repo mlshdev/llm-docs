@@ -87,10 +87,10 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "98e92563a3b60dbf6d370fd3491d7f896398e4c1",
-      "sourceCommittedAt": "2026-10-01T15:14:53Z",
-      "observedCommit": "98e92563a3b60dbf6d370fd3491d7f896398e4c1",
-      "documentationDigest": "d2976766d02d546bc96add732ccb6076141ec9ca6baa6b0b5b262fff4502a4e1"
+      "sourceCommit": "935b61a60350ceb964ade84e8dab0e98b74b2c79",
+      "sourceCommittedAt": "2026-09-28T20:32:46Z",
+      "observedCommit": "935b61a60350ceb964ade84e8dab0e98b74b2c79",
+      "documentationDigest": "0646472594b8643c3be3cd51ecb4932cdc2b188e3310c165169bad96328cd558"
     },
     "yt-dlp": {
       "tag": "2026.08.19",

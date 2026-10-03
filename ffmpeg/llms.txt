@@ -1,6 +1,6 @@
 # FFmpeg master
 
-> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `98e92563a3b60dbf6d370fd3491d7f896398e4c1`.
+> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `935b61a60350ceb964ade84e8dab0e98b74b2c79`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for FFmpeg master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -16,10 +16,10 @@
 - [Description](pages/doc/ffmpeg-utils.md): This document describes some generic features and utilities provided by the libavutil library. (22298 bytes)
 - [Description](pages/doc/ffmpeg-scaler.md): The FFmpeg rescaler provides a high-level interface to the libswscale library image conversion utilities. In particular it allows one to perform image rescaling and pixel format conversion. (5815 bytes)
 - [Description](pages/doc/ffmpeg-resampler.md): The FFmpeg resampler provides a high-level interface to the libswresample library audio resampling utilities. In particular it allows one to perform audio resampling, audio channel layout rematrixing, and convert audio… (7850 bytes)
-- [Description](pages/doc/ffmpeg-codecs.md): This document describes the codecs (decoders and encoders) provided by the libavcodec library. (177606 bytes)
+- [Description](pages/doc/ffmpeg-codecs.md): This document describes the codecs (decoders and encoders) provided by the libavcodec library. (177762 bytes)
 - [Description](pages/doc/ffmpeg-formats.md): This document describes the supported formats (muxers and demuxers) provided by the libavformat library. (196162 bytes)
 - [Description](pages/doc/ffmpeg-devices.md): This document describes the input and output devices provided by the libavdevice library. (60331 bytes)
-- [Description](pages/doc/ffmpeg-filters.md): This document describes filters, sources, and sinks provided by the libavfilter library. (897364 bytes)
+- [Description](pages/doc/ffmpeg-filters.md): This document describes filters, sources, and sinks provided by the libavfilter library. (897710 bytes)
 - [Description](pages/doc/ffmpeg-protocols.md): This document describes the input and output protocols provided by the libavformat library. (80125 bytes)
 - [Description](pages/doc/ffmpeg-bitstream-filters.md): This document describes the bitstream filters provided by the libavcodec library. (38852 bytes)
 - [Introduction](pages/doc/developer.md): This text is concerned with the development of FFmpeg itself. Information on using the FFmpeg libraries in other programs can be found elsewhere, e.g. in: ----------------------------------------------------------------… (43485 bytes)

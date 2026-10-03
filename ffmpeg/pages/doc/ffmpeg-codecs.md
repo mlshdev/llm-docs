@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/98e92563a3b60dbf6d370fd3491d7f896398e4c1/doc/ffmpeg-codecs.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/935b61a60350ceb964ade84e8dab0e98b74b2c79/doc/ffmpeg-codecs.texi)
 
 # Description
 
@@ -3055,7 +3055,9 @@ FFv1 Encoder
 The following options are supported by FFmpeg's FFv1 encoder.
 
 - context
-  Sets the context size, 0 (default) is small, 1 is big.
+  Sets the context size, 0 (default) is small, 1 is big, 2 is minimal.
+  The minimal context set compresses better when coding many slices, as each
+  slice has too little data for larger context sets to adapt to.
 
 - coder
   Set the coder,

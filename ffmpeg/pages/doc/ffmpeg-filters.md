@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/98e92563a3b60dbf6d370fd3491d7f896398e4c1/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/935b61a60350ceb964ade84e8dab0e98b74b2c79/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -14817,6 +14817,12 @@ Possible values are:
 - pass
   Pass through last frame if input duration has not been reached yet.
   The default is `round`.
+
+If timestamp rounding would otherwise discard every frame, one frame is
+retained when its rounded timestamp equals both the first output timestamp
+and the rounded end of input. This exception extends the output beyond the
+rounded end of input by one output frame period. Frames whose entire interval
+is trimmed by `start_time` remain discarded.
 
 Alternatively, the options can be specified as a flat string:
 *fps*\[:*start\_time*\[:*round*]].
