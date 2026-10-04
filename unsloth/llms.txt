@@ -1,0 +1,42 @@
+# Unsloth v0.1.902-beta
+
+> Documentation generated from the latest stable release of [unslothai/unsloth](https://github.com/unslothai/unsloth) and pinned to immutable source commit `1b588389b488eb9f8a9cb8ad5ca3073c7661f073`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for Unsloth v0.1.902-beta.
+- [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
+- Release-pinned repository Markdown covers installation, Docker, Studio, Core, and contributor guides; test fixtures, bundled agent skills, and vendored documentation are excluded.
+- The separately published GitBook documentation at https://unsloth.ai/docs is linked but is not part of this repository snapshot.
+- Unsloth publishes beta-suffixed desktop tags as non-prerelease GitHub Releases; pins follow GitHub's published latest-release classification.
+- LICENSE.upstream retains both LICENSE (Apache-2.0) and COPYING (AGPL-3.0), including upstream's per-directory licensing notices.
+
+## Getting started
+
+- [Contributor Covenant Code of Conduct](pages/CODE_OF_CONDUCT.md): We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteris… (5491 bytes)
+- [🦥 Contributing to Unsloth](pages/CONTRIBUTING.md): Thank you for not only using Unsloth but also for being interested in helping out! We value all contributions, whether they come in the form of code, ideas, support for others or just by simply spreading the word of Uns… (2423 bytes)
+- [Unsloth](pages/index.md): Unsloth is the first desktop app to run and train models. (25371 bytes)
+
+## Docker
+
+- [Unsloth on AMD (ROCm)](pages/docker/DOCKERHUB-ROCM.md): Fine-tune and run LLMs on AMD GPUs with no setup. This image carries the full training stack built against ROCm: PyTorch with ROCm 7.2, Unsloth, unsloth-zoo, a bitsandbytes build with the ROCm 4-bit fix, triton-rocm, TR… (13233 bytes)
+- [Unsloth Docker Image](pages/docker/DOCKERHUB.md): Fine-tune and run LLMs, vision, audio and diffusion models with no setup. Every image carries the training stack (PyTorch 2.11 with CUDA 12.8, Unsloth, unsloth-zoo, bitsandbytes, TRL, PEFT, plus xformers on linux/amd64)… (17996 bytes)
+- [Unsloth Docker Studio branding](pages/docker/jupyter/BRANDING.md): The Unsloth Docker Studio and JupyterLab image ships Unsloth attribution across several files. Preserving it is a license condition, not just a build check. See ../NOTICE and /studio/LICENSE.AGPL-3.0. (3041 bytes)
+
+## Development
+
+- [Windows Smart App Control probe](pages/scripts/windows_sac_probe/README.md): Collects evidence about Windows code integrity blocking the Unsloth Studio llama.cpp runtime, on a real machine, in a form that can be attached to an issue or a pull request. (22832 bytes)
+
+## Unsloth Studio
+
+- [MCP in Unsloth Studio](pages/studio/MCP.md): Blender MCP is disabled by default. Unsloth Studio downloads a pinned, checksum-verified runtime on first enable/test and caches it on the backend machine. No commands, Git or pip installs are needed. Subsequent starts… (5504 bytes)
+- [GPU peer-to-peer (GGMLCUDAP2P) and why it is gated on NVLink](pages/studio/NVLINK_P2P.md): Recorded so the gate in applydatacenterenv is not "fixed" back into a product-name allowlist by someone who reasonably assumes a data-center GPU implies a working peer fabric. It does not. Background: issue #10613. (9899 bytes)
+- [Scanned PDF uploads](pages/studio/PDF_OCR.md): Unsloth Studio can extract text from scanned PDFs in Chat, project sources, and Data Recipes. Existing selectable text is preserved. OCR runs on image-only pages, including scans with a selectable header or footer. Smal… (2524 bytes)
+- [ROCm on RDNA2 APUs (Steam Deck / gfx1033)](pages/studio/ROCM_RDNA2_APU.md): Measured findings for AMD RDNA2 integrated GPUs, recorded so the routing decisions in installllamaprebuilt.py (hasamdgpuwithoutrocm, the Linux Vulkan branches) are not "fixed" back into ROCm by someone who reasonably as… (6384 bytes)
+- [Multi-GPU (FSDP2) design for the Unsloth diffusion DiT trainer](pages/studio/backend/core/training/fsdp2_design_notes.md): Status: design only. No implementation in this document's scope. (7850 bytes)
+- [data-designer-github-repo-seed](pages/studio/backend/plugins/data-designer-github-repo-seed/README.md): A Data Designer seed-reader plugin for Unsloth Studio that scrapes real GitHub data (issues, pull requests, commits) from one or more repositories and hands it to the recipe pipeline as a seed dataset. (2759 bytes)
+- [VRAM Estimation for Training](pages/studio/backend/utils/hardware/VRAM_ESTIMATION.md): The 3.2 factor (16/5) accounts for BNB NF4 blockwise scales. Repos whose quantization config enables bnb4bitusedoublequant use a tighter, still conservative 3.6 factor for the quantized portion of the weights. When a 4-… (7113 bytes)
+- [i18n Contribution Guide](pages/studio/frontend/src/i18n/README.md): Normalized source from studio/frontend/src/i18n/README.md. (1356 bytes)
+
+## Unsloth Core
+
+- [README](pages/unsloth/kernels/moe/README.md): Optimized implementation of MoE MLP Block. Licensed under AGPLv3. (6124 bytes)
+- [REGISTRY](pages/unsloth/registry/REGISTRY.md): Each model is registered in a separate file within the registry module (e.g. registry/llama.py). (3547 bytes)

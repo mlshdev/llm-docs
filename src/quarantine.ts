@@ -73,6 +73,7 @@ const unresolvedSyntax: Record<ProjectId, RegExp> = {
   "discord-py":
     /^\s*\.\.\s+[a-zA-Z][\w:-]*::|(?:^|[^`\\]):[a-zA-Z][\w:-]*:`|`[^`\n]+`_|\|(?:coro|maybecoro|coroutine_link)\|/m,
   qdrant: hugoShortcode,
+  unsloth: /\{%\s*[a-zA-Z-]+/,
   "apple-swift": /(?!)/,
   "apple-swiftui": /(?!)/,
   "apple-webkit": /(?!)/,

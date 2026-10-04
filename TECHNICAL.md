@@ -17,7 +17,7 @@ Everything under a project directory (e.g. `docker/`, `apple-swift/`) is
 ## Pipeline
 
 ```
-config/sources.json          what to track (one entry per corpus, 32 projects)
+config/sources.json          what to track (one entry per corpus, 34 projects)
         │
         ▼
 bun run src/cli.ts update     resolve the latest stable pin per project
@@ -87,6 +87,14 @@ Adding a project: add an adapter in `src/projects/`, register it in
 `src/projects/index.ts`, add the id to `src/types.ts` `projectIds`, add config
 in `config/sources.json`, and a scanner entry in `src/quarantine.ts`
 `unresolvedSyntax` if the upstream uses raw markup that must never survive.
+
+The Unsloth adapter collects release-pinned Markdown from the repository root
+and `docker/`, `studio/`, `unsloth/`, and `scripts/`, excluding vendored assets
+and bundled agent skills. It preserves both root license files and rewrites
+relative and same-repository blob/raw links against the commit. Its separate
+GitBook site is not an immutable repository input and is linked only. Release
+selection uses GitHub's non-prerelease flag, including upstream's beta-suffixed
+desktop release tags.
 
 ## Conventions
 

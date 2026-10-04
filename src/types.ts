@@ -26,6 +26,7 @@ export const projectIds = [
   "discord-py-self",
   "discord-py",
   "qdrant",
+  "unsloth",
   "apple-swift",
   "apple-swiftui",
   "apple-webkit",

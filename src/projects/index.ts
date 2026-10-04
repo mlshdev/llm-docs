@@ -16,6 +16,7 @@ import { buildRunpod } from "./runpod.ts";
 import { buildSearxng } from "./searxng.ts";
 import { buildTraefik } from "./traefik.ts";
 import { buildTriggerDev } from "./trigger-dev.ts";
+import { buildUnsloth } from "./unsloth.ts";
 import { buildVastai } from "./vastai.ts";
 import { buildVictoriametricsDocs } from "./victoriametrics.ts";
 import { buildZitadel } from "./zitadel.ts";
@@ -109,5 +110,7 @@ function runAdapter(
       return buildDiscordPy(project, lock);
     case "qdrant":
       return buildQdrant(project, lock);
+    case "unsloth":
+      return buildUnsloth(project, lock);
   }
 }

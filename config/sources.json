@@ -187,6 +187,13 @@
       "homepage": "https://qdrant.tech/documentation/"
     },
     {
+      "id": "unsloth",
+      "kind": "github",
+      "title": "Unsloth",
+      "repository": "unslothai/unsloth",
+      "homepage": "https://unsloth.ai/docs"
+    },
+    {
       "id": "apple-swift",
       "kind": "docc",
       "catalog": "swift",

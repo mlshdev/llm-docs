@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 2,
+  "generatorVersion": 3,
+  "generatorDigest": "49104766a0640dc41819f01ac0b013701e87719823cb5f7bf8fa1add3776472a",
+  "project": "unsloth",
+  "title": "Unsloth",
+  "homepage": "https://unsloth.ai/docs",
+  "repository": "unslothai/unsloth",
+  "tag": "v0.1.902-beta",
+  "releaseId": 401027235,
+  "releasePublishedAt": "2026-10-01T14:06:23Z",
+  "sourceCommit": "1b588389b488eb9f8a9cb8ad5ca3073c7661f073",
+  "documentCount": 17,
+  "indexComplete": true,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 152723,
+      "documentCount": 17,
+      "sha256": "ba6aeda58e71708058a24ad4932445df068ab01f50d1e2d5cac7df9ffffeb65f"
+    }
+  ],
+  "outputDigest": "de1d71c764180ffc0644347b92300650d34cff23be638d51203dbb3cc732bf1d",
+  "notes": [
+    "Release-pinned repository Markdown covers installation, Docker, Studio, Core, and contributor guides; test fixtures, bundled agent skills, and vendored documentation are excluded.",
+    "The separately published GitBook documentation at https://unsloth.ai/docs is linked but is not part of this repository snapshot.",
+    "Unsloth publishes beta-suffixed desktop tags as non-prerelease GitHub Releases; pins follow GitHub's published latest-release classification.",
+    "LICENSE.upstream retains both LICENSE (Apache-2.0) and COPYING (AGPL-3.0), including upstream's per-directory licensing notices."
+  ]
+}

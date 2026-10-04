@@ -1,0 +1,2669 @@
+# Unsloth v0.1.902-beta: full documentation
+
+Source repository: https://github.com/unslothai/unsloth
+Release tag: v0.1.902-beta
+Source commit: 1b588389b488eb9f8a9cb8ad5ca3073c7661f073
+
+# Document: Contributor Covenant Code of Conduct
+
+Source path: CODE_OF_CONDUCT.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/CODE_OF_CONDUCT.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/CODE_OF_CONDUCT.md
+Description: We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteris…
+
+# Contributor Covenant Code of Conduct
+
+## Our Pledge
+
+We as members, contributors, and leaders pledge to make participation in our
+community a harassment-free experience for everyone, regardless of age, body
+size, visible or invisible disability, ethnicity, sex characteristics, gender
+identity and expression, level of experience, education, socio-economic status,
+nationality, personal appearance, race, caste, color, religion, or sexual
+identity and orientation.
+
+We pledge to act and interact in ways that contribute to an open, welcoming,
+diverse, inclusive, and healthy community.
+
+## Our Standards
+
+Examples of behavior that contributes to a positive environment for our
+community include:
+
+- Demonstrating empathy and kindness toward other people
+- Being respectful of differing opinions, viewpoints, and experiences
+- Giving and gracefully accepting constructive feedback
+- Accepting responsibility and apologizing to those affected by our mistakes,
+  and learning from the experience
+- Focusing on what is best not just for us as individuals, but for the overall
+  community
+
+Examples of unacceptable behavior include:
+
+- The use of sexualized language or imagery, and sexual attention or advances of
+  any kind
+- Trolling, insulting or derogatory comments, and personal or political attacks
+- Public or private harassment
+- Publishing others' private information, such as a physical or email address,
+  without their explicit permission
+- Other conduct which could reasonably be considered inappropriate in a
+  professional setting
+
+## Enforcement Responsibilities
+
+Community leaders are responsible for clarifying and enforcing our standards of
+acceptable behavior and will take appropriate and fair corrective action in
+response to any behavior that they deem inappropriate, threatening, offensive,
+or harmful.
+
+Community leaders have the right and responsibility to remove, edit, or reject
+comments, commits, code, wiki edits, issues, and other contributions that are
+not aligned to this Code of Conduct, and will communicate reasons for moderation
+decisions when appropriate.
+
+## Scope
+
+This Code of Conduct applies within all community spaces, and also applies when
+an individual is officially representing the community in public spaces.
+Examples of representing our community include using an official e-mail address,
+posting via an official social media account, or acting as an appointed
+representative at an online or offline event.
+
+## Enforcement
+
+Instances of abusive, harassing, or otherwise unacceptable behavior may be
+reported to the community leaders responsible for enforcement at <support@unsloth.ai>.
+All complaints will be reviewed and investigated promptly and fairly.
+
+All community leaders are obligated to respect the privacy and security of the
+reporter of any incident.
+
+## Enforcement Guidelines
+
+Community leaders will follow these Community Impact Guidelines in determining
+the consequences for any action they deem in violation of this Code of Conduct:
+
+### 1. Correction
+
+**Community Impact**: Use of inappropriate language or other behavior deemed
+unprofessional or unwelcome in the community.
+
+**Consequence**: A private, written warning from community leaders, providing
+clarity around the nature of the violation and an explanation of why the
+behavior was inappropriate. A public apology may be requested.
+
+### 2. Warning
+
+**Community Impact**: A violation through a single incident or series of
+actions.
+
+**Consequence**: A warning with consequences for continued behavior. No
+interaction with the people involved, including unsolicited interaction with
+those enforcing the Code of Conduct, for a specified period of time. This
+includes avoiding interactions in community spaces as well as external channels
+like social media. Violating these terms may lead to a temporary or permanent
+ban.
+
+### 3. Temporary Ban
+
+**Community Impact**: A serious violation of community standards, including
+sustained inappropriate behavior.
+
+**Consequence**: A temporary ban from any sort of interaction or public
+communication with the community for a specified period of time. No public or
+private interaction with the people involved, including unsolicited interaction
+with those enforcing the Code of Conduct, is allowed during this period.
+Violating these terms may lead to a permanent ban.
+
+### 4. Permanent Ban
+
+**Community Impact**: Demonstrating a pattern of violation of community
+standards, including sustained inappropriate behavior, harassment of an
+individual, or aggression toward or disparagement of classes of individuals.
+
+**Consequence**: A permanent ban from any sort of public interaction within the
+community.
+
+## Attribution
+
+This Code of Conduct is adapted from the [Contributor Covenant][homepage],
+version 2.1, available at
+[https://www.contributor-covenant.org/version/2/1/code\_of\_conduct.html][v2.1].
+
+Community Impact Guidelines were inspired by
+[Mozilla's code of conduct enforcement ladder][Mozilla CoC].
+
+For answers to common questions about this code of conduct, see the FAQ at
+[https://www.contributor-covenant.org/faq][FAQ]. Translations are available at
+[https://www.contributor-covenant.org/translations][translations].
+
+[homepage]: https://www.contributor-covenant.org
+
+[v2.1]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
+
+[Mozilla CoC]: https://github.com/mozilla/diversity
+
+[FAQ]: https://www.contributor-covenant.org/faq
+
+[translations]: https://www.contributor-covenant.org/translations
+
+
+# Document: 🦥 Contributing to Unsloth
+
+Source path: CONTRIBUTING.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/CONTRIBUTING.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/CONTRIBUTING.md
+Description: Thank you for not only using Unsloth but also for being interested in helping out! We value all contributions, whether they come in the form of code, ideas, support for others or just by simply spreading the word of Uns…
+
+# 🦥 Contributing to Unsloth
+
+Thank you for not only using Unsloth but also for being interested in helping out! We value all contributions, whether they come in the form of code, ideas, support for others or just by simply spreading the word of Unsloth! 💕
+
+- **[Support the Community](https://github.com/unslothai/unsloth/issues)**: Answer questions, review pull requests, or assist others in discussions.
+- **Fix Bugs**: Identify and resolve issues with the existing codebase.
+- **Submit Ideas**: Request new features or share enhancements you'd like to see.
+- **Develop Features**: Implement new functionality or improve existing tools which can be done via PRs.
+- **[Improve Documentation](https://docs.unsloth.ai/)**: Help by creating guides, FAQs, or enhancing clarity.
+
+One of the best ways to support us is by spreading the word about Unsloth! Share how it’s powering your amazing projects in blog posts or social media, and inspire others to explore its potential. Even a simple star on our repo goes a long way in showing your support and helping the community grow. 🌟
+
+## Submitting Issues
+
+If you find a bug or have a feature idea, we’d love to hear from you! Here’s how to make your submission stand out:
+
+### Reporting Bugs
+
+1. **Search First**: Check if the issue has already been reported using GitHub’s search bar under Issues.
+2. **Details Matter**: Is this on Google Colab, Kaggle, or on another platform service? Are you using Unsloth's official notebook? Include your OS, Python version, and other relevant details. For bugs, a concise code snippet that reproduces the issue is incredibly helpful.
+3. **Be Thorough**: Attach screenshots, traceback logs, or any additional information that might speed up resolution.
+
+## Spread the Word
+
+Your support extends beyond code:
+
+- Spread the word by writing about Unsloth in blogs or social media.
+- Share how Unsloth powers your projects.
+- Star our repository to show your appreciation.
+
+Finally, please be mindful of our [Code of Conduct](https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/CODE_OF_CONDUCT.md) to ensure a welcoming and inclusive environment for everyone.
+
+Thank you so much for reading and we hope you have lots of fun using Unsloth! 🦥
+
+## Pull Request Guidelines
+
+- Keep PRs focused on a single change
+- Include a concise description and motivation
+- Link related issues when applicable
+
+
+# Document: Unsloth
+
+Source path: README.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/README.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/README.md
+Description: Unsloth is the first desktop app to run and train models.
+
+# Unsloth
+
+<h3 align="center" style="margin: 0; margin-top: 0;">
+Unsloth is the first desktop app to run and train models.
+</h3>
+
+<p align="center">
+  <a href="#-features">Features</a> •
+  <a href="#-get-started">Quickstart</a> •
+  <a href="#-free-notebooks">Notebooks</a> •
+  <a href="https://unsloth.ai/docs">Documentation</a>
+</p>
+
+<p align="center">
+  <a href="https://unsloth.ai/docs/desktop">
+![unsloth desktop](https://unsloth.ai/cgi/image/unsloth_qwen3.8_final_ut2eqWnYJ-SLmu0s7x522.png?format=raw)
+  </a>
+</p>
+
+## ⚡ Get started
+
+Download the native Unsloth Desktop app for your operating system:
+
+<table>
+  <tr>
+    <td><b>Platform</b></td>
+    <td><b>Link</b></td>
+  </tr>
+  <tr>
+    <td><b>Windows</b></td>
+    <td><a href='https://github.com/unslothai/unsloth/releases/latest/download/Unsloth-Desktop-Windows.exe'>Download</a></td>
+  </tr>
+  <tr>
+    <td><b>macOS</b></td>
+    <td><a href='https://github.com/unslothai/unsloth/releases/latest/download/Unsloth-Desktop-MacOS.dmg'>Download</a></td>
+  </tr>
+  <tr>
+    <td><b>Linux x64 / Ubuntu (deb)</b></td>
+    <td><a href='https://github.com/unslothai/unsloth/releases/latest/download/Unsloth-Desktop-Ubuntu.deb'>Download</a></td>
+  </tr>
+  <tr>
+    <td><b>Linux ARM64 / Ubuntu 24.04+ (deb)</b></td>
+    <td><a href='https://github.com/unslothai/unsloth/releases/latest/download/Unsloth-Desktop-Ubuntu-ARM64.deb'>Download</a></td>
+  </tr>
+  <tr>
+    <td><b>Linux x64 (AppImage)</b></td>
+    <td><a href='https://github.com/unslothai/unsloth/releases/latest/download/Unsloth-Desktop-Linux.AppImage'>Download</a></td>
+  </tr>
+</table>
+
+Download from [Unsloth](https://unsloth.ai/download) or [GitHub Releases](https://github.com/unslothai/unsloth/releases).
+
+Or if you prefer to install manually:
+
+#### macOS, Linux, WSL:
+
+```bash
+curl -fsSL https://unsloth.ai/install.sh | sh
+```
+
+#### Windows:
+
+```powershell
+irm https://unsloth.ai/install.ps1 | iex
+```
+
+#### Docker
+
+The [Unsloth Docker image](https://hub.docker.com/r/unsloth/unsloth) `unsloth/unsloth` is available on Docker. [Read guide.](https://unsloth.ai/docs/get-started/install/docker)
+
+#### Community:
+
+- [Discord](https://discord.gg/unsloth)
+- [𝕏 (Twitter)](https://x.com/UnslothAI)
+- [Reddit](https://reddit.com/r/unsloth)
+
+## ⭐ Features
+
+Unsloth works on **Windows, Linux, WSL** and **macOS**. We support **Multi GPU setups, NVIDIA, AMD, Intel GPUs, CPUs** and the **Vulkan** backend.
+
+### Run & Build with AI
+
+- Run and train LLMs, MLX, GGUF, diffusion, embedding, audio models: [Qwen3.8](https://unsloth.ai/docs/models/qwen3.8), [GLM-5.3-Flash](https://unsloth.ai/docs/models/glm-5.3-flash), [Kimi K3](https://unsloth.ai/docs/models/kimi-k3), [Qwen-Image-2.1](https://unsloth.ai/docs/models/qwen-image-2.1), MiniMax-H3, [DeepSeek-V4](https://unsloth.ai/docs/models/deepseek-v4), [Gemma 4](https://unsloth.ai/docs/models/gemma-4).
+- **Agents & Tools:** Use local models with [Claude Code](https://unsloth.ai/docs/basics/claude-code), [Codex](https://unsloth.ai/docs/basics/codex), and [MCP](https://unsloth.ai/docs/basics/mcp), including tool calling and code execution.
+- **Search & RAG:** Use private and unlimited web search, deep research, auto-compaction (rolling context window) and RAG.
+- **Image and video:** Run and train [image](https://unsloth.ai/docs/basics/diffusion-image) and video diffusion or multimodal models
+- **Remote & LAN:** Access your local models from any device on [LAN](https://unsloth.ai/docs/basics/lan) or remotely through secure [Cloudflare](https://unsloth.ai/docs/basics/how-to-serve-local-llms-anywhere-secure-remote-access-with-cloudflare-and-unsloth) HTTPS.
+- **Connect:** Serve models through an [OpenAI compatible API](https://unsloth.ai/docs/basics/api). Also connect your ChatGPT/Codex subscription and [cloud providers](https://unsloth.ai/docs/integrations/connections)
+
+### Train & Deploy
+
+- **Fine-tuning:** Train LLMs, diffusion, TTS, and embedding models 2× faster with 70% less VRAM with [no accuracy loss](https://unsloth.ai/blog#training)
+- **Complete support:** Supports [reinforcement learning](https://unsloth.ai/docs/get-started/reinforcement-learning-rl-guide), LoRA, QLoRA, full fine tuning, pretraining, RL, GRPO, DPO, and FP8.
+- **Export & Deploy:** [Export](https://unsloth.ai/docs/new/studio/export) or Deploy models with including [GGUF](https://unsloth.ai/docs/basics/inference-and-deployment/saving-to-gguf), NVFP4, FP8 and more formats.
+- **Datasets:** Build datasets from PDFs, CSVs, DOCX files, and more with [Data Recipes](https://unsloth.ai/docs/new/studio/data-recipe).
+
+## 🚀 Unsloth Start
+
+[Unsloth Start](https://unsloth.ai/docs/integrations/unsloth-start) connects [Claude Code](https://unsloth.ai/docs/basics/claude-code), [Codex](https://unsloth.ai/docs/basics/codex) and other agents to local models with one command.
+
+```bash
+unsloth start claude --model unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_XL
+```
+
+| Agent            | Command                  |
+| ---------------- | ------------------------ |
+| Claude Code      | `unsloth start claude`   |
+| OpenAI Codex     | `unsloth start codex`    |
+| DeepSeek Harness | `unsloth start dsh`      |
+| Hermes Agent     | `unsloth start hermes`   |
+| OpenCode         | `unsloth start opencode` |
+| OpenClaw         | `unsloth start openclaw` |
+
+## 📥 Install
+
+Unsloth can be used in three ways: **[Unsloth Desktop](https://unsloth.ai/download)**, the desktop app; **[Unsloth Studio](https://unsloth.ai/docs/new/studio/)**, the web UI; or **Unsloth Core**, the code based version.
+
+### Unsloth Desktop (recommended)
+
+<table>
+  <tr>
+    <td><b>Platform</b></td>
+    <td><b>Link</b></td>
+  </tr>
+  <tr>
+    <td><b>Windows</b></td>
+    <td><a href='https://github.com/unslothai/unsloth/releases/latest/download/Unsloth-Desktop-Windows.exe'>Download</a></td>
+  </tr>
+  <tr>
+    <td><b>macOS</b></td>
+    <td><a href='https://github.com/unslothai/unsloth/releases/latest/download/Unsloth-Desktop-MacOS.dmg'>Download</a></td>
+  </tr>
+  <tr>
+    <td><b>Linux x64 / Ubuntu (deb)</b></td>
+    <td><a href='https://github.com/unslothai/unsloth/releases/latest/download/Unsloth-Desktop-Ubuntu.deb'>Download</a></td>
+  </tr>
+  <tr>
+    <td><b>Linux ARM64 / Ubuntu 24.04+ (deb)</b></td>
+    <td><a href='https://github.com/unslothai/unsloth/releases/latest/download/Unsloth-Desktop-Ubuntu-ARM64.deb'>Download</a></td>
+  </tr>
+  <tr>
+    <td><b>Linux x64 (AppImage)</b></td>
+    <td><a href='https://github.com/unslothai/unsloth/releases/latest/download/Unsloth-Desktop-Linux.AppImage'>Download</a></td>
+  </tr>
+  <tr>
+    <td><b>Windows ARM64</b></td>
+    <td><a href='https://github.com/unslothai/unsloth/releases/download/v0.1.811-beta/Unsloth-Desktop-Windows-ARM64.exe'>Download</a></td>
+  </tr>
+</table>
+
+### Unsloth Studio (web UI)
+
+#### macOS, Linux, WSL:
+
+```bash
+curl -fsSL https://unsloth.ai/install.sh | sh
+```
+
+#### Windows:
+
+```powershell
+irm https://unsloth.ai/install.ps1 | iex
+```
+
+#### Launch
+
+```bash
+unsloth studio
+```
+
+#### HTTP Secure Deployment
+
+```bash
+unsloth studio --secure
+```
+
+#### Docker
+
+Use our [Docker image](https://hub.docker.com/r/unsloth/unsloth) `unsloth/unsloth`. On Linux, set up GPU access once with `curl -fsSL https://raw.githubusercontent.com/unslothai/unsloth/main/docker/install_nvidia_toolkit.sh -o install_nvidia_toolkit.sh && sudo -E bash install_nvidia_toolkit.sh` (Windows: [Docker Desktop with WSL 2](https://unsloth.ai/docs/get-started/install/docker)).
+
+**Linux / WSL (Bash):**
+
+```bash
+# use  -e UNSLOTH_STUDIO_SECURE=1  instead of -p 8000:8000 for a public Cloudflare HTTPS link
+docker run -d --name unsloth --gpus all --ipc=host \
+  -p 8000:8000 -p 8888:8888 \
+  -v "$PWD":/workspace/host \
+  -v "$HOME/.cache/huggingface":/workspace/.cache/huggingface \
+  -v unsloth-studio:/opt/unsloth-studio \
+  unsloth/unsloth && docker logs -f unsloth
+```
+
+See [Docker docs](https://unsloth.ai/docs/get-started/install/docker) for more information. For cloud hosting / global serving, add `-e UNSLOTH_STUDIO_SECURE=1`, drop `-p 8000:8000` and bind JupyterLab to `-p 127.0.0.1:8888:8888`, or bind both to `127.0.0.1` and use an SSH tunnel. Tags (`unsloth/unsloth:core` for notebooks only), GPU support and options: [Docker Hub](https://hub.docker.com/r/unsloth/unsloth).
+
+On AMD there is a separate image, [`unsloth/unsloth-rocm`](https://hub.docker.com/r/unsloth/unsloth-rocm), with the run command and the supported cards on its [Docker Hub page](https://hub.docker.com/r/unsloth/unsloth-rocm).
+
+#### Remote HTTPS & LAN Access
+
+Server-side tools are on by default - so **be careful**! Keep your password safe, or use `--disable-tools` when exposing Unsloth.
+
+**Global HTTPS Access**:
+Creates a free Cloudflare link that serves Unsloth - you can access the link globally (even on your phone!)
+
+```bash
+unsloth studio --secure
+```
+
+`-H 0.0.0.0` and different ports also work:
+
+```bash
+unsloth studio -H 0.0.0.0 -p 8888
+```
+
+**LAN Access (home network)**: `Settings > API keys > LAN access`
+
+#### Password management & headless starts
+
+Exposing Unsloth (`--secure`, `--cloudflare`, or a non-loopback `-H`) asks once at the terminal for a new admin password. Ctrl+C there aborts the launch rather than exposing the auto-generated one; set a password non-interactively instead, or use `-H 127.0.0.1` to stay off the network.
+
+Headless starts:
+
+```bash
+UNSLOTH_STUDIO_PASSWORD='your-strong-password' unsloth studio --secure   # via env var
+```
+
+Reset your password:
+
+```bash
+unsloth studio reset-password
+```
+
+#### Developer, Nightly, Uninstall
+
+To see developer, nightly and uninstallation etc. instructions, see [advanced installation](#-advanced-installation).
+
+### Unsloth Core (code-based)
+
+#### Linux, WSL:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv venv unsloth_env --python 3.13
+source unsloth_env/bin/activate
+uv pip install unsloth --torch-backend=auto
+```
+
+#### Windows:
+
+```powershell
+winget install -e --id Python.Python.3.13
+winget install --id=astral-sh.uv  -e
+uv venv unsloth_env --python 3.13
+.\unsloth_env\Scripts\activate
+uv pip install unsloth --torch-backend=auto
+```
+
+#### AMD, Intel, DGX Spark, Blackwell:
+
+See our [Blackwell guide](https://unsloth.ai/docs/blog/fine-tuning-llms-with-blackwell-rtx-50-series-and-unsloth) and [DGX Spark guide](https://unsloth.ai/docs/blog/fine-tuning-llms-with-nvidia-dgx-spark-and-unsloth). <br>
+To install Unsloth on **AMD** and **Intel** GPUs, follow our [AMD Guide](https://unsloth.ai/docs/basics/amd) and [Intel Guide](https://unsloth.ai/docs/get-started/install/intel).
+
+## 📒 Free Notebooks
+
+Train for free with our notebooks.
+Read our [guide](https://unsloth.ai/docs/get-started/fine-tuning-llms-guide). Add dataset, run, then deploy your trained model.
+
+| Model                        | Free Notebooks                                                                                                                             | Performance | Memory use |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ---------- |
+| **Unsloth Studio**           | [▶️ Start for free](https://colab.research.google.com/github/unslothai/unsloth/blob/main/studio/Unsloth_Studio_Colab.ipynb)                |             |            |
+| **Gemma 4 (E2B)**            | [▶️ Start for free](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Gemma4_\(E2B\)-Vision.ipynb)                 | 1.5x faster | 50% less   |
+| **Qwen3.5 (4B)**             | [▶️ Start for free](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Qwen3_5_\(4B\)_Vision.ipynb)                 | 1.5x faster | 60% less   |
+| **gpt-oss (20B)**            | [▶️ Start for free](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/gpt-oss-\(20B\)-Fine-tuning.ipynb)           | 2x faster   | 70% less   |
+| **Qwen3.5 GSPO**             | [▶️ Start for free](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Qwen3_5_\(4B\)_Vision_GRPO.ipynb)            | 2x faster   | 70% less   |
+| **gpt-oss (20B): GRPO**      | [▶️ Start for free](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/gpt-oss-\(20B\)-GRPO.ipynb)                  | 2x faster   | 80% less   |
+| **Qwen3: Advanced GRPO**     | [▶️ Start for free](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Qwen3_\(4B\)-GRPO.ipynb)                     | 2x faster   | 70% less   |
+| **embeddinggemma (300M)**    | [▶️ Start for free](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/EmbeddingGemma_\(300M\).ipynb)               | 2x faster   | 20% less   |
+| **Llama 3.1 (8B) Alpaca**    | [▶️ Start for free](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Llama3.1_\(8B\)-Alpaca.ipynb)                | 2x faster   | 70% less   |
+| **Llama 3.2 Conversational** | [▶️ Start for free](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Llama3.2_\(1B_and_3B\)-Conversational.ipynb) | 2x faster   | 70% less   |
+| **Orpheus-TTS (3B)**         | [▶️ Start for free](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Orpheus_\(3B\)-TTS.ipynb)                    | 1.5x faster | 50% less   |
+
+- See all our notebooks for: [Kaggle](https://github.com/unslothai/notebooks?tab=readme-ov-file#-kaggle-notebooks), [GRPO](https://unsloth.ai/docs/get-started/unsloth-notebooks#grpo-reasoning-rl-notebooks), [TTS](https://unsloth.ai/docs/get-started/unsloth-notebooks#text-to-speech-tts-notebooks), [embedding](https://unsloth.ai/docs/new/embedding-finetuning) & [Vision](https://unsloth.ai/docs/get-started/unsloth-notebooks#vision-multimodal-notebooks)
+- See [all our models](https://unsloth.ai/docs/get-started/unsloth-model-catalog) and [all our notebooks](https://unsloth.ai/docs/get-started/unsloth-notebooks)
+- See detailed documentation for Unsloth [here](https://unsloth.ai/docs)
+
+## 🦥 Unsloth News
+
+- **AMD training**: Train, run RL, chat and deploy on AMD GPUs across Windows, WSL and Linux. [Guide](https://unsloth.ai/docs/basics/amd)
+- **Local models for any agent**: Use `unsloth start` with Claude Code, Codex, Hermes, OpenCode, OpenClaw, DeepSeek Harness and more through Unsloth's OpenAI- and Anthropic-compatible APIs. [Guide](https://unsloth.ai/docs/basics/api)
+- **GLM-5.2**: Run Z.ai's 744B-parameter, 1M-context open model locally with Unsloth Dynamic GGUFs. [Guide](https://unsloth.ai/docs/models/glm-5.2)
+- **DeepSeek-V4**: Run DeepSeek-V4-Flash locally with corrected multi-turn and tool-calling behavior. [Guide](https://unsloth.ai/docs/models/deepseek-v4)
+- **Gemma 4**: Run and train Gemma 4 text, image and audio models with QAT, MTP, GGUF and MLX support. [Guide](https://unsloth.ai/docs/models/gemma-4)
+- **MCP servers**: Connect local models to files, apps, databases and external tools through Model Context Protocol. [Guide](https://unsloth.ai/docs/basics/mcp)
+- **New models**: [Qwen-AgentWorld](https://huggingface.co/unsloth/Qwen-AgentWorld-35B-A3B-GGUF), [Ornith](https://huggingface.co/unsloth/models?search=ornith), [Kimi K2.7 Code](https://unsloth.ai/docs/models/kimi-k2.7-code) and [MiniMax M3](https://unsloth.ai/docs/models/minimax-m3)
+
+<details>
+  <summary>More News</summary>
+
+- **Connections**: Mix local models with API providers (OpenAI, Anthropic) or servers (vLLM, Ollama) in the same interface. [Guide](https://unsloth.ai/docs/integrations/connections)
+- **Introducing Unsloth Studio**: our new web UI for running and training LLMs. [Blog](https://unsloth.ai/docs/new/studio)
+- **DiffusionGemma**: Run and fine-tune Google's diffusion language model with 1.8x faster inference in Unsloth Studio. [Guide](https://unsloth.ai/docs/models/diffusiongemma)
+- **Qwen3.6**: Run and train Qwen3.6 with MTP for 1.4-2.2x faster inference and NVFP4 quants for supported GPUs. [Guide](https://unsloth.ai/docs/models/qwen3.6)
+- Train **MoE LLMs 12x faster** with 35% less VRAM - DeepSeek, GLM, Qwen and gpt-oss. [Blog](https://unsloth.ai/docs/new/faster-moe)
+- **Embedding models**: Unsloth now supports \~1.8-3.3x faster embedding fine-tuning. [Blog](https://unsloth.ai/docs/new/embedding-finetuning) • [Notebooks](https://unsloth.ai/docs/get-started/unsloth-notebooks#embedding-models)
+- New **7x longer context RL** vs. all other setups, via our new batching algorithms. [Blog](https://unsloth.ai/docs/new/grpo-long-context)
+- New RoPE & MLP **Triton Kernels** & **Padding Free + Packing**: 3x faster training & 30% less VRAM. [Blog](https://unsloth.ai/docs/new/3x-faster-training-packing)
+- **500K Context**: Training a 20B model with >500K context is now possible on an 80GB GPU. [Blog](https://unsloth.ai/docs/blog/500k-context-length-fine-tuning)
+- **FP8 & Vision RL**: You can now do FP8 & VLM GRPO on consumer GPUs. [FP8 Blog](https://unsloth.ai/docs/get-started/reinforcement-learning-rl-guide/fp8-reinforcement-learning) • [Vision RL](https://unsloth.ai/docs/get-started/reinforcement-learning-rl-guide/vision-reinforcement-learning-vlm-rl)
+
+</details>
+
+## 📥 Advanced Installation
+
+The below advanced instructions are for Unsloth Studio. For Unsloth Core advanced installation, [view our docs](https://unsloth.ai/docs/get-started/install/pip-install#advanced-pip-installation).
+
+#### Developer / Nightly / Experimental installs: macOS, Linux, WSL:
+
+The developer install builds from the `main` branch, which is the latest (nightly) source.
+
+```bash
+git clone https://github.com/unslothai/unsloth
+cd unsloth
+./install.sh --local
+unsloth studio -p 8888
+```
+
+To install into an isolated location, set `UNSLOTH_STUDIO_HOME`:
+
+```bash
+UNSLOTH_STUDIO_HOME="$PWD/.studio" ./install.sh --local
+UNSLOTH_STUDIO_HOME="$PWD/.studio" unsloth studio -p 8888
+```
+
+Then to update:
+
+```bash
+cd unsloth && git pull
+./install.sh --local
+unsloth studio -p 8888
+```
+
+#### Developer / Nightly / Experimental installs: Windows PowerShell:
+
+The developer install builds from the `main` branch, which is the latest (nightly) source.
+
+```powershell
+git clone https://github.com/unslothai/unsloth.git
+cd unsloth
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+.\install.ps1 --local
+unsloth studio -p 8888
+```
+
+To install into an isolated location, set `UNSLOTH_STUDIO_HOME`:
+
+```powershell
+$env:UNSLOTH_STUDIO_HOME="$PWD\.studio"; .\install.ps1 --local
+$env:UNSLOTH_STUDIO_HOME="$PWD\.studio"; unsloth studio -p 8888
+```
+
+Then to update:
+
+```powershell
+cd unsloth; git pull
+.\install.ps1 --local
+unsloth studio -p 8888
+```
+
+#### Advanced launch options
+
+Skip PyTorch (GGUF-only mode):
+
+```bash
+curl -fsSL https://unsloth.ai/install.sh | UNSLOTH_NO_TORCH=1 sh
+```
+
+```powershell
+$env:UNSLOTH_NO_TORCH=1; irm https://unsloth.ai/install.ps1 | iex
+```
+
+Skip the post-install prompt that starts Unsloth (useful for automated installs):
+
+```bash
+curl -fsSL https://unsloth.ai/install.sh | UNSLOTH_SKIP_AUTOSTART=1 sh
+```
+
+```powershell
+$env:UNSLOTH_SKIP_AUTOSTART=1; irm https://unsloth.ai/install.ps1 | iex
+```
+
+Keep the install-time package cache under the Unsloth Studio directory instead of reusing an existing uv cache. Downloads are slower the first time, and an explicit `UV_CACHE_DIR` still wins over this:
+
+```bash
+curl -fsSL https://unsloth.ai/install.sh | UNSLOTH_ISOLATE_UV_CACHE=1 sh
+```
+
+```powershell
+$env:UNSLOTH_ISOLATE_UV_CACHE=1; irm https://unsloth.ai/install.ps1 | iex
+```
+
+For a local run the flag is `--isolated-uv-cache`:
+
+```bash
+./install.sh --local --isolated-uv-cache
+```
+
+```powershell
+.\install.ps1 --local --isolated-uv-cache
+```
+
+Discard the previous environment immediately when reinstalling, instead of keeping a copy until the new one works. A reinstall normally holds both at once, so it needs room for two; this needs room for one, at the cost of not being able to undo a failed install:
+
+```bash
+curl -fsSL https://unsloth.ai/install.sh | UNSLOTH_INSTALL_NO_ROLLBACK=1 sh
+```
+
+```powershell
+$env:UNSLOTH_INSTALL_NO_ROLLBACK=1; irm https://unsloth.ai/install.ps1 | iex
+```
+
+For a local run the flag is `--no-rollback`:
+
+```bash
+./install.sh --local --no-rollback
+```
+
+```powershell
+.\install.ps1 --local --no-rollback
+```
+
+Pinning the Python version:
+
+```bash
+curl -fsSL https://unsloth.ai/install.sh | UNSLOTH_PYTHON=3.12 sh
+```
+
+```powershell
+$env:UNSLOTH_PYTHON='3.12'; irm https://unsloth.ai/install.ps1 | iex
+```
+
+Install to a custom location with `UNSLOTH_STUDIO_HOME`:
+
+```bash
+curl -fsSL https://unsloth.ai/install.sh | UNSLOTH_STUDIO_HOME=/abs/path sh
+```
+
+```powershell
+$env:UNSLOTH_STUDIO_HOME='C:\path'; irm https://unsloth.ai/install.ps1 | iex
+```
+
+Point the frontend build at a corporate npm mirror/proxy with `UNSLOTH_NPM_REGISTRY`:
+
+```bash
+UNSLOTH_NPM_REGISTRY=https://artifactory.example.com/api/npm/npm/ ./install.sh --local
+```
+
+```powershell
+$env:UNSLOTH_NPM_REGISTRY='https://artifactory.example.com/api/npm/npm/'; .\install.ps1 --local
+```
+
+Cap Unsloth's native CPU thread pools on high-core hosts: `UNSLOTH_CPU_THREADS=8 unsloth studio -p 8888`.
+
+#### Vulkan, custom llama.cpp backends:
+
+You can force the backend during installation:
+
+```bash
+export UNSLOTH_LLAMA_CPP_BACKEND=vulkan   # or cpu, cuda, rocm, auto
+curl -fsSL https://unsloth.ai/install.sh | sh
+```
+
+```powershell
+$env:UNSLOTH_LLAMA_CPP_BACKEND="vulkan"   # or cpu, cuda, rocm, auto
+irm https://unsloth.ai/install.ps1 | iex
+```
+
+#### Uninstall
+
+**MacOS, WSL, Linux:** `curl -fsSL https://raw.githubusercontent.com/unslothai/unsloth/main/scripts/uninstall.sh | sh`
+
+**Windows (PowerShell):** `irm https://raw.githubusercontent.com/unslothai/unsloth/main/scripts/uninstall.ps1 | iex`
+
+For more info, [see our docs](https://unsloth.ai/docs/new/studio/install#uninstall).
+
+#### Deleting model files
+
+You can delete old model files either from the bin icon in model search or by removing the relevant cached model folder from the default Hugging Face cache directory. By default, HF uses:
+
+**MacOS, Linux, WSL:** `~/.cache/huggingface/hub/`
+
+**Windows:** `%USERPROFILE%\.cache\huggingface\hub\`
+
+## 💚 Community and Links
+
+| Type                                                                                                                    | Links                                                                        |
+| ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| ![](https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66e3d80db9971f10a9757c99_Symbol.svg)  **Discord**       | [Join Discord server](https://discord.com/invite/unsloth)                    |
+| ![](https://redditinc.com/hs-fs/hubfs/Reddit%20Inc/Brand/Reddit_Logo.png)  **r/unsloth Reddit**                         | [Join Reddit community](https://reddit.com/r/unsloth)                        |
+| 📚 **Documentation & Wiki**                                                                                             | [Read Our Docs](https://unsloth.ai/docs)                                     |
+| ![](https://upload.wikimedia.org/wikipedia/commons/0/09/X_\(formerly_Twitter\)_logo_late_2025.svg)  **Twitter (aka X)** | [Follow us on X](https://twitter.com/unslothai)                              |
+| 🔮 **Our Models**                                                                                                       | [Unsloth Catalog](https://unsloth.ai/docs/get-started/unsloth-model-catalog) |
+| ✍️ **Blog**                                                                                                             | [Read our Blogs](https://unsloth.ai/blog)                                    |
+
+### Citation
+
+You can cite the Unsloth repo as follows:
+
+```bibtex
+@software{unsloth,
+  author = {Daniel Han, Michael Han and Unsloth team},
+  title = {Unsloth},
+  url = {https://github.com/unslothai/unsloth},
+  year = {2023}
+}
+```
+
+If you trained a model with 🦥Unsloth, you can use this cool sticker!   ![](https://raw.githubusercontent.com/unslothai/unsloth/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/images/made%20with%20unsloth.png)
+
+### License
+
+Unsloth uses a dual-licensing model of Apache 2.0 and AGPL-3.0. The core Unsloth package remains licensed under **[Apache 2.0](https://github.com/unslothai/unsloth?tab=Apache-2.0-1-ov-file)**, while certain optional components, such as the Unsloth Studio UI are licensed under the open-source license **[AGPL-3.0](https://github.com/unslothai/unsloth?tab=AGPL-3.0-2-ov-file)**.
+
+This structure helps support ongoing Unsloth development while keeping the project open source and enabling the broader ecosystem to continue growing.
+
+### Thank You to
+
+- The [llama.cpp library](https://github.com/ggml-org/llama.cpp) that lets users run and save models with Unsloth
+- The Hugging Face team and their libraries: [transformers](https://github.com/huggingface/transformers) and [TRL](https://github.com/huggingface/trl)
+- The Pytorch and [Torch AO](https://github.com/unslothai/unsloth/pull/3391) team for their contributions
+- NVIDIA for their [NeMo DataDesigner](https://github.com/NVIDIA-NeMo/DataDesigner) library and their contributions
+- And of course for every single person who has contributed or has used Unsloth!
+
+
+# Document: Unsloth on AMD (ROCm)
+
+Source path: docker/DOCKERHUB-ROCM.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/docker/DOCKERHUB-ROCM.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/docker/DOCKERHUB-ROCM.md
+Description: Fine-tune and run LLMs on AMD GPUs with no setup. This image carries the full training stack built against ROCm: PyTorch with ROCm 7.2, Unsloth, unsloth-zoo, a bitsandbytes build with the ROCm 4-bit fix, triton-rocm, TR…
+
+# Unsloth on AMD (ROCm)
+
+Fine-tune and run LLMs on AMD GPUs with no setup. This image carries the full training stack built against ROCm: PyTorch with ROCm 7.2, Unsloth, unsloth-zoo, a bitsandbytes build with the ROCm 4-bit fix, triton-rocm, TRL, PEFT and diffusers.
+
+This is the AMD counterpart to [`unsloth/unsloth`](https://hub.docker.com/r/unsloth/unsloth), which is CUDA-only. Source: [`docker/Dockerfile.rocm`](https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/docker/Dockerfile.rocm). Guide: [docs.unsloth.ai](https://docs.unsloth.ai/get-started/install/docker).
+
+## Quick start
+
+Needs Docker and, on Linux, a working amdgpu driver. Windows goes through WSL2 and is covered below. Without Docker, start here:
+
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
+```
+
+AMD GPUs are reached through the kernel driver's device nodes, not through a container toolkit, so the run command differs from the NVIDIA one. On Linux:
+
+```bash
+GPU_FLAGS="--device /dev/kfd"
+[ -e /dev/dri ] && GPU_FLAGS="$GPU_FLAGS --device /dev/dri"
+for g in video render; do
+  gid=$(getent group "$g" | cut -d: -f3)
+  [ -n "$gid" ] && GPU_FLAGS="$GPU_FLAGS --group-add $gid"
+done
+
+docker run --rm -it \
+  $GPU_FLAGS \
+  --ipc=host \
+  -v "$HOME/.cache/huggingface":/workspace/.cache/huggingface \
+  unsloth/unsloth-rocm
+```
+
+Those few lines build the flags the way `docker/run.sh` does, and each part earns its place. `--group-add` needs the numeric group ids, because a name is resolved inside the container, where the host's `video` and `render` groups do not exist, so passing the names can add the wrong groups and leave `/dev/kfd` unreadable. A minimal host may have no `render` group at all, and a plain `--group-add "$(getent group render | cut -d: -f3)"` would then expand to an empty argument. And Docker refuses to start over a device that does not exist, so `/dev/dri` is named only when it is there, leaving the entrypoint to explain an incomplete driver rather than failing in the daemon.
+
+On Windows there is no `/dev/kfd`. WSL2 reaches the card over its DXG bridge, so the flags are the `/dev/dxg` node, the runtime's opt-in, and the host's `librocdxg` together with the `libdxcore` it loads from WSL's own lib directory (the image cannot ship `librocdxg`: its build needs Windows SDK headers). This needs ROCm for WSL on the host (`scripts/install_rocm_wsl_strixhalo.sh` installs it), a docker engine running inside the WSL distribution (Docker Desktop's own engine exposes neither node), and a per-architecture image: the generic image's torch bundles `librocprofiler-sdk`, which aborts on the bridge, and the entrypoint refuses before it gets that far. Until the per-architecture tags are published, build one with `ROCM_GFX=<your gfx> bash docker/build.sh --rocm`, which tags it `unsloth-rocm:latest` locally. That build exists for the Strix APUs and RDNA4 (`gfx1150`, `gfx1151`, `gfx1152`, `gfx1200`, `gfx1201`); RDNA3 cards (`gfx1100` to `gfx1103`) have no bridge path yet, because the Dockerfile does not map them to AMD's `gfx110X-all` wheels. Then:
+
+```bash
+GPU_FLAGS="--device /dev/dxg -e HSA_ENABLE_DXG_DETECTION=1 \
+  -v /opt/rocm/lib/librocdxg.so.1:/usr/lib/x86_64-linux-gnu/librocdxg.so:ro \
+  -v /usr/lib/wsl/lib:/usr/lib/wsl/lib:ro -e LD_LIBRARY_PATH=/usr/lib/wsl/lib"
+
+docker run --rm -it \
+  $GPU_FLAGS \
+  --ipc=host \
+  -v "$HOME/.cache/huggingface":/workspace/.cache/huggingface \
+  unsloth-rocm:latest
+```
+
+No `--group-add` here: WSL exposes `/dev/dxg` to everyone and has no `render` group.
+
+The Hugging Face mount is not optional if you care about your downloads: `HF_HOME` inside the container is `/workspace/.cache/huggingface`, which lives in the container's writable layer, so without it every model is fetched again after `docker rm`.
+
+Or let the launcher work out the device nodes, group ids and mounts for you, on Linux and on WSL alike. It defaults to the published image, so on WSL name the build from above:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/unslothai/unsloth/main/docker/run.sh -o run.sh
+bash run.sh --rocm                                   # Linux
+UNSLOTH_IMAGE=unsloth-rocm:latest bash run.sh --rocm # WSL
+```
+
+Check the GPU is visible before anything else, with `GPU_FLAGS` set as above (on WSL, `unsloth-rocm:latest` in place of `unsloth/unsloth-rocm`):
+
+```bash
+docker run --rm $GPU_FLAGS \
+  -v "$HOME/.cache/huggingface":/workspace/.cache/huggingface \
+  unsloth/unsloth-rocm python /workspace/smoke_test_rocm.py
+```
+
+That runs a real 5-step LoRA on a 1B model and fails loudly if the GPU is not usable. The cache mount is there so a second attempt reuses the model rather than downloading it again: the container is `--rm`, so without it every run starts from nothing.
+
+## Tags
+
+| tag                                                   | what it is                                                                                                                                                                                                                                                                                                                    |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `latest`                                              | the current build from `main`, linux/amd64                                                                                                                                                                                                                                                                                    |
+| `sha-<commit>`                                        | the same image, pinned to the commit it was built from                                                                                                                                                                                                                                                                        |
+| `nightly`                                             | the scheduled weekly build                                                                                                                                                                                                                                                                                                    |
+| `gfx1150`, `gfx1151`, `gfx1152`, `gfx1200`, `gfx1201` | builds using AMD's per-architecture wheels, when published                                                                                                                                                                                                                                                                    |
+| `studio`                                              | `latest` plus Unsloth Studio's web UI on port 8000, JupyterLab with the Unsloth notebooks on port 8888, from [`docker/Dockerfile.studio-rocm`](https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/docker/Dockerfile.studio-rocm). Every tag above has a `-studio` twin built on the same base |
+
+Pin a digest for anything reproducible. `latest` moves.
+
+## Supported hardware
+
+RDNA2 and newer, and CDNA, except `gfx1033`. The image is built against the generic ROCm 7.2 PyTorch index, which covers most cards.
+
+Three cases need care:
+
+- **Strix Halo / Strix Point APUs (`gfx1150`, `gfx1151`, `gfx1152`) and RDNA4 (`gfx1200`, `gfx1201`)** run on the generic wheels, and the entrypoint says so on start, but AMD's per-architecture wheels carry fixes the generic index lacks, not only tuning: the `_grouped_mm` segfault on `gfx1151` is one of them. The generic image may well work for what you run, and everything measured below was measured on it, but if training crashes on one of these arches, rebuilding with `ROCM_GFX=gfx1151` (or your arch) is the fix rather than a speedup.
+- **Van Gogh (`gfx1033`, Steam Deck)** is refused outright. It is RDNA2, but training diverges to NaN under ROCm while forward passes look valid, so the entrypoint exits rather than train on it, and `HSA_OVERRIDE_GFX_VERSION` does not help because it hides the silicon, not the arithmetic.
+- **Vega 20 (`gfx906`)** lost its kernels after ROCm 6.3. Build with `ROCM_GFX=gfx906` and `ROCM_VERSION=6.3.4`; that variant ships without bitsandbytes, since no prebuilt wheel carries gfx906 kernels.
+
+The container prints what it found and refuses to start rather than silently falling back to the CPU. Set `UNSLOTH_SKIP_GPU_CHECK=1` to bypass the diagnostics.
+
+## What is measured
+
+On a Radeon 8060S (`gfx1151`, Strix Halo), against the published `latest` digest:
+
+| workload                                              | result                   |
+| ----------------------------------------------------- | ------------------------ |
+| 4-bit QLoRA, 5 steps, Llama 3.2 1B                    | loss 2.8146 to 1.2242    |
+| text to image, sd-turbo, 4 steps, 512px               | 118 s, 4.21 GB peak VRAM |
+| text to video, text-to-video-ms-1.7b, 8 frames, 256px | 279 s, 4.77 GB peak VRAM |
+
+The diffusion outputs match the same seed on an NVIDIA B200 to three decimal places of pixel spread, so this is numerical agreement rather than only "it ran". Speed is another matter: an integrated APU sharing system memory is roughly 25x to 50x slower than a datacentre card on those two generations.
+
+Discrete RDNA2, RDNA4 and CDNA cards are not covered by that testing.
+
+## What is in the image, and what is not
+
+Included: PyTorch with ROCm, Unsloth, unsloth-zoo, transformers, TRL, PEFT, accelerate, bitsandbytes, triton-rocm, diffusers, timm.
+
+Not included in `latest`, unlike `unsloth/unsloth`: Unsloth Studio and its web UI, JupyterLab, prebuilt llama.cpp and whisper.cpp, vLLM and xformers. `latest` is a training image.
+
+The `studio` tag adds Unsloth Studio, JupyterLab with the Unsloth notebooks (the `AMD-*` set first) and a CPU llama.cpp for GGUF chat, still without whisper.cpp, vLLM or xformers. Training, the notebooks and the UI use the GPU; GGUF chat runs on the CPU, since a ROCm llama.cpp bundle is per-architecture and would pin the image to one card. Studio's data (accounts, chats, outputs) lives at `/opt/unsloth-studio`, so mount a volume there to keep it, with `GPU_FLAGS` set as in the quick start:
+
+```bash
+docker run --rm $GPU_FLAGS --ipc=host -p 127.0.0.1:8000:8000 -p 127.0.0.1:8888:8888 \
+  -v unsloth-studio-rocm:/opt/unsloth-studio \
+  -v "$HOME/.cache/huggingface":/workspace/.cache/huggingface \
+  unsloth/unsloth-rocm:studio
+```
+
+## Environment
+
+| variable                   | effect                                                                                                                                                    |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `UNSLOTH_SKIP_GPU_CHECK=1` | skip the startup diagnostics                                                                                                                              |
+| `HSA_OVERRIDE_GFX_VERSION` | present an unsupported card as a supported one. Ignored on images with native kernels for the card                                                        |
+| `HF_TOKEN`                 | forwarded for gated models                                                                                                                                |
+| `UNSLOTH_STUDIO_PASSWORD`  | `studio` tag: the initial admin password, first boot only; ignored once one is stored. Unset, Studio generates one and names the file it wrote in the log |
+
+Model downloads land in `/workspace/.cache/huggingface`, which is in the container's writable layer unless you mount it. Mount it to keep them, and to reuse what the host has already downloaded.
+
+The build's own record is in the image: `cat /etc/unsloth-rocm-build` reports the ROCm version, the wheel index and the architecture it was built for, and `/opt/unsloth-venv/requirements.lock.txt` is the resolved package set.
+
+## Links
+
+- Source and issues: [github.com/unslothai/unsloth](https://github.com/unslothai/unsloth)
+- Docker files: [`docker/`](https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/docker)
+- Documentation: [docs.unsloth.ai](https://docs.unsloth.ai)
+- Licences: the image is labelled `Apache-2.0 AND AGPL-3.0-only`. [Apache-2.0](https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/LICENSE) covers the repository and the training stack. The [AGPL-3.0](https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/LICENSE.AGPL-3.0) half is there for the one AGPL file this image ships, `/workspace/smoke_test_rocm.py`, which carries an `AGPL-3.0-only` header; Unsloth Studio itself is only in the `studio` tag.
+
+
+# Document: Unsloth Docker Image
+
+Source path: docker/DOCKERHUB.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/docker/DOCKERHUB.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/docker/DOCKERHUB.md
+Description: Fine-tune and run LLMs, vision, audio and diffusion models with no setup. Every image carries the training stack (PyTorch 2.11 with CUDA 12.8, Unsloth, unsloth-zoo, bitsandbytes, TRL, PEFT, plus xformers on linux/amd64)…
+
+# Unsloth Docker Image
+
+Fine-tune and run LLMs, vision, audio and diffusion models with no setup. Every image carries the training stack (PyTorch 2.11 with CUDA 12.8, [Unsloth](https://github.com/unslothai/unsloth), unsloth-zoo, bitsandbytes, TRL, PEFT, plus xformers on `linux/amd64`), JupyterLab with the [Unsloth notebooks](https://github.com/unslothai/notebooks), and prebuilt llama.cpp. The `latest` image adds whisper.cpp for Unsloth Studio's speech-to-text.
+
+Source: [`docker/`](https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/docker). Guide: [docs.unsloth.ai](https://docs.unsloth.ai/get-started/install/docker).
+
+## Quick start
+
+```bash
+# use  -e UNSLOTH_STUDIO_SECURE=1  instead of -p 8000:8000 for a public Cloudflare HTTPS link
+docker run -d --name unsloth --gpus all --ipc=host \
+  --ulimit memlock=-1 --ulimit stack=67108864 \
+  -p 8000:8000 -p 8888:8888 \
+  -v "$PWD":/workspace/host \
+  -v "$HOME/.cache/huggingface":/workspace/.cache/huggingface \
+  -v unsloth-studio:/opt/unsloth-studio \
+  unsloth/unsloth && docker logs -f unsloth
+```
+
+That starts the container and follows its startup, which ends after about a minute with your links and a generated JupyterLab password. On the first run against a new `unsloth-studio` volume it generates an Unsloth Studio password too; change that one on first sign-in or Unsloth Studio stops after an hour. Reusing an existing volume keeps the Unsloth Studio password already stored on it, which the log says rather than printing one. Ctrl-C stops following the log, not the container.
+
+Those ports publish on every interface, which is fine on a laptop and not on a cloud host. Three ways to close that, in order of least work:
+
+- `-e UNSLOTH_STUDIO_SECURE=1`, with `-p 8000:8000` dropped and 8888 changed to `-p 127.0.0.1:8888:8888`: Unsloth Studio is served only over a Cloudflare HTTPS link, printed in the log, and binds to loopback inside the container so no raw port exists. It fails closed, so no tunnel means no link rather than serving in the clear. Move JupyterLab too, or it stays published on every interface over plain HTTP, which is a shell on your GPU box with its password in the clear. On a new volume the public page will not hand out the generated first-boot password, on purpose; read it from the log, where it is printed for exactly this case, or set one yourself with `UNSLOTH_STUDIO_PASSWORD`. `UNSLOTH_STUDIO_CLOUDFLARE=1` keeps the local port as well.
+- Publish to `127.0.0.1` and tunnel: `-p 127.0.0.1:8000:8000 -p 127.0.0.1:8888:8888`, then `ssh -L 8000:localhost:8000 -L 8888:localhost:8888 user@your-host`.
+- Keep the ports and set real passwords with `-e UNSLOTH_STUDIO_PASSWORD=...` and `-e JUPYTER_PASSWORD=...`.
+
+Unsloth Studio reports on start whether the port answered from the public internet, so you are told either way.
+
+### Before that, on a new machine
+
+Needs an NVIDIA driver of 570.26 or newer. On Linux you also need Docker and the NVIDIA Container Toolkit:
+
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
+curl -fsSL https://raw.githubusercontent.com/unslothai/unsloth/main/docker/install_nvidia_toolkit.sh -o install_nvidia_toolkit.sh && sudo -E bash install_nvidia_toolkit.sh
+```
+
+The second command covers Ubuntu, Debian, RHEL, Fedora, Rocky, Amazon Linux and SUSE, and checks that a container can see the GPU. On Windows, Docker Desktop with the WSL 2 backend and a current NVIDIA Windows driver is all you need; run the quick start above in a WSL 2 shell.
+
+Or let `run.sh` set the quick start's flags, including the `unsloth-studio` volume, for you. It offers to install the toolkit if the daemon has no `nvidia` runtime:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/unslothai/unsloth/main/docker/run.sh -o run.sh
+UNSLOTH_PORTS="-p 8000:8000 -p 8888:8888" bash run.sh
+```
+
+### Resetting the password
+
+```bash
+docker exec unsloth unsloth studio reset-password --username unsloth
+```
+
+It mints a new password and prints it, revokes sessions and API keys, and rotates in place, so nothing needs restarting. `--username` is required once more than one account exists and harmless before that. Shared `/p` preview links are not revoked; rotate those in Settings if the old password leaked.
+
+### Stopping and removing it
+
+```bash
+docker stop unsloth      # shut it down, keep it
+docker start unsloth     # bring it back, same state
+docker rm -f unsloth     # stop and delete the container
+docker ps -a             # find it again, running or not
+```
+
+`docker rm -f` deletes the container, not your work: models stay in the Hugging Face cache, your files in the directory you mounted, and Unsloth Studio's accounts and chats on the `unsloth-studio` volume, so the next container with the same `-v unsloth-studio:/opt/unsloth-studio` resumes where this one left off, password included. Only what was written inside the container is lost. `docker volume rm unsloth-studio` discards the Unsloth Studio data too, and cannot be undone.
+
+These take a container, not an image, so `docker stop unsloth/unsloth` fails with "No such container". Use the `NAMES` or `CONTAINER ID` column of `docker ps -a`; without `--name`, Docker assigns a random one.
+
+### Notebooks only (`core`)
+
+The `core` image has no service manager. Start JupyterLab on the command line:
+
+```bash
+docker run -d --gpus all --ipc=host -p 8888:8888 \
+  -v "$PWD":/workspace/host \
+  unsloth/unsloth:core \
+  jupyter lab --ip 0.0.0.0 --port 8888 --allow-root
+```
+
+The login token is printed in `docker logs`. With no command the image runs `python`, so a bare `docker run unsloth/unsloth:core` exits immediately.
+
+### Scripts
+
+```bash
+docker run --rm --gpus all --ipc=host -v "$PWD":/workspace/host \
+  unsloth/unsloth:core python /workspace/host/train.py
+```
+
+### CPU-only hosts
+
+`latest` starts without a GPU on its own. Unsloth Studio chat with GGUF models, JupyterLab and the GGUF tooling work; training does not. `core` refuses to start without a GPU unless you opt in:
+
+```bash
+docker run -d -p 8000:8000 -p 8888:8888 unsloth/unsloth
+docker run --rm -e UNSLOTH_ALLOW_CPU=1 unsloth/unsloth:core python -c "import unsloth"
+```
+
+## Tags
+
+| Tag                                                 | Contents                                                               | Use it for                                 |
+| --------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------ |
+| `latest`, `studio`                                  | Unsloth Studio web UI + JupyterLab + notebooks + key-only SSH          | Most users. Train and chat in the browser. |
+| `core`                                              | Training stack + JupyterLab + notebooks, no Unsloth Studio             | Notebooks, scripts, CI, slimmer pulls.     |
+| `nightly-<YYYY.MM.DD>`, `core-nightly-<YYYY.MM.DD>` | The same two images, one immutable pin per daily rebuild, kept 60 days | Reproducible runs.                         |
+
+`latest` and `core` are rebuilt daily, not on every merge to `main`. Both are multi-arch: `linux/amd64` and `linux/arm64` (GH200, DGX Spark).
+
+## Supported GPUs
+
+Turing (T4, RTX 20) through Blackwell (B200, GB200, RTX 50, RTX PRO 6000) run precompiled SASS: `sm_75 sm_80 sm_86 sm_90 sm_100 sm_120` on `linux/amd64`, `sm_80 sm_90 sm_90a sm_100 sm_100a sm_120 sm_120a` on `linux/arm64`. SASS is forward-compatible within a major version, so Ada runs the `sm_86` binaries, B300 and GB300 the `sm_100` ones, and GB10 (DGX Spark) the `sm_120` ones. A source build inside the image compiles for `7.5;8.0;8.6;8.9;9.0;10.0;12.0+PTX`.
+
+Drivers: 570.26 or newer for CUDA 12.8 on every GPU, 580 or newer for B300, GB300 and GB10. On `linux/arm64` the bundled llama.cpp is a CUDA 13 build, because upstream ships no CUDA 12 one there, so training works from 570 but GGUF export and Unsloth Studio chat need 580.
+
+Turing has no bfloat16; Unsloth falls back to float16 there. These images are CUDA only; for AMD use [`unsloth/unsloth-rocm`](https://hub.docker.com/r/unsloth/unsloth-rocm), a ROCm build of the training stack.
+
+## Ports
+
+| Port | Service                                                    | Image    |
+| ---- | ---------------------------------------------------------- | -------- |
+| 8000 | Unsloth Studio (`UNSLOTH_STUDIO_PORT`)                     | `latest` |
+| 8888 | JupyterLab                                                 | both     |
+| 22   | SSH, key only, off unless `SSH_KEY` or `PUBLIC_KEY` is set | `latest` |
+
+## Environment variables
+
+| Variable                                 | Effect                                                                                                                                                                                                                        |
+| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `UNSLOTH_STUDIO_PASSWORD`                | Initial Unsloth Studio password for user `unsloth`; ignored once one is stored. Unset: generated, printed in the logs, and Unsloth Studio stops after an hour unless changed (`UNSLOTH_STUDIO_BOOTSTRAP_TIMEOUT=0` disables). |
+| `JUPYTER_PASSWORD`                       | JupyterLab password, read by the `latest` launcher. Unset: generated and printed in the logs. On `core` you start JupyterLab yourself.                                                                                        |
+| `JUPYTER_PORT`                           | JupyterLab's port inside the container. Default `8888`. Unsloth Studio's port (`UNSLOTH_STUDIO_PORT`) is refused.                                                                                                             |
+| `UNSLOTH_STUDIO_PORT`                    | Unsloth Studio's port inside the container, for `--network host` when 8000 is taken. Default `8000`.                                                                                                                          |
+| `SSH_KEY` or `PUBLIC_KEY`                | OpenSSH public key for root login; enables sshd on port 22. Password login is never enabled.                                                                                                                                  |
+| `UNSLOTH_ALLOW_CPU=1`                    | Allow starting without a GPU (`latest` already does). Dropped when a GPU is visible, where it would turn off Unsloth's training patches.                                                                                      |
+| `UNSLOTH_STUDIO_SECURE=1`                | Serve Unsloth Studio over a Cloudflare HTTPS link only, bound to loopback inside the container so no raw port is published. Fails closed if the tunnel does not come up.                                                      |
+| `UNSLOTH_STUDIO_CLOUDFLARE=1`            | The same HTTPS link, with the local port still served. Not valid together with `UNSLOTH_STUDIO_SECURE=1`.                                                                                                                     |
+| `UNSLOTH_JUPYTER_CLOUDFLARE=1`           | Publish JupyterLab through a Cloudflare quick tunnel and print the URL.                                                                                                                                                       |
+| `UNSLOTH_SKIP_NOTEBOOK_REFRESH=1`        | Do not refresh the notebooks from GitHub on start; the copy baked into the image is still used.                                                                                                                               |
+| `UNSLOTH_SKIP_NOTEBOOK_SYNC=1`           | Do not set up the notebooks at all: nothing is created at `/workspace/unsloth-notebooks` or `/workspace/Unsloth Notebooks`.                                                                                                   |
+| `HF_TOKEN`, `WANDB_API_KEY`              | Forwarded to Hugging Face and Weights and Biases.                                                                                                                                                                             |
+| `UNSLOTH_STUDIO_SHUTDOWN_STOP_TIMEOUT_S` | How long a training run gets to save a checkpoint when the container stops. Default `120`, and capped by `UNSLOTH_STUDIO_TRAINING_STOP_TIMEOUT_S` (default `600`).                                                            |
+
+On a CPU-only host a non-login `docker exec` is built from the image, not the container's first process, so `docker exec <c> python -c "import unsloth"` still asks for a GPU. Use `bash -lc '...'` or pass `-e UNSLOTH_ALLOW_CPU=1`.
+
+## Volumes
+
+The working directory is `/workspace`. Mount what you want to keep:
+
+| Container path                  | What it holds                                                                                                                    |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `/workspace/host`               | Your files. Mount your project directory here.                                                                                   |
+| `/workspace/.cache/huggingface` | Model downloads. Mount your host HF cache to reuse it.                                                                           |
+| `/opt/unsloth-studio`           | Unsloth Studio's accounts, chats, outputs, exports and runs (`latest`). Use a named volume: without one, `docker rm` loses them. |
+| `/workspace/.cache/triton`      | Compiled kernels. Optional, speeds up restarts.                                                                                  |
+| `/workspace/unsloth-notebooks`  | The synced notebooks. Your edits are kept across refreshes.                                                                      |
+| `/workspace/Unsloth Notebooks`  | The same notebooks grouped by topic, rebuilt on each start.                                                                      |
+
+The container runs as root by default. On `core`, `--user <uid>:<gid>` is supported and keeps files on your mounts owned by you. `latest` runs its services as root and does not start under `--user`.
+
+<a id="studio-data-and-studio-code"></a>
+
+### Unsloth Studio data and code
+
+Unsloth Studio's code ships in the image under `/opt/unsloth-studio-app` and is linked into `/opt/unsloth-studio` at every start, so the volume holds only your data and every image runs its own code.
+
+- A volume from before that split holds an old image's code. The first start of a newer image moves it aside to `/opt/unsloth-studio/.unsloth-studio-legacy/` and links the new code in; nothing is deleted. Delete it once the new image works (`docker exec <c> rm -rf /opt/unsloth-studio/.unsloth-studio-legacy`), along with the 9 GB uv cache at `/opt/unsloth-studio/cache/uv`, or start with `-e UNSLOTH_STUDIO_KEEP_LEGACY=0` to skip keeping it. Going back to a pre-split image needs those entries moved back, or `docker run --rm -v unsloth-studio:/opt/unsloth-studio --entrypoint unsloth-studio-home <current image> --restore`.
+- Use a named volume, not a bind mount of a Windows or macOS host directory: the Unsloth Studio home needs symlinks, and Docker Desktop's file sharing may refuse to create them, stopping the container at start. A Linux directory, including one inside a WSL 2 distribution, works.
+
+## Stopping while training
+
+On `docker stop` and `docker restart`, Unsloth Studio stops a running training job at the next step and saves a checkpoint before it exits, so the run can be resumed from the Training page. Docker only waits 10 seconds by default, which is not enough for a large model, so give it the budget:
+
+```bash
+docker stop -t 150 <container>
+```
+
+or `stop_grace_period: 150s` in Compose. `docker/run.sh` sets this for you. `UNSLOTH_STUDIO_SHUTDOWN_STOP_TIMEOUT_S` (default 120) is the time Unsloth Studio itself waits for the save; the container's own limit is 30 seconds above it.
+
+A save is also bounded by the training stop watchdog, which force-terminates a worker that has not finished after `UNSLOTH_STUDIO_TRAINING_STOP_TIMEOUT_S` (default 600). Raising the shutdown budget past that does nothing on its own; raise both, and `docker/run.sh` forwards both.
+
+A host shutdown is not covered: the daemon stops every container under its own `--shutdown-timeout` (15 seconds by default), so a save that takes longer is cut short. Stop the container yourself before shutting the host down.
+
+## Updating inside a running container
+
+On the `latest` image:
+
+- `unsloth-studio-update` upgrades Unsloth Studio and Unsloth in place, leaving the torch and CUDA stack pinned. It survives `docker restart`, not `docker rm`.
+- `unsloth-llama-update` fetches the newest prebuilt llama.cpp.
+- `unsloth-jupyter-tunnel --force` opens a Cloudflare quick tunnel to JupyterLab. Without `--force` or `UNSLOTH_JUPYTER_CLOUDFLARE=1` it prints that it is disabled and exits.
+
+Both images refresh the notebooks from GitHub on each start, which costs 10 to 20 seconds, so a one-shot `docker run --rm ... python script.py` is worth running with `UNSLOTH_SKIP_NOTEBOOK_SYNC=1`. Pull a new image tag to update everything else.
+
+## Help
+
+- [Documentation](https://docs.unsloth.ai)
+- [r/unsloth](https://reddit.com/r/unsloth)
+- [Issues](https://github.com/unslothai/unsloth/issues)
+
+## License
+
+Unsloth is Apache-2.0 ([LICENSE](https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/LICENSE)). Both images also include Unsloth Studio's code (`studio/`), which is AGPL-3.0 ([studio/LICENSE.AGPL-3.0](https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/LICENSE.AGPL-3.0)).
+
+
+# Document: Unsloth Docker Studio branding
+
+Source path: docker/jupyter/BRANDING.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/docker/jupyter/BRANDING.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/docker/jupyter/BRANDING.md
+Description: The Unsloth Docker Studio and JupyterLab image ships Unsloth attribution across several files. Preserving it is a license condition, not just a build check. See ../NOTICE and /studio/LICENSE.AGPL-3.0.
+
+# Unsloth Docker Studio branding
+
+The Unsloth Docker Studio and JupyterLab image ships Unsloth attribution across
+several files. Preserving it is a license condition, not just a build check. See
+[../NOTICE](https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/docker/NOTICE) and [/studio/LICENSE.AGPL-3.0](https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/LICENSE.AGPL-3.0).
+
+## What must stay
+
+- `Built by the Unsloth team` (login page and the labextension).
+- `Copyright 2026-Present the Unsloth team`.
+- `Licensed under Apache 2.0 and the GNU AGPLv3`.
+- The Unsloth logo and the `Unsloth Dark` theme in the top bar and on the splash.
+- The Help > About dialog with the Source, Website, License, AGPLv3 and Apache
+  links.
+
+The canonical strings live in `unsloth_branding.py` and its TypeScript mirror
+`unsloth_labext/src/branding.ts`. The `PHRASE` literal must be byte-identical
+between the two, because the guard greps the built labextension bundle for it.
+
+## Where it lives
+
+| File                             | Carries                                     |
+| -------------------------------- | ------------------------------------------- |
+| `login.html`                     | JupyterLab login page and attribution line. |
+| `unsloth_labext/src/branding.ts` | Canonical attribution strings (TS mirror).  |
+| `unsloth_labext/src/about.ts`    | Help > About dialog and the license links.  |
+| `unsloth_labext/src/splash.ts`   | Loading-splash caption.                     |
+| `unsloth_labext/src/logo.ts`     | Embedded Unsloth logo data URI.             |
+| `unsloth_branding.py`            | Canonical strings and the integrity guard.  |
+
+## How it is enforced
+
+`unsloth_branding.py` verifies the attribution is present and unaltered in three
+places (see [../Dockerfile.studio](https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/docker/Dockerfile.studio) and
+[../studio\_launch.sh](https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/docker/studio_launch.sh)):
+
+1. **Build time:** `python -m unsloth_branding --verify` fails the image build if
+   any attribution asset is missing or altered.
+2. **Whole image:** `studio_launch.sh` re-runs the same check before starting
+   supervisord; a failure refuses to start the container.
+3. **JupyterLab:** the module is also a `jupyter_server` extension that re-checks
+   on load and refuses to serve JupyterLab if attribution was stripped after the
+   container started.
+
+The guard is a tripwire, not a lock. Anyone who forks the source controls the
+build and can edit any of these files. It exists to make accidental removal fail
+loudly and to make deliberate removal unambiguous. The attribution is protected
+by the AGPLv3 as an Appropriate Legal Notice (see [../NOTICE](https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/docker/NOTICE)), and
+removing it before conveying or network-serving the image is a license
+violation.
+
+
+# Document: Windows Smart App Control probe
+
+Source path: scripts/windows_sac_probe/README.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/scripts/windows_sac_probe/README.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/scripts/windows_sac_probe/README.md
+Description: Collects evidence about Windows code integrity blocking the Unsloth Studio llama.cpp runtime, on a real machine, in a form that can be attached to an issue or a pull request.
+
+# Windows Smart App Control probe
+
+Collects evidence about Windows code integrity blocking the Unsloth Studio
+llama.cpp runtime, on a real machine, in a form that can be attached to an issue
+or a pull request.
+
+## What we are trying to settle
+
+**Start with an AMD machine if you have one.** Every Smart App Control report so
+far has been AMD, not NVIDIA: unslothai/unsloth#6588 (unsigned ROCm libraries),
+unslothai/unsloth#6648 (`rocfft.dll`, with the verdict changing on a byte
+identical file), and the report that prompted this. The ROCm bundle also has by
+far the largest unsigned surface, 75 PE files against 47 for CUDA, because it
+carries AMD's own TheRock runtime DLLs (`amdhip64_*.dll`, `rocblas.dll`,
+`hipblas.dll`, `amd_comgr.dll`, `origami.dll` and more) which ship unsigned.
+
+Users report Studio installing and launching, then failing to load a model, with
+the failure clearing when Smart App Control is turned off and returning after a
+reboot. The dialog is:
+
+```
+llama-server.exe - Bad Image
+C:\Users\...\.unsloth\llama.cpp\build\bin\Release\llama-common.dll is either not
+designed to run on Windows or it contains an error. Error status 0xc0e90002.
+```
+
+`0xc0e90002` is a code integrity refusal, not a corrupt file. On the affected
+releases every PE we shipped in the Windows bundles was unsigned (47 of 47 in the
+CUDA bundle, 51 of 52 in the CPU bundle, the one exception being Microsoft's own
+OpenMP runtime), and VirusTotal had never seen any of them, so they carried no
+cloud reputation either. Smart App Control decides per file, on signature first
+and reputation second.
+
+**The current release is signed**: `b10830-mix-d5c17a0` is 992 of 992 across all
+seventeen Windows bundles, which is why `.github/workflows/windows-llama-signature-audit.yml`
+now fails on an unsigned PE rather than warning. So a probe run against a current
+bundle measures the signed baseline, not the unsigned surface above; use
+`UNSLOTH_LLAMA_RELEASE_TAG` (see "The matrix") to pin an affected release when
+reproducing the original report. The reputation half is unchanged either way: a
+freshly published hash carries no ISG reputation whether or not it is signed.
+
+So far this rests on one screenshot. This probe is how it becomes a measurement.
+
+**The llama.cpp runtime is not the whole surface, and may not even be the
+likeliest one.** The first enforced block this probe caught on a real
+enforcing machine was not in llama.cpp at all. It was
+`sentencepiece\_sentencepiece.cp313-win_amd64.pyd`, loaded by a validly signed
+`python.exe`, refused with event 3077, and it failed **silently**: no
+`ImportError`, no "DLL load failed", inference carried on afterwards. On that
+same machine the entirely unsigned llama.cpp bundle launched three times and was
+never blocked.
+
+Measured on that install:
+
+| scope                     | PE files | unsigned |
+| ------------------------- | -------: | -------: |
+| `~/.unsloth/llama.cpp`    |       27 |       27 |
+| the `unsloth_studio` venv |      673 |  **657** |
+
+657 unsigned native modules across about 70 packages, roughly 1.1 GB, mostly
+`.pyd`: `scipy`, `sklearn`, `numpy`, `av`, `pandas`, `pyarrow`, and `torch` and
+`triton` by size. Only 16 files in the venv are validly signed and none of them
+are ours. `sentencepiece` is a small contributor; it was drawn from 657
+candidates because it happened to sit on a startup import path.
+
+So the probe inventories **both** trees. An inventory that stopped at the
+runtime directory would have missed the only enforcement evidence on that
+machine.
+
+## What this does not do
+
+It never turns Smart App Control on or off. Switching it through Settings is a
+one-way operation that cannot be undone without reinstalling Windows, and the
+registry route needs BitLocker suspended and a boot into recovery. The script
+only adds and removes an **audit** App Control policy, which is reversible, and
+reports whichever mode it finds the machine in.
+
+## Requirements
+
+- Windows 11, elevated PowerShell (right click Windows Terminal, Run as administrator)
+- Any Python 3 on `PATH`. The scenario uses only the standard library: no pip install, no browser
+- Optional but strongly preferred: `SmartAppControlAuditNoISG.bin` from <https://aka.ms/sacauditpolicies>
+
+The NoISG policy is the useful one. It checks signatures and skips the cloud
+reputation lookup, which means it works **even with Smart App Control off**, so
+any machine can produce evidence. It logs event 3076 for every file it would
+have refused. That is exactly the half of the verdict that signing changes.
+
+## Getting it onto the machine
+
+```powershell
+git clone --depth 1 https://github.com/unslothai/unsloth C:\unsloth-probe
+cd C:\unsloth-probe\scripts\windows_sac_probe
+```
+
+These scripts are not Authenticode signed. On Windows 11 Home the effective
+execution policy is often `Restricted`, which refuses **any** script, cloned or
+not, so a clean `git clone` still needs this. Set it for the current process
+only, which touches no machine-wide state and is gone when the window closes:
+
+```powershell
+Get-ExecutionPolicy -List        # see what this machine actually has
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+```
+
+If you downloaded the files individually rather than cloning, they also carry
+Mark-of-the-Web:
+
+```powershell
+Get-ChildItem . -Recurse | Unblock-File
+```
+
+Do not change the machine-wide execution policy. It is part of what we are
+measuring.
+
+## Running it
+
+Four stages, in order. Use a distinct `-Label` per cell of the matrix below so
+runs do not overwrite each other.
+
+```powershell
+cd scripts\windows_sac_probe
+
+.\sac-probe.ps1 -Stage prepare -Label custom-sac-on -AuditPolicy C:\path\to\SmartAppControlAuditNoISG.bin
+.\sac-probe.ps1 -Stage run     -Label custom-sac-on
+.\sac-probe.ps1 -Stage collect -Label custom-sac-on
+.\sac-probe.ps1 -Stage revert  -Label custom-sac-on
+```
+
+`run` needs the Studio password, always:
+
+```powershell
+$env:UNSLOTH_STUDIO_PASSWORD = 'your studio password'
+.\sac-probe.ps1 -Stage run -Label custom-sac-on
+```
+
+On a Studio that has already been opened, that is the password you sign in
+with. On one that has never been opened, the bootstrap credential is still on
+disk and the scenario rotates it to the value you give here; the rotation is
+permanent and `revert` does not undo it, which is why there is no default. The
+password is never written to the evidence.
+
+The probe reads that variable and then **removes it from its own environment**
+before launching anything, re-exporting it as `SAC_PROBE_STUDIO_PASSWORD` for
+the scenario process alone and clearing that again once the scenario exits.
+It is deliberately not passed as `--password`: an argument is readable from the
+process table by anything that can see it and is captured verbatim by
+process-creation auditing and EDR telemetry, for the whole length of a run that
+can take minutes. `unsloth_cli` reads `UNSLOTH_STUDIO_PASSWORD` itself and
+treats it as *set the initial password*, so a Studio that already has one
+refuses to start with
+
+```
+Error: an Unsloth admin password is already set; --password only sets the
+initial password.
+```
+
+which is exactly the case the variable is needed for. One name, two
+incompatible consumers.
+
+If Studio runs from a custom home (`UNSLOTH_STUDIO_HOME`), a portable root (`UNSLOTH_HOME`) or a custom runtime
+(`UNSLOTH_LLAMA_CPP_PATH`), set the same variables in the shell that runs the
+probe, so it inventories the runtime Studio actually loads and reads the logs
+Studio actually writes.
+
+`prepare` runs `Update-MpSignature`; add `-SkipUpdates` to skip it. It does not
+upgrade packages unless you pass `-UpgradePackages`: `winget upgrade --all` changes
+every managed package on the machine and `revert` cannot put them back, so it is
+not part of the reversible run. The same goes for Defender's sample submission:
+`prepare` raises real-time protection, MAPS and the cloud block level, all of
+which `revert` restores, but sets `SubmitSamplesConsent` only with `-SendSamples`,
+since a sample uploaded during the probe cannot be recalled.
+
+`prepare` restarts a Studio that is already running. Studio's startup is where the
+venv's native modules load, and those loads have to happen inside the event window
+and under the audit policy to be measured.
+
+With `-AuditPolicy`, `prepare` also runs a **positive control**: it builds a small
+unsigned executable, runs it, and requires the policy to raise a 3076 (or a 3077 on
+a machine where Smart App Control is genuinely enforcing) naming it. Without that,
+a cell with no events is unfalsifiable, since "nothing would be blocked" and "the
+policy loaded but evaluates nothing" look identical. `prepare` refuses to continue
+when the control does not fire. Building the control needs Windows PowerShell 5.1;
+PowerShell 7 dropped assembly emission from `Add-Type`, so on pwsh the control is
+skipped, the cell is recorded as unverified, and `collect` says so rather than
+reading an empty window as an allow. The control binary is built outside the run
+directory and deleted immediately, so it never reaches the evidence zip.
+
+Without `-AuditPolicy`, on a machine where Smart App Control reads as enforcing,
+`prepare` runs the same control for the same reason: there the 3077 refusing it
+is the only thing that shows enforcement is live. The registry mode is an
+intent, not an observation, and Windows settles it on the boot path, so `run`
+asks again whenever the machine booted since the baseline was captured, and
+`collect` refuses the allow line unless the control fired on the boot that
+measured. A control `run` has to repeat lands inside the window, so its own
+3076 or 3077 shows up in the export naming `unsigned-control.exe`; it is scoped
+`other`, is not part of any Unsloth count, and is the proof, not the finding.
+
+Running `prepare` again with the same label (after a failure, or to add
+`-AuditPolicy`) keeps the baseline the first pass captured, so `revert` still
+restores the machine as it was before the first pass. Once `revert` has
+finished, that baseline is spent: a later `prepare` on the same label captures a
+new one, so a `revert` after it restores the machine as it is now rather than as
+it was before a run that has already been undone. `collect` refuses a label that
+was never prepared rather than exporting unrelated events.
+
+`collect` refuses a label whose `revert` already completed: collect first, then revert.
+
+`prepare` refuses a new label while another label has not been reverted, including
+one kept under a different `-WorkDir` (tracked under
+`%ProgramData%\unsloth-sac-probe\pending`): revert that label first. A `prepare` that fails after applying the audit policy removes
+it again. If `revert` finds the policy still active after removing it (Windows 11
+before 24H2 needs a restart for that), or `CiTool -lp` cannot list the policies to
+confirm it is gone, it leaves the baseline pending: restart (or fix CiTool) and
+run `revert` again.
+
+### On a machine with no Unsloth on it
+
+Nothing extra to do. `prepare` detects that Studio is absent and installs it with
+the documented command, then starts it and waits for it to answer:
+
+```
+=== Unsloth Studio ===
+Studio is not installed on this machine.
+
+=== Install Unsloth Studio ===
+irm https://unsloth.ai/install.ps1 | iex
+...
+managed interpreter: C:\Users\you\.unsloth\studio\unsloth_studio\Scripts\python.exe
+starting Studio on port 8888
+Studio answering on port 8888 after 65s
+```
+
+The install happens **after** the event log window opens, on purpose: installing
+is what downloads the llama.cpp bundle, and first launch is what loads it, so
+both are inside the window `collect` exports. On an affected machine the block
+may well appear during `prepare` rather than during `run`.
+
+Studio is started through the managed interpreter, not the generated
+`unsloth.exe`. Windows materialises that console script as an unsigned PE and
+Application Control denies it (unslothai/unsloth#8490) while the signed
+interpreter beside it keeps running, so on exactly the machines this probe
+targets, launching the normal way would fail for a reason unrelated to what is
+being measured. The supported entry point is documented in
+`unsloth_cli/__main__.py`:
+
+```powershell
+python -X utf8 -I -m unsloth_cli studio -p 8888
+```
+
+Pass `-SkipInstall` to refuse to install, or `-Port` if 8888 is taken. `run`
+re-checks and restarts an installed Studio too, since a machine may have been
+rebooted between stages, which is itself part of the reported behaviour; it
+never installs one, so a `prepare -SkipInstall` stays in force. `run` also
+evicts the model before the measured load, because a model already resident
+would make the load a no-op that loads no PE inside the window.
+
+### What each stage does
+
+| stage     | what it changes                                                                                                                                                                                                                                                                                                                        | how it is undone                    |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| `prepare` | records a baseline; updates packages and Defender signatures; turns Defender real-time, MAPS advanced, cloud block level high and PUA on; raises the CodeIntegrity log to 64 MB; applies the audit policy if given (a pre-existing policy with the same GUID is saved first); installs Unsloth Studio if it is missing, then starts it | `revert` (Studio is left installed) |
+| `run`     | nothing on the machine beyond restarting Studio if it stopped; inventories signatures and drives Studio (rotates a never-used bootstrap password to yours, see above)                                                                                                                                                                  | n/a                                 |
+| `collect` | nothing; exports events and zips the evidence                                                                                                                                                                                                                                                                                          | n/a                                 |
+| `revert`  | removes the audit policy (or restores the pre-existing one), restores the CodeIntegrity log settings and the Defender settings from the baseline, and regrants the invoking user access to the Studio trees (below); the EFI partition is never left mounted                                                                           | n/a                                 |
+
+Because every stage is elevated, a Studio that `prepare` installs is installed
+**as administrator**, and the trees its installer creates (`llama.cpp`,
+`whisper.cpp`, `node`, `.cache`) come out owned by `BUILTIN\Administrators`.
+The user's own non-elevated Studio can then fail to read its own runtime; on a
+machine where `prepare` did the install, `llama.cpp`, `whisper.cpp` and `node`
+all refused `Get-Acl` to the owning user afterwards. This is a side effect of
+running elevated at all, not something `prepare` sets, so there is no baseline
+value for it. `revert` regrants access. If you never run `revert`:
+
+```powershell
+icacls $env:USERPROFILE\.unsloth /grant "${env:USERNAME}:(OI)(CI)F" /T
+```
+
+The braces are load bearing: `"$env:USERNAME:(OI)(CI)F"` parses the trailing
+colon as part of the variable name, so icacls receives `(OI)(CI)F` as a
+separate argument and fails with `Invalid parameter "(OI)(CI)F"`.
+
+`revert` reads `baseline.json` from the same `-Label` directory, so use the label
+you prepared with.
+
+## The matrix
+
+One run is not a result. Run all four cells, ideally across the machines
+available:
+
+|                                       | Smart App Control enforcing | Smart App Control off |
+| ------------------------------------- | --------------------------- | --------------------- |
+| our build (`unslothai/llama.cpp`)     | C-on                        | C-off                 |
+| upstream build (`ggml-org/llama.cpp`) | U-on                        | U-off                 |
+
+The upstream row separates "our additive-merge build is the problem" from "the
+whole unsigned llama.cpp ecosystem is the problem". Upstream is also 0 of N
+signed, and so is `lemonade-sdk/llamacpp-rocm` (72 PE files, 0 signed), so U-on
+is what tells us whether download prevalence alone carries a build through.
+
+To pin a specific runtime for a cell, the runtime has to be **installed** with
+that pin **before `prepare`**.
+`UNSLOTH_LLAMA_RELEASE_TAG` is read by the installer only, and `run`
+never installs. The order is not a formality:
+`prepare` opens the event window and then installs or restarts Studio, so a
+runtime swapped in afterwards leaves loads from *both* releases inside one
+window. `collect` scopes those events by directory, and the installer overwrites
+the same managed `llama.cpp` directory, while the signature inventory hashes only
+the files that survive the swap. A 3076 or 3077 raised by the release you
+replaced would then be read as the pinned release's, which is exactly the
+comparison the matrix exists to make.
+
+```powershell
+$env:UNSLOTH_LLAMA_RELEASE_TAG = 'b10715-mix-86bd2d3'   # an older, more established build
+# re-run the Studio installer (studio\setup.ps1) so it fetches that release, then:
+.\sac-probe.ps1 -Stage prepare -Label custom-b10715-sac-on
+.\sac-probe.ps1 -Stage run     -Label custom-b10715-sac-on
+```
+
+If you already ran `prepare` for the cell, run `prepare` again once the pinned
+release is installed. A second `prepare` on the same label reopens the window and
+deletes the previous one's evidence, and it keeps the baseline the first pass
+captured, so `revert` still restores the machine as it was before the first pass.
+
+For the upstream row, point Studio at an upstream build through its custom
+llama.cpp folder setting (or `UNSLOTH_LLAMA_CPP_PATH`) and restart it, again
+before `prepare` and for the same reason. Either way, check
+`signature-inventory.json` afterwards: the SHA-256 of each file is what says
+which build a cell actually exercised, not the label.
+
+## Reading the output
+
+`collect` writes a zip to `%USERPROFILE%\unsloth-sac-probe\`. Inside:
+
+- `runtime-selection.json`: the llama-server Studio resolved, in its own order (`LLAMA_SERVER_PATH`, `UNSLOTH_LLAMA_CPP_PATH`, the folder selected in Studio's settings, the managed default). The inventory is of that build.
+- `signature-inventory.csv` and `.json`: every PE under that runtime with its Authenticode `Status`, `StatusMessage`, signer subject, thumbprint and SHA-256. Record `Status`, not merely whether a certificate is present: an unsigned file and one whose chain did not build both report `UnknownError`, and `StatusMessage` is what separates them
+- `venv-signature-inventory.csv` and `.json`: the same for every PE in the `unsloth_studio` venv, which is around 25 times as many files and is where the only enforced block so far actually landed. `run` also prints the ten worst packages by unsigned count
+- `scenario-status.json`: whether the Studio scenario ran and its exit code. Read this **before** reading the event count. A scenario that never authenticated or never loaded a model produces an empty window, and an empty window looks identical to a clean allow. `collect` warns loudly when this happened, and refuses to imply a result
+- `code-integrity-events.json` and `.txt`: events 3033, 3076, 3077, 3089 and 3090 to 3099 in the run window, each tagged with a `Scope` of `llama.cpp`, `venv` or `other`. The channel is machine-wide, so unrelated software lands in the same window: one run picked up seven 3076 events from a Git Bash session (`msys-2.0.dll`, `head.exe`, `tail.exe`). `collect` counts only the Unsloth scopes in its headline and reports the rest separately; nothing is dropped from the export
+- `CodeIntegrity-Operational.evtx`: the raw log, bounded to the same window as the JSON
+- `defender-query-error.txt`: present only when the Defender detection query itself failed. If you see this file, the absence of `defender-detections.json` is not a clean window, it is an uncollected one
+- `scenario-results.json`: every HTTP call with its duration, plus the status-poll summary
+- `studio-logs\`: Studio's own logs, the redirected Studio stdout from a start the probe did, and the scenario's console output, all passed through Studio's log redactor. The raw copies stay in `raw-logs\` on the machine and are not archived
+- `studio-logs\`: Studio's own backend and llama-server logs
+- `baseline.json`, `sac-state-after.json`: what the machine looked like before and after
+
+**Grade the events correctly.** They are not interchangeable:
+
+- **3077** is an enforced block. This is proof.
+- **3076** is audit only: "would have been blocked". Strong, but not enforcement.
+- **3089** carries the signature detail for a block. Correlate it to a 3077 by `ActivityID`, never by timestamp alone.
+- **3090 to 3092** are allow and origin context, and prove nothing on their own.
+- Events scoped `other` are somebody else's binaries and say nothing about Studio. Do not quote a raw total off the evtx; read the scoped counts.
+
+Also keep "unsigned" and "low reputation" apart. Smart App Control may allow a
+validly signed file whose reputation is inconclusive, which is the behaviour the
+signing fix depends on. Search the events for **every** PE path in the bundle:
+the file that gets blocked can be a dependent `ggml`, HIP, OpenMP or VC runtime
+DLL rather than `llama-server.exe` itself.
+
+Do not enable Windows test-signing mode. It changes enforcement conditions and
+invalidates the run.
+
+## The status timing half
+
+`scenario-results.json` also answers a separate question. Field diagnostics show
+`/api/inference/status` taking over 80 seconds, which starves `/api/health` and
+gets the backend killed by the desktop watchdog at its 3 strike, roughly 75
+second budget, surfacing as "Server stopped unexpectedly". Those stalls were
+observed with **no model loaded**, so the cause is not yet established. The
+scenario polls status at the same 5 second cadence the frontend uses and reports
+`max_ms`, `over_10s` and `over_75s`, which is the measurement that has been
+missing.
+
+## What to send back
+
+Attach the zip. It contains your Windows user name inside file paths. Redacting
+the user name is fine; keep the file names and the rest of each path, because
+which file was blocked is the entire point.
+
+
+# Document: MCP in Unsloth Studio
+
+Source path: studio/MCP.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/MCP.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/MCP.md
+Description: Blender MCP is disabled by default. Unsloth Studio downloads a pinned, checksum-verified runtime on first enable/test and caches it on the backend machine. No commands, Git or pip installs are needed. Subsequent starts…
+
+# MCP in Unsloth Studio
+
+## Connect Blender MCP
+
+Blender MCP is **disabled by default**. Unsloth Studio downloads a pinned, checksum-verified
+runtime on first enable/test and caches it on the backend machine. No commands,
+Git or pip installs are needed. Subsequent starts use the cache without internet.
+The Blender add-on is installed separately. No MCP archive or source is shipped
+in Unsloth Studio's Python package or desktop build.
+
+1. Open **Manage MCP servers → Blender**, approve the execution warning and choose
+   **Enable Blender MCP**. Use a tool-capable model with MCP enabled for the chat.
+2. Open **Setup help → Download Blender add-on** for
+   [Blender's official page](https://www.blender.org/lab/mcp-server/).
+3. In Blender 5.1+, enable **Preferences → System → Network → Allow Online Access**.
+   Drag the website's install button into Blender twice: first to add the Blender
+   Lab repository, then to install MCP. Alternatively, search **MCP** in
+   **Get Extensions** after adding the repository.
+4. Enable and start the add-on bridge, keep Blender open, then **Test connection**.
+
+A green dot means Blender is connected; amber means only the MCP server is connected.
+Setup help stays in the same Blender entry. Advanced settings configure the bridge
+port (default `9876`) and optional Blender executable. This port is not an HTTP URL.
+
+The bridge uses loopback on the **Unsloth Studio backend machine**, not a remote browser.
+Unsloth Studio does not install or launch Blender during setup. Approved tools can run
+Python, write files and launch background Blender. Existing tool permissions apply;
+external model providers receive tool results. Keep the unauthenticated bridge local.
+
+The downloaded runtime excludes the large API/manual reference corpus and its three
+offline documentation tools. The official source is
+<https://projects.blender.org/lab/blender_mcp> (GPL-3.0-or-later).
+The pinned revision and SHA-256 are in `backend/integrations/blender/runtime.py`.
+Downloads are staged and verified before activation; failures leave the server
+disabled and can be retried with **Enable Blender MCP**. Merely opening the dialog
+or launching Unsloth Studio does not download anything.
+
+## Large tool catalogs
+
+A server can expose dozens of tools with long descriptions and deeply nested
+parameter schemas: Notion's catalog alone is about 65,000 tokens. Every tool is
+listed in full whenever the catalog fits the loaded local model's context window,
+so a model that can hold the full listing always gets it.
+
+When the full listing would take more than three quarters of the window, which
+would otherwise get even a short prompt refused, the largest tools (only those
+whose description and schema together exceed about 1,500 characters) are listed
+in a compact form, largest first, until the listing fits: a compact tool shows its
+first sentence plus its top-level parameters with their types, required flags and
+short enums. Every other tool keeps its full schema. The model then also gets `mcp_tool_schema`, which returns a tool's
+full description and JSON Schema on demand, in pages when it is longer than the
+room left for a tool result. A compact tool called without one of its required
+arguments, or whose call the server rejects, answers with that schema so the model
+can correct the call. Arguments to a compact tool are still typed against its full
+schema. External providers always get the full listing.
+
+## Unsloth Decisions MCP
+
+When the Decision API is on (**Settings → API**), the chat's MCP menu lists
+**Unsloth Decisions**. Enable it and a tool-capable chat model can call `decide`,
+which asks the local Laya model the same typed questions `POST /v1/systemone`
+answers (`noul`, `choice` and `score`), with the model chosen in Settings.
+
+Other MCP clients reach the same tool at `http://127.0.0.1:8888/mcp/decisions/`
+(use the actual Unsloth port). It takes the credentials `/v1/systemone` takes, so
+send an Unsloth API key as `Authorization: Bearer sk-unsloth-...`.
+
+<a id="studios-own-mcp-server"></a>
+
+## Unsloth Studio's own MCP server
+
+Unsloth can expose a local MCP server so an MCP client can inspect models and
+GPU state, validate recipes, start or stop training, inspect recipe output, and
+export a loaded model.
+
+The server is disabled by default. Enable it for a local Unsloth process with:
+
+```bash
+UNSLOTH_STUDIO_ENABLE_MCP=1 \
+UNSLOTH_STUDIO_MCP_TOKEN='use-a-local-secret' \
+unsloth studio
+```
+
+The endpoint is `http://127.0.0.1:8888/mcp/` when Unsloth uses its default port
+(a request to `/mcp` redirects to the canonical `/mcp/`). Use the actual Unsloth
+port when it is configured differently.
+
+The high-impact tools are:
+
+- `studio_status` and `list_local_models` for discovery
+- `get_training_status`, `start_training`, `stop_training`, and `list_training_runs`
+- `validate_recipe`, `get_recipe_job_status`, and `get_recipe_job_dataset`
+- `load_checkpoint` and `export_gguf`
+
+`start_training` accepts the same fields as the Unsloth `TrainingStartRequest`.
+The request is validated by the existing Pydantic model before a subprocess is
+started. Export paths use the existing Unsloth validation as well.
+
+The endpoint always requires `UNSLOTH_STUDIO_MCP_TOKEN` and checks an exact
+Bearer token for both HTTP and WebSocket connections. Keep it on localhost
+unless the deployment has an authenticated reverse proxy. The MCP endpoint is
+intentionally opt-in because tools can consume GPU memory, write model
+artifacts, and stop active work.
+
+
+# Document: GPU peer-to-peer (GGMLCUDAP2P) and why it is gated on NVLink
+
+Source path: studio/NVLINK_P2P.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/NVLINK_P2P.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/NVLINK_P2P.md
+Description: Recorded so the gate in applydatacenterenv is not "fixed" back into a product-name allowlist by someone who reasonably assumes a data-center GPU implies a working peer fabric. It does not. Background: issue #10613.
+
+# GPU peer-to-peer (`GGML_CUDA_P2P`) and why it is gated on NVLink
+
+Recorded so the gate in `_apply_datacenter_env` is not "fixed" back into a product-name
+allowlist by someone who reasonably assumes a data-center GPU implies a working peer
+fabric. It does not. Background: issue #10613.
+
+## Summary
+
+|                                                           | verdict                                                                        |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| NVLink-connected multi-GPU (`NV#` in the topology matrix) | **P2P enabled** — the configuration PR #6098 benchmarked, +33-51% tensor-split |
+| PCIe multi-GPU (`NODE` / `PHB` / `PXB` / `PIX` / `SYS`)   | **P2P not enabled** — copies can be silently discarded                         |
+| topology unreadable                                       | **P2P not enabled** — unknown means no                                         |
+| single GPU                                                | not applicable, no peer traffic                                                |
+
+`GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F` is unaffected by all of this and still applies to
+every data-center part. It is a property of the silicon, not of the interconnect.
+
+## The failure it prevents
+
+On bare-metal Linux with the IOMMU in translating mode, a PCIe peer-to-peer copy between
+two NVIDIA GPUs can be dropped by the chipset while CUDA reports `cudaSuccess`. The write
+faults (`DMAR: [DMA Write NO_PASID] ... [fault reason 0x71]` in `dmesg`), the IOMMU
+handles it as an Unsupported Request and discards it, and `cudaMemcpyPeerAsync` has no
+return code for "the platform ate your DMA".
+
+Inside llama.cpp with `GGML_CUDA_P2P` set, that means tensors that never arrive. The model
+emits `!!!!!`, `/////`, a repeated Cyrillic token in reply to English, or fluent word
+salad. Nothing is logged and no error is raised, so it looks exactly like a broken quant
+or a wrong chat template. The reporter of #10613 spent a day on it.
+
+It is also load-dependent: whether a given layer placement pushes enough traffic across
+the bus varies, so the same configuration can look healthy on a short prompt and collapse
+on a long one. A clean short test proves nothing here.
+
+NVIDIA documents the configuration as unsupported ([CUDA C++ Programming Guide, IOMMU on
+Linux](https://docs.nvidia.com/cuda/cuda-programming-guide/index.html#iommu-on-linux)):
+bare-metal PCIe peer-to-peer copies require the IOMMU disabled. Most distributions enable
+it by default, so "bare-metal Linux, no NVLink" is the common case, not a corner case.
+
+## Why a name allowlist could not work
+
+Four families on the data-center allowlist have no NVLink connector at all: RTX 6000 Ada,
+RTX PRO 6000, L40 / L40S and L4. They ship in 2-, 4- and 8-way workstations and servers.
+A product name cannot tell you whether the box has a bridge.
+
+## Why the driver is not asked either
+
+`torch.cuda.can_device_access_peer()` returns `True` and `nvidia-smi topo -p2p w` reports
+`OK` on hosts where every peer copy drops. The driver's answer is the thing that is wrong;
+asking it again is not verification. vLLM reached the same conclusion and performs a real
+data-integrity check (`can_actually_p2p`, from vllm#2728).
+
+Unsloth Studio reads the topology itself and requires a confirmed NVLink between every selected pair.
+NVLink traffic does not traverse the PCIe root complex, so the IOMMU fault class above
+cannot apply to it. The probe fails closed: a missing `nvidia-smi`, a non-zero exit, a
+timeout, an unparsable matrix, or a device mask that cannot be mapped to PCI indices all
+mean no P2P.
+
+### Where the answer comes from
+
+Two sources, in order. The first conclusive one wins; if neither answers, no P2P.
+
+| tier | source                                                                       | cost on an 8x B200 |
+| ---- | ---------------------------------------------------------------------------- | ------------------ |
+| 1    | NVML, via `ctypes` against the driver's own `libnvidia-ml.so.1` / `nvml.dll` | \~230 ms           |
+| 2    | `nvidia-smi topo -m`                                                         | \~1200 ms          |
+
+NVML ships with the driver, so it is present exactly when `nvidia-smi` is (`nvidia-smi` is
+itself an NVML client) and this adds no Python dependency. Tier 1 asks
+`nvmlDeviceGetP2PStatus(a, b, NVML_P2P_CAPS_INDEX_NVLINK)`, which is a question about one
+pair. Note what it deliberately does not do: an active link whose remote endpoint is an
+NVSwitch proves only that the GPU is attached to a switch, and switch fabrics can be
+partitioned, so "every GPU has a switch link" is not read as "every pair is reachable".
+
+Anything short of a complete, unambiguous answer falls to tier 2: a missing library or
+symbol, any non-zero NVML return, fewer than two devices, a partial walk, or a positive
+that contradicts the live NVLink count on either endpoint. The result is cached for the
+process, primed on the startup warm thread so the first model load reads it warm, and
+never gates startup.
+
+Whichever tier answers, the verdict is identical on the hardware tested here: NVML and
+`topo -m` agree exactly on an 8x B200 NVSwitch host, 56 of 56 ordered pairs, in both
+directions. PCIe-only and partially bridged hosts were not available to test, which is what
+`UNSLOTH_P2P_TOPO_CROSSCHECK=1` and `scripts/p2p_integrity_probe.py` are for.
+
+### Partially bridged boxes, and which pairs get checked
+
+Only the pairs actually selected are checked, so on a 4-way or 8-way box with NVLink
+bridges over pairs (0-1 and 2-3, say) and PCIe between the islands, running on a bridged
+pair keeps P2P while a selection spanning the islands does not.
+
+Both index spaces here come from nvidia-smi: the GPU selection is sourced from
+`nvidia-smi --query-gpu=index` and the matrix from `nvidia-smi topo -m`, one enumeration,
+so the selection indexes the matrix directly. Do not "translate" it into CUDA ordinals.
+CUDA enumerates in `FASTEST_FIRST` order by default, so under a permutation that remapping
+would turn a PCIe-crossing selection into an NVLinked-looking one and enable the flag this
+gate exists to withhold.
+
+When no explicit selection is given, every pair on the visible box must be `NV#`.
+
+The log line names the pair that vetoed it.
+
+## Checking a host
+
+```
+nvidia-smi topo -m
+```
+
+`NV#` between the GPU pair means NVLink and you are unaffected. `NODE`, `PHB`, `PXB`,
+`PIX` or `SYS` means the copy goes over PCIe.
+
+To test whether peer copies on this host actually move data:
+
+```
+python scripts/p2p_integrity_probe.py
+```
+
+It fills the destination with a sentinel first, so a copy that transfers nothing is
+distinguishable from one that legitimately writes zeros, and it sweeps every ordered pair
+at several sizes. Exit 0 means intact, 1 means data was lost, 2 means it could not run.
+
+## Environment variables
+
+| variable                        | effect                                                                                                                                                                                                                                                                                                          |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `UNSLOTH_DISABLE_DC_TUNING=1`   | disables all data-center tuning, including FP32 accumulate                                                                                                                                                                                                                                                      |
+| `UNSLOTH_DISABLE_DC_P2P=1`      | disables `GGML_CUDA_P2P` only, keeping FP32 accumulate and `CUDA_SCALE_LAUNCH_QUEUES`. Also removes an inherited `GGML_CUDA_P2P`, so it holds even if the variable is already set elsewhere in your environment                                                                                                 |
+| `UNSLOTH_FORCE_DC_P2P=1`        | enables P2P on an unverified fabric (use after the probe passes). It cannot override `UNSLOTH_DISABLE_DC_P2P=1`, an off-meaning `GGML_CUDA_P2P` in your environment, or the data-center gate itself                                                                                                             |
+| `UNSLOTH_P2P_TOPO_CROSSCHECK=1` | runs both topology tiers and logs any disagreement, preferring `nvidia-smi topo -m` when they differ. Diagnostic only; costs the slow probe on every process. The startup prime stands down while it is set, since a primed NVML-only answer would satisfy the cache before the load path could compare the two |
+
+`CUDA_SCALE_LAUNCH_QUEUES` is deliberately not gated on the fabric: it sizes a CUDA command
+buffer, moves no data between devices, and the reporter of #10613 measured it clean in
+isolation on the affected host. The set of hosts that receive it is unchanged by this gate.
+
+### `GGML_CUDA_P2P=0` does not disable P2P
+
+llama.cpp tests the variable for presence, not value:
+
+```c
+// ggml/src/ggml-cuda/ggml-cuda.cu
+if (getenv("GGML_CUDA_P2P") != nullptr) { ...
+bool use_peer_access = getenv("GGML_CUDA_P2P") != nullptr;
+```
+
+So `GGML_CUDA_P2P=0` turns peer access **on**. The variable must be unset entirely.
+Unsloth Studio deletes it from the llama-server environment when its inherited value reads as off
+(`0`, `false`, `no`, `off`, empty), on every backend, so the intuitive spelling of the
+opt-out does what the user meant. Set it to `1` and it is honoured as a deliberate request.
+
+
+# Document: Scanned PDF uploads
+
+Source path: studio/PDF_OCR.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/PDF_OCR.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/PDF_OCR.md
+Description: Unsloth Studio can extract text from scanned PDFs in Chat, project sources, and Data Recipes. Existing selectable text is preserved. OCR runs on image-only pages, including scans with a selectable header or footer. Smal…
+
+# Scanned PDF uploads
+
+Unsloth Studio can extract text from scanned PDFs in Chat, project sources, and Data Recipes.
+Existing selectable text is preserved. OCR runs on image-only pages, including scans
+with a selectable header or footer. Small logos do not require OCR when selectable
+text is present. Large images with little selectable body text are treated as
+possible scans, so illustrated pages can also require OCR. Chat has a separate
+figure-captioning setting.
+
+Chat first uses the loaded local vision GGUF model when available, then tries local
+Tesseract OCR for scanned pages that were not transcribed. Data Recipes uses local
+Tesseract OCR without requiring a loaded chat model.
+Recipe PDF extraction runs in separate worker processes so OCR does not block
+other requests.
+
+## Local OCR setup
+
+PyMuPDF includes the OCR integration. Install Tesseract language data on the machine
+running the Unsloth Studio backend, and set TESSDATA\_PREFIX to the folder containing the
+.traineddata files before starting Unsloth Studio. No data is downloaded automatically.
+
+For example, install your operating system's Tesseract package and English language
+data, then point TESSDATA\_PREFIX to its tessdata directory. You can also obtain
+language files from the [official Tesseract repository](https://github.com/tesseract-ocr/tessdata_fast).
+See [PyMuPDF's OCR setup](https://pymupdf.readthedocs.io/en/latest/installation.html#enabling-integrated-ocr-support)
+for platform-specific details.
+
+Set RAG\_OCR\_LANGUAGE to the installed language codes; the default is eng.
+For example, eng+deu requires both eng.traineddata and deu.traineddata.
+
+## Limits and failed uploads
+
+RAG\_OCR\_SCANNED=0 disables scanned-page OCR by default. Chat's **OCR scanned pages**
+setting overrides this for chat/project uploads. Data Recipes follows the backend
+default.
+
+RAG\_OCR\_MAX\_PAGES defaults to 20 scanned pages per PDF. Raise it before starting
+Unsloth Studio when longer scans are expected. Local OCR uses RAG\_OCR\_DPI (default 150).
+
+If scanned pages remain unreadable, the upload fails with their page numbers rather
+than silently accepting an incomplete document. Configure the OCR language data,
+enable OCR, increase the page budget when necessary, or upload a searchable PDF,
+then attach the file again. Empty documents also fail instead of appearing indexed
+with zero searchable chunks.
+
+OCR is fallible, especially for handwriting, low-resolution scans, and complex
+tables. Check extracted results against the original document.
+
+
+# Document: ROCm on RDNA2 APUs (Steam Deck / gfx1033)
+
+Source path: studio/ROCM_RDNA2_APU.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/ROCM_RDNA2_APU.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/ROCM_RDNA2_APU.md
+Description: Measured findings for AMD RDNA2 integrated GPUs, recorded so the routing decisions in installllamaprebuilt.py (hasamdgpuwithoutrocm, the Linux Vulkan branches) are not "fixed" back into ROCm by someone who reasonably as…
+
+# ROCm on RDNA2 APUs (Steam Deck / gfx1033)
+
+Measured findings for AMD RDNA2 integrated GPUs, recorded so the routing decisions in
+`install_llama_prebuilt.py` (`has_amd_gpu_without_rocm`, the Linux Vulkan branches) are not
+"fixed" back into ROCm by someone who reasonably assumes ROCm must be the fast path.
+
+Hardware: Valve Steam Deck LCD, AMD Van Gogh, `gfx1033`, 8 CU RDNA2, 16 GB LPDDR5
+shared, 1 GB default UMA carveout. SteamOS 3 (immutable, no system ROCm).
+
+## Summary
+
+|                               | verdict                                  |
+| ----------------------------- | ---------------------------------------- |
+| GGUF inference via **Vulkan** | **works, fastest** — the shipped default |
+| GGUF inference via ROCm       | works, but slower than CPU               |
+| **PyTorch training** via ROCm | **numerically wrong — do not enable**    |
+| PyTorch training via CPU      | correct                                  |
+
+## 1. Inference: Vulkan wins by a wide margin
+
+`llama-bench`, Qwen2.5-0.5B-Instruct Q4\_0, `-p 128 -n 64 -ngl 99 -r 2`, one session:
+
+| backend                                                        | prompt t/s         | generation t/s     |
+| -------------------------------------------------------------- | ------------------ | ------------------ |
+| **Vulkan (RADV)**                                              | **1444.80 ± 8.03** | **112.81 ± 18.32** |
+| CPU (`-ngl 0`)                                                 | 753.08 ± 43.65     | 49.76 ± 2.15       |
+| ROCm `gfx103X` prebuilt, via `HSA_OVERRIDE_GFX_VERSION=10.3.0` | 802.06 ± 431.34    | 17.51 ± 1.89       |
+
+ROCm is \~6x slower than Vulkan and \~3x slower than plain CPU, with very unstable prompt
+throughput.
+
+**Building llama.cpp from source for the real arch does not help.** Built from the same
+source commit with `-DGGML_HIP=ON -DAMDGPU_TARGETS=gfx1033` against AMD's native
+gfx1033 `rocm-sdk` wheels (device reports `gfx1033 (0x1033)`, no `HSA_OVERRIDE`), all
+three measured in one session:
+
+| backend                       | prompt t/s      | generation t/s |
+| ----------------------------- | --------------- | -------------- |
+| native `gfx1033` (self-built) | 864.60 ± 163.37 | 12.46 ± 0.34   |
+| Vulkan (RADV)                 | 1268.85 ± 1.12  | 62.16 ± 9.99   |
+| CPU                           | 686.43 ± 9.76   | 32.16 ± 0.42   |
+
+Root cause: **108 of 142 gfx1033 rocBLAS Tensile files are named `fallback`** (76%).
+AMD ships the arch but never tuned GEMM kernels for it, so "native but untuned" loses to
+"foreign but tuned" (`gfx1030`), and both lose to Vulkan. Recompiling cannot synthesise a
+tuning library; that needs Tensile's tuning pipeline, which wants far more RAM than the
+device has.
+
+Memory is *not* the limitation, so raising the BIOS UMA carveout does not change this:
+llama.cpp's ROCm backend reports 8192 MiB (4478 free) via UMA detection and Vulkan
+reports 9216 MiB (7361 free), both well past the 1 GB carveout.
+
+## 2. Training: ROCm produces wrong results
+
+Identical seed, init and data; 60 SGD steps on a 64→64→1 MLP with MSE loss:
+
+| stack                                          | CPU final loss | GPU final loss    |
+| ---------------------------------------------- | -------------- | ----------------- |
+| rocm7.2 / torch 2.11 (`HSA_OVERRIDE` gfx1030)  | 0.1148         | 17.4674           |
+| rocm7.1 / torch 2.10 (`HSA_OVERRIDE` gfx1030)  | 0.1148         | **-0.7765 → nan** |
+| native gfx1033, TheRock torch 2.13 + ROCm 7.15 | 0.1148         | **nan**           |
+
+A negative MSE loss is not attainable, and `torch.autograd.gradcheck` fails in float64
+on all three ("backward is not reentrant" on the native build — the same inputs and
+`grad_output` produce different gradients between runs). The runtime also raises
+`HSA_STATUS_ERROR_EXCEPTION` (code `0x1016`) and hangs the GPU queue under load.
+
+Forward math is fine — full-module forward matched CPU to `4.2e-07` and loss to seven
+significant figures — so this is specifically the backward pass. Three independent ROCm
+versions fail identically, including AMD's own native gfx1033 build, so it is the
+hardware/driver rather than a packaging or version problem.
+
+Forward-only inference through PyTorch also disagreed with CPU on 1 of 40 fp32 runs, so
+it is not dependable either. CPU is the correct default for the training stack here.
+
+## 3. Two traps when debugging this hardware
+
+- **Without `HSA_OVERRIDE_GFX_VERSION` set, GPU ops segfault** rather than degrading —
+  `torch.randn(256, 256, device="cuda") @ itself` dumps core. The device still
+  enumerates and `torch.cuda.is_available()` still returns `True`, so nothing warns
+  first.
+- On the `HSA_OVERRIDE` stacks, **`.item()` can return the previous reduction's value**:
+  after `x.sum().item()`, a following `x.max().item()` on the same tensor returns the
+  sum. `.cpu().item()` and `float()` are safe. This silently fabricates plausible-looking
+  numbers and is easy to mistake for a compute bug. AMD's native gfx1033 build fixes this
+  one; the training failures above survive it.
+
+## 4. Why the Vulkan routing covers AMD generally
+
+The Linux Vulkan branch accepts any AMD GPU with no usable ROCm, not just this part.
+ROCm supports a short list of AMD hardware — APUs least of all — and many distros ship
+Mesa/RADV without ROCm ever being installed, so that population is large and was getting
+a CPU-only binary on a GPU host.
+
+Widening it is safe because **the Vulkan bundle is a superset of the CPU bundle**: it
+ships the same `libggml-cpu-*.so` variants alongside `libggml-vulkan.so`. With no usable
+Vulkan device it enumerates zero devices and runs on the CPU backend — verified by
+running `--list-devices` with the Vulkan ICD removed, which lists nothing and exits 0. So
+a host that turns out to have no working Vulkan lands exactly where it does today, and
+one that does gets its GPU. The numbers above are what justify preferring Vulkan when it
+is available.
+
+The probe only runs when there is no usable NVIDIA and no ROCm, so a host where ROCm
+works keeps the ROCm branches; the flag cannot divert it. Such a host also resolves to the
+`cpu` torch index — `get_torch_index_url` falls back to CPU when an AMD GPU is present
+with no ROCm — so it ends up with the CPU training stack plus Vulkan inference, which is
+the combination verified end to end on this hardware.
+
+
+# Document: Multi-GPU (FSDP2) design for the Unsloth diffusion DiT trainer
+
+Source path: studio/backend/core/training/fsdp2_design_notes.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/backend/core/training/fsdp2_design_notes.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/backend/core/training/fsdp2_design_notes.md
+Description: Status: design only. No implementation in this document's scope.
+
+# Multi-GPU (FSDP2) design for the Unsloth diffusion DiT trainer
+
+Status: design only. No implementation in this document's scope.
+
+## Goal and scope
+
+Extend `core/training/diffusion_dit_trainer.py` with an optional multi-GPU path
+for the dense base precisions (bf16 and fp8). The single-GPU path stays the
+default and is untouched; the FSDP2 path activates only when the run is
+launched with `world_size > 1` and `base_precision` is `bf16` or `fp8`.
+
+Out of scope, explicitly:
+
+- torchao int8 (`Int8WeightOnlyConfig`): the quantized weight is a tensor
+  subclass, and `fully_shard` would need to wrap a DTensor around that
+  subclass. DTensor-over-subclass composition is a known sharp edge (dispatch
+  ordering between the two `__torch_dispatch__` layers is not guaranteed, and
+  reduce-scatter over the packed int8 payload is undefined). int8 stays
+  single-GPU only; the trainer should raise a clear error when int8 + multi-GPU
+  is requested rather than attempt it.
+- nf4 (bitsandbytes): bnb 4-bit `Params4bit` are likewise incompatible with
+  `fully_shard`. Multi-GPU QLoRA would need per-rank replicated bases (DDP on
+  the LoRA params only), which is a separate, simpler design; noted below.
+- Pipeline/tensor/context parallelism. The Unsloth DiTs fit one node; FSDP2
+  data parallelism is the whole design.
+
+## Wrapping plan (vendored, not imported)
+
+Vendor a minimal FSDP2 helper into `core/training/` modeled on the reference
+recipe pattern (an auto-pipeline that loads the diffusers pipeline, then
+parallelizes only the transformer):
+
+1. Only the transformer is wrapped. The VAE and text encoders are already
+   freed before the loop in our phased load, so there is nothing else to
+   shard. The conditioning phase (prompt encode + latent cache build) runs on
+   rank 0 only and broadcasts/serializes results through the persistent
+   conditioning cache (`diffusion_train_extras.PersistentConditioningCache`),
+   which doubles as the cross-rank handoff: ranks != 0 wait on the cache files
+   instead of loading the encoders at all.
+2. Per-block units: walk the transformer's `nn.ModuleList` block lists and
+   `fully_shard` each repeated block as its own unit, then `fully_shard` the
+   root with `reshard_after_forward=False` (root params are reused immediately
+   in backward). All non-final blocks reshard after forward; keep the last
+   block gathered so backward prefetch starts warm.
+3. Explicit prefetch chains (`set_modules_to_forward_prefetch` depth 1,
+   `set_modules_to_backward_prefetch` depth 2) as an opt-in flag; defaults
+   off for the first landing to keep the state space small.
+4. Mixed precision policy: `param_dtype=bf16, reduce_dtype=fp32,
+   output_dtype=bf16, cast_forward_inputs=True`. fp32 gradient reduction is
+   the important part: the LoRA params train in fp32 (our
+   `cast_training_params` call), so their reduce must not round through bf16.
+5. CPU offload (`CPUOffloadPolicy`) stays exposed but default-off, matching
+   the reference configs (none of their diffusion examples enable it).
+
+## PEFT LoRA over FSDP2: ordering rules
+
+The ordering that works (and that the reference implementation encodes):
+
+1. Load the dense bf16 transformer.
+2. Attach the LoRA (`add_adapter`) BEFORE `fully_shard`, so FSDP2 sees the
+   final module structure and the `lora_A/lora_B` params become DTensors with
+   proper gradient reduction.
+3. Do NOT freeze the base before sharding in a way that creates never-gathered
+   units; freeze base params AFTER `fully_shard` (freezing before can break
+   LoRA gradient reduction wiring inside a unit that mixes frozen and
+   trainable params). Our current code freezes before `add_adapter`; the FSDP2
+   path must reorder this: attach adapter, shard, then `requires_grad_(False)`
+   on non-LoRA params.
+4. Keep LoRA dtype equal to the base param dtype (bf16 storage) inside the
+   sharded units so reduce-scatter sees one dtype per unit; the fp32 master
+   copy lives in the optimizer (switch from `cast_training_params` to an
+   optimizer-side master-weight approach, e.g. torch AdamW with fused fp32
+   master weights, when sharded).
+5. Saving: gather the LoRA state dict on rank 0 via
+   `get_peft_model_state_dict` over full-tensor materialization
+   (`DTensor.full_tensor()` per param); the LoRA set is megabytes, so a plain
+   rank-0 gather is fine (no DCP needed). The EMA shadow
+   (`diffusion_train_extras.LoRAEMA`) tracks only LoRA params, which are small
+   enough to keep replicated on every rank; update from `full_tensor()` views
+   on rank 0 only.
+
+## fp8 over FSDP2
+
+torchao `convert_to_float8_training` composes with FSDP2 when applied BEFORE
+`fully_shard` (Float8Linear is a module swap, not a tensor subclass on the
+stored weight; weights stay bf16 in memory). Order: load dense, attach LoRA,
+convert frozen linears to Float8Linear (our existing `_fp8_module_filter`
+excludes `lora_` and non-16-divisible shapes), then shard. Two extra knobs
+from the reference worth carrying as config, both default off:
+
+- `enable_fsdp_float8_all_gather` (tensorwise only): all-gathers the fp8-cast
+  weight instead of bf16, saving interconnect bandwidth.
+- `precompute_float8_dynamic_scale_for_fsdp`: batches the per-step scale
+  computation; only meaningful with the fp8 all-gather.
+
+Both interact only with the tensorwise recipe (what we use); if we ever move
+to rowwise, they must be forced off.
+
+## Per-family notes: would Wan/Hunyuan-style custom strategies apply?
+
+The reference registers custom parallelization strategies for two video DiTs:
+Wan (a TP plan over its ffn/time-embedder plus per-block activation
+checkpointing) and HunyuanVideo (per-block non-reentrant checkpoint wrapping,
+flash-varlen attention masks). Mapped onto our trainable families:
+
+- flux.1 / flux.2 (dev, klein): homogeneous double/single-stream block lists;
+  the generic per-block wrap covers them. No custom strategy needed. FLUX.2-dev
+  (32B) is the family that actually needs FSDP2 to train dense at all on
+  sub-80GB cards.
+- qwen-image: homogeneous MMDiT block list; generic wrap. Its unpadded text
+  stream is irrelevant to sharding.
+- z-image: heterogeneous single-stream blocks (\~11 distinct shapes). Still one
+  ModuleList, so the generic per-block wrap applies; the only interaction is
+  with regional compile (more distinct graphs), which we already handle via
+  the recompile-limit bump.
+- krea-2: generic wrap; its custom conditioning modules (text\_fusion,
+  time\_mod\_proj) sit outside the block list and land in the root unit, which
+  is fine at their size.
+- A Wan-style TP plan would only become relevant if we adopt video families
+  (Wan/Hunyuan themselves) into the trainer; for the current image DiTs,
+  sequence lengths (\~4k tokens) never reach the \~30k-token activation
+  pressure that motivated Wan's per-block checkpoint + TP combination. Our
+  existing non-reentrant gradient checkpointing flag is the equivalent lever
+  and already composes with FSDP2.
+
+## Launch and process model
+
+The Unsloth trainer runs as a spawned subprocess today. Multi-GPU wraps that
+same entrypoint with `torchrun --nproc-per-node=N`; the event/stop protocol
+stays rank-0-only (ranks != 0 swallow events, poll the same stop flag file).
+Determinism: seed per rank as `cfg.seed + rank` for the noise/timestep draws
+while keeping the permutation sampler on the shared seed with a rank-strided
+view, so the global batch covers the dataset exactly as the single-GPU run
+does at the same effective batch size.
+
+## Failure containment
+
+- If `fully_shard` or the fp8 conversion raises on any rank, abort the run
+  (no silent single-GPU fallback mid-launch: ranks would desync).
+- Preflight in `training_precision_preflight_error`: reject
+  world\_size > 1 with base\_precision in ("nf4", "int8", "mxfp8") before any
+  eviction, with the DTensor-over-subclass rationale in the int8 message.
+
+
+# Document: data-designer-github-repo-seed
+
+Source path: studio/backend/plugins/data-designer-github-repo-seed/README.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/backend/plugins/data-designer-github-repo-seed/README.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/backend/plugins/data-designer-github-repo-seed/README.md
+Description: A Data Designer seed-reader plugin for Unsloth Studio that scrapes real GitHub data (issues, pull requests, commits) from one or more repositories and hands it to the recipe pipeline as a seed dataset.
+
+# data-designer-github-repo-seed
+
+A Data Designer seed-reader plugin for **Unsloth Studio** that scrapes real
+GitHub data (issues, pull requests, commits) from one or more repositories
+and hands it to the recipe pipeline as a seed dataset.
+
+Designed to ship with Unsloth as a default seed source so any user with a
+GitHub token can build training datasets straight from live repos.
+
+## What it does
+
+Given a list of `owner/name` repos, a GitHub token, and a per-resource
+`limit`, the plugin uses GitHub's GraphQL API to fetch issues, pull
+requests, and/or commits, with labels, state, authors, and the first N
+comments of each item, and materialises a single JSONL with uniform
+columns so the rest of the recipe (LLM text / LLM structured / processors)
+can treat it like any other seed table.
+
+| Column       | Description                                     |
+| ------------ | ----------------------------------------------- |
+| `item_type`  | `issue` / `pull` / `commit`                     |
+| `repo`       | `owner/name`                                    |
+| `number`     | Issue/PR number, or commit SHA                  |
+| `title`      | Title (or commit message headline)              |
+| `body`       | Issue/PR body (or full commit message)          |
+| `state`      | `OPEN` / `CLOSED` / `MERGED` (empty for commit) |
+| `author`     | GitHub login of the author                      |
+| `created_at` | ISO8601                                         |
+| `closed_at`  | ISO8601 (empty for commits)                     |
+| `url`        | Permalink                                       |
+| `labels`     | List of label names                             |
+| `comments`   | First N comments concatenated                   |
+
+## Usage in a recipe
+
+```json
+{
+  "seed_config": {
+    "source": {
+      "seed_type": "github_repo",
+      "repos": ["unslothai/unsloth", "unslothai/unsloth-zoo"],
+      "token": "",
+      "item_types": ["issues", "pulls"],
+      "limit": 100,
+      "include_comments": true,
+      "max_comments_per_item": 30
+    },
+    "sampling_strategy": "shuffle",
+    "selection_strategy": null
+  }
+}
+```
+
+Leave `token` empty to fall back to the server's `GH_TOKEN` / `GITHUB_TOKEN`
+environment variable, useful when the recipe is published and shouldn't
+carry a secret.
+
+## Auth
+
+A GitHub personal access token with `public_repo` scope is enough for public
+repositories; `repo` scope is required for private ones. GraphQL requests
+are rate-limit aware: the client inspects `x-ratelimit-*` headers and
+sleeps until reset when the budget drops below a safety threshold.
+
+## Install
+
+Shipped as a default Unsloth plugin. For development:
+
+```bash
+pip install -e .
+```
+
+Registered automatically via the `data_designer.plugins` entry point.
+
+
+# Document: VRAM Estimation for Training
+
+Source path: studio/backend/utils/hardware/VRAM_ESTIMATION.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/backend/utils/hardware/VRAM_ESTIMATION.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/backend/utils/hardware/VRAM_ESTIMATION.md
+Description: The 3.2 factor (16/5) accounts for BNB NF4 blockwise scales. Repos whose quantization config enables bnb4bitusedoublequant use a tighter, still conservative 3.6 factor for the quantized portion of the weights. When a 4-…
+
+# VRAM Estimation for Training
+
+```
+Total VRAM = Weights + LoRA Adapters + Optimizer + Gradients + Activations + CUDA Overhead
+```
+
+| Symbol | Meaning                                           |
+| ------ | ------------------------------------------------- |
+| `H`    | `hidden_size`                                     |
+| `L`    | `num_hidden_layers`                               |
+| `V`    | `vocab_size`                                      |
+| `K`    | `(H / num_attention_heads) * num_key_value_heads` |
+| `M`    | `intermediate_size` (or `moe_intermediate_size`)  |
+| `E`    | `num_experts` (1 for dense)                       |
+| `r`    | LoRA rank                                         |
+| `B`    | `per_device_train_batch_size`                     |
+| `S`    | `max_seq_length`                                  |
+
+***
+
+## 1. Model Weights
+
+```
+QKVO = (H + K + K + H) * H
+MLP  = H * M * 3 * E  +  (E * H if E > 1 else 0)
+
+Quantizable     = (QKVO + MLP) * L
+Non-quantizable = 2*H*L + V*H + (V*H if not tie_embeddings else 0)
+```
+
+| Mode             | Bytes                                         |
+| ---------------- | --------------------------------------------- |
+| QLoRA 4-bit      | `Quantizable * 2 / 3.2 + Non-quantizable * 2` |
+| LoRA / Full fp16 | `(Quantizable + Non-quantizable) * 2`         |
+
+The 3.2 factor (`16/5`) accounts for BNB NF4 blockwise scales. Repos whose
+quantization config enables `bnb_4bit_use_double_quant` use a tighter, still
+conservative 3.6 factor for the quantized portion of the weights.
+When a 4-bit config has `llm_int8_skip_modules` entries that point to language
+model layers or submodules, those quantizable weights are charged at fp16
+instead of NF4. Generic embedding and multimodal skip names are already covered
+by non-quantizable terms or excluded from text training weights.
+
+## 2. LoRA Adapters
+
+| Module     | A     | B     |
+| ---------- | ----- | ----- |
+| q\_proj    | `H×r` | `r×H` |
+| k\_proj    | `H×r` | `r×K` |
+| v\_proj    | `H×r` | `r×K` |
+| o\_proj    | `H×r` | `r×H` |
+| gate\_proj | `H×r` | `r×M` |
+| up\_proj   | `H×r` | `r×M` |
+| down\_proj | `M×r` | `r×H` |
+
+MLP modules multiply by `E` for MoE.
+
+```
+LoRA_bytes = sum(A + B per selected module) * L * 2
+```
+
+`all-linear` is treated as all known text linear modules in the table above.
+The estimator deliberately does not infer multimodal or vision-tower LoRA
+modules from config shapes; those modules vary too much across VLM families for
+a generic config formula.
+
+Some decoder configs expose layer-shape fields such as `layer_types`,
+`head_dim`, `global_head_dim`, `num_global_key_value_heads`, `attention_k_eq_v`,
+`num_kv_shared_layers`, `use_double_wide_mlp`, `vocab_size_per_layer_input`, and
+`hidden_size_per_layer_input`. When those fields are present, the estimator
+derives text weight and LoRA counts from the per-layer shapes instead of
+assuming every layer has the same seven projection modules.
+
+## 3. Optimizer States (calibrated)
+
+| Optimizer           | Bytes/param | Notes                           |
+| ------------------- | ----------- | ------------------------------- |
+| `adamw_8bit`        | 4           | BNB upcasts to fp32 during step |
+| `adamw_torch`       | 6           | Fused, no master copy           |
+| `paged_adamw_32bit` | 8           | Full fp32 states                |
+| `sgd`               | 4           |                                 |
+
+Trainable params = all params (Full FT) or LoRA params only.
+
+## 4. Gradients
+
+```
+Gradient_bytes = trainable_params * 2    (fp16, accumulated in-place)
+```
+
+## 5. Activations
+
+Per-layer (from `unsloth_zoo/vllm_utils.py`):
+
+```
+Per_layer = (S*B*(H+K+K) + S*B*2 + S*B*(M+M)) * 2 * 1.25
+```
+
+When the resolved attention implementation is none of `flash_attention_2`,
+`sdpa`, or `flex_attention` (PyTorch SDPA dispatches to flash or
+memory-efficient kernels and FlexAttention is also a memory-efficient
+kernel, all of which are O(n) in memory), activation memory also includes
+a quadratic attention-score/workspace estimate:
+
+```
+Non_flash_attention = B * num_attention_heads * S^2 * 2 * 12.0 * effective_layers
+Activations = max(Per_layer_with_gc, Non_flash_attention)
+```
+
+Unsloth resolves the attention implementation with Unsloth's
+`resolve_attention_implementation` helper and uses that result directly. The
+estimator does not duplicate model-family attention policy.
+
+| GC Mode   | Full FT    | LoRA/QLoRA |
+| --------- | ---------- | ---------- |
+| none      | `L` layers | `L` layers |
+| true (HF) | 2.0        | 1.0        |
+| unsloth   | 1.5        | 1.0        |
+
+## 6. Floors
+
+Activations use the computed formula directly:
+
+```
+activation_bytes = computed_activation_bytes
+```
+
+Full fine-tuning keeps the gradient floor at **15% of model weight memory** to
+account for autograd overhead, NCCL buffers, mixed-precision scaling, and
+PyTorch fragmentation:
+
+```
+gradient_bytes = max(computed_gradient_bytes, weights * 0.15)
+```
+
+For LoRA/QLoRA, the base model is frozen, so the weight-derived gradient floor
+is capped by trainable-state and live-activation scale:
+
+```
+raw_gradient_bytes = trainable_params * 2
+gradient_floor = min(weights * 0.15, max(computed_activation_bytes, optimizer_bytes))
+gradient_bytes = max(raw_gradient_bytes, gradient_floor)
+```
+
+This prevents frozen quantized model size from dominating gradient/state
+overhead when the measured runtime footprint is governed by LoRA optimizer
+states and live activations.
+
+## 7. CUDA Overhead
+
+**1.4 GB** fixed — CUDA driver + PyTorch runtime, calibrated on RTX 5070 Ti.
+
+## 8. Multi-GPU Overhead
+
+When sharding across multiple GPUs, each additional GPU (beyond the first) contributes only **85%** of its free VRAM to the usable pool. The 15% discount accounts for NCCL all-reduce buffers, PCIe/NVLink transfer overhead, synchronization barriers, and memory fragmentation from non-uniform shard sizes. Calibrated empirically on 2-8 GPU setups with NVLink and PCIe topologies.
+
+```
+usable_gb = free[gpu_0] + sum(free[gpu_i] * 0.85 for i in 1..N)
+```
+
+***
+
+## Parameter Flow
+
+```
+Frontend -> routes/{training,inference}.py
+         -> prepare_gpu_selection(gpu_ids, model_name, ...)
+            |
+            +-- gpu_ids is explicit (e.g. [5,6,7])
+            |     -> resolve_requested_gpu_ids: validate against parent-visible set
+            |     -> return all requested GPUs (model sharded across all of them)
+            |
+            +-- gpu_ids is None or []
+                  -> auto_select_gpu_ids: estimate VRAM, pick minimum GPUs needed
+                  -> estimate_required_model_memory_gb -> estimate_training_vram
+                  -> greedy selection: rank GPUs by free VRAM, add until model fits
+
+         -> get_device_map(resolved_gpu_ids)
+            -> "balanced" if >1 GPU, "sequential" otherwise
+
+         -> worker subprocess: apply_gpu_ids(resolved_gpu_ids)
+            -> sets CUDA_VISIBLE_DEVICES before torch/CUDA init
+```
+
+Threaded params: `batch_size`, `max_seq_length`, `lora_r`, `target_modules`, `gradient_checkpointing`, `optim`.
+
+Source: `studio/backend/utils/hardware/vram_estimation.py`
+
+
+# Document: i18n Contribution Guide
+
+Source path: studio/frontend/src/i18n/README.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/frontend/src/i18n/README.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/studio/frontend/src/i18n/README.md
+Description: Normalized source from studio/frontend/src/i18n/README.md.
+
+# i18n Contribution Guide
+
+- `locales/en.ts` is the complete baseline message file.
+- Non-English locale files may be partial. Missing keys must fall back to English at runtime.
+- Use BCP 47 locale tags for new languages, for example `zh-CN`, `pt-BR`, `ja-JP`, and `ko-KR`.
+- Do not change fallback logic to hide missing translations.
+- Do not add automatic DOM translation, MutationObserver text replacement, or runtime guess-based translation.
+- Preserve interpolation variables exactly, for example `{count}`, `{model}`, and `{provider}`.
+- Keep product and technical names unchanged unless there is an established localized name, for example `Unsloth`, `LoRA`, `GGUF`, and `Hugging Face`.
+- Keep translation changes small and reviewable. Prefer separate commits for runtime changes, UI migration, and locale text.
+- When adding user-facing Unsloth UI text, add the English message key first and add non-English overrides only when the translation is clear.
+- Run `npm run i18n:check` before committing to ensure there are no shape mismatches or placeholder discrepancies in the non-English overlays.
+- CI runs `npm run i18n:check:strict`, which also fails on missing keys. The runtime fallback stays as a safety net, but a key that only exists in `en.ts` renders English inside a translated UI, so add every new key to all overlays in the same change.
+
+
+# Document: README
+
+Source path: unsloth/kernels/moe/README.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/unsloth/kernels/moe/README.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/unsloth/kernels/moe/README.md
+Description: Optimized implementation of MoE MLP Block. Licensed under AGPLv3.
+
+## MoE Grouped GEMM
+
+Optimized implementation of `MoE MLP Block`.
+Licensed under AGPLv3.
+
+### Background
+
+`MoE MLP` requires the following steps:
+
+- Calculate `topk_weights` and `topk_indices`
+- If using a grouped gemm implementation, calculate permutation indices needed to rearrange tokens grouped by expert
+- For each expert:
+  - `expert_tokens`: gather the tokens assigned to the expert
+  - `first_gemm`: `gate / up proj` @ `expert_tokens`
+  - `silu_and_mul`: `silu` and `mul` of `first_gemm`
+  - `second_gemm`: `silu_and_mul` @ `down proj`
+  - `scatter_second_gemm`: scatter the `second_gemm` to the original token order
+  - `topk_weight_mul`: `second_gemm` @ `topk_weights`
+  - `final_output`: if `topk > 1`, `topk_weight_mul.view(num_tokens, topk, -1).sum(dim=1)` else `topk_weight_mul`
+
+One way to eliminate the loop is to use a grouped GEMM, where all expert GEMMs are computed within a single kernel, which iterates over tiles of the expert GEMMs as individual GEMMs, where each GEMM, the `A` matrix is `M' x K` and the `B` matrix is `K x N`, where `M'` is the number of tokens assigned to the expert and `B` is the weight matrix for that expert.
+
+This requires an additional permute (and subsequent copy) of the hidden states such that the tokens assigned to each expert are contiguous in memory before running the first grouped GEMM within the Expert MLP.
+Additionally, after the second grouped GEMM, the hidden states must be permuted back to the original token order and multiplied by `topk_weights` to get the final output.
+
+### Optimizations
+
+This repo implements a grouped GEMM-based MoE MLP with the following optimizations:
+
+- Eliminates the loop over experts by performing gemms as a grouped GEMM, computing the expert gemms within a single fused triton kernel
+- Fuses the permutation of hidden states from token order (original input order) to expert order (tokens grouped by expert) within the prologue of first the first grouped GEMM
+- Fuses the (un)permutation of hidden states from expert order back to token order in second GEMM
+- Fuses the mul of hidden states by expert weights within epilogue of second GEMM (only implemented for inference, not for training)
+
+### Structure
+
+- `grouped_gemm/interface.py`: wrappers for the individual forward / backward kernels as well as the `torch.autograd.Function`
+- `grouped_gemm/kernels/forward.py`: forward kernel
+- `grouped_gemm/kernels/backward.py`: backward dX and dW kernels
+- `grouped_gemm/kernels/tuning.py`: manual tuning utils
+- `grouped_gemm/kernels/autotuning.py`: autotuning utils
+- `grouped_gemm/reference/moe_block.py`: contains `Qwen3MoeFusedGroupedGEMMBlock`, a reference implementation of Huggingface `Qwen3SparseMOEBlock` with fused triton kernel in-place of original HF expert computation
+- `grouped_gemm/reference/moe_ops.py`: supporting ops (routing, token sorting, etc.) and reference MoE block using a torch-native grouped gemm approach.
+
+### Tests
+
+- `grouped_gemm/tests/test_grouped_gemm.py`: unit tests for forward, backward grouped gemm kernels as well as the wrapped grouped gemm autograd.Function.  Best not to run this entire test suite at once due to the large number of parametrized unit tests.  Rather, use filters to run specific
+  sets of tests.  E.g., to run forward tests with autotune turned on: `pytest -sv -k "forward and autotune" --tb=short tests/test_grouped_gemm.py`.  Use the test function names and parameter ids for words to filter on.
+- `grouped_gemm/tests/test_qwen3_moe.py`: end to end test for Qwen3 MoE block.  IMPORTANT: read `tests/run_qwen3_moe_tests.sh` as well as notes in the test itself for complications when running parametrized pytest test suites and triton / autotune.  TLDR: use the test script and NOT pytest to run the tests.
+
+### Benchmarks
+
+- `grouped_gemm/benchmark/benchmark_fused_moe.py`: benchmarks HF `Qwen3SpareMOEBlock` or `Llama4TextMoe` against the fused implementation
+
+Running with these flags on an `H100` to bench forward pass (run with `--help` to see all available flags):
+
+For `Qwen3-30B-A3B`:
+
+```
+python benchmark/benchmark_fused_moe.py --model qwen3 --mode forward --seqlen 1024 --permute_x --permute_y --autotune
+```
+
+For the backward bench:
+
+```
+python benchmark/benchmark_fused_moe.py --model qwen3 --mode backward --seqlen 1024 --permute_x --permute_y --autotune
+```
+
+For `Llama-4-Scout-17B-16E`:
+
+```
+python benchmark/benchmark_fused_moe.py --model llama4 --autotune --mode=forward --permute_y
+```
+
+Ditto for backwards.
+
+### Notes
+
+- Tested and benched on `H100`, though should run on Ampere and possibly even earlier gpu generations though the autotuning configs will need to be adjusted.
+- The env I used to develop the kernel was `pytorch 2.7/2.8` and `pytorch-triton 3.3`.
+- The kernels can be run either as autotuned (see `autotuning.py`) or with manually specified config (see `tuning.py`).  Recommended to run using autotuner since the MoE block requires 2 configs for the forward (2 grouped gemms) and 4 for the backwards (dX and dW per grouped gemm, 2 grouped gemms).
+- Running with autotuning turned off with the default manual kernel config will result is **highly** sub-optimal performance as it is only meant for testing / debugging purposes.
+- I've tried to strike a balance between compilation time and autotuning search space -- can probably squeeze even more performance for specific workloads.
+- The Llama4 reference layer is still highly under-optimized as there are many low-hanging opportunities for further speedups around routing and shared expert calculation.
+
+TODO:
+
+- TMA store: implemented but not enabled currently due to non-determinism arising from triton pipelining bug.
+- Warp specialization: Hopper support for WS not yet enabled on triton 3.3x branch which ships with latest pytorch 2.7.
+- Additional optimizations:
+  - Fused / optimized implementations of routing, token sorting, etc.
+  - Better software pipelining within grouped gemm
+  - Threadblock swizzling for better L2 caching
+  - Llama4
+    - Fused gather / topk weight merging
+    - Custom topk, gather indices kernel
+    - Shared expert fusion with experts calculation
+
+
+# Document: REGISTRY
+
+Source path: unsloth/registry/REGISTRY.md
+Pinned source: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/unsloth/registry/REGISTRY.md
+Canonical documentation: https://github.com/unslothai/unsloth/blob/1b588389b488eb9f8a9cb8ad5ca3073c7661f073/unsloth/registry/REGISTRY.md
+Description: Each model is registered in a separate file within the registry module (e.g. registry/llama.py).
+
+## Model Registry
+
+### Structure
+
+```
+unsloth
+    -registry
+        __init__.py
+        registry.py
+        _llama.py
+        _mistral.py
+        _phi.py
+        ...
+```
+
+Each model is registered in a separate file within the `registry` module (e.g. `registry/_llama.py`).
+
+Within each model registration file, a high-level `ModelMeta` is created for each model version, with the following structure:
+
+```python
+@dataclass
+class ModelMeta:
+    org: str
+    base_name: str
+    model_version: str
+    model_info_cls: type[ModelInfo]
+    model_sizes: list[str] = field(default_factory=list)
+    instruct_tags: list[str] = field(default_factory=list)
+    quant_types: list[QuantType] | dict[str, list[QuantType]] = field(default_factory=list)
+    is_multimodal: bool = False
+```
+
+Each model then instantiates a global `ModelMeta` for its specific model version, defining how the model path (e.g. `unsloth/Llama-3.1-8B-Instruct`) is constructed since each model type has a different naming convention.
+
+```python
+LlamaMeta_3_1 = ModelMeta(
+    org="meta-llama",
+    base_name="Llama",
+    instruct_tags=[None, "Instruct"],
+    model_version="3.1",
+    model_sizes=["8"],
+    model_info_cls=LlamaModelInfo,
+    is_multimodal=False,
+    quant_types=[QuantType.NONE, QuantType.BNB, QuantType.UNSLOTH],
+)
+```
+
+`LlamaModelInfo` is a subclass of `ModelInfo` that defines the model path for each model size and quant type.
+
+```python
+class LlamaModelInfo(ModelInfo):
+    @classmethod
+    def construct_model_name(cls, base_name, version, size, quant_type, instruct_tag):
+        key = f"{base_name}-{version}-{size}B"
+        return super().construct_model_name(base_name, version, size, quant_type, instruct_tag, key)
+```
+
+Once these constructs are defined, the model is registered by writing a register\_xx\_models function.
+
+```python
+def register_llama_3_1_models(include_original_model: bool = False):
+    global _IS_LLAMA_3_1_REGISTERED
+    if _IS_LLAMA_3_1_REGISTERED:
+        return
+    _register_models(LlamaMeta_3_1, include_original_model=include_original_model)
+    _IS_LLAMA_3_1_REGISTERED = True
+```
+
+`_register_models` is a helper function that registers the model with the registry.  The global `_IS_XX_REGISTERED` is used to prevent duplicate registration.
+
+Once a model is registered, registry.registry.MODEL\_REGISTRY is updated with the model info and can be searched with `registry.search_models`.
+
+### Tests
+
+The `tests/test_model_registry.py` file contains tests for the model registry.
+
+Also, each model registration file is an executable module that checks that all registered models are available on `huggingface_hub`.
+
+```python
+python unsloth.registry._llama.py
+```
+
+Prints the following (abridged) output:
+
+```bash
+✓ unsloth/Llama-3.1-8B
+✓ unsloth/Llama-3.1-8B-bnb-4bit
+✓ unsloth/Llama-3.1-8B-unsloth-bnb-4bit
+✓ meta-llama/Llama-3.1-8B
+✓ unsloth/Llama-3.1-8B-Instruct
+✓ unsloth/Llama-3.1-8B-Instruct-bnb-4bit
+✓ unsloth/Llama-3.1-8B-Instruct-unsloth-bnb-4bit
+✓ meta-llama/Llama-3.1-8B-Instruct
+✓ unsloth/Llama-3.2-1B
+✓ unsloth/Llama-3.2-1B-bnb-4bit
+✓ unsloth/Llama-3.2-1B-unsloth-bnb-4bit
+✓ meta-llama/Llama-3.2-1B
+...
+```
+
+### TODO
+
+- Model Collections
+  - [x] Gemma3
+  - [ ] Llama3.1
+  - [x] Llama3.2
+  - [x] MistralSmall
+  - [x] Qwen2.5
+  - [x] Qwen2.5-VL
+  - [x] Qwen2.5 Coder
+  - [x] QwenQwQ-32B
+  - [x] Deepseek v3
+  - [x] Deepseek R1
+  - [x] Phi-4
+  - [ ] Unsloth 4-bit Dynamic Quants
+  - [ ] Vision/multimodal models
+- Sync model uploads with registry
+- Add utility methods for tracking model stats
+

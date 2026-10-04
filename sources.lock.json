@@ -164,6 +164,12 @@
       "observedCommit": "e3215d0e9b9a11b0b6af719307e7eed92e3c436f",
       "documentationDigest": "2481179f77625e2d0052d402a0f257a54176c69fd0af7f3cb4e67ce71ddd6b90"
     },
+    "unsloth": {
+      "tag": "v0.1.902-beta",
+      "releaseId": 401027235,
+      "releasePublishedAt": "2026-10-01T14:06:23Z",
+      "sourceCommit": "1b588389b488eb9f8a9cb8ad5ca3073c7661f073"
+    },
     "apple-swift": {
       "tag": "snapshot-5915b24a1311",
       "snapshotDigest": "5915b24a13116058563ec2085adb7610a331e7e4aea596f8d2f1f1b39a6e0f1c",

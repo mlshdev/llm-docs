@@ -29,6 +29,7 @@
 - [discord.py-self v2.1.0](discord-py-self/llms.txt): [full corpus](discord-py-self/llms-full.txt), [manifest](discord-py-self/manifest.json)
 - [discord.py v2.7.1](discord-py/llms.txt): [full corpus](discord-py/llms-full.txt), [manifest](discord-py/manifest.json)
 - [Qdrant master](qdrant/llms.txt): [full corpus](qdrant/llms-full.txt), [manifest](qdrant/manifest.json)
+- [Unsloth v0.1.902-beta](unsloth/llms.txt): [full corpus](unsloth/llms-full.txt), [manifest](unsloth/manifest.json)
 - [Apple Swift snapshot-5915b24a1311](apple-swift/llms.txt): [full corpus](apple-swift/llms-full.txt), [manifest](apple-swift/manifest.json)
 - [Apple SwiftUI snapshot-8b55d19a707e](apple-swiftui/llms.txt): [full corpus](apple-swiftui/llms-full.txt), [manifest](apple-swiftui/manifest.json)
 - [Apple WebKit and Safari snapshot-a0a4b8d281c3](apple-webkit/llms.txt): [full corpus](apple-webkit/llms-full.txt), [manifest](apple-webkit/manifest.json)
